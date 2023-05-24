@@ -48,7 +48,10 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <teleport-stub>
+  <teleport-stub
+    disabled="false"
+    to="[object HTMLBodyElement]"
+  >
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -275,7 +278,10 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <teleport-stub>
+  <teleport-stub
+    disabled="false"
+    to="[object HTMLBodyElement]"
+  >
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -533,7 +539,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <teleport-stub>
+      <teleport-stub
+        disabled="false"
+        to="[object HTMLBodyElement]"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -773,7 +782,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <teleport-stub>
+      <teleport-stub
+        disabled="false"
+        to="[object HTMLBodyElement]"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -987,7 +999,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <teleport-stub>
+      <teleport-stub
+        disabled="false"
+        to="[object HTMLBodyElement]"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1227,7 +1242,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <teleport-stub>
+      <teleport-stub
+        disabled="false"
+        to="[object HTMLBodyElement]"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1467,7 +1485,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <teleport-stub>
+      <teleport-stub
+        disabled="false"
+        to="[object HTMLBodyElement]"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1701,7 +1722,10 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <teleport-stub>
+  <teleport-stub
+    disabled="false"
+    to="[object HTMLBodyElement]"
+  >
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1898,7 +1922,10 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <teleport-stub>
+  <teleport-stub
+    disabled="false"
+    to="[object HTMLBodyElement]"
+  >
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -2129,7 +2156,10 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <teleport-stub>
+  <teleport-stub
+    disabled="false"
+    to="[object HTMLBodyElement]"
+  >
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"

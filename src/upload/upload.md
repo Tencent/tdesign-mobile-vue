@@ -7,6 +7,7 @@
 -- | -- | -- | -- | --
 accept | String | - | 接受上传的文件类型，[查看 W3C示例](https://www.w3schools.com/tags/att_input_accept.asp)，[查看 MDN 示例](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input/file) | N
 action | String | - | 上传接口。设接口响应数据为字段 `response`，那么 `response.error` 存在时会判断此次上传失败，并显示错误文本信息；`response.url` 会作为文件上传成功后的地址，并使用该地址显示图片或文件 | N
+addContent | String / Slot / Function | - | 添加按钮内容 | N
 allowUploadDuplicateFile | Boolean | false | 是否允许重复上传相同文件名的文件 | N
 autoUpload | Boolean | true | 是否在选择文件后自动发起请求上传文件 | N
 beforeUpload | Function | - | 如果是自动上传模式 `autoUpload=true`，表示单个文件上传之前的钩子函数，若函数返回值为 `false` 则表示不上传当前文件。<br/>如果是非自动上传模式 `autoUpload=false`，函数返回值为 `false` 时表示从上传文件中剔除当前文件。TS 类型：`(file: UploadFile) => boolean \| Promise<boolean>` | N

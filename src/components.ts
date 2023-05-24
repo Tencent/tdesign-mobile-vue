@@ -52,3 +52,4 @@ export { default as Footer } from './footer';
 export { default as Empty } from './empty';
 export { default as Link } from './link';
 export { Form, FormItem } from './form';
+export { default as Icon } from './icon';

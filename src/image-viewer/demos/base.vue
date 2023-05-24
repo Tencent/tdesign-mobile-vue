@@ -1,27 +1,14 @@
 <template>
-  <div class="image-viewer-demo">
-    <t-button block size="large" variant="outline" @click="tapShow"> 基础用法 </t-button>
-    <t-image-viewer v-model:images="images" v-model:visible="showViewer"></t-image-viewer>
-  </div>
+  <t-button block size="large" variant="outline" theme="primary" @click="visible = true">基础图片预览</t-button>
+  <t-image-viewer v-model:images="images" v-model:visible="visible" />
 </template>
-<script lang="ts" setup>
-import { ref, Ref } from 'vue';
 
-const showViewer = ref(false);
-const images: Ref<Array<string>> = ref([
-  'https://imgcache.qq.com/open_proj/proj_qcloud_v2/rocket_images/1606728019829_yw760ok1jmpbep14i.png',
-  'https://imgcache.qq.com/open_proj/proj_qcloud_v2/rocket_images/1606728019829_yw760ok1jmpbep14i.png',
-  'https://imgcache.qq.com/open_proj/proj_qcloud_v2/rocket_images/1606728019829_yw760ok1jmpbep14i.png',
-]);
-const tapShow = () => {
-  showViewer.value = true;
-};
+<script lang="ts" setup>
+import { ref } from 'vue';
+
+const visible = ref(false);
+const images = [
+  'https://tdesign.gtimg.com/miniprogram/images/swiper1.png',
+  'https://tdesign.gtimg.com/miniprogram/images/swiper2.png',
+];
 </script>
-<style lang="less" scoped>
-.image-viewer-demo {
-  margin: 0 16px;
-  button {
-    margin-bottom: 16px;
-  }
-}
-</style>

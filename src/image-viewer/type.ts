@@ -13,17 +13,25 @@ export interface TdImageViewerProps {
    */
   closeBtn?: boolean | TNode;
   /**
+   * 是否显示删除操作，前提需要开启页码
+   * @default false
+   */
+  deleteBtn?: boolean | TNode;
+  /**
    * 图片数组
    * @default []
    */
   images?: Array<string>;
   /**
-   * 初始化页码
-   * @default 0
+   * 当前预览图片所在的下标
    */
-  initialIndex?: Number;
+  index?: number;
   /**
-   * 最大放大比例
+   * 当前预览图片所在的下标，非受控属性
+   */
+  defaultIndex?: number;
+  /**
+   * 【开发中】最大放大比例
    * @default 3
    */
   maxZoom?: Number;
@@ -48,9 +56,13 @@ export interface TdImageViewerProps {
    */
   modelValue?: boolean;
   /**
-   * 关闭时触发，事件参数包含触发关闭的来源：关闭按钮、遮罩层、ESC 键
+   * 关闭时触发
    */
-  onClose?: (context: { trigger: 'close-btn' | 'overlay' | 'esc'; e: MouseEvent | KeyboardEvent }) => void;
+  onClose?: (context: { trigger: 'overlay' | 'close-btn'; visible: Boolean; index: Number }) => void;
+  /**
+   * 点击删除操作按钮时触发
+   */
+  onDelete?: (index: Number) => void;
   /**
    * 预览图片切换时触发，`context.prev` 切换到上一张图片，`context.next` 切换到下一张图片
    */

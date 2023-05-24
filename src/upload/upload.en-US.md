@@ -7,6 +7,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 accept | String | - | \- | N
 action | String | - | upload action url | N
+addContent | String / Slot / Function | - | \- | N
 allowUploadDuplicateFile | Boolean | false | \- | N
 autoUpload | Boolean | true | \- | N
 beforeUpload | Function | - | Typescript：`(file: UploadFile) => boolean \| Promise<boolean>` | N
