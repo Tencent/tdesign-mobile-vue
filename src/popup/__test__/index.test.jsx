@@ -4,8 +4,8 @@ import Popup from '../popup.vue';
 import { ref } from 'vue';
 
 config.global.stubs = {
-  teleport: true
-}
+  teleport: true,
+};
 
 describe('popup', () => {
   // test props api
@@ -33,7 +33,7 @@ describe('popup', () => {
       const wrapper = mount(Popup, {
         props: {
           placement: 'top',
-          visible: true
+          visible: true,
         },
       });
       expect(wrapper.find('.t-popup').classes()).toContain(`t-popup--${wrapper.vm.placement}`);
@@ -47,7 +47,7 @@ describe('popup', () => {
       const wrapper = mount(Popup, {
         props: {
           zIndex: 15000,
-          visible: true
+          visible: true,
         },
       });
       expect(wrapper.find('.t-popup').attributes('style')).toContain('z-index: 15000');
@@ -94,7 +94,7 @@ describe('popup', () => {
               onClosed={closed}
             />
           );
-        }
+        },
       });
 
       const $popup = wrapper.find('.t-popup');

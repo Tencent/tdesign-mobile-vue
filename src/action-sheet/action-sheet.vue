@@ -1,35 +1,30 @@
 <template>
-  <t-popup :class="name" :visible="currentVisible" placement="bottom" @close="handleClose">
+  <t-popup :visible="currentVisible" :placement="`bottom`" :class="name" @close="handleClose">
     <div :class="rootClasses">
-      <!-- @ts-ignore -->
-      <menu-list v-if="type === 'list'" :items="actionItems" @selected="handleSelected">
-        <template #cell="slotProps">
-          <slot name="cell" :item="slotProps.item"></slot>
-        </template>
-      </menu-list>
-
-      <menu-grid v-else :items="actionItems" :count="count" @selected="handleSelected">
-        <template #cell="slotProps">
-          <slot name="cell" :item="slotProps.item"></slot>
-        </template>
-      </menu-grid>
-
+      <p v-if="description" :class="descriptionClasses">{{ description }}</p>
+      <action-sheet-list v-if="theme === 'list'" :align="align" :items="actionItems" @selected="handleSelected" />
+      <action-sheet-grid v-if="theme === 'grid'" :items="actionItems" :count="count" @selected="handleSelected" />
       <template v-if="showCancel">
-        <div v-if="type === 'list'" :class="`${name}__separation`"></div>
-        <button :class="`${name}__action`" @click="handleCancel">{{ cancelText }}</button>
+        <div :class="`${name}__footer`">
+          <div :class="`${name}__gap-${theme}`"></div>
+          <t-button :class="`${name}__cancel`" variant="text" block @click="handleCancel">
+            {{ cancelText }}
+          </t-button>
+        </div>
       </template>
     </div>
   </t-popup>
 </template>
 
 <script lang="ts">
-import { ref, computed, watch, defineComponent, PropType, ComputedRef } from 'vue';
-import { useEmitEvent } from '../shared';
-import MenuList from './menu-list.vue';
-import MenuGrid from './menu-grid.vue';
+import { ref, watch, defineComponent, computed } from 'vue';
+import { useEmitEvent, useDefault } from '../shared';
+import ActionSheetList from './action-sheet-list.vue';
+import ActionSheetGrid from './action-sheet-grid.vue';
 import TPopup from '../popup';
 import config from '../config';
-import { ActionSheetItem } from './type';
+import { TdActionSheetProps, ActionSheetItem } from './type';
+import ActionSheetProps from './props';
 
 const { prefix } = config;
 const name = `${prefix}-action-sheet`;
@@ -38,85 +33,42 @@ export default defineComponent({
   name,
   components: {
     TPopup,
-    MenuList,
-    MenuGrid,
+    ActionSheetList,
+    ActionSheetGrid,
   },
-  props: {
-    modelValue: Boolean,
-    /**
-     * @description 是否显示
-     * @attribute visible
-     */
-    visible: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * @description 菜单项
-     * @attribute items
-     */
-    items: {
-      type: Array as PropType<Array<ActionSheetItem | string>>,
-      required: true,
-    },
-    /**
-     * @description 展示类型
-     * @attribute type
-     */
-    type: {
-      type: String,
-      default: 'list',
-    },
-    /**
-     * @description grid时每页显示的数量
-     * @attribute count
-     */
-    count: {
-      type: Number,
-      default: 8,
-    },
-    /**
-     * @description 是否展示【取消】选项
-     * @attribute show-cancel
-     */
-    showCancel: {
-      type: Boolean,
-      default: true,
-    },
-    /**
-     * @description 【取消】选项的文本
-     * @attribute cancel-text
-     */
-    cancelText: {
-      type: String,
-      default: '取消',
-    },
-  },
+  props: ActionSheetProps,
   emits: ['selected', 'update:modelValue', 'cancel', 'close'],
-  setup(props, context) {
+  setup(props: any, context) {
     const emitEvent = useEmitEvent(props, context.emit);
-    const actionItems = ref([]);
-
-    const currentVisible = computed(() => props.modelValue || props.visible) as ComputedRef<boolean>;
+    const actionItems = computed(() => {
+      return props.items.map((item: String | ActionSheetItem) => {
+        if (typeof item === 'string') {
+          return {
+            label: item,
+          };
+        }
+        return item;
+      });
+    });
+    const [currentVisible] = useDefault<TdActionSheetProps['visible'], TdActionSheetProps>(
+      props,
+      context.emit,
+      'visible',
+      'visible-change',
+    );
     const rootClasses = computed(() => ({
-      [`${name}__panel`]: true,
-      [`${name}__panel-list`]: props.type === 'list',
-      [`${name}__panel-grid`]: props.type === 'grid',
+      [`${name}__content`]: true,
     }));
-
+    const descriptionClasses = computed(() => ({
+      [`${name}__description`]: true,
+      [`${name}__description--left`]: props.align === 'left',
+      [`${name}__description--grid`]: props.theme === 'grid',
+    }));
     watch(
-      () => props.items,
+      () => currentVisible.value,
       (val) => {
-        let items = JSON.parse(JSON.stringify(val));
-        // 数据格式处理，统一转为object结构
-        items = items.map((item: unknown) => {
-          if (typeof item === 'string') {
-            return { label: item };
-          }
-
-          return item;
-        });
-        actionItems.value = items;
+        currentVisible.value = val;
+        // emitEvent('update:modelValue', val);
       },
       {
         immediate: true,
@@ -124,23 +76,30 @@ export default defineComponent({
       },
     );
 
+    const hide = (trigger: string) => {
+      context.emit('update:modelValue', false);
+      emitEvent('close', { trigger });
+    };
+
     const handleCancel = () => {
       emitEvent('cancel');
       context.emit('update:modelValue', false);
     };
 
     const handleSelected = (index: number) => {
-      emitEvent('selected', props.items[index], index);
+      emitEvent('selected', props?.items[index], index);
+      hide('selected');
     };
 
     const handleClose = () => {
-      emitEvent('close');
-      context.emit('update:modelValue', false);
+      hide('overlay');
     };
 
     return {
+      prefix,
       name: ref(name),
       rootClasses,
+      descriptionClasses,
       actionItems,
       currentVisible,
       handleCancel,

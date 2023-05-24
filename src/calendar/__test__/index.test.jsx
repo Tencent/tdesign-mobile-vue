@@ -5,8 +5,8 @@ import Button from '../../button/index';
 import Calendar from '../calendar.vue';
 
 config.global.stubs = {
-  teleport: true
-}
+  teleport: true,
+};
 
 const prefix = 't';
 const name = `${prefix}-calendar`;
@@ -18,7 +18,7 @@ const day = 15;
 const minDate = new Date(year, month, 1);
 const maxDate = new Date(year, month, 31);
 const value = new Date(year, month, day);
-const confirmBtn = 'confirmBtn'
+const confirmBtn = 'confirmBtn';
 
 const dayFormat = (date, character) => {
   const D = new Date(date);

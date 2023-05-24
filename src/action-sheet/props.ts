@@ -8,6 +8,15 @@ import { TdActionSheetProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 水平对齐方式 */
+  align: {
+    type: String as PropType<TdActionSheetProps['align']>,
+    default: 'center' as TdActionSheetProps['align'],
+    validator(val: TdActionSheetProps['align']): boolean {
+      if (!val) return true;
+      return ['center', 'left'].includes(val);
+    },
+  },
   /** 设置取消按钮的文本 */
   cancelText: {
     type: String,
@@ -18,9 +27,15 @@ export default {
     type: Number,
     default: 8,
   },
+  /** 动作面板描述文字 */
+  description: {
+    type: String,
+    default: '',
+  },
   /** 菜单项 */
   items: {
     type: Array as PropType<TdActionSheetProps['items']>,
+    default: [],
     required: true,
   },
   /** 是否显示取消按钮 */

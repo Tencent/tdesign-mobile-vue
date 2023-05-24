@@ -3,16 +3,20 @@
  */
 
 import { mount } from '@vue/test-utils';
+import alignVue from '@/action-sheet/demos/align.vue';
 import gridMultipleVue from '@/action-sheet/demos/grid-multiple.vue';
 import gridVue from '@/action-sheet/demos/grid.vue';
 import listVue from '@/action-sheet/demos/list.vue';
 import mobileVue from '@/action-sheet/demos/mobile.vue';
+import statusVue from '@/action-sheet/demos/status.vue';
 
 const mapper = {
+  alignVue,
   gridMultipleVue,
   gridVue,
   listVue,
   mobileVue,
+  statusVue,
 };
 
 describe('ActionSheet', () => {
