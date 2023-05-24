@@ -1,143 +1,87 @@
 <template>
-  <div v-if="isShowItems" :class="classes" :style="{ ...expandStyle }">
-    <!-- <t-overlay v-if="isShowItems && showOverlay" @click="onClickOverlay" /> -->
-    <div :class="styleContent" :style="{ ...transitionStyle }">
-      <div :class="`${name}__bd`">
-        <slot>
-          <template v-if="optionsLayout === 'columns'">
+  <div v-if="wrapperVisible" id="dropdown-popup" :class="classes" :style="{ ...expandStyle }">
+    <t-popup
+      v-model="isShowItems"
+      :duration="duration"
+      :show-overlay="showOverlay"
+      :style="popupStyle"
+      :overlay-props="{ style: 'position: absolute' }"
+      :class="`${name}__popup-host`"
+      attach="#dropdown-popup"
+    >
+      <div :class="styleContent">
+        <div :class="`${name}__body`">
+          <slot>
             <template v-if="!multiple">
               <!-- 单选列表 -->
-              <t-radio-group v-model="radioSelect">
+              <t-radio-group v-model="radioSelect" placement="right" :class="`${name}__radio-group`">
                 <template v-for="option in options" :key="option.value">
                   <t-radio
                     :value="option.value"
-                    :label="option.title"
+                    :label="option.label"
                     :disabled="option.disabled"
                     :class="styleDropRadio(option.value)"
-                    align="right"
                     :checked="isCheckedRadio(option.value)"
-                    :icon="renderCheckIcon"
+                    icon="line"
                   />
                 </template>
               </t-radio-group>
             </template>
             <template v-else>
               <!-- 多选列表 -->
-              <t-checkbox-group v-model="checkSelect">
+              <t-checkbox-group
+                v-model="checkSelect"
+                :class="`${name}__checkbox-group`"
+                :style="`grid-template-columns: repeat(${$props.optionsColumns}, 1fr)`"
+              >
                 <template v-for="option in options" :key="option.value">
-                  <t-checkbox borderless :value="option.value" :label="option.title" :disabled="option.disabled" />
+                  <t-checkbox
+                    :class="`${name}__checkbox-item t-checkbox--tag`"
+                    icon="none"
+                    borderless
+                    :value="option.value"
+                    :label="option.label"
+                    :disabled="option.disabled"
+                  />
                 </template>
               </t-checkbox-group>
             </template>
-          </template>
-          <template v-else-if="optionsLayout === 'tree'">
-            <!-- 树形列表 ST -->
-            <div v-for="(_, level) in treeOptions" :key="level" :class="`${name}__tree-group`">
-              <t-radio-group
-                v-if="level < treeState.leafLevel"
-                :model-value="convertTreeRadioType(treeState.selectList[level])"
-                @update:model-value="selectTreeNode(level, $event)"
-              >
-                <!-- 树形列表 - 父级节点 ST -->
-                <template v-for="option in treeOptions[level]" :key="option.value">
-                  <t-radio
-                    :class="styleTreeRadio(option.value, level)"
-                    :value="option.value"
-                    :label="option.title"
-                    :disabled="option.disabled"
-                    align="right"
-                    :icon="[]"
-                    borderless
-                  />
-                </template>
-                <!-- 树形列表 - 父级节点 ED -->
-              </t-radio-group>
-              <template v-else>
-                <!-- 树形列表 - 叶子节点 ST -->
-                <template v-if="!multiple">
-                  <!-- 树形列表 - 叶子节点（单选） ST -->
-                  <t-radio-group
-                    :value="convertTreeRadioType(treeState.selectList[level])"
-                    @update:value="selectTreeNode(level, $event)"
-                  >
-                    <template v-for="option in treeOptions[level]" :key="option.value">
-                      <t-radio
-                        :value="option.value"
-                        :label="option.title"
-                        :disabled="option.disabled"
-                        :class="styleTreeRadio(option.value, level)"
-                        align="right"
-                        borderless
-                      />
-                    </template>
-                  </t-radio-group>
-                  <!-- 树形列表 - 叶子节点（单选） ED -->
-                </template>
-                <template v-else>
-                  <!-- 树形列表 - 叶子节点（多选） ST -->
-                  <t-checkbox-group
-                    :value="convertTreeCheckType(treeState.selectList[level])"
-                    @update:value="selectTreeNode(level, $event)"
-                  >
-                    <template v-for="option in treeOptions[level]" :key="option.value">
-                      <t-checkbox
-                        :value="option.value"
-                        :label="option.title"
-                        :disabled="option.disabled"
-                        placement="right"
-                        borderless
-                      ></t-checkbox>
-                    </template>
-                  </t-checkbox-group>
-                  <!-- 树形列表 - 叶子节点（多选） ED -->
-                </template>
-                <!-- 树形列表 - 叶子节点 ED -->
-              </template>
-            </div>
-            <!-- 树形列表 ED -->
-          </template>
-        </slot>
+          </slot>
+        </div>
+        <div v-if="multiple" :class="`${name}__footer`">
+          <t-button
+            theme="light"
+            :class="`${name}__footer-btn ${name}__reset-btn`"
+            :disabled="isBtnDisabled"
+            @click="resetSelect"
+            >重置</t-button
+          >
+          <t-button
+            theme="primary"
+            :class="`${name}__footer-btn ${name}__confirm-btn`"
+            :disabled="isBtnDisabled"
+            @click="confirmSelect"
+            >确定</t-button
+          >
+        </div>
       </div>
-      <div v-if="multiple || optionsLayout === 'tree'" :class="`${name}__ft`">
-        <t-button variant="outline" :disabled="isBtnDisabled" @click="resetSelect">重置</t-button>
-        <t-button theme="primary" :disabled="isBtnDisabled" @click="confirmSelect">确定</t-button>
-      </div>
-    </div>
+    </t-popup>
   </div>
 </template>
 
 <script lang="ts">
-import { CheckIcon } from 'tdesign-icons-vue-next';
-import { h, ref, watch, toRefs, inject, computed, reactive, nextTick, onBeforeMount, defineComponent } from 'vue';
-import { TNode } from '../common';
+import { ref, watch, toRefs, inject, computed, reactive, onBeforeMount, defineComponent, nextTick } from 'vue';
 import TRadio, { RadioGroup as TRadioGroup } from '../radio';
 import config from '../config';
 import TButton from '../button';
 import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
-import TransAniControl from './trans-ani-control';
 import { useVModel, useEmitEvent } from '../shared';
 import DropdownItemProps from './dropdown-item-props';
 import { DropdownMenuState, DropdownMenuControl } from './context';
-import { TdDropdownMenuProps, TdDropdownItemProps, TdDropdownItemOption, TdDropdownItemOptionValueType } from './type';
+import { TdDropdownMenuProps, DropdownOption, DropdownValue } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-dropdown-item`;
-
-interface TdDropdownTreeState {
-  /**
-   * 叶子层级
-   */
-  leafLevel: number;
-  /**
-   * 树的各级选项
-   */
-  selectList: TdDropdownTreeValueType[];
-}
-
-/**
- * 树选中项目（单选/多选）
- */
-type TdDropdownTreeValueType = TdDropdownItemOptionValueType | TdDropdownItemOptionValueType[] | undefined;
 
 export default defineComponent({
   name,
@@ -153,15 +97,9 @@ export default defineComponent({
     const menuProps = inject('dropdownMenuProps') as TdDropdownMenuProps;
     const menuState = inject('dropdownMenuState') as DropdownMenuState;
     const { expandMenu, collapseMenu } = inject('dropdownMenuControl') as DropdownMenuControl;
-    const menuAniControl = inject('dropdownAniControl') as TransAniControl;
 
     // 组件样式
-    const classes = computed(() => [
-      `${name}`,
-      {
-        [`${prefix}-is-expanded`]: state.isExpanded,
-      },
-    ]);
+    const classes = computed(() => [`${name}`]);
 
     const itemId = ref(0);
     onBeforeMount(() => {
@@ -170,42 +108,30 @@ export default defineComponent({
     });
 
     const state = reactive({
-      showOverlay: computed(() => menuProps.overlay),
+      showOverlay: computed(() => menuProps.showOverlay),
+      duration: computed(() => menuProps.duration),
       isShowItems: false,
-      isExpanded: false,
+      wrapperVisible: false,
       expandStyle: {} as Object,
-      transitionStyle: computed(() => ({
-        transition: `transform ${menuProps.duration}ms ease`,
-        '-webkit-transition': `transform ${menuProps.duration}ms ease`,
-      })),
       multiple: computed(() => props.multiple),
-      optionsLayout: computed(() => props.optionsLayout),
       options: computed(() => props.options),
     });
-    const isCheckedRadio = (value: TdDropdownItemOptionValueType) => value === radioSelect.value;
-    const styleDropRadio = (value: TdDropdownItemOptionValueType) => [
-      `${name}__radio`,
+    const isCheckedRadio = (value: DropdownValue) => value === radioSelect.value;
+    const styleDropRadio = (value: DropdownValue) => [
+      `${name}__radio-item`,
       {
         [`${prefix}-is-tick`]: !props.multiple,
         [`${prefix}-is-checked`]: isCheckedRadio(value),
       },
     ];
+    const popupStyle = computed(() => {
+      return {
+        zIndex: menuProps.zIndex && menuProps.zIndex + 1,
+        position: 'absolute',
+      };
+    });
     const styleContent = computed(() => {
-      const { optionsLayout } = props;
-      const layoutCol = +(props.optionsColumns ?? 0);
-      const isTree = optionsLayout === 'tree';
-      const treeCol = isTree ? treeState.leafLevel + 1 : 0;
-      return [
-        `${name}__content`,
-        {
-          [`${prefix}-is-tree`]: isTree,
-          [`${prefix}-is-single`]: !isTree && !props.multiple,
-          [`${prefix}-is-multi`]: !isTree && props.multiple,
-          [`${prefix}-is-col1`]: layoutCol === 1 || treeCol === 1,
-          [`${prefix}-is-col2`]: layoutCol === 2 || treeCol === 2,
-          [`${prefix}-is-col3`]: layoutCol === 3 || treeCol === 3,
-        },
-      ];
+      return [`${name}__content`, `t-popup__content`];
     });
     // 设置展开/收起状态
     const setExpand = (val: boolean) => {
@@ -217,28 +143,17 @@ export default defineComponent({
       };
       const { duration } = menuProps;
       // 动画状态控制
-      menuAniControl.setTo(
-        +(duration ?? 200),
-        () => {
-          // Now do:
-          emitEvent(val ? 'open' : 'close');
-          if (val) {
-            state.isShowItems = val;
-          }
-          state.isExpanded = !val;
-        },
-        () => {
-          // Next tick do:
-          state.isExpanded = val;
-        },
-        () => {
-          // Finally do:
-          if (!val) {
-            state.isShowItems = val;
-          }
-          emitEvent(val ? 'opened' : 'closed');
-        },
-      );
+      if (val) {
+        state.wrapperVisible = true;
+      }
+      nextTick(() => {
+        state.isShowItems = val;
+      });
+      if (!val) {
+        setTimeout(() => {
+          state.wrapperVisible = false;
+        }, Number(duration));
+      }
     };
 
     // 根据父组件状态，判断当前是否展开
@@ -247,105 +162,17 @@ export default defineComponent({
       (val: boolean) => setExpand(val),
     );
 
-    const radioSelect = ref<TdDropdownItemOptionValueType | undefined>();
-    const checkSelect = ref<TdDropdownItemOptionValueType[]>([]);
-    const treeState = reactive<TdDropdownTreeState>({
-      leafLevel: 0,
-      selectList: [],
-    });
-    const styleTreeRadio = computed(() => (value: string, level: number) => [
-      `${name}__radio`,
-      {
-        [`${prefix}-is-tick`]: level === treeState.leafLevel,
-        [`${prefix}-is-checked`]: value === treeState.selectList[level],
-      },
-    ]);
-    // 点击树形节点的时候
-    const selectTreeNode = (level: number, value: TdDropdownTreeValueType, rebuildTree = true) => {
-      // 当前节点
-      const tempValue: TdDropdownTreeValueType[] = treeState.selectList.slice(0, level);
-      tempValue[level] = value;
-      treeState.selectList = tempValue;
-      if (rebuildTree) {
-        buildTreeOptions();
-      }
-    };
-    // 处理后的树形选项列表
-    const treeOptions = ref<TdDropdownItemOption[]>([]);
-    const buildTreeOptions = () => {
-      const { options } = props;
-      const { selectList } = treeState;
-      const newTreeOptions = [];
-      let level = -1;
-      let node: TdDropdownItemOption | undefined = {
-        title: '',
-        value: '',
-        disabled: false,
-        options,
-      };
-      while (node?.options) {
-        // 当前层级节点的列表
-        const list: TdDropdownItemOption[] = node.options;
-        newTreeOptions.push([...list]);
-        level += 1;
-        // 当前层级列表选中项
-        const thisValue: TdDropdownTreeValueType | undefined = selectList[level];
-        if (thisValue === undefined) {
-          const firstChild = list[0];
-          if (firstChild.options) {
-            // 还有子节点，当前层级作为单选处理
-            selectTreeNode(level, firstChild.value, false);
-            node = firstChild;
-          } else {
-            // 没有子节点，结束处理
-            selectTreeNode(level, props.multiple ? [] : undefined, false);
-            break;
-          }
-        } else if (!Array.isArray(thisValue)) {
-          const child: TdDropdownItemOption | undefined = list.find(
-            (child: TdDropdownItemOption) => child.value === thisValue,
-          );
-          node = child;
-        } else {
-          node = undefined;
-        }
-      }
-      treeState.leafLevel = Math.max(0, level);
-      treeOptions.value = newTreeOptions as [];
-    };
-    if (props.optionsLayout === 'tree') {
-      watch(
-        () =>
-          JSON.stringify({
-            options: props.options,
-          }),
-        async () => {
-          // fix: 这次微任务结束后，再重建选项。否则 oldVal 无法更新，导致无限调用
-          await nextTick();
-          buildTreeOptions();
-        },
-      );
-      buildTreeOptions();
-    }
+    const radioSelect = ref<DropdownValue | undefined>();
+    const checkSelect = ref<DropdownValue>();
     // 根据传入值更新当前选中
-    const updateSelectValue = (
-      val: TdDropdownItemOptionValueType | TdDropdownItemOptionValueType[] | TdDropdownTreeValueType[] | null,
-    ) => {
-      const layout = props.optionsLayout;
-      if (layout === 'tree') {
-        treeState.selectList = (val ?? []) as TdDropdownTreeValueType[];
-        buildTreeOptions();
-      } else if (layout === 'columns') {
-        if (!props.multiple) {
-          const list = props.options as TdDropdownItemOption[];
-          const firstChild = list?.[0];
-          const newValue = val ?? firstChild?.value ?? null;
-          radioSelect.value = newValue as TdDropdownItemOptionValueType;
-        } else if (props.multiple) {
-          if (props.optionsLayout === 'columns') {
-            checkSelect.value = (val ?? []) as TdDropdownItemOptionValueType[];
-          }
-        }
+    const updateSelectValue = (val: DropdownValue | DropdownValue[] | null) => {
+      if (!props.multiple) {
+        const list = props.options as DropdownOption[];
+        const firstChild = list?.[0];
+        const newValue = val ?? firstChild?.value ?? null;
+        radioSelect.value = newValue as DropdownValue;
+      } else if (props.multiple) {
+        checkSelect.value = (val ?? []) as DropdownValue[];
       }
     };
     // 初始值更新一次选中项
@@ -360,49 +187,26 @@ export default defineComponent({
     );
     // 底部按键是否可用
     const isBtnDisabled = computed(() => {
-      switch (props.optionsLayout) {
-        case 'columns':
-          return checkSelect.value.length <= 0;
-        case 'tree':
-          if (!props.multiple) {
-            return treeState.selectList[treeState.leafLevel] === undefined;
-          }
-          if (props.multiple) {
-            const selectList = treeState.selectList[treeState.leafLevel] as [];
-            return selectList && selectList.length <= 0;
-          }
-      }
-      return true;
+      return Array.isArray(checkSelect.value) && checkSelect.value.length <= 0;
     });
     // 重置
     const resetSelect = () => {
-      switch (props.optionsLayout) {
-        case 'columns':
-          checkSelect.value = [];
-          break;
-        case 'tree':
-          treeState.selectList = [];
-          break;
-      }
+      checkSelect.value = [];
     };
     // 确认
     const confirmSelect = () => {
-      let values;
-      switch (props.optionsLayout) {
-        case 'columns':
-          values = checkSelect.value;
-          break;
-        case 'tree':
-          values = treeState.selectList;
-          break;
-      }
+      let values = checkSelect.value;
       values = JSON.parse(JSON.stringify(values));
       setValue(values);
       collapseMenu();
     };
     // 单选值监控
     watch(radioSelect, (val) => {
-      if (props.multiple || props.optionsLayout === 'tree') return;
+      if (menuState.activeId !== null) {
+        const target = props.options?.find((item: any) => item.value === val);
+        menuState.itemsLabel[menuState.activeId] = target?.label;
+      }
+      if (props.multiple) return;
       if (!state.isShowItems) return;
       const value = passInValue.value || [];
       if (value[0] === val) return;
@@ -417,34 +221,23 @@ export default defineComponent({
         collapseMenu();
       }
     };
-    // 创建小图标
-    const TiconCheckIcon = h(CheckIcon);
-    // 树形节点的类型转换
-    const convertTreeRadioType = (value: TdDropdownTreeValueType) => value as TdDropdownItemOptionValueType;
-    const convertTreeCheckType = (value: TdDropdownTreeValueType) => value as TdDropdownItemOptionValueType[];
     return {
       name: ref(name),
       ...toRefs(props),
       ...toRefs(state),
       classes,
+      popupStyle,
       styleContent,
       isBtnDisabled,
       radioSelect,
       checkSelect,
-      treeOptions,
-      treeState,
-      styleTreeRadio,
       isCheckedRadio,
-      selectTreeNode,
       styleDropRadio,
       expandMenu,
       collapseMenu,
       resetSelect,
       confirmSelect,
       onClickOverlay,
-      renderCheckIcon: [TiconCheckIcon as unknown as TNode],
-      convertTreeRadioType,
-      convertTreeCheckType,
     };
   },
 });
