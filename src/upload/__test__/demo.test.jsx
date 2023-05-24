@@ -4,12 +4,14 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/upload/demos/base.vue';
+import customVue from '@/upload/demos/custom.vue';
 import mobileVue from '@/upload/demos/mobile.vue';
 import multipleVue from '@/upload/demos/multiple.vue';
 import statusVue from '@/upload/demos/status.vue';
 
 const mapper = {
   baseVue,
+  customVue,
   mobileVue,
   multipleVue,
   statusVue,
