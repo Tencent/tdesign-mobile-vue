@@ -88,11 +88,10 @@ import {
 import isFunction from 'lodash/isFunction';
 import { isArray, isBoolean } from 'lodash';
 import { useSwipe } from './useSwipe';
-import { useClickAway } from '@/shared/useClickAway';
 import props from './props';
 import config from '../config';
 import { SwipeActionItem } from './type';
-import { renderContent, renderTNode, TNode, useEmitEvent } from '../shared';
+import { renderContent, renderTNode, TNode, useEmitEvent, useClickAway } from '../shared';
 import { useSureConfirm } from './useSureConfirm';
 
 const { prefix } = config;
