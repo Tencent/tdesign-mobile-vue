@@ -149,7 +149,6 @@ export default defineComponent({
 
     const handleSidebarItemClick = (index: string | number) => {
       emitEvent('select', index);
-      props.onSelect?.(index);
       setActiveSidebarAndTip(index);
       scrollToByIndex(index);
     };
@@ -216,7 +215,6 @@ export default defineComponent({
       (val, oldVal) => {
         if (val !== oldVal) {
           emitEvent('change', state.activeSidebar);
-          props.onChange?.(state.activeSidebar);
         }
       },
     );
