@@ -75,7 +75,7 @@ import TRadio, { RadioGroup as TRadioGroup } from '../radio';
 import config from '../config';
 import TButton from '../button';
 import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
-import { useVModel, useEmitEvent } from '../shared';
+import { useVModel } from '../shared';
 import DropdownItemProps from './dropdown-item-props';
 import { DropdownMenuState, DropdownMenuControl } from './context';
 import { TdDropdownMenuProps, DropdownOption, DropdownValue } from './type';
@@ -88,8 +88,7 @@ export default defineComponent({
   components: { TRadio, TButton, TCheckbox, TRadioGroup, TCheckboxGroup },
   props: DropdownItemProps,
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
-  setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
+  setup(props) {
     // 受控 value 属性
     const { value, modelValue } = toRefs(props);
     const [passInValue, setValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
@@ -162,8 +161,8 @@ export default defineComponent({
       (val: boolean) => setExpand(val),
     );
 
-    const radioSelect = ref<DropdownValue | undefined>();
-    const checkSelect = ref<DropdownValue>();
+    const radioSelect = ref();
+    const checkSelect = ref();
     // 根据传入值更新当前选中
     const updateSelectValue = (val: DropdownValue | DropdownValue[] | null) => {
       if (!props.multiple) {

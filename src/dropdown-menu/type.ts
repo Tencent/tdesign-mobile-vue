@@ -93,4 +93,4 @@ export interface DropdownOption {
   value: DropdownValue;
 }
 
-export type DropdownValue = string | number | Array<DropdownValue>;
+export type DropdownValue = string | number;

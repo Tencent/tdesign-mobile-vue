@@ -9,6 +9,7 @@
     @click="handleChange"
   >
     <div
+      v-if="icon !== 'none'"
       :class="{
         [`${name}__icon`]: true,
         [`${name}__icon--${placement}`]: true,

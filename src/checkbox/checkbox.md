@@ -13,7 +13,7 @@ content | String / Slot / Function | - | 多选框内容。TS 类型：`string \
 contentDisabled | Boolean | - | 是否禁用组件内容（content）触发选中 | N
 default | String / Slot / Function | - | 多选框内容，同 label。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 disabled | Boolean | undefined | 是否禁用组件。如果父组件存在 CheckboxGroup，默认值由 CheckboxGroup.disabled 控制。Checkbox.disabled 优先级高于 CheckboxGroup.disabled | N
-icon | String / Array | 'circle' | 自定义选中图标和非选中图标。使用 Array 时表示：[选中态图标，非选中态图标]。使用 String 时，值为 circle 表示填充圆形图标、值为 line 表示描边型图标、值为 rectangle 表示填充矩形图标。。TS 类型：`'circle' \| 'line' \| 'rectangle' \| Array<TNode \| String>`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+icon | String / Array | 'circle' | 自定义选中图标和非选中图标。使用 Array 时表示：[选中态图标，非选中态图标]。使用 String 时，值为 circle 表示填充圆形图标、值为 line 表示描边型图标、值为 rectangle 表示填充矩形图标。。TS 类型：`'circle' \| 'line' \| 'rectangle' \| 'none' \| Array<TNode \| String>`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 indeterminate | Boolean | false | 是否为半选 | N
 label | String / Slot / Function | - | 主文案。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 maxContentRow | Number | 5 | 内容最大行数限制 | N
