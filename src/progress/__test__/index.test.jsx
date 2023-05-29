@@ -58,11 +58,13 @@ describe('Progress', () => {
     });
 
     it(': status', async () => {
-      const wrapper = mount(Progress, {
-        props: { status: 'success' },
+      const statusList = ['', 'success', 'error', 'warning', 'active'];
+      const statusListResult = ['default', 'success', 'error', 'warning', 'active'];
+      statusList.forEach((status, index) => {
+        const wrapper = mount(() => <Progress percentage={30} status={status} />);
+        const thin = wrapper.find('.t-progress--thin');
+        expect(thin.classes()).toContain(`t-progress--status--${statusListResult[index]}`);
       });
-      const container = wrapper.find('.t-progress--thin');
-      expect(container.classes()).toContain('t-progress--status--success');
     });
 
     it(': strokeWidth', async () => {
@@ -85,6 +87,20 @@ describe('Progress', () => {
         trackColor: 'white',
       });
       expect(getComputedStyle(wrapper.find('.t-progress__bar').element).backgroundColor).toEqual('white');
+    });
+
+    it(': theme', async () => {
+      const wrapper = mount(Progress, {
+        props: { percentage: 50, theme: '' },
+      });
+      const progressDom = wrapper.find('.t-progress');
+      expect(progressDom.text()).toBeFalsy();
+      await wrapper.setProps({
+        theme: 'plump',
+      });
+      const bar = wrapper.find('.t-progress__bar');
+      expect(bar.exists()).toBeTruthy();
+      expect(bar.classes()).toContain('t-progress--plump');
     });
   });
 
