@@ -8,6 +8,7 @@
       :overlay-props="{ style: 'position: absolute' }"
       :class="`${name}__popup-host`"
       attach="#dropdown-popup"
+      @close="closePopup"
     >
       <div :class="styleContent">
         <div :class="`${name}__body`">
@@ -37,7 +38,7 @@
                 <template v-for="option in options" :key="option.value">
                   <t-checkbox
                     :class="`${name}__checkbox-item t-checkbox--tag`"
-                    icon="none"
+                    :icon="false"
                     borderless
                     :value="option.value"
                     :label="option.label"
@@ -48,22 +49,24 @@
             </template>
           </slot>
         </div>
-        <div v-if="multiple" :class="`${name}__footer`">
-          <t-button
-            theme="light"
-            :class="`${name}__footer-btn ${name}__reset-btn`"
-            :disabled="isBtnDisabled"
-            @click="resetSelect"
-            >重置</t-button
-          >
-          <t-button
-            theme="primary"
-            :class="`${name}__footer-btn ${name}__confirm-btn`"
-            :disabled="isBtnDisabled"
-            @click="confirmSelect"
-            >确定</t-button
-          >
-        </div>
+        <slot name="footer">
+          <div v-if="multiple" :class="`${name}__footer`">
+            <t-button
+              theme="light"
+              :class="`${name}__footer-btn ${name}__reset-btn`"
+              :disabled="isBtnDisabled"
+              @click="resetSelect"
+              >重置</t-button
+            >
+            <t-button
+              theme="primary"
+              :class="`${name}__footer-btn ${name}__confirm-btn`"
+              :disabled="isBtnDisabled"
+              @click="confirmSelect"
+              >确定</t-button
+            >
+          </div>
+        </slot>
       </div>
     </t-popup>
   </div>
@@ -75,7 +78,7 @@ import TRadio, { RadioGroup as TRadioGroup } from '../radio';
 import config from '../config';
 import TButton from '../button';
 import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
-import { useVModel } from '../shared';
+import { useVModel, useEmitEvent } from '../shared';
 import DropdownItemProps from './dropdown-item-props';
 import { DropdownMenuState, DropdownMenuControl } from './context';
 import { TdDropdownMenuProps, DropdownOption, DropdownValue } from './type';
@@ -88,10 +91,11 @@ export default defineComponent({
   components: { TRadio, TButton, TCheckbox, TRadioGroup, TCheckboxGroup },
   props: DropdownItemProps,
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
-  setup(props) {
+  setup(props, context) {
+    const emitEvent = useEmitEvent(props, context.emit);
     // 受控 value 属性
     const { value, modelValue } = toRefs(props);
-    const [passInValue, setValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+    const [passInValue, setValue] = useVModel(value, modelValue, props.defaultValue);
     // 从父组件取属性、状态和控制函数
     const menuProps = inject('dropdownMenuProps') as TdDropdownMenuProps;
     const menuState = inject('dropdownMenuState') as DropdownMenuState;
@@ -141,6 +145,7 @@ export default defineComponent({
         top: `${bottom}px`,
       };
       const { duration } = menuProps;
+      emitEvent(val ? 'open' : 'close');
       // 动画状态控制
       if (val) {
         state.wrapperVisible = true;
@@ -153,6 +158,7 @@ export default defineComponent({
           state.wrapperVisible = false;
         }, Number(duration));
       }
+      emitEvent(val ? 'opened' : 'closed');
     };
 
     // 根据父组件状态，判断当前是否展开
@@ -174,6 +180,9 @@ export default defineComponent({
         checkSelect.value = (val ?? []) as DropdownValue[];
       }
     };
+    const closePopup = () => {
+      collapseMenu();
+    };
     // 初始值更新一次选中项
     updateSelectValue(passInValue.value || null);
     // 跟踪 modelValue 更新选项
@@ -191,14 +200,29 @@ export default defineComponent({
     // 重置
     const resetSelect = () => {
       checkSelect.value = [];
+      let values = checkSelect.value;
+      values = JSON.parse(JSON.stringify(values));
+      props.onReset?.(values);
     };
     // 确认
     const confirmSelect = () => {
       let values = checkSelect.value;
       values = JSON.parse(JSON.stringify(values));
+      props.onConfirm?.(values);
       setValue(values);
       collapseMenu();
     };
+    // 多选值监控
+    watch(checkSelect, (val) => {
+      if (!props.multiple) return;
+      if (!state.isShowItems) return;
+      if (val) {
+        const value = JSON.stringify(passInValue.value || []);
+        const values = JSON.stringify(val);
+        if (value === values) return;
+        props.onChange?.(JSON.parse(values));
+      }
+    });
     // 单选值监控
     watch(radioSelect, (val) => {
       if (menuState.activeId !== null) {
@@ -210,6 +234,7 @@ export default defineComponent({
       const value = passInValue.value || [];
       if (value[0] === val) return;
       if (val) {
+        props.onChange?.(val);
         setValue(val);
       }
       collapseMenu();
@@ -230,6 +255,7 @@ export default defineComponent({
       isBtnDisabled,
       radioSelect,
       checkSelect,
+      closePopup,
       isCheckedRadio,
       styleDropRadio,
       expandMenu,

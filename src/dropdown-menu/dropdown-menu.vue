@@ -4,7 +4,7 @@
       <div :class="`${name}__title`">
         {{ item.label }}
       </div>
-      <caret-down-small-icon :class="`${name}__arrow`" size="24" />
+      <caret-down-small-icon :class="iconStyle(item, idx)" size="24" />
     </div>
     <slot />
   </div>
@@ -84,6 +84,12 @@ export default defineComponent({
         [`${name}__item--active`]: idx === state.activeId,
       },
     ]);
+    const iconStyle = computed(() => (item: any, idx: number) => [
+      `${name}__icon`,
+      {
+        [`${name}__icon--active`]: idx === state.activeId,
+      },
+    ]);
     // 展开对应项目的菜单
     const expandMenu = (item: any, idx: number) => {
       const { disabled } = item;
@@ -140,6 +146,7 @@ export default defineComponent({
       refBar,
       state,
       styleBarItem,
+      iconStyle,
       menuItems,
       menuTitles,
       expandMenu,

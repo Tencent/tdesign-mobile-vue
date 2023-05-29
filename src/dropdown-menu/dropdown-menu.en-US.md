@@ -25,6 +25,7 @@ value | String / Number | undefined | `v-model` and `v-model:value` is supported
 defaultValue | String / Number | undefined | uncontrolled property。Typescript：`DropdownValue ` `type DropdownValue = string \| number;`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
 onChange | Function |  | Typescript：`(value: DropdownValue) => void`<br/> | N
 onConfirm | Function |  | Typescript：`(value: DropdownValue) => void`<br/> | N
+onReset | Function |  | Typescript：`(value: DropdownValue) => void`<br/> | N
 
 ### DropdownItem Events
 
@@ -32,3 +33,4 @@ name | params | description
 -- | -- | --
 change | `(value: DropdownValue)` | \-
 confirm | `(value: DropdownValue)` | \-
+reset | `(value: DropdownValue)` | \-

@@ -85,6 +85,10 @@ export interface TdDropdownItemProps {
    * 点击确认时触发
    */
   onConfirm?: (value: DropdownValue) => void;
+  /**
+   * 点击重置时触发
+   */
+  onReset?: (value: DropdownValue) => void;
 }
 
 export interface DropdownOption {

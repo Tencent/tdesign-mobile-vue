@@ -13,7 +13,7 @@ content | String / Slot / Function | - | Typescript：`string \| TNode`。[see m
 contentDisabled | Boolean | - | \- | N
 default | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 disabled | Boolean | undefined | \- | N
-icon | String / Array | 'circle' | Typescript：`'circle' \| 'line' \| 'rectangle' \| 'none' \| Array<TNode \| String>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+icon | String / Boolean / Array | 'circle' | Typescript：`'circle' \| 'line' \| 'rectangle' \| boolean \| Array<TNode \| String>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 indeterminate | Boolean | false | \- | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 maxContentRow | Number | 5 | \- | N

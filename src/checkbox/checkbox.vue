@@ -9,7 +9,7 @@
     @click="handleChange"
   >
     <div
-      v-if="icon !== 'none'"
+      v-if="icon"
       :class="{
         [`${name}__icon`]: true,
         [`${name}__icon--${placement}`]: true,
@@ -24,8 +24,12 @@
         <t-node v-if="isChecked" :content="checkedIcon" :class="`${name}__icon-wrapper`" />
         <template v-else>
           <div
-            v-if="icon === 'circle' || icon === 'rectangle'"
-            :class="{ [`${name}__icon-${icon}`]: true, [`${name}__icon-${icon}--disabled`]: isDisabled }"
+            v-if="icon === 'circle' || icon === true || icon === 'rectangle'"
+            :class="{
+              [`${name}__icon-circle`]: icon === true,
+              [`${name}__icon-${icon}`]: typeof icon === 'string',
+              [`${name}__icon-${icon}--disabled`]: isDisabled,
+            }"
           />
           <div v-if="icon === 'line'" class="placeholder" />
         </template>
@@ -64,7 +68,6 @@ import {
   MinusCircleFilledIcon,
   MinusRectangleFilledIcon,
   CheckRectangleFilledIcon,
-  CheckIcon,
 } from 'tdesign-icons-vue-next';
 import config from '../config';
 import CheckboxProps from './props';
@@ -117,7 +120,8 @@ export default defineComponent({
     });
 
     const checkedIcon = computed(() => {
-      if (props.icon === 'circle') return indeterminate.value ? h(MinusCircleFilledIcon) : h(CheckCircleFilledIcon);
+      if (props.icon === 'circle' || props.icon === true)
+        return indeterminate.value ? h(MinusCircleFilledIcon) : h(CheckCircleFilledIcon);
       if (props.icon === 'rectangle')
         return indeterminate.value ? h(MinusRectangleFilledIcon) : h(CheckRectangleFilledIcon);
       if (props.icon === 'line')

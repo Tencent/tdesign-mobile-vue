@@ -54,4 +54,6 @@ export default {
   onChange: Function as PropType<TdDropdownItemProps['onChange']>,
   /** 点击确认时触发 */
   onConfirm: Function as PropType<TdDropdownItemProps['onConfirm']>,
+  /** 点击重置时触发 */
+  onReset: Function as PropType<TdDropdownItemProps['onReset']>,
 };

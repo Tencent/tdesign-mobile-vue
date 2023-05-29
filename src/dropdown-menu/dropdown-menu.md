@@ -25,6 +25,7 @@ value | String / Number | undefined | 选中值。支持语法糖 `v-model` 或 
 defaultValue | String / Number | undefined | 选中值。非受控属性。TS 类型：`DropdownValue ` `type DropdownValue = string \| number;`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
 onChange | Function |  | TS 类型：`(value: DropdownValue) => void`<br/>值改变时触发 | N
 onConfirm | Function |  | TS 类型：`(value: DropdownValue) => void`<br/>点击确认时触发 | N
+onReset | Function |  | TS 类型：`(value: DropdownValue) => void`<br/>点击重置时触发 | N
 
 ### DropdownItem Events
 
@@ -32,3 +33,4 @@ onConfirm | Function |  | TS 类型：`(value: DropdownValue) => void`<br/>点�
 -- | -- | --
 change | `(value: DropdownValue)` | 值改变时触发
 confirm | `(value: DropdownValue)` | 点击确认时触发
+reset | `(value: DropdownValue)` | 点击重置时触发
