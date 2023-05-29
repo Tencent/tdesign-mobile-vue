@@ -1,5 +1,5 @@
 <template>
-  <div v-if="wrapperVisible" id="dropdown-popup" :class="classes" :style="{ ...expandStyle }">
+  <div v-if="wrapperVisible" :id="dropdownItemId" :class="classes" :style="{ ...expandStyle }">
     <t-popup
       v-model="isShowItems"
       :duration="duration"
@@ -7,7 +7,7 @@
       :style="popupStyle"
       :overlay-props="{ style: 'position: absolute' }"
       :class="`${name}__popup-host`"
-      attach="#dropdown-popup"
+      :attach="`#${dropdownItemId}`"
       @close="closePopup"
     >
       <div :class="styleContent">
@@ -116,6 +116,7 @@ export default defineComponent({
       isShowItems: false,
       wrapperVisible: false,
       expandStyle: {} as Object,
+      dropdownItemId: '',
       multiple: computed(() => props.multiple),
       options: computed(() => props.options),
     });
@@ -138,6 +139,7 @@ export default defineComponent({
     });
     // 设置展开/收起状态
     const setExpand = (val: boolean) => {
+      state.dropdownItemId = `dropdown-popup-${menuState.barRect.bottom}${menuState.childCount}`;
       // 菜单定位
       const { bottom } = menuState.barRect;
       state.expandStyle = {
@@ -158,7 +160,9 @@ export default defineComponent({
           state.wrapperVisible = false;
         }, Number(duration));
       }
-      emitEvent(val ? 'opened' : 'closed');
+      setTimeout(() => {
+        emitEvent(val ? 'opened' : 'closed');
+      }, Number(duration));
     };
 
     // 根据父组件状态，判断当前是否展开
