@@ -7,7 +7,6 @@ import { CloseCircleFilledIcon, InfoCircleFilledIcon, AppIcon } from 'tdesign-ic
 
 const prefix = 't';
 const name = `${prefix}-input`;
-const alignList = ['center', 'right'];
 
 const simulateEvent = (target, text, event) => {
   target.value = text;
@@ -16,26 +15,24 @@ const simulateEvent = (target, text, event) => {
 
 describe('Input.vue', async () => {
   describe('props', async () => {
-    // it(': value', async () => {
-    //   const value = ref('123');
-    //   const wrapper = mount(<Input v-model={value.value} />);
-    //   expect(wrapper.classes()).toContain('t-input');
-    //   expect(wrapper.classes()).toContain('t-cell');
-    //   const input = wrapper.find('.t-input__wrap input');
-    //   expect(input.exists()).toBeTruthy();
-    //   expect(input.element.value).toBe('123');
-    // });
+    it(': value', async () => {
+      const value = ref('123');
+      const wrapper = mount(<Input v-model={value.value} />);
+      const input = wrapper.find('.t-input input');
+      expect(input.exists()).toBeTruthy();
+      expect(input.element.value).toBe('123');
+    });
 
-    // it(': maxcharacter', async () => {
-    //   const value = ref('');
-    //   const maxcharacter = 2;
-    //   const onChange = vi.fn();
-    //   const wrapper = mount(<Input v-model={value.value} maxcharacter={maxcharacter} onChange={onChange} />);
-    //   const el = wrapper.find('input').element;
-    //   await simulateEvent(el, '一个汉字等于两个字符，超出会被剪切', 'input');
-    //   expect(onChange).toBeCalledTimes(1);
-    //   expect(onChange).toHaveBeenCalledWith('一');
-    // });
+    it(': maxcharacter', async () => {
+      const value = ref('');
+      const maxcharacter = 2;
+      const onChange = vi.fn();
+      const wrapper = mount(<Input v-model={value.value} maxcharacter={maxcharacter} onChange={onChange} />);
+      const el = wrapper.find('input').element;
+      await simulateEvent(el, '一个汉字等于两个字符，超出会被剪切', 'input');
+      expect(onChange).toBeCalledTimes(1);
+      expect(onChange).toHaveBeenCalledWith('一');
+    });
 
     it(': placeholder', async () => {
       const wrapper = mount(<Input placeholder="请输入" />);
@@ -43,54 +40,55 @@ describe('Input.vue', async () => {
       expect(input.attributes('placeholder')).toBe('请输入');
     });
 
-    // it(': label', async () => {
-    //   const wrapper = mount(<Input label="标题" />);
-    //   const label = wrapper.find('.t-cell__title .t-input--label');
-    //   expect(label.exists()).toBeTruthy();
-    //   expect(label.text()).toBe('标题');
-    // });
+    it(': label', async () => {
+      const wrapper = mount(<Input label="标题" />);
+      const label = wrapper.find('.t-input__label');
+      expect(label.exists()).toBeTruthy();
+      expect(label.text()).toBe('标题');
+    });
 
-    // it(': required', async () => {
-    //   const wrapper = mount(<Input label="标题" required />);
-    //   const required = wrapper.find('.t-cell__title .t-cell--required');
-    //   expect(required.exists()).toBeTruthy();
-    //   expect(required.text()).toContain('*');
-    // });
+    it(': tips', async () => {
+      const wrapper = mount(<Input label="标题" tips="错误信息" />);
+      const $tips = wrapper.find('.t-input__tips');
+      expect($tips.exists()).toBeTruthy();
+      expect($tips.text()).toBe('错误信息');
+    });
 
-    // it(': errorMessage', async () => {
-    //   const wrapper = mount(<Input label="标题" errorMessage="错误信息" />);
-    //   const errorMessage = wrapper.find('.t-input__error-msg');
-    //   expect(errorMessage.exists()).toBeTruthy();
-    //   expect(errorMessage.text()).toBe('错误信息');
-    // });
+    it(': align', async () => {
+      const alignList = ['', 'left', 'center', 'right'];
+      alignList.forEach((align) => {
+        const tips = 'tips';
+        const wrapper = mount(<Input label="标题" align={align} tips={tips} />);
+        const $tips = wrapper.find('.t-input__tips');
+        const control = wrapper.find(`.t-input__control`);
 
-    // it(': align', async () => {
-    //   alignList.forEach((a) => {
-    //     const wrapper = mount(<Input label="标题" align={a} />);
-    //     const control = wrapper.find(`.t-input__control--${a}`);
-    //     expect(control.exists()).toBeTruthy();
-    //   });
-    // });
+        if (align && align !== 'left') {
+          expect(control.classes()).toContain(`t-input--${align}`);
+        }
 
-    // it(': clearable', async () => {
-    //   const value = ref('123');
-    //   const handleClear = vi.fn();
-    //   const wrapper = mount(<Input label="标题" v-model={value.value} clearable onClear={handleClear} />);
-    //   const closeIcon = wrapper.findComponent(CloseCircleFilledIcon);
-    //   expect(closeIcon.exists()).toBeTruthy();
-    //   await closeIcon.trigger('click');
-    //   expect(value.value).toBe('');
-    //   expect(handleClear).toBeCalled();
-    // });
+        expect($tips.classes()).contain(`t-input--${align}`);
+      });
+    });
 
-    // it(': disabled', async () => {
-    //   const value = ref('123');
-    //   const wrapper = mount(<Input label="标题" v-model={value.value} disabled />);
-    //   const label = wrapper.find('.t-input--label');
-    //   expect(label.classes()).toContain('t-is-disabled');
-    //   const input = wrapper.find('.t-input__wrap input');
-    //   expect(input.element.hasAttribute('disabled')).toBeTruthy();
-    // });
+    it(': clearable', async () => {
+      const value = ref('123');
+      const handleClear = vi.fn();
+      const wrapper = mount(<Input label="标题" v-model={value.value} clearable onClear={handleClear} />);
+      const closeIcon = wrapper.findComponent(CloseCircleFilledIcon);
+      expect(closeIcon.exists()).toBeTruthy();
+      await closeIcon.trigger('click');
+      expect(value.value).toBe('');
+      expect(handleClear).toBeCalled();
+    });
+
+    it(': disabled', async () => {
+      const value = ref('123');
+      const wrapper = mount(<Input label="标题" v-model={value.value} disabled />);
+      const label = wrapper.find('.t-input__label');
+      expect(label.classes()).toContain('t-is-disabled');
+      const input = wrapper.find('.t-input__wrap input');
+      expect(input.element.hasAttribute('disabled')).toBeTruthy();
+    });
 
     it(': readonly', async () => {
       const value = ref('123');
@@ -112,10 +110,25 @@ describe('Input.vue', async () => {
       expect(input.element.getAttribute('autocomplete')).toBe('On');
     });
 
-    // it(': size', async () => {
-    //   const wrapper = mount(() => <Input label="标题" size="small" />);
-    //   expect(wrapper.classes()).toContain('t-input--size-small');
-    // });
+    it(': size', async () => {
+      const sizeList = ['', 'small', 'meddium', 'large'];
+      sizeList.forEach((size, index) => {
+        const wrapper = mount(() => <Input label="标题" size={size} />);
+        if (size) {
+          expect(wrapper.classes()).toContain(`t-input--size-${size}`);
+        }
+      });
+    });
+
+    it(': layout', async () => {
+      const layoutList = ['', 'vertical', 'horizontal'];
+      layoutList.forEach((layout, index) => {
+        const wrapper = mount(() => <Input label="标题" layout={layout} />);
+        if (layout) {
+          expect(wrapper.classes()).toContain(`t-input--layout-${layout}`);
+        }
+      });
+    });
 
     it(': type', async () => {
       const wrapper = mount(<Input label="标题" type="number" />);
@@ -175,21 +188,29 @@ describe('Input.vue', async () => {
       inputRef.value.blur(); // 调用 blur 方法，实现失焦
       await nextTick();
     });
+
+    it(': compositionend', async () => {
+      const onCompositionend = vi.fn();
+      const wrapper = mount(<Input label="标题" onCompositionend={onCompositionend} />);
+      const $input = wrapper.find('input');
+      await $input.trigger('compositionend');
+      expect(onCompositionend).toBeCalled();
+    });
   });
 
-  // describe('slots', async () => {
-  //   it(': icon', async () => {
-  //     const slots = {
-  //       prefixIcon: () => <InfoCircleFilledIcon />,
-  //       suffixIcon: () => <AppIcon />,
-  //     };
-  //     const wrapper = mount(<Input label="标题" v-slots={slots} />);
-  //     const leftIcon = wrapper.find('.t-cell__left-icon svg');
-  //     const rightIcon = wrapper.find('.t-cell__right-icon svg');
-  //     expect(wrapper.findComponent(InfoCircleFilledIcon).exists()).toBeTruthy();
-  //     expect(wrapper.findComponent(AppIcon).exists()).toBeTruthy();
-  //     expect(leftIcon.exists()).toBeTruthy();
-  //     expect(rightIcon.exists()).toBeTruthy();
-  //   });
-  // });
+  describe('slots', async () => {
+    it(': prefixIcon && suffixIcon', async () => {
+      const slots = {
+        prefixIcon: () => <InfoCircleFilledIcon />,
+        suffixIcon: () => <AppIcon />,
+      };
+      const wrapper = mount(<Input label="标题" v-slots={slots} />);
+      const prefixIcon = wrapper.find('.t-input__icon--prefix svg');
+      const suffixIcon = wrapper.find('.t-input__wrap--suffix-icon svg');
+      expect(prefixIcon.exists()).toBeTruthy();
+      expect(suffixIcon.exists()).toBeTruthy();
+      expect(wrapper.findComponent(InfoCircleFilledIcon).exists()).toBeTruthy();
+      expect(wrapper.findComponent(AppIcon).exists()).toBeTruthy();
+    });
+  });
 });
