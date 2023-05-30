@@ -5,6 +5,36 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.23.0 `2023-05-30` 
+### ❗ BREAKING CHANGES
+- `ActionSheet`: 移除 `type` 属性 @brianzhang ([#637](https://github.com/Tencent/tdesign-mobile-vue/pull/637))
+- `ActionSheet`:  `close` 事件参数变更 @brianzhang ([#637](https://github.com/Tencent/tdesign-mobile-vue/pull/637))
+- `Indexes`: 调整 DOM 结构 @yaogengzhu ([#680](https://github.com/Tencent/tdesign-mobile-vue/pull/680))
+- `Indexes`: 移除 `IndexesCell` @yaogengzhu ([#680](https://github.com/Tencent/tdesign-mobile-vue/pull/680))
+- `Indexes`: 移除 `height` 属性 @yaogengzhu ([#680](https://github.com/Tencent/tdesign-mobile-vue/pull/680))
+- `Indexes`:  `list` 属性更名为 `indexList` 属性 @yaogengzhu ([#680](https://github.com/Tencent/tdesign-mobile-vue/pull/680))
+- `DropdownMenu`: 调整 DOM @ccccpj ([#695](https://github.com/Tencent/tdesign-mobile-vue/pull/695))
+- `DropdownMenu`: 移除 `activeColor` 属性 @ccccpj ([#695](https://github.com/Tencent/tdesign-mobile-vue/pull/695))
+- `DropdownMenu`: 属性 `overlay` 更名为 `showOverlay` @ccccpj ([#695](https://github.com/Tencent/tdesign-mobile-vue/pull/695))
+
+### 🚀 Features
+- `Table`: 新增表格组件 @anlyyao ([#740](https://github.com/Tencent/tdesign-mobile-vue/pull/740))
+- `ActionSheet`: 新增 `align`、`description` 属性 @brianzhang ([#637](https://github.com/Tencent/tdesign-mobile-vue/pull/637))
+- `Indexes`:  新增 `change` 事件 @yaogengzhu ([#680](https://github.com/Tencent/tdesign-mobile-vue/pull/680))
+- `Indexes`:  新增 `IndexesAnchor`  @yaogengzhu ([#680](https://github.com/Tencent/tdesign-mobile-vue/pull/680))
+- `DropdownMenu`: 新增 `confirm`、 `reset` 事件 @ccccpj ([#695](https://github.com/Tencent/tdesign-mobile-vue/pull/695))
+- `DropdownMenu`: 新增 `footer` 插槽 @ccccpj ([#695](https://github.com/Tencent/tdesign-mobile-vue/pull/695))
+- `DropdownMenuItem`: 新增  `keys` 属性 @ccccpj ([#695](https://github.com/Tencent/tdesign-mobile-vue/pull/695))
+- `Checkbox`: `icon` 新增  `boolean` 类型 @ccccpj ([#695](https://github.com/Tencent/tdesign-mobile-vue/pull/695))
+
+### 🐞 Bug Fixes
+- `SwipeCell`: 修复别名引用问题 @anlyyao ([#690](https://github.com/Tencent/tdesign-mobile-vue/pull/690))
+- `Image`: 修复 `Image` 默认宽度样式缺失的问题 @xiaosansiji ([#1354](https://github.com/Tencent/tdesign-common/pull/1354))
+- `Picker`: 修复样式错误 @ccccpj ([#1358](https://github.com/Tencent/tdesign-common/pull/1358))
+
+### 🚧 Others
+- `Progress`: 补充测试用例 @anlyyao ([#741](https://github.com/Tencent/tdesign-mobile-vue/pull/741))
+
 ## 🌈 0.22.0 `2023-05-23` 
 ### ❗ BREAKING CHANGES
 - `Rate`: 调整 DOM 结构 @fengchunqi ([#642](https://github.com/Tencent/tdesign-mobile-vue/pull/642))
