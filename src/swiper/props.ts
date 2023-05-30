@@ -50,11 +50,6 @@ export default {
     type: Number,
     default: 300,
   },
-  /** 已废弃。轮播的高度；默认单位 `px` */
-  height: {
-    type: [String, Number] as PropType<TdSwiperProps['height']>,
-    default: 192,
-  },
   /** 轮播间隔时间 */
   interval: {
     type: Number,

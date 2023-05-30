@@ -1,18 +1,19 @@
 <template>
-  <div :style="{ height: `${height}px`, overflow: 'hidden' }" :class="`${name}`">
+  <div :class="rootName" :style="{ height: swiperHight }">
     <div
       ref="swiperContainer"
       :class="`${name}__container`"
       :style="{
-        height: `${height}px`,
         flexDirection: direction === 'horizontal' ? 'row' : 'column',
       }"
       @transitionend="handleAnimationEnd"
+      @click="onItemClick"
     >
       <slot></slot>
     </div>
+    <!-- 导航器 -->
     <template v-if="navigation && state.showNavigation">
-      <span v-if="direction === 'horizontal' && 'showSlideBtn' in navigation && navigation.showSlideBtn">
+      <span v-if="direction === 'horizontal' && 'showControls' in navigation && navigation.showControls">
         <span :class="`${name}__btn btn-prev`" @click="prev(1)">
           <chevron-left-icon size="20px" />
         </span>
@@ -20,23 +21,25 @@
           <chevron-right-icon size="20px" />
         </span>
       </span>
-      <span
-        v-if="'type' in navigation"
-        :class="`${name}__pagination ${name}__pagination-${
-          navigation.type || ''
-        } ${name}__pagination-${paginationPosition}`"
-      >
-        <template v-if="['dots', 'dots-bar'].includes(navigation.type || '')">
-          <span
-            v-for="(item, index) in state.children.length"
-            :key="'page' + index"
-            :class="{ [`${name}-dot`]: true, [`${name}-dot--active`]: index === state.activeIndex }"
-          ></span>
-        </template>
-        <span v-if="navigation.type && navigation.type === 'fraction'">
-          {{ showPageNum + '/' + state.children.length }}
+      <div :class="navigationWrapperClass">
+        <span
+          v-if="'type' in navigation"
+          :class="`${name}__pagination ${name}__pagination-${navigation.type || ''} ${name}__pagination-${
+            navigation.paginationPosition || 'bottom'
+          }`"
+        >
+          <template v-if="['dots', 'dots-bar'].includes(navigation.type || '')">
+            <span
+              v-for="(item, index) in state.children.length"
+              :key="'page' + index"
+              :class="{ [`${name}-dot`]: true, [`${name}-dot--active`]: index === state.activeIndex }"
+            ></span>
+          </template>
+          <span v-if="navigation.type && navigation.type === 'fraction'">
+            {{ showPageNum + '/' + state.children.length }}
+          </span>
         </span>
-      </span>
+      </div>
     </template>
     <template v-else-if="computedNavigation !== undefined">
       <t-node :content="computedNavigation" :style="{}"></t-node>
@@ -61,8 +64,8 @@ import { ChevronLeftIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import { useSwipe } from '@vueuse/core';
 import SwiperProps from './props';
 import config from '../config';
-import { renderTNode, useDefault, TNode } from '../shared';
-import { TdSwiperProps } from './type';
+import { renderTNode, useDefault, TNode, useEmitEvent } from '../shared';
+import { SwiperNavigation, TdSwiperProps } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-swiper`;
@@ -76,18 +79,18 @@ export default defineComponent({
   props: SwiperProps,
   emits: ['change', 'update:current', 'update:modelValue'],
   setup(props, context) {
-    // const emitEvent = useEmitEvent(props, context.emit);
+    const emitEvent = useEmitEvent(props, context.emit);
     const [swiperValue, setSwiperValue] = useDefault<Number, TdSwiperProps>(props, context.emit, 'current', 'change');
     const self = getCurrentInstance();
     const swiperContainer = ref<HTMLElement | null>(null);
     const computedNavigation = computed(() => renderTNode(self, 'navigation'));
-    // const { height = 180, current = null } = props;
-    const height = props.height || 180;
+
     const state: {
       showNavigation: boolean;
       activeIndex: number;
       itemLength: number;
       itemWidth: number;
+      itemHight: number;
       isControl: boolean;
       btnDisabled: boolean;
       children: ComponentPublicInstance[];
@@ -96,6 +99,7 @@ export default defineComponent({
       activeIndex: 0,
       itemLength: 0,
       itemWidth: 0,
+      itemHight: 0,
       isControl: false,
       btnDisabled: false,
       children: [] as ComponentPublicInstance[],
@@ -107,9 +111,27 @@ export default defineComponent({
       if (activeIndex < 0) return 1;
       return activeIndex + 1;
     });
-    const childCount = computed(() => state.children.length);
+    const swiperHight = computed(() => {
+      const { itemHight } = state;
+      const { placement = 'inside' } = props.navigation as SwiperNavigation;
+      if (placement === 'outside') {
+        return `${itemHight + 36}px`;
+      }
+      return `${itemHight}px`;
+    });
+
+    const rootName = computed(() => {
+      return [`${name}`];
+    });
+    const navigationWrapperClass = computed(() => {
+      const { placement = 'inside' } = props.navigation as SwiperNavigation;
+      if (placement === 'outside') {
+        return [`${name}__navigation`];
+      }
+      return [];
+    });
+
     const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector(`.${name}__container`);
-    // const getContainer = (): HTMLDivElement => swiperContainer.value as any;
     const initSwiper = () => {
       const _swiperContainer = getContainer();
       _swiperContainer.querySelectorAll('.copy-item').forEach((ele) => {
@@ -117,8 +139,9 @@ export default defineComponent({
       });
       const items = _swiperContainer.querySelectorAll(`.${name}-item`);
       state.itemLength = _swiperContainer.children?.length || 0;
-      const itemWidth = _swiperContainer.querySelector(`.${name}-item`)?.getBoundingClientRect().width || 0;
-      state.itemWidth = itemWidth;
+      const { width, height } = _swiperContainer.querySelector(`.${name}-item`)?.getBoundingClientRect() || {};
+      state.itemWidth = width || 0;
+      state.itemHight = height || 0;
       if (items.length <= 0) return false;
       if (
         computedNavigation.value &&
@@ -160,13 +183,17 @@ export default defineComponent({
     // eslint-disable-next-line no-undef
     let autoplayTimer: number | NodeJS.Timeout | null = null;
     let actionIsTrust = true;
+
+    const onItemClick = () => {
+      emitEvent('click', state.activeIndex);
+    };
     /**
      * move item
      */
     const move = (targetIndex: number, isTrust = true) => {
       const _swiperContainer = getContainer();
       const moveDirection = props?.direction === 'horizontal' ? 'X' : 'Y';
-      const moveLength: number = props?.direction === 'vertical' ? height : state.itemWidth;
+      const moveLength: number = props?.direction === 'vertical' ? state.itemHight : state.itemWidth;
       actionIsTrust = isTrust;
       _swiperContainer.dataset.isTrust = `${isTrust}`;
       // do not translate one item if not loop
@@ -266,7 +293,7 @@ export default defineComponent({
     });
     const onTouchMove = (event: TouchEvent) => {
       event.preventDefault();
-      const { activeIndex, itemWidth } = state;
+      const { activeIndex, itemWidth, itemHight } = state;
       const distanceX = lengthX.value;
       const distanceY = lengthY.value;
       const _container = getContainer();
@@ -275,8 +302,7 @@ export default defineComponent({
       if (props?.direction === 'horizontal') {
         setOffset(_container, -(toIndex * itemWidth + distanceX));
       } else {
-        const { height = 180 } = props;
-        setOffset(_container, -(toIndex * height + distanceY), 'Y');
+        setOffset(_container, -(toIndex * itemHight + distanceY), 'Y');
       }
     };
     const onTouchEnd = () => {
@@ -318,6 +344,10 @@ export default defineComponent({
       },
     );
     return {
+      rootName,
+      navigationWrapperClass,
+      swiperHight,
+      onItemClick,
       swiperContainer,
       name,
       computedNavigation,

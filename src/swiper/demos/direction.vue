@@ -1,28 +1,33 @@
 <template>
-  <t-swiper :autoplay="false" :height="180" direction="vertical" :navigation="{ type: 'fraction' }">
-    <t-swiper-item class="swiper-item--demo">
-      <img src="https://tdesign.gtimg.com/site/swiper/01.png" class="img" />
-    </t-swiper-item>
-    <t-swiper-item class="swiper-item--demo">
-      <img src="https://tdesign.gtimg.com/site/swiper/02.png" class="img" />
-    </t-swiper-item>
-    <t-swiper-item class="swiper-item--demo">
-      <img src="https://tdesign.gtimg.com/site/swiper/03.png" class="img" />
-    </t-swiper-item>
-  </t-swiper>
+  <div style="padding: 0 16px">
+    <t-swiper
+      direction="vertical"
+      :autoplay="true"
+      :navigation="{ type: 'dots-bar', paginationPosition: 'right' }"
+      @change="handleChange"
+    >
+      <t-swiper-item v-for="(item, index) in swiperList" :key="index" class="swiper-item--demo">
+        <img :src="item" class="img" />
+      </t-swiper-item>
+    </t-swiper>
+  </div>
 </template>
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const imageCdn = 'https://tdesign.gtimg.com/miniprogram/images';
+const swiperList = [
+  `${imageCdn}/swiper1.png`,
+  `${imageCdn}/swiper2.png`,
+  `${imageCdn}/swiper1.png`,
+  `${imageCdn}/swiper2.png`,
+  `${imageCdn}/swiper1.png`,
+];
+
+const handleChange = (index: number) => {
+  console.log('基础示例,页数变化到》》》', index);
+};
+</script>
 <style lang="less">
 .swiper-item--demo {
-  width: 100%;
-  height: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f33;
-  font-size: 20px;
-  color: #fff;
-
   img {
     height: 100%;
   }

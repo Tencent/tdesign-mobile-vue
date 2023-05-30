@@ -43,12 +43,6 @@ export interface TdSwiperProps {
    */
   duration?: number;
   /**
-   * 轮播的高度；默认单位 `px`
-   * @default 192
-   * @deprecated
-   */
-  height?: string | number;
-  /**
    * 轮播间隔时间
    * @default 5000
    */
