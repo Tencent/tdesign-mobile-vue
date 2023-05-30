@@ -3,19 +3,23 @@
 exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
+  data-v-282366a4=""
 >
   <h1
     class="title"
+    data-v-282366a4=""
   >
     DropdownMenu 下拉菜单
   </h1>
   <p
     class="summary"
+    data-v-282366a4=""
   >
     菜单呈现数个并列的选项类目，用于整个页面的内容筛选，由菜单面板和菜单选项组成。
   </p>
   <div
     class="tdesign-mobile-demo-block"
+    data-v-282366a4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -37,6 +41,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
       
       <div
         class="t-dropdown-menu"
+        data-v-282366a4=""
       >
         
         <div
@@ -94,6 +99,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-282366a4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -111,6 +117,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
       
       <div
         class="t-dropdown-menu"
+        data-v-282366a4=""
       >
         
         <div
@@ -191,6 +198,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
+    data-v-282366a4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -212,6 +220,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
       
       <div
         class="t-dropdown-menu"
+        data-v-282366a4=""
       >
         
         <div
@@ -269,6 +278,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-282366a4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -287,6 +297,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
       <div
         class="t-dropdown-menu"
         data-v-0f84d48d=""
+        data-v-282366a4=""
       >
         
         <div
@@ -320,6 +331,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
+    data-v-282366a4=""
     style="height: 40px;"
   />
 </div>

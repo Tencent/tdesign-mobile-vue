@@ -1,6 +1,6 @@
 <template>
-  <t-dropdown-menu>
-    <t-dropdown-item v-model="val" v-model:visible="visible" label="单列多选" multiple options-columns="1">
+  <t-dropdown-menu ref="parentRef">
+    <t-dropdown-item v-model="val" label="单列多选" multiple options-columns="1">
       <div v-for="(group, i) in groups" :key="i">
         <div class="demo-dropdown-item_label">
           {{ group.label }}
@@ -37,9 +37,10 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-let val = ref(['type_1', 'type_2', 'role_2']);
+// 获取组件
+const parentRef = ref<HTMLElement | null>(null);
 
-const visible = ref(false);
+let val = ref(['type_1', 'type_2', 'role_2']);
 
 const chineseNumber = '一二三四五六七八九十'.split('');
 
@@ -118,10 +119,11 @@ function resetSelect() {
   checkSelect = [];
   initCheckValue();
 }
+
 // 确认
 function confirmSelect() {
-  visible.value = false;
-  console.log(val.value);
+  // @ts-ignore
+  parentRef.value.collapseMenu();
 }
 </script>
 <style lang="less" scoped>
@@ -137,5 +139,9 @@ function confirmSelect() {
       flex: 1;
     }
   }
+}
+
+.demo-dropdown-item_footer {
+  --td-button-border-radius: 0;
 }
 </style>

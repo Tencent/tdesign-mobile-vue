@@ -139,6 +139,12 @@ export default defineComponent({
         }
       },
     });
+
+    expose({
+      expandMenu,
+      collapseMenu,
+    });
+
     return {
       name: ref(name),
       classes,

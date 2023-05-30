@@ -26,3 +26,9 @@ import slotDemoVue from './slotDemo.vue';
 import singleVue from './single.vue';
 import multipleVue from './multi.vue';
 </script>
+
+<style lang="less" scoped>
+.tdesign-mobile-demo {
+  height: 1000px;
+}
+</style>

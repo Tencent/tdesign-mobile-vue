@@ -23,7 +23,6 @@ optionsColumns | String / Number | 1 | 选项分栏（1-3） | N
 optionsLayout | String | columns | 已废弃。选项排列；不再支持 tree 布局，可与 treeSelect 配合使用 | N
 value | String / Number | undefined | 选中值。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`DropdownValue ` `type DropdownValue = string \| number;`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
 defaultValue | String / Number | undefined | 选中值。非受控属性。TS 类型：`DropdownValue ` `type DropdownValue = string \| number;`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
-visible | Boolean | false | 是否展示 | N
 onChange | Function |  | TS 类型：`(value: DropdownValue) => void`<br/>值改变时触发 | N
 onConfirm | Function |  | TS 类型：`(value: DropdownValue) => void`<br/>点击确认时触发 | N
 onReset | Function |  | TS 类型：`(value: DropdownValue) => void`<br/>点击重置时触发 | N

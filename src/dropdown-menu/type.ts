@@ -78,11 +78,6 @@ export interface TdDropdownItemProps {
    */
   modelValue?: DropdownValue;
   /**
-   * 是否展示
-   * @default false
-   */
-  visible?: boolean;
-  /**
    * 值改变时触发
    */
   onChange?: (value: DropdownValue) => void;
