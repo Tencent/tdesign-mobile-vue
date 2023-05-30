@@ -3,11 +3,17 @@
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
-
+import { TNode } from '../common';
+import { TdBadgeProps } from '../badge/type';
 export interface TdActionSheetProps {
   /**
+   * 水平对齐方式
+   * @default center
+   */
+  align?: 'center' | 'left';
+  /**
    * 设置取消按钮的文本
-   * @default 取消
+   * @default ''
    */
   cancelText?: string;
   /**
@@ -16,9 +22,14 @@ export interface TdActionSheetProps {
    */
   count?: number;
   /**
+   * 动作面板描述文字
+   * @default ''
+   */
+  description?: string;
+  /**
    * 菜单项
    */
-  items: Array<string | ActionSheetItem>;
+  items?: Array<string | ActionSheetItem>;
   /**
    * 是否显示取消按钮
    * @default true
@@ -51,15 +62,19 @@ export interface TdActionSheetProps {
   /**
    * 关闭时触发
    */
-  onClose?: (context: { e: MouseEvent }) => void;
+  onClose?: (trigger: TriggerSource) => void;
   /**
    * 选择菜单项时触发
    */
-  onSelected?: (selected: ActionSheetItem | String, index: number) => void;
+  onSelected?: (selected: ActionSheetItem | string, index: number) => void;
 }
 
 export interface ActionSheetItem {
   label: string;
   color?: string;
   disabled?: boolean;
+  icon?: TNode;
+  badge?: TdBadgeProps;
 }
+
+export type TriggerSource = 'overlay' | 'command' | 'select';

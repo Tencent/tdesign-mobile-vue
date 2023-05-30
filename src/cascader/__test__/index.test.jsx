@@ -6,8 +6,8 @@ import { AppIcon as TIconApp, CloseIcon } from 'tdesign-icons-vue-next';
 import Radio from '../../radio/index';
 
 config.global.stubs = {
-  teleport: true
-}
+  teleport: true,
+};
 
 const prefix = 't';
 const name = `${prefix}-cascader`;
@@ -130,14 +130,14 @@ describe('cascader', () => {
       // 无默认 value 值，初始化时 steps.length = 1
       expect($cascaderSteps).toHaveLength(1);
       const $radios = wrapper.findAllComponents(Radio);
-      expect( $radios).toHaveLength(options.length);
+      expect($radios).toHaveLength(options.length);
 
       // 模拟点击 第1项
       const clickIndex = 0;
-      await $radios[clickIndex].find(`.t-radio`).trigger('click')
+      await $radios[clickIndex].find(`.t-radio`).trigger('click');
       expect(onPick).toHaveBeenCalledTimes(1);
       expect($radios[clickIndex].findAll(`.t-radio__icon--checked`)).toHaveLength(1);
-      expect (selectedValue[0]).toBe(options[0].value);
+      expect(selectedValue[0]).toBe(options[0].value);
     });
   });
 });

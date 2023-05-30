@@ -5,8 +5,8 @@ import { ref, h } from 'vue';
 import { AppIcon } from 'tdesign-icons-vue-next';
 
 config.global.stubs = {
-  teleport: true
-}
+  teleport: true,
+};
 
 describe('drawer', () => {
   // test props

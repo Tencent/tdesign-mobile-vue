@@ -1,11 +1,19 @@
 <template>
-  <div class="tdesign-mobile-demo" :style="{ 'background-color': '#fff', height: '100vh' }">
+  <div class="tdesign-mobile-demo" :style="{ 'background-color': '#fff' }">
     <h1 class="title">ActionSheet 动作面板</h1>
-    <p class="summary">底部弹起的模态面板，包含与当前情境相关的多个选项。</p>
+    <p class="summary">从底部弹出的模态框，提供和当前场景相关的操作动作，也支持提供信息输入和描述。</p>
     <tdesign-demo-block title="01 类型" summary="列表型">
       <ListDemo />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="宫格型动作面板">
       <GridDemo />
       <GridMultipleDemo />
+    </tdesign-demo-block>
+    <tdesign-demo-block title="02 组件状态" summary="列表型选项状态">
+      <StatusVue />
+    </tdesign-demo-block>
+    <tdesign-demo-block title="03 组件样式" summary="列表型对齐方式">
+      <AlignVue />
     </tdesign-demo-block>
   </div>
 </template>
@@ -14,6 +22,8 @@
 import ListDemo from './list.vue';
 import GridDemo from './grid.vue';
 import GridMultipleDemo from './grid-multiple.vue';
+import AlignVue from './align.vue';
+import StatusVue from './status.vue';
 </script>
 
 <style lang="less">

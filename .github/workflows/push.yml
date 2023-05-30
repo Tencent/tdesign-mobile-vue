@@ -1,7 +1,6 @@
 name: MAIN_PUSH
 
-on:
-  push
+on: push
 
 jobs:
   call-test-build:

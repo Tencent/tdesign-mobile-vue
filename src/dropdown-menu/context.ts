@@ -4,6 +4,7 @@ export type DropdownMenuState = {
   activeId: number | null;
   barRect: any;
   childCount: number;
+  itemsLabel: any[];
 };
 
 export type DropdownMenuControl = {

@@ -4,12 +4,9 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { KeysType } from '../common';
+
 export interface TdDropdownMenuProps {
-  /**
-   * 菜单标题和选项的选中态颜色
-   * @default ''
-   */
-  activeColor?: string;
   /**
    * 是否在点击遮罩层后关闭菜单
    * @default true
@@ -24,9 +21,10 @@ export interface TdDropdownMenuProps {
    * 是否显示遮罩层
    * @default true
    */
-  overlay?: boolean;
+  showOverlay?: boolean;
   /**
    * 菜单栏 z-index 层级
+   * @default 11600
    */
   zIndex?: number;
 }
@@ -37,6 +35,10 @@ export interface TdDropdownItemProps {
    * @default false
    */
   disabled?: boolean;
+  /**
+   * 用来定义 value / label 在 `options` 中对应的字段别名
+   */
+  keys?: KeysType;
   /**
    * 标题
    * @default ''
@@ -49,36 +51,50 @@ export interface TdDropdownItemProps {
   multiple?: boolean;
   /**
    * 选项数据
+   * @default []
    */
-  options?: Array<TdDropdownItemOption>;
+  options?: Array<DropdownOption>;
   /**
    * 选项分栏（1-3）
+   * @default 1
    */
   optionsColumns?: string | number;
   /**
-   * 选项排列
+   * 选项排列；不再支持 tree 布局，可与 treeSelect 配合使用
    * @default columns
+   * @deprecated
    */
-  optionsLayout?: 'columns' | 'tree';
+  optionsLayout?: string;
   /**
    * 选中值
    */
-  value?: TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType>;
+  value?: DropdownValue;
   /**
    * 选中值，非受控属性
    */
-  defaultValue?: TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType>;
+  defaultValue?: DropdownValue;
+  /**
+   * 选中值
+   */
+  modelValue?: DropdownValue;
   /**
    * 值改变时触发
    */
-  onChange?: (value: TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType>) => void;
+  onChange?: (value: DropdownValue) => void;
+  /**
+   * 点击确认时触发
+   */
+  onConfirm?: (value: DropdownValue) => void;
+  /**
+   * 点击重置时触发
+   */
+  onReset?: (value: DropdownValue) => void;
 }
 
-export interface TdDropdownItemOption {
-  title: string;
+export interface DropdownOption {
+  label: string;
   disabled: boolean;
-  value: TdDropdownItemOptionValueType;
-  [key: string]: any;
+  value: DropdownValue;
 }
 
-export type TdDropdownItemOptionValueType = string | number;
+export type DropdownValue = string | number;
