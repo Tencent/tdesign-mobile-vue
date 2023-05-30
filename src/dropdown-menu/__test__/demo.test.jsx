@@ -3,26 +3,16 @@
  */
 
 import { mount } from '@vue/test-utils';
-import customizedMenuVue from '@/dropdown-menu/demos/customized-menu.vue';
-import demoContainerVue from '@/dropdown-menu/demos/demo-container.vue';
-import disabledVue from '@/dropdown-menu/demos/disabled.vue';
-import eventsVue from '@/dropdown-menu/demos/events.vue';
 import mobileVue from '@/dropdown-menu/demos/mobile.vue';
-import multipleVue from '@/dropdown-menu/demos/multiple.vue';
-import optionsLayoutVue from '@/dropdown-menu/demos/options-layout.vue';
+import multiVue from '@/dropdown-menu/demos/multi.vue';
 import singleVue from '@/dropdown-menu/demos/single.vue';
-import treeVue from '@/dropdown-menu/demos/tree.vue';
+import slotDemoVue from '@/dropdown-menu/demos/slotDemo.vue';
 
 const mapper = {
-  customizedMenuVue,
-  demoContainerVue,
-  disabledVue,
-  eventsVue,
   mobileVue,
-  multipleVue,
-  optionsLayoutVue,
+  multiVue,
   singleVue,
-  treeVue,
+  slotDemoVue,
 };
 
 describe('DropdownMenu', () => {
