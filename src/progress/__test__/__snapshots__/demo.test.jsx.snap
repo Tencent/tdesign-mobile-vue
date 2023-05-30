@@ -15,7 +15,7 @@ exports[`Progress > Progress baseVue demo works fine 1`] = `
     >
       <!-- LINE -->
       <div
-        class="t-progress--thin t-progress--status--default"
+        class="t-progress--thin t-progress--status-default"
       >
         <div
           class="t-progress__bar"
@@ -49,7 +49,7 @@ exports[`Progress > Progress baseVue demo works fine 1`] = `
       <!--v-if-->
       <!-- PLUMP -->
       <div
-        class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status--default"
+        class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-default"
       >
         <div
           class="t-progress__inner"
@@ -81,7 +81,7 @@ exports[`Progress > Progress baseVue demo works fine 1`] = `
       <!--v-if-->
       <!-- CIRCLE -->
       <div
-        class="t-progress--circle t-progress--status--default"
+        class="t-progress--circle t-progress--status-default"
         style="width: 112px; height: 112px;"
       >
         <div
@@ -139,7 +139,7 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
       <!--v-if-->
       <!-- CIRCLE -->
       <div
-        class="t-progress--circle t-progress--status--default"
+        class="t-progress--circle t-progress--status-default"
         style="width: 112px; height: 112px;"
       >
         <div
@@ -189,7 +189,7 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
       <!--v-if-->
       <!-- CIRCLE -->
       <div
-        class="t-progress--circle t-progress--status--warning"
+        class="t-progress--circle t-progress--status-warning"
         style="width: 112px; height: 112px;"
       >
         <div
@@ -251,7 +251,7 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
       <!--v-if-->
       <!-- CIRCLE -->
       <div
-        class="t-progress--circle t-progress--status--error"
+        class="t-progress--circle t-progress--status-error"
         style="width: 112px; height: 112px;"
       >
         <div
@@ -313,7 +313,7 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
       <!--v-if-->
       <!-- CIRCLE -->
       <div
-        class="t-progress--circle t-progress--status--success"
+        class="t-progress--circle t-progress--status-success"
         style="width: 112px; height: 112px;"
       >
         <div
@@ -379,7 +379,7 @@ exports[`Progress > Progress customVue demo works fine 1`] = `
     >
       <!-- LINE -->
       <div
-        class="t-progress--thin t-progress--status--default"
+        class="t-progress--thin t-progress--status-default"
       >
         <div
           class="t-progress__bar"
@@ -419,7 +419,7 @@ exports[`Progress > Progress customVue demo works fine 1`] = `
     >
       <!-- LINE -->
       <div
-        class="t-progress--thin t-progress--status--default"
+        class="t-progress--thin t-progress--status-default"
       >
         <div
           class="t-progress__bar"
@@ -459,7 +459,7 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
     >
       <!-- LINE -->
       <div
-        class="t-progress--thin t-progress--status--default"
+        class="t-progress--thin t-progress--status-default"
       >
         <div
           class="t-progress__bar"
@@ -491,7 +491,7 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
     >
       <!-- LINE -->
       <div
-        class="t-progress--thin t-progress--status--warning"
+        class="t-progress--thin t-progress--status-warning"
       >
         <div
           class="t-progress__bar"
@@ -535,7 +535,7 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
     >
       <!-- LINE -->
       <div
-        class="t-progress--thin t-progress--status--error"
+        class="t-progress--thin t-progress--status-error"
       >
         <div
           class="t-progress__bar"
@@ -579,7 +579,7 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
     >
       <!-- LINE -->
       <div
-        class="t-progress--thin t-progress--status--success"
+        class="t-progress--thin t-progress--status-success"
       >
         <div
           class="t-progress__bar"
@@ -670,7 +670,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
           >
             <!-- LINE -->
             <div
-              class="t-progress--thin t-progress--status--default"
+              class="t-progress--thin t-progress--status-default"
             >
               <div
                 class="t-progress__bar"
@@ -704,7 +704,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             <!--v-if-->
             <!-- PLUMP -->
             <div
-              class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status--default"
+              class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-default"
             >
               <div
                 class="t-progress__inner"
@@ -736,7 +736,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             <!--v-if-->
             <!-- CIRCLE -->
             <div
-              class="t-progress--circle t-progress--status--default"
+              class="t-progress--circle t-progress--status-default"
               style="width: 112px; height: 112px;"
             >
               <div
@@ -805,7 +805,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         >
           <!-- LINE -->
           <div
-            class="t-progress--thin t-progress--status--default"
+            class="t-progress--thin t-progress--status-default"
           >
             <div
               class="t-progress__bar"
@@ -906,7 +906,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
           >
             <!-- LINE -->
             <div
-              class="t-progress--thin t-progress--status--default"
+              class="t-progress--thin t-progress--status-default"
             >
               <div
                 class="t-progress__bar"
@@ -946,7 +946,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
           >
             <!-- LINE -->
             <div
-              class="t-progress--thin t-progress--status--default"
+              class="t-progress--thin t-progress--status-default"
             >
               <div
                 class="t-progress__bar"
@@ -1009,7 +1009,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
           >
             <!-- LINE -->
             <div
-              class="t-progress--thin t-progress--status--default"
+              class="t-progress--thin t-progress--status-default"
             >
               <div
                 class="t-progress__bar"
@@ -1041,7 +1041,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
           >
             <!-- LINE -->
             <div
-              class="t-progress--thin t-progress--status--warning"
+              class="t-progress--thin t-progress--status-warning"
             >
               <div
                 class="t-progress__bar"
@@ -1085,7 +1085,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
           >
             <!-- LINE -->
             <div
-              class="t-progress--thin t-progress--status--error"
+              class="t-progress--thin t-progress--status-error"
             >
               <div
                 class="t-progress__bar"
@@ -1129,7 +1129,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
           >
             <!-- LINE -->
             <div
-              class="t-progress--thin t-progress--status--success"
+              class="t-progress--thin t-progress--status-success"
             >
               <div
                 class="t-progress__bar"
@@ -1202,7 +1202,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             <!--v-if-->
             <!-- PLUMP -->
             <div
-              class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status--default"
+              class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-default"
             >
               <div
                 class="t-progress__inner"
@@ -1232,7 +1232,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             <!--v-if-->
             <!-- PLUMP -->
             <div
-              class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status--warning"
+              class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-warning"
             >
               <div
                 class="t-progress__inner"
@@ -1262,7 +1262,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             <!--v-if-->
             <!-- PLUMP -->
             <div
-              class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status--error"
+              class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-error"
             >
               <div
                 class="t-progress__inner"
@@ -1292,7 +1292,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             <!--v-if-->
             <!-- PLUMP -->
             <div
-              class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status--success"
+              class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-success"
             >
               <div
                 class="t-progress__inner"
@@ -1351,7 +1351,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             <!--v-if-->
             <!-- CIRCLE -->
             <div
-              class="t-progress--circle t-progress--status--default"
+              class="t-progress--circle t-progress--status-default"
               style="width: 112px; height: 112px;"
             >
               <div
@@ -1401,7 +1401,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             <!--v-if-->
             <!-- CIRCLE -->
             <div
-              class="t-progress--circle t-progress--status--warning"
+              class="t-progress--circle t-progress--status-warning"
               style="width: 112px; height: 112px;"
             >
               <div
@@ -1463,7 +1463,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             <!--v-if-->
             <!-- CIRCLE -->
             <div
-              class="t-progress--circle t-progress--status--error"
+              class="t-progress--circle t-progress--status-error"
               style="width: 112px; height: 112px;"
             >
               <div
@@ -1525,7 +1525,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             <!--v-if-->
             <!-- CIRCLE -->
             <div
-              class="t-progress--circle t-progress--status--success"
+              class="t-progress--circle t-progress--status-success"
               style="width: 112px; height: 112px;"
             >
               <div
@@ -1597,7 +1597,7 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
       <!--v-if-->
       <!-- PLUMP -->
       <div
-        class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status--default"
+        class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-default"
       >
         <div
           class="t-progress__inner"
@@ -1627,7 +1627,7 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
       <!--v-if-->
       <!-- PLUMP -->
       <div
-        class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status--warning"
+        class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-warning"
       >
         <div
           class="t-progress__inner"
@@ -1657,7 +1657,7 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
       <!--v-if-->
       <!-- PLUMP -->
       <div
-        class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status--error"
+        class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-error"
       >
         <div
           class="t-progress__inner"
@@ -1687,7 +1687,7 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
       <!--v-if-->
       <!-- PLUMP -->
       <div
-        class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status--success"
+        class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-success"
       >
         <div
           class="t-progress__inner"
@@ -1719,7 +1719,7 @@ exports[`Progress > Progress transitionVue demo works fine 1`] = `
   >
     <!-- LINE -->
     <div
-      class="t-progress--thin t-progress--status--default"
+      class="t-progress--thin t-progress--status-default"
     >
       <div
         class="t-progress__bar"

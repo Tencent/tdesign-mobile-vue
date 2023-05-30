@@ -1,7 +1,7 @@
 <template>
   <div :class="`${name}`">
     <!-- LINE -->
-    <div v-if="theme === PRO_THEME.LINE" :class="[`${name}--thin`, `${name}--status--${computedStatus}`]">
+    <div v-if="theme === PRO_THEME.LINE" :class="[`${name}--thin`, `${name}--status-${computedStatus}`]">
       <div :class="`${name}__bar`" :style="trackBgStyle">
         <div :class="`${name}__inner`" :style="barStyle"></div>
       </div>
@@ -16,7 +16,7 @@
         `${name}__bar`,
         `${name}--plump`,
         `${Number(percentage) > PLUMP_SEPARATE ? name + '--over-ten' : name + '--under-ten'}`,
-        `${name}--status--${computedStatus}`,
+        `${name}--status-${computedStatus}`,
       ]"
       :style="trackBgStyle"
     >
@@ -32,7 +32,7 @@
     <!-- CIRCLE -->
     <div
       v-if="theme === PRO_THEME.CIRCLE"
-      :class="[`${name}--circle`, `${name}--status--${computedStatus}`]"
+      :class="[`${name}--circle`, `${name}--status-${computedStatus}`]"
       :style="circleStyle"
     >
       <div v-if="label" :class="`${name}__info`">

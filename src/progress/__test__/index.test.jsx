@@ -63,7 +63,7 @@ describe('Progress', () => {
       statusList.forEach((status, index) => {
         const wrapper = mount(() => <Progress percentage={30} status={status} />);
         const thin = wrapper.find('.t-progress--thin');
-        expect(thin.classes()).toContain(`t-progress--status--${statusListResult[index]}`);
+        expect(thin.classes()).toContain(`t-progress--status-${statusListResult[index]}`);
       });
     });
 
