@@ -15,6 +15,15 @@ describe('Toast', () => {
         direction: 'column',
       });
       expect(wrapper.find('.t-toast').classes()).toContain('t-toast--column');
+
+      const directionList = ['', 'row', 'column'];
+      directionList.forEach((direction, index) => {
+        const wrapper = mount(() => <Toast direction={direction} message="direction" />);
+        const $toast = wrapper.find('.t-toast');
+        if (direction) {
+          expect($toast.classes()).toContain(`t-toast--${direction}`);
+        }
+      });
     });
 
     it(': icon', async () => {
