@@ -283,6 +283,12 @@ export default {
           component: () => import('@/swiper/swiper.md'),
         },
         {
+          title: 'Table 表格',
+          name: 'table',
+          path: '/mobile-vue/components/table',
+          component: () => import('@/table/table.md'),
+        },
+        {
           title: 'ImageViewer 图片预览',
           name: 'image-viewer',
           path: '/mobile-vue/components/image-viewer',

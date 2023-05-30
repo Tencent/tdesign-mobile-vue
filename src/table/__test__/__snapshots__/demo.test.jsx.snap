@@ -1,0 +1,3566 @@
+// Vitest Snapshot v1
+
+exports[`Table > Table baseVue demo works fine 1`] = `
+<div>
+  <div
+    class="t-table t-vertical-align-middle"
+    style="position: relative;"
+  >
+    <div
+      class="t-table__content"
+    >
+      <table
+        class="t-table--layout-fixed"
+      >
+        <colgroup>
+          
+          <col
+            style="width: 80px; min-width: undefined;"
+          />
+          <col
+            style="width: 80px; min-width: undefined;"
+          />
+          <col
+            style="width: 80px; min-width: undefined;"
+          />
+          <col
+            style="width: 80px; min-width: undefined;"
+          />
+          
+        </colgroup>
+        <thead
+          class="t-table__header"
+        >
+          <tr>
+            
+            <th
+              class="t-table__th-applicant t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                标题
+              </div>
+            </th>
+            <th
+              class="t-table__th-status t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                标题
+              </div>
+            </th>
+            <th
+              class="t-table__th-channel t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                标题
+              </div>
+            </th>
+            <th
+              class="t-table__th-detail.email t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                标题
+              </div>
+            </th>
+            
+          </tr>
+        </thead>
+        <tbody
+          class="t-table__body"
+        >
+          
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容内容内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容内容内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容内容内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Table > Table borderedVue demo works fine 1`] = `
+<div>
+  <div
+    class="t-table t-vertical-align-middle t-table--bordered t-table--striped"
+    style="position: relative;"
+  >
+    <div
+      class="t-table__content"
+    >
+      <table
+        class="t-table--layout-fixed"
+      >
+        <colgroup>
+          
+          <col
+            style="width: 80px; min-width: undefined;"
+          />
+          <col
+            style="width: 80px; min-width: undefined;"
+          />
+          <col
+            style="width: 80px; min-width: undefined;"
+          />
+          <col
+            style="width: 80px; min-width: undefined;"
+          />
+          
+        </colgroup>
+        <thead
+          class="t-table__header t-table--bordered"
+        >
+          <tr>
+            
+            <th
+              class="t-table__th-applicant t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                标题
+              </div>
+            </th>
+            <th
+              class="t-table__th-status t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                标题
+              </div>
+            </th>
+            <th
+              class="t-table__th-channel t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                标题
+              </div>
+            </th>
+            <th
+              class="t-table__th-detail.email t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                标题
+              </div>
+            </th>
+            
+          </tr>
+        </thead>
+        <tbody
+          class="t-table__body"
+        >
+          
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容内容内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容内容内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容内容内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis t-align-center"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Table > Table mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+>
+  <h1
+    class="title"
+  >
+    Table 表格
+  </h1>
+  <p
+    class="summary"
+  >
+     表格常用于展示同类结构下的多种数据，易于组织、对比和分析等，并可对数据进行搜索、筛选、排序等操作。一般包括表头、数据行和表尾三部分。 
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        01 组件类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        基础表格
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot with-padding"
+    >
+      
+      <div>
+        <div
+          class="t-table t-vertical-align-middle"
+          style="position: relative;"
+        >
+          <div
+            class="t-table__content"
+          >
+            <table
+              class="t-table--layout-fixed"
+            >
+              <colgroup>
+                
+                <col
+                  style="width: 80px; min-width: undefined;"
+                />
+                <col
+                  style="width: 80px; min-width: undefined;"
+                />
+                <col
+                  style="width: 80px; min-width: undefined;"
+                />
+                <col
+                  style="width: 80px; min-width: undefined;"
+                />
+                
+              </colgroup>
+              <thead
+                class="t-table__header"
+              >
+                <tr>
+                  
+                  <th
+                    class="t-table__th-applicant t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      标题
+                    </div>
+                  </th>
+                  <th
+                    class="t-table__th-status t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      标题
+                    </div>
+                  </th>
+                  <th
+                    class="t-table__th-channel t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      标题
+                    </div>
+                  </th>
+                  <th
+                    class="t-table__th-detail.email t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      标题
+                    </div>
+                  </th>
+                  
+                </tr>
+              </thead>
+              <tbody
+                class="t-table__body"
+              >
+                
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容内容内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容内容内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容内容内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        横向平铺可滚动表格
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot with-padding"
+    >
+      
+      <div>
+        <div
+          class="t-table t-vertical-align-middle"
+          layout-table="auto"
+          style="position: relative;"
+        >
+          <div
+            class="t-table__content"
+          >
+            <table
+              class="t-table--layout-fixed"
+            >
+              <colgroup>
+                
+                <col
+                  style="width: 180px; min-width: undefined;"
+                />
+                <col
+                  style="width: 180px; min-width: undefined;"
+                />
+                <col
+                  style="width: 180px; min-width: undefined;"
+                />
+                <col
+                  style="width: 180px; min-width: undefined;"
+                />
+                
+              </colgroup>
+              <thead
+                class="t-table__header"
+              >
+                <tr>
+                  
+                  <th
+                    class="t-table__th-applicant t-align-center"
+                  >
+                    <div
+                      class=""
+                    >
+                      标题
+                    </div>
+                  </th>
+                  <th
+                    class="t-table__th-status"
+                  >
+                    <div
+                      class=""
+                    >
+                      标题
+                    </div>
+                  </th>
+                  <th
+                    class="t-table__th-channel"
+                  >
+                    <div
+                      class=""
+                    >
+                      标题
+                    </div>
+                  </th>
+                  <th
+                    class="t-table__th-detail.email"
+                  >
+                    <div
+                      class=""
+                    >
+                      标题
+                    </div>
+                  </th>
+                  
+                </tr>
+              </thead>
+              <tbody
+                class="t-table__body"
+              >
+                
+                <tr>
+                  
+                  <td
+                    class="t-align-center"
+                  >
+                    <div
+                      class=""
+                    >
+                      横向平铺内容不省略
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      横向平铺内容不省略
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      横向平铺内容不省略
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      横向平铺内容不省略
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-align-center"
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-align-center"
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-align-center"
+                  >
+                    <div
+                      class=""
+                    >
+                      横向平铺内容不省略
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      横向平铺内容不省略
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      横向平铺内容不省略
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      横向平铺内容不省略
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-align-center"
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        带斑马纹表格样式
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot with-padding"
+    >
+      
+      <div>
+        <div
+          class="t-table t-vertical-align-middle t-table--bordered t-table--striped"
+          style="position: relative;"
+        >
+          <div
+            class="t-table__content"
+            style="max-height: 400px;"
+          >
+            <table
+              class="t-table--layout-fixed"
+            >
+              <colgroup>
+                
+                <col
+                  style="width: 80px; min-width: undefined;"
+                />
+                <col
+                  style="width: 80px; min-width: undefined;"
+                />
+                <col
+                  style="width: 80px; min-width: undefined;"
+                />
+                <col
+                  style="width: 80px; min-width: undefined;"
+                />
+                
+              </colgroup>
+              <thead
+                class="t-table__header t-table__header--fixed t-table--bordered"
+              >
+                <tr>
+                  
+                  <th
+                    class="t-table__th-applicant t-align-center"
+                  >
+                    <div
+                      class=""
+                    >
+                      标题
+                    </div>
+                  </th>
+                  <th
+                    class="t-table__th-status"
+                  >
+                    <div
+                      class=""
+                    >
+                      标题
+                    </div>
+                  </th>
+                  <th
+                    class="t-table__th-channel"
+                  >
+                    <div
+                      class=""
+                    >
+                      标题
+                    </div>
+                  </th>
+                  <th
+                    class="t-table__th-detail.email t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      标题
+                    </div>
+                  </th>
+                  
+                </tr>
+              </thead>
+              <tbody
+                class="t-table__body"
+              >
+                
+                <tr>
+                  
+                  <td
+                    class="t-align-center"
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-align-center"
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-align-center"
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-align-center"
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-align-center"
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-align-center"
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-align-center"
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-align-center"
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-align-center"
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-align-center"
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        带边框表格样式
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot with-padding"
+    >
+      
+      <div>
+        <div
+          class="t-table t-vertical-align-middle t-table--bordered t-table--striped"
+          style="position: relative;"
+        >
+          <div
+            class="t-table__content"
+          >
+            <table
+              class="t-table--layout-fixed"
+            >
+              <colgroup>
+                
+                <col
+                  style="width: 80px; min-width: undefined;"
+                />
+                <col
+                  style="width: 80px; min-width: undefined;"
+                />
+                <col
+                  style="width: 80px; min-width: undefined;"
+                />
+                <col
+                  style="width: 80px; min-width: undefined;"
+                />
+                
+              </colgroup>
+              <thead
+                class="t-table__header t-table--bordered"
+              >
+                <tr>
+                  
+                  <th
+                    class="t-table__th-applicant t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      标题
+                    </div>
+                  </th>
+                  <th
+                    class="t-table__th-status t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      标题
+                    </div>
+                  </th>
+                  <th
+                    class="t-table__th-channel t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      标题
+                    </div>
+                  </th>
+                  <th
+                    class="t-table__th-detail.email t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      标题
+                    </div>
+                  </th>
+                  
+                </tr>
+              </thead>
+              <tbody
+                class="t-table__body"
+              >
+                
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容内容内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容内容内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容内容内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis t-align-center"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Table > Table scrollVue demo works fine 1`] = `
+<div>
+  <div
+    class="t-table t-vertical-align-middle"
+    layout-table="auto"
+    style="position: relative;"
+  >
+    <div
+      class="t-table__content"
+    >
+      <table
+        class="t-table--layout-fixed"
+      >
+        <colgroup>
+          
+          <col
+            style="width: 180px; min-width: undefined;"
+          />
+          <col
+            style="width: 180px; min-width: undefined;"
+          />
+          <col
+            style="width: 180px; min-width: undefined;"
+          />
+          <col
+            style="width: 180px; min-width: undefined;"
+          />
+          
+        </colgroup>
+        <thead
+          class="t-table__header"
+        >
+          <tr>
+            
+            <th
+              class="t-table__th-applicant t-align-center"
+            >
+              <div
+                class=""
+              >
+                标题
+              </div>
+            </th>
+            <th
+              class="t-table__th-status"
+            >
+              <div
+                class=""
+              >
+                标题
+              </div>
+            </th>
+            <th
+              class="t-table__th-channel"
+            >
+              <div
+                class=""
+              >
+                标题
+              </div>
+            </th>
+            <th
+              class="t-table__th-detail.email"
+            >
+              <div
+                class=""
+              >
+                标题
+              </div>
+            </th>
+            
+          </tr>
+        </thead>
+        <tbody
+          class="t-table__body"
+        >
+          
+          <tr>
+            
+            <td
+              class="t-align-center"
+            >
+              <div
+                class=""
+              >
+                横向平铺内容不省略
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                横向平铺内容不省略
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                横向平铺内容不省略
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                横向平铺内容不省略
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-align-center"
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-align-center"
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-align-center"
+            >
+              <div
+                class=""
+              >
+                横向平铺内容不省略
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                横向平铺内容不省略
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                横向平铺内容不省略
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                横向平铺内容不省略
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-align-center"
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Table > Table stripeVue demo works fine 1`] = `
+<div>
+  <div
+    class="t-table t-vertical-align-middle t-table--bordered t-table--striped"
+    style="position: relative;"
+  >
+    <div
+      class="t-table__content"
+      style="max-height: 400px;"
+    >
+      <table
+        class="t-table--layout-fixed"
+      >
+        <colgroup>
+          
+          <col
+            style="width: 80px; min-width: undefined;"
+          />
+          <col
+            style="width: 80px; min-width: undefined;"
+          />
+          <col
+            style="width: 80px; min-width: undefined;"
+          />
+          <col
+            style="width: 80px; min-width: undefined;"
+          />
+          
+        </colgroup>
+        <thead
+          class="t-table__header t-table__header--fixed t-table--bordered"
+        >
+          <tr>
+            
+            <th
+              class="t-table__th-applicant t-align-center"
+            >
+              <div
+                class=""
+              >
+                标题
+              </div>
+            </th>
+            <th
+              class="t-table__th-status"
+            >
+              <div
+                class=""
+              >
+                标题
+              </div>
+            </th>
+            <th
+              class="t-table__th-channel"
+            >
+              <div
+                class=""
+              >
+                标题
+              </div>
+            </th>
+            <th
+              class="t-table__th-detail.email t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                标题
+              </div>
+            </th>
+            
+          </tr>
+        </thead>
+        <tbody
+          class="t-table__body"
+        >
+          
+          <tr>
+            
+            <td
+              class="t-align-center"
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-align-center"
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-align-center"
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-align-center"
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-align-center"
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-align-center"
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-align-center"
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-align-center"
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-align-center"
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-align-center"
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
