@@ -23,6 +23,7 @@ optionsColumns | String / Number | 1 | \- | N
 optionsLayout | String | columns | `deprecated` | N
 value | String / Number | undefined | `v-model` and `v-model:value` is supported。Typescript：`DropdownValue ` `type DropdownValue = string \| number;`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
 defaultValue | String / Number | undefined | uncontrolled property。Typescript：`DropdownValue ` `type DropdownValue = string \| number;`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
+visible | Boolean | false | \- | N
 onChange | Function |  | Typescript：`(value: DropdownValue) => void`<br/> | N
 onConfirm | Function |  | Typescript：`(value: DropdownValue) => void`<br/> | N
 onReset | Function |  | Typescript：`(value: DropdownValue) => void`<br/> | N

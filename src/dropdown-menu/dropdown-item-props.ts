@@ -50,6 +50,8 @@ export default {
     type: [String, Number] as PropType<TdDropdownItemProps['defaultValue']>,
     default: undefined,
   },
+  /** 是否展示 */
+  visible: Boolean,
   /** 值改变时触发 */
   onChange: Function as PropType<TdDropdownItemProps['onChange']>,
   /** 点击确认时触发 */

@@ -14,11 +14,15 @@
         <t-dropdown-item disabled label="禁用菜单" />
       </t-dropdown-menu>
     </tdesign-demo-block>
+    <tdesign-demo-block summary="插槽样式">
+      <slotDemoVue />
+    </tdesign-demo-block>
     <div style="height: 40px" />
   </div>
 </template>
 
 <script lang="ts" setup>
+import slotDemoVue from './slotDemo.vue';
 import singleVue from './single.vue';
 import multipleVue from './multi.vue';
 </script>

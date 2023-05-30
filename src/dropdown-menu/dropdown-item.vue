@@ -8,6 +8,7 @@
       :overlay-props="{ style: 'position: absolute' }"
       :class="`${name}__popup-host`"
       :attach="`#${dropdownItemId}`"
+      @visible-change="onVisibleChange"
       @close="closePopup"
     >
       <div :class="styleContent">
@@ -90,11 +91,21 @@ export default defineComponent({
   name,
   components: { TRadio, TButton, TCheckbox, TRadioGroup, TCheckboxGroup },
   props: DropdownItemProps,
-  emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
+  emits: [
+    'change',
+    'open',
+    'opened',
+    'close',
+    'closed',
+    'overlayClick',
+    'update:visible',
+    'update:value',
+    'update:modelValue',
+  ],
   setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     // 受控 value 属性
-    const { value, modelValue } = toRefs(props);
+    const { value, modelValue, visible } = toRefs(props);
     const [passInValue, setValue] = useVModel(value, modelValue, props.defaultValue);
     // 从父组件取属性、状态和控制函数
     const menuProps = inject('dropdownMenuProps') as TdDropdownMenuProps;
@@ -110,16 +121,30 @@ export default defineComponent({
       menuState.childCount += 1;
     });
 
+    const isShowItems = ref(visible.value || false);
     const state = reactive({
       showOverlay: computed(() => menuProps.showOverlay),
       duration: computed(() => menuProps.duration),
-      isShowItems: false,
       wrapperVisible: false,
       expandStyle: {} as Object,
       dropdownItemId: '',
       multiple: computed(() => props.multiple),
       options: computed(() => props.options),
     });
+    watch(isShowItems, () => {
+      emitEvent('update:visible', isShowItems.value);
+    });
+
+    watch(visible, () => {
+      isShowItems.value = visible.value;
+      !isShowItems.value && collapseMenu();
+    });
+
+    const onVisibleChange = (visible: boolean) => {
+      if (state.showOverlay) {
+        emitEvent('overlayClick', { visible });
+      }
+    };
     const isCheckedRadio = (value: DropdownValue) => value === radioSelect.value;
     const styleDropRadio = (value: DropdownValue) => [
       `${name}__radio-item`,
@@ -139,7 +164,7 @@ export default defineComponent({
     });
     // 设置展开/收起状态
     const setExpand = (val: boolean) => {
-      state.dropdownItemId = `dropdown-popup-${menuState.barRect.bottom}${menuState.childCount}`;
+      state.dropdownItemId = `dropdown-popup-${menuState.barRect.bottom}${itemId.value}`;
       // 菜单定位
       const { bottom } = menuState.barRect;
       state.expandStyle = {
@@ -153,7 +178,7 @@ export default defineComponent({
         state.wrapperVisible = true;
       }
       nextTick(() => {
-        state.isShowItems = val;
+        isShowItems.value = val;
       });
       if (!val) {
         setTimeout(() => {
@@ -219,7 +244,7 @@ export default defineComponent({
     // 多选值监控
     watch(checkSelect, (val) => {
       if (!props.multiple) return;
-      if (!state.isShowItems) return;
+      if (!isShowItems.value) return;
       if (val) {
         const value = JSON.stringify(passInValue.value || []);
         const values = JSON.stringify(val);
@@ -234,7 +259,7 @@ export default defineComponent({
         menuState.itemsLabel[menuState.activeId] = target?.label;
       }
       if (props.multiple) return;
-      if (!state.isShowItems) return;
+      if (!isShowItems.value) return;
       const value = passInValue.value || [];
       if (value[0] === val) return;
       if (val) {
@@ -259,6 +284,7 @@ export default defineComponent({
       isBtnDisabled,
       radioSelect,
       checkSelect,
+      isShowItems,
       closePopup,
       isCheckedRadio,
       styleDropRadio,
@@ -266,6 +292,7 @@ export default defineComponent({
       collapseMenu,
       resetSelect,
       confirmSelect,
+      onVisibleChange,
       onClickOverlay,
     };
   },
