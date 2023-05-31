@@ -94,7 +94,7 @@ export default defineComponent({
   setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     // 受控 value 属性
-    const { value, modelValue } = toRefs(props);
+    const { value, modelValue, keys } = toRefs(props);
     const [passInValue, setValue] = useVModel(value, modelValue, props.defaultValue);
     // 从父组件取属性、状态和控制函数
     const menuProps = inject('dropdownMenuProps') as TdDropdownMenuProps;
@@ -118,7 +118,16 @@ export default defineComponent({
       expandStyle: {} as Object,
       dropdownItemId: '',
       multiple: computed(() => props.multiple),
-      options: computed(() => props.options),
+    });
+    const options: any = [];
+    props.options?.forEach((item) => {
+      options.push(
+        JSON.parse(
+          JSON.stringify(item)
+            .replace(keys.value?.value ?? 'value', 'value')
+            .replace(keys.value?.label ?? 'label', 'label'),
+        ),
+      );
     });
 
     const isCheckedRadio = (value: DropdownValue) => value === radioSelect.value;
@@ -177,7 +186,7 @@ export default defineComponent({
     // 根据传入值更新当前选中
     const updateSelectValue = (val: DropdownValue | DropdownValue[] | null) => {
       if (!props.multiple) {
-        const list = props.options as DropdownOption[];
+        const list = options;
         const firstChild = list?.[0];
         const newValue = val ?? firstChild?.value ?? null;
         radioSelect.value = newValue as DropdownValue;
@@ -231,7 +240,7 @@ export default defineComponent({
     // 单选值监控
     watch(radioSelect, (val) => {
       if (menuState.activeId !== null) {
-        const target = props.options?.find((item: any) => item.value === val);
+        const target = options?.find((item: any) => item.value === val);
         menuState.itemsLabel[menuState.activeId] = target?.label;
       }
       if (props.multiple) return;
@@ -260,6 +269,7 @@ export default defineComponent({
       isBtnDisabled,
       radioSelect,
       checkSelect,
+      options,
       closePopup,
       isCheckedRadio,
       styleDropRadio,

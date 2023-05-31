@@ -55,12 +55,12 @@ export default defineComponent({
     // 通过 slots.default 子成员，计算标题栏选项
     const menuTitles = computed(() =>
       menuItems.value.map((item: any) => {
-        const { label, disabled, value, options } = item.props;
-        const target = options?.find((item: any) => item.value === value);
+        const { keys, label, value, disabled, options } = item.props;
+        const target = options?.find((item: any) => item[keys?.value ?? 'value'] === value);
         if (!label) {
-          state.itemsLabel.push(target?.label || '');
+          state.itemsLabel.push(target[keys?.label ?? 'label'] || '');
         }
-        const computedLabel = target?.label || '';
+        const computedLabel = target?.[keys?.label ?? 'label'] || '';
         return {
           label: label || computedLabel,
           disabled: disabled !== undefined && disabled !== false,
