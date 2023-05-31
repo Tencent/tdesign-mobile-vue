@@ -112,7 +112,17 @@ describe('CheckTag render', async () => {
     expect(wrapper.text()).toContain('已选中态');
     expect(wrapper.classes()).toContain('t-tag--checked');
   });
-  
+
+  it('close render', async () => {
+    const wrapper = mount(() => <TCheckTag closable>{TEXT}</TCheckTag>);
+    const com = wrapper.findComponent(TCheckTag);
+    expect(wrapper.classes()).toContain('t-tag--closable');
+    const closeBtn = com.find('.t-tag__icon-close');
+    expect(closeBtn.exists()).toBeTruthy();
+    await closeBtn.trigger('click');
+    expect(com.emitted('close')).toBeTruthy();
+  });
+
   it('checked render', async () => {
     const wrapper = mount(() => <TCheckTag modelValue={true}>{TEXT}</TCheckTag>);
     expect(wrapper.classes()).toContain('t-tag--checked');
