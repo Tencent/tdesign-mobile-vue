@@ -8,10 +8,10 @@ import TCheckTag from '../check-tag.vue';
 const TEXT = 'tdesign-mobile-vue';
 const iconFunc = () => h(TIconApp);
 
-const themeList = ['danger', 'default', 'primary', 'success', 'warning'];
-const variantList = ['dark', 'light', 'light-outline', 'outline'];
-const sizeList = ['large', 'medium', 'small'];
-const shapeList = ['mark', 'round', 'square'];
+const themeList = ['danger', 'default', 'primary', 'success', 'warning', ''];
+const variantList = ['dark', 'light', 'light-outline', 'outline', ''];
+const sizeList = ['large', 'medium', 'small', ''];
+const shapeList = ['mark', 'round', 'square', ''];
 
 describe('Tag.vue', async () => {
   it('create', async () => {
@@ -23,28 +23,44 @@ describe('Tag.vue', async () => {
   it('theme render', async () => {
     themeList.forEach((t) => {
       const wrapper = mount(() => <Tag theme={t}>{TEXT}</Tag>);
-      expect(wrapper.classes()).toContain(`t-tag--${t}`);
+      if(!t) {
+        expect(wrapper.classes()).toContain(`t-tag`);
+      }else {
+        expect(wrapper.classes()).toContain(`t-tag--${t}`);
+      }
     });
   });
 
   it('variant render', async () => {
     variantList.forEach((v) => {
       const wrapper = mount(() => <Tag variant={v}>{TEXT}</Tag>);
-      expect(wrapper.classes()).toContain(`t-tag--${v}`);
+      if(!v) {
+        expect(wrapper.classes()).toContain(`t-tag--${'default'}`);
+      }else {
+        expect(wrapper.classes()).toContain(`t-tag--${v}`);
+      }
     });
   });
 
   it('size render', async () => {
     sizeList.forEach((s) => {
       const wrapper = mount(() => <Tag size={s}>{TEXT}</Tag>);
-      expect(wrapper.classes()).toContain(`t-tag--${s}`);
+      if(!s) {
+        expect(wrapper.classes()).toContain(`t-tag--${'default'}`);
+      } else {
+        expect(wrapper.classes()).toContain(`t-tag--${s}`);
+      }
     });
   });
 
   it('shape render', async () => {
     shapeList.forEach((s) => {
       const wrapper = mount(() => <Tag shape={s}>{TEXT}</Tag>);
-      expect(wrapper.classes()).toContain(`t-tag--${s}`);
+      if(!s) {
+        expect(wrapper.classes()).toContain(`t-tag--${'default'}`);
+      }else {
+        expect(wrapper.classes()).toContain(`t-tag--${s}`);
+      }
     });
   });
 
@@ -88,6 +104,15 @@ describe('CheckTag render', async () => {
     expect(wrapper.classes()).toContain('t-tag--checkable');
   });
 
+  it('content render', async () => {
+    const content = ['已选中态', '未选中态'];
+    const wrapper = mount(() => <TCheckTag content={content}>{TEXT}</TCheckTag>);
+    expect(wrapper.text()).toContain('未选中态');
+    await wrapper.trigger('click');
+    expect(wrapper.text()).toContain('已选中态');
+    expect(wrapper.classes()).toContain('t-tag--checked');
+  });
+  
   it('checked render', async () => {
     const wrapper = mount(() => <TCheckTag modelValue={true}>{TEXT}</TCheckTag>);
     expect(wrapper.classes()).toContain('t-tag--checked');
@@ -114,6 +139,17 @@ describe('CheckTag render', async () => {
     shapeList.forEach((s) => {
       const wrapper = mount(() => <TCheckTag shape={s}>{TEXT}</TCheckTag>);
       expect(wrapper.classes()).toContain(`t-tag--${s}`);
+    });
+  });
+
+  it('variant render', async () => {
+    variantList.forEach((v) => {
+      const wrapper = mount(() => <TCheckTag variant={v}>{TEXT}</TCheckTag>);
+      if(!v) {
+        expect(wrapper.classes()).toContain(`t-tag--${'default'}`);
+      }else {
+        expect(wrapper.classes()).toContain(`t-tag--${v}`);
+      }
     });
   });
 
