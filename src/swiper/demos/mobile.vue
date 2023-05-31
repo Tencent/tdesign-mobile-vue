@@ -15,7 +15,7 @@
       <control />
     </tdesign-demo-block>
     <tdesign-demo-block title="01 组件样式" summary="垂直模式">
-      <direction />
+      <vertical />
     </tdesign-demo-block>
   </div>
 </template>
@@ -24,7 +24,7 @@ import baseDemo from './base.vue';
 import custom from './custom.vue';
 import fraction from './fraction.vue';
 import control from './control.vue';
-import direction from './direction.vue';
+import vertical from './vertical.vue';
 </script>
 
 <style lang="less">

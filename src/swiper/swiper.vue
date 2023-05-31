@@ -13,36 +13,39 @@
     </div>
     <!-- 导航器 -->
     <template v-if="navigation && state.showNavigation">
-      <span v-if="direction === 'horizontal' && 'showControls' in navigation && navigation.showControls">
-        <span :class="`${name}__btn btn-prev`" @click="prev(1)">
-          <chevron-left-icon size="20px" />
-        </span>
-        <span :class="`${name}__btn btn-next`" @click="next(1)">
-          <chevron-right-icon size="20px" />
+      <span
+        v-if="direction === 'horizontal' && 'showControls' in navigation && navigation.showControls"
+        :class="`${navName}__btn`"
+      >
+        <span :class="`${navName}__btn--prev`" @click="prev(1)" />
+        <span :class="`${navName}__btn--next`" @click="next(1)" />
+      </span>
+      <span
+        v-if="'type' in navigation"
+        :class="[
+          `${navName}--${direction}`,
+          `${navName}__${navigation.type || ''}`,
+          `${navName}--${navigation.paginationPosition || 'bottom'}`,
+        ]"
+      >
+        <template v-if="['dots', 'dots-bar'].includes(navigation.type || '')">
+          <span
+            v-for="(_, index) in state.children.length"
+            :key="'page' + index"
+            :class="[
+              `${navName}__${navigation.type}-item`,
+              { [`${navName}__${navigation.type}-item--active`]: index === state.activeIndex },
+              `${navName}__${navigation.type}-item--${direction}`,
+            ]"
+          ></span>
+        </template>
+        <span v-if="navigation.type && navigation.type === 'fraction'">
+          {{ showPageNum + '/' + state.children.length }}
         </span>
       </span>
-      <div :class="navigationWrapperClass">
-        <span
-          v-if="'type' in navigation"
-          :class="`${name}__pagination ${name}__pagination-${navigation.type || ''} ${name}__pagination-${
-            navigation.paginationPosition || 'bottom'
-          }`"
-        >
-          <template v-if="['dots', 'dots-bar'].includes(navigation.type || '')">
-            <span
-              v-for="(item, index) in state.children.length"
-              :key="'page' + index"
-              :class="{ [`${name}-dot`]: true, [`${name}-dot--active`]: index === state.activeIndex }"
-            ></span>
-          </template>
-          <span v-if="navigation.type && navigation.type === 'fraction'">
-            {{ showPageNum + '/' + state.children.length }}
-          </span>
-        </span>
-      </div>
     </template>
     <template v-else-if="computedNavigation !== undefined">
-      <t-node :content="computedNavigation" :style="{}"></t-node>
+      <t-node :content="computedNavigation"></t-node>
     </template>
   </div>
 </template>
@@ -60,7 +63,6 @@ import {
   ComponentInternalInstance,
   ComponentPublicInstance,
 } from 'vue';
-import { ChevronLeftIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import { useSwipe } from '@vueuse/core';
 import SwiperProps from './props';
 import config from '../config';
@@ -69,13 +71,14 @@ import { SwiperNavigation, TdSwiperProps } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-swiper`;
+const navName = `${prefix}-swiper-nav`;
 const setOffset = (element: HTMLDivElement, offset: number, direction = 'X'): void => {
   // eslint-disable-next-line no-param-reassign
   element.style.transform = `translate${direction}(${offset}px)`;
 };
 export default defineComponent({
   name,
-  components: { ChevronLeftIcon, ChevronRightIcon, TNode },
+  components: { TNode },
   props: SwiperProps,
   emits: ['change', 'update:current', 'update:modelValue'],
   setup(props, context) {
@@ -122,13 +125,6 @@ export default defineComponent({
 
     const rootName = computed(() => {
       return [`${name}`];
-    });
-    const navigationWrapperClass = computed(() => {
-      const { placement = 'inside' } = props.navigation as SwiperNavigation;
-      if (placement === 'outside') {
-        return [`${name}__navigation`];
-      }
-      return [];
     });
 
     const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector(`.${name}__container`);
@@ -345,11 +341,11 @@ export default defineComponent({
     );
     return {
       rootName,
-      navigationWrapperClass,
       swiperHight,
       onItemClick,
       swiperContainer,
       name,
+      navName,
       computedNavigation,
       onTouchMove,
       onTouchEnd,
