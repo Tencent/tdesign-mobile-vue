@@ -126,6 +126,12 @@ export default {
           component: () => import('@/calendar/calendar.md'),
         },
         {
+          title: 'Cascader 级联选择器',
+          name: 'cascader',
+          path: '/mobile-vue/components/cascader',
+          component: () => import('@/cascader/cascader.md'),
+        },
+        {
           title: 'CheckBox 复选框',
           name: 'checkbox',
           path: '/mobile-vue/components/checkbox',
@@ -136,12 +142,6 @@ export default {
           name: 'input',
           path: '/mobile-vue/components/input',
           component: () => import('@/input/input.md'),
-        },
-        {
-          title: 'Textarea 多行输入框',
-          name: 'textarea',
-          path: '/mobile-vue/components/textarea',
-          component: () => import('@/textarea/textarea.md'),
         },
         {
           title: 'Picker 选择器',
@@ -168,18 +168,6 @@ export default {
           component: () => import('@/rate/rate.md'),
         },
         {
-          title: 'Stepper 步进器',
-          name: 'stepper',
-          path: '/mobile-vue/components/stepper',
-          component: () => import('@/stepper/stepper.md'),
-        },
-        {
-          title: 'Switch 开关',
-          name: 'switch',
-          path: '/mobile-vue/components/switch',
-          component: () => import('@/switch/switch.md'),
-        },
-        {
           title: 'Search 搜索框',
           name: 'search',
           path: '/mobile-vue/components/search',
@@ -192,16 +180,28 @@ export default {
           component: () => import('@/slider/slider.md'),
         },
         {
+          title: 'Stepper 步进器',
+          name: 'stepper',
+          path: '/mobile-vue/components/stepper',
+          component: () => import('@/stepper/stepper.md'),
+        },
+        {
+          title: 'Switch 开关',
+          name: 'switch',
+          path: '/mobile-vue/components/switch',
+          component: () => import('@/switch/switch.md'),
+        },
+        {
+          title: 'Textarea 多行输入框',
+          name: 'textarea',
+          path: '/mobile-vue/components/textarea',
+          component: () => import('@/textarea/textarea.md'),
+        },
+        {
           title: 'Upload 上传',
           name: 'upload',
           path: '/mobile-vue/components/upload',
           component: () => import('@/upload/upload.md'),
-        },
-        {
-          title: 'Cascader 级联选择器',
-          name: 'cascader',
-          path: '/mobile-vue/components/cascader',
-          component: () => import('@/cascader/cascader.md'),
         },
       ],
     },
@@ -209,6 +209,12 @@ export default {
       title: '数据展示',
       type: 'component',
       children: [
+        {
+          title: 'Table 表格',
+          name: 'table',
+          path: '/mobile-vue/components/table',
+          component: () => import('@/table/table.md'),
+        },
         {
           title: 'Cell 单元格',
           name: 'cell',
@@ -281,12 +287,6 @@ export default {
           name: 'swiper',
           path: '/mobile-vue/components/swiper',
           component: () => import('@/swiper/swiper.md'),
-        },
-        {
-          title: 'Table 表格',
-          name: 'table',
-          path: '/mobile-vue/components/table',
-          component: () => import('@/table/table.md'),
         },
         {
           title: 'ImageViewer 图片预览',
