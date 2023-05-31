@@ -77,6 +77,7 @@ import { ref, watch, toRefs, inject, computed, reactive, onBeforeMount, defineCo
 import TRadio, { RadioGroup as TRadioGroup } from '../radio';
 import config from '../config';
 import TButton from '../button';
+import TPopup from '../popup';
 import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
 import { useVModel, useEmitEvent } from '../shared';
 import DropdownItemProps from './dropdown-item-props';
@@ -88,7 +89,7 @@ const name = `${prefix}-dropdown-item`;
 
 export default defineComponent({
   name,
-  components: { TRadio, TButton, TCheckbox, TRadioGroup, TCheckboxGroup },
+  components: { TRadio, TButton, TPopup, TCheckbox, TRadioGroup, TCheckboxGroup },
   props: DropdownItemProps,
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
   setup(props, context) {
