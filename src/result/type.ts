@@ -18,7 +18,7 @@ export interface TdResultProps {
   /**
    * 图片地址
    */
-  image?: string | TNode;
+  image?: string;
   /**
    * 内置主题。
    * @default default

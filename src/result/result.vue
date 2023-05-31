@@ -21,6 +21,7 @@
 <script lang="ts">
 import { h, computed, toRefs, getCurrentInstance, defineComponent } from 'vue';
 import { InfoCircleIcon, CheckCircleIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
+import TImage from '../image';
 import resultProps from './props';
 import config from '../config';
 import { renderTNode, TNode } from '../shared';
@@ -37,9 +38,7 @@ const iconDefault = {
 
 export default defineComponent({
   name,
-  components: {
-    TNode,
-  },
+  components: { TNode, TImage },
   props: resultProps,
   setup(props) {
     const internalInstance = getCurrentInstance();
