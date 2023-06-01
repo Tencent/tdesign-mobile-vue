@@ -49,6 +49,7 @@ describe('Result.vue', () => {
     const wrapper1 = mount(() => <Result theme="success"></Result>);
     const wrapper2 = mount(() => <Result theme="warning"></Result>);
     const wrapper3 = mount(() => <Result theme="error"></Result>);
+    const wrapper4 = mount(() => <Result theme=""></Result>);
 
     expect(wrapper1.classes()).toContain('t-result--theme-success');
     expect(wrapper1.findComponent(CheckCircleIcon).exists()).toBeTruthy();
@@ -56,5 +57,7 @@ describe('Result.vue', () => {
     expect(wrapper2.findComponent(InfoCircleIcon).exists()).toBeTruthy();
     expect(wrapper3.classes()).toContain('t-result--theme-error');
     expect(wrapper3.findComponent(CloseCircleIcon).exists()).toBeTruthy();
+
+    expect(wrapper4.classes()).toContain('t-result--theme-');
   });
 });
