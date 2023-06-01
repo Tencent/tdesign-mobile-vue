@@ -4,6 +4,11 @@ import { nextTick } from 'vue';
 import Stepper from '../stepper.vue';
 import { ref } from 'vue';
 
+const simulateEvent = (target, text, event) => {
+  target.value = text;
+  target.dispatchEvent(new Event(event));
+};
+
 describe('stepper', () => {
   describe('props', () => {
     it(': disabled', async () => {
@@ -163,6 +168,30 @@ describe('stepper', () => {
       $input.trigger('blur');
       expect(onBlur).toHaveBeenCalled(1);
       expect(value.value).toBe(2);
+    });
+
+    it(': focus', async () => {
+      const data = ref('');
+      const onFocus = vi.fn();
+      const wrapper = mount(<Stepper v-model={data.value} onFocus={onFocus} />);
+
+      const $input = wrapper.find('.t-stepper__input');
+      await $input.trigger('focus');
+      expect(onFocus).toBeCalled();
+    });
+
+    it(': input ', async () => {
+      const data = ref('');
+      const value = ref('');
+      const handleChange = (val) => {
+        value.value = val;
+      };
+      const wrapper = mount(<Stepper v-model={data.value} onChange={handleChange} />);
+      const $input = wrapper.find('.t-stepper__input').element;
+
+      const inputValue = 12;
+      await simulateEvent($input, inputValue, 'input');
+      expect(value.value).toBe(inputValue);
     });
   });
 });
