@@ -1,9 +1,8 @@
 import { h } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
+import { Icon, AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import Link from '../link.vue';
-
 // const iconFunc = () => h(TIconApp);
 
 // every component needs four parts: props/events/slots/functions.
@@ -17,6 +16,12 @@ describe('Link', () => {
         },
       });
       expect(wrapper.element).toMatchSnapshot();
+      const wrapperDefault = mount({
+        render() {
+          return <Link size=''>text</Link>;
+        },
+      });
+      expect(wrapperDefault.element).toMatchSnapshot();
     });
     it(':theme', () => {
       const wrapper = mount({
@@ -25,6 +30,12 @@ describe('Link', () => {
         },
       });
       expect(wrapper.element).toMatchSnapshot();
+      const wrapperDefault = mount({
+        render() {
+          return <Link theme=''>text</Link>;
+        },
+      });
+      expect(wrapperDefault.element).toMatchSnapshot();
     });
     it(':hover', () => {
       const wrapper = mount({
@@ -76,6 +87,10 @@ describe('Link', () => {
       });
       expect(wrapper.element).toMatchSnapshot();
     });
+    it('prefixIcon', () => {
+      const wrapper = mount(() => <Link prefixIcon={<Icon />}>text</Link>)
+      expect(wrapper.findComponent(Icon)).toBeTruthy()
+    })
   });
 
   // test events
