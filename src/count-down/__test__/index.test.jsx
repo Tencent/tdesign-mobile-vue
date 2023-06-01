@@ -61,11 +61,15 @@ describe('countdown.vue', async () => {
     it('size', async () => {
       const wrapper = mount(<CountDown time={100000}></CountDown>);
       expect(wrapper.find('.t-count-down--medium').exists()).toBe(true);
+      const wrapper1 = mount(<CountDown time={100000} size=""></CountDown>);
+      expect(wrapper1.find('.t-count-down').exists()).toBe(true);
     });
 
     it('theme', async () => {
       const wrapper = mount(<CountDown time={100000}></CountDown>);
       expect(wrapper.find('.t-count-down--default').exists()).toBe(true);
+      const wrapper1 = mount(<CountDown time={100000} theme=""></CountDown>);
+      expect(wrapper1.find('.t-count-down').exists()).toBe(true);
     });
   });
 
