@@ -8,7 +8,7 @@
         :style="rootStyles"
         @touchmove="handleMove"
       >
-        <div v-if="closeBtnNode" :class="`${name}__close`">
+        <div v-if="closeBtnNode" :class="`${name}__close`" @click="handleCloseClick">
           <t-node :content="closeBtnNode" />
         </div>
         <slot />
@@ -88,14 +88,14 @@ export default defineComponent({
 
     const closeBtnNode = computed(() =>
       renderTNode(currentInstance, 'closeBtn', {
-        defaultNode: h(CloseIcon, {
-          size: '24px',
-          onClick() {
-            setVisible(false);
-          },
-        }),
+        defaultNode: h(CloseIcon, { size: '24px' }),
       }),
     );
+
+    const handleCloseClick = (e: MouseEvent) => {
+      emitEvent('close', { e });
+      setVisible(false);
+    };
 
     const handleOverlayClick = (args: { e: MouseEvent }) => {
       const { e } = args;
@@ -142,6 +142,7 @@ export default defineComponent({
       afterEnter,
       afterLeave,
       handleOverlayClick,
+      handleCloseClick,
       handleMove,
     };
   },
