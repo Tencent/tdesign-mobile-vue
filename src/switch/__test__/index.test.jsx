@@ -47,5 +47,32 @@ describe('switch', () => {
       });
       expect(wrapper.classes()).not.toContain('t-switch--disabled');
     });
+
+    it(': size', async () => {
+      const wrapper = mount(Switch, {
+        props: {
+          size: '',
+        },
+      });
+      expect(wrapper.classes()).toContain('t-switch--');
+      await wrapper.setProps({
+        size: 'small',
+      });
+
+      expect(wrapper.classes()).toContain('t-switch--small');
+    });
+  });
+  describe('event', () => {
+    it(': onChange', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(Switch, {
+        props: {
+          onChange,
+        },
+      });
+      const $switch = wrapper.find('.t-switch');
+      await $switch.trigger('click');
+      expect(onChange).toHaveBeenCalled();
+    });
   });
 });
