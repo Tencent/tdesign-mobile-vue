@@ -1,69 +1,77 @@
 // Vitest Snapshot v1
 
 exports[`Fab > Fab advanceVue demo works fine 1`] = `
-<button
-  aria-disabled="false"
-  class="t-button t-button--size-large t-button--base t-button--primary t-button--round t-fab"
-  role="button"
+<div
+  class="t-fab"
   style="right: 16px; bottom: 32px;"
-  type="button"
 >
-  <svg
-    class="t-icon t-icon-add"
-    fill="none"
-    height="1em"
-    style="font-size: 24px;"
-    viewBox="0 0 16 16"
-    width="1em"
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--base t-button--primary t-button--round t-fab__button"
+    role="button"
+    type="button"
   >
-    <path
-      d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-      fill="currentColor"
-      fill-opacity="0.9"
-    />
-  </svg>
-  <span
-    class="t-button__content"
-  >
-    
-    按钮文字
-    
-  </span>
-  <!---->
-</button>
+    <svg
+      class="t-icon t-icon-add"
+      fill="none"
+      height="1em"
+      style="font-size: 24px;"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+    <span
+      class="t-button__content"
+    >
+      
+      按钮文字
+      
+    </span>
+    <!---->
+  </button>
+</div>
 `;
 
 exports[`Fab > Fab baseVue demo works fine 1`] = `
-<button
-  aria-disabled="false"
-  class="t-button t-button--size-large t-button--base t-button--primary t-button--circle t-fab"
-  role="button"
+<div
+  class="t-fab"
   style="right: 16px; bottom: 32px;"
-  type="button"
 >
-  <svg
-    class="t-icon t-icon-add"
-    fill="none"
-    height="1em"
-    style="font-size: 24px;"
-    viewBox="0 0 16 16"
-    width="1em"
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--base t-button--primary t-button--circle t-fab__button"
+    role="button"
+    type="button"
   >
-    <path
-      d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-      fill="currentColor"
-      fill-opacity="0.9"
-    />
-  </svg>
-  <span
-    class="t-button__content"
-  >
-    
-    
-    
-  </span>
-  <!---->
-</button>
+    <svg
+      class="t-icon t-icon-add"
+      fill="none"
+      height="1em"
+      style="font-size: 24px;"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+    <span
+      class="t-button__content"
+    >
+      
+      
+      
+    </span>
+    <!---->
+  </button>
+</div>
 `;
 
 exports[`Fab > Fab mobileVue demo works fine 1`] = `
@@ -163,37 +171,41 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
       
     </div>
   </div>
-  <button
-    aria-disabled="false"
-    class="t-button t-button--size-large t-button--base t-button--primary t-button--circle t-fab"
+  <div
+    class="t-fab"
     data-v-38a07a02=""
-    role="button"
     style="right: 16px; bottom: 32px;"
-    type="button"
   >
-    <svg
-      class="t-icon t-icon-add"
-      fill="none"
-      height="1em"
-      style="font-size: 24px;"
-      viewBox="0 0 16 16"
-      width="1em"
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-large t-button--base t-button--primary t-button--circle t-fab__button"
+      role="button"
+      type="button"
     >
-      <path
-        d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-        fill="currentColor"
-        fill-opacity="0.9"
-      />
-    </svg>
-    <span
-      class="t-button__content"
-    >
-      
-      
-      
-    </span>
-    <!---->
-  </button>
+      <svg
+        class="t-icon t-icon-add"
+        fill="none"
+        height="1em"
+        style="font-size: 24px;"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      <span
+        class="t-button__content"
+      >
+        
+        
+        
+      </span>
+      <!---->
+    </button>
+  </div>
   <!--v-if-->
 </div>
 `;
