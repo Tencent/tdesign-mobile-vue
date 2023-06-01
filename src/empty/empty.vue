@@ -22,6 +22,7 @@
 
 <script lang="ts">
 import { toRefs, defineComponent, getCurrentInstance, computed } from 'vue';
+import TImage from '../image';
 import EmptyProps from './props';
 import config from '../config';
 import { renderTNode, TNode } from '../shared';
@@ -31,7 +32,7 @@ const name = `${prefix}-empty`;
 
 export default defineComponent({
   name,
-  components: { TNode },
+  components: { TNode, TImage },
 
   props: EmptyProps,
   setup(props, context) {

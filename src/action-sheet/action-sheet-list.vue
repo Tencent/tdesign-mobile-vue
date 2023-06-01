@@ -34,6 +34,8 @@
 import { ref, defineComponent, PropType, computed } from 'vue';
 import config from '../config';
 import { ActionSheetItem } from './type';
+import TButton from '../button';
+import TBadge from '../badge';
 import { TNode } from '../shared';
 
 const { prefix } = config;
@@ -41,7 +43,7 @@ const { prefix } = config;
 const name = `${prefix}-action-sheet`;
 
 export default defineComponent({
-  components: { TNode },
+  components: { TNode, TButton, TBadge },
   props: {
     items: {
       type: Array as PropType<ActionSheetItem[]>,

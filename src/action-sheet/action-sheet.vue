@@ -22,6 +22,7 @@ import { useEmitEvent, useDefault } from '../shared';
 import ActionSheetList from './action-sheet-list.vue';
 import ActionSheetGrid from './action-sheet-grid.vue';
 import TPopup from '../popup';
+import TButton from '../button';
 import config from '../config';
 import { TdActionSheetProps, ActionSheetItem } from './type';
 import ActionSheetProps from './props';
@@ -33,6 +34,7 @@ export default defineComponent({
   name,
   components: {
     TPopup,
+    TButton,
     ActionSheetList,
     ActionSheetGrid,
   },
