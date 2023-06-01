@@ -2,7 +2,6 @@
   <div :class="styleWrapper">
     <div :class="`${componentName}__wrap--prefix`">
       <div :class="`${componentName}__icon--prefix`">
-        <slot name="prefix-icon" />
         <template v-if="prefixIconContent">
           <t-node :content="prefixIconContent"></t-node>
         </template>
@@ -40,7 +39,6 @@
           <t-node :content="suffixContent" />
         </div>
         <div v-if="suffixIconContent" :class="`${componentName}__wrap--suffix-icon`">
-          <slot name="suffix-icon" />
           <t-node :content="suffixIconContent"></t-node>
         </div>
       </div>

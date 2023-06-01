@@ -14,8 +14,6 @@ exports[`Input > Input alignVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -54,8 +52,6 @@ exports[`Input > Input alignVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -94,8 +90,6 @@ exports[`Input > Input alignVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -140,8 +134,6 @@ exports[`Input > Input bannerVue demo works fine 1`] = `
     <div
       class="t-input__icon--prefix"
     >
-      
-      
       <!--v-if-->
     </div>
     <div
@@ -187,8 +179,6 @@ exports[`Input > Input baseVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -227,8 +217,6 @@ exports[`Input > Input baseVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -267,8 +255,6 @@ exports[`Input > Input baseVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -307,8 +293,6 @@ exports[`Input > Input baseVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -365,8 +349,6 @@ exports[`Input > Input borderedVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -394,8 +376,6 @@ exports[`Input > Input borderedVue demo works fine 1`] = `
         <div
           class="t-input__wrap--suffix-icon"
         >
-          
-          
           
           <svg
             class="t-icon t-icon-error-circle-filled"
@@ -432,8 +412,6 @@ exports[`Input > Input customVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -476,8 +454,6 @@ exports[`Input > Input labelVue demo works fine 1`] = `
     <div
       class="t-input__icon--prefix"
     >
-      
-      
       <!--v-if-->
     </div>
     <div
@@ -519,8 +495,6 @@ exports[`Input > Input layoutVue demo works fine 1`] = `
     <div
       class="t-input__icon--prefix"
     >
-      
-      
       <!--v-if-->
     </div>
     <div
@@ -548,8 +522,6 @@ exports[`Input > Input layoutVue demo works fine 1`] = `
       <div
         class="t-input__wrap--suffix-icon"
       >
-        
-        
         
         <svg
           class="t-icon t-icon-error-circle-filled"
@@ -586,8 +558,6 @@ exports[`Input > Input maxLengthVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -630,8 +600,6 @@ exports[`Input > Input maxLengthVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -714,8 +682,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -754,8 +720,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -794,8 +758,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -834,8 +796,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -900,8 +860,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -944,8 +902,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -1010,8 +966,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -1039,8 +993,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <div
               class="t-input__wrap--suffix-icon"
             >
-              
-              
               
               <svg
                 class="t-icon t-icon-info-circle-filled"
@@ -1070,8 +1022,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -1131,8 +1081,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -1160,8 +1108,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <div
               class="t-input__wrap--suffix-icon"
             >
-              
-              
               
               <svg
                 class="t-icon t-icon-user-avatar"
@@ -1217,8 +1163,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             class="t-input__icon--prefix"
           >
             
-            
-            
             <svg
               class="t-icon t-icon-app"
               fill="none"
@@ -1270,8 +1214,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             
             <svg
               class="t-icon t-icon-app"
@@ -1346,8 +1288,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -1401,8 +1341,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -1460,8 +1398,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -1518,8 +1454,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -1562,8 +1496,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -1632,8 +1564,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -1676,8 +1606,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -1737,8 +1665,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -1802,8 +1728,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -1842,8 +1766,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -1882,8 +1804,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -1943,8 +1863,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -1972,8 +1890,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <div
               class="t-input__wrap--suffix-icon"
             >
-              
-              
               
               <svg
                 class="t-icon t-icon-error-circle-filled"
@@ -2024,8 +1940,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__icon--prefix"
           >
-            
-            
             <!--v-if-->
           </div>
           <div
@@ -2093,8 +2007,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <div
               class="t-input__icon--prefix"
             >
-              
-              
               <!--v-if-->
             </div>
             <div
@@ -2122,8 +2034,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               <div
                 class="t-input__wrap--suffix-icon"
               >
-                
-                
                 
                 <svg
                   class="t-icon t-icon-error-circle-filled"
@@ -2177,8 +2087,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <div
               class="t-input__icon--prefix"
             >
-              
-              
               <!--v-if-->
             </div>
             <div
@@ -2229,8 +2137,6 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         
         <svg
           class="t-icon t-icon-app"
@@ -2283,8 +2189,6 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         
         <svg
           class="t-icon t-icon-app"
@@ -2346,8 +2250,6 @@ exports[`Input > Input specialVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -2401,8 +2303,6 @@ exports[`Input > Input specialVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -2460,8 +2360,6 @@ exports[`Input > Input specialVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -2518,8 +2416,6 @@ exports[`Input > Input specialVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -2562,8 +2458,6 @@ exports[`Input > Input specialVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -2615,8 +2509,6 @@ exports[`Input > Input statusVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -2659,8 +2551,6 @@ exports[`Input > Input statusVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -2708,8 +2598,6 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -2737,8 +2625,6 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
         <div
           class="t-input__wrap--suffix-icon"
         >
-          
-          
           
           <svg
             class="t-icon t-icon-info-circle-filled"
@@ -2768,8 +2654,6 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -2829,8 +2713,6 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
       <div
         class="t-input__icon--prefix"
       >
-        
-        
         <!--v-if-->
       </div>
       <div
@@ -2858,8 +2740,6 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
         <div
           class="t-input__wrap--suffix-icon"
         >
-          
-          
           
           <svg
             class="t-icon t-icon-user-avatar"
