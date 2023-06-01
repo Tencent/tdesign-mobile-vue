@@ -18,7 +18,7 @@ export default {
   },
   /** 图片地址 */
   image: {
-    type: [String] as PropType<TdResultProps['image']>,
+    type: [String, Function] as PropType<TdResultProps['image']>,
   },
   /** 内置主题。 */
   theme: {

@@ -2,7 +2,7 @@
   <div :class="classes">
     <div :class="`${name}__thumb`">
       <template v-if="imageContent">
-        <t-image v-if="typeof image === 'string'" v-bind="customImageProps"></t-image>
+        <t-image v-if="typeof image === 'string'" :src="image"></t-image>
         <t-node v-else :content="imageContent"></t-node>
       </template>
       <template v-else>
@@ -57,19 +57,10 @@ export default defineComponent({
     }
     iconContent = props.icon ? computed(() => renderTNode(internalInstance, 'icon')) : iconContent;
 
-    const baseImageProps = {
-      src: props.image,
-    };
-
-    const customImageProps = computed(() => ({
-      ...baseImageProps,
-    }));
-
     return {
       name,
       classes,
       imageContent,
-      customImageProps,
       iconContent,
       titleContent,
       descriptionContent,
