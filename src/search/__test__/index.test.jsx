@@ -37,7 +37,9 @@ describe('search', () => {
       // shape = 'round'
       expect($inputBox.classes().includes(`${name}__input-box--round`)).toBeTruthy();
     });
+  });
 
+  describe('event', () => {
     it(': onFocus', async () => {
       const value = '聚焦测试';
       let focusValue = '';
@@ -98,6 +100,44 @@ describe('search', () => {
       expect(onBlur).toBeCalled();
       expect($search.classes().includes(`${prefix}-is-focused`)).toBeFalsy();
     });
+
+    it(':onKeypress', async () => {
+      const onKeypress = vi.fn();
+      const wrapper = mount(Search, {
+        props: {
+          onKeypress,
+        },
+      });
+      const $input = wrapper.find(`input`);
+      await $input.trigger('keypress');
+      expect(onKeypress).toBeCalled();
+    });
+
+    it(':onCompositionend', async () => {
+      const onCompositionend = vi.fn();
+      const wrapper = mount(Search, {
+        props: {
+          onCompositionend,
+        },
+      });
+      const $input = wrapper.find('input');
+      await $input.trigger('compositionend');
+      expect(onCompositionend).toBeCalled();
+    });
+
+    it(':onActionClick', async () => {
+      const onActionClick = vi.fn();
+      const wrapper = mount(Search, {
+        props: {
+          action: '取消',
+          focus: true,
+          onActionClick,
+        },
+      });
+      const $input = wrapper.find(`.${name}__search-action`);
+      await $input.trigger('click');
+      expect(onActionClick).toBeCalled();
+    });
   });
 
   describe('slots', () => {
@@ -111,6 +151,20 @@ describe('search', () => {
       // TODO: 插槽实现的 dom 结构不正确，后期另提 pr 修复
       const $search = wrapper.find(`.${name}`);
       expect($search.text()).toEqual(action);
+    });
+
+    it(': left-icon', async () => {
+      const text = '插槽';
+      const leftIcon = () => {
+        return text;
+      };
+      const wrapper = mount(Search, {
+        slots: {
+          leftIcon,
+        },
+      });
+      const $search = wrapper.find(`.${name}`);
+      expect($search.text()).toEqual(text);
     });
   });
 });
