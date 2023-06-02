@@ -5,7 +5,7 @@
     <div :class="`${name}__loading--wrapper`" @click.stop="onLoadMore">
       <t-loading
         v-if="typeof asyncLoading === 'string' && ['loading', 'load-more'].includes(asyncLoading)"
-        :loading="asyncLoading === 'loading'"
+        :indicator="asyncLoading === 'loading'"
         :text="typeof asyncLoading === 'string' ? LOADING_TEXT_MAP[asyncLoading] : ''"
         :class="`${name}__loading`"
       />
@@ -16,7 +16,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, computed, getCurrentInstance } from 'vue';
-import { useElementBounding, useWindowSize, useEventListener } from '@vueuse/core';
+import { useWindowSize, useEventListener } from '@vueuse/core';
 import TLoading from '../loading';
 import config from '../config';
 import ListProps from './props';
@@ -55,9 +55,10 @@ export default defineComponent({
     };
 
     const handleScroll = (e: WheelEvent | Event) => {
-      const { top } = useElementBounding(root);
+      const scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 
-      emitEvent('scroll', top.value - height.value, document.documentElement.scrollTop);
+      emitEvent('scroll', scrollHeight - (scrollTop + height.value), scrollTop);
     };
 
     useEventListener(scrollParent, 'scroll', handleScroll);
