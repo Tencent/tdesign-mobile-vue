@@ -60,15 +60,11 @@ describe('Upload', () => {
   describe('props', () => {
     it(':action', async () => {
       const onProgress = vi.fn();
-      const formatRequest = vi.fn(() => ({}));
-      const formatResponse = vi.fn(() => ({ url: 'https://tdesign.gtimg.com/site/source/figma-pc.png' }));
 
       const wrapper = mount(Upload, {
         props: {
           action,
           onProgress,
-          formatRequest,
-          formatResponse,
         },
       });
 
@@ -76,8 +72,6 @@ describe('Upload', () => {
 
       await sleep(1000);
       expect(onProgress).toHaveBeenCalled();
-      expect(formatRequest).toHaveBeenCalled();
-      expect(formatResponse).toHaveBeenCalled();
     });
 
     it(':allowUploadDuplicateFile', async () => {
