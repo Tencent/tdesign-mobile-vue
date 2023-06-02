@@ -306,7 +306,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
           <div
             class="t-dropdown-menu__title"
           >
-            单列多选
+            三列多选
           </div>
           <svg
             class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
@@ -486,7 +486,7 @@ exports[`DropdownMenu > DropdownMenu slotDemoVue demo works fine 1`] = `
     <div
       class="t-dropdown-menu__title"
     >
-      单列多选
+      三列多选
     </div>
     <svg
       class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"

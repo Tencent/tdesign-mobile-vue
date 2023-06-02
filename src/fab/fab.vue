@@ -1,15 +1,9 @@
 <template>
-  <t-button
-    size="large"
-    theme="primary"
-    :class="classes"
-    :style="style"
-    v-bind="btnProps"
-    :icon="() => iconTNode"
-    @click="onClick"
-  >
-    {{ text }}
-  </t-button>
+  <div :class="classes" :style="style" @click="onClick">
+    <t-button size="large" theme="primary" :class="[`${name}__button`]" v-bind="btnProps" :icon="() => iconTNode">
+      {{ text }}
+    </t-button>
+  </div>
 </template>
 
 <script lang="ts">

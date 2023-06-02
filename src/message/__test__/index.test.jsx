@@ -51,7 +51,7 @@ describe('Message.vue', () => {
       vi.useFakeTimers();
       const fn = vi.fn();
       timer(fn);
-      const wrapper = mount(<Message visible duration={5000} onCloseBtnClick={fn} />);
+      const wrapper = mount(<Message defaultVisible duration={5000} onCloseBtnClick={fn} />);
       vi.advanceTimersByTime(5000);
       expect(fn).toBeCalledTimes(1);
     });
@@ -69,7 +69,7 @@ describe('Message.vue', () => {
       const wrapper = mount(() => (
         <Message visible={true} content="这是一条带关闭的消息通知，常驻可关闭" closeBtn={true} onCloseBtnClick={fn} />
       ));
-      const closeBtn = wrapper.find('.t-icon-close');
+      const closeBtn = wrapper.find('.t-message__close-wrap');
       closeBtn.trigger('click');
       expect(fn).toBeCalledTimes(1);
     });

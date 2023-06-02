@@ -119,7 +119,16 @@ export default defineComponent({
       expandStyle: {} as Object,
       dropdownItemId: '',
       multiple: computed(() => props.multiple),
-      options: computed(() => props.options),
+      options: computed(() => {
+        if (props.keys) {
+          return props.options?.map((item) => ({
+            value: item[props.keys?.value ?? 'value'],
+            label: item[props.keys?.label ?? 'label'],
+            disabled: item.disabled,
+          }));
+        }
+        return props.options;
+      }),
     });
 
     const isCheckedRadio = (value: DropdownValue) => value === radioSelect.value;
@@ -178,7 +187,7 @@ export default defineComponent({
     // 根据传入值更新当前选中
     const updateSelectValue = (val: DropdownValue | DropdownValue[] | null) => {
       if (!props.multiple) {
-        const list = props.options as DropdownOption[];
+        const list = state.options;
         const firstChild = list?.[0];
         const newValue = val ?? firstChild?.value ?? null;
         radioSelect.value = newValue as DropdownValue;
@@ -232,7 +241,7 @@ export default defineComponent({
     // 单选值监控
     watch(radioSelect, (val) => {
       if (menuState.activeId !== null) {
-        const target = props.options?.find((item: any) => item.value === val);
+        const target = state.options?.find((item: any) => item.value === val);
         menuState.itemsLabel[menuState.activeId] = target?.label;
       }
       if (props.multiple) return;
