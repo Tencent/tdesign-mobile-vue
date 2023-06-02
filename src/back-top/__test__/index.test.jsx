@@ -73,7 +73,12 @@ describe('BackTop', () => {
 
   describe('events', () => {
     it(': to-top', async () => {
-      const wrapper = mount(BackTop, { props: { icon: false } });
+      const wrapper = mount(BackTop, {
+        props: {
+          icon: false,
+          theme: '',
+        },
+      });
       wrapper.find('.t-back-top').trigger('click');
       expect(wrapper.emitted('to-top')).toHaveLength(1);
     });
