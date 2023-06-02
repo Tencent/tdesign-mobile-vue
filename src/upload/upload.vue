@@ -402,7 +402,6 @@ export default defineComponent({
       if (!resFormatted && props.formatResponse && isFunction(props.formatResponse)) {
         res = props.formatResponse(response, { file });
       }
-      // errorMsg.value = res?.error;
       if (
         !uploadedFiles.value.find((item) => {
           return item.name === file.name;

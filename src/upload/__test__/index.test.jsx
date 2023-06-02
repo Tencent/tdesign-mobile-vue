@@ -1,7 +1,7 @@
 import { ref, nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import { AddIcon, CloseIcon, RefreshIcon, UploadIcon } from 'tdesign-icons-vue-next';
+import { AddIcon, CloseIcon, UploadIcon } from 'tdesign-icons-vue-next';
 import Upload from '../upload.vue';
 
 const mockFileFoo = new File([new ArrayBuffer(3)], 'foo.png', {
@@ -60,11 +60,15 @@ describe('Upload', () => {
   describe('props', () => {
     it(':action', async () => {
       const onProgress = vi.fn();
+      const formatRequest = vi.fn(() => ({}));
+      const formatResponse = vi.fn(() => ({ url: 'https://tdesign.gtimg.com/site/source/figma-pc.png' }));
 
       const wrapper = mount(Upload, {
         props: {
           action,
           onProgress,
+          formatRequest,
+          formatResponse,
         },
       });
 
@@ -72,6 +76,8 @@ describe('Upload', () => {
 
       await sleep(1000);
       expect(onProgress).toHaveBeenCalled();
+      expect(formatRequest).toHaveBeenCalled();
+      expect(formatResponse).toHaveBeenCalled();
     });
 
     it(':allowUploadDuplicateFile', async () => {
@@ -353,6 +359,7 @@ describe('Upload', () => {
       const props = {
         requestMethod,
         format,
+        sizeLimit: 100,
       };
 
       const wrapper = mount(Upload, {
@@ -367,6 +374,7 @@ describe('Upload', () => {
 
     it(':onFail', async () => {
       const onFail = vi.fn();
+      const formatResponse = vi.fn(() => ({ url: 'https://tdesign.gtimg.com/site/source/figma-pc.png' }));
 
       const props = {
         requestMethod: () =>
@@ -377,6 +385,7 @@ describe('Upload', () => {
             }),
           ),
         onFail,
+        formatResponse,
       };
 
       const wrapper = mount(Upload, {
