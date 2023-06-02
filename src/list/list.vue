@@ -5,7 +5,7 @@
     <div :class="`${name}__loading--wrapper`" @click.stop="onLoadMore">
       <t-loading
         v-if="typeof asyncLoading === 'string' && ['loading', 'load-more'].includes(asyncLoading)"
-        :loading="asyncLoading === 'loading'"
+        :indicator="asyncLoading === 'loading'"
         :text="typeof asyncLoading === 'string' ? LOADING_TEXT_MAP[asyncLoading] : ''"
         :class="`${name}__loading`"
       />
