@@ -1,7 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import SwipeCell from '../swipe-cell.vue';
-import Button from '../../button/button.vue';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import { trigger } from '../../image-viewer/__test__/touch';
 
@@ -22,7 +21,6 @@ describe('swipe-cell', () => {
       ];
       const content = 'content is a string';
       const wrapper = mount(<SwipeCell content={() => <div class="swipe-cell__content">{content}</div>} right={right} />);
-      // expect(wrapper).toMatchSnapshot()
 
       // content
       const $content = wrapper.find('.swipe-cell__content');
