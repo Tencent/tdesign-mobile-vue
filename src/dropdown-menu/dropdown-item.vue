@@ -1,5 +1,5 @@
 <template>
-  <div v-if="wrapperVisible" :id="dropdownItemId" :class="classes" :style="{ ...expandStyle }">
+  <div v-if="wrapperVisible" :id="popupId" :class="classes" :style="{ ...expandStyle }">
     <t-popup
       v-model="isShowItems"
       :duration="duration"
@@ -7,7 +7,7 @@
       :style="popupStyle"
       :overlay-props="{ style: 'position: absolute' }"
       :class="`${name}__popup-host`"
-      :attach="`#${dropdownItemId}`"
+      :attach="`#${popupId}`"
       @close="closePopup"
     >
       <div :class="styleContent">
@@ -79,13 +79,14 @@ import config from '../config';
 import TButton from '../button';
 import TPopup from '../popup';
 import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
-import { useVModel, useEmitEvent } from '../shared';
+import { useVModel, useEmitEvent, uniqueFactory } from '../shared';
 import DropdownItemProps from './dropdown-item-props';
 import { DropdownMenuState, DropdownMenuControl } from './context';
 import { TdDropdownMenuProps, DropdownOption, DropdownValue } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-dropdown-item`;
+const getUniqueID = uniqueFactory('dropdown-popup');
 
 export default defineComponent({
   name,
@@ -117,7 +118,6 @@ export default defineComponent({
       isShowItems: false,
       wrapperVisible: false,
       expandStyle: {} as Object,
-      dropdownItemId: '',
       multiple: computed(() => props.multiple),
       options: computed(() => {
         if (props.keys) {
@@ -148,9 +148,9 @@ export default defineComponent({
     const styleContent = computed(() => {
       return [`${name}__content`, `t-popup__content`];
     });
+    const popupId = getUniqueID();
     // 设置展开/收起状态
     const setExpand = (val: boolean) => {
-      state.dropdownItemId = `dropdown-popup-${menuState.barRect.bottom}${itemId.value}`;
       // 菜单定位
       const { bottom } = menuState.barRect;
       state.expandStyle = {
@@ -270,6 +270,7 @@ export default defineComponent({
       isBtnDisabled,
       radioSelect,
       checkSelect,
+      popupId,
       closePopup,
       isCheckedRadio,
       styleDropRadio,

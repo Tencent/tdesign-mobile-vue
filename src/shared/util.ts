@@ -1,4 +1,7 @@
 import { isNumber } from '@vueuse/core';
+import config from '../config';
+
+const { prefix } = config;
 
 export function toCamel(str: string): string {
   return str.replace(/^\S/, (m) => m.toUpperCase());
@@ -49,6 +52,11 @@ export function getCharacterLength(str: string, maxCharacter?: number) {
 }
 
 export const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms)); // eslint-disable-line
+
+export const uniqueFactory = (compName: string) => {
+  let number = 0;
+  return () => `${prefix}-${compName}_${number++}`;
+};
 
 export const convertUnit = (val: string | number | undefined) => {
   if (val == null) return 0;
