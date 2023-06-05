@@ -34,7 +34,7 @@ exports[`Radio > props > : checked 1`] = `
         class="t-radio__title"
         style=""
       >
-        单选
+        0
       </span>
       <!--v-if-->
     </div>
@@ -80,6 +80,90 @@ exports[`Radio > props > : checked 1`] = `
         class="t-radio__title"
         style=""
       >
+        1
+      </span>
+      <!--v-if-->
+    </div>
+    <div
+      class="t-radio__border t-radio__border--left"
+    />
+  </div>
+  
+  <!--v-if-->
+</div>
+`;
+
+exports[`Radio > props > : keys 1`] = `
+<div
+  class="t-radio-group"
+  role="radiogroup"
+>
+  
+  <div
+    class="t-radio t-radio--left t-radio--block"
+  >
+    <input
+      class="t-radio__original"
+      disabled=""
+      name=""
+      type="radio"
+      value="1"
+    />
+    <div
+      class="t-radio__icon t-radio__icon--left t-radio__icon--disabled"
+    >
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+      <div
+        class="t-radio__icon-circle t-radio__icon-circle--disabled"
+      />
+      <!--v-if-->
+      <!---->
+    </div>
+    <div
+      class="t-radio__content"
+    >
+      <span
+        class="t-radio__title t-radio__title--disabled"
+        style=""
+      >
+        单选
+      </span>
+      <!--v-if-->
+    </div>
+    <div
+      class="t-radio__border t-radio__border--left"
+    />
+  </div>
+  <div
+    class="t-radio t-radio--left t-radio--block"
+  >
+    <input
+      class="t-radio__original"
+      name=""
+      type="radio"
+      value="2"
+    />
+    <div
+      class="t-radio__icon t-radio__icon--left"
+    >
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+      <div
+        class="t-radio__icon-circle"
+      />
+      <!--v-if-->
+      <!---->
+    </div>
+    <div
+      class="t-radio__content"
+    >
+      <span
+        class="t-radio__title"
+        style=""
+      >
         单选
       </span>
       <!--v-if-->
@@ -90,5 +174,36 @@ exports[`Radio > props > : checked 1`] = `
   </div>
   
   <!--v-if-->
+</div>
+`;
+
+exports[`Radio > props > :placement 1`] = `
+<div
+  class="t-radio t-radio--right t-radio--block"
+>
+  <input
+    class="t-radio__original"
+    name=""
+    type="radio"
+  />
+  <div
+    class="t-radio__icon t-radio__icon--right t-radio__icon--checked"
+  >
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+    line
+  </div>
+  <div
+    class="t-radio__content"
+  >
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <div
+    class="t-radio__border t-radio__border--right"
+  />
 </div>
 `;
