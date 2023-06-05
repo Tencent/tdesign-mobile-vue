@@ -9,22 +9,20 @@
       <multipleVue />
     </tdesign-demo-block>
     <tdesign-demo-block title="02 组件状态" summary="禁用状态">
-      <t-dropdown-menu>
-        <t-dropdown-item disabled label="禁用菜单" />
-        <t-dropdown-item disabled label="禁用菜单" />
-      </t-dropdown-menu>
+      <disabledVue />
     </tdesign-demo-block>
     <tdesign-demo-block summary="插槽样式">
-      <slotDemoVue />
+      <customizedVue />
     </tdesign-demo-block>
     <div style="height: 40px" />
   </div>
 </template>
 
 <script lang="ts" setup>
-import slotDemoVue from './slotDemo.vue';
+import customizedVue from './customized.vue';
 import singleVue from './single.vue';
-import multipleVue from './multi.vue';
+import multipleVue from './multiple.vue';
+import disabledVue from './disabled.vue';
 </script>
 
 <style lang="less" scoped>

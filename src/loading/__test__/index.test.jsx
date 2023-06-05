@@ -50,6 +50,12 @@ describe('Loading.vue', () => {
       const iconWrapperStyle = iconWrapper.attributes().style;
       expect(iconWrapperStyle).toContain('animation-direction: reverse');
     });
+
+    it(':theme', () => {
+      const wrapper = mount(() => <Loading theme={'spinner'} />);
+      const icon = wrapper.findComponent(Spinner);
+      expect(icon.exists()).toBeTruthy();
+    });
   });
 
   describe('slots', () => {
