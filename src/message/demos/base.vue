@@ -14,14 +14,20 @@
   <!-- 带图标通知 -->
   <t-message
     v-model="visible1"
-    :icon="InfoIcon"
+    :icon="InfoCircleFilledIcon"
     :offset="['10px', '16px']"
     :duration="5000"
     content="这是一条普通的通知信息"
   />
 
   <!-- 带关闭通知 -->
-  <t-message v-model="visible2" :icon="InfoIcon" :offset="['10px', 16]" :duration="-1" content="这是一条普通的通知信息">
+  <t-message
+    v-model="visible2"
+    :icon="InfoCircleFilledIcon"
+    :offset="['10px', 16]"
+    :duration="-1"
+    content="这是一条普通的通知信息"
+  >
     <template #closeBtn>
       <t-button class="close-btn" variant="text">按钮</t-button>
       <closeIcon class="t-message__icon--right" />
@@ -38,7 +44,13 @@
   />
 
   <!-- 带按钮通知 -->
-  <t-message v-model="visible4" :icon="InfoIcon" :offset="[10, 16]" :duration="-1" content="这是一条普通的通知信息">
+  <t-message
+    v-model="visible4"
+    :icon="InfoCircleFilledIcon"
+    :offset="[10, 16]"
+    :duration="-1"
+    content="这是一条普通的通知信息"
+  >
     <template #closeBtn>
       <t-button class="close-btn" variant="text">按钮</t-button>
     </template>
@@ -47,7 +59,7 @@
 
 <script lang="ts" setup>
 import { h, ref } from 'vue';
-import { ErrorCircleFilledIcon, CloseIcon, NotificationFilledIcon, InfoCircleFilledIcon } from 'tdesign-icons-vue-next';
+import { CloseIcon, InfoCircleFilledIcon } from 'tdesign-icons-vue-next';
 
 const visible = ref(false);
 const visible1 = ref(false);
@@ -60,9 +72,6 @@ const suffixIconStyle = {
   cursor: 'pointer',
 };
 
-const InfoIcon = () => h(InfoCircleFilledIcon);
-// const prefixIcon = () => h(ErrorCircleFilledIcon, { color: '#0052D9' });
-// const notificationIcon = () => h(NotificationFilledIcon, { color: '#0052D9' });
 const closeIcon = () => h(CloseIcon, { ...suffixIconStyle });
 
 const showTextMessage = () => {
