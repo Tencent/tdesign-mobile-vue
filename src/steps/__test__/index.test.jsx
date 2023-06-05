@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import { ref } from 'vue';
+import { nextTick, ref } from 'vue';
 import { Steps, StepItem } from '../../steps';
 const items = [
   {
@@ -112,14 +112,15 @@ describe('steps', () => {
   });
 
   describe('StepItem Slots', () => {
-    it(': content && title', () => {
+    it(': content && title', async () => {
       const current = ref(1);
+      const stepItems = ref(items.slice());
       const wrapper = mount({
         setup() {
           return () => (
             <Steps v-model={current.value}>
               {{
-                default: items.map((item, index) => {
+                default: stepItems.value.map((item, index) => {
                   return <StepItem title={item.title} content={item.content} />;
                 }),
               }}
@@ -127,11 +128,15 @@ describe('steps', () => {
           );
         },
       });
+
+      stepItems.value.pop();
+      await nextTick();
+
       const $stepItems = wrapper.findAllComponents(StepItem);
-      expect($stepItems.length).toEqual(items.length);
+      expect($stepItems.length).toEqual(stepItems.value.length);
       $stepItems.map((item, index) => {
-        expect(item.find(`.t-step-item__title`).text()).toEqual(items[index].title);
-        expect(item.find(`.t-step-item__description`).text()).toEqual(items[index].content);
+        expect(item.find(`.t-step-item__title`).text()).toEqual(stepItems.value[index].title);
+        expect(item.find(`.t-step-item__description`).text()).toEqual(stepItems.value[index].content);
       });
     });
   });
