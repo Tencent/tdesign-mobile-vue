@@ -13,8 +13,6 @@ const loadingDuration = ref(5);
 
 <style scoped>
 .slider-wrap {
-  display: flex;
-  align-items: center;
   width: 100%;
   margin-top: 20px;
 }
