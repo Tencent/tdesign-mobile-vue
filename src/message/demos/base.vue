@@ -121,7 +121,7 @@ export default {
   height: 22px;
   line-height: 22px;
   color: #0052d9;
-
+  font-size: 14px;
   &:active {
     background: none;
   }
