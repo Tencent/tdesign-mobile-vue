@@ -26,18 +26,7 @@ describe('Radio', () => {
     });
 
     it(': checked', async () => {
-      const options = [
-        {
-          label: '单选',
-          value: 0,
-          content: '辅助信息文字最多两行',
-        },
-        {
-          label: '单选',
-          value: 1,
-          content: '辅助信息文字最多两行',
-        },
-      ];
+      const options = [0, 1];
       const onChange = vi.fn();
 
       const radio = ref(1);
@@ -65,23 +54,77 @@ describe('Radio', () => {
       expect($firstRadio.vm.checked).toBeTruthy();
       expect($secondRadio.vm.checked).toBeFalsy();
     });
+
+    it(':placement', async () => {
+      const wrapper = mount(Radio, {
+        props: {
+          placement: 'right',
+          icon: ['line', 'dot'],
+          checked: true,
+        },
+      });
+
+      expect(wrapper.element).toMatchSnapshot();
+    });
+
+    it(': icon', async () => {
+      const wrapper = mount(Radio, {
+        props: {
+          icon: 'dot',
+        },
+      });
+      const $icon = wrapper.find(`.${name}__icon-dot`);
+      expect($icon.exists()).toBeTruthy();
+
+      const radioContent = wrapper.find(`.${name}__content`);
+      await radioContent.trigger('click');
+      expect(wrapper.vm.checked).toBeTruthy();
+    });
+
+    it(': keys', async () => {
+      const wrapper = mount(RadioGroup, {
+        props: {
+          options: [
+            {
+              name: '单选',
+              data: '1',
+              disabled: true,
+            },
+            {
+              name: '单选',
+              data: '2',
+            },
+          ],
+          keys: {
+            value: 'data',
+            label: 'name',
+          },
+        },
+      });
+
+      expect(wrapper.element).toMatchSnapshot();
+    });
   });
 
   describe('events', () => {
     it(':change', async () => {
       const radio = ref('1');
       const wrapper = mount(() => (
-        <RadioGroup v-model:value={radio.value}>
+        <RadioGroup v-model:value={radio.value} allowUncheck>
           <Radio name="radio" value="1" label="单选"></Radio>
           <Radio name="radio" value="2" label="单选"></Radio>
           <Radio name="radio" value="3" label="单选"></Radio>
         </RadioGroup>
       ));
-      const [radio1, radio2] = wrapper.findAllComponents('.t-radio');
+      const [radio1, radio2] = wrapper.findAllComponents(`.${name}`);
       expect(radio1.vm.checked).toBeTruthy();
       await radio2.trigger('click');
       expect(radio2.vm.checked).toBeTruthy();
       expect(radio.value).toBe('2');
+
+      const radioContent = wrapper.find(`.${name}__content`);
+      await radioContent.trigger('click');
+      expect(radio1.vm.checked).toBeTruthy();
     });
   });
 
