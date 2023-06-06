@@ -1,7 +1,8 @@
+import { ref } from 'vue';
 import { describe, it, expect, vi } from 'vitest';
-import BackTop from '../back-top.vue';
 import { mount } from '@vue/test-utils';
-import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
+import { BacktopIcon as TIconBackTop, AppIcon as TIconApp } from 'tdesign-icons-vue-next';
+import BackTop from '../back-top.vue';
 
 describe('BackTop', () => {
   describe('props', () => {
@@ -56,6 +57,13 @@ describe('BackTop', () => {
       await wrapper.find('.t-back-top').trigger('click');
       expect(window.document.documentElement.scrollTop).toEqual(10);
     });
+
+    it(': icon', () => {
+      const icon = ref(false);
+      const wrapper = mount(<BackTop icon={icon.value} />);
+      icon.value = true;
+      expect(wrapper.findComponent(TIconBackTop)).toBeTruthy();
+    });
   });
 
   describe('slots', () => {
@@ -73,12 +81,7 @@ describe('BackTop', () => {
 
   describe('events', () => {
     it(': to-top', async () => {
-      const wrapper = mount(BackTop, {
-        props: {
-          icon: false,
-          theme: '',
-        },
-      });
+      const wrapper = mount(BackTop);
       wrapper.find('.t-back-top').trigger('click');
       expect(wrapper.emitted('to-top')).toHaveLength(1);
     });
