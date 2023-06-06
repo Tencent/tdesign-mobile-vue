@@ -1,5 +1,5 @@
 <template>
-  <div :class="rootName" :style="{ height: swiperHight }">
+  <div :class="rootClass" :style="{ height: swiperHeight }">
     <div
       ref="swiperContainer"
       :class="`${name}__container`"
@@ -88,21 +88,12 @@ export default defineComponent({
     const swiperContainer = ref<HTMLElement | null>(null);
     const computedNavigation = computed(() => renderTNode(self, 'navigation'));
 
-    const state: {
-      showNavigation: boolean;
-      activeIndex: number;
-      itemLength: number;
-      itemWidth: number;
-      itemHight: number;
-      isControl: boolean;
-      btnDisabled: boolean;
-      children: ComponentPublicInstance[];
-    } = reactive({
+    const state = reactive({
       showNavigation: true,
       activeIndex: 0,
       itemLength: 0,
       itemWidth: 0,
-      itemHight: 0,
+      itemHeight: 0,
       isControl: false,
       btnDisabled: false,
       children: [] as ComponentPublicInstance[],
@@ -114,17 +105,15 @@ export default defineComponent({
       if (activeIndex < 0) return 1;
       return activeIndex + 1;
     });
-    const swiperHight = computed(() => {
-      const { itemHight } = state;
-      const { placement = 'inside' } = props.navigation as SwiperNavigation;
-      if (placement === 'outside') {
-        return `${itemHight + 36}px`;
+    const swiperHeight = computed(() => {
+      if (props.direction === 'vertical' && props.height) {
+        return `${props.height}px`;
       }
-      return `${itemHight}px`;
+      return 'auto';
     });
 
-    const rootName = computed(() => {
-      return [`${name}`];
+    const rootClass = computed(() => {
+      return [`${name}`, `${name}--${props.type}`];
     });
 
     const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector(`.${name}__container`);
@@ -137,7 +126,7 @@ export default defineComponent({
       state.itemLength = _swiperContainer.children?.length || 0;
       const { width, height } = _swiperContainer.querySelector(`.${name}-item`)?.getBoundingClientRect() || {};
       state.itemWidth = width || 0;
-      state.itemHight = height || 0;
+      state.itemHeight = height || 0;
       if (items.length <= 0) return false;
       if (
         computedNavigation.value &&
@@ -162,10 +151,7 @@ export default defineComponent({
       }
     };
     onMounted(() => {
-      nextTick(() => {
-        console.info('swiper mounted');
-        initSwiper();
-      });
+      initSwiper();
     });
     watch(
       () => state.children.length,
@@ -189,7 +175,7 @@ export default defineComponent({
     const move = (targetIndex: number, isTrust = true) => {
       const _swiperContainer = getContainer();
       const moveDirection = props?.direction === 'horizontal' ? 'X' : 'Y';
-      const moveLength: number = props?.direction === 'vertical' ? state.itemHight : state.itemWidth;
+      const moveLength: number = props?.direction === 'vertical' ? state.itemHeight : state.itemWidth;
       actionIsTrust = isTrust;
       _swiperContainer.dataset.isTrust = `${isTrust}`;
       // do not translate one item if not loop
@@ -289,7 +275,7 @@ export default defineComponent({
     });
     const onTouchMove = (event: TouchEvent) => {
       event.preventDefault();
-      const { activeIndex, itemWidth, itemHight } = state;
+      const { activeIndex, itemWidth, itemHeight } = state;
       const distanceX = lengthX.value;
       const distanceY = lengthY.value;
       const _container = getContainer();
@@ -298,7 +284,7 @@ export default defineComponent({
       if (props?.direction === 'horizontal') {
         setOffset(_container, -(toIndex * itemWidth + distanceX));
       } else {
-        setOffset(_container, -(toIndex * itemHight + distanceY), 'Y');
+        setOffset(_container, -(toIndex * itemHeight + distanceY), 'Y');
       }
     };
     const onTouchEnd = () => {
@@ -340,8 +326,8 @@ export default defineComponent({
       },
     );
     return {
-      rootName,
-      swiperHight,
+      rootClass,
+      swiperHeight,
       onItemClick,
       swiperContainer,
       name,

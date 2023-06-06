@@ -2,7 +2,7 @@
   <div style="padding: 0 16px">
     <t-swiper
       :autoplay="true"
-      :navigation="{ type: 'fraction', showControls: true, paginationPosition: 'bottom-right' }"
+      :navigation="{ showControls: true, paginationPosition: 'bottom-right' }"
       @change="handleChange"
     >
       <t-swiper-item v-for="(item, index) in swiperList" :key="index">

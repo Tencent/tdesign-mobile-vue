@@ -50,6 +50,10 @@ export default {
     type: Number,
     default: 300,
   },
+  /** 当使用垂直方向滚动时的高度 */
+  height: {
+    type: Number,
+  },
   /** 轮播间隔时间 */
   interval: {
     type: Number,
@@ -64,15 +68,24 @@ export default {
   navigation: {
     type: [Object, Function] as PropType<TdSwiperProps['navigation']>,
   },
-  /** 后边距偏移量，可用于露出后一项的一小部分。默认单位 `px` */
-  nextAffset: {
-    type: [String, Number] as PropType<TdSwiperProps['nextAffset']>,
+  /** 后边距，可用于露出后一项的一小部分。默认单位 `px` */
+  nextMargin: {
+    type: [String, Number] as PropType<TdSwiperProps['nextMargin']>,
     default: 0,
   },
-  /** 前边距偏移量，可用于露出前一项的一小部分。默认单位 `px` */
-  previousAffset: {
-    type: [String, Number] as PropType<TdSwiperProps['previousAffset']>,
+  /** 前边距，可用于露出前一项的一小部分。默认单位 `px` */
+  previousMargin: {
+    type: [String, Number] as PropType<TdSwiperProps['previousMargin']>,
     default: 0,
+  },
+  /** 样式类型：默认样式、卡片样式 */
+  type: {
+    type: String as PropType<TdSwiperProps['type']>,
+    default: 'default' as TdSwiperProps['type'],
+    validator(val: TdSwiperProps['type']): boolean {
+      if (!val) return true;
+      return ['default', 'card'].includes(val);
+    },
   },
   /** 轮播切换时触发 */
   onChange: Function as PropType<TdSwiperProps['onChange']>,

@@ -43,6 +43,10 @@ export interface TdSwiperProps {
    */
   duration?: number;
   /**
+   * 当使用垂直方向滚动时的高度
+   */
+  height?: number;
+  /**
    * 轮播间隔时间
    * @default 5000
    */
@@ -57,15 +61,20 @@ export interface TdSwiperProps {
    */
   navigation?: SwiperNavigation | TNode;
   /**
-   * 后边距偏移量，可用于露出后一项的一小部分。默认单位 `px`
+   * 后边距，可用于露出后一项的一小部分。默认单位 `px`
    * @default 0
    */
-  nextAffset?: string | number;
+  nextMargin?: string | number;
   /**
-   * 前边距偏移量，可用于露出前一项的一小部分。默认单位 `px`
+   * 前边距，可用于露出前一项的一小部分。默认单位 `px`
    * @default 0
    */
-  previousAffset?: string | number;
+  previousMargin?: string | number;
+  /**
+   * 样式类型：默认样式、卡片样式
+   * @default default
+   */
+  type?: 'default' | 'card';
   /**
    * 轮播切换时触发
    */
@@ -77,11 +86,6 @@ export interface TdSwiperProps {
 }
 
 export interface SwiperNavigation {
-  /**
-   * 当前轮播在哪一项（下标）
-   * @default 0
-   */
-  current?: number;
   /**
    * 小于这个数字不会显示导航器
    */
@@ -101,11 +105,6 @@ export interface SwiperNavigation {
    * @default false
    */
   showControls?: boolean;
-  /**
-   * 总共的项数
-   * @default 0
-   */
-  total?: number;
   /**
    * 导航器类型，点状(dots)、点条状(dots-bar)、分式(fraction)等
    * @default dots
