@@ -110,7 +110,7 @@ export default defineComponent({
       state.barRect = barRect;
 
       // 记录展开状态
-      const container = findRelativeContainer(bar) || document.body;
+      const container = document.body;
       menuContext.recordMenuExpanded(container, control, DropdownMenuExpandState.expanded);
     };
     const collapseMenu = () => {
@@ -122,8 +122,7 @@ export default defineComponent({
       state.activeId = null;
 
       // 清除已展开状态记录
-      const bar = refBar.value as any;
-      const container = findRelativeContainer(bar) || document.body;
+      const container = document.body;
       menuContext.recordMenuExpanded(container, control, DropdownMenuExpandState.collapsed);
     };
     const control: DropdownMenuControl = { expandMenu, collapseMenu };
