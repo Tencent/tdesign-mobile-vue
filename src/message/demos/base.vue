@@ -1,5 +1,5 @@
 <template>
-  <div class="button-demo" style="margin: 0 16px">
+  <div class="button-demo">
     <t-button block size="large" variant="outline" theme="primary" @click="showTextMessage">纯文字的通知</t-button>
     <t-button block size="large" variant="outline" theme="primary" @click="showIconMessage">带图标的通知</t-button>
     <t-button block size="large" variant="outline" theme="primary" @click="showCloseMessage">带关闭的通知</t-button>
@@ -11,22 +11,10 @@
   <t-message v-model="visible" :icon="false" :offset="[10, 16]" :duration="5000" content="这是一条普通的通知信息" />
 
   <!-- 带图标通知 -->
-  <t-message
-    v-model="visible1"
-    :icon="prefixIcon"
-    :offset="['10px', '16px']"
-    :duration="5000"
-    content="这是一条普通的通知信息"
-  />
+  <t-message v-model="visible1" :offset="['10px', '16px']" :duration="5000" content="这是一条普通的通知信息" />
 
   <!-- 带关闭通知 -->
-  <t-message
-    v-model="visible2"
-    :icon="prefixIcon"
-    :offset="['10px', 16]"
-    :duration="-1"
-    content="这是一条普通的通知信息"
-  >
+  <t-message v-model="visible2" :offset="['10px', 16]" :duration="-1" content="这是一条普通的通知信息">
     <template #closeBtn>
       <t-button class="close-btn" variant="text">按钮</t-button>
       <closeIcon class="t-message__icon--right" />
@@ -43,13 +31,7 @@
   />
 
   <!-- 带按钮通知 -->
-  <t-message
-    v-model="visible4"
-    :icon="notificationIcon"
-    :offset="[10, 16]"
-    :duration="-1"
-    content="这是一条普通的通知信息"
-  >
+  <t-message v-model="visible4" :offset="[10, 16]" :duration="-1" content="这是一条普通的通知信息">
     <template #closeBtn>
       <t-button class="close-btn" variant="text">按钮</t-button>
     </template>
@@ -58,7 +40,7 @@
 
 <script lang="ts" setup>
 import { h, ref } from 'vue';
-import { ErrorCircleFilledIcon, CloseIcon, NotificationFilledIcon } from 'tdesign-icons-vue-next';
+import { CloseIcon } from 'tdesign-icons-vue-next';
 
 const visible = ref(false);
 const visible1 = ref(false);
@@ -71,8 +53,6 @@ const suffixIconStyle = {
   cursor: 'pointer',
 };
 
-const prefixIcon = () => h(ErrorCircleFilledIcon, { color: '#0052D9' });
-const notificationIcon = () => h(NotificationFilledIcon, { color: '#0052D9' });
 const closeIcon = () => h(CloseIcon, { ...suffixIconStyle });
 
 const showTextMessage = () => {
@@ -108,31 +88,15 @@ const cleanMessage = () => {
 };
 </script>
 
-<script lang="ts">
-export default {
-  name: 'BaseDemo',
-};
-</script>
-
 <style lang="less" scoped>
-.tdesign-mobile-demo-block .button-demo {
-  .t-button {
-    border-radius: 6px;
-    &.t-size-l {
-      height: 48px;
-      font-size: 16px;
-      font-weight: bold;
-    }
-  }
-}
-
 .close-btn {
   margin-left: 8px;
   height: 22px;
   line-height: 22px;
   color: #0052d9;
+  font-size: 14px;
 
-  &:active {
+  &::after {
     background: none;
   }
 }
