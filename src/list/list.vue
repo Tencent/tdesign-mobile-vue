@@ -55,10 +55,14 @@ export default defineComponent({
     };
 
     const handleScroll = (e: WheelEvent | Event) => {
-      const scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight =
+        (e.target as HTMLElement).scrollHeight ||
+        Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+      const scrollTop =
+        (e.target as HTMLElement).scrollTop || document.documentElement.scrollTop || document.body.scrollTop;
+      const offsetHeight = (e.target as HTMLElement).offsetHeight || height.value;
 
-      emitEvent('scroll', scrollHeight - (scrollTop + height.value), scrollTop);
+      emitEvent('scroll', scrollHeight - (scrollTop + offsetHeight), scrollTop);
     };
 
     useEventListener(scrollParent, 'scroll', handleScroll);
