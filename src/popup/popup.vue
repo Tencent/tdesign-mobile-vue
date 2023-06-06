@@ -31,6 +31,7 @@ import { getAttach } from '../shared/dom';
 const { prefix } = config;
 
 const name = `${prefix}-popup`;
+const BODY_LOCK_CLASS = 't-overflow-hidden';
 
 export default defineComponent({
   name,
@@ -126,6 +127,23 @@ export default defineComponent({
           emitEvent('open');
           setVisible(true);
         }
+      },
+    );
+
+    const lock = () => {
+      document.body.classList.add(BODY_LOCK_CLASS);
+    };
+
+    const unlock = () => {
+      document.body.classList.remove(BODY_LOCK_CLASS);
+    };
+
+    const shouldLock = computed(() => wrapperVisbile.value && props.preventScrollThrough);
+
+    watch(
+      () => shouldLock.value,
+      (value) => {
+        value ? lock() : unlock();
       },
     );
 
