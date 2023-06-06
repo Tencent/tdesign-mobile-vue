@@ -8,7 +8,6 @@ exports[`Message > Message baseVue demo works fine 1`] = `
   <div
     class="button-demo"
     data-v-e60c559e=""
-    style="margin: 0px 16px;"
   >
     <button
       aria-disabled="false"
@@ -143,14 +142,13 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
       </p>
     </div>
     <div
-      class="tdesign-mobile-demo-block__slot"
+      class="tdesign-mobile-demo-block__slot with-padding"
     >
       
       
       <div
         class="button-demo"
         data-v-e60c559e=""
-        style="margin: 0px 16px;"
       >
         <button
           aria-disabled="false"
@@ -270,18 +268,15 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
       </p>
     </div>
     <div
-      class="tdesign-mobile-demo-block__slot"
+      class="tdesign-mobile-demo-block__slot with-padding"
     >
       
       <div
         class="button-demo"
-        data-v-fba28ece=""
-        style="margin: 0px 16px;"
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-fba28ece=""
           role="button"
           type="button"
         >
@@ -298,7 +293,6 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-fba28ece=""
           role="button"
           type="button"
         >
@@ -315,7 +309,6 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-fba28ece=""
           role="button"
           type="button"
         >
@@ -332,7 +325,6 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-fba28ece=""
           role="button"
           type="button"
         >
@@ -356,13 +348,10 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
 exports[`Message > Message themeVue demo works fine 1`] = `
 <div
   class="button-demo"
-  data-v-fba28ece=""
-  style="margin: 0px 16px;"
 >
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    data-v-fba28ece=""
     role="button"
     type="button"
   >
@@ -379,7 +368,6 @@ exports[`Message > Message themeVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    data-v-fba28ece=""
     role="button"
     type="button"
   >
@@ -396,7 +384,6 @@ exports[`Message > Message themeVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    data-v-fba28ece=""
     role="button"
     type="button"
   >
@@ -413,7 +400,6 @@ exports[`Message > Message themeVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    data-v-fba28ece=""
     role="button"
     type="button"
   >

@@ -1,5 +1,5 @@
 <template>
-  <div class="button-demo" style="margin: 0 16px">
+  <div class="button-demo">
     <t-button block size="large" variant="outline" theme="primary" @click="showInfoMessage">普通通知</t-button>
     <t-button block size="large" variant="outline" theme="primary" @click="showSuccessMessage">成功通知</t-button>
     <t-button block size="large" variant="outline" theme="primary" @click="showWarnMessage">警示通知</t-button>
@@ -31,22 +31,3 @@ const showSuccessMessage = () => showMessage('success', '这是一条成功的�
 
 const showErrorMessage = () => showMessage('error', '这是一条错误提示通知');
 </script>
-
-<script lang="ts">
-export default {
-  name: 'ThemeDemo',
-};
-</script>
-
-<style lang="less" scoped>
-.tdesign-mobile-demo-block .button-demo {
-  .t-button {
-    border-radius: 6px;
-    &.t-size-l {
-      height: 48px;
-      font-size: 16px;
-      font-weight: bold;
-    }
-  }
-}
-</style>
