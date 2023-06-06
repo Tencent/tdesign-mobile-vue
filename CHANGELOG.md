@@ -5,6 +5,56 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.24.0 `2023-06-06` 
+### ❗ BREAKING CHANGES
+- `Fab`: 调整DOM @anlyyao ([#773](https://github.com/Tencent/tdesign-mobile-vue/pull/773))
+
+### 🐞 Bug Fixes
+- `Popup`: 解决使用 `closeBtn` 插槽时关闭无效的问题 @anlyyao ([#753](https://github.com/Tencent/tdesign-mobile-vue/pull/753))
+- `Popup`: 修复 `preventScrollThrough` 属性无效的问题 @anlyyao ([#824](https://github.com/Tencent/tdesign-mobile-vue/pull/824))
+- `Search`: 修复 `leftIcon` 插槽无效的问题 @anlyyao ([#742](https://github.com/Tencent/tdesign-mobile-vue/pull/742))
+- `Cascader`: 修复构建后组件样式缺失问题 @anlyyao ([#770](https://github.com/Tencent/tdesign-mobile-vue/pull/770))
+- `Cascader`: 修复 `closeBtn` 无法关闭选择器面板 @anlyyao ([#820](https://github.com/Tencent/tdesign-mobile-vue/pull/820))
+- `Cascader`: 修复示例无法拉起选择器面板的问题 @anlyyao ([#820](https://github.com/Tencent/tdesign-mobile-vue/pull/820))
+- `DropdownMenu`: 修复 `keys` 属性无效的问题 @ccccpj ([#769](https://github.com/Tencent/tdesign-mobile-vue/pull/769))
+- `Fab`: 修复按钮阴影样式缺失问题 @anlyyao ([#773](https://github.com/Tencent/tdesign-mobile-vue/pull/773))
+- `List`: 修复有父级元素时滚动值始终为 0 的问题 @ccccpj ([#823](https://github.com/Tencent/tdesign-mobile-vue/pull/823))
+- `List`: 修复 `load-more` 文案不显示的问题 @ccccpj ([#806](https://github.com/Tencent/tdesign-mobile-vue/pull/806))
+- `List`: 修复 `loading` 内容不居中的问题 @ccccpj ([#806](https://github.com/Tencent/tdesign-mobile-vue/pull/806))
+- `DropdownMenu`: 修复下拉组件唯一 Id 问题 @ccccpj ([#782](https://github.com/Tencent/tdesign-mobile-vue/pull/782))
+- `Message`: 修复 `theme` 属性内置图标错误 @Resuragam ([#812](https://github.com/Tencent/tdesign-mobile-vue/pull/812))
+- `Message`: 修复示例按钮样式错误 @Resuragam ([#812](https://github.com/Tencent/tdesign-mobile-vue/pull/812))
+- `Calendar`: 修复组件圆角样式错误 @anlyyao ([#818](https://github.com/Tencent/tdesign-mobile-vue/pull/818))
+- `Upload`: 修复国徽上传示例占位图错误 @anlyyao ([#821](https://github.com/Tencent/tdesign-mobile-vue/pull/821))
+- `Input`: 移除浏览器默认聚焦样式 @anlyyao ([#1365](https://github.com/Tencent/tdesign-common/pull/1365))
+- `Rate`: 修复图标不居中的问题 @anlyyao ([#1381](https://github.com/Tencent/tdesign-common/pull/1381))
+- `Steps`: 修复 dot 样式错误 @anlyyao ([#1374](https://github.com/Tencent/tdesign-common/pull/1374))
+- `Toast`: 修复组件背景色不正确 @anlyyao ([#1375](https://github.com/Tencent/tdesign-common/pull/1375))
+- `Overlay `: 修复组件背景色不正确 @anlyyao ([#1376](https://github.com/Tencent/tdesign-common/pull/1376))
+### 🚧 Others
+-  fix: 处理部分组件按需引入报错的问题 @anlyyao ([#754](https://github.com/Tencent/tdesign-mobile-vue/pull/754))
+- `Popup`: 补充测试用例 @anlyyao ([#753](https://github.com/Tencent/tdesign-mobile-vue/pull/753))
+- `Search`: 补充测试用例 @anlyyao ([#742](https://github.com/Tencent/tdesign-mobile-vue/pull/742))
+- `Textarea`: 补充测试用例 @anlyyao ([#743](https://github.com/Tencent/tdesign-mobile-vue/pull/743))
+- `Stepper`: 补充测试用例 @anlyyao ([#744](https://github.com/Tencent/tdesign-mobile-vue/pull/744))
+- `Switch`: 补充测试用例 @anlyyao ([#745](https://github.com/Tencent/tdesign-mobile-vue/pull/745))
+- `Input`: 补充测试用例 @anlyyao ([#746](https://github.com/Tencent/tdesign-mobile-vue/pull/746))
+- `Toast`: 补充测试用例 @anlyyao ([#749](https://github.com/Tencent/tdesign-mobile-vue/pull/749))
+- `PullDownRefresh`: 补充测试用例 @anlyyao ([#750](https://github.com/Tencent/tdesign-mobile-vue/pull/750))
+- `Tag`: 补充测试用例 @Resuragam ([#752](https://github.com/Tencent/tdesign-mobile-vue/pull/752))
+- `Footer`: 补充测试用例 @Resuragam ([#771](https://github.com/Tencent/tdesign-mobile-vue/pull/771))
+- `Result`: 补充测试用例 @Resuragam ([#772](https://github.com/Tencent/tdesign-mobile-vue/pull/772))
+- `Message`: 补充测试用例 @palmcivet ([#774](https://github.com/Tencent/tdesign-mobile-vue/pull/774))
+- `Link`: 补充测试用例 @Resuragam ([#780](https://github.com/Tencent/tdesign-mobile-vue/pull/780))
+- `CountDown`: 补充测试用例 @Resuragam ([#789](https://github.com/Tencent/tdesign-mobile-vue/pull/789))
+- `Upload`: 补充测试用例 @palmcivet ([#808](https://github.com/Tencent/tdesign-mobile-vue/pull/808))
+- `Loading`: 补充测试用例 @palmcivet ([#811](https://github.com/Tencent/tdesign-mobile-vue/pull/811))
+- `Steps`: 补充测试用例 @palmcivet ([#815](https://github.com/Tencent/tdesign-mobile-vue/pull/815))
+- `Radio`: 补充测试用例 @palmcivet ([#814](https://github.com/Tencent/tdesign-mobile-vue/pull/814))
+- `Rate`: 补充测试用例 @palmcivet ([#807](https://github.com/Tencent/tdesign-mobile-vue/pull/807))
+- `BackTop`: 补充测试用例 @palmcivet ([#810](https://github.com/Tencent/tdesign-mobile-vue/pull/810))
+- `Tag`: 补充测试用例 @Resuragam ([#752](https://github.com/Tencent/tdesign-mobile-vue/pull/752))
+
 ## 🌈 0.23.0 `2023-05-30` 
 ### ❗ BREAKING CHANGES
 - `ActionSheet`: 移除 `type` 属性 @brianzhang ([#637](https://github.com/Tencent/tdesign-mobile-vue/pull/637))
