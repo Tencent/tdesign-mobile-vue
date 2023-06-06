@@ -80,7 +80,7 @@ const onValidate = (context: any) => {
   }
 
   .reverse {
-    --td-upload-background: center / 100% 100% no-repeat url('https://tdesign.gtimg.com/mobile/demos/upload1.png');
+    --td-upload-background: center / 100% 100% no-repeat url('https://tdesign.gtimg.com/mobile/demos/upload2.png');
   }
 
   .add-content {
