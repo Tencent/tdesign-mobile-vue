@@ -14,9 +14,9 @@
     <tdesign-demo-block summary="切换按钮（controls）">
       <control />
     </tdesign-demo-block>
-    <!-- <tdesign-demo-block summary="卡片模式">
+    <tdesign-demo-block summary="卡片模式">
       <card />
-    </tdesign-demo-block> -->
+    </tdesign-demo-block>
     <tdesign-demo-block title="02 组件样式" summary="垂直模式">
       <vertical />
     </tdesign-demo-block>
