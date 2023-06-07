@@ -32,7 +32,7 @@ import {
   nextTick,
   onMounted,
 } from 'vue';
-import { CheckCircleFilledIcon, ErrorCircleFilledIcon, CloseIcon } from 'tdesign-icons-vue-next';
+import { CheckCircleFilledIcon, CloseIcon, InfoCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { isFunction } from 'lodash';
 import messageProps from './props';
 import { DrawMarquee } from './type';
@@ -42,10 +42,10 @@ import { renderContent, renderTNode, TNode, useEmitEvent, useVModel } from '../s
 const { prefix } = config;
 const name = `${prefix}-message`;
 const iconDefault = {
-  info: h(ErrorCircleFilledIcon),
+  info: h(InfoCircleFilledIcon),
   success: h(CheckCircleFilledIcon),
-  warning: h(ErrorCircleFilledIcon),
-  error: h(ErrorCircleFilledIcon),
+  warning: h(InfoCircleFilledIcon),
+  error: h(InfoCircleFilledIcon),
 };
 
 export default defineComponent({

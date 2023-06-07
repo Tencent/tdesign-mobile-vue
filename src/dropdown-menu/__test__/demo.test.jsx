@@ -3,16 +3,18 @@
  */
 
 import { mount } from '@vue/test-utils';
+import customizedVue from '@/dropdown-menu/demos/customized.vue';
+import disabledVue from '@/dropdown-menu/demos/disabled.vue';
 import mobileVue from '@/dropdown-menu/demos/mobile.vue';
-import multiVue from '@/dropdown-menu/demos/multi.vue';
+import multipleVue from '@/dropdown-menu/demos/multiple.vue';
 import singleVue from '@/dropdown-menu/demos/single.vue';
-import slotDemoVue from '@/dropdown-menu/demos/slotDemo.vue';
 
 const mapper = {
+  customizedVue,
+  disabledVue,
   mobileVue,
-  multiVue,
+  multipleVue,
   singleVue,
-  slotDemoVue,
 };
 
 describe('DropdownMenu', () => {

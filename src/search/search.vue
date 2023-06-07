@@ -66,7 +66,7 @@ export default defineComponent({
     // left-icon
     const internalInstance = getCurrentInstance();
     const leftIconContent = computed(() => {
-      if (isFunction(props.leftIcon) || context.slots.prefixIcon) {
+      if (isFunction(props.leftIcon) || context.slots.leftIcon) {
         return renderTNode(internalInstance, 'leftIcon');
       }
       if (props.leftIcon) {

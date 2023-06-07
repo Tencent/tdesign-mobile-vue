@@ -1,5 +1,5 @@
 <template>
-  <div :class="name">
+  <div :class="{ [`${name}`]: true, [`${name}--popup`]: usePopup }">
     <div :class="`${name}__title`">
       <slot name="title">{{ title || '请选择日期' }}</slot>
     </div>

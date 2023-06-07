@@ -26,6 +26,7 @@
 
 <script lang="ts">
 import { toRefs, defineComponent } from 'vue';
+import TImage from '../image';
 import FooterProps from './props';
 import config from '../config';
 
@@ -34,6 +35,7 @@ const name = `${prefix}-footer`;
 
 export default defineComponent({
   name,
+  components: { TImage },
   props: FooterProps,
   setup(props) {
     return {

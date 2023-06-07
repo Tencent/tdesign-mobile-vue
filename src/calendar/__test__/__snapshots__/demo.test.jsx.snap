@@ -21,7 +21,7 @@ exports[`Calendar > Calendar baseVue demo works fine 1`] = `
         <!--v-if-->
         
         <div
-          class="t-calendar"
+          class="t-calendar t-calendar--popup"
         >
           <div
             class="t-calendar__title"
@@ -2216,7 +2216,7 @@ exports[`Calendar > Calendar customButtonVue demo works fine 1`] = `
         <!--v-if-->
         
         <div
-          class="t-calendar"
+          class="t-calendar t-calendar--popup"
         >
           <div
             class="t-calendar__title"
@@ -4412,7 +4412,7 @@ exports[`Calendar > Calendar customRangeVue demo works fine 1`] = `
         <!--v-if-->
         
         <div
-          class="t-calendar"
+          class="t-calendar t-calendar--popup"
         >
           <div
             class="t-calendar__title"
@@ -4874,7 +4874,7 @@ exports[`Calendar > Calendar customTextVue demo works fine 1`] = `
         <!--v-if-->
         
         <div
-          class="t-calendar"
+          class="t-calendar t-calendar--popup"
         >
           <div
             class="t-calendar__title"
@@ -5887,7 +5887,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 <!--v-if-->
                 
                 <div
-                  class="t-calendar"
+                  class="t-calendar t-calendar--popup"
                 >
                   <div
                     class="t-calendar__title"
@@ -8076,7 +8076,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 <!--v-if-->
                 
                 <div
-                  class="t-calendar"
+                  class="t-calendar t-calendar--popup"
                 >
                   <div
                     class="t-calendar__title"
@@ -10265,7 +10265,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 <!--v-if-->
                 
                 <div
-                  class="t-calendar"
+                  class="t-calendar t-calendar--popup"
                 >
                   <div
                     class="t-calendar__title"
@@ -12479,7 +12479,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             <!--v-if-->
             
             <div
-              class="t-calendar"
+              class="t-calendar t-calendar--popup"
             >
               <div
                 class="t-calendar__title"
@@ -13455,7 +13455,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             <!--v-if-->
             
             <div
-              class="t-calendar"
+              class="t-calendar t-calendar--popup"
             >
               <div
                 class="t-calendar__title"
@@ -15644,7 +15644,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             <!--v-if-->
             
             <div
-              class="t-calendar"
+              class="t-calendar t-calendar--popup"
             >
               <div
                 class="t-calendar__title"
@@ -18223,7 +18223,7 @@ exports[`Calendar > Calendar multipleVue demo works fine 1`] = `
         <!--v-if-->
         
         <div
-          class="t-calendar"
+          class="t-calendar t-calendar--popup"
         >
           <div
             class="t-calendar__title"
@@ -20415,7 +20415,7 @@ exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
         <!--v-if-->
         
         <div
-          class="t-calendar"
+          class="t-calendar t-calendar--popup"
         >
           <div
             class="t-calendar__title"

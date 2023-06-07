@@ -27,7 +27,6 @@ describe('fab', () => {
       const wrapper = mount(Fab, {
         props: { style },
       });
-      const buttonContainer = wrapper.find('.t-button');
       expect(getComputedStyle(wrapper.element, null).right).toBe('32px');
       expect(getComputedStyle(wrapper.element, null).bottom).toBe('48px');
     });
@@ -42,9 +41,10 @@ describe('fab', () => {
       const wrapper = mount(Fab, {
         props: { icon, buttonProps },
       });
-      expect(wrapper.classes()).toContain(`t-button--danger`);
-      expect(wrapper.classes()).toContain(`t-button--circle`);
-      expect(wrapper.classes()).toContain(`t-button--size-large`);
+      const $btn = wrapper.find('.t-button');
+      expect($btn.classes()).toContain(`t-button--danger`);
+      expect($btn.classes()).toContain(`t-button--circle`);
+      expect($btn.classes()).toContain(`t-button--size-large`);
     });
   });
 

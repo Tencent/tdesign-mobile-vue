@@ -61,6 +61,7 @@ import {
 } from 'vue';
 import { InfoCircleFilledIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { isArray } from 'lodash';
+import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
 import NoticeBarProps from './props';
 import { NoticeBarTrigger, DrawMarquee } from './type';
 import config from '../config';
@@ -76,7 +77,7 @@ const iconDefault = {
 };
 export default defineComponent({
   name,
-  components: { TNode },
+  components: { TNode, TSwiper, TSwiperItem },
   props: NoticeBarProps,
   emits: ['click'],
   setup(props, context) {

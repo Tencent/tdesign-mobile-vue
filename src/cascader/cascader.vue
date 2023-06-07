@@ -36,7 +36,7 @@
             </div>
           </div>
           <div v-if="open && theme === 'tab'">
-            <t-tabs id="tabs" :value="stepIndex" @change="onTabChange">
+            <t-tabs id="tabs" :value="stepIndex" :space-evenly="false" @change="onTabChange">
               <t-tab-panel v-for="(item, index) in steps" :key="index" :value="index" :label="item" />
             </t-tabs>
           </div>
@@ -213,7 +213,7 @@ export default defineComponent({
           item[keys.value?.value ?? 'value'],
           items.map((item, index) => toRaw(item?.[selectedIndexes[index]])),
         );
-        hide('finish');
+        close('finish');
       }
     };
 
@@ -225,17 +225,17 @@ export default defineComponent({
       open.value = visible.value;
     });
 
-    const hide = (trigger: string) => {
-      visible.value = false;
+    const close = (trigger: string) => {
       emitEvent('close', { trigger });
     };
 
-    const onVisibleChange = () => {
-      hide('overlay');
+    const onVisibleChange = (visible: boolean) => {
+      close('overlay');
     };
 
     const onClose = () => {
-      hide('close-btn');
+      open.value = false;
+      close('close-btn');
     };
 
     const onStepClick = (index: number) => {

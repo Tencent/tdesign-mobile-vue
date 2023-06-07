@@ -40,8 +40,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               <div
                 class="t-input__icon--prefix"
               >
-                
-                
                 <!--v-if-->
               </div>
               <div
@@ -117,8 +115,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               <div
                 class="t-input__icon--prefix"
               >
-                
-                
                 <!--v-if-->
               </div>
               <div
@@ -336,8 +332,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               <div
                 class="t-input__icon--prefix"
               >
-                
-                
                 <!--v-if-->
               </div>
               <div
@@ -661,8 +655,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               <div
                 class="t-input__icon--prefix"
               >
-                
-                
                 <!--v-if-->
               </div>
               <div
@@ -1651,8 +1643,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     <div
                       class="t-input__icon--prefix"
                     >
-                      
-                      
                       <!--v-if-->
                     </div>
                     <div
@@ -1728,8 +1718,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     <div
                       class="t-input__icon--prefix"
                     >
-                      
-                      
                       <!--v-if-->
                     </div>
                     <div
@@ -1947,8 +1935,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     <div
                       class="t-input__icon--prefix"
                     >
-                      
-                      
                       <!--v-if-->
                     </div>
                     <div
@@ -2272,8 +2258,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     <div
                       class="t-input__icon--prefix"
                     >
-                      
-                      
                       <!--v-if-->
                     </div>
                     <div
@@ -3135,8 +3119,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               <div
                 class="t-input__icon--prefix"
               >
-                
-                
                 <!--v-if-->
               </div>
               <div
@@ -3211,8 +3193,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               <div
                 class="t-input__icon--prefix"
               >
-                
-                
                 <!--v-if-->
               </div>
               <div
@@ -3428,8 +3408,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               <div
                 class="t-input__icon--prefix"
               >
-                
-                
                 <!--v-if-->
               </div>
               <div
@@ -3752,8 +3730,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               <div
                 class="t-input__icon--prefix"
               >
-                
-                
                 <!--v-if-->
               </div>
               <div

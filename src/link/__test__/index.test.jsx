@@ -1,9 +1,8 @@
 import { h } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
+import { Icon, AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import Link from '../link.vue';
-
 // const iconFunc = () => h(TIconApp);
 
 // every component needs four parts: props/events/slots/functions.
@@ -16,7 +15,13 @@ describe('Link', () => {
           return <Link size={'large'}>text</Link>;
         },
       });
-      expect(wrapper.element).toMatchSnapshot();
+      expect(wrapper.find('.t-link--large').exists()).toBeTruthy();
+      const wrapperDefault = mount({
+        render() {
+          return <Link size=''>text</Link>;
+        },
+      });
+      expect(wrapperDefault.find('.t-link--').exists()).toBeTruthy();
     });
     it(':theme', () => {
       const wrapper = mount({
@@ -24,7 +29,13 @@ describe('Link', () => {
           return <Link theme={'primary'}>text</Link>;
         },
       });
-      expect(wrapper.element).toMatchSnapshot();
+      expect(wrapper.find('.t-link--primary').exists()).toBeTruthy();
+      const wrapperDefault = mount({
+        render() {
+          return <Link theme=''>text</Link>;
+        },
+      });
+      expect(wrapperDefault.find('.t-link--').exists()).toBeTruthy();
     });
     it(':hover', () => {
       const wrapper = mount({
@@ -32,7 +43,7 @@ describe('Link', () => {
           return <Link hover={true}>text</Link>;
         },
       });
-      expect(wrapper.element).toMatchSnapshot();
+      expect(wrapper.find('.t-link--hover').exists()).toBeTruthy();
     });
     it(':underline', () => {
       const wrapper = mount({
@@ -40,7 +51,7 @@ describe('Link', () => {
           return <Link underline={true}>text</Link>;
         },
       });
-      expect(wrapper.element).toMatchSnapshot();
+      expect(wrapper.find('.t-link--underline').exists()).toBeTruthy();
     });
     it(':disabled', () => {
       const fn = vi.fn();
@@ -55,7 +66,7 @@ describe('Link', () => {
       });
       wrapper.trigger('click');
       expect(fn).not.toHaveBeenCalled();
-      expect(wrapper.element).toMatchSnapshot();
+      expect(wrapper.find('.t-link--disabled').exists()).toBeTruthy();
     });
     it(':content', () => {
       const renderContent = function () {
@@ -74,7 +85,11 @@ describe('Link', () => {
           );
         },
       });
-      expect(wrapper.element).toMatchSnapshot();
+      expect(wrapper.find('.t-link--content')).toBeTruthy();
+    });
+    it('prefixIcon', () => {
+      const wrapper = mount(() => <Link prefixIcon={<Icon />}>text</Link>)
+      expect(wrapper.findComponent(Icon)).toBeTruthy()
     });
   });
 

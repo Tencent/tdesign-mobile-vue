@@ -1,6 +1,6 @@
 <template>
   <t-dropdown-menu ref="parentRef">
-    <t-dropdown-item v-model="val" label="单列多选" multiple options-columns="1">
+    <t-dropdown-item v-model="val" label="三列多选" multiple options-columns="1">
       <div v-for="(group, i) in groups" :key="i">
         <div class="demo-dropdown-item_label">
           {{ group.label }}

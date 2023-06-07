@@ -1,5 +1,5 @@
 <template>
-  <div v-if="wrapperVisible" :id="dropdownItemId" :class="classes" :style="{ ...expandStyle }">
+  <div v-if="wrapperVisible" :id="popupId" :class="classes" :style="{ ...expandStyle }">
     <t-popup
       v-model="isShowItems"
       :duration="duration"
@@ -7,7 +7,7 @@
       :style="popupStyle"
       :overlay-props="{ style: 'position: absolute' }"
       :class="`${name}__popup-host`"
-      :attach="`#${dropdownItemId}`"
+      :attach="`#${popupId}`"
       @close="closePopup"
     >
       <div :class="styleContent">
@@ -77,18 +77,20 @@ import { ref, watch, toRefs, inject, computed, reactive, onBeforeMount, defineCo
 import TRadio, { RadioGroup as TRadioGroup } from '../radio';
 import config from '../config';
 import TButton from '../button';
+import TPopup from '../popup';
 import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
-import { useVModel, useEmitEvent } from '../shared';
+import { useVModel, useEmitEvent, uniqueFactory } from '../shared';
 import DropdownItemProps from './dropdown-item-props';
 import { DropdownMenuState, DropdownMenuControl } from './context';
 import { TdDropdownMenuProps, DropdownOption, DropdownValue } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-dropdown-item`;
+const getUniqueID = uniqueFactory('dropdown-popup');
 
 export default defineComponent({
   name,
-  components: { TRadio, TButton, TCheckbox, TRadioGroup, TCheckboxGroup },
+  components: { TRadio, TButton, TPopup, TCheckbox, TRadioGroup, TCheckboxGroup },
   props: DropdownItemProps,
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
   setup(props, context) {
@@ -116,9 +118,17 @@ export default defineComponent({
       isShowItems: false,
       wrapperVisible: false,
       expandStyle: {} as Object,
-      dropdownItemId: '',
       multiple: computed(() => props.multiple),
-      options: computed(() => props.options),
+      options: computed(() => {
+        if (props.keys) {
+          return props.options?.map((item) => ({
+            value: item[props.keys?.value ?? 'value'],
+            label: item[props.keys?.label ?? 'label'],
+            disabled: item.disabled,
+          }));
+        }
+        return props.options;
+      }),
     });
 
     const isCheckedRadio = (value: DropdownValue) => value === radioSelect.value;
@@ -138,9 +148,9 @@ export default defineComponent({
     const styleContent = computed(() => {
       return [`${name}__content`, `t-popup__content`];
     });
+    const popupId = getUniqueID();
     // 设置展开/收起状态
     const setExpand = (val: boolean) => {
-      state.dropdownItemId = `dropdown-popup-${menuState.barRect.bottom}${itemId.value}`;
       // 菜单定位
       const { bottom } = menuState.barRect;
       state.expandStyle = {
@@ -177,7 +187,7 @@ export default defineComponent({
     // 根据传入值更新当前选中
     const updateSelectValue = (val: DropdownValue | DropdownValue[] | null) => {
       if (!props.multiple) {
-        const list = props.options as DropdownOption[];
+        const list = state.options;
         const firstChild = list?.[0];
         const newValue = val ?? firstChild?.value ?? null;
         radioSelect.value = newValue as DropdownValue;
@@ -231,7 +241,7 @@ export default defineComponent({
     // 单选值监控
     watch(radioSelect, (val) => {
       if (menuState.activeId !== null) {
-        const target = props.options?.find((item: any) => item.value === val);
+        const target = state.options?.find((item: any) => item.value === val);
         menuState.itemsLabel[menuState.activeId] = target?.label;
       }
       if (props.multiple) return;
@@ -260,6 +270,7 @@ export default defineComponent({
       isBtnDisabled,
       radioSelect,
       checkSelect,
+      popupId,
       closePopup,
       isCheckedRadio,
       styleDropRadio,

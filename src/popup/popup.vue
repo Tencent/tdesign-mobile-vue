@@ -8,7 +8,7 @@
         :style="rootStyles"
         @touchmove="handleMove"
       >
-        <div v-if="closeBtnNode" :class="`${name}__close`">
+        <div v-if="closeBtnNode" :class="`${name}__close`" @click="handleCloseClick">
           <t-node :content="closeBtnNode" />
         </div>
         <slot />
@@ -31,6 +31,7 @@ import { getAttach } from '../shared/dom';
 const { prefix } = config;
 
 const name = `${prefix}-popup`;
+const bodyLockClass = `${prefix}-overflow-hidden`;
 
 export default defineComponent({
   name,
@@ -88,14 +89,14 @@ export default defineComponent({
 
     const closeBtnNode = computed(() =>
       renderTNode(currentInstance, 'closeBtn', {
-        defaultNode: h(CloseIcon, {
-          size: '24px',
-          onClick() {
-            setVisible(false);
-          },
-        }),
+        defaultNode: h(CloseIcon, { size: '24px' }),
       }),
     );
+
+    const handleCloseClick = (e: MouseEvent) => {
+      emitEvent('close', { e });
+      setVisible(false);
+    };
 
     const handleOverlayClick = (args: { e: MouseEvent }) => {
       const { e } = args;
@@ -129,6 +130,23 @@ export default defineComponent({
       },
     );
 
+    const lock = () => {
+      document.body.classList.add(bodyLockClass);
+    };
+
+    const unlock = () => {
+      document.body.classList.remove(bodyLockClass);
+    };
+
+    const shouldLock = computed(() => wrapperVisbile.value && props.preventScrollThrough);
+
+    watch(
+      () => shouldLock.value,
+      (value) => {
+        value ? lock() : unlock();
+      },
+    );
+
     return {
       name,
       to,
@@ -142,6 +160,7 @@ export default defineComponent({
       afterEnter,
       afterLeave,
       handleOverlayClick,
+      handleCloseClick,
       handleMove,
     };
   },

@@ -16,7 +16,7 @@ exports[`calendar > props > : format 1`] = `
       <!--v-if-->
       
       <div
-        class="t-calendar"
+        class="t-calendar t-calendar--popup"
       >
         <div
           class="t-calendar__title"

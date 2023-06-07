@@ -62,6 +62,16 @@ describe('Textarea.vue', () => {
     expect(textarea.element.hasAttribute('disabled')).toBeTruthy();
   });
 
+  it(': indicator', async () => {
+    const maxcharacter = 20;
+    const wrapper = mount(<Textarea label="标题" indicator maxcharacter={maxcharacter} />);
+    const indicator = wrapper.find('.t-textarea__indicator');
+    expect(indicator.exists()).toBeTruthy();
+    expect(indicator.text()).toBe(`0/${maxcharacter}`);
+  });
+});
+
+describe(':event', () => {
   it(': onBlur', async () => {
     const onBlur = vi.fn();
     const onFocus = vi.fn();
@@ -77,6 +87,14 @@ describe('Textarea.vue', () => {
     const textarea = wrapper.find('textarea');
     await textarea.trigger('focus');
     expect(onFocus).toBeCalled();
+  });
+
+  it(': onCompositionend', async () => {
+    const onCompositionend = vi.fn();
+    const wrapper = mount(<Textarea label="标题" onCompositionend={onCompositionend} />);
+    const textarea = wrapper.find('textarea');
+    await textarea.trigger('compositionend');
+    expect(onCompositionend).toBeCalled();
   });
 
   it(': onChange ', async () => {

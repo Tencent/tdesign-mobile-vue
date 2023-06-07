@@ -52,7 +52,7 @@ export default defineComponent({
   props: RadioProps,
   emits: ['update:checked', 'update:modelValue', 'change'],
   setup(props) {
-    const { checked, modelValue, placement, block } = toRefs(props);
+    const { checked, modelValue, block } = toRefs(props);
     const [innerChecked, setInnerChecked] = useVModel(
       checked,
       modelValue,
@@ -125,7 +125,6 @@ export default defineComponent({
     ]);
 
     const radioContentChange = (e: Event) => {
-      console.log('radioContentChange', props.contentDisabled);
       if (props.contentDisabled) {
         return;
       }

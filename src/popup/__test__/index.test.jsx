@@ -2,6 +2,7 @@ import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Popup from '../popup.vue';
 import { ref } from 'vue';
+import { CloseIcon } from 'tdesign-icons-vue-next';
 
 config.global.stubs = {
   teleport: true,
@@ -29,18 +30,42 @@ describe('popup', () => {
       expect(onOpen).toBeCalledTimes(1);
     });
 
-    it(':placement', async () => {
+    it(':closeBtn', async () => {
+      const icon = () => <CloseIcon />;
       const wrapper = mount(Popup, {
         props: {
-          placement: 'top',
+          closeBtn: true,
           visible: true,
         },
       });
-      expect(wrapper.find('.t-popup').classes()).toContain(`t-popup--${wrapper.vm.placement}`);
+      expect(wrapper.find('.t-popup__close').exists()).toBeTruthy();
+      // closeBtn = true, 使用默认 CloseIcon
+      expect(wrapper.findComponent(CloseIcon).exists()).toBeTruthy();
+
       await wrapper.setProps({
-        placement: 'center',
+        closeBtn: false,
       });
-      expect(wrapper.find('.t-popup').classes()).toContain(`t-popup--${wrapper.vm.placement}`);
+      expect(wrapper.find('.t-popup__close').exists()).toBeFalsy();
+
+      const temp = '取消';
+      await wrapper.setProps({
+        closeBtn: () => {
+          return temp;
+        },
+      });
+      expect(wrapper.find('.t-popup__close').exists()).toBeTruthy();
+      expect(wrapper.find('.t-popup__close').text()).toEqual(temp);
+    });
+
+    it(':placement', async () => {
+      const placementList = ['', 'top', 'left', 'right', 'bottom', 'center'];
+      placementList.forEach((placement, index) => {
+        const wrapper = mount(() => <Popup visible={true} placement={placement} />);
+        const $popup = wrapper.find('.t-popup');
+        if (placement) {
+          expect($popup.classes()).toContain(`t-popup--${placement}`);
+        }
+      });
     });
 
     it(':zIndex', async () => {
@@ -86,6 +111,7 @@ describe('popup', () => {
             <Popup
               placement="bottom"
               transition-name="slide-fade"
+              closeBtn={true}
               visible={visible.value}
               onVisibleChange={onVisibleChange}
               onOpen={open}
@@ -99,11 +125,16 @@ describe('popup', () => {
 
       const $popup = wrapper.find('.t-popup');
       const $overlay = wrapper.find('.t-overlay');
+      const $closeBtn = wrapper.find('.t-popup__close');
 
       await $overlay.trigger('click');
 
       expect(onVisibleChange).toBeCalledTimes(1);
       expect(close).toBeCalledTimes(1);
+
+      await $closeBtn.trigger('click');
+      expect(onVisibleChange).toBeCalledTimes(2);
+      expect(close).toBeCalledTimes(2);
 
       const $transition = wrapper.findAllComponents({ name: 'transition' }); // => 通过 `name` 找到 transition
       expect($transition).toHaveLength(2);

@@ -63,6 +63,13 @@ describe('PullDownRefresh', () => {
   });
 
   describe(':events', () => {
+    it('transitionend', async () => {
+      const wrapper = mount(<PullDownRefresh value={true} loadingBarHeight={30} maxBarHeight={80} />);
+
+      const track = wrapper.find('.t-pull-down-refresh__track');
+      track.trigger(`transitionend`);
+    });
+
     it('timeout', async () => {
       const status = ref(false);
       const refreshTimeout = 500;
@@ -77,15 +84,15 @@ describe('PullDownRefresh', () => {
       });
       const onTimeout = vi.fn();
 
-      const wrapper = mount(
-        () => <PullDownRefresh
+      const wrapper = mount(() => (
+        <PullDownRefresh
           value={status.value}
           refreshTimeout={refreshTimeout}
           onChange={onChange}
           onRefresh={onRefresh}
           onTimeout={onTimeout}
-        />,
-      );
+        />
+      ));
 
       const target = wrapper.find('.t-pull-down-refresh__track');
       const maxBar = wrapper.find('.t-pull-down-refresh__tips');
@@ -107,7 +114,7 @@ describe('PullDownRefresh', () => {
       });
 
       // expect(wrapper.emitted()).toHaveProperty('update:value'); // useModel 受控模式
-      
+
       expect(onChange).toHaveBeenCalled();
       expect(onRefresh).toHaveBeenCalled();
       expect(onTimeout).toHaveBeenCalled();
