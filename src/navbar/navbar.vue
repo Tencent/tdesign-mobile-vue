@@ -21,8 +21,9 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, getCurrentInstance, ref, toRefs } from 'vue';
+import { computed, defineComponent, getCurrentInstance, ref, toRefs, watch } from 'vue';
 import { ChevronLeftIcon as TChevronLeftIcon } from 'tdesign-icons-vue-next';
+import { useResizeObserver } from '@vueuse/core';
 import config from '../config';
 import { renderTNode, TNode, useEmitEvent } from '../shared';
 import NavbarProps from './props';
@@ -50,16 +51,35 @@ export default defineComponent({
       props.visible ? `${name}--visible${animationSuffix}` : `${name}--hide${animationSuffix}`,
     ]);
 
-    // 计算左右区域的最大宽度
-    const navbarRight = computed(
-      () =>
-        Math.max(navLeft.value?.clientWidth ?? 0, navRight.value?.clientWidth ?? 0) + (navLeft.value?.offsetLeft ?? 0),
-    );
+    const navStyle = ref();
 
-    const navStyle = computed(
-      () => `position: ${fixed.value ? 'fixed' : 'relative'};
-            --td-navbar-padding-top: 0px;
-            --td-navbar-right: ${navbarRight.value}px;`,
+    const setNavStyle = () => {
+      // 计算左右区域的最大宽度
+      const navbarRight = computed(
+        () =>
+          Math.max(navLeft.value?.clientWidth ?? 0, navRight.value?.clientWidth ?? 0) +
+          (navLeft.value?.offsetLeft ?? 0),
+      );
+      navStyle.value = `position: ${fixed.value ? 'fixed' : 'relative'};
+              --td-navbar-padding-top: 0px;
+              --td-navbar-right: ${navbarRight.value}px;`;
+    };
+
+    setNavStyle();
+
+    useResizeObserver(navLeft, () => {
+      setNavStyle();
+    });
+
+    useResizeObserver(navRight, () => {
+      setNavStyle();
+    });
+
+    watch(
+      () => props.fixed,
+      () => {
+        setNavStyle();
+      },
     );
 
     const isStringTitle = typeof props.title === 'string' && !internalInstance?.slots.title;
