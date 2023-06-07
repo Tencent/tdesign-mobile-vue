@@ -5,6 +5,7 @@
       :class="`${name}__container`"
       :style="{
         flexDirection: !isVertical ? 'row' : 'column',
+        transition: animating ? `transform ${duration}ms` : 'none',
       }"
       @transitionend="handleAnimationEnd"
       @click="onItemClick"
@@ -31,13 +32,13 @@
             :key="'page' + index"
             :class="[
               `${navName}__${navigation.type}-item`,
-              { [`${navName}__${navigation.type}-item--active`]: index === state.activeIndex },
+              { [`${navName}__${navigation.type}-item--active`]: index === current },
               `${navName}__${navigation.type}-item--${direction}`,
             ]"
           ></span>
         </template>
         <span v-if="navigation.type && navigation.type === 'fraction'">
-          {{ (current ?? 0 + 1) + '/' + items.length }}
+          {{ (current ?? 0) + 1 + '/' + items.length }}
         </span>
       </span>
     </template>
@@ -78,6 +79,8 @@ export default {
 
 <script lang="ts" setup>
 const navName = `${prefix}-swiper-nav`;
+const self = getCurrentInstance();
+
 const setOffset = (element: HTMLDivElement, offset: number, direction = 'X'): void => {
   // eslint-disable-next-line no-param-reassign
   element.style.transform = `translate${direction}(${offset}px)`;
@@ -95,9 +98,10 @@ const [current, setCurrent] = useVModel(
   props.defaultCurrent,
   props.onChange,
 );
-const self = getCurrentInstance();
 const swiperContainer = ref<HTMLElement | null>(null);
 const computedNavigation = computed(() => renderTNode(self, 'navigation'));
+
+const animating = ref(false);
 
 const state = reactive({
   showNavigation: true,
@@ -135,7 +139,6 @@ const initSwiper = () => {
     state.showNavigation = false;
   }
 
-  // move(0);
   startAutoplay();
 };
 
@@ -161,39 +164,21 @@ const onItemClick = () => {
   emitEvent('click', state.activeIndex);
 };
 
-const move = (targetIndex: number, isTrust = true) => {
+const move = (step: number, isTrust = true) => {
+  animating.value = true;
+  processIndex((current.value as number) + step);
   const _swiperContainer = getContainer();
   const moveDirection = !isVertical.value ? 'X' : 'Y';
   const moveLength: number = props?.direction === 'vertical' ? state.itemHeight : state.itemWidth;
   actionIsTrust = isTrust;
   _swiperContainer.dataset.isTrust = `${isTrust}`;
-  // do not translate one item if not loop
-  console.log(`translate${moveDirection}(${-1 * moveLength * targetIndex}px)`);
+  _swiperContainer.style.transform = `translate${moveDirection}(${-1 * moveLength * step}px)`;
+};
 
-  _swiperContainer.style.transform = `translate${moveDirection}(${-1 * moveLength * targetIndex}px)`;
-};
-const addAnimation = () => {
-  const _swiperContainer = getContainer();
-  _swiperContainer.style.transition = `transform ${props?.duration}ms`;
-};
-const removeAnimation = () => {
-  const _swiperContainer = getContainer();
-  _swiperContainer.style.transition = 'none';
-};
 const handleAnimationEnd = () => {
   state.btnDisabled = false;
-  removeAnimation();
-  // if (state.activeIndex >= state.itemLength) {
-  //   state.activeIndex = 0;
-  //   move(0);
-  // }
-  // if (state.activeIndex <= -1) {
-  //   state.activeIndex = state.itemLength - 1;
-  //   move(state.itemLength - 1);
-  // }
-  // setTimeout(() => {
-  //   actionIsTrust && emitCurrentChange(state.activeIndex);
-  // }, 0);
+  animating.value = false;
+
   updateItemPosition();
   const _swiperContainer = getContainer();
   _swiperContainer.style.transform = 'translateX(0)';
@@ -210,36 +195,31 @@ const startAutoplay = () => {
     goNext();
   }, props?.interval);
 };
-const emitCurrentChange = (index: number) => {
-  let resultIndex = index;
-  if (index >= state.itemLength) resultIndex = 0;
-  if (index < 0) resultIndex = state.itemLength - 1;
-  // emitEvent('change', resultIndex);
-  setCurrent(resultIndex);
-};
 
 const goPrev = () => {
-  processIndex((current.value as number) + 1);
+  move(-1);
 };
 const goNext = () => {
-  processIndex((current.value as number) + 1);
+  move(1);
 };
 
 const processIndex = (index: number) => {
   const max = items.value.length;
+  let val = index;
 
   if (index < 0) {
-    setCurrent(props.loop ? max - 1 : 0);
-  } else if (index >= max) {
-    setCurrent(props.loop ? 0 : max - 1);
-  } else {
-    setCurrent(index);
+    val = props.loop ? max - 1 : 0;
   }
+  if (index >= max) {
+    val = props.loop ? 0 : max - 1;
+  }
+
+  setCurrent(val);
 };
 
 const { lengthX, lengthY } = useSwipe(swiperContainer, {
   passive: false,
-  onSwipeStart(e: TouchEvent) {
+  onSwipeStart() {
     if (state.btnDisabled) return false;
     stopAutoplay();
   },
@@ -253,13 +233,13 @@ const { lengthX, lengthY } = useSwipe(swiperContainer, {
 });
 
 const onTouchMove = (event: TouchEvent) => {
+  if (animating.value) return;
   event.preventDefault();
-  const { activeIndex, itemWidth, itemHeight } = state;
   const distanceX = lengthX.value;
   const distanceY = lengthY.value;
   const _container = getContainer();
-  removeAnimation();
-  const toIndex = props?.loop ? activeIndex + 1 : activeIndex;
+
+  animating.value = false;
   if (!isVertical.value) {
     setOffset(_container, -distanceX);
   } else {
@@ -270,13 +250,10 @@ const onTouchMove = (event: TouchEvent) => {
 const onTouchEnd = () => {
   const distanceX = lengthX.value;
   const distanceY = lengthY.value;
-  addAnimation();
   if ((!isVertical.value && distanceX < -100) || (isVertical.value && distanceY < -100)) {
     move(-1);
-    goPrev();
   } else if ((!isVertical.value && distanceX > 100) || (isVertical.value && distanceY > 100)) {
     move(1);
-    goNext();
   } else {
     move(state.activeIndex);
   }
@@ -294,13 +271,14 @@ const removeChild = (uid: number) => {
 
 const updateItemPosition = () => {
   items.value.forEach((item: any, index: number) => {
-    item.calcTranslateStyle(index, current.value, items.value.length);
+    item.calcTranslateStyle(index, current.value);
   });
 };
 
 provide('parent', {
   loop: props.loop,
   root,
+  items,
   isVertical,
   addChild,
   removeChild,

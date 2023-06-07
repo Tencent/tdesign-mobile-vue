@@ -17,15 +17,15 @@ export default {
 </script>
 
 <script lang="ts" setup>
-const { addChild, removeChild, isVertical, root, loop } = inject('parent') as any;
+const { addChild, removeChild, isVertical, root, loop, items } = inject('parent') as any;
 const rootStyle = ref('');
 const instance = getCurrentInstance();
 
 const direction = computed(() => (isVertical.value ? 'Y' : 'X'));
 
-const calcTranslateStyle = (index: number, activeIndex: number, total: number) => {
+const calcTranslateStyle = (index: number, activeIndex: number) => {
   const distance = root.value?.[isVertical.value ? 'offsetHeight' : 'offsetWidth'] ?? 0;
-  const lastItemIndex = total - 1;
+  const lastItemIndex = items.value.length - 1;
   let step = Math.min(index + 1, Math.abs(activeIndex - index));
 
   if (activeIndex === index) step = 0;
