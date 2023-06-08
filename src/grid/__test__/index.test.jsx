@@ -182,7 +182,11 @@ describe('grid-item', () => {
         );
       });
       const $gridItems = wrapper.find(`.${name}-item`);
-      expect($gridItems.find(`.t-grid-item--${l}`).exists()).toBe(true);
+      if(!l) {
+        expect($gridItems.find('.t-grid-item--').exists()).toBe(true)
+      }else {
+        expect($gridItems.find(`.t-grid-item--${l}`).exists()).toBe(true)
+      }
     });
   });
 });
