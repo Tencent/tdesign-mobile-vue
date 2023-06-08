@@ -8,7 +8,7 @@
 backgroundColor | String | - | 遮罩层的背景色	 | N
 customStyle | String | - | 遮罩层自定义样式。优先级低于其他属性 | N
 duration | Number | 300 | 背景色过渡时间，单位毫秒 | N
-preventScrollThrough | Boolean | true | 防止滚动穿透，即不允许点击和滚动 | N
+preventScrollThrough | Boolean | true | 是否阻止背景滚动，阻止时蒙层里的内容也将无法滚动 | N
 visible | Boolean | false | 是否展示 | N
 zIndex | Number | 1000 | 遮罩的层级 | N
 onClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>遮罩层的点击事件 | N

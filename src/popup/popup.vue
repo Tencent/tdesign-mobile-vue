@@ -2,12 +2,7 @@
   <teleport v-if="!destroyOnClose || wrapperVisbile" :to="to" :disabled="!to">
     <t-overlay v-bind="overlayProps" :visible="innerVisible && showOverlay" @click="handleOverlayClick" />
     <transition :name="contentTransitionName" @after-enter="afterEnter" @after-leave="afterLeave">
-      <div
-        v-show="innerVisible"
-        :class="[name, $attrs.class, contentClasses]"
-        :style="rootStyles"
-        @touchmove="handleMove"
-      >
+      <div v-show="innerVisible" :class="[name, $attrs.class, contentClasses]" :style="rootStyles">
         <div v-if="closeBtnNode" :class="`${name}__close`" @click="handleCloseClick">
           <t-node :content="closeBtnNode" />
         </div>
@@ -107,12 +102,6 @@ export default defineComponent({
       setVisible(false);
     };
 
-    const handleMove = (e: TouchEvent) => {
-      if (props.preventScrollThrough) {
-        e.preventDefault();
-      }
-    };
-
     const afterLeave = () => {
       wrapperVisbile.value = false;
       emitEvent('closed');
@@ -161,7 +150,6 @@ export default defineComponent({
       afterLeave,
       handleOverlayClick,
       handleCloseClick,
-      handleMove,
     };
   },
 });
