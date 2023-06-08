@@ -38,6 +38,17 @@ describe('NoticeBar', async () => {
       const wrapper3 = mount(<NoticeBar visible marquee={params} />);
       await nextTick();
       expect(wrapper3.vm.scroll.marquee).toBe(false);
+
+
+      params.loop = 3;
+      const wrapper4 = mount(<NoticeBar visible marquee={params} />);
+      await nextTick();
+      await wrapper4.find('.t-notice-bar__content').trigger('transitionend');
+      expect(wrapper4.vm.scroll.loop).toBe(2);
+      await wrapper4.find('.t-notice-bar__content').trigger('transitionend');
+      expect(wrapper4.vm.scroll.loop).toBe(1);
+      await wrapper4.find('.t-notice-bar__content').trigger('transitionend');
+      expect(wrapper4.vm.scroll.loop).toBe(0);
     });
 
     it('prefixIcon', async () => {
@@ -47,6 +58,9 @@ describe('NoticeBar', async () => {
 
       const wrapper2 = mount(<NoticeBar visible />);
       expect(wrapper2.find('.t-icon-info-circle-filled').exists()).toBe(true);
+
+      const wrapper3 = mount(<NoticeBar visible prefix-icon={false} />);
+      expect(wrapper3.find('.t-notice-bar__prefix-icon > .t-icon').exists()).toBe(false);
     });
 
     it('theme', async () => {
@@ -79,6 +93,13 @@ describe('NoticeBar', async () => {
     it('defaultVisible', async () => {
       const wrapper = mount(<NoticeBar defaultVisible />);
       expect(wrapper.find('.t-notice-bar').exists()).toBe(true);
+    });
+
+    it('direction', async () => {
+      const content = ['君不见', '高堂明镜悲白发', '朝如青丝暮成雪', '人生得意须尽欢', '莫使金樽空对月'];
+      const wrapper = mount(<NoticeBar visible marquee direction='vertical' content={content} />);
+      await nextTick();
+      expect(wrapper.find('.t-notice-bar__content--vertical').exists()).toBe(true);
     });
   });
 
