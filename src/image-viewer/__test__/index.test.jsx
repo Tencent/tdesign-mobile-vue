@@ -27,11 +27,11 @@ describe('ImageViewer', () => {
       const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} />);
 
       await nextTick();
-      expect(wrapper.findAll('.t-swiper-item').length - 2).toBe(images.value.length);
+      expect(wrapper.findAll('.t-swiper-item').length).toBe(images.value.length);
 
       images.value.pop();
       await nextTick();
-      expect(wrapper.findAll('.t-swiper-item').length - 2).toBe(images.value.length);
+      expect(wrapper.findAll('.t-swiper-item').length).toBe(images.value.length);
     });
 
     it(':maxZoom', async () => {

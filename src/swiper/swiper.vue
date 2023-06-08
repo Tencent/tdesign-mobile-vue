@@ -6,6 +6,7 @@
       :style="{
         flexDirection: !isVertical ? 'row' : 'column',
         transition: animating ? `transform ${duration}ms` : 'none',
+        transform: translateContainer,
       }"
       @transitionend="handleAnimationEnd"
       @click="onItemClick"
@@ -13,7 +14,7 @@
       <slot />
     </div>
     <!-- 导航器 -->
-    <template v-if="navigation && state.showNavigation">
+    <template v-if="navigation && enableNavigation">
       <span v-if="!isVertical && 'showControls' in navigation && navigation.showControls" :class="`${navName}__btn`">
         <span :class="`${navName}__btn--prev`" @click="goPrev()" />
         <span :class="`${navName}__btn--next`" @click="goNext()" />
@@ -42,31 +43,19 @@
         </span>
       </span>
     </template>
-    <template v-else-if="computedNavigation !== undefined">
+    <template v-else-if="computedNavigation">
       <t-node :content="computedNavigation" />
     </template>
   </div>
 </template>
 
 <script lang="ts">
-import {
-  reactive,
-  getCurrentInstance,
-  onMounted,
-  computed,
-  watch,
-  ref,
-  nextTick,
-  provide,
-  ComponentPublicInstance,
-  defineEmits,
-  defineProps,
-} from 'vue';
+import { getCurrentInstance, onMounted, computed, ref, provide, defineEmits, defineProps } from 'vue';
 import { useSwipe } from '@vueuse/core';
+import isObject from 'lodash/isObject';
+
 import config from '../config';
-
 import SwiperProps from './props';
-
 import { renderTNode, TNode, useEmitEvent, useVModel } from '../shared';
 
 const { prefix } = config;
@@ -81,9 +70,8 @@ export default {
 const navName = `${prefix}-swiper-nav`;
 const self = getCurrentInstance();
 
-const setOffset = (element: HTMLDivElement, offset: number, direction = 'X'): void => {
-  // eslint-disable-next-line no-param-reassign
-  element.style.transform = `translate${direction}(${offset}px)`;
+const setOffset = (offset: number, direction = 'X'): void => {
+  translateContainer.value = `translate${direction}(${offset}px)`;
 };
 
 const root = ref();
@@ -99,19 +87,11 @@ const [current, setCurrent] = useVModel(
   props.onChange,
 );
 const swiperContainer = ref<HTMLElement | null>(null);
-const computedNavigation = computed(() => renderTNode(self, 'navigation'));
+const computedNavigation = computed(() => (isObject(props.navigation) ? '' : renderTNode(self, 'navigation')));
 
 const animating = ref(false);
-
-const state = reactive({
-  showNavigation: true,
-  activeIndex: 0,
-  itemLength: 0,
-  itemWidth: 0,
-  itemHeight: 0,
-  btnDisabled: false,
-  children: [] as ComponentPublicInstance[],
-});
+const disabled = ref(false);
+const translateContainer = ref('');
 
 const isVertical = computed(() => props.direction === 'vertical');
 const swiperHeight = computed(() => {
@@ -125,69 +105,43 @@ const rootClass = computed(() => {
   return [`${name}`, `${name}--${props.type}`];
 });
 
-const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector(`.${name}__container`);
-
-const initSwiper = () => {
-  const _swiperContainer = getContainer();
-  const items = _swiperContainer.querySelectorAll(`.${name}-item`);
-  state.itemLength = _swiperContainer.children?.length || 0;
-  const { width, height } = _swiperContainer.querySelector(`.${name}-item`)?.getBoundingClientRect() || {};
-  state.itemWidth = width || 0;
-  state.itemHeight = height || 0;
-  if (items.length <= 0) return false;
-  if (computedNavigation.value?.minShowNum && items.length < computedNavigation.value?.minShowNum) {
-    state.showNavigation = false;
+const enableNavigation = computed(() => {
+  if (typeof props.navigation === 'object') {
+    return props.navigation?.minShowNum ? items.value.length >= props.navigation?.minShowNum : true;
   }
-
-  startAutoplay();
-};
-
-onMounted(() => {
-  initSwiper();
+  return false;
 });
 
-watch(
-  () => state.children.length,
-  () => {
-    nextTick(() => {
-      console.info('swiper mounted');
-      initSwiper();
-    });
-  },
-);
-
-// eslint-disable-next-line no-undef
-let autoplayTimer: number | NodeJS.Timeout | null = null;
-let actionIsTrust = true;
+let autoplayTimer: any = null;
 
 const onItemClick = () => {
-  emitEvent('click', state.activeIndex);
+  emitEvent('click', current.value);
 };
 
-const move = (step: number, isTrust = true) => {
+const move = (step: number) => {
   animating.value = true;
   processIndex((current.value as number) + step);
-  const _swiperContainer = getContainer();
+
   const moveDirection = !isVertical.value ? 'X' : 'Y';
-  const moveLength: number = props?.direction === 'vertical' ? state.itemHeight : state.itemWidth;
-  actionIsTrust = isTrust;
-  _swiperContainer.dataset.isTrust = `${isTrust}`;
-  _swiperContainer.style.transform = `translate${moveDirection}(${-1 * moveLength * step}px)`;
+  const distance = root.value?.[isVertical.value ? 'offsetHeight' : 'offsetWidth'] ?? 0;
+
+  translateContainer.value = `translate${moveDirection}(${-1 * distance * step}px)`;
 };
 
 const handleAnimationEnd = () => {
-  state.btnDisabled = false;
+  disabled.value = false;
   animating.value = false;
+  translateContainer.value = 'translateX(0)';
 
   updateItemPosition();
-  const _swiperContainer = getContainer();
-  _swiperContainer.style.transform = 'translateX(0)';
 };
+
 const stopAutoplay = () => {
   if (!autoplayTimer) return;
   clearInterval(autoplayTimer as number);
   autoplayTimer = null;
 };
+
 const startAutoplay = () => {
   if (typeof props.current === 'number') return false;
   if (!props?.autoplay || autoplayTimer !== null) return false; // stop repeat autoplay
@@ -197,9 +151,11 @@ const startAutoplay = () => {
 };
 
 const goPrev = () => {
+  disabled.value = true;
   move(-1);
 };
 const goNext = () => {
+  disabled.value = true;
   move(1);
 };
 
@@ -220,11 +176,11 @@ const processIndex = (index: number) => {
 const { lengthX, lengthY } = useSwipe(swiperContainer, {
   passive: false,
   onSwipeStart() {
-    if (state.btnDisabled) return false;
+    if (disabled.value) return;
     stopAutoplay();
   },
   onSwipe(e: TouchEvent) {
-    if (state.btnDisabled) return false;
+    if (disabled.value) return;
     onTouchMove(e);
   },
   onSwipeEnd() {
@@ -237,25 +193,26 @@ const onTouchMove = (event: TouchEvent) => {
   event.preventDefault();
   const distanceX = lengthX.value;
   const distanceY = lengthY.value;
-  const _container = getContainer();
 
   animating.value = false;
+
   if (!isVertical.value) {
-    setOffset(_container, -distanceX);
+    setOffset(-distanceX);
   } else {
-    setOffset(_container, -distanceY, 'Y');
+    setOffset(-distanceY, 'Y');
   }
 };
 
 const onTouchEnd = () => {
   const distanceX = lengthX.value;
   const distanceY = lengthY.value;
+
   if ((!isVertical.value && distanceX < -100) || (isVertical.value && distanceY < -100)) {
     move(-1);
   } else if ((!isVertical.value && distanceX > 100) || (isVertical.value && distanceY > 100)) {
     move(1);
   } else {
-    move(state.activeIndex);
+    move(current.value as number);
   }
   startAutoplay();
 };
@@ -285,6 +242,7 @@ provide('parent', {
 });
 
 onMounted(() => {
+  startAutoplay();
   updateItemPosition();
 });
 </script>
