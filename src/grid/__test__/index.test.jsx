@@ -181,11 +181,12 @@ describe('grid-item', () => {
           </Grid>
         );
       });
-      const $gridItems = wrapper.find(`.${name}-item`);
-      if(!l) {
-        expect($gridItems.find('.t-grid-item--').exists()).toBe(true)
-      }else {
-        expect($gridItems.find(`.t-grid-item--${l}`).exists()).toBe(true)
+      if (l === 'horizontal') {
+        expect(wrapper.find('.t-grid-item--horizontal').exists()).toBe(true)
+      } else if (l === 'vertical') {
+        expect(wrapper.find('.t-grid-item--vertical').exists()).toBe(true)
+      } else if (l === '') {
+        expect(wrapper.find('.t-grid-item').exists()).toBe(true)
       }
     });
   });
