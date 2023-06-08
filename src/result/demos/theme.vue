@@ -1,6 +1,6 @@
 <template>
   <div v-for="(item, index) in resultList" :key="index">
-    <t-result :theme="item.theme" :title="item.title" :description="item.description" />
+    <t-result :theme="item.theme" :title="item.title" :description="item.description" class="space" />
   </div>
 </template>
 
@@ -36,3 +36,9 @@ const props = defineProps({
   description: String,
 });
 </script>
+
+<style>
+.space {
+  margin-bottom: 48px;
+}
+</style>

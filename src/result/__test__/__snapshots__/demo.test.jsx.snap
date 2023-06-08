@@ -135,7 +135,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
       
       <div>
         <div
-          class="t-result t-result--theme-success"
+          class="t-result t-result--theme-success space"
         >
           <div
             class="t-result__thumb"
@@ -175,7 +175,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
       </div>
       <div>
         <div
-          class="t-result t-result--theme-error"
+          class="t-result t-result--theme-error space"
         >
           <div
             class="t-result__thumb"
@@ -215,7 +215,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
       </div>
       <div>
         <div
-          class="t-result t-result--theme-warning"
+          class="t-result t-result--theme-warning space"
         >
           <div
             class="t-result__thumb"
@@ -255,7 +255,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
       </div>
       <div>
         <div
-          class="t-result t-result--theme-default"
+          class="t-result t-result--theme-default space"
         >
           <div
             class="t-result__thumb"
@@ -445,7 +445,7 @@ exports[`Result > Result themeVue demo works fine 1`] = `
   
   <div>
     <div
-      class="t-result t-result--theme-success"
+      class="t-result t-result--theme-success space"
     >
       <div
         class="t-result__thumb"
@@ -485,7 +485,7 @@ exports[`Result > Result themeVue demo works fine 1`] = `
   </div>
   <div>
     <div
-      class="t-result t-result--theme-error"
+      class="t-result t-result--theme-error space"
     >
       <div
         class="t-result__thumb"
@@ -525,7 +525,7 @@ exports[`Result > Result themeVue demo works fine 1`] = `
   </div>
   <div>
     <div
-      class="t-result t-result--theme-warning"
+      class="t-result t-result--theme-warning space"
     >
       <div
         class="t-result__thumb"
@@ -565,7 +565,7 @@ exports[`Result > Result themeVue demo works fine 1`] = `
   </div>
   <div>
     <div
-      class="t-result t-result--theme-default"
+      class="t-result t-result--theme-default space"
     >
       <div
         class="t-result__thumb"
