@@ -215,18 +215,18 @@ describe('swiper', () => {
         );
       },
     });
-    const $contianer = wrapper.find('.t-swiper__container')
+    const $container = wrapper.find('.t-swiper__container')
     
-    await $contianer.trigger('touchstart', { touches: [{ clientX: 0, clientY: 0 }] })
-    await $contianer.trigger('touchmove', { touches: [{ clientX: 101, clientY: 0 }] })
-    await $contianer.trigger('touchend', { touches: [{ clientX: 200, clientY: 0 }] })
+    await $container.trigger('touchstart', { touches: [{ clientX: 0, clientY: 0 }] })
+    await $container.trigger('touchmove', { touches: [{ clientX: 101, clientY: 0 }] })
+    await $container.trigger('touchend', { touches: [{ clientX: 200, clientY: 0 }] })
     await sleep(200)
     expect(onChange).toBeCalledWith(0);
     // direction.value = 'vertical';
     // await sleep(1000)
-    // await $contianer.trigger('touchstart', { touches: [{ clientX: 0, clientY: 0 }] })
-    // await $contianer.trigger('touchmove', { touches: [{ clientX: 0, clientY: 101 }] })
-    // await $contianer.trigger('touchend', { touches: [{ clientX: 0, clientY: 200 }] })
+    // await $container.trigger('touchstart', { touches: [{ clientX: 0, clientY: 0 }] })
+    // await $container.trigger('touchmove', { touches: [{ clientX: 0, clientY: 101 }] })
+    // await $container.trigger('touchend', { touches: [{ clientX: 0, clientY: 200 }] })
     // await sleep(500)
     // expect(onChange).toBeCalledWith(2);
   })
