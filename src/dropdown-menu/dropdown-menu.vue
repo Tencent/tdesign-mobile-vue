@@ -14,8 +14,15 @@
 import { defineComponent, computed, toRefs, ref, reactive, watch, provide } from 'vue';
 import { CaretDownSmallIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
-import { context as menuContext, DropdownMenuState, DropdownMenuControl, DropdownMenuExpandState } from './context';
+import {
+  context as menuContext,
+  DropdownMenuState,
+  DropdownMenuControl,
+  DropdownMenuExpandState,
+  TriggerSource,
+} from './context';
 import TransAniControl from './trans-ani-control';
+import { useEmitEvent } from '../shared';
 import { findRelativeRect, findRelativeContainer } from './dom-utils';
 import DropdownMenuProps from './props';
 
@@ -26,7 +33,9 @@ export default defineComponent({
   name,
   components: { CaretDownSmallIcon },
   props: DropdownMenuProps,
-  setup(props, { slots, expose }) {
+  emits: ['menuOpened', 'menuClosed'],
+  setup(props, { slots, expose, emit }) {
+    const emitEvent = useEmitEvent(props, emit);
     // 菜单状态
     const state = reactive<DropdownMenuState>({
       activeId: null,
@@ -90,6 +99,11 @@ export default defineComponent({
         [`${name}__icon--active`]: idx === state.activeId,
       },
     ]);
+
+    const emitEvents = (emit: string, trigger?: TriggerSource) => {
+      emitEvent(emit, { trigger });
+    };
+
     // 展开对应项目的菜单
     const expandMenu = (item: any, idx: number) => {
       const { disabled } = item;
@@ -99,9 +113,10 @@ export default defineComponent({
       if (state.activeId === idx) {
         // 再次点击时收起
         collapseMenu();
+        emitEvents('menuClosed', 'dropdown-item');
         return;
       }
-
+      emitEvents('menuOpened');
       state.activeId = idx;
 
       // 获取菜单定位
@@ -126,7 +141,7 @@ export default defineComponent({
       const container = findRelativeContainer(bar) || document.body;
       menuContext.recordMenuExpanded(container, control, DropdownMenuExpandState.collapsed);
     };
-    const control: DropdownMenuControl = { expandMenu, collapseMenu };
+    const control: DropdownMenuControl = { expandMenu, collapseMenu, emitEvents };
     // 提供子组件访问
     provide('dropdownMenuControl', control);
     expose({

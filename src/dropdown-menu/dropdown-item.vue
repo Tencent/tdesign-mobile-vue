@@ -8,6 +8,7 @@
       :overlay-props="{ style: 'position: absolute' }"
       :class="`${name}__popup-host`"
       :attach="`#${popupId}`"
+      @visible-change="onVisibleChange"
       @close="closePopup"
     >
       <div :class="styleContent">
@@ -101,7 +102,7 @@ export default defineComponent({
     // 从父组件取属性、状态和控制函数
     const menuProps = inject('dropdownMenuProps') as TdDropdownMenuProps;
     const menuState = inject('dropdownMenuState') as DropdownMenuState;
-    const { expandMenu, collapseMenu } = inject('dropdownMenuControl') as DropdownMenuControl;
+    const { expandMenu, collapseMenu, emitEvents } = inject('dropdownMenuControl') as DropdownMenuControl;
 
     // 组件样式
     const classes = computed(() => [`${name}`]);
@@ -254,12 +255,14 @@ export default defineComponent({
       }
       collapseMenu();
     });
-    // 点击遮罩层
-    const onClickOverlay = () => {
-      if (menuProps.closeOnClickOverlay) {
+
+    const onVisibleChange = (visible: boolean) => {
+      if (menuProps.closeOnClickOverlay && !visible) {
         collapseMenu();
+        emitEvents('menuClosed', 'overlay');
       }
     };
+
     return {
       name: ref(name),
       ...toRefs(props),
@@ -278,7 +281,7 @@ export default defineComponent({
       collapseMenu,
       resetSelect,
       confirmSelect,
-      onClickOverlay,
+      onVisibleChange,
     };
   },
 });
