@@ -26,8 +26,8 @@
       </div>
       <template #footer>
         <div class="demo-dropdown-item_footer">
-          <t-button theme="light" @click="resetSelect">重置</t-button>
-          <t-button theme="primary" @click="confirmSelect">确定</t-button>
+          <t-button size="large" theme="light" @click="resetSelect">重置</t-button>
+          <t-button size="large" theme="primary" @click="confirmSelect">确定</t-button>
         </div>
       </template>
     </t-dropdown-item>
@@ -130,6 +130,7 @@ function confirmSelect() {
 .demo-dropdown-item {
   &_label {
     padding: 16px 0 0 16px;
+    font-size: 14px;
   }
   &_footer {
     display: flex;
