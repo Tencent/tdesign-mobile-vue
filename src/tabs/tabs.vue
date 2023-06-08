@@ -196,15 +196,15 @@ export default defineComponent({
     // 手势滑动开始
     const moveStart = (e: any) => {
       if (!swipeable.value) return;
-      startX.value = e.targetTouches[0].pageX;
-      startY.value = e.targetTouches[0].pageY;
+      startX.value = e.targetTouches[0].clientX;
+      startY.value = e.targetTouches[0].clientY;
     };
 
     const onMove = (e: any) => {
       if (!swipeable.value) return;
       if (!canMove.value) return;
-      endX.value = e.targetTouches[0].pageX;
-      endY.value = e.targetTouches[0].pageY;
+      endX.value = e.targetTouches[0].clientX;
+      endY.value = e.targetTouches[0].clientY;
       const dValueX = Math.abs(startX.value - endX.value);
       const dValueY = Math.abs(startY.value - endY.value);
       if (tabIndex.value >= 0 && tabIndex.value < itemProps.value.length) {
