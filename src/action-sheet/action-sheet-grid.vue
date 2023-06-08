@@ -4,7 +4,7 @@
       v-show="actionItems.length > 1"
       :autoplay="false"
       pagination-position="bottom"
-      :navigation="{ type: 'dots', showSlideBtn: false }"
+      :navigation="{ type: 'dots', showControls: false }"
       :loop="false"
       :class="`${name}__swiper-wrap`"
       @change="handleSwiperChange"
