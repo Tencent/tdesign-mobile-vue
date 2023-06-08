@@ -3,24 +3,22 @@
  */
 
 import { mount } from '@vue/test-utils';
-import asyncVue from '@/swiper/demos/async.vue';
 import baseVue from '@/swiper/demos/base.vue';
+import cardVue from '@/swiper/demos/card.vue';
 import controlVue from '@/swiper/demos/control.vue';
-import controlledVue from '@/swiper/demos/controlled.vue';
-import directionVue from '@/swiper/demos/direction.vue';
+import customVue from '@/swiper/demos/custom.vue';
+import fractionVue from '@/swiper/demos/fraction.vue';
 import mobileVue from '@/swiper/demos/mobile.vue';
-import navigationTypeVue from '@/swiper/demos/navigation-type.vue';
-import noLoopVue from '@/swiper/demos/no-loop.vue';
+import verticalVue from '@/swiper/demos/vertical.vue';
 
 const mapper = {
-  asyncVue,
   baseVue,
+  cardVue,
   controlVue,
-  controlledVue,
-  directionVue,
+  customVue,
+  fractionVue,
   mobileVue,
-  navigationTypeVue,
-  noLoopVue,
+  verticalVue,
 };
 
 describe('Swiper', () => {
