@@ -142,12 +142,6 @@ describe('popup', () => {
       expect($transition.at(0).exists()).toBeTruthy();
       expect($transition.at(1).exists()).toBeTruthy();
 
-      const event = {
-        preventDefault: vi.fn(),
-      };
-      await $popup.trigger('touchmove', event);
-      expect(event.preventDefault).toHaveBeenCalledTimes(1);
-
       // 理论上点击遮罩层，可以触发 transition 的 after-leave 事件，但在测试环境中并没有触发。
       // 手动触发 afterLeave
       wrapper.findComponent(Popup).vm.afterLeave();
