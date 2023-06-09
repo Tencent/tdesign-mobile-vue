@@ -2,8 +2,8 @@ import { ref, reactive } from 'vue';
 import { mount } from '@vue/test-utils';
 import { Collapse, CollapsePanel } from '../index';
 
-const placementList = ['bottom', 'top'];
-const themeList = ['default', 'card'];
+const placementList = ['', 'bottom', 'top'];
+const themeList = ['', 'default', 'card'];
 
 describe('Collapse', () => {
   describe('collapse props', () => {
@@ -148,18 +148,19 @@ describe('Collapse', () => {
     });
 
     test('theme', async () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Collapse theme="">
-              <CollapsePanel ref="1" value="1"/>
-            </Collapse>
-          );
-        },
-      });
-      const $Collapse = wrapper.findComponent(Collapse);
-      themeList.map((item) => {
-        expect($Collapse.classes().includes(`t-collapse--${item}`)).toBeFalsy();
+      themeList.forEach((theme) => {
+        const wrapper = mount({
+          setup() {
+            return () => (
+              <Collapse theme={theme}>
+                <CollapsePanel ref="1" value="1"/>
+              </Collapse>
+            );
+          },
+        });
+        if (theme) {
+          expect(wrapper.classes()).toContain(`t-collapse--${theme}`);
+        }
       });
     });
   });
@@ -242,18 +243,20 @@ describe('Collapse', () => {
     });
 
     test('placement', async () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Collapse>
-              <CollapsePanel ref="1" value="1" placement=""/>
-            </Collapse>
-          );
-        },
-      });
-      const $CollapsePanel = wrapper.findComponent(CollapsePanel);
-      placementList.map((item) => {
-        expect($CollapsePanel.classes().includes(`t-collapse-panel--${item}`)).toBeFalsy();
+      placementList.forEach((placement) => {
+        const wrapper = mount({
+          setup() {
+            return () => (
+              <Collapse>
+                <CollapsePanel ref="1" value="1" placement={placement}/>
+              </Collapse>
+            );
+          },
+        });
+        if (placement) {
+          const $CollapsePanel = wrapper.findComponent(CollapsePanel);
+          expect($CollapsePanel.classes()).toContain(`t-collapse-panel--${placement}`);
+        }
       });
     });
   });
