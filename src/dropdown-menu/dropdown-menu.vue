@@ -22,7 +22,7 @@ import {
   TriggerSource,
 } from './context';
 import TransAniControl from './trans-ani-control';
-import { useEmitEvent } from '../shared';
+import { useEmitEvent, useExpose } from '../shared';
 import { findRelativeRect, findRelativeContainer } from './dom-utils';
 import DropdownMenuProps from './props';
 
@@ -34,7 +34,7 @@ export default defineComponent({
   components: { CaretDownSmallIcon },
   props: DropdownMenuProps,
   emits: ['menuOpened', 'menuClosed'],
-  setup(props, { slots, expose, emit }) {
+  setup(props, { slots, emit }) {
     const emitEvent = useEmitEvent(props, emit);
     // 菜单状态
     const state = reactive<DropdownMenuState>({
@@ -144,7 +144,7 @@ export default defineComponent({
     const control: DropdownMenuControl = { expandMenu, collapseMenu, emitEvents };
     // 提供子组件访问
     provide('dropdownMenuControl', control);
-    expose({
+    useExpose({
       toggle(idx?: number) {
         if (idx != null) {
           const item = menuTitles.value[idx];
@@ -155,7 +155,7 @@ export default defineComponent({
       },
     });
 
-    expose({
+    useExpose({
       expandMenu,
       collapseMenu,
     });
