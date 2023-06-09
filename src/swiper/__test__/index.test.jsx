@@ -25,7 +25,6 @@ const list = [
 ];
 
 describe('swiper', () => {
-  describe(': props', () => {
     // it('duration && paginationPosition', async () => {
     //   const current = ref(1);
     //   const duration = 100;
@@ -92,131 +91,177 @@ describe('swiper', () => {
     //   // 初始化时，current 项为激活态
     //   expect($dots[current.value].attributes('class').includes(`t-swiper-dot--active`)).toBeTruthy();
     // });
-
-    // it('height && direction', async () => {
-    //   const current = ref(1);
-    //   const height = 200;
-    //   const duration = 100;
-    //   const interval = 100;
-    //   const direction = 'vertical';
-    //   const navigation = {
-    //     type: 'dots-bar',
-    //     showSlideBtn: false,
-    //   };
-    //   const onChange = vi.fn();
-    //   const wrapper = mount({
-    //     setup() {
-    //       return () => (
-    //         <Swiper
-    //           v-model={current.value}
-    //           interval={interval}
-    //           duration={duration}
-    //           height={height}
-    //           navigation={navigation}
-    //           direction={direction}
-    //           onChange={onChange}
-    //         >
-    //           {{
-    //             default: list.map((item, index) => {
-    //               return (
-    //                 <SwiperItem>
-    //                   {{
-    //                     default: () => {
-    //                       return <img src={item.image} />;
-    //                     },
-    //                   }}
-    //                 </SwiperItem>
-    //               );
-    //             }),
-    //           }}
-    //         </Swiper>
-    //       );
-    //     },
-    //   });
-    //   await sleep(interval + duration);
-    //   expect(wrapper.element).toMatchSnapshot();
-    //   const $swiper = wrapper.find(`.${classPrefix}`);
-    //   const $swiperContainer = wrapper.find(`.${classPrefix}__container`);
-    //   $swiperContainer.trigger(`transitionend`);
-    //   expect(
-    //     $swiperContainer
-    //       .attributes('style')
-    //       .includes(`flex-direction: column; transform: translateY(-${height * (1 + current.value)}px);`),
-    //   );
-
-    //   // height = 200
-    //   expect($swiper.attributes('style').includes(`height: ${height}px;`));
-    //   expect($swiperContainer.attributes('style').includes(`height: ${height}px;`));
-
-    //   // 导航器 dots-bar
-    //   const $pagination = wrapper.find(`.${classPrefix}__pagination`);
-    //   expect($pagination.attributes('class').includes(`t-swiper__pagination-${navigation.type}`));
-    //   const $dots = wrapper.findAll(`.${classPrefix}-dot`);
-    //   expect($dots).toHaveLength(list.length);
-    // });
-
-    it(': onChange', async () => {
-      const current = ref(1);
-      const duration = 100;
-      const interval = 100;
-      const navigation = {
-        showSlideBtn: true,
-      };
-      const onChange = vi.fn();
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Swiper
-              v-model:current={current.value}
-              autoplay={false}
-              loop={false}
-              interval={interval}
-              duration={duration}
-              navigation={navigation}
-              onChange={onChange}
-            >
-              {{
-                default: list.map((item, index) => {
-                  return (
-                    <SwiperItem>
-                      {{
-                        default: () => {
-                          return <img src={item.image} />;
-                        },
-                      }}
-                    </SwiperItem>
-                  );
-                }),
-              }}
-            </Swiper>
-          );
-        },
-      });
-      await sleep(interval + duration);
-      const $swiperContainer = wrapper.find(`.${classPrefix}__container`);
-      $swiperContainer.trigger(`transitionend`);
-      // showSlideBtn = true, 显示两侧的滑动控制按钮
-      const $btn = wrapper.findAll(`.${classPrefix}__btn`);
-      expect($btn).toHaveLength(2);
-      const $btnNext = wrapper.find(`.btn-next`);
-      // 模拟触发 click , 下一页
-      $btnNext.trigger('click');
-      await sleep(200);
-      expect(onChange).toHaveBeenCalledTimes(1);
-      expect(onChange).toHaveBeenCalledWith(2);
+  it('height & direction', async () => {
+    const current = ref(1);
+    const height = 200;
+    const duration = 100;
+    const interval = 100;
+    const direction = 'vertical';
+    const navigation = {
+      type: 'dots-bar',
+      showSlideBtn: false,
+    };
+    const onChange = vi.fn();
+    const wrapper = mount({
+      setup() {
+        return () => (
+          <Swiper
+            v-model={current.value}
+            interval={interval}
+            duration={duration}
+            height={height}
+            navigation={navigation}
+            direction={direction}
+            onChange={onChange}
+          >
+            {
+              list.map((item) => (
+                <SwiperItem>
+                    <img src={item.image} />
+                </SwiperItem>
+              ))
+            }
+          </Swiper>
+        );
+      },
     });
+    await sleep(interval + duration);
+    expect(wrapper.element).toMatchSnapshot();
+    const $swiper = wrapper.find(`.${classPrefix}`);
+    const $swiperContainer = wrapper.find(`.${classPrefix}__container`);
+    $swiperContainer.trigger(`transitionend`);
+    expect(
+      $swiperContainer
+        .attributes('style')
+        .includes(`flex-direction: column; transform: translateY(-${height * (1 + current.value)}px);`),
+    );
+
+    // height = 200
+    expect($swiper.attributes('style').includes(`height: ${height}px;`));
+    expect($swiperContainer.attributes('style').includes(`height: ${height}px;`));
+
+    // 导航器 dots-bar
+    // const $pagination = wrapper.find(`.${classPrefix}__pagination`);
+    // expect($pagination.attributes('class').includes(`t-swiper__pagination-${navigation.type}`));
+    // const $dots = wrapper.findAll(`.${classPrefix}-dot`);
+    // expect($dots).toHaveLength(list.length);
   });
+
+  it(':change', async () => {
+    const current = ref(1);
+    const duration = 100;
+    const interval = 100;
+    const navigation = {
+      showControls: true,
+    };
+    const onChange = vi.fn();
+    const wrapper = mount({
+      setup() {
+        return () => (
+          <Swiper
+            v-model={current.value}
+            autoplay={false}
+            loop={false}
+            interval={interval}
+            duration={duration}
+            navigation={navigation}
+            onChange={onChange}
+          >
+            {
+              list.map((item) => (
+                <SwiperItem>
+                    <img src={item.image} />
+                </SwiperItem>
+              ))
+            }
+          </Swiper>
+        );
+      },
+    });
+    await sleep(interval + duration);
+    const $swiperContainer = wrapper.find(`.${classPrefix}__container`);
+    $swiperContainer.trigger(`transitionend`);
+    const $btnNext = wrapper.find(`.${classPrefix}-nav__btn--next`);
+    $btnNext.trigger('click');
+    await sleep(200);
+    expect(onChange).toHaveBeenCalledTimes(1);
+    expect(onChange).toHaveBeenCalledWith(2);
+  });
+
+  it('@event', async () => {
+    const current = ref(1);
+    const duration = 100;
+    const onChange = vi.fn();
+    const direction = ref('horinzotal');
+    const wrapper = mount({
+      setup() {
+        return () => (
+          <Swiper
+            v-model={current.value}
+            autoplay={false}
+            loop={true}
+            duration={duration}
+            direction={direction.value}
+            onChange={onChange}
+          >
+            {
+              list.map((item) => (
+                <SwiperItem>
+                    <img src={item.image} />
+                </SwiperItem>
+              ))
+            }
+          </Swiper>
+        );
+      },
+    });
+    const $container = wrapper.find('.t-swiper__container')
+    
+    await $container.trigger('touchstart', { touches: [{ clientX: 0, clientY: 0 }] })
+    await $container.trigger('touchmove', { touches: [{ clientX: 101, clientY: 0 }] })
+    await $container.trigger('touchend', { touches: [{ clientX: 200, clientY: 0 }] })
+    await sleep(200)
+    expect(onChange).toBeCalledWith(0);
+    // direction.value = 'vertical';
+    // await sleep(1000)
+    // await $container.trigger('touchstart', { touches: [{ clientX: 0, clientY: 0 }] })
+    // await $container.trigger('touchmove', { touches: [{ clientX: 0, clientY: 101 }] })
+    // await $container.trigger('touchend', { touches: [{ clientX: 0, clientY: 200 }] })
+    // await sleep(500)
+    // expect(onChange).toBeCalledWith(2);
+  })
+
+  it(':remove', async () => {
+    const items = ref(list);
+    const wrapper = mount({
+      setup() {
+        return () => (
+          <Swiper>
+            {
+              items.value.map((item) => (
+                <SwiperItem>
+                    <img src={item.image} />
+                </SwiperItem>
+              ))
+            }
+          </Swiper>
+        );
+      },
+    });
+
+    items.value.splice(0, 1);
+    expect(items.value.length).toBe(2);
+  })
 });
 
-// TODO: 目前 change 事件均是通过 showSlideBtn = true 时，两侧滑动按钮控制前后翻页触发, 后期需要补齐 touch。
-describe('SwiperNavigation', () => {
-  it(': minShowNum', async () => {
+describe('navigation', () => {
+  it(':minShowNum', async () => {
     const current = ref(1);
     const duration = 100;
     const interval = 100;
     const navigation = {
       type: 'dots',
-      showSlideBtn: false,
+      showControls: false,
       minShowNum: 4,
     };
     const onChange = vi.fn();
@@ -230,19 +275,13 @@ describe('SwiperNavigation', () => {
             navigation={navigation}
             onChange={onChange}
           >
-            {{
-              default: list.map((item, index) => {
-                return (
-                  <SwiperItem>
-                    {{
-                      default: () => {
-                        return <img src={item.image} />;
-                      },
-                    }}
-                  </SwiperItem>
-                );
-              }),
-            }}
+            {
+              list.map((item) => (
+                <SwiperItem>
+                    <img src={item.image} />
+                </SwiperItem>
+              ))
+            }
           </Swiper>
         );
       },
@@ -253,12 +292,12 @@ describe('SwiperNavigation', () => {
     expect($pagination.exists()).toBeFalsy();
   });
 
-  it(': showSlideBtn', async () => {
+  it(':controls', async () => {
     const current = ref(1); // 受控
     const duration = 100;
     const interval = 100;
     const navigation = {
-      showSlideBtn: true,
+      showControls: true,
     };
     const onChange = vi.fn();
     const wrapper = mount({
@@ -273,19 +312,13 @@ describe('SwiperNavigation', () => {
             navigation={navigation}
             onChange={onChange}
           >
-            {{
-              default: list.map((item, index) => {
-                return (
-                  <SwiperItem>
-                    {{
-                      default: () => {
-                        return <img src={item.image} />;
-                      },
-                    }}
-                  </SwiperItem>
-                );
-              }),
-            }}
+            {
+              list.map((item) => (
+                <SwiperItem>
+                    <img src={item.image} />
+                </SwiperItem>
+              ))
+            }
           </Swiper>
         );
       },
@@ -293,11 +326,9 @@ describe('SwiperNavigation', () => {
     await sleep(interval + duration);
     const $swiperContainer = wrapper.find(`.${classPrefix}__container`);
     $swiperContainer.trigger(`transitionend`);
-    // showSlideBtn = true, 显示两侧的滑动控制按钮
-    const $btn = wrapper.findAll(`.${classPrefix}__btn`);
-    expect($btn).toHaveLength(2);
-    const $btnPrev = wrapper.find(`.btn-prev`);
-    const $btnNext = wrapper.find(`.btn-next`);
+    const $btn = wrapper.findAll(`.${classPrefix}-nav__btn`);
+    expect($btn).toHaveLength(1);
+    const $btnPrev = wrapper.find(`.${classPrefix}-nav__btn--prev`);
 
     // 模拟触发 click 事件
     $btnPrev.trigger('click');
@@ -305,4 +336,24 @@ describe('SwiperNavigation', () => {
     expect(onChange).toHaveBeenCalledTimes(1);
     expect(onChange).toHaveBeenCalledWith(0);
   });
+
+  it(':slot', async () => {
+    const wrapper = mount({
+      setup() {
+        return () => (
+          <Swiper navigation={undefined}>
+            {{
+              default: list.map((item) => (
+                <SwiperItem>
+                    <img src={item.image} />
+                </SwiperItem>
+              )),
+              navigation: () => <div class="test-navigation">navigation</div>
+            }}
+          </Swiper>
+        );
+      },
+    });
+    expect(wrapper.find('.test-navigation').text()).toBe('navigation');
+  })
 });

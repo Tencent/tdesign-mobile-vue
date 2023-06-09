@@ -393,17 +393,19 @@ exports[`ActionSheet > ActionSheet gridMultipleVue demo works fine 1`] = `
           class="t-action-sheet__grid t-action-sheet__grid--swiper"
         >
           <div
-            class="t-swiper t-action-sheet__swiper-wrap"
-            style="overflow: hidden;"
+            class="t-swiper t-swiper--default t-action-sheet__swiper-wrap"
+            pagination-position="bottom"
+            style="height: 192px;"
           >
             <div
               class="t-swiper__container"
-              style="flex-direction: row;"
+              style="flex-direction: row; transition: none;"
             >
               
               
               <div
                 class="t-swiper-item"
+                style=""
               >
                 
                 <div
@@ -915,6 +917,7 @@ exports[`ActionSheet > ActionSheet gridMultipleVue demo works fine 1`] = `
               </div>
               <div
                 class="t-swiper-item"
+                style=""
               >
                 
                 <div
@@ -1055,10 +1058,11 @@ exports[`ActionSheet > ActionSheet gridMultipleVue demo works fine 1`] = `
               
               
             </div>
+            <!-- 导航器 -->
             
             <!--v-if-->
             <span
-              class="t-swiper__pagination t-swiper__pagination-dots t-swiper__pagination-bottom"
+              class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
             >
               
               
@@ -1188,17 +1192,19 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
           class="t-action-sheet__grid"
         >
           <div
-            class="t-swiper t-action-sheet__swiper-wrap"
-            style="overflow: hidden; display: none;"
+            class="t-swiper t-swiper--default t-action-sheet__swiper-wrap"
+            pagination-position="bottom"
+            style="height: 192px; display: none;"
           >
             <div
               class="t-swiper__container"
-              style="flex-direction: row;"
+              style="flex-direction: row; transition: none;"
             >
               
               
               <div
                 class="t-swiper-item"
+                style=""
               >
                 
                 <div
@@ -1711,10 +1717,11 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
               
               
             </div>
+            <!-- 导航器 -->
             
             <!--v-if-->
             <span
-              class="t-swiper__pagination t-swiper__pagination-dots t-swiper__pagination-bottom"
+              class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
             >
               
               
@@ -2287,17 +2294,19 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
           class="t-action-sheet__grid"
         >
           <div
-            class="t-swiper t-action-sheet__swiper-wrap"
-            style="overflow: hidden; display: none;"
+            class="t-swiper t-swiper--default t-action-sheet__swiper-wrap"
+            pagination-position="bottom"
+            style="height: 192px; display: none;"
           >
             <div
               class="t-swiper__container"
-              style="flex-direction: row;"
+              style="flex-direction: row; transition: none;"
             >
               
               
               <div
                 class="t-swiper-item"
+                style=""
               >
                 
                 <div
@@ -2810,10 +2819,11 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
               
               
             </div>
+            <!-- 导航器 -->
             
             <!--v-if-->
             <span
-              class="t-swiper__pagination t-swiper__pagination-dots t-swiper__pagination-bottom"
+              class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
             >
               
               
@@ -3386,17 +3396,19 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
           class="t-action-sheet__grid"
         >
           <div
-            class="t-swiper t-action-sheet__swiper-wrap"
-            style="overflow: hidden; display: none;"
+            class="t-swiper t-swiper--default t-action-sheet__swiper-wrap"
+            pagination-position="bottom"
+            style="height: 192px; display: none;"
           >
             <div
               class="t-swiper__container"
-              style="flex-direction: row;"
+              style="flex-direction: row; transition: none;"
             >
               
               
               <div
                 class="t-swiper-item"
+                style=""
               >
                 
                 <div
@@ -3981,10 +3993,11 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
               
               
             </div>
+            <!-- 导航器 -->
             
             <!--v-if-->
             <span
-              class="t-swiper__pagination t-swiper__pagination-dots t-swiper__pagination-bottom"
+              class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
             >
               
               
@@ -6325,17 +6338,19 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               class="t-action-sheet__grid"
             >
               <div
-                class="t-swiper t-action-sheet__swiper-wrap"
-                style="overflow: hidden; display: none;"
+                class="t-swiper t-swiper--default t-action-sheet__swiper-wrap"
+                pagination-position="bottom"
+                style="height: 192px; display: none;"
               >
                 <div
                   class="t-swiper__container"
-                  style="flex-direction: row;"
+                  style="flex-direction: row; transition: none;"
                 >
                   
                   
                   <div
                     class="t-swiper-item"
+                    style=""
                   >
                     
                     <div
@@ -6848,10 +6863,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                   
                   
                 </div>
+                <!-- 导航器 -->
                 
                 <!--v-if-->
                 <span
-                  class="t-swiper__pagination t-swiper__pagination-dots t-swiper__pagination-bottom"
+                  class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
                 >
                   
                   
@@ -7424,17 +7440,19 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               class="t-action-sheet__grid"
             >
               <div
-                class="t-swiper t-action-sheet__swiper-wrap"
-                style="overflow: hidden; display: none;"
+                class="t-swiper t-swiper--default t-action-sheet__swiper-wrap"
+                pagination-position="bottom"
+                style="height: 192px; display: none;"
               >
                 <div
                   class="t-swiper__container"
-                  style="flex-direction: row;"
+                  style="flex-direction: row; transition: none;"
                 >
                   
                   
                   <div
                     class="t-swiper-item"
+                    style=""
                   >
                     
                     <div
@@ -7947,10 +7965,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                   
                   
                 </div>
+                <!-- 导航器 -->
                 
                 <!--v-if-->
                 <span
-                  class="t-swiper__pagination t-swiper__pagination-dots t-swiper__pagination-bottom"
+                  class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
                 >
                   
                   
@@ -8523,17 +8542,19 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               class="t-action-sheet__grid"
             >
               <div
-                class="t-swiper t-action-sheet__swiper-wrap"
-                style="overflow: hidden; display: none;"
+                class="t-swiper t-swiper--default t-action-sheet__swiper-wrap"
+                pagination-position="bottom"
+                style="height: 192px; display: none;"
               >
                 <div
                   class="t-swiper__container"
-                  style="flex-direction: row;"
+                  style="flex-direction: row; transition: none;"
                 >
                   
                   
                   <div
                     class="t-swiper-item"
+                    style=""
                   >
                     
                     <div
@@ -9118,10 +9139,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                   
                   
                 </div>
+                <!-- 导航器 -->
                 
                 <!--v-if-->
                 <span
-                  class="t-swiper__pagination t-swiper__pagination-dots t-swiper__pagination-bottom"
+                  class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
                 >
                   
                   
@@ -9786,17 +9808,19 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               class="t-action-sheet__grid t-action-sheet__grid--swiper"
             >
               <div
-                class="t-swiper t-action-sheet__swiper-wrap"
-                style="overflow: hidden;"
+                class="t-swiper t-swiper--default t-action-sheet__swiper-wrap"
+                pagination-position="bottom"
+                style="height: 192px;"
               >
                 <div
                   class="t-swiper__container"
-                  style="flex-direction: row;"
+                  style="flex-direction: row; transition: none;"
                 >
                   
                   
                   <div
                     class="t-swiper-item"
+                    style=""
                   >
                     
                     <div
@@ -10308,6 +10332,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                   </div>
                   <div
                     class="t-swiper-item"
+                    style=""
                   >
                     
                     <div
@@ -10448,10 +10473,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                   
                   
                 </div>
+                <!-- 导航器 -->
                 
                 <!--v-if-->
                 <span
-                  class="t-swiper__pagination t-swiper__pagination-dots t-swiper__pagination-bottom"
+                  class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
                 >
                   
                   

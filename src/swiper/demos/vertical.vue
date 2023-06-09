@@ -1,12 +1,19 @@
 <template>
   <div style="padding: 0 16px">
-    <t-swiper :navigation="{ type: 'dots' }" :autoplay="false" @change="handleChange">
+    <t-swiper
+      direction="vertical"
+      :height="192"
+      :autoplay="true"
+      :navigation="{ type: 'dots-bar', paginationPosition: 'right' }"
+      @change="handleChange"
+    >
       <t-swiper-item v-for="(item, index) in swiperList" :key="index">
         <img :src="item" class="img" />
       </t-swiper-item>
     </t-swiper>
   </div>
 </template>
+
 <script lang="ts" setup>
 const imageCdn = 'https://tdesign.gtimg.com/miniprogram/images';
 const swiperList = [
@@ -16,16 +23,7 @@ const swiperList = [
   `${imageCdn}/swiper2.png`,
   `${imageCdn}/swiper1.png`,
 ];
-
 const handleChange = (index: number) => {
-  console.log('基础示例,页数变化到》》》', index);
+  console.log('change: ', index);
 };
 </script>
-
-<style>
-img {
-  display: block;
-  width: 100%;
-  height: 192px;
-}
-</style>
