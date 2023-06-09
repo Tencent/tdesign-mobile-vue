@@ -67,7 +67,7 @@ export default defineComponent({
         const { keys, label, value, disabled, options } = item.props;
         const target = options?.find((item: any) => item[keys?.value ?? 'value'] === value);
         if (!label) {
-          state.itemsLabel.push(target[keys?.label ?? 'label'] || '');
+          state.itemsLabel.push((target && target[keys?.label ?? 'label']) || '');
         }
         const computedLabel = target?.[keys?.label ?? 'label'] || '';
         return {
