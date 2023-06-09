@@ -227,6 +227,7 @@ export default defineComponent({
       props.onConfirm?.(values);
       setValue(values);
       collapseMenu();
+      emitEvents('menuClosed', 'confirm');
     };
     // 多选值监控
     watch(checkSelect, (val) => {
@@ -254,6 +255,7 @@ export default defineComponent({
         setValue(val);
       }
       collapseMenu();
+      emitEvents('menuClosed', 'content');
     });
 
     const onVisibleChange = (visible: boolean) => {
