@@ -2,6 +2,9 @@ import { ref, reactive } from 'vue';
 import { mount } from '@vue/test-utils';
 import { Collapse, CollapsePanel } from '../index';
 
+const placementList = ['', 'bottom', 'top'];
+const themeList = ['', 'default', 'card'];
+
 describe('Collapse', () => {
   describe('collapse props', () => {
     test('defaultExpandAll', async () => {
@@ -143,6 +146,23 @@ describe('Collapse', () => {
 
       expect(handleChange).toHaveBeenCalledTimes(1);
     });
+
+    test('theme', async () => {
+      themeList.forEach((theme) => {
+        const wrapper = mount({
+          setup() {
+            return () => (
+              <Collapse theme={theme}>
+                <CollapsePanel ref="1" value="1"/>
+              </Collapse>
+            );
+          },
+        });
+        if (theme) {
+          expect(wrapper.classes()).toContain(`t-collapse--${theme}`);
+        }
+      });
+    });
   });
 
   describe('collapse-panel props', () => {
@@ -220,6 +240,24 @@ describe('Collapse', () => {
       expect(panel.find('.t-collapse-panel__title .t-cell__title h4').html()).toBe('<h4>标题</h4>');
       expect(panel.find('.t-collapse-panel__title .t-cell__note > span').html()).toBe('<span>操作</span>');
       expect(panel.find('.t-collapse-panel__content > div').html()).toBe('<div>内容</div>');
+    });
+
+    test('placement', async () => {
+      placementList.forEach((placement) => {
+        const wrapper = mount({
+          setup() {
+            return () => (
+              <Collapse>
+                <CollapsePanel ref="1" value="1" placement={placement}/>
+              </Collapse>
+            );
+          },
+        });
+        if (placement) {
+          const $CollapsePanel = wrapper.findComponent(CollapsePanel);
+          expect($CollapsePanel.classes()).toContain(`t-collapse-panel--${placement}`);
+        }
+      });
     });
   });
 });
