@@ -91,128 +91,63 @@ exports[`Empty > Empty buttonEmptyVue demo works fine 1`] = `
 
 exports[`Empty > Empty imageEmptyVue demo works fine 1`] = `
 <div
-  data-v-app=""
+  class="t-empty"
 >
-  
   <div
-    class="t-empty"
+    class="t-empty__thumb"
   >
+    
     <div
-      class="t-empty__thumb"
+      class="t-image t-image--square"
     >
-      
       <div
-        class="t-image t-image--square"
+        class="t-image__mask"
       >
         <div
-          class="t-image__mask"
+          class="t-loading"
+          style="font-size: 20px;"
         >
+          
           <div
-            class="t-loading"
-            style="font-size: 20px;"
+            class="t-loading__dots"
+            style="animation-duration: 800ms; width: 20px; height: 20px;"
           >
-            
             <div
-              class="t-loading__dots"
-              style="animation-duration: 800ms; width: 20px; height: 20px;"
-            >
-              <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0s;"
-              />
-              <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-              />
-              <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-              />
-            </div>
-            
-            <!--v-if-->
-            <!---->
+              class="t-loading__dot"
+              style="animation-duration: 0.8s; animation-delay: 0s;"
+            />
+            <div
+              class="t-loading__dot"
+              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+            />
+            <div
+              class="t-loading__dot"
+              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+            />
           </div>
-        </div>
-        <picture>
+          
           <!--v-if-->
-          <img
-            alt=""
-            class="t-image__img"
-            src="https://tdesign.gtimg.com/miniprogram/images/empty1.png"
-            style="object-fit: fill; object-position: center;"
-          />
-        </picture>
+          <!---->
+        </div>
       </div>
-      
+      <picture>
+        <!--v-if-->
+        <img
+          alt=""
+          class="t-image__img"
+          src="https://tdesign.gtimg.com/miniprogram/images/empty1.png"
+          style="object-fit: fill; object-position: center;"
+        />
+      </picture>
     </div>
-    <div
-      class="t-empty__description"
-    >
-      描述文字
-    </div>
-    <!--v-if-->
+    
   </div>
   <div
-    class="t-empty"
+    class="t-empty__description"
   >
-    <div
-      class="t-empty__thumb"
-    >
-      
-      <div
-        class="t-image t-image--square"
-      >
-        <div
-          class="t-image__mask"
-        >
-          <div
-            class="t-loading"
-            style="font-size: 20px;"
-          >
-            
-            <div
-              class="t-loading__dots"
-              style="animation-duration: 800ms; width: 20px; height: 20px;"
-            >
-              <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0s;"
-              />
-              <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-              />
-              <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-              />
-            </div>
-            
-            <!--v-if-->
-            <!---->
-          </div>
-        </div>
-        <picture>
-          <!--v-if-->
-          <img
-            alt=""
-            class="t-image__img"
-            src="https://tdesign.gtimg.com/miniprogram/images/empty1.png"
-            style="object-fit: fill; object-position: center;"
-          />
-        </picture>
-      </div>
-      
-    </div>
-    <div
-      class="t-empty__description"
-    >
-      描述文字
-    </div>
-    <!--v-if-->
+    描述文字
   </div>
-  
+  <!--v-if-->
 </div>
 `;
 
@@ -298,7 +233,6 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
       class="tdesign-mobile-demo-block__slot"
     >
       
-      
       <div
         class="t-empty"
       >
@@ -358,66 +292,6 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
         </div>
         <!--v-if-->
       </div>
-      <div
-        class="t-empty"
-      >
-        <div
-          class="t-empty__thumb"
-        >
-          
-          <div
-            class="t-image t-image--square"
-          >
-            <div
-              class="t-image__mask"
-            >
-              <div
-                class="t-loading"
-                style="font-size: 20px;"
-              >
-                
-                <div
-                  class="t-loading__dots"
-                  style="animation-duration: 800ms; width: 20px; height: 20px;"
-                >
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0s;"
-                  />
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                  />
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                  />
-                </div>
-                
-                <!--v-if-->
-                <!---->
-              </div>
-            </div>
-            <picture>
-              <!--v-if-->
-              <img
-                alt=""
-                class="t-image__img"
-                src="https://tdesign.gtimg.com/miniprogram/images/empty1.png"
-                style="object-fit: fill; object-position: center;"
-              />
-            </picture>
-          </div>
-          
-        </div>
-        <div
-          class="t-empty__description"
-        >
-          描述文字
-        </div>
-        <!--v-if-->
-      </div>
-      
       
     </div>
   </div>
