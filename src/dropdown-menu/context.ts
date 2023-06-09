@@ -1,4 +1,4 @@
-export type TriggerSource = 'overlay' | 'dropdown-item';
+export type TriggerSource = 'overlay' | 'menu' | 'content' | 'confirm';
 
 export type DropdownMenuDo = () => void;
 

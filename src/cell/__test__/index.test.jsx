@@ -3,12 +3,13 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import { ChevronRightIcon, AppIcon } from 'tdesign-icons-vue-next';
 import Cell from '../cell.vue';
+import CellGroup from '../cell-group.vue';
 import Avatar from '../../avatar/avatar.vue';
-import { TdCellProps } from '../type';
 
 const appIcon = () => h(AppIcon);
 const chevronRightIcon = () => h(ChevronRightIcon);
 const alignList = ['bottom', 'middle', 'top'];
+const themeList = ['default', 'card'];
 const avatarUrl = 'https://tdesign.gtimg.com/mobile/demos/avatar_1.png';
 
 describe('Cell.vue', async () => {
@@ -94,5 +95,14 @@ describe('Cell.vue', async () => {
     const wrapper = mount(() => <Cell title="单行标题"></Cell>);
     await wrapper.trigger('click');
     expect(wrapper.emitted('click')).toBeDefined();
+  });
+});
+describe('cell-group', async () => {
+  it(': theme', async () => {
+    themeList.forEach((t) => {
+      const wrapper = mount(() => <CellGroup theme={t}></CellGroup>);
+      const theme = wrapper.find(`.t-cell-group--${t}`);
+      expect(theme.exists()).toBeTruthy();
+    });
   });
 });

@@ -113,7 +113,7 @@ export default defineComponent({
       if (state.activeId === idx) {
         // 再次点击时收起
         collapseMenu();
-        emitEvents('menuClosed', 'dropdown-item');
+        emitEvents('menuClosed', 'menu');
         return;
       }
       emitEvents('menuOpened');

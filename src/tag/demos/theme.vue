@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="summary">可关闭标签</div>
+    <div class="summary">展示型标签</div>
     <div class="tag-demo">
       <div>
         <div class="tag-block">

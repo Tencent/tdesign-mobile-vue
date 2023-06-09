@@ -1,11 +1,16 @@
 <template>
-  <div style="padding: 0 16px">
-    <t-swiper :navigation="{ type: 'dots' }" :autoplay="false" @change="handleChange">
-      <t-swiper-item v-for="(item, index) in swiperList" :key="index">
-        <img :src="item" class="img" />
-      </t-swiper-item>
-    </t-swiper>
-  </div>
+  <t-swiper
+    type="card"
+    :navigation="{ type: 'dots' }"
+    :previous-margin="12"
+    :next-margin="12"
+    :autoplay="false"
+    @change="handleChange"
+  >
+    <t-swiper-item v-for="(item, index) in swiperList" :key="index">
+      <img :src="item" class="img" />
+    </t-swiper-item>
+  </t-swiper>
 </template>
 <script lang="ts" setup>
 const imageCdn = 'https://tdesign.gtimg.com/miniprogram/images';

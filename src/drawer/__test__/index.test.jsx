@@ -8,6 +8,8 @@ config.global.stubs = {
   teleport: true,
 };
 
+const placementList = ['', 'left', 'right'];
+
 describe('drawer', () => {
   // test props
   describe('props', () => {
@@ -25,25 +27,35 @@ describe('drawer', () => {
       expect(wrapper.find('.t-drawer__sidebar').isVisible()).toBe(true);
     });
 
-    // it(': closeOnOverlayClick', async () => {
-    //   let triggerOrigin = {};
-    //   const onClose = ({ trigger }) => {
-    //     triggerOrigin = trigger;
-    //   };
-    //   const closeOverlayClick = ref(true);
+    it(': placement	', async () => {
+      placementList.map((placement) => {
+        const wrapper = mount(() => <drawer visible={true} placement={placement} />);
+        if (placement) {
+          expect(wrapper.find(`.t-popup--${placement}`)).toBeTruthy();
+        }
+      });
+    });
 
-    //   const visible = ref(true);
-    //   const wrapper = mount({
-    //     render() {
-    //       return <drawer visible={visible.value} closeOverlayClick={closeOverlayClick} onClose={onClose} />;
-    //     },
-    //   });
+    it(': closeOnOverlayClick', async () => {
+      let triggerOrigin = {};
+      const onClose = ({ trigger }) => {
+        triggerOrigin = trigger;
+      };
+      const closeOverlayClick = ref(true);
 
-    //   const $overlay = wrapper.findComponent({ name: 't-overlay' });
-    //   expect($overlay.exists()).toBeTruthy();
-    //   $overlay.vm.$emit('click');
-    //   expect(triggerOrigin).toBe('overlay');
-    // });
+      const visible = ref(true);
+      const wrapper = mount({
+        render() {
+          return <drawer visible={visible.value} closeOverlayClick={closeOverlayClick} onClose={onClose} />;
+        },
+      });
+
+      const $overlay = wrapper.findComponent({ name: 't-overlay' });
+      expect($overlay.exists()).toBeTruthy();
+
+      $overlay.find('.t-overlay').trigger('click');
+      expect(triggerOrigin).toBe('overlay');
+    });
 
     it(': items', async () => {
       const titleSidebar = ref([

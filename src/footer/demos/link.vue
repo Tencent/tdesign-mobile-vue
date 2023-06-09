@@ -1,29 +1,43 @@
 <template>
-  <t-footer :links="link1" text="Copyright © 2019-2023 TDesign.All Rights Reserved." />
-  <t-footer :links="link2" text="Copyright © 2019-2023 TDesign.All Rights Reserved." />
+  <!-- theme 为 text，含有底部链接 -->
+  <div class="footer-example">
+    <t-footer :text="text" :links="links[0]" />
+  </div>
+
+  <div class="footer-example">
+    <t-footer :text="text" :links="links[1]" />
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+const text = 'Copyright © 2021-2031 TD.All Rights Reserved.';
 
-const link1 = ref([
-  {
-    name: '底部链接',
-    url: '/pages/index',
-    openType: 'navigate',
-  },
-]);
-
-const link2 = ref([
-  {
-    name: '底部链接',
-    url: '/pages/index',
-    openType: 'navigate',
-  },
-  {
-    name: '底部链接',
-    url: '/pages/index',
-    openType: 'navigate',
-  },
-]);
+const links = [
+  [
+    {
+      name: '底部链接',
+      url: '',
+    },
+  ],
+  [
+    {
+      name: '底部链接',
+      url: '',
+    },
+    {
+      name: '底部链接',
+      url: '',
+    },
+  ],
+];
 </script>
+
+<style lang="less">
+.footer-example {
+  padding: 4px 0;
+}
+
+.footer-example:not(:last-child) {
+  margin-bottom: 16px;
+}
+</style>

@@ -1,55 +1,27 @@
 <template>
-  <div>
+  <div style="padding: 0 16px">
     <t-swiper
-      v-model:current="state.currentPage"
-      :interval="3000"
       :autoplay="true"
-      :navigation="{ type: 'dots-bar', showSlideBtn: true }"
+      :navigation="{ showControls: true, paginationPosition: 'bottom-right' }"
+      @change="handleChange"
     >
-      <t-swiper-item class="swiper-item--demo"> item1 </t-swiper-item>
-      <t-swiper-item style="background: blue" class="swiper-item--demo"> item2 </t-swiper-item>
-      <t-swiper-item style="background: green" class="swiper-item--demo"> item3 </t-swiper-item>
+      <t-swiper-item v-for="(item, index) in swiperList" :key="index">
+        <img :src="item" class="img" />
+      </t-swiper-item>
     </t-swiper>
-    <p class="summary">
-      手动指定页数：
-      <t-button size="small" theme="primary" @click="handleSwitch(0)">第一页</t-button>
-      <t-button size="small" theme="default" @click="handleSwitch(1)">第二页</t-button>
-      <t-button size="small" theme="primary" @click="handleSwitch(2)">第三页</t-button>
-    </p>
-    <p class="summary">当前页 {{ state.currentPage }}</p>
   </div>
 </template>
-<script lang="ts">
-import { defineComponent, reactive } from 'vue';
-// import PaginationType from './pagination-type.vue';
-// import Direction from './direction.vue';
+<script lang="ts" setup>
+const imageCdn = 'https://tdesign.gtimg.com/miniprogram/images';
+const swiperList = [
+  `${imageCdn}/swiper1.png`,
+  `${imageCdn}/swiper2.png`,
+  `${imageCdn}/swiper1.png`,
+  `${imageCdn}/swiper2.png`,
+  `${imageCdn}/swiper1.png`,
+];
 
-export default defineComponent({
-  // components: {
-  //   'pagination-type': PaginationType,
-  //   'demo-direction': Direction,
-  // },
-  setup() {
-    const state: {
-      currentPage: number;
-    } = reactive({
-      currentPage: 1,
-    });
-    const handleSwitch = (index: number) => {
-      state.currentPage = index;
-    };
-    return {
-      current: 1,
-      state,
-      handleSwitch,
-    };
-  },
-});
+const handleChange = (index: number) => {
+  console.log('基础示例,页数变化到》》》', index);
+};
 </script>
-<style lang="less" scoped>
-p {
-  padding: 10px;
-  color: #666;
-  font-size: 14px;
-}
-</style>
