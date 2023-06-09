@@ -39,7 +39,7 @@ export default defineComponent({
       `${name}--${props.size}`,
       {
         [`${name}--checked`]: checked.value,
-        [`${name}--disabled`]: disabled.value,
+        [`${name}--disabled`]: disabled.value || props.loading,
       },
     ]);
     const dotClasses = computed(() => [
@@ -60,7 +60,7 @@ export default defineComponent({
     const iconContent = computed(() => props?.icon?.[checked.value ? 0 : 1]);
 
     function handleToggle(event: Event) {
-      if (disabled.value) {
+      if (disabled.value || props.loading) {
         return;
       }
       toggle();

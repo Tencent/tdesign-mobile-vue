@@ -516,7 +516,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
           >
             
             <div
-              class="t-switch t-switch--medium"
+              class="t-switch t-switch--medium t-switch--disabled"
             >
               <div
                 class="t-switch__dot t-switch__dot--medium"
@@ -586,7 +586,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
           >
             
             <div
-              class="t-switch t-switch--medium t-switch--checked"
+              class="t-switch t-switch--medium t-switch--checked t-switch--disabled"
             >
               <div
                 class="t-switch__dot t-switch__dot--medium t-switch__dot--checked"
@@ -1056,7 +1056,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
       >
         
         <div
-          class="t-switch t-switch--medium"
+          class="t-switch t-switch--medium t-switch--disabled"
         >
           <div
             class="t-switch__dot t-switch__dot--medium"
@@ -1126,7 +1126,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
       >
         
         <div
-          class="t-switch t-switch--medium t-switch--checked"
+          class="t-switch t-switch--medium t-switch--checked t-switch--disabled"
         >
           <div
             class="t-switch__dot t-switch__dot--medium t-switch__dot--checked"
