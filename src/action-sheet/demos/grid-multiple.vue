@@ -15,7 +15,7 @@
 
 <script lang="ts" setup>
 import { ref, h } from 'vue';
-import { ShareIcon, StarIcon, DownloadIcon, Edit1Icon } from 'tdesign-icons-vue-next';
+import { ShareIcon, StarIcon, DownloadIcon, Edit1Icon, ImageIcon } from 'tdesign-icons-vue-next';
 import { ActionSheetItem } from '../type';
 
 const items = ref([
@@ -51,8 +51,14 @@ const items = ref([
     label: '复制',
     icon: () => h(Edit1Icon, { size: '24px' }),
   },
-  { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
-  { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
+  {
+    label: '文字',
+    icon: () => h(ImageIcon, { size: '24px' }),
+  },
+  {
+    label: '文字',
+    icon: () => h(ImageIcon, { size: '24px' }),
+  },
 ]);
 const visible = ref(false);
 const count = ref(8);
