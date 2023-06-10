@@ -1,17 +1,16 @@
 <template>
-  <div :class="className">
-    <t-picker
-      :value="pickerValue"
-      :title="title"
-      :confirm-btn="confirmButtonText"
-      :cancel-btn="cancelButtonText"
-      :columns="columns"
-      @change="onChange"
-      @confirm="onConfirm"
-      @cancel="onCancel"
-      @pick="onPick"
-    />
-  </div>
+  <t-picker
+    :class="className"
+    :value="pickerValue"
+    :title="title"
+    :confirm-btn="confirmButtonText"
+    :cancel-btn="cancelButtonText"
+    :columns="columns"
+    @change="onChange"
+    @confirm="onConfirm"
+    @cancel="onCancel"
+    @pick="onPick"
+  />
 </template>
 
 <script lang="ts">
@@ -110,10 +109,14 @@ export default defineComponent({
 
     const curDate = ref(
       (() => {
+        let currentValue = innerValue.value;
         if (isTimeMode.value) {
-          return dayjs(`1900-1-1 ${innerValue.value}`);
+          const dateStr = dayjs(start.value).format('YYYY-MM-DD');
+          currentValue = dayjs(`${dateStr} ${currentValue}`);
         }
-        return dayjs(innerValue.value);
+        const parseDate = dayjs(currentValue || start.value);
+        const isDateValid = parseDate.isValid();
+        return isDateValid ? parseDate : start.value;
       })(),
     );
 

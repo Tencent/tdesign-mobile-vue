@@ -109,7 +109,7 @@ class Picker {
     this.height = this.holder.offsetHeight || DEFAULT_HOLDER_HEIGHT;
     let curIndex = this.options.defaultIndex || 0;
     this.itemClassName = `${prefix}-picker-item__item`;
-    this.itemSelectedClassName = `${prefix}-picker-item__item--selected`;
+    this.itemSelectedClassName = `${prefix}-picker-item__item--active`;
     this.itemHeight = DEFAULT_ITEM_HEIGHT;
     this.startY = 0;
     this.isPicking = false;

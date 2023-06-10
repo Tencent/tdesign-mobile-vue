@@ -95,7 +95,7 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
             >
               
               <li
-                class="t-picker-item__item t-picker-item__item--selected"
+                class="t-picker-item__item t-picker-item__item--active"
               >
                 北京市
               </li>
@@ -286,7 +286,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
             >
               
               <li
-                class="t-picker-item__item t-picker-item__item--selected"
+                class="t-picker-item__item t-picker-item__item--active"
               >
                 北京市
               </li>
@@ -391,7 +391,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
             >
               
               <li
-                class="t-picker-item__item t-picker-item__item--selected"
+                class="t-picker-item__item t-picker-item__item--active"
               >
                 2023
               </li>
@@ -452,7 +452,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
             >
               
               <li
-                class="t-picker-item__item t-picker-item__item--selected"
+                class="t-picker-item__item t-picker-item__item--active"
               >
                 春
               </li>
@@ -602,7 +602,7 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
             >
               
               <li
-                class="t-picker-item__item t-picker-item__item--selected"
+                class="t-picker-item__item t-picker-item__item--active"
               >
                 战士
               </li>
@@ -638,7 +638,7 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
                 铠
               </li>
               <li
-                class="t-picker-item__item t-picker-item__item--selected"
+                class="t-picker-item__item t-picker-item__item--active"
               >
                 狂铁
               </li>
@@ -833,7 +833,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
                 >
                   
                   <li
-                    class="t-picker-item__item t-picker-item__item--selected"
+                    class="t-picker-item__item t-picker-item__item--active"
                   >
                     北京市
                   </li>
@@ -938,7 +938,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
                 >
                   
                   <li
-                    class="t-picker-item__item t-picker-item__item--selected"
+                    class="t-picker-item__item t-picker-item__item--active"
                   >
                     2023
                   </li>
@@ -999,7 +999,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
                 >
                   
                   <li
-                    class="t-picker-item__item t-picker-item__item--selected"
+                    class="t-picker-item__item t-picker-item__item--active"
                   >
                     春
                   </li>
@@ -1128,7 +1128,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
                 >
                   
                   <li
-                    class="t-picker-item__item t-picker-item__item--selected"
+                    class="t-picker-item__item t-picker-item__item--active"
                   >
                     北京市
                   </li>
@@ -1333,7 +1333,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
                 >
                   
                   <li
-                    class="t-picker-item__item t-picker-item__item--selected"
+                    class="t-picker-item__item t-picker-item__item--active"
                   >
                     北京市
                   </li>
@@ -1515,7 +1515,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
             >
               
               <li
-                class="t-picker-item__item t-picker-item__item--selected"
+                class="t-picker-item__item t-picker-item__item--active"
               >
                 北京市
               </li>
