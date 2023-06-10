@@ -31,30 +31,40 @@ const items2 = [
 ];
 describe('grid', () => {
   describe('props', () => {
-    it(':align ', async () => {
-      const align = 'left';
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Grid align={align}>
-              {{
-                default: items.map((item, index) => {
-                  return <GridItem text={item.text + index} image={item.image} />;
-                }),
-              }}
+    it(':align', async () => {
+      const alignList = ['left', 'center', ''];
+      alignList.map((a) => {
+        const wrapper = mount(() => {
+          return (
+            <Grid align={a}>
+              <GridItem />
             </Grid>
           );
-        },
+        });
+        const $gridItem = wrapper.find('.t-grid-item');
+        if (a === 'left') {
+          expect($gridItem.element.style.textAlign).toBe('left');
+        } else {
+          expect($gridItem.element.style.textAlign).toBe('center');
+        }
       });
-      expect(wrapper.findComponent(Grid).exists()).toBeTruthy();
-      expect(wrapper.findAllComponents(GridItem).length).toEqual(items.length);
-      const $gridItems = wrapper.findAll(`.${name}-item`);
-      // align = 'left (自定义)
-      // border = false, column = 4, gutter = 0 (默认)
-      $gridItems.map((item) => {
-        expect(item.attributes('class').includes(`${name}-item--bordered`)).toBeFalsy(); // border
-        expect(item.element.style.textAlign).toBe('left'); // align
-        expect(item.element.style.flexBasis).toBe(`${100 / 4}%`); // column
+    });
+
+    it(':theme', async () => {
+      const themeList = ['default', 'card', ''];
+      themeList.map((t) => {
+        const wrapper = mount(() => {
+          return (
+            <Grid theme={t}>
+              <GridItem />
+            </Grid>
+          );
+        });
+        if (t === 'card') {
+          expect(wrapper.find(`.t-grid--card`).exists()).toBe(true);
+        } else {
+          expect(wrapper.find(`.t-grid--card`).exists()).toBe(false);
+        }
       });
     });
 
@@ -105,6 +115,17 @@ describe('grid', () => {
         expect(item.element.style.flexBasis).toBe(`${100 / column}%`); // column
       });
     });
+
+    it(':column = 0', async () => {
+      const wrapper = mount(() => {
+        return (
+          <Grid column={0}>
+            <GridItem></GridItem>
+          </Grid>
+        );
+      });
+      expect(wrapper.find('.t-grid--auto-size').exists()).toBeTruthy();
+    });
   });
 });
 
@@ -148,5 +169,21 @@ describe('grid-item', () => {
     expect(wrapper.findComponent(Badge).exists()).toBeTruthy();
     expect(badge.exists()).toBeTruthy();
     expect(badge.text()).toBe('1');
+  });
+
+  it(':layout', async () => {
+    const layoutList = ['vertical', 'horizontal', ''];
+    layoutList.map((l) => {
+      const wrapper = mount(() => {
+        return (
+          <Grid>
+            <GridItem layout={l} />
+          </Grid>
+        );
+      });
+      if (l) { 
+        expect(wrapper.find('.t-grid-item').classes()).toContain(`t-grid-item--${l}`); 
+      }
+    });
   });
 });
