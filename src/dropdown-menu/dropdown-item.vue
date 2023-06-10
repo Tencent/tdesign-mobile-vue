@@ -1,7 +1,7 @@
 <template>
   <div v-if="wrapperVisible" :id="popupId" :class="classes" :style="{ ...expandStyle }">
     <t-popup
-      v-model="isShowItems"
+      :visible="isShowItems"
       :duration="duration"
       :show-overlay="showOverlay"
       :style="popupStyle"
@@ -9,7 +9,6 @@
       :class="`${name}__popup-host`"
       :attach="`#${popupId}`"
       @visible-change="onVisibleChange"
-      @close="closePopup"
     >
       <div :class="styleContent">
         <div :class="`${name}__body`">
@@ -196,9 +195,6 @@ export default defineComponent({
         checkSelect.value = (val ?? []) as DropdownValue[];
       }
     };
-    const closePopup = () => {
-      collapseMenu();
-    };
     // 初始值更新一次选中项
     updateSelectValue(passInValue.value || null);
     // 跟踪 modelValue 更新选项
@@ -276,7 +272,6 @@ export default defineComponent({
       radioSelect,
       checkSelect,
       popupId,
-      closePopup,
       isCheckedRadio,
       styleDropRadio,
       expandMenu,
