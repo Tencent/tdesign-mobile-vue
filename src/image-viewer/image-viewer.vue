@@ -13,7 +13,13 @@
           <t-node :content="deleteNode" />
         </div>
       </div>
-      <t-swiper :autoplay="false" :class="`${name}__content`" :current="currentIndex" @change="onSwiperChange">
+      <t-swiper
+        :autoplay="false"
+        :class="`${name}__content`"
+        :style="{ '--td-swiper-height': swiperStyle[Number(currentIndex)] }"
+        :current="currentIndex"
+        @change="onSwiperChange"
+      >
         <t-swiper-item
           v-for="(image, index) in images"
           :key="index"
@@ -22,7 +28,7 @@
           @touchmove="onTouchMove"
           @touchend="onTouchEnd"
         >
-          <t-image :src="image" :style="imageStyle" />
+          <t-image :src="image" :style="imageStyle" @load="onImageLoadSuccess" />
         </t-swiper-item>
       </t-swiper>
     </div>
@@ -30,7 +36,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, reactive, getCurrentInstance, CSSProperties, h, Transition } from 'vue';
+import { computed, defineComponent, reactive, getCurrentInstance, CSSProperties, h, Transition, toRefs } from 'vue';
 import { CloseIcon, DeleteIcon } from 'tdesign-icons-vue-next';
 
 import config from '../config';
@@ -64,6 +70,7 @@ export default defineComponent({
     const state = reactive({
       zooming: false,
       scale: 1,
+      swiperStyle: [] as string[],
     });
     const emitEvent = useEmitEvent(props, context.emit);
     const [visible, setVisible] = useDefault(props, context.emit, 'visible', 'change');
@@ -99,6 +106,45 @@ export default defineComponent({
 
       return style;
     });
+
+    const calcImageDisplayStyle = (imageWidth: number, imageHeight: number) => {
+      const { height, width } = window.screen;
+      const ratio = imageWidth / imageHeight;
+      // 图片宽高都小于屏幕宽高
+      if (imageWidth < width && imageHeight < height) {
+        return {
+          styleObj: {
+            width: `${imageWidth}px`,
+            height: `${imageHeight}px`,
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+          },
+        };
+      }
+      // 图片宽高至少存在一个大于屏幕宽高，此时判断图片宽高比，按长边显示
+      if (ratio >= 1) {
+        return {
+          styleObj: {
+            width: '100vw',
+            height: `${width / ratio}px`,
+          },
+        };
+      }
+      return {
+        styleObj: {
+          width: `${ratio * width}px`,
+          height: '100vh',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+        },
+      };
+    };
+
+    const onImageLoadSuccess = (e: any) => {
+      const { clientHeight, clientWidth } = e.target as HTMLElement;
+      const { styleObj } = calcImageDisplayStyle(clientHeight, clientWidth);
+      state.swiperStyle.push(`${styleObj.height}`);
+    };
 
     const handleClose = (e: Event, trigger: string) => {
       setVisible(false);
@@ -219,12 +265,14 @@ export default defineComponent({
 
     return {
       name,
+      ...toRefs(state),
       prefix,
       closeNode,
       deleteNode,
       currentIndex,
       imageStyle,
       visible,
+      onImageLoadSuccess,
       handleClose,
       handleDelete,
       onSwiperChange,

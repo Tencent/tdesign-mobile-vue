@@ -1,5 +1,5 @@
 <template>
-  <div ref="root" :class="rootClass" :style="{ height: swiperHeight }">
+  <div ref="root" :class="rootClass" :style="{ '--td-swiper-height': swiperHeight }">
     <div
       ref="swiperContainer"
       :class="`${name}__container`"
