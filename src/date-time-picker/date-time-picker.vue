@@ -66,11 +66,11 @@ export default defineComponent({
     const cancelButtonText = computed(() => props.cancelBtn || '取消');
 
     const start = computed(() => {
-      return props.start ? dayjs(props.start) : dayjs().subtract(10, 'year');
+      return props.start && dayjs(props.start).isValid() ? dayjs(props.start) : dayjs().subtract(10, 'year');
     });
 
     const end = computed(() => {
-      return props.end ? dayjs(props.end) : dayjs().add(10, 'year');
+      return props.end && dayjs(props.end).isValid() ? dayjs(props.end) : dayjs().add(10, 'year');
     });
 
     const meaningColumn = computed(() => getMeaningColumn(props.mode));
@@ -112,11 +112,10 @@ export default defineComponent({
         let currentValue = innerValue.value;
         if (isTimeMode.value) {
           const dateStr = dayjs(start.value).format('YYYY-MM-DD');
-          currentValue = dayjs(`${dateStr} ${currentValue}`);
+          currentValue = `${dateStr} ${currentValue}`;
         }
-        const parseDate = dayjs(currentValue || start.value);
-        const isDateValid = parseDate.isValid();
-        return isDateValid ? parseDate : start.value;
+
+        return currentValue && dayjs(currentValue).isValid() ? dayjs(currentValue) : start.value;
       })(),
     );
 
