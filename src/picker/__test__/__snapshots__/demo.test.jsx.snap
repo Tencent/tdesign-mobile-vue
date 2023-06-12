@@ -12,7 +12,7 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
       class="t-cell__left"
     >
       <!--v-if-->
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-cell__title"
@@ -161,7 +161,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
       class="t-cell__left"
     >
       <!--v-if-->
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-cell__title"
@@ -201,7 +201,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
       class="t-cell__left"
     >
       <!--v-if-->
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-cell__title"
@@ -511,7 +511,7 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
         class="t-cell__left"
       >
         <!--v-if-->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-cell__title"
@@ -708,7 +708,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           class="t-cell__left"
         >
           <!--v-if-->
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-cell__title"
@@ -748,7 +748,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           class="t-cell__left"
         >
           <!--v-if-->
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-cell__title"
@@ -1045,7 +1045,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           class="t-cell__left"
         >
           <!--v-if-->
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-cell__title"
@@ -1208,7 +1208,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           class="t-cell__left"
         >
           <!--v-if-->
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-cell__title"
@@ -1248,7 +1248,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           class="t-cell__left"
         >
           <!--v-if-->
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-cell__title"
@@ -1390,7 +1390,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
       class="t-cell__left"
     >
       <!--v-if-->
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-cell__title"
@@ -1430,7 +1430,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
       class="t-cell__left"
     >
       <!--v-if-->
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-cell__title"

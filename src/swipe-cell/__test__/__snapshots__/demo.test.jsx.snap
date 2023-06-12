@@ -52,7 +52,7 @@ exports[`SwipeCell > SwipeCell doubleVue demo works fine 1`] = `
             class="t-cell__left"
           >
             <!--v-if-->
-            <!--v-if-->
+            <!---->
           </div>
           <div
             class="t-cell__title"
@@ -163,7 +163,7 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
             class="t-cell__left"
           >
             <!--v-if-->
-            <!--v-if-->
+            <!---->
           </div>
           <div
             class="t-cell__title"
@@ -265,7 +265,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
               class="t-cell__left"
             >
               <!--v-if-->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-cell__title"
@@ -396,7 +396,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
               class="t-cell__left"
             >
               <!--v-if-->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-cell__title"
@@ -517,7 +517,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
               class="t-cell__left"
             >
               <!--v-if-->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-cell__title"
@@ -674,7 +674,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
               class="t-cell__left"
             >
               <!--v-if-->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-cell__title"
@@ -754,7 +754,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
               class="t-cell__left"
             >
               <!--v-if-->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-cell__title"
@@ -838,7 +838,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
               class="t-cell__left"
             >
               <!--v-if-->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-cell__title"
@@ -935,7 +935,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
               class="t-cell__left"
             >
               <!--v-if-->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-cell__title"
@@ -1074,7 +1074,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-cell__left"
             >
               <!--v-if-->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-cell__title"
@@ -1154,7 +1154,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-cell__left"
             >
               <!--v-if-->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-cell__title"
@@ -1238,7 +1238,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-cell__left"
             >
               <!--v-if-->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-cell__title"
@@ -1335,7 +1335,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-cell__left"
             >
               <!--v-if-->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-cell__title"
@@ -1457,7 +1457,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-cell__left"
             >
               <!--v-if-->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-cell__title"
@@ -1545,7 +1545,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-cell__left"
             >
               <!--v-if-->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-cell__title"
@@ -1639,7 +1639,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-cell__left"
             >
               <!--v-if-->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-cell__title"
@@ -1770,7 +1770,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-cell__left"
             >
               <!--v-if-->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-cell__title"
@@ -1891,7 +1891,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-cell__left"
             >
               <!--v-if-->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-cell__title"
@@ -2051,7 +2051,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-cell__left"
             >
               <!--v-if-->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-cell__title"
@@ -2155,7 +2155,7 @@ exports[`SwipeCell > SwipeCell rightVue demo works fine 1`] = `
             class="t-cell__left"
           >
             <!--v-if-->
-            <!--v-if-->
+            <!---->
           </div>
           <div
             class="t-cell__title"

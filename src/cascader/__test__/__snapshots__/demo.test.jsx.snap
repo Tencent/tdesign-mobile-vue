@@ -12,7 +12,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
       class="t-cell__left"
     >
       <!--v-if-->
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-cell__title"
@@ -242,7 +242,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
       class="t-cell__left"
     >
       <!--v-if-->
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-cell__title"
@@ -503,7 +503,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           class="t-cell__left"
         >
           <!--v-if-->
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-cell__title"
@@ -746,7 +746,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           class="t-cell__left"
         >
           <!--v-if-->
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-cell__title"
@@ -963,7 +963,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           class="t-cell__left"
         >
           <!--v-if-->
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-cell__title"
@@ -1206,7 +1206,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           class="t-cell__left"
         >
           <!--v-if-->
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-cell__title"
@@ -1449,7 +1449,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           class="t-cell__left"
         >
           <!--v-if-->
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-cell__title"
@@ -1686,7 +1686,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
       class="t-cell__left"
     >
       <!--v-if-->
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-cell__title"
@@ -1886,7 +1886,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
       class="t-cell__left"
     >
       <!--v-if-->
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-cell__title"
@@ -2120,7 +2120,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
       class="t-cell__left"
     >
       <!--v-if-->
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-cell__title"

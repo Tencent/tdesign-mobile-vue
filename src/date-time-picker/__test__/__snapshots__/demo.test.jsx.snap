@@ -12,7 +12,7 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
       class="t-cell__left"
     >
       <!--v-if-->
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-cell__title"
@@ -446,7 +446,7 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
       class="t-cell__left"
     >
       <!--v-if-->
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-cell__title"
@@ -815,7 +815,7 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
       class="t-cell__left"
     >
       <!--v-if-->
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-cell__title"
@@ -2043,7 +2043,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
           class="t-cell__left"
         >
           <!--v-if-->
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-cell__title"
@@ -2470,7 +2470,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
           class="t-cell__left"
         >
           <!--v-if-->
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-cell__title"
@@ -2741,7 +2741,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
           class="t-cell__left"
         >
           <!--v-if-->
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-cell__title"
@@ -3291,7 +3291,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
           class="t-cell__left"
         >
           <!--v-if-->
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-cell__title"
@@ -3663,7 +3663,7 @@ exports[`DateTimePicker > DateTimePicker timeVue demo works fine 1`] = `
       class="t-cell__left"
     >
       <!--v-if-->
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-cell__title"
@@ -4196,7 +4196,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
       class="t-cell__left"
     >
       <!--v-if-->
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-cell__title"
