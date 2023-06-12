@@ -8,7 +8,6 @@
       @clear="onClear"
       @focus="onFocus"
       @submit="onSubmit"
-      @action-click="onActionClick"
     ></t-search>
   </div>
 </template>
@@ -31,9 +30,6 @@ const onFocus = () => {
 
 const onSubmit = () => {
   console.log('submit');
-};
-const onActionClick = () => {
-  console.log('action-click');
 };
 const value = ref('');
 </script>
