@@ -1,17 +1,16 @@
 <template>
-  <div :class="className">
-    <t-picker
-      :value="pickerValue"
-      :title="title"
-      :confirm-btn="confirmButtonText"
-      :cancel-btn="cancelButtonText"
-      :columns="columns"
-      @change="onChange"
-      @confirm="onConfirm"
-      @cancel="onCancel"
-      @pick="onPick"
-    />
-  </div>
+  <t-picker
+    :class="className"
+    :value="pickerValue"
+    :title="title"
+    :confirm-btn="confirmButtonText"
+    :cancel-btn="cancelButtonText"
+    :columns="columns"
+    @change="onChange"
+    @confirm="onConfirm"
+    @cancel="onCancel"
+    @pick="onPick"
+  />
 </template>
 
 <script lang="ts">
@@ -67,11 +66,11 @@ export default defineComponent({
     const cancelButtonText = computed(() => props.cancelBtn || '取消');
 
     const start = computed(() => {
-      return props.start ? dayjs(props.start) : dayjs().subtract(10, 'year');
+      return props.start && dayjs(props.start).isValid() ? dayjs(props.start) : dayjs().subtract(10, 'year');
     });
 
     const end = computed(() => {
-      return props.end ? dayjs(props.end) : dayjs().add(10, 'year');
+      return props.end && dayjs(props.end).isValid() ? dayjs(props.end) : dayjs().add(10, 'year');
     });
 
     const meaningColumn = computed(() => getMeaningColumn(props.mode));
@@ -110,10 +109,13 @@ export default defineComponent({
 
     const curDate = ref(
       (() => {
+        let currentValue = innerValue.value;
         if (isTimeMode.value) {
-          return dayjs(`1900-1-1 ${innerValue.value}`);
+          const dateStr = dayjs(start.value).format('YYYY-MM-DD');
+          currentValue = `${dateStr} ${currentValue}`;
         }
-        return dayjs(innerValue.value);
+
+        return currentValue && dayjs(currentValue).isValid() ? dayjs(currentValue) : start.value;
       })(),
     );
 
