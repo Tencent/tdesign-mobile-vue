@@ -36,8 +36,7 @@ export default defineComponent({
     const index = computed(() => sideBarProvide.state.children.indexOf(proxy));
 
     const iconNode = computed(() => renderTNode(internalInstance, 'icon'));
-    const current = computed(() => sideBarProvide.currentValue.value || sideBarProvide.defaultValue || 0);
-    const isActive = computed(() => index.value === current.value);
+    const isActive = computed(() => index.value === sideBarProvide.currentValue.value);
 
     const rootClassName = computed(() => [
       name,
