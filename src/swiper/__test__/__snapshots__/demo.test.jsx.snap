@@ -6,7 +6,7 @@ exports[`Swiper > Swiper baseVue demo works fine 1`] = `
 >
   <div
     class="t-swiper t-swiper--default"
-    style="height: 192px;"
+    style="--td-swiper-height: 192px;"
   >
     <div
       class="t-swiper__container"
@@ -90,7 +90,7 @@ exports[`Swiper > Swiper baseVue demo works fine 1`] = `
 exports[`Swiper > Swiper cardVue demo works fine 1`] = `
 <div
   class="t-swiper t-swiper--card"
-  style="height: 192px;"
+  style="--td-swiper-height: 192px;"
 >
   <div
     class="t-swiper__container"
@@ -176,7 +176,7 @@ exports[`Swiper > Swiper controlVue demo works fine 1`] = `
 >
   <div
     class="t-swiper t-swiper--default"
-    style="height: 192px;"
+    style="--td-swiper-height: 192px;"
   >
     <div
       class="t-swiper__container"
@@ -266,7 +266,7 @@ exports[`Swiper > Swiper customVue demo works fine 1`] = `
 >
   <div
     class="t-swiper t-swiper--default"
-    style="height: 192px;"
+    style="--td-swiper-height: 192px;"
   >
     <div
       class="t-swiper__container"
@@ -353,7 +353,7 @@ exports[`Swiper > Swiper fractionVue demo works fine 1`] = `
 >
   <div
     class="t-swiper t-swiper--default"
-    style="height: 192px;"
+    style="--td-swiper-height: 192px;"
   >
     <div
       class="t-swiper__container"
@@ -475,7 +475,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
       >
         <div
           class="t-swiper t-swiper--default"
-          style="height: 192px;"
+          style="--td-swiper-height: 192px;"
         >
           <div
             class="t-swiper__container"
@@ -579,7 +579,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
       >
         <div
           class="t-swiper t-swiper--default"
-          style="height: 192px;"
+          style="--td-swiper-height: 192px;"
         >
           <div
             class="t-swiper__container"
@@ -683,7 +683,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
       >
         <div
           class="t-swiper t-swiper--default"
-          style="height: 192px;"
+          style="--td-swiper-height: 192px;"
         >
           <div
             class="t-swiper__container"
@@ -788,7 +788,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
       >
         <div
           class="t-swiper t-swiper--default"
-          style="height: 192px;"
+          style="--td-swiper-height: 192px;"
         >
           <div
             class="t-swiper__container"
@@ -902,7 +902,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
       >
         <div
           class="t-swiper t-swiper--default"
-          style="height: 192px;"
+          style="--td-swiper-height: 192px;"
         >
           <div
             class="t-swiper__container"
@@ -993,7 +993,7 @@ exports[`Swiper > Swiper verticalVue demo works fine 1`] = `
 >
   <div
     class="t-swiper t-swiper--default"
-    style="height: 192px;"
+    style="--td-swiper-height: 192px;"
   >
     <div
       class="t-swiper__container"
