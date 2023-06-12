@@ -1558,7 +1558,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             class="t-cell__left"
           >
             <!--v-if-->
-            <!--v-if-->
+            <!---->
           </div>
           <div
             class="t-cell__title"
