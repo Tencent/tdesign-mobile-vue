@@ -6,17 +6,16 @@ exports[`Swiper > Swiper baseVue demo works fine 1`] = `
 >
   <div
     class="t-swiper t-swiper--default"
-    style="--td-swiper-height: 192px;"
   >
     <div
       class="t-swiper__container"
-      style="flex-direction: row; transition: none;"
+      style="flex-direction: row; transition: none; height: auto;"
     >
       
       
       <div
         class="t-swiper-item"
-        style=""
+        style="height: 192px;"
       >
         
         <img
@@ -27,7 +26,7 @@ exports[`Swiper > Swiper baseVue demo works fine 1`] = `
       </div>
       <div
         class="t-swiper-item"
-        style=""
+        style="height: 192px;"
       >
         
         <img
@@ -38,7 +37,7 @@ exports[`Swiper > Swiper baseVue demo works fine 1`] = `
       </div>
       <div
         class="t-swiper-item"
-        style=""
+        style="height: 192px;"
       >
         
         <img
@@ -49,7 +48,7 @@ exports[`Swiper > Swiper baseVue demo works fine 1`] = `
       </div>
       <div
         class="t-swiper-item"
-        style=""
+        style="height: 192px;"
       >
         
         <img
@@ -60,7 +59,7 @@ exports[`Swiper > Swiper baseVue demo works fine 1`] = `
       </div>
       <div
         class="t-swiper-item"
-        style=""
+        style="height: 192px;"
       >
         
         <img
@@ -90,11 +89,10 @@ exports[`Swiper > Swiper baseVue demo works fine 1`] = `
 exports[`Swiper > Swiper cardVue demo works fine 1`] = `
 <div
   class="t-swiper t-swiper--card"
-  style="--td-swiper-height: 192px;"
 >
   <div
     class="t-swiper__container"
-    style="flex-direction: row; transition: none;"
+    style="flex-direction: row; transition: none; height: auto;"
   >
     
     
@@ -176,11 +174,10 @@ exports[`Swiper > Swiper controlVue demo works fine 1`] = `
 >
   <div
     class="t-swiper t-swiper--default"
-    style="--td-swiper-height: 192px;"
   >
     <div
       class="t-swiper__container"
-      style="flex-direction: row; transition: none;"
+      style="flex-direction: row; transition: none; height: auto;"
     >
       
       
@@ -266,11 +263,10 @@ exports[`Swiper > Swiper customVue demo works fine 1`] = `
 >
   <div
     class="t-swiper t-swiper--default"
-    style="--td-swiper-height: 192px;"
   >
     <div
       class="t-swiper__container"
-      style="flex-direction: row; transition: none;"
+      style="flex-direction: row; transition: none; height: auto;"
     >
       
       
@@ -353,17 +349,16 @@ exports[`Swiper > Swiper fractionVue demo works fine 1`] = `
 >
   <div
     class="t-swiper t-swiper--default"
-    style="--td-swiper-height: 192px;"
   >
     <div
       class="t-swiper__container"
-      style="flex-direction: row; transition: none;"
+      style="flex-direction: row; transition: none; height: auto;"
     >
       
       
       <div
         class="t-swiper-item"
-        style=""
+        style="height: 192px;"
       >
         
         <img
@@ -374,7 +369,7 @@ exports[`Swiper > Swiper fractionVue demo works fine 1`] = `
       </div>
       <div
         class="t-swiper-item"
-        style=""
+        style="height: 192px;"
       >
         
         <img
@@ -385,7 +380,7 @@ exports[`Swiper > Swiper fractionVue demo works fine 1`] = `
       </div>
       <div
         class="t-swiper-item"
-        style=""
+        style="height: 192px;"
       >
         
         <img
@@ -396,7 +391,7 @@ exports[`Swiper > Swiper fractionVue demo works fine 1`] = `
       </div>
       <div
         class="t-swiper-item"
-        style=""
+        style="height: 192px;"
       >
         
         <img
@@ -407,7 +402,7 @@ exports[`Swiper > Swiper fractionVue demo works fine 1`] = `
       </div>
       <div
         class="t-swiper-item"
-        style=""
+        style="height: 192px;"
       >
         
         <img
@@ -475,17 +470,16 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
       >
         <div
           class="t-swiper t-swiper--default"
-          style="--td-swiper-height: 192px;"
         >
           <div
             class="t-swiper__container"
-            style="flex-direction: row; transition: none;"
+            style="flex-direction: row; transition: none; height: auto;"
           >
             
             
             <div
               class="t-swiper-item"
-              style=""
+              style="height: 192px;"
             >
               
               <img
@@ -496,7 +490,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-swiper-item"
-              style=""
+              style="height: 192px;"
             >
               
               <img
@@ -507,7 +501,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-swiper-item"
-              style=""
+              style="height: 192px;"
             >
               
               <img
@@ -518,7 +512,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-swiper-item"
-              style=""
+              style="height: 192px;"
             >
               
               <img
@@ -529,7 +523,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-swiper-item"
-              style=""
+              style="height: 192px;"
             >
               
               <img
@@ -579,11 +573,10 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
       >
         <div
           class="t-swiper t-swiper--default"
-          style="--td-swiper-height: 192px;"
         >
           <div
             class="t-swiper__container"
-            style="flex-direction: row; transition: none;"
+            style="flex-direction: row; transition: none; height: auto;"
           >
             
             
@@ -683,17 +676,16 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
       >
         <div
           class="t-swiper t-swiper--default"
-          style="--td-swiper-height: 192px;"
         >
           <div
             class="t-swiper__container"
-            style="flex-direction: row; transition: none;"
+            style="flex-direction: row; transition: none; height: auto;"
           >
             
             
             <div
               class="t-swiper-item"
-              style=""
+              style="height: 192px;"
             >
               
               <img
@@ -704,7 +696,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-swiper-item"
-              style=""
+              style="height: 192px;"
             >
               
               <img
@@ -715,7 +707,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-swiper-item"
-              style=""
+              style="height: 192px;"
             >
               
               <img
@@ -726,7 +718,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-swiper-item"
-              style=""
+              style="height: 192px;"
             >
               
               <img
@@ -737,7 +729,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-swiper-item"
-              style=""
+              style="height: 192px;"
             >
               
               <img
@@ -788,11 +780,10 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
       >
         <div
           class="t-swiper t-swiper--default"
-          style="--td-swiper-height: 192px;"
         >
           <div
             class="t-swiper__container"
-            style="flex-direction: row; transition: none;"
+            style="flex-direction: row; transition: none; height: auto;"
           >
             
             
@@ -902,11 +893,10 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
       >
         <div
           class="t-swiper t-swiper--default"
-          style="--td-swiper-height: 192px;"
         >
           <div
             class="t-swiper__container"
-            style="flex-direction: column; transition: none;"
+            style="flex-direction: column; transition: none; height: auto;"
           >
             
             
@@ -993,11 +983,10 @@ exports[`Swiper > Swiper verticalVue demo works fine 1`] = `
 >
   <div
     class="t-swiper t-swiper--default"
-    style="--td-swiper-height: 192px;"
   >
     <div
       class="t-swiper__container"
-      style="flex-direction: column; transition: none;"
+      style="flex-direction: column; transition: none; height: auto;"
     >
       
       

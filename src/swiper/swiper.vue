@@ -1,5 +1,5 @@
 <template>
-  <div ref="root" :class="rootClass" :style="{ '--td-swiper-height': swiperHeight }">
+  <div ref="root" :class="rootClass">
     <div
       ref="swiperContainer"
       :class="`${name}__container`"
@@ -7,6 +7,7 @@
         flexDirection: !isVertical ? 'row' : 'column',
         transition: animating ? `transform ${duration}ms` : 'none',
         transform: translateContainer,
+        height: containerHeight,
       }"
       @transitionend="handleAnimationEnd"
       @click="onItemClick"
@@ -50,10 +51,11 @@
 </template>
 
 <script lang="ts">
-import { getCurrentInstance, onMounted, computed, ref, provide, defineEmits, defineProps } from 'vue';
+import { getCurrentInstance, onMounted, computed, ref, provide, defineEmits, defineProps, watch } from 'vue';
 import { useSwipe } from '@vueuse/core';
 import isObject from 'lodash/isObject';
 
+import { log } from 'console';
 import config from '../config';
 import SwiperProps from './props';
 import { renderTNode, TNode, useEmitEvent, useVModel } from '../shared';
@@ -94,12 +96,7 @@ const disabled = ref(false);
 const translateContainer = ref('');
 
 const isVertical = computed(() => props.direction === 'vertical');
-const swiperHeight = computed(() => {
-  if (isVertical.value && props.height) {
-    return `${props.height}px`;
-  }
-  return '192px';
-});
+const containerHeight = ref('auto');
 
 const rootClass = computed(() => {
   return [`${name}`, `${name}--${props.type}`];
@@ -232,6 +229,21 @@ const updateItemPosition = () => {
   });
 };
 
+const setContainerHeight = (height: number) => (containerHeight.value = `${height}px`);
+
+const updateContainerHeight = () => {
+  const target = items.value[current.value ?? 0];
+  const rect = target?.proxy?.$el.getBoundingClientRect();
+
+  if (props.height) {
+    setContainerHeight(props.height);
+  } else if (rect) {
+    setContainerHeight(rect.height);
+  }
+};
+
+watch(current, updateContainerHeight);
+
 provide('parent', {
   loop: props.loop,
   root,
@@ -239,10 +251,12 @@ provide('parent', {
   isVertical,
   addChild,
   removeChild,
+  setContainerHeight,
 });
 
 onMounted(() => {
   startAutoplay();
   updateItemPosition();
+  updateContainerHeight();
 });
 </script>

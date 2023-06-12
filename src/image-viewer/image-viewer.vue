@@ -13,17 +13,12 @@
           <t-node :content="deleteNode" />
         </div>
       </div>
-      <t-swiper
-        :autoplay="false"
-        :class="`${name}__content`"
-        :style="{ '--td-swiper-height': swiperStyle[Number(currentIndex)] }"
-        :current="currentIndex"
-        @change="onSwiperChange"
-      >
+      <t-swiper :autoplay="false" :class="`${name}__content`" :current="currentIndex" @change="onSwiperChange">
         <t-swiper-item
           v-for="(image, index) in images"
           :key="index"
           :class="`${name}__swiper-item`"
+          :style="{ height: swiperStyle[index] }"
           @touchstart="onTouchStart"
           @touchmove="onTouchMove"
           @touchend="onTouchEnd"
