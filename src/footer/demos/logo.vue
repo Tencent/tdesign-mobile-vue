@@ -1,17 +1,11 @@
 <template>
-  <t-footer :logo="logo2" text="Copyright © 2019-2023 TDesign.All Rights Reserved." />
-  <t-footer :logo="logo1" text="Copyright © 2019-2023 TDesign.All Rights Reserved." />
+  <!-- theme 为 logo -->
+  <t-footer :logo="logo" />
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
-
-const logo1 = ref({
-  url: 'https://tdesign.gtimg.com/miniprogram/images/logo1.png',
-});
-
-const logo2 = ref({
+const logo = {
   icon: 'https://tdesign.gtimg.com/miniprogram/images/logo2.png',
-  title: '品牌页脚',
-});
+  title: '品牌名称',
+};
 </script>

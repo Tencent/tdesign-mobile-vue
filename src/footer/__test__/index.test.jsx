@@ -65,4 +65,13 @@ describe('footer', () => {
     });
     expect(wrapper.find('.t-footer__title').exists()).toEqual(true);
   });
+  it(': logo-target', () => {
+    const logo = {
+      target: 'https://tdesign.tencent.com/',
+    };
+    const wrapper = mount(Footer, {
+      props: { logo },
+    });
+    expect(wrapper.find('.t-footer__logo').attributes().target).toBe(logo.target);
+  });
 });

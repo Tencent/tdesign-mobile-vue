@@ -1,3 +1,5 @@
+export type TriggerSource = 'overlay' | 'menu' | 'content' | 'confirm';
+
 export type DropdownMenuDo = () => void;
 
 export type DropdownMenuState = {
@@ -10,6 +12,7 @@ export type DropdownMenuState = {
 export type DropdownMenuControl = {
   expandMenu: (item: any, idx: number) => void;
   collapseMenu: () => void;
+  emitEvents: (emit: string, trigger?: TriggerSource) => void;
 };
 
 export enum DropdownMenuExpandState {

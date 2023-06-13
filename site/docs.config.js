@@ -90,6 +90,12 @@ export default {
           component: () => import('@/navbar/navbar.md'),
         },
         {
+          title: 'SideBar 侧边栏',
+          name: 'side-bar',
+          path: '/mobile-vue/components/side-bar',
+          component: () => import('@/side-bar/side-bar.md'),
+        },
+        {
           title: 'Steps 步骤条',
           name: 'steps',
           path: '/mobile-vue/components/steps',

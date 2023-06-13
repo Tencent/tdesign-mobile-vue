@@ -5,7 +5,7 @@
       :key="index"
       variant="text"
       block
-      :class="itemClasses"
+      :class="[itemClasses, { [`${name}__list-item--disabled`]: item.disabled }]"
       :disabled="item.disabled"
       :icon="item.icon"
       :style="{ color: item.color }"

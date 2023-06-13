@@ -5,6 +5,61 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.25.0 `2023-06-13`
+
+### ❗ BREAKING CHANGES
+- `Swiper`: 调整 DOM @LeeJim ([#845](https://github.com/Tencent/tdesign-mobile-vue/pull/845))
+- `Swiper`: 属性 `paginationPosition` 移至属性 `navigation` 下 @LeeJim ([#845](https://github.com/Tencent/tdesign-mobile-vue/pull/845))
+- `Swiper`: 属性 `navigation` 内部值发生变更 @LeeJim ([#845](https://github.com/Tencent/tdesign-mobile-vue/pull/845))
+- `GridItem`: 调整DOM结构 @anlyyao ([#854](https://github.com/Tencent/tdesign-mobile-vue/pull/854))
+- `DateTimePicker`: 调整DOM结构 @anlyyao ([#852](https://github.com/Tencent/tdesign-mobile-vue/pull/852))
+
+### 🚀 Features
+- `SideBar`: 新增侧边导航组件 @anlyyao ([#855](https://github.com/Tencent/tdesign-mobile-vue/pull/855))
+- `DropdownMenu`: 新增 `menuOpened`、`menuClosed` 事件 @anlyyao ([#837](https://github.com/Tencent/tdesign-mobile-vue/pull/837))
+- `Swiper`: 新增 `click` 事件 @LeeJim ([#845](https://github.com/Tencent/tdesign-mobile-vue/pull/845))
+- `Swiper`: `height` 属性支持 `string` 类型 @anlyyao ([#858](https://github.com/Tencent/tdesign-mobile-vue/pull/858))
+
+### 🐞 Bug Fixes
+- `Popup`: 修复弹出层内容无法滚动的问题  @anlyyao ([#834](https://github.com/Tencent/tdesign-mobile-vue/pull/834))
+- `Tabs`: 修复纵向 `touch` 也会触发tabs切换的问题  @ccccpj ([#836](https://github.com/Tencent/tdesign-mobile-vue/pull/836))
+- `Switch`: 修复 `loading` 态背景色错误 @anlyyao ([#841](https://github.com/Tencent/tdesign-mobile-vue/pull/841))
+- `Switch`: 修复 `loading` 态仍能点击的问题 @anlyyao ([#841](https://github.com/Tencent/tdesign-mobile-vue/pull/841))
+- `DropdownMenu`: 修复 `closeOnClickOverlay` 属性无效的问题 @ccccpj ([#851](https://github.com/Tencent/tdesign-mobile-vue/pull/851))
+- `DropdownMenu`: 修复 `options` 初始值不能为空 @ccccpj ([#851](https://github.com/Tencent/tdesign-mobile-vue/pull/851))
+- `DropdownMenu`: 修复 `expose` 产生的告警问题 @ccccpj ([#851](https://github.com/Tencent/tdesign-mobile-vue/pull/851))
+- `DropdownMenu`: 修复示例字号及按钮样式错误 @ccccpj ([#848](https://github.com/Tencent/tdesign-mobile-vue/pull/848))
+- `GridItem`: 修复 `Image` 属性不支持 `Function` 类型 @anlyyao ([#854](https://github.com/Tencent/tdesign-mobile-vue/pull/854))
+- `ActionSheet`: 修复禁用态背景色错误 @anlyyao ([#854](https://github.com/Tencent/tdesign-mobile-vue/pull/854))
+- `ActionSheet`: 修复示例占位图错误 @anlyyao ([#854](https://github.com/Tencent/tdesign-mobile-vue/pull/854))
+- `DateTimePicker`: 修复初始值不能为空的问题 @anlyyao ([#852](https://github.com/Tencent/tdesign-mobile-vue/pull/852))
+- `DateTimePicker`: 修复选中文本和弹窗面板圆角样式错误 @anlyyao ([#852](https://github.com/Tencent/tdesign-mobile-vue/pull/852))
+- `Dialog`: 修复弹窗圆角、标题行高样式错误  @anlyyao ([#1393](https://github.com/Tencent/tdesign-common/pull/1393))
+- `Picker`: 修复选中文本样式错误 @anlyyao ([#852](https://github.com/Tencent/tdesign-mobile-vue/pull/852))
+- `Textarea`: 解决 `autoSize` 动态修改输入值时未生效问题 @ccccpj ([#859](https://github.com/Tencent/tdesign-mobile-vue/pull/859))
+- `ImageViewer`: 修复图片预览显示不全的问题 @anlyyao ([#858](https://github.com/Tencent/tdesign-mobile-vue/pull/858))
+- `Empty`: 移除无效的示例 @anlyyao ([#827](https://github.com/Tencent/tdesign-mobile-vue/pull/827))
+- `Tag`: 修复示例文案错误 @Resuragam ([#842](https://github.com/Tencent/tdesign-mobile-vue/pull/842))
+- `Result`: 修复示例间距样式 @Resuragam ([#844](https://github.com/Tencent/tdesign-mobile-vue/pull/844))
+- `Footer`: 修复分割线尺寸错误并移除下划线样式 @anlyyao ([#1384](https://github.com/Tencent/tdesign-common/pull/1384))
+- `Footer`: 更新示例代码 @anlyyao ([#829](https://github.com/Tencent/tdesign-mobile-vue/pull/829))
+- `Steps`: 修复标题换行和不换行均存在时，步骤条图标对齐问题 @Resuragam ([#1388](https://github.com/Tencent/tdesign-common/pull/1388))
+- `Tabs`: 修复字号尺寸错误 @anlyyao ([#1386](https://github.com/Tencent/tdesign-common/pull/1386))
+- `BackTop`: 修复边框颜色错误 @anlyyao ([#1367](https://github.com/Tencent/tdesign-common/pull/1367))
+
+### 🚧 Others
+- `Footer`: 补充测试用例 @engvuchen ([#849](https://github.com/Tencent/tdesign-mobile-vue/pull/849))
+- `Swiper`: 补充单元测试 @LeeJim ([#845](https://github.com/Tencent/tdesign-mobile-vue/pull/845))
+- `Collapse`: 补充测试用例 @ccccpj ([#846](https://github.com/Tencent/tdesign-mobile-vue/pull/846))
+- `NoticeBar`: 补充测试用例 @ccccpj ([#840](https://github.com/Tencent/tdesign-mobile-vue/pull/840))
+- `Cell`: 补充测试用例 @ccccpj ([#832](https://github.com/Tencent/tdesign-mobile-vue/pull/832))
+- `Avatar`: 补充测试用例 @ccccpj ([#830](https://github.com/Tencent/tdesign-mobile-vue/pull/830))
+- `SwipeCell`: 补充测试用例 @nined9 ([#828](https://github.com/Tencent/tdesign-mobile-vue/pull/828))
+- `Drawer`: 补充测试用例 @anlyyao ([#850](https://github.com/Tencent/tdesign-mobile-vue/pull/850))
+- `Grid`: 补充测试用例 @Resuragam ([#838](https://github.com/Tencent/tdesign-mobile-vue/pull/838))
+- `Calendar`: 补充测试用例 @ccccpj ([#831](https://github.com/Tencent/tdesign-mobile-vue/pull/831))
+- `TabBar`: 补充测试用例 @LeeJim ([#860](https://github.com/Tencent/tdesign-mobile-vue/pull/860))
+
 ## 🌈 0.24.0 `2023-06-06`
 ### ❗ BREAKING CHANGES
 - `Fab`: 调整DOM @anlyyao ([#773](https://github.com/Tencent/tdesign-mobile-vue/pull/773))

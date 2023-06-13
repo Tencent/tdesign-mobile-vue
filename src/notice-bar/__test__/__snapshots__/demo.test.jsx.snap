@@ -1203,17 +1203,17 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
         >
           <div>
             <div
-              class="t-swiper t-notice-bar__content--vertical"
-              style="height: 22px; overflow: hidden;"
+              class="t-swiper t-swiper--default t-notice-bar__content--vertical"
             >
               <div
                 class="t-swiper__container"
-                style="height: 22px; flex-direction: column;"
+                style="flex-direction: column; transition: none; height: auto;"
               >
                 
                 
                 <div
                   class="t-swiper-item"
+                  style=""
                 >
                   
                   <div
@@ -1225,6 +1225,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
                 </div>
                 <div
                   class="t-swiper-item"
+                  style=""
                 >
                   
                   <div
@@ -1236,6 +1237,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
                 </div>
                 <div
                   class="t-swiper-item"
+                  style=""
                 >
                   
                   <div
@@ -1247,6 +1249,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
                 </div>
                 <div
                   class="t-swiper-item"
+                  style=""
                 >
                   
                   <div
@@ -1258,6 +1261,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
                 </div>
                 <div
                   class="t-swiper-item"
+                  style=""
                 >
                   
                   <div
@@ -1270,6 +1274,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
                 
                 
               </div>
+              <!-- 导航器 -->
               <!--v-if-->
             </div>
           </div>
@@ -1391,17 +1396,17 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
     >
       <div>
         <div
-          class="t-swiper t-notice-bar__content--vertical"
-          style="height: 22px; overflow: hidden;"
+          class="t-swiper t-swiper--default t-notice-bar__content--vertical"
         >
           <div
             class="t-swiper__container"
-            style="height: 22px; flex-direction: column;"
+            style="flex-direction: column; transition: none; height: auto;"
           >
             
             
             <div
               class="t-swiper-item"
+              style=""
             >
               
               <div
@@ -1413,6 +1418,7 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
             </div>
             <div
               class="t-swiper-item"
+              style=""
             >
               
               <div
@@ -1424,6 +1430,7 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
             </div>
             <div
               class="t-swiper-item"
+              style=""
             >
               
               <div
@@ -1435,6 +1442,7 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
             </div>
             <div
               class="t-swiper-item"
+              style=""
             >
               
               <div
@@ -1446,6 +1454,7 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
             </div>
             <div
               class="t-swiper-item"
+              style=""
             >
               
               <div
@@ -1458,6 +1467,7 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
             
             
           </div>
+          <!-- 导航器 -->
           <!--v-if-->
         </div>
       </div>

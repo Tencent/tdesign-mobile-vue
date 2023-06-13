@@ -1,0 +1,67 @@
+// Vitest Snapshot v1
+
+exports[`swiper > height & direction 1`] = `
+<div
+  class="t-swiper t-swiper--default"
+>
+  <div
+    class="t-swiper__container"
+    style="flex-direction: column; transition: transform 100ms; height: 200px; transform: translateY(0px);"
+  >
+    
+    
+    <div
+      class="t-swiper-item"
+      style="transform: translateY(0px);"
+    >
+      
+      <img
+        src="https://tdesign.gtimg.com/site/swiper/01.png"
+      />
+      
+    </div>
+    <div
+      class="t-swiper-item"
+      style="transform: translateY(0px);"
+    >
+      
+      <img
+        src="https://tdesign.gtimg.com/site/swiper/02.png"
+      />
+      
+    </div>
+    <div
+      class="t-swiper-item"
+      style="transform: translateY(0px);"
+    >
+      
+      <img
+        src="https://tdesign.gtimg.com/site/swiper/03.png"
+      />
+      
+    </div>
+    
+    
+  </div>
+  <!-- 导航器 -->
+  
+  <!--v-if-->
+  <span
+    class="t-swiper-nav--vertical t-swiper-nav__dots-bar t-swiper-nav--bottom"
+  >
+    
+    <span
+      class="t-swiper-nav__dots-bar-item t-swiper-nav__dots-bar-item--vertical"
+    />
+    <span
+      class="t-swiper-nav__dots-bar-item t-swiper-nav__dots-bar-item--active t-swiper-nav__dots-bar-item--vertical"
+    />
+    <span
+      class="t-swiper-nav__dots-bar-item t-swiper-nav__dots-bar-item--vertical"
+    />
+    
+    <!--v-if-->
+  </span>
+  
+</div>
+`;

@@ -4,10 +4,10 @@
       v-show="actionItems.length > 1"
       :autoplay="false"
       pagination-position="bottom"
-      :navigation="{ type: 'dots', showSlideBtn: false }"
+      :navigation="{ type: 'dots', showControls: false }"
       :loop="false"
       :class="`${name}__swiper-wrap`"
-      @change="handleSwiperChange"
+      height="192"
     >
       <t-swiper-item v-for="(Items, i) in actionItems" :key="i">
         <t-grid :column="gridColumn">
@@ -73,14 +73,12 @@ export default defineComponent({
     const gridClasses = computed(() => ({
       [`${name}__grid`]: true,
       [`${name}__grid--swiper`]: pageNum.value > 1,
+      [`${name}__dots`]: pageNum.value > 1,
     }));
     const handleSelected = (i: any) => {
       emitEvent('selected', i);
     };
-    const handleSwiperChange = (i: any) => {
-      // emitEvent('swiperChange', i);
-      console.log('handleSwiperChange', i);
-    };
+
     return {
       name: ref(name),
       pageNum,
@@ -88,7 +86,6 @@ export default defineComponent({
       actionItems,
       gridClasses,
       handleSelected,
-      handleSwiperChange,
     };
   },
 });

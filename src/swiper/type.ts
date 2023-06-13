@@ -45,7 +45,7 @@ export interface TdSwiperProps {
   /**
    * 当使用垂直方向滚动时的高度
    */
-  height?: number;
+  height?: number | string;
   /**
    * 轮播间隔时间
    * @default 5000
@@ -61,14 +61,28 @@ export interface TdSwiperProps {
    */
   navigation?: SwiperNavigation | TNode;
   /**
-   * 页码信息展示位置
-   * @default bottom-right
+   * 后边距，可用于露出后一项的一小部分。默认单位 `px`
+   * @default 0
    */
-  paginationPosition?: 'top-left' | 'top' | 'top-right' | 'bottom-left' | 'bottom' | 'bottom-right';
+  nextMargin?: string | number;
+  /**
+   * 前边距，可用于露出前一项的一小部分。默认单位 `px`
+   * @default 0
+   */
+  previousMargin?: string | number;
+  /**
+   * 样式类型：默认样式、卡片样式
+   * @default default
+   */
+  type?: 'default' | 'card';
   /**
    * 轮播切换时触发
    */
   onChange?: (current: number, context: { source: SwiperChangeSource }) => void;
+  /**
+   * 点击轮播项时触发
+   */
+  onClick?: (index: number) => void;
 }
 
 export interface SwiperNavigation {
@@ -77,12 +91,23 @@ export interface SwiperNavigation {
    */
   minShowNum?: number;
   /**
-   * 表示是否显示两侧的滑动控制按钮
+   * 页码信息展示位置
+   * @default bottom
    */
-  showSlideBtn?: boolean;
+  paginationPosition?: 'top-left' | 'top' | 'top-right' | 'bottom-left' | 'bottom' | 'bottom-right';
+  /**
+   * 导航器位置，位于主体的内侧或是外侧
+   * @default inside
+   */
+  placement?: 'inside' | 'outside';
+  /**
+   * 是否显示两侧的控制按钮
+   * @default false
+   */
+  showControls?: boolean;
   /**
    * 导航器类型，点状(dots)、点条状(dots-bar)、分式(fraction)等
-   * @default ''
+   * @default dots
    */
   type?: SwiperNavigationType;
 }

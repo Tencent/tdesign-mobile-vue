@@ -683,7 +683,7 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
             class="t-cell__left"
           >
             <!--v-if-->
-            <!--v-if-->
+            <!---->
           </div>
           <div
             class="t-cell__title"
@@ -1128,7 +1128,7 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
       class="t-cell__left"
     >
       <!--v-if-->
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-cell__title"

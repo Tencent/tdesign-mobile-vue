@@ -107,6 +107,18 @@ describe('avatar-group', async () => {
     });
   });
 
+  it(': cascading', async () => {
+    sizeList.forEach((s) => {
+      const wrapper = mount(() => (
+        <AvatarGroup cascading="" size={s}>
+          <Avatar image={IMAGE}></Avatar>
+          <Avatar image={IMAGE}></Avatar>
+        </AvatarGroup>
+      ));
+      expect(wrapper.classes()).toContain(`t-avatar-group-offset-right-${s}`);
+    });
+  });
+
   it(': max', async () => {
     const wrapper = mount(() => (
       <AvatarGroup max={1}>

@@ -1,14 +1,14 @@
 <template>
   <div v-if="wrapperVisible" :id="popupId" :class="classes" :style="{ ...expandStyle }">
     <t-popup
-      v-model="isShowItems"
+      :visible="isShowItems"
       :duration="duration"
       :show-overlay="showOverlay"
       :style="popupStyle"
       :overlay-props="{ style: 'position: absolute' }"
       :class="`${name}__popup-host`"
       :attach="`#${popupId}`"
-      @close="closePopup"
+      @visible-change="onVisibleChange"
     >
       <div :class="styleContent">
         <div :class="`${name}__body`">
@@ -101,7 +101,7 @@ export default defineComponent({
     // 从父组件取属性、状态和控制函数
     const menuProps = inject('dropdownMenuProps') as TdDropdownMenuProps;
     const menuState = inject('dropdownMenuState') as DropdownMenuState;
-    const { expandMenu, collapseMenu } = inject('dropdownMenuControl') as DropdownMenuControl;
+    const { expandMenu, collapseMenu, emitEvents } = inject('dropdownMenuControl') as DropdownMenuControl;
 
     // 组件样式
     const classes = computed(() => [`${name}`]);
@@ -195,9 +195,6 @@ export default defineComponent({
         checkSelect.value = (val ?? []) as DropdownValue[];
       }
     };
-    const closePopup = () => {
-      collapseMenu();
-    };
     // 初始值更新一次选中项
     updateSelectValue(passInValue.value || null);
     // 跟踪 modelValue 更新选项
@@ -226,6 +223,7 @@ export default defineComponent({
       props.onConfirm?.(values);
       setValue(values);
       collapseMenu();
+      emitEvents('menuClosed', 'confirm');
     };
     // 多选值监控
     watch(checkSelect, (val) => {
@@ -253,13 +251,16 @@ export default defineComponent({
         setValue(val);
       }
       collapseMenu();
+      emitEvents('menuClosed', 'content');
     });
-    // 点击遮罩层
-    const onClickOverlay = () => {
-      if (menuProps.closeOnClickOverlay) {
+
+    const onVisibleChange = (visible: boolean) => {
+      if (menuProps.closeOnClickOverlay && !visible) {
         collapseMenu();
+        emitEvents('menuClosed', 'overlay');
       }
     };
+
     return {
       name: ref(name),
       ...toRefs(props),
@@ -271,14 +272,13 @@ export default defineComponent({
       radioSelect,
       checkSelect,
       popupId,
-      closePopup,
       isCheckedRadio,
       styleDropRadio,
       expandMenu,
       collapseMenu,
       resetSelect,
       confirmSelect,
-      onClickOverlay,
+      onVisibleChange,
     };
   },
 });

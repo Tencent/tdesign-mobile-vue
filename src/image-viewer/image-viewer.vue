@@ -13,7 +13,13 @@
           <t-node :content="deleteNode" />
         </div>
       </div>
-      <t-swiper :autoplay="false" :class="`${name}__content`" :current="currentIndex" @change="onSwiperChange">
+      <t-swiper
+        :autoplay="false"
+        :class="`${name}__content`"
+        height="100vh"
+        :current="currentIndex"
+        @change="onSwiperChange"
+      >
         <t-swiper-item
           v-for="(image, index) in images"
           :key="index"
@@ -30,7 +36,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, reactive, getCurrentInstance, CSSProperties, h, Transition } from 'vue';
+import { computed, defineComponent, reactive, getCurrentInstance, CSSProperties, h, Transition, toRefs } from 'vue';
 import { CloseIcon, DeleteIcon } from 'tdesign-icons-vue-next';
 
 import config from '../config';
@@ -64,6 +70,7 @@ export default defineComponent({
     const state = reactive({
       zooming: false,
       scale: 1,
+      swiperStyle: [] as string[],
     });
     const emitEvent = useEmitEvent(props, context.emit);
     const [visible, setVisible] = useDefault(props, context.emit, 'visible', 'change');
@@ -219,6 +226,7 @@ export default defineComponent({
 
     return {
       name,
+      ...toRefs(state),
       prefix,
       closeNode,
       deleteNode,

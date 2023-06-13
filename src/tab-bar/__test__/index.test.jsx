@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import TabBar from '../tab-bar.vue';
 import TabBarItem from '../tab-bar-item.vue';
-import { nextTick, ref } from 'vue';
+import { ref } from 'vue';
 
 const list = [
   {
@@ -87,23 +87,22 @@ describe('TabBar', () => {
       ).toEqual('标签二');
     });
 
-    // it('snapshot', () => {
-    //   const icon = () => <TIconApp />;
-    //   const wrapper = mount({
-    //     render: () => (
-    //       <TabBar>
-    //         {list.map((item) => {
-    //           return <TabBarItem {...item} icon={icon} badgeProps={{ count: 1 }} />;
-    //         })}
-    //       </TabBar>
-    //     ),
-    //   });
-    //   expect(wrapper.element).toMatchSnapshot();
-    // });
+    it('item without value', async () => {
+      const wrapper = mount({
+        render() {
+          return <TabBar value={0}>
+            <TabBarItem></TabBarItem>
+          </TabBar>
+        }
+      })
+
+      const item = wrapper.findComponent('.t-tab-bar-item');
+      expect(item.vm.isChecked).toBeTruthy();
+    })
   });
 
   describe('events', () => {
-    it('click to change', async () => {
+    it('click', async () => {
       const onChange = vi.fn();
       const value = ref('1');
       const wrapper = mount({

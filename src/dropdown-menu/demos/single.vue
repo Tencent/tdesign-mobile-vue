@@ -1,5 +1,5 @@
 <template>
-  <t-dropdown-menu>
+  <t-dropdown-menu @menu-opened="handleMenuOpened" @menu-closed="handleMenuClosed">
     <t-dropdown-item :options="product.options" :value="product.value" @change="onChange" />
     <t-dropdown-item :options="sorter.options" :value="sorter.value" />
   </t-dropdown-menu>
@@ -39,4 +39,12 @@ const sorter = {
 function onChange(e: any) {
   console.log(e);
 }
+
+const handleMenuOpened = () => {
+  console.log('==handleMenuOpened===');
+};
+
+const handleMenuClosed = (val: string) => {
+  console.log('==handleMenuClosed===', val);
+};
 </script>

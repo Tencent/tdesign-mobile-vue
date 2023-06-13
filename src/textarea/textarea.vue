@@ -26,7 +26,7 @@
 </template>
 
 <script lang="ts">
-import { computed, ref, onMounted, defineComponent, getCurrentInstance, toRefs, nextTick } from 'vue';
+import { computed, ref, onMounted, defineComponent, getCurrentInstance, toRefs, nextTick, watch } from 'vue';
 import { useEmitEvent, renderTNode, TNode, getCharacterLength, useVModel } from '../shared';
 import config from '../config';
 import TextareaProps from './props';
@@ -137,6 +137,11 @@ export default defineComponent({
       adjustTextareaHeight();
     });
 
+    watch(innerValue, () => {
+      nextTick(() => {
+        adjustTextareaHeight();
+      });
+    });
     return {
       componentName,
       ...toRefs(props),

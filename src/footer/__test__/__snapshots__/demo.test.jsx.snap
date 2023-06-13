@@ -22,74 +22,83 @@ exports[`Footer > Footer linkVue demo works fine 1`] = `
   data-v-app=""
 >
   
+  <!-- theme 为 text，含有底部链接 -->
   <div
-    class="t-footer"
+    class="footer-example"
   >
-    <!-- logo -->
-    
-    <!-- text -->
     <div
-      class="t-footer__link-list"
+      class="t-footer"
     >
+      <!-- logo -->
       
-      
-      <a
-        class="t-footer__link-item"
-        href="/pages/index"
-      >
-        底部链接
-      </a>
-      <!--v-if-->
-      
-      
-    </div>
-    <div
-      class="t-footer__text"
-    >
-      Copyright © 2019-2023 TDesign.All Rights Reserved.
-    </div>
-    
-  </div>
-  <div
-    class="t-footer"
-  >
-    <!-- logo -->
-    
-    <!-- text -->
-    <div
-      class="t-footer__link-list"
-    >
-      
-      
-      <a
-        class="t-footer__link-item"
-        href="/pages/index"
-      >
-        底部链接
-      </a>
+      <!-- text -->
       <div
-        class="t-footer__link-line"
+        class="t-footer__link-list"
       >
-        |
+        
+        
+        <a
+          class="t-footer__link-item"
+          href=""
+        >
+          底部链接
+        </a>
+        <!--v-if-->
+        
+        
+      </div>
+      <div
+        class="t-footer__text"
+      >
+        Copyright © 2021-2031 TD.All Rights Reserved.
       </div>
       
-      
-      <a
-        class="t-footer__link-item"
-        href="/pages/index"
-      >
-        底部链接
-      </a>
-      <!--v-if-->
-      
-      
     </div>
+  </div>
+  <div
+    class="footer-example"
+  >
     <div
-      class="t-footer__text"
+      class="t-footer"
     >
-      Copyright © 2019-2023 TDesign.All Rights Reserved.
+      <!-- logo -->
+      
+      <!-- text -->
+      <div
+        class="t-footer__link-list"
+      >
+        
+        
+        <a
+          class="t-footer__link-item"
+          href=""
+        >
+          底部链接
+        </a>
+        <div
+          class="t-footer__link-line"
+        >
+          |
+        </div>
+        
+        
+        <a
+          class="t-footer__link-item"
+          href=""
+        >
+          底部链接
+        </a>
+        <!--v-if-->
+        
+        
+      </div>
+      <div
+        class="t-footer__text"
+      >
+        Copyright © 2021-2031 TD.All Rights Reserved.
+      </div>
+      
     </div>
-    
   </div>
   
 </div>
@@ -100,6 +109,7 @@ exports[`Footer > Footer logoVue demo works fine 1`] = `
   data-v-app=""
 >
   
+  <!-- theme 为 logo -->
   <div
     class="t-footer"
   >
@@ -153,20 +163,8 @@ exports[`Footer > Footer logoVue demo works fine 1`] = `
       <span
         class="t-footer__title"
       >
-        品牌页脚
+        品牌名称
       </span>
-    </a>
-  </div>
-  <div
-    class="t-footer"
-  >
-    <!-- logo -->
-    <a
-      class="t-footer__logo"
-      href="https://tdesign.gtimg.com/miniprogram/images/logo1.png"
-    >
-      <!--v-if-->
-      <!--v-if-->
     </a>
   </div>
   
@@ -239,74 +237,83 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
     >
       
       
+      <!-- theme 为 text，含有底部链接 -->
       <div
-        class="t-footer"
+        class="footer-example"
       >
-        <!-- logo -->
-        
-        <!-- text -->
         <div
-          class="t-footer__link-list"
+          class="t-footer"
         >
+          <!-- logo -->
           
-          
-          <a
-            class="t-footer__link-item"
-            href="/pages/index"
-          >
-            底部链接
-          </a>
-          <!--v-if-->
-          
-          
-        </div>
-        <div
-          class="t-footer__text"
-        >
-          Copyright © 2019-2023 TDesign.All Rights Reserved.
-        </div>
-        
-      </div>
-      <div
-        class="t-footer"
-      >
-        <!-- logo -->
-        
-        <!-- text -->
-        <div
-          class="t-footer__link-list"
-        >
-          
-          
-          <a
-            class="t-footer__link-item"
-            href="/pages/index"
-          >
-            底部链接
-          </a>
+          <!-- text -->
           <div
-            class="t-footer__link-line"
+            class="t-footer__link-list"
           >
-            |
+            
+            
+            <a
+              class="t-footer__link-item"
+              href=""
+            >
+              底部链接
+            </a>
+            <!--v-if-->
+            
+            
+          </div>
+          <div
+            class="t-footer__text"
+          >
+            Copyright © 2021-2031 TD.All Rights Reserved.
           </div>
           
-          
-          <a
-            class="t-footer__link-item"
-            href="/pages/index"
-          >
-            底部链接
-          </a>
-          <!--v-if-->
-          
-          
         </div>
+      </div>
+      <div
+        class="footer-example"
+      >
         <div
-          class="t-footer__text"
+          class="t-footer"
         >
-          Copyright © 2019-2023 TDesign.All Rights Reserved.
+          <!-- logo -->
+          
+          <!-- text -->
+          <div
+            class="t-footer__link-list"
+          >
+            
+            
+            <a
+              class="t-footer__link-item"
+              href=""
+            >
+              底部链接
+            </a>
+            <div
+              class="t-footer__link-line"
+            >
+              |
+            </div>
+            
+            
+            <a
+              class="t-footer__link-item"
+              href=""
+            >
+              底部链接
+            </a>
+            <!--v-if-->
+            
+            
+          </div>
+          <div
+            class="t-footer__text"
+          >
+            Copyright © 2021-2031 TD.All Rights Reserved.
+          </div>
+          
         </div>
-        
       </div>
       
       
@@ -330,6 +337,7 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
     >
       
       
+      <!-- theme 为 logo -->
       <div
         class="t-footer"
       >
@@ -383,20 +391,8 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
           <span
             class="t-footer__title"
           >
-            品牌页脚
+            品牌名称
           </span>
-        </a>
-      </div>
-      <div
-        class="t-footer"
-      >
-        <!-- logo -->
-        <a
-          class="t-footer__logo"
-          href="https://tdesign.gtimg.com/miniprogram/images/logo1.png"
-        >
-          <!--v-if-->
-          <!--v-if-->
         </a>
       </div>
       
