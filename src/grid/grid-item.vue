@@ -61,7 +61,7 @@ export default defineComponent({
     });
 
     const size = computed(() => {
-      if (column.value > 4) return 'small';
+      if (column.value > 4 || !column.value) return 'small';
       return column.value < 4 ? 'large' : 'middle';
     });
 
