@@ -10,7 +10,7 @@ autoplay | Boolean | true | \- | N
 current | Number | 0 | `v-model` and `v-model:current` is supported | N
 direction | String | horizontal | options：horizontal/vertical | N
 duration | Number | 300 | \- | N
-height | Number | - | \- | N
+height | Number / String | - | \- | N
 interval | Number | 5000 | \- | N
 loop | Boolean | true | \- | N
 navigation | Object / Slot / Function | - | Typescript：`SwiperNavigation \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N

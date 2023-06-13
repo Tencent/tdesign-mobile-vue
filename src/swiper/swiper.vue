@@ -54,8 +54,8 @@
 import { getCurrentInstance, onMounted, computed, ref, provide, defineEmits, defineProps, watch } from 'vue';
 import { useSwipe } from '@vueuse/core';
 import isObject from 'lodash/isObject';
+import { isNumber } from 'lodash';
 
-import { log } from 'console';
 import config from '../config';
 import SwiperProps from './props';
 import { renderTNode, TNode, useEmitEvent, useVModel } from '../shared';
@@ -229,7 +229,8 @@ const updateItemPosition = () => {
   });
 };
 
-const setContainerHeight = (height: number) => (containerHeight.value = `${height}px`);
+const setContainerHeight = (height: number | string) =>
+  (containerHeight.value = isNumber(height) ? `${height}px` : height);
 
 const updateContainerHeight = () => {
   const target = items.value[current.value ?? 0];

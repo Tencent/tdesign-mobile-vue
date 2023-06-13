@@ -13,17 +13,22 @@
           <t-node :content="deleteNode" />
         </div>
       </div>
-      <t-swiper :autoplay="false" :class="`${name}__content`" :current="currentIndex" @change="onSwiperChange">
+      <t-swiper
+        :autoplay="false"
+        :class="`${name}__content`"
+        height="100vh"
+        :current="currentIndex"
+        @change="onSwiperChange"
+      >
         <t-swiper-item
           v-for="(image, index) in images"
           :key="index"
           :class="`${name}__swiper-item`"
-          :style="{ height: swiperStyle[index] }"
           @touchstart="onTouchStart"
           @touchmove="onTouchMove"
           @touchend="onTouchEnd"
         >
-          <t-image :src="image" :style="imageStyle" @load="onImageLoadSuccess" />
+          <t-image :src="image" :style="imageStyle" />
         </t-swiper-item>
       </t-swiper>
     </div>
@@ -101,45 +106,6 @@ export default defineComponent({
 
       return style;
     });
-
-    const calcImageDisplayStyle = (imageWidth: number, imageHeight: number) => {
-      const { height, width } = window.screen;
-      const ratio = imageWidth / imageHeight;
-      // 图片宽高都小于屏幕宽高
-      if (imageWidth < width && imageHeight < height) {
-        return {
-          styleObj: {
-            width: `${imageWidth}px`,
-            height: `${imageHeight}px`,
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-          },
-        };
-      }
-      // 图片宽高至少存在一个大于屏幕宽高，此时判断图片宽高比，按长边显示
-      if (ratio >= 1) {
-        return {
-          styleObj: {
-            width: '100vw',
-            height: `${width / ratio}px`,
-          },
-        };
-      }
-      return {
-        styleObj: {
-          width: `${ratio * width}px`,
-          height: '100vh',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-        },
-      };
-    };
-
-    const onImageLoadSuccess = (e: any) => {
-      const { clientHeight, clientWidth } = e.target as HTMLElement;
-      const { styleObj } = calcImageDisplayStyle(clientHeight, clientWidth);
-      state.swiperStyle.push(`${styleObj.height}`);
-    };
 
     const handleClose = (e: Event, trigger: string) => {
       setVisible(false);
@@ -267,7 +233,6 @@ export default defineComponent({
       currentIndex,
       imageStyle,
       visible,
-      onImageLoadSuccess,
       handleClose,
       handleDelete,
       onSwiperChange,
