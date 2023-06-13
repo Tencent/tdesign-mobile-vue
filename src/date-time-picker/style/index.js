@@ -1,1 +1,1 @@
-import '../../_common/style/mobile/components/date-time-picker/_index.less';
+import '../../_common/style/mobile/components/date-time-picker/v2/_index.less';

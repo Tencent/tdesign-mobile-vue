@@ -4,10 +4,8 @@
       <div v-if="leftIconContent" :class="`${name}__left-icon`">
         <t-node :content="leftIconContent" />
       </div>
-      <template v-if="image">
-        <img v-if="typeof image === 'string'" :src="image" :class="`${name}__left-image`" />
-        <t-node v-else :content="imageContent" />
-      </template>
+      <img v-if="typeof image === 'string'" :src="image" :class="`${name}__left-image`" />
+      <t-node v-else :content="imageContent" />
     </div>
     <div v-if="titleContent" :class="`${name}__title`">
       <t-node :content="titleContent" /><span v-if="required" :class="`${name}--required`">&nbsp;*</span>

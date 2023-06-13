@@ -1,21 +1,14 @@
 <template>
   <div :class="[`${name}`, `${name}--${layout}`, { [`${name}--bordered`]: border }]" :style="rootStyle">
-    <t-badge v-if="badge" v-bind="badge">
-      <t-image
-        v-if="realImage"
-        shape="round"
-        v-bind="realImage"
-        :class="[`${name}__image`, `${name}__image--${size}`]"
-      />
+    <div :class="[`${name}__image`, `${name}__image--${size}`]">
+      <t-badge v-if="badge" v-bind="badge">
+        <t-image v-if="realImage" shape="round" v-bind="realImage" />
+        <t-node v-else :content="imageContent" />
+      </t-badge>
+      <t-image v-else-if="realImage" shape="round" v-bind="realImage" />
       <t-node v-else :content="imageContent" />
-    </t-badge>
-    <t-image
-      v-else-if="realImage"
-      shape="round"
-      v-bind="realImage"
-      :class="[`${name}__image`, `${name}__image--${size}`]"
-    />
-    <t-node v-else :content="imageContent" />
+    </div>
+
     <div :class="[`${name}__content`, `${name}__content--${layout}`]">
       <div :class="[`${name}__title`, `${name}__title--${size}`]">
         <t-node :content="textContent" />
@@ -31,6 +24,7 @@
 import { defineComponent, getCurrentInstance, computed, inject } from 'vue';
 import isObject from 'lodash/isObject';
 import isString from 'lodash/isString';
+import isFunction from 'lodash/isFunction';
 
 import TImage from '../image';
 import TBadge from '../badge';
@@ -45,7 +39,7 @@ export default defineComponent({
   name,
   components: { TNode, TBadge, TImage },
   props: gridItemProps,
-  setup(props) {
+  setup(props, context) {
     const internalInstance = getCurrentInstance();
     const { column, border, align } = inject<any>('grid');
 
@@ -73,7 +67,9 @@ export default defineComponent({
 
     const realImage = computed(() => {
       if (isString(props.image)) return { src: props.image };
-      if (isObject(props.image)) return props.image;
+      if (isObject(props.image) && !isFunction(props.image) && !context.slots.image) {
+        return props.image;
+      }
       return null;
     });
 

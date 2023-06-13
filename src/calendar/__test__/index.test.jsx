@@ -145,14 +145,16 @@ describe('calendar', () => {
     it(': onConfirm', async () => {
       const time = ref('');
       const character = '-';
+      const onClose = vi.fn();
       const onConfirm = vi.fn((e) => {
         time.value = dayFormat(e, character);
       });
-      const wrapper = mount(<Calendar visible={true} value={value} onConfirm={onConfirm} />);
+      const wrapper = mount(<Calendar visible={true} value={value} onConfirm={onConfirm} onClose={onClose} />);
       const $button = wrapper.findComponent(Button);
       await $button.trigger('click');
       expect(onConfirm).toHaveBeenCalledTimes(1);
       expect(time.value).toEqual([year, month + 1, day].join(character));
+      expect(onClose).toHaveBeenCalledTimes(1);
     });
 
     it(': onSelect', async () => {

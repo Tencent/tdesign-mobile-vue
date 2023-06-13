@@ -90,7 +90,7 @@ describe('picker', () => {
     });
 
     it(': defaultValue', () => {
-      const selector = '.t-picker-item__item--selected';
+      const selector = '.t-picker-item__item--active';
       // valid option value
       let wrapper = mountPicker({ defaultValue: [seasonOptions[1].value] });
       let textContainer = wrapper.find(selector);
@@ -124,7 +124,7 @@ describe('picker', () => {
     it(': value', async () => {
       const value = ref([seasonOptions[1].value]);
       const wrapper = mount(<Picker v-model={value.value} {...commonProps} />);
-      const textContainer = wrapper.find('.t-picker-item__item--selected');
+      const textContainer = wrapper.find('.t-picker-item__item--active');
       expect(textContainer.text()).toBe(seasonOptions[1].label);
 
       await simulateMoveOption(wrapper.find('.t-picker-item').element, 2);
@@ -239,7 +239,7 @@ describe('picker', () => {
       pickerItemRef.value.setIndex(2);
       await nextTick();
 
-      const textContainer = wrapper.find('.t-picker-item__item--selected');
+      const textContainer = wrapper.find('.t-picker-item__item--active');
       expect(textContainer.text()).toBe(seasonOptions[2].label);
     });
 
@@ -254,7 +254,7 @@ describe('picker', () => {
       pickerItemRef.value.setValue(seasonOptions[2].value);
       await nextTick();
 
-      const textContainer = wrapper.find('.t-picker-item__item--selected');
+      const textContainer = wrapper.find('.t-picker-item__item--active');
       expect(textContainer.text()).toBe(seasonOptions[2].label);
     });
 
@@ -305,7 +305,7 @@ describe('picker', () => {
       await sleep(1000);
 
       // scroll  to the last one
-      const textContainer = wrapper.find('.t-picker-item__item--selected');
+      const textContainer = wrapper.find('.t-picker-item__item--active');
       expect(textContainer.text()).toBe(seasonOptions[3].label);
     });
 
@@ -313,7 +313,7 @@ describe('picker', () => {
       const wrapper = mountPicker();
       const el = wrapper.find('.t-picker-item').element;
       simulateMoveOption(el, 2);
-      const textContainer = wrapper.find('.t-picker-item__item--selected');
+      const textContainer = wrapper.find('.t-picker-item__item--active');
       expect(textContainer.text()).toBe(seasonOptions[2].label);
     });
   });
