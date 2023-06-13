@@ -127,17 +127,16 @@ describe('swiper', () => {
     });
     await sleep(interval + duration);
     expect(wrapper.element).toMatchSnapshot();
-    const $swiper = wrapper.find(`.${classPrefix}`);
+    // const $swiper = wrapper.find(`.${classPrefix}`);
     const $swiperContainer = wrapper.find(`.${classPrefix}__container`);
     $swiperContainer.trigger(`transitionend`);
-    expect(
-      $swiperContainer
-        .attributes('style')
-        .includes(`flex-direction: column; transform: translateY(-${height * (1 + current.value)}px);`),
-    );
+    // expect(
+    //   $swiperContainer
+    //     .attributes('style')
+    //     .includes(`flex-direction: column; transform: translateY(-${height * (1 + current.value)}px);`),
+    // );
 
     // height = 200
-    expect($swiper.attributes('style').includes(`height: ${height}px;`));
     expect($swiperContainer.attributes('style').includes(`height: ${height}px;`));
 
     // 导航器 dots-bar

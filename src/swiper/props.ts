@@ -52,7 +52,7 @@ export default {
   },
   /** 当使用垂直方向滚动时的高度 */
   height: {
-    type: Number,
+    type: [String, Number] as PropType<TdSwiperProps['height']>,
   },
   /** 轮播间隔时间 */
   interval: {

@@ -395,11 +395,10 @@ exports[`ActionSheet > ActionSheet gridMultipleVue demo works fine 1`] = `
           <div
             class="t-swiper t-swiper--default t-action-sheet__swiper-wrap"
             pagination-position="bottom"
-            style="height: 192px;"
           >
             <div
               class="t-swiper__container"
-              style="flex-direction: row; transition: none;"
+              style="flex-direction: row; transition: none; height: auto;"
             >
               
               
@@ -1083,11 +1082,11 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
           <div
             class="t-swiper t-swiper--default t-action-sheet__swiper-wrap"
             pagination-position="bottom"
-            style="height: 192px; display: none;"
+            style="display: none;"
           >
             <div
               class="t-swiper__container"
-              style="flex-direction: row; transition: none;"
+              style="flex-direction: row; transition: none; height: auto;"
             >
               
               
@@ -2035,11 +2034,11 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
           <div
             class="t-swiper t-swiper--default t-action-sheet__swiper-wrap"
             pagination-position="bottom"
-            style="height: 192px; display: none;"
+            style="display: none;"
           >
             <div
               class="t-swiper__container"
-              style="flex-direction: row; transition: none;"
+              style="flex-direction: row; transition: none; height: auto;"
             >
               
               
@@ -2987,11 +2986,11 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
           <div
             class="t-swiper t-swiper--default t-action-sheet__swiper-wrap"
             pagination-position="bottom"
-            style="height: 192px; display: none;"
+            style="display: none;"
           >
             <div
               class="t-swiper__container"
-              style="flex-direction: row; transition: none;"
+              style="flex-direction: row; transition: none; height: auto;"
             >
               
               
@@ -5779,11 +5778,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               <div
                 class="t-swiper t-swiper--default t-action-sheet__swiper-wrap"
                 pagination-position="bottom"
-                style="height: 192px; display: none;"
+                style="display: none;"
               >
                 <div
                   class="t-swiper__container"
-                  style="flex-direction: row; transition: none;"
+                  style="flex-direction: row; transition: none; height: auto;"
                 >
                   
                   
@@ -6731,11 +6730,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               <div
                 class="t-swiper t-swiper--default t-action-sheet__swiper-wrap"
                 pagination-position="bottom"
-                style="height: 192px; display: none;"
+                style="display: none;"
               >
                 <div
                   class="t-swiper__container"
-                  style="flex-direction: row; transition: none;"
+                  style="flex-direction: row; transition: none; height: auto;"
                 >
                   
                   
@@ -7683,11 +7682,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               <div
                 class="t-swiper t-swiper--default t-action-sheet__swiper-wrap"
                 pagination-position="bottom"
-                style="height: 192px; display: none;"
+                style="display: none;"
               >
                 <div
                   class="t-swiper__container"
-                  style="flex-direction: row; transition: none;"
+                  style="flex-direction: row; transition: none; height: auto;"
                 >
                   
                   
@@ -8799,11 +8798,10 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               <div
                 class="t-swiper t-swiper--default t-action-sheet__swiper-wrap"
                 pagination-position="bottom"
-                style="height: 192px;"
               >
                 <div
                   class="t-swiper__container"
-                  style="flex-direction: row; transition: none;"
+                  style="flex-direction: row; transition: none; height: auto;"
                 >
                   
                   

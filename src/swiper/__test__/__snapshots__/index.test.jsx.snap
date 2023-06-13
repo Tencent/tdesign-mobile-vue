@@ -3,11 +3,10 @@
 exports[`swiper > height & direction 1`] = `
 <div
   class="t-swiper t-swiper--default"
-  style="height: 200px;"
 >
   <div
     class="t-swiper__container"
-    style="flex-direction: column; transition: transform 100ms; transform: translateY(0px);"
+    style="flex-direction: column; transition: transform 100ms; height: 200px; transform: translateY(0px);"
   >
     
     

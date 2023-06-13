@@ -45,7 +45,7 @@ export interface TdSwiperProps {
   /**
    * 当使用垂直方向滚动时的高度
    */
-  height?: number;
+  height?: number | string;
   /**
    * 轮播间隔时间
    * @default 5000

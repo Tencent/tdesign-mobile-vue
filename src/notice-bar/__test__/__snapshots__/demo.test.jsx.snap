@@ -1204,11 +1204,10 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
           <div>
             <div
               class="t-swiper t-swiper--default t-notice-bar__content--vertical"
-              style="height: 22px;"
             >
               <div
                 class="t-swiper__container"
-                style="flex-direction: column; transition: none;"
+                style="flex-direction: column; transition: none; height: auto;"
               >
                 
                 
@@ -1398,11 +1397,10 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
       <div>
         <div
           class="t-swiper t-swiper--default t-notice-bar__content--vertical"
-          style="height: 22px;"
         >
           <div
             class="t-swiper__container"
-            style="flex-direction: column; transition: none;"
+            style="flex-direction: column; transition: none; height: auto;"
           >
             
             

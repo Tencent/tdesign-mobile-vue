@@ -1,11 +1,13 @@
 <template>
-  <div :class="name" :style="rootStyle">
+  <div ref="selfRef" :class="name" :style="rootStyle">
     <slot />
   </div>
 </template>
 
 <script lang="ts">
-import { ref, inject, computed, getCurrentInstance, onMounted, onUnmounted } from 'vue';
+import { ref, inject, computed, getCurrentInstance, onMounted, onUnmounted, watch } from 'vue';
+import { useElementBounding } from '@vueuse/core';
+
 import config from '../config';
 
 const { prefix } = config;
@@ -17,7 +19,8 @@ export default {
 </script>
 
 <script lang="ts" setup>
-const { addChild, removeChild, isVertical, root, loop, items } = inject('parent') as any;
+const { addChild, removeChild, isVertical, root, loop, items, setContainerHeight } = inject('parent') as any;
+const selfRef = ref(null);
 const rootStyle = ref('');
 const instance = getCurrentInstance();
 
@@ -34,9 +37,15 @@ const calcTranslateStyle = (index: number, activeIndex: number) => {
 
   rootStyle.value = `transform: translate${direction.value}(${step * distance}px)`;
 };
+const { height } = useElementBounding(selfRef);
+
+watch(height, (val) => {
+  setContainerHeight(val);
+});
 
 onMounted(() => {
   addChild({
+    proxy: instance?.proxy,
     uid: instance?.uid,
     calcTranslateStyle,
   });

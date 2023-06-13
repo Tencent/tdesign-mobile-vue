@@ -3,6 +3,7 @@
     <t-swiper
       :autoplay="true"
       :navigation="{ showControls: true, paginationPosition: 'bottom-right' }"
+      height="192"
       @change="handleChange"
     >
       <t-swiper-item v-for="(item, index) in swiperList" :key="index">

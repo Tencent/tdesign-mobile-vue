@@ -5,7 +5,7 @@
       :navigation="{ type: 'fraction', paginationPosition: 'bottom-right' }"
       @change="handleChange"
     >
-      <t-swiper-item v-for="(item, index) in swiperList" :key="index">
+      <t-swiper-item v-for="(item, index) in swiperList" :key="index" style="height: 192px">
         <img :src="item" class="img" />
       </t-swiper-item>
     </t-swiper>
