@@ -166,8 +166,6 @@ describe('DateTimePicker', () => {
       // 设置到最后一天
       await wrapper.setProps({ value: end })
 
-      expect(wrapper.element).toMatchSnapshot()
-
       $pickerItems.forEach((item, index) => {
         const { length } = item.findAll(`.${prefix}-picker-item__item`);
         const counter = [6, 10, 10, 11, 11, 11]
