@@ -82,8 +82,6 @@ export default defineComponent({
         el: root.value,
         defaultIndex: getIndexByValue(props.value) || 0,
         onChange: (index: number) => {
-          console.log('onchange');
-
           const curItem = props.options[index];
           const changeValue = { value: curItem.value, index };
           emitEvent('pick', changeValue);

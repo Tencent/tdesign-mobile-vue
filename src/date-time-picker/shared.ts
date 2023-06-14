@@ -1,13 +1,8 @@
-import isString from 'lodash/isString';
 import isArray from 'lodash/isArray';
 
 export const getMeaningColumn = (mode: string | string[]) => {
   const arr = ['year', 'month', 'date', 'hour', 'minute', 'second'];
 
-  if (isString(mode)) {
-    const cutIndex = arr.indexOf(mode);
-    return arr.slice(0, cutIndex + 1);
-  }
   if (isArray(mode)) {
     const ans = [];
     const [dateMode, timeMode] = mode;
@@ -25,5 +20,8 @@ export const getMeaningColumn = (mode: string | string[]) => {
     }
     return ans;
   }
-  return [];
+
+  const cutIndex = arr.indexOf(mode);
+
+  return arr.slice(0, cutIndex + 1);
 };

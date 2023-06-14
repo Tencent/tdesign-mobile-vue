@@ -1,12 +1,11 @@
 <template>
   <t-picker
     :class="className"
-    :value="pickerValue"
+    :value="valueOfPicker"
     :title="title"
     :confirm-btn="confirmButtonText"
     :cancel-btn="cancelButtonText"
     :columns="columns"
-    @change="onChange"
     @confirm="onConfirm"
     @cancel="onCancel"
     @pick="onPick"
@@ -52,71 +51,20 @@ export default defineComponent({
     const emitEvent = useEmitEvent(props, context.emit);
     const className = computed(() => [`${name}`]);
     const { value, modelValue } = toRefs(props);
-    const [dateTimePickerValue, setDateTimePickerValue] = useVModel(
-      value,
-      modelValue,
-      props.defaultValue,
-      props.onChange,
-    );
-    const innerValue = ref(dateTimePickerValue.value);
+    const [innerValue, setDateTimePickerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
     const title = computed(() => {
       return props.title || '选择时间';
     });
     const confirmButtonText = computed(() => props.confirmBtn || '确定');
     const cancelButtonText = computed(() => props.cancelBtn || '取消');
-
-    const start = computed(() => {
-      return props.start && dayjs(props.start).isValid() ? dayjs(props.start) : dayjs().subtract(10, 'year');
-    });
-
-    const end = computed(() => {
-      return props.end && dayjs(props.end).isValid() ? dayjs(props.end) : dayjs().add(10, 'year');
-    });
+    const normalize = (val: string | number, defaultDay: Dayjs) =>
+      val && dayjs(val).isValid() ? dayjs(val) : defaultDay;
+    const start = computed(() => normalize(props.start, dayjs().subtract(10, 'year')));
+    const end = computed(() => normalize(props.end, dayjs().add(10, 'year')));
 
     const meaningColumn = computed(() => getMeaningColumn(props.mode));
     const isTimeMode = computed(
-      () => ['hour', 'minute', 'second'].includes(props.mode) || (isArray(props.mode) && props.mode[0] == null),
-    );
-
-    // 根据mode，判断是否需要渲染'year','month','date','hour','minute','second'对应的列
-    const isPrecision = (type: string) => {
-      if (!props.mode) {
-        return false;
-      }
-
-      const arrayIndex = ['year', 'month', 'date'].includes(type) ? 0 : 1;
-
-      if (type in precisionRankRecord) {
-        return (
-          (isString(props.mode) && precisionRankRecord[props.mode] >= precisionRankRecord[type]) ||
-          (isArray(props.mode) && precisionRankRecord[props.mode[arrayIndex]] >= precisionRankRecord[type])
-        );
-      }
-
-      return true;
-    };
-
-    // 将dateTimeValue格式的值转为pickerValue，赋值给picker组件的value
-    const getPickerValueByDateTimePickerValue = (currentDate: Dayjs) => {
-      const ret: PickerValue[] = [];
-      Object.keys(precisionRankRecord).forEach((item) => {
-        if (isPrecision(item)) {
-          ret.push(`${currentDate[item]()}`);
-        }
-      });
-      return ret;
-    };
-
-    const curDate = ref(
-      (() => {
-        let currentValue = innerValue.value;
-        if (isTimeMode.value) {
-          const dateStr = dayjs(start.value).format('YYYY-MM-DD');
-          currentValue = `${dateStr} ${currentValue}`;
-        }
-
-        return currentValue && dayjs(currentValue).isValid() ? dayjs(currentValue) : start.value;
-      })(),
+      () => isArray(props.mode) && props.mode[0] == null && ['hour', 'minute', 'second'].includes(props.mode[1]),
     );
 
     const rationalize = (val: Dayjs) => {
@@ -126,12 +74,29 @@ export default defineComponent({
       return val;
     };
 
-    const pickerValue = computed(() => getPickerValueByDateTimePickerValue(curDate.value));
+    const calcDate = (currentValue: string | number) => {
+      if (isTimeMode.value) {
+        const dateStr = dayjs(start.value).format('YYYY-MM-DD');
+        currentValue = `${dateStr} ${currentValue}`;
+      }
+
+      return currentValue && dayjs(currentValue).isValid() ? rationalize(dayjs(currentValue)) : start.value;
+    };
+    const curDate = ref(calcDate(innerValue.value));
+
+    const valueOfPicker = computed(() => meaningColumn.value.map((item) => curDate.value[item]().toString()));
 
     // 每次pick后，根据start,end生成最新的columns
     const columns = computed(() => {
       const ret: PickerColumn[] = [];
-      const getDate = (date: Dayjs) => [date.year(), date.month() + 1, date.date(), date.minute(), date.second()];
+      const getDate = (date: Dayjs) => [
+        date.year(),
+        date.month() + 1,
+        date.date(),
+        date.hour(),
+        date.minute(),
+        date.second(),
+      ];
       const [curYear, curMonth, curDay, curHour, curMinute] = getDate(curDate.value);
       const [minYear, minMonth, minDay, minHour, minMinute, minSecond] = getDate(start.value);
       const [maxYear, maxMonth, maxDay, maxHour, maxMinute, maxSecond] = getDate(end.value);
@@ -168,35 +133,35 @@ export default defineComponent({
         ret.push(arr);
       };
 
-      if (isPrecision('year')) {
+      if (meaningColumn.value.includes('year')) {
         generateColumn(minYear, maxYear, 'year');
       }
 
-      if (isPrecision('month')) {
+      if (meaningColumn.value.includes('month')) {
         const lower = isInMinYear ? minMonth : 1;
         const upper = isInMaxYear ? maxMonth : 12;
         generateColumn(lower, upper, 'month');
       }
 
-      if (isPrecision('date')) {
+      if (meaningColumn.value.includes('date')) {
         const lower = isInMinMonth ? minDay : 1;
         const upper = isInMaxMonth ? maxDay : dayjs(`${curYear}-${curMonth}`).daysInMonth();
         generateColumn(lower, upper, 'date');
       }
 
-      if (isPrecision('hour')) {
+      if (meaningColumn.value.includes('hour')) {
         const lower = isInMinDay && !isTimeMode.value ? minHour : 0;
         const upper = isInMaxDay && !isTimeMode.value ? maxHour : 23;
         generateColumn(lower, upper, 'hour');
       }
 
-      if (isPrecision('minute')) {
+      if (meaningColumn.value.includes('minute')) {
         const lower = isInMinHour && !isTimeMode.value ? minMinute : 0;
         const upper = isInMaxHour && !isTimeMode.value ? maxMinute : 59;
         generateColumn(lower, upper, 'minute');
       }
 
-      if (isPrecision('second')) {
+      if (meaningColumn.value.includes('second')) {
         const lower = isInMinMinute && !isTimeMode.value ? minSecond : 0;
         const upper = isInMaxMinute && !isTimeMode.value ? maxSecond : 59;
         generateColumn(lower, upper, 'second');
@@ -204,16 +169,13 @@ export default defineComponent({
       return ret;
     });
 
-    const onConfirm = (value: Array<PickerValue>, context: { index: number[] }) => {
+    const onConfirm = () => {
       emitEvent('confirm', dayjs(curDate.value).format(props.format));
+      setDateTimePickerValue(dayjs(curDate.value).format(props.format));
     };
 
     const onCancel = (context: { e: MouseEvent }) => {
       emitEvent('cancel', { e: context.e });
-    };
-
-    const onChange = (value: Array<PickerValue>, context: { columns: Array<PickerContext>; e: MouseEvent }) => {
-      emitEvent('change', dayjs(curDate.value).format(props.format));
     };
 
     const onPick = (value: Array<PickerValue>, context: PickerContext) => {
@@ -222,8 +184,12 @@ export default defineComponent({
       const val = curDate.value.set(type as UnitType, parseInt(columns.value[column][index]?.value, 10));
 
       curDate.value = rationalize(val);
-      emitEvent('pick', curDate.value.format(props.format));
+      emitEvent('pick', rationalize(val).format(props.format));
     };
+
+    watch(innerValue, (val) => {
+      curDate.value = calcDate(val);
+    });
 
     return {
       className,
@@ -232,12 +198,11 @@ export default defineComponent({
       title,
       start,
       end,
-      pickerValue,
+      valueOfPicker,
       columns,
       onConfirm,
       onCancel,
       onPick,
-      onChange,
     };
   },
 });
