@@ -226,7 +226,7 @@ export default defineComponent({
     onMounted(() => {
       getInitialStyle();
       if (range.value) {
-        const left = (state.maxRange * (innerValue.value[0] - min.value)) / (max.value - min.value); // @ts-ignore
+        const left = (state.maxRange * (innerValue.value?.[0] ?? 0 - min.value)) / (max.value - min.value); // @ts-ignore
         const right = (state.maxRange * (max.value - innerValue.value[1])) / (max.value - min.value); // @ts-ignore
         // 因为要计算点相对于线的绝对定位，所以要取整条线的长度而非可滑动的范围
         setLineStyle(left, right);
