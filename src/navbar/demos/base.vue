@@ -1,7 +1,7 @@
 <template>
   <t-navbar title="标题文字" :fixed="false" left-arrow @left-click="handleClick" />
 
-  <t-navbar title="这是一个超长的标题文字也会自动省略" :fixed="false" left-arrow @left-click="handleClick">
+  <t-navbar title="标题文字" :fixed="false" left-arrow @left-click="handleClick">
     <template #left>
       <t-icon name="close" size="24px" />
     </template>
@@ -10,7 +10,7 @@
     </template>
   </t-navbar>
 
-  <t-navbar title="只能显示五个字" :title-max-length="5" :fixed="false" @left-click="handleClick">
+  <t-navbar title="标题文字超出" :title-max-length="5" :fixed="false" @left-click="handleClick">
     <template #capsule>
       <div class="custom-capsule">
         <t-icon name="chevron-left" size="20px" class="custom-capsule__icon" />
