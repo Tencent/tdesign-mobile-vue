@@ -2,9 +2,49 @@ import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import ActionSheet from '../action-sheet.vue';
 import MenuGrid from '../action-sheet-grid.vue';
+import { GridItem as TGridItem } from '../../grid/index';
+import TBadge from '../../badge/index';
+import config from '../../config';
+
+const { prefix } = config;
+const name = `${prefix}-action-sheet`;
 
 describe('ActionSheet', () => {
   describe('props', () => {
+    it('items', async () => {
+      const wrapper = mount(ActionSheet, {
+        props: {
+          items: [
+            {
+              label: '选项一',
+              badge: { count: 1 },
+            },
+            {
+              label: '选项二',
+              badge: { dot: true },
+            },
+          ],
+          visible: true,
+        },
+      });
+      expect(wrapper.find(`.${name}__content`).exists()).toEqual(true);
+      expect(wrapper.findAllComponents(TBadge).length).toEqual(2);
+    });
+    it('align', async () => {
+      const alignList = ['', 'center', 'left'];
+
+      alignList.map((align, index) => {
+        const wrapper = mount(() => (
+          <ActionSheet items={[]} visible={true} description={'动作面板描述文字'} align={align}></ActionSheet>
+        ));
+        if (align === 'left') {
+          expect(wrapper.find(`.${name}__description--left`).exists()).toBeTruthy();
+        } else {
+          expect(wrapper.find(`.${name}__description--left`).exists()).toBeFalsy();
+        }
+      });
+    });
+
     it('showCancel', async () => {
       const wrapper = mount(ActionSheet, {
         props: {
@@ -12,11 +52,11 @@ describe('ActionSheet', () => {
           visible: true,
         },
       });
-      expect(wrapper.find('.t-action-sheet__content').exists()).toEqual(true);
+      expect(wrapper.find(`.${name}__content`).exists()).toEqual(true);
       await wrapper.setProps({
         showCancel: false,
       });
-      expect(wrapper.find('.t-action-sheet__footer').exists()).toEqual(false);
+      expect(wrapper.find(`.${name}__footer`).exists()).toEqual(false);
     });
 
     it('cancelText', async () => {
@@ -26,11 +66,11 @@ describe('ActionSheet', () => {
           visible: true,
         },
       });
-      expect(wrapper.find('.t-action-sheet__footer').text()).toEqual('取消');
+      expect(wrapper.find(`.${name}__footer`).text()).toEqual('取消');
       await wrapper.setProps({
         cancelText: 'Cancel',
       });
-      expect(wrapper.find('.t-action-sheet__footer').text()).toEqual('Cancel');
+      expect(wrapper.find(`.${name}__footer`).text()).toEqual('Cancel');
     });
 
     it('theme', async () => {
@@ -41,13 +81,13 @@ describe('ActionSheet', () => {
           visible: true,
         },
       });
-      expect(wrapper.find('.t-action-sheet__list').exists()).toEqual(true);
-      expect(wrapper.find('.t-action-sheet__grid').exists()).toEqual(false);
+      expect(wrapper.find(`.${name}__list`).exists()).toEqual(true);
+      expect(wrapper.find(`.${name}__grid`).exists()).toEqual(false);
       await wrapper.setProps({
         theme: 'grid',
       });
-      expect(wrapper.find('.t-action-sheet__list').exists()).toEqual(false);
-      expect(wrapper.find('.t-action-sheet__grid').exists()).toEqual(true);
+      expect(wrapper.find(`.${name}__list`).exists()).toEqual(false);
+      expect(wrapper.find(`.${name}__grid`).exists()).toEqual(true);
     });
 
     it('count', async () => {
@@ -73,43 +113,57 @@ describe('ActionSheet', () => {
           items: [],
         },
       });
-      expect(wrapper.find('.t-popup').isVisible()).toEqual(false);
+      expect(wrapper.find(`.${prefix}-popup`).isVisible()).toEqual(false);
       await wrapper.setProps({
         visible: true,
       });
-      expect(wrapper.find('.t-popup').isVisible()).toEqual(true);
+      expect(wrapper.find(`.${prefix}-popup`).isVisible()).toEqual(true);
     });
   });
 
   describe('events', () => {
-    it('onSelected', () => {
+    it('onSelected', async () => {
       const onSelected = vi.fn();
       const wrapper = mount(ActionSheet, {
         props: {
+          theme: 'list',
           visible: true,
           items: ['确定', '删除'],
           onSelected,
         },
       });
-      wrapper.findAll('.t-action-sheet__list-item')[0].trigger('click');
+      wrapper.findAll(`.${name}__list-item`)[0].trigger('click');
       expect(onSelected).toHaveBeenCalledTimes(1);
       expect(onSelected).toHaveBeenLastCalledWith('确定', 0);
-      wrapper.findAll('.t-action-sheet__list-item')[1].trigger('click');
+      wrapper.findAll(`.${name}__list-item`)[1].trigger('click');
       expect(onSelected).toHaveBeenCalledTimes(2);
+      expect(onSelected).toHaveBeenLastCalledWith('删除', 1);
+
+      await wrapper.setProps({
+        theme: 'grid',
+      });
+
+      const $TGridItems = wrapper.findAllComponents(TGridItem);
+      expect($TGridItems.length).toEqual(2);
+      $TGridItems[0].trigger('click');
+      expect(onSelected).toHaveBeenCalledTimes(3);
+      expect(onSelected).toHaveBeenLastCalledWith('确定', 0);
+      $TGridItems[1].trigger('click');
+      expect(onSelected).toHaveBeenCalledTimes(4);
       expect(onSelected).toHaveBeenLastCalledWith('删除', 1);
     });
 
     it('onCancel', () => {
       const onCancel = vi.fn();
       const wrapper = mount(() => <ActionSheet visible items={['确定', '删除']} onCancel={onCancel} />);
-      wrapper.find('.t-action-sheet__cancel').trigger('click');
+      wrapper.find(`.${name}__cancel`).trigger('click');
       expect(onCancel).toHaveBeenCalledTimes(1);
     });
 
     it('onClose', () => {
       const onClose = vi.fn();
       const wrapper = mount(() => <ActionSheet visible items={['确定', '删除']} onClose={onClose} />);
-      wrapper.find('.t-overlay').trigger('click');
+      wrapper.find(`.${prefix}-overlay`).trigger('click');
       expect(onClose).toHaveBeenCalledTimes(1);
     });
   });
@@ -133,10 +187,10 @@ describe('MenuGrid', () => {
         count: 1,
       },
     });
-    expect(wrapper.findAll('.t-grid')).toHaveLength(3);
+    expect(wrapper.findAll(`.${prefix}-grid`)).toHaveLength(3);
     await wrapper.setProps({
       count: 2,
     });
-    expect(wrapper.findAll('.t-grid')).toHaveLength(2);
+    expect(wrapper.findAll(`.${prefix}-grid`)).toHaveLength(2);
   });
 });
