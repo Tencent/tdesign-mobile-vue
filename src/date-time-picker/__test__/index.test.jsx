@@ -1,6 +1,8 @@
 import { nextTick, ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
+import dayjs from 'dayjs';
+
 import DateTimePicker from '../date-time-picker.vue';
 import PickerItem from '../../picker/picker-item.vue';
 import { DEFAULT_ITEM_HEIGHT, ANIMATION_TIME_LIMIT } from '../../picker/picker.class';
@@ -106,13 +108,13 @@ describe('DateTimePicker', () => {
     });
 
     it(': mode', async () => {
-      const defaultValue = defaultDateTime;
-      const modeArray = ['date', 'second'];
+      const onPick = vi.mock();
       const wrapper = mount(DateTimePicker, {
         props: {
-          defaultValue,
+          defaultValue: defaultDateTime,
           title: 'mode 测试',
-          mode: modeArray,
+          mode: ['date', 'second'],
+          onPick
         },
       });
       // mode = ['date', 'second'], 渲染年月日时分秒，6列
@@ -120,26 +122,38 @@ describe('DateTimePicker', () => {
       expect(pickerItem.exists()).toBeTruthy();
       const $pickerItems = wrapper.findAllComponents(PickerItem);
       expect($pickerItems).toHaveLength(6);
-      await wrapper.setProps({
-        mode: false,
-      });
-      // mode = false, 不渲染列
-      expect(pickerItem.exists()).toBeFalsy();
+
+      // pick
+      const el = wrapper.findAll(`.${prefix}-picker-item`);
+      const touchItemIndex = 0;
+      const touchIndex = 2;
+      simulateMoveOption(el[touchItemIndex].element, touchIndex);
     });
 
-    it(': start && end ', async () => {
-      const defaultValue = defaultDateTime;
-      const start = '2020-6-30';
-      const end = '2025-6-30';
+    it(': time mode', async () => {
+      const wrapper = mount(DateTimePicker, {
+        props: {
+          value: '10:00:00',
+          mode: [null, 'second'],
+          format: 'HH:mm:ss',
+          start: '2023-06-13'
+        },
+      });
+      expect(wrapper.vm.valueOfPicker).toStrictEqual(['10', '0', '0'])
+    })
 
+    it(': start && end ', async () => {
+      const start = '2020-6-30 10:00:00';
+      const end = '2025-10-10 10:10:10';
       const startYear = start.split('-')[0];
       const endYear = end.split('-')[0];
 
       const wrapper = mount(DateTimePicker, {
         props: {
-          defaultValue,
+          value: start,
           start,
           end,
+          mode: 'second'
         },
       });
       const $pickerItems = wrapper.findAllComponents(PickerItem);
@@ -148,6 +162,17 @@ describe('DateTimePicker', () => {
         res[precisionRankRecord[index]] = item.findAll(`.${prefix}-picker-item__item`);
       });
       expect(res[precisionRankRecord[0]].length).toEqual(endYear - startYear + 1);
+
+      // 设置到最后一天
+      await wrapper.setProps({ value: end })
+
+      expect(wrapper.element).toMatchSnapshot()
+
+      $pickerItems.forEach((item, index) => {
+        const { length } = item.findAll(`.${prefix}-picker-item__item`);
+        const counter = [6, 10, 10, 11, 11, 11]
+        expect(length).toBe(counter[index])
+      });
     });
 
     it(': renderLabel', async () => {
