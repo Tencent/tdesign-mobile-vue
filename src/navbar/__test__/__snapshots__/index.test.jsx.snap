@@ -3,7 +3,7 @@
 exports[`navbar > events > left-click 1`] = `
 <div
   class="t-navbar t-navbar--fixed t-navbar--visible-animation"
-  style="position: fixed; --td-navbar-padding-top: 0px; --td-navbar-right: 0px;"
+  style="position: fixed;"
 >
   <div
     class="t-navbar____placeholder"
@@ -41,11 +41,7 @@ exports[`navbar > events > left-click 1`] = `
         标题
       </span>
     </div>
-    <div
-      class="t-navbar__right"
-    >
-      <!---->
-    </div>
+    <!--v-if-->
   </div>
 </div>
 `;
@@ -53,7 +49,7 @@ exports[`navbar > events > left-click 1`] = `
 exports[`navbar > events > right-click 1`] = `
 <div
   class="t-navbar t-navbar--fixed t-navbar--visible-animation"
-  style="position: fixed; --td-navbar-padding-top: 0px; --td-navbar-right: 0px;"
+  style="position: fixed;"
 >
   <div
     class="t-navbar____placeholder"
