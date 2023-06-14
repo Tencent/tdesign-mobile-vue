@@ -76,7 +76,6 @@ export default defineComponent({
       [`${name}__dots`]: pageNum.value > 1,
     }));
     const handleSelected = (i: any) => {
-      console.log('==grid==', i);
       emitEvent('selected', i);
     };
 
