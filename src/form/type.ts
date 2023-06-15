@@ -37,8 +37,8 @@ export interface TdFormProps<FormData extends Data = Data> {
    */
   labelAlign?: 'left' | 'right' | 'top';
   /**
-   * 可以整体设置label标签宽度，默认为100px
-   * @default '100px'
+   * 可以整体设置label标签宽度，默认为81px
+   * @default '81px'
    */
   labelWidth?: string | number;
   /**

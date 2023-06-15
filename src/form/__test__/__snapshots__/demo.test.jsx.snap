@@ -25,6 +25,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       </div>
       <div
         class="t-form__controls"
+        style="margin-left: 81px;"
       >
         <div
           class="t-form__controls-content t-form__controls--left"
@@ -100,6 +101,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       </div>
       <div
         class="t-form__controls"
+        style="margin-left: 81px;"
       >
         <div
           class="t-form__controls-content t-form__controls--left"
@@ -171,6 +173,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       </div>
       <div
         class="t-form__controls"
+        style="margin-left: 81px;"
       >
         <div
           class="t-form__controls-content t-form__controls--left"
@@ -317,6 +320,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       </div>
       <div
         class="t-form__controls"
+        style="margin-left: 81px;"
       >
         <div
           class="t-form__controls-content t-form__controls--right"
@@ -751,6 +755,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       </div>
       <div
         class="t-form__controls"
+        style="margin-left: 81px;"
       >
         <div
           class="t-form__controls-content t-form__controls--right"
@@ -1015,6 +1020,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       </div>
       <div
         class="t-form__controls"
+        style="margin-left: 81px;"
       >
         <div
           class="t-form__controls-content t-form__controls--right"
@@ -1090,6 +1096,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       </div>
       <div
         class="t-form__controls"
+        style="margin-left: 81px;"
       >
         <div
           class="t-form__controls-content t-form__controls--right"
@@ -1315,6 +1322,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       </div>
       <div
         class="t-form__controls"
+        style="margin-left: 81px;"
       >
         <div
           class="t-form__controls-content t-form__controls--left"
@@ -1368,6 +1376,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       </div>
       <div
         class="t-form__controls"
+        style="margin-left: 81px;"
       >
         <div
           class="t-form__controls-content t-form__controls--left"
@@ -1739,6 +1748,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-form__controls"
+              style="margin-left: 81px;"
             >
               <div
                 class="t-form__controls-content t-form__controls--left"
@@ -1814,6 +1824,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-form__controls"
+              style="margin-left: 81px;"
             >
               <div
                 class="t-form__controls-content t-form__controls--left"
@@ -1885,6 +1896,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-form__controls"
+              style="margin-left: 81px;"
             >
               <div
                 class="t-form__controls-content t-form__controls--left"
@@ -2031,6 +2043,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-form__controls"
+              style="margin-left: 81px;"
             >
               <div
                 class="t-form__controls-content t-form__controls--right"
@@ -2465,6 +2478,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-form__controls"
+              style="margin-left: 81px;"
             >
               <div
                 class="t-form__controls-content t-form__controls--right"
@@ -2729,6 +2743,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-form__controls"
+              style="margin-left: 81px;"
             >
               <div
                 class="t-form__controls-content t-form__controls--right"
@@ -2804,6 +2819,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-form__controls"
+              style="margin-left: 81px;"
             >
               <div
                 class="t-form__controls-content t-form__controls--right"
@@ -3029,6 +3045,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-form__controls"
+              style="margin-left: 81px;"
             >
               <div
                 class="t-form__controls-content t-form__controls--left"
@@ -3082,6 +3099,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-form__controls"
+              style="margin-left: 81px;"
             >
               <div
                 class="t-form__controls-content t-form__controls--left"

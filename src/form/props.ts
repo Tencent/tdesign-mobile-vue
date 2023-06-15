@@ -31,13 +31,13 @@ export default {
   /** 表单字段标签对齐方式：左对齐、右对齐、顶部对齐 */
   labelAlign: {
     type: String as PropType<TdFormProps['labelAlign']>,
-    default: 'left' as TdFormProps['labelAlign'],
+    default: 'right' as TdFormProps['labelAlign'],
     validator(val: TdFormProps['labelAlign']): boolean {
       if (!val) return true;
       return ['left', 'right', 'top'].includes(val);
     },
   },
-  /** 可以整体设置label标签宽度，默认为100px */
+  /** 可以整体设置label标签宽度，默认为81px */
   labelWidth: {
     type: [String, Number] as PropType<TdFormProps['labelWidth']>,
     default: '81px',
