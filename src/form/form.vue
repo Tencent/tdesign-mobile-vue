@@ -174,6 +174,7 @@ export default defineComponent({
     expose({ validate, submit, reset, clearValidate, setValidateMessage });
 
     return {
+      formRef,
       formClass,
       onSubmit,
       onReset,
