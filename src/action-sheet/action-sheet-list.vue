@@ -56,7 +56,6 @@ export default defineComponent({
   },
   emits: ['selected'],
   setup(props, context) {
-    console.log(props.items);
     const handleSelected = (index: number) => {
       context.emit('selected', index);
     };
