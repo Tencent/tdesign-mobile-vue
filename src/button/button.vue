@@ -1,6 +1,6 @@
 <template>
   <button
-    v-hover="{ className: `${name}--hover` }"
+    v-hover="{ className: `${name}--hover`, active: !disabled }"
     :class="buttonClass"
     :disabled="disabled"
     :type="type"
