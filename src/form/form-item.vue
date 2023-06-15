@@ -160,7 +160,7 @@ export default defineComponent({
 
     const errorClasses = computed(() => {
       if (!showErrorMessage.value) return '';
-      if (!errorList.value.length) return;
+      if (!errorList.value.length) return '';
       const type = errorList.value[0].type || 'error';
       return type === 'error' ? `${classPrefix}--error` : `${classPrefix}--warning`;
     });
