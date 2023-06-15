@@ -8,6 +8,9 @@
     <tdesign-demo-block summary="分栏下拉菜单">
       <multipleVue />
     </tdesign-demo-block>
+    <tdesign-demo-block summary="向上展开">
+      <directionVue />
+    </tdesign-demo-block>
     <tdesign-demo-block title="02 组件状态" summary="禁用状态">
       <disabledVue />
     </tdesign-demo-block>
@@ -23,6 +26,7 @@ import customizedVue from './customized.vue';
 import singleVue from './single.vue';
 import multipleVue from './multiple.vue';
 import disabledVue from './disabled.vue';
+import directionVue from './direction.vue';
 </script>
 
 <style lang="less" scoped>

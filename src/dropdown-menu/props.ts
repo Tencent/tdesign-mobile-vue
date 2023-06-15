@@ -13,6 +13,15 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 菜单展开方向 */
+  direction: {
+    type: String as PropType<TdDropdownMenuProps['direction']>,
+    default: 'down' as TdDropdownMenuProps['direction'],
+    validator(val: TdDropdownMenuProps['direction']): boolean {
+      if (!val) return true;
+      return ['down', 'up'].includes(val);
+    },
+  },
   /** 动画时长 */
   duration: {
     type: [String, Number] as PropType<TdDropdownMenuProps['duration']>,

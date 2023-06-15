@@ -4,7 +4,8 @@
       <div :class="`${name}__title`">
         {{ item.label }}
       </div>
-      <caret-down-small-icon :class="iconStyle(item, idx)" size="24" />
+      <caret-down-small-icon v-if="$props.direction === 'down'" :class="styleIcon(item, idx)" size="24" />
+      <caret-up-small-icon v-else :class="styleIcon(item, idx)" size="24" />
     </div>
     <slot />
   </div>
@@ -12,7 +13,7 @@
 
 <script lang="ts">
 import { defineComponent, computed, toRefs, ref, reactive, watch, provide } from 'vue';
-import { CaretDownSmallIcon } from 'tdesign-icons-vue-next';
+import { CaretDownSmallIcon, CaretUpSmallIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import {
   context as menuContext,
@@ -31,7 +32,7 @@ const name = `${prefix}-dropdown-menu`;
 
 export default defineComponent({
   name,
-  components: { CaretDownSmallIcon },
+  components: { CaretDownSmallIcon, CaretUpSmallIcon },
   props: DropdownMenuProps,
   emits: ['menuOpened', 'menuClosed'],
   setup(props, { slots, emit }) {
@@ -93,7 +94,7 @@ export default defineComponent({
         [`${name}__item--active`]: idx === state.activeId,
       },
     ]);
-    const iconStyle = computed(() => (item: any, idx: number) => [
+    const styleIcon = computed(() => (item: any, idx: number) => [
       `${name}__icon`,
       {
         [`${name}__icon--active`]: idx === state.activeId,
@@ -167,7 +168,7 @@ export default defineComponent({
       refBar,
       state,
       styleBarItem,
-      iconStyle,
+      styleIcon,
       menuItems,
       menuTitles,
       expandMenu,

@@ -13,6 +13,11 @@ export interface TdDropdownMenuProps {
    */
   closeOnClickOverlay?: boolean;
   /**
+   * 菜单展开方向
+   * @default down
+   */
+  direction?: 'down' | 'up';
+  /**
    * 动画时长
    * @default 200
    */
