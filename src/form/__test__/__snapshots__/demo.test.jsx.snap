@@ -31,7 +31,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-input t-input--layout-horizontal t-input--size-small"
+            class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
             data-v-799be585=""
           >
             <div
@@ -106,7 +106,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-input t-input--layout-horizontal t-input--size-small"
+            class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
             data-v-799be585=""
           >
             <div
@@ -323,7 +323,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-input t-input--layout-horizontal t-input--size-small"
+            class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
             data-v-799be585=""
           >
             <div
@@ -757,7 +757,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-input t-input--layout-horizontal t-input--size-small"
+            class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
             data-v-799be585=""
           >
             <div
@@ -1745,7 +1745,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 
                 <div
-                  class="t-input t-input--layout-horizontal t-input--size-small"
+                  class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
                   data-v-799be585=""
                 >
                   <div
@@ -1820,7 +1820,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 
                 <div
-                  class="t-input t-input--layout-horizontal t-input--size-small"
+                  class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
                   data-v-799be585=""
                 >
                   <div
@@ -2037,7 +2037,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 
                 <div
-                  class="t-input t-input--layout-horizontal t-input--size-small"
+                  class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
                   data-v-799be585=""
                 >
                   <div
@@ -2471,7 +2471,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 
                 <div
-                  class="t-input t-input--layout-horizontal t-input--size-small"
+                  class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
                   data-v-799be585=""
                 >
                   <div
@@ -3332,7 +3332,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-input t-input--layout-horizontal t-input--size-small"
+            class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
             data-v-713b33d2=""
           >
             <div
@@ -3406,7 +3406,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-input t-input--layout-horizontal t-input--size-small"
+            class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
             data-v-713b33d2=""
           >
             <div
@@ -3621,7 +3621,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-input t-input--layout-horizontal t-input--size-small"
+            class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
             data-v-713b33d2=""
           >
             <div
@@ -4054,7 +4054,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-input t-input--layout-horizontal t-input--size-small"
+            class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
             data-v-713b33d2=""
           >
             <div

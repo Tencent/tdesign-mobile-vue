@@ -1,3 +1,4 @@
+
 :: BASE_DOC ::
 
 ## API
@@ -15,6 +16,7 @@ errorMessage | String | - | `deprecated` | N
 format | Function | - | Typescript：`InputFormatType` `type InputFormatType = (value: InputValue) => string`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/input/type.ts) | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 layout | String | horizontal | options：vertical/horizontal | N
+borderless | Boolean | false | \- | N
 maxcharacter | Number | - | \- | N
 maxlength | Number | - | \- | N
 name | String | - | \- | N
