@@ -42,6 +42,11 @@ export interface TdTextareaProps {
    */
   label?: string | TNode;
   /**
+   * 标题输入框布局方式
+   * @default horizontal
+   */
+  layout?: 'vertical' | 'horizontal';
+  /**
    * 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度
    */
   maxcharacter?: number;

@@ -56,6 +56,7 @@ export default defineComponent({
     const textareaClass = computed(() => [
       `${componentName}`,
       {
+        [`${componentName}--layout-${props.layout}`]: props.layout,
         [`${componentName}--border`]: props.bordered,
       },
     ]);
