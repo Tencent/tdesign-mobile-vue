@@ -4,7 +4,6 @@
       row-key="index"
       :data="data"
       :columns="columns"
-      :stripe="stripe"
       :bordered="bordered"
       :show-header="showHeader"
       cell-empty-content="-"
@@ -32,12 +31,11 @@ for (let i = 0; i < total; i++) {
   });
 }
 
-const stripe = ref(true);
 const bordered = ref(true);
 const showHeader = ref(true);
 
 const columns = ref([
-  { colKey: 'applicant', title: '标题', align: 'center', ellipsis: true },
+  { colKey: 'applicant', title: '标题', ellipsis: true },
   {
     colKey: 'status',
     title: '标题',

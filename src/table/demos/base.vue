@@ -35,7 +35,7 @@ const bordered = ref(true);
 const showHeader = ref(true);
 
 const columns = ref([
-  { colKey: 'applicant', title: '标题', align: 'center', ellipsis: true },
+  { colKey: 'applicant', title: '标题', ellipsis: true },
   {
     colKey: 'status',
     title: '标题',
