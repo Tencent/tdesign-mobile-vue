@@ -29,6 +29,15 @@ export default {
   label: {
     type: [String, Function] as PropType<TdTextareaProps['label']>,
   },
+  /** 标题输入框布局方式 */
+  layout: {
+    type: String as PropType<TdTextareaProps['layout']>,
+    default: 'horizontal' as TdTextareaProps['layout'],
+    validator(val: TdTextareaProps['layout']): boolean {
+      if (!val) return true;
+      return ['vertical', 'horizontal'].includes(val);
+    },
+  },
   /** 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度 */
   maxcharacter: {
     type: Number,
