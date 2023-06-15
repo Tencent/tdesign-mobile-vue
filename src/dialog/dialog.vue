@@ -79,14 +79,18 @@ export default defineComponent({
 
     const footerClass = computed(() => [
       `${name}__footer`,
-      props.buttonLayout === 'vertical' ? `${name}__footer--column` : '',
-      isTextStyleBtn.value && get(props.actions, 'length', 0) === 0 ? `${name}__footer--full` : '',
+      {
+        [`${name}__footer--column`]: props.buttonLayout === 'vertical',
+        [`${name}__footer--full`]: isTextStyleBtn.value && get(props.actions, 'length', 0) === 0,
+      },
     ]);
+
     const buttonClass = computed(() => [
       `${name}__button`,
-      props.buttonLayout === 'vertical' ? `${name}__button--vertical` : '',
-      !isTextStyleBtn.value && props.buttonLayout !== 'vertical' ? `${name}__button--horizontal` : ``,
-      isTextStyleBtn.value ? `${name}__button--text` : '',
+      {
+        [`${name}__button--${props.buttonLayout}`]: !isTextStyleBtn.value,
+        [`${name}__button--text`]: isTextStyleBtn.value,
+      },
     ]);
 
     const rootStyles = computed(() => ({
