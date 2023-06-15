@@ -6,7 +6,7 @@
     </div>
   </t-checkbox-group>
 
-  <div class="demo-desc" style="margin: 24px 16px 16px">横向卡片多选框</div>
+  <div class="tdesign-mobile-demo-block__summary" style="margin-left: 16px; margin-top: 24px">横向卡片多选框</div>
 
   <t-checkbox-group v-model:value="value1" class="horizontal-box">
     <div v-for="n in 3" :key="n" :class="`card ${value1.indexOf(n) > -1 ? 'card--active' : value1.indexOf(n)}`">
