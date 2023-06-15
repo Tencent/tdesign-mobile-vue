@@ -1,12 +1,12 @@
 <template>
-  <div :class="styleWrapper">
+  <div :class="rootClasses">
     <div :class="`${componentName}__wrap--prefix`">
       <div :class="`${componentName}__icon--prefix`">
         <template v-if="prefixIconContent">
           <t-node :content="prefixIconContent"></t-node>
         </template>
       </div>
-      <div :class="styleLabel">
+      <div :class="labelClasses">
         <t-node :content="labelContent"></t-node>
       </div>
     </div>
@@ -16,7 +16,7 @@
           ref="inputRef"
           :value="innerValue"
           :name="name"
-          :class="styleControl"
+          :class="inputClasses"
           :type="type"
           :disabled="disabled"
           :autocomplete="autocomplete ? 'On' : 'Off'"
@@ -55,7 +55,6 @@ import { ref, computed, defineComponent, getCurrentInstance, toRefs, nextTick, w
 import { useFocus } from '@vueuse/core';
 import config from '../config';
 import InputProps from './props';
-import ClASSNAMES from '../shared/constants';
 import { InputValue, TdInputProps } from './type';
 import { useEmitEvent, getCharacterLength, renderTNode, TNode, useDefault, extendAPI } from '../shared';
 import { useFormDisabled } from '../form/hooks';
@@ -69,7 +68,13 @@ export default defineComponent({
     TNode,
     CloseCircleFilledIcon,
   },
-  props: InputProps,
+  props: {
+    ...InputProps,
+    labelAlign: {
+      type: String,
+      default: 'top',
+    },
+  },
   emits: ['update:value', 'update:modelValue', 'click-icon', 'focus', 'blur', 'change', 'clear'],
   setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
@@ -81,11 +86,7 @@ export default defineComponent({
     const [innerValue] = useDefault<string, TdInputProps>(props, context.emit, 'value', 'change');
 
     const status = props.status || 'default';
-    const styleLabel = computed(() => ({
-      [`${componentName}__label`]: true,
-      [ClASSNAMES.STATUS.disabled]: disabled.value,
-      [`${componentName}-is-${status}`]: status && status !== 'default',
-    }));
+    const labelClasses = computed(() => [`${componentName}__label`]);
     const { focused } = useFocus(inputRef, { initialValue: props.autofocus });
 
     const labelContent = computed(() => renderTNode(internalInstance, 'label'));
@@ -94,19 +95,24 @@ export default defineComponent({
     const suffixContent = computed(() => renderTNode(internalInstance, 'suffix'));
     const tipsContent = computed(() => renderTNode(internalInstance, 'tips'));
 
-    const styleControl = computed(() => [
+    const inputClasses = computed(() => [
       `${componentName}__control`,
       {
         [`${componentName}--${props.align}`]: props.align !== 'left',
         [`${componentName}--${status}`]: status,
+        [`${componentName}__control--disabled`]: disabled.value,
       },
     ]);
 
-    const styleWrapper = computed(() => ({
-      [componentName]: true,
-      [`${componentName}--layout-${props.layout}`]: props.layout,
-      [`${componentName}--size-${props.size}`]: props.size,
-    }));
+    const rootClasses = computed(() => [
+      componentName,
+      {
+        [`${componentName}--layout-${props.layout}`]: props.layout,
+        [`${componentName}--size-${props.size}`]: props.size,
+        [`${componentName}--center`]: props.labelAlign === 'center',
+        [`${componentName}--border`]: !props.borderless,
+      },
+    ]);
 
     const setInputValue = (v: InputValue = '') => {
       const input = inputRef.value as HTMLInputElement;
@@ -180,9 +186,9 @@ export default defineComponent({
       componentName,
       ...toRefs(props),
       disabled,
-      styleLabel,
-      styleWrapper,
-      styleControl,
+      labelClasses,
+      rootClasses,
+      inputClasses,
       suffixContent,
       tipsContent,
       suffixIconContent,

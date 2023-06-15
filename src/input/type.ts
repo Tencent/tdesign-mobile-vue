@@ -55,6 +55,11 @@ export interface TdInputProps {
    */
   layout?: 'vertical' | 'horizontal';
   /**
+   * 是否开启无边框模式
+   * @default true
+   */
+  borderless?: boolean;
+  /**
    * 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用
    */
   maxcharacter?: number;

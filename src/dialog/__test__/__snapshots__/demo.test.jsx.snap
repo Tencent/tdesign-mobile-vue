@@ -871,7 +871,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
             >
               
               <div
-                class="t-input t-input--layout-horizontal t-input--size-small"
+                class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
                 data-v-4a76bf3d=""
               >
                 <div
@@ -1025,7 +1025,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
                 告知当前状态、信息和解决方法等，描述文案尽可能控制在三行内
               </p>
               <div
-                class="t-input t-input--layout-horizontal t-input--size-small"
+                class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
                 data-v-4a76bf3d=""
               >
                 <div
@@ -1733,7 +1733,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 >
                   
                   <div
-                    class="t-input t-input--layout-horizontal t-input--size-small"
+                    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
                     data-v-4a76bf3d=""
                   >
                     <div
@@ -1887,7 +1887,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                     告知当前状态、信息和解决方法等，描述文案尽可能控制在三行内
                   </p>
                   <div
-                    class="t-input t-input--layout-horizontal t-input--size-small"
+                    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
                     data-v-4a76bf3d=""
                   >
                     <div

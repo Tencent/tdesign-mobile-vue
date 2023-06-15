@@ -52,6 +52,11 @@ export default {
       return ['vertical', 'horizontal'].includes(val);
     },
   },
+  /** 是否开启无边框模式 */
+  borderless: {
+    type: Boolean,
+    value: false,
+  },
   /** 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用 */
   maxcharacter: {
     type: Number,

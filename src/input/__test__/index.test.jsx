@@ -84,8 +84,8 @@ describe('Input.vue', async () => {
     it(': disabled', async () => {
       const value = ref('123');
       const wrapper = mount(<Input label="标题" v-model={value.value} disabled />);
-      const label = wrapper.find('.t-input__label');
-      expect(label.classes()).toContain('t-is-disabled');
+      const label = wrapper.find('.t-input__control');
+      expect(label.classes()).toContain('t-input__control--disabled');
       const input = wrapper.find('.t-input__wrap input');
       expect(input.element.hasAttribute('disabled')).toBeTruthy();
     });
