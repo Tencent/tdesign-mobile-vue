@@ -18,7 +18,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const imageSrc = ref('https://tdesign.gtimg.com/site/upload1.png');
+const imageSrc = ref('https://tdesign.gtimg.com/mobile/images/example4.png');
 </script>
 
 <style lang="less" scoped>
