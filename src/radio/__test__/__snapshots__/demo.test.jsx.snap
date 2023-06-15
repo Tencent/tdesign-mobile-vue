@@ -9,7 +9,7 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
     <!--v-if-->
     
     <div
-      class="t-radio t-radio--right t-radio--block"
+      class="t-radio t-radio--left t-radio--block"
     >
       <input
         class="t-radio__original"
@@ -18,7 +18,7 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
         value="1"
       />
       <div
-        class="t-radio__icon t-radio__icon--right"
+        class="t-radio__icon t-radio__icon--left"
       >
         <!--v-if-->
         <!--v-if-->
@@ -41,11 +41,11 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
         <!--v-if-->
       </div>
       <div
-        class="t-radio__border t-radio__border--right"
+        class="t-radio__border t-radio__border--left"
       />
     </div>
     <div
-      class="t-radio t-radio--right t-radio--block"
+      class="t-radio t-radio--left t-radio--block"
     >
       <input
         class="t-radio__original"
@@ -54,7 +54,7 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
         value="2"
       />
       <div
-        class="t-radio__icon t-radio__icon--right"
+        class="t-radio__icon t-radio__icon--left"
       >
         <!--v-if-->
         <!--v-if-->
@@ -77,11 +77,11 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
         <!--v-if-->
       </div>
       <div
-        class="t-radio__border t-radio__border--right"
+        class="t-radio__border t-radio__border--left"
       />
     </div>
     <div
-      class="t-radio t-radio--right t-radio--block"
+      class="t-radio t-radio--left t-radio--block"
     >
       <input
         class="t-radio__original"
@@ -90,7 +90,7 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
         value="3"
       />
       <div
-        class="t-radio__icon t-radio__icon--right t-radio__icon--checked"
+        class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
       >
         <svg
           class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
@@ -123,11 +123,11 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
         <!--v-if-->
       </div>
       <div
-        class="t-radio__border t-radio__border--right"
+        class="t-radio__border t-radio__border--left"
       />
     </div>
     <div
-      class="t-radio t-radio--right t-radio--block"
+      class="t-radio t-radio--left t-radio--block"
     >
       <input
         class="t-radio__original"
@@ -136,7 +136,7 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
         value="4"
       />
       <div
-        class="t-radio__icon t-radio__icon--right"
+        class="t-radio__icon t-radio__icon--left"
       >
         <!--v-if-->
         <!--v-if-->
@@ -164,7 +164,7 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-radio__border t-radio__border--right"
+        class="t-radio__border t-radio__border--left"
       />
     </div>
     
@@ -732,7 +732,7 @@ exports[`Radio > Radio iconVue demo works fine 1`] = `
 >
   
   <div
-    class="t-radio t-radio--undefined t-radio--block block"
+    class="t-radio t-radio--left t-radio--block block"
     data-v-9c2f6eb6=""
   >
     <input
@@ -741,7 +741,7 @@ exports[`Radio > Radio iconVue demo works fine 1`] = `
       type="radio"
     />
     <div
-      class="t-radio__icon t-radio__icon--undefined t-radio__icon--checked"
+      class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
     >
       <!--v-if-->
       <svg
@@ -774,11 +774,11 @@ exports[`Radio > Radio iconVue demo works fine 1`] = `
       <!--v-if-->
     </div>
     <div
-      class="t-radio__border t-radio__border--undefined"
+      class="t-radio__border t-radio__border--left"
     />
   </div>
   <div
-    class="t-radio t-radio--undefined t-radio--block block"
+    class="t-radio t-radio--left t-radio--block block"
     data-v-9c2f6eb6=""
   >
     <input
@@ -787,7 +787,7 @@ exports[`Radio > Radio iconVue demo works fine 1`] = `
       type="radio"
     />
     <div
-      class="t-radio__icon t-radio__icon--undefined t-radio__icon--checked"
+      class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
     >
       <!--v-if-->
       <!--v-if-->
@@ -810,7 +810,7 @@ exports[`Radio > Radio iconVue demo works fine 1`] = `
       <!--v-if-->
     </div>
     <div
-      class="t-radio__border t-radio__border--undefined"
+      class="t-radio__border t-radio__border--left"
     />
   </div>
   
@@ -860,7 +860,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           <!--v-if-->
           
           <div
-            class="t-radio t-radio--right t-radio--block"
+            class="t-radio t-radio--left t-radio--block"
           >
             <input
               class="t-radio__original"
@@ -869,7 +869,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               value="1"
             />
             <div
-              class="t-radio__icon t-radio__icon--right"
+              class="t-radio__icon t-radio__icon--left"
             >
               <!--v-if-->
               <!--v-if-->
@@ -892,11 +892,11 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               <!--v-if-->
             </div>
             <div
-              class="t-radio__border t-radio__border--right"
+              class="t-radio__border t-radio__border--left"
             />
           </div>
           <div
-            class="t-radio t-radio--right t-radio--block"
+            class="t-radio t-radio--left t-radio--block"
           >
             <input
               class="t-radio__original"
@@ -905,7 +905,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               value="2"
             />
             <div
-              class="t-radio__icon t-radio__icon--right"
+              class="t-radio__icon t-radio__icon--left"
             >
               <!--v-if-->
               <!--v-if-->
@@ -928,11 +928,11 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               <!--v-if-->
             </div>
             <div
-              class="t-radio__border t-radio__border--right"
+              class="t-radio__border t-radio__border--left"
             />
           </div>
           <div
-            class="t-radio t-radio--right t-radio--block"
+            class="t-radio t-radio--left t-radio--block"
           >
             <input
               class="t-radio__original"
@@ -941,7 +941,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               value="3"
             />
             <div
-              class="t-radio__icon t-radio__icon--right t-radio__icon--checked"
+              class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
             >
               <svg
                 class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
@@ -974,11 +974,11 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               <!--v-if-->
             </div>
             <div
-              class="t-radio__border t-radio__border--right"
+              class="t-radio__border t-radio__border--left"
             />
           </div>
           <div
-            class="t-radio t-radio--right t-radio--block"
+            class="t-radio t-radio--left t-radio--block"
           >
             <input
               class="t-radio__original"
@@ -987,7 +987,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               value="4"
             />
             <div
-              class="t-radio__icon t-radio__icon--right"
+              class="t-radio__icon t-radio__icon--left"
             >
               <!--v-if-->
               <!--v-if-->
@@ -1015,7 +1015,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               </div>
             </div>
             <div
-              class="t-radio__border t-radio__border--right"
+              class="t-radio__border t-radio__border--left"
             />
           </div>
           
@@ -1304,7 +1304,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-radio t-radio--undefined t-radio--block block"
+        class="t-radio t-radio--left t-radio--block block"
         data-v-9c2f6eb6=""
       >
         <input
@@ -1313,7 +1313,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           type="radio"
         />
         <div
-          class="t-radio__icon t-radio__icon--undefined t-radio__icon--checked"
+          class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
         >
           <!--v-if-->
           <svg
@@ -1346,11 +1346,11 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-radio__border t-radio__border--undefined"
+          class="t-radio__border t-radio__border--left"
         />
       </div>
       <div
-        class="t-radio t-radio--undefined t-radio--block block"
+        class="t-radio t-radio--left t-radio--block block"
         data-v-9c2f6eb6=""
       >
         <input
@@ -1359,7 +1359,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           type="radio"
         />
         <div
-          class="t-radio__icon t-radio__icon--undefined t-radio__icon--checked"
+          class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
         >
           <!--v-if-->
           <!--v-if-->
@@ -1382,7 +1382,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-radio__border t-radio__border--undefined"
+          class="t-radio__border t-radio__border--left"
         />
       </div>
       
@@ -1408,7 +1408,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-radio t-radio--undefined t-radio--block block"
+        class="t-radio t-radio--left t-radio--block block"
         data-v-57f93969=""
       >
         <input
@@ -1417,7 +1417,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           type="radio"
         />
         <div
-          class="t-radio__icon t-radio__icon--undefined t-radio__icon--checked"
+          class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
         >
           <svg
             class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
@@ -1450,7 +1450,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-radio__border t-radio__border--undefined"
+          class="t-radio__border t-radio__border--left"
         />
       </div>
       <div
@@ -1977,7 +1977,7 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
 >
   
   <div
-    class="t-radio t-radio--undefined t-radio--block block"
+    class="t-radio t-radio--left t-radio--block block"
     data-v-57f93969=""
   >
     <input
@@ -1986,7 +1986,7 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
       type="radio"
     />
     <div
-      class="t-radio__icon t-radio__icon--undefined t-radio__icon--checked"
+      class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
     >
       <svg
         class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
@@ -2019,7 +2019,7 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
       <!--v-if-->
     </div>
     <div
-      class="t-radio__border t-radio__border--undefined"
+      class="t-radio__border t-radio__border--left"
     />
   </div>
   <div

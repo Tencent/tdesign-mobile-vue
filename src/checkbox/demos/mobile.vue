@@ -24,7 +24,7 @@
       <tdesign-demo-block summary="非通栏多选样式">
         <CardDemo />
       </tdesign-demo-block>
-      <tdesign-demo-block title="04 组件规格" summary="多选框尺寸规格">
+      <tdesign-demo-block title="04 特殊样式" summary="纵向卡片多选框">
         <SpecialDemo />
       </tdesign-demo-block>
     </div>
