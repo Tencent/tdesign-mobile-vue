@@ -70,6 +70,26 @@ describe('Indexes', () => {
       expect(wrapper.findAllComponents(TCell).length).toBe(
         list.reduce((count, item) => count + item.children.length, 0),
       );
+
+      const wrapper1 = mount({
+        setup() {
+          return () => (
+            <Indexes>
+              {{
+                default: list.map((item, index) => (
+                  <template>
+                    <IndexesAnchor index={item.index} key={index}></IndexesAnchor>
+                    {item.children.map((val) => (
+                      <TCell className="indexes-cell">{val}</TCell>
+                    ))}
+                  </template>
+                )),
+              }}
+            </Indexes>
+          );
+        },
+      });
+      expect(wrapper1.findAll(`.${componentName}__sidebar-item`).length).toBe(26);
     });
   });
   describe('event', () => {
