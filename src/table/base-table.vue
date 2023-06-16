@@ -39,7 +39,7 @@
           </tr>
         </thead>
         <tbody :class="tbodyClasses">
-          <tr v-if="empty" :class="tableBaseClass.emptyRow">
+          <tr v-if="renderContentEmpty" :class="tableBaseClass.emptyRow">
             <td :colspan="columns?.length">
               <div :class="tableBaseClass.empty">
                 <t-node :content="renderContentEmpty"></t-node>
@@ -74,20 +74,25 @@
           </tr>
         </tbody>
       </table>
+      <div v-if="loadingContent" :class="loadingClasses">
+        <t-node :content="loadingContent"></t-node>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
+import { defineComponent, computed, toRefs, getCurrentInstance, h } from 'vue';
 import get from 'lodash/get';
+import isBoolean from 'lodash/isBoolean';
+import isFunction from 'lodash/isFunction';
 import TdBaseTableProps from './base-table-props';
 import config from '../config';
 import useClassName from './hooks/useClassName';
 import useStyle, { formatCSSUnit } from './hooks/useStyle';
 import { renderTNode, TNode, useEmitEvent } from '../shared';
-import { formatClassNames } from './utils';
 import { TableRowData } from './type';
+import TLoading from '../loading';
 
 const { prefix } = config;
 const name = `${prefix}-base-table`;
@@ -139,6 +144,17 @@ export default defineComponent({
     const internalInstance = getCurrentInstance();
     const renderContentEmpty = computed(() => renderTNode(internalInstance, 'empty'));
     const renderCellEmptyContent = computed(() => renderTNode(internalInstance, 'cellEmptyContent'));
+    const loadingClasses = computed(() => [`${classPrefix}-table__loading--full`]);
+    const loadingContent = computed(() => {
+      if (isBoolean(props.loading) && props.loading) {
+        return h(TLoading, { ...props.loadingProps });
+      }
+
+      if (isFunction(props.loading) || context.slots.loading) {
+        return renderTNode(internalInstance, 'loading');
+      }
+      return false;
+    });
 
     const onInnerVirtualScroll = (e: WheelEvent) => {
       emitEvent('scroll', { params: e });
@@ -161,8 +177,9 @@ export default defineComponent({
       ellipsisClasses,
       renderContentEmpty,
       renderCellEmptyContent,
+      loadingClasses,
+      loadingContent,
       formatCSSUnit,
-      formatClassNames,
       onInnerVirtualScroll,
       get,
       handleCellClick,
