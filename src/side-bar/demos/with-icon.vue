@@ -87,13 +87,14 @@ const getOffsetTopList = () => {
 };
 
 const moveToActiveSideBar = (index: number) => {
-  contentStyle.value = `transform: translateY(-${
-    offsetTopList[index] - offsetTopList[0]
-  }px);transition-duration: 300ms`;
+  if (wrapper.value) {
+    wrapper.value.scrollTop = offsetTopList[index] - offsetTopList[0];
+  }
 };
 
 onMounted(() => {
   getOffsetTopList();
+  moveToActiveSideBar(Number(sideBarIndex.value));
 });
 
 const onSideBarClick = (value: TdSideBarProps['value'], label: TdSideBarItemProps['label']) => {
