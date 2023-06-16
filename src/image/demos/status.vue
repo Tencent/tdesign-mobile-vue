@@ -20,7 +20,7 @@
     </div>
     <div class="col">
       <p class="tips">失败自定义提示</p>
-      <t-image lazy class="image-container" src="x" shape="round">
+      <t-image class="image-container" src="x" shape="round">
         <template #error>
           <div class="error-tips">加载失败</div>
         </template>
@@ -38,7 +38,7 @@ import { Loading as TLoading } from 'tdesign-mobile-vue';
   display: flex;
   grid-gap: 24px;
   padding: 0 16px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 
   .image-container {
     width: 72px;
