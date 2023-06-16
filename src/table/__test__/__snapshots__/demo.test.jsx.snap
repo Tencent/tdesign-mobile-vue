@@ -479,6 +479,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
           
         </tbody>
       </table>
+      <!--v-if-->
     </div>
   </div>
 </div>
@@ -963,6 +964,7 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
           
         </tbody>
       </table>
+      <!--v-if-->
     </div>
   </div>
 </div>
@@ -1481,6 +1483,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 
               </tbody>
             </table>
+            <!--v-if-->
           </div>
         </div>
       </div>
@@ -1783,6 +1786,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 
               </tbody>
             </table>
+            <!--v-if-->
           </div>
         </div>
       </div>
@@ -2285,6 +2289,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 
               </tbody>
             </table>
+            <!--v-if-->
           </div>
         </div>
       </div>
@@ -2786,6 +2791,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 
               </tbody>
             </table>
+            <!--v-if-->
           </div>
         </div>
       </div>
@@ -3075,6 +3081,7 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
           
         </tbody>
       </table>
+      <!--v-if-->
     </div>
   </div>
 </div>
@@ -3560,6 +3567,7 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
           
         </tbody>
       </table>
+      <!--v-if-->
     </div>
   </div>
 </div>
