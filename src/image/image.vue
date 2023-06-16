@@ -60,7 +60,7 @@ export default defineComponent({
       }
       return '';
     });
-    console.log('=====', statusContent);
+
     // 记录图片的loading、error状态
     const isLoading = ref(true);
     const isError = ref(false);
