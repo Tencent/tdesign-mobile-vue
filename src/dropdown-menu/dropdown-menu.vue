@@ -21,7 +21,6 @@ import {
   DropdownMenuExpandState,
   TriggerSource,
 } from './context';
-import TransAniControl from './trans-ani-control';
 import { useEmitEvent, useExpose } from '../shared';
 import { findRelativeRect, findRelativeContainer } from './dom-utils';
 import DropdownMenuProps from './props';
@@ -77,11 +76,9 @@ export default defineComponent({
       }),
     );
 
-    const aniControl = new TransAniControl();
     // 提供子组件访问
     provide('dropdownMenuProps', props);
     provide('dropdownMenuState', state);
-    provide('dropdownAniControl', aniControl);
     // 根结点样式
     const classes = computed(() => [`${name}`]);
     // 标题栏结点引用
