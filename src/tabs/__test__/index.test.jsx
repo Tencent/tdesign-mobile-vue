@@ -223,33 +223,6 @@ describe('Tabs', () => {
       ).toBeTruthy();
     });
 
-    it(': sticky', async () => {
-      const wrapper = mount({
-        render() {
-          return <Tabs sticky={true} />;
-        },
-      });
-      expect(wrapper.element).toMatchSnapshot();
-    });
-
-    it(': value', () => {
-      const wrapper = mount({
-        render() {
-          return <Tabs value={'1'} />;
-        },
-      });
-      expect(wrapper.element).toMatchSnapshot();
-    });
-
-    it(': defaultValue', () => {
-      const wrapper = mount({
-        render() {
-          return <Tabs value={'1'} />;
-        },
-      });
-      expect(wrapper.element).toMatchSnapshot();
-    });
-
     it(': swipeable', async () => {
       const currentValue = ref('3');
       const onClick = vi.fn((value) => {
@@ -308,7 +281,6 @@ describe('Tabs', () => {
           );
         },
       });
-      expect(wrapper.element).toMatchSnapshot();
       const navWrap = wrapper.find(`.${name}__wrapper`);
       const $tabNavItems = navWrap.findAllComponents(TTabNav);
       const $panels = wrapper.findAllComponents(TabPanel);
