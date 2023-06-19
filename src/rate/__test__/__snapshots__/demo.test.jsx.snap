@@ -1103,7 +1103,6 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
   >
     用于对某行为/事物进行打分。
   </p>
-  <br />
   <div
     class="tdesign-mobile-demo-block"
   >
@@ -1878,7 +1877,6 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
       
     </div>
   </div>
-  <br />
   <div
     class="tdesign-mobile-demo-block"
   >
@@ -2236,7 +2234,6 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
       
     </div>
   </div>
-  <br />
   <div
     class="tdesign-mobile-demo-block"
   >
@@ -2931,7 +2928,6 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
       
     </div>
   </div>
-  <br />
   <div
     class="tdesign-mobile-demo-block"
   >

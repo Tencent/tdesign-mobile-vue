@@ -2,7 +2,7 @@
   <div class="tdesign-mobile-demo">
     <h1 class="title">Rate 评分</h1>
     <p class="summary">用于对某行为/事物进行打分。</p>
-    <br />
+
     <tdesign-demo-block title="01 组件类型" summary="实心评分">
       <BaseDemo />
     </tdesign-demo-block>
@@ -15,18 +15,18 @@
     <tdesign-demo-block summary="带描述评分">
       <ShowTextDemo />
     </tdesign-demo-block>
-    <br />
+
     <tdesign-demo-block title="02 组件状态">
       <ActionDemo />
     </tdesign-demo-block>
-    <br />
+
     <tdesign-demo-block title="03 组件样式" summary="评分大小">
       <SizeDemo />
     </tdesign-demo-block>
     <tdesign-demo-block summary="设置评分颜色">
       <ColorDemo />
     </tdesign-demo-block>
-    <br />
+
     <tdesign-demo-block title="04 特殊样式" summary="竖向带描述评分">
       <SpecialDemo />
     </tdesign-demo-block>

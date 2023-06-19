@@ -2,13 +2,13 @@
   <div class="tdesign-mobile-demo">
     <h1 class="title">Form 表单</h1>
     <p class="summary">用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。</p>
-    <tdesign-demo-block summary="01 基础类型">
+    <tdesign-demo-block title="01 基础类型" summary="基础表单">
       <div class="option">
         <div class="button-group">
-          <t-button :theme="isActive1 ? 'primary' : 'default'" shape="round" @click="onClick('isActive1', isActive1)">
+          <t-button :theme="isActive1 ? 'light' : 'default'" shape="round" @click="onClick('isActive1', isActive1)">
             水平排布
           </t-button>
-          <t-button :theme="isActive2 ? 'primary' : 'default'" shape="round" @click="onClick('isActive2', isActive2)">
+          <t-button :theme="isActive2 ? 'light' : 'default'" shape="round" @click="onClick('isActive2', isActive2)">
             竖直排布
           </t-button>
         </div>

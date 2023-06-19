@@ -11,10 +11,14 @@
     @submit="onSubmit"
   >
     <t-form-item label="用户名" name="name" help="输入用户名">
-      <t-input v-model="formData.name" placeholder="请输入内容"></t-input>
+      <t-input v-model="formData.name" borderless placeholder="请输入内容"></t-input>
     </t-form-item>
     <t-form-item label="密码" name="password">
-      <t-input v-model="formData.password" type="password" placeholder="请输入内容"></t-input>
+      <t-input v-model="formData.password" borderless type="password" :clearable="false" placeholder="请输入内容">
+        <template #suffixIcon>
+          <BrowseOffIcon />
+        </template>
+      </t-input>
     </t-form-item>
     <t-form-item label="性别" name="gender">
       <t-radio-group v-model="formData.gender" class="box" borderless @change="groupChangeFn">
@@ -24,7 +28,13 @@
       </t-radio-group>
     </t-form-item>
     <t-form-item arrow label="生日" name="birth" content-align="right">
-      <t-input v-model="formData.birth" align="right" placeholder="请输入内容" @click="visible = true"></t-input>
+      <t-input
+        v-model="formData.birth"
+        borderless
+        align="right"
+        placeholder="请输入内容"
+        @click="visible = true"
+      ></t-input>
       <t-popup v-model="visible" placement="bottom">
         <t-date-time-picker
           :value="formData.birth"
@@ -40,7 +50,13 @@
       </t-popup>
     </t-form-item>
     <t-form-item arrow label="籍贯" name="place" content-align="right">
-      <t-input v-model="formData.place" align="right" placeholder="请输入内容" @click="showCascader"></t-input>
+      <t-input
+        v-model="formData.place"
+        borderless
+        align="right"
+        placeholder="请输入内容"
+        @click="showCascader"
+      ></t-input>
       <t-cascader
         v-model:visible="visibleCascader"
         :value="address"
@@ -53,7 +69,7 @@
       <t-stepper v-model="formData.age" theme="filled" @change="onChangeStepper" />
     </t-form-item>
     <t-form-item label="自我评价" name="description" content-align="right">
-      <t-rate v-model="formData.description" clearable allow-half :gap="rateGap" />
+      <t-rate v-model="formData.description" variant="filled" allow-half :gap="rateGap" />
     </t-form-item>
     <t-form-item label="个人简介" name="resume">
       <t-textarea
@@ -89,6 +105,7 @@
 </template>
 <script lang="ts" setup>
 import { ref, reactive, defineProps, toRefs, onMounted } from 'vue';
+import { BrowseOffIcon } from 'tdesign-icons-vue-next';
 
 import {
   UploadChangeContext,
