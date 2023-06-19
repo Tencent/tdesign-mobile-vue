@@ -27,7 +27,7 @@ import debounce from 'lodash/debounce';
 import isArray from 'lodash/isArray';
 
 import PullDownRefreshProps from './props';
-import { useEmitEvent, useVModel, convertUnit } from '../shared';
+import { useEmitEvent, useVModel, convertUnit, reconvertUnit } from '../shared';
 import config from '../config';
 import TLoading from '../loading';
 import { useTouch, isReachTop, easeDistance } from './useTouch';
@@ -64,6 +64,7 @@ export default defineComponent({
     const maxBar = ref(null);
     const { height: loadingBarHeight } = useElementSize(loadingBar);
     const { height: maxBarHeight } = useElementSize(maxBar);
+    const actualLoadingBarHeight = ref(0);
 
     watch(
       [loading, loadingBarHeight],
@@ -118,6 +119,7 @@ export default defineComponent({
       if (!isReachTop(e) || loading.value) return;
 
       const { deltaY } = touch;
+      actualLoadingBarHeight.value = deltaY.value;
       const nextDistance = easeDistance(deltaY.value, loadingBarHeight.value);
       // 下拉时，防止下拉整个页面
       if (deltaY.value > 0) {
@@ -174,9 +176,14 @@ export default defineComponent({
         transform: `translate3d(0, ${distance.value}px, 0)`,
       };
     });
-    const loadingBarStyles = computed(() => ({
-      height: convertUnit(props.loadingBarHeight),
-    }));
+    const heightDiff = (reconvertUnit(props.maxBarHeight) - reconvertUnit(props.loadingBarHeight)) / 2;
+    const loadingBarStyles = computed(() => {
+      return {
+        transform: `translateY(${heightDiff}px)`,
+        height: `${actualLoadingBarHeight.value}px`,
+        maxHeight: convertUnit(props.loadingBarHeight),
+      };
+    });
     const maxBarStyles = computed(() => ({
       height: convertUnit(props.maxBarHeight),
     }));
