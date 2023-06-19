@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!showSidebar" class="tdesign-mobile-demo">
+  <div class="tdesign-mobile-demo">
     <h1 class="title">SideBar 侧边栏</h1>
     <p class="summary">用于内容分类后的展示切换。</p>
     <tdesign-demo-block title="01 组件类型" summary="侧边导航用法" :padding="true">
@@ -21,27 +21,14 @@
       </t-button>
     </tdesign-demo-block>
   </div>
-
-  <div v-else>
-    <BaseDemo v-if="type === 'base'" />
-    <WithIconDemo v-if="type === 'with-icon'" />
-    <SwitchDemo v-if="type === 'switch'" />
-    <CustomDemo v-if="type === 'custom'" />
-  </div>
 </template>
 <script lang="ts" setup>
-import { ref } from 'vue';
-import BaseDemo from './base.vue';
-import SwitchDemo from './switch.vue';
-import WithIconDemo from './with-icon.vue';
-import CustomDemo from './custom.vue';
+import { useRouter } from 'vue-router';
 
-const showSidebar = ref(false);
-const type = ref('');
+const router = useRouter();
 
 const handleClick = (t = 'base') => {
-  showSidebar.value = true;
-  type.value = t;
+  router.push(`/side-bar/${t}`);
 };
 </script>
 

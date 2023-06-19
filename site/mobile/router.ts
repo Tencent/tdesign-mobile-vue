@@ -6,7 +6,7 @@ const { docs } = siteConfig;
 
 // 引入所有views下.vue文件
 // @ts-ignore
-const demoModules = import.meta.glob('../../src/**/demos/mobile.vue');
+const demoModules = import.meta.glob('../../src/**/demos/*.vue');
 
 function getDocsRoutes(docs: any[]): RouteRecordRaw[] {
   let docsRoutes: Array<RouteRecordRaw> = [];
@@ -32,8 +32,26 @@ function getDocsRoutes(docs: any[]): RouteRecordRaw[] {
       });
     }
   });
+
   return docsRoutes;
 }
+
+const componentInnerRoutes: RouteRecordRaw[] = [];
+const demoRouteGenerator = (compName, demos, title) => {
+  const ans = demos.map((demo) => ({
+    path: `/${compName}/${demo}`,
+    meta: { title },
+    component: demoModules[`../../src/${compName}/demos/${demo}.vue`],
+  }));
+
+  componentInnerRoutes.push(...ans);
+};
+
+// 组件需要多页面展示时，需要多个路由
+demoRouteGenerator('side-bar', ['base', 'switch', 'with-icon', 'custom'], 'SideBar 侧边栏');
+demoRouteGenerator('indexes', ['base', 'custom'], 'Indexes 索引');
+
+console.log(componentInnerRoutes);
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -41,6 +59,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Home,
   },
   ...getDocsRoutes(docs),
+  ...componentInnerRoutes,
 ];
 const router = createRouter({
   history: createWebHashHistory('/mobile.html'),
