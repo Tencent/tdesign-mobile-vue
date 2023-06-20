@@ -5,6 +5,55 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.26.0 `2023-06-20` 
+### ❗ Breaking Changes
+- `NavBar`: 调整布局方式 @LeeJim ([#871](https://github.com/Tencent/tdesign-mobile-vue/pull/871))
+
+### 🚀 Features
+- `Textarea`: 新增 `layout` 属性 @anlyyao ([#879](https://github.com/Tencent/tdesign-mobile-vue/pull/879))
+- `Input`: 新增 borderless 属性 @anlyyao ([#877](https://github.com/Tencent/tdesign-mobile-vue/pull/877))
+- `Button`: 增加幽灵按钮的点击样式 @LeeJim ([#883](https://github.com/Tencent/tdesign-mobile-vue/pull/883))
+- `Rate`: 增加组件禁用态样式 @anlyyao ([#887](https://github.com/Tencent/tdesign-mobile-vue/pull/887))
+- `Table`:  新增 `loadingProps` 属性 @anlyyao ([#884](https://github.com/Tencent/tdesign-mobile-vue/pull/884))
+### 🐞 Bug Fixes
+- `DateTimePicker`: 修复 `value` 无法动态响应的问题 @LeeJim ([#869](https://github.com/Tencent/tdesign-mobile-vue/pull/869))
+- `DateTimePicker`: 修复 `mode` 使用时分秒时错误的问题 @LeeJim ([#869](https://github.com/Tencent/tdesign-mobile-vue/pull/869))
+- `Grid`: 修复组件上下边距及水平滚动时字号错误 @anlyyao ([#867](https://github.com/Tencent/tdesign-mobile-vue/pull/867))
+- `Loading`: 修复示例样式问题 @anlyyao ([#866](https://github.com/Tencent/tdesign-mobile-vue/pull/866))
+- `Slider`: 修复 change 事件重复触发的问题 @LeeJim ([#864](https://github.com/Tencent/tdesign-mobile-vue/pull/864))
+- `ActionSheet`: 修复 `items` 项数小于 `count` 时，`selected `事件返回值错误 @anlyyao ([#870](https://github.com/Tencent/tdesign-mobile-vue/pull/870))
+- `Textarea`: 修复 `label` 标签字号错误 @anlyyao ([#879](https://github.com/Tencent/tdesign-mobile-vue/pull/879))
+- `Input`: 修复禁用态输入框文本颜色错误 @anlyyao ([#877](https://github.com/Tencent/tdesign-mobile-vue/pull/877))
+- `Input`: 修复垂直布局时 `label` 下边距错误 @anlyyao ([#877](https://github.com/Tencent/tdesign-mobile-vue/pull/877))
+- `Input`: 修复示例样式问题 @anlyyao ([#877](https://github.com/Tencent/tdesign-mobile-vue/pull/877))
+- `Form`: 修复 `FormRule`  中 `type` 属性无效的问题 @anlyyao ([#876](https://github.com/Tencent/tdesign-mobile-vue/pull/876))
+- `Form`: 修复 `expose` 中的 `submit` 和 `reset` 事件报错 @anlyyao ([#876](https://github.com/Tencent/tdesign-mobile-vue/pull/876))
+- `Form`: 修复文档 `labelWidth` 属性默认值错误 @anlyyao ([#876](https://github.com/Tencent/tdesign-mobile-vue/pull/876))
+- `Radio`: 修复 placement 错误的问题 @LeeJim ([#882](https://github.com/Tencent/tdesign-mobile-vue/pull/882))
+- `Table`: 修复边框和字号错误 @anlyyao ([#880](https://github.com/Tencent/tdesign-mobile-vue/pull/880))
+- `Button`: 移除禁用态的点击样式 @LeeJim ([#883](https://github.com/Tencent/tdesign-mobile-vue/pull/883))
+- `SideBar`: 修复示例错误 @ccccpj ([#886](https://github.com/Tencent/tdesign-mobile-vue/pull/886))
+- `Image`: 修复 `error` 默认值失效 @anlyyao ([#885](https://github.com/Tencent/tdesign-mobile-vue/pull/885))
+- `Table`: 修复 `loading` 属性无效的问题 @anlyyao ([#884](https://github.com/Tencent/tdesign-mobile-vue/pull/884))
+### 🚧 Others
+- fix: 优化多个示例页面切换问题 @LeeJim ([#890](https://github.com/Tencent/tdesign-mobile-vue/pull/890))
+- `DateTimePicker`: 提升测试覆盖率 @LeeJim ([#869](https://github.com/Tencent/tdesign-mobile-vue/pull/869))
+- `Slider`: 提升测试覆盖率 @LeeJim ([#864](https://github.com/Tencent/tdesign-mobile-vue/pull/864))
+- `ActionSheet`: 补充测试用例 @anlyyao ([#870](https://github.com/Tencent/tdesign-mobile-vue/pull/870))
+- `Dialog`: 补充测试用例 @anlyyao ([#872](https://github.com/Tencent/tdesign-mobile-vue/pull/872))
+- `Cascader`: 补充测试用例 @anlyyao ([#874](https://github.com/Tencent/tdesign-mobile-vue/pull/874))
+- `Tabs`: 补充测试用例 @ChaneyZhao ([#822](https://github.com/Tencent/tdesign-mobile-vue/pull/822))
+- `Form`: 补充测试用例 @anlyyao ([#876](https://github.com/Tencent/tdesign-mobile-vue/pull/876))
+- `Table`: 更新示例 @anlyyao ([#880](https://github.com/Tencent/tdesign-mobile-vue/pull/880))
+- `ImageViewer`: 补充测试用例 @ccccpj ([#861](https://github.com/Tencent/tdesign-mobile-vue/pull/861))
+- `DropdownMenu`: 补充测试用例 @ccccpj ([#868](https://github.com/Tencent/tdesign-mobile-vue/pull/868))
+- `Tabs`: 提升测试覆盖率 @ccccpj ([#865](https://github.com/Tencent/tdesign-mobile-vue/pull/865))
+- `Image`: 更新示例代码 @anlyyao ([#885](https://github.com/Tencent/tdesign-mobile-vue/pull/885))
+- `Form`: 更新示例代码 @anlyyao ([#887](https://github.com/Tencent/tdesign-mobile-vue/pull/887))
+- `Indexes`: 补充测试用例 @ccccpj ([#881](https://github.com/Tencent/tdesign-mobile-vue/pull/881))
+- `Table`: 补充单元测试 @anlyyao ([#884](https://github.com/Tencent/tdesign-mobile-vue/pull/884))
+- `Tabs`: 补充测试用例 @ChaneyZhao ([#822](https://github.com/Tencent/tdesign-mobile-vue/pull/822))
+
 ## 🌈 0.25.0 `2023-06-13` 
 
 ### ❗ BREAKING CHANGES
