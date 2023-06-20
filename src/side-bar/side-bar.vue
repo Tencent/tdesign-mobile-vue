@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, ComponentInternalInstance, provide, toRefs } from 'vue';
+import { defineComponent, ref, Ref, ComponentInternalInstance, provide, toRefs } from 'vue';
 import config from '../config';
 import SideBarProps from './props';
 import { TdSideBarProps } from './type';
@@ -28,16 +28,14 @@ export default defineComponent({
       'change',
     );
 
-    const state = reactive({
-      children: [] as ComponentInternalInstance[],
-    });
+    const children: Ref<ComponentInternalInstance[]> = ref([]);
 
     const relation = (child: ComponentInternalInstance) => {
-      child && state.children.push(child);
+      child && children.value.push(child);
     };
 
     const removeRelation = (child: ComponentInternalInstance) => {
-      state.children = state.children.filter((item) => item !== child);
+      children.value = children.value.filter((item) => item !== child);
     };
 
     const onClickItem = (cur: TdSideBarProps['value'], label: string) => {
@@ -47,7 +45,7 @@ export default defineComponent({
 
     provide('sideBarProvide', {
       ...props,
-      state,
+      children,
       currentValue,
       relation,
       removeRelation,

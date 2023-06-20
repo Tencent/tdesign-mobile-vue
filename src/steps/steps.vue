@@ -32,8 +32,12 @@ export default defineComponent({
       'change',
     );
 
-    const state = reactive({
-      children: [] as ComponentInternalInstance[],
+    interface TState {
+      children: ComponentInternalInstance[];
+    }
+
+    const state: TState = reactive({
+      children: [],
     });
 
     const relation = (child: ComponentInternalInstance) => {
