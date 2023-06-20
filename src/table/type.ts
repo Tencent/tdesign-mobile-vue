@@ -5,6 +5,7 @@
  * */
 
 import { TNode, ClassName } from '../common';
+import { LoadingProps } from '../loading';
 
 export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
   /**
@@ -43,6 +44,10 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    * 加载中状态。值为 `true` 会显示默认加载中样式，可以通过 Function 和 插槽 自定义加载状态呈现内容和样式。值为 `false` 则会取消加载状态
    */
   loading?: boolean | TNode;
+  /**
+   * 透传加载组件全部属性
+   */
+  loadingProps?: Partial<LoadingProps>;
   /**
    * 表格最大高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px
    */
