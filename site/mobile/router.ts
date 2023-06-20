@@ -51,8 +51,6 @@ const demoRouteGenerator = (compName, demos, title) => {
 demoRouteGenerator('side-bar', ['base', 'switch', 'with-icon', 'custom'], 'SideBar 侧边栏');
 demoRouteGenerator('indexes', ['base', 'custom'], 'Indexes 索引');
 
-console.log(componentInnerRoutes);
-
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',

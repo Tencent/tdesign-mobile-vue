@@ -27,14 +27,13 @@ export default defineComponent({
   name,
   components: { TNode },
   props: SideBarItemProps,
-  setup(props, context) {
+  setup(props) {
     const internalInstance = getCurrentInstance();
     const { proxy } = internalInstance as ComponentInternalInstance;
     const sideBarProvide: any = inject('sideBarProvide', undefined);
     sideBarProvide.relation(proxy);
 
-    const index = computed(() => sideBarProvide.state.children.indexOf(proxy));
-
+    const index = computed(() => sideBarProvide.children.value.indexOf(proxy));
     const iconNode = computed(() => renderTNode(internalInstance, 'icon'));
     const isActive = computed(() => index.value === sideBarProvide.currentValue.value);
 

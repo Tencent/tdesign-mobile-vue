@@ -36,4 +36,8 @@ const handleClick = (t = 'base') => {
 .t-button {
   margin-bottom: 16px;
 }
+
+.tdesign-mobile-demo {
+  background-color: #fff;
+}
 </style>
