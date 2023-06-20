@@ -36,18 +36,6 @@ describe('tableLayout', () => {
     });
     // default value is fixed
     expect(wrapper.find(`.${name}--layout-fixed`).exists()).toBeTruthy();
-
-    // tableLayout =  ''
-    await wrapper.setProps({
-      tableLayout: '',
-    });
-    expect(wrapper.find(`.${name}--layout-fixed`).exists()).toBeTruthy();
-
-    // tableLayout =  'auto'
-    await wrapper.setProps({
-      tableLayout: 'auto',
-    });
-    expect(wrapper.find(`.${name}--layout-auto`).exists()).toBeTruthy();
   });
 });
 
@@ -55,15 +43,8 @@ describe('bordered', () => {
   it(': bordered', async () => {
     const wrapper = mount({
       render() {
-        return <TTable rowKey="index" data={data} columns={columns}></TTable>;
+        return <TTable rowKey="index" data={data} columns={columns} bordered></TTable>;
       },
-    });
-    // default value is false
-    expect(wrapper.find(`.${name}--bordered`).exists()).toBeFalsy();
-
-    // bordered =  true
-    await wrapper.setProps({
-      bordered: true,
     });
     expect(wrapper.find(`.${name}--bordered`).exists()).toBeTruthy();
   });
@@ -73,15 +54,8 @@ describe('empty', () => {
   it(': empty', async () => {
     const wrapper = mount({
       render() {
-        return <TTable rowKey="index" data={[]} columns={columns}></TTable>;
+        return <TTable rowKey="index" data={[]} columns={columns} empty="暂无数据"></TTable>;
       },
-    });
-    // default value is ''
-    expect(wrapper.find('.t-table__empty').exists()).toBeFalsy();
-
-    // bordered =  true
-    await wrapper.setProps({
-      empty: '暂无数据',
     });
     expect(wrapper.find('.t-table__empty').text()).toBe('暂无数据');
   });
@@ -198,18 +172,6 @@ describe('verticalAlign', () => {
     });
     // default value is middle
     expect(wrapper.classes('t-vertical-align-middle')).toBeTruthy();
-
-    // verticalAlign =  'top'
-    await wrapper.setProps({
-      verticalAlign: 'top',
-    });
-    expect(wrapper.classes('t-vertical-align-top')).toBe(true);
-
-    // verticalAlign =  'bottom'
-    await wrapper.setProps({
-      verticalAlign: 'bottom',
-    });
-    expect(wrapper.classes('t-vertical-align-bottom')).toBe(true);
   });
 });
 

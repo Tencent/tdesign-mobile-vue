@@ -84,8 +84,6 @@
 <script lang="ts">
 import { defineComponent, computed, toRefs, getCurrentInstance, h } from 'vue';
 import get from 'lodash/get';
-import isBoolean from 'lodash/isBoolean';
-import isFunction from 'lodash/isFunction';
 import TdBaseTableProps from './base-table-props';
 import config from '../config';
 import useClassName from './hooks/useClassName';
@@ -145,16 +143,9 @@ export default defineComponent({
     const renderContentEmpty = computed(() => renderTNode(internalInstance, 'empty'));
     const renderCellEmptyContent = computed(() => renderTNode(internalInstance, 'cellEmptyContent'));
     const loadingClasses = computed(() => [`${classPrefix}-table__loading--full`]);
-    const loadingContent = computed(() => {
-      if (isBoolean(props.loading) && props.loading) {
-        return h(TLoading, { ...props.loadingProps });
-      }
-
-      if (isFunction(props.loading) || context.slots.loading) {
-        return renderTNode(internalInstance, 'loading');
-      }
-      return false;
-    });
+    const loadingContent = computed(() =>
+      renderTNode(internalInstance, 'loading', { defaultNode: h(TLoading, { ...props.loadingProps }) }),
+    );
 
     const onInnerVirtualScroll = (e: WheelEvent) => {
       emitEvent('scroll', { params: e });
