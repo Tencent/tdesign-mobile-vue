@@ -1607,12 +1607,12 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
         <h2
           class="tdesign-mobile-demo-block__title"
         >
-          04 组件规格
+          04 特殊样式
         </h2>
         <p
           class="tdesign-mobile-demo-block__summary"
         >
-          多选框尺寸规格
+          纵向卡片多选框
         </p>
       </div>
       <div
@@ -1748,9 +1748,9 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           
         </div>
         <div
-          class="demo-desc"
+          class="tdesign-mobile-demo-block__summary"
           data-v-89e01132=""
-          style="margin: 24px 16px 16px;"
+          style="margin-left: 16px; margin-top: 24px;"
         >
           横向卡片多选框
         </div>
@@ -2115,9 +2115,9 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
     
   </div>
   <div
-    class="demo-desc"
+    class="tdesign-mobile-demo-block__summary"
     data-v-89e01132=""
-    style="margin: 24px 16px 16px;"
+    style="margin-left: 16px; margin-top: 24px;"
   >
     横向卡片多选框
   </div>

@@ -6,7 +6,7 @@
           <t-node :content="labelContent"></t-node>
         </label>
       </div>
-      <div :class="contentClasses">
+      <div :class="contentClasses" :style="contentStyle">
         <div :class="contentSlotClasses">
           <slot></slot>
         </div>
@@ -158,7 +158,14 @@ export default defineComponent({
       return form?.showErrorMessage;
     });
 
-    const contentClasses = computed(() => [`${prefix}-form__controls`]);
+    const errorClasses = computed(() => {
+      if (!showErrorMessage.value) return '';
+      if (!errorList.value.length) return '';
+      const type = errorList.value[0].type || 'error';
+      return type === 'error' ? `${classPrefix}--error` : `${classPrefix}--warning`;
+    });
+
+    const contentClasses = computed(() => [`${prefix}-form__controls`, errorClasses.value]);
     const contentSlotClasses = computed(() => [
       `${prefix}-form__controls-content`,
       `${prefix}-form__controls--${contentAlign.value}`,

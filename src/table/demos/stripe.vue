@@ -6,7 +6,6 @@
       :max-height="400"
       :columns="columns"
       :stripe="stripe"
-      :bordered="bordered"
       :show-header="showHeader"
       cell-empty-content="-"
       @row-click="handleRowClick"
@@ -34,11 +33,10 @@ for (let i = 0; i < total; i++) {
 }
 
 const stripe = ref(true);
-const bordered = ref(true);
 const showHeader = ref(true);
 
 const columns = ref([
-  { colKey: 'applicant', title: '标题', align: 'center' },
+  { colKey: 'applicant', title: '标题' },
   {
     colKey: 'status',
     title: '标题',

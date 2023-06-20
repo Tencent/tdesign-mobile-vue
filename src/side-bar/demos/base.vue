@@ -80,9 +80,9 @@ const getOffsetTopList = () => {
 };
 
 const moveToActiveSideBar = (index: number) => {
-  contentStyle.value = `transform: translateY(-${
-    offsetTopList[index] - offsetTopList[0]
-  }px);transition-duration: 300ms`;
+  if (wrapper.value) {
+    wrapper.value.scrollTop = offsetTopList[index] - offsetTopList[0];
+  }
 };
 
 onMounted(() => {

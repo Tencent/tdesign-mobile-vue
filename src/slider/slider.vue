@@ -38,7 +38,7 @@
           <div
             ref="singleDot"
             :class="`${name}__dot`"
-            @touchmove="onSingleLineTap"
+            @touchmove="onSingleDotMove"
             @touchend="onTouchEnd"
             @touchcancel="onTouchEnd"
           >
@@ -117,7 +117,7 @@ import { ref, toRefs, computed, reactive, defineComponent, getCurrentInstance, w
 import config from '../config';
 import props from './props';
 import { useVModel } from '../shared/useVModel';
-import { renderTNode, useEmitEvent } from '../shared';
+import { renderTNode } from '../shared';
 import { trimSingleValue, trimValue } from './tool';
 import type { SliderValue } from './type';
 import { useFormDisabled } from '../form/hooks';
@@ -167,18 +167,19 @@ export default defineComponent({
       scaleArray: [],
       scaleTextArray: [],
     });
-    const emitEvent = useEmitEvent(props, context.emit);
-
     const defaultValue = props.defaultValue || props.min;
-    const { value, modelValue, label, max, min, theme, marks, step, range } = toRefs(props);
+    const { value, modelValue, label, theme, marks, range } = toRefs(props);
+    const max = computed(() => Number(props.max));
+    const min = computed(() => Number(props.min));
+    const step = computed(() => Number(props.step));
     const [innerValue, setInnerValue] = useVModel(value, modelValue, defaultValue, props.onChange);
 
     watch(
       () => innerValue.value,
       (val: any) => {
         if (range.value) {
-          const left = (state.maxRange * (val[0] - Number(min.value))) / (Number(max.value) - Number(min.value));
-          const right = (state.maxRange * (Number(max.value) - val[1])) / (Number(max.value) - Number(min.value));
+          const left = (state.maxRange * (val[0] - min.value)) / (max.value - min.value);
+          const right = (state.maxRange * (max.value - val[1])) / (max.value - min.value);
           // 因为要计算点相对于线的绝对定位，所以要取整条线的长度而非可滑动的范围
           setLineStyle(left, right);
         } else {
@@ -218,17 +219,15 @@ export default defineComponent({
     const lineBarWidth = ref<number>();
     const setSingleBarWidth = (value: number) => {
       const halfBlock = theme.value === 'capsule' ? Number(state.blockSize) / 2 : 0;
-      const percentage = (Number(value) - Number(min.value)) / (Number(max.value) - Number(min.value));
+      const percentage = (Number(value) - min.value) / (max.value - min.value);
       lineBarWidth.value = percentage * state.maxRange + halfBlock;
     };
 
     onMounted(() => {
       getInitialStyle();
       if (range.value) {
-        const left = // @ts-ignore
-          (state.maxRange * (innerValue.value[0] - Number(min.value))) / (Number(max.value) - Number(min.value));
-        const right = // @ts-ignore
-          (state.maxRange * (Number(max.value) - innerValue.value[1])) / (Number(max.value) - Number(min.value));
+        const left = (state.maxRange * (innerValue.value?.[0] ?? 0 - min.value)) / (max.value - min.value); // @ts-ignore
+        const right = (state.maxRange * (max.value - innerValue.value[1])) / (max.value - min.value); // @ts-ignore
         // 因为要计算点相对于线的绝对定位，所以要取整条线的长度而非可滑动的范围
         setLineStyle(left, right);
       } else {
@@ -259,6 +258,7 @@ export default defineComponent({
       const line = sliderLine.value?.getBoundingClientRect() as DOMRect;
       const halfBlock = Number(state.blockSize) / 2;
       const maxRange = line.right - line.left;
+
       state.maxRange = maxRange;
       state.initialLeft = line.left;
       state.initialRight = line.right;
@@ -269,48 +269,23 @@ export default defineComponent({
       }
     };
 
-    const onTouchEnd = (e: TouchEvent) => {};
+    const onTouchEnd = () => {};
 
-    // 点击滑动条的事件
-    const onSingleLineTap = (e: TouchEvent | MouseEvent) => {
+    const onSingleDotMove = (e: TouchEvent) => {
       if (disabled.value) return;
-      const value = getSingleChangeValue(e as any);
-      setInnerValue(value);
-      triggerValue(value);
+      const [{ pageX }] = e.changedTouches;
+      const value = convertPosToValue(pageX - state.initialLeft);
+
+      changeValue(value);
     };
 
-    const getSingleChangeValue = (e: TouchEvent) => {
-      const [touch] = e.changedTouches;
-      const { pageX } = touch;
-      const currentLeft = pageX - state.initialLeft;
-      return getChangeValue(currentLeft);
+    const changeValue = (value: SliderValue) => {
+      setInnerValue(trimValue(value, props));
     };
 
-    const getChangeValue = (currentLeft: number) => {
-      let value = 0;
-      if (currentLeft <= 0) {
-        value = Number(min.value);
-      } else if (currentLeft >= state.maxRange) {
-        value = Number(max.value);
-      } else {
-        value = Math.round(
-          (currentLeft / state.maxRange) * (Number(max.value) - Number(min.value)) + Number(min.value),
-        );
-      }
-      return stepValue(value);
-    };
-
-    const triggerValue = (value: SliderValue) => {
-      emitEvent('change', { value: trimValue(value, props) });
-    };
-
-    const stepValue = (value: number): number => {
-      if (Number(step.value) < 1 || Number(step.value) > Number(max.value) - Number(min.value)) return value;
-      const closestStep = trimSingleValue(
-        Math.round(value / Number(step.value)) * Number(step.value),
-        Number(min.value),
-        Number(max.value),
-      );
+    const calcByStep = (value: number): number => {
+      if (step.value < 1 || step.value > max.value - min.value) return value;
+      const closestStep = trimSingleValue(Math.round(value / step.value) * step.value, min.value, max.value);
 
       return closestStep as number;
     };
@@ -344,42 +319,31 @@ export default defineComponent({
       }
     };
 
-    /**
-     * 将位置转换为值
-     *
-     * @param {number} posValue 位置数据
-     * @param {(0 | 1)} dir 方向： 0-left， 1-right
-     * @return  {number}
-     * @memberof Slider
-     */
-    const convertPosToValue = (posValue: number, dir: 0 | 1): number => {
-      return dir === 0
-        ? (posValue / state.maxRange) * (Number(max.value) - Number(min.value)) + Number(min.value)
-        : Number(max.value) - (posValue / state.maxRange) * (Number(max.value) - Number(min.value));
+    const convertPosToValue = (posValue: number, isLeft = true) => {
+      const raw = isLeft
+        ? (posValue / state.maxRange) * (max.value - min.value) + min.value
+        : max.value - (posValue / state.maxRange) * (max.value - min.value);
+      return Math.round(raw);
     };
 
     const onTouchMoveLeft = (e: TouchEvent) => {
       if (disabled.value) return;
-      const [touch] = e.changedTouches;
-      const { pageX } = touch;
+      const [{ pageX }] = e.changedTouches;
       const currentLeft = pageX - state.initialLeft;
       const newData = [...(innerValue.value as number[])];
-      const leftValue = convertPosToValue(currentLeft, 0);
-      newData[0] = stepValue(leftValue);
-      setInnerValue(newData);
-      triggerValue(newData);
+      const leftValue = convertPosToValue(currentLeft);
+      newData[0] = calcByStep(leftValue);
+      changeValue(newData);
     };
 
     const onTouchMoveRight = (e: TouchEvent) => {
       if (disabled.value) return;
-      const [touch] = e.changedTouches;
-      const { pageX } = touch;
+      const [{ pageX }] = e.changedTouches;
       const currentRight = -(pageX - state.initialRight);
       const newData = [...(innerValue.value as number[])];
-      const rightValue = convertPosToValue(currentRight, 1);
-      newData[1] = stepValue(rightValue);
-      setInnerValue(newData);
-      triggerValue(newData);
+      const rightValue = convertPosToValue(currentRight, false);
+      newData[1] = calcByStep(rightValue);
+      changeValue(newData);
     };
 
     const onClick = (e: MouseEvent) => {
@@ -387,9 +351,8 @@ export default defineComponent({
       if (disabled.value) return;
       if (!sliderLine.value) return;
       const currentLeft = e.clientX - state.initialLeft;
-      const value = getChangeValue(currentLeft);
-      setInnerValue(value);
-      triggerValue(value);
+      const value = convertPosToValue(currentLeft);
+      changeValue(value);
     };
 
     const onLineClick = (e: MouseEvent) => {
@@ -411,14 +374,12 @@ export default defineComponent({
       if (isMoveLeft) {
         // 当前leftdot中心 + 左侧偏移量 = 目标左侧中心距离
         const left = e.clientX - state.initialLeft;
-        const leftValue = convertPosToValue(left, 0);
-        setInnerValue([stepValue(leftValue), innerValue.value?.[1]]);
-        triggerValue([stepValue(leftValue), innerValue.value?.[1]]);
+        const leftValue = convertPosToValue(left);
+        changeValue([calcByStep(leftValue), innerValue.value?.[1]]);
       } else {
         const right = -(e.clientX - state.initialRight);
-        const rightValue = convertPosToValue(right, 1);
-        setInnerValue([innerValue.value?.[0], stepValue(rightValue)]);
-        triggerValue([stepValue(rightValue), innerValue.value?.[1]]);
+        const rightValue = convertPosToValue(right, false);
+        changeValue([innerValue.value?.[0], calcByStep(rightValue)]);
       }
     };
     return {
@@ -434,7 +395,7 @@ export default defineComponent({
       sliderLineClasses,
       disabled,
       onTouchEnd,
-      onSingleLineTap,
+      onSingleDotMove,
       onTouchMoveLeft,
       onTouchMoveRight,
       getValue,

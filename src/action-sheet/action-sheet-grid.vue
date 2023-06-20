@@ -1,7 +1,7 @@
 <template>
   <div :class="gridClasses">
     <t-swiper
-      v-show="actionItems.length > 1"
+      v-if="actionItems.length > 1"
       :autoplay="false"
       pagination-position="bottom"
       :navigation="{ type: 'dots', showControls: false }"
@@ -29,7 +29,7 @@
         :text="item.label"
         :image="item.icon"
         :badge="item.badge"
-        @click="handleSelected(count + index)"
+        @click="handleSelected(index)"
       />
     </t-grid>
   </div>

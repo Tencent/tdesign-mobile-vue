@@ -1,19 +1,23 @@
-import { h } from 'vue';
+import { ref, h, nextTick } from 'vue';
 import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Cascader from '../cascader.vue';
 import { AppIcon as TIconApp, CloseIcon } from 'tdesign-icons-vue-next';
 import Radio from '../../radio/index';
+import { Tabs as TTabs, TabPanel as TTabPanel } from '../../tabs';
+import prefixConfig from '../../config';
+
+const { prefix } = prefixConfig;
 
 config.global.stubs = {
   teleport: true,
 };
 
-const prefix = 't';
 const name = `${prefix}-cascader`;
 
 const TEXT = 'tdesign-mobile-vue';
 const iconFunc = () => h(TIconApp);
+const address = ref('120119');
 const options = [
   {
     label: '北京市',
@@ -72,9 +76,129 @@ const options = [
     ],
   },
 ];
+const keys = {
+  label: 'name',
+  value: 'id',
+  children: 'sub',
+};
+
+const areaList = [
+  {
+    name: '北京市',
+    id: '110000',
+    sub: [
+      {
+        id: '110100',
+        name: '北京市',
+        sub: [
+          { id: '110101', name: '东城区' },
+          { id: '110102', name: '西城区' },
+          { id: '110105', name: '朝阳区' },
+          { id: '110106', name: '丰台区' },
+          { id: '110107', name: '石景山区' },
+          { id: '110108', name: '海淀区' },
+          { id: '110109', name: '门头沟区' },
+          { id: '110111', name: '房山区' },
+          { id: '110112', name: '通州区' },
+          { id: '110113', name: '顺义区' },
+          { id: '110114', name: '昌平区' },
+          { id: '110115', name: '大兴区' },
+          { id: '110116', name: '怀柔区' },
+          { id: '110117', name: '平谷区' },
+          { id: '110118', name: '密云区' },
+          { id: '110119', name: '延庆区' },
+        ],
+      },
+    ],
+  },
+  {
+    name: '天津市',
+    id: '120000',
+    sub: [
+      {
+        id: '120100',
+        name: '天津市',
+        sub: [
+          { id: '120101', name: '和平区' },
+          { id: '120102', name: '河东区' },
+          { id: '120103', name: '河西区' },
+          { id: '120104', name: '南开区' },
+          { id: '120105', name: '河北区' },
+          { id: '120106', name: '红桥区' },
+          { id: '120110', name: '东丽区' },
+          { id: '120111', name: '西青区' },
+          { id: '120112', name: '津南区' },
+          { id: '120113', name: '北辰区' },
+          { id: '120114', name: '武清区' },
+          { id: '120115', name: '宝坻区' },
+          { id: '120116', name: '滨海新区' },
+          { id: '120117', name: '宁河区' },
+          { id: '120118', name: '静海区' },
+          { id: '120119', name: '蓟州区' },
+        ],
+      },
+    ],
+  },
+];
+
+const itemList = [
+  {
+    label: '北京市',
+    value: '110000',
+    disabled: true,
+    children: [
+      {
+        value: '110100',
+        label: '北京市',
+        children: [{ value: '110101', label: '东城区' }],
+      },
+    ],
+  },
+];
+
+const subTitles = ['请选择省份', '请选择城市', '请选择区/县'];
 
 describe('cascader', () => {
   describe('props', () => {
+    it(':visible	', async () => {
+      const onPick = vi.fn();
+      const wrapper = mount(Cascader, {
+        props: {
+          visible: false,
+          options: itemList,
+          onPick,
+        },
+      });
+      expect(wrapper.find(`.${name}`).isVisible()).toBe(false);
+      await wrapper.setProps({
+        visible: true,
+      });
+      expect(wrapper.find(`.${name}`).isVisible()).toBe(true);
+
+      const $radios = wrapper.findAllComponents(Radio);
+
+      // 模拟点击 第1项，禁用态，点击不会触发pick事件
+      await $radios[0].find(`.${prefix}-radio`).trigger('click');
+      expect(onPick).toHaveBeenCalledTimes(0);
+    });
+
+    it(': keys', async () => {
+      const wrapper = mount(<Cascader visible={true} options={areaList} keys={keys} value={address} theme="tab" />);
+      expect(wrapper.findComponent(TTabs).exists()).toBeTruthy();
+      await nextTick();
+      const $tabs = wrapper.find(`.${prefix}-tabs`);
+      expect($tabs.text()).toEqual('天津市天津市蓟州区');
+    });
+
+    it(': value', async () => {
+      const address = ref('120119');
+      const wrapper = mount(<Cascader visible={true} options={options} value={address} theme="tab" />);
+      expect(wrapper.findComponent(TTabs).exists()).toBeTruthy();
+      await nextTick();
+      const $tabs = wrapper.find(`.${prefix}-tabs`);
+      expect($tabs.text()).toEqual('天津市天津市蓟州区');
+    });
+
     it(': title', async () => {
       const wrapper = mount(<Cascader options={options} />);
       const $title = wrapper.find(`.${name}__title`);
@@ -90,10 +214,33 @@ describe('cascader', () => {
       });
     });
 
+    it(': subTitles', async () => {
+      const wrapper = mount(<Cascader options={options} subTitles={subTitles} />);
+      const $subTitles = wrapper.find(`.${name}__options-title`);
+      expect($subTitles.exists()).toBeTruthy();
+    });
+
     it(': closeIcon', async () => {
       const wrapper = mount(<Cascader options={options} />);
       // 默认
       expect(wrapper.findComponent(CloseIcon).exists()).toBeTruthy();
+    });
+
+    it(': theme', async () => {
+      const themeList = ['', 'step', 'tab'];
+      themeList.map((theme, index) => {
+        const wrapper = mount(() => (
+          <Cascader visible={true} options={options} value={address} theme={theme}></Cascader>
+        ));
+        if (theme === 'step') {
+          expect(wrapper.find(`.${name}__steps`).exists()).toBeTruthy();
+          expect(wrapper.findComponent(TTabs).exists()).toBeFalsy();
+        }
+        if (theme === 'tab') {
+          expect(wrapper.find(`.${name}__steps`).exists()).toBeFalsy();
+          expect(wrapper.findComponent(TTabs).exists()).toBeTruthy();
+        }
+      });
     });
   });
 
@@ -108,22 +255,37 @@ describe('cascader', () => {
       const $title = wrapper.find(`.${name}__title`);
       expect($title.text()).toBe(title);
     });
+
+    it(': closeBtn', () => {
+      const closeBtn = '关闭';
+      const wrapper = mount(<Cascader options={options} />, {
+        slots: {
+          closeBtn,
+        },
+      });
+      const $closeBtn = wrapper.find(`.${name}__close-btn`);
+      expect($closeBtn.text()).toBe(closeBtn);
+    });
   });
 
   describe('events', () => {
-    it(': cancel', async () => {
+    it(': close', async () => {
       const onClose = vi.fn();
       const wrapper = mount(<Cascader options={options} onClose={onClose} />);
       const $closeBtn = wrapper.find(`.${name}__close-btn`);
       await $closeBtn.trigger('click');
       expect(onClose).toHaveBeenCalledTimes(1);
+      expect(onClose).toHaveBeenLastCalledWith({ trigger: 'close-btn' });
+
+      // overlay
+      const $overlay = wrapper.find(`.${prefix}-overlay`);
+      $overlay.trigger('click');
+      expect(onClose).toBeCalledTimes(2);
+      expect(onClose).toHaveBeenLastCalledWith({ trigger: 'overlay' });
     });
 
     it(': pick', async () => {
-      let selectedValue = [];
-      const onPick = vi.fn((e) => {
-        selectedValue.push(e.value);
-      });
+      const onPick = vi.fn();
       const wrapper = mount(<Cascader options={options} onPick={onPick} />);
       expect(wrapper.element).toMatchSnapshot();
       const $cascaderSteps = wrapper.findAll(`.${name}__step`);
@@ -137,7 +299,15 @@ describe('cascader', () => {
       await $radios[clickIndex].find(`.t-radio`).trigger('click');
       expect(onPick).toHaveBeenCalledTimes(1);
       expect($radios[clickIndex].findAll(`.t-radio__icon--checked`)).toHaveLength(1);
-      expect(selectedValue[0]).toBe(options[0].value);
+      expect(onPick).toHaveBeenCalledWith({ index: 0, value: '110000' });
+      const $step = wrapper.findAll(`.${name}__step`);
+      expect($step).toHaveLength(2);
+
+      // 此时 label 激活项为第二项
+      expect($step[1].find(`.${name}__step-label`).classes().includes(`${name}__step-label--active`)).toBeTruthy();
+      // 模拟点击 第一项 step内容，此时激活项变更为第一项
+      await $step[0].trigger('click');
+      expect($step[0].find(`.${name}__step-label`).classes().includes(`${name}__step-label--active`)).toBeTruthy();
     });
   });
 });

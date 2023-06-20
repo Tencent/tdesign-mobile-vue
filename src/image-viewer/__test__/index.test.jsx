@@ -83,5 +83,12 @@ describe('ImageViewer', () => {
       await wrapper.find('.t-image-viewer__nav-close').trigger('click');
       expect(wrapper.emitted()).toHaveProperty('close');
     });
+
+    it(': delete', async () => {
+      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} delete-btn={true} />);
+      
+      await wrapper.find('.t-image-viewer__nav-delete').trigger('click');
+      expect(wrapper.emitted()).toHaveProperty('delete');
+    });
   });
 });

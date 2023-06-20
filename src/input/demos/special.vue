@@ -1,10 +1,14 @@
 <template>
-  <t-input label="输入密码" type="password" default-value="520 TDesign" clearable />
+  <t-input label="输入密码" type="password" default-value="520 TDesign" :clearable="false">
+    <template #suffixIcon>
+      <BrowseOffIcon />
+    </template>
+  </t-input>
   <t-input placeholder="输入验证码" label="验证码">
     <template #suffix>
       <div class="suffix">
         <div class="suffix--line"></div>
-        <image
+        <t-image
           class="image"
           src="https://wwcdn.weixin.qq.com/node/wework/images/202010241547.ac6876be9c.png"
           mode="heightFix"
@@ -16,7 +20,7 @@
   </t-input>
   <t-input v-model="phoneNumber" label="手机号" placeholder="输入手机号码" :tips="tips">
     <template #suffix>
-      <div style="display: flex; align-items: center">
+      <div class="suffix">
         <div class="suffix--line"></div>
         <div class="verify" aria-role="button">发送验证码</div>
       </div>
@@ -28,6 +32,7 @@
 
 <script lang="ts" setup>
 import { ref, computed } from 'vue';
+import { BrowseOffIcon } from 'tdesign-icons-vue-next';
 
 const phoneNumber = ref('17600600600');
 

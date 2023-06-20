@@ -84,9 +84,8 @@ export default defineComponent({
     const stickyProps = computed(() => ({ ...props.stickyProps, disabled: !props.sticky }));
     const activeClass = `${name}__item--active`;
     const disabledClass = `${name}__item--disabled`;
-    const classes = computed(() => [`${name}`, props.size ? CLASSNAMES.SIZE[props.size] : '']);
+    const classes = computed(() => [`${name}`, props.size && CLASSNAMES.SIZE[props.size]]);
     const navClasses = ref([`${name}__nav`]);
-    const isScroll = ref(false);
     const startX = ref(0);
     const startY = ref(0);
     const endX = ref(0);
@@ -157,8 +156,6 @@ export default defineComponent({
     };
 
     onMounted(() => {
-      isScroll.value = (navWrap.value?.offsetWidth || 0) > (navScroll.value?.offsetWidth || 0);
-      isScroll.value && navClasses.value.push(`${prefix}-is-scrollable`);
       window.addEventListener('resize', moveToActiveTab, false);
       setTimeout(() => {
         moveToActiveTab();

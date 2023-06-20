@@ -113,7 +113,7 @@ export default defineComponent({
     TRadioGroup,
   },
   props: TdCascaderProps,
-  emits: ['change', 'close', 'pick', 'click-tab', 'update:modelValue', 'update:value', 'update:visible'],
+  emits: ['change', 'close', 'pick', 'update:modelValue', 'update:value', 'update:visible'],
   setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const { visible, value, modelValue, subTitles, options, keys } = toRefs(props);
@@ -130,11 +130,6 @@ export default defineComponent({
     onMounted(() => {
       initWithValue();
     });
-
-    const onStepsChange = (index: number) => {
-      stepIndex.value = index;
-      emitEvent('click-tab', index);
-    };
 
     const internalInstance = getCurrentInstance();
     const closeBtnTNode = computed(() => {
@@ -267,7 +262,6 @@ export default defineComponent({
       setCascaderValue,
       emitEvent,
       onClose,
-      onStepsChange,
     };
   },
 });

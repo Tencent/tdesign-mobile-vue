@@ -1,5 +1,5 @@
 <template>
-  <div :class="`${name}`">
+  <div :class="rootClasses">
     <div
       ref="rateWrapper"
       :class="`${name}__wrapper`"
@@ -83,6 +83,7 @@ import rateProps from './props';
 import config from '../config';
 import { TdRateProps } from './type';
 import { useDefault } from '../shared';
+import { useFormDisabled } from '../form/hooks';
 
 const { prefix } = config;
 const name = `${prefix}-rate`;
@@ -92,6 +93,8 @@ export default defineComponent({
   props: rateProps,
   emits: ['change', 'update:value', 'update:modelValue'],
   setup(props, context) {
+    const disabled = useFormDisabled();
+
     const rateWrapper = ref<HTMLElement | null>(null);
     const [actualVal] = useDefault<number, TdRateProps>(props, context.emit, 'value', 'change');
     const rateText = computed(() => {
@@ -172,9 +175,10 @@ export default defineComponent({
       );
     };
 
+    const rootClasses = computed(() => [`${name}`, { [`${name}--disabled`]: disabled.value }]);
+
     const classes = (n: number) => {
       const classPrefix = `${name}__icon`;
-      const { disabled } = props;
       const className = {
         [classPrefix]: true,
       };
@@ -183,9 +187,6 @@ export default defineComponent({
       }
       if (actualVal.value >= n) {
         className[`${classPrefix}--selected`] = true;
-        if (disabled) {
-          className[`${classPrefix}--disabled`] = true;
-        }
       } else {
         className[`${classPrefix}--unselected`] = true;
       }
@@ -225,7 +226,7 @@ export default defineComponent({
     };
 
     const onClick = (event: MouseEvent) => {
-      if (props.disabled) return;
+      if (disabled.value) return;
       // if (Date.now() - touchStartTime.value > 200) return;
       getRect(event, 'tap');
     };
@@ -236,19 +237,19 @@ export default defineComponent({
     };
 
     const onTouchstart = (e: TouchEvent) => {
-      if (props.disabled) return;
+      if (disabled.value) return;
       touchStartTime.value = Date.now();
       touchEnd.value = false;
     };
 
     const onTouchmove = (e: TouchEvent) => {
-      if (props.disabled) return;
+      if (disabled.value) return;
       if (Date.now() - touchStartTime.value <= 200) return;
       onTouch(e, 'move');
     };
 
     const onTouchEnd = (e: TouchEvent) => {
-      if (props.disabled) return;
+      if (disabled.value) return;
       touchEnd.value = true;
       hideTips();
     };
@@ -296,6 +297,7 @@ export default defineComponent({
 
     return {
       name: ref(name),
+      rootClasses,
       classes,
       rateWrapper,
       actualVal,

@@ -43,7 +43,7 @@ export default defineComponent({
     // 默认loading和error状态展示，slot支持Node和Function
     const internalInstance = getCurrentInstance();
 
-    const closeIcon = h(CloseIcon);
+    const closeIcon = h(CloseIcon, { size: '22px' });
     const LoadingIcon = h(Loading, { theme: 'dots', inheritColor: true });
     const statusContent = computed(() => {
       if (context.slots?.loading && isLoading.value) {

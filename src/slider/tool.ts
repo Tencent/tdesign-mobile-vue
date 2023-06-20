@@ -6,9 +6,6 @@
  * @return {number}
  */
 export const trimSingleValue = (value: any, min: number, max: number): number => {
-  if (typeof value !== 'number') {
-    return min;
-  }
   if (value < min) {
     return min;
   }
@@ -40,9 +37,5 @@ export const trimValue = (value: number | number[], props: any): number | number
     return [min, max];
   }
 
-  if (!range) {
-    return trimSingleValue(value, min, max);
-  }
-
-  return [];
+  return trimSingleValue(value, min, max);
 };

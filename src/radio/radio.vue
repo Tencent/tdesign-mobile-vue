@@ -37,6 +37,7 @@
 <script lang="ts">
 import { inject, computed, defineComponent, getCurrentInstance, Ref, toRefs } from 'vue';
 import { CheckIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
+
 import { renderContent, renderTNode, TNode, NOOP, useVModel } from '../shared';
 import config from '../config';
 import RadioProps from './props';
@@ -62,23 +63,23 @@ export default defineComponent({
     );
 
     const rootGroupProps = inject('rootGroupProps', {}) as TdRadioGroupProps;
-    const rootGroupValue = inject<Ref<RadioValue>>('rootGroupValue');
+    const rootGroupValue = inject('rootGroupValue', {}) as Ref;
     const rootGroupChange = inject('rootGroupChange', NOOP) as (val: RadioValue, e: Event) => void;
 
     const formDisabled = useFormDisabled();
 
     const disabled = computed(() => {
-      if (formDisabled.value == null) return rootGroupProps.disabled;
+      if (formDisabled.value == null && 'disabled' in rootGroupProps) return rootGroupProps.disabled;
       return formDisabled.value;
     });
     const radioChecked = computed(() => innerChecked.value || props.value === rootGroupValue?.value);
     const finalBorderless = computed(() => {
-      if (props.borderless == null) return rootGroupProps.borderless;
+      if (props.borderless == null && 'borderless' in rootGroupProps) return rootGroupProps.borderless;
       return props.borderless;
     });
     const finalPlacement = computed(() => {
-      if (props.placement == null) return rootGroupProps.placement;
-      return props.placement;
+      if (props.placement == null && 'placement' in rootGroupProps) return rootGroupProps.placement;
+      return props.placement || 'left';
     });
 
     // input props attribute
