@@ -146,7 +146,7 @@ exports[`List > List pullRefreshVue demo works fine 1`] = `
     >
       <div
         class="t-pull-down-refresh__loading"
-        style="transform: translateY(15px); height: 0px; max-height: 50px;"
+        style="height: 50px;"
       >
         <div
           class="t-pull-down-refresh__text"

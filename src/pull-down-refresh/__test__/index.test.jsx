@@ -13,10 +13,10 @@ describe('PullDownRefresh', () => {
     it(':loadingBarHeight', async () => {
       const wrapper = mount(<PullDownRefresh value={true} loadingBarHeight={30} />);
       const loadingBar = wrapper.find('.t-pull-down-refresh__loading');
-      expect(window.getComputedStyle(loadingBar.element).getPropertyValue('max-height')).toBe(`${30}px`);
+      expect(window.getComputedStyle(loadingBar.element).height).toBe(`${30}px`);
 
       await wrapper.setProps({ loadingBarHeight: '90px' });
-      expect(window.getComputedStyle(loadingBar.element).getPropertyValue('max-height')).toBe(`${90}px`);
+      expect(window.getComputedStyle(loadingBar.element).height).toBe(`${90}px`);
     });
 
     it(':others', async () => {
