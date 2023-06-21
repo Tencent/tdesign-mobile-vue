@@ -7,6 +7,8 @@
 -- | -- | -- | -- | --
 closeBtn | Boolean / Slot / Function | true | 关闭按钮。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 keys | Object | - | 用来定义 value / label 在 `options` 中对应的字段别名。TS 类型：`KeysType`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+lazy | Boolean | false | 是否异步加载 | N
+loadCompleted | Boolean | false | 是否完成异步加载 | N
 options | Array | [] | 可选项数据源。TS 类型：`Array<CascaderOption>` | N
 subTitles | Array | [] | 每级展示的次标题。TS 类型：`Array<string>` | N
 theme | String | step | 展示风格。可选项：step/tab | N

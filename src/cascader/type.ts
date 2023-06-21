@@ -17,6 +17,16 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   keys?: KeysType;
   /**
+   * 是否异步加载
+   * @default false
+   */
+  lazy?: boolean;
+  /**
+   * 是否完成异步加载
+   * @default false
+   */
+  loadCompleted?: boolean;
+  /**
    * 可选项数据源
    * @default []
    */

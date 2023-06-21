@@ -61,7 +61,7 @@ export interface TdRadioProps {
    * 自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标
    * @default 'circle'
    */
-  icon?: 'circle' | 'line' | 'dot' | Array<TNode>;
+  icon?: 'circle' | 'line' | 'dot' | 'loading' | Array<TNode>;
   /**
    * 主文案
    */
@@ -83,7 +83,6 @@ export interface TdRadioProps {
   name?: string;
   /**
    * 复选框和内容相对位置
-   * @default left
    */
   placement?: 'left' | 'right';
   /**
@@ -115,7 +114,7 @@ export interface TdRadioGroupProps<T = RadioValue> {
    * 自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标
    * @default 'circle'
    */
-  icon?: 'circle' | 'line' | 'dot' | Array<TNode>;
+  icon?: 'circle' | 'line' | 'dot' | 'loading' | Array<TNode>;
   /**
    * 用来定义 value / label 在 `options` 中对应的字段别名
    */
@@ -156,7 +155,7 @@ export type RadioOption = string | number | RadioOptionObj;
 
 export interface RadioOptionObj {
   label?: string | TNode;
-  value?: string | number;
+  value?: string | number | boolean;
   disabled?: boolean;
 }
 

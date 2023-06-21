@@ -113,9 +113,11 @@ exports[`cascader > events > : pick 1`] = `
                     <!--v-if-->
                     <!--v-if-->
                     <!--v-if-->
+                    <!--v-if-->
                     <div
                       class="placeholder"
                     />
+                    <!--v-if-->
                     <!---->
                   </div>
                   <div
@@ -147,9 +149,11 @@ exports[`cascader > events > : pick 1`] = `
                     <!--v-if-->
                     <!--v-if-->
                     <!--v-if-->
+                    <!--v-if-->
                     <div
                       class="placeholder"
                     />
+                    <!--v-if-->
                     <!---->
                   </div>
                   <div

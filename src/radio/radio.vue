@@ -4,6 +4,7 @@
     <div :class="iconClass">
       <check-circle-filled-icon v-if="checked && icon === 'circle'" :class="`${name}__icon-wrap`" />
       <check-icon v-if="checked && icon === 'line'" :class="`${name}__icon-wrap`" />
+      <loading-icon v-if="checked && icon === 'loading'" :class="`${name}__icon-wrap`" />
       <div
         v-if="checked && icon == 'dot'"
         :class="[`${name}__icon-${icon}`, { [`${name}__icon-${icon}--disabled`]: disabled }]"
@@ -13,6 +14,7 @@
         :class="[`${name}__icon-circle`, { [`${name}__icon-circle--disabled`]: disabled }]"
       />
       <div v-if="!checked && icon == 'line'" class="placeholder" />
+      <div v-if="!checked && icon == 'loading'" class="placeholder" />
 
       <t-node :content="iconContent" />
     </div>
@@ -36,7 +38,7 @@
 
 <script lang="ts">
 import { inject, computed, defineComponent, getCurrentInstance, Ref, toRefs } from 'vue';
-import { CheckIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
+import { CheckIcon, LoadingIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
 
 import { renderContent, renderTNode, TNode, NOOP, useVModel } from '../shared';
 import config from '../config';
@@ -49,7 +51,7 @@ const name = `${prefix}-radio`;
 
 export default defineComponent({
   name,
-  components: { TNode, CheckIcon, CheckCircleFilledIcon },
+  components: { TNode, CheckIcon, LoadingIcon, CheckCircleFilledIcon },
   props: RadioProps,
   emits: ['update:checked', 'update:modelValue', 'change'],
   setup(props) {

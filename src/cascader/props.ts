@@ -17,6 +17,10 @@ export default {
   keys: {
     type: Object as PropType<TdCascaderProps['keys']>,
   },
+  /** 是否异步加载 */
+  lazy: Boolean,
+  /** 是否完成异步加载 */
+  loadCompleted: Boolean,
   /** 可选项数据源 */
   options: {
     type: Array as PropType<TdCascaderProps['options']>,

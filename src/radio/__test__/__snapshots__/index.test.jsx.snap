@@ -21,9 +21,11 @@ exports[`Radio > props > : checked 1`] = `
       <!--v-if-->
       <!--v-if-->
       <!--v-if-->
+      <!--v-if-->
       <div
         class="t-radio__icon-circle"
       />
+      <!--v-if-->
       <!--v-if-->
       <!---->
     </div>
@@ -67,6 +69,8 @@ exports[`Radio > props > : checked 1`] = `
           fill-opacity="0.9"
         />
       </svg>
+      <!--v-if-->
+      <!--v-if-->
       <!--v-if-->
       <!--v-if-->
       <!--v-if-->
@@ -115,9 +119,11 @@ exports[`Radio > props > : keys 1`] = `
       <!--v-if-->
       <!--v-if-->
       <!--v-if-->
+      <!--v-if-->
       <div
         class="t-radio__icon-circle t-radio__icon-circle--disabled"
       />
+      <!--v-if-->
       <!--v-if-->
       <!---->
     </div>
@@ -151,9 +157,11 @@ exports[`Radio > props > : keys 1`] = `
       <!--v-if-->
       <!--v-if-->
       <!--v-if-->
+      <!--v-if-->
       <div
         class="t-radio__icon-circle"
       />
+      <!--v-if-->
       <!--v-if-->
       <!---->
     </div>
@@ -194,7 +202,9 @@ exports[`Radio > props > :placement 1`] = `
     <!--v-if-->
     <!--v-if-->
     <!--v-if-->
-    line
+    <!--v-if-->
+    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-radio__content"

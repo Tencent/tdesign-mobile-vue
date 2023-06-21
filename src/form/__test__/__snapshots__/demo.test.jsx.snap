@@ -226,9 +226,11 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 <!--v-if-->
                 <!--v-if-->
                 <!--v-if-->
+                <!--v-if-->
                 <div
                   class="t-radio__icon-circle"
                 />
+                <!--v-if-->
                 <!--v-if-->
                 <!---->
               </div>
@@ -261,9 +263,11 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 <!--v-if-->
                 <!--v-if-->
                 <!--v-if-->
+                <!--v-if-->
                 <div
                   class="t-radio__icon-circle"
                 />
+                <!--v-if-->
                 <!--v-if-->
                 <!---->
               </div>
@@ -296,9 +300,11 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 <!--v-if-->
                 <!--v-if-->
                 <!--v-if-->
+                <!--v-if-->
                 <div
                   class="t-radio__icon-circle"
                 />
+                <!--v-if-->
                 <!--v-if-->
                 <!---->
               </div>
@@ -939,9 +945,11 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                               <!--v-if-->
                               <!--v-if-->
                               <!--v-if-->
+                              <!--v-if-->
                               <div
                                 class="placeholder"
                               />
+                              <!--v-if-->
                               <!---->
                             </div>
                             <div
@@ -973,9 +981,11 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                               <!--v-if-->
                               <!--v-if-->
                               <!--v-if-->
+                              <!--v-if-->
                               <div
                                 class="placeholder"
                               />
+                              <!--v-if-->
                               <!---->
                             </div>
                             <div
@@ -1977,9 +1987,11 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       <!--v-if-->
                       <!--v-if-->
                       <!--v-if-->
+                      <!--v-if-->
                       <div
                         class="t-radio__icon-circle"
                       />
+                      <!--v-if-->
                       <!--v-if-->
                       <!---->
                     </div>
@@ -2012,9 +2024,11 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       <!--v-if-->
                       <!--v-if-->
                       <!--v-if-->
+                      <!--v-if-->
                       <div
                         class="t-radio__icon-circle"
                       />
+                      <!--v-if-->
                       <!--v-if-->
                       <!---->
                     </div>
@@ -2047,9 +2061,11 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       <!--v-if-->
                       <!--v-if-->
                       <!--v-if-->
+                      <!--v-if-->
                       <div
                         class="t-radio__icon-circle"
                       />
+                      <!--v-if-->
                       <!--v-if-->
                       <!---->
                     </div>
@@ -2690,9 +2706,11 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                                     <!--v-if-->
                                     <!--v-if-->
                                     <!--v-if-->
+                                    <!--v-if-->
                                     <div
                                       class="placeholder"
                                     />
+                                    <!--v-if-->
                                     <!---->
                                   </div>
                                   <div
@@ -2724,9 +2742,11 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                                     <!--v-if-->
                                     <!--v-if-->
                                     <!--v-if-->
+                                    <!--v-if-->
                                     <div
                                       class="placeholder"
                                     />
+                                    <!--v-if-->
                                     <!---->
                                   </div>
                                   <div
@@ -3592,9 +3612,11 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 <!--v-if-->
                 <!--v-if-->
                 <!--v-if-->
+                <!--v-if-->
                 <div
                   class="t-radio__icon-circle"
                 />
+                <!--v-if-->
                 <!--v-if-->
                 <!---->
               </div>
@@ -3627,9 +3649,11 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 <!--v-if-->
                 <!--v-if-->
                 <!--v-if-->
+                <!--v-if-->
                 <div
                   class="t-radio__icon-circle"
                 />
+                <!--v-if-->
                 <!--v-if-->
                 <!---->
               </div>
@@ -3662,9 +3686,11 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 <!--v-if-->
                 <!--v-if-->
                 <!--v-if-->
+                <!--v-if-->
                 <div
                   class="t-radio__icon-circle"
                 />
+                <!--v-if-->
                 <!--v-if-->
                 <!---->
               </div>
@@ -4301,9 +4327,11 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                               <!--v-if-->
                               <!--v-if-->
                               <!--v-if-->
+                              <!--v-if-->
                               <div
                                 class="placeholder"
                               />
+                              <!--v-if-->
                               <!---->
                             </div>
                             <div
@@ -4335,9 +4363,11 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                               <!--v-if-->
                               <!--v-if-->
                               <!--v-if-->
+                              <!--v-if-->
                               <div
                                 class="placeholder"
                               />
+                              <!--v-if-->
                               <!---->
                             </div>
                             <div

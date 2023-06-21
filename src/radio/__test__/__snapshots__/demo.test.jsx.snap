@@ -23,9 +23,11 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
         <!--v-if-->
         <!--v-if-->
         <!--v-if-->
+        <!--v-if-->
         <div
           class="t-radio__icon-circle"
         />
+        <!--v-if-->
         <!--v-if-->
         <!---->
       </div>
@@ -59,9 +61,11 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
         <!--v-if-->
         <!--v-if-->
         <!--v-if-->
+        <!--v-if-->
         <div
           class="t-radio__icon-circle"
         />
+        <!--v-if-->
         <!--v-if-->
         <!---->
       </div>
@@ -109,6 +113,8 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
         <!--v-if-->
         <!--v-if-->
         <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
         <!---->
       </div>
       <div
@@ -141,9 +147,11 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
         <!--v-if-->
         <!--v-if-->
         <!--v-if-->
+        <!--v-if-->
         <div
           class="t-radio__icon-circle"
         />
+        <!--v-if-->
         <!--v-if-->
         <!---->
       </div>
@@ -209,6 +217,8 @@ exports[`Radio > Radio cardVue demo works fine 1`] = `
         <!--v-if-->
         <!--v-if-->
         <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
         <!---->
       </div>
       <div
@@ -241,9 +251,11 @@ exports[`Radio > Radio cardVue demo works fine 1`] = `
         <!--v-if-->
         <!--v-if-->
         <!--v-if-->
+        <!--v-if-->
         <div
           class="t-radio__icon-circle"
         />
+        <!--v-if-->
         <!--v-if-->
         <!---->
       </div>
@@ -277,9 +289,11 @@ exports[`Radio > Radio cardVue demo works fine 1`] = `
         <!--v-if-->
         <!--v-if-->
         <!--v-if-->
+        <!--v-if-->
         <div
           class="t-radio__icon-circle"
         />
+        <!--v-if-->
         <!--v-if-->
         <!---->
       </div>
@@ -346,6 +360,8 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
           <!--v-if-->
           <!--v-if-->
           <!--v-if-->
+          <!--v-if-->
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -390,6 +406,8 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
           <!--v-if-->
           <!--v-if-->
           <!--v-if-->
+          <!--v-if-->
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -429,6 +447,8 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
         <div
           class="t-radio__icon t-radio__icon--left"
         >
+          <!--v-if-->
+          <!--v-if-->
           <!--v-if-->
           <!--v-if-->
           <!--v-if-->
@@ -502,6 +522,8 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
           <!--v-if-->
           <!--v-if-->
           <!--v-if-->
+          <!--v-if-->
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -541,6 +563,8 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
           <!--v-if-->
           <!--v-if-->
           <!--v-if-->
+          <!--v-if-->
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -575,6 +599,8 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
         <div
           class="t-radio__icon t-radio__icon--left"
         >
+          <!--v-if-->
+          <!--v-if-->
           <!--v-if-->
           <!--v-if-->
           <!--v-if-->
@@ -625,9 +651,11 @@ exports[`Radio > Radio horizontalVue demo works fine 1`] = `
       <!--v-if-->
       <!--v-if-->
       <!--v-if-->
+      <!--v-if-->
       <div
         class="t-radio__icon-circle"
       />
+      <!--v-if-->
       <!--v-if-->
       <!---->
     </div>
@@ -659,9 +687,11 @@ exports[`Radio > Radio horizontalVue demo works fine 1`] = `
       <!--v-if-->
       <!--v-if-->
       <!--v-if-->
+      <!--v-if-->
       <div
         class="t-radio__icon-circle"
       />
+      <!--v-if-->
       <!--v-if-->
       <!---->
     </div>
@@ -703,6 +733,8 @@ exports[`Radio > Radio horizontalVue demo works fine 1`] = `
           fill-opacity="0.9"
         />
       </svg>
+      <!--v-if-->
+      <!--v-if-->
       <!--v-if-->
       <!--v-if-->
       <!--v-if-->
@@ -760,6 +792,8 @@ exports[`Radio > Radio iconVue demo works fine 1`] = `
       <!--v-if-->
       <!--v-if-->
       <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
       <!---->
     </div>
     <div
@@ -791,9 +825,11 @@ exports[`Radio > Radio iconVue demo works fine 1`] = `
     >
       <!--v-if-->
       <!--v-if-->
+      <!--v-if-->
       <div
         class="t-radio__icon-dot"
       />
+      <!--v-if-->
       <!--v-if-->
       <!--v-if-->
       <!---->
@@ -874,9 +910,11 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               <!--v-if-->
               <!--v-if-->
               <!--v-if-->
+              <!--v-if-->
               <div
                 class="t-radio__icon-circle"
               />
+              <!--v-if-->
               <!--v-if-->
               <!---->
             </div>
@@ -910,9 +948,11 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               <!--v-if-->
               <!--v-if-->
               <!--v-if-->
+              <!--v-if-->
               <div
                 class="t-radio__icon-circle"
               />
+              <!--v-if-->
               <!--v-if-->
               <!---->
             </div>
@@ -960,6 +1000,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               <!--v-if-->
               <!--v-if-->
               <!--v-if-->
+              <!--v-if-->
+              <!--v-if-->
               <!---->
             </div>
             <div
@@ -992,9 +1034,11 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               <!--v-if-->
               <!--v-if-->
               <!--v-if-->
+              <!--v-if-->
               <div
                 class="t-radio__icon-circle"
               />
+              <!--v-if-->
               <!--v-if-->
               <!---->
             </div>
@@ -1062,9 +1106,11 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <!--v-if-->
             <!--v-if-->
             <!--v-if-->
+            <!--v-if-->
             <div
               class="t-radio__icon-circle"
             />
+            <!--v-if-->
             <!--v-if-->
             <!---->
           </div>
@@ -1096,9 +1142,11 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <!--v-if-->
             <!--v-if-->
             <!--v-if-->
+            <!--v-if-->
             <div
               class="t-radio__icon-circle"
             />
+            <!--v-if-->
             <!--v-if-->
             <!---->
           </div>
@@ -1140,6 +1188,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
                 fill-opacity="0.9"
               />
             </svg>
+            <!--v-if-->
+            <!--v-if-->
             <!--v-if-->
             <!--v-if-->
             <!--v-if-->
@@ -1221,6 +1271,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <!--v-if-->
             <!--v-if-->
             <!--v-if-->
+            <!--v-if-->
+            <!--v-if-->
             <!---->
           </div>
           <div
@@ -1254,9 +1306,11 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <!--v-if-->
             <!--v-if-->
             <!--v-if-->
+            <!--v-if-->
             <div
               class="t-radio__icon-circle t-radio__icon-circle--disabled"
             />
+            <!--v-if-->
             <!--v-if-->
             <!---->
           </div>
@@ -1332,6 +1386,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           <!--v-if-->
           <!--v-if-->
           <!--v-if-->
+          <!--v-if-->
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -1363,9 +1419,11 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         >
           <!--v-if-->
           <!--v-if-->
+          <!--v-if-->
           <div
             class="t-radio__icon-dot"
           />
+          <!--v-if-->
           <!--v-if-->
           <!--v-if-->
           <!---->
@@ -1436,6 +1494,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           <!--v-if-->
           <!--v-if-->
           <!--v-if-->
+          <!--v-if-->
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -1478,6 +1538,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               fill-opacity="0.9"
             />
           </svg>
+          <!--v-if-->
+          <!--v-if-->
           <!--v-if-->
           <!--v-if-->
           <!--v-if-->
@@ -1556,6 +1618,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               <!--v-if-->
               <!--v-if-->
               <!--v-if-->
+              <!--v-if-->
+              <!--v-if-->
               <!---->
             </div>
             <div
@@ -1588,9 +1652,11 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               <!--v-if-->
               <!--v-if-->
               <!--v-if-->
+              <!--v-if-->
               <div
                 class="t-radio__icon-circle"
               />
+              <!--v-if-->
               <!--v-if-->
               <!---->
             </div>
@@ -1624,9 +1690,11 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               <!--v-if-->
               <!--v-if-->
               <!--v-if-->
+              <!--v-if-->
               <div
                 class="t-radio__icon-circle"
               />
+              <!--v-if-->
               <!--v-if-->
               <!---->
             </div>
@@ -1711,6 +1779,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               <!--v-if-->
               <!--v-if-->
               <!--v-if-->
+              <!--v-if-->
+              <!--v-if-->
               <!---->
             </div>
             <div
@@ -1755,6 +1825,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               <!--v-if-->
               <!--v-if-->
               <!--v-if-->
+              <!--v-if-->
+              <!--v-if-->
               <!---->
             </div>
             <div
@@ -1794,6 +1866,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <div
               class="t-radio__icon t-radio__icon--left"
             >
+              <!--v-if-->
+              <!--v-if-->
               <!--v-if-->
               <!--v-if-->
               <!--v-if-->
@@ -1867,6 +1941,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               <!--v-if-->
               <!--v-if-->
               <!--v-if-->
+              <!--v-if-->
+              <!--v-if-->
               <!---->
             </div>
             <div
@@ -1906,6 +1982,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               <!--v-if-->
               <!--v-if-->
               <!--v-if-->
+              <!--v-if-->
+              <!--v-if-->
               <!---->
             </div>
             <div
@@ -1940,6 +2018,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <div
               class="t-radio__icon t-radio__icon--left"
             >
+              <!--v-if-->
+              <!--v-if-->
               <!--v-if-->
               <!--v-if-->
               <!--v-if-->
@@ -2005,6 +2085,8 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
       <!--v-if-->
       <!--v-if-->
       <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
       <!---->
     </div>
     <div
@@ -2047,6 +2129,8 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
           fill-opacity="0.9"
         />
       </svg>
+      <!--v-if-->
+      <!--v-if-->
       <!--v-if-->
       <!--v-if-->
       <!--v-if-->
@@ -2109,6 +2193,8 @@ exports[`Radio > Radio statusVue demo works fine 1`] = `
       <!--v-if-->
       <!--v-if-->
       <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
       <!---->
     </div>
     <div
@@ -2142,9 +2228,11 @@ exports[`Radio > Radio statusVue demo works fine 1`] = `
       <!--v-if-->
       <!--v-if-->
       <!--v-if-->
+      <!--v-if-->
       <div
         class="t-radio__icon-circle t-radio__icon-circle--disabled"
       />
+      <!--v-if-->
       <!--v-if-->
       <!---->
     </div>

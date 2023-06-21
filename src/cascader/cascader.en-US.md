@@ -1,13 +1,14 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Cascader Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
 closeBtn | Boolean / Slot / Function | true | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 keys | Object | - | Typescript：`KeysType`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+lazy | Boolean | false | \- | N
+loadCompleted | Boolean | false | \- | N
 options | Array | [] | Typescript：`Array<CascaderOption>` | N
 subTitles | Array | [] | Typescript：`Array<string>` | N
 theme | String | step | options：step/tab | N

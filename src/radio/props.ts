@@ -82,7 +82,7 @@ export default {
   /** 复选框和内容相对位置 */
   placement: {
     type: String as PropType<TdRadioProps['placement']>,
-    default: undefined,
+    default: undefined as TdRadioProps['placement'],
     validator(val: TdRadioProps['placement']): boolean {
       if (!val) return true;
       return ['left', 'right'].includes(val);

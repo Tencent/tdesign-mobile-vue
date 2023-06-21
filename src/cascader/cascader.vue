@@ -56,7 +56,7 @@
                   :keys="keys"
                   :options="options"
                   placement="right"
-                  icon="line"
+                  :icon="icon"
                   borderless
                   @change="handleSelect($event, index)"
                 />
@@ -94,6 +94,7 @@ import { TreeOptionData } from '../common';
 const { prefix } = config;
 const name = `${prefix}-cascader`;
 const defaultOptionLabel = '选择选项';
+const icon = ref('line');
 
 interface KeysType {
   value?: string;
@@ -193,15 +194,25 @@ export default defineComponent({
         return;
       }
 
-      emitEvent('pick', { value: item[keys.value?.value ?? 'value'], index });
-
-      if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length) {
-        items[level + 1] = item[(keys as Ref<KeysType>).value?.children ?? 'children'];
+      const children = item[(keys as Ref<KeysType>).value?.children ?? 'children'];
+      if (children?.length > 0) {
+        emitEvent('pick', { value: item[keys.value?.value ?? 'value'], index });
+        items[level + 1] = children;
         items.length = level + 2;
         stepIndex.value += 1;
         steps[level + 1] = '选择选项';
         steps.length = level + 2;
+      } else if (props.lazy && children?.length === 0) {
+        icon.value = 'loading';
+        watch(
+          () => props.loadCompleted,
+          () => {
+            handleSelect(e, level);
+            icon.value = 'line';
+          },
+        );
       } else {
+        emitEvent('pick', { value: item[keys.value?.value ?? 'value'], index });
         setCascaderValue(item[keys.value?.value ?? 'value']);
         emitEvent(
           'change',
@@ -252,6 +263,7 @@ export default defineComponent({
       titleTNode,
       stepIndex,
       name,
+      icon,
       title,
       subTitles,
       cascaderValue,

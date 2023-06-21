@@ -59,7 +59,7 @@ describe('Radio', () => {
       const wrapper = mount(Radio, {
         props: {
           placement: 'right',
-          icon: ['line', 'dot'],
+          icon: ['line', 'loading', 'dot'],
           checked: true,
         },
       });
