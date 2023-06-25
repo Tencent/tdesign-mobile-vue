@@ -11,7 +11,7 @@ import { computed, getCurrentInstance, defineComponent, ref, watch } from 'vue';
 import { useElementBounding, templateRef } from '@vueuse/core';
 import props from './props';
 import config from '../config';
-import { renderContent, useEmitEvent, TNode } from '../shared';
+import { renderContent, TNode } from '../shared';
 
 const name = `${config.prefix}-sticky`;
 
@@ -19,10 +19,9 @@ export default defineComponent({
   name,
   components: { TNode },
   props,
-  setup(props, context) {
+  setup(props) {
     const boxClasses = name;
     const stickyContent = computed(() => renderContent(getCurrentInstance(), 'default', ''));
-    const emitEvent = useEmitEvent(props, context.emit);
 
     // box 用于占位和记录边界
     // content 用于实际定位
@@ -66,7 +65,7 @@ export default defineComponent({
         styleStr += `position:fixed;top:${offsetTop}px;`;
         isFixed = true;
       }
-      emitEvent('scroll', { scrollTop: contentTop.value, isFixed });
+      props.onScroll?.({ scrollTop: contentTop.value, isFixed });
       return styleStr;
     });
 

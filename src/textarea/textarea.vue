@@ -27,7 +27,7 @@
 
 <script lang="ts">
 import { computed, ref, onMounted, defineComponent, getCurrentInstance, toRefs, nextTick, watch } from 'vue';
-import { useEmitEvent, renderTNode, TNode, getCharacterLength, useVModel } from '../shared';
+import { renderTNode, TNode, getCharacterLength, useVModel } from '../shared';
 import config from '../config';
 import TextareaProps from './props';
 import { TdTextareaProps, TextareaValue } from './type';
@@ -45,7 +45,6 @@ export default defineComponent({
   props: TextareaProps,
   emits: ['update:value', 'update:modelValue', 'focus', 'blur', 'change'],
   setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
     const disabled = useFormDisabled();
     const textareaRef = ref<null | HTMLElement>(null);
     const textareaStyle = ref();
@@ -125,10 +124,10 @@ export default defineComponent({
     };
 
     const handleFocus = (e: FocusEvent) => {
-      emitEvent('focus', innerValue.value, { e });
+      props.onFocus?.(innerValue.value, { e });
     };
     const handleBlur = (e: FocusEvent) => {
-      emitEvent('blur', innerValue.value, { e });
+      props.onBlur?.(innerValue.value, { e });
     };
 
     onMounted(() => {

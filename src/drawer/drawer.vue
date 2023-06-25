@@ -41,7 +41,7 @@
 import { ref, watch, toRefs, computed, defineComponent, getCurrentInstance } from 'vue';
 import TPopup from '../popup';
 import config from '../config';
-import { useEmitEvent, renderTNode, TNode } from '../shared';
+import { renderTNode, TNode } from '../shared';
 import DrawerProps from './props';
 import { DrawerItem } from './type';
 
@@ -55,7 +55,6 @@ export default defineComponent({
   emits: ['update:visible', 'itemClick', 'overlayClick'],
   setup(props, context) {
     const currentInstance = getCurrentInstance();
-    const emitEvent = useEmitEvent(props, context.emit);
     const { visible, items, placement, showOverlay } = toRefs(props);
     const open = ref(visible.value || false);
 
@@ -63,7 +62,7 @@ export default defineComponent({
     const footerNode = computed(() => renderTNode(currentInstance, 'footer'));
 
     watch(open, () => {
-      emitEvent('update:visible', open.value);
+      context.emit('update:visible', open.value);
     });
 
     watch(visible, () => {
@@ -71,17 +70,17 @@ export default defineComponent({
     });
 
     const onItemClick = (index: number, item: DrawerItem, context: { e: MouseEvent }) => {
-      emitEvent('itemClick', index, item, context);
+      props.onItemClick?.(index, item, context);
     };
 
     const onVisibleChange = (visible: boolean) => {
       if (showOverlay.value) {
-        emitEvent('overlayClick', { visible });
+        props.onOverlayClick?.({ visible });
       }
     };
 
     const onClose = () => {
-      emitEvent('close', { trigger: 'overlay' });
+      props.onClose?.('overlay');
     };
 
     return {

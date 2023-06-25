@@ -22,7 +22,7 @@
 import { defineComponent, computed, getCurrentInstance } from 'vue';
 import config from '../config';
 import LinkProps from './props';
-import { useEmitEvent, renderContent, renderTNode, TNode } from '../shared';
+import { renderContent, renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-link`;
@@ -33,9 +33,8 @@ export default defineComponent({
     TNode,
   },
   props: LinkProps,
-  setup(props, context) {
+  setup(props) {
     const baseClass = name;
-    const emitEvent = useEmitEvent(props, context.emit);
     const _this = getCurrentInstance();
     const linkContent = computed(() => renderContent(_this, 'default', 'content'));
     const prefixContent = computed(() => renderTNode(_this, 'prefixIcon'));
@@ -43,7 +42,7 @@ export default defineComponent({
 
     const handleClick = (e: MouseEvent) => {
       if (props.disabled) return;
-      emitEvent('click', e);
+      props.onClick?.(e);
     };
 
     const linkClass = [

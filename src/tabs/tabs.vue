@@ -62,7 +62,7 @@ import {
 import config from '../config';
 import TabsProps from './props';
 import TabNavItem from './tab-nav-item.vue';
-import { useVModel, useEmitEvent } from '../shared';
+import { useVModel } from '../shared';
 import CLASSNAMES from '../shared/constants';
 import TSticky from '../sticky';
 
@@ -75,7 +75,6 @@ export default defineComponent({
   props: TabsProps,
   emits: ['update:value', 'update:modelValue'],
   setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
     const placement = ref('top');
     const theme = computed(() => props.theme);
     const spaceEvenly = computed(() => props.spaceEvenly);
@@ -177,7 +176,7 @@ export default defineComponent({
         return false;
       }
       setCurrentValue(value, typeof label === 'function' ? label() : label);
-      emitEvent('click', value, typeof label === 'function' ? label() : label);
+      props.onClick?.(value, typeof label === 'function' ? label() : label);
       nextTick(() => {
         moveToActiveTab();
       });
@@ -186,7 +185,7 @@ export default defineComponent({
     const handlerScroll = (context: { scrollTop: number; isFixed: boolean }) => {
       const { scrollTop, isFixed } = context;
       if (props.stickyProps) {
-        emitEvent('scroll', scrollTop, isFixed);
+        props.onScroll?.(scrollTop, isFixed);
       }
     };
 

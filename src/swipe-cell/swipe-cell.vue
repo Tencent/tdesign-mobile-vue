@@ -91,7 +91,7 @@ import { useSwipe } from './useSwipe';
 import props from './props';
 import config from '../config';
 import { SwipeActionItem } from './type';
-import { renderContent, renderTNode, TNode, useEmitEvent, useClickAway } from '../shared';
+import { renderContent, renderTNode, TNode, useClickAway } from '../shared';
 import { useSureConfirm } from './useSureConfirm';
 
 const { prefix } = config;
@@ -113,7 +113,6 @@ export default defineComponent({
   props,
   emits: ['click', 'change'],
   setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
     const swipeContent = computed(() => renderContent(internalInstance, 'default', 'content'));
     const swipeLeftMenu = computed(() =>
@@ -356,12 +355,12 @@ export default defineComponent({
       if (direction === 'toLeft') {
         initData.pos = -initData.rightWidth;
         if (initData.rightWidth && !isOpen) {
-          emitEvent('change', 'right');
+          props.onChange?.('right');
         }
       } else {
         initData.pos = initData.leftWidth;
         if (initData.leftWidth && !isOpen) {
-          emitEvent('change', 'left');
+          props.onChange?.('left');
         }
       }
     };
@@ -373,7 +372,7 @@ export default defineComponent({
       sureMarginRight.value = 0;
       initData.status = 'close';
       initData.pos = 0;
-      emitEvent('change', undefined);
+      props.onChange?.(undefined);
     };
     const handleClickBtn = ({ action, source }: { action: SwipeActionItem; source: String }) => {
       const clickFn = () => {
@@ -384,7 +383,7 @@ export default defineComponent({
           action.onClick();
           return;
         }
-        emitEvent('click', { action, source });
+        props.onClick?.({ action, source });
       };
       if (action.sure) {
         showSure(action.sure, clickFn);

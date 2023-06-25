@@ -17,13 +17,12 @@ import { ref, computed, defineComponent, toRefs, watch, nextTick } from 'vue';
 import dayjs, { Dayjs, UnitType } from 'dayjs';
 import weekday from 'dayjs/plugin/weekday';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
-import isString from 'lodash/isString';
 import isArray from 'lodash/isArray';
 
 import config from '../config';
 import DateTimePickerProps from './props';
 import { getMeaningColumn } from './shared';
-import { useEmitEvent, useVModel } from '../shared';
+import { useVModel } from '../shared';
 import { Picker as TPicker } from '../picker';
 import { PickerColumn, PickerColumnItem, PickerValue, PickerContext } from '../picker/type';
 
@@ -47,8 +46,7 @@ export default defineComponent({
   components: { TPicker },
   props: DateTimePickerProps,
   emits: ['change', 'cancel', 'confirm', 'pick', 'update:modelValue', 'update:value'],
-  setup(props: any, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
+  setup(props: any) {
     const className = computed(() => [`${name}`]);
     const { value, modelValue } = toRefs(props);
     const [innerValue, setDateTimePickerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
@@ -170,12 +168,12 @@ export default defineComponent({
     });
 
     const onConfirm = () => {
-      emitEvent('confirm', dayjs(curDate.value).format(props.format));
+      props.onConfirm(dayjs(curDate.value).format(props.format));
       setDateTimePickerValue(dayjs(curDate.value).format(props.format));
     };
 
     const onCancel = (context: { e: MouseEvent }) => {
-      emitEvent('cancel', { e: context.e });
+      props.onCancel?.({ e: context.e });
     };
 
     const onPick = (value: Array<PickerValue>, context: PickerContext) => {
@@ -184,7 +182,7 @@ export default defineComponent({
       const val = curDate.value.set(type as UnitType, parseInt(columns.value[column][index]?.value, 10));
 
       curDate.value = rationalize(val);
-      emitEvent('pick', rationalize(val).format(props.format));
+      props.onPick?.(rationalize(val).format(props.format));
     };
 
     watch(innerValue, (val) => {

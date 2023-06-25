@@ -20,7 +20,7 @@ import { useWindowSize, useEventListener } from '@vueuse/core';
 import TLoading from '../loading';
 import config from '../config';
 import ListProps from './props';
-import { renderTNode, TNode, useScrollParent, useEmitEvent } from '../shared';
+import { renderTNode, TNode, useScrollParent } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-list`;
@@ -38,7 +38,6 @@ export default defineComponent({
   props: ListProps,
   emits: ['load-more', 'scroll'],
   setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
     const root = ref<HTMLElement>();
     const empty = ref<HTMLElement>();
     const scrollParent = useScrollParent(root);
@@ -50,7 +49,7 @@ export default defineComponent({
 
     const onLoadMore = (e: MouseEvent) => {
       if (props.asyncLoading === 'load-more') {
-        emitEvent('load-more');
+        props.onLoadMore?.();
       }
     };
 
@@ -62,7 +61,7 @@ export default defineComponent({
         (e.target as HTMLElement).scrollTop || document.documentElement.scrollTop || document.body.scrollTop;
       const offsetHeight = (e.target as HTMLElement).offsetHeight || height.value;
 
-      emitEvent('scroll', scrollHeight - (scrollTop + offsetHeight), scrollTop);
+      props.onScroll?.(scrollHeight - (scrollTop + offsetHeight), scrollTop);
     };
 
     useEventListener(scrollParent, 'scroll', handleScroll);

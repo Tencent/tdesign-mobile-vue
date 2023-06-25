@@ -41,7 +41,7 @@ import { CloseIcon, DeleteIcon } from 'tdesign-icons-vue-next';
 
 import config from '../config';
 import ImagediverProps from './props';
-import { renderTNode, TNode, useEmitEvent, useDefault, useTouch } from '../shared';
+import { renderTNode, TNode, useDefault, useTouch } from '../shared';
 import { TdImageViewerProps } from './type';
 
 // inner components
@@ -72,7 +72,6 @@ export default defineComponent({
       scale: 1,
       swiperStyle: [] as string[],
     });
-    const emitEvent = useEmitEvent(props, context.emit);
     const [visible, setVisible] = useDefault(props, context.emit, 'visible', 'change');
     const [currentIndex, setIndex] = useDefault<TdImageViewerProps['index'], TdImageViewerProps>(
       props,
@@ -109,11 +108,11 @@ export default defineComponent({
 
     const handleClose = (e: Event, trigger: string) => {
       setVisible(false);
-      emitEvent('close', { trigger, e });
+      props.onClose?.({ trigger, e });
     };
 
     const handleDelete = () => {
-      emitEvent('delete', currentIndex);
+      props.onDelete?.(currentIndex.value ?? 0);
     };
 
     const onSwiperChange = (index: number, context: any) => {
