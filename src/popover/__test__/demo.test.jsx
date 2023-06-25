@@ -3,23 +3,21 @@
  */
 
 import { mount } from '@vue/test-utils';
-import baseVue from '@/image/demos/base.vue';
-import mobileVue from '@/image/demos/mobile.vue';
-import positionVue from '@/image/demos/position.vue';
-import shapeVue from '@/image/demos/shape.vue';
-import statusVue from '@/image/demos/status.vue';
+import mobileVue from '@/popover/demos/mobile.vue';
+import placementVue from '@/popover/demos/placement.vue';
+import themeVue from '@/popover/demos/theme.vue';
+import typeVue from '@/popover/demos/type.vue';
 
 const mapper = {
-  baseVue,
   mobileVue,
-  positionVue,
-  shapeVue,
-  statusVue,
+  placementVue,
+  themeVue,
+  typeVue,
 };
 
-describe('Image', () => {
+describe('Popover', () => {
   Object.keys(mapper).forEach((demoName) => {
-    it(`Image ${demoName} demo works fine`, () => {
+    it(`Popover ${demoName} demo works fine`, () => {
       const wrapper = mount(mapper[demoName]);
       expect(wrapper.element).toMatchSnapshot();
     });

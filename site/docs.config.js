@@ -367,6 +367,12 @@ export default {
           component: () => import('@/dialog/dialog.md'),
         },
         {
+          title: 'Popover 弹出气泡',
+          name: 'popover',
+          path: '/mobile-vue/components/popover',
+          component: () => import('@/popover/popover.md'),
+        },
+        {
           title: 'Popup 弹出层',
           name: 'popup',
           path: '/mobile-vue/components/popup',
