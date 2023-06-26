@@ -64,18 +64,18 @@ export default defineComponent({
     TImage,
   },
   props: ImagediverProps,
-  emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'change'],
-  setup(props, context) {
+  emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'delete'],
+  setup(props, { emit }) {
     const internalInstance = getCurrentInstance();
     const state = reactive({
       zooming: false,
       scale: 1,
       swiperStyle: [] as string[],
     });
-    const [visible, setVisible] = useDefault(props, context.emit, 'visible', 'change');
+    const [visible, setVisible] = useDefault(props, emit, 'visible', 'change');
     const [currentIndex, setIndex] = useDefault<TdImageViewerProps['index'], TdImageViewerProps>(
       props,
-      context.emit,
+      emit,
       'index',
       'index-change',
     );
@@ -108,11 +108,11 @@ export default defineComponent({
 
     const handleClose = (e: Event, trigger: string) => {
       setVisible(false);
-      props.onClose?.({ trigger, e });
+      emit('close', { trigger, e });
     };
 
     const handleDelete = () => {
-      props.onDelete?.(currentIndex.value ?? 0);
+      emit('delete', currentIndex.value ?? 0);
     };
 
     const onSwiperChange = (index: number, context: any) => {

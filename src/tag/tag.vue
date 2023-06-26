@@ -56,6 +56,9 @@ const Tag = defineComponent({
 
     const onClickClose = (e: MouseEvent): void => {
       if (!props.disabled) {
+        console.log(1);
+        console.log(props.onClose);
+
         props.onClose?.({ e });
       }
     };

@@ -29,9 +29,13 @@ export default defineComponent({
       type: Function,
       default: undefined,
     },
+    onPick: {
+      type: Function,
+      default: undefined,
+    },
   },
   emits: ['pick'],
-  setup(props: any, context) {
+  setup(props, context) {
     let picker: Picker | null = null;
     const el = document.createElement('ul');
     const root = ref(el);

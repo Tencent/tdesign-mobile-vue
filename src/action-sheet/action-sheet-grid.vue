@@ -55,6 +55,10 @@ export default defineComponent({
       type: Number,
       default: 8,
     },
+    selected: {
+      type: Function,
+      default: undefined,
+    },
   },
   emits: ['selected'],
   setup(props, context) {
@@ -74,7 +78,7 @@ export default defineComponent({
       [`${name}__dots`]: pageNum.value > 1,
     }));
     const handleSelected = (i: any) => {
-      props.onSelected?.(i);
+      context.emit('selected', i);
     };
 
     return {

@@ -93,11 +93,11 @@ export default defineComponent({
     'select-change',
     'validate',
   ],
-  setup(props, context) {
+  setup(props, { emit }) {
     const disabled = useFormDisabled();
     const [innerFiles, setInnerFiles] = useDefault<TdUploadProps['files'], TdUploadProps>(
       props,
-      context.emit,
+      emit,
       'files',
       'change',
     );
@@ -128,7 +128,7 @@ export default defineComponent({
 
     const handlePreview = (e: MouseEvent, file: UploadFile) => {
       showViewer.value = true;
-      props.onPreview?.({
+      emit('preview', {
         e,
         file,
       });
@@ -143,7 +143,7 @@ export default defineComponent({
       if (disabled.value || !input || !input.files) return;
 
       const formatFiles = formatFileToUploadFile(input.files);
-      props.onSelectChange?.([...formatFiles], { currentSelectedFiles: uploadedFiles.value });
+      emit?.('select-change', [...formatFiles], { currentSelectedFiles: uploadedFiles.value });
       uploadFiles(formatFiles);
       input.value = '';
     };
@@ -279,7 +279,7 @@ export default defineComponent({
       const files = uploadedFiles.value.concat();
       files.splice(index, 1);
       setInnerFiles(files, { e, trigger: 'remove', index, file });
-      props.onRemove?.({ e, index, file });
+      emit('remove', { e, index, file });
       images.value.splice(index, 1);
     };
 
@@ -380,7 +380,7 @@ export default defineComponent({
       const newFile = { ...file, response: res };
       const files = uploadedFiles.value.concat(newFile as UploadFile);
       setInnerFiles(files, { e: event, response: res, trigger: 'upload-success' });
-      props.onSuccess?.({
+      emit('success', {
         file,
         fileList: files,
         e: event,
