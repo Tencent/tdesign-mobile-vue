@@ -50,8 +50,13 @@ export default defineComponent({
   setup(props: any, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const className = computed(() => [`${name}`]);
-    const { value, modelValue } = toRefs(props);
-    const [innerValue, setDateTimePickerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+    const { value } = toRefs(props);
+    const [innerValue, setDateTimePickerValue] = useVModel(
+      value,
+      ref(props.modelValue),
+      props.defaultValue,
+      props.onChange,
+    );
     const title = computed(() => {
       return props.title || '选择时间';
     });
