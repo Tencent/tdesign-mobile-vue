@@ -9,18 +9,14 @@
       </template>
       <t-node v-else :content="tagContent"></t-node>
     </span>
-    <span v-if="closable && !disabled" :class="`${baseClass}__icon-close`" @click="onClickClose">
-      <close-icon />
-    </span>
   </span>
 </template>
 
 <script lang="ts">
-import { CloseIcon } from 'tdesign-icons-vue-next';
 import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
 import config from '../config';
 import CheckTagProps from './check-tag-props';
-import { useEmitEvent, renderContent, renderTNode, TNode, useVModel } from '../shared';
+import { renderContent, renderTNode, TNode, useVModel } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-check-tag`;
@@ -28,13 +24,11 @@ const name = `${prefix}-check-tag`;
 const CheckTag = defineComponent({
   name,
   components: {
-    CloseIcon,
     TNode,
   },
   props: CheckTagProps,
   emits: ['change', 'click', 'update:checked', 'update:modelValue'],
-  setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
+  setup(props) {
     const internalInstance = getCurrentInstance();
     const tagContent = computed(() => renderContent(internalInstance, 'default', 'content'));
     const iconContent = computed(() => renderTNode(internalInstance, 'icon'));
@@ -64,21 +58,14 @@ const CheckTag = defineComponent({
       `${baseClass}--${props.size}`,
       `${baseClass}--${props.variant}`,
       {
-        [`${prefix}-is-closable ${baseClass}--closable`]: props.closable,
         [`${prefix}-is-disabled ${baseClass}--disabled`]: props.disabled,
         [`${prefix}-is-checked ${baseClass}--checked`]: !props.disabled && innerChecked.value,
       },
     ]);
 
-    const onClickClose = (e: MouseEvent): void => {
-      if (!props.disabled) {
-        emitEvent('close', { e });
-      }
-    };
-
     const handleClick = (e: MouseEvent) => {
       if (!props.disabled) {
-        emitEvent('click', { e });
+        props.onClick?.({ e });
         setInnerChecked(!innerChecked.value);
       }
     };
@@ -87,7 +74,6 @@ const CheckTag = defineComponent({
       contentIsArray,
       baseClass,
       classes,
-      onClickClose,
       handleClick,
       iconContent,
       tagContent,
