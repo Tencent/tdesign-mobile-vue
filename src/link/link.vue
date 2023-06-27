@@ -6,13 +6,13 @@
     :aria-disabled="disabled"
     @click="handleClick"
   >
-    <span v-if="prefixContent" :class="`${baseClass}__prefix-icon ${prefix}-class-prefix-icon`">
+    <span v-if="prefixContent" :class="`${name}__prefix-icon ${prefix}-class-prefix-icon`">
       <t-node :content="prefixContent"></t-node>
     </span>
-    <span :class="`${baseClass}__content`">
+    <span :class="`${name}__content`">
       <t-node :content="linkContent"></t-node>
     </span>
-    <span v-if="suffixContent" :class="`${baseClass}__suffix-icon ${prefix}-class-suffix-icon`">
+    <span v-if="suffixContent" :class="`${name}__suffix-icon ${prefix}-class-suffix-icon`">
       <t-node :content="suffixContent"></t-node>
     </span>
   </a>
@@ -45,21 +45,21 @@ export default defineComponent({
       props.onClick?.(e);
     };
 
-    const linkClass = [
-      baseClass,
-      `${baseClass}--${props.theme}`,
-      `${name}--${props.size}`,
+    const linkClass = computed(() => [
+      name,
+      `${name}--${props.theme || 'default'}`,
+      `${name}--${props.size || 'medium'}`,
       {
         [`${name}--disabled`]: props.disabled,
         [`${name}--underline`]: props.underline,
         [`${name}--hover`]: props.hover && !props.disabled,
       },
-    ];
+    ]);
 
     return {
       prefix,
       linkClass,
-      baseClass,
+      name,
       handleClick,
       linkContent,
       prefixContent,
