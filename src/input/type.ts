@@ -27,6 +27,11 @@ export interface TdInputProps {
    */
   autofocus?: boolean;
   /**
+   * 是否开启无边框模式
+   * @default false
+   */
+  borderless?: boolean;
+  /**
    * 是否可清空
    * @default false
    */
@@ -35,12 +40,6 @@ export interface TdInputProps {
    * 是否禁用输入框
    */
   disabled?: boolean;
-  /**
-   * 错误提示文本，值为空不显示（废弃属性，如果需要，请更为使用 status 和 tips）
-   * @default ''
-   * @deprecated
-   */
-  errorMessage?: string;
   /**
    * 指定输入框展示值的格式
    */
@@ -54,11 +53,6 @@ export interface TdInputProps {
    * @default horizontal
    */
   layout?: 'vertical' | 'horizontal';
-  /**
-   * 是否开启无边框模式
-   * @default true
-   */
-  borderless?: boolean;
   /**
    * 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用
    */

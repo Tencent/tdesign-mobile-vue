@@ -68,24 +68,9 @@ export interface TdMessageProps {
    */
   zIndex?: number;
   /**
-   * 可见性变化时触发
-   * @deprecated
-   */
-  onChange?: (visible: boolean) => void;
-  /**
-   * 关闭消息时触发
-   * @deprecated
-   */
-  onClose?: (context: { trigger: 'close-click' | 'duration-end'; e?: MouseEvent }) => void;
-  /**
    * 当关闭按钮存在时，用户点击关闭按钮触发
    */
   onCloseBtnClick?: (context: { e: MouseEvent }) => void;
-  /**
-   * 关闭消息并且动画结束后触发
-   * @deprecated
-   */
-  onClosed?: () => void;
   /**
    * 计时结束后触发
    */
@@ -94,16 +79,6 @@ export interface TdMessageProps {
    * 当link链接存在时，点击链接文本时触发
    */
   onLinkClick?: (context: { e: MouseEvent }) => void;
-  /**
-   * 展示Message时触发
-   * @deprecated
-   */
-  onOpen?: () => void;
-  /**
-   * 展示Message时并且动画结束后触发
-   * @deprecated
-   */
-  onOpened?: () => void;
 }
 
 export type MessageAlignType = 'left' | 'center';

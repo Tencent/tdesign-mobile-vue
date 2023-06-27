@@ -147,7 +147,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
                 >
                   
                   <div
-                    class="t-radio t-radio--right t-radio--block"
+                    class="t-radio t-radio--left t-radio--block"
                   >
                     <input
                       class="t-radio__original"
@@ -156,7 +156,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
                       value="110000"
                     />
                     <div
-                      class="t-radio__icon t-radio__icon--right"
+                      class="t-radio__icon t-radio__icon--left"
                     >
                       <!--v-if-->
                       <!--v-if-->
@@ -181,7 +181,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
                     <!--v-if-->
                   </div>
                   <div
-                    class="t-radio t-radio--right t-radio--block"
+                    class="t-radio t-radio--left t-radio--block"
                   >
                     <input
                       class="t-radio__original"
@@ -190,7 +190,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
                       value="120000"
                     />
                     <div
-                      class="t-radio__icon t-radio__icon--right"
+                      class="t-radio__icon t-radio__icon--left"
                     >
                       <!--v-if-->
                       <!--v-if-->
@@ -377,7 +377,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                 >
                   
                   <div
-                    class="t-radio t-radio--right t-radio--block"
+                    class="t-radio t-radio--left t-radio--block"
                   >
                     <input
                       class="t-radio__original"
@@ -386,7 +386,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                       value="110000"
                     />
                     <div
-                      class="t-radio__icon t-radio__icon--right"
+                      class="t-radio__icon t-radio__icon--left"
                     >
                       <!--v-if-->
                       <!--v-if-->
@@ -411,7 +411,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                     <!--v-if-->
                   </div>
                   <div
-                    class="t-radio t-radio--right t-radio--block"
+                    class="t-radio t-radio--left t-radio--block"
                   >
                     <input
                       class="t-radio__original"
@@ -420,7 +420,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                       value="120000"
                     />
                     <div
-                      class="t-radio__icon t-radio__icon--right"
+                      class="t-radio__icon t-radio__icon--left"
                     >
                       <!--v-if-->
                       <!--v-if-->
@@ -638,7 +638,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                     >
                       
                       <div
-                        class="t-radio t-radio--right t-radio--block"
+                        class="t-radio t-radio--left t-radio--block"
                       >
                         <input
                           class="t-radio__original"
@@ -647,7 +647,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           value="110000"
                         />
                         <div
-                          class="t-radio__icon t-radio__icon--right"
+                          class="t-radio__icon t-radio__icon--left"
                         >
                           <!--v-if-->
                           <!--v-if-->
@@ -672,7 +672,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <!--v-if-->
                       </div>
                       <div
-                        class="t-radio t-radio--right t-radio--block"
+                        class="t-radio t-radio--left t-radio--block"
                       >
                         <input
                           class="t-radio__original"
@@ -681,7 +681,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           value="120000"
                         />
                         <div
-                          class="t-radio__icon t-radio__icon--right"
+                          class="t-radio__icon t-radio__icon--left"
                         >
                           <!--v-if-->
                           <!--v-if-->
@@ -851,7 +851,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                     >
                       
                       <div
-                        class="t-radio t-radio--right t-radio--block"
+                        class="t-radio t-radio--left t-radio--block"
                       >
                         <input
                           class="t-radio__original"
@@ -860,7 +860,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           value="110000"
                         />
                         <div
-                          class="t-radio__icon t-radio__icon--right"
+                          class="t-radio__icon t-radio__icon--left"
                         >
                           <!--v-if-->
                           <!--v-if-->
@@ -885,7 +885,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <!--v-if-->
                       </div>
                       <div
-                        class="t-radio t-radio--right t-radio--block"
+                        class="t-radio t-radio--left t-radio--block"
                       >
                         <input
                           class="t-radio__original"
@@ -894,7 +894,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           value="120000"
                         />
                         <div
-                          class="t-radio__icon t-radio__icon--right"
+                          class="t-radio__icon t-radio__icon--left"
                         >
                           <!--v-if-->
                           <!--v-if-->
@@ -1098,7 +1098,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                     >
                       
                       <div
-                        class="t-radio t-radio--right t-radio--block"
+                        class="t-radio t-radio--left t-radio--block"
                       >
                         <input
                           class="t-radio__original"
@@ -1107,7 +1107,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           value="110000"
                         />
                         <div
-                          class="t-radio__icon t-radio__icon--right"
+                          class="t-radio__icon t-radio__icon--left"
                         >
                           <!--v-if-->
                           <!--v-if-->
@@ -1132,7 +1132,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <!--v-if-->
                       </div>
                       <div
-                        class="t-radio t-radio--right t-radio--block"
+                        class="t-radio t-radio--left t-radio--block"
                       >
                         <input
                           class="t-radio__original"
@@ -1141,7 +1141,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           value="120000"
                         />
                         <div
-                          class="t-radio__icon t-radio__icon--right"
+                          class="t-radio__icon t-radio__icon--left"
                         >
                           <!--v-if-->
                           <!--v-if-->
@@ -1341,7 +1341,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                     >
                       
                       <div
-                        class="t-radio t-radio--right t-radio--block"
+                        class="t-radio t-radio--left t-radio--block"
                       >
                         <input
                           class="t-radio__original"
@@ -1350,7 +1350,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           value="110000"
                         />
                         <div
-                          class="t-radio__icon t-radio__icon--right"
+                          class="t-radio__icon t-radio__icon--left"
                         >
                           <!--v-if-->
                           <!--v-if-->
@@ -1375,7 +1375,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <!--v-if-->
                       </div>
                       <div
-                        class="t-radio t-radio--right t-radio--block"
+                        class="t-radio t-radio--left t-radio--block"
                       >
                         <input
                           class="t-radio__original"
@@ -1384,7 +1384,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           value="120000"
                         />
                         <div
-                          class="t-radio__icon t-radio__icon--right"
+                          class="t-radio__icon t-radio__icon--left"
                         >
                           <!--v-if-->
                           <!--v-if-->
@@ -1588,7 +1588,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                     >
                       
                       <div
-                        class="t-radio t-radio--right t-radio--block"
+                        class="t-radio t-radio--left t-radio--block"
                       >
                         <input
                           class="t-radio__original"
@@ -1597,7 +1597,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           value="110000"
                         />
                         <div
-                          class="t-radio__icon t-radio__icon--right"
+                          class="t-radio__icon t-radio__icon--left"
                         >
                           <!--v-if-->
                           <!--v-if-->
@@ -1622,7 +1622,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <!--v-if-->
                       </div>
                       <div
-                        class="t-radio t-radio--right t-radio--block"
+                        class="t-radio t-radio--left t-radio--block"
                       >
                         <input
                           class="t-radio__original"
@@ -1631,7 +1631,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           value="120000"
                         />
                         <div
-                          class="t-radio__icon t-radio__icon--right"
+                          class="t-radio__icon t-radio__icon--left"
                         >
                           <!--v-if-->
                           <!--v-if-->
@@ -1791,7 +1791,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
                 >
                   
                   <div
-                    class="t-radio t-radio--right t-radio--block"
+                    class="t-radio t-radio--left t-radio--block"
                   >
                     <input
                       class="t-radio__original"
@@ -1800,7 +1800,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
                       value="110000"
                     />
                     <div
-                      class="t-radio__icon t-radio__icon--right"
+                      class="t-radio__icon t-radio__icon--left"
                     >
                       <!--v-if-->
                       <!--v-if-->
@@ -1825,7 +1825,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
                     <!--v-if-->
                   </div>
                   <div
-                    class="t-radio t-radio--right t-radio--block"
+                    class="t-radio t-radio--left t-radio--block"
                   >
                     <input
                       class="t-radio__original"
@@ -1834,7 +1834,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
                       value="120000"
                     />
                     <div
-                      class="t-radio__icon t-radio__icon--right"
+                      class="t-radio__icon t-radio__icon--left"
                     >
                       <!--v-if-->
                       <!--v-if-->
@@ -2025,7 +2025,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
                 >
                   
                   <div
-                    class="t-radio t-radio--right t-radio--block"
+                    class="t-radio t-radio--left t-radio--block"
                   >
                     <input
                       class="t-radio__original"
@@ -2034,7 +2034,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
                       value="110000"
                     />
                     <div
-                      class="t-radio__icon t-radio__icon--right"
+                      class="t-radio__icon t-radio__icon--left"
                     >
                       <!--v-if-->
                       <!--v-if-->
@@ -2059,7 +2059,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
                     <!--v-if-->
                   </div>
                   <div
-                    class="t-radio t-radio--right t-radio--block"
+                    class="t-radio t-radio--left t-radio--block"
                   >
                     <input
                       class="t-radio__original"
@@ -2068,7 +2068,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
                       value="120000"
                     />
                     <div
-                      class="t-radio__icon t-radio__icon--right"
+                      class="t-radio__icon t-radio__icon--left"
                     >
                       <!--v-if-->
                       <!--v-if-->
@@ -2255,7 +2255,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
                 >
                   
                   <div
-                    class="t-radio t-radio--right t-radio--block"
+                    class="t-radio t-radio--left t-radio--block"
                   >
                     <input
                       class="t-radio__original"
@@ -2264,7 +2264,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
                       value="110000"
                     />
                     <div
-                      class="t-radio__icon t-radio__icon--right"
+                      class="t-radio__icon t-radio__icon--left"
                     >
                       <!--v-if-->
                       <!--v-if-->
@@ -2289,7 +2289,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
                     <!--v-if-->
                   </div>
                   <div
-                    class="t-radio t-radio--right t-radio--block"
+                    class="t-radio t-radio--left t-radio--block"
                   >
                     <input
                       class="t-radio__original"
@@ -2298,7 +2298,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
                       value="120000"
                     />
                     <div
-                      class="t-radio__icon t-radio__icon--right"
+                      class="t-radio__icon t-radio__icon--left"
                     >
                       <!--v-if-->
                       <!--v-if-->

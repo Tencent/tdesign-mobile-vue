@@ -1,14 +1,12 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Tabs Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
 animation | Object | - | Typescript：`TabAnimation` `type TabAnimation = { duration: number } & Record<string, any>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tabs/type.ts) | N
 list | Array | - | Typescript：`Array<TdTabPanelProps>` | N
-placement | String | top | options：left/top | N
 showBottomLine | Boolean | true | \- | N
 size | String | medium | options：medium/large | N
 spaceEvenly | Boolean | true | \- | N
