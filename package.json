@@ -118,6 +118,7 @@
     "@vitejs/plugin-vue": "^2.3.1",
     "@vitejs/plugin-vue-jsx": "^1.3.3",
     "@vitest/ui": "^0.16.0",
+    "@vue/babel-plugin-jsx": "1.1.1",
     "@vue/eslint-config-typescript": "^9.1.0",
     "@vue/runtime-core": "^3.2.41",
     "@vue/server-renderer": "^3.2.4",
