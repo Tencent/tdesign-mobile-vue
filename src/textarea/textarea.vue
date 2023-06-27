@@ -94,34 +94,33 @@ export default defineComponent({
 
     const handleInput = (e: any) => {
       if (e.isComposing || e.inputType === 'insertCompositionText') return;
-      textareaValueChangeHandle(e);
+      textareaValueChangeHandle();
     };
 
-    const textareaValueChangeHandle = (e: InputEvent) => {
-      const { target } = e;
-      const { value } = target as HTMLInputElement;
+    const textareaValueChangeHandle = () => {
+      const textarea = textareaRef.value as HTMLInputElement;
       if (
         !props.allowInputOverMax &&
         props.maxcharacter &&
         props.maxcharacter > 0 &&
         !Number.isNaN(props.maxcharacter)
       ) {
-        const { length = 0, characters = '' } = getCharacterLength(value, props.maxcharacter) as {
+        const { length = 0, characters = '' } = getCharacterLength(textarea.value, props.maxcharacter) as {
           length: number;
           characters: string;
         };
         setInnerValue(characters);
         textareaLength.value = length;
       } else {
-        setInnerValue(value);
-        textareaLength.value = String(innerValue.value).length;
+        setInnerValue(textarea.value);
+        textareaLength.value = String(textarea.value).length;
       }
       nextTick(() => setInputValue(innerValue.value));
       adjustTextareaHeight();
     };
 
     const handleCompositionend = (e: InputEvent | CompositionEvent) => {
-      textareaValueChangeHandle(e as InputEvent);
+      textareaValueChangeHandle();
     };
 
     const handleFocus = (e: FocusEvent) => {
@@ -135,6 +134,7 @@ export default defineComponent({
       if (props.autofocus) {
         textareaRef.value?.focus();
       }
+      textareaValueChangeHandle();
       adjustTextareaHeight();
     });
 
