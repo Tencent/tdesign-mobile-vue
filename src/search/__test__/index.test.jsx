@@ -129,8 +129,8 @@ describe('search', () => {
       const onActionClick = vi.fn();
       const wrapper = mount(Search, {
         props: {
+          value: 'test',
           action: '取消',
-          focus: true,
           onActionClick,
         },
       });

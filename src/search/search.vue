@@ -24,7 +24,7 @@
       </div>
     </div>
     <slot name="action">
-      <div v-if="action" v-show="focused" :class="`${name}__search-action`" @click="onActionClick">
+      <div v-if="action && searchValue" :class="`${name}__search-action`" @click="onActionClick">
         {{ action }}
       </div>
     </slot>

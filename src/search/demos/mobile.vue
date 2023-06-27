@@ -5,7 +5,7 @@
     <tdesign-demo-block title="01 组件类型" summary="基础搜索框">
       <baseDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="获取焦点后显示取消按钮">
+    <tdesign-demo-block summary="输入值后显示取消按钮">
       <actionDemo />
     </tdesign-demo-block>
     <tdesign-demo-block title="02 组件样式" summary="搜索框形状">
