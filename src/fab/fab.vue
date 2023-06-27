@@ -16,7 +16,7 @@
 <script lang="ts">
 import { computed, defineProps, defineEmits, getCurrentInstance } from 'vue';
 
-import { renderTNode, useEmitEvent } from '../shared';
+import { renderTNode } from '../shared';
 import fabProps from './props';
 import config from '../config';
 import TButton from '../button';
@@ -35,11 +35,10 @@ const emit = defineEmits(['click']);
 
 const internalInstance = getCurrentInstance();
 const iconTNode = computed(() => renderTNode(internalInstance, 'icon'));
-const emitEvent = useEmitEvent(props, emit);
 
 const classes = computed(() => ({
   [`${name}`]: true,
 }));
 
-const onClick = (e: MouseEvent) => emitEvent('click', { e });
+const onClick = (e: MouseEvent) => props.onClick?.({ e });
 </script>

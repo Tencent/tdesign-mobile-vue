@@ -58,7 +58,7 @@ import { isNumber } from 'lodash';
 
 import config from '../config';
 import SwiperProps from './props';
-import { renderTNode, TNode, useEmitEvent, useVModel } from '../shared';
+import { renderTNode, TNode, useVModel } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-swiper`;
@@ -81,7 +81,6 @@ const items = ref<any>([]);
 const props = defineProps(SwiperProps);
 const emit = defineEmits(['change', 'update:current', 'update:modelValue']);
 
-const emitEvent = useEmitEvent(props, emit);
 const [current, setCurrent] = useVModel(
   ref(props.current),
   ref(props.modelValue),
@@ -112,7 +111,7 @@ const enableNavigation = computed(() => {
 let autoplayTimer: any = null;
 
 const onItemClick = () => {
-  emitEvent('click', current.value);
+  props.onClick?.(current.value ?? 0);
 };
 
 const move = (step: number) => {

@@ -57,7 +57,7 @@ import isFunction from 'lodash/isFunction';
 import TImage from '../image';
 import TImageViewer from '../image-viewer';
 import xhr from '../_common/js/upload/xhr';
-import { useDefault, useEmitEvent, renderTNode, TNode } from '../shared';
+import { useDefault, renderTNode, TNode } from '../shared';
 import { TdUploadProps, UploadFile, RequestMethodResponse, SizeLimitObj } from './type';
 import { SuccessContext, InnerProgressContext } from './interface';
 import UploadProps from './props';
@@ -93,12 +93,11 @@ export default defineComponent({
     'select-change',
     'validate',
   ],
-  setup(props, context) {
+  setup(props, { emit }) {
     const disabled = useFormDisabled();
-    const emitEvent = useEmitEvent(props, context.emit);
     const [innerFiles, setInnerFiles] = useDefault<TdUploadProps['files'], TdUploadProps>(
       props,
-      context.emit,
+      emit,
       'files',
       'change',
     );
@@ -129,7 +128,7 @@ export default defineComponent({
 
     const handlePreview = (e: MouseEvent, file: UploadFile) => {
       showViewer.value = true;
-      emitEvent('preview', {
+      emit('preview', {
         e,
         file,
       });
@@ -144,7 +143,7 @@ export default defineComponent({
       if (disabled.value || !input || !input.files) return;
 
       const formatFiles = formatFileToUploadFile(input.files);
-      emitEvent('select-change', [...formatFiles]);
+      emit?.('select-change', [...formatFiles], { currentSelectedFiles: uploadedFiles.value });
       uploadFiles(formatFiles);
       input.value = '';
     };
@@ -176,7 +175,7 @@ export default defineComponent({
         if (props.sizeLimit) {
           const isOverSizeLimit = handleSizeLimit(file.size || 0);
           if (isOverSizeLimit) {
-            emitEvent('validate', { type: 'FILE_OVER_SIZE_LIMIT', files: [file] });
+            props.onValidate?.({ type: 'FILE_OVER_SIZE_LIMIT', files: [file] });
           }
           resolve(!handleSizeLimit(file.size || 0));
         }
@@ -231,7 +230,7 @@ export default defineComponent({
           } else {
             const isDuplicated = toUploadFiles.value.some((file) => file.name === uploadFile.name);
             if (isDuplicated) {
-              emitEvent('validate', {
+              props.onValidate?.({
                 type: 'FILTER_FILE_SAME_NAME',
                 files: [uploadFile],
               });
@@ -273,14 +272,14 @@ export default defineComponent({
         file,
         type,
       };
-      emitEvent('progress', progressCtx);
+      props.onProgress?.(progressCtx);
     };
 
     const handleRemove = (e: MouseEvent, file: UploadFile, index: number) => {
       const files = uploadedFiles.value.concat();
       files.splice(index, 1);
       setInnerFiles(files, { e, trigger: 'remove', index, file });
-      emitEvent('remove', { e, index, file });
+      emit('remove', { e, index, file });
       images.value.splice(index, 1);
     };
 
@@ -381,7 +380,7 @@ export default defineComponent({
       const newFile = { ...file, response: res };
       const files = uploadedFiles.value.concat(newFile as UploadFile);
       setInnerFiles(files, { e: event, response: res, trigger: 'upload-success' });
-      emitEvent('success', {
+      emit('success', {
         file,
         fileList: files,
         e: event,
@@ -410,7 +409,7 @@ export default defineComponent({
         const files = uploadedFiles.value.concat(file);
         setInnerFiles(files, { e: event, response: res, trigger: 'upload-fail' });
       }
-      emitEvent('fail', { e: event, file });
+      props.onFail?.({ e: event, file });
     };
 
     return {
@@ -427,7 +426,6 @@ export default defineComponent({
       uploadedFiles,
       defaultContent,
       addContent,
-      emitEvent,
       setInnerFiles,
       triggerUpload,
       handleChange,

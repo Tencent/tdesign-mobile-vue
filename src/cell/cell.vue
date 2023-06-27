@@ -27,7 +27,7 @@
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, toRefs, h } from 'vue';
 import { ChevronRightIcon } from 'tdesign-icons-vue-next';
-import { renderTNode, renderContent, TNode, useEmitEvent, Hover } from '../shared';
+import { renderTNode, renderContent, TNode, Hover } from '../shared';
 import config from '../config';
 import CellProps from './props';
 import { useFormDisabled } from '../form/hooks';
@@ -41,8 +41,7 @@ export default defineComponent({
   directives: { Hover },
   props: CellProps,
   emits: ['click'],
-  setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
+  setup(props) {
     const disabled = useFormDisabled();
     const internalInstance = getCurrentInstance();
     const noteContent = computed(() => renderContent(internalInstance, 'default', 'note'));
@@ -71,7 +70,7 @@ export default defineComponent({
 
     const onClick = (e: Event) => {
       if (!disabled.value) {
-        emitEvent('click', e);
+        props.onClick?.(e);
       }
     };
 

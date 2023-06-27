@@ -47,7 +47,7 @@ import { toRefs, computed, defineComponent } from 'vue';
 import { AddIcon, RemoveIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import StepperProps from './props';
-import { useDefault, useEmitEvent } from '../shared';
+import { useDefault } from '../shared';
 import { TdStepperProps } from './type';
 import { useFormDisabled } from '../form/hooks';
 
@@ -63,7 +63,6 @@ export default defineComponent({
   emits: ['update:value', 'update:modelValue', 'blur', 'change', 'overlimit'],
   setup(props, context) {
     const [stepperValue] = useDefault<number, TdStepperProps>(props, context.emit, 'value', 'change');
-    const emitEvent = useEmitEvent(props, context.emit);
     const disabled = useFormDisabled();
     const { min, max, step, inputWidth } = toRefs(props);
     const inputStyle = computed(() => (inputWidth ? { width: `${inputWidth.value}px` } : ''));
@@ -88,7 +87,7 @@ export default defineComponent({
 
     const plusValue = () => {
       if (isDisabled('plus')) {
-        emitEvent('overlimit', 'plus');
+        props.onOverlimit?.('plus');
         return;
       }
       updateValue(Number(stepperValue.value) + step.value);
@@ -96,7 +95,7 @@ export default defineComponent({
 
     const minusValue = () => {
       if (isDisabled('minus')) {
-        emitEvent('overlimit', 'minus');
+        props.onOverlimit?.('minus');
         return;
       }
       updateValue(Number(stepperValue.value) - step.value);
@@ -113,11 +112,11 @@ export default defineComponent({
     };
 
     const handleFocus = () => {
-      emitEvent('focus', stepperValue.value);
+      props.onFocus?.(stepperValue.value);
     };
 
     const handleBlur = () => {
-      emitEvent('blur', stepperValue.value);
+      props.onBlur?.(stepperValue.value);
     };
 
     return {

@@ -37,10 +37,7 @@ describe('drawer', () => {
     });
 
     it(': closeOnOverlayClick', async () => {
-      let triggerOrigin = {};
-      const onClose = ({ trigger }) => {
-        triggerOrigin = trigger;
-      };
+      const onClose = vi.fn();
       const closeOverlayClick = ref(true);
 
       const visible = ref(true);
@@ -54,7 +51,7 @@ describe('drawer', () => {
       expect($overlay.exists()).toBeTruthy();
 
       $overlay.find('.t-overlay').trigger('click');
-      expect(triggerOrigin).toBe('overlay');
+      expect(onClose).toBeCalledWith('overlay');
     });
 
     it(': items', async () => {

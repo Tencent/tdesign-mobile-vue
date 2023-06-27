@@ -65,7 +65,7 @@ import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
 import NoticeBarProps from './props';
 import { NoticeBarTrigger, DrawMarquee } from './type';
 import config from '../config';
-import { useEmitEvent, renderTNode, TNode, useVModel } from '../shared';
+import { renderTNode, TNode, useVModel } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-notice-bar`;
@@ -81,7 +81,6 @@ export default defineComponent({
   props: NoticeBarProps,
   emits: ['click'],
   setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
     // 初始化数据
     const state = reactive({
@@ -123,7 +122,7 @@ export default defineComponent({
     const showContent = computed(() => renderTNode(internalInstance, 'content'));
     // click
     function handleClick(trigger: NoticeBarTrigger) {
-      emitEvent('click', trigger);
+      props.onClick?.(trigger);
     }
     // 动画 i
     const animateStyle = computed(() => ({

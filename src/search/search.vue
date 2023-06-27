@@ -37,7 +37,7 @@ import { ref, computed, defineComponent, toRefs, getCurrentInstance, h, nextTick
 import isFunction from 'lodash/isFunction';
 import { useFocus } from '@vueuse/core';
 import config from '../config';
-import { renderTNode, TNode, useEmitEvent } from '../shared';
+import { renderTNode, TNode } from '../shared';
 import searchProps from './props';
 import { useDefault } from '../shared/useDefault';
 
@@ -50,7 +50,6 @@ export default defineComponent({
   props: searchProps,
   emits: ['update:value', 'update:modelValue', 'action-click', 'focus', 'blur', 'change', 'clear', 'submit'],
   setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
     const searchInput = ref();
     const { focused } = useFocus(searchInput, { initialValue: props.focus });
     const [searchValue] = useDefault(props, context.emit, 'value', 'change');
@@ -102,15 +101,15 @@ export default defineComponent({
     const handleClear = (e: MouseEvent) => {
       searchValue.value = '';
       focused.value = true;
-      emitEvent('clear', { e });
+      props.onClear?.({ e });
     };
 
     const handleFocus = (e: FocusEvent) => {
-      emitEvent('focus', { value: searchValue.value, e });
+      props.onFocus?.({ value: searchValue.value, e });
     };
 
     const handleBlur = (e: FocusEvent) => {
-      emitEvent('blur', { value: searchValue.value, e });
+      props.onBlur?.({ value: searchValue.value, e });
     };
 
     const handleCompositionend = (e: InputEvent | CompositionEvent) => {
@@ -118,14 +117,14 @@ export default defineComponent({
     };
 
     const onActionClick = (e: MouseEvent) => {
-      emitEvent('action-click', { e: MouseEvent });
+      props.onActionClick?.({ e });
     };
 
     const handleSearch = (e: any) => {
       // 如果按的是 enter 键, 13是 enter
       if (e.keyCode === 13) {
         e.preventDefault(); // 禁止默认（换行）事件
-        emitEvent('submit', { value: searchValue.value, e });
+        props.onSubmit?.({ value: searchValue.value, e });
       }
     };
 

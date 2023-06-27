@@ -10,7 +10,7 @@ import { computed, defineComponent, getCurrentInstance, h } from 'vue';
 import { useElementBounding } from '@vueuse/core';
 import { BacktopIcon as TIconBackTop } from 'tdesign-icons-vue-next';
 
-import { useEmitEvent, renderTNode, TNode } from '../shared';
+import { renderTNode, TNode } from '../shared';
 import BackTopProps from './props';
 import config from '../config';
 
@@ -21,7 +21,6 @@ export default defineComponent({
   components: { TNode },
   props: BackTopProps,
   setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
     const el = computed(() => {
       return props.target ? props.target() : window.document.documentElement;
     });
@@ -45,7 +44,7 @@ export default defineComponent({
 
     const clickBackBtn = () => {
       window.document.documentElement.scrollTop += top.value;
-      emitEvent('to-top');
+      props.onToTop?.();
     };
     return {
       name,

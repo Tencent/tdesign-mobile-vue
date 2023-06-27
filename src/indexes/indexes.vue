@@ -39,7 +39,6 @@ import {
 import _ from 'lodash';
 import config from '../config';
 import IndexesProps from './props';
-import { useEmitEvent } from '../shared';
 
 const { prefix } = config;
 
@@ -66,8 +65,7 @@ export default defineComponent({
   name: componentName,
   props: IndexesProps,
   emits: ['select', 'change'],
-  setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
+  setup(props) {
     let timeOut: number;
     const indexesRoot = ref<HTMLElement>();
     const parentRect = ref();
@@ -148,7 +146,7 @@ export default defineComponent({
     };
 
     const handleSidebarItemClick = (index: string | number) => {
-      emitEvent('select', index);
+      props.onSelect?.(index);
       setActiveSidebarAndTip(index);
       scrollToByIndex(index);
     };
@@ -214,7 +212,7 @@ export default defineComponent({
       () => state.activeSidebar,
       (val, oldVal) => {
         if (val !== oldVal) {
-          emitEvent('change', state.activeSidebar);
+          props.onChange?.(state.activeSidebar);
         }
       },
     );

@@ -19,8 +19,6 @@ export default {
   },
   /** 标签选中的状态，默认风格（theme=default）才有选中态，非受控属性 */
   defaultChecked: Boolean,
-  /** 已废弃。标签是否可关闭 */
-  closable: Boolean,
   /** 组件子元素；传入数组时：[选中内容，非选中内容] */
   content: {
     type: [String, Number, Array, Function] as PropType<TdCheckTagProps['content']>,

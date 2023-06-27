@@ -29,7 +29,7 @@ import config from '../config';
 import AvatarProps from './props';
 import { TdAvatarGroupProps } from './type';
 import CLASSNAMES from '../shared/constants';
-import { renderContent, renderTNode, TNode, useEmitEvent } from '../shared';
+import { renderContent, renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-avatar`;
@@ -39,8 +39,7 @@ export default defineComponent({
   components: { TNode, TBadge, TImage },
   props: AvatarProps,
   emits: ['error'],
-  setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
+  setup(props) {
     const internalInstance = getCurrentInstance();
     const avatarGroupProps = inject('avatarGroup', {}) as TdAvatarGroupProps;
     const hasAvatarGroupProps = Object.keys(avatarGroupProps).length > 0;
@@ -69,7 +68,7 @@ export default defineComponent({
     });
 
     const handleImgLoadError = (e: any) => {
-      emitEvent('error', e);
+      props.onError?.(e);
     };
 
     const customBadgeProps = computed(() => ({
