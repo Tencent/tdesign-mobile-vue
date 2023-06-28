@@ -79,10 +79,10 @@ import config from '../config';
 import TButton from '../button';
 import TPopup from '../popup';
 import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
-import { useVModel, useEmitEvent, uniqueFactory } from '../shared';
+import { useVModel, uniqueFactory } from '../shared';
 import DropdownItemProps from './dropdown-item-props';
 import { DropdownMenuState, DropdownMenuControl } from './context';
-import { TdDropdownMenuProps, DropdownOption, DropdownValue } from './type';
+import { TdDropdownMenuProps, DropdownValue } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-dropdown-item`;
@@ -93,8 +93,7 @@ export default defineComponent({
   components: { TRadio, TButton, TPopup, TCheckbox, TRadioGroup, TCheckboxGroup },
   props: DropdownItemProps,
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
-  setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
+  setup(props) {
     // 受控 value 属性
     const { value, modelValue } = toRefs(props);
     const [passInValue, setValue] = useVModel(value, modelValue, props.defaultValue);
@@ -158,7 +157,7 @@ export default defineComponent({
         top: `${bottom}px`,
       };
       const { duration } = menuProps;
-      emitEvent(val ? 'open' : 'close');
+      props[`on${val ? 'Open' : 'Close'}`]?.();
       // 动画状态控制
       if (val) {
         state.wrapperVisible = true;
@@ -172,7 +171,7 @@ export default defineComponent({
         }, Number(duration));
       }
       setTimeout(() => {
-        emitEvent(val ? 'opened' : 'closed');
+        props[`on${val ? 'Opened' : 'Closed'}`]?.();
       }, Number(duration));
     };
 

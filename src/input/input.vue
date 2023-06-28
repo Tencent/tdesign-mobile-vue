@@ -56,7 +56,7 @@ import { useFocus } from '@vueuse/core';
 import config from '../config';
 import InputProps from './props';
 import { InputValue, TdInputProps } from './type';
-import { useEmitEvent, getCharacterLength, renderTNode, TNode, useDefault, extendAPI } from '../shared';
+import { getCharacterLength, renderTNode, TNode, useDefault, extendAPI } from '../shared';
 import { useFormDisabled } from '../form/hooks';
 
 const { prefix } = config;
@@ -77,7 +77,6 @@ export default defineComponent({
   },
   emits: ['update:value', 'update:modelValue', 'click-icon', 'focus', 'blur', 'change', 'clear'],
   setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
     const disabled = useFormDisabled();
 
     const inputRef = ref();
@@ -161,13 +160,13 @@ export default defineComponent({
     const handleClear = (e: MouseEvent) => {
       innerValue.value = '';
       focused.value = true;
-      emitEvent('clear', { e });
+      props.onClear?.({ e });
     };
     const handleFocus = (e: FocusEvent) => {
-      emitEvent('focus', innerValue.value, { e });
+      props.onFocus?.(innerValue.value, { e });
     };
     const handleBlur = (e: FocusEvent) => {
-      emitEvent('blur', innerValue.value, { e });
+      props.onBlur?.(innerValue.value, { e });
     };
 
     const handleCompositionend = (e: InputEvent | CompositionEvent) => {

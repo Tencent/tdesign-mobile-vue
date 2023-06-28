@@ -37,7 +37,6 @@
 <script lang="ts">
 import { ref, defineComponent, computed } from 'vue';
 import config from '../config';
-import { useEmitEvent } from '../shared';
 import { Grid as TGrid, GridItem as TGridItem } from '../grid';
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
 
@@ -56,10 +55,13 @@ export default defineComponent({
       type: Number,
       default: 8,
     },
+    selected: {
+      type: Function,
+      default: undefined,
+    },
   },
   emits: ['selected'],
   setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
     const gridColumn = computed(() => Math.ceil(props.count / 2));
     const pageNum = computed(() => Math.ceil(props.items.length / props.count));
     const actionItems = computed(() => {
@@ -76,7 +78,7 @@ export default defineComponent({
       [`${name}__dots`]: pageNum.value > 1,
     }));
     const handleSelected = (i: any) => {
-      emitEvent('selected', i);
+      context.emit('selected', i);
     };
 
     return {

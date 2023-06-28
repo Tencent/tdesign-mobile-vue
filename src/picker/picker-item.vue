@@ -11,7 +11,6 @@ import { ref, computed, onMounted, toRefs, defineComponent, PropType, watch } fr
 import config from '../config';
 import Picker from './picker.class';
 import { PickerColumnItem, PickerValue } from './type';
-import { useEmitEvent } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-picker-item`;
@@ -30,10 +29,13 @@ export default defineComponent({
       type: Function,
       default: undefined,
     },
+    onPick: {
+      type: Function,
+      default: undefined,
+    },
   },
   emits: ['pick'],
-  setup(props: any, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
+  setup(props, context) {
     let picker: Picker | null = null;
     const el = document.createElement('ul');
     const root = ref(el);
@@ -84,7 +86,7 @@ export default defineComponent({
         onChange: (index: number) => {
           const curItem = props.options[index];
           const changeValue = { value: curItem.value, index };
-          emitEvent('pick', changeValue);
+          props.onPick?.(changeValue);
         },
       });
     });

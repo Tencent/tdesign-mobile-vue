@@ -20,7 +20,7 @@ import popupProps from './props';
 import TOverlay from '../overlay';
 import config from '../config';
 import { TdPopupProps } from './type';
-import { useDefault, useEmitEvent, TNode, renderTNode } from '../shared';
+import { useDefault, TNode, renderTNode } from '../shared';
 import { getAttach } from '../shared/dom';
 
 const { prefix } = config;
@@ -35,7 +35,6 @@ export default defineComponent({
   emits: ['open', 'close', 'opened', 'closed', 'visible-change', 'update:visible', 'update:modelValue'],
   setup(props, context) {
     const currentInstance = getCurrentInstance();
-    const emitEvent = useEmitEvent(props, context.emit);
     const [currentVisible, setVisible] = useDefault<TdPopupProps['visible'], TdPopupProps>(
       props,
       context.emit,
@@ -89,7 +88,7 @@ export default defineComponent({
     );
 
     const handleCloseClick = (e: MouseEvent) => {
-      emitEvent('close', { e });
+      props.onClose?.({ e });
       setVisible(false);
     };
 
@@ -98,22 +97,22 @@ export default defineComponent({
       if (!props.closeOnOverlayClick) {
         return;
       }
-      emitEvent('close', { e });
+      props.onClose?.({ e });
       setVisible(false);
     };
 
     const afterLeave = () => {
       wrapperVisbile.value = false;
-      emitEvent('closed');
+      props.onClosed?.();
     };
-    const afterEnter = () => emitEvent('opened');
+    const afterEnter = () => props.onOpened?.();
     const to = computed(() => getAttach(props.attach ?? 'body'));
 
     watch(
       () => currentVisible.value,
       (val) => {
         if (val) {
-          emitEvent('open');
+          props.onOpen?.();
           setVisible(true);
         }
       },

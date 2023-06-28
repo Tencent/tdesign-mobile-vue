@@ -5,12 +5,14 @@
 import { mount } from '@vue/test-utils';
 import baseVue from '@/image/demos/base.vue';
 import mobileVue from '@/image/demos/mobile.vue';
+import positionVue from '@/image/demos/position.vue';
 import shapeVue from '@/image/demos/shape.vue';
 import statusVue from '@/image/demos/status.vue';
 
 const mapper = {
   baseVue,
   mobileVue,
+  positionVue,
   shapeVue,
   statusVue,
 };

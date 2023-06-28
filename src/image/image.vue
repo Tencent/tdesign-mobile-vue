@@ -26,7 +26,7 @@ import { useIntersectionObserver } from '@vueuse/core';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
 import Loading from '../loading';
-import { useEmitEvent, renderTNode, TNode } from '../shared';
+import { renderTNode, TNode } from '../shared';
 import ImageProps from './props';
 import config from '../config';
 
@@ -38,8 +38,6 @@ export default defineComponent({
   components: { TNode },
   props: ImageProps,
   setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
-
     // 默认loading和error状态展示，slot支持Node和Function
     const internalInstance = getCurrentInstance();
 
@@ -93,7 +91,7 @@ export default defineComponent({
 
     // 图片加载完成回调
     const handleImgLoadCompleted = (e: Event) => {
-      emitEvent('load', e);
+      props.onLoad?.({ e });
       isLoading.value = false;
     };
 
@@ -102,7 +100,7 @@ export default defineComponent({
       if (realSrc.value === '') {
         return;
       }
-      emitEvent('error', e);
+      props.onError?.({ e });
       isLoading.value = false;
       isError.value = true;
     };

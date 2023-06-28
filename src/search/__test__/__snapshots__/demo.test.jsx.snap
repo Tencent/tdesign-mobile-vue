@@ -35,12 +35,7 @@ exports[`Search > Search actionVue demo works fine 1`] = `
       <!--v-if-->
     </div>
     
-    <div
-      class="t-search__search-action"
-      style="display: none;"
-    >
-      取消
-    </div>
+    <!--v-if-->
     
   </div>
 </div>
@@ -171,7 +166,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
       <p
         class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        获取焦点后显示取消按钮
+        输入值后显示取消按钮
       </p>
     </div>
     <div
@@ -212,12 +207,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
             <!--v-if-->
           </div>
           
-          <div
-            class="t-search__search-action"
-            style="display: none;"
-          >
-            取消
-          </div>
+          <!--v-if-->
           
         </div>
       </div>

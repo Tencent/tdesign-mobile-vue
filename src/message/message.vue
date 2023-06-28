@@ -35,9 +35,9 @@ import {
 import { CheckCircleFilledIcon, CloseIcon, InfoCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { isFunction } from 'lodash';
 import messageProps from './props';
-import { DrawMarquee } from './type';
+import { DrawMarquee, TdMessageProps } from './type';
 import config from '../config';
-import { renderContent, renderTNode, TNode, useEmitEvent, useVModel } from '../shared';
+import { renderContent, renderTNode, TNode, useVModel } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-message`;
@@ -53,8 +53,7 @@ export default defineComponent({
   components: { TNode },
   props: messageProps,
   emits: ['durationEnd', 'closeBtnClick'],
-  setup(props: any, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
+  setup(props, context) {
     const internalInstance = getCurrentInstance();
 
     // 初始化动画相关数据
@@ -84,13 +83,13 @@ export default defineComponent({
       [`${name}__text-nowrap`]: props.marquee,
     }));
 
-    const changeNumToStr = (arr: []) => {
+    const changeNumToStr = (arr: TdMessageProps['offset'] = []) => {
       return arr.map(function (item) {
         return typeof item === 'number' ? `${item}px` : item;
       });
     };
 
-    const getMessageStylesOffset = (offset: []) => {
+    const getMessageStylesOffset = (offset: TdMessageProps['offset']) => {
       const arr = changeNumToStr(offset);
       return {
         top: arr[0],
@@ -153,11 +152,11 @@ export default defineComponent({
       state.scroll = {
         marquee: true,
         // 负数统一当作循环播放
-        loop: Math.max(props.marquee?.loop, -1) || loop,
+        loop: Math.max(props.marquee === true || props.marquee?.loop == null ? loop : props.marquee?.loop, -1),
         // 速度必须为正数
-        speed: Math.max(props.marquee?.speed, 1) || speed,
+        speed: Math.max(props.marquee === true || props.marquee?.speed == null ? speed : props.marquee?.speed, 1),
         // 延迟不可为负数
-        delay: Math.max(props.marquee?.delay, 0) || delay,
+        delay: Math.max(props.marquee === true || props.marquee?.delay == null ? delay : props.marquee?.delay, 0),
       };
       state.offset = 0;
 
@@ -198,14 +197,14 @@ export default defineComponent({
     };
 
     const onCloseBtnClick = () => {
-      emitEvent('closeBtnClick');
+      props.onCloseBtnClick?.();
       setVisible(false);
     };
 
     const handleDuration = () => {
       if (props.duration > 0) {
         setTimeout(() => {
-          emitEvent('durationEnd');
+          props.onDurationEnd?.();
           onCloseBtnClick();
         }, props.duration);
       }

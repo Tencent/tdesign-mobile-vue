@@ -70,6 +70,10 @@ export interface TdStepperProps {
    */
   onChange?: (value: string | number) => void;
   /**
+   * 输入框聚焦时触发
+   */
+  onFocus?: (value: string | number) => void;
+  /**
    * 数值超出限制时触发
    */
   onOverlimit?: (type: 'minus' | 'plus') => void;
