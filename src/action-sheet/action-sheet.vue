@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import { ref, watch, defineComponent, computed } from 'vue';
-import { useEmitEvent, useDefault } from '../shared';
+import { useDefault } from '../shared';
 import ActionSheetList from './action-sheet-list.vue';
 import ActionSheetGrid from './action-sheet-grid.vue';
 import TPopup from '../popup';
@@ -41,7 +41,6 @@ export default defineComponent({
   props: ActionSheetProps,
   emits: ['selected', 'update:modelValue', 'cancel', 'close'],
   setup(props: any, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
     const actionItems = computed(() => {
       return props.items.map((item: String | ActionSheetItem) => {
         if (typeof item === 'string') {
@@ -70,7 +69,6 @@ export default defineComponent({
       () => currentVisible.value,
       (val) => {
         currentVisible.value = val;
-        // emitEvent('update:modelValue', val);
       },
       {
         immediate: true,
@@ -80,16 +78,16 @@ export default defineComponent({
 
     const hide = (trigger: string) => {
       context.emit('update:modelValue', false);
-      emitEvent('close', { trigger });
+      props.onClose?.({ trigger });
     };
 
     const handleCancel = () => {
-      emitEvent('cancel');
+      props.onCancel?.();
       context.emit('update:modelValue', false);
     };
 
     const handleSelected = (index: number) => {
-      emitEvent('selected', props?.items[index], index);
+      props.onSelected?.(props?.items[index], index);
       hide('selected');
     };
 

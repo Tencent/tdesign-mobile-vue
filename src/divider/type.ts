@@ -30,9 +30,4 @@ export interface TdDividerProps {
    * @default horizontal
    */
   layout?: 'horizontal' | 'vertical';
-  /**
-   * 分隔线颜色
-   * @default ''
-   */
-  lineColor?: string;
 }

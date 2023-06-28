@@ -27,7 +27,7 @@
 
 <script lang="ts">
 import { computed, ref, onMounted, defineComponent, getCurrentInstance, toRefs, nextTick, watch } from 'vue';
-import { useEmitEvent, renderTNode, TNode, getCharacterLength, useVModel } from '../shared';
+import { renderTNode, TNode, getCharacterLength, useVModel } from '../shared';
 import config from '../config';
 import TextareaProps from './props';
 import { TdTextareaProps, TextareaValue } from './type';
@@ -45,7 +45,6 @@ export default defineComponent({
   props: TextareaProps,
   emits: ['update:value', 'update:modelValue', 'focus', 'blur', 'change'],
   setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
     const disabled = useFormDisabled();
     const textareaRef = ref<null | HTMLElement>(null);
     const textareaStyle = ref();
@@ -94,47 +93,47 @@ export default defineComponent({
 
     const handleInput = (e: any) => {
       if (e.isComposing || e.inputType === 'insertCompositionText') return;
-      textareaValueChangeHandle(e);
+      textareaValueChangeHandle();
     };
 
-    const textareaValueChangeHandle = (e: InputEvent) => {
-      const { target } = e;
-      const { value } = target as HTMLInputElement;
+    const textareaValueChangeHandle = () => {
+      const textarea = textareaRef.value as HTMLInputElement;
       if (
         !props.allowInputOverMax &&
         props.maxcharacter &&
         props.maxcharacter > 0 &&
         !Number.isNaN(props.maxcharacter)
       ) {
-        const { length = 0, characters = '' } = getCharacterLength(value, props.maxcharacter) as {
+        const { length = 0, characters = '' } = getCharacterLength(textarea.value, props.maxcharacter) as {
           length: number;
           characters: string;
         };
         setInnerValue(characters);
         textareaLength.value = length;
       } else {
-        setInnerValue(value);
-        textareaLength.value = String(innerValue.value).length;
+        setInnerValue(textarea.value);
+        textareaLength.value = String(textarea.value).length;
       }
       nextTick(() => setInputValue(innerValue.value));
       adjustTextareaHeight();
     };
 
     const handleCompositionend = (e: InputEvent | CompositionEvent) => {
-      textareaValueChangeHandle(e as InputEvent);
+      textareaValueChangeHandle();
     };
 
     const handleFocus = (e: FocusEvent) => {
-      emitEvent('focus', innerValue.value, { e });
+      props.onFocus?.(innerValue.value, { e });
     };
     const handleBlur = (e: FocusEvent) => {
-      emitEvent('blur', innerValue.value, { e });
+      props.onBlur?.(innerValue.value, { e });
     };
 
     onMounted(() => {
       if (props.autofocus) {
         textareaRef.value?.focus();
       }
+      textareaValueChangeHandle();
       adjustTextareaHeight();
     });
 

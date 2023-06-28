@@ -24,7 +24,7 @@
 import { computed, defineComponent, getCurrentInstance, ref, toRefs } from 'vue';
 import { ChevronLeftIcon as TChevronLeftIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
-import { renderTNode, TNode, useEmitEvent } from '../shared';
+import { renderTNode, TNode } from '../shared';
 import NavbarProps from './props';
 
 const { prefix } = config;
@@ -70,14 +70,12 @@ export default defineComponent({
     const rightContent = computed(() => renderTNode(internalInstance, 'right'));
     const capsuleContent = computed(() => renderTNode(internalInstance, 'capsule'));
 
-    const emitEvent = useEmitEvent(props, context.emit);
-
     const handleLeftClick = () => {
-      emitEvent('left-click');
+      props.onLeftClick?.();
     };
 
     const handleRightClick = () => {
-      emitEvent('right-click');
+      props.onRightClick?.();
     };
 
     return {

@@ -141,18 +141,14 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
               />
             </svg>
             <div
-              class="t-divider--vertical-center"
+              class="t-divider t-divider--vertical t-divider--center"
               data-v-7388e034=""
               role="separator"
             >
               <div
-                class="t-divider t-divider--vertical t-divider--center"
+                class="t-divider__content"
               >
-                <div
-                  class="t-divider__content"
-                >
-                  <!---->
-                </div>
+                <!---->
               </div>
             </div>
             <svg
@@ -655,18 +651,14 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
                   />
                 </svg>
                 <div
-                  class="t-divider--vertical-center"
+                  class="t-divider t-divider--vertical t-divider--center"
                   data-v-7388e034=""
                   role="separator"
                 >
                   <div
-                    class="t-divider t-divider--vertical t-divider--center"
+                    class="t-divider__content"
                   >
-                    <div
-                      class="t-divider__content"
-                    >
-                      <!---->
-                    </div>
+                    <!---->
                   </div>
                 </div>
                 <svg

@@ -5,6 +5,25 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.0.0-rc `2023-06-27`
+### ❗ Breaking Changes
+- `Divider`: 调整 DOM，移除 lineColor 废弃属性 @LeeJim ([#896](https://github.com/Tencent/tdesign-mobile-vue/pull/896))
+- `CheckTag`: 移除废弃属性 closable @LeeJim ([#899](https://github.com/Tencent/tdesign-mobile-vue/pull/899))
+
+### 🚀 Features
+- `Popover`: 新增 Popover 弹出气泡组件 @anlyyao ([#898](https://github.com/Tencent/tdesign-mobile-vue/pull/898))
+### 🐞 Bug Fixes
+- `PullDownRefresh`: 修复下拉刷新加载样式未居中问题 @ccccpj ([#888](https://github.com/Tencent/tdesign-mobile-vue/pull/888))
+- `Fab`: 改用 setup 语法糖 @LeeJim ([#897](https://github.com/Tencent/tdesign-mobile-vue/pull/897))
+- `Textarea`: 修复计数器错误 @anlyyao ([#902](https://github.com/Tencent/tdesign-mobile-vue/pull/902))
+- `Table`: 修复事件 cell-click 和 row-click 返回参数错误的问题 @LeeJim ([#899](https://github.com/Tencent/tdesign-mobile-vue/pull/899))
+- `Drawer`: 修复事件 close 返回参数错误的问题 @LeeJim ([#899](https://github.com/Tencent/tdesign-mobile-vue/pull/899))
+- `Image`: 修复事件 load 和 error 返回参数错误的问题 @LeeJim ([#899](https://github.com/Tencent/tdesign-mobile-vue/pull/899))
+- `Search`: 修复事件 action-click 返回参数错误的问题 @LeeJim ([#899](https://github.com/Tencent/tdesign-mobile-vue/pull/899))
+- `Upload`: 修复事件 select-change 返回参数错误的问题 @LeeJim ([#899](https://github.com/Tencent/tdesign-mobile-vue/pull/899))
+- `Search`: 修复 `action-click` 事件无效 @anlyyao ([#908](https://github.com/Tencent/tdesign-mobile-vue/pull/908))
+- `DateTimePicker`: 修复 `modelValue` 属性无效的问题 @anlyyao ([#903](https://github.com/Tencent/tdesign-mobile-vue/pull/903))
+
 ## 🌈 0.26.0 `2023-06-20`
 ### ❗ Breaking Changes
 - `NavBar`: 调整布局方式 @LeeJim ([#871](https://github.com/Tencent/tdesign-mobile-vue/pull/871))

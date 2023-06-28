@@ -17,6 +17,7 @@ value | String / Number | 0 | 值。支持语法糖 `v-model` 或 `v-model:value
 defaultValue | String / Number | 0 | 值。非受控属性 | N
 onBlur | Function |  | TS 类型：`(value: string \| number) => void`<br/>输入框失去焦点时触发 | N
 onChange | Function |  | TS 类型：`(value: string \| number) => void`<br/>数值发生变更时触发 | N
+onFocus | Function |  | TS 类型：`(value: string \| number) => void`<br/>输入框聚焦时触发 | N
 onOverlimit | Function |  | TS 类型：`(type: 'minus' \| 'plus') => void`<br/>数值超出限制时触发 | N
 
 ### Stepper Events
@@ -25,4 +26,5 @@ onOverlimit | Function |  | TS 类型：`(type: 'minus' \| 'plus') => void`<br/>
 -- | -- | --
 blur | `(value: string \| number)` | 输入框失去焦点时触发
 change | `(value: string \| number)` | 数值发生变更时触发
+focus | `(value: string \| number)` | 输入框聚焦时触发
 overlimit | `(type: 'minus' \| 'plus')` | 数值超出限制时触发

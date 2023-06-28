@@ -64,12 +64,8 @@ describe('divider.vue', async () => {
       // layout = 'vertical'
       expect($divider.find(`.${name}`).classes()).toContain(`${name}--${layout}`);
     });
-
-    it(': lineColor', async () => {
-      const wrapper = mount(() => <Divider lineColor="red" />);
-      expect(getComputedStyle(wrapper.element.firstChild, null).borderColor).toBe('red');
-    });
   });
+
   describe('slot', async () => {
     it(': content', async () => {
       const wrapper = mount({

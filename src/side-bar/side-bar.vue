@@ -10,7 +10,7 @@ import { defineComponent, ref, Ref, ComponentInternalInstance, provide, toRefs }
 import config from '../config';
 import SideBarProps from './props';
 import { TdSideBarProps } from './type';
-import { useEmitEvent, useDefault } from '../shared';
+import { useDefault } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-side-bar`;
@@ -20,7 +20,6 @@ export default defineComponent({
   props: SideBarProps,
   emits: ['update:value', 'update:modelValue', 'change'],
   setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
     const [currentValue, setCurrentValue] = useDefault<TdSideBarProps['value'], TdSideBarProps>(
       props,
       context.emit,
@@ -38,9 +37,9 @@ export default defineComponent({
       children.value = children.value.filter((item) => item !== child);
     };
 
-    const onClickItem = (cur: TdSideBarProps['value'], label: string) => {
+    const onClickItem = (cur: string | number, label: string) => {
       setCurrentValue(cur);
-      emitEvent('click', cur, label);
+      props.onClick?.(cur, label);
     };
 
     provide('sideBarProvide', {

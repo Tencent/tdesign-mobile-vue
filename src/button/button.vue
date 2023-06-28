@@ -21,7 +21,7 @@
 import { computed, toRefs, defineComponent, getCurrentInstance } from 'vue';
 
 import Loading from '../loading';
-import { useEmitEvent, renderContent, renderTNode, TNode, Hover } from '../shared';
+import { renderContent, renderTNode, TNode, Hover } from '../shared';
 import ButtonProps from './props';
 import config from '../config';
 import { useFormDisabled } from '../form/hooks';
@@ -36,7 +36,6 @@ export default defineComponent({
   props: ButtonProps,
   emits: ['click'],
   setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
     const disabled = useFormDisabled();
     const internalInstance = getCurrentInstance();
     const buttonClass = computed(() => [
@@ -58,7 +57,7 @@ export default defineComponent({
 
     const onClick = (e: Event) => {
       if (!props.loading && !disabled.value) {
-        emitEvent('click', e);
+        props.onClick?.(e);
       } else {
         e.stopPropagation();
       }

@@ -88,7 +88,7 @@ import TdBaseTableProps from './base-table-props';
 import config from '../config';
 import useClassName from './hooks/useClassName';
 import useStyle, { formatCSSUnit } from './hooks/useStyle';
-import { renderTNode, TNode, useEmitEvent } from '../shared';
+import { renderTNode, TNode } from '../shared';
 import { TableRowData } from './type';
 import TLoading from '../loading';
 
@@ -100,9 +100,7 @@ export default defineComponent({
   components: { TNode },
   props: TdBaseTableProps,
   emits: ['cell-click', 'row-click', 'scroll'],
-  setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
-
+  setup(props) {
     const { classPrefix, tableLayoutClasses, tableHeaderClasses, tableBaseClass, tdAlignClasses, tdEllipsisClass } =
       useClassName();
 
@@ -124,16 +122,14 @@ export default defineComponent({
     const ellipsisClasses = computed(() => [`${classPrefix}-table__ellipsis`, `${classPrefix}-text-ellipsis`]);
 
     const handleRowClick = (row: TableRowData, rowIndex: number, e: MouseEvent) => {
-      const p = { row, index: rowIndex, e };
-      emitEvent('rowClick', { context: p });
+      props.onRowClick?.({ row, index: rowIndex, e });
     };
 
     const handleCellClick = (row: TableRowData, col: any, rowIndex: number, colIndex: number, e: MouseEvent) => {
-      const p = { row, col, rowIndex, colIndex, e };
       if (col.stopPropagation) {
         e.stopPropagation();
       }
-      emitEvent('cellClick', { context: p });
+      props.onCellClick?.({ row, col, rowIndex, colIndex, e });
     };
 
     const dynamicBaseTableClasses = computed(() => [tableClasses.value]);
@@ -148,7 +144,7 @@ export default defineComponent({
     );
 
     const onInnerVirtualScroll = (e: WheelEvent) => {
-      emitEvent('scroll', { params: e });
+      props.onScroll?.({ params: e });
     };
 
     return {

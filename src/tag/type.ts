@@ -77,12 +77,6 @@ export interface TdCheckTagProps {
    */
   modelValue?: boolean;
   /**
-   * 标签是否可关闭
-   * @default false
-   * @deprecated
-   */
-  closable?: boolean;
-  /**
    * 组件子元素；传入数组时：[选中内容，非选中内容]
    */
   content?: string | number | string[] | TNode;

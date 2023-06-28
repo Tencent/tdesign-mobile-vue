@@ -14,7 +14,7 @@ exports[`PullDownRefresh > :props > :others 1`] = `
     >
       <div
         class="t-pull-down-refresh__loading"
-        style="height: 50px;"
+        style="transform: translateY(15px); height: 0px; max-height: 50px;"
       >
         <div
           class="t-pull-down-refresh__text"

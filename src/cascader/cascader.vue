@@ -88,7 +88,7 @@ import { Tabs as TTabs, TabPanel as TTabPanel } from '../tabs';
 import { RadioGroup as TRadioGroup } from '../radio';
 import config from '../config';
 import TdCascaderProps from './props';
-import { useEmitEvent, useVModel, renderTNode, TNode } from '../shared';
+import { useVModel, renderTNode, TNode } from '../shared';
 import { TreeOptionData } from '../common';
 
 const { prefix } = config;
@@ -115,7 +115,6 @@ export default defineComponent({
   props: TdCascaderProps,
   emits: ['change', 'close', 'pick', 'update:modelValue', 'update:value', 'update:visible'],
   setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
     const { visible, value, modelValue, subTitles, options, keys } = toRefs(props);
     const open = ref(visible.value || false);
     const [cascaderValue, setCascaderValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
@@ -193,7 +192,7 @@ export default defineComponent({
         return;
       }
 
-      emitEvent('pick', { value: item[keys.value?.value ?? 'value'], index });
+      props.onPick?.({ value: item[keys.value?.value ?? 'value'], index });
 
       if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length) {
         items[level + 1] = item[(keys as Ref<KeysType>).value?.children ?? 'children'];
@@ -203,8 +202,7 @@ export default defineComponent({
         steps.length = level + 2;
       } else {
         setCascaderValue(item[keys.value?.value ?? 'value']);
-        emitEvent(
-          'change',
+        props.onChange?.(
           item[keys.value?.value ?? 'value'],
           items.map((item, index) => toRaw(item?.[selectedIndexes[index]])),
         );
@@ -213,7 +211,7 @@ export default defineComponent({
     };
 
     watch(open, () => {
-      emitEvent('update:visible', open.value);
+      context.emit('update:visible', open.value);
     });
 
     watch(visible, () => {
@@ -221,7 +219,7 @@ export default defineComponent({
     });
 
     const close = (trigger: string) => {
-      emitEvent('close', { trigger });
+      props.onClose?.({ trigger });
     };
 
     const onVisibleChange = (visible: boolean) => {
@@ -260,7 +258,6 @@ export default defineComponent({
       selectedIndexes,
       items,
       setCascaderValue,
-      emitEvent,
       onClose,
     };
   },

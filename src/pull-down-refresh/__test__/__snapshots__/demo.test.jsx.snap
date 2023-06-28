@@ -15,7 +15,7 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
     >
       <div
         class="t-pull-down-refresh__loading"
-        style="height: 66px;"
+        style="transform: translateY(7px); height: 0px; max-height: 66px;"
       >
         <div
           class="t-pull-down-refresh__text"
@@ -312,7 +312,7 @@ exports[`PullDownRefresh > PullDownRefresh loadingTextsVue demo works fine 1`] =
           >
             <div
               class="t-pull-down-refresh__loading"
-              style="height: 70px;"
+              style="transform: translateY(15px); height: 0px; max-height: 70px;"
             >
               <div
                 class="t-pull-down-refresh__text"
@@ -346,7 +346,7 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
       >
         <div
           class="t-pull-down-refresh__loading"
-          style="height: 66px;"
+          style="transform: translateY(7px); height: 0px; max-height: 66px;"
         >
           <div
             class="t-pull-down-refresh__text"
@@ -644,7 +644,7 @@ exports[`PullDownRefresh > PullDownRefresh timeoutVue demo works fine 1`] = `
           >
             <div
               class="t-pull-down-refresh__loading"
-              style="height: 50px;"
+              style="transform: translateY(15px); height: 0px; max-height: 50px;"
             >
               <div
                 class="t-pull-down-refresh__text"
