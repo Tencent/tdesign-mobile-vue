@@ -25,9 +25,10 @@ describe('Textarea.vue', () => {
     const wrapper = mount(
       <Textarea label="标题" v-model={value.value} maxcharacter={maxcharacter} onChange={onChange} />,
     );
+    expect(onChange).toBeCalledTimes(1);
     const el = wrapper.find('textarea').element;
     await simulateEvent(el, '一个汉字等于两个字符，超出会被剪切', 'input');
-    expect(onChange).toBeCalledTimes(1);
+    expect(onChange).toBeCalledTimes(2);
     expect(onChange).toHaveBeenCalledWith('一');
   });
 
@@ -35,9 +36,10 @@ describe('Textarea.vue', () => {
     const value = ref('');
     const onChange = vi.fn();
     const wrapper = mount(<Textarea label="标题" v-model={value.value} autosize onChange={onChange} />);
+    expect(onChange).toBeCalledTimes(1);
     const el = wrapper.find('textarea').element;
     await simulateEvent(el, '这里是一段很长很长很长的长文本，支持自动换行', 'input');
-    expect(onChange).toBeCalledTimes(1);
+    expect(onChange).toBeCalledTimes(2);
   });
 
   it(': placeholder', async () => {

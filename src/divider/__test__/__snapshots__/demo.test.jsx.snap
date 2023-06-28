@@ -11,18 +11,14 @@ exports[`Divider > Divider baseVue demo works fine 1`] = `
     水平分割线
   </div>
   <div
-    class=""
+    class="t-divider t-divider--horizontal t-divider--center"
     data-v-589c0842=""
     role="separator"
   >
     <div
-      class="t-divider t-divider--horizontal t-divider--center"
+      class="t-divider__content"
     >
-      <div
-        class="t-divider__content"
-      >
-        <!---->
-      </div>
+      <!---->
     </div>
   </div>
   <div
@@ -32,48 +28,36 @@ exports[`Divider > Divider baseVue demo works fine 1`] = `
     带文字水平分割线
   </div>
   <div
-    class=""
+    class="t-divider t-divider--horizontal t-divider--left"
     data-v-589c0842=""
     role="separator"
   >
     <div
-      class="t-divider t-divider--horizontal t-divider--left"
+      class="t-divider__content"
     >
-      <div
-        class="t-divider__content"
-      >
-        文字信息
-      </div>
+      文字信息
     </div>
   </div>
   <div
-    class=""
+    class="t-divider t-divider--horizontal t-divider--center"
     data-v-589c0842=""
     role="separator"
   >
     <div
-      class="t-divider t-divider--horizontal t-divider--center"
+      class="t-divider__content"
     >
-      <div
-        class="t-divider__content"
-      >
-        文字信息
-      </div>
+      文字信息
     </div>
   </div>
   <div
-    class=""
+    class="t-divider t-divider--horizontal t-divider--right"
     data-v-589c0842=""
     role="separator"
   >
     <div
-      class="t-divider t-divider--horizontal t-divider--right"
+      class="t-divider__content"
     >
-      <div
-        class="t-divider__content"
-      >
-        文字信息
-      </div>
+      文字信息
     </div>
   </div>
   <div
@@ -93,18 +77,14 @@ exports[`Divider > Divider baseVue demo works fine 1`] = `
       文字信息
     </span>
     <div
-      class="t-divider--vertical-center"
+      class="t-divider t-divider--vertical t-divider--center"
       data-v-589c0842=""
       role="separator"
     >
       <div
-        class="t-divider t-divider--vertical t-divider--center"
+        class="t-divider__content"
       >
-        <div
-          class="t-divider__content"
-        >
-          <!---->
-        </div>
+        <!---->
       </div>
     </div>
     <span
@@ -113,18 +93,14 @@ exports[`Divider > Divider baseVue demo works fine 1`] = `
       文字信息
     </span>
     <div
-      class="t-divider--vertical-center"
+      class="t-divider t-divider--vertical t-divider--center"
       data-v-589c0842=""
       role="separator"
     >
       <div
-        class="t-divider t-divider--vertical t-divider--center"
+        class="t-divider__content"
       >
-        <div
-          class="t-divider__content"
-        >
-          <!---->
-        </div>
+        <!---->
       </div>
     </div>
     <span
@@ -182,18 +158,14 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
           水平分割线
         </div>
         <div
-          class=""
+          class="t-divider t-divider--horizontal t-divider--center"
           data-v-589c0842=""
           role="separator"
         >
           <div
-            class="t-divider t-divider--horizontal t-divider--center"
+            class="t-divider__content"
           >
-            <div
-              class="t-divider__content"
-            >
-              <!---->
-            </div>
+            <!---->
           </div>
         </div>
         <div
@@ -203,48 +175,36 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
           带文字水平分割线
         </div>
         <div
-          class=""
+          class="t-divider t-divider--horizontal t-divider--left"
           data-v-589c0842=""
           role="separator"
         >
           <div
-            class="t-divider t-divider--horizontal t-divider--left"
+            class="t-divider__content"
           >
-            <div
-              class="t-divider__content"
-            >
-              文字信息
-            </div>
+            文字信息
           </div>
         </div>
         <div
-          class=""
+          class="t-divider t-divider--horizontal t-divider--center"
           data-v-589c0842=""
           role="separator"
         >
           <div
-            class="t-divider t-divider--horizontal t-divider--center"
+            class="t-divider__content"
           >
-            <div
-              class="t-divider__content"
-            >
-              文字信息
-            </div>
+            文字信息
           </div>
         </div>
         <div
-          class=""
+          class="t-divider t-divider--horizontal t-divider--right"
           data-v-589c0842=""
           role="separator"
         >
           <div
-            class="t-divider t-divider--horizontal t-divider--right"
+            class="t-divider__content"
           >
-            <div
-              class="t-divider__content"
-            >
-              文字信息
-            </div>
+            文字信息
           </div>
         </div>
         <div
@@ -264,18 +224,14 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
             文字信息
           </span>
           <div
-            class="t-divider--vertical-center"
+            class="t-divider t-divider--vertical t-divider--center"
             data-v-589c0842=""
             role="separator"
           >
             <div
-              class="t-divider t-divider--vertical t-divider--center"
+              class="t-divider__content"
             >
-              <div
-                class="t-divider__content"
-              >
-                <!---->
-              </div>
+              <!---->
             </div>
           </div>
           <span
@@ -284,18 +240,14 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
             文字信息
           </span>
           <div
-            class="t-divider--vertical-center"
+            class="t-divider t-divider--vertical t-divider--center"
             data-v-589c0842=""
             role="separator"
           >
             <div
-              class="t-divider t-divider--vertical t-divider--center"
+              class="t-divider__content"
             >
-              <div
-                class="t-divider__content"
-              >
-                <!---->
-              </div>
+              <!---->
             </div>
           </div>
           <span
@@ -337,63 +289,47 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
           虚线样式
         </div>
         <div
-          class=""
+          class="t-divider t-divider--horizontal t-divider--center t-divider--dashed"
           data-v-127b67ab=""
           role="separator"
         >
           <div
-            class="t-divider t-divider--horizontal t-divider--center t-divider--dashed"
+            class="t-divider__content"
           >
-            <div
-              class="t-divider__content"
-            >
-              <!---->
-            </div>
+            <!---->
           </div>
         </div>
         <div
-          class=""
+          class="t-divider t-divider--horizontal t-divider--left t-divider--dashed"
           data-v-127b67ab=""
           role="separator"
         >
           <div
-            class="t-divider t-divider--horizontal t-divider--left t-divider--dashed"
+            class="t-divider__content"
           >
-            <div
-              class="t-divider__content"
-            >
-              文字信息
-            </div>
+            文字信息
           </div>
         </div>
         <div
-          class=""
+          class="t-divider t-divider--horizontal t-divider--center t-divider--dashed"
           data-v-127b67ab=""
           role="separator"
         >
           <div
-            class="t-divider t-divider--horizontal t-divider--center t-divider--dashed"
+            class="t-divider__content"
           >
-            <div
-              class="t-divider__content"
-            >
-              文字信息
-            </div>
+            文字信息
           </div>
         </div>
         <div
-          class=""
+          class="t-divider t-divider--horizontal t-divider--right t-divider--dashed"
           data-v-127b67ab=""
           role="separator"
         >
           <div
-            class="t-divider t-divider--horizontal t-divider--right t-divider--dashed"
+            class="t-divider__content"
           >
-            <div
-              class="t-divider__content"
-            >
-              文字信息
-            </div>
+            文字信息
           </div>
         </div>
       </div>
@@ -414,63 +350,47 @@ exports[`Divider > Divider themeVue demo works fine 1`] = `
     虚线样式
   </div>
   <div
-    class=""
+    class="t-divider t-divider--horizontal t-divider--center t-divider--dashed"
     data-v-127b67ab=""
     role="separator"
   >
     <div
-      class="t-divider t-divider--horizontal t-divider--center t-divider--dashed"
+      class="t-divider__content"
     >
-      <div
-        class="t-divider__content"
-      >
-        <!---->
-      </div>
+      <!---->
     </div>
   </div>
   <div
-    class=""
+    class="t-divider t-divider--horizontal t-divider--left t-divider--dashed"
     data-v-127b67ab=""
     role="separator"
   >
     <div
-      class="t-divider t-divider--horizontal t-divider--left t-divider--dashed"
+      class="t-divider__content"
     >
-      <div
-        class="t-divider__content"
-      >
-        文字信息
-      </div>
+      文字信息
     </div>
   </div>
   <div
-    class=""
+    class="t-divider t-divider--horizontal t-divider--center t-divider--dashed"
     data-v-127b67ab=""
     role="separator"
   >
     <div
-      class="t-divider t-divider--horizontal t-divider--center t-divider--dashed"
+      class="t-divider__content"
     >
-      <div
-        class="t-divider__content"
-      >
-        文字信息
-      </div>
+      文字信息
     </div>
   </div>
   <div
-    class=""
+    class="t-divider t-divider--horizontal t-divider--right t-divider--dashed"
     data-v-127b67ab=""
     role="separator"
   >
     <div
-      class="t-divider t-divider--horizontal t-divider--right t-divider--dashed"
+      class="t-divider__content"
     >
-      <div
-        class="t-divider__content"
-      >
-        文字信息
-      </div>
+      文字信息
     </div>
   </div>
 </div>

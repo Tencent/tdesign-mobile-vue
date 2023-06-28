@@ -35,7 +35,7 @@ export interface TdPopupProps {
    * 浮层出现位置
    * @default top
    */
-  placement?: 'top' | 'left' | 'right' | 'bottom' | 'center';
+  placement?: 'top' | 'left' | 'right' | 'bottom' | 'center' | '';
   /**
    * 防止滚动穿透
    * @default true

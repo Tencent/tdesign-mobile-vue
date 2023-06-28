@@ -67,6 +67,8 @@ export default {
   onBlur: Function as PropType<TdStepperProps['onBlur']>,
   /** 数值发生变更时触发 */
   onChange: Function as PropType<TdStepperProps['onChange']>,
+  /** 输入框聚焦时触发 */
+  onFocus: Function as PropType<TdStepperProps['onFocus']>,
   /** 数值超出限制时触发 */
   onOverlimit: Function as PropType<TdStepperProps['onOverlimit']>,
 };

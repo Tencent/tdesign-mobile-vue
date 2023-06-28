@@ -36,9 +36,4 @@ export default {
       return ['horizontal', 'vertical'].includes(val);
     },
   },
-  /** 分隔线颜色 */
-  lineColor: {
-    type: String,
-    default: '',
-  },
 };
