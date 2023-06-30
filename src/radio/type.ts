@@ -8,11 +8,6 @@ import { TNode, KeysType } from '../common';
 
 export interface TdRadioProps {
   /**
-   * 已废弃。复选框和内容相对位置
-   * @default left
-   */
-  align?: 'left' | 'right';
-  /**
    * 是否允许取消选中
    * @default false
    */
@@ -156,7 +151,7 @@ export type RadioOption = string | number | RadioOptionObj;
 
 export interface RadioOptionObj {
   label?: string | TNode;
-  value?: string | number;
+  value?: string | number | boolean;
   disabled?: boolean;
 }
 

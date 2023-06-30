@@ -31,11 +31,6 @@ export default {
     type: [String, Number] as PropType<TdDropdownItemProps['optionsColumns']>,
     default: 1,
   },
-  /** 已废弃。选项排列；不再支持 tree 布局，可与 treeSelect 配合使用 */
-  optionsLayout: {
-    type: String,
-    default: 'columns',
-  },
   /** 选中值 */
   value: {
     type: [String, Number] as PropType<TdDropdownItemProps['value']>,

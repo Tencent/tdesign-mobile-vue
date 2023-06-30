@@ -73,20 +73,10 @@ export default {
   zIndex: {
     type: Number,
   },
-  /** 已废弃。可见性变化时触发 */
-  onChange: Function as PropType<TdMessageProps['onChange']>,
-  /** 已废弃。关闭消息时触发 */
-  onClose: Function as PropType<TdMessageProps['onClose']>,
   /** 当关闭按钮存在时，用户点击关闭按钮触发 */
   onCloseBtnClick: Function as PropType<TdMessageProps['onCloseBtnClick']>,
-  /** 已废弃。关闭消息并且动画结束后触发 */
-  onClosed: Function as PropType<TdMessageProps['onClosed']>,
   /** 计时结束后触发 */
   onDurationEnd: Function as PropType<TdMessageProps['onDurationEnd']>,
   /** 当link链接存在时，点击链接文本时触发 */
   onLinkClick: Function as PropType<TdMessageProps['onLinkClick']>,
-  /** 已废弃。展示Message时触发 */
-  onOpen: Function as PropType<TdMessageProps['onOpen']>,
-  /** 已废弃。展示Message时并且动画结束后触发 */
-  onOpened: Function as PropType<TdMessageProps['onOpened']>,
 };

@@ -924,7 +924,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                         >
                           
                           <div
-                            class="t-radio t-radio--right t-radio--block"
+                            class="t-radio t-radio--left t-radio--block"
                           >
                             <input
                               class="t-radio__original"
@@ -933,7 +933,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                               value="110000"
                             />
                             <div
-                              class="t-radio__icon t-radio__icon--right"
+                              class="t-radio__icon t-radio__icon--left"
                             >
                               <!--v-if-->
                               <!--v-if-->
@@ -958,7 +958,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                             <!--v-if-->
                           </div>
                           <div
-                            class="t-radio t-radio--right t-radio--block"
+                            class="t-radio t-radio--left t-radio--block"
                           >
                             <input
                               class="t-radio__original"
@@ -967,7 +967,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                               value="120000"
                             />
                             <div
-                              class="t-radio__icon t-radio__icon--right"
+                              class="t-radio__icon t-radio__icon--left"
                             >
                               <!--v-if-->
                               <!--v-if-->
@@ -2675,7 +2675,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                               >
                                 
                                 <div
-                                  class="t-radio t-radio--right t-radio--block"
+                                  class="t-radio t-radio--left t-radio--block"
                                 >
                                   <input
                                     class="t-radio__original"
@@ -2684,7 +2684,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                                     value="110000"
                                   />
                                   <div
-                                    class="t-radio__icon t-radio__icon--right"
+                                    class="t-radio__icon t-radio__icon--left"
                                   >
                                     <!--v-if-->
                                     <!--v-if-->
@@ -2709,7 +2709,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                                   <!--v-if-->
                                 </div>
                                 <div
-                                  class="t-radio t-radio--right t-radio--block"
+                                  class="t-radio t-radio--left t-radio--block"
                                 >
                                   <input
                                     class="t-radio__original"
@@ -2718,7 +2718,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                                     value="120000"
                                   />
                                   <div
-                                    class="t-radio__icon t-radio__icon--right"
+                                    class="t-radio__icon t-radio__icon--left"
                                   >
                                     <!--v-if-->
                                     <!--v-if-->
@@ -4286,7 +4286,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                         >
                           
                           <div
-                            class="t-radio t-radio--right t-radio--block"
+                            class="t-radio t-radio--left t-radio--block"
                           >
                             <input
                               class="t-radio__original"
@@ -4295,7 +4295,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                               value="110000"
                             />
                             <div
-                              class="t-radio__icon t-radio__icon--right"
+                              class="t-radio__icon t-radio__icon--left"
                             >
                               <!--v-if-->
                               <!--v-if-->
@@ -4320,7 +4320,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                             <!--v-if-->
                           </div>
                           <div
-                            class="t-radio t-radio--right t-radio--block"
+                            class="t-radio t-radio--left t-radio--block"
                           >
                             <input
                               class="t-radio__original"
@@ -4329,7 +4329,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                               value="120000"
                             />
                             <div
-                              class="t-radio__icon t-radio__icon--right"
+                              class="t-radio__icon t-radio__icon--left"
                             >
                               <!--v-if-->
                               <!--v-if-->
