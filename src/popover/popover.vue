@@ -1,5 +1,5 @@
 <template>
-  <div ref="referenceRef" :class="`${name}__wrapper`">
+  <div ref="referenceRef" :class="`${name}__wrapper`" @click="onClickReference">
     <t-node :content="triggerElementContent"></t-node>
   </div>
 
@@ -13,12 +13,12 @@
   </Transition>
 </template>
 <script lang="ts">
-import { defineComponent, getCurrentInstance, computed, ref, toRefs, provide, watch } from 'vue';
+import { defineComponent, getCurrentInstance, computed, ref, watch, onUnmounted } from 'vue';
 import { createPopper, Placement } from '@popperjs/core';
 import PopoverProps from './props';
 import { TdPopoverProps } from './type';
 import config from '../config';
-import { renderContent, renderTNode, TNode, useDefault } from '../shared';
+import { renderContent, renderTNode, TNode, useDefault, useClickAway } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-popover`;
@@ -70,6 +70,30 @@ export default defineComponent({
       }
     };
 
+    const onClickAway = () => {
+      if (currentVisible.value && props.closeOnClickOutside) {
+        setVisible(false);
+      }
+    };
+
+    const closeOnClickOutside = ref(
+      useClickAway(
+        [referenceRef, popoverRef],
+        () => {
+          onClickAway();
+        },
+        { detectIframe: true },
+      ),
+    );
+
+    const onClickReference = () => {
+      setVisible(!currentVisible.value);
+    };
+
+    onUnmounted(() => {
+      closeOnClickOutside.value?.();
+    });
+
     watch(
       () => currentVisible.value,
       (val) => {
@@ -95,6 +119,7 @@ export default defineComponent({
       contentClasses,
       updatePopper,
       destroyPopper,
+      onClickReference,
     };
   },
 });
