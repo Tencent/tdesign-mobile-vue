@@ -8,6 +8,11 @@ import { TdPopoverProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 是否在点击外部元素后关闭菜单  */
+  closeOnClickOutside: {
+    type: Boolean,
+    default: true,
+  },
   /** 确认框内容 */
   content: {
     type: [String, Function] as PropType<TdPopoverProps['content']>,
