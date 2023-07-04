@@ -96,6 +96,16 @@ const { prefix } = config;
 const name = `${prefix}-cascader`;
 const defaultOptionLabel = '选择选项';
 
+interface ChildrenInfoType {
+  value: string | number;
+  level: number;
+}
+
+const childrenInfo: ChildrenInfoType = {
+  value: '',
+  level: 0,
+};
+
 interface KeysType {
   value?: string;
   label?: string;
@@ -202,10 +212,8 @@ export default defineComponent({
         steps[level + 1] = '选择选项';
         steps.length = level + 2;
       } else if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length === 0) {
-        nextTick(() => {
-          // console.log(pOptions.value);
-          // TODO: 这里判断有 children 但长度为 0 时 判断异步加载
-        });
+        childrenInfo.value = e;
+        childrenInfo.level = level;
       } else {
         setCascaderValue(item[keys.value?.value ?? 'value']);
         props.onChange?.(
@@ -223,10 +231,13 @@ export default defineComponent({
     watch(visible, () => {
       open.value = visible.value;
     });
+
     watch(
       () => props.options,
       () => {
-        console.log('options change');
+        if (open.value) {
+          handleSelect(childrenInfo.value, childrenInfo.level);
+        }
       },
       {
         deep: true,
