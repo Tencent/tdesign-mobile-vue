@@ -54,7 +54,6 @@ export default defineComponent({
     return {
       name,
       onClickItem,
-      ...toRefs(props),
     };
   },
 });
