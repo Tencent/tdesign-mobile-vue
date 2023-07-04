@@ -30,7 +30,11 @@ const note = ref('请选择地址');
 
 const onPick = (value: string) => {
   const values = JSON.parse(JSON.stringify(value));
-  if (values.value === options.value[values.index].value && options.value[values.index].children?.length === 0) {
+  if (
+    options.value[values.index] &&
+    values.value === options.value[values.index].value &&
+    options.value[values.index].children?.length === 0
+  ) {
     Toast({
       theme: 'loading',
       message: '加载中...',
