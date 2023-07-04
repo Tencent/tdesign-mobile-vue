@@ -26,9 +26,9 @@ export default {
     type: Number,
     default: 800,
   },
-  /** 是否显示加载指示符 */
+  /** 加载指示符，值为 true 显示默认指示符，值为 false 则不显示，也可以自定义指示符 */
   indicator: {
-    type: Boolean,
+    type: [Boolean, Function] as PropType<TdLoadingProps['indicator']>,
     default: true,
   },
   /** 是否继承父元素颜色 */
@@ -49,10 +49,6 @@ export default {
   },
   /** 是否暂停动画 */
   pause: Boolean,
-  /** 加载进度 */
-  progress: {
-    type: Number,
-  },
   /** 加载动画是否反向 */
   reverse: Boolean,
   /** 尺寸，示例：20px */
