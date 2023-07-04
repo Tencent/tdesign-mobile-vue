@@ -35,6 +35,63 @@ exports[`DropdownMenu > DropdownMenu customizedVue demo works fine 1`] = `
 </div>
 `;
 
+exports[`DropdownMenu > DropdownMenu directionVue demo works fine 1`] = `
+<div
+  class="t-dropdown-menu"
+>
+  
+  <div
+    class="t-dropdown-menu__item"
+  >
+    <div
+      class="t-dropdown-menu__title"
+    >
+      全部产品
+    </div>
+    <svg
+      class="t-icon t-icon-caret-up-small t-dropdown-menu__icon"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M11 10.5H5L8 6l3 4.5z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <div
+    class="t-dropdown-menu__item"
+  >
+    <div
+      class="t-dropdown-menu__title"
+    >
+      默认排序
+    </div>
+    <svg
+      class="t-icon t-icon-caret-up-small t-dropdown-menu__icon"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M11 10.5H5L8 6l3 4.5z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  
+  
+  <!--v-if-->
+  <!--v-if-->
+  
+</div>
+`;
+
 exports[`DropdownMenu > DropdownMenu disabledVue demo works fine 1`] = `
 <div
   class="t-dropdown-menu"
@@ -281,6 +338,82 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
         
         
         <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+        
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-282366a4=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        向上展开
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-dropdown-menu"
+        data-v-282366a4=""
+      >
+        
+        <div
+          class="t-dropdown-menu__item"
+        >
+          <div
+            class="t-dropdown-menu__title"
+          >
+            全部产品
+          </div>
+          <svg
+            class="t-icon t-icon-caret-up-small t-dropdown-menu__icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 10.5H5L8 6l3 4.5z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <div
+          class="t-dropdown-menu__item"
+        >
+          <div
+            class="t-dropdown-menu__title"
+          >
+            默认排序
+          </div>
+          <svg
+            class="t-icon t-icon-caret-up-small t-dropdown-menu__icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 10.5H5L8 6l3 4.5z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        
+        
         <!--v-if-->
         <!--v-if-->
         

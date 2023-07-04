@@ -6,6 +6,7 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 closeOnClickOverlay | Boolean | true | \- | N
+direction | String | down | options：down/up | N
 duration | String / Number | 200 | \- | N
 showOverlay | Boolean | true | \- | N
 zIndex | Number | 11600 | \- | N
