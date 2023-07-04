@@ -5,6 +5,21 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.0.0-rc.1 `2023-07-04` 
+### ❗ Breaking Changes
+- `Loading`:  移除`progress` 属性 @anlyyao ([#918](https://github.com/Tencent/tdesign-mobile-vue/pull/918))
+### 🚀 Features
+- `Popover`: 新增 `closeOnClickOutside` 属性 @anlyyao ([#916](https://github.com/Tencent/tdesign-mobile-vue/pull/916))
+- `Loading`: `indicator` 属性新增 `Slot / Function`类型，支持自定义指示符 @anlyyao ([#918](https://github.com/Tencent/tdesign-mobile-vue/pull/918))
+- `Cascader`: `options` 支持支持异步数据 @ccccpj ([#917](https://github.com/Tencent/tdesign-mobile-vue/pull/917))
+- `DropdownMenu`: 新增 `direction` 属性 @ccccpj ([#878](https://github.com/Tencent/tdesign-mobile-vue/pull/878))
+### 🐞 Bug Fixes
+- `Stepper`: 修复精度缺失问题 @anlyyao ([#906](https://github.com/Tencent/tdesign-mobile-vue/pull/906))
+- `Popup`: 修复 `visible-change` 事件参数错误  @anlyyao ([#920](https://github.com/Tencent/tdesign-mobile-vue/pull/920))
+- `NavBar`: 修复 `fixed=true` 时样式错误 @anlyyao ([#1494](https://github.com/Tencent/tdesign-common/pull/1494))
+### 🚧 Others
+- `Docs`:  新增支持英文站点 @anlyyao ([#914](https://github.com/Tencent/tdesign-mobile-vue/pull/914))
+
 ## 🌈 1.0.0-rc `2023-06-27` 
 ### ❗ Breaking Changes
 - `Divider`: 调整 DOM，移除 lineColor 废弃属性 @LeeJim ([#896](https://github.com/Tencent/tdesign-mobile-vue/pull/896))
