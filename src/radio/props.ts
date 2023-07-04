@@ -8,15 +8,6 @@ import { TdRadioProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 已废弃。复选框和内容相对位置 */
-  align: {
-    type: String as PropType<TdRadioProps['align']>,
-    default: 'left' as TdRadioProps['align'],
-    validator(val: TdRadioProps['align']): boolean {
-      if (!val) return true;
-      return ['left', 'right'].includes(val);
-    },
-  },
   /** 是否允许取消选中 */
   allowUncheck: Boolean,
   /** 是否为块级元素	 */
@@ -82,7 +73,7 @@ export default {
   /** 复选框和内容相对位置 */
   placement: {
     type: String as PropType<TdRadioProps['placement']>,
-    default: undefined,
+    default: 'left' as TdRadioProps['placement'],
     validator(val: TdRadioProps['placement']): boolean {
       if (!val) return true;
       return ['left', 'right'].includes(val);

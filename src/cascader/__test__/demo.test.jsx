@@ -5,6 +5,7 @@
 import { mount } from '@vue/test-utils';
 import baseVue from '@/cascader/demos/base.vue';
 import keysVue from '@/cascader/demos/keys.vue';
+import lazyVue from '@/cascader/demos/lazy.vue';
 import mobileVue from '@/cascader/demos/mobile.vue';
 import themeTabVue from '@/cascader/demos/theme-tab.vue';
 import withTitleVue from '@/cascader/demos/with-title.vue';
@@ -13,6 +14,7 @@ import withValueVue from '@/cascader/demos/with-value.vue';
 const mapper = {
   baseVue,
   keysVue,
+  lazyVue,
   mobileVue,
   themeTabVue,
   withTitleVue,

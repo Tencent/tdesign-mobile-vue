@@ -28,5 +28,5 @@ export interface TdFabProps {
   /**
    * 悬浮按钮点击事件
    */
-  onClick?: ({ e }: { e: MouseEvent }) => void;
+  onClick?: (context: { e: MouseEvent }) => void;
 }

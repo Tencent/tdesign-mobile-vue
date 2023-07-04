@@ -26,10 +26,10 @@ export interface TdLoadingProps {
    */
   duration?: number;
   /**
-   * 是否显示加载指示符
+   * 加载指示符，值为 true 显示默认指示符，值为 false 则不显示，也可以自定义指示符
    * @default true
    */
-  indicator?: boolean;
+  indicator?: boolean | TNode;
   /**
    * 是否继承父元素颜色
    * @default false
@@ -50,10 +50,6 @@ export interface TdLoadingProps {
    * @default false
    */
   pause?: boolean;
-  /**
-   * 加载进度
-   */
-  progress?: number;
   /**
    * 加载动画是否反向
    */

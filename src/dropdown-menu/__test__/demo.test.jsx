@@ -4,6 +4,7 @@
 
 import { mount } from '@vue/test-utils';
 import customizedVue from '@/dropdown-menu/demos/customized.vue';
+import directionVue from '@/dropdown-menu/demos/direction.vue';
 import disabledVue from '@/dropdown-menu/demos/disabled.vue';
 import mobileVue from '@/dropdown-menu/demos/mobile.vue';
 import multipleVue from '@/dropdown-menu/demos/multiple.vue';
@@ -11,6 +12,7 @@ import singleVue from '@/dropdown-menu/demos/single.vue';
 
 const mapper = {
   customizedVue,
+  directionVue,
   disabledVue,
   mobileVue,
   multipleVue,

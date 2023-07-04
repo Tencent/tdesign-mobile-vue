@@ -10,7 +10,7 @@
       :attach="`#${popupId}`"
       @visible-change="onVisibleChange"
     >
-      <div :class="styleContent">
+      <div ref="popupContent" :class="styleContent" :style="contentStyle">
         <div :class="`${name}__body`">
           <slot>
             <template v-if="!multiple">
@@ -147,15 +147,24 @@ export default defineComponent({
     const styleContent = computed(() => {
       return [`${name}__content`, `t-popup__content`];
     });
+    const contentStyle = computed(() => {
+      return menuProps.direction === 'up' ? { transform: 'rotateX(180deg) rotateY(180deg)' } : {};
+    });
     const popupId = getUniqueID();
     // 设置展开/收起状态
     const setExpand = (val: boolean) => {
       // 菜单定位
-      const { bottom } = menuState.barRect;
-      state.expandStyle = {
-        zIndex: menuProps.zIndex,
-        top: `${bottom}px`,
-      };
+      const { bottom, top } = menuState.barRect;
+      menuProps.direction === 'up'
+        ? (state.expandStyle = {
+            transform: menuProps.direction === 'up' ? 'rotateX(180deg) rotateY(180deg)' : '',
+            zIndex: menuProps.zIndex,
+            bottom: `calc(100vh - ${top}px)`,
+          })
+        : (state.expandStyle = {
+            zIndex: menuProps.zIndex,
+            top: `${bottom}px`,
+          });
       const { duration } = menuProps;
       props[`on${val ? 'Open' : 'Close'}`]?.();
       // 动画状态控制
@@ -173,6 +182,8 @@ export default defineComponent({
       setTimeout(() => {
         props[`on${val ? 'Opened' : 'Closed'}`]?.();
       }, Number(duration));
+
+      const popupContent = ref(null);
     };
 
     // 根据父组件状态，判断当前是否展开
@@ -267,6 +278,7 @@ export default defineComponent({
       classes,
       popupStyle,
       styleContent,
+      contentStyle,
       isBtnDisabled,
       radioSelect,
       checkSelect,

@@ -1,23 +1,6 @@
 <template>
   <div :class="rootClass" :style="rootStyle">
-    <template v-if="indicator && realLoading">
-      <gradient-icon v-if="theme === 'circular'" :style="animationStyle" />
-      <spinner-icon v-else-if="theme === 'spinner'" :style="animationStyle" />
-      <div v-else-if="theme === 'dots'" :class="`${name}__dots`" :style="animationStyle">
-        <div
-          :class="`${name}__dot`"
-          :style="duration ? `animation-duration: ${duration / 1000}s; animation-delay: 0s` : ''"
-        ></div>
-        <div
-          :class="`${name}__dot`"
-          :style="duration ? `animation-duration: ${duration / 1000}s; animation-delay: ${(duration * 1) / 3000}s` : ''"
-        ></div>
-        <div
-          :class="`${name}__dot`"
-          :style="duration ? `animation-duration: ${duration / 1000}s; animation-delay: ${(duration * 2) / 3000}s` : ''"
-        ></div>
-      </div>
-    </template>
+    <t-node v-if="indicator && realLoading && indicatorContent" :content="indicatorContent" />
     <span v-if="textContent && realLoading" :class="textClass">
       <t-node :content="textContent" />
     </span>
@@ -26,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, getCurrentInstance, computed, ref, watch, toRefs } from 'vue';
+import { defineComponent, getCurrentInstance, computed, ref, watch, toRefs, h } from 'vue';
 import GradientIcon from './icon/gradient.vue';
 import SpinnerIcon from './icon/spinner.vue';
 import { renderTNode, TNode, renderContent } from '../shared';
@@ -40,8 +23,6 @@ const name = `${prefix}-loading`;
 export default defineComponent({
   name,
   components: {
-    GradientIcon,
-    SpinnerIcon,
     TNode,
   },
   props: LoadingProps,
@@ -98,23 +79,51 @@ export default defineComponent({
       return style.join(';');
     });
 
-    const animationStyle = computed(() => {
-      const ans: Record<string, any> = {};
-      if (props.pause) {
-        ans['animation-play-state'] = 'paused';
-      }
-      if (props.reverse) {
-        ans['animation-direction'] = 'reverse';
-      }
-      if (props.duration) {
-        ans['animation-duration'] = `${props.duration}ms`;
-      }
-      if (props.size) {
-        ans.width = props.size;
-        ans.height = props.size;
-      }
-      return ans;
-    });
+    const defaultIndicator = {
+      circular: GradientIcon,
+      spinner: SpinnerIcon,
+    };
+
+    const indicatorContent = computed(() =>
+      renderTNode(internalInstance, 'indicator', {
+        defaultNode:
+          props.theme === 'dots'
+            ? h(
+                'div',
+                {
+                  class: `${name}__dots`,
+                  style: {
+                    animationPlayState: props.pause ? 'paused' : '',
+                    animationDirection: props.reverse ? 'reverse' : '',
+                    animationDuration: `${props.duration}ms`,
+                    width: props.size,
+                    height: props.size,
+                  },
+                },
+                [
+                  Array.from({ length: 3 }).map((val, i) => {
+                    return h('div', {
+                      class: `${name}__dot`,
+                      style: props.duration
+                        ? `animation-duration: ${props.duration / 1000}s; animation-delay: ${
+                            (props.duration * i) / 3000
+                          }s`
+                        : '',
+                    });
+                  }),
+                ],
+              )
+            : h(defaultIndicator[props.theme || 'circular'], {
+                style: {
+                  animationPlayState: props.pause ? 'paused' : '',
+                  animationDirection: props.reverse ? 'reverse' : '',
+                  animationDuration: `${props.duration}ms`,
+                  width: props.size,
+                  height: props.size,
+                },
+              }),
+      }),
+    );
 
     return {
       name,
@@ -123,8 +132,8 @@ export default defineComponent({
       textClass,
       textContent,
       defaultContent,
+      indicatorContent,
       rootStyle,
-      animationStyle,
       realLoading,
     };
   },
