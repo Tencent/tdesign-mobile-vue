@@ -34,7 +34,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
           <tr>
             
             <th
-              class="t-table__th-applicant t-table-td--ellipsis t-align-center"
+              class="t-table__th-applicant t-table-td--ellipsis"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -79,47 +79,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-table-td--ellipsis t-align-center"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            <td
               class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            
-          </tr>
-          <tr>
-            
-            <td
-              class="t-table-td--ellipsis t-align-center"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -159,7 +119,47 @@ exports[`Table > Table baseVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-table-td--ellipsis t-align-center"
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -199,47 +199,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-table-td--ellipsis t-align-center"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            <td
               class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            
-          </tr>
-          <tr>
-            
-            <td
-              class="t-table-td--ellipsis t-align-center"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -279,7 +239,47 @@ exports[`Table > Table baseVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-table-td--ellipsis t-align-center"
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -319,47 +319,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-table-td--ellipsis t-align-center"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            <td
               class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            
-          </tr>
-          <tr>
-            
-            <td
-              class="t-table-td--ellipsis t-align-center"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -399,7 +359,47 @@ exports[`Table > Table baseVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-table-td--ellipsis t-align-center"
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -439,7 +439,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-table-td--ellipsis t-align-center"
+              class="t-table-td--ellipsis"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -479,6 +479,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
           
         </tbody>
       </table>
+      <!--v-if-->
     </div>
   </div>
 </div>
@@ -487,7 +488,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
 exports[`Table > Table borderedVue demo works fine 1`] = `
 <div>
   <div
-    class="t-table t-vertical-align-middle t-table--bordered t-table--striped"
+    class="t-table t-vertical-align-middle t-table--bordered"
     style="position: relative;"
   >
     <div
@@ -518,7 +519,7 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
           <tr>
             
             <th
-              class="t-table__th-applicant t-table-td--ellipsis t-align-center"
+              class="t-table__th-applicant t-table-td--ellipsis"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -563,47 +564,7 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-table-td--ellipsis t-align-center"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            <td
               class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            
-          </tr>
-          <tr>
-            
-            <td
-              class="t-table-td--ellipsis t-align-center"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -643,7 +604,47 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-table-td--ellipsis t-align-center"
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -683,47 +684,7 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-table-td--ellipsis t-align-center"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            <td
               class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            
-          </tr>
-          <tr>
-            
-            <td
-              class="t-table-td--ellipsis t-align-center"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -763,7 +724,47 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-table-td--ellipsis t-align-center"
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -803,47 +804,7 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-table-td--ellipsis t-align-center"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            <td
               class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            
-          </tr>
-          <tr>
-            
-            <td
-              class="t-table-td--ellipsis t-align-center"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -883,7 +844,47 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-table-td--ellipsis t-align-center"
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class="t-table-td--ellipsis"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -923,7 +924,7 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-table-td--ellipsis t-align-center"
+              class="t-table-td--ellipsis"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -963,6 +964,7 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
           
         </tbody>
       </table>
+      <!--v-if-->
     </div>
   </div>
 </div>
@@ -1036,7 +1038,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <th
-                    class="t-table__th-applicant t-table-td--ellipsis t-align-center"
+                    class="t-table__th-applicant t-table-td--ellipsis"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -1081,47 +1083,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-table-td--ellipsis t-align-center"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
                     class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  
-                  <td
-                    class="t-table-td--ellipsis t-align-center"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -1161,7 +1123,47 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-table-td--ellipsis t-align-center"
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -1201,47 +1203,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-table-td--ellipsis t-align-center"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
                     class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  
-                  <td
-                    class="t-table-td--ellipsis t-align-center"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -1281,7 +1243,47 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-table-td--ellipsis t-align-center"
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -1321,47 +1323,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-table-td--ellipsis t-align-center"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
                     class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  
-                  <td
-                    class="t-table-td--ellipsis t-align-center"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -1401,7 +1363,47 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-table-td--ellipsis t-align-center"
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -1441,7 +1443,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-table-td--ellipsis t-align-center"
+                    class="t-table-td--ellipsis"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -1481,6 +1483,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 
               </tbody>
             </table>
+            <!--v-if-->
           </div>
         </div>
       </div>
@@ -1538,7 +1541,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <th
-                    class="t-table__th-applicant t-align-center"
+                    class="t-table__th-applicant"
                   >
                     <div
                       class=""
@@ -1583,127 +1586,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-align-center"
-                  >
-                    <div
-                      class=""
-                    >
-                      横向平铺内容不省略
-                    </div>
-                  </td>
-                  <td
                     class=""
-                  >
-                    <div
-                      class=""
-                    >
-                      横向平铺内容不省略
-                    </div>
-                  </td>
-                  <td
-                    class=""
-                  >
-                    <div
-                      class=""
-                    >
-                      横向平铺内容不省略
-                    </div>
-                  </td>
-                  <td
-                    class=""
-                  >
-                    <div
-                      class=""
-                    >
-                      横向平铺内容不省略
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  
-                  <td
-                    class="t-align-center"
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class=""
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class=""
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class=""
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  
-                  <td
-                    class="t-align-center"
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class=""
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class=""
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class=""
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  
-                  <td
-                    class="t-align-center"
                   >
                     <div
                       class=""
@@ -1743,7 +1626,127 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-align-center"
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      横向平铺内容不省略
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      横向平铺内容不省略
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      横向平铺内容不省略
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      横向平铺内容不省略
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class=""
                   >
                     <div
                       class=""
@@ -1783,6 +1786,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 
               </tbody>
             </table>
+            <!--v-if-->
           </div>
         </div>
       </div>
@@ -1808,7 +1812,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
       
       <div>
         <div
-          class="t-table t-vertical-align-middle t-table--bordered t-table--striped"
+          class="t-table t-vertical-align-middle t-table--striped"
           style="position: relative;"
         >
           <div
@@ -1835,12 +1839,12 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 
               </colgroup>
               <thead
-                class="t-table__header t-table__header--fixed t-table--bordered"
+                class="t-table__header t-table__header--fixed"
               >
                 <tr>
                   
                   <th
-                    class="t-table__th-applicant t-align-center"
+                    class="t-table__th-applicant"
                   >
                     <div
                       class=""
@@ -1885,47 +1889,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-align-center"
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
                     class=""
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class=""
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  
-                  <td
-                    class="t-align-center"
                   >
                     <div
                       class=""
@@ -1965,47 +1929,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-align-center"
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
                     class=""
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class=""
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  
-                  <td
-                    class="t-align-center"
                   >
                     <div
                       class=""
@@ -2045,47 +1969,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-align-center"
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
                     class=""
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class=""
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  
-                  <td
-                    class="t-align-center"
                   >
                     <div
                       class=""
@@ -2125,47 +2009,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-align-center"
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
                     class=""
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class=""
-                  >
-                    <div
-                      class=""
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  
-                  <td
-                    class="t-align-center"
                   >
                     <div
                       class=""
@@ -2205,7 +2049,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-align-center"
+                    class=""
                   >
                     <div
                       class=""
@@ -2245,7 +2089,167 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-align-center"
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div
+                      class=""
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class=""
                   >
                     <div
                       class=""
@@ -2285,6 +2289,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 
               </tbody>
             </table>
+            <!--v-if-->
           </div>
         </div>
       </div>
@@ -2310,7 +2315,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
       
       <div>
         <div
-          class="t-table t-vertical-align-middle t-table--bordered t-table--striped"
+          class="t-table t-vertical-align-middle t-table--bordered"
           style="position: relative;"
         >
           <div
@@ -2341,7 +2346,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <th
-                    class="t-table__th-applicant t-table-td--ellipsis t-align-center"
+                    class="t-table__th-applicant t-table-td--ellipsis"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -2386,47 +2391,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-table-td--ellipsis t-align-center"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
                     class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  
-                  <td
-                    class="t-table-td--ellipsis t-align-center"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -2466,7 +2431,47 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-table-td--ellipsis t-align-center"
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -2506,47 +2511,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-table-td--ellipsis t-align-center"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
                     class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  
-                  <td
-                    class="t-table-td--ellipsis t-align-center"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -2586,7 +2551,47 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-table-td--ellipsis t-align-center"
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -2626,47 +2631,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-table-td--ellipsis t-align-center"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
                     class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  
-                  <td
-                    class="t-table-td--ellipsis t-align-center"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -2706,7 +2671,47 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-table-td--ellipsis t-align-center"
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td
+                    class="t-table-td--ellipsis"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -2746,7 +2751,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <tr>
                   
                   <td
-                    class="t-table-td--ellipsis t-align-center"
+                    class="t-table-td--ellipsis"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -2786,6 +2791,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 
               </tbody>
             </table>
+            <!--v-if-->
           </div>
         </div>
       </div>
@@ -2830,7 +2836,7 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
           <tr>
             
             <th
-              class="t-table__th-applicant t-align-center"
+              class="t-table__th-applicant"
             >
               <div
                 class=""
@@ -2875,127 +2881,7 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-align-center"
-            >
-              <div
-                class=""
-              >
-                横向平铺内容不省略
-              </div>
-            </td>
-            <td
               class=""
-            >
-              <div
-                class=""
-              >
-                横向平铺内容不省略
-              </div>
-            </td>
-            <td
-              class=""
-            >
-              <div
-                class=""
-              >
-                横向平铺内容不省略
-              </div>
-            </td>
-            <td
-              class=""
-            >
-              <div
-                class=""
-              >
-                横向平铺内容不省略
-              </div>
-            </td>
-            
-          </tr>
-          <tr>
-            
-            <td
-              class="t-align-center"
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class=""
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class=""
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class=""
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            
-          </tr>
-          <tr>
-            
-            <td
-              class="t-align-center"
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class=""
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class=""
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class=""
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            
-          </tr>
-          <tr>
-            
-            <td
-              class="t-align-center"
             >
               <div
                 class=""
@@ -3035,7 +2921,127 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-align-center"
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                横向平铺内容不省略
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                横向平铺内容不省略
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                横向平铺内容不省略
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                横向平铺内容不省略
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class=""
             >
               <div
                 class=""
@@ -3075,6 +3081,7 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
           
         </tbody>
       </table>
+      <!--v-if-->
     </div>
   </div>
 </div>
@@ -3083,7 +3090,7 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
 exports[`Table > Table stripeVue demo works fine 1`] = `
 <div>
   <div
-    class="t-table t-vertical-align-middle t-table--bordered t-table--striped"
+    class="t-table t-vertical-align-middle t-table--striped"
     style="position: relative;"
   >
     <div
@@ -3110,12 +3117,12 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
           
         </colgroup>
         <thead
-          class="t-table__header t-table__header--fixed t-table--bordered"
+          class="t-table__header t-table__header--fixed"
         >
           <tr>
             
             <th
-              class="t-table__th-applicant t-align-center"
+              class="t-table__th-applicant"
             >
               <div
                 class=""
@@ -3160,47 +3167,7 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-align-center"
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            <td
               class=""
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class=""
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            
-          </tr>
-          <tr>
-            
-            <td
-              class="t-align-center"
             >
               <div
                 class=""
@@ -3240,47 +3207,7 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-align-center"
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            <td
               class=""
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class=""
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            
-          </tr>
-          <tr>
-            
-            <td
-              class="t-align-center"
             >
               <div
                 class=""
@@ -3320,47 +3247,7 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-align-center"
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            <td
               class=""
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class=""
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            
-          </tr>
-          <tr>
-            
-            <td
-              class="t-align-center"
             >
               <div
                 class=""
@@ -3400,47 +3287,7 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-align-center"
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            <td
               class=""
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class=""
-            >
-              <div
-                class=""
-              >
-                内容
-              </div>
-            </td>
-            <td
-              class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            
-          </tr>
-          <tr>
-            
-            <td
-              class="t-align-center"
             >
               <div
                 class=""
@@ -3480,7 +3327,7 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-align-center"
+              class=""
             >
               <div
                 class=""
@@ -3520,7 +3367,167 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
           <tr>
             
             <td
-              class="t-align-center"
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div
+                class=""
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td
+              class=""
             >
               <div
                 class=""
@@ -3560,6 +3567,7 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
           
         </tbody>
       </table>
+      <!--v-if-->
     </div>
   </div>
 </div>

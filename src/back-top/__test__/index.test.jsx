@@ -81,9 +81,10 @@ describe('BackTop', () => {
 
   describe('events', () => {
     it(': to-top', async () => {
-      const wrapper = mount(BackTop);
+      const onToTop = vi.fn();
+      const wrapper = mount(<BackTop onToTop={onToTop} />);
       wrapper.find('.t-back-top').trigger('click');
-      expect(wrapper.emitted('to-top')).toHaveLength(1);
+      expect(onToTop).toBeCalledTimes(1);
     });
   });
 });

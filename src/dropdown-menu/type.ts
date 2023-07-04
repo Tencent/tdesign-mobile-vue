@@ -65,12 +65,6 @@ export interface TdDropdownItemProps {
    */
   optionsColumns?: string | number;
   /**
-   * 选项排列；不再支持 tree 布局，可与 treeSelect 配合使用
-   * @default columns
-   * @deprecated
-   */
-  optionsLayout?: string;
-  /**
    * 选中值
    */
   value?: DropdownValue;

@@ -2,173 +2,304 @@
 
 exports[`Image > Image baseVue demo works fine 1`] = `
 <div
-  class="image-group"
+  class="image-example"
   data-v-37d8259d=""
 >
   <div
-    class="image-demo"
+    class="image-example-title"
     data-v-37d8259d=""
   >
-    <p
-      class="image-demo-tip"
-      data-v-37d8259d=""
-    >
-      fill
-    </p>
-    <div
-      class="t-image t-image--square image-container"
-      data-v-37d8259d=""
-    >
-      <div
-        class="t-image__mask"
-      >
-        <div
-          class="t-loading"
-          style="font-size: 20px;"
-        >
-          
-          <div
-            class="t-loading__dots"
-            style="animation-duration: 800ms; width: 20px; height: 20px;"
-          >
-            <div
-              class="t-loading__dot"
-              style="animation-duration: 0.8s; animation-delay: 0s;"
-            />
-            <div
-              class="t-loading__dot"
-              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-            />
-            <div
-              class="t-loading__dot"
-              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-            />
-          </div>
-          
-          <!--v-if-->
-          <!---->
-        </div>
-      </div>
-      <picture>
-        <!--v-if-->
-        <img
-          alt=""
-          class="t-image__img"
-          src="https://tdesign.gtimg.com/site/upload1.png"
-          style="object-fit: fill; object-position: center;"
-        />
-      </picture>
-    </div>
+    不同填充模式的图片
   </div>
   <div
-    class="image-demo"
+    class="image-example-desc"
     data-v-37d8259d=""
   >
-    <p
-      class="image-demo-tip"
-      data-v-37d8259d=""
-    >
-      contain
-    </p>
-    <div
-      class="t-image t-image--square image-container"
-      data-v-37d8259d=""
-    >
-      <div
-        class="t-image__mask"
-      >
-        <div
-          class="t-loading"
-          style="font-size: 20px;"
-        >
-          
-          <div
-            class="t-loading__dots"
-            style="animation-duration: 800ms; width: 20px; height: 20px;"
-          >
-            <div
-              class="t-loading__dot"
-              style="animation-duration: 0.8s; animation-delay: 0s;"
-            />
-            <div
-              class="t-loading__dot"
-              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-            />
-            <div
-              class="t-loading__dot"
-              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-            />
-          </div>
-          
-          <!--v-if-->
-          <!---->
-        </div>
-      </div>
-      <picture>
-        <!--v-if-->
-        <img
-          alt=""
-          class="t-image__img"
-          src="https://tdesign.gtimg.com/site/upload1.png"
-          style="object-fit: contain; object-position: center;"
-        />
-      </picture>
-    </div>
+    提供 fill、contain、cover、none、scale-down 5 种填充类型。
   </div>
   <div
-    class="image-demo"
+    class="image-group"
     data-v-37d8259d=""
-    style="width: 134px;"
   >
-    <p
-      class="image-demo-tip"
-      data-v-37d8259d=""
-    >
-      cover
-    </p>
     <div
-      class="t-image t-image--square image-container"
+      class="image-demo"
       data-v-37d8259d=""
     >
+      <p
+        class="image-demo-tip"
+        data-v-37d8259d=""
+      >
+        fill
+      </p>
       <div
-        class="t-image__mask"
+        class="t-image t-image--square image-container"
+        data-v-37d8259d=""
+        style="width: 72px; height: 72px;"
       >
         <div
-          class="t-loading"
-          style="font-size: 20px;"
+          class="t-image__mask"
         >
-          
           <div
-            class="t-loading__dots"
-            style="animation-duration: 800ms; width: 20px; height: 20px;"
+            class="t-loading"
+            style="font-size: 20px;"
           >
             <div
-              class="t-loading__dot"
-              style="animation-duration: 0.8s; animation-delay: 0s;"
-            />
-            <div
-              class="t-loading__dot"
-              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-            />
-            <div
-              class="t-loading__dot"
-              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-            />
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!--v-if-->
+            <!---->
           </div>
-          
-          <!--v-if-->
-          <!---->
         </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </picture>
       </div>
-      <picture>
-        <!--v-if-->
-        <img
-          alt=""
-          class="t-image__img"
-          src="https://tdesign.gtimg.com/site/upload1.png"
-          style="object-fit: cover; object-position: center;"
-        />
-      </picture>
+    </div>
+    <div
+      class="image-demo"
+      data-v-37d8259d=""
+    >
+      <p
+        class="image-demo-tip"
+        data-v-37d8259d=""
+      >
+        contain
+      </p>
+      <div
+        class="t-image t-image--square image-container"
+        data-v-37d8259d=""
+        style="width: 72px; height: 72px;"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+            style="object-fit: contain; object-position: center;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="image-demo"
+      data-v-37d8259d=""
+    >
+      <p
+        class="image-demo-tip"
+        data-v-37d8259d=""
+      >
+        cover
+      </p>
+      <div
+        class="t-image t-image--square image-container"
+        data-v-37d8259d=""
+        style="width: 72px; height: 72px;"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+            style="object-fit: cover; object-position: center;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="image-demo"
+      data-v-37d8259d=""
+    >
+      <p
+        class="image-demo-tip"
+        data-v-37d8259d=""
+      >
+        none
+      </p>
+      <div
+        class="t-image t-image--square image-container"
+        data-v-37d8259d=""
+        style="width: 72px; height: 72px;"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+            style="object-fit: none; object-position: center;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="image-demo"
+      data-v-37d8259d=""
+    >
+      <p
+        class="image-demo-tip"
+        data-v-37d8259d=""
+      >
+        scale-down
+      </p>
+      <div
+        class="t-image t-image--square image-container"
+        data-v-37d8259d=""
+        style="width: 72px; height: 72px;"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+            style="object-fit: scale-down; object-position: center;"
+          />
+        </picture>
+      </div>
     </div>
   </div>
 </div>
@@ -189,7 +320,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
     class="summary"
     data-v-d8a5fc24=""
   >
-    用于展示效果，主要为上下左右居中裁切、拉伸、平铺等方式。
+    用于展示图片素材。
   </p>
   <div
     class="tdesign-mobile-demo-block"
@@ -206,349 +337,1080 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
       <!--v-if-->
     </div>
     <div
-      class="tdesign-mobile-demo-block__slot"
+      class="tdesign-mobile-demo-block__slot with-padding"
     >
       
       <div
-        class="image-group"
+        class="image-example"
         data-v-37d8259d=""
         data-v-d8a5fc24=""
       >
         <div
-          class="image-demo"
+          class="image-example-title"
           data-v-37d8259d=""
         >
-          <p
-            class="image-demo-tip"
-            data-v-37d8259d=""
-          >
-            fill
-          </p>
-          <div
-            class="t-image t-image--square image-container"
-            data-v-37d8259d=""
-          >
-            <div
-              class="t-image__mask"
-            >
-              <div
-                class="t-loading"
-                style="font-size: 20px;"
-              >
-                
-                <div
-                  class="t-loading__dots"
-                  style="animation-duration: 800ms; width: 20px; height: 20px;"
-                >
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0s;"
-                  />
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                  />
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                  />
-                </div>
-                
-                <!--v-if-->
-                <!---->
-              </div>
-            </div>
-            <picture>
-              <!--v-if-->
-              <img
-                alt=""
-                class="t-image__img"
-                src="https://tdesign.gtimg.com/site/upload1.png"
-                style="object-fit: fill; object-position: center;"
-              />
-            </picture>
-          </div>
+          不同填充模式的图片
         </div>
         <div
-          class="image-demo"
+          class="image-example-desc"
           data-v-37d8259d=""
         >
-          <p
-            class="image-demo-tip"
-            data-v-37d8259d=""
-          >
-            contain
-          </p>
-          <div
-            class="t-image t-image--square image-container"
-            data-v-37d8259d=""
-          >
-            <div
-              class="t-image__mask"
-            >
-              <div
-                class="t-loading"
-                style="font-size: 20px;"
-              >
-                
-                <div
-                  class="t-loading__dots"
-                  style="animation-duration: 800ms; width: 20px; height: 20px;"
-                >
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0s;"
-                  />
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                  />
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                  />
-                </div>
-                
-                <!--v-if-->
-                <!---->
-              </div>
-            </div>
-            <picture>
-              <!--v-if-->
-              <img
-                alt=""
-                class="t-image__img"
-                src="https://tdesign.gtimg.com/site/upload1.png"
-                style="object-fit: contain; object-position: center;"
-              />
-            </picture>
-          </div>
+          提供 fill、contain、cover、none、scale-down 5 种填充类型。
         </div>
         <div
-          class="image-demo"
+          class="image-group"
           data-v-37d8259d=""
-          style="width: 134px;"
         >
-          <p
-            class="image-demo-tip"
-            data-v-37d8259d=""
-          >
-            cover
-          </p>
           <div
-            class="t-image t-image--square image-container"
+            class="image-demo"
             data-v-37d8259d=""
           >
+            <p
+              class="image-demo-tip"
+              data-v-37d8259d=""
+            >
+              fill
+            </p>
             <div
-              class="t-image__mask"
+              class="t-image t-image--square image-container"
+              data-v-37d8259d=""
+              style="width: 72px; height: 72px;"
             >
               <div
-                class="t-loading"
-                style="font-size: 20px;"
+                class="t-image__mask"
               >
-                
                 <div
-                  class="t-loading__dots"
-                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  class="t-loading"
+                  style="font-size: 20px;"
                 >
                   <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0s;"
-                  />
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                  />
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                  />
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
                 </div>
-                
-                <!--v-if-->
-                <!---->
               </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </picture>
             </div>
-            <picture>
-              <!--v-if-->
-              <img
-                alt=""
-                class="t-image__img"
-                src="https://tdesign.gtimg.com/site/upload1.png"
-                style="object-fit: cover; object-position: center;"
-              />
-            </picture>
+          </div>
+          <div
+            class="image-demo"
+            data-v-37d8259d=""
+          >
+            <p
+              class="image-demo-tip"
+              data-v-37d8259d=""
+            >
+              contain
+            </p>
+            <div
+              class="t-image t-image--square image-container"
+              data-v-37d8259d=""
+              style="width: 72px; height: 72px;"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+                  style="object-fit: contain; object-position: center;"
+                />
+              </picture>
+            </div>
+          </div>
+          <div
+            class="image-demo"
+            data-v-37d8259d=""
+          >
+            <p
+              class="image-demo-tip"
+              data-v-37d8259d=""
+            >
+              cover
+            </p>
+            <div
+              class="t-image t-image--square image-container"
+              data-v-37d8259d=""
+              style="width: 72px; height: 72px;"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+                  style="object-fit: cover; object-position: center;"
+                />
+              </picture>
+            </div>
+          </div>
+          <div
+            class="image-demo"
+            data-v-37d8259d=""
+          >
+            <p
+              class="image-demo-tip"
+              data-v-37d8259d=""
+            >
+              none
+            </p>
+            <div
+              class="t-image t-image--square image-container"
+              data-v-37d8259d=""
+              style="width: 72px; height: 72px;"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+                  style="object-fit: none; object-position: center;"
+                />
+              </picture>
+            </div>
+          </div>
+          <div
+            class="image-demo"
+            data-v-37d8259d=""
+          >
+            <p
+              class="image-demo-tip"
+              data-v-37d8259d=""
+            >
+              scale-down
+            </p>
+            <div
+              class="t-image t-image--square image-container"
+              data-v-37d8259d=""
+              style="width: 72px; height: 72px;"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+                  style="object-fit: scale-down; object-position: center;"
+                />
+              </picture>
+            </div>
           </div>
         </div>
       </div>
       <div
-        class="image-group"
+        class="image-example"
+        data-v-2d6651f5=""
+        data-v-d8a5fc24=""
+      >
+        <div
+          class="image-example-title"
+          data-v-2d6651f5=""
+        >
+          不同填充位置的图片
+        </div>
+        <div
+          class="image-example-desc"
+          data-v-2d6651f5=""
+        >
+          当图片过大时，提供显示图片的局部左侧对齐、或右侧对齐的不同位置。
+        </div>
+        <div
+          class="image-group"
+          data-v-2d6651f5=""
+        >
+          <div
+            class="image-demo"
+            data-v-2d6651f5=""
+          >
+            <p
+              class="image-demo-tip"
+              data-v-2d6651f5=""
+            >
+              cover center
+            </p>
+            <div
+              class="t-image t-image--square image-container"
+              data-v-2d6651f5=""
+              style="width: 72px; height: 72px;"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+                  style="object-fit: cover; object-position: center;"
+                />
+              </picture>
+            </div>
+          </div>
+          <div
+            class="image-demo"
+            data-v-2d6651f5=""
+          >
+            <p
+              class="image-demo-tip"
+              data-v-2d6651f5=""
+            >
+              cover left
+            </p>
+            <div
+              class="t-image t-image--square image-container"
+              data-v-2d6651f5=""
+              style="width: 72px; height: 72px;"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+                  style="object-fit: cover; object-position: left;"
+                />
+              </picture>
+            </div>
+          </div>
+          <div
+            class="image-demo"
+            data-v-2d6651f5=""
+          >
+            <p
+              class="image-demo-tip"
+              data-v-2d6651f5=""
+            >
+              cover right
+            </p>
+            <div
+              class="t-image t-image--square image-container"
+              data-v-2d6651f5=""
+              style="width: 72px; height: 72px;"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+                  style="object-fit: cover; object-position: right;"
+                />
+              </picture>
+            </div>
+          </div>
+          <div
+            class="image-demo"
+            data-v-2d6651f5=""
+          >
+            <p
+              class="image-demo-tip"
+              data-v-2d6651f5=""
+            >
+              cover top
+            </p>
+            <div
+              class="t-image t-image--square"
+              data-v-2d6651f5=""
+              style="width: 240px; height: 80px;"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+                  style="object-fit: cover; object-position: top;"
+                />
+              </picture>
+            </div>
+          </div>
+          <div
+            class="image-demo"
+            data-v-2d6651f5=""
+          >
+            <p
+              class="image-demo-tip"
+              data-v-2d6651f5=""
+            >
+              cover bottom
+            </p>
+            <div
+              class="t-image t-image--square"
+              data-v-2d6651f5=""
+              style="width: 240px; height: 80px;"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+                  style="object-fit: cover; object-position: bottom;"
+                />
+              </picture>
+            </div>
+          </div>
+          <div
+            class="image-demo"
+            data-v-2d6651f5=""
+          >
+            <p
+              class="image-demo-tip"
+              data-v-2d6651f5=""
+            >
+              contain top
+            </p>
+            <div
+              class="t-image t-image--square image-container"
+              data-v-2d6651f5=""
+              style="width: 72px; height: 80px;"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+                  style="object-fit: contain; object-position: top;"
+                />
+              </picture>
+            </div>
+          </div>
+          <div
+            class="image-demo"
+            data-v-2d6651f5=""
+          >
+            <p
+              class="image-demo-tip"
+              data-v-2d6651f5=""
+            >
+              contain bottom
+            </p>
+            <div
+              class="t-image t-image--square image-container"
+              data-v-2d6651f5=""
+              style="width: 72px; height: 80px;"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+                  style="object-fit: contain; object-position: bottom;"
+                />
+              </picture>
+            </div>
+          </div>
+          <div
+            class="image-demo"
+            data-v-2d6651f5=""
+          >
+            <p
+              class="image-demo-tip"
+              data-v-2d6651f5=""
+            >
+              contain center
+            </p>
+            <div
+              class="t-image t-image--square image-container"
+              data-v-2d6651f5=""
+              style="width: 72px; height: 80px;"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+                  style="object-fit: contain; object-position: center;"
+                />
+              </picture>
+            </div>
+          </div>
+          <div
+            class="image-demo"
+            data-v-2d6651f5=""
+          >
+            <p
+              class="image-demo-tip"
+              data-v-2d6651f5=""
+            >
+              contain left
+            </p>
+            <div
+              class="t-image t-image--square image-container"
+              data-v-2d6651f5=""
+              style="width: 180px; height: 80px;"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+                  style="object-fit: contain; object-position: left;"
+                />
+              </picture>
+            </div>
+          </div>
+          <div
+            class="image-demo"
+            data-v-2d6651f5=""
+          >
+            <p
+              class="image-demo-tip"
+              data-v-2d6651f5=""
+            >
+              contain right
+            </p>
+            <div
+              class="t-image t-image--square image-container"
+              data-v-2d6651f5=""
+              style="width: 180px; height: 80px;"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+                  style="object-fit: contain; object-position: right;"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="image-example"
         data-v-5f48b8f6=""
         data-v-d8a5fc24=""
       >
         <div
-          class="image-demo"
+          class="image-example-title"
           data-v-5f48b8f6=""
         >
-          <p
-            class="image-demo-tip"
-            data-v-5f48b8f6=""
-          >
-            方形
-          </p>
-          <div
-            class="t-image t-image--square image-container"
-            data-v-5f48b8f6=""
-          >
-            <div
-              class="t-image__mask"
-            >
-              <div
-                class="t-loading"
-                style="font-size: 20px;"
-              >
-                
-                <div
-                  class="t-loading__dots"
-                  style="animation-duration: 800ms; width: 20px; height: 20px;"
-                >
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0s;"
-                  />
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                  />
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                  />
-                </div>
-                
-                <!--v-if-->
-                <!---->
-              </div>
-            </div>
-            <picture>
-              <!--v-if-->
-              <img
-                alt=""
-                class="t-image__img"
-                src="https://tdesign.gtimg.com/site/upload1.png"
-                style="object-fit: fill; object-position: center;"
-              />
-            </picture>
-          </div>
+          不同形状的图片
         </div>
         <div
-          class="image-demo"
+          class="image-example-desc"
           data-v-5f48b8f6=""
         >
-          <p
-            class="image-demo-tip"
-            data-v-5f48b8f6=""
-          >
-            圆角方形
-          </p>
-          <div
-            class="t-image t-image--round image-container"
-            data-v-5f48b8f6=""
-          >
-            <div
-              class="t-image__mask"
-            >
-              <div
-                class="t-loading"
-                style="font-size: 20px;"
-              >
-                
-                <div
-                  class="t-loading__dots"
-                  style="animation-duration: 800ms; width: 20px; height: 20px;"
-                >
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0s;"
-                  />
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                  />
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                  />
-                </div>
-                
-                <!--v-if-->
-                <!---->
-              </div>
-            </div>
-            <picture>
-              <!--v-if-->
-              <img
-                alt=""
-                class="t-image__img"
-                src="https://tdesign.gtimg.com/site/upload1.png"
-                style="object-fit: fill; object-position: center;"
-              />
-            </picture>
-          </div>
+           提供方形、圆角方形、圆角 3 种形状。 当图片长宽不相等时，无法使用 circle 展示一个正圆。 
         </div>
         <div
-          class="image-demo"
+          class="image-group"
           data-v-5f48b8f6=""
         >
-          <p
-            class="image-demo-tip"
-            data-v-5f48b8f6=""
-          >
-            圆形
-          </p>
           <div
-            class="t-image t-image--circle image-container"
+            class="image-demo"
             data-v-5f48b8f6=""
           >
+            <p
+              class="image-demo-tip"
+              data-v-5f48b8f6=""
+            >
+              方形
+            </p>
             <div
-              class="t-image__mask"
+              class="t-image t-image--square image-container"
+              data-v-5f48b8f6=""
             >
               <div
-                class="t-loading"
-                style="font-size: 20px;"
+                class="t-image__mask"
               >
-                
                 <div
-                  class="t-loading__dots"
-                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  class="t-loading"
+                  style="font-size: 20px;"
                 >
                   <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0s;"
-                  />
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                  />
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                  />
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
                 </div>
-                
-                <!--v-if-->
-                <!---->
               </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </picture>
             </div>
-            <picture>
-              <!--v-if-->
-              <img
-                alt="一张图片"
-                class="t-image__img"
-                src="https://tdesign.gtimg.com/site/upload1.png"
-                style="object-fit: cover; object-position: center;"
-              />
-            </picture>
+          </div>
+          <div
+            class="image-demo"
+            data-v-5f48b8f6=""
+          >
+            <p
+              class="image-demo-tip"
+              data-v-5f48b8f6=""
+            >
+              圆角方形
+            </p>
+            <div
+              class="t-image t-image--round image-container"
+              data-v-5f48b8f6=""
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </picture>
+            </div>
+          </div>
+          <div
+            class="image-demo"
+            data-v-5f48b8f6=""
+          >
+            <p
+              class="image-demo-tip"
+              data-v-5f48b8f6=""
+            >
+              圆形
+            </p>
+            <div
+              class="t-image t-image--circle image-container"
+              data-v-5f48b8f6=""
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt="一张图片"
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+                  style="object-fit: cover; object-position: center;"
+                />
+              </picture>
+            </div>
           </div>
         </div>
       </div>
@@ -599,11 +1461,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                 class="t-loading"
                 style="font-size: 20px;"
               >
-                
                 <div
                   class="t-loading__dots"
                   style="animation-duration: 800ms; width: 20px; height: 20px;"
                 >
+                  
                   <div
                     class="t-loading__dot"
                     style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -616,8 +1478,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     class="t-loading__dot"
                     style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                   />
+                  
                 </div>
-                
                 <!--v-if-->
                 <!---->
               </div>
@@ -656,7 +1518,6 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                 data-v-20e0193e=""
                 style="font-size: 20px;"
               >
-                
                 <svg
                   class="t-loading__gradient t-icon-loading"
                   height="1em"
@@ -677,7 +1538,6 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                   </foreignobject>
                 </svg>
-                
                 <!--v-if-->
                 <!---->
               </div>
@@ -720,11 +1580,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                 class="t-loading"
                 style="font-size: 20px;"
               >
-                
                 <div
                   class="t-loading__dots"
                   style="animation-duration: 800ms; width: 20px; height: 20px;"
                 >
+                  
                   <div
                     class="t-loading__dot"
                     style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -737,8 +1597,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     class="t-loading__dot"
                     style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                   />
+                  
                 </div>
-                
                 <!--v-if-->
                 <!---->
               </div>
@@ -775,11 +1635,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                 class="t-loading"
                 style="font-size: 20px;"
               >
-                
                 <div
                   class="t-loading__dots"
                   style="animation-duration: 800ms; width: 20px; height: 20px;"
                 >
+                  
                   <div
                     class="t-loading__dot"
                     style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -792,8 +1652,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     class="t-loading__dot"
                     style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                   />
+                  
                 </div>
-                
                 <!--v-if-->
                 <!---->
               </div>
@@ -803,7 +1663,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
               <img
                 alt=""
                 class="t-image__img"
-                src=""
+                src="x"
                 style="object-fit: fill; object-position: center;"
               />
             </picture>
@@ -817,174 +1677,776 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
 </div>
 `;
 
+exports[`Image > Image positionVue demo works fine 1`] = `
+<div
+  class="image-example"
+  data-v-2d6651f5=""
+>
+  <div
+    class="image-example-title"
+    data-v-2d6651f5=""
+  >
+    不同填充位置的图片
+  </div>
+  <div
+    class="image-example-desc"
+    data-v-2d6651f5=""
+  >
+    当图片过大时，提供显示图片的局部左侧对齐、或右侧对齐的不同位置。
+  </div>
+  <div
+    class="image-group"
+    data-v-2d6651f5=""
+  >
+    <div
+      class="image-demo"
+      data-v-2d6651f5=""
+    >
+      <p
+        class="image-demo-tip"
+        data-v-2d6651f5=""
+      >
+        cover center
+      </p>
+      <div
+        class="t-image t-image--square image-container"
+        data-v-2d6651f5=""
+        style="width: 72px; height: 72px;"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+            style="object-fit: cover; object-position: center;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="image-demo"
+      data-v-2d6651f5=""
+    >
+      <p
+        class="image-demo-tip"
+        data-v-2d6651f5=""
+      >
+        cover left
+      </p>
+      <div
+        class="t-image t-image--square image-container"
+        data-v-2d6651f5=""
+        style="width: 72px; height: 72px;"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+            style="object-fit: cover; object-position: left;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="image-demo"
+      data-v-2d6651f5=""
+    >
+      <p
+        class="image-demo-tip"
+        data-v-2d6651f5=""
+      >
+        cover right
+      </p>
+      <div
+        class="t-image t-image--square image-container"
+        data-v-2d6651f5=""
+        style="width: 72px; height: 72px;"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+            style="object-fit: cover; object-position: right;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="image-demo"
+      data-v-2d6651f5=""
+    >
+      <p
+        class="image-demo-tip"
+        data-v-2d6651f5=""
+      >
+        cover top
+      </p>
+      <div
+        class="t-image t-image--square"
+        data-v-2d6651f5=""
+        style="width: 240px; height: 80px;"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+            style="object-fit: cover; object-position: top;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="image-demo"
+      data-v-2d6651f5=""
+    >
+      <p
+        class="image-demo-tip"
+        data-v-2d6651f5=""
+      >
+        cover bottom
+      </p>
+      <div
+        class="t-image t-image--square"
+        data-v-2d6651f5=""
+        style="width: 240px; height: 80px;"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+            style="object-fit: cover; object-position: bottom;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="image-demo"
+      data-v-2d6651f5=""
+    >
+      <p
+        class="image-demo-tip"
+        data-v-2d6651f5=""
+      >
+        contain top
+      </p>
+      <div
+        class="t-image t-image--square image-container"
+        data-v-2d6651f5=""
+        style="width: 72px; height: 80px;"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+            style="object-fit: contain; object-position: top;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="image-demo"
+      data-v-2d6651f5=""
+    >
+      <p
+        class="image-demo-tip"
+        data-v-2d6651f5=""
+      >
+        contain bottom
+      </p>
+      <div
+        class="t-image t-image--square image-container"
+        data-v-2d6651f5=""
+        style="width: 72px; height: 80px;"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+            style="object-fit: contain; object-position: bottom;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="image-demo"
+      data-v-2d6651f5=""
+    >
+      <p
+        class="image-demo-tip"
+        data-v-2d6651f5=""
+      >
+        contain center
+      </p>
+      <div
+        class="t-image t-image--square image-container"
+        data-v-2d6651f5=""
+        style="width: 72px; height: 80px;"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+            style="object-fit: contain; object-position: center;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="image-demo"
+      data-v-2d6651f5=""
+    >
+      <p
+        class="image-demo-tip"
+        data-v-2d6651f5=""
+      >
+        contain left
+      </p>
+      <div
+        class="t-image t-image--square image-container"
+        data-v-2d6651f5=""
+        style="width: 180px; height: 80px;"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+            style="object-fit: contain; object-position: left;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="image-demo"
+      data-v-2d6651f5=""
+    >
+      <p
+        class="image-demo-tip"
+        data-v-2d6651f5=""
+      >
+        contain right
+      </p>
+      <div
+        class="t-image t-image--square image-container"
+        data-v-2d6651f5=""
+        style="width: 180px; height: 80px;"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+            style="object-fit: contain; object-position: right;"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Image > Image shapeVue demo works fine 1`] = `
 <div
-  class="image-group"
+  class="image-example"
   data-v-5f48b8f6=""
 >
   <div
-    class="image-demo"
+    class="image-example-title"
     data-v-5f48b8f6=""
   >
-    <p
-      class="image-demo-tip"
-      data-v-5f48b8f6=""
-    >
-      方形
-    </p>
-    <div
-      class="t-image t-image--square image-container"
-      data-v-5f48b8f6=""
-    >
-      <div
-        class="t-image__mask"
-      >
-        <div
-          class="t-loading"
-          style="font-size: 20px;"
-        >
-          
-          <div
-            class="t-loading__dots"
-            style="animation-duration: 800ms; width: 20px; height: 20px;"
-          >
-            <div
-              class="t-loading__dot"
-              style="animation-duration: 0.8s; animation-delay: 0s;"
-            />
-            <div
-              class="t-loading__dot"
-              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-            />
-            <div
-              class="t-loading__dot"
-              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-            />
-          </div>
-          
-          <!--v-if-->
-          <!---->
-        </div>
-      </div>
-      <picture>
-        <!--v-if-->
-        <img
-          alt=""
-          class="t-image__img"
-          src="https://tdesign.gtimg.com/site/upload1.png"
-          style="object-fit: fill; object-position: center;"
-        />
-      </picture>
-    </div>
+    不同形状的图片
   </div>
   <div
-    class="image-demo"
+    class="image-example-desc"
     data-v-5f48b8f6=""
   >
-    <p
-      class="image-demo-tip"
-      data-v-5f48b8f6=""
-    >
-      圆角方形
-    </p>
-    <div
-      class="t-image t-image--round image-container"
-      data-v-5f48b8f6=""
-    >
-      <div
-        class="t-image__mask"
-      >
-        <div
-          class="t-loading"
-          style="font-size: 20px;"
-        >
-          
-          <div
-            class="t-loading__dots"
-            style="animation-duration: 800ms; width: 20px; height: 20px;"
-          >
-            <div
-              class="t-loading__dot"
-              style="animation-duration: 0.8s; animation-delay: 0s;"
-            />
-            <div
-              class="t-loading__dot"
-              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-            />
-            <div
-              class="t-loading__dot"
-              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-            />
-          </div>
-          
-          <!--v-if-->
-          <!---->
-        </div>
-      </div>
-      <picture>
-        <!--v-if-->
-        <img
-          alt=""
-          class="t-image__img"
-          src="https://tdesign.gtimg.com/site/upload1.png"
-          style="object-fit: fill; object-position: center;"
-        />
-      </picture>
-    </div>
+     提供方形、圆角方形、圆角 3 种形状。 当图片长宽不相等时，无法使用 circle 展示一个正圆。 
   </div>
   <div
-    class="image-demo"
+    class="image-group"
     data-v-5f48b8f6=""
   >
-    <p
-      class="image-demo-tip"
-      data-v-5f48b8f6=""
-    >
-      圆形
-    </p>
     <div
-      class="t-image t-image--circle image-container"
+      class="image-demo"
       data-v-5f48b8f6=""
     >
+      <p
+        class="image-demo-tip"
+        data-v-5f48b8f6=""
+      >
+        方形
+      </p>
       <div
-        class="t-image__mask"
+        class="t-image t-image--square image-container"
+        data-v-5f48b8f6=""
       >
         <div
-          class="t-loading"
-          style="font-size: 20px;"
+          class="t-image__mask"
         >
-          
           <div
-            class="t-loading__dots"
-            style="animation-duration: 800ms; width: 20px; height: 20px;"
+            class="t-loading"
+            style="font-size: 20px;"
           >
             <div
-              class="t-loading__dot"
-              style="animation-duration: 0.8s; animation-delay: 0s;"
-            />
-            <div
-              class="t-loading__dot"
-              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-            />
-            <div
-              class="t-loading__dot"
-              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-            />
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!--v-if-->
+            <!---->
           </div>
-          
-          <!--v-if-->
-          <!---->
         </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </picture>
       </div>
-      <picture>
-        <!--v-if-->
-        <img
-          alt="一张图片"
-          class="t-image__img"
-          src="https://tdesign.gtimg.com/site/upload1.png"
-          style="object-fit: cover; object-position: center;"
-        />
-      </picture>
+    </div>
+    <div
+      class="image-demo"
+      data-v-5f48b8f6=""
+    >
+      <p
+        class="image-demo-tip"
+        data-v-5f48b8f6=""
+      >
+        圆角方形
+      </p>
+      <div
+        class="t-image t-image--round image-container"
+        data-v-5f48b8f6=""
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="image-demo"
+      data-v-5f48b8f6=""
+    >
+      <p
+        class="image-demo-tip"
+        data-v-5f48b8f6=""
+      >
+        圆形
+      </p>
+      <div
+        class="t-image t-image--circle image-container"
+        data-v-5f48b8f6=""
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt="一张图片"
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+            style="object-fit: cover; object-position: center;"
+          />
+        </picture>
+      </div>
     </div>
   </div>
 </div>
@@ -1020,11 +2482,11 @@ exports[`Image > Image statusVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -1037,8 +2499,8 @@ exports[`Image > Image statusVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -1077,7 +2539,6 @@ exports[`Image > Image statusVue demo works fine 1`] = `
             data-v-20e0193e=""
             style="font-size: 20px;"
           >
-            
             <svg
               class="t-loading__gradient t-icon-loading"
               height="1em"
@@ -1098,7 +2559,6 @@ exports[`Image > Image statusVue demo works fine 1`] = `
                 />
               </foreignobject>
             </svg>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -1141,11 +2601,11 @@ exports[`Image > Image statusVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -1158,8 +2618,8 @@ exports[`Image > Image statusVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -1196,11 +2656,11 @@ exports[`Image > Image statusVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -1213,8 +2673,8 @@ exports[`Image > Image statusVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -1224,7 +2684,7 @@ exports[`Image > Image statusVue demo works fine 1`] = `
           <img
             alt=""
             class="t-image__img"
-            src=""
+            src="x"
             style="object-fit: fill; object-position: center;"
           />
         </picture>

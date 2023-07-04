@@ -5,7 +5,7 @@
         `${name}__minus`,
         `${name}__minus--${theme}`,
         `${name}__icon--${size}`,
-        `${disabled || stepperValue <= min ? name + '--' + theme + '-disabled' : ''}`,
+        `${disabled || Number(stepperValue) <= min ? name + '--' + theme + '-disabled' : ''}`,
       ]"
       @click="minusValue"
     >
@@ -33,7 +33,7 @@
         `${name}__plus`,
         `${name}__plus--${theme}`,
         `${name}__icon--${size}`,
-        `${disabled || stepperValue >= max ? name + '--' + theme + '-disabled' : ''}`,
+        `${disabled || Number(stepperValue) >= max ? name + '--' + theme + '-disabled' : ''}`,
       ]"
       @click="plusValue"
     >
@@ -47,7 +47,7 @@ import { toRefs, computed, defineComponent } from 'vue';
 import { AddIcon, RemoveIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import StepperProps from './props';
-import { useDefault, useEmitEvent } from '../shared';
+import { useDefault } from '../shared';
 import { TdStepperProps } from './type';
 import { useFormDisabled } from '../form/hooks';
 
@@ -62,44 +62,60 @@ export default defineComponent({
   props: StepperProps,
   emits: ['update:value', 'update:modelValue', 'blur', 'change', 'overlimit'],
   setup(props, context) {
-    const [stepperValue] = useDefault<number, TdStepperProps>(props, context.emit, 'value', 'change');
-    const emitEvent = useEmitEvent(props, context.emit);
+    const [stepperValue] = useDefault<TdStepperProps['value'], TdStepperProps>(props, context.emit, 'value', 'change');
     const disabled = useFormDisabled();
     const { min, max, step, inputWidth } = toRefs(props);
     const inputStyle = computed(() => (inputWidth ? { width: `${inputWidth.value}px` } : ''));
 
     const isDisabled = (type: 'minus' | 'plus') => {
       if (disabled.value) return true;
-      if (type === 'minus' && stepperValue.value <= min.value) {
+      if (type === 'minus' && Number(stepperValue.value) <= min.value) {
         return true;
       }
-      if (type === 'plus' && stepperValue.value >= max.value) {
+      if (type === 'plus' && Number(stepperValue.value) >= max.value) {
         return true;
       }
       return false;
     };
 
-    const formatValue = (value: number) =>
-      Math.max(Math.min(max.value, value, Number.MAX_SAFE_INTEGER), min.value, Number.MIN_SAFE_INTEGER);
+    const getLen = (num: number) => {
+      const numStr = num.toString();
+      return numStr.indexOf('.') === -1 ? 0 : numStr.split('.')[1].length;
+    };
 
-    const updateValue = (value: number) => {
-      stepperValue.value = formatValue(value);
+    /**
+     * 精确加法
+     */
+    const add = (a: number, b: number) => {
+      const maxLen = Math.max(getLen(a), getLen(b));
+      const base = 10 ** maxLen;
+      return Math.round(a * base + b * base) / base;
+    };
+
+    const formatValue = (value: number) => {
+      return Math.max(Math.min(max.value, value, Number.MAX_SAFE_INTEGER), min.value, Number.MIN_SAFE_INTEGER).toFixed(
+        getLen(step.value),
+      );
+    };
+
+    const updateValue = (value: TdStepperProps['value']) => {
+      stepperValue.value = value;
     };
 
     const plusValue = () => {
       if (isDisabled('plus')) {
-        emitEvent('overlimit', 'plus');
+        props.onOverlimit?.('plus');
         return;
       }
-      updateValue(Number(stepperValue.value) + step.value);
+      updateValue(formatValue(add(Number(stepperValue.value), step.value)));
     };
 
     const minusValue = () => {
       if (isDisabled('minus')) {
-        emitEvent('overlimit', 'minus');
+        props.onOverlimit?.('minus');
         return;
       }
-      updateValue(Number(stepperValue.value) - step.value);
+      updateValue(formatValue(add(Number(stepperValue.value), -step.value)));
     };
 
     const handleInput = (e: Event) => {
@@ -108,16 +124,16 @@ export default defineComponent({
     };
 
     const handleChange = () => {
-      const formattedValue = formatValue(stepperValue.value);
+      const formattedValue = formatValue(Number(stepperValue.value));
       updateValue(formattedValue);
     };
 
     const handleFocus = () => {
-      emitEvent('focus', stepperValue.value);
+      props.onFocus?.(Number(stepperValue.value));
     };
 
     const handleBlur = () => {
-      emitEvent('blur', stepperValue.value);
+      props.onBlur?.(Number(stepperValue.value));
     };
 
     return {

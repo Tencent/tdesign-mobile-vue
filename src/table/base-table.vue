@@ -39,7 +39,7 @@
           </tr>
         </thead>
         <tbody :class="tbodyClasses">
-          <tr v-if="empty" :class="tableBaseClass.emptyRow">
+          <tr v-if="renderContentEmpty" :class="tableBaseClass.emptyRow">
             <td :colspan="columns?.length">
               <div :class="tableBaseClass.empty">
                 <t-node :content="renderContentEmpty"></t-node>
@@ -74,20 +74,23 @@
           </tr>
         </tbody>
       </table>
+      <div v-if="loadingContent" :class="loadingClasses">
+        <t-node :content="loadingContent"></t-node>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
+import { defineComponent, computed, toRefs, getCurrentInstance, h } from 'vue';
 import get from 'lodash/get';
 import TdBaseTableProps from './base-table-props';
 import config from '../config';
 import useClassName from './hooks/useClassName';
 import useStyle, { formatCSSUnit } from './hooks/useStyle';
-import { renderTNode, TNode, useEmitEvent } from '../shared';
-import { formatClassNames } from './utils';
+import { renderTNode, TNode } from '../shared';
 import { TableRowData } from './type';
+import TLoading from '../loading';
 
 const { prefix } = config;
 const name = `${prefix}-base-table`;
@@ -97,9 +100,7 @@ export default defineComponent({
   components: { TNode },
   props: TdBaseTableProps,
   emits: ['cell-click', 'row-click', 'scroll'],
-  setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
-
+  setup(props) {
     const { classPrefix, tableLayoutClasses, tableHeaderClasses, tableBaseClass, tdAlignClasses, tdEllipsisClass } =
       useClassName();
 
@@ -121,16 +122,14 @@ export default defineComponent({
     const ellipsisClasses = computed(() => [`${classPrefix}-table__ellipsis`, `${classPrefix}-text-ellipsis`]);
 
     const handleRowClick = (row: TableRowData, rowIndex: number, e: MouseEvent) => {
-      const p = { row, index: rowIndex, e };
-      emitEvent('rowClick', { context: p });
+      props.onRowClick?.({ row, index: rowIndex, e });
     };
 
     const handleCellClick = (row: TableRowData, col: any, rowIndex: number, colIndex: number, e: MouseEvent) => {
-      const p = { row, col, rowIndex, colIndex, e };
       if (col.stopPropagation) {
         e.stopPropagation();
       }
-      emitEvent('cellClick', { context: p });
+      props.onCellClick?.({ row, col, rowIndex, colIndex, e });
     };
 
     const dynamicBaseTableClasses = computed(() => [tableClasses.value]);
@@ -139,9 +138,13 @@ export default defineComponent({
     const internalInstance = getCurrentInstance();
     const renderContentEmpty = computed(() => renderTNode(internalInstance, 'empty'));
     const renderCellEmptyContent = computed(() => renderTNode(internalInstance, 'cellEmptyContent'));
+    const loadingClasses = computed(() => [`${classPrefix}-table__loading--full`]);
+    const loadingContent = computed(() =>
+      renderTNode(internalInstance, 'loading', { defaultNode: h(TLoading, { ...props.loadingProps }) }),
+    );
 
     const onInnerVirtualScroll = (e: WheelEvent) => {
-      emitEvent('scroll', { params: e });
+      props.onScroll?.({ params: e });
     };
 
     return {
@@ -161,8 +164,9 @@ export default defineComponent({
       ellipsisClasses,
       renderContentEmpty,
       renderCellEmptyContent,
+      loadingClasses,
+      loadingContent,
       formatCSSUnit,
-      formatClassNames,
       onInnerVirtualScroll,
       get,
       handleCellClick,

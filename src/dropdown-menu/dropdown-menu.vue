@@ -13,7 +13,10 @@
 
 <script lang="ts">
 import { defineComponent, computed, toRefs, ref, reactive, watch, provide } from 'vue';
+
 import { CaretDownSmallIcon, CaretUpSmallIcon } from 'tdesign-icons-vue-next';
+import camelCase from 'lodash/camelCase';
+
 import config from '../config';
 import {
   context as menuContext,
@@ -22,8 +25,7 @@ import {
   DropdownMenuExpandState,
   TriggerSource,
 } from './context';
-import TransAniControl from './trans-ani-control';
-import { useEmitEvent, useExpose } from '../shared';
+import { useExpose } from '../shared';
 import { findRelativeRect, findRelativeContainer } from './dom-utils';
 import DropdownMenuProps from './props';
 
@@ -35,8 +37,7 @@ export default defineComponent({
   components: { CaretDownSmallIcon, CaretUpSmallIcon },
   props: DropdownMenuProps,
   emits: ['menuOpened', 'menuClosed'],
-  setup(props, { slots, emit }) {
-    const emitEvent = useEmitEvent(props, emit);
+  setup(props, { slots }) {
     // 菜单状态
     const state = reactive<DropdownMenuState>({
       activeId: null,
@@ -78,11 +79,9 @@ export default defineComponent({
       }),
     );
 
-    const aniControl = new TransAniControl();
     // 提供子组件访问
     provide('dropdownMenuProps', props);
     provide('dropdownMenuState', state);
-    provide('dropdownAniControl', aniControl);
     // 根结点样式
     const classes = computed(() => [`${name}`]);
     // 标题栏结点引用
@@ -101,10 +100,6 @@ export default defineComponent({
       },
     ]);
 
-    const emitEvents = (emit: string, trigger?: TriggerSource) => {
-      emitEvent(emit, { trigger });
-    };
-
     // 展开对应项目的菜单
     const expandMenu = (item: any, idx: number) => {
       const { disabled } = item;
@@ -114,10 +109,10 @@ export default defineComponent({
       if (state.activeId === idx) {
         // 再次点击时收起
         collapseMenu();
-        emitEvents('menuClosed', 'menu');
+        props.onMenuClosed?.({ trigger: 'menu' });
         return;
       }
-      emitEvents('menuOpened');
+      props.onMenuOpened?.('menuOpened');
       state.activeId = idx;
 
       // 获取菜单定位
@@ -142,7 +137,13 @@ export default defineComponent({
       const container = findRelativeContainer(bar) || document.body;
       menuContext.recordMenuExpanded(container, control, DropdownMenuExpandState.collapsed);
     };
-    const control: DropdownMenuControl = { expandMenu, collapseMenu, emitEvents };
+    const control: DropdownMenuControl = {
+      expandMenu,
+      collapseMenu,
+      emitEvents(emit: string, trigger?: TriggerSource) {
+        props[`on${camelCase(emit)}`]?.(trigger);
+      },
+    };
     // 提供子组件访问
     provide('dropdownMenuControl', control);
     useExpose({

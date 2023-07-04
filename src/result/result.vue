@@ -46,7 +46,7 @@ export default defineComponent({
     const titleContent = computed(() => renderTNode(internalInstance, 'title'));
     const descriptionContent = computed(() => renderTNode(internalInstance, 'description'));
 
-    const classes = computed(() => [`${name}`, `${name}--theme-${props.theme}`]);
+    const classes = computed(() => [`${name}`, `${name}--theme-${props.theme || 'default'}`]);
 
     let iconContent: any;
     if (props?.theme) {

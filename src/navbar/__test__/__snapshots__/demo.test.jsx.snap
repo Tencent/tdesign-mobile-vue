@@ -141,18 +141,14 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
               />
             </svg>
             <div
-              class="t-divider--vertical-center"
+              class="t-divider t-divider--vertical t-divider--center"
               data-v-7388e034=""
               role="separator"
             >
               <div
-                class="t-divider t-divider--vertical t-divider--center"
+                class="t-divider__content"
               >
-                <div
-                  class="t-divider__content"
-                >
-                  <!---->
-                </div>
+                <!---->
               </div>
             </div>
             <svg
@@ -281,11 +277,11 @@ exports[`Navbar > Navbar imgVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -298,8 +294,8 @@ exports[`Navbar > Navbar imgVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -655,18 +651,14 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
                   />
                 </svg>
                 <div
-                  class="t-divider--vertical-center"
+                  class="t-divider t-divider--vertical t-divider--center"
                   data-v-7388e034=""
                   role="separator"
                 >
                   <div
-                    class="t-divider t-divider--vertical t-divider--center"
+                    class="t-divider__content"
                   >
-                    <div
-                      class="t-divider__content"
-                    >
-                      <!---->
-                    </div>
+                    <!---->
                   </div>
                 </div>
                 <svg
@@ -860,11 +852,11 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -877,8 +869,8 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <t-radio-group placement="right" :default-value="radio" class="radio-group-demo" @change="groupChangeFn">
+    <t-radio-group :default-value="radio" class="radio-group-demo" @change="groupChangeFn">
       <t-radio name="radio" value="1" label="单选" />
       <t-radio name="radio" value="2" label="单选" />
       <t-radio

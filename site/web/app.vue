@@ -20,9 +20,12 @@ import packageJson from '../../package.json';
 const registryUrl = 'https://mirrors.tencent.com/npm/tdesign-mobile-vue';
 const currentVersion = packageJson.version.replace(/\./g, '_');
 
-const docs = sortDocs(siteConfig.docs);
+const { docs, enDocs } = JSON.parse(JSON.stringify(siteConfig).replace(/component:.+/g, ''));
 
-const { docs: routerList } = JSON.parse(JSON.stringify({ docs: docs }).replace(/component:.+/g, ''));
+const docsMap = {
+  zh: sortDocs(docs),
+  en: sortDocs(enDocs),
+};
 
 export default defineComponent({
   data() {
@@ -43,7 +46,7 @@ export default defineComponent({
   mounted() {
     this.docType = this.$route.meta.docType;
     this.$refs.tdDocSearch.docsearchInfo = { indexName: 'tdesign_doc_vue_mobile' };
-    this.$refs.tdDocAside.routerList = routerList;
+    this.$refs.tdDocAside.routerList = docsMap[this.$route?.meta?.lang || 'zh'];
     this.$refs.tdDocAside.onchange = ({ detail }) => {
       if (this.$route.path === detail) return;
       this.loaded = false;
@@ -63,6 +66,7 @@ export default defineComponent({
 
   watch: {
     $route(route) {
+      this.$refs.tdDocAside.routerList = docsMap[route.meta.lang || 'zh'];
       if (!route.meta.docType) return;
       this.docType = route.meta.docType;
     },

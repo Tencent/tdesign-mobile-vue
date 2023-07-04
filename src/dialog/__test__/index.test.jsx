@@ -1,8 +1,13 @@
 import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import { nextTick } from 'vue';
 import Dialog from '../dialog.vue';
 import Button from '../../button/button.vue';
+import { CloseIcon } from 'tdesign-icons-vue-next';
+
+import prefixConfig from '../../config';
+
+const { prefix } = prefixConfig;
+const name = `${prefix}-dialog`;
 
 config.global.stubs = {
   teleport: true,
@@ -65,20 +70,60 @@ describe('dialog', () => {
       expect(wrapper.find('.t-dialog__body').text()).toBe(newContent);
     });
 
-    // it(': buttonLayout', async () => {
-    //   const visible = true;
-    //   const selector = 't-dialog__vertical-footer';
-    //   const wrapper = mount(Dialog, {
-    //     props: {
-    //       visible,
-    //     },
-    //   });
-    //   expect(wrapper.find('.t-dialog__footer').classes().includes(selector)).toBeFalsy();
-    //   await wrapper.setProps({
-    //     buttonLayout: 'vertical',
-    //   });
-    //   expect(wrapper.find('.t-dialog__footer').classes().includes(selector)).toBeTruthy();
-    // });
+    it(': buttonLayout', async () => {
+      const confirmBtn = {
+        content: '确认',
+        variant: 'text',
+        size: 'large',
+      };
+      const cancelBtn = {
+        content: '取消',
+        variant: 'text',
+        size: 'large',
+      };
+      const onCancel = vi.fn();
+      const onConfirm = vi.fn();
+
+      const wrapper = mount(Dialog, {
+        props: {
+          visible: true,
+          title: '对话框标题',
+          content: '告知当前状态、信息和解决方法',
+          cancelBtn: cancelBtn,
+          confirmBtn: confirmBtn,
+          onConfirm: onConfirm,
+          onCancel: onCancel,
+        },
+      });
+      // 文字按钮
+      expect(wrapper.find(`.${name}__button`).classes().includes(`${name}__button--text`)).toBeTruthy();
+
+      // 默认水平
+      expect(wrapper.find(`.${name}__footer`).classes().includes(`${name}__footer--column`)).toBeFalsy();
+      // 垂直
+      await wrapper.setProps({
+        buttonLayout: 'vertical',
+      });
+      expect(wrapper.find(`.${name}__footer`).classes().includes(`${name}__footer--column`)).toBeTruthy();
+    });
+
+    it(':closeBtn', async () => {
+      const wrapper = mount(Dialog, {
+        props: {
+          visible: true,
+          closeBtn: false,
+        },
+      });
+
+      // false
+      expect(wrapper.find(`.${name}__close-btn`).exists()).toBeFalsy();
+
+      // true
+      await wrapper.setProps({
+        closeBtn: true,
+      });
+      expect(wrapper.find(`.${name}__close-btn`).exists()).toBeTruthy();
+    });
 
     it(':width', async () => {
       const visible = true;
@@ -117,49 +162,42 @@ describe('dialog', () => {
       expect(wrapper.find('.t-dialog').attributes('style').includes(`z-index: ${newZIndex}`)).toBeTruthy();
     });
 
-    // it(': closeOnOverlayClick', async () => {
-    //   let triggerOrigin = {};
-    //   const onClose = vi.fn((trigger) => {
-    //     triggerOrigin = trigger;
-    //   });
-    //   const onOverlayClick = vi.fn();
-    //   const closeOverlayClick = true;
-    //   const visible = true;
-    //   const wrapper = mount(Dialog, {
-    //     props: {
-    //       visible,
-    //       closeOverlayClick,
-    //       onClose,
-    //       onOverlayClick,
-    //     },
-    //   });
-
-    //   const $overlay = wrapper.findComponent({ name: 't-overlay' });
-    //   expect($overlay.exists()).toBeTruthy();
-    //   $overlay.vm.$emit('click');
-    //   await nextTick();
-    //   expect(onClose).toBeCalledTimes(1);
-    //   expect(onOverlayClick).toBeCalledTimes(1);
-    //   expect(triggerOrigin).toBe('overlay');
-    // });
+    it(': closeOnOverlayClick', async () => {
+      const onClose = vi.fn();
+      const onOverlayClick = vi.fn();
+      const closeOnOverlayClick = true;
+      const visible = true;
+      const wrapper = mount(Dialog, {
+        props: {
+          visible,
+          closeOnOverlayClick,
+          onClose,
+          onOverlayClick,
+        },
+      });
+      const $overlay = wrapper.find(`.t-overlay`);
+      expect($overlay.exists()).toBeTruthy();
+      $overlay.trigger('click');
+      expect(onClose).toBeCalledTimes(1);
+      expect(onOverlayClick).toBeCalledTimes(1);
+      expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'overlay' });
+    });
   });
 
   describe('event', () => {
-    it(':cancel && confirm', async () => {
-      let triggerOrigin = {};
+    it(':cancel && confirm && close', async () => {
       const visible = true;
       const cancelBtn = 'cancel';
       const confirmBtn = 'confirm';
       const title = 'this is a title';
-      const onClose = vi.fn(({ trigger }) => {
-        triggerOrigin = trigger;
-      });
+      const onClose = vi.fn();
       const onCancel = vi.fn();
       const onConfirm = vi.fn();
       const wrapper = mount(Dialog, {
         props: {
           visible,
           title,
+          closeBtn: true,
           cancelBtn,
           confirmBtn,
           onCancel,
@@ -167,7 +205,7 @@ describe('dialog', () => {
           onClose,
         },
       });
-      // expect(wrapper).toMatchSnapshot()
+
       // footer
       const $buttons = wrapper.findAllComponents(Button);
       expect($buttons).toHaveLength(2);
@@ -175,10 +213,15 @@ describe('dialog', () => {
       expect($buttons.at(1).text()).toBe(confirmBtn);
       $buttons.at(0).trigger('click');
       expect(onClose).toBeCalledTimes(1);
-      expect(triggerOrigin).toBe('cancel');
+      expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'cancel' });
       expect(onCancel).toBeCalledTimes(1);
       $buttons.at(1).trigger('click');
       expect(onConfirm).toBeCalledTimes(1);
+
+      const $closeIcon = wrapper.findComponent(CloseIcon);
+      $closeIcon.trigger('click');
+      expect(onClose).toBeCalledTimes(2);
+      expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'close-btn' });
     });
   });
 });

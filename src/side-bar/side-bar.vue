@@ -6,11 +6,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, ComponentInternalInstance, provide, toRefs } from 'vue';
+import { defineComponent, ref, Ref, ComponentInternalInstance, provide, toRefs } from 'vue';
 import config from '../config';
 import SideBarProps from './props';
 import { TdSideBarProps } from './type';
-import { useEmitEvent, useDefault } from '../shared';
+import { useDefault } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-side-bar`;
@@ -20,7 +20,6 @@ export default defineComponent({
   props: SideBarProps,
   emits: ['update:value', 'update:modelValue', 'change'],
   setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
     const [currentValue, setCurrentValue] = useDefault<TdSideBarProps['value'], TdSideBarProps>(
       props,
       context.emit,
@@ -28,26 +27,24 @@ export default defineComponent({
       'change',
     );
 
-    const state = reactive({
-      children: [] as ComponentInternalInstance[],
-    });
+    const children: Ref<ComponentInternalInstance[]> = ref([]);
 
     const relation = (child: ComponentInternalInstance) => {
-      child && state.children.push(child);
+      child && children.value.push(child);
     };
 
     const removeRelation = (child: ComponentInternalInstance) => {
-      state.children = state.children.filter((item) => item !== child);
+      children.value = children.value.filter((item) => item !== child);
     };
 
-    const onClickItem = (cur: TdSideBarProps['value'], label: string) => {
+    const onClickItem = (cur: string | number, label: string) => {
       setCurrentValue(cur);
-      emitEvent('click', cur, label);
+      props.onClick?.(cur, label);
     };
 
     provide('sideBarProvide', {
       ...props,
-      state,
+      children,
       currentValue,
       relation,
       removeRelation,

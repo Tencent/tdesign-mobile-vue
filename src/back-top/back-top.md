@@ -16,4 +16,4 @@ onToTop | Function |  | TS 类型：`() => void`<br/>点击触发 | N
 
 名称 | 参数 | 描述
 -- | -- | --
-to-top | - | 点击触发
+to-top | \- | 点击触发

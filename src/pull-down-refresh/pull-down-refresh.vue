@@ -27,7 +27,8 @@ import debounce from 'lodash/debounce';
 import isArray from 'lodash/isArray';
 
 import PullDownRefreshProps from './props';
-import { useEmitEvent, useVModel, convertUnit } from '../shared';
+import { useVModel, convertUnit, reconvertUnit } from '../shared';
+
 import config from '../config';
 import TLoading from '../loading';
 import { useTouch, isReachTop, easeDistance } from './useTouch';
@@ -41,8 +42,7 @@ export default defineComponent({
   components: { TLoading },
   props: PullDownRefreshProps,
   emits: ['refresh', 'timeout', 'scrolltolower', 'update:value', 'update:modelValue'],
-  setup(props, context) {
-    const emitEvent = useEmitEvent(props, context.emit);
+  setup(props) {
     let timer: any = null;
 
     // 滑动距离
@@ -64,6 +64,7 @@ export default defineComponent({
     const maxBar = ref(null);
     const { height: loadingBarHeight } = useElementSize(loadingBar);
     const { height: maxBarHeight } = useElementSize(maxBar);
+    const actualLoadingBarHeight = ref(0);
 
     watch(
       [loading, loadingBarHeight],
@@ -118,6 +119,7 @@ export default defineComponent({
       if (!isReachTop(e) || loading.value) return;
 
       const { deltaY } = touch;
+      actualLoadingBarHeight.value = deltaY.value;
       const nextDistance = easeDistance(deltaY.value, loadingBarHeight.value);
       // 下拉时，防止下拉整个页面
       if (deltaY.value > 0) {
@@ -135,10 +137,10 @@ export default defineComponent({
       if (status.value === 'loosing') {
         distance.value = loadingBarHeight.value;
         setLoading(true);
-        emitEvent('refresh');
+        props.onRefresh?.();
         timer = setTimeout(() => {
           if (loading.value) {
-            emitEvent('timeout');
+            props.onTimeout?.();
             setLoading(false);
           }
         }, props.refreshTimeout);
@@ -153,7 +155,7 @@ export default defineComponent({
         const { clientHeight, scrollHeight } = document.documentElement; // 可视区域/屏幕高度， 页面高度
         const distance = 20; // 距离视窗 20 时，开始触发
         if (scrollTop + clientHeight >= scrollHeight - distance) {
-          emitEvent('scrolltolower');
+          props.onScrolltolower?.();
         }
       },
       300,
@@ -174,9 +176,14 @@ export default defineComponent({
         transform: `translate3d(0, ${distance.value}px, 0)`,
       };
     });
-    const loadingBarStyles = computed(() => ({
-      height: convertUnit(props.loadingBarHeight),
-    }));
+    const heightDiff = (reconvertUnit(props.maxBarHeight) - reconvertUnit(props.loadingBarHeight)) / 2;
+    const loadingBarStyles = computed(() => {
+      return {
+        transform: `translateY(${heightDiff}px)`,
+        height: `${actualLoadingBarHeight.value}px`,
+        maxHeight: convertUnit(props.loadingBarHeight),
+      };
+    });
     const maxBarStyles = computed(() => ({
       height: convertUnit(props.maxBarHeight),
     }));

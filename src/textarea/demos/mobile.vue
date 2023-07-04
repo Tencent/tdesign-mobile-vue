@@ -20,7 +20,7 @@
     <tdesign-demo-block title="02 组件状态" summary="禁用状态">
       <disableDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block title="03 组件样式" summary="卡片样式">
+    <tdesign-demo-block title="03 组件样式" summary="竖排样式">
       <cardDemo />
     </tdesign-demo-block>
     <tdesign-demo-block title="04 特殊样式" summary="标签外置输入框">

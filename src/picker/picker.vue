@@ -23,14 +23,14 @@
 </template>
 
 <script lang="ts">
-import { computed, nextTick, defineComponent, toRefs, onMounted, ref, getCurrentInstance, watch } from 'vue';
+import { computed, defineComponent, toRefs, onMounted, ref, getCurrentInstance, watch } from 'vue';
 import isString from 'lodash/isString';
 import isBoolean from 'lodash/isBoolean';
 
 import config from '../config';
 import PickerProps from './props';
 import { PickerValue, PickerColumn, PickerColumnItem } from './type';
-import { useEmitEvent, useVModel, useChildSlots, useExpose, TNode, renderTNode } from '../shared';
+import { useVModel, useChildSlots, TNode, renderTNode } from '../shared';
 import PickerItem from './picker-item.vue';
 
 const { prefix } = config;
@@ -45,9 +45,8 @@ export default defineComponent({
   components: { PickerItem, TNode },
   props: PickerProps,
   emits: ['change', 'cancel', 'pick', 'update:modelValue', 'update:value'],
-  setup(props: any, context) {
+  setup(props: any) {
     const internalInstance = getCurrentInstance();
-    const emitEvent = useEmitEvent(props, context.emit);
     const { value, modelValue } = toRefs(props);
     const [pickerValue = ref([]), setPickerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
     const getDefaultText = (prop: string | boolean, defaultText: string): string => {
@@ -80,13 +79,13 @@ export default defineComponent({
       const label = target.map((item: PickerColumnItem) => item.label);
       const value = target.map((item: PickerColumnItem) => item.value);
       setPickerValue(value);
-      emitEvent('confirm', value, { index: curIndexArray, label, e });
+      props.onConfirm?.(value, { index: curIndexArray, label, e });
     };
     const handleCancel = (e: MouseEvent) => {
       pickerItemInstanceArray.value.forEach((item: any, index: number) => {
         item.exposed?.setIndex(curIndexArray[index]);
       });
-      emitEvent('cancel', { e });
+      props.onCancel?.({ e });
     };
     const handlePick = (context: any, column: number) => {
       const { index } = context;
@@ -94,7 +93,7 @@ export default defineComponent({
       curIndexArray[column] = index;
       curValueArray.value[column] = realColumns.value[column][index]?.value;
 
-      emitEvent('pick', curValueArray.value, { index, column });
+      props.onPick?.(curValueArray.value, { index, column });
     };
 
     watch(pickerValue, () => {

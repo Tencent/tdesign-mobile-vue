@@ -127,11 +127,11 @@ exports[`Footer > Footer logoVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -144,8 +144,8 @@ exports[`Footer > Footer logoVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -355,11 +355,11 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
                 class="t-loading"
                 style="font-size: 20px;"
               >
-                
                 <div
                   class="t-loading__dots"
                   style="animation-duration: 800ms; width: 20px; height: 20px;"
                 >
+                  
                   <div
                     class="t-loading__dot"
                     style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -372,8 +372,8 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
                     class="t-loading__dot"
                     style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                   />
+                  
                 </div>
-                
                 <!--v-if-->
                 <!---->
               </div>

@@ -6,10 +6,16 @@ import camelCase from 'camelcase';
 
 import testCoverage from '../test-coverage';
 
-const defaultTabs = [
+const DEFAULT_TABS = [
   { tab: 'demo', name: '示例' },
   { tab: 'api', name: 'API' },
   { tab: 'design', name: '指南' },
+];
+
+const DEFAULT_EN_TABS = [
+  { tab: 'demo', name: 'DEMO' },
+  { tab: 'api', name: 'API' },
+  { tab: 'design', name: 'Guideline' },
 ];
 
 export default function mdToVue(options) {
@@ -145,7 +151,7 @@ export default function mdToVue(options) {
 function customRender({ source, file, md }) {
   const { content, data } = matter(source);
   // console.log('data', data);
-
+  const isEn = file.endsWith('en-US.md');
   // md top data
   const pageData = {
     spline: '',
@@ -154,7 +160,7 @@ function customRender({ source, file, md }) {
     description: '',
     isComponent: false,
     tdDocHeader: true,
-    tdDocTabs: defaultTabs,
+    tdDocTabs: !isEn ? DEFAULT_TABS : DEFAULT_EN_TABS,
     apiFlag: /#+\s*API/i,
     docClass: '',
     lastUpdated: Math.round(fs.statSync(file).mtimeMs),
@@ -162,7 +168,7 @@ function customRender({ source, file, md }) {
   };
 
   // md filename
-  const reg = file.match(/src\/([\w-]+)\/([\w-]+)\.md/);
+  const reg = file.match(/([\w-]+)\.?([\w-]+)?\.md/);
   const componentName = reg && reg[1];
 
   // split md

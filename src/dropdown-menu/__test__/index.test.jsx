@@ -139,6 +139,65 @@ describe('dropdown-menu', () => {
       });
     });
 
+    it(': keys', async () => {
+      const value1 = ref('option_2');
+      const value2 = ref('option_2');
+
+
+      const options2 = emptyArr.map((_, i) => ({
+        name: `选项${chineseMap[i]}`,
+        val: `option_${i}`,
+        disabled: false,
+      }));
+      const keys = {
+        value: 'val',
+        label: 'name',
+      };
+
+      const items = [
+        {
+          value: value1,
+          label: '菜单',
+          disabled: true,
+          options: options2,
+        },
+        {
+          value: value2,
+          label: '菜单',
+          disabled: false,
+          options: options2,
+        },
+      ];
+
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <DropdownMenu>
+              {{
+                default: items.map((item, index) => {
+                  return (
+                    <DropdownItem
+                      value={item.value.value}
+                      label={item.label}
+                      keys={keys}
+                      disabled={item.disabled}
+                      options={item.options}
+                    />
+                  );
+                }),
+              }}
+            </DropdownMenu>
+          );
+        },
+      });
+
+      const $menuLabels = wrapper.findAll(`.${name}__item`);
+      $menuLabels.map(async (item, index) => {
+        expect(item.attributes('class').includes(`${name}__item--disabled`)).toEqual(items[index].disabled);
+        expect(item.text()).toEqual(items[index].label);
+      });
+    });
+
     it(': optionsColumns', async () => {
       // options-columns值为[1,3]区间内，仅在 multiple = true 时，有效
       const value1 = ref(['option_1']);
@@ -228,6 +287,64 @@ describe('dropdown-menu', () => {
       // 禁用态按钮，不触发 change
       await $radios[2].trigger('click');
       expect(onChange).toHaveBeenCalledTimes(1);
+    });
+
+    it(': resetSelect confirmSelect', async () => {
+      let value1 = ref(['option_1']);
+      const items = [
+        {
+          value: value1,
+          label: '菜单',
+          options: options,
+          multiple: true,
+          optionsColumns: 2,
+        },
+      ];
+      const onReset = vi.fn();
+      const onConfirm = vi.fn();
+      const onChange = vi.fn();
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <DropdownMenu>
+              {{
+                default: items.map((item, index) => {
+                  return (
+                    <DropdownItem
+                      value={item.value.value}
+                      label={item.label}
+                      multiple={item.multiple}
+                      options={item.options}
+                      optionsColumns={item.optionsColumns}
+                      onReset={onReset}
+                      onConfirm={onConfirm}
+                      onChange={onChange}
+                    />
+                  );
+                }),
+              }}
+            </DropdownMenu>
+          );
+        },
+      });
+      const $menuLabels = wrapper.findAll(`.${name}__item`);
+      $menuLabels.map((item, index) => {
+        item.trigger('click', { item, index });
+      });
+      await sleep(200);
+      const $resetButton = wrapper.find(`.${prefix}-dropdown-item__reset-btn`);
+      await $resetButton.trigger('click');
+      expect(onReset).toHaveBeenCalledTimes(1);
+
+      const $confirmButton = wrapper.find(`.${prefix}-dropdown-item__confirm-btn`);
+      await $confirmButton.trigger('click');
+      expect(onConfirm).toHaveBeenCalledTimes(0);
+
+      const $checkbox = wrapper.findAll(`.t-checkbox`);
+      await $checkbox[0].trigger('click');
+      expect(onChange).toHaveBeenCalledTimes(2);
+      await $confirmButton.trigger('click');
+      expect(onConfirm).toHaveBeenCalledTimes(1);
     });
   });
 });

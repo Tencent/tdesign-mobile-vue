@@ -8,11 +8,6 @@ import { TNode } from '../common';
 
 export interface TdSwitchProps<T = SwitchValue> {
   /**
-   * 已废弃。自定义颜色，[打开时的颜色，关闭时的颜色]。组件默认颜色为 ['#0052d9', 'rgba(0, 0, 0, .26']。示例：[blue, gray]
-   * @deprecated
-   */
-  colors?: string[];
-  /**
    * 用于自定义开关的值，[打开时的值，关闭时的值]。默认为 [true, false]。示例：[1, 0]、['open', 'close']
    */
   customValue?: Array<SwitchValue>;
@@ -55,7 +50,7 @@ export interface TdSwitchProps<T = SwitchValue> {
   /**
    * 数据发生变化时触发
    */
-  onChange?: (value: T) => void;
+  onChange?: (value: T, context: { e: MouseEvent }) => void;
 }
 
 export type SwitchValue = string | number | boolean;

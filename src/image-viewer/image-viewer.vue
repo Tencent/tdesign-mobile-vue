@@ -41,7 +41,7 @@ import { CloseIcon, DeleteIcon } from 'tdesign-icons-vue-next';
 
 import config from '../config';
 import ImagediverProps from './props';
-import { renderTNode, TNode, useEmitEvent, useDefault, useTouch } from '../shared';
+import { renderTNode, TNode, useDefault, useTouch } from '../shared';
 import { TdImageViewerProps } from './type';
 
 // inner components
@@ -64,19 +64,18 @@ export default defineComponent({
     TImage,
   },
   props: ImagediverProps,
-  emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'change'],
-  setup(props, context) {
+  emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'delete'],
+  setup(props, { emit }) {
     const internalInstance = getCurrentInstance();
     const state = reactive({
       zooming: false,
       scale: 1,
       swiperStyle: [] as string[],
     });
-    const emitEvent = useEmitEvent(props, context.emit);
-    const [visible, setVisible] = useDefault(props, context.emit, 'visible', 'change');
+    const [visible, setVisible] = useDefault(props, emit, 'visible', 'change');
     const [currentIndex, setIndex] = useDefault<TdImageViewerProps['index'], TdImageViewerProps>(
       props,
-      context.emit,
+      emit,
       'index',
       'index-change',
     );
@@ -109,11 +108,11 @@ export default defineComponent({
 
     const handleClose = (e: Event, trigger: string) => {
       setVisible(false);
-      emitEvent('close', { trigger, e });
+      emit('close', { trigger, e });
     };
 
     const handleDelete = () => {
-      emitEvent('delete', currentIndex);
+      emit('delete', currentIndex.value ?? 0);
     };
 
     const onSwiperChange = (index: number, context: any) => {

@@ -553,11 +553,11 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
               class="t-loading"
               style="font-size: 20px;"
             >
-              
               <div
                 class="t-loading__dots"
                 style="animation-duration: 800ms; width: 20px; height: 20px;"
               >
+                
                 <div
                   class="t-loading__dot"
                   style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -570,8 +570,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
                   class="t-loading__dot"
                   style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                 />
+                
               </div>
-              
               <!--v-if-->
               <!---->
             </div>
@@ -727,11 +727,11 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
               class="t-loading"
               style="font-size: 20px;"
             >
-              
               <div
                 class="t-loading__dots"
                 style="animation-duration: 800ms; width: 20px; height: 20px;"
               >
+                
                 <div
                   class="t-loading__dot"
                   style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -744,8 +744,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
                   class="t-loading__dot"
                   style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                 />
+                
               </div>
-              
               <!--v-if-->
               <!---->
             </div>
@@ -871,7 +871,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
             >
               
               <div
-                class="t-input t-input--layout-horizontal t-input--size-small"
+                class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
                 data-v-4a76bf3d=""
               >
                 <div
@@ -1025,7 +1025,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
                 告知当前状态、信息和解决方法等，描述文案尽可能控制在三行内
               </p>
               <div
-                class="t-input t-input--layout-horizontal t-input--size-small"
+                class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
                 data-v-4a76bf3d=""
               >
                 <div
@@ -1733,7 +1733,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 >
                   
                   <div
-                    class="t-input t-input--layout-horizontal t-input--size-small"
+                    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
                     data-v-4a76bf3d=""
                   >
                     <div
@@ -1887,7 +1887,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                     告知当前状态、信息和解决方法等，描述文案尽可能控制在三行内
                   </p>
                   <div
-                    class="t-input t-input--layout-horizontal t-input--size-small"
+                    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
                     data-v-4a76bf3d=""
                   >
                     <div
@@ -2047,11 +2047,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -2064,8 +2064,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -2221,11 +2221,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -2238,8 +2238,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>

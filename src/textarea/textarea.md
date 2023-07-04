@@ -12,6 +12,7 @@ bordered | Boolean | false | 是否显示外边框 | N
 disabled | Boolean | false | 是否禁用文本框 | N
 indicator | Boolean | false | 显示文本计数器，如 0/140。当 maxlength < 0 && maxcharacter < 0 成立时， indicator无效 | N
 label | String / Slot / Function | - | 左侧文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+layout | String | horizontal | 标题输入框布局方式。可选项：vertical/horizontal | N
 maxcharacter | Number | - | 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度 | N
 maxlength | Number | - | 用户最多可以输入的字符个数 | N
 name | String | - | 名称，HTML 元素原生属性 | N

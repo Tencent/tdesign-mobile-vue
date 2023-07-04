@@ -1,3 +1,4 @@
+
 :: BASE_DOC ::
 
 ## API
@@ -9,9 +10,9 @@ align | String | left | options：left/center/right | N
 allowInputOverMax | Boolean | false | \- | N
 autocomplete | String | undefined | \- | N
 autofocus | Boolean | false | \- | N
+borderless | Boolean | false | \- | N
 clearable | Boolean | false | \- | N
 disabled | Boolean | - | \- | N
-errorMessage | String | - | `deprecated` | N
 format | Function | - | Typescript：`InputFormatType` `type InputFormatType = (value: InputValue) => string`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/input/type.ts) | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 layout | String | horizontal | options：vertical/horizontal | N
@@ -33,6 +34,7 @@ onBlur | Function |  | Typescript：`(value: InputValue, context: { e: FocusEven
 onChange | Function |  | Typescript：`(value: InputValue, context?: { e?: InputEvent \| MouseEvent \| CompositionEvent; trigger: 'input' \| 'initial' \| 'clear' }) => void`<br/> | N
 onClear | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onFocus | Function |  | Typescript：`(value: InputValue, context: { e: FocusEvent }) => void`<br/> | N
+onValidate | Function |  | Typescript：`(context: { error?: 'exceed-maximum' \| 'below-minimum' }) => void`<br/>trigger on text length being over max length or max character | N
 
 ### Input Events
 
@@ -42,3 +44,4 @@ blur | `(value: InputValue, context: { e: FocusEvent })` | \-
 change | `(value: InputValue, context?: { e?: InputEvent \| MouseEvent \| CompositionEvent; trigger: 'input' \| 'initial' \| 'clear' })` | \-
 clear | `(context: { e: MouseEvent })` | \-
 focus | `(value: InputValue, context: { e: FocusEvent })` | \-
+validate | `(context: { error?: 'exceed-maximum' \| 'below-minimum' })` | trigger on text length being over max length or max character

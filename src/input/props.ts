@@ -26,15 +26,12 @@ export default {
   },
   /** 自动聚焦 */
   autofocus: Boolean,
+  /** 是否开启无边框模式 */
+  borderless: Boolean,
   /** 是否可清空 */
   clearable: Boolean,
   /** 是否禁用输入框 */
   disabled: Boolean,
-  /** 已废弃。错误提示文本，值为空不显示（废弃属性，如果需要，请更为使用 status 和 tips） */
-  errorMessage: {
-    type: String,
-    default: '',
-  },
   /** 指定输入框展示值的格式 */
   format: {
     type: Function as PropType<TdInputProps['format']>,

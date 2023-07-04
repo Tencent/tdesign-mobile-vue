@@ -13,6 +13,7 @@ empty | String / Slot / Function | '' | empty text or empty element。Typescript
 fixedRows | Array | - | Typescript：`Array<number>` | N
 height | String / Number | - | table height | N
 loading | Boolean / Slot / Function | undefined | loading state table。Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+loadingProps | Object | - | Typescript：`Partial<LoadingProps>`，[Loading API Documents](./loading?tab=api)。| N
 maxHeight | String / Number | - | table max height | N
 rowKey | String | 'id' | required。unique key for each row data | Y
 showHeader | Boolean | true | show table header | N

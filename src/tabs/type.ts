@@ -17,11 +17,6 @@ export interface TdTabsProps {
    */
   list?: Array<TdTabPanelProps>;
   /**
-   * 已废弃。选项卡位置
-   * @default top
-   */
-  placement?: 'left' | 'top';
-  /**
    * 是否展示底部激活线条
    * @default true
    */

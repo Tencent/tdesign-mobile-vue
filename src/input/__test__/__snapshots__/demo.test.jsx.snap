@@ -6,7 +6,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
 >
   
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -44,7 +44,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -82,7 +82,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -125,8 +125,8 @@ exports[`Input > Input alignVue demo works fine 1`] = `
 
 exports[`Input > Input bannerVue demo works fine 1`] = `
 <div
-  class="t-input t-input--layout-horizontal t-input--size-small"
-  style="border-radius: 6px; margin: 0px 16px;"
+  class="t-input t-input--layout-horizontal t-input--size-small t-input--border input-demo"
+  data-v-378bb8e9=""
 >
   <div
     class="t-input__wrap--prefix"
@@ -171,7 +171,7 @@ exports[`Input > Input baseVue demo works fine 1`] = `
 >
   
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -209,7 +209,7 @@ exports[`Input > Input baseVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -247,7 +247,7 @@ exports[`Input > Input baseVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -284,64 +284,24 @@ exports[`Input > Input baseVue demo works fine 1`] = `
       <!--v-if-->
     </div>
   </div>
-  <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
-  >
-    <div
-      class="t-input__wrap--prefix"
-    >
-      <div
-        class="t-input__icon--prefix"
-      >
-        <!--v-if-->
-      </div>
-      <div
-        class="t-input__label"
-      >
-        标签文字
-      </div>
-    </div>
-    <div
-      class="t-input__wrap"
-    >
-      <div
-        class="t-input__content t-input--default"
-      >
-        <input
-          autocomplete="Off"
-          class="t-input__control t-input--default"
-          maxlength="-1"
-          name=""
-          placeholder="请输入文字"
-          type="text"
-        />
-        <!--v-if-->
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-input__tips t-input--left"
-      >
-        辅助说明
-      </div>
-    </div>
-  </div>
   
 </div>
 `;
 
 exports[`Input > Input borderedVue demo works fine 1`] = `
 <div
-  style="--td-input-vertical-padding: 12px; background-color: rgb(255, 255, 255); padding: 16px 16px 8px;"
+  class="input-demo"
+  data-v-0b3942c8=""
 >
   <div
-    class="input-example__label"
+    class="input-demo__summary"
+    data-v-0b3942c8=""
   >
     标签文字
   </div>
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
-    style="border: 1px solid rgba(220,220,220,1); border-radius: 6px;"
+    class="t-input t-input--layout-horizontal t-input--size-small custom-input"
+    data-v-0b3942c8=""
   >
     <div
       class="t-input__wrap--prefix"
@@ -379,6 +339,7 @@ exports[`Input > Input borderedVue demo works fine 1`] = `
           
           <svg
             class="t-icon t-icon-error-circle-filled"
+            data-v-0b3942c8=""
             fill="none"
             height="1em"
             viewBox="0 0 16 16"
@@ -401,10 +362,12 @@ exports[`Input > Input borderedVue demo works fine 1`] = `
 
 exports[`Input > Input customVue demo works fine 1`] = `
 <div
-  style="--td-input-bg-color: rgba(44, 44, 44, 1); --td-input-border-color: rgba(75, 75, 75, 1); --td-input-default-text-color: rgba(255, 255, 255, 1); --td-input-placeholder-text-color: rgba(255, 255, 255, 0.35); --td-input-label-text-color: rgba(255, 255, 255, 1);"
+  class="input-demo"
+  data-v-16c31aae=""
 >
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
+    data-v-16c31aae=""
   >
     <div
       class="t-input__wrap--prefix"
@@ -446,7 +409,7 @@ exports[`Input > Input customVue demo works fine 1`] = `
 
 exports[`Input > Input labelVue demo works fine 1`] = `
 <div
-  class="t-input t-input--layout-horizontal t-input--size-small"
+  class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
 >
   <div
     class="t-input__wrap--prefix"
@@ -487,7 +450,7 @@ exports[`Input > Input labelVue demo works fine 1`] = `
 
 exports[`Input > Input layoutVue demo works fine 1`] = `
 <div
-  class="t-input t-input--layout-vertical t-input--size-small"
+  class="t-input t-input--layout-vertical t-input--size-small t-input--border"
 >
   <div
     class="t-input__wrap--prefix"
@@ -550,7 +513,7 @@ exports[`Input > Input maxLengthVue demo works fine 1`] = `
 >
   
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -592,7 +555,7 @@ exports[`Input > Input maxLengthVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -674,7 +637,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -712,7 +675,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -750,7 +713,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -787,48 +750,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <!--v-if-->
         </div>
       </div>
-      <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
-      >
-        <div
-          class="t-input__wrap--prefix"
-        >
-          <div
-            class="t-input__icon--prefix"
-          >
-            <!--v-if-->
-          </div>
-          <div
-            class="t-input__label"
-          >
-            标签文字
-          </div>
-        </div>
-        <div
-          class="t-input__wrap"
-        >
-          <div
-            class="t-input__content t-input--default"
-          >
-            <input
-              autocomplete="Off"
-              class="t-input__control t-input--default"
-              maxlength="-1"
-              name=""
-              placeholder="请输入文字"
-              type="text"
-            />
-            <!--v-if-->
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-input__tips t-input--left"
-          >
-            辅助说明
-          </div>
-        </div>
-      </div>
       
       
     </div>
@@ -852,7 +773,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -894,7 +815,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -958,7 +879,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -1014,7 +935,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -1051,7 +972,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               
               <button
                 aria-disabled="false"
-                class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
+                class="t-button t-button--size-extra-small t-button--base t-button--primary t-button--rectangle"
                 role="button"
                 type="button"
               >
@@ -1073,7 +994,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -1154,7 +1075,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -1206,7 +1127,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -1280,7 +1201,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -1309,31 +1230,38 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               type="password"
             />
+            <!--v-if-->
+            <!--v-if-->
             <div
-              class="t-input__wrap--clearable-icon"
+              class="t-input__wrap--suffix-icon"
             >
+              
               <svg
-                class="t-icon t-icon-close-circle-filled"
+                class="t-icon t-icon-browse-off"
                 fill="none"
                 height="1em"
                 viewBox="0 0 16 16"
                 width="1em"
               >
                 <path
-                  d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
+                  d="M10.77 11.98l1.38 1.37.7-.7-9.7-9.7-.7.7 1.2 1.21a7.9 7.9 0 00-2.53 2.91L1 8l.12.23a7.72 7.72 0 009.65 3.75zM10 11.2A6.67 6.67 0 012.11 8c.56-1 1.34-1.83 2.26-2.43l1.08 1.09a2.88 2.88 0 003.9 3.9l.64.64zM6.21 7.42l2.37 2.37a1.88 1.88 0 01-2.37-2.37zM14.88 8.23L15 8l-.12-.23a7.73 7.73 0 00-9.35-3.86l.8.8A6.7 6.7 0 0113.9 8a6.87 6.87 0 01-2.02 2.26l.7.7a7.9 7.9 0 002.3-2.73z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+                <path
+                  d="M10.88 8c0 .37-.07.73-.2 1.06l-.82-.82.02-.24a1.88 1.88 0 00-2.12-1.86l-.82-.82A2.87 2.87 0 0110.88 8z"
                   fill="currentColor"
                   fill-opacity="0.9"
                 />
               </svg>
+              
             </div>
-            <!--v-if-->
-            <!--v-if-->
           </div>
           <!--v-if-->
         </div>
       </div>
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -1374,13 +1302,52 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 <div
                   class="suffix--line"
                 />
-                <image
+                <div
                   aria-label="验证码"
                   aria-role="img"
-                  class="image"
+                  class="t-image t-image--square image"
                   mode="heightFix"
-                  src="https://wwcdn.weixin.qq.com/node/wework/images/202010241547.ac6876be9c.png"
-                />
+                >
+                  <div
+                    class="t-image__mask"
+                  >
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
+                    >
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                        
+                      </div>
+                      <!--v-if-->
+                      <!---->
+                    </div>
+                  </div>
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://wwcdn.weixin.qq.com/node/wework/images/202010241547.ac6876be9c.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
+                </div>
               </div>
               
             </div>
@@ -1390,7 +1357,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -1426,7 +1393,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             >
               
               <div
-                style="display: flex; align-items: center;"
+                class="suffix"
               >
                 <div
                   class="suffix--line"
@@ -1446,7 +1413,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -1488,7 +1455,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -1556,7 +1523,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -1567,7 +1534,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <!--v-if-->
           </div>
           <div
-            class="t-input__label t-input-is-error"
+            class="t-input__label"
           >
             标签文字
           </div>
@@ -1598,7 +1565,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -1609,7 +1576,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <!--v-if-->
           </div>
           <div
-            class="t-input__label t-is-disabled"
+            class="t-input__label"
           >
             不可编辑
           </div>
@@ -1622,7 +1589,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           >
             <input
               autocomplete="Off"
-              class="t-input__control t-input--default"
+              class="t-input__control t-input--default t-input__control--disabled"
               disabled=""
               maxlength="-1"
               name=""
@@ -1657,7 +1624,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -1720,7 +1687,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -1758,7 +1725,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -1796,7 +1763,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -1855,7 +1822,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-input t-input--layout-vertical t-input--size-small"
+        class="t-input t-input--layout-vertical t-input--size-small t-input--border"
       >
         <div
           class="t-input__wrap--prefix"
@@ -1931,8 +1898,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-input t-input--layout-horizontal t-input--size-small"
-        style="border-radius: 6px; margin: 0px 16px;"
+        class="t-input t-input--layout-horizontal t-input--size-small t-input--border input-demo"
+        data-v-378bb8e9=""
       >
         <div
           class="t-input__wrap--prefix"
@@ -1990,16 +1957,18 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
     >
       
       <div
-        style="--td-input-vertical-padding: 12px; background-color: rgb(255, 255, 255); padding: 16px 16px 8px;"
+        class="input-demo"
+        data-v-0b3942c8=""
       >
         <div
-          class="input-example__label"
+          class="input-demo__summary"
+          data-v-0b3942c8=""
         >
           标签文字
         </div>
         <div
-          class="t-input t-input--layout-horizontal t-input--size-small"
-          style="border: 1px solid rgba(220,220,220,1); border-radius: 6px;"
+          class="t-input t-input--layout-horizontal t-input--size-small custom-input"
+          data-v-0b3942c8=""
         >
           <div
             class="t-input__wrap--prefix"
@@ -2037,6 +2006,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 
                 <svg
                   class="t-icon t-icon-error-circle-filled"
+                  data-v-0b3942c8=""
                   fill="none"
                   height="1em"
                   viewBox="0 0 16 16"
@@ -2076,10 +2046,12 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
     >
       
       <div
-        style="--td-input-bg-color: rgba(44, 44, 44, 1); --td-input-border-color: rgba(75, 75, 75, 1); --td-input-default-text-color: rgba(255, 255, 255, 1); --td-input-placeholder-text-color: rgba(255, 255, 255, 0.35); --td-input-label-text-color: rgba(255, 255, 255, 1);"
+        class="input-demo"
+        data-v-16c31aae=""
       >
         <div
-          class="t-input t-input--layout-horizontal t-input--size-small"
+          class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
+          data-v-16c31aae=""
         >
           <div
             class="t-input__wrap--prefix"
@@ -2129,7 +2101,7 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
 >
   
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -2181,7 +2153,7 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -2242,7 +2214,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
 >
   
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -2271,31 +2243,38 @@ exports[`Input > Input specialVue demo works fine 1`] = `
           name=""
           type="password"
         />
+        <!--v-if-->
+        <!--v-if-->
         <div
-          class="t-input__wrap--clearable-icon"
+          class="t-input__wrap--suffix-icon"
         >
+          
           <svg
-            class="t-icon t-icon-close-circle-filled"
+            class="t-icon t-icon-browse-off"
             fill="none"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
           >
             <path
-              d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
+              d="M10.77 11.98l1.38 1.37.7-.7-9.7-9.7-.7.7 1.2 1.21a7.9 7.9 0 00-2.53 2.91L1 8l.12.23a7.72 7.72 0 009.65 3.75zM10 11.2A6.67 6.67 0 012.11 8c.56-1 1.34-1.83 2.26-2.43l1.08 1.09a2.88 2.88 0 003.9 3.9l.64.64zM6.21 7.42l2.37 2.37a1.88 1.88 0 01-2.37-2.37zM14.88 8.23L15 8l-.12-.23a7.73 7.73 0 00-9.35-3.86l.8.8A6.7 6.7 0 0113.9 8a6.87 6.87 0 01-2.02 2.26l.7.7a7.9 7.9 0 002.3-2.73z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+            <path
+              d="M10.88 8c0 .37-.07.73-.2 1.06l-.82-.82.02-.24a1.88 1.88 0 00-2.12-1.86l-.82-.82A2.87 2.87 0 0110.88 8z"
               fill="currentColor"
               fill-opacity="0.9"
             />
           </svg>
+          
         </div>
-        <!--v-if-->
-        <!--v-if-->
       </div>
       <!--v-if-->
     </div>
   </div>
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -2336,13 +2315,52 @@ exports[`Input > Input specialVue demo works fine 1`] = `
             <div
               class="suffix--line"
             />
-            <image
+            <div
               aria-label="验证码"
               aria-role="img"
-              class="image"
+              class="t-image t-image--square image"
               mode="heightFix"
-              src="https://wwcdn.weixin.qq.com/node/wework/images/202010241547.ac6876be9c.png"
-            />
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://wwcdn.weixin.qq.com/node/wework/images/202010241547.ac6876be9c.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </picture>
+            </div>
           </div>
           
         </div>
@@ -2352,7 +2370,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -2388,7 +2406,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
         >
           
           <div
-            style="display: flex; align-items: center;"
+            class="suffix"
           >
             <div
               class="suffix--line"
@@ -2408,7 +2426,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -2450,7 +2468,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -2501,7 +2519,7 @@ exports[`Input > Input statusVue demo works fine 1`] = `
 >
   
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -2512,7 +2530,7 @@ exports[`Input > Input statusVue demo works fine 1`] = `
         <!--v-if-->
       </div>
       <div
-        class="t-input__label t-input-is-error"
+        class="t-input__label"
       >
         标签文字
       </div>
@@ -2543,7 +2561,7 @@ exports[`Input > Input statusVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -2554,7 +2572,7 @@ exports[`Input > Input statusVue demo works fine 1`] = `
         <!--v-if-->
       </div>
       <div
-        class="t-input__label t-is-disabled"
+        class="t-input__label"
       >
         不可编辑
       </div>
@@ -2567,7 +2585,7 @@ exports[`Input > Input statusVue demo works fine 1`] = `
       >
         <input
           autocomplete="Off"
-          class="t-input__control t-input--default"
+          class="t-input__control t-input--default t-input__control--disabled"
           disabled=""
           maxlength="-1"
           name=""
@@ -2590,7 +2608,7 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
 >
   
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -2646,7 +2664,7 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
@@ -2683,7 +2701,7 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
+            class="t-button t-button--size-extra-small t-button--base t-button--primary t-button--rectangle"
             role="button"
             type="button"
           >
@@ -2705,7 +2723,7 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-input t-input--layout-horizontal t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
   >
     <div
       class="t-input__wrap--prefix"
