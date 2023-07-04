@@ -82,6 +82,7 @@ import {
   watch,
   onMounted,
   Ref,
+  nextTick,
 } from 'vue';
 import TPopup from '../popup';
 import { Tabs as TTabs, TabPanel as TTabPanel } from '../tabs';
@@ -200,6 +201,11 @@ export default defineComponent({
         stepIndex.value += 1;
         steps[level + 1] = '选择选项';
         steps.length = level + 2;
+      } else if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length === 0) {
+        nextTick(() => {
+          // console.log(pOptions.value);
+          // TODO: 这里判断有 children 但长度为 0 时 判断异步加载
+        });
       } else {
         setCascaderValue(item[keys.value?.value ?? 'value']);
         props.onChange?.(
