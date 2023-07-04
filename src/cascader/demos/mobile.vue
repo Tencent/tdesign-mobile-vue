@@ -17,6 +17,9 @@
     <tdesign-demo-block summary="使用次级标题">
       <withTitleDemo />
     </tdesign-demo-block>
+    <tdesign-demo-block summary="异步加载">
+      <lazyDemo />
+    </tdesign-demo-block>
   </div>
 </template>
 <script lang="ts" setup>
@@ -25,4 +28,5 @@ import themeTabDemo from './theme-tab.vue';
 import keysDemo from './keys.vue';
 import withValueDemo from './with-value.vue';
 import withTitleDemo from './with-title.vue';
+import lazyDemo from './lazy.vue';
 </script>

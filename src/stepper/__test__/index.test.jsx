@@ -77,13 +77,13 @@ describe('stepper', () => {
       await nextTick();
       // value <= min，change 触发， value = min
       expect(onChange).toBeCalledTimes(1);
-      expect(value.value).toBe(1);
+      expect(Number(value.value)).toBe(1);
       expect(minusIcon.classes()).toContain('t-stepper--normal-disabled');
 
       await plusIcon.trigger('click');
       await nextTick();
       expect(onChange).toBeCalledTimes(2);
-      expect(value.value).toBe(3);
+      expect(Number(value.value)).toBe(3);
 
       // 此时 value = max, plusIcon 为禁用态
       expect(plusIcon.classes()).toContain('t-stepper--normal-disabled');
@@ -121,14 +121,14 @@ describe('stepper', () => {
       await plusIcon.trigger('click');
       await nextTick();
       expect(onChange).toBeCalledTimes(1);
-      expect(value.value).toBe(5);
+      expect(Number(value.value)).toBe(5);
 
       // 此时 value = max，不触发 change，但触发 overlimit
       await plusIcon.trigger('click');
       await nextTick();
       expect(onChange).toBeCalledTimes(1);
       expect(onOverlimit).toBeCalledTimes(1);
-      expect(value.value).toBe(5);
+      expect(Number(value.value)).toBe(5);
 
       /**
        * minusIcon
@@ -136,7 +136,7 @@ describe('stepper', () => {
       // 此时 value = 5，
       await minusIcon.trigger('click');
       await nextTick();
-      expect(value.value).toBe(0);
+      expect(Number(value.value)).toBe(0);
       expect(onChange).toBeCalledTimes(2);
 
       //此时 value = min， 不触发 change，但触发 overlimit

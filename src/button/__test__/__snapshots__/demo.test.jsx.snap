@@ -276,7 +276,6 @@ exports[`Button > Button iconVue demo works fine 1`] = `
       class="t-loading"
       style="font-size: 20px;"
     >
-      
       <svg
         class="t-loading__gradient t-icon-loading"
         height="1em"
@@ -297,7 +296,6 @@ exports[`Button > Button iconVue demo works fine 1`] = `
           />
         </foreignobject>
       </svg>
-      
       <!--v-if-->
       <!---->
     </div>
@@ -544,7 +542,6 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <svg
               class="t-loading__gradient t-icon-loading"
               height="1em"
@@ -565,7 +562,6 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
                 />
               </foreignobject>
             </svg>
-            
             <!--v-if-->
             <!---->
           </div>

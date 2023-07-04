@@ -43,11 +43,11 @@ exports[`Image > Image baseVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -60,8 +60,8 @@ exports[`Image > Image baseVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -99,11 +99,11 @@ exports[`Image > Image baseVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -116,8 +116,8 @@ exports[`Image > Image baseVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -155,11 +155,11 @@ exports[`Image > Image baseVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -172,8 +172,8 @@ exports[`Image > Image baseVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -211,11 +211,11 @@ exports[`Image > Image baseVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -228,8 +228,8 @@ exports[`Image > Image baseVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -267,11 +267,11 @@ exports[`Image > Image baseVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -284,8 +284,8 @@ exports[`Image > Image baseVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -383,11 +383,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -400,8 +400,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -439,11 +439,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -456,8 +456,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -495,11 +495,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -512,8 +512,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -551,11 +551,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -568,8 +568,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -607,11 +607,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -624,8 +624,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -686,11 +686,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -703,8 +703,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -742,11 +742,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -759,8 +759,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -798,11 +798,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -815,8 +815,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -854,11 +854,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -871,8 +871,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -910,11 +910,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -927,8 +927,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -966,11 +966,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -983,8 +983,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -1022,11 +1022,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -1039,8 +1039,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -1078,11 +1078,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -1095,8 +1095,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -1134,11 +1134,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -1151,8 +1151,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -1190,11 +1190,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -1207,8 +1207,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -1268,11 +1268,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -1285,8 +1285,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -1323,11 +1323,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -1340,8 +1340,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -1378,11 +1378,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   class="t-loading"
                   style="font-size: 20px;"
                 >
-                  
                   <div
                     class="t-loading__dots"
                     style="animation-duration: 800ms; width: 20px; height: 20px;"
                   >
+                    
                     <div
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -1395,8 +1395,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                       class="t-loading__dot"
                       style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                     />
+                    
                   </div>
-                  
                   <!--v-if-->
                   <!---->
                 </div>
@@ -1461,11 +1461,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                 class="t-loading"
                 style="font-size: 20px;"
               >
-                
                 <div
                   class="t-loading__dots"
                   style="animation-duration: 800ms; width: 20px; height: 20px;"
                 >
+                  
                   <div
                     class="t-loading__dot"
                     style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -1478,8 +1478,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     class="t-loading__dot"
                     style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                   />
+                  
                 </div>
-                
                 <!--v-if-->
                 <!---->
               </div>
@@ -1518,7 +1518,6 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                 data-v-20e0193e=""
                 style="font-size: 20px;"
               >
-                
                 <svg
                   class="t-loading__gradient t-icon-loading"
                   height="1em"
@@ -1539,7 +1538,6 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                   </foreignobject>
                 </svg>
-                
                 <!--v-if-->
                 <!---->
               </div>
@@ -1582,11 +1580,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                 class="t-loading"
                 style="font-size: 20px;"
               >
-                
                 <div
                   class="t-loading__dots"
                   style="animation-duration: 800ms; width: 20px; height: 20px;"
                 >
+                  
                   <div
                     class="t-loading__dot"
                     style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -1599,8 +1597,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     class="t-loading__dot"
                     style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                   />
+                  
                 </div>
-                
                 <!--v-if-->
                 <!---->
               </div>
@@ -1637,11 +1635,11 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                 class="t-loading"
                 style="font-size: 20px;"
               >
-                
                 <div
                   class="t-loading__dots"
                   style="animation-duration: 800ms; width: 20px; height: 20px;"
                 >
+                  
                   <div
                     class="t-loading__dot"
                     style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -1654,8 +1652,8 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     class="t-loading__dot"
                     style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
                   />
+                  
                 </div>
-                
                 <!--v-if-->
                 <!---->
               </div>
@@ -1722,11 +1720,11 @@ exports[`Image > Image positionVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -1739,8 +1737,8 @@ exports[`Image > Image positionVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -1778,11 +1776,11 @@ exports[`Image > Image positionVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -1795,8 +1793,8 @@ exports[`Image > Image positionVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -1834,11 +1832,11 @@ exports[`Image > Image positionVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -1851,8 +1849,8 @@ exports[`Image > Image positionVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -1890,11 +1888,11 @@ exports[`Image > Image positionVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -1907,8 +1905,8 @@ exports[`Image > Image positionVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -1946,11 +1944,11 @@ exports[`Image > Image positionVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -1963,8 +1961,8 @@ exports[`Image > Image positionVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -2002,11 +2000,11 @@ exports[`Image > Image positionVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -2019,8 +2017,8 @@ exports[`Image > Image positionVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -2058,11 +2056,11 @@ exports[`Image > Image positionVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -2075,8 +2073,8 @@ exports[`Image > Image positionVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -2114,11 +2112,11 @@ exports[`Image > Image positionVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -2131,8 +2129,8 @@ exports[`Image > Image positionVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -2170,11 +2168,11 @@ exports[`Image > Image positionVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -2187,8 +2185,8 @@ exports[`Image > Image positionVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -2226,11 +2224,11 @@ exports[`Image > Image positionVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -2243,8 +2241,8 @@ exports[`Image > Image positionVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -2306,11 +2304,11 @@ exports[`Image > Image shapeVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -2323,8 +2321,8 @@ exports[`Image > Image shapeVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -2361,11 +2359,11 @@ exports[`Image > Image shapeVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -2378,8 +2376,8 @@ exports[`Image > Image shapeVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -2416,11 +2414,11 @@ exports[`Image > Image shapeVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -2433,8 +2431,8 @@ exports[`Image > Image shapeVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -2484,11 +2482,11 @@ exports[`Image > Image statusVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -2501,8 +2499,8 @@ exports[`Image > Image statusVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -2541,7 +2539,6 @@ exports[`Image > Image statusVue demo works fine 1`] = `
             data-v-20e0193e=""
             style="font-size: 20px;"
           >
-            
             <svg
               class="t-loading__gradient t-icon-loading"
               height="1em"
@@ -2562,7 +2559,6 @@ exports[`Image > Image statusVue demo works fine 1`] = `
                 />
               </foreignobject>
             </svg>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -2605,11 +2601,11 @@ exports[`Image > Image statusVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -2622,8 +2618,8 @@ exports[`Image > Image statusVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>
@@ -2660,11 +2656,11 @@ exports[`Image > Image statusVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            
             <div
               class="t-loading__dots"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
             >
+              
               <div
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -2677,8 +2673,8 @@ exports[`Image > Image statusVue demo works fine 1`] = `
                 class="t-loading__dot"
                 style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
               />
+              
             </div>
-            
             <!--v-if-->
             <!---->
           </div>

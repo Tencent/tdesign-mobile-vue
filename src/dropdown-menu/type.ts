@@ -13,6 +13,11 @@ export interface TdDropdownMenuProps {
    */
   closeOnClickOverlay?: boolean;
   /**
+   * 菜单展开方向
+   * @default down
+   */
+  direction?: 'down' | 'up';
+  /**
    * 动画时长
    * @default 200
    */
@@ -59,12 +64,6 @@ export interface TdDropdownItemProps {
    * @default 1
    */
   optionsColumns?: string | number;
-  /**
-   * 选项排列；不再支持 tree 布局，可与 treeSelect 配合使用
-   * @default columns
-   * @deprecated
-   */
-  optionsLayout?: string;
   /**
    * 选中值
    */

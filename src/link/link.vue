@@ -34,7 +34,6 @@ export default defineComponent({
   },
   props: LinkProps,
   setup(props) {
-    const baseClass = name;
     const _this = getCurrentInstance();
     const linkContent = computed(() => renderContent(_this, 'default', 'content'));
     const prefixContent = computed(() => renderTNode(_this, 'prefixIcon'));

@@ -8,6 +8,11 @@ import { TNode } from '../common';
 
 export interface TdPopoverProps {
   /**
+   * 是否在点击外部元素后关闭菜单
+   * @default true
+   */
+  closeOnClickOutside?: boolean;
+  /**
    * 确认框内容
    */
   content?: string | TNode;

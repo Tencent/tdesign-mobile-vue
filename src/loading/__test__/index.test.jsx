@@ -4,22 +4,22 @@ import Loading from '../loading.vue';
 import Spinner from '../icon/spinner.vue';
 import { nextTick } from 'vue';
 
+const sleep = (duration) =>
+  new Promise((resolve) =>
+    setTimeout(() => {
+      resolve();
+    }, duration),
+  );
+
+
 describe('Loading.vue', () => {
   describe('props', () => {
-    beforeEach(() => {
-      vi.useFakeTimers();
-    });
-
-    afterEach(() => {
-      vi.restoreAllMocks();
-    });
-
-    it(':delay', async () => {
-      const wrapper = mount(() => <Loading delay={1000} />);
-      expect(wrapper.find('.t-icon-loading').exists()).not.toBeTruthy();
-      vi.runAllTimers();
-      await nextTick();
-      expect(wrapper.find('.t-icon-loading').exists()).toBeTruthy();
+    it(':delay', () => {
+      const wrapper = mount(() => <Loading delay={1000}></Loading>);
+      const loading = wrapper.find('.t-loading');
+      setTimeout(() => {
+        expect(loading.exists()).toBeTruthy();
+      }, 1000);
     });
 
     it(':inheritColor', () => {

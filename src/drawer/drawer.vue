@@ -55,7 +55,7 @@ export default defineComponent({
   emits: ['update:visible', 'itemClick', 'overlayClick'],
   setup(props, context) {
     const currentInstance = getCurrentInstance();
-    const { visible, items, placement, showOverlay } = toRefs(props);
+    const { visible, placement, showOverlay } = toRefs(props);
     const open = ref(visible.value || false);
 
     const titleNode = computed(() => renderTNode(currentInstance, 'title'));
@@ -85,7 +85,6 @@ export default defineComponent({
 
     return {
       name,
-      items,
       placement,
       showOverlay,
       open,

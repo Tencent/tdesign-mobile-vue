@@ -5,7 +5,6 @@ exports[`Loading.vue > props > :pause 1`] = `
   class="t-loading"
   style="font-size: 20px;"
 >
-  
   <svg
     class="t-loading__gradient t-icon-loading"
     height="1em"
@@ -26,7 +25,6 @@ exports[`Loading.vue > props > :pause 1`] = `
       />
     </foreignobject>
   </svg>
-  
   <!--v-if-->
   <!---->
 </div>
@@ -37,7 +35,6 @@ exports[`Loading.vue > props > :reverse 1`] = `
   class="t-loading"
   style="font-size: 20px;"
 >
-  
   <svg
     class="t-loading__gradient t-icon-loading"
     height="1em"
@@ -58,7 +55,6 @@ exports[`Loading.vue > props > :reverse 1`] = `
       />
     </foreignobject>
   </svg>
-  
   <!--v-if-->
   <!---->
 </div>
