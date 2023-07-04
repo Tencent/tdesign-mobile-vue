@@ -35,7 +35,7 @@ export default defineComponent({
   components: { TChevronLeftIcon, TNode },
   props: NavbarProps,
   emits: ['left-click', 'right-click'],
-  setup(props, context) {
+  setup(props) {
     const internalInstance = getCurrentInstance();
     const { title, titleMaxLength, fixed } = toRefs(props);
 

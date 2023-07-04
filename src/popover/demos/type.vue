@@ -2,15 +2,9 @@
   <div class="popover-example">
     <div class="popover-example__summary mb-16">带箭头的弹出气泡</div>
     <div class="popover-example__content mb-24">
-      <t-popover
-        :visible="visibleList[0]"
-        placement="top"
-        theme="dark"
-        content="弹出气泡内容"
-        @visible-change="handleVisibleChange"
-      >
+      <t-popover placement="top" theme="dark" content="弹出气泡内容" :close-on-click-outside="false">
         <template #triggerElement>
-          <t-button theme="primary" variant="outline" size="large" @click="handleClick(0)">带箭头</t-button>
+          <t-button theme="primary" variant="outline" size="large">带箭头</t-button>
         </template>
       </t-popover>
     </div>
@@ -18,9 +12,16 @@
   <div class="popover-example">
     <div class="popover-example__summary mb-16">不带箭头的弹出气泡</div>
     <div class="popover-example__content mb-24">
-      <t-popover :visible="visibleList[1]" placement="top" theme="dark" :show-arrow="false" content="弹出气泡内容">
+      <t-popover
+        :visible="visible"
+        placement="top"
+        theme="dark"
+        :show-arrow="false"
+        content="弹出气泡内容"
+        @visible-change="handleVisibleChange"
+      >
         <template #triggerElement>
-          <t-button theme="primary" variant="outline" size="large" @click="handleClick(1)">不带箭头</t-button>
+          <t-button theme="primary" variant="outline" size="large">不带箭头</t-button>
         </template>
       </t-popover>
     </div>
@@ -28,9 +29,9 @@
   <div class="popover-example">
     <div class="popover-example__summary mb-16">自定义内容弹出气泡</div>
     <div class="custom popover-example__content mb-24">
-      <t-popover :visible="visibleList[2]" placement="top" theme="dark">
+      <t-popover placement="top" theme="dark">
         <template #triggerElement>
-          <t-button theme="primary" variant="outline" size="large" @click="handleClick(2)">自定义内容</t-button>
+          <t-button theme="primary" variant="outline" size="large">自定义内容</t-button>
         </template>
         <template #content>
           <div class="custom__list">
@@ -44,20 +45,10 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const visibleList = ref([false, false, false]);
+const visible = ref(false);
 
-const handleClick = (number: number) => {
-  const newVisibleList = visibleList.value.map((item, index) => {
-    if (index === number) {
-      return !item;
-    }
-    return false;
-  });
-  visibleList.value = newVisibleList;
-};
-
-const handleVisibleChange = (visible: boolean) => {
-  console.log('visible is: ', visible);
+const handleVisibleChange = (val: boolean) => {
+  visible.value = val;
 };
 </script>
 

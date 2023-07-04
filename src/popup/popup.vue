@@ -89,7 +89,7 @@ export default defineComponent({
 
     const handleCloseClick = (e: MouseEvent) => {
       props.onClose?.({ e });
-      setVisible(false);
+      setVisible(false, { trigger: 'close-btn' });
     };
 
     const handleOverlayClick = (args: { e: MouseEvent }) => {
@@ -98,7 +98,7 @@ export default defineComponent({
         return;
       }
       props.onClose?.({ e });
-      setVisible(false);
+      setVisible(false, { trigger: 'overlay' });
     };
 
     const afterLeave = () => {

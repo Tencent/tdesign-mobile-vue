@@ -26,15 +26,12 @@ export default {
   },
   /** 自动聚焦 */
   autofocus: Boolean,
+  /** 是否开启无边框模式 */
+  borderless: Boolean,
   /** 是否可清空 */
   clearable: Boolean,
   /** 是否禁用输入框 */
   disabled: Boolean,
-  /** 已废弃。错误提示文本，值为空不显示（废弃属性，如果需要，请更为使用 status 和 tips） */
-  errorMessage: {
-    type: String,
-    default: '',
-  },
   /** 指定输入框展示值的格式 */
   format: {
     type: Function as PropType<TdInputProps['format']>,
@@ -51,11 +48,6 @@ export default {
       if (!val) return true;
       return ['vertical', 'horizontal'].includes(val);
     },
-  },
-  /** 是否开启无边框模式 */
-  borderless: {
-    type: Boolean,
-    value: false,
   },
   /** 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用 */
   maxcharacter: {

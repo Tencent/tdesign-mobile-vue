@@ -10,8 +10,6 @@ import { PropType } from 'vue';
 export default {
   /** 是否允许半选 */
   allowHalf: Boolean,
-  /** 已废弃。是否允许取消选择 */
-  clearable: Boolean,
   /** 评分图标的颜色，样式中默认为 #ED7B2F。一个值表示设置选中高亮的五角星颜色，示例：[选中颜色]。数组则表示分别设置 选中高亮的五角星颜色 和 未选中暗灰的五角星颜色，[选中颜色，未选中颜色]。示例：['#ED7B2F', '#E3E6EB']。 */
   color: {
     type: [String, Array] as PropType<TdRateProps['color']>,
@@ -31,7 +29,7 @@ export default {
   },
   /** 自定义评分图标，[选中图标，未选中图标] */
   icon: {
-    type: [Function, Array] as PropType<TdRateProps['icon']>,
+    type: [Array, Function] as PropType<TdRateProps['icon']>,
   },
   /** 是否显示对应的辅助文字 */
   showText: Boolean,

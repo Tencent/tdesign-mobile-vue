@@ -8,10 +8,6 @@ import { TdSwitchProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 已废弃。已废弃。自定义颜色，[打开时的颜色，关闭时的颜色]。组件默认颜色为 ['#0052d9', 'rgba(0, 0, 0, .26']。示例：[blue, gray] */
-  colors: {
-    type: Array as PropType<TdSwitchProps['colors']>,
-  },
   /** 用于自定义开关的值，[打开时的值，关闭时的值]。默认为 [true, false]。示例：[1, 0]、['open', 'close'] */
   customValue: {
     type: Array as PropType<TdSwitchProps['customValue']>,

@@ -6,6 +6,7 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 closeOnClickOverlay | Boolean | true | \- | N
+direction | String | down | options：down/up | N
 duration | String / Number | 200 | \- | N
 showOverlay | Boolean | true | \- | N
 zIndex | Number | 11600 | \- | N
@@ -20,7 +21,6 @@ label | String | - | \- | N
 multiple | Boolean | false | \- | N
 options | Array | [] | Typescript：`Array<DropdownOption>` `interface DropdownOption { label: string; disabled: boolean; value: DropdownValue; }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
 optionsColumns | String / Number | 1 | \- | N
-optionsLayout | String | columns | `deprecated` | N
 value | String / Number | undefined | `v-model` and `v-model:value` is supported。Typescript：`DropdownValue ` `type DropdownValue = string \| number;`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
 defaultValue | String / Number | undefined | uncontrolled property。Typescript：`DropdownValue ` `type DropdownValue = string \| number;`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
 onChange | Function |  | Typescript：`(value: DropdownValue) => void`<br/> | N

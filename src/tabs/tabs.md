@@ -7,7 +7,6 @@
 -- | -- | -- | -- | --
 animation | Object | - | 动画效果设置。其中 duration 表示动画时长。TS 类型：`TabAnimation` `type TabAnimation = { duration: number } & Record<string, any>`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tabs/type.ts) | N
 list | Array | - | 选项卡列表。TS 类型：`Array<TdTabPanelProps>` | N
-placement | String | top | 已废弃。选项卡位置。可选项：left/top | N
 showBottomLine | Boolean | true | 是否展示底部激活线条 | N
 size | String | medium | 组件尺寸。可选项：medium/large | N
 spaceEvenly | Boolean | true | 选项卡头部空间是否均分 | N

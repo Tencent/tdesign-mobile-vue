@@ -1,11 +1,14 @@
 import { RouteRecordRaw, createRouter, createWebHistory, RouterOptions } from 'vue-router';
-import docsConfig from '../docs.config';
+import config from '../docs.config';
 import { sortDocs } from './utils';
 
-const docs = sortDocs(docsConfig.docs);
+const docs = sortDocs(config.docs);
+const enDocs = sortDocs(config.enDocs);
 
 function getDocsRoutes(docs: any[], type: string): RouteRecordRaw[] {
   let docsRoutes: Array<RouteRecordRaw> = [];
+  let docRoute;
+
   docs.forEach((item) => {
     const docType = item.type || type;
     if (docType === type) {
@@ -13,17 +16,14 @@ function getDocsRoutes(docs: any[], type: string): RouteRecordRaw[] {
       if (children) {
         docsRoutes = docsRoutes.concat(getDocsRoutes(children, docType));
       } else {
-        docsRoutes.push({
-          path: item.path,
-          name: item.name,
-          meta: item.meta || {},
-          component: item.component,
-        });
+        docRoute = { ...item };
+        docsRoutes.push(docRoute);
       }
     }
   });
   return docsRoutes;
 }
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -35,6 +35,8 @@ const routes: Array<RouteRecordRaw> = [
   },
   ...getDocsRoutes(docs, 'document'),
   ...getDocsRoutes(docs, 'component'),
+  ...getDocsRoutes(enDocs, 'document'),
+  ...getDocsRoutes(enDocs, 'component'),
 ];
 
 const routerConfig: RouterOptions = {

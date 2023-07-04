@@ -82,6 +82,7 @@ import {
   watch,
   onMounted,
   Ref,
+  nextTick,
 } from 'vue';
 import TPopup from '../popup';
 import { Tabs as TTabs, TabPanel as TTabPanel } from '../tabs';
@@ -94,6 +95,16 @@ import { TreeOptionData } from '../common';
 const { prefix } = config;
 const name = `${prefix}-cascader`;
 const defaultOptionLabel = '选择选项';
+
+interface ChildrenInfoType {
+  value: string | number;
+  level: number;
+}
+
+const childrenInfo: ChildrenInfoType = {
+  value: '',
+  level: 0,
+};
 
 interface KeysType {
   value?: string;
@@ -200,6 +211,9 @@ export default defineComponent({
         stepIndex.value += 1;
         steps[level + 1] = '选择选项';
         steps.length = level + 2;
+      } else if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length === 0) {
+        childrenInfo.value = e;
+        childrenInfo.level = level;
       } else {
         setCascaderValue(item[keys.value?.value ?? 'value']);
         props.onChange?.(
@@ -217,6 +231,18 @@ export default defineComponent({
     watch(visible, () => {
       open.value = visible.value;
     });
+
+    watch(
+      () => props.options,
+      () => {
+        if (open.value) {
+          handleSelect(childrenInfo.value, childrenInfo.level);
+        }
+      },
+      {
+        deep: true,
+      },
+    );
 
     const close = (trigger: string) => {
       props.onClose?.({ trigger });

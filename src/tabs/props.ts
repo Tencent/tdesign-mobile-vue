@@ -16,15 +16,6 @@ export default {
   list: {
     type: Array as PropType<TdTabsProps['list']>,
   },
-  /** 已废弃。选项卡位置 */
-  placement: {
-    type: String as PropType<TdTabsProps['placement']>,
-    default: 'top' as TdTabsProps['placement'],
-    validator(val: TdTabsProps['placement']): boolean {
-      if (!val) return true;
-      return ['left', 'top'].includes(val);
-    },
-  },
   /** 是否展示底部激活线条 */
   showBottomLine: {
     type: Boolean,
