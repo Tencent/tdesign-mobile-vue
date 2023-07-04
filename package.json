@@ -13,6 +13,7 @@
     "url": "https://github.com/tencent/tdesign-mobile-vue"
   },
   "scripts": {
+    "init": "git submodule init && git submodule update",
     "start": "npm run dev",
     "prepare": "husky install .husky",
     "dev": "cd site && cross-env NODE_ENV=development vite",

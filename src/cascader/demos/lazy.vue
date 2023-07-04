@@ -4,7 +4,7 @@
     v-model:visible="visible"
     :value="address"
     title="选择地址"
-    :options="options"
+    :options="data"
     @pick="onPick"
     @change="onChange"
   />
@@ -14,17 +14,15 @@
 import { ref, computed } from 'vue';
 import Toast from '../../toast/index';
 
-const data = {
-  areaList: [
-    {
-      label: '深圳市',
-      value: '440300',
-      children: [] as any[],
-    },
-  ],
-};
+const data = ref([
+  {
+    label: '深圳市',
+    value: '440300',
+    children: [] as any[],
+  },
+]);
 const options = computed(() => {
-  return data.areaList;
+  return data.value;
 });
 const address = ref();
 const visible = ref(false);
@@ -43,7 +41,7 @@ const onPick = (value: string) => {
     });
     // 模拟数据请求
     setTimeout(() => {
-      options.value[0].children = [
+      data.value[0].children = [
         { value: '440304', label: '福田区' },
         { value: '440303', label: '罗湖区' },
         { value: '440305', label: '南山区' },

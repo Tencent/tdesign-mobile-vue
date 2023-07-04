@@ -223,6 +223,15 @@ export default defineComponent({
     watch(visible, () => {
       open.value = visible.value;
     });
+    watch(
+      () => props.options,
+      () => {
+        console.log('options change');
+      },
+      {
+        deep: true,
+      },
+    );
 
     const close = (trigger: string) => {
       props.onClose?.({ trigger });
