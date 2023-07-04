@@ -10,7 +10,6 @@ exports[`Loading > Loading baseVue demo works fine 1`] = `
     data-v-4a68c35c=""
     style="font-size: 20px;"
   >
-    
     <svg
       class="t-loading__gradient t-icon-loading"
       height="1em"
@@ -31,7 +30,6 @@ exports[`Loading > Loading baseVue demo works fine 1`] = `
         />
       </foreignobject>
     </svg>
-    
     <!--v-if-->
     <!---->
   </div>
@@ -40,7 +38,6 @@ exports[`Loading > Loading baseVue demo works fine 1`] = `
     data-v-4a68c35c=""
     style="font-size: 20px;"
   >
-    
     <span
       class="t-loading__spinner"
       style="animation-duration: 800ms; width: 20px; height: 20px;"
@@ -84,7 +81,6 @@ exports[`Loading > Loading baseVue demo works fine 1`] = `
       />
       
     </span>
-    
     <!--v-if-->
     <!---->
   </div>
@@ -93,11 +89,11 @@ exports[`Loading > Loading baseVue demo works fine 1`] = `
     data-v-4a68c35c=""
     style="font-size: 40px;"
   >
-    
     <div
       class="t-loading__dots"
       style="animation-duration: 800ms; width: 40px; height: 40px;"
     >
+      
       <div
         class="t-loading__dot"
         style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -110,8 +106,8 @@ exports[`Loading > Loading baseVue demo works fine 1`] = `
         class="t-loading__dot"
         style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
       />
+      
     </div>
-    
     <!--v-if-->
     <!---->
   </div>
@@ -172,7 +168,6 @@ exports[`Loading > Loading horzVue demo works fine 1`] = `
     data-v-c48bb9cc=""
     style="font-size: 20px;"
   >
-    
     <svg
       class="t-loading__gradient t-icon-loading"
       height="1em"
@@ -193,7 +188,6 @@ exports[`Loading > Loading horzVue demo works fine 1`] = `
         />
       </foreignobject>
     </svg>
-    
     <span
       class="t-loading__text"
     >
@@ -206,7 +200,6 @@ exports[`Loading > Loading horzVue demo works fine 1`] = `
     data-v-c48bb9cc=""
     style="font-size: 20px;"
   >
-    
     <span
       class="t-loading__spinner"
       style="animation-duration: 800ms; width: 20px; height: 20px;"
@@ -250,7 +243,6 @@ exports[`Loading > Loading horzVue demo works fine 1`] = `
       />
       
     </span>
-    
     <span
       class="t-loading__text"
     >
@@ -311,7 +303,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           data-v-4a68c35c=""
           style="font-size: 20px;"
         >
-          
           <svg
             class="t-loading__gradient t-icon-loading"
             height="1em"
@@ -332,7 +323,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
               />
             </foreignobject>
           </svg>
-          
           <!--v-if-->
           <!---->
         </div>
@@ -341,7 +331,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           data-v-4a68c35c=""
           style="font-size: 20px;"
         >
-          
           <span
             class="t-loading__spinner"
             style="animation-duration: 800ms; width: 20px; height: 20px;"
@@ -385,7 +374,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
             />
             
           </span>
-          
           <!--v-if-->
           <!---->
         </div>
@@ -394,11 +382,11 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           data-v-4a68c35c=""
           style="font-size: 40px;"
         >
-          
           <div
             class="t-loading__dots"
             style="animation-duration: 800ms; width: 40px; height: 40px;"
           >
+            
             <div
               class="t-loading__dot"
               style="animation-duration: 0.8s; animation-delay: 0s;"
@@ -411,8 +399,8 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
               class="t-loading__dot"
               style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
             />
+            
           </div>
-          
           <!--v-if-->
           <!---->
         </div>
@@ -449,7 +437,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           data-v-c48bb9cc=""
           style="font-size: 20px;"
         >
-          
           <svg
             class="t-loading__gradient t-icon-loading"
             height="1em"
@@ -470,7 +457,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
               />
             </foreignobject>
           </svg>
-          
           <span
             class="t-loading__text"
           >
@@ -483,7 +469,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           data-v-c48bb9cc=""
           style="font-size: 20px;"
         >
-          
           <span
             class="t-loading__spinner"
             style="animation-duration: 800ms; width: 20px; height: 20px;"
@@ -527,7 +512,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
             />
             
           </span>
-          
           <span
             class="t-loading__text"
           >
@@ -572,7 +556,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
             data-v-3ab7b9bc=""
             style="font-size: 20px;"
           >
-            
             <svg
               class="t-loading__gradient t-icon-loading"
               height="1em"
@@ -593,7 +576,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
                 />
               </foreignobject>
             </svg>
-            
             <span
               class="t-loading__text"
             >
@@ -606,7 +588,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
             data-v-3ab7b9bc=""
             style="font-size: 20px;"
           >
-            
             <span
               class="t-loading__spinner"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
@@ -650,7 +631,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
               />
               
             </span>
-            
             <span
               class="t-loading__text"
             >
@@ -736,7 +716,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           data-v-38fef6e8=""
           style="font-size: 26px;"
         >
-          
           <svg
             class="t-loading__gradient t-icon-loading"
             height="1em"
@@ -757,7 +736,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
               />
             </foreignobject>
           </svg>
-          
           <span
             class="t-loading__text"
           >
@@ -781,7 +759,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           data-v-38fef6e8=""
           style="font-size: 22px;"
         >
-          
           <svg
             class="t-loading__gradient t-icon-loading"
             height="1em"
@@ -802,7 +779,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
               />
             </foreignobject>
           </svg>
-          
           <span
             class="t-loading__text"
           >
@@ -826,7 +802,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           data-v-38fef6e8=""
           style="font-size: 20px;"
         >
-          
           <svg
             class="t-loading__gradient t-icon-loading"
             height="1em"
@@ -847,7 +822,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
               />
             </foreignobject>
           </svg>
-          
           <span
             class="t-loading__text"
           >
@@ -892,7 +866,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           data-v-0fadab4c=""
           style="font-size: 20px;"
         >
-          
           <svg
             class="t-loading__gradient t-icon-loading"
             height="1em"
@@ -913,7 +886,6 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
               />
             </foreignobject>
           </svg>
-          
           <span
             class="t-loading__text"
           >
@@ -997,7 +969,6 @@ exports[`Loading > Loading sizeVue demo works fine 1`] = `
       data-v-38fef6e8=""
       style="font-size: 26px;"
     >
-      
       <svg
         class="t-loading__gradient t-icon-loading"
         height="1em"
@@ -1018,7 +989,6 @@ exports[`Loading > Loading sizeVue demo works fine 1`] = `
           />
         </foreignobject>
       </svg>
-      
       <span
         class="t-loading__text"
       >
@@ -1042,7 +1012,6 @@ exports[`Loading > Loading sizeVue demo works fine 1`] = `
       data-v-38fef6e8=""
       style="font-size: 22px;"
     >
-      
       <svg
         class="t-loading__gradient t-icon-loading"
         height="1em"
@@ -1063,7 +1032,6 @@ exports[`Loading > Loading sizeVue demo works fine 1`] = `
           />
         </foreignobject>
       </svg>
-      
       <span
         class="t-loading__text"
       >
@@ -1087,7 +1055,6 @@ exports[`Loading > Loading sizeVue demo works fine 1`] = `
       data-v-38fef6e8=""
       style="font-size: 20px;"
     >
-      
       <svg
         class="t-loading__gradient t-icon-loading"
         height="1em"
@@ -1108,7 +1075,6 @@ exports[`Loading > Loading sizeVue demo works fine 1`] = `
           />
         </foreignobject>
       </svg>
-      
       <span
         class="t-loading__text"
       >
@@ -1135,7 +1101,6 @@ exports[`Loading > Loading speedVue demo works fine 1`] = `
       data-v-0fadab4c=""
       style="font-size: 20px;"
     >
-      
       <svg
         class="t-loading__gradient t-icon-loading"
         height="1em"
@@ -1156,7 +1121,6 @@ exports[`Loading > Loading speedVue demo works fine 1`] = `
           />
         </foreignobject>
       </svg>
-      
       <span
         class="t-loading__text"
       >
@@ -1212,7 +1176,6 @@ exports[`Loading > Loading vertVue demo works fine 1`] = `
     data-v-3ab7b9bc=""
     style="font-size: 20px;"
   >
-    
     <svg
       class="t-loading__gradient t-icon-loading"
       height="1em"
@@ -1233,7 +1196,6 @@ exports[`Loading > Loading vertVue demo works fine 1`] = `
         />
       </foreignobject>
     </svg>
-    
     <span
       class="t-loading__text"
     >
@@ -1246,7 +1208,6 @@ exports[`Loading > Loading vertVue demo works fine 1`] = `
     data-v-3ab7b9bc=""
     style="font-size: 20px;"
   >
-    
     <span
       class="t-loading__spinner"
       style="animation-duration: 800ms; width: 20px; height: 20px;"
@@ -1290,7 +1251,6 @@ exports[`Loading > Loading vertVue demo works fine 1`] = `
       />
       
     </span>
-    
     <span
       class="t-loading__text"
     >
