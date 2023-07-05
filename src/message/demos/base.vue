@@ -14,12 +14,14 @@
   <t-message v-model="visible1" :offset="['10px', '16px']" :duration="5000" content="这是一条普通的通知信息" />
 
   <!-- 带关闭通知 -->
-  <t-message v-model="visible2" :offset="['10px', 16]" :duration="-1" content="这是一条普通的通知信息">
-    <template #closeBtn>
-      <t-button class="close-btn" variant="text">按钮</t-button>
-      <closeIcon class="t-message__icon--right" />
-    </template>
-  </t-message>
+  <t-message
+    v-model="visible2"
+    :offset="['10px', 16]"
+    :duration="-1"
+    content="这是一条普通的通知信息"
+    :link="{ content: '按钮' }"
+    :close-btn="true"
+  />
 
   <!-- 滚动通知 -->
   <t-message
@@ -31,11 +33,7 @@
   />
 
   <!-- 带按钮通知 -->
-  <t-message v-model="visible4" :offset="[10, 16]" :duration="-1" content="这是一条普通的通知信息">
-    <template #closeBtn>
-      <t-button class="close-btn" variant="text">按钮</t-button>
-    </template>
-  </t-message>
+  <t-message v-model="visible4" :offset="[10, 16]" :duration="-1" content="这是一条普通的通知信息" link="链接" />
 </template>
 
 <script lang="ts" setup>
