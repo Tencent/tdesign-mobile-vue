@@ -36,7 +36,7 @@ import {
   ComponentInternalInstance,
   watch,
 } from 'vue';
-import _ from 'lodash';
+import throttle from 'lodash/throttle';
 import config from '../config';
 import IndexesProps from './props';
 
@@ -151,7 +151,7 @@ export default defineComponent({
       scrollToByIndex(index);
     };
 
-    const handleRootScroll = _.throttle((e: UIEvent) => {
+    const handleRootScroll = throttle((e: UIEvent) => {
       const scrollTop = indexesRoot.value?.scrollTop ?? 0;
       setAnchorOnScroll(scrollTop);
     }, 1000 / 30);

@@ -86,7 +86,8 @@ import {
   onUnmounted,
 } from 'vue';
 import isFunction from 'lodash/isFunction';
-import { isArray, isBoolean } from 'lodash';
+import isArray from 'lodash/isArray';
+import isBoolean from 'lodash/isBoolean';
 import { useSwipe } from './useSwipe';
 import props from './props';
 import config from '../config';
