@@ -33,7 +33,7 @@ export default {
   /** 前缀图标 */
   prefixIcon: {
     type: [Boolean, Function] as PropType<TdNoticeBarProps['prefixIcon']>,
-    default: null,
+    default: true,
   },
   /** 后缀图标 */
   suffixIcon: {

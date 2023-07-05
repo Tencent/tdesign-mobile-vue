@@ -156,7 +156,7 @@ describe('NoticeBar', async () => {
         triggerName = name;
       });
       const wrapper = mount(
-        <NoticeBar visible prefix-icon="pre" content="test" extra="extra" suffix-icon="suffix" onClick={fn} />,
+        <NoticeBar visible prefix-icon="pre" content="test" extra="extra" suffix-icon="suffix" operation="operation" onClick={fn} />,
       );
       await wrapper.find('.t-notice-bar__prefix-icon').trigger('click');
       expect(triggerName).toBe('prefix-icon');

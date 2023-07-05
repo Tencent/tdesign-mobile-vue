@@ -1,7 +1,11 @@
 <template>
   <div v-if="isShow" :class="rootClasses">
     <!-- prefixIcon -->
-    <div :class="`${name}__prefix-icon`" @click="() => handleClick('prefix-icon')">
+    <div
+      v-if="prefixIcon && prefixIconContent"
+      :class="`${name}__prefix-icon`"
+      @click="() => handleClick('prefix-icon')"
+    >
       <t-node :content="prefixIconContent"></t-node>
     </div>
     <!-- content -->
@@ -30,17 +34,13 @@
         @transitionend="handleTransitionend()"
       >
         <t-node v-if="showContent" :content="showContent"></t-node>
-        <span :class="`${name}__operation`" @click.stop="() => handleClick('operation')">
+        <span v-if="operationContent" :class="`${name}__operation`" @click.stop="() => handleClick('operation')">
           <t-node :content="operationContent"></t-node>
         </span>
       </div>
     </div>
     <!-- suffixIcon -->
-    <div
-      v-if="suffixIconContent !== undefined"
-      :class="`${name}__suffix-icon`"
-      @click="() => handleClick('suffix-icon')"
-    >
+    <div v-if="suffixIconContent" :class="`${name}__suffix-icon`" @click="() => handleClick('suffix-icon')">
       <t-node :content="suffixIconContent"></t-node>
     </div>
   </div>
@@ -101,19 +101,10 @@ export default defineComponent({
     const rootClasses = computed(() => [`${name}`, `${name}--${props.theme}`]);
 
     // prefix-icon
-    const prefixIconContent = computed(() => {
-      let iconContent = null;
-      if (typeof props.prefixIcon === 'boolean' && props.prefixIcon === false) {
-        return;
-      }
-      if (props.prefixIcon || context.slots.prefixIcon) {
-        iconContent = renderTNode(internalInstance, 'prefixIcon');
-      } else {
-        const key = props.theme as string;
-        iconContent = iconDefault?.[key] || null;
-      }
-      return iconContent;
-    });
+    const prefixIconContent = computed(() =>
+      renderTNode(internalInstance, 'prefixIcon', { defaultNode: iconDefault[props.theme || 'info'] }),
+    );
+
     // suffix-icon
     const suffixIconContent = computed(() => renderTNode(internalInstance, 'suffixIcon'));
     // operation
