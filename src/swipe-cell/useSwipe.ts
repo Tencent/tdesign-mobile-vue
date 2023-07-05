@@ -2,6 +2,7 @@ import type { ComputedRef, Ref } from 'vue';
 import { computed, reactive, ref } from 'vue';
 import { useEventListener } from '@vueuse/core';
 import { isObject } from 'lodash';
+import { preventDefault } from '../shared/dom';
 
 const noop = () => {};
 
@@ -122,7 +123,7 @@ export function useSwipe(
           listenerOptions === true ||
           (isObject(listenerOptions) && listenerOptions.capture && !listenerOptions.passive)
         )
-          e.preventDefault();
+          preventDefault(e, false);
         const [x, y] = getTouchEventCoords(e);
         updateCoordsStart(x, y);
         updateCoordsEnd(x, y);

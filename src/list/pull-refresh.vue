@@ -21,6 +21,7 @@
 
 <script lang="ts">
 import { defineComponent, nextTick, reactive, ref, computed, watch } from 'vue';
+import { preventDefault } from '../shared/dom';
 import config from '../config';
 import TLoading from '../loading';
 
@@ -136,7 +137,7 @@ export default defineComponent({
 
       const { deltaY } = touch;
       if (deltaY.value >= 0) {
-        e.preventDefault();
+        preventDefault(e, false);
         setStatus(easeDistance(deltaY.value, PULL_DISTANCE));
       }
       touch.move(e);

@@ -92,6 +92,7 @@ import props from './props';
 import config from '../config';
 import { SwipeActionItem } from './type';
 import { renderContent, renderTNode, TNode, useClickAway } from '../shared';
+import { preventDefault } from '../shared/dom';
 import { useSureConfirm } from './useSureConfirm';
 
 const { prefix } = config;
@@ -201,7 +202,7 @@ export default defineComponent({
           swipeDir = -1;
           return;
         }
-        e.preventDefault();
+        preventDefault(e, false);
 
         if (props.disabled || Math.abs(lengthX.value) < distance) {
           return;
@@ -394,8 +395,7 @@ export default defineComponent({
     // 点击事件拦截，判定是否透传事件
     const handleCellClick = (e: Event) => {
       if (initData.moved) {
-        e.preventDefault();
-        e.stopPropagation();
+        preventDefault(e, true);
       }
     };
 

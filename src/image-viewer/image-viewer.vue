@@ -42,6 +42,7 @@ import { CloseIcon, DeleteIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import ImagediverProps from './props';
 import { renderTNode, TNode, useDefault, useTouch } from '../shared';
+import { preventDefault } from '../shared/dom';
 import { TdImageViewerProps } from './type';
 
 // inner components
@@ -125,8 +126,7 @@ export default defineComponent({
     let doubleTapTimer: number | null;
     let touchStartTime: number;
     const onTouchStart = (event: TouchEvent) => {
-      event.preventDefault();
-      event.stopPropagation();
+      preventDefault(event, true);
       const { touches } = event;
 
       touch.start(event);
@@ -144,11 +144,9 @@ export default defineComponent({
       const { touches } = event;
 
       touch.move(event);
-      event.preventDefault();
-      event.stopPropagation();
+      preventDefault(event, true);
       if (state.zooming) {
-        event.preventDefault();
-        event.stopPropagation();
+        preventDefault(event, true);
       }
       if (state.zooming && touches.length === 2) {
         const distance = getDistance(touches);
@@ -201,8 +199,7 @@ export default defineComponent({
 
     const onTouchEnd = (event: TouchEvent) => {
       // eliminate tap delay on safari
-      event.preventDefault();
-
+      preventDefault(event, false);
       if (state.zooming) {
         event.stopPropagation();
         if (!event.touches.length) {
