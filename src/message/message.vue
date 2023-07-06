@@ -38,8 +38,6 @@ import {
   onMounted,
 } from 'vue';
 import { CheckCircleFilledIcon, CloseIcon, InfoCircleFilledIcon } from 'tdesign-icons-vue-next';
-import isObject from 'lodash/isObject';
-import isString from 'lodash/isString';
 import Link from '../link';
 import messageProps from './props';
 import { DrawMarquee, TdMessageProps } from './type';

@@ -38,6 +38,7 @@ import isFunction from 'lodash/isFunction';
 import { useFocus } from '@vueuse/core';
 import config from '../config';
 import { renderTNode, TNode } from '../shared';
+import { preventDefault } from '../shared/dom';
 import searchProps from './props';
 import { useDefault } from '../shared/useDefault';
 
@@ -123,7 +124,7 @@ export default defineComponent({
     const handleSearch = (e: any) => {
       // 如果按的是 enter 键, 13是 enter
       if (e.keyCode === 13) {
-        e.preventDefault(); // 禁止默认（换行）事件
+        preventDefault(e, false);
         props.onSubmit?.({ value: searchValue.value, e });
       }
     };
