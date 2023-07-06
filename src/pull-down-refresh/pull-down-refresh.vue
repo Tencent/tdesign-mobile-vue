@@ -28,7 +28,7 @@ import isArray from 'lodash/isArray';
 
 import PullDownRefreshProps from './props';
 import { useVModel, convertUnit, reconvertUnit } from '../shared';
-
+import { preventDefault } from '../shared/dom';
 import config from '../config';
 import TLoading from '../loading';
 import { useTouch, isReachTop, easeDistance } from './useTouch';
@@ -123,7 +123,7 @@ export default defineComponent({
       const nextDistance = easeDistance(deltaY.value, loadingBarHeight.value);
       // 下拉时，防止下拉整个页面
       if (deltaY.value > 0) {
-        e.preventDefault();
+        preventDefault(e, false);
       }
       if (nextDistance >= 0 && nextDistance < maxBarHeight.value) {
         distance.value = nextDistance;

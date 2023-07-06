@@ -63,6 +63,7 @@ import config from '../config';
 import TabsProps from './props';
 import TabNavItem from './tab-nav-item.vue';
 import { useVModel } from '../shared';
+import { preventDefault } from '../shared/dom';
 import CLASSNAMES from '../shared/constants';
 import TSticky from '../sticky';
 
@@ -206,7 +207,7 @@ export default defineComponent({
       if (tabIndex.value >= 0 && tabIndex.value < itemProps.value.length) {
         if (dValueX > dValueY) {
           // 水平滑动长度大于纵向滑动长度，那么选择水平滑动，阻止浏览器默认左右滑动事件
-          e.preventDefault();
+          preventDefault(e, false);
           if (dValueX <= 40) return;
           if (startX.value > endX.value) {
             // 向左划

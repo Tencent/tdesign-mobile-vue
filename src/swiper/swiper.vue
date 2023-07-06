@@ -59,6 +59,7 @@ import isNumber from 'lodash/isNumber';
 import config from '../config';
 import SwiperProps from './props';
 import { renderTNode, TNode, useVModel } from '../shared';
+import { preventDefault } from '../shared/dom';
 
 const { prefix } = config;
 const name = `${prefix}-swiper`;
@@ -186,7 +187,7 @@ const { lengthX, lengthY } = useSwipe(swiperContainer, {
 
 const onTouchMove = (event: TouchEvent) => {
   if (animating.value) return;
-  event.preventDefault();
+  preventDefault(event, false);
   const distanceX = lengthX.value;
   const distanceY = lengthY.value;
 

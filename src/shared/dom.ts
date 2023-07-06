@@ -14,3 +14,18 @@ export function getAttach(node: AttachNode) {
   }
   return document.body;
 }
+
+export function stopPropagation(event: Event) {
+  event.stopPropagation();
+}
+
+export function preventDefault(event: Event, isStopPropagation?: boolean) {
+  if (typeof event.cancelable !== 'boolean' || event.cancelable) {
+    // The event can be canceled, so we do so.
+    event.preventDefault();
+  }
+
+  if (isStopPropagation) {
+    stopPropagation(event);
+  }
+}

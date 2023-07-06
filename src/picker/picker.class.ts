@@ -1,4 +1,5 @@
 import config from '../config';
+import { preventDefault } from '../shared/dom';
 
 const { prefix } = config;
 
@@ -143,7 +144,7 @@ class Picker {
   }
 
   touchStartHandler(event: TouchEvent): void {
-    event.preventDefault();
+    preventDefault(event, false);
     this.isPicking = true;
     if (!this.holder) return;
     if (this.list) this.list.style.transition = '';
@@ -153,7 +154,7 @@ class Picker {
   }
 
   touchMoveHandler(event: TouchEvent): void {
-    event.preventDefault();
+    preventDefault(event, false);
     if (!this.isPicking || !this.holder) return;
     const endY = event.changedTouches[0].pageY;
     const dragRange = endY - this.startY;
@@ -163,7 +164,7 @@ class Picker {
   }
 
   touchEndHandler(event: TouchEvent): void {
-    event.preventDefault();
+    preventDefault(event, false);
     this.isPicking = false;
     if (!this.holder) return;
     const point = event.changedTouches[0];

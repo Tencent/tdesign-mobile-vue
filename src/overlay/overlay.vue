@@ -8,6 +8,7 @@
 
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
+import { preventDefault } from '../shared/dom';
 import config from '../config';
 import props from './props';
 
@@ -43,8 +44,7 @@ export default defineComponent({
 
     const handleTouchMove = (e: TouchEvent) => {
       if (props.preventScrollThrough) {
-        e.stopPropagation();
-        e.preventDefault();
+        preventDefault(e, true);
       }
     };
     const handleClick = (e: MouseEvent) => {
