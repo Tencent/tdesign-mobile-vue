@@ -14,5 +14,4 @@ import { SoundIcon } from 'tdesign-icons-vue-next';
 
 const content = ref<string>('提示文字描述提示文字描述提示文字描述提示文字描述文');
 const content1 = ref(['君不见', '高堂明镜悲白发', '朝如青丝暮成雪', '人生得意须尽欢', '莫使金樽空对月']);
-const visible = ref<boolean>(true);
 </script>

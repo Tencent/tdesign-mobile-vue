@@ -18,7 +18,6 @@ import { h } from 'vue';
 import { CloseIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import { Toast } from 'tdesign-mobile-vue';
 
-const iconFunc = () => h(CloseIcon);
 const arrowRight = () => h(ChevronRightIcon);
 const handleClick = (context: string) => {
   Toast(`click:${context}`);
