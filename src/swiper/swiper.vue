@@ -54,7 +54,7 @@
 import { getCurrentInstance, onMounted, computed, ref, provide, defineEmits, defineProps, watch } from 'vue';
 import { useSwipe } from '@vueuse/core';
 import isObject from 'lodash/isObject';
-import { isNumber } from 'lodash';
+import isNumber from 'lodash/isNumber';
 
 import config from '../config';
 import SwiperProps from './props';

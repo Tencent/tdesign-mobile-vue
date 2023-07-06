@@ -9,7 +9,8 @@ import {
   setBlockTracking,
   Ref,
 } from 'vue';
-import { isFunction, isString } from 'lodash';
+import isFunction from 'lodash/isFunction';
+import isString from 'lodash/isString';
 import { SwipeInitData } from './swipe-cell.vue';
 import { renderTNode } from '../shared';
 import { SwipeActionItem } from './type';

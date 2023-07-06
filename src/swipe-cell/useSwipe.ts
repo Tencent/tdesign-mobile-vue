@@ -1,7 +1,7 @@
 import type { ComputedRef, Ref } from 'vue';
 import { computed, reactive, ref } from 'vue';
 import { useEventListener } from '@vueuse/core';
-import { isObject } from 'lodash';
+import isObject from 'lodash/isObject';
 import { preventDefault } from '../shared/dom';
 
 const noop = () => {};

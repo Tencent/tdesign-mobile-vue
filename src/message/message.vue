@@ -33,7 +33,7 @@ import {
   onMounted,
 } from 'vue';
 import { CheckCircleFilledIcon, CloseIcon, InfoCircleFilledIcon } from 'tdesign-icons-vue-next';
-import { isFunction } from 'lodash';
+import isFunction from 'lodash/isFunction';
 import messageProps from './props';
 import { DrawMarquee, TdMessageProps } from './type';
 import config from '../config';

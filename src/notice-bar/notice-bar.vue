@@ -60,7 +60,7 @@ import {
   watch,
 } from 'vue';
 import { InfoCircleFilledIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
-import { isArray } from 'lodash';
+import isArray from 'lodash/isArray';
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
 import NoticeBarProps from './props';
 import { NoticeBarTrigger, DrawMarquee } from './type';
