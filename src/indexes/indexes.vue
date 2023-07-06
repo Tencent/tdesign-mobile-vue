@@ -37,6 +37,7 @@ import {
   watch,
 } from 'vue';
 import _ from 'lodash';
+import { preventDefault } from '../shared/dom';
 import config from '../config';
 import IndexesProps from './props';
 
@@ -184,7 +185,7 @@ export default defineComponent({
     };
 
     const handleSidebarTouchmove = (event: TouchEvent) => {
-      event.preventDefault();
+      preventDefault(event, false);
       const { touches } = event;
       const { clientX, clientY } = touches[0];
       const target = document.elementFromPoint(clientX, clientY);

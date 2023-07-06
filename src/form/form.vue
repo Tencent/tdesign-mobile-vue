@@ -22,6 +22,7 @@ import { FormInjectionKey, FormItemContext } from './const';
 import { FormDisabledProvider } from './hooks';
 import config from '../config';
 import { renderContent } from '../shared';
+import { preventDefault } from '../shared/dom';
 import { FormItemValidateResult } from './form-item.vue';
 
 const { prefix } = config;
@@ -119,8 +120,7 @@ export default defineComponent({
     const submitParams = ref<Pick<FormValidateParams, 'showErrorMessage'>>();
     const onSubmit = (e?: FormSubmitEvent) => {
       if (props.preventSubmitDefault && e) {
-        e.preventDefault();
-        e.stopPropagation();
+        preventDefault(e, true);
       }
       validate(submitParams.value).then((r) => {
         // @ts-ignore
@@ -137,8 +137,7 @@ export default defineComponent({
     const resetParams = ref<FormResetParams<Data>>();
     const onReset = (e?: FormResetEvent) => {
       if (props.preventSubmitDefault && e) {
-        e.preventDefault();
-        e.stopPropagation();
+        preventDefault(e, true);
       }
       children.value
         .filter(
