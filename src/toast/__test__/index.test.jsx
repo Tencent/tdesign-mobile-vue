@@ -56,6 +56,15 @@ describe('Toast', () => {
       expect(wrapper.findComponent(Overlay).vm.duration).toEqual(1000);
     });
 
+    it(': preventScrollThrough', async () => {
+      const wrapper = mount(Toast, {
+        props: {
+          preventScrollThrough: true,
+        },
+      });
+      expect(wrapper.findComponent(Overlay).vm.visible).toEqual(true);
+    })
+
     it(': showOverlay', async () => {
       const wrapper = mount(Toast, {
         props: {

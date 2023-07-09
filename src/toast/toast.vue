@@ -73,7 +73,8 @@ export default defineComponent({
     const customOverlayProps = computed(() => {
       const toastOverlayProps = {
         preventScrollThrough: props.preventScrollThrough,
-        visible: props.showOverlay,
+        visible: props.preventScrollThrough || props.showOverlay,
+        customStyle: props.preventScrollThrough ? 'background-color: transparent' : props.overlayProps?.customStyle,
       };
 
       return {
