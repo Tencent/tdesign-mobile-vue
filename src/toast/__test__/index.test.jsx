@@ -66,7 +66,7 @@ describe('Toast', () => {
           preventScrollThrough: true,
         },
       });
-      expect(document.body).toHaveClass(bodyLockClass);
+      expect(document.body.classList.contains(bodyLockClass)).toBeTruthy();
     });
 
     it(': showOverlay', async () => {
