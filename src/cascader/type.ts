@@ -63,7 +63,7 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
   /**
    * 选择后触发
    */
-  onPick?: (value: string | number, index: number) => void;
+  onPick?: (context: { level: number; value: string | number; index: number }) => void;
 }
 
 export type TriggerSource = 'overlay' | 'close-btn' | 'finish';
