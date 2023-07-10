@@ -4,6 +4,10 @@ import Overlay from '../../overlay';
 import { mount } from '@vue/test-utils';
 import { LoadingIcon } from 'tdesign-icons-vue-next';
 
+import config from '../../config';
+const { prefix } = config;
+const bodyLockClass = `${prefix}-overflow-hidden`;
+
 describe('Toast', () => {
   describe('props', () => {
     it(': direction', async () => {
@@ -57,13 +61,13 @@ describe('Toast', () => {
     });
 
     it(': preventScrollThrough', async () => {
-      const wrapper = mount(Toast, {
+      mount(Toast, {
         props: {
           preventScrollThrough: true,
         },
       });
-      expect(wrapper.findComponent(Overlay).vm.visible).toEqual(true);
-    })
+      expect(document.body).toHaveClass(bodyLockClass);
+    });
 
     it(': showOverlay', async () => {
       const wrapper = mount(Toast, {
