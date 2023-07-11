@@ -202,8 +202,7 @@ export default defineComponent({
       if (item.disabled) {
         return;
       }
-
-      props.onPick?.({ value: item[keys.value?.value ?? 'value'], index });
+      props.onPick?.({ level, value: item[keys.value?.value ?? 'value'], index });
 
       if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length) {
         items[level + 1] = item[(keys as Ref<KeysType>).value?.children ?? 'children'];

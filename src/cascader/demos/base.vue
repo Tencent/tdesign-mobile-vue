@@ -1,6 +1,13 @@
 <template>
   <t-cell title="地址" :note="note" arrow @click="showCascader" />
-  <t-cascader v-model:visible="visible" :value="address" title="选择地址" :options="options" @change="onChange" />
+  <t-cascader
+    v-model:visible="visible"
+    :value="address"
+    title="选择地址"
+    :options="options"
+    @pick="onPick"
+    @change="onChange"
+  />
 </template>
 
 <script lang="ts" setup>
@@ -78,5 +85,9 @@ const onChange = (value: string, options: any) => {
 
 const showCascader = () => {
   visible.value = true;
+};
+
+const onPick = (context: { level: number; value: string | number; index: number }) => {
+  console.log(`level: ${context.level}, value: ${context.value}, index: ${context.index}`);
 };
 </script>
