@@ -17,7 +17,7 @@ defaultValue | String / Number | - | uncontrolled property | N
 visible | Boolean | false | \- | N
 onChange | Function |  | Typescript：`(value: string \| number, selectedOptions: string[]) => void`<br/> | N
 onClose | Function |  | Typescript：`(trigger: TriggerSource) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/> | N
-onPick | Function |  | Typescript：`(value: string \| number, index: number) => void`<br/> | N
+onPick | Function |  | Typescript：`(context: { level: number; value: string | number; index: number }) => void`<br/> | N
 
 ### Cascader Events
 
@@ -25,4 +25,4 @@ name | params | description
 -- | -- | --
 change | `(value: string \| number, selectedOptions: string[])` | \-
 close | `(trigger: TriggerSource)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/>
-pick | `(value: string \| number, index: number)` | \-
+pick | `(context: { level: number, value: string \| number, index: number })` | \-

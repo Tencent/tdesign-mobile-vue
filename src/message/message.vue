@@ -1,7 +1,9 @@
 <template>
   <transition name="message">
     <div v-if="currentVisible" ref="root" :class="rootClasses" :style="rootStyles">
-      <t-node v-if="computedPrefixIcon" :content="computedPrefixIcon" :class="`${name}__icon--left`"></t-node>
+      <div v-if="prefixIconContent" :class="`${name}__icon--left`">
+        <t-node :content="prefixIconContent" />
+      </div>
       <div ref="textWrapDOM" :class="textWrapClasses">
         <div
           ref="textDOM"
@@ -12,8 +14,11 @@
           <t-node v-if="computedContent" :content="computedContent"></t-node>
         </div>
       </div>
-      <div v-if="computedCloseBtn" :class="`${name}__close-wrap`" @click="onCloseBtnClick">
-        <t-node :content="computedCloseBtn" :class="`${name}__icon--right`"></t-node>
+      <div v-if="linkContent" :class="`${name}__link`" @click="onLinkClick">
+        <t-node :content="linkContent"></t-node>
+      </div>
+      <div v-if="closeBtnContent" :class="[`${name}__close-wrap`, `${name}__icon--right`]" @click="onCloseBtnClick">
+        <t-node :content="closeBtnContent"></t-node>
       </div>
     </div>
   </transition>
@@ -33,7 +38,9 @@ import {
   onMounted,
 } from 'vue';
 import { CheckCircleFilledIcon, CloseIcon, InfoCircleFilledIcon } from 'tdesign-icons-vue-next';
-import { isFunction } from 'lodash';
+import { isObject, isString } from '@vueuse/core';
+
+import Link from '../link';
 import messageProps from './props';
 import { DrawMarquee, TdMessageProps } from './type';
 import config from '../config';
@@ -47,7 +54,7 @@ const iconDefault = {
   warning: h(InfoCircleFilledIcon),
   error: h(InfoCircleFilledIcon),
 };
-
+const closeBtnDefault = h(CloseIcon);
 export default defineComponent({
   name,
   components: { TNode },
@@ -107,31 +114,27 @@ export default defineComponent({
       };
     });
 
-    const computedPrefixIcon = computed(() => {
-      const { icon } = props;
-      if (!icon) return null;
-      if (icon && !context.slots.icon && !isFunction(icon)) {
-        const theme = props.theme as string;
-        return iconDefault?.[theme] || null;
-      }
-      return renderTNode(internalInstance, 'icon');
-    });
-
+    const prefixIconContent = computed(() =>
+      renderTNode(internalInstance, 'icon', { defaultNode: iconDefault?.[props.theme || 'info'] }),
+    );
     // content
     const computedContent = computed(() => renderContent(internalInstance, 'default', 'content'));
 
     // closeBtn
-    const computedCloseBtn = computed(() => {
-      const { closeBtn } = props;
-      if (isFunction(closeBtn || context.slots.closeBtn)) {
-        return renderTNode(internalInstance, 'closeBtn');
+    const closeBtnContent = computed(() => renderTNode(internalInstance, 'closeBtn', { defaultNode: closeBtnDefault }));
+
+    // link
+    const linkContent = computed(() => {
+      if (typeof props.link === 'function' || context.slots?.link) {
+        return renderTNode(internalInstance, 'link');
       }
-      if (closeBtn) {
-        return h(CloseIcon);
+
+      if (isObject(props.link) || isString(props.link)) {
+        const _link = isObject(props.link) ? { ...props.link } : { content: props.link };
+        return h(Link, { theme: 'primary', ..._link });
       }
       return null;
     });
-
     // 动画
     const animateStyle = computed(() => ({
       transform: state.offset ? `translateX(${state.offset}px)` : '',
@@ -196,6 +199,10 @@ export default defineComponent({
       }, 0);
     };
 
+    const onLinkClick = (e: MouseEvent) => {
+      props.onLinkClick?.({ e });
+    };
+
     const onCloseBtnClick = () => {
       props.onCloseBtnClick?.();
       setVisible(false);
@@ -235,13 +242,15 @@ export default defineComponent({
       rootClasses,
       textWrapClasses,
       rootStyles,
-      computedPrefixIcon,
+      prefixIconContent,
       computedContent,
-      computedCloseBtn,
+      closeBtnContent,
+      linkContent,
       textWrapDOM,
       textDOM,
       animateStyle,
       onCloseBtnClick,
+      onLinkClick,
       handleTransitionend,
     };
   },

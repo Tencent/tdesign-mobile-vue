@@ -16,7 +16,7 @@ defaultValue | String / Number | - | 选项值。非受控属性 | N
 visible | Boolean | false | 是否展示 | N
 onChange | Function |  | TS 类型：`(value: string \| number, selectedOptions: string[]) => void`<br/>值发生变更时触发 | N
 onClose | Function |  | TS 类型：`(trigger: TriggerSource) => void`<br/>关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/> | N
-onPick | Function |  | TS 类型：`(value: string \| number, index: number) => void`<br/>选择后触发 | N
+onPick | Function |  | TS 类型：`(context: { level: number, value: string \| number, index: number }) => void`<br/>选择后触发 | N
 
 ### Cascader Events
 
@@ -24,4 +24,4 @@ onPick | Function |  | TS 类型：`(value: string \| number, index: number) => 
 -- | -- | --
 change | `(value: string \| number, selectedOptions: string[])` | 值发生变更时触发
 close | `(trigger: TriggerSource)` | 关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/>
-pick | `(value: string \| number, index: number)` | 选择后触发
+pick | `(context: { level: number, value: string \| number, index: number })` | 选择后触发

@@ -4,7 +4,7 @@
       <t-cell
         :class="[`${name}__header`, `${name}__header--${placement}`, { [`${name}__header--expanded`]: isActive }]"
       >
-        <template #leftIcon>
+        <template v-if="leftIcon" #leftIcon>
           <t-node :content="leftIcon" />
         </template>
         <template #title>
@@ -25,9 +25,9 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, nextTick, watch, onMounted, inject, defineComponent, getCurrentInstance } from 'vue';
+import { ref, computed, nextTick, watch, onMounted, inject, defineComponent, getCurrentInstance, h } from 'vue';
 import { ChevronDownIcon, ChevronUpIcon } from 'tdesign-icons-vue-next';
-
+import isFunction from 'lodash/isFunction';
 import TCell from '../cell';
 import props from './collapse-panel-props';
 import config from '../config';
@@ -39,7 +39,7 @@ const { prefix } = config;
 const name = `${prefix}-collapse-panel`;
 export default defineComponent({
   name,
-  components: { ChevronDownIcon, ChevronUpIcon, TNode, TCell },
+  components: { TNode, TCell },
   props,
   setup(props, context) {
     const internalInstance = getCurrentInstance();
@@ -48,13 +48,17 @@ export default defineComponent({
 
     const rightIcon = computed(() => {
       if (props.expandIcon === false) return;
+      if (isFunction(props.expandIcon) || context.slots.expandIcon) {
+        return renderTNode(internalInstance, 'expandIcon');
+      }
       if (isTrue(props.expandIcon) || isTrue(parent?.expandIcon.value)) {
         if (props.placement === 'bottom') {
           return isActive.value ? ChevronUpIcon : ChevronDownIcon;
         }
         return isActive.value ? ChevronDownIcon : ChevronUpIcon;
       }
-      return renderTNode(internalInstance, 'expand-icon')[0];
+
+      return null;
     });
     const disabled = computed(() => parent?.disabled.value || props.disabled);
     const rootClass = computed(() => ({

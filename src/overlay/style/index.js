@@ -1,1 +1,1 @@
-import '../../_common/style/mobile/components/overlay/_index.less';
+import '../../_common/style/mobile/components/overlay/v2/_index.less';

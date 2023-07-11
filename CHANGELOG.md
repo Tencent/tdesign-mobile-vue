@@ -5,6 +5,21 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.0.0-rc.2 `2023-07-11`
+### ❗ Breaking Changes
+- `NoticeBar`: `prefixIcon` 属性默认值变更为 `true` @anlyyao ([#929](https://github.com/Tencent/tdesign-mobile-vue/pull/929))
+### 🚀 Features
+- `Cascader`: `pick` 事件新增 `level` 参数 @anlyyao ([#940](https://github.com/Tencent/tdesign-mobile-vue/pull/940))
+### 🐞 Bug Fixes
+- `Message`: 修复 `link` 、`onLinkClick`属性无效 @anlyyao ([#931](https://github.com/Tencent/tdesign-mobile-vue/pull/931))
+- `Overlay`: 修复 `backgroundColor` 属性致动画失效问题 @yaogengzhu ([#942](https://github.com/Tencent/tdesign-mobile-vue/pull/942))
+- `ActionSheet`: 修复多页宫格工作面板高度计算错误 @anlyyao ([#936](https://github.com/Tencent/tdesign-mobile-vue/pull/936))
+- `CollapsePanel`: 修复 `expandIcon` 的值为插槽或函数时无效 @anlyyao ([#934](https://github.com/Tencent/tdesign-mobile-vue/pull/934))
+- `Table`: 修复table组件卸载时，异常报错 @yaogengzhu ([#938](https://github.com/Tencent/tdesign-mobile-vue/pull/938))
+- `Toast`: 修复preventScrollThrough属性无效 @yaogengzhu ([#939](https://github.com/Tencent/tdesign-mobile-vue/pull/939))
+- `Search`: 修复 `iOS` 环境 `search` 默认自带图标 @yaogengzhu ([#1519](https://github.com/Tencent/tdesign-common/pull/1519))
+
+
 ## 🌈 1.0.0-rc.1 `2023-07-04`
 ### ❗ Breaking Changes
 - `Loading`:  移除`progress` 属性 @anlyyao ([#918](https://github.com/Tencent/tdesign-mobile-vue/pull/918))

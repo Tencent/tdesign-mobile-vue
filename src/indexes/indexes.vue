@@ -36,7 +36,8 @@ import {
   ComponentInternalInstance,
   watch,
 } from 'vue';
-import _ from 'lodash';
+import throttle from 'lodash/throttle';
+import { preventDefault } from '../shared/dom';
 import config from '../config';
 import IndexesProps from './props';
 
@@ -151,7 +152,7 @@ export default defineComponent({
       scrollToByIndex(index);
     };
 
-    const handleRootScroll = _.throttle((e: UIEvent) => {
+    const handleRootScroll = throttle((e: UIEvent) => {
       const scrollTop = indexesRoot.value?.scrollTop ?? 0;
       setAnchorOnScroll(scrollTop);
     }, 1000 / 30);
@@ -184,7 +185,7 @@ export default defineComponent({
     };
 
     const handleSidebarTouchmove = (event: TouchEvent) => {
-      event.preventDefault();
+      preventDefault(event, false);
       const { touches } = event;
       const { clientX, clientY } = touches[0];
       const target = document.elementFromPoint(clientX, clientY);
