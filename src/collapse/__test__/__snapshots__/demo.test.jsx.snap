@@ -19,13 +19,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -94,13 +88,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -169,13 +157,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -244,13 +226,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -329,13 +305,7 @@ exports[`Collapse > Collapse actionVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -413,13 +383,7 @@ exports[`Collapse > Collapse baseVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -498,13 +462,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -573,13 +531,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -648,13 +600,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -723,13 +669,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -842,13 +782,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -943,13 +877,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1040,13 +968,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1142,13 +1064,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1217,13 +1133,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1292,13 +1202,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1367,13 +1271,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1474,13 +1372,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1549,13 +1441,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1624,13 +1510,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1699,13 +1579,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1788,13 +1662,7 @@ exports[`Collapse > Collapse placementVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
