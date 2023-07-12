@@ -22,7 +22,7 @@ import config from '../config';
 
 const { prefix } = config;
 const name = `${prefix}-toast`;
-const bodyLockClass = `${prefix}-overflow-hidden`;
+const bodyLockClass = `${name}-overflow-hidden`;
 
 export default defineComponent({
   name,

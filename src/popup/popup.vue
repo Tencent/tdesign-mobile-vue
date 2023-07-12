@@ -26,7 +26,7 @@ import { getAttach } from '../shared/dom';
 const { prefix } = config;
 
 const name = `${prefix}-popup`;
-const bodyLockClass = `${prefix}-overflow-hidden`;
+const bodyLockClass = `${name}-overflow-hidden`;
 
 export default defineComponent({
   name,
