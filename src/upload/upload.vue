@@ -1,6 +1,6 @@
 <template>
   <div :class="`${name}`">
-    <div v-for="(file, index) in uploadedFiles" :key="index" :class="`${name}__item`">
+    <div v-for="(file, index) in renderUploadFiles" :key="index" :class="`${name}__item`">
       <t-image
         :class="`${name}__image`"
         shape="round"
@@ -24,7 +24,7 @@
       </div>
       <close-icon :class="`${name}__delete-btn`" @click="({ e }) => handleRemove(e, file, index)" />
     </div>
-    <template v-if="max === 0 || (max > 0 && uploadedFiles?.length < max)">
+    <template v-if="max === 0 || (max > 0 && renderUploadFiles?.length < max)">
       <div v-if="defaultContent" @click="triggerUpload">
         <t-node :content="defaultContent" />
       </div>
@@ -118,6 +118,22 @@ export default defineComponent({
       }
       return [];
     });
+
+    const renderUploadFiles = computed(() => {
+      if (props.autoUpload) {
+        return uploadedFiles.value;
+      }
+      const list = toUploadFiles.value.map((file: UploadFile) => {
+        return {
+          ...file,
+          file: file.fileRaw as File,
+          status: '',
+          url: URL.createObjectURL(file.fileRaw),
+        };
+      });
+      return list as UploadFile[];
+    });
+
     const inputRef = ref<null | HTMLInputElement>(null);
 
     const triggerUpload = () => {
@@ -423,7 +439,7 @@ export default defineComponent({
       xhrReq,
       toUploadFiles,
       inputRef,
-      uploadedFiles,
+      renderUploadFiles,
       defaultContent,
       addContent,
       setInnerFiles,
