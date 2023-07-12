@@ -46,6 +46,6 @@ value | String / Number | - | 当前面板唯一标识，如果值为空则取�
 --td-collapse-content-text-color | @font-gray-1 | - 
 --td-collapse-extra-font-size | @font-size-m | - 
 --td-collapse-header-text-color | @font-gray-1 | - 
---td-collapse-header-text-diabled-color | @font-gray-4 | - 
+--td-collapse-header-text-disabled-color | @font-gray-4 | - 
 --td-collapse-panel-bg-color | @bg-color-container | - 
 --td-collapse-title-font-size | @font-size-m | - 

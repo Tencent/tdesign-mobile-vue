@@ -54,6 +54,6 @@ change | `(value: T, context: { e: MouseEvent })` | 数据发生变化时触发
 --td-switch-unchecked-color | @font-gray-4 | - 
 --td-switch-unchecked-disabled-color | @bg-color-component-disabled | - 
 --td-switch-width | 45px | - 
---td-swtich-label-font-size | 12px | - 
---td-swtich-label-font-size | 14px | - 
---td-swtich-label-font-size | 16px | - 
+--td-switch-label-font-size | 12px | - 
+--td-switch-label-font-size | 14px | - 
+--td-switch-label-font-size | 16px | - 

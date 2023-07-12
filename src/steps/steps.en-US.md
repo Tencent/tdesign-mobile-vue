@@ -42,7 +42,7 @@ Name | Default Value | Description
 --td-step-item-default-dot-border-color | @component-border | - 
 --td-step-item-default-icon-color | @font-gray-3 | - 
 --td-step-item-default-title-color | @font-gray-3 | - 
---td-step-item-descrition-color | @font-gray-3 | - 
+--td-step-item-description-color | @font-gray-3 | - 
 --td-step-item-dot-size | 8px | - 
 --td-step-item-error-circle-bg | @error-color-1 | - 
 --td-step-item-error-circle-color | @error-color | - 
