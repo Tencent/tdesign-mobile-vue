@@ -1,5 +1,5 @@
 <template>
-  <div @touchstart.stop>
+  <div @touchstart.stop class="tdesign-demo-page">
     <tdesign-header />
     <div class="tdesign-demo-main">
       <router-view />
