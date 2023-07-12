@@ -34,3 +34,19 @@ header | String / Slot / Function | - | Typescript：`string \| TNode`。[see mo
 headerRightContent | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 placement | String | bottom | options：bottom/top | N
 value | String / Number | - | \- | N
+
+
+### CSS Variables
+The component provides the following CSS variables, which can be used to customize styles.
+Name | Default Value | Description 
+-- | -- | --
+--td-collapse-border-color | @border-color | - 
+--td-collapse-content-font-size | @font-size-base | - 
+--td-collapse-content-line-height | 1.5 | - 
+--td-collapse-content-padding | 16px | - 
+--td-collapse-content-text-color | @font-gray-1 | - 
+--td-collapse-extra-font-size | @font-size-m | - 
+--td-collapse-header-text-color | @font-gray-1 | - 
+--td-collapse-header-text-diabled-color | @font-gray-4 | - 
+--td-collapse-panel-bg-color | @bg-color-container | - 
+--td-collapse-title-font-size | @font-size-m | - 

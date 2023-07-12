@@ -45,3 +45,29 @@ change | `(value: InputValue, context?: { e?: InputEvent \| MouseEvent \| Compos
 clear | `(context: { e: MouseEvent })` | \-
 focus | `(value: InputValue, context: { e: FocusEvent })` | \-
 validate | `(context: { error?: 'exceed-maximum' \| 'below-minimum' })` | trigger on text length being over max length or max character
+
+
+### CSS Variables
+The component provides the following CSS variables, which can be used to customize styles.
+Name | Default Value | Description 
+-- | -- | --
+--td-input-bg-color | @bg-color-container | - 
+--td-input-border-color | @component-stroke | - 
+--td-input-border-left-space | 16px | - 
+--td-input-border-radius | @radius-default | - 
+--td-input-border-right-space | 0 | - 
+--td-input-default-text-color | @font-gray-1 | - 
+--td-input-default-tips-color | @font-gray-3 | - 
+--td-input-disabled-text-color | @text-color-disabled | - 
+--td-input-error-text-color | @error-color | - 
+--td-input-error-tips-color | @error-color | - 
+--td-input-label-text-color | @font-gray-1 | - 
+--td-input-placeholder-text-color | @text-color-placeholder | - 
+--td-input-prefix-icon-color | @font-gray-1 | - 
+--td-input-success-text-color | @success-color | - 
+--td-input-success-tips-color | @success-color | - 
+--td-input-suffix-icon-color | @font-gray-3 | - 
+--td-input-suffix-text-color | @font-gray-1 | - 
+--td-input-vertical-padding | 16px | - 
+--td-input-warning-text-color | @warning-color | - 
+--td-input-warning-tips-color | @warning-color | - 

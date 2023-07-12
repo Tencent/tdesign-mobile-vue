@@ -50,3 +50,24 @@ onChange | Function |  | TS 类型：`(value: T, context: { e: Event }) => void`
 名称 | 参数 | 描述
 -- | -- | --
 change | `(value: T, context: { e: Event })` | 选中值发生变化时触发
+
+
+### CSS 变量
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-radio-bg-color | @bg-color-container | - 
+--td-radio-border-color | @component-stroke | - 
+--td-radio-content-color | @font-gray-2 | - 
+--td-radio-content-disabled-color | @text-color-disabled | - 
+--td-radio-content-line-height | 22px | - 
+--td-radio-font-size | 16px | - 
+--td-radio-icon-checked-color | @brand-color | - 
+--td-radio-icon-color | @component-border | - 
+--td-radio-icon-disabled-bg-color | @bg-color-component-disabled | - 
+--td-radio-icon-disabled-color | @brand-color-disabled | - 
+--td-radio-icon-size | 24px | - 
+--td-radio-label-color | @font-gray-1 | - 
+--td-radio-label-disabled-color | @text-color-disabled | - 
+--td-radio-label-line-height | 24px | - 
+--td-radio-vertical-padding | 16px | - 

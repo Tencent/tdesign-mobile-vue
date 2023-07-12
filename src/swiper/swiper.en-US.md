@@ -36,3 +36,21 @@ paginationPosition | String | bottom | options：top-left/top/top-right/bottom-l
 placement | String | inside | options：inside/outside | N
 showControls | Boolean | false | \- | N
 type | String | dots | Typescript：`SwiperNavigationType` `type SwiperNavigationType = 'dots' \| 'dots-bar' \| 'fraction'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swiper/type.ts) | N
+
+
+### CSS Variables
+The component provides the following CSS variables, which can be used to customize styles.
+Name | Default Value | Description 
+-- | -- | --
+--td-swiper-nav-btn-bg-color | @font-gray-3 | - 
+--td-swiper-nav-btn-color | @font-white-1 | - 
+--td-swiper-nav-btn-size | 24px | - 
+--td-swiper-nav-dot-active-color | @font-white-1 | - 
+--td-swiper-nav-dot-color | @font-white-2 | - 
+--td-swiper-nav-dot-size | 6px | - 
+--td-swiper-nav-dots-bar-active-width | 20px | - 
+--td-swiper-nav-fraction-bg-color | @font-gray-3 | - 
+--td-swiper-nav-fraction-color | @font-white-1 | - 
+--td-swiper-nav-fraction-font-size | 12px | - 
+--td-swiper-nav-fraction-height | 24px | - 
+--td-swiper-border-radius | 8px | - 

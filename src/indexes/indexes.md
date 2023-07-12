@@ -23,3 +23,28 @@ select | `(index: string \| number)` | 点击侧边栏时触发事件
 名称 | 类型 | 默认值 | 说明 | 必传
 -- | -- | -- | -- | --
 index | String / Number | - | 索引字符 | N
+
+
+### CSS 变量
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-indexes-sidebar-active-bg-color | @brand-color | - 
+--td-indexes-sidebar-active-color | @font-white-1 | - 
+--td-indexes-sidebar-color | @font-gray-1 | - 
+--td-indexes-sidebar-font-size | 12px | - 
+--td-indexes-sidebar-item-size | 20px | - 
+--td-indexes-sidebar-line-height | 20px | - 
+--td-indexes-sidebar-right | 8px | - 
+--td-indexes-sidebar-tips-bg-color | @brand-color-light | - 
+--td-indexes-sidebar-tips-color | @brand-color | - 
+--td-indexes-sidebar-tips-font-size | 20px | - 
+--td-indexes-sidebar-tips-right | 38px | - 
+--td-indexes-sidebar-tips-size | 48px | - 
+--td-indexes-anchor-active-bg-color | @bg-color-container | - 
+--td-indexes-anchor-active-color | @brand-color | - 
+--td-indexes-anchor-active-font-weight | 600 | - 
+--td-indexes-anchor-bg-color | @bg-color-secondarycontainer | - 
+--td-indexes-anchor-color | @font-gray-1 | - 
+--td-indexes-anchor-font-size | 14px | - 
+--td-indexes-anchor-line-height | 22px | - 

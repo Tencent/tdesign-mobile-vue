@@ -29,3 +29,19 @@ change | `(value: Date)` | \-
 close | `(trigger: CalendarTrigger)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts)。<br/>`type CalendarTrigger = 'close-btn' \| 'confirm-btn' \| 'overlay'`<br/>
 confirm | `(value: Date)` | \-
 select | `(value: Date)` | \-
+
+
+### CSS Variables
+The component provides the following CSS variables, which can be used to customize styles.
+Name | Default Value | Description 
+-- | -- | --
+--td-calendar-active-color | @brand-color | - 
+--td-calendar-bg-color | @bg-color-container | - 
+--td-calendar-days-color | @font-gray-2 | - 
+--td-calendar-item-centre-color | @brand-color-light | - 
+--td-calendar-item-disabled-color | @font-gray-4 | - 
+--td-calendar-item-suffix-color | @font-gray-3 | - 
+--td-calendar-radius | 12px | - 
+--td-calendar-selected-color | @font-white-1 | - 
+--td-calendar-title-color | @font-gray-1 | - 
+--td-calendar-title-font-size | 18px | - 

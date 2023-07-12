@@ -23,14 +23,23 @@ const COMPONENT_NAME = process.argv[process.argv.indexOf('--NAME') + 1]; // 在 
 
 const matchReg = /(?<=var).*?(?=\;)/g;
 
-// 使用 v2 文件夹下变量文件
+function findFilePath(componentName) {
+  const path = resolveCwd(`src/_common/style/mobile/components/${componentName}/v2/_var.less`);
+  if (fs.existsSync(path)) {
+    return path;
+  }
+
+  return resolveCwd(`src/_common/style/mobile/components/${componentName}/_var.less`);
+}
+
+// 使用 v2 文件夹下 _var.less 文件
 const lessPath = [];
 if (combine[COMPONENT_NAME]) {
   combine[COMPONENT_NAME].map((item, index) => {
-    lessPath.push(resolveCwd(`src/_common/style/mobile/components/${item}/v2/_var.less`));
+    lessPath.push(findFilePath(item));
   });
 } else {
-  lessPath.push(resolveCwd(`src/_common/style/mobile/components/${COMPONENT_NAME}/v2/_var.less`));
+  lessPath.push(findFilePath(COMPONENT_NAME));
 }
 
 // 追加到文件
@@ -48,9 +57,9 @@ lessPath.map((item, index) => {
         console.log('please execute npm run update:css first!', err);
         return;
       }
-      const list = file.match(matchReg).sort();
+      const list = file.match(matchReg)?.sort();
       let cssVariableBodyContent = '';
-      list.map((item, index) => {
+      list?.map((item, index) => {
         cssVariableBodyContent += `${item.slice(1, item.indexOf(','))} | ${item.slice(
           item.indexOf(',') + 2,
           item.length - 1,
