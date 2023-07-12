@@ -35,6 +35,9 @@ size | String | medium | size | N
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
+--td-avatar-group-margin-left-large | -8px | - 
+--td-avatar-group-margin-left-medium | -6px | - 
+--td-avatar-group-margin-left-small | -4px | - 
 --td-avatar-bg-color | @brand-color-light-active | - 
 --td-avatar-border-color | #fff | - 
 --td-avatar-border-width-large | 4px | - 
@@ -42,9 +45,6 @@ Name | Default Value | Description
 --td-avatar-border-width-small | 2px | - 
 --td-avatar-circle-border-radius | @radius-circle | - 
 --td-avatar-content-color | @brand-color | - 
---td-avatar-group-margin-left-large | -8px | - 
---td-avatar-group-margin-left-medium | -6px | - 
---td-avatar-group-margin-left-small | -4px | - 
 --td-avatar-icon-large-font-size | 32px | - 
 --td-avatar-icon-medium-font-size | 24px | - 
 --td-avatar-icon-small-font-size | 20px | - 

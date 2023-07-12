@@ -2,11 +2,16 @@ const fs = require('fs');
 const path = require('path');
 
 const combine = {
-  cell: ['cell', 'cell-group'],
-  dropdown: ['dropdown-menu', 'dropdown-item'],
+  avatar: ['avatar-group', 'avatar'],
+  cell: ['cell-group', 'cell'],
+  collapse: ['collapse', 'collapse-panel'],
+  'dropdown-menu': ['dropdown-menu', 'dropdown-item'],
   tag: ['tag', 'check-tag'],
-  checkbox: ['checkbox', 'checkbox-group'],
+  checkbox: ['checkbox-group', 'checkbox'],
   indexes: ['indexes', 'indexes-anchor'],
+  picker: ['picker', 'picker-item'],
+  radio: ['radio-group', 'radio'],
+  'side-bar': ['side-bar', 'side-bar-item'],
   steps: ['steps', 'step-item'],
   swiper: ['swiper', 'swiper-nav'],
   tabs: ['tabs', 'tab-panel'],
@@ -35,7 +40,7 @@ function findFilePath(componentName) {
 // 使用 v2 文件夹下 _var.less 文件
 const lessPath = [];
 if (combine[COMPONENT_NAME]) {
-  combine[COMPONENT_NAME].map((item, index) => {
+  combine[COMPONENT_NAME].forEach((item) => {
     lessPath.push(findFilePath(item));
   });
 } else {
@@ -50,7 +55,7 @@ fs.appendFileSync(resolveCwd(`src/${COMPONENT_NAME}/${COMPONENT_NAME}.md`), cssV
 fs.appendFileSync(resolveCwd(`src/${COMPONENT_NAME}/${COMPONENT_NAME}.en-US.md`), cssVariableHeadContentEn);
 
 // 读取 less 文件内容
-lessPath.map((item, index) => {
+lessPath.forEach((item) => {
   if (fs.existsSync(item)) {
     fs.readFile(item, 'utf8', (err, file) => {
       if (err) {
@@ -59,7 +64,7 @@ lessPath.map((item, index) => {
       }
       const list = file.match(matchReg)?.sort();
       let cssVariableBodyContent = '';
-      list?.map((item, index) => {
+      list?.forEach((item) => {
         cssVariableBodyContent += `${item.slice(1, item.indexOf(','))} | ${item.slice(
           item.indexOf(',') + 2,
           item.length - 1,

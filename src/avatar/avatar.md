@@ -35,6 +35,9 @@ size | String | medium | 尺寸，示例值：small/medium/large/24px/38px 等�
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
+--td-avatar-group-margin-left-large | -8px | - 
+--td-avatar-group-margin-left-medium | -6px | - 
+--td-avatar-group-margin-left-small | -4px | - 
 --td-avatar-bg-color | @brand-color-light-active | - 
 --td-avatar-border-color | #fff | - 
 --td-avatar-border-width-large | 4px | - 
@@ -42,9 +45,6 @@ size | String | medium | 尺寸，示例值：small/medium/large/24px/38px 等�
 --td-avatar-border-width-small | 2px | - 
 --td-avatar-circle-border-radius | @radius-circle | - 
 --td-avatar-content-color | @brand-color | - 
---td-avatar-group-margin-left-large | -8px | - 
---td-avatar-group-margin-left-medium | -6px | - 
---td-avatar-group-margin-left-small | -4px | - 
 --td-avatar-icon-large-font-size | 32px | - 
 --td-avatar-icon-medium-font-size | 24px | - 
 --td-avatar-icon-small-font-size | 20px | - 
