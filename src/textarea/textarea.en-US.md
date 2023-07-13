@@ -30,3 +30,19 @@ name | params | description
 blur | `(value: TextareaValue, context: { e: FocusEvent })` | \-
 change | `(value: TextareaValue, context?: { e?: InputEvent })` | \-
 focus | `(value: TextareaValue, context : { e: FocusEvent })` | \-
+
+
+### CSS Variables
+The component provides the following CSS variables, which can be used to customize styles.
+Name | Default Value | Description 
+-- | -- | --
+--td-textarea-background-color | @bg-color-container | - 
+--td-textarea-border-color | rgba(220, 220, 220, 1) | - 
+--td-textarea-border-radius | @radius-default | - 
+--td-textarea-disabled-text-color | @font-gray-4 | - 
+--td-textarea-indicator-text-color | @font-gray-3 | - 
+--td-textarea-label-color | @font-gray-1 | - 
+--td-textarea-label-width | 64px | - 
+--td-textarea-padding | @textarea-vertical-padding @textarea-horizontal-padding | - 
+--td-textarea-placeholder-color | @font-gray-3 | - 
+--td-textarea-text-color | @font-gray-1 | - 

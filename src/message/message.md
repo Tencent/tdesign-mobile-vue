@@ -28,3 +28,18 @@ onLinkClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<b
 close-btn-click | `(context: { e: MouseEvent })` | 当关闭按钮存在时，用户点击关闭按钮触发
 duration-end | \- | 计时结束后触发
 link-click | `(context: { e: MouseEvent })` | 当link链接存在时，点击链接文本时触发
+
+
+### CSS 变量
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-message-bg-color | @bg-color-container | - 
+--td-message-border-radius | @radius-default | - 
+--td-message-box-shadow | @shadow-4 | - 
+--td-message-close-icon-color | @font-gray-3 | - 
+--td-message-content-font-color | @font-gray-1 | - 
+--td-message-error-color | @error-color | - 
+--td-message-info-color | @brand-color | - 
+--td-message-success-color | @success-color | - 
+--td-message-warning-color | @warning-color | - 

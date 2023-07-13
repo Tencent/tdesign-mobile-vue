@@ -24,3 +24,18 @@ onChange | Function |  | TS 类型：`(value: number) => void`<br/>评分数改�
 名称 | 参数 | 描述
 -- | -- | --
 change | `(value: number)` | 评分数改变时触发
+
+
+### CSS 变量
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-rate-disabled-selected-color | @warning-color-3 | - 
+--td-rate-disabled-unselected-color | @gray-color-2 | - 
+--td-rate-icon-scale | 1.33 | - 
+--td-rate-selected-color | @warning-color | - 
+--td-rate-text-active-color | @font-gray-1 | - 
+--td-rate-text-active-font-weight | 600 | - 
+--td-rate-text-color | @font-gray-4 | - 
+--td-rate-text-font-size | @font-size-m | - 
+--td-rate-unselected-color | @bg-color-secondarycomponent | - 

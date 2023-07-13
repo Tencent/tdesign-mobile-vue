@@ -45,6 +45,7 @@
     "lint:fix-prettier": "prettier ./ --ignore-path .gitignore --ignore-path .eslintignore --write './*.{vue,ts,tsx}' --ignore-unknown",
     "lint:vue": "vue-tsc --noEmit -p tsconfig.build.json",
     "update:coverage-badge": "node scripts/test/generate-coverage.js",
+    "update:css": "node scripts/test/generate-css-vars.js",
     "changelog": "publish-cli changelog",
     "robot": "publish-cli robot-msg",
     "commit": "git-cz"

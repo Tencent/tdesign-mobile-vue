@@ -16,3 +16,10 @@ onClick | Function |  | TS 类型：`(context: {e: MouseEvent}) => void`<br/>悬
 名称 | 参数 | 描述
 -- | -- | --
 click | `(context: {e: MouseEvent})` | 悬浮按钮点击事件
+
+
+### CSS 变量
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-fab-shadow | @shadow-2 | - 

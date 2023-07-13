@@ -23,3 +23,21 @@ onChange | Function |  | TS 类型：`(value: SliderValue) => void`<br/>滑块�
 名称 | 参数 | 描述
 -- | -- | --
 change | `(value: SliderValue)` | 滑块值变化时触发
+
+
+### CSS 变量
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-slider-active-color | @brand-color | - 
+--td-slider-bar-height | 4px | - 
+--td-slider-capsule-bar-color | @bg-color-component | - 
+--td-slider-capsule-bar-heihgt | 24px | - 
+--td-slider-capsule-line-heihgt | 18px | - 
+--td-slider-default-color | @bg-color-component-disabled | - 
+--td-slider-default-color | @bg-color-secondarycomponent | - 
+--td-slider-disabled-color | @brand-color-disabled | - 
+--td-slider-disabled-text-color | @font-gray-4 | - 
+--td-slider-dot-bg-color | @bg-color-container | - 
+--td-slider-dot-color | @bg-color-secondarycontainer | - 
+--td-slider-dot-size | 20px | - 

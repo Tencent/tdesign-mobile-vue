@@ -80,3 +80,20 @@ name | params | default | description
 options | Object | - | Typescript：`Omit<DialogOptions, 'cancelBtn'>`
 
 插件返回值：`DialogInstance`
+
+
+### CSS Variables
+The component provides the following CSS variables, which can be used to customize styles.
+Name | Default Value | Description 
+-- | -- | --
+--td-border-radius | @radius-extra-large | - 
+--td-dialog-body-max-height | 456px | - 
+--td-dialog-close-color | @font-gray-3 | - 
+--td-dialog-close-font-size | 22px | - 
+--td-dialog-content-color | @font-gray-2 | - 
+--td-dialog-content-font-size | 16px | - 
+--td-dialog-content-line-height | 24px | - 
+--td-dialog-title-color | @font-gray-1 | - 
+--td-dialog-title-font-size | 18px | - 
+--td-dialog-title-line-height | 26px | - 
+--td-dialog-width | 311px | - 

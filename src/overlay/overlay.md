@@ -18,3 +18,12 @@ onClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>�
 名称 | 参数 | 描述
 -- | -- | --
 click | `(context: { e: MouseEvent })` | 遮罩层的点击事件
+
+
+### CSS 变量
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-overlay-bg-color | @font-gray-1 | - 
+--td-overlay-transition-duration | 300ms | - 
+--td-overlay-zindex | 1000 | - 
