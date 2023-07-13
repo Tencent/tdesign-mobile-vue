@@ -34,3 +34,17 @@ onReset | Function |  | TS 类型：`(value: DropdownValue) => void`<br/>点击�
 change | `(value: DropdownValue)` | 值改变时触发
 confirm | `(value: DropdownValue)` | 点击确认时触发
 reset | `(value: DropdownValue)` | 点击重置时触发
+
+
+### CSS 变量
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-dropdown-body-max-height | 280px | - 
+--td-dropdown-menu-bg-color | @bg-color-container | - 
+--td-dropdown-menu-active-colorm | @brand-color | - 
+--td-dropdown-menu-bg-colorm | @bg-color-container | - 
+--td-dropdown-menu-colorm | @font-gray-1 | - 
+--td-dropdown-menu-disabled-colorm | @font-gray-4 | - 
+--td-dropdown-menu-font-sizem | 14px | - 
+--td-dropdown-menu-icon-sizem | 24px | - 

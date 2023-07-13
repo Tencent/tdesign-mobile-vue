@@ -22,3 +22,14 @@ onFinish | Function |  | TS 类型：`() => void`<br/>倒计时结束时触发 |
 -- | -- | --
 change | `(time: TimeData)` | 时间变化时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/count-down/type.ts)。<br/>`interface TimeData {  days: number; hours: number; minutes: number; seconds: number; milliseconds: number }`<br/>
 finish | \- | 倒计时结束时触发
+
+
+### CSS 变量
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-countdown-bg-color | @error-color-6 | - 
+--td-countdown-default-color | @font-gray-1 | - 
+--td-countdown-round-border-radius | @radius-circle | - 
+--td-countdown-round-color | @font-white-1 | - 
+--td-countdown-square-border-radius | @radius-small | - 

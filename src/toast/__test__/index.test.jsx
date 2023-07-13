@@ -6,7 +6,7 @@ import { LoadingIcon } from 'tdesign-icons-vue-next';
 
 import config from '../../config';
 const { prefix } = config;
-const bodyLockClass = `${prefix}-overflow-hidden`;
+const bodyLockClass = `${prefix}-toast-overflow-hidden`;
 
 describe('Toast', () => {
   describe('props', () => {

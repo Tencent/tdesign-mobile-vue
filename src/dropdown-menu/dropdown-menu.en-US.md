@@ -34,3 +34,17 @@ name | params | description
 change | `(value: DropdownValue)` | \-
 confirm | `(value: DropdownValue)` | \-
 reset | `(value: DropdownValue)` | \-
+
+
+### CSS Variables
+The component provides the following CSS variables, which can be used to customize styles.
+Name | Default Value | Description 
+-- | -- | --
+--td-dropdown-body-max-height | 280px | - 
+--td-dropdown-menu-bg-color | @bg-color-container | - 
+--td-dropdown-menu-active-colorm | @brand-color | - 
+--td-dropdown-menu-bg-colorm | @bg-color-container | - 
+--td-dropdown-menu-colorm | @font-gray-1 | - 
+--td-dropdown-menu-disabled-colorm | @font-gray-4 | - 
+--td-dropdown-menu-font-sizem | 14px | - 
+--td-dropdown-menu-icon-sizem | 24px | - 

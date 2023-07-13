@@ -36,3 +36,20 @@ clear | `(context: { e: MouseEvent })` | 点击清除时触发
 focus | `(context: { value: string; e: FocusEvent })` | 获得焦点时触发
 search | `(context?: { value: string; trigger: 'submit' \| 'option-click' \| 'clear'; e?: InputEvent \| MouseEvent })` | 【讨论中】搜索触发，包含：手机键盘提交健、联想关键词点击、清空按钮点击等
 submit | `(context: { value: string; e: KeyboardEvent })` | 提交时触发，如：手机键盘提交按钮点击
+
+
+### CSS 变量
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--search-label-color | @font-gray-1 | - 
+--td-search-action-color | @brand-color | - 
+--td-search-bg-color | @bg-color-secondarycontainer | - 
+--td-search-clear-icon-color | @font-gray-3 | - 
+--td-search-font-size | @font-size-m | - 
+--td-search-height | 40px | - 
+--td-search-icon-color | @font-gray-3 | - 
+--td-search-padding | 8px 12px | - 
+--td-search-placeholder-color | @font-gray-3 | - 
+--td-search-square-radius | @radius-default | - 
+--td-search-text-color | @font-gray-1 | - 

@@ -38,3 +38,26 @@ disabled | Boolean | false | 是否禁用当前选项卡 | N
 label | String / Slot / Function | - | 选项卡名称，可自定义选项卡导航内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 panel | String / Slot / Function | - | 用于自定义选项卡面板内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 value | String / Number | - | 选项卡的值，唯一标识。TS 类型：`TabValue` | N
+
+
+### CSS 变量
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-tab-border-color | @component-stroke | - 
+--td-tab-font-size | 14px | - 
+--td-tab-icon-size | 16px | - 
+--td-tab-track-color | @brand-color | - 
+--td-tab-track-radius | 4px | - 
+--td-tab-track-thickness | 3px | - 
+--td-tab-track-width | 16px | - 
+--td-tab-nav-bg-color | @bg-color-container | - 
+--td-tab-item-active-color | @brand-color | - 
+--td-tab-item-color | @font-gray-1 | - 
+--td-tab-item-disabled-color | @font-gray-4 | - 
+--td-tab-item-height | 48px | - 
+--td-tab-item-tag-active-bg | @brand-color-light | - 
+--td-tab-item-tag-bg | @bg-color-secondarycontainer | - 
+--td-tab-item-tag-height | 32px | - 
+--td-tab-item-vertical-height | 54px | - 
+--td-tab-item-vertical-width | 104px | - 

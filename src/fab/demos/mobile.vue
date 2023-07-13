@@ -31,7 +31,7 @@ const btnProps = {
 <style lang="less" scoped>
 .tdesign-mobile-demo {
   background-color: #fff;
-  min-height: 100vh;
+  min-height: 100%;
   box-sizing: border-box;
 }
 </style>

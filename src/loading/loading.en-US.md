@@ -18,3 +18,12 @@ reverse | Boolean | - | \- | N
 size | String | '20px' | \- | N
 text | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 theme | String | circular | options：circular/spinner/dots | N
+
+
+### CSS Variables
+The component provides the following CSS variables, which can be used to customize styles.
+Name | Default Value | Description 
+-- | -- | --
+--td-loading-color | @brand-color | - 
+--td-loading-text-font-size | 12px | - 
+--td-loading-text-line-height | 20px | - 
