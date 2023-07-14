@@ -1,11 +1,12 @@
 <template>
   <button
-    v-hover="{ className: `${name}--hover`, active: !disabled }"
     :class="buttonClass"
     :disabled="disabled"
     :type="type"
     role="button"
     :aria-disabled="disabled"
+    @touchstart="touchstart($event, disabled)"
+    @touchend="touchend"
     @click="onClick"
   >
     <t-loading v-if="loading" inherit-color v-bind="loadingProps" />
@@ -28,6 +29,9 @@ import { useFormDisabled } from '../form/hooks';
 
 const { prefix } = config;
 const name = `${prefix}-button`;
+
+const startTime = 50;
+const stayTime = 70;
 
 export default defineComponent({
   name,
@@ -62,6 +66,20 @@ export default defineComponent({
         e.stopPropagation();
       }
     };
+
+    const touchstart = (e: TouchEvent, disabled: boolean) => {
+      if (disabled) return;
+      setTimeout(() => {
+        (e.target as HTMLElement)?.classList.add(`${name}--hover`);
+      }, startTime);
+    };
+
+    const touchend = (e: TouchEvent) => {
+      setTimeout(() => {
+        (e.target as HTMLElement)?.classList.remove(`${name}--hover`);
+      }, stayTime);
+    };
+
     return {
       name,
       ...toRefs(props),
@@ -70,6 +88,8 @@ export default defineComponent({
       iconContent,
       suffixContent,
       buttonClass,
+      touchstart,
+      touchend,
       onClick,
     };
   },
