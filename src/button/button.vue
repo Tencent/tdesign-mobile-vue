@@ -1,6 +1,6 @@
 <template>
   <button
-    v-hover="{ className: `${name}--hover`, active: !disabled }"
+    v-hover="{ className: `${name}--hover` }"
     :class="buttonClass"
     :disabled="disabled"
     :type="type"
@@ -35,7 +35,7 @@ export default defineComponent({
   directives: { Hover },
   props: ButtonProps,
   emits: ['click'],
-  setup(props, context) {
+  setup(props) {
     const disabled = useFormDisabled();
     const internalInstance = getCurrentInstance();
     const buttonClass = computed(() => [
