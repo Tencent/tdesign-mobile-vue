@@ -58,6 +58,7 @@ import {
   readonly,
   Fragment,
   watch,
+  CSSProperties,
 } from 'vue';
 import config from '../config';
 import TabsProps from './props';
@@ -76,7 +77,6 @@ export default defineComponent({
   props: TabsProps,
   emits: ['update:value', 'update:modelValue'],
   setup(props, context) {
-    const placement = ref('top');
     const theme = computed(() => props.theme);
     const spaceEvenly = computed(() => props.spaceEvenly);
     const showBottomLine = computed(() => props.showBottomLine);
@@ -137,21 +137,31 @@ export default defineComponent({
     const navScroll = ref<HTMLElement | null>(null);
     const navWrap = ref<HTMLElement | null>(null);
     const navLine = ref<HTMLElement | null>(null);
-    const lineStyle = ref('');
+    const lineStyle = ref();
     const moveToActiveTab = () => {
       if (navWrap.value && navLine.value && showBottomLine.value) {
         const tab = navWrap.value.querySelector<HTMLElement>(`.${activeClass}`);
         if (!tab) return;
         const line = navLine.value;
-        if (placement.value === 'left') {
-          lineStyle.value = `transform: translateY(${tab.offsetTop}px);${
-            props.animation ? `transition-duration:${props.animation.duration}ms` : ''
-          }`;
+        const tabInner = tab.querySelector<HTMLElement>(`.${prefix}-badge`);
+        const style: CSSProperties = {};
+        if (props.bottomLineMode === 'auto') {
+          style.width = `${Number(tabInner?.offsetWidth)}px`;
+          style.transform = `translateX(${Number(tab?.offsetLeft) + Number(tabInner?.offsetLeft)}px)`;
+        } else if (props.bottomLineMode === 'full') {
+          style.width = `${Number(tab?.offsetWidth)}px`;
+          style.transform = `translateX(${Number(tab?.offsetLeft)}px)`;
         } else {
-          lineStyle.value = `transform: translateX(${
-            Number(tab.offsetLeft) + Number(tab.offsetWidth) / 2 - line.offsetWidth / 2
-          }px);${props.animation ? `transition-duration:${props.animation.duration}ms` : ''}`;
+          style.transform = `translateX(${
+            Number(tab?.offsetLeft) + (Number(tab?.offsetWidth) - Number(line?.offsetWidth)) / 2
+          }px)`;
         }
+
+        if (props.animation) {
+          style.transitionDuration = `${props.animation.duration}ms`;
+        }
+
+        lineStyle.value = style;
       }
     };
 
