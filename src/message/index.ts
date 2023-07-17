@@ -28,9 +28,11 @@ function create(props: MessageActionOptionsType): void {
         visible: visible.value,
         onDurationEnd: () => {
           visible.value = false;
+          context.removeChild(root);
         },
         onCloseBtnClick: () => {
           visible.value = false;
+          context.removeChild(root);
         },
       }),
   });
