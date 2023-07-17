@@ -1,6 +1,6 @@
 <template>
   <div :class="`${name}`">
-    <div v-for="(file, index) in uploadedFiles" :key="index" :class="`${name}__item`">
+    <div v-for="(file, index) in renderUploadFiles" :key="index" :class="`${name}__item`">
       <t-image
         :class="`${name}__image`"
         shape="round"
@@ -8,23 +8,17 @@
         :src="file.url"
         @click="(e) => handlePreview(e, file)"
       />
-      <div
-        v-if="file.status === 'fail' || file.status === 'progress'"
-        data-index="{{index}}"
-        :class="`${name}__progress-mask`"
-        data-file="{{file}}"
-        bind:tap="onFileClick"
-      >
+      <div v-if="file.status === 'fail' || file.status === 'progress'" :class="`${name}__progress-mask`">
         <template v-if="file.status === 'progress'">
-          <loading-icon :class="`${name}__progress-loading`" size="24" aria-hidden />
+          <loading-icon :class="`${name}__progress-loading`" size="24" />
           <div :class="`${name}__progress-text`">{{ file.percent ? file.percent + '%' : '上传中...' }}</div>
         </template>
-        <close-circle-icon v-else size="24" aria-hidden />
+        <close-circle-icon v-else size="24" />
         <div v-if="file.status === 'fail'" :class="`${name}__progress-text`">上传失败</div>
       </div>
       <close-icon :class="`${name}__delete-btn`" @click="({ e }) => handleRemove(e, file, index)" />
     </div>
-    <template v-if="max === 0 || (max > 0 && uploadedFiles?.length < max)">
+    <template v-if="max === 0 || (max > 0 && renderUploadFiles?.length < max)">
       <div v-if="defaultContent" @click="triggerUpload">
         <t-node :content="defaultContent" />
       </div>
@@ -45,7 +39,7 @@
       :accept="accept"
       @change="handleChange"
     />
-    <t-image-viewer v-model:images="images" v-model="showViewer" :default-index="initialIndex" />
+    <t-image-viewer v-model:images="renderImages" v-model="showViewer" />
   </div>
 </template>
 <script lang="ts">
@@ -118,6 +112,28 @@ export default defineComponent({
       }
       return [];
     });
+
+    const renderUploadFiles = computed((): UploadFile[] => {
+      if (props.autoUpload) {
+        return uploadedFiles.value;
+      }
+      return toUploadFiles.value.map((file) => {
+        return {
+          ...file,
+          status: 'success',
+        };
+      });
+    });
+
+    const renderImages = computed(() => {
+      if (innerFiles.value) {
+        console.log(innerFiles.value);
+        const imgs = innerFiles.value.map((item) => item.url as string);
+        return images.value.concat(...imgs);
+      }
+      return images.value;
+    });
+
     const inputRef = ref<null | HTMLInputElement>(null);
 
     const triggerUpload = () => {
@@ -219,30 +235,33 @@ export default defineComponent({
         reader.readAsDataURL(fileRaw);
         reader.onload = (event: ProgressEvent<FileReader>) => {
           uploadFile.url = event.target?.result as string;
-        };
-        handleBeforeUpload(fileRaw).then((canUpload) => {
-          if (!canUpload) return;
-          const newFiles: Array<UploadFile> = toUploadFiles.value.concat();
+          if (!props.autoUpload) {
+            images.value.push(uploadFile.url as string);
+          }
+          handleBeforeUpload(fileRaw).then((canUpload) => {
+            if (!canUpload) return;
+            const newFiles: Array<UploadFile> = toUploadFiles.value.concat();
 
-          // 判断是否为重复文件条件，已选是否存在检验
-          if (props.allowUploadDuplicateFile) {
-            newFiles.push(uploadFile);
-          } else {
-            const isDuplicated = toUploadFiles.value.some((file) => file.name === uploadFile.name);
-            if (isDuplicated) {
-              props.onValidate?.({
-                type: 'FILTER_FILE_SAME_NAME',
-                files: [uploadFile],
-              });
-            } else {
+            // 判断是否为重复文件条件，已选是否存在检验
+            if (props.allowUploadDuplicateFile) {
               newFiles.push(uploadFile);
+            } else {
+              const isDuplicated = toUploadFiles.value.some((file) => file.name === uploadFile.name);
+              if (isDuplicated) {
+                props.onValidate?.({
+                  type: 'FILTER_FILE_SAME_NAME',
+                  files: [uploadFile],
+                });
+              } else {
+                newFiles.push(uploadFile);
+              }
             }
-          }
-          toUploadFiles.value = newFiles;
-          if (props.autoUpload) {
-            upload(uploadFile);
-          }
-        });
+            toUploadFiles.value = newFiles;
+            if (props.autoUpload) {
+              upload(uploadFile);
+            }
+          });
+        };
       });
     };
 
@@ -434,6 +453,8 @@ export default defineComponent({
       handleBeforeUpload,
       handleSizeLimit,
       uploadFiles,
+      renderUploadFiles,
+      renderImages,
       handleMockProgress,
       handleProgress,
       handleRemove,
