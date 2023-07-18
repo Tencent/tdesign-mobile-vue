@@ -8,7 +8,7 @@ name | type | default | description | required
 animation | Object | - | Typescript：`TabAnimation` `type TabAnimation = { duration: number } & Record<string, any>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tabs/type.ts) | N
 list | Array | - | Typescript：`Array<TdTabPanelProps>` | N
 showBottomLine | Boolean | true | \- | N
-bottomLineMode | String | fixed'| options：fixed/auto/full ｜ N
+bottomLineMode | String | fixed | options：fixed/auto/full ｜ N
 size | String | medium | options：medium/large | N
 spaceEvenly | Boolean | true | \- | N
 sticky | Boolean | false | \- | N

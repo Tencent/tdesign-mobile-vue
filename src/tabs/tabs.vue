@@ -16,7 +16,7 @@
               }"
               @click="(e) => tabClick(e, item)"
             >
-              <t-badge v-bind="item.badgeProps">
+              <t-badge v-bind="item['badge-props'] || item.badgeProps">
                 <div
                   :class="{
                     [`${name}__item-inner ${name}__item-inner--${theme}`]: true,
