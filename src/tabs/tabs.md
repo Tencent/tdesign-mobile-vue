@@ -8,6 +8,7 @@
 animation | Object | - | 动画效果设置。其中 duration 表示动画时长。TS 类型：`TabAnimation` `type TabAnimation = { duration: number } & Record<string, any>`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tabs/type.ts) | N
 list | Array | - | 选项卡列表。TS 类型：`Array<TdTabPanelProps>` | N
 showBottomLine | Boolean | true | 是否展示底部激活线条 | N
+bottomLineMode | String | fixed | 激活下划线的模式。可选项：fixed/auto/full ｜ N
 size | String | medium | 组件尺寸。可选项：medium/large | N
 spaceEvenly | Boolean | true | 选项卡头部空间是否均分 | N
 sticky | Boolean | false | 是否开启粘性布局 | N
@@ -50,7 +51,7 @@ value | String / Number | - | 选项卡的值，唯一标识。TS 类型：`TabV
 --td-tab-track-color | @brand-color | - 
 --td-tab-track-radius | 4px | - 
 --td-tab-track-thickness | 3px | - 
---td-tab-track-width | 16px | - 
+--td-tab-track-width | 16px | 当前激活 tab 下划线的宽度，仅在 bottomLineMode 为 'fixed' 时有效
 --td-tab-nav-bg-color | @bg-color-container | - 
 --td-tab-item-active-color | @brand-color | - 
 --td-tab-item-color | @font-gray-1 | - 
