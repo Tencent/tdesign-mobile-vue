@@ -62,7 +62,7 @@ exports[`Textarea > Textarea cardVue demo works fine 1`] = `
       >
         <textarea
           class="t-textarea__wrapper-inner"
-          maxlength="-1"
+          maxlength="500"
           name=""
           placeholder="请输入文字"
         />
@@ -98,7 +98,7 @@ exports[`Textarea > Textarea cardVue demo works fine 1`] = `
       >
         <textarea
           class="t-textarea__wrapper-inner"
-          maxlength="-1"
+          maxlength="500"
           name=""
           placeholder="请输入文字"
         />
@@ -135,7 +135,7 @@ exports[`Textarea > Textarea customVue demo works fine 1`] = `
     >
       <textarea
         class="t-textarea__wrapper-inner"
-        maxlength="-1"
+        maxlength="100"
         name=""
         placeholder="请输入文字"
       />
@@ -239,7 +239,7 @@ exports[`Textarea > Textarea maxlengthVue demo works fine 1`] = `
   >
     <textarea
       class="t-textarea__wrapper-inner"
-      maxlength="-1"
+      maxlength="500"
       name="标签文字"
       placeholder="请输入文字"
     />
@@ -414,7 +414,7 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
         >
           <textarea
             class="t-textarea__wrapper-inner"
-            maxlength="-1"
+            maxlength="500"
             name="标签文字"
             placeholder="请输入文字"
           />
@@ -549,7 +549,7 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
           >
             <textarea
               class="t-textarea__wrapper-inner"
-              maxlength="-1"
+              maxlength="500"
               name=""
               placeholder="请输入文字"
             />
@@ -585,7 +585,7 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
           >
             <textarea
               class="t-textarea__wrapper-inner"
-              maxlength="-1"
+              maxlength="500"
               name=""
               placeholder="请输入文字"
             />
@@ -642,7 +642,7 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
           >
             <textarea
               class="t-textarea__wrapper-inner"
-              maxlength="-1"
+              maxlength="100"
               name=""
               placeholder="请输入文字"
             />
