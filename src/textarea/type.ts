@@ -51,7 +51,8 @@ export interface TdTextareaProps {
    */
   maxcharacter?: number;
   /**
-   * 用户最多可以输入的字符个数
+   * 用户最多可以输入的字符个数。默认为 -1，不限制输入长度
+   * @default -1
    */
   maxlength?: number;
   /**
