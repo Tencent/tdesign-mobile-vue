@@ -6,7 +6,7 @@
         shape="round"
         v-bind="imageProps"
         :src="file.url"
-        @click="(e) => handlePreview(e, file)"
+        @click="(e) => handlePreview(e, file, index)"
       />
       <div v-if="file.status === 'fail' || file.status === 'progress'" :class="`${name}__progress-mask`">
         <template v-if="file.status === 'progress'">
@@ -127,9 +127,8 @@ export default defineComponent({
 
     const renderImages = computed(() => {
       if (innerFiles.value) {
-        console.log(innerFiles.value);
         const imgs = innerFiles.value.map((item) => item.url as string);
-        return images.value.concat(...imgs);
+        return imgs.concat(images.value);
       }
       return images.value;
     });
@@ -142,7 +141,8 @@ export default defineComponent({
       input.click();
     };
 
-    const handlePreview = (e: MouseEvent, file: UploadFile) => {
+    const handlePreview = (e: MouseEvent, file: UploadFile, index: number) => {
+      initialIndex.value = index;
       showViewer.value = true;
       emit('preview', {
         e,
@@ -294,11 +294,22 @@ export default defineComponent({
     };
 
     const handleRemove = (e: MouseEvent, file: UploadFile, index: number) => {
-      const files = uploadedFiles.value.concat();
-      files.splice(index, 1);
-      setInnerFiles(files, { e, trigger: 'remove', index, file });
-      emit('remove', { e, index, file });
+      if (props.autoUpload) {
+        const files = uploadedFiles.value.concat();
+        files.splice(index, 1);
+        setInnerFiles(files, { e, trigger: 'remove', index, file });
+      } else {
+        const findIndex = toUploadFiles.value.findIndex((item) => item.fileRaw === file.fileRaw);
+        if (findIndex !== -1) {
+          toUploadFiles.value.splice(findIndex, 1);
+        } else {
+          const files = uploadedFiles.value.concat();
+          files.splice(index, 1);
+          setInnerFiles(files, { e, trigger: 'remove', index, file });
+        }
+      }
       images.value.splice(index, 1);
+      emit('remove', { e, index, file });
     };
 
     const upload = async (file: UploadFile): Promise<void> => {

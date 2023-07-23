@@ -36,17 +36,7 @@
 </template>
 
 <script lang="ts">
-import {
-  computed,
-  defineComponent,
-  reactive,
-  getCurrentInstance,
-  CSSProperties,
-  h,
-  Transition,
-  toRefs,
-  ref,
-} from 'vue';
+import { computed, defineComponent, reactive, getCurrentInstance, CSSProperties, h, Transition, toRefs } from 'vue';
 import { CloseIcon, DeleteIcon } from 'tdesign-icons-vue-next';
 
 import config from '../config';
@@ -57,6 +47,7 @@ import { preventDefault } from '../shared/dom';
 // inner components
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
 import TImage from '../image';
+import { TdImageViewerProps } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-image-viewer`;
@@ -83,10 +74,13 @@ export default defineComponent({
       swiperStyle: [] as string[],
     });
     const [visible, setVisible] = useDefault(props, emit, 'visible', 'change');
-    const currentIndex = ref(props.index ?? 0);
+    const [currentIndex, setIndex] = useDefault<TdImageViewerProps['index'], TdImageViewerProps>(
+      props,
+      emit,
+      'index',
+      'index-change',
+    );
     const touch = useTouch();
-
-    // node
     const closeNode = computed(() =>
       renderTNode(internalInstance, 'close-btn', {
         defaultNode: h(CloseIcon),
@@ -121,8 +115,7 @@ export default defineComponent({
     };
 
     const onSwiperChange = (index: number, context: any) => {
-      currentIndex.value = index;
-      emit('index-change', index, context);
+      setIndex(index, { context });
     };
 
     let fingerNum: number;
