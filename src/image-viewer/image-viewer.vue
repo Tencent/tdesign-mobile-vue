@@ -17,7 +17,7 @@
         :autoplay="false"
         :class="`${name}__content`"
         height="100vh"
-        :current="currentIndex"
+        :default-current="currentIndex"
         @change="onSwiperChange"
       >
         <t-swiper-item
@@ -36,14 +36,23 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, reactive, getCurrentInstance, CSSProperties, h, Transition, toRefs } from 'vue';
+import {
+  computed,
+  defineComponent,
+  reactive,
+  getCurrentInstance,
+  CSSProperties,
+  h,
+  Transition,
+  toRefs,
+  ref,
+} from 'vue';
 import { CloseIcon, DeleteIcon } from 'tdesign-icons-vue-next';
 
 import config from '../config';
 import ImagediverProps from './props';
 import { renderTNode, TNode, useDefault, useTouch } from '../shared';
 import { preventDefault } from '../shared/dom';
-import { TdImageViewerProps } from './type';
 
 // inner components
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
@@ -74,12 +83,7 @@ export default defineComponent({
       swiperStyle: [] as string[],
     });
     const [visible, setVisible] = useDefault(props, emit, 'visible', 'change');
-    const [currentIndex, setIndex] = useDefault<TdImageViewerProps['index'], TdImageViewerProps>(
-      props,
-      emit,
-      'index',
-      'index-change',
-    );
+    const currentIndex = ref(props.index ?? 0);
     const touch = useTouch();
 
     // node
@@ -117,7 +121,8 @@ export default defineComponent({
     };
 
     const onSwiperChange = (index: number, context: any) => {
-      setIndex(index, { context });
+      currentIndex.value = index;
+      emit('index-change', index, context);
     };
 
     let fingerNum: number;

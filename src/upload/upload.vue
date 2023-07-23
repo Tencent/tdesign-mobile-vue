@@ -39,7 +39,7 @@
       :accept="accept"
       @change="handleChange"
     />
-    <t-image-viewer v-model:images="renderImages" v-model="showViewer" />
+    <t-image-viewer v-model:images="renderImages" v-model="showViewer" :index="initialIndex" />
   </div>
 </template>
 <script lang="ts">
