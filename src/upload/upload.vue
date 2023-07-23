@@ -117,7 +117,7 @@ export default defineComponent({
       if (props.autoUpload) {
         return uploadedFiles.value;
       }
-      return toUploadFiles.value.map((file) => {
+      return uploadedFiles.value.concat(toUploadFiles.value).map((file) => {
         return {
           ...file,
           status: 'success',
@@ -231,37 +231,33 @@ export default defineComponent({
           percent: 0,
           status: 'waiting',
         };
-        const reader = new FileReader();
-        reader.readAsDataURL(fileRaw);
-        reader.onload = (event: ProgressEvent<FileReader>) => {
-          uploadFile.url = event.target?.result as string;
-          if (!props.autoUpload) {
-            images.value.push(uploadFile.url as string);
-          }
-          handleBeforeUpload(fileRaw).then((canUpload) => {
-            if (!canUpload) return;
-            const newFiles: Array<UploadFile> = toUploadFiles.value.concat();
+        uploadFile.url = URL.createObjectURL(fileRaw);
+        if (!props.autoUpload) {
+          images.value.push(uploadFile.url as string);
+        }
+        handleBeforeUpload(fileRaw).then((canUpload) => {
+          if (!canUpload) return;
+          const newFiles: Array<UploadFile> = toUploadFiles.value.concat();
 
-            // 判断是否为重复文件条件，已选是否存在检验
-            if (props.allowUploadDuplicateFile) {
-              newFiles.push(uploadFile);
+          // 判断是否为重复文件条件，已选是否存在检验
+          if (props.allowUploadDuplicateFile) {
+            newFiles.push(uploadFile);
+          } else {
+            const isDuplicated = toUploadFiles.value.some((file) => file.name === uploadFile.name);
+            if (isDuplicated) {
+              props.onValidate?.({
+                type: 'FILTER_FILE_SAME_NAME',
+                files: [uploadFile],
+              });
             } else {
-              const isDuplicated = toUploadFiles.value.some((file) => file.name === uploadFile.name);
-              if (isDuplicated) {
-                props.onValidate?.({
-                  type: 'FILTER_FILE_SAME_NAME',
-                  files: [uploadFile],
-                });
-              } else {
-                newFiles.push(uploadFile);
-              }
+              newFiles.push(uploadFile);
             }
-            toUploadFiles.value = newFiles;
-            if (props.autoUpload) {
-              upload(uploadFile);
-            }
-          });
-        };
+          }
+          toUploadFiles.value = newFiles;
+          if (props.autoUpload) {
+            upload(uploadFile);
+          }
+        });
       });
     };
 

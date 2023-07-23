@@ -651,14 +651,10 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </picture>
             </div>
             <div
-              bind:tap="onFileClick"
               class="t-upload__progress-mask"
-              data-file="{{file}}"
-              data-index="{{index}}"
             >
               
               <svg
-                aria-hidden=""
                 class="t-icon t-icon-loading t-upload__progress-loading"
                 fill="none"
                 height="1em"
@@ -740,14 +736,10 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </picture>
             </div>
             <div
-              bind:tap="onFileClick"
               class="t-upload__progress-mask"
-              data-file="{{file}}"
-              data-index="{{index}}"
             >
               
               <svg
-                aria-hidden=""
                 class="t-icon t-icon-loading t-upload__progress-loading"
                 fill="none"
                 height="1em"
@@ -882,13 +874,9 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </picture>
             </div>
             <div
-              bind:tap="onFileClick"
               class="t-upload__progress-mask"
-              data-file="{{file}}"
-              data-index="{{index}}"
             >
               <svg
-                aria-hidden=""
                 class="t-icon t-icon-close-circle"
                 fill="none"
                 height="1em"
@@ -1468,14 +1456,10 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           </picture>
         </div>
         <div
-          bind:tap="onFileClick"
           class="t-upload__progress-mask"
-          data-file="{{file}}"
-          data-index="{{index}}"
         >
           
           <svg
-            aria-hidden=""
             class="t-icon t-icon-loading t-upload__progress-loading"
             fill="none"
             height="1em"
@@ -1557,14 +1541,10 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           </picture>
         </div>
         <div
-          bind:tap="onFileClick"
           class="t-upload__progress-mask"
-          data-file="{{file}}"
-          data-index="{{index}}"
         >
           
           <svg
-            aria-hidden=""
             class="t-icon t-icon-loading t-upload__progress-loading"
             fill="none"
             height="1em"
@@ -1699,13 +1679,9 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           </picture>
         </div>
         <div
-          bind:tap="onFileClick"
           class="t-upload__progress-mask"
-          data-file="{{file}}"
-          data-index="{{index}}"
         >
           <svg
-            aria-hidden=""
             class="t-icon t-icon-close-circle"
             fill="none"
             height="1em"
