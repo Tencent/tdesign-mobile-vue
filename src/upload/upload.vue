@@ -64,6 +64,7 @@ import UploadProps from './props';
 import config from '../config';
 import { isOverSizeLimit } from '../_common/js/upload/utils';
 import { useFormDisabled } from '../form/hooks';
+import useEmit from '../hooks/useEmit';
 
 const { prefix } = config;
 const name = `${prefix}-upload`;
@@ -93,8 +94,9 @@ export default defineComponent({
     'select-change',
     'validate',
   ],
-  setup(props, { emit }) {
+  setup(props) {
     const disabled = useFormDisabled();
+    const { emit } = useEmit();
     const [innerFiles, setInnerFiles] = useDefault<TdUploadProps['files'], TdUploadProps>(
       props,
       emit,
