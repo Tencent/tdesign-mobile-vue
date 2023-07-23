@@ -5,6 +5,23 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.0.0-rc.4 `2023-07-18` 
+### 🚀 Features
+- `Tabs`: 新增 `bottomLineMode` 属性 @anlyyao ([#968](https://github.com/Tencent/tdesign-mobile-vue/pull/968))
+### 🐞 Bug Fixes
+- `Message`: 修复 `Message` 关闭时未销毁节点 @anlyyao ([#962](https://github.com/Tencent/tdesign-mobile-vue/pull/962))
+- `Button`: 修复 `disabled` 变更之后仍有点击态的问题 @LeeJim ([#963](https://github.com/Tencent/tdesign-mobile-vue/pull/963))
+- `Tabs`: 修复 `badgeProps` 属性失效 @anlyyao ([#968](https://github.com/Tencent/tdesign-mobile-vue/pull/968))
+
+
+## 🌈 1.0.0-rc.3 `2023-07-13` 
+### 🚧 Others
+- `Popup`: 类名 `t-overflow-hidden` 更新为 `t-popup-overflow-hidden` @anlyyao ([#947](https://github.com/Tencent/tdesign-mobile-vue/pull/947))
+- `Toast`: 类名 `t-overflow-hidden` 更新为 `t-toast-overflow-hidden` @anlyyao ([#947](https://github.com/Tencent/tdesign-mobile-vue/pull/947))
+- `Message`: 更新示例代码 @anlyyao ([#949](https://github.com/Tencent/tdesign-mobile-vue/pull/949))
+- site: 组件文档新增  `CSS variables` 内容 @anlyyao ([#944](https://github.com/Tencent/tdesign-mobile-vue/pull/944))
+
+
 ## 🌈 1.0.0-rc.2 `2023-07-11` 
 ### ❗ Breaking Changes
 - `NoticeBar`: `prefixIcon` 属性默认值变更为 `true` @anlyyao ([#929](https://github.com/Tencent/tdesign-mobile-vue/pull/929))

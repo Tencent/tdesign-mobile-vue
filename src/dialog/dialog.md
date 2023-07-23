@@ -80,3 +80,20 @@ options | \- | - | TS 类型：`DialogOptions`
 options | Object | - | TS 类型：`Omit<DialogOptions, 'cancelBtn'>`
 
 插件返回值：`DialogInstance`
+
+
+### CSS 变量
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-border-radius | @radius-extra-large | - 
+--td-dialog-body-max-height | 456px | - 
+--td-dialog-close-color | @font-gray-3 | - 
+--td-dialog-close-font-size | 22px | - 
+--td-dialog-content-color | @font-gray-2 | - 
+--td-dialog-content-font-size | 16px | - 
+--td-dialog-content-line-height | 24px | - 
+--td-dialog-title-color | @font-gray-1 | - 
+--td-dialog-title-font-size | 18px | - 
+--td-dialog-title-line-height | 26px | - 
+--td-dialog-width | 311px | - 

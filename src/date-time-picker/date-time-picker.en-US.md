@@ -30,3 +30,10 @@ cancel | `(context: { e: MouseEvent })` | \-
 change | `(value: DateValue)` | \-
 confirm | `(value: DateValue)` | \-
 pick | `(value: DateValue)` | \-
+
+
+### CSS Variables
+The component provides the following CSS variables, which can be used to customize styles.
+Name | Default Value | Description 
+-- | -- | --
+--td-data-time-picker-year-width | 64px | - 

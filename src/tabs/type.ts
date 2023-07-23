@@ -22,6 +22,11 @@ export interface TdTabsProps {
    */
   showBottomLine?: boolean;
   /**
+   * 激活下划线的模式
+   * @default fixed
+   */
+  bottomLineMode?: 'fixed' | 'auto' | 'full';
+  /**
    * 组件尺寸
    * @default medium
    */

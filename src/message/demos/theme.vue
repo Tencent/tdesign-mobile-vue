@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-import Message from '../index';
+import { Message } from 'tdesign-mobile-vue';
 
 const showMessage = (theme: string, content = '这是一条普通通知信息', duration = 5000) => {
   if (Message[theme]) {
@@ -18,7 +18,7 @@ const showMessage = (theme: string, content = '这是一条普通通知信息', 
       duration,
       icon: true,
       zIndex: 20000,
-      context: document.querySelector('.tdesign-mobile-demo'),
+      context: document.querySelector('.button-demo'),
     });
   }
 };

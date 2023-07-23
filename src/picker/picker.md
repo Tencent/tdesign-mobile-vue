@@ -28,3 +28,28 @@ cancel | `(context: { e: MouseEvent })` | 点击取消按钮时触发
 change | `(value: Array<PickerValue>, context: { columns: Array<PickerContext>, e: MouseEvent }) ` | 选中变化时候触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/picker/type.ts)。<br/>`interface PickerContext{ column: number,index: number }`<br/>
 confirm | `(value: Array<PickerValue>, context: { index: number[], e: MouseEvent, label: string[] })` | 点击确认按钮时触发
 pick | `(value: Array<PickerValue>,context: PickerContext)` | 任何一列选中都会触发，不同的列参数不同。`context.column` 表示第几列变化，`context.index` 表示变化那一列的选中项下标
+
+
+### CSS 变量
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-picker-bg-color | @bg-color-container | - 
+--td-picker-border-radius | 12px | - 
+--td-picker-button-font-size | 16px | - 
+--td-picker-cancel-color | @font-gray-2 | - 
+--td-picker-confirm-color | @brand-color | - 
+--td-picker-group-height | 200px | - 
+--td-picker-indicator-bg-color | @bg-color-secondarycontainer | - 
+--td-picker-indicator-border-radius | 6px | - 
+--td-picker-item-active-color | @font-gray-1 | - 
+--td-picker-item-color | @font-gray-2 | - 
+--td-picker-item-height | 40px | - 
+--td-picker-item-height | 40px | - 
+--td-picker-mask-color-bottom | hsla(0, 0%, 100%, .4) | - 
+--td-picker-mask-color-top | hsla(0, 0%, 100%, .92) | - 
+--td-picker-title-color | @font-gray-1 | - 
+--td-picker-title-font-size | 18px | - 
+--td-picker-title-font-weight | 600 | - 
+--td-picker-title-line-height | 26px | - 
+--td-picker-toolbar-height | 58px | - 

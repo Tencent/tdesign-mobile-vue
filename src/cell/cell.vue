@@ -1,5 +1,5 @@
 <template>
-  <div v-hover="{ className: `${name}--hover`, active: hover }" :class="styleCell" @click="onClick">
+  <div v-hover="{ className: `${name}--hover`, disabledName: 'hoverDisabled' }" :class="styleCell" @click="onClick">
     <div :class="`${name}__left`">
       <div v-if="leftIconContent" :class="`${name}__left-icon`">
         <t-node :content="leftIconContent" />
@@ -63,10 +63,11 @@ export default defineComponent({
       `${name}`,
       `${name}--${props.align}`,
       {
-        [`${name}--hover`]: props.hover && disabled.value,
         [`${name}--borderless`]: !props.bordered,
       },
     ]);
+
+    const hoverDisabled = computed(() => !props.hover || disabled.value);
 
     const onClick = (e: Event) => {
       if (!disabled.value) {
@@ -76,6 +77,7 @@ export default defineComponent({
 
     return {
       ...toRefs(props),
+      hoverDisabled,
       name,
       onClick,
       styleCell,
