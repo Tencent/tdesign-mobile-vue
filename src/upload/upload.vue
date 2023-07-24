@@ -243,10 +243,13 @@ export default defineComponent({
           const newFiles: Array<UploadFile> = toUploadFiles.value.concat();
 
           // 判断是否为重复文件条件，已选是否存在检验
+          let isDuplicated = false;
           if (props.allowUploadDuplicateFile) {
             newFiles.push(uploadFile);
           } else {
-            const isDuplicated = toUploadFiles.value.some((file) => file.name === uploadFile.name);
+            isDuplicated = [...uploadedFiles.value, ...toUploadFiles.value].some(
+              (file) => file.name === uploadFile.name,
+            );
             if (isDuplicated) {
               props.onValidate?.({
                 type: 'FILTER_FILE_SAME_NAME',
@@ -257,7 +260,7 @@ export default defineComponent({
             }
           }
           toUploadFiles.value = newFiles;
-          if (props.autoUpload) {
+          if ((props.allowUploadDuplicateFile || !isDuplicated) && props.autoUpload) {
             upload(uploadFile);
           }
         });

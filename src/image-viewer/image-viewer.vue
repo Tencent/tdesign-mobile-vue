@@ -65,7 +65,7 @@ export default defineComponent({
     TImage,
   },
   props: ImagediverProps,
-  emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'delete'],
+  emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'update:index', 'delete'],
   setup(props, { emit }) {
     const internalInstance = getCurrentInstance();
     const state = reactive({
