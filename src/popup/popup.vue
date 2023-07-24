@@ -27,6 +27,7 @@ const { prefix } = config;
 
 const name = `${prefix}-popup`;
 const bodyLockClass = `${name}-overflow-hidden`;
+let lockTimes = 0;
 
 export default defineComponent({
   name,
@@ -119,11 +120,21 @@ export default defineComponent({
     );
 
     const lock = () => {
-      document.body.classList.add(bodyLockClass);
+      if (!lockTimes) {
+        document.body.classList.add(bodyLockClass);
+      }
+
+      lockTimes++;
     };
 
     const unlock = () => {
-      document.body.classList.remove(bodyLockClass);
+      if (lockTimes) {
+        lockTimes--;
+
+        if (!lockTimes) {
+          document.body.classList.remove(bodyLockClass);
+        }
+      }
     };
 
     const shouldLock = computed(() => wrapperVisbile.value && props.preventScrollThrough);
