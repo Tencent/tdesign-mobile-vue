@@ -17,7 +17,7 @@
         :autoplay="false"
         :class="`${name}__content`"
         height="100vh"
-        :current="currentIndex"
+        :default-current="currentIndex"
         @change="onSwiperChange"
       >
         <t-swiper-item
@@ -43,11 +43,11 @@ import config from '../config';
 import ImagediverProps from './props';
 import { renderTNode, TNode, useDefault, useTouch } from '../shared';
 import { preventDefault } from '../shared/dom';
-import { TdImageViewerProps } from './type';
 
 // inner components
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
 import TImage from '../image';
+import { TdImageViewerProps } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-image-viewer`;
@@ -65,7 +65,7 @@ export default defineComponent({
     TImage,
   },
   props: ImagediverProps,
-  emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'delete'],
+  emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'update:index', 'delete'],
   setup(props, { emit }) {
     const internalInstance = getCurrentInstance();
     const state = reactive({
@@ -81,8 +81,6 @@ export default defineComponent({
       'index-change',
     );
     const touch = useTouch();
-
-    // node
     const closeNode = computed(() =>
       renderTNode(internalInstance, 'close-btn', {
         defaultNode: h(CloseIcon),
