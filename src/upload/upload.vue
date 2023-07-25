@@ -51,8 +51,8 @@ import isFunction from 'lodash/isFunction';
 import TImage from '../image';
 import TImageViewer from '../image-viewer';
 import xhr from '../_common/js/upload/xhr';
-import { useDefault, renderTNode, TNode } from '../shared';
-import { TdUploadProps, UploadFile, RequestMethodResponse, SizeLimitObj } from './type';
+import { useVModel, renderTNode, TNode } from '../shared';
+import { UploadFile, RequestMethodResponse, SizeLimitObj } from './type';
 import { SuccessContext, InnerProgressContext } from './interface';
 import UploadProps from './props';
 import config from '../config';
@@ -89,12 +89,9 @@ export default defineComponent({
   ],
   setup(props, { emit }) {
     const disabled = useFormDisabled();
-    const [innerFiles, setInnerFiles] = useDefault<TdUploadProps['files'], TdUploadProps>(
-      props,
-      emit,
-      'files',
-      'change',
-    );
+    const { files, modelValue, defaultFiles } = toRefs(props);
+    const [innerFiles, setInnerFiles] = useVModel(files, modelValue, defaultFiles.value, props.onChange, 'files');
+
     const internalInstance = getCurrentInstance();
     const defaultContent = computed(() => renderTNode(internalInstance, 'default'));
     const addContent = computed(() => renderTNode(internalInstance, 'addContent'));
