@@ -144,9 +144,10 @@ export default defineComponent({
     const handlePreview = (e: MouseEvent, file: UploadFile, index: number) => {
       initialIndex.value = index;
       showViewer.value = true;
-      emit('preview', {
+      props.onPreview?.({
         e,
         file,
+        index,
       });
     };
 
@@ -159,7 +160,7 @@ export default defineComponent({
       if (disabled.value || !input || !input.files) return;
 
       const formatFiles = formatFileToUploadFile(input.files);
-      emit?.('select-change', [...formatFiles], { currentSelectedFiles: uploadedFiles.value });
+      props.onSelectChange?.([...formatFiles], { currentSelectedFiles: uploadedFiles.value });
       uploadFiles(formatFiles);
       input.value = '';
     };
@@ -312,7 +313,7 @@ export default defineComponent({
         }
       }
       images.value.splice(index, 1);
-      emit('remove', { e, index, file });
+      props.onRemove?.({ e, index, file });
     };
 
     const upload = async (file: UploadFile): Promise<void> => {
@@ -412,7 +413,7 @@ export default defineComponent({
       const newFile = { ...file, response: res };
       const files = uploadedFiles.value.concat(newFile as UploadFile);
       setInnerFiles(files, { e: event, response: res, trigger: 'upload-success' });
-      emit('success', {
+      props.onSuccess?.({
         file,
         fileList: files,
         e: event,
