@@ -45,7 +45,7 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   disabled?: boolean;
   /**
-   * 用于完全自定义文件列表内容
+   * 用于完全自定义文件列表界面内容(UI)，单文件和多文件均有效
    */
   fileListDisplay?: TNode<{ files: UploadFile[]; dragEvents?: UploadDisplayDragEvents }>;
   /**
@@ -106,6 +106,21 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    * @default true
    */
   useMockProgress?: boolean;
+  /**
+   * 已上传文件列表，同 `files`。TS 类型：`UploadFile`
+   * @default []
+   */
+  value?: Array<T>;
+  /**
+   * 已上传文件列表，同 `files`。TS 类型：`UploadFile`，非受控属性
+   * @default []
+   */
+  defaultValue?: Array<T>;
+  /**
+   * 已上传文件列表，同 `files`。TS 类型：`UploadFile`
+   * @default []
+   */
+  modelValue?: Array<T>;
   /**
    * 上传请求时是否携带 cookie
    * @default false

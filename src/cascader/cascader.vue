@@ -197,6 +197,8 @@ export default defineComponent({
       const item = items[level][index];
       selectedIndexes[level] = index;
       selectedIndexes.length = level + 1;
+      selectedValue[level] = String(e);
+      selectedValue.length = level + 1;
       steps[level] = item[keys.value?.label ?? 'label'] as string;
 
       if (item.disabled) {

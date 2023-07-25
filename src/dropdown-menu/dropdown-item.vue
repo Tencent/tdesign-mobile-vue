@@ -256,10 +256,8 @@ export default defineComponent({
       if (!state.isShowItems) return;
       const value = passInValue.value || [];
       if (value[0] === val) return;
-      if (val) {
-        props.onChange?.(val);
-        setValue(val);
-      }
+      props.onChange?.(val);
+      setValue(val);
       collapseMenu();
       emitEvents('menuClosed', 'content');
     });

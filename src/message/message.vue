@@ -59,7 +59,7 @@ export default defineComponent({
   name,
   components: { TNode },
   props: messageProps,
-  emits: ['durationEnd', 'closeBtnClick'],
+  emits: ['durationEnd', 'closeBtnClick', 'update:value'],
   setup(props, context) {
     const internalInstance = getCurrentInstance();
 
@@ -212,7 +212,7 @@ export default defineComponent({
       if (props.duration > 0) {
         setTimeout(() => {
           props.onDurationEnd?.();
-          onCloseBtnClick();
+          setVisible(false);
         }, props.duration);
       }
     };

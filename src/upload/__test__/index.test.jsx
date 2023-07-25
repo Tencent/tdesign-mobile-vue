@@ -300,8 +300,16 @@ describe('Upload', () => {
 
   describe('event', () => {
     it(':events', async () => {
+      const onSelectChange = vi.fn();
+      const onSuccess = vi.fn();
+      const onPreview = vi.fn();
+      const onRemove = vi.fn();
       const props = {
         requestMethod,
+        onSelectChange,
+        onSuccess,
+        onPreview,
+        onRemove,
       };
 
       const wrapper = mount(Upload, {
@@ -311,14 +319,14 @@ describe('Upload', () => {
       triggerUploadFile(wrapper, [mockFileFoo]);
 
       await sleep(0);
-      expect(wrapper.emitted()).toHaveProperty('select-change');
-      expect(wrapper.emitted()).toHaveProperty('success');
+      expect(onSelectChange).toHaveBeenCalledTimes(1);
+      expect(onSuccess).toHaveBeenCalledTimes(1);
 
       await wrapper.find('.t-upload__image').trigger('click');
-      expect(wrapper.emitted()).toHaveProperty('preview');
+      expect(onPreview).toHaveBeenCalledTimes(1);
 
       await wrapper.findComponent(CloseIcon).trigger('click');
-      expect(wrapper.emitted()).toHaveProperty('remove');
+      expect(onRemove).toHaveBeenCalledTimes(1);
     });
   });
 
