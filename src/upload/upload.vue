@@ -145,7 +145,7 @@ export default defineComponent({
       if (disabled.value || !input || !input.files) return;
 
       const formatFiles = formatFileToUploadFile(input.files);
-      emit?.('select-change', [...formatFiles], { currentSelectedFiles: uploadedFiles.value });
+      emit('select-change', [...formatFiles], { currentSelectedFiles: uploadedFiles.value });
       uploadFiles(formatFiles);
       input.value = '';
     };
@@ -177,7 +177,7 @@ export default defineComponent({
         if (props.sizeLimit) {
           const isOverSizeLimit = handleSizeLimit(file.size || 0);
           if (isOverSizeLimit) {
-            props.onValidate?.({ type: 'FILE_OVER_SIZE_LIMIT', files: [file] });
+            emit('validate', { type: 'FILE_OVER_SIZE_LIMIT', files: [file] });
           }
           resolve(!handleSizeLimit(file.size || 0));
         }
@@ -232,7 +232,7 @@ export default defineComponent({
           } else {
             const isDuplicated = toUploadFiles.value.some((file) => file.name === uploadFile.name);
             if (isDuplicated) {
-              props.onValidate?.({
+              emit('Validate', {
                 type: 'FILTER_FILE_SAME_NAME',
                 files: [uploadFile],
               });
@@ -274,7 +274,7 @@ export default defineComponent({
         file,
         type,
       };
-      props.onProgress?.(progressCtx);
+      emit('progress', progressCtx);
     };
 
     const handleRemove = (e: MouseEvent, file: UploadFile, index: number) => {
@@ -411,7 +411,7 @@ export default defineComponent({
         const files = uploadedFiles.value.concat(file);
         setInnerFiles(files, { e: event, response: res, trigger: 'upload-fail' });
       }
-      props.onFail?.({ e: event, file });
+      emit('fail', { e: event, file });
     };
 
     return {

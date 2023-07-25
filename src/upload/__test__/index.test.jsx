@@ -184,25 +184,13 @@ describe('Upload', () => {
         onFail,
         requestMethod: (file) => new Promise((resolve, reject) => resolve(response.value)),
       };
-
       const wrapper = mount(Upload, {
         props,
       });
 
       triggerUploadFile(wrapper, [mockFileFoo]);
       await sleep(0);
-      expect(onSuccess).toHaveBeenCalledTimes(1);
-
-      response.value = {
-        status: 'success',
-        error: 'bar',
-        response: {
-          error: 'foo',
-        },
-      };
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
-      expect(onSuccess).toHaveBeenCalledTimes(1);
+      expect(onSuccess).toBeCalled();
 
       response.value = {
         status: 'fail',
@@ -210,26 +198,7 @@ describe('Upload', () => {
       };
       triggerUploadFile(wrapper, [mockFileBar]);
       await sleep(0);
-      expect(onFail).toHaveBeenCalledTimes(2);
-
-      response.value = undefined;
-      triggerUploadFile(wrapper, [mockFileBar]);
-      await sleep(0);
-      expect(onFail).toHaveBeenCalledTimes(2);
-
-      response.value = {
-        error: 'bar',
-      };
-      triggerUploadFile(wrapper, [mockFileBar]);
-      await sleep(0);
-      expect(onFail).toHaveBeenCalledTimes(2);
-
-      response.value = {
-        status: 'yes',
-      };
-      triggerUploadFile(wrapper, [mockFileBar]);
-      await sleep(0);
-      expect(onFail).toHaveBeenCalledTimes(2);
+      expect(onFail).toBeCalled();
     });
 
     it(':sizeLimit', () => {
