@@ -5,6 +5,25 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.0.0-rc.5 `2023-07-25` 
+### ❗ Breaking Changes
+- `Textarea`: `maxLength`属性默认值变更为 `-1` @anlyyao ([#977](https://github.com/Tencent/tdesign-mobile-vue/pull/977))
+### 🐞 Bug Fixes
+- `Popup`: 修复多个 `popup` 时 `preventScrollThrough` 属性无效 @anlyyao ([#983](https://github.com/Tencent/tdesign-mobile-vue/pull/983))
+- `Message`: 修复函数式调用传入 `context` 时 `ts` 类型报错 @anlyyao ([#985](https://github.com/Tencent/tdesign-mobile-vue/pull/985))
+- `Message`: 修复关闭窗体时控制台报错 @anlyyao ([#985](https://github.com/Tencent/tdesign-mobile-vue/pull/985))
+- `Cascader`: 修复点选后未勾选的问题 @anlyyao ([#986](https://github.com/Tencent/tdesign-mobile-vue/pull/986))
+- `DropdownMenu`:  `DropdownItem` 的 `value` 属性支持空字符串 @yaogengzhu ([#980](https://github.com/Tencent/tdesign-mobile-vue/pull/980))
+- `upload`: 修复 `autoUpload` 为 `false` 时无法上传的问题 @yaogengzhu ([#967](https://github.com/Tencent/tdesign-mobile-vue/pull/967))
+- `upload`: 修复图片预览问题 @yaogengzhu ([#967](https://github.com/Tencent/tdesign-mobile-vue/pull/967))
+- `upload`: 修复 `autoUpload` 为 `true` 时 `allowUploadDuplicateFile ` 属性失效图片 @yaogengzhu ([#967](https://github.com/Tencent/tdesign-mobile-vue/pull/967))
+- `Upload`: 修复 `v-model` 无效的问题 @anlyyao ([#988](https://github.com/Tencent/tdesign-mobile-vue/pull/988))
+- `Upload`: 修复 `onPreview`, `onSuccess`, `onRemove`, `onSelectChange` 无效 @anlyyao ([#987](https://github.com/Tencent/tdesign-mobile-vue/pull/987))
+- `Textarea`: 修复 `maxLength`属性无效的问题 @anlyyao ([#977](https://github.com/Tencent/tdesign-mobile-vue/pull/977))
+### 🚧 Others
+- `Overlay`: 背景色从 `@font-gray-1` 变更为 `@font-gray-2` @anlyyao ([#1540](https://github.com/Tencent/tdesign-common/pull/1540))
+
+
 ## 🌈 1.0.0-rc.4 `2023-07-18` 
 ### 🚀 Features
 - `Tabs`: 新增 `bottomLineMode` 属性 @anlyyao ([#968](https://github.com/Tencent/tdesign-mobile-vue/pull/968))
