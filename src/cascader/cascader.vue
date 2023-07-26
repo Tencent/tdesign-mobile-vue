@@ -6,8 +6,7 @@
         <template v-else>{{ title }}</template>
       </div>
       <div :class="`${name}__close-btn`" @click="onClose">
-        <t-node v-if="!(typeof closeBtnTNode === 'boolean')" :content="closeBtnTNode" />
-        <close-icon v-else-if="typeof closeBtn === 'boolean' && closeBtn" size="24" />
+        <t-node v-if="closeBtnTNode" :content="closeBtnTNode" />
       </div>
       <div :class="`${name}__content`">
         <div v-if="steps && steps.length">
@@ -82,7 +81,7 @@ import {
   watch,
   onMounted,
   Ref,
-  nextTick,
+  h,
 } from 'vue';
 import TPopup from '../popup';
 import { Tabs as TTabs, TabPanel as TTabPanel } from '../tabs';
@@ -115,7 +114,6 @@ interface KeysType {
 export default defineComponent({
   name,
   components: {
-    CloseIcon,
     ChevronRightIcon,
     TNode,
     TPopup,
@@ -143,7 +141,9 @@ export default defineComponent({
 
     const internalInstance = getCurrentInstance();
     const closeBtnTNode = computed(() => {
-      return renderTNode(internalInstance, 'closeBtn');
+      return renderTNode(internalInstance, 'closeBtn', {
+        defaultNode: h(CloseIcon, { size: '24px' }),
+      });
     });
     const titleTNode = computed(() => renderTNode(internalInstance, 'title'));
 
