@@ -80,11 +80,12 @@ const getYearMonthDay = (date: Date) => {
   };
 };
 
-const title = computed(() => props.title);
-const usePopup = computed(() => props.usePopup);
+const title = ref(props.title);
+const usePopup = ref(props.usePopup);
 const valueRef = ref(props.value);
 const selectedDate = ref();
 const firstDayOfWeek = computed(() => props.firstDayOfWeek || 0);
+const type = ref(props.type);
 const days = computed(() => {
   const raw = '日一二三四五六';
   const ans = [];
@@ -98,10 +99,10 @@ const days = computed(() => {
   return ans;
 });
 const today = new Date();
-const minDate = computed(() => (props.minDate ? new Date(props.minDate) : today));
-const maxDate = computed(() =>
-  props.maxDate ? new Date(props.maxDate) : new Date(today.getFullYear(), today.getMonth() + 6, today.getDate()),
-);
+const minDate = props.minDate ? new Date(props.minDate) : today;
+const maxDate = props.maxDate
+  ? new Date(props.maxDate)
+  : new Date(today.getFullYear(), today.getMonth() + 6, today.getDate());
 
 // 获取日期
 const getDate = (year: number, month: number, day: number) => new Date(year, month, day);
@@ -116,7 +117,7 @@ const handleSelect = (year: number, month: number, date: number, dateItem: TDate
   if (dateItem.type === 'disabled') return;
   const selected = new Date(year, month, date);
 
-  if (props.type === 'range' && Array.isArray(selectedDate.value)) {
+  if (type.value === 'range' && Array.isArray(selectedDate.value)) {
     if (selectedDate.value.length === 1) {
       if (selectedDate.value[0] > selected) {
         selectedDate.value = [selected];
@@ -180,21 +181,21 @@ const isSameDate = (date1: CompareDate, date2: CompareDate) => {
 
 const months = computed(() => {
   const ans = [];
-  let { year: minYear, month: minMonth } = getYearMonthDay(minDate.value);
-  const { year: maxYear, month: maxMonth } = getYearMonthDay(maxDate.value);
+  let { year: minYear, month: minMonth } = getYearMonthDay(minDate);
+  const { year: maxYear, month: maxMonth } = getYearMonthDay(maxDate);
   const calcType = (year: number, month: number, date: number): TDateType => {
     const curDate = new Date(year, month, date, 23, 59, 59);
 
-    if (props.type === 'single') {
+    if (type.value === 'single') {
       if (isSameDate({ year, month, date }, selectedDate.value)) return 'selected';
     }
-    if (props.type === 'multiple') {
+    if (type.value === 'multiple') {
       const hit = selectedDate.value.some((item: Date) => isSameDate({ year, month, date }, item));
       if (hit) {
         return 'selected';
       }
     }
-    if (props.type === 'range') {
+    if (type.value === 'range') {
       if (Array.isArray(selectedDate.value)) {
         const [startDate, endDate] = selectedDate.value;
 
@@ -206,7 +207,7 @@ const months = computed(() => {
     }
 
     const minCurDate = new Date(year, month, date, 0, 0, 0);
-    if (curDate.getTime() < minDate.value.getTime() || minCurDate.getTime() > maxDate.value.getTime()) {
+    if (curDate.getTime() < minDate.getTime() || minCurDate.getTime() > maxDate.getTime()) {
       return 'disabled';
     }
     return '';

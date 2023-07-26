@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import { defineEmits, defineProps, provide, reactive } from 'vue';
+import { defineEmits, defineProps, provide } from 'vue';
 
 import TPopup from '../popup';
 import config from '../config';
@@ -36,8 +36,7 @@ export default {
 
 <script setup lang="ts">
 const props = defineProps(calendarProps);
-
-provide('templateProps', reactive(props));
+provide('templateProps', { ...props });
 
 const emit = defineEmits(['update:visible']);
 
