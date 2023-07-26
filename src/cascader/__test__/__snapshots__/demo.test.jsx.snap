@@ -82,6 +82,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
             class="t-icon t-icon-close"
             fill="none"
             height="1em"
+            style="font-size: 24px;"
             viewBox="0 0 16 16"
             width="1em"
           >
@@ -312,6 +313,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
             class="t-icon t-icon-close"
             fill="none"
             height="1em"
+            style="font-size: 24px;"
             viewBox="0 0 16 16"
             width="1em"
           >
@@ -542,6 +544,7 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
             class="t-icon t-icon-close"
             fill="none"
             height="1em"
+            style="font-size: 24px;"
             viewBox="0 0 16 16"
             width="1em"
           >
@@ -769,6 +772,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-close"
                 fill="none"
                 height="1em"
+                style="font-size: 24px;"
                 viewBox="0 0 16 16"
                 width="1em"
               >
@@ -1012,6 +1016,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-close"
                 fill="none"
                 height="1em"
+                style="font-size: 24px;"
                 viewBox="0 0 16 16"
                 width="1em"
               >
@@ -1229,6 +1234,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-close"
                 fill="none"
                 height="1em"
+                style="font-size: 24px;"
                 viewBox="0 0 16 16"
                 width="1em"
               >
@@ -1472,6 +1478,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-close"
                 fill="none"
                 height="1em"
+                style="font-size: 24px;"
                 viewBox="0 0 16 16"
                 width="1em"
               >
@@ -1715,6 +1722,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-close"
                 fill="none"
                 height="1em"
+                style="font-size: 24px;"
                 viewBox="0 0 16 16"
                 width="1em"
               >
@@ -1962,6 +1970,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-close"
                 fill="none"
                 height="1em"
+                style="font-size: 24px;"
                 viewBox="0 0 16 16"
                 width="1em"
               >
@@ -2161,6 +2170,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
             class="t-icon t-icon-close"
             fill="none"
             height="1em"
+            style="font-size: 24px;"
             viewBox="0 0 16 16"
             width="1em"
           >
@@ -2361,6 +2371,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
             class="t-icon t-icon-close"
             fill="none"
             height="1em"
+            style="font-size: 24px;"
             viewBox="0 0 16 16"
             width="1em"
           >
@@ -2595,6 +2606,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
             class="t-icon t-icon-close"
             fill="none"
             height="1em"
+            style="font-size: 24px;"
             viewBox="0 0 16 16"
             width="1em"
           >
