@@ -17,8 +17,8 @@
     <!-- 导航器 -->
     <template v-if="navigation && enableNavigation">
       <span v-if="!isVertical && 'showControls' in navigation && navigation.showControls" :class="`${navName}__btn`">
-        <span :class="`${navName}__btn--prev`" @click="goPrev()" />
-        <span :class="`${navName}__btn--next`" @click="goNext()" />
+        <span :class="`${navName}__btn--prev`" @click="goPrev('nav')" />
+        <span :class="`${navName}__btn--next`" @click="goNext('nav')" />
       </span>
       <span
         v-if="'type' in navigation"
@@ -58,6 +58,7 @@ import isNumber from 'lodash/isNumber';
 
 import config from '../config';
 import SwiperProps from './props';
+import { SwiperChangeSource } from './type';
 import { renderTNode, TNode, useVModel } from '../shared';
 import { preventDefault } from '../shared/dom';
 
@@ -82,12 +83,7 @@ const items = ref<any>([]);
 const props = defineProps(SwiperProps);
 const emit = defineEmits(['change', 'update:current', 'update:modelValue']);
 
-const [current, setCurrent] = useVModel(
-  ref(props.current),
-  ref(props.modelValue),
-  props.defaultCurrent,
-  props.onChange,
-);
+const [current, setCurrent] = useVModel(ref(props.current), ref(props.modelValue), props.defaultCurrent);
 const swiperContainer = ref<HTMLElement | null>(null);
 const computedNavigation = computed(() => (isObject(props.navigation) ? '' : renderTNode(self, 'navigation')));
 
@@ -115,9 +111,9 @@ const onItemClick = () => {
   props.onClick?.(current.value ?? 0);
 };
 
-const move = (step: number) => {
+const move = (step: number, source: SwiperChangeSource) => {
   animating.value = true;
-  processIndex((current.value as number) + step);
+  processIndex((current.value as number) + step, source);
 
   const moveDirection = !isVertical.value ? 'X' : 'Y';
   const distance = root.value?.[isVertical.value ? 'offsetHeight' : 'offsetWidth'] ?? 0;
@@ -143,20 +139,20 @@ const startAutoplay = () => {
   if (typeof props.current === 'number') return false;
   if (!props?.autoplay || autoplayTimer !== null) return false; // stop repeat autoplay
   autoplayTimer = setInterval(() => {
-    goNext();
+    goNext('autoplay');
   }, props?.interval);
 };
 
-const goPrev = () => {
+const goPrev = (source: SwiperChangeSource) => {
   disabled.value = true;
-  move(-1);
+  move(-1, source);
 };
-const goNext = () => {
+const goNext = (source: SwiperChangeSource) => {
   disabled.value = true;
-  move(1);
+  move(1, source);
 };
 
-const processIndex = (index: number) => {
+const processIndex = (index: number, source: SwiperChangeSource) => {
   const max = items.value.length;
   let val = index;
 
@@ -168,6 +164,7 @@ const processIndex = (index: number) => {
   }
 
   setCurrent(val);
+  props.onChange?.(val, { source });
 };
 
 const { lengthX, lengthY } = useSwipe(swiperContainer, {
@@ -205,11 +202,11 @@ const onTouchEnd = () => {
   const distanceY = lengthY.value;
 
   if ((!isVertical.value && distanceX < -100) || (isVertical.value && distanceY < -100)) {
-    move(-1);
+    move(-1, 'touch');
   } else if ((!isVertical.value && distanceX > 100) || (isVertical.value && distanceY > 100)) {
-    move(1);
+    move(1, 'touch');
   } else {
-    move(current.value as number);
+    move(current.value as number, 'touch');
   }
   startAutoplay();
 };

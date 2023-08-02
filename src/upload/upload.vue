@@ -230,7 +230,7 @@ export default defineComponent({
           status: 'waiting',
         };
         // node 环境不支持 URL.createObjectURL, 保证测试用例通过
-        if (!(typeof process !== 'undefined' && process.release.name === 'node')) {
+        if (!(typeof process !== 'undefined' && process.release?.name === 'node')) {
           uploadFile.url = URL.createObjectURL(fileRaw);
           if (!props.autoUpload) {
             images.value.push(uploadFile.url as string);

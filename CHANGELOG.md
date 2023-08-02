@@ -5,6 +5,12 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.0.0-rc.6 `2023-08-01` 
+### 🐞 Bug Fixes
+- `Calendar`: 解决属性不支持响应式的问题 @LeeJim ([#991](https://github.com/Tencent/tdesign-mobile-vue/pull/991))
+- `Tag`: 修复当 `disabled` 为 `true` 时， `closable` 无效的问题 @anlyyao ([#994](https://github.com/Tencent/tdesign-mobile-vue/pull/994))
+- `Swiper`: 修复 `change` 事件参数错误 @anlyyao ([#996](https://github.com/Tencent/tdesign-mobile-vue/pull/996))
+
 ## 🌈 1.0.0-rc.5 `2023-07-25` 
 ### ❗ Breaking Changes
 - `Textarea`: `maxLength`属性默认值变更为 `-1` @anlyyao ([#977](https://github.com/Tencent/tdesign-mobile-vue/pull/977))
@@ -1024,3 +1030,4 @@ spline: explain
 ### BREAKING CHANGES
 
 * 对齐已发布组件的API能力
+
