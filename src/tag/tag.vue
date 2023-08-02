@@ -6,7 +6,7 @@
     <span :class="`${baseClass}__text`">
       <t-node :content="tagContent"></t-node>
     </span>
-    <span v-if="closable && !disabled" :class="`${baseClass}__icon-close`" @click.stop="onClickClose">
+    <span v-if="closable" :class="`${baseClass}__icon-close`" @click.stop="onClickClose">
       <close-icon />
     </span>
   </span>
@@ -56,9 +56,6 @@ const Tag = defineComponent({
 
     const onClickClose = (e: MouseEvent): void => {
       if (!props.disabled) {
-        console.log(1);
-        console.log(props.onClose);
-
         props.onClose?.({ e });
       }
     };

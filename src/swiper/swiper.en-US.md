@@ -17,14 +17,14 @@ navigation | Object / Slot / Function | - | Typescript：`SwiperNavigation \| TN
 nextMargin | String / Number | 0 | \- | N
 previousMargin | String / Number | 0 | \- | N
 type | String | default | options：default/card | N
-onChange | Function |  | Typescript：`(current: number, context: { source: SwiperChangeSource }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swiper/type.ts)。<br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| ''`<br/> | N
+onChange | Function |  | Typescript：`(current: number, context: { source: SwiperChangeSource }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swiper/type.ts)。<br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| 'nav'`<br/> | N
 onClick | Function |  | Typescript：`(index: number) => void`<br/> | N
 
 ### Swiper Events
 
 name | params | description
 -- | -- | --
-change | `(current: number, context: { source: SwiperChangeSource })` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swiper/type.ts)。<br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| ''`<br/>
+change | `(current: number, context: { source: SwiperChangeSource })` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swiper/type.ts)。<br/>`type SwiperChangeSource =  'autoplay' \| 'touch' \| 'nav'`<br/>
 click | `(index: number)` | \-
 
 ### SwiperNavigation
