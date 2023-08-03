@@ -188,5 +188,10 @@
       "eslint --fix",
       "prettier --write"
     ]
-  }
+  },
+  "vetur": {
+    "tags": "helper/tags.json",
+    "attributes": "helper/attributes.json"
+  },
+  "web-types": "helper/web-types.json"
 }
