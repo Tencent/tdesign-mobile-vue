@@ -8,7 +8,6 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
   
   <div
     class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -77,7 +76,6 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
   </div>
   <div
     class="t-collapse-panel t-collapse-panel--bottom"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -146,7 +144,6 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
   </div>
   <div
     class="t-collapse-panel t-collapse-panel--bottom"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -215,7 +212,6 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
   </div>
   <div
     class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--disabled"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -294,7 +290,6 @@ exports[`Collapse > Collapse actionVue demo works fine 1`] = `
   
   <div
     class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -372,7 +367,6 @@ exports[`Collapse > Collapse baseVue demo works fine 1`] = `
   
   <div
     class="t-collapse-panel t-collapse-panel--bottom"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -451,7 +445,6 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
   
   <div
     class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -520,7 +513,6 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
   </div>
   <div
     class="t-collapse-panel t-collapse-panel--bottom"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -589,7 +581,6 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
   </div>
   <div
     class="t-collapse-panel t-collapse-panel--bottom"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -658,7 +649,6 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
   </div>
   <div
     class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--disabled"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -771,7 +761,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         
         <div
           class="t-collapse-panel t-collapse-panel--bottom"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -866,7 +855,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         
         <div
           class="t-collapse-panel t-collapse-panel--top"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -957,7 +945,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         
         <div
           class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -1053,7 +1040,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         
         <div
           class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -1122,7 +1108,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-collapse-panel t-collapse-panel--bottom"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -1191,7 +1176,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-collapse-panel t-collapse-panel--bottom"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -1260,7 +1244,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--disabled"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -1361,7 +1344,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         
         <div
           class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -1430,7 +1412,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-collapse-panel t-collapse-panel--bottom"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -1499,7 +1480,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-collapse-panel t-collapse-panel--bottom"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -1568,7 +1548,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--disabled"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -1651,7 +1630,6 @@ exports[`Collapse > Collapse placementVue demo works fine 1`] = `
   
   <div
     class="t-collapse-panel t-collapse-panel--top"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
