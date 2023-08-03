@@ -26,6 +26,7 @@ exports[`Stepper > Stepper baseVue demo works fine 1`] = `
     </div>
     <input
       class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+      style=""
       type="tel"
     />
     <div
@@ -75,6 +76,7 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
     </div>
     <input
       class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+      style=""
       type="tel"
     />
     <div
@@ -117,6 +119,7 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
     </div>
     <input
       class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+      style=""
       type="tel"
     />
     <div
@@ -159,6 +162,7 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
     </div>
     <input
       class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+      style=""
       type="tel"
     />
     <div
@@ -242,6 +246,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           </div>
           <input
             class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+            style=""
             type="tel"
           />
           <div
@@ -312,6 +317,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           </div>
           <input
             class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+            style=""
             type="tel"
           />
           <div
@@ -354,6 +360,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           </div>
           <input
             class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+            style=""
             type="tel"
           />
           <div
@@ -396,6 +403,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           </div>
           <input
             class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+            style=""
             type="tel"
           />
           <div
@@ -463,6 +471,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           <input
             class="t-stepper__input t-stepper__input--filled t-stepper__input--medium t-stepper--filled-disabled"
             disabled=""
+            style=""
             type="tel"
           />
           <div
@@ -533,6 +542,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           </div>
           <input
             class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+            style=""
             type="tel"
           />
           <div
@@ -575,6 +585,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           </div>
           <input
             class="t-stepper__input t-stepper__input--outline t-stepper__input--medium"
+            style=""
             type="tel"
           />
           <div
@@ -617,6 +628,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           </div>
           <input
             class="t-stepper__input t-stepper__input--normal t-stepper__input--medium"
+            style=""
             type="tel"
           />
           <div
@@ -683,6 +695,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           </div>
           <input
             class="t-stepper__input t-stepper__input--filled t-stepper__input--large"
+            style=""
             type="tel"
           />
           <div
@@ -725,6 +738,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           </div>
           <input
             class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+            style=""
             type="tel"
           />
           <div
@@ -767,6 +781,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           </div>
           <input
             class="t-stepper__input t-stepper__input--filled t-stepper__input--small"
+            style=""
             type="tel"
           />
           <div
@@ -820,6 +835,7 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
     </div>
     <input
       class="t-stepper__input t-stepper__input--filled t-stepper__input--large"
+      style=""
       type="tel"
     />
     <div
@@ -862,6 +878,7 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
     </div>
     <input
       class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+      style=""
       type="tel"
     />
     <div
@@ -904,6 +921,7 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
     </div>
     <input
       class="t-stepper__input t-stepper__input--filled t-stepper__input--small"
+      style=""
       type="tel"
     />
     <div
@@ -954,6 +972,7 @@ exports[`Stepper > Stepper statusVue demo works fine 1`] = `
     <input
       class="t-stepper__input t-stepper__input--filled t-stepper__input--medium t-stepper--filled-disabled"
       disabled=""
+      style=""
       type="tel"
     />
     <div
@@ -1003,6 +1022,7 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
     </div>
     <input
       class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+      style=""
       type="tel"
     />
     <div
@@ -1045,6 +1065,7 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
     </div>
     <input
       class="t-stepper__input t-stepper__input--outline t-stepper__input--medium"
+      style=""
       type="tel"
     />
     <div
@@ -1087,6 +1108,7 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
     </div>
     <input
       class="t-stepper__input t-stepper__input--normal t-stepper__input--medium"
+      style=""
       type="tel"
     />
     <div
