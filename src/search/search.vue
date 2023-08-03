@@ -1,9 +1,7 @@
 <template>
   <div :class="`${name}`">
     <div :class="boxClasses">
-      <slot name="leftIcon">
-        <t-node v-if="leftIconContent" :content="leftIconContent"></t-node>
-      </slot>
+      <t-node v-if="leftIconContent" :content="leftIconContent" />
       <input
         ref="searchInput"
         :value="searchValue"
@@ -34,7 +32,6 @@
 <script lang="ts">
 import { SearchIcon, CloseCircleFilledIcon as TIconClear } from 'tdesign-icons-vue-next';
 import { ref, computed, defineComponent, toRefs, getCurrentInstance, h, nextTick } from 'vue';
-import isFunction from 'lodash/isFunction';
 import { useFocus } from '@vueuse/core';
 import config from '../config';
 import { renderTNode, TNode } from '../shared';
@@ -65,15 +62,11 @@ export default defineComponent({
 
     // left-icon
     const internalInstance = getCurrentInstance();
-    const leftIconContent = computed(() => {
-      if (isFunction(props.leftIcon) || context.slots.leftIcon) {
-        return renderTNode(internalInstance, 'leftIcon');
-      }
-      if (props.leftIcon) {
-        return h(SearchIcon, { size: '24px' });
-      }
-      return null;
-    });
+    const leftIconContent = computed(() =>
+      renderTNode(internalInstance, 'leftIcon', {
+        defaultNode: h(SearchIcon, { size: '24px' }),
+      }),
+    );
 
     const setInputValue = (v: any) => {
       const input = searchInput.value as HTMLInputElement;
