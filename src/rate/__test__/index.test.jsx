@@ -1,7 +1,7 @@
 import { ref, nextTick, markRaw } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import { ThumbUpIcon, ThumbDownIcon, StarIcon } from 'tdesign-icons-vue-next';
+import { ThumbUpIcon, ThumbDownIcon, StarFilledIcon } from 'tdesign-icons-vue-next';
 import Rate from '../rate.vue';
 import { trigger } from '../../image-viewer/__test__/touch';
 
@@ -20,7 +20,7 @@ describe('Rate', () => {
     expect(wrapper.classes()).toContain(`${name}`);
     const items = wrapper.findAll(`.${name}__icon`);
     expect(items.length).toBe(5);
-    const icon = wrapper.findComponent(StarIcon);
+    const icon = wrapper.findComponent(StarFilledIcon);
     expect(icon.exists()).toBeTruthy();
 
     const $target = wrapper.find(`.${name}__wrapper`);
