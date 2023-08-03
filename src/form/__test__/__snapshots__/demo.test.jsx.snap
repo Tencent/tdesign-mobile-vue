@@ -1074,6 +1074,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             </div>
             <input
               class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+              style=""
               type="tel"
             />
             <div
@@ -2826,6 +2827,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   </div>
                   <input
                     class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+                    style=""
                     type="tel"
                   />
                   <div
@@ -4436,6 +4438,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             </div>
             <input
               class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+              style=""
               type="tel"
             />
             <div
