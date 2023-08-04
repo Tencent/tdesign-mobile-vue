@@ -64,6 +64,7 @@ export interface TdCellProps {
 export interface TdCellGroupProps {
   /**
    * 是否显示组边框
+   * @default false
    */
   bordered?: boolean;
   /**

@@ -28,7 +28,7 @@ click | `(context: { e: MouseEvent })` | Typescript：`string \| TNode`。[see m
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-bordered | Boolean | - | \- | N
+bordered | Boolean | false | \- | N
 theme | String | default | `0.15.0`。options：default/card | N
 title | String | - | \- | N
 
