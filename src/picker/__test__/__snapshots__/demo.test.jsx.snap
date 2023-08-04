@@ -499,10 +499,11 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
 >
   
   <!-- 联动选择 -->
+  
+  <!--v-if-->
   <div
     class="t-cell-group t-cell-group--default"
   >
-    <!--v-if-->
     
     <div
       class="t-cell t-cell--middle"
@@ -549,6 +550,7 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
     </div>
     
   </div>
+  
   <teleport-stub
     disabled="false"
     to="[object HTMLBodyElement]"
