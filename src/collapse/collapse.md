@@ -26,10 +26,11 @@ change | `(value: CollapseValue, context: { e: MouseEvent })` | 切换面板时�
 -- | -- | -- | -- | --
 content | String / Slot / Function | - | 折叠面板内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 default | String / Slot / Function | - | 折叠面板内容，同 content。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-destroyOnCollapse | Boolean | false | 当前面板处理折叠状态时，是否销毁面板内容 | N
+destroyOnCollapse | Boolean | false | 【暂不支持】当前面板处理折叠状态时，是否销毁面板内容 | N
 disabled | Boolean | undefined | 禁止当前面板展开，优先级大于 Collapse 的同名属性 | N
 expandIcon | Boolean / Slot / Function | undefined | 当前折叠面板展开图标，优先级大于 Collapse 的同名属性。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 header | String / Slot / Function | - | 面板头内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+headerLeftIcon | String / Slot / Function | - | 面板头左侧图标。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 headerRightContent | String / Slot / Function | - | 面板头的右侧区域，一般用于呈现面板操作。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 placement | String | bottom | 选项卡内容的位置。可选项：bottom/top | N
 value | String / Number | - | 当前面板唯一标识，如果值为空则取当前面下标兜底作为唯一标识 | N

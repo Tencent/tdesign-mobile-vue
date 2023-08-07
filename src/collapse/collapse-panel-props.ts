@@ -32,6 +32,10 @@ export default {
   header: {
     type: [String, Function] as PropType<TdCollapsePanelProps['header']>,
   },
+  /** 面板头左侧图标 */
+  headerLeftIcon: {
+    type: [String, Function] as PropType<TdCollapsePanelProps['headerLeftIcon']>,
+  },
   /** 面板头的右侧区域，一般用于呈现面板操作 */
   headerRightContent: {
     type: [String, Function] as PropType<TdCollapsePanelProps['headerRightContent']>,
