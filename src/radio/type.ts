@@ -56,7 +56,7 @@ export interface TdRadioProps {
    * 自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标
    * @default 'circle'
    */
-  icon?: 'circle' | 'line' | 'dot' | Array<TNode>;
+  icon?: 'circle' | 'line' | 'dot' | 'none' | Array<TNode>;
   /**
    * 主文案
    */
