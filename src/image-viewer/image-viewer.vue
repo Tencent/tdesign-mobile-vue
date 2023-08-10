@@ -24,6 +24,7 @@
           v-for="(image, index) in images"
           :key="index"
           :class="`${name}__swiper-item`"
+          :scale="scale"
           @touchstart="onTouchStart"
           @touchmove="onTouchMove"
           @touchend="onTouchEnd"
