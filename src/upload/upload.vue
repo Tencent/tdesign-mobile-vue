@@ -56,8 +56,6 @@ import { renderTNode, TNode } from '../shared';
 import { UploadFile, RequestMethodResponse, SizeLimitObj } from './type';
 import UploadProps from './props';
 import config from '../config';
-import { isOverSizeLimit } from '../_common/js/upload/utils';
-import { useFormDisabled } from '../form/hooks';
 import useUpload from './hooks/useUpload';
 
 const { prefix } = config;
@@ -112,7 +110,6 @@ export default defineComponent({
     const addContent = computed(() => renderTNode(internalInstance, 'addContent'));
 
     const handlePreview = (e: MouseEvent, file: UploadFile, index: number) => {
-      console.log(index, '???', displayFiles, 'ssss');
       initialIndex.value = index;
       showViewer.value = true;
       props.onPreview?.({

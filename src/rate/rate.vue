@@ -77,7 +77,7 @@
 
 <script lang="ts">
 import { ref, computed, defineComponent, h } from 'vue';
-import { StarFilledIcon, StarIcon } from 'tdesign-icons-vue-next';
+import { StarFilledIcon } from 'tdesign-icons-vue-next';
 import { onClickOutside } from '@vueuse/core';
 import rateProps from './props';
 import config from '../config';
@@ -121,7 +121,7 @@ export default defineComponent({
     });
 
     const regSize = (val: string | number) => {
-      return `${val}`.indexOf('px') > 0 ? val : `${val}px`;
+      return `${val}`.includes('px') ? val : `${val}px`;
     };
     const unitConvert = (value: number | string): number => {
       if (typeof value === 'string') {
@@ -131,10 +131,11 @@ export default defineComponent({
     };
 
     const icon = (isSelect: boolean) => {
-      const { variant, icon } = props;
-      const startComponent = variant === 'filled' ? StarFilledIcon : StarIcon;
+      const { icon } = props;
+      const startComponent = StarFilledIcon;
       let select = startComponent;
       let unSelect = startComponent;
+
       if (Array.isArray(icon)) {
         const [_select, _unSelect] = icon;
         if (typeof _select === 'function') {
@@ -179,18 +180,12 @@ export default defineComponent({
 
     const classes = (n: number) => {
       const classPrefix = `${name}__icon`;
-      const className = {
+
+      return {
         [classPrefix]: true,
+        [`${classPrefix}--current`]: scaleIndex.value === Math.ceil(n),
+        [`${classPrefix}--${actualVal.value >= n ? 'selected' : 'unselected'}`]: true,
       };
-      if (scaleIndex.value === Math.ceil(n)) {
-        className[`${classPrefix}--current`] = true;
-      }
-      if (actualVal.value >= n) {
-        className[`${classPrefix}--selected`] = true;
-      } else {
-        className[`${classPrefix}--unselected`] = true;
-      }
-      return className;
     };
 
     const ratePopoverRef = ref<HTMLElement>();

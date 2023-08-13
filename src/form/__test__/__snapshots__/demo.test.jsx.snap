@@ -859,6 +859,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                     class="t-icon t-icon-close"
                     fill="none"
                     height="1em"
+                    style="font-size: 24px;"
                     viewBox="0 0 16 16"
                     width="1em"
                   >
@@ -1073,6 +1074,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             </div>
             <input
               class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+              style=""
               type="tel"
             />
             <div
@@ -2610,6 +2612,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                           class="t-icon t-icon-close"
                           fill="none"
                           height="1em"
+                          style="font-size: 24px;"
                           viewBox="0 0 16 16"
                           width="1em"
                         >
@@ -2824,6 +2827,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   </div>
                   <input
                     class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+                    style=""
                     type="tel"
                   />
                   <div
@@ -4221,6 +4225,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                     class="t-icon t-icon-close"
                     fill="none"
                     height="1em"
+                    style="font-size: 24px;"
                     viewBox="0 0 16 16"
                     width="1em"
                   >
@@ -4433,6 +4438,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             </div>
             <input
               class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+              style=""
               type="tel"
             />
             <div

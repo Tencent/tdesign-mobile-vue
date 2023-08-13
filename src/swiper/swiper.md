@@ -16,14 +16,14 @@ loop | Boolean | true | 是否循环播放 | N
 navigation | Object / Slot / Function | - | 导航器全部配置。TS 类型：`SwiperNavigation \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 nextMargin | String / Number | 0 | 【开发中】后边距，可用于露出后一项的一小部分。默认单位 `px` | N
 previousMargin | String / Number | 0 | 【开发中】前边距，可用于露出前一项的一小部分。默认单位 `px` | N
-onChange | Function |  | TS 类型：`(current: number, context: { source: SwiperChangeSource }) => void`<br/>轮播切换时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swiper/type.ts)。<br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| ''`<br/> | N
+onChange | Function |  | TS 类型：`(current: number, context: { source: SwiperChangeSource }) => void`<br/>轮播切换时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swiper/type.ts)。<br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| 'nav'`<br/> | N
 onClick | Function |  | TS 类型：`(index: number) => void`<br/>点击轮播项时触发 | N
 
 ### Swiper Events
 
 名称 | 参数 | 描述
 -- | -- | --
-change | `(current: number, context: { source: SwiperChangeSource })` | 轮播切换时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swiper/type.ts)。<br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| ''`<br/>
+change | `(current: number, context: { source: SwiperChangeSource })` | 轮播切换时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swiper/type.ts)。<br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| 'nav'`<br/>
 click | `(index: number)` | 点击轮播项时触发
 
 ### SwiperNavigation
