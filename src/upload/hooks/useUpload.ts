@@ -1,4 +1,4 @@
-import { computed, h, ref, toRefs } from 'vue';
+import { computed, h, ref, toRefs, ComputedRef } from 'vue';
 import { isFunction, isString } from 'lodash';
 import { SizeLimitObj, TdUploadProps, UploadChangeContext, UploadFile, UploadRemoveContext } from '../type';
 import { useVModel } from '../../shared';
@@ -26,7 +26,7 @@ export default function useUpload(props: TdUploadProps) {
   const uploading = ref(false);
 
   // 文件列表显示的内容（自动上传和非自动上传有所不同）
-  const displayFiles = computed(() => {
+  const displayFiles: ComputedRef<UploadFile[]> = computed(() => {
     return getDisplayFiles({
       multiple: multiple?.value || false,
       toUploadFiles: toUploadFiles.value,
