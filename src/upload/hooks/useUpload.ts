@@ -304,7 +304,6 @@ export default function useUpload(props: TdUploadProps) {
   }
 
   function onInnerRemove(p: UploadRemoveContext) {
-    console.log(p, '??');
     sizeOverLimitMessage.value = '';
     p.e.stopPropagation?.();
     const changePrams: UploadChangeContext = {

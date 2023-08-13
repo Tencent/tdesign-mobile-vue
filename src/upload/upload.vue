@@ -2,6 +2,7 @@
   <div :class="`${name}`">
     <div v-for="(file, index) in displayFiles" :key="index" :class="`${name}__item`">
       <t-image
+        v-if="file.url"
         :class="`${name}__image`"
         shape="round"
         v-bind="imageProps"
@@ -53,7 +54,7 @@ import { AddIcon, LoadingIcon, CloseIcon, CloseCircleIcon } from 'tdesign-icons-
 import TImage from '../image';
 import TImageViewer from '../image-viewer';
 import { renderTNode, TNode } from '../shared';
-import { UploadFile, RequestMethodResponse, SizeLimitObj } from './type';
+import { UploadFile } from './type';
 import UploadProps from './props';
 import config from '../config';
 import useUpload from './hooks/useUpload';
