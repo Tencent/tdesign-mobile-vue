@@ -40,11 +40,7 @@
       :accept="accept"
       @change="onNormalFileChange"
     />
-    <t-image-viewer
-      v-model="showViewer"
-      :images="displayFiles.map((item) => item.url as string)"
-      :index="initialIndex"
-    />
+    <t-image-viewer v-model="showViewer" :images="previewImgs" :index="initialIndex" />
   </div>
 </template>
 <script lang="ts">
@@ -126,6 +122,10 @@ export default defineComponent({
       input.click();
     };
 
+    const previewImgs = computed(() => {
+      return displayFiles.value.map((item) => item.url as string);
+    });
+
     return {
       name,
       triggerUpload,
@@ -134,6 +134,7 @@ export default defineComponent({
       handlePreview,
       defaultContent,
       addContent,
+      previewImgs,
 
       toUploadFiles,
       uploadValue,
