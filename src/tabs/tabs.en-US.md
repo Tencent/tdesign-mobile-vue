@@ -10,11 +10,10 @@ list | Array | - | Typescript：`Array<TdTabPanelProps>` | N
 showBottomLine | Boolean | true | \- | N
 bottomLineMode | String | fixed | options：fixed/auto/full ｜ N
 size | String | medium | options：medium/large | N
-spaceEvenly | Boolean | true | \- | N
 sticky | Boolean | false | \- | N
 stickyProps | Object | - | Typescript：`StickyProps`，[Sticky API Documents](./sticky?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tabs/type.ts) | N
 swipeable | Boolean | true | \- | N
-theme | String | line | options：line/tag/card | N
+theme | String | line | options: line/tag/card | N
 value | String / Number | - | `v-model` and `v-model:value` is supported。Typescript：`TabValue` `type TabValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tabs/type.ts) | N
 defaultValue | String / Number | - | uncontrolled property。Typescript：`TabValue` `type TabValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tabs/type.ts) | N
 onChange | Function |  | Typescript：`(value: TabValue, label: string) => void`<br/> | N

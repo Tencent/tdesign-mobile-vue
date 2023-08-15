@@ -8,7 +8,7 @@ import { TdTabsProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 动画效果设置。其中 duration 表示动画时长 */
+  /** 动画效果设置。其中 duration 表示动画时长。（单位：秒） */
   animation: {
     type: Object as PropType<TdTabsProps['animation']>,
   },
@@ -38,11 +38,6 @@ export default {
       if (!val) return true;
       return ['medium', 'large'].includes(val);
     },
-  },
-  /** 选项卡头部空间是否均分 */
-  spaceEvenly: {
-    type: Boolean,
-    default: true,
   },
   /** 是否开启粘性布局 */
   sticky: Boolean,

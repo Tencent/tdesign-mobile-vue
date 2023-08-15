@@ -9,7 +9,6 @@
               :key="item.value"
               :class="{
                 [`${name}__item ${name}__item--top`]: true,
-                [`${name}__item--evenly`]: spaceEvenly,
                 [activeClass]: item.value === currentValue,
                 [disabledClass]: item.disabled,
                 [`${name}__item--${theme}`]: true,
@@ -78,7 +77,6 @@ export default defineComponent({
   emits: ['update:value', 'update:modelValue'],
   setup(props, context) {
     const theme = computed(() => props.theme);
-    const spaceEvenly = computed(() => props.spaceEvenly);
     const showBottomLine = computed(() => props.showBottomLine);
     const swipeable = computed(() => props.swipeable);
     const stickyProps = computed(() => ({ ...props.stickyProps, disabled: !props.sticky }));
@@ -265,7 +263,6 @@ export default defineComponent({
       moveToActiveTab,
       stickyProps,
       theme,
-      spaceEvenly,
       moveStart,
       onMove,
       moveEnd,

@@ -10,7 +10,6 @@ list | Array | - | 选项卡列表。TS 类型：`Array<TdTabPanelProps>` | N
 showBottomLine | Boolean | true | 是否展示底部激活线条 | N
 bottomLineMode | String | fixed | 激活下划线的模式。可选项：fixed/auto/full ｜ N
 size | String | medium | 组件尺寸。可选项：medium/large | N
-spaceEvenly | Boolean | true | 选项卡头部空间是否均分 | N
 sticky | Boolean | false | 是否开启粘性布局 | N
 stickyProps | Object | - | 透传至 Sticky 组件。TS 类型：`StickyProps`，[Sticky API Documents](./sticky?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tabs/type.ts) | N
 swipeable | Boolean | true | 是否可以滑动切换 | N
