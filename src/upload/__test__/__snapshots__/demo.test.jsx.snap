@@ -28,13 +28,12 @@ exports[`Upload > Upload baseVue demo works fine 1`] = `
           class="t-icon t-icon-add"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+            d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -292,13 +291,12 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-add"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -399,13 +397,12 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -460,13 +457,12 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -521,13 +517,12 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -543,13 +538,12 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-add"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -658,11 +652,11 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-loading t-upload__progress-loading"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
+                  d="M12 2.25a9.75 9.75 0 000 19.5v-2.44A7.31 7.31 0 1119.31 12h2.44A9.75 9.75 0 0012 2.25z"
                   fill="currentColor"
                   fill-opacity="0.9"
                 />
@@ -679,13 +673,12 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -743,11 +736,11 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-loading t-upload__progress-loading"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
+                  d="M12 2.25a9.75 9.75 0 000 19.5v-2.44A7.31 7.31 0 1119.31 12h2.44A9.75 9.75 0 0012 2.25z"
                   fill="currentColor"
                   fill-opacity="0.9"
                 />
@@ -764,13 +757,12 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -786,13 +778,12 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-add"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -880,18 +871,12 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-close-circle"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M4.98 10.31L7.3 8 5 5.69l.7-.7L8 7.28 10.31 5l.7.7L8.72 8l2.3 2.31-.7.7L8 8.72 5.69 11l-.7-.7z"
+                  d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zM7.4 15.18L10.6 12 7.4 8.82 8.82 7.4 12 10.6l3.18-3.19 1.42 1.42L13.4 12l3.19 3.18-1.42 1.42L12 13.4 8.82 16.6 7.4 15.18z"
                   fill="currentColor"
-                  fill-opacity="0.9"
-                />
-                <path
-                  d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               <div
@@ -904,13 +889,12 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -926,13 +910,12 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-add"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1222,13 +1205,12 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
         class="t-icon t-icon-close t-upload__delete-btn"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+          d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -1283,13 +1265,12 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
         class="t-icon t-icon-close t-upload__delete-btn"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+          d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -1344,13 +1325,12 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
         class="t-icon t-icon-close t-upload__delete-btn"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+          d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -1366,13 +1346,12 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
           class="t-icon t-icon-add"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+            d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -1463,11 +1442,11 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             class="t-icon t-icon-loading t-upload__progress-loading"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
+              d="M12 2.25a9.75 9.75 0 000 19.5v-2.44A7.31 7.31 0 1119.31 12h2.44A9.75 9.75 0 0012 2.25z"
               fill="currentColor"
               fill-opacity="0.9"
             />
@@ -1484,13 +1463,12 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+            d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -1548,11 +1526,11 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             class="t-icon t-icon-loading t-upload__progress-loading"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
+              d="M12 2.25a9.75 9.75 0 000 19.5v-2.44A7.31 7.31 0 1119.31 12h2.44A9.75 9.75 0 0012 2.25z"
               fill="currentColor"
               fill-opacity="0.9"
             />
@@ -1569,13 +1547,12 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+            d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -1591,13 +1568,12 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             class="t-icon t-icon-add"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+              d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -1685,18 +1661,12 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             class="t-icon t-icon-close-circle"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M4.98 10.31L7.3 8 5 5.69l.7-.7L8 7.28 10.31 5l.7.7L8.72 8l2.3 2.31-.7.7L8 8.72 5.69 11l-.7-.7z"
+              d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zM7.4 15.18L10.6 12 7.4 8.82 8.82 7.4 12 10.6l3.18-3.19 1.42 1.42L13.4 12l3.19 3.18-1.42 1.42L12 13.4 8.82 16.6 7.4 15.18z"
               fill="currentColor"
-              fill-opacity="0.9"
-            />
-            <path
-              d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
-              fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           <div
@@ -1709,13 +1679,12 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+            d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -1731,13 +1700,12 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             class="t-icon t-icon-add"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+              d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>

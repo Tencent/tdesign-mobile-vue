@@ -1,32 +1,46 @@
 <template>
   <div class="t-demo-iconfont">
     <div class="t-demo-row">
-      <loading-icon />
-      <close-icon @click="onIconClose" />
-      <check-circle-filled-icon />
+      <letters-t-icon @click="onIconClick" />
+      <letters-d-icon />
+      <letters-e-icon />
+      <letters-s-icon />
+      <letters-i-icon />
+      <letters-g-icon />
+      <letters-n-icon />
     </div>
     <br />
     <div class="t-demo-row">
-      <check-circle-filled-icon size="small" />
-      <check-circle-filled-icon />
-      <check-circle-filled-icon size="medium" />
-      <check-circle-filled-icon size="large" />
-      <check-circle-filled-icon size="25px" />
-      <check-circle-filled-icon size="2em" />
-    </div>
-    <br />
-    <div class="t-demo-row">
-      <check-circle-filled-icon style="color: red" />
-      <check-circle-filled-icon style="color: green" />
-      <check-circle-filled-icon style="color: orange" />
+      <component-checkbox-icon />
+      <component-breadcrumb-icon />
+      <component-input-icon />
+      <component-switch-icon />
+      <component-dropdown-icon />
+      <component-radio-icon />
+      <component-steps-icon />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { LoadingIcon, CloseIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
+import {
+  LettersTIcon,
+  LettersDIcon,
+  LettersSIcon,
+  LettersEIcon,
+  LettersIIcon,
+  LettersNIcon,
+  LettersGIcon,
+  ComponentCheckboxIcon,
+  ComponentInputIcon,
+  ComponentSwitchIcon,
+  ComponentBreadcrumbIcon,
+  ComponentDropdownIcon,
+  ComponentRadioIcon,
+  ComponentStepsIcon,
+} from 'tdesign-icons-vue-next';
 
-const onIconClose = () => {
+const onIconClick = () => {
   console.log('icon was clicked.');
 };
 </script>

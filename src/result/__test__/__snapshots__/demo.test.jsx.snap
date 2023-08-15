@@ -145,18 +145,12 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
               class="t-icon t-icon-check-circle t-result__icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M4.5 8.2L7 10.7l4.5-4.5-.7-.7L7 9.3 5.2 7.5l-.7.7z"
+                d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zm-12.5 4.41L6.09 12l1.41-1.41 3 3 6-6L17.91 9l-7.41 7.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M4.11 2.18a7 7 0 117.78 11.64A7 7 0 014.1 2.18zm.56 10.8a6 6 0 106.66-9.97A6 6 0 004.67 13z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -185,18 +179,12 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
               class="t-icon t-icon-close-circle t-result__icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M4.98 10.31L7.3 8 5 5.69l.7-.7L8 7.28 10.31 5l.7.7L8.72 8l2.3 2.31-.7.7L8 8.72 5.69 11l-.7-.7z"
+                d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zM7.4 15.18L10.6 12 7.4 8.82 8.82 7.4 12 10.6l3.18-3.19 1.42 1.42L13.4 12l3.19 3.18-1.42 1.42L12 13.4 8.82 16.6 7.4 15.18z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -225,18 +213,12 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
               class="t-icon t-icon-info-circle t-result__icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.5 12V6.5h1V12h-1zM8.6 4H7.4v1.2h1.2V4z"
+                d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zm-12 5.5V10h2v7.5h-2zm2-9h-2v-2h2v2z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M1 8a7 7 0 1014 0A7 7 0 001 8zm1 0a6 6 0 1112 0A6 6 0 012 8z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -265,18 +247,12 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
               class="t-icon t-icon-info-circle t-result__icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.5 12V6.5h1V12h-1zM8.6 4H7.4v1.2h1.2V4z"
+                d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zm-12 5.5V10h2v7.5h-2zm2-9h-2v-2h2v2z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M1 8a7 7 0 1014 0A7 7 0 001 8zm1 0a6 6 0 1112 0A6 6 0 012 8z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -455,18 +431,12 @@ exports[`Result > Result themeVue demo works fine 1`] = `
           class="t-icon t-icon-check-circle t-result__icon"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M4.5 8.2L7 10.7l4.5-4.5-.7-.7L7 9.3 5.2 7.5l-.7.7z"
+            d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zm-12.5 4.41L6.09 12l1.41-1.41 3 3 6-6L17.91 9l-7.41 7.41z"
             fill="currentColor"
-            fill-opacity="0.9"
-          />
-          <path
-            d="M4.11 2.18a7 7 0 117.78 11.64A7 7 0 014.1 2.18zm.56 10.8a6 6 0 106.66-9.97A6 6 0 004.67 13z"
-            fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         
@@ -495,18 +465,12 @@ exports[`Result > Result themeVue demo works fine 1`] = `
           class="t-icon t-icon-close-circle t-result__icon"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M4.98 10.31L7.3 8 5 5.69l.7-.7L8 7.28 10.31 5l.7.7L8.72 8l2.3 2.31-.7.7L8 8.72 5.69 11l-.7-.7z"
+            d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zM7.4 15.18L10.6 12 7.4 8.82 8.82 7.4 12 10.6l3.18-3.19 1.42 1.42L13.4 12l3.19 3.18-1.42 1.42L12 13.4 8.82 16.6 7.4 15.18z"
             fill="currentColor"
-            fill-opacity="0.9"
-          />
-          <path
-            d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
-            fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         
@@ -535,18 +499,12 @@ exports[`Result > Result themeVue demo works fine 1`] = `
           class="t-icon t-icon-info-circle t-result__icon"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M7.5 12V6.5h1V12h-1zM8.6 4H7.4v1.2h1.2V4z"
+            d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zm-12 5.5V10h2v7.5h-2zm2-9h-2v-2h2v2z"
             fill="currentColor"
-            fill-opacity="0.9"
-          />
-          <path
-            d="M1 8a7 7 0 1014 0A7 7 0 001 8zm1 0a6 6 0 1112 0A6 6 0 012 8z"
-            fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         
@@ -575,18 +533,12 @@ exports[`Result > Result themeVue demo works fine 1`] = `
           class="t-icon t-icon-info-circle t-result__icon"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M7.5 12V6.5h1V12h-1zM8.6 4H7.4v1.2h1.2V4z"
+            d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zm-12 5.5V10h2v7.5h-2zm2-9h-2v-2h2v2z"
             fill="currentColor"
-            fill-opacity="0.9"
-          />
-          <path
-            d="M1 8a7 7 0 1014 0A7 7 0 001 8zm1 0a6 6 0 1112 0A6 6 0 012 8z"
-            fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         

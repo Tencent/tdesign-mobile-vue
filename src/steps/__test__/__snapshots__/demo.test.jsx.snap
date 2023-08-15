@@ -29,13 +29,12 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
               class="t-icon t-icon-check"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -208,13 +207,12 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
               fill="none"
               height="1em"
               style="font-size: 20px;"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -260,13 +258,12 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
               fill="none"
               height="1em"
               style="font-size: 20px;"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -312,13 +309,12 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
               fill="none"
               height="1em"
               style="font-size: 20px;"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -364,13 +360,12 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
               fill="none"
               height="1em"
               style="font-size: 20px;"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -623,13 +618,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-check"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                      d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                 </div>
@@ -802,13 +796,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     fill="none"
                     height="1em"
                     style="font-size: 20px;"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -854,13 +847,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     fill="none"
                     height="1em"
                     style="font-size: 20px;"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -906,13 +898,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     fill="none"
                     height="1em"
                     style="font-size: 20px;"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -958,13 +949,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     fill="none"
                     height="1em"
                     style="font-size: 20px;"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -1184,13 +1174,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-check"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                      d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                 </div>
@@ -1363,13 +1352,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     fill="none"
                     height="1em"
                     style="font-size: 20px;"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -1415,13 +1403,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     fill="none"
                     height="1em"
                     style="font-size: 20px;"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -1467,13 +1454,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     fill="none"
                     height="1em"
                     style="font-size: 20px;"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -1519,13 +1505,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     fill="none"
                     height="1em"
                     style="font-size: 20px;"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -1968,13 +1953,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-check"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                      d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                 </div>
@@ -2017,13 +2001,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-close"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                      d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                 </div>
@@ -2154,13 +2137,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     fill="none"
                     height="1em"
                     style="font-size: 20px;"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -2206,13 +2188,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     fill="none"
                     height="1em"
                     style="font-size: 20px;"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -2258,13 +2239,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     fill="none"
                     height="1em"
                     style="font-size: 20px;"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -2310,13 +2290,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     fill="none"
                     height="1em"
                     style="font-size: 20px;"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -2563,13 +2542,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     fill="none"
                     height="1em"
                     style="font-size: 22px;"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                      d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -2614,13 +2592,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     fill="none"
                     height="1em"
                     style="font-size: 22px;"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                      d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -2665,13 +2642,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     fill="none"
                     height="1em"
                     style="font-size: 22px;"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                      d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -2716,13 +2692,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     fill="none"
                     height="1em"
                     style="font-size: 22px;"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                      d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -2967,13 +2942,12 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
               fill="none"
               height="1em"
               style="font-size: 22px;"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -3018,13 +2992,12 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
               fill="none"
               height="1em"
               style="font-size: 22px;"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -3069,13 +3042,12 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
               fill="none"
               height="1em"
               style="font-size: 22px;"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -3120,13 +3092,12 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
               fill="none"
               height="1em"
               style="font-size: 22px;"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -3355,13 +3326,12 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
               class="t-icon t-icon-check"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -3404,13 +3374,12 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
               class="t-icon t-icon-close"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -3541,13 +3510,12 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
               fill="none"
               height="1em"
               style="font-size: 20px;"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -3593,13 +3561,12 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
               fill="none"
               height="1em"
               style="font-size: 20px;"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -3645,13 +3612,12 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
               fill="none"
               height="1em"
               style="font-size: 20px;"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -3697,13 +3663,12 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
               fill="none"
               height="1em"
               style="font-size: 20px;"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -3921,13 +3886,12 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
               class="t-icon t-icon-check"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -4100,13 +4064,12 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
               fill="none"
               height="1em"
               style="font-size: 20px;"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -4152,13 +4115,12 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
               fill="none"
               height="1em"
               style="font-size: 20px;"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -4204,13 +4166,12 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
               fill="none"
               height="1em"
               style="font-size: 20px;"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -4256,13 +4217,12 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
               fill="none"
               height="1em"
               style="font-size: 20px;"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M1 3h1.58l1.39 8.33c.06.39.4.67.78.67H14v-1H4.92L4.6 9h8.63a.8.8 0 00.78-.6l.85-3.4a.8.8 0 00-.78-1H3.76l-.23-1.33A.8.8 0 002.75 2H1v1zm12.07 5H4.42l-.5-3h9.9l-.75 3zM4.75 14.5a.75.75 0 100-1.5.75.75 0 000 1.5zM12.81 14.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
