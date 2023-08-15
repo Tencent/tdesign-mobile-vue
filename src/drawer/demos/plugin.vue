@@ -3,11 +3,10 @@
 </template>
 
 <script lang="ts" setup>
-import { inject } from 'vue';
+import { DrawerPlugin } from 'tdesign-mobile-vue';
 
-const $drawer: any = inject('$drawer');
 const showDrawer = () => {
-  const instance = $drawer({
+  const instance = DrawerPlugin({
     items: new Array(20).fill({ title: '菜单' }).map((item, index: number) => ({ title: `标题 ${index + 1}` })),
     onItemClick(index: number) {
       console.log(index);

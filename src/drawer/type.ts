@@ -97,8 +97,8 @@ export interface DrawerInstance {
 }
 
 export interface DrawerItem {
-  title: string;
-  icon: TNode;
+  title?: string;
+  icon?: TNode;
 }
 
 export type TriggerSource = 'overlay';
