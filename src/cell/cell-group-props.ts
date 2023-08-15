@@ -9,7 +9,10 @@ import { PropType } from 'vue';
 
 export default {
   /** 是否显示组边框 */
-  bordered: Boolean,
+  bordered: {
+    type: Boolean,
+    default: false,
+  },
   /** 单元格组风格 */
   theme: {
     type: String as PropType<TdCellGroupProps['theme']>,

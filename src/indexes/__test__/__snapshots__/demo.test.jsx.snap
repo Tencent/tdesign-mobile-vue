@@ -99,10 +99,11 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
         </div>
       </div>
     </div>
+    
+    <!--v-if-->
     <div
       class="t-cell-group t-cell-group--default"
     >
-      <!--v-if-->
       
       
       <div
@@ -281,6 +282,7 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
     </div>
     
     
+    
     <div
       class="t-indexes-anchor"
       data-index="B"
@@ -301,10 +303,11 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
         </div>
       </div>
     </div>
+    
+    <!--v-if-->
     <div
       class="t-cell-group t-cell-group--default"
     >
-      <!--v-if-->
       
       
       <div
@@ -578,6 +581,7 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
     </div>
     
     
+    
     <div
       class="t-indexes-anchor"
       data-index="C"
@@ -598,10 +602,11 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
         </div>
       </div>
     </div>
+    
+    <!--v-if-->
     <div
       class="t-cell-group t-cell-group--default"
     >
-      <!--v-if-->
       
       
       <div
@@ -970,6 +975,7 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
     </div>
     
     
+    
     <div
       class="t-indexes-anchor"
       data-index="D"
@@ -990,10 +996,11 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
         </div>
       </div>
     </div>
+    
+    <!--v-if-->
     <div
       class="t-cell-group t-cell-group--default"
     >
-      <!--v-if-->
       
       
       <div
@@ -1248,6 +1255,7 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
     </div>
     
     
+    
     <div
       class="t-indexes-anchor"
       data-index="E"
@@ -1268,10 +1276,11 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
         </div>
       </div>
     </div>
+    
+    <!--v-if-->
     <div
       class="t-cell-group t-cell-group--default"
     >
-      <!--v-if-->
       
       
       <div
@@ -1336,6 +1345,7 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
     </div>
     
     
+    
     <div
       class="t-indexes-anchor"
       data-index="F"
@@ -1356,10 +1366,11 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
         </div>
       </div>
     </div>
+    
+    <!--v-if-->
     <div
       class="t-cell-group t-cell-group--default"
     >
-      <!--v-if-->
       
       
       <div
@@ -1500,6 +1511,7 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
     </div>
     
     
+    
     <div
       class="t-indexes-anchor"
       data-index="G"
@@ -1520,10 +1532,11 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
         </div>
       </div>
     </div>
+    
+    <!--v-if-->
     <div
       class="t-cell-group t-cell-group--default"
     >
-      <!--v-if-->
       
       
       <div
@@ -1721,6 +1734,7 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
     </div>
     
     
+    
     <div
       class="t-indexes-anchor"
       data-index="J"
@@ -1741,10 +1755,11 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
         </div>
       </div>
     </div>
+    
+    <!--v-if-->
     <div
       class="t-cell-group t-cell-group--default"
     >
-      <!--v-if-->
       
       
       <div
@@ -1961,6 +1976,7 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
     </div>
     
     
+    
     <div
       class="t-indexes-anchor"
       data-index="K"
@@ -1981,10 +1997,11 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
         </div>
       </div>
     </div>
+    
+    <!--v-if-->
     <div
       class="t-cell-group t-cell-group--default"
     >
-      <!--v-if-->
       
       
       <div
@@ -2066,6 +2083,7 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
       
       
     </div>
+    
     
     
     
@@ -2163,10 +2181,11 @@ exports[`Indexes > Indexes customVue demo works fine 1`] = `
         </div>
       </div>
     </div>
+    
+    <!--v-if-->
     <div
       class="t-cell-group t-cell-group--default"
     >
-      <!--v-if-->
       
       
       <div
@@ -2267,6 +2286,7 @@ exports[`Indexes > Indexes customVue demo works fine 1`] = `
       
       
     </div>
+    
     
     
     <div
@@ -2294,10 +2314,11 @@ exports[`Indexes > Indexes customVue demo works fine 1`] = `
         </div>
       </div>
     </div>
+    
+    <!--v-if-->
     <div
       class="t-cell-group t-cell-group--default"
     >
-      <!--v-if-->
       
       
       <div
@@ -2398,6 +2419,7 @@ exports[`Indexes > Indexes customVue demo works fine 1`] = `
       
       
     </div>
+    
     
     
     <div
@@ -2425,10 +2447,11 @@ exports[`Indexes > Indexes customVue demo works fine 1`] = `
         </div>
       </div>
     </div>
+    
+    <!--v-if-->
     <div
       class="t-cell-group t-cell-group--default"
     >
-      <!--v-if-->
       
       
       <div
@@ -2529,6 +2552,7 @@ exports[`Indexes > Indexes customVue demo works fine 1`] = `
       
       
     </div>
+    
     
     
     <div
@@ -2556,10 +2580,11 @@ exports[`Indexes > Indexes customVue demo works fine 1`] = `
         </div>
       </div>
     </div>
+    
+    <!--v-if-->
     <div
       class="t-cell-group t-cell-group--default"
     >
-      <!--v-if-->
       
       
       <div
@@ -2660,6 +2685,7 @@ exports[`Indexes > Indexes customVue demo works fine 1`] = `
       
       
     </div>
+    
     
     
     <div
@@ -2687,10 +2713,11 @@ exports[`Indexes > Indexes customVue demo works fine 1`] = `
         </div>
       </div>
     </div>
+    
+    <!--v-if-->
     <div
       class="t-cell-group t-cell-group--default"
     >
-      <!--v-if-->
       
       
       <div
@@ -2791,6 +2818,7 @@ exports[`Indexes > Indexes customVue demo works fine 1`] = `
       
       
     </div>
+    
     
     
     <div
@@ -2818,10 +2846,11 @@ exports[`Indexes > Indexes customVue demo works fine 1`] = `
         </div>
       </div>
     </div>
+    
+    <!--v-if-->
     <div
       class="t-cell-group t-cell-group--default"
     >
-      <!--v-if-->
       
       
       <div
@@ -2922,6 +2951,7 @@ exports[`Indexes > Indexes customVue demo works fine 1`] = `
       
       
     </div>
+    
     
     
     <div
@@ -2949,10 +2979,11 @@ exports[`Indexes > Indexes customVue demo works fine 1`] = `
         </div>
       </div>
     </div>
+    
+    <!--v-if-->
     <div
       class="t-cell-group t-cell-group--default"
     >
-      <!--v-if-->
       
       
       <div
@@ -3053,6 +3084,7 @@ exports[`Indexes > Indexes customVue demo works fine 1`] = `
       
       
     </div>
+    
     
     
     

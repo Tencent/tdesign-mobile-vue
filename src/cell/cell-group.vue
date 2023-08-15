@@ -1,15 +1,15 @@
 <template>
-  <div :class="rootClass">
-    <div v-if="title" :class="`${name}__title`">
-      <slot name="title">{{ title }}</slot>
-    </div>
-
+  <div v-if="titleContent" :class="`${name}__title`">
+    <t-node :content="titleContent" />
+  </div>
+  <div :class="contentClass">
     <slot />
   </div>
 </template>
 
 <script lang="ts">
-import { defineProps, computed } from 'vue';
+import { defineProps, computed, getCurrentInstance } from 'vue';
+import { renderTNode, TNode } from '../shared';
 import CellGroupProps from './cell-group-props';
 import config from '../config';
 
@@ -18,10 +18,13 @@ const name = `${prefix}-cell-group`;
 
 export default {
   name,
+  components: { TNode },
 };
 </script>
 
 <script lang="ts" setup>
 const props = defineProps(CellGroupProps);
-const rootClass = computed(() => [name, `${name}--${props.theme}`]);
+const internalInstance = getCurrentInstance();
+const titleContent = computed(() => renderTNode(internalInstance, 'title'));
+const contentClass = computed(() => [name, `${name}--${props.theme}`, { [`${name}--bordered`]: props.bordered }]);
 </script>
