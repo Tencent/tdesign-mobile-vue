@@ -33,6 +33,7 @@ function create(props: MessageActionOptionsType): void {
         ...otherOptions,
         visible: visible.value,
         onDurationEnd: () => {
+          otherOptions.onDurationEnd?.();
           visible.value = false;
           destroy(context, root);
         },
