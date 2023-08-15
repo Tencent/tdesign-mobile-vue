@@ -97,7 +97,7 @@ export interface DrawerInstance {
 }
 
 export interface DrawerItem {
-  title?: string;
+  title: string;
   icon?: TNode;
 }
 
