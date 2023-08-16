@@ -792,6 +792,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           <input
             accept="image/png"
             hidden=""
+            multiple=""
             type="file"
           />
           <!--v-if-->
@@ -922,8 +923,9 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           
           <input
-            accept="image/png"
+            accept=""
             hidden=""
+            multiple=""
             type="file"
           />
           <!--v-if-->
@@ -1582,6 +1584,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
       <input
         accept="image/png"
         hidden=""
+        multiple=""
         type="file"
       />
       <!--v-if-->
@@ -1712,8 +1715,9 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
       </div>
       
       <input
-        accept="image/png"
+        accept=""
         hidden=""
+        multiple=""
         type="file"
       />
       <!--v-if-->

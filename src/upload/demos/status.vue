@@ -3,8 +3,8 @@
     <div class="upload-title">上传图片</div>
     <t-upload
       :default-files="files"
-      :multiple="false"
       accept="image/png"
+      multiple
       action="//service-bv448zsw-1257786608.gz.apigw.tencentcs.com/api/upload-demo"
     >
     </t-upload>
@@ -16,9 +16,8 @@
     <div class="upload-title">上传图片</div>
     <t-upload
       :default-files="failFiles"
-      :multiple="false"
-      accept="image/png"
       action="//service-bv448zsw-1257786608.gz.apigw.tencentcs.com/api/upload-demo"
+      multiple
     >
     </t-upload>
   </div>
