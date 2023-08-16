@@ -107,7 +107,7 @@ export default defineComponent({
 
     const rootStyles = computed(() => {
       const { offset } = props;
-      const offsetStyle = offset ? getMessageStylesOffset(offset) : [];
+      const offsetStyle: any = offset ? getMessageStylesOffset(offset) : [];
       return {
         zIndex: props.zIndex,
         ...offsetStyle,
@@ -146,7 +146,7 @@ export default defineComponent({
     const textDOM = ref();
 
     const handleScrolling = () => {
-      if (!props?.marquee || (props?.marquee as DrawMarquee)?.loop === 0) {
+      if (!props?.marquee || (isObject(props?.marquee) && (props?.marquee as DrawMarquee))?.loop === 0) {
         return;
       }
 
@@ -155,11 +155,26 @@ export default defineComponent({
       state.scroll = {
         marquee: true,
         // 负数统一当作循环播放
-        loop: Math.max(props.marquee === true || props.marquee?.loop == null ? loop : props.marquee?.loop, -1),
+        loop: Math.max(
+          props.marquee === true || (props.marquee as DrawMarquee)?.loop == null
+            ? loop
+            : (props.marquee as DrawMarquee)?.loop,
+          -1,
+        ),
         // 速度必须为正数
-        speed: Math.max(props.marquee === true || props.marquee?.speed == null ? speed : props.marquee?.speed, 1),
+        speed: Math.max(
+          props.marquee === true || (props.marquee as DrawMarquee)?.speed == null
+            ? speed
+            : (props.marquee as DrawMarquee)?.speed,
+          1,
+        ),
         // 延迟不可为负数
-        delay: Math.max(props.marquee === true || props.marquee?.delay == null ? delay : props.marquee?.delay, 0),
+        delay: Math.max(
+          props.marquee === true || (props.marquee as DrawMarquee)?.delay == null
+            ? delay
+            : (props.marquee as DrawMarquee)?.delay,
+          0,
+        ),
       };
       state.offset = 0;
 

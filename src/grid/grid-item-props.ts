@@ -11,7 +11,6 @@ export default {
   /** 透传至 Badge 属性 */
   badge: {
     type: Object as PropType<TdGridItemProps['badge']>,
-    default: () => null,
   },
   /** 文本以外的更多描述，辅助信息。可以通过 Props 传入文本，也可以自定义标题节点 */
   description: {

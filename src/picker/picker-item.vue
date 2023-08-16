@@ -19,7 +19,6 @@ export default defineComponent({
   props: {
     options: {
       type: Array as PropType<PickerColumnItem[]>,
-      default: () => [],
     },
     value: {
       type: [String, Number] as PropType<PickerValue>,
@@ -42,7 +41,7 @@ export default defineComponent({
     const getIndexByValue = (val: number | string | undefined) => {
       let defaultIndex = 0;
       if (val !== undefined) {
-        defaultIndex = props.options.findIndex((item: any) => item.value === val);
+        defaultIndex = props.options?.findIndex((item: any) => item.value === val);
       }
       return defaultIndex < 0 ? 0 : defaultIndex;
     };

@@ -76,7 +76,7 @@ class Picker {
   constructor(options: PickerOptions) {
     if (!options.el) throw new Error('options el needed!');
     this.holder = options.el;
-    this.options = options || {};
+    this.options = options;
     this.onChange = options.onChange;
     this.init();
   }
