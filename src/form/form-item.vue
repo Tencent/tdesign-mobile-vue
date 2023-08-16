@@ -210,7 +210,7 @@ export default defineComponent({
       }
       return emptyValue;
     };
-    const resetField = async (resetType: 'initial' | 'empty' | undefined = form?.resetType) => {
+    const resetField = async (resetType: 'initial' | 'empty' | undefined = form?.resetType): Promise<any> => {
       if (!props.name) return null;
 
       if (resetType === 'empty') {

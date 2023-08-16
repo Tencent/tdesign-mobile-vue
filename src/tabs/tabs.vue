@@ -67,6 +67,7 @@ import { useVModel } from '../shared';
 import { preventDefault } from '../shared/dom';
 import CLASSNAMES from '../shared/constants';
 import TSticky from '../sticky';
+import { TdStickyProps } from '../sticky/type';
 
 const { prefix } = config;
 const name = `${prefix}-tabs`;
@@ -81,7 +82,7 @@ export default defineComponent({
     const spaceEvenly = computed(() => props.spaceEvenly);
     const showBottomLine = computed(() => props.showBottomLine);
     const swipeable = computed(() => props.swipeable);
-    const stickyProps = computed(() => ({ ...props.stickyProps, disabled: !props.sticky }));
+    const stickyProps = computed(() => ({ ...(props.stickyProps as TdStickyProps), disabled: !props.sticky }));
     const activeClass = `${name}__item--active`;
     const disabledClass = `${name}__item--disabled`;
     const classes = computed(() => [`${name}`, props.size && CLASSNAMES.SIZE[props.size]]);

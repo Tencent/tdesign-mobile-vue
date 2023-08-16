@@ -43,7 +43,7 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, getCurrentInstance, ref, Ref, toRefs, computed, ComputedRef } from 'vue';
+import { defineComponent, getCurrentInstance, ref, Ref, toRefs, computed, ComputedRef, PropType } from 'vue';
 import { AddIcon, LoadingIcon, CloseIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
 import findIndex from 'lodash/findIndex';
 import isFunction from 'lodash/isFunction';
@@ -52,7 +52,7 @@ import TImage from '../image';
 import TImageViewer from '../image-viewer';
 import xhr from '../_common/js/upload/xhr';
 import { useVModel, renderTNode, TNode } from '../shared';
-import { UploadFile, RequestMethodResponse, SizeLimitObj } from './type';
+import { UploadFile, RequestMethodResponse, SizeLimitObj, TdUploadProps } from './type';
 import { SuccessContext, InnerProgressContext } from './interface';
 import UploadProps from './props';
 import config from '../config';
@@ -330,7 +330,7 @@ export default defineComponent({
         const request = xhr;
         const data = {
           file: file.fileRaw,
-          ...props.data,
+          ...(props.data as PropType<TdUploadProps['data']>),
         };
         xhrReq.value = request({
           action: props.action,
