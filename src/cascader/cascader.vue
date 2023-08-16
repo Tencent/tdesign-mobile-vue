@@ -164,8 +164,8 @@ export default defineComponent({
         for (let i = 0, size = selectedIndexes.length; i < size; i += 1) {
           const index = selectedIndexes[i];
           const next = items[i]?.[index];
-          selectedValue.push(next[keys.value?.value ?? 'value']);
-          steps.push(next[keys.value?.label ?? 'label']);
+          selectedValue.push(next[(keys as Ref<KeysType>).value?.value ?? 'value']);
+          steps.push(next[(keys as Ref<KeysType>).value?.label ?? 'label']);
           if (next[(keys as Ref<KeysType>).value?.children ?? 'children']) {
             items.push(next[(keys as Ref<KeysType>).value?.children ?? 'children']);
           }
@@ -179,7 +179,7 @@ export default defineComponent({
 
     const getIndexesByValue = (options: any, value: any) => {
       for (let i = 0; i < options.length; i++) {
-        if (options[i][keys.value?.value ?? 'value'] === value) {
+        if (options[i][(keys as Ref<KeysType>).value?.value ?? 'value'] === value) {
           return [i];
         }
         if (options[i][(keys as Ref<KeysType>).value?.children ?? 'children']) {
@@ -193,18 +193,20 @@ export default defineComponent({
 
     const handleSelect = (e: string | number, level: number) => {
       const value = e;
-      const index = items[level].findIndex((item: any) => item[keys.value?.value ?? 'value'] === value);
+      const index = items[level].findIndex(
+        (item: any) => item[(keys as Ref<KeysType>).value?.value ?? 'value'] === value,
+      );
       const item = items[level][index];
       selectedIndexes[level] = index;
       selectedIndexes.length = level + 1;
       selectedValue[level] = String(e);
       selectedValue.length = level + 1;
-      steps[level] = item[keys.value?.label ?? 'label'] as string;
+      steps[level] = item[(keys as Ref<KeysType>).value?.label ?? 'label'] as string;
 
       if (item.disabled) {
         return;
       }
-      props.onPick?.({ level, value: item[keys.value?.value ?? 'value'], index });
+      props.onPick?.({ level, value: item[(keys as Ref<KeysType>).value?.value ?? 'value'], index });
 
       if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length) {
         items[level + 1] = item[(keys as Ref<KeysType>).value?.children ?? 'children'];
@@ -216,9 +218,9 @@ export default defineComponent({
         childrenInfo.value = e;
         childrenInfo.level = level;
       } else {
-        setCascaderValue(item[keys.value?.value ?? 'value']);
+        setCascaderValue(item[(keys as Ref<KeysType>).value?.value ?? 'value']);
         props.onChange?.(
-          item[keys.value?.value ?? 'value'],
+          item[(keys as Ref<KeysType>).value?.value ?? 'value'],
           items.map((item, index) => toRaw(item?.[selectedIndexes[index]])),
         );
         close('finish');

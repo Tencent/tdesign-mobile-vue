@@ -44,7 +44,7 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, getCurrentInstance, ref, Ref, toRefs, computed, ComputedRef } from 'vue';
+import { defineComponent, getCurrentInstance, ref, Ref, toRefs, computed, ComputedRef, PropType } from 'vue';
 import { AddIcon, LoadingIcon, CloseIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
 
 import TImage from '../image';

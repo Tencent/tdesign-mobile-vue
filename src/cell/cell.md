@@ -28,7 +28,7 @@ click | `(context: { e: MouseEvent })` | 右侧内容。TS 类型：`string \| T
 
 名称 | 类型 | 默认值 | 说明 | 必传
 -- | -- | -- | -- | --
-bordered | Boolean | - | 是否显示组边框 | N
+bordered | Boolean | false | 是否显示组边框 | N
 theme | String | default | `0.15.0`。单元格组风格。可选项：default/card | N
 title | String | - | 单元格组标题 | N
 

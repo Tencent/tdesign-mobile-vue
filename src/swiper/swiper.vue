@@ -58,7 +58,7 @@ import isNumber from 'lodash/isNumber';
 
 import config from '../config';
 import SwiperProps from './props';
-import { SwiperChangeSource } from './type';
+import { SwiperChangeSource, SwiperNavigation } from './type';
 import { renderTNode, TNode, useVModel } from '../shared';
 import { preventDefault } from '../shared/dom';
 
@@ -98,9 +98,11 @@ const rootClass = computed(() => {
   return [`${name}`, `${name}--${props.type}`];
 });
 
+const navigation = computed((): SwiperNavigation => props.navigation);
+
 const enableNavigation = computed(() => {
   if (typeof props.navigation === 'object') {
-    return props.navigation?.minShowNum ? items.value.length >= props.navigation?.minShowNum : true;
+    return navigation.value?.minShowNum ? items.value.length >= navigation.value?.minShowNum : true;
   }
   return false;
 });
