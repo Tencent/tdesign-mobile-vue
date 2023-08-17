@@ -5,6 +5,10 @@ toc: false
 spline: explain
 ---
 
+  ## 🌈 1.0.1 `2023-08-17` 
+### 🐞 Bug Fixes
+- `upload`:  修复`useUpload`导入异常 @linesoft2 ([#1038](https://github.com/Tencent/tdesign-mobile-vue/pull/1038)) 
+
  ## 🌈 1.0.0 `2023-08-16` 
 ### ❗ Breaking Changes
 - `CellGroup`: 调整 `DOM` 结构 @anlyyao ([#1010](https://github.com/Tencent/tdesign-mobile-vue/pull/1010))
