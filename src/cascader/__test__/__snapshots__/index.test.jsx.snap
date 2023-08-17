@@ -9,15 +9,15 @@ exports[`cascader > events > : pick 1`] = `
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
   >
-    
-    
+
+
   </div>
   <div
     class="t-popup t-popup--bottom"
     style="display: none;"
   >
     <!--v-if-->
-    
+
     <div
       class="t-cascader"
     >
@@ -50,7 +50,7 @@ exports[`cascader > events > : pick 1`] = `
           <div
             class="t-cascader__steps"
           >
-            
+
             <div
               class="t-cascader__step"
             >
@@ -75,7 +75,7 @@ exports[`cascader > events > : pick 1`] = `
                 />
               </svg>
             </div>
-            
+
           </div>
           <!--v-if-->
         </div>
@@ -84,7 +84,7 @@ exports[`cascader > events > : pick 1`] = `
           class="t-cascader__options-container"
           style="width: 200vw; transform: translateX(-000vw);"
         >
-          
+
           <div
             class="t-cascader__options"
           >
@@ -95,7 +95,7 @@ exports[`cascader > events > : pick 1`] = `
                 class="t-radio-group"
                 role="radiogroup"
               >
-                
+
                 <div
                   class="t-radio t-radio--left t-radio--block"
                 >
@@ -164,16 +164,16 @@ exports[`cascader > events > : pick 1`] = `
                   </div>
                   <!--v-if-->
                 </div>
-                
+
                 <!--v-if-->
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>
-    
+
   </div>
 </teleport-stub>
 `;
