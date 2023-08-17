@@ -30,11 +30,11 @@ export default defineComponent({
   name,
   components: { TNode },
   props: BadgeProps,
-  setup(props) {
+  setup(props, context) {
     const internalInstance = getCurrentInstance();
     const badgeContent = computed(() => renderContent(internalInstance, 'default', 'content'));
     const countContent = computed(() => {
-      if (typeof props.count === 'function') {
+      if (typeof props.count === 'function' || context.slots.count) {
         return renderTNode(internalInstance, 'count');
       }
       return null;
@@ -46,7 +46,7 @@ export default defineComponent({
         return true;
       }
       const count = Number(props.count);
-      if (!props.showZero && !isNaN(count) && count === 0) {
+      if (!props.showZero && count === 0) {
         return false;
       }
       if (props.count == null) return false;

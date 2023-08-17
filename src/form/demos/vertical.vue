@@ -108,7 +108,7 @@ const props = defineProps({
 const { disabled } = toRefs(props);
 
 // upload
-const onFail = ({ file, e }: { file: UploadFile; e: ProgressEvent }) => {
+const onFail = ({ file, e }: { file: UploadFile; e: ProgressEvent }): any => {
   console.log('---onFail', file, e);
   return null;
 };

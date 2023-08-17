@@ -263,7 +263,7 @@ export default defineComponent({
     const updateRightMenuPosStyle = (value?: number) => {
       if (!rightRef.value) return;
       const pos = value || initData.pos;
-      const children = rightRef.value.children || [];
+      const children: any = rightRef.value.children || [];
       const wArr: number[] = [];
       for (let i = 0, len = children.length - 2; i < len; ++i) {
         const el = children[i] as HTMLElement;
@@ -281,7 +281,7 @@ export default defineComponent({
     const updateLeftMenuPosStyle = (value?: number) => {
       if (!leftRef.value) return;
       const pos = value || initData.pos;
-      const children = leftRef.value.children || [];
+      const children: string | any[] | HTMLCollection = leftRef.value.children || [];
       const wArr: number[] = [];
       for (let i = 0, len = children.length - 2; i < len; ++i) {
         const el = children[i] as HTMLElement;

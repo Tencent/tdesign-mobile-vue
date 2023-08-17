@@ -29,10 +29,12 @@ function create(props: MessageActionOptionsType): void {
 
   const component = defineComponent({
     render: (): VNode =>
+      // @ts-ignore
       h(Message, {
         ...otherOptions,
         visible: visible.value,
         onDurationEnd: () => {
+          otherOptions.onDurationEnd?.();
           visible.value = false;
           destroy(context, root);
         },

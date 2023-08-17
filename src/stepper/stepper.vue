@@ -64,8 +64,8 @@ export default defineComponent({
   setup(props, context) {
     const [stepperValue] = useDefault<TdStepperProps['value'], TdStepperProps>(props, context.emit, 'value', 'change');
     const disabled = useFormDisabled();
-    const { min, max, step, inputWidth } = toRefs(props);
-    const inputStyle = computed(() => (inputWidth ? { width: `${inputWidth.value}px` } : ''));
+    const { min, max, step } = toRefs(props);
+    const inputStyle = computed(() => (props.inputWidth ? { width: `${props.inputWidth}px` } : ''));
 
     const isDisabled = (type: 'minus' | 'plus') => {
       if (disabled.value) return true;

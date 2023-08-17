@@ -173,13 +173,14 @@ export default defineComponent({
     const min = computed(() => Number(props.min));
     const step = computed(() => Number(props.step));
     const [innerValue, setInnerValue] = useVModel(value, modelValue, defaultValue, props.onChange);
+    const scope = computed(() => Number(props.max) - Number(props.min));
 
     watch(
       () => innerValue.value,
       (val: any) => {
         if (range.value) {
-          const left = (state.maxRange * (val[0] - min.value)) / (max.value - min.value);
-          const right = (state.maxRange * (max.value - val[1])) / (max.value - min.value);
+          const left = (state.maxRange * (val[0] - min.value)) / scope.value;
+          const right = (state.maxRange * (max.value - val[1])) / scope.value;
           // 因为要计算点相对于线的绝对定位，所以要取整条线的长度而非可滑动的范围
           setLineStyle(left, right);
         } else {
@@ -219,15 +220,15 @@ export default defineComponent({
     const lineBarWidth = ref<number>();
     const setSingleBarWidth = (value: number) => {
       const halfBlock = theme.value === 'capsule' ? Number(state.blockSize) / 2 : 0;
-      const percentage = (Number(value) - min.value) / (max.value - min.value);
+      const percentage = (Number(value) - min.value) / scope.value;
       lineBarWidth.value = percentage * state.maxRange + halfBlock;
     };
 
     onMounted(() => {
       getInitialStyle();
       if (range.value) {
-        const left = (state.maxRange * (innerValue.value?.[0] ?? 0 - min.value)) / (max.value - min.value); // @ts-ignore
-        const right = (state.maxRange * (max.value - innerValue.value[1])) / (max.value - min.value); // @ts-ignore
+        const left = (state.maxRange * (innerValue.value?.[0] ?? 0 - min.value)) / scope.value; // @ts-ignore
+        const right = (state.maxRange * (max.value - innerValue.value[1])) / scope.value; // @ts-ignore
         // 因为要计算点相对于线的绝对定位，所以要取整条线的长度而非可滑动的范围
         setLineStyle(left, right);
       } else {
@@ -284,7 +285,7 @@ export default defineComponent({
     };
 
     const calcByStep = (value: number): number => {
-      if (step.value < 1 || step.value > max.value - min.value) return value;
+      if (step.value < 1 || step.value > scope.value) return value;
       const closestStep = trimSingleValue(Math.round(value / step.value) * step.value, min.value, max.value);
 
       return closestStep as number;
@@ -301,7 +302,7 @@ export default defineComponent({
         const margin = (theme.value as any) === 'capsule' ? state.blockSize / 2 : 0;
         return arr.map((item) => ({
           val: item,
-          left: Math.round((item / 100) * state.maxRange) + margin,
+          left: Math.round(((item - min.value) / scope.value) * state.maxRange) + margin,
         }));
       };
       if (marks?.length && Array.isArray(marks)) {
@@ -321,8 +322,8 @@ export default defineComponent({
 
     const convertPosToValue = (posValue: number, isLeft = true) => {
       const raw = isLeft
-        ? (posValue / state.maxRange) * (max.value - min.value) + min.value
-        : max.value - (posValue / state.maxRange) * (max.value - min.value);
+        ? (posValue / state.maxRange) * scope.value + min.value
+        : max.value - (posValue / state.maxRange) * scope.value;
       return Math.round(raw);
     };
 

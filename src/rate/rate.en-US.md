@@ -16,7 +16,6 @@ size | String | 24px | \- | N
 texts | Array | [] | Typescript：`Array<string>` | N
 value | Number | 0 | `v-model` and `v-model:value` is supported | N
 defaultValue | Number | 0 | uncontrolled property | N
-variant | String | outline | options：outline/filled | N
 onChange | Function |  | Typescript：`(value: number) => void`<br/> | N
 
 ### Rate Events

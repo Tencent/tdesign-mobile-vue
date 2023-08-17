@@ -1,12 +1,14 @@
 <template>
   <div :class="`${name}__wrapper`" :style="customSize">
     <div :class="`${name}__badge`">
-      <t-badge v-bind="customBadgeProps">
+      <t-badge v-bind="badgeProps">
         <div :class="avatarClass">
           <t-image
             v-if="image && !hideOnLoadFailed"
             :style="customSize"
-            v-bind="customImageProps"
+            :src="image"
+            :alt="alt"
+            v-bind="imageProps"
             @error="handleImgLoadError"
           />
           <div v-else-if="iconContent !== undefined" :class="`${name}__icon`">
@@ -71,19 +73,6 @@ export default defineComponent({
       props.onError?.(e);
     };
 
-    const customBadgeProps = computed(() => ({
-      ...props.badgeProps,
-    }));
-
-    const baseImageProps = {
-      src: props.image,
-      alt: props.alt,
-    };
-    const customImageProps = computed(() => ({
-      ...props.imageProps,
-      ...baseImageProps,
-    }));
-
     return {
       name,
       ...toRefs(props),
@@ -92,8 +81,6 @@ export default defineComponent({
       avatarClass,
       customSize,
       handleImgLoadError,
-      customImageProps,
-      customBadgeProps,
     };
   },
 });
