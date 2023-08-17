@@ -2,14 +2,20 @@ import { computed, h, ref, toRefs, ComputedRef } from 'vue';
 import { isFunction, isString } from 'lodash';
 import { SizeLimitObj, TdUploadProps, UploadChangeContext, UploadFile, UploadRemoveContext } from '../type';
 import { useVModel } from '../../shared';
-import { formatToUploadFile, getDisplayFiles, validateFile, upload, getFilesAndErrors } from '@/_common/js/upload/main';
+import {
+  formatToUploadFile,
+  getDisplayFiles,
+  validateFile,
+  upload,
+  getFilesAndErrors,
+} from '../../_common/js/upload/main';
 import {
   FileChangeReturn,
   InnerProgressContext,
   OnResponseErrorContext,
   SuccessContext,
-} from '@/_common/js/upload/types';
-import { getFileList, getFileUrlByFileRaw } from '@/_common/js/upload/utils';
+} from '../../_common/js/upload/types';
+import { getFileList, getFileUrlByFileRaw } from '../../_common/js/upload/utils';
 
 // @ts-ignore
 export type ValidateParams = Parameters<TdUploadProps['onValidate']>[0];
