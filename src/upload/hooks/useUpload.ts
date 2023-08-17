@@ -2,7 +2,13 @@ import { computed, h, ref, toRefs, ComputedRef } from 'vue';
 import { isFunction, isString } from 'lodash';
 import { SizeLimitObj, TdUploadProps, UploadChangeContext, UploadFile, UploadRemoveContext } from '../type';
 import { useVModel } from '../../shared';
-import { formatToUploadFile, getDisplayFiles, validateFile, upload, getFilesAndErrors } from '../../_common/js/upload/main';
+import {
+  formatToUploadFile,
+  getDisplayFiles,
+  validateFile,
+  upload,
+  getFilesAndErrors,
+} from '../../_common/js/upload/main';
 import {
   FileChangeReturn,
   InnerProgressContext,
