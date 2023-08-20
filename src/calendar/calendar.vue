@@ -6,7 +6,7 @@
       </template>
     </calendarTemplate>
     <t-popup v-else :visible="props.visible" placement="bottom" @visible-change="onPopupVisibleChange">
-      <calendarTemplate @visible-change="onVisibleChange">
+      <calendarTemplate ref="calendarTemplateRef" @visible-change="onVisibleChange">
         <template #confirmBtn>
           <slot name="confirmBtn"></slot>
         </template>
@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import { defineEmits, defineProps, provide } from 'vue';
+import { defineEmits, defineProps, provide, watch, ref } from 'vue';
 
 import TPopup from '../popup';
 import config from '../config';
@@ -47,4 +47,11 @@ const onPopupVisibleChange = (v: boolean) => {
   if (!v) props.onClose?.('overlay');
   emit('update:visible', v);
 };
+const calendarTemplateRef = ref();
+watch(
+  () => props.value,
+  (val) => {
+    calendarTemplateRef.value.valueRef = val;
+  },
+);
 </script>
