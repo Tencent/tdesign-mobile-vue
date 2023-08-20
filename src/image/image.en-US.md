@@ -24,3 +24,13 @@ name | params | description
 -- | -- | --
 error | `(context: { e: ImageEvent })` | trigger on image load failed
 load | `(context: { e: ImageEvent })` | trigger on image loaded
+
+
+### CSS Variables
+The component provides the following CSS variables, which can be used to customize styles.
+Name | Default Value | Description 
+-- | -- | --
+--td-image-color | @font-gray-3 | - 
+--td-image-loading-bg-color | @bg-color-secondarycontainer | - 
+--td-image-loading-color | @font-gray-3 | - 
+--td-image-round-radius | @radius-default | - 

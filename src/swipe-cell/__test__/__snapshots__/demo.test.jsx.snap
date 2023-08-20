@@ -296,18 +296,13 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 fill="none"
                 height="1em"
                 style="font-size: 16px;"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
-                <g
+                <path
+                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
                   fill="currentColor"
-                  fill-opacity="0.9"
-                  opacity="0.9"
-                >
-                  <path
-                    d="M14.13 4.95L10.9 1.71l.7-.71 3.25 3.24-.7.71zM5.97 13.11l-3.61.72a.3.3 0 01-.35-.35l.72-3.61 7.3-7.3 3.24 3.24-7.3 7.3zm5.89-7.3l-1.83-1.83-6.38 6.38-.46 2.29 2.29-.46 6.38-6.38zM15 11h-4v1h4v-1zM15 13H8.5v1H15v-1z"
-                  />
-                </g>
+                />
               </svg>
               <span
                 class="t-swipe-cell__text"
@@ -324,18 +319,12 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 fill="none"
                 height="1em"
                 style="font-size: 16px;"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6 12V6h1v6H6zM9 6v6h1V6H9z"
+                  d="M7.5 1h9v3H22v2h-2.03l-.5 17H4.53l-.5-17H2V4h5.5V1zm2 3h5V3h-5v1zM6.03 6l.44 15h11.06l.44-15H6.03zM13 8v11h-2V8h2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
-                />
-                <path
-                  d="M10.5 3H14v1h-1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4H2V3h3.5V1.8c0-.44.36-.8.8-.8h3.4c.44 0 .8.36.8.8V3zm-4 0h3V2h-3v1zM4 4v10h8V4H4z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               <span
@@ -426,18 +415,13 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 class="t-icon t-icon-edit-1 t-swipe-cell__icon"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
-                <g
+                <path
+                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
                   fill="currentColor"
-                  fill-opacity="0.9"
-                  opacity="0.9"
-                >
-                  <path
-                    d="M14.13 4.95L10.9 1.71l.7-.71 3.25 3.24-.7.71zM5.97 13.11l-3.61.72a.3.3 0 01-.35-.35l.72-3.61 7.3-7.3 3.24 3.24-7.3 7.3zm5.89-7.3l-1.83-1.83-6.38 6.38-.46 2.29 2.29-.46 6.38-6.38zM15 11h-4v1h4v-1zM15 13H8.5v1H15v-1z"
-                  />
-                </g>
+                />
               </svg>
               <!--v-if-->
             </div>
@@ -449,18 +433,12 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 class="t-icon t-icon-delete t-swipe-cell__icon"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6 12V6h1v6H6zM9 6v6h1V6H9z"
+                  d="M7.5 1h9v3H22v2h-2.03l-.5 17H4.53l-.5-17H2V4h5.5V1zm2 3h5V3h-5v1zM6.03 6l.44 15h11.06l.44-15H6.03zM13 8v11h-2V8h2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
-                />
-                <path
-                  d="M10.5 3H14v1h-1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4H2V3h3.5V1.8c0-.44.36-.8.8-.8h3.4c.44 0 .8.36.8.8V3zm-4 0h3V2h-3v1zM4 4v10h8V4H4z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               <!--v-if-->
@@ -552,18 +530,13 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 fill="none"
                 height="1em"
                 style="font-size: 16px;"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
-                <g
+                <path
+                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
                   fill="currentColor"
-                  fill-opacity="0.9"
-                  opacity="0.9"
-                >
-                  <path
-                    d="M14.13 4.95L10.9 1.71l.7-.71 3.25 3.24-.7.71zM5.97 13.11l-3.61.72a.3.3 0 01-.35-.35l.72-3.61 7.3-7.3 3.24 3.24-7.3 7.3zm5.89-7.3l-1.83-1.83-6.38 6.38-.46 2.29 2.29-.46 6.38-6.38zM15 11h-4v1h4v-1zM15 13H8.5v1H15v-1z"
-                  />
-                </g>
+                />
               </svg>
               <span
                 class="t-swipe-cell__text"
@@ -580,18 +553,12 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 fill="none"
                 height="1em"
                 style="font-size: 16px;"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6 12V6h1v6H6zM9 6v6h1V6H9z"
+                  d="M7.5 1h9v3H22v2h-2.03l-.5 17H4.53l-.5-17H2V4h5.5V1zm2 3h5V3h-5v1zM6.03 6l.44 15h11.06l.44-15H6.03zM13 8v11h-2V8h2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
-                />
-                <path
-                  d="M10.5 3H14v1h-1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4H2V3h3.5V1.8c0-.44.36-.8.8-.8h3.4c.44 0 .8.36.8.8V3zm-4 0h3V2h-3v1zM4 4v10h8V4H4z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               <span
@@ -1670,18 +1637,13 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 fill="none"
                 height="1em"
                 style="font-size: 16px;"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
-                <g
+                <path
+                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
                   fill="currentColor"
-                  fill-opacity="0.9"
-                  opacity="0.9"
-                >
-                  <path
-                    d="M14.13 4.95L10.9 1.71l.7-.71 3.25 3.24-.7.71zM5.97 13.11l-3.61.72a.3.3 0 01-.35-.35l.72-3.61 7.3-7.3 3.24 3.24-7.3 7.3zm5.89-7.3l-1.83-1.83-6.38 6.38-.46 2.29 2.29-.46 6.38-6.38zM15 11h-4v1h4v-1zM15 13H8.5v1H15v-1z"
-                  />
-                </g>
+                />
               </svg>
               <span
                 class="t-swipe-cell__text"
@@ -1698,18 +1660,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 fill="none"
                 height="1em"
                 style="font-size: 16px;"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6 12V6h1v6H6zM9 6v6h1V6H9z"
+                  d="M7.5 1h9v3H22v2h-2.03l-.5 17H4.53l-.5-17H2V4h5.5V1zm2 3h5V3h-5v1zM6.03 6l.44 15h11.06l.44-15H6.03zM13 8v11h-2V8h2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
-                />
-                <path
-                  d="M10.5 3H14v1h-1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4H2V3h3.5V1.8c0-.44.36-.8.8-.8h3.4c.44 0 .8.36.8.8V3zm-4 0h3V2h-3v1zM4 4v10h8V4H4z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               <span
@@ -1800,18 +1756,13 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-edit-1 t-swipe-cell__icon"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
-                <g
+                <path
+                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
                   fill="currentColor"
-                  fill-opacity="0.9"
-                  opacity="0.9"
-                >
-                  <path
-                    d="M14.13 4.95L10.9 1.71l.7-.71 3.25 3.24-.7.71zM5.97 13.11l-3.61.72a.3.3 0 01-.35-.35l.72-3.61 7.3-7.3 3.24 3.24-7.3 7.3zm5.89-7.3l-1.83-1.83-6.38 6.38-.46 2.29 2.29-.46 6.38-6.38zM15 11h-4v1h4v-1zM15 13H8.5v1H15v-1z"
-                  />
-                </g>
+                />
               </svg>
               <!--v-if-->
             </div>
@@ -1823,18 +1774,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-delete t-swipe-cell__icon"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6 12V6h1v6H6zM9 6v6h1V6H9z"
+                  d="M7.5 1h9v3H22v2h-2.03l-.5 17H4.53l-.5-17H2V4h5.5V1zm2 3h5V3h-5v1zM6.03 6l.44 15h11.06l.44-15H6.03zM13 8v11h-2V8h2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
-                />
-                <path
-                  d="M10.5 3H14v1h-1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4H2V3h3.5V1.8c0-.44.36-.8.8-.8h3.4c.44 0 .8.36.8.8V3zm-4 0h3V2h-3v1zM4 4v10h8V4H4z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               <!--v-if-->
@@ -1926,18 +1871,13 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 fill="none"
                 height="1em"
                 style="font-size: 16px;"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
-                <g
+                <path
+                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
                   fill="currentColor"
-                  fill-opacity="0.9"
-                  opacity="0.9"
-                >
-                  <path
-                    d="M14.13 4.95L10.9 1.71l.7-.71 3.25 3.24-.7.71zM5.97 13.11l-3.61.72a.3.3 0 01-.35-.35l.72-3.61 7.3-7.3 3.24 3.24-7.3 7.3zm5.89-7.3l-1.83-1.83-6.38 6.38-.46 2.29 2.29-.46 6.38-6.38zM15 11h-4v1h4v-1zM15 13H8.5v1H15v-1z"
-                  />
-                </g>
+                />
               </svg>
               <span
                 class="t-swipe-cell__text"
@@ -1954,18 +1894,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 fill="none"
                 height="1em"
                 style="font-size: 16px;"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6 12V6h1v6H6zM9 6v6h1V6H9z"
+                  d="M7.5 1h9v3H22v2h-2.03l-.5 17H4.53l-.5-17H2V4h5.5V1zm2 3h5V3h-5v1zM6.03 6l.44 15h11.06l.44-15H6.03zM13 8v11h-2V8h2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
-                />
-                <path
-                  d="M10.5 3H14v1h-1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4H2V3h3.5V1.8c0-.44.36-.8.8-.8h3.4c.44 0 .8.36.8.8V3zm-4 0h3V2h-3v1zM4 4v10h8V4H4z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               <span

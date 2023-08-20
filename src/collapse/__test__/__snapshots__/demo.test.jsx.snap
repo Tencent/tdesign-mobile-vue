@@ -8,7 +8,6 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
   
   <div
     class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -19,13 +18,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -55,13 +48,12 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
+                d="M17.5 15.91l-5.5-5.5-5.5 5.5-1.41-1.41L12 7.59l6.91 6.91-1.41 1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -83,7 +75,6 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
   </div>
   <div
     class="t-collapse-panel t-collapse-panel--bottom"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -94,13 +85,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -130,13 +115,12 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -158,7 +142,6 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
   </div>
   <div
     class="t-collapse-panel t-collapse-panel--bottom"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -169,13 +152,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -205,13 +182,12 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -233,7 +209,6 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
   </div>
   <div
     class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--disabled"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -244,13 +219,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -280,13 +249,12 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -318,7 +286,6 @@ exports[`Collapse > Collapse actionVue demo works fine 1`] = `
   
   <div
     class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -329,13 +296,7 @@ exports[`Collapse > Collapse actionVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -365,13 +326,12 @@ exports[`Collapse > Collapse actionVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
+                d="M17.5 15.91l-5.5-5.5-5.5 5.5-1.41-1.41L12 7.59l6.91 6.91-1.41 1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -402,7 +362,6 @@ exports[`Collapse > Collapse baseVue demo works fine 1`] = `
   
   <div
     class="t-collapse-panel t-collapse-panel--bottom"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -413,13 +372,7 @@ exports[`Collapse > Collapse baseVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -449,13 +402,12 @@ exports[`Collapse > Collapse baseVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -487,7 +439,6 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
   
   <div
     class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -498,13 +449,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -534,13 +479,12 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
+                d="M17.5 15.91l-5.5-5.5-5.5 5.5-1.41-1.41L12 7.59l6.91 6.91-1.41 1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -562,7 +506,6 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
   </div>
   <div
     class="t-collapse-panel t-collapse-panel--bottom"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -573,13 +516,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -609,13 +546,12 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -637,7 +573,6 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
   </div>
   <div
     class="t-collapse-panel t-collapse-panel--bottom"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -648,13 +583,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -684,13 +613,12 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -712,7 +640,6 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
   </div>
   <div
     class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--disabled"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -723,13 +650,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -759,13 +680,12 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -831,7 +751,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         
         <div
           class="t-collapse-panel t-collapse-panel--bottom"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -842,13 +761,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -878,13 +791,12 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                      d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -932,7 +844,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         
         <div
           class="t-collapse-panel t-collapse-panel--top"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -943,13 +854,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -979,13 +884,12 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
+                      d="M17.5 15.91l-5.5-5.5-5.5 5.5-1.41-1.41L12 7.59l6.91 6.91-1.41 1.41z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -1029,7 +933,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         
         <div
           class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -1040,13 +943,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1076,13 +973,12 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
+                      d="M17.5 15.91l-5.5-5.5-5.5 5.5-1.41-1.41L12 7.59l6.91 6.91-1.41 1.41z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -1131,7 +1027,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         
         <div
           class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -1142,13 +1037,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1178,13 +1067,12 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
+                      d="M17.5 15.91l-5.5-5.5-5.5 5.5-1.41-1.41L12 7.59l6.91 6.91-1.41 1.41z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -1206,7 +1094,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-collapse-panel t-collapse-panel--bottom"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -1217,13 +1104,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1253,13 +1134,12 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                      d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -1281,7 +1161,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-collapse-panel t-collapse-panel--bottom"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -1292,13 +1171,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1328,13 +1201,12 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                      d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -1356,7 +1228,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--disabled"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -1367,13 +1238,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1403,13 +1268,12 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                      d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -1463,7 +1327,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         
         <div
           class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -1474,13 +1337,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1510,13 +1367,12 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
+                      d="M17.5 15.91l-5.5-5.5-5.5 5.5-1.41-1.41L12 7.59l6.91 6.91-1.41 1.41z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -1538,7 +1394,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-collapse-panel t-collapse-panel--bottom"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -1549,13 +1404,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1585,13 +1434,12 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                      d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -1613,7 +1461,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-collapse-panel t-collapse-panel--bottom"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -1624,13 +1471,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1660,13 +1501,12 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                      d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -1688,7 +1528,6 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--disabled"
-          style="height: 0px;"
         >
           <div
             class="t-collapse-panel__title"
@@ -1699,13 +1538,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -1735,13 +1568,12 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                      d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -1777,7 +1609,6 @@ exports[`Collapse > Collapse placementVue demo works fine 1`] = `
   
   <div
     class="t-collapse-panel t-collapse-panel--top"
-    style="height: 0px;"
   >
     <div
       class="t-collapse-panel__title"
@@ -1788,13 +1619,7 @@ exports[`Collapse > Collapse placementVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!--v-if-->
           <!---->
         </div>
         <div
@@ -1824,13 +1649,12 @@ exports[`Collapse > Collapse placementVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
+                d="M17.5 15.91l-5.5-5.5-5.5 5.5-1.41-1.41L12 7.59l6.91 6.91-1.41 1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             

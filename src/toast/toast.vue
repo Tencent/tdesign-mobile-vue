@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import { LoadingIcon, CheckCircleIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
-import { computed, toRefs, ref, defineComponent, getCurrentInstance, h } from 'vue';
+import { computed, toRefs, ref, defineComponent, getCurrentInstance, h, onUnmounted } from 'vue';
 import { renderTNode, TNode } from '../shared';
 import TOverlay from '../overlay';
 import ToastProps from './props';
@@ -22,6 +22,7 @@ import config from '../config';
 
 const { prefix } = config;
 const name = `${prefix}-toast`;
+const bodyLockClass = `${name}-overflow-hidden`;
 
 export default defineComponent({
   name,
@@ -70,16 +71,28 @@ export default defineComponent({
       },
     ]);
 
+    const lock = () => {
+      document.body.classList.add(bodyLockClass);
+    };
+
+    const unlock = () => {
+      document.body.classList.remove(bodyLockClass);
+    };
+
     const customOverlayProps = computed(() => {
       const toastOverlayProps = {
         preventScrollThrough: props.preventScrollThrough,
         visible: props.showOverlay,
       };
-
+      props.preventScrollThrough ? lock() : unlock();
       return {
         ...props.overlayProps,
         ...toastOverlayProps,
       };
+    });
+
+    onUnmounted(() => {
+      unlock();
     });
 
     return {

@@ -16,7 +16,7 @@ defaultValue | String / Number | - | 选项值。非受控属性 | N
 visible | Boolean | false | 是否展示 | N
 onChange | Function |  | TS 类型：`(value: string \| number, selectedOptions: string[]) => void`<br/>值发生变更时触发 | N
 onClose | Function |  | TS 类型：`(trigger: TriggerSource) => void`<br/>关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/> | N
-onPick | Function |  | TS 类型：`(value: string \| number, index: number) => void`<br/>选择后触发 | N
+onPick | Function |  | TS 类型：`(context: { level: number, value: string \| number, index: number }) => void`<br/>选择后触发 | N
 
 ### Cascader Events
 
@@ -24,4 +24,20 @@ onPick | Function |  | TS 类型：`(value: string \| number, index: number) => 
 -- | -- | --
 change | `(value: string \| number, selectedOptions: string[])` | 值发生变更时触发
 close | `(trigger: TriggerSource)` | 关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/>
-pick | `(value: string \| number, index: number)` | 选择后触发
+pick | `(context: { level: number, value: string \| number, index: number })` | 选择后触发
+
+
+### CSS 变量
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-cascader-active-color | @brand-color | - 
+--td-cascader-border-color | @border-color | - 
+--td-cascader-disabled-color | @font-gray-4 | - 
+--td-cascader-options-height | 320px | - 
+--td-cascader-options-title-color | @font-gray-3 | - 
+--td-cascader-step-arrow-color | @font-gray-3 | - 
+--td-cascader-step-dot-size | 8px | - 
+--td-cascader-step-height | 44px | - 
+--td-cascader-title-color | @font-gray-1 | - 
+--td-cascder-title-font-size | 18px | - 

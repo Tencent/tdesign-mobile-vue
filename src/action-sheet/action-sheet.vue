@@ -1,5 +1,5 @@
 <template>
-  <t-popup :visible="currentVisible" :placement="`bottom`" :class="name" @close="handleClose">
+  <t-popup :visible="currentVisible" :placement="`bottom`" :destroy-on-close="true" :class="name" @close="handleClose">
     <div :class="rootClasses">
       <p v-if="description" :class="descriptionClasses">{{ description }}</p>
       <action-sheet-list v-if="theme === 'list'" :align="align" :items="actionItems" @selected="handleSelected" />

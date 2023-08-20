@@ -91,6 +91,7 @@ import useStyle, { formatCSSUnit } from './hooks/useStyle';
 import { renderTNode, TNode } from '../shared';
 import { TableRowData } from './type';
 import TLoading from '../loading';
+import { TdLoadingProps } from '../loading/type';
 
 const { prefix } = config;
 const name = `${prefix}-base-table`;
@@ -103,7 +104,7 @@ export default defineComponent({
   setup(props) {
     const { classPrefix, tableLayoutClasses, tableHeaderClasses, tableBaseClass, tdAlignClasses, tdEllipsisClass } =
       useClassName();
-
+    const defaultLoadingContent = h(TLoading, { ...(props.loadingProps as TdLoadingProps) });
     // 表格基础样式类
     const { tableClasses, tableContentStyles, tableElementStyles } = useStyle(props);
 
@@ -140,9 +141,8 @@ export default defineComponent({
     const renderCellEmptyContent = computed(() => renderTNode(internalInstance, 'cellEmptyContent'));
     const loadingClasses = computed(() => [`${classPrefix}-table__loading--full`]);
     const loadingContent = computed(() =>
-      renderTNode(internalInstance, 'loading', { defaultNode: h(TLoading, { ...props.loadingProps }) }),
+      renderTNode(internalInstance, 'loading', { defaultNode: defaultLoadingContent }),
     );
-
     const onInnerVirtualScroll = (e: WheelEvent) => {
       props.onScroll?.({ params: e });
     };

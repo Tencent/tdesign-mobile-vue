@@ -12,10 +12,21 @@ body {
   z-index: 0;
 }
 
+.tdesign-demo-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.tdesign-demo-main {
+  flex: 1;
+  overflow-y: scroll;
+}
+
 .tdesign-mobile-home {
   box-sizing: border-box;
   width: 100%;
-  min-height: 100vh;
   padding: 24px;
   & p{
     padding-top:16px;

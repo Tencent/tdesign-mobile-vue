@@ -22,3 +22,15 @@ name | params | description
 -- | -- | --
 close | \- | \-
 Destroy | \- | \-
+
+
+### CSS Variables
+The component provides the following CSS variables, which can be used to customize styles.
+Name | Default Value | Description 
+-- | -- | --
+--td-toast-bg-color | @font-gray-1 | - 
+--td-toast-color | @font-white-1 | - 
+--td-toast-column-icon-size | 32px | - 
+--td-toast-max-width | 187px | - 
+--td-toast-radius | 4px | - 
+--td-toast-row-icon-size | 24px | - 

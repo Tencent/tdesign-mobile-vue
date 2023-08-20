@@ -65,15 +65,23 @@ export default defineComponent({
 
     // 通过 slots.default 子成员，计算标题栏选项
     const menuTitles = computed(() =>
-      menuItems.value.map((item: any) => {
+      menuItems.value.map((item: any, index: number) => {
         const { keys, label, value, disabled, options } = item.props;
         const target = options?.find((item: any) => item[keys?.value ?? 'value'] === value);
-        if (!label) {
-          state.itemsLabel.push((target && target[keys?.label ?? 'label']) || '');
+        if (state.itemsLabel.length < index + 1) {
+          if (!label) {
+            state.itemsLabel.push((target && target[keys?.label ?? 'label']) || '');
+          } else {
+            state.itemsLabel.push(label || '');
+          }
+          const computedLabel = target?.[keys?.label ?? 'label'] || '';
+          return {
+            label: label || computedLabel,
+            disabled: disabled !== undefined && disabled !== false,
+          };
         }
-        const computedLabel = target?.[keys?.label ?? 'label'] || '';
         return {
-          label: label || computedLabel,
+          label: menuTitles.value[index].label,
           disabled: disabled !== undefined && disabled !== false,
         };
       }),
@@ -125,11 +133,9 @@ export default defineComponent({
       menuContext.recordMenuExpanded(container, control, DropdownMenuExpandState.expanded);
     };
     const collapseMenu = () => {
-      if (state.itemsLabel.length > 0) {
-        menuTitles.value.forEach((item: any, index: number) => {
-          item.label = state.itemsLabel[index];
-        });
-      }
+      menuTitles.value.forEach((item: any, index: number) => {
+        item.label = state.itemsLabel[index];
+      });
       state.activeId = null;
 
       // 清除已展开状态记录

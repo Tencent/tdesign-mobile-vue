@@ -298,8 +298,8 @@ describe('cascader', () => {
       const clickIndex = 0;
       await $radios[clickIndex].find(`.t-radio`).trigger('click');
       expect(onPick).toHaveBeenCalledTimes(1);
-      expect($radios[clickIndex].findAll(`.t-radio__icon--checked`)).toHaveLength(1);
-      expect(onPick).toHaveBeenCalledWith({ index: 0, value: '110000' });
+      expect(wrapper.findAll('.t-radio-group')[0].findAll(`.t-radio__icon--checked`)).toHaveLength(1);
+      expect(onPick).toHaveBeenCalledWith({ level: 0, index: 0, value: '110000' });
       const $step = wrapper.findAll(`.${name}__step`);
       expect($step).toHaveLength(2);
 

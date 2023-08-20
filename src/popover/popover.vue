@@ -55,6 +55,7 @@ export default defineComponent({
       placement: getPopperPlacement(props.placement),
     });
 
+    // @ts-ignore
     const updatePopper = () => {
       if (referenceRef.value && popoverRef.value) {
         popper = createPopper(referenceRef.value, popoverRef.value, getPopoverOptions());

@@ -21,6 +21,15 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 激活下划线的模式*/
+  bottomLineMode: {
+    type: String as PropType<TdTabsProps['bottomLineMode']>,
+    default: 'fixed' as TdTabsProps['bottomLineMode'],
+    validator(val: TdTabsProps['theme']): boolean {
+      if (!val) return true;
+      return ['fixed', 'auto', 'full'].includes(val);
+    },
+  },
   /** 组件尺寸 */
   size: {
     type: String as PropType<TdTabsProps['size']>,

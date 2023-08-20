@@ -12,13 +12,11 @@ const list = [
     value: 'home',
     label: '首页',
     icon: 'home',
-    children: [],
   },
   {
     value: 'app',
     label: '应用',
     icon: 'app',
-    children: [],
   },
   {
     value: 'user',

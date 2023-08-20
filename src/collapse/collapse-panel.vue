@@ -1,10 +1,10 @@
 <template>
-  <div ref="wrapRef" :class="rootClass">
+  <div ref="wrapRef" :class="rootClass" :style="{ height: wrapperHeight }">
     <div ref="headRef" :class="`${name}__title`" @click="handleClick">
       <t-cell
         :class="[`${name}__header`, `${name}__header--${placement}`, { [`${name}__header--expanded`]: isActive }]"
       >
-        <template #leftIcon>
+        <template v-if="leftIcon" #leftIcon>
           <t-node :content="leftIcon" />
         </template>
         <template #title>
@@ -27,7 +27,7 @@
 <script lang="ts">
 import { ref, computed, nextTick, watch, onMounted, inject, defineComponent, getCurrentInstance } from 'vue';
 import { ChevronDownIcon, ChevronUpIcon } from 'tdesign-icons-vue-next';
-
+import isFunction from 'lodash/isFunction';
 import TCell from '../cell';
 import props from './collapse-panel-props';
 import config from '../config';
@@ -39,7 +39,7 @@ const { prefix } = config;
 const name = `${prefix}-collapse-panel`;
 export default defineComponent({
   name,
-  components: { ChevronDownIcon, ChevronUpIcon, TNode, TCell },
+  components: { TNode, TCell },
   props,
   setup(props, context) {
     const internalInstance = getCurrentInstance();
@@ -48,13 +48,17 @@ export default defineComponent({
 
     const rightIcon = computed(() => {
       if (props.expandIcon === false) return;
+      if (isFunction(props.expandIcon) || context.slots.expandIcon) {
+        return renderTNode(internalInstance, 'expandIcon');
+      }
       if (isTrue(props.expandIcon) || isTrue(parent?.expandIcon.value)) {
         if (props.placement === 'bottom') {
           return isActive.value ? ChevronUpIcon : ChevronDownIcon;
         }
         return isActive.value ? ChevronDownIcon : ChevronUpIcon;
       }
-      return renderTNode(internalInstance, 'expand-icon')[0];
+
+      return null;
     });
     const disabled = computed(() => parent?.disabled.value || props.disabled);
     const rootClass = computed(() => ({
@@ -87,18 +91,19 @@ export default defineComponent({
     const bodyRef = ref();
     const wrapRef = ref();
     const headRef = ref();
+    const wrapperHeight = ref('');
     const updatePanelState = () => {
       if (!wrapRef.value) {
         return;
       }
       const { height: headHeight } = headRef.value.getBoundingClientRect();
       if (!isActive.value) {
-        wrapRef.value.style.height = `${headHeight}px`;
+        wrapperHeight.value = `${headHeight}px`;
         return;
       }
       const { height: bodyHeight } = bodyRef.value.getBoundingClientRect();
       const height = headHeight + bodyHeight;
-      wrapRef.value.style.height = `${height}px`;
+      wrapperHeight.value = `${height}px`;
     };
 
     watch(isActive, () => {
@@ -127,6 +132,7 @@ export default defineComponent({
       panelContent,
       headerContent,
       noteContent,
+      wrapperHeight,
     };
   },
 });

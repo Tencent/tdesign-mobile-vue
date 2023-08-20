@@ -150,18 +150,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                     data-v-799be585=""
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 26 24"
                     width="1em"
                   >
                     <path
-                      d="M10.77 11.98l1.38 1.37.7-.7-9.7-9.7-.7.7 1.2 1.21a7.9 7.9 0 00-2.53 2.91L1 8l.12.23a7.72 7.72 0 009.65 3.75zM10 11.2A6.67 6.67 0 012.11 8c.56-1 1.34-1.83 2.26-2.43l1.08 1.09a2.88 2.88 0 003.9 3.9l.64.64zM6.21 7.42l2.37 2.37a1.88 1.88 0 01-2.37-2.37zM14.88 8.23L15 8l-.12-.23a7.73 7.73 0 00-9.35-3.86l.8.8A6.7 6.7 0 0113.9 8a6.87 6.87 0 01-2.02 2.26l.7.7a7.9 7.9 0 002.3-2.73z"
+                      d="M4 1.59l6.17 6.17 7.07 7.07L23.41 21 22 22.41l-2.97-2.96A12.5 12.5 0 011.08 12.3L1 12l.1-.3c.77-2.4 2.24-4.5 4.18-6.02L2.59 3 4 1.59zM6.7 7.1A10.53 10.53 0 003.1 12a10.5 10.5 0 0014.45 5.97l-1.8-1.8a5 5 0 01-6.93-6.93L6.7 7.11zm3.6 3.6a3 3 0 004 4l-4-4zM13 5c-.58 0-1.14.05-1.7.14l-.98.16L10 3.32l.99-.16A12.5 12.5 0 0124.9 11.7l.1.31-.1.3c-.41 1.3-1.03 2.5-1.82 3.58l-.59.8-1.61-1.18.59-.8c.6-.82 1.08-1.73 1.42-2.7A10.5 10.5 0 0013 5zm.51 1.93l.96.29a5 5 0 013.31 3.31l.3.96-1.92.58-.3-.95a3 3 0 00-1.98-1.99l-.95-.3.58-1.9z"
                       fill="currentColor"
-                      fill-opacity="0.9"
-                    />
-                    <path
-                      d="M10.88 8c0 .37-.07.73-.2 1.06l-.82-.82.02-.24a1.88 1.88 0 00-2.12-1.86l-.82-.82A2.87 2.87 0 0110.88 8z"
-                      fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -750,13 +744,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       fill="none"
       height="1em"
       style="font-size: 24px;"
-      viewBox="0 0 16 16"
+      viewBox="0 0 24 24"
       width="1em"
     >
       <path
-        d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+        d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
         fill="currentColor"
-        fill-opacity="0.9"
       />
     </svg>
   </div>
@@ -859,13 +852,13 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                     class="t-icon t-icon-close"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    style="font-size: 24px;"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                      d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                 </div>
@@ -892,13 +885,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                           class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                           fill="none"
                           height="1em"
-                          viewBox="0 0 16 16"
+                          viewBox="0 0 24 24"
                           width="1em"
                         >
                           <path
-                            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                             fill="currentColor"
-                            fill-opacity="0.9"
                           />
                         </svg>
                       </div>
@@ -1015,13 +1007,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       fill="none"
       height="1em"
       style="font-size: 24px;"
-      viewBox="0 0 16 16"
+      viewBox="0 0 24 24"
       width="1em"
     >
       <path
-        d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+        d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
         fill="currentColor"
-        fill-opacity="0.9"
       />
     </svg>
   </div>
@@ -1061,18 +1052,18 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 class="t-icon t-icon-remove t-stepper__minus-icon"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M3.5 7.35h9v1.3h-9v-1.3z"
+                  d="M4 11h16v2H4v-2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
             <input
               class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+              style=""
               type="tel"
             />
             <div
@@ -1082,13 +1073,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 class="t-icon t-icon-add t-stepper__plus-icon"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1146,13 +1136,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                 </div>
@@ -1160,13 +1149,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -1182,13 +1170,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                 </div>
@@ -1196,13 +1183,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -1218,13 +1204,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                 </div>
@@ -1232,13 +1217,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -1254,13 +1238,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                 </div>
@@ -1268,13 +1251,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -1290,13 +1272,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                 </div>
@@ -1304,13 +1285,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -1362,7 +1342,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             >
               <textarea
                 class="t-textarea__wrapper-inner"
-                maxlength="-1"
+                maxlength="50"
                 name=""
                 placeholder="请输入个人简介"
               />
@@ -1462,13 +1442,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 class="t-icon t-icon-close t-upload__delete-btn"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                  d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1523,13 +1502,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 class="t-icon t-icon-close t-upload__delete-btn"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                  d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1545,13 +1523,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   class="t-icon t-icon-add"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                    d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -1901,18 +1878,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                           data-v-799be585=""
                           fill="none"
                           height="1em"
-                          viewBox="0 0 16 16"
+                          viewBox="0 0 26 24"
                           width="1em"
                         >
                           <path
-                            d="M10.77 11.98l1.38 1.37.7-.7-9.7-9.7-.7.7 1.2 1.21a7.9 7.9 0 00-2.53 2.91L1 8l.12.23a7.72 7.72 0 009.65 3.75zM10 11.2A6.67 6.67 0 012.11 8c.56-1 1.34-1.83 2.26-2.43l1.08 1.09a2.88 2.88 0 003.9 3.9l.64.64zM6.21 7.42l2.37 2.37a1.88 1.88 0 01-2.37-2.37zM14.88 8.23L15 8l-.12-.23a7.73 7.73 0 00-9.35-3.86l.8.8A6.7 6.7 0 0113.9 8a6.87 6.87 0 01-2.02 2.26l.7.7a7.9 7.9 0 002.3-2.73z"
+                            d="M4 1.59l6.17 6.17 7.07 7.07L23.41 21 22 22.41l-2.97-2.96A12.5 12.5 0 011.08 12.3L1 12l.1-.3c.77-2.4 2.24-4.5 4.18-6.02L2.59 3 4 1.59zM6.7 7.1A10.53 10.53 0 003.1 12a10.5 10.5 0 0014.45 5.97l-1.8-1.8a5 5 0 01-6.93-6.93L6.7 7.11zm3.6 3.6a3 3 0 004 4l-4-4zM13 5c-.58 0-1.14.05-1.7.14l-.98.16L10 3.32l.99-.16A12.5 12.5 0 0124.9 11.7l.1.31-.1.3c-.41 1.3-1.03 2.5-1.82 3.58l-.59.8-1.61-1.18.59-.8c.6-.82 1.08-1.73 1.42-2.7A10.5 10.5 0 0013 5zm.51 1.93l.96.29a5 5 0 013.31 3.31l.3.96-1.92.58-.3-.95a3 3 0 00-1.98-1.99l-.95-.3.58-1.9z"
                             fill="currentColor"
-                            fill-opacity="0.9"
-                          />
-                          <path
-                            d="M10.88 8c0 .37-.07.73-.2 1.06l-.82-.82.02-.24a1.88 1.88 0 00-2.12-1.86l-.82-.82A2.87 2.87 0 0110.88 8z"
-                            fill="currentColor"
-                            fill-opacity="0.9"
                           />
                         </svg>
                         
@@ -2501,13 +2472,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             fill="none"
             height="1em"
             style="font-size: 24px;"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -2610,13 +2580,13 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                           class="t-icon t-icon-close"
                           fill="none"
                           height="1em"
-                          viewBox="0 0 16 16"
+                          style="font-size: 24px;"
+                          viewBox="0 0 24 24"
                           width="1em"
                         >
                           <path
-                            d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                            d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                             fill="currentColor"
-                            fill-opacity="0.9"
                           />
                         </svg>
                       </div>
@@ -2643,13 +2613,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                                 class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                                 fill="none"
                                 height="1em"
-                                viewBox="0 0 16 16"
+                                viewBox="0 0 24 24"
                                 width="1em"
                               >
                                 <path
-                                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                                  d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                                   fill="currentColor"
-                                  fill-opacity="0.9"
                                 />
                               </svg>
                             </div>
@@ -2766,13 +2735,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             fill="none"
             height="1em"
             style="font-size: 24px;"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -2812,18 +2780,18 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-remove t-stepper__minus-icon"
                       fill="none"
                       height="1em"
-                      viewBox="0 0 16 16"
+                      viewBox="0 0 24 24"
                       width="1em"
                     >
                       <path
-                        d="M3.5 7.35h9v1.3h-9v-1.3z"
+                        d="M4 11h16v2H4v-2z"
                         fill="currentColor"
-                        fill-opacity="0.9"
                       />
                     </svg>
                   </div>
                   <input
                     class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+                    style=""
                     type="tel"
                   />
                   <div
@@ -2833,13 +2801,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-add t-stepper__plus-icon"
                       fill="none"
                       height="1em"
-                      viewBox="0 0 16 16"
+                      viewBox="0 0 24 24"
                       width="1em"
                     >
                       <path
-                        d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                        d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                         fill="currentColor"
-                        fill-opacity="0.9"
                       />
                     </svg>
                   </div>
@@ -2897,13 +2864,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                           class="t-icon t-icon-star-filled"
                           fill="none"
                           height="1em"
-                          viewBox="0 0 16 16"
+                          viewBox="0 0 24 24"
                           width="1em"
                         >
                           <path
-                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                             fill="currentColor"
-                            fill-opacity="0.9"
                           />
                         </svg>
                       </div>
@@ -2911,13 +2877,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-star-filled"
                         fill="none"
                         height="1em"
-                        viewBox="0 0 16 16"
+                        viewBox="0 0 24 24"
                         width="1em"
                       >
                         <path
-                          d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                          d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                           fill="currentColor"
-                          fill-opacity="0.9"
                         />
                       </svg>
                     </div>
@@ -2933,13 +2898,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                           class="t-icon t-icon-star-filled"
                           fill="none"
                           height="1em"
-                          viewBox="0 0 16 16"
+                          viewBox="0 0 24 24"
                           width="1em"
                         >
                           <path
-                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                             fill="currentColor"
-                            fill-opacity="0.9"
                           />
                         </svg>
                       </div>
@@ -2947,13 +2911,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-star-filled"
                         fill="none"
                         height="1em"
-                        viewBox="0 0 16 16"
+                        viewBox="0 0 24 24"
                         width="1em"
                       >
                         <path
-                          d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                          d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                           fill="currentColor"
-                          fill-opacity="0.9"
                         />
                       </svg>
                     </div>
@@ -2969,13 +2932,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                           class="t-icon t-icon-star-filled"
                           fill="none"
                           height="1em"
-                          viewBox="0 0 16 16"
+                          viewBox="0 0 24 24"
                           width="1em"
                         >
                           <path
-                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                             fill="currentColor"
-                            fill-opacity="0.9"
                           />
                         </svg>
                       </div>
@@ -2983,13 +2945,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-star-filled"
                         fill="none"
                         height="1em"
-                        viewBox="0 0 16 16"
+                        viewBox="0 0 24 24"
                         width="1em"
                       >
                         <path
-                          d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                          d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                           fill="currentColor"
-                          fill-opacity="0.9"
                         />
                       </svg>
                     </div>
@@ -3005,13 +2966,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                           class="t-icon t-icon-star-filled"
                           fill="none"
                           height="1em"
-                          viewBox="0 0 16 16"
+                          viewBox="0 0 24 24"
                           width="1em"
                         >
                           <path
-                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                             fill="currentColor"
-                            fill-opacity="0.9"
                           />
                         </svg>
                       </div>
@@ -3019,13 +2979,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-star-filled"
                         fill="none"
                         height="1em"
-                        viewBox="0 0 16 16"
+                        viewBox="0 0 24 24"
                         width="1em"
                       >
                         <path
-                          d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                          d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                           fill="currentColor"
-                          fill-opacity="0.9"
                         />
                       </svg>
                     </div>
@@ -3041,13 +3000,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                           class="t-icon t-icon-star-filled"
                           fill="none"
                           height="1em"
-                          viewBox="0 0 16 16"
+                          viewBox="0 0 24 24"
                           width="1em"
                         >
                           <path
-                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                             fill="currentColor"
-                            fill-opacity="0.9"
                           />
                         </svg>
                       </div>
@@ -3055,13 +3013,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-star-filled"
                         fill="none"
                         height="1em"
-                        viewBox="0 0 16 16"
+                        viewBox="0 0 24 24"
                         width="1em"
                       >
                         <path
-                          d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                          d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                           fill="currentColor"
-                          fill-opacity="0.9"
                         />
                       </svg>
                     </div>
@@ -3113,7 +3070,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   >
                     <textarea
                       class="t-textarea__wrapper-inner"
-                      maxlength="-1"
+                      maxlength="50"
                       name=""
                       placeholder="请输入个人简介"
                     />
@@ -3213,13 +3170,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-close t-upload__delete-btn"
                       fill="none"
                       height="1em"
-                      viewBox="0 0 16 16"
+                      viewBox="0 0 24 24"
                       width="1em"
                     >
                       <path
-                        d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                        d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                         fill="currentColor"
-                        fill-opacity="0.9"
                       />
                     </svg>
                   </div>
@@ -3274,13 +3230,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-close t-upload__delete-btn"
                       fill="none"
                       height="1em"
-                      viewBox="0 0 16 16"
+                      viewBox="0 0 24 24"
                       width="1em"
                     >
                       <path
-                        d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                        d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                         fill="currentColor"
-                        fill-opacity="0.9"
                       />
                     </svg>
                   </div>
@@ -3296,13 +3251,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-add"
                         fill="none"
                         height="1em"
-                        viewBox="0 0 16 16"
+                        viewBox="0 0 24 24"
                         width="1em"
                       >
                         <path
-                          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                           fill="currentColor"
-                          fill-opacity="0.9"
                         />
                       </svg>
                     </div>
@@ -3518,18 +3472,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                     data-v-713b33d2=""
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 26 24"
                     width="1em"
                   >
                     <path
-                      d="M10.77 11.98l1.38 1.37.7-.7-9.7-9.7-.7.7 1.2 1.21a7.9 7.9 0 00-2.53 2.91L1 8l.12.23a7.72 7.72 0 009.65 3.75zM10 11.2A6.67 6.67 0 012.11 8c.56-1 1.34-1.83 2.26-2.43l1.08 1.09a2.88 2.88 0 003.9 3.9l.64.64zM6.21 7.42l2.37 2.37a1.88 1.88 0 01-2.37-2.37zM14.88 8.23L15 8l-.12-.23a7.73 7.73 0 00-9.35-3.86l.8.8A6.7 6.7 0 0113.9 8a6.87 6.87 0 01-2.02 2.26l.7.7a7.9 7.9 0 002.3-2.73z"
+                      d="M4 1.59l6.17 6.17 7.07 7.07L23.41 21 22 22.41l-2.97-2.96A12.5 12.5 0 011.08 12.3L1 12l.1-.3c.77-2.4 2.24-4.5 4.18-6.02L2.59 3 4 1.59zM6.7 7.1A10.53 10.53 0 003.1 12a10.5 10.5 0 0014.45 5.97l-1.8-1.8a5 5 0 01-6.93-6.93L6.7 7.11zm3.6 3.6a3 3 0 004 4l-4-4zM13 5c-.58 0-1.14.05-1.7.14l-.98.16L10 3.32l.99-.16A12.5 12.5 0 0124.9 11.7l.1.31-.1.3c-.41 1.3-1.03 2.5-1.82 3.58l-.59.8-1.61-1.18.59-.8c.6-.82 1.08-1.73 1.42-2.7A10.5 10.5 0 0013 5zm.51 1.93l.96.29a5 5 0 013.31 3.31l.3.96-1.92.58-.3-.95a3 3 0 00-1.98-1.99l-.95-.3.58-1.9z"
                       fill="currentColor"
-                      fill-opacity="0.9"
-                    />
-                    <path
-                      d="M10.88 8c0 .37-.07.73-.2 1.06l-.82-.82.02-.24a1.88 1.88 0 00-2.12-1.86l-.82-.82A2.87 2.87 0 0110.88 8z"
-                      fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -4114,13 +4062,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
       fill="none"
       height="1em"
       style="font-size: 24px;"
-      viewBox="0 0 16 16"
+      viewBox="0 0 24 24"
       width="1em"
     >
       <path
-        d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+        d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
         fill="currentColor"
-        fill-opacity="0.9"
       />
     </svg>
   </div>
@@ -4221,13 +4168,13 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                     class="t-icon t-icon-close"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    style="font-size: 24px;"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                      d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                 </div>
@@ -4254,13 +4201,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                           class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                           fill="none"
                           height="1em"
-                          viewBox="0 0 16 16"
+                          viewBox="0 0 24 24"
                           width="1em"
                         >
                           <path
-                            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                             fill="currentColor"
-                            fill-opacity="0.9"
                           />
                         </svg>
                       </div>
@@ -4377,13 +4323,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
       fill="none"
       height="1em"
       style="font-size: 24px;"
-      viewBox="0 0 16 16"
+      viewBox="0 0 24 24"
       width="1em"
     >
       <path
-        d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+        d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
         fill="currentColor"
-        fill-opacity="0.9"
       />
     </svg>
   </div>
@@ -4421,18 +4366,18 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 class="t-icon t-icon-remove t-stepper__minus-icon"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M3.5 7.35h9v1.3h-9v-1.3z"
+                  d="M4 11h16v2H4v-2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
             <input
               class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+              style=""
               type="tel"
             />
             <div
@@ -4442,13 +4387,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 class="t-icon t-icon-add t-stepper__plus-icon"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -4504,13 +4448,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                 </div>
@@ -4518,13 +4461,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -4540,13 +4482,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                 </div>
@@ -4554,13 +4495,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -4576,13 +4516,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                 </div>
@@ -4590,13 +4529,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -4612,13 +4550,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                 </div>
@@ -4626,13 +4563,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -4648,13 +4584,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                 </div>
@@ -4662,13 +4597,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -4718,7 +4652,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             >
               <textarea
                 class="t-textarea__wrapper-inner"
-                maxlength="-1"
+                maxlength="50"
                 name=""
                 placeholder="请输入个人简介"
               />
@@ -4816,13 +4750,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 class="t-icon t-icon-close t-upload__delete-btn"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                  d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -4877,13 +4810,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 class="t-icon t-icon-close t-upload__delete-btn"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                  d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -4899,13 +4831,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   class="t-icon t-icon-add"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                    d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>

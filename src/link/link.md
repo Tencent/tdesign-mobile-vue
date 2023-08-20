@@ -23,3 +23,24 @@ onClick | Function |  | TS 类型：`(e: MouseEvent) => void`<br/>点击事件�
 名称 | 参数 | 描述
 -- | -- | --
 click | `(e: MouseEvent)` | 点击事件，禁用状态不会触发点击事件
+
+
+### CSS 变量
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-link-danger-active-color | @error-color-active | - 
+--td-link-danger-color | @error-color | - 
+--td-link-danger-disabled-color | @error-color-disabled | - 
+--td-link-default-active-color | @brand-color-active | - 
+--td-link-default-color | @font-gray-1 | - 
+--td-link-default-disabled-color | @text-color-disabled | - 
+--td-link-primary-active-color | @brand-color-active | - 
+--td-link-primary-color | @brand-color | - 
+--td-link-primary-disabled-color | @brand-color-disabled | - 
+--td-link-success-active-color | @success-color-active | - 
+--td-link-success-color | @success-color | - 
+--td-link-success-disabled-color | @success-color-disabled | - 
+--td-link-warning-active-color | @warning-color-active | - 
+--td-link-warning-color | @warning-color | - 
+--td-link-warning-disabled-color | @warning-color-disabled | - 

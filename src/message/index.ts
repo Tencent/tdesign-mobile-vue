@@ -6,7 +6,13 @@ import { TdMessageProps, MessageThemeList } from './type';
 import './style';
 
 interface MessageActionOptionsType extends TdMessageProps {
-  context?: HTMLElement;
+  context?: Element;
+}
+
+function destroy(context: Element, root: Element) {
+  if (context.contains(root)) {
+    context.removeChild(root);
+  }
 }
 
 function create(props: MessageActionOptionsType): void {
@@ -23,14 +29,18 @@ function create(props: MessageActionOptionsType): void {
 
   const component = defineComponent({
     render: (): VNode =>
+      // @ts-ignore
       h(Message, {
         ...otherOptions,
         visible: visible.value,
         onDurationEnd: () => {
+          otherOptions.onDurationEnd?.();
           visible.value = false;
+          destroy(context, root);
         },
         onCloseBtnClick: () => {
           visible.value = false;
+          destroy(context, root);
         },
       }),
   });
@@ -55,8 +65,8 @@ const defaultProps: TdMessageProps = {
 };
 
 (['info', 'success', 'warning', 'error'] as MessageThemeList[]).forEach((theme: MessageThemeList): void => {
-  Message[theme] = (options: TdMessageProps | string) => {
-    let props: TdMessageProps = {
+  Message[theme] = (options: MessageActionOptionsType | string) => {
+    let props: MessageActionOptionsType = {
       ...defaultProps,
       theme,
     };
@@ -81,13 +91,13 @@ Message.install = (app: App, name = '') => {
 
 type MessageApi = {
   /** 展示普通消息 */
-  info: (options?: TdMessageProps | string) => void;
+  info: (options?: MessageActionOptionsType | string) => void;
   /** 展示成功消息 */
-  success: (options?: TdMessageProps | string) => void;
+  success: (options?: MessageActionOptionsType | string) => void;
   /** 展示警示消息 */
-  warning: (options?: TdMessageProps | string) => void;
+  warning: (options?: MessageActionOptionsType | string) => void;
   /** 展示错误消息 */
-  error: (options?: TdMessageProps | string) => void;
+  error: (options?: MessageActionOptionsType | string) => void;
 };
 
 export const MessagePlugin: WithInstallType<typeof Message> & MessageApi = Message as any;

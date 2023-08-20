@@ -7,7 +7,7 @@
       :navigation="{ type: 'dots', showControls: false }"
       :loop="false"
       :class="`${name}__swiper-wrap`"
-      height="192"
+      :height="192"
     >
       <t-swiper-item v-for="(Items, i) in actionItems" :key="i">
         <t-grid :column="gridColumn">

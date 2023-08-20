@@ -13,13 +13,11 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="有16条消息"
       aria-selected="true"
       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
       role="tab"
     >
       <div
-        aria-hidden="true"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -70,13 +68,11 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="有新的消息"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--normal"
       role="tab"
     >
       <div
-        aria-hidden="true"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -127,13 +123,11 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="New"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--normal"
       role="tab"
     >
       <div
-        aria-hidden="true"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -184,13 +178,11 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="···"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--normal"
       role="tab"
     >
       <div
-        aria-hidden="true"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -252,13 +244,11 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="true"
       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
       role="tab"
     >
       <div
-        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -289,13 +279,11 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
       <div
-        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -326,13 +314,11 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
       <div
-        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -363,13 +349,11 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
       <div
-        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -414,13 +398,11 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="true"
       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
       role="tab"
     >
       <div
-        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -451,13 +433,11 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--normal"
       role="tab"
     >
       <div
-        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -488,13 +468,11 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--normal"
       role="tab"
     >
       <div
-        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -525,13 +503,11 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--normal"
       role="tab"
     >
       <div
-        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -612,7 +588,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="true"
             class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
             role="tab"
@@ -634,7 +609,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
@@ -656,7 +630,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
@@ -678,7 +651,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
@@ -731,13 +703,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="true"
             class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
             role="tab"
           >
             <div
-              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -768,13 +738,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
             <div
-              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -805,13 +773,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
             <div
-              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -842,13 +808,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
             <div
-              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -910,13 +874,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="true"
             class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
             role="tab"
           >
             <div
-              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -945,13 +907,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
             <div
-              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -980,13 +940,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
             <div
-              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1015,13 +973,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
             <div
-              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1081,7 +1037,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="true"
             class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
             role="tab"
@@ -1103,7 +1058,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
@@ -1125,7 +1079,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="button"
@@ -1138,13 +1091,12 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-view-list t-tab-bar-item__icon-menu"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M14 4.5H2v-1h12v1zM14 8.5H2v-1h12v1zM2 12.5h12v-1H2v1z"
+                  d="M2 4h20v2H2V4zm0 7h20v2H2v-2zm1 7H2v2h20v-2H3z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               
@@ -1195,13 +1147,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="有16条消息"
             aria-selected="true"
             class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
             role="tab"
           >
             <div
-              aria-hidden="true"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1252,13 +1202,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="有新的消息"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--normal"
             role="tab"
           >
             <div
-              aria-hidden="true"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1309,13 +1257,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="New"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--normal"
             role="tab"
           >
             <div
-              aria-hidden="true"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1366,13 +1312,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="···"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--normal"
             role="tab"
           >
             <div
-              aria-hidden="true"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1453,13 +1397,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="true"
             class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
             role="tab"
           >
             <div
-              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1488,13 +1430,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
             <div
-              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1523,13 +1463,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
             <div
-              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1558,13 +1496,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
             <div
-              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1630,13 +1566,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="true"
             class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
             role="tab"
           >
             <div
-              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1667,13 +1601,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--normal"
             role="tab"
           >
             <div
-              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1704,13 +1636,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--normal"
             role="tab"
           >
             <div
-              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1741,13 +1671,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         >
           <div
             aria-expanded="false"
-            aria-label="TabBar"
             aria-selected="false"
             class="t-tab-bar-item__content t-tab-bar-item__content--normal"
             role="tab"
           >
             <div
-              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1793,13 +1721,11 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="true"
       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
       role="tab"
     >
       <div
-        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -1828,13 +1754,11 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
       <div
-        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -1863,13 +1787,11 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
       <div
-        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -1898,13 +1820,11 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
       <div
-        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -1945,13 +1865,11 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="true"
       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
       role="tab"
     >
       <div
-        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -1980,13 +1898,11 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
       <div
-        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -2015,13 +1931,11 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
       <div
-        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -2050,13 +1964,11 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
       <div
-        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -2097,7 +2009,6 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="true"
       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
       role="tab"
@@ -2119,7 +2030,6 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
@@ -2141,7 +2051,6 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="button"
@@ -2154,13 +2063,12 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
           class="t-icon t-icon-view-list t-tab-bar-item__icon-menu"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M14 4.5H2v-1h12v1zM14 8.5H2v-1h12v1zM2 12.5h12v-1H2v1z"
+            d="M2 4h20v2H2V4zm0 7h20v2H2v-2zm1 7H2v2h20v-2H3z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         
@@ -2187,7 +2095,6 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="true"
       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
       role="tab"
@@ -2209,7 +2116,6 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
@@ -2231,7 +2137,6 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
@@ -2253,7 +2158,6 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
   >
     <div
       aria-expanded="false"
-      aria-label="TabBar"
       aria-selected="false"
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"

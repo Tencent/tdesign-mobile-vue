@@ -25,72 +25,72 @@ const list = [
 ];
 
 describe('swiper', () => {
-    // it('duration && paginationPosition', async () => {
-    //   const current = ref(1);
-    //   const duration = 100;
-    //   const interval = 100;
-    //   const navigation = {
-    //     type: 'dots',
-    //     showSlideBtn: false,
-    //   };
-    //   const paginationPosition = 'top';
-    //   const onChange = vi.fn();
-    //   const wrapper = mount({
-    //     setup() {
-    //       return () => (
-    //         <Swiper
-    //           v-model={current.value}
-    //           interval={interval}
-    //           duration={duration}
-    //           navigation={navigation}
-    //           paginationPosition={paginationPosition}
-    //           onChange={onChange}
-    //         >
-    //           {{
-    //             default: list.map((item, index) => {
-    //               return (
-    //                 <SwiperItem>
-    //                   {{
-    //                     default: () => {
-    //                       return <img src={item.image} />;
-    //                     },
-    //                   }}
-    //                 </SwiperItem>
-    //               );
-    //             }),
-    //           }}
-    //         </Swiper>
-    //       );
-    //     },
-    //   });
-    //   await sleep(interval + duration);
-    //   const $swiper = wrapper.find(`.${classPrefix}`);
-    //   const $swiperContainer = wrapper.find(`.${classPrefix}__container`);
+  // it('duration && paginationPosition', async () => {
+  //   const current = ref(1);
+  //   const duration = 100;
+  //   const interval = 100;
+  //   const navigation = {
+  //     type: 'dots',
+  //     showSlideBtn: false,
+  //   };
+  //   const paginationPosition = 'top';
+  //   const onChange = vi.fn();
+  //   const wrapper = mount({
+  //     setup() {
+  //       return () => (
+  //         <Swiper
+  //           v-model={current.value}
+  //           interval={interval}
+  //           duration={duration}
+  //           navigation={navigation}
+  //           paginationPosition={paginationPosition}
+  //           onChange={onChange}
+  //         >
+  //           {{
+  //             default: list.map((item, index) => {
+  //               return (
+  //                 <SwiperItem>
+  //                   {{
+  //                     default: () => {
+  //                       return <img src={item.image} />;
+  //                     },
+  //                   }}
+  //                 </SwiperItem>
+  //               );
+  //             }),
+  //           }}
+  //         </Swiper>
+  //       );
+  //     },
+  //   });
+  //   await sleep(interval + duration);
+  //   const $swiper = wrapper.find(`.${classPrefix}`);
+  //   const $swiperContainer = wrapper.find(`.${classPrefix}__container`);
 
-    //   // 模拟触发 transitionend
-    //   $swiperContainer.trigger(`transitionend`);
+  //   // 模拟触发 transitionend
+  //   $swiperContainer.trigger(`transitionend`);
 
-    //   // duration = 100
-    //   expect($swiperContainer.attributes('style').includes(`transform ${duration}ms;`));
+  //   // duration = 100
+  //   expect($swiperContainer.attributes('style').includes(`transform ${duration}ms;`));
 
-    //   // swiper 会复制首项和末项， 所有 swiper-item 个数是 list.length + 2
-    //   const $swiperItems = wrapper.findAll(`.${classPrefix}-item`);
-    //   expect($swiperItems).toHaveLength(list.length + 2);
+  //   // swiper 会复制首项和末项， 所有 swiper-item 个数是 list.length + 2
+  //   const $swiperItems = wrapper.findAll(`.${classPrefix}-item`);
+  //   expect($swiperItems).toHaveLength(list.length + 2);
 
-    //   // 导航器
-    //   const $pagination = wrapper.find(`.${classPrefix}__pagination`);
-    //   expect(
-    //     $pagination
-    //       .attributes('class')
-    //       .includes(`t-swiper__pagination-${navigation.type} t-swiper__pagination-${paginationPosition}`),
-    //   );
+  //   // 导航器
+  //   const $pagination = wrapper.find(`.${classPrefix}__pagination`);
+  //   expect(
+  //     $pagination
+  //       .attributes('class')
+  //       .includes(`t-swiper__pagination-${navigation.type} t-swiper__pagination-${paginationPosition}`),
+  //   );
 
-    //   // 导航器 dot
-    //   const $dots = wrapper.findAll(`.${classPrefix}-dot`);
-    //   expect($dots).toHaveLength(list.length);
-    //   // 初始化时，current 项为激活态
-    //   expect($dots[current.value].attributes('class').includes(`t-swiper-dot--active`)).toBeTruthy();
-    // });
+  //   // 导航器 dot
+  //   const $dots = wrapper.findAll(`.${classPrefix}-dot`);
+  //   expect($dots).toHaveLength(list.length);
+  //   // 初始化时，current 项为激活态
+  //   expect($dots[current.value].attributes('class').includes(`t-swiper-dot--active`)).toBeTruthy();
+  // });
   it('height & direction', async () => {
     const current = ref(1);
     const height = 200;
@@ -114,13 +114,11 @@ describe('swiper', () => {
             direction={direction}
             onChange={onChange}
           >
-            {
-              list.map((item) => (
-                <SwiperItem>
-                    <img src={item.image} />
-                </SwiperItem>
-              ))
-            }
+            {list.map((item) => (
+              <SwiperItem>
+                <img src={item.image} />
+              </SwiperItem>
+            ))}
           </Swiper>
         );
       },
@@ -166,13 +164,11 @@ describe('swiper', () => {
             navigation={navigation}
             onChange={onChange}
           >
-            {
-              list.map((item) => (
-                <SwiperItem>
-                    <img src={item.image} />
-                </SwiperItem>
-              ))
-            }
+            {list.map((item) => (
+              <SwiperItem>
+                <img src={item.image} />
+              </SwiperItem>
+            ))}
           </Swiper>
         );
       },
@@ -183,8 +179,8 @@ describe('swiper', () => {
     const $btnNext = wrapper.find(`.${classPrefix}-nav__btn--next`);
     $btnNext.trigger('click');
     await sleep(200);
-    expect(onChange).toHaveBeenCalledTimes(1);
-    expect(onChange).toHaveBeenCalledWith(2);
+    expect(onChange).toHaveBeenCalledTimes(1, { source: 'nav' });
+    expect(onChange).toHaveBeenCalledWith(2, { source: 'nav' });
   });
 
   it('@event', async () => {
@@ -203,24 +199,22 @@ describe('swiper', () => {
             direction={direction.value}
             onChange={onChange}
           >
-            {
-              list.map((item) => (
-                <SwiperItem>
-                    <img src={item.image} />
-                </SwiperItem>
-              ))
-            }
+            {list.map((item) => (
+              <SwiperItem>
+                <img src={item.image} />
+              </SwiperItem>
+            ))}
           </Swiper>
         );
       },
     });
-    const $container = wrapper.find('.t-swiper__container')
-    
-    await $container.trigger('touchstart', { touches: [{ clientX: 0, clientY: 0 }] })
-    await $container.trigger('touchmove', { touches: [{ clientX: 101, clientY: 0 }] })
-    await $container.trigger('touchend', { touches: [{ clientX: 200, clientY: 0 }] })
-    await sleep(200)
-    expect(onChange).toBeCalledWith(0);
+    const $container = wrapper.find('.t-swiper__container');
+
+    await $container.trigger('touchstart', { touches: [{ clientX: 0, clientY: 0 }] });
+    await $container.trigger('touchmove', { touches: [{ clientX: 101, clientY: 0 }] });
+    await $container.trigger('touchend', { touches: [{ clientX: 200, clientY: 0 }] });
+    await sleep(200);
+    expect(onChange).toBeCalledWith(0, { source: 'touch' });
     // direction.value = 'vertical';
     // await sleep(1000)
     // await $container.trigger('touchstart', { touches: [{ clientX: 0, clientY: 0 }] })
@@ -228,7 +222,7 @@ describe('swiper', () => {
     // await $container.trigger('touchend', { touches: [{ clientX: 0, clientY: 200 }] })
     // await sleep(500)
     // expect(onChange).toBeCalledWith(2);
-  })
+  });
 
   it(':remove', async () => {
     const items = ref(list);
@@ -236,13 +230,11 @@ describe('swiper', () => {
       setup() {
         return () => (
           <Swiper>
-            {
-              items.value.map((item) => (
-                <SwiperItem>
-                    <img src={item.image} />
-                </SwiperItem>
-              ))
-            }
+            {items.value.map((item) => (
+              <SwiperItem>
+                <img src={item.image} />
+              </SwiperItem>
+            ))}
           </Swiper>
         );
       },
@@ -250,7 +242,7 @@ describe('swiper', () => {
 
     items.value.splice(0, 1);
     expect(items.value.length).toBe(2);
-  })
+  });
 });
 
 describe('navigation', () => {
@@ -274,13 +266,11 @@ describe('navigation', () => {
             navigation={navigation}
             onChange={onChange}
           >
-            {
-              list.map((item) => (
-                <SwiperItem>
-                    <img src={item.image} />
-                </SwiperItem>
-              ))
-            }
+            {list.map((item) => (
+              <SwiperItem>
+                <img src={item.image} />
+              </SwiperItem>
+            ))}
           </Swiper>
         );
       },
@@ -311,13 +301,11 @@ describe('navigation', () => {
             navigation={navigation}
             onChange={onChange}
           >
-            {
-              list.map((item) => (
-                <SwiperItem>
-                    <img src={item.image} />
-                </SwiperItem>
-              ))
-            }
+            {list.map((item) => (
+              <SwiperItem>
+                <img src={item.image} />
+              </SwiperItem>
+            ))}
           </Swiper>
         );
       },
@@ -332,8 +320,8 @@ describe('navigation', () => {
     // 模拟触发 click 事件
     $btnPrev.trigger('click');
     await sleep(200);
-    expect(onChange).toHaveBeenCalledTimes(1);
-    expect(onChange).toHaveBeenCalledWith(0);
+    expect(onChange).toHaveBeenCalledTimes(1, { source: 'nav' });
+    expect(onChange).toHaveBeenCalledWith(0, { source: 'nav' });
   });
 
   it(':slot', async () => {
@@ -344,15 +332,15 @@ describe('navigation', () => {
             {{
               default: list.map((item) => (
                 <SwiperItem>
-                    <img src={item.image} />
+                  <img src={item.image} />
                 </SwiperItem>
               )),
-              navigation: () => <div class="test-navigation">navigation</div>
+              navigation: () => <div class="test-navigation">navigation</div>,
             }}
           </Swiper>
         );
       },
     });
     expect(wrapper.find('.test-navigation').text()).toBe('navigation');
-  })
+  });
 });

@@ -10,7 +10,7 @@
         :class="textareaClassNames"
         :style="textareaStyle"
         :name="name"
-        :maxlength="-1"
+        :maxlength="maxlength"
         :disabled="disabled"
         :placeholder="placeholder"
         @focus="handleFocus"

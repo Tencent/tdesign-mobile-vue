@@ -5,6 +5,94 @@ toc: false
 spline: explain
 ---
 
+  ## 🌈 1.0.1 `2023-08-17` 
+### 🐞 Bug Fixes
+- `upload`:  修复`useUpload`导入异常 @linesoft2 ([#1038](https://github.com/Tencent/tdesign-mobile-vue/pull/1038)) 
+
+ ## 🌈 1.0.0 `2023-08-16` 
+### ❗ Breaking Changes
+- `CellGroup`: 调整 `DOM` 结构 @anlyyao ([#1010](https://github.com/Tencent/tdesign-mobile-vue/pull/1010))
+- `Rate`: 移除 variant 废弃属性 @LeeJim ([#1005](https://github.com/Tencent/tdesign-mobile-vue/pull/1005))
+- `Icon`: 新增 `960` 个图标；调整图标命名 `photo` 为 `camera`，`books` 为 `bookmark`，`stop-cirle-1` 为 `stop-circle-stroke`；移除 `money-circle` 图标，具体请查看图标页面。 @anlyyao ([#1024](https://github.com/Tencent/tdesign-mobile-vue/pull/1024))
+
+### 🚀 Features
+- `CollapsePanel`: 新增 `headerLeftIcon` 属性 @LeeJim ([#1009](https://github.com/Tencent/tdesign-mobile-vue/pull/1009))
+- `CellGroup`: `CellGroup` 支持最后一项 `Cell` 无 `border` @anlyyao ([#1010](https://github.com/Tencent/tdesign-mobile-vue/pull/1010))
+- 
+### 🐞 Bug Fixes
+- `Avatar`: 修复 `src` 属性不支持应式的问题 @anlyyao ([#1008](https://github.com/Tencent/tdesign-mobile-vue/pull/1008))
+- `Badge`: 修复 count 不支持 slot 的问题 @LeeJim ([#1007](https://github.com/Tencent/tdesign-mobile-vue/pull/1007))
+- `DropdownMenu`: 修复单选和多选混合使用是 `label` 显示错误问题 @ccccpj ([#1011](https://github.com/Tencent/tdesign-mobile-vue/pull/1011))
+- `Radio`: 修复 `icon='none'` 时 `ts` 类型报错 @anlyyao ([#1015](https://github.com/Tencent/tdesign-mobile-vue/pull/1015))
+- `Slider`: 修复 `max` 存在时，刻度计算错误 @anlyyao ([#1026](https://github.com/Tencent/tdesign-mobile-vue/pull/1026))
+- `Message`: 修复函数式调用时 `onDurationEnd` 属性无效 @anlyyao ([#1028](https://github.com/Tencent/tdesign-mobile-vue/pull/1028))
+- `CellGroup`: 修复 `bordered` 属性无效 @anlyyao ([#1010](https://github.com/Tencent/tdesign-mobile-vue/pull/1010))
+- `Drawer`: 修复按需引入时无法在 `SFC` 中使用 `Drawer` 组件 @anlyyao ([#1030](https://github.com/Tencent/tdesign-mobile-vue/pull/1030))
+- `TabBar`: 修复 `bordered` 属性无效的问题 @anlyyao ([#1569](https://github.com/Tencent/tdesign-common/pull/1569))
+
+### 🚧 Others
+- `Upload`: 优化`Upload` 逻辑 @yaogengzhu ([#999](https://github.com/Tencent/tdesign-mobile-vue/pull/999))
+- `Tabs`: 隐藏滚动条样式  @anlyyao ([#1560](https://github.com/Tencent/tdesign-common/pull/1560))
+- other: 支持 WebStrom 编辑器代码提示 @liweijie0812 ([#998](https://github.com/Tencent/tdesign-mobile-vue/pull/998))
+ 
+
+## 🌈 1.0.0-rc.6 `2023-08-01` 
+### 🐞 Bug Fixes
+- `Calendar`: 解决属性不支持响应式的问题 @LeeJim ([#991](https://github.com/Tencent/tdesign-mobile-vue/pull/991))
+- `Tag`: 修复当 `disabled` 为 `true` 时， `closable` 无效的问题 @anlyyao ([#994](https://github.com/Tencent/tdesign-mobile-vue/pull/994))
+- `Swiper`: 修复 `change` 事件参数错误 @anlyyao ([#996](https://github.com/Tencent/tdesign-mobile-vue/pull/996))
+
+## 🌈 1.0.0-rc.5 `2023-07-25` 
+### ❗ Breaking Changes
+- `Textarea`: `maxLength`属性默认值变更为 `-1` @anlyyao ([#977](https://github.com/Tencent/tdesign-mobile-vue/pull/977))
+### 🐞 Bug Fixes
+- `Popup`: 修复多个 `popup` 时 `preventScrollThrough` 属性无效 @anlyyao ([#983](https://github.com/Tencent/tdesign-mobile-vue/pull/983))
+- `Message`: 修复函数式调用传入 `context` 时 `ts` 类型报错 @anlyyao ([#985](https://github.com/Tencent/tdesign-mobile-vue/pull/985))
+- `Message`: 修复关闭窗体时控制台报错 @anlyyao ([#985](https://github.com/Tencent/tdesign-mobile-vue/pull/985))
+- `Cascader`: 修复点选后未勾选的问题 @anlyyao ([#986](https://github.com/Tencent/tdesign-mobile-vue/pull/986))
+- `DropdownMenu`:  `DropdownItem` 的 `value` 属性支持空字符串 @yaogengzhu ([#980](https://github.com/Tencent/tdesign-mobile-vue/pull/980))
+- `upload`: 修复 `autoUpload` 为 `false` 时无法上传的问题 @yaogengzhu ([#967](https://github.com/Tencent/tdesign-mobile-vue/pull/967))
+- `upload`: 修复图片预览问题 @yaogengzhu ([#967](https://github.com/Tencent/tdesign-mobile-vue/pull/967))
+- `upload`: 修复 `autoUpload` 为 `true` 时 `allowUploadDuplicateFile ` 属性失效图片 @yaogengzhu ([#967](https://github.com/Tencent/tdesign-mobile-vue/pull/967))
+- `Upload`: 修复 `v-model` 无效的问题 @anlyyao ([#988](https://github.com/Tencent/tdesign-mobile-vue/pull/988))
+- `Upload`: 修复 `onPreview`, `onSuccess`, `onRemove`, `onSelectChange` 无效 @anlyyao ([#987](https://github.com/Tencent/tdesign-mobile-vue/pull/987))
+- `Textarea`: 修复 `maxLength`属性无效的问题 @anlyyao ([#977](https://github.com/Tencent/tdesign-mobile-vue/pull/977))
+### 🚧 Others
+- `Overlay`: 背景色从 `@font-gray-1` 变更为 `@font-gray-2` @anlyyao ([#1540](https://github.com/Tencent/tdesign-common/pull/1540))
+
+
+## 🌈 1.0.0-rc.4 `2023-07-18` 
+### 🚀 Features
+- `Tabs`: 新增 `bottomLineMode` 属性 @anlyyao ([#968](https://github.com/Tencent/tdesign-mobile-vue/pull/968))
+### 🐞 Bug Fixes
+- `Message`: 修复 `Message` 关闭时未销毁节点 @anlyyao ([#962](https://github.com/Tencent/tdesign-mobile-vue/pull/962))
+- `Button`: 修复 `disabled` 变更之后仍有点击态的问题 @LeeJim ([#963](https://github.com/Tencent/tdesign-mobile-vue/pull/963))
+- `Tabs`: 修复 `badgeProps` 属性失效 @anlyyao ([#968](https://github.com/Tencent/tdesign-mobile-vue/pull/968))
+
+
+## 🌈 1.0.0-rc.3 `2023-07-13` 
+### 🚧 Others
+- `Popup`: 类名 `t-overflow-hidden` 更新为 `t-popup-overflow-hidden` @anlyyao ([#947](https://github.com/Tencent/tdesign-mobile-vue/pull/947))
+- `Toast`: 类名 `t-overflow-hidden` 更新为 `t-toast-overflow-hidden` @anlyyao ([#947](https://github.com/Tencent/tdesign-mobile-vue/pull/947))
+- `Message`: 更新示例代码 @anlyyao ([#949](https://github.com/Tencent/tdesign-mobile-vue/pull/949))
+- site: 组件文档新增  `CSS variables` 内容 @anlyyao ([#944](https://github.com/Tencent/tdesign-mobile-vue/pull/944))
+
+
+## 🌈 1.0.0-rc.2 `2023-07-11` 
+### ❗ Breaking Changes
+- `NoticeBar`: `prefixIcon` 属性默认值变更为 `true` @anlyyao ([#929](https://github.com/Tencent/tdesign-mobile-vue/pull/929))
+### 🚀 Features
+- `Cascader`: `pick` 事件新增 `level` 参数 @anlyyao ([#940](https://github.com/Tencent/tdesign-mobile-vue/pull/940))
+### 🐞 Bug Fixes
+- `Message`: 修复 `link` 、`onLinkClick`属性无效 @anlyyao ([#931](https://github.com/Tencent/tdesign-mobile-vue/pull/931))
+- `Overlay`: 修复 `backgroundColor` 属性致动画失效问题 @yaogengzhu ([#942](https://github.com/Tencent/tdesign-mobile-vue/pull/942))
+- `ActionSheet`: 修复多页宫格工作面板高度计算错误 @anlyyao ([#936](https://github.com/Tencent/tdesign-mobile-vue/pull/936))
+- `CollapsePanel`: 修复 `expandIcon` 的值为插槽或函数时无效 @anlyyao ([#934](https://github.com/Tencent/tdesign-mobile-vue/pull/934))
+- `Table`: 修复table组件卸载时，异常报错 @yaogengzhu ([#938](https://github.com/Tencent/tdesign-mobile-vue/pull/938))
+- `Toast`: 修复preventScrollThrough属性无效 @yaogengzhu ([#939](https://github.com/Tencent/tdesign-mobile-vue/pull/939))
+- `Search`: 修复 `iOS` 环境 `search` 默认自带图标 @yaogengzhu ([#1519](https://github.com/Tencent/tdesign-common/pull/1519))
+
+
 ## 🌈 1.0.0-rc.1 `2023-07-04` 
 ### ❗ Breaking Changes
 - `Loading`:  移除`progress` 属性 @anlyyao ([#918](https://github.com/Tencent/tdesign-mobile-vue/pull/918))
@@ -973,3 +1061,4 @@ spline: explain
 ### BREAKING CHANGES
 
 * 对齐已发布组件的API能力
+

@@ -16,7 +16,7 @@
               }"
               @click="(e) => tabClick(e, item)"
             >
-              <t-badge v-bind="item.badgeProps">
+              <t-badge v-bind="item['badge-props'] || item.badgeProps">
                 <div
                   :class="{
                     [`${name}__item-inner ${name}__item-inner--${theme}`]: true,
@@ -58,6 +58,7 @@ import {
   readonly,
   Fragment,
   watch,
+  CSSProperties,
 } from 'vue';
 import config from '../config';
 import TabsProps from './props';
@@ -66,6 +67,7 @@ import { useVModel } from '../shared';
 import { preventDefault } from '../shared/dom';
 import CLASSNAMES from '../shared/constants';
 import TSticky from '../sticky';
+import { TdStickyProps } from '../sticky/type';
 
 const { prefix } = config;
 const name = `${prefix}-tabs`;
@@ -76,12 +78,11 @@ export default defineComponent({
   props: TabsProps,
   emits: ['update:value', 'update:modelValue'],
   setup(props, context) {
-    const placement = ref('top');
     const theme = computed(() => props.theme);
     const spaceEvenly = computed(() => props.spaceEvenly);
     const showBottomLine = computed(() => props.showBottomLine);
     const swipeable = computed(() => props.swipeable);
-    const stickyProps = computed(() => ({ ...props.stickyProps, disabled: !props.sticky }));
+    const stickyProps = computed(() => ({ ...(props.stickyProps as TdStickyProps), disabled: !props.sticky }));
     const activeClass = `${name}__item--active`;
     const disabledClass = `${name}__item--disabled`;
     const classes = computed(() => [`${name}`, props.size && CLASSNAMES.SIZE[props.size]]);
@@ -137,21 +138,31 @@ export default defineComponent({
     const navScroll = ref<HTMLElement | null>(null);
     const navWrap = ref<HTMLElement | null>(null);
     const navLine = ref<HTMLElement | null>(null);
-    const lineStyle = ref('');
+    const lineStyle = ref();
     const moveToActiveTab = () => {
       if (navWrap.value && navLine.value && showBottomLine.value) {
         const tab = navWrap.value.querySelector<HTMLElement>(`.${activeClass}`);
         if (!tab) return;
         const line = navLine.value;
-        if (placement.value === 'left') {
-          lineStyle.value = `transform: translateY(${tab.offsetTop}px);${
-            props.animation ? `transition-duration:${props.animation.duration}ms` : ''
-          }`;
+        const tabInner = tab.querySelector<HTMLElement>(`.${prefix}-badge`);
+        const style: CSSProperties = {};
+        if (props.bottomLineMode === 'auto') {
+          style.width = `${Number(tabInner?.offsetWidth)}px`;
+          style.transform = `translateX(${Number(tab?.offsetLeft) + Number(tabInner?.offsetLeft)}px)`;
+        } else if (props.bottomLineMode === 'full') {
+          style.width = `${Number(tab?.offsetWidth)}px`;
+          style.transform = `translateX(${Number(tab?.offsetLeft)}px)`;
         } else {
-          lineStyle.value = `transform: translateX(${
-            Number(tab.offsetLeft) + Number(tab.offsetWidth) / 2 - line.offsetWidth / 2
-          }px);${props.animation ? `transition-duration:${props.animation.duration}ms` : ''}`;
+          style.transform = `translateX(${
+            Number(tab?.offsetLeft) + (Number(tab?.offsetWidth) - Number(line?.offsetWidth)) / 2
+          }px)`;
         }
+
+        if (props.animation) {
+          style.transitionDuration = `${props.animation.duration}ms`;
+        }
+
+        lineStyle.value = style;
       }
     };
 

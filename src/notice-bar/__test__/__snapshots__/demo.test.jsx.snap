@@ -36,18 +36,12 @@ exports[`NoticeBar > NoticeBar customVue demo works fine 1`] = `
       class="t-icon t-icon-sound"
       fill="none"
       height="1em"
-      viewBox="0 0 16 16"
+      viewBox="0 0 24 24"
       width="1em"
     >
       <path
-        d="M4 11l4.24 2.55a.5.5 0 00.76-.43V2.88a.5.5 0 00-.76-.43L4 5H2.1a.6.6 0 00-.6.6v4.8c0 .33.27.6.6.6H4zm1-5.43l3-1.8v8.46l-3-1.8V5.57zM4 10H2.5V6H4v4zM13.52 5.73a6 6 0 00-1.4-1.95l.68-.73c.7.65 1.25 1.42 1.63 2.27a6.6 6.6 0 01-1.63 7.63l-.68-.73a6 6 0 001.4-1.95 5.6 5.6 0 000-4.54z"
+        d="M15 1.29v21.42L5.74 17.5H1v-11h4.74L15 1.29zM5 8.5H3v7h2v-7zm2 7.41l6 3.38V4.71L7 8.08v7.83zm13.98-8.93l.6.8a7 7 0 010 8.44l-.6.8-1.6-1.2.6-.8a5 5 0 000-6.04l-.6-.8 1.6-1.2zm-2.8 2.11l.6.8a3.5 3.5 0 010 4.22l-.6.8-1.6-1.21.61-.8a1.5 1.5 0 000-1.8l-.6-.8 1.6-1.2z"
         fill="currentColor"
-        fill-opacity="0.9"
-      />
-      <path
-        d="M11.5 8c0-.87-.36-1.75-1.07-2.45l.7-.72c.9.88 1.37 2.02 1.37 3.17 0 1.16-.48 2.29-1.38 3.17l-.7-.72A3.44 3.44 0 0011.5 8z"
-        fill="currentColor"
-        fill-opacity="0.9"
       />
     </svg>
     
@@ -73,13 +67,12 @@ exports[`NoticeBar > NoticeBar customVue demo works fine 1`] = `
       class="t-icon t-icon-chevron-right"
       fill="none"
       height="1em"
-      viewBox="0 0 16 16"
+      viewBox="0 0 24 24"
       width="1em"
     >
       <path
-        d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+        d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
         fill="currentColor"
-        fill-opacity="0.9"
       />
     </svg>
     
@@ -99,13 +92,12 @@ exports[`NoticeBar > NoticeBar customizationVue demo works fine 1`] = `
       class="t-icon t-icon-info-circle-filled"
       fill="none"
       height="1em"
-      viewBox="0 0 16 16"
+      viewBox="0 0 24 24"
       width="1em"
     >
       <path
-        d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+        d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
         fill="currentColor"
-        fill-opacity="0.9"
       />
     </svg>
   </div>
@@ -151,13 +143,12 @@ exports[`NoticeBar > NoticeBar customizationVue demo works fine 1`] = `
       class="t-icon t-icon-close"
       fill="none"
       height="1em"
-      viewBox="0 0 16 16"
+      viewBox="0 0 24 24"
       width="1em"
     >
       <path
-        d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+        d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
         fill="currentColor"
-        fill-opacity="0.9"
       />
     </svg>
     
@@ -181,13 +172,12 @@ exports[`NoticeBar > NoticeBar eventVue demo works fine 1`] = `
         class="t-icon t-icon-info-circle-filled"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+          d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -232,13 +222,12 @@ exports[`NoticeBar > NoticeBar eventVue demo works fine 1`] = `
         class="t-icon t-icon-chevron-right"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+          d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -254,13 +243,12 @@ exports[`NoticeBar > NoticeBar eventVue demo works fine 1`] = `
         class="t-icon t-icon-info-circle-filled"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+          d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -284,13 +272,12 @@ exports[`NoticeBar > NoticeBar eventVue demo works fine 1`] = `
         class="t-icon t-icon-chevron-right"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+          d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -311,13 +298,12 @@ exports[`NoticeBar > NoticeBar iconDemoVue demo works fine 1`] = `
       class="t-icon t-icon-info-circle-filled"
       fill="none"
       height="1em"
-      viewBox="0 0 16 16"
+      viewBox="0 0 24 24"
       width="1em"
     >
       <path
-        d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+        d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
         fill="currentColor"
-        fill-opacity="0.9"
       />
     </svg>
   </div>
@@ -424,13 +410,12 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             class="t-icon t-icon-info-circle-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+              d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -480,13 +465,12 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             class="t-icon t-icon-info-circle-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+              d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -511,13 +495,12 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             class="t-icon t-icon-close"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+              d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           
@@ -555,13 +538,12 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             class="t-icon t-icon-info-circle-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+              d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -606,13 +588,12 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -628,13 +609,12 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             class="t-icon t-icon-info-circle-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+              d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -658,13 +638,12 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -702,18 +681,12 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             class="t-icon t-icon-sound"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M4 11l4.24 2.55a.5.5 0 00.76-.43V2.88a.5.5 0 00-.76-.43L4 5H2.1a.6.6 0 00-.6.6v4.8c0 .33.27.6.6.6H4zm1-5.43l3-1.8v8.46l-3-1.8V5.57zM4 10H2.5V6H4v4zM13.52 5.73a6 6 0 00-1.4-1.95l.68-.73c.7.65 1.25 1.42 1.63 2.27a6.6 6.6 0 01-1.63 7.63l-.68-.73a6 6 0 001.4-1.95 5.6 5.6 0 000-4.54z"
+              d="M15 1.29v21.42L5.74 17.5H1v-11h4.74L15 1.29zM5 8.5H3v7h2v-7zm2 7.41l6 3.38V4.71L7 8.08v7.83zm13.98-8.93l.6.8a7 7 0 010 8.44l-.6.8-1.6-1.2.6-.8a5 5 0 000-6.04l-.6-.8 1.6-1.2zm-2.8 2.11l.6.8a3.5 3.5 0 010 4.22l-.6.8-1.6-1.21.61-.8a1.5 1.5 0 000-1.8l-.6-.8 1.6-1.2z"
               fill="currentColor"
-              fill-opacity="0.9"
-            />
-            <path
-              d="M11.5 8c0-.87-.36-1.75-1.07-2.45l.7-.72c.9.88 1.37 2.02 1.37 3.17 0 1.16-.48 2.29-1.38 3.17l-.7-.72A3.44 3.44 0 0011.5 8z"
-              fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           
@@ -739,13 +712,12 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           
@@ -782,13 +754,12 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             class="t-icon t-icon-info-circle-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+              d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -834,13 +805,12 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             class="t-icon t-icon-close"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+              d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           
@@ -882,13 +852,12 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             class="t-icon t-icon-info-circle-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+              d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -918,13 +887,12 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             class="t-icon t-icon-check-circle-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+              d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -954,13 +922,12 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             class="t-icon t-icon-info-circle-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+              d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -990,13 +957,12 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             class="t-icon t-icon-info-circle-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+              d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -1072,13 +1038,12 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             class="t-icon t-icon-info-circle-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+              d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -1109,18 +1074,12 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             class="t-icon t-icon-sound"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M4 11l4.24 2.55a.5.5 0 00.76-.43V2.88a.5.5 0 00-.76-.43L4 5H2.1a.6.6 0 00-.6.6v4.8c0 .33.27.6.6.6H4zm1-5.43l3-1.8v8.46l-3-1.8V5.57zM4 10H2.5V6H4v4zM13.52 5.73a6 6 0 00-1.4-1.95l.68-.73c.7.65 1.25 1.42 1.63 2.27a6.6 6.6 0 01-1.63 7.63l-.68-.73a6 6 0 001.4-1.95 5.6 5.6 0 000-4.54z"
+              d="M15 1.29v21.42L5.74 17.5H1v-11h4.74L15 1.29zM5 8.5H3v7h2v-7zm2 7.41l6 3.38V4.71L7 8.08v7.83zm13.98-8.93l.6.8a7 7 0 010 8.44l-.6.8-1.6-1.2.6-.8a5 5 0 000-6.04l-.6-.8 1.6-1.2zm-2.8 2.11l.6.8a3.5 3.5 0 010 4.22l-.6.8-1.6-1.21.61-.8a1.5 1.5 0 000-1.8l-.6-.8 1.6-1.2z"
               fill="currentColor"
-              fill-opacity="0.9"
-            />
-            <path
-              d="M11.5 8c0-.87-.36-1.75-1.07-2.45l.7-.72c.9.88 1.37 2.02 1.37 3.17 0 1.16-.48 2.29-1.38 3.17l-.7-.72A3.44 3.44 0 0011.5 8z"
-              fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           
@@ -1253,13 +1212,12 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
         class="t-icon t-icon-info-circle-filled"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+          d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -1290,18 +1248,12 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
         class="t-icon t-icon-sound"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M4 11l4.24 2.55a.5.5 0 00.76-.43V2.88a.5.5 0 00-.76-.43L4 5H2.1a.6.6 0 00-.6.6v4.8c0 .33.27.6.6.6H4zm1-5.43l3-1.8v8.46l-3-1.8V5.57zM4 10H2.5V6H4v4zM13.52 5.73a6 6 0 00-1.4-1.95l.68-.73c.7.65 1.25 1.42 1.63 2.27a6.6 6.6 0 01-1.63 7.63l-.68-.73a6 6 0 001.4-1.95 5.6 5.6 0 000-4.54z"
+          d="M15 1.29v21.42L5.74 17.5H1v-11h4.74L15 1.29zM5 8.5H3v7h2v-7zm2 7.41l6 3.38V4.71L7 8.08v7.83zm13.98-8.93l.6.8a7 7 0 010 8.44l-.6.8-1.6-1.2.6-.8a5 5 0 000-6.04l-.6-.8 1.6-1.2zm-2.8 2.11l.6.8a3.5 3.5 0 010 4.22l-.6.8-1.6-1.21.61-.8a1.5 1.5 0 000-1.8l-.6-.8 1.6-1.2z"
           fill="currentColor"
-          fill-opacity="0.9"
-        />
-        <path
-          d="M11.5 8c0-.87-.36-1.75-1.07-2.45l.7-.72c.9.88 1.37 2.02 1.37 3.17 0 1.16-.48 2.29-1.38 3.17l-.7-.72A3.44 3.44 0 0011.5 8z"
-          fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
       
@@ -1407,13 +1359,12 @@ exports[`NoticeBar > NoticeBar suffixIconVue demo works fine 1`] = `
       class="t-icon t-icon-info-circle-filled"
       fill="none"
       height="1em"
-      viewBox="0 0 16 16"
+      viewBox="0 0 24 24"
       width="1em"
     >
       <path
-        d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+        d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
         fill="currentColor"
-        fill-opacity="0.9"
       />
     </svg>
   </div>
@@ -1438,13 +1389,12 @@ exports[`NoticeBar > NoticeBar suffixIconVue demo works fine 1`] = `
       class="t-icon t-icon-close"
       fill="none"
       height="1em"
-      viewBox="0 0 16 16"
+      viewBox="0 0 24 24"
       width="1em"
     >
       <path
-        d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+        d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
         fill="currentColor"
-        fill-opacity="0.9"
       />
     </svg>
     
@@ -1468,13 +1418,12 @@ exports[`NoticeBar > NoticeBar themeVue demo works fine 1`] = `
         class="t-icon t-icon-info-circle-filled"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+          d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -1504,13 +1453,12 @@ exports[`NoticeBar > NoticeBar themeVue demo works fine 1`] = `
         class="t-icon t-icon-check-circle-filled"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+          d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -1540,13 +1488,12 @@ exports[`NoticeBar > NoticeBar themeVue demo works fine 1`] = `
         class="t-icon t-icon-info-circle-filled"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+          d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -1576,13 +1523,12 @@ exports[`NoticeBar > NoticeBar themeVue demo works fine 1`] = `
         class="t-icon t-icon-info-circle-filled"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+          d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>

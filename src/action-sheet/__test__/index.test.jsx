@@ -113,11 +113,11 @@ describe('ActionSheet', () => {
           items: [],
         },
       });
-      expect(wrapper.find(`.${prefix}-popup`).isVisible()).toEqual(false);
+      expect(wrapper.find(`.${prefix}-popup`).exists()).toBeFalsy();
       await wrapper.setProps({
         visible: true,
       });
-      expect(wrapper.find(`.${prefix}-popup`).isVisible()).toEqual(true);
+      expect(wrapper.find(`.${prefix}-popup`).exists()).toBeTruthy();
     });
   });
 

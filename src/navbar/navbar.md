@@ -23,3 +23,21 @@ onRightClick | Function |  | TS 类型：`() => void`<br/>点击右侧图标时�
 -- | -- | --
 left-click | \- | 点击左侧按钮时触发
 right-click | \- | 点击右侧图标时触发
+
+
+### CSS 变量
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-navbar-bg-color | @bg-color-container | - 
+--td-navbar-capsule-border-color | #e3e6ea | - 
+--td-navbar-capsule-border-radius | 16px | - 
+--td-navbar-capsule-height | 32px | - 
+--td-navbar-capsule-width | 88px | - 
+--td-navbar-color | @font-gray-1 | - 
+--td-navbar-height | 48px | - 
+--td-navbar-left-arrow-size | 24px | - 
+--td-navbar-padding-top | 0 | - 
+--td-navbar-right | 95px | - 
+--td-navbar-title-font-size | 18px | - 
+--td-navbar-title-font-weight | 600 | - 
