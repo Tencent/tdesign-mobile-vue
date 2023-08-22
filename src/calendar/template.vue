@@ -50,7 +50,7 @@
 </template>
 
 <script lang="ts">
-import { defineEmits, computed, watch, inject, ref, toRaw } from 'vue';
+import { defineEmits, defineExpose, computed, watch, inject, ref, toRaw } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 import TButton from '../button';
 import config from '../config';
@@ -251,4 +251,7 @@ watch(
   },
   { immediate: true },
 );
+defineExpose({
+  valueRef,
+});
 </script>
