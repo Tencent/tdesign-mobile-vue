@@ -146,7 +146,7 @@ export default defineComponent({
       params: BaseTableCellParams<TableRowData>,
       cellEmptyContent?: TdBaseTableProps['cellEmptyContent'],
     ) => {
-      const { col, row, rowIndex } = params;
+      const { col, row } = params;
       if (isFunction(col.cell)) {
         return col.cell(h, params);
       }
@@ -158,7 +158,7 @@ export default defineComponent({
         return context.slots[col.cell](params);
       }
       const r = get(row, col.colKey);
-      // 0 和 false 属于正常可用之，不能使用兜底逻辑 cellEmptyContent
+      // 0 和 false 属于正常可用值，不能使用兜底逻辑 cellEmptyContent
       if (![undefined, '', null].includes(r)) return r;
 
       // cellEmptyContent 作为空数据兜底显示，用户可自定义
