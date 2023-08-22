@@ -178,6 +178,8 @@ export default defineComponent({
         return;
       }
 
+      resetScale();
+
       const { offsetX, offsetY } = touch;
       const deltaTime = Date.now() - touchStartTime;
       const TAP_TIME = 250;
