@@ -36,13 +36,12 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -83,13 +82,12 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
             fill="none"
             height="1em"
             style="font-size: 24px;"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+              d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -116,13 +114,12 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                    d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -267,13 +264,12 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -314,13 +310,12 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
             fill="none"
             height="1em"
             style="font-size: 24px;"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+              d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -347,13 +342,12 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                    d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -498,13 +492,12 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -545,13 +538,12 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
             fill="none"
             height="1em"
             style="font-size: 24px;"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+              d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -578,13 +570,12 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                    d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -726,13 +717,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -773,13 +763,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                 fill="none"
                 height="1em"
                 style="font-size: 24px;"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                  d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -806,13 +795,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                       fill="none"
                       height="1em"
-                      viewBox="0 0 16 16"
+                      viewBox="0 0 24 24"
                       width="1em"
                     >
                       <path
-                        d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                        d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                         fill="currentColor"
-                        fill-opacity="0.9"
                       />
                     </svg>
                   </div>
@@ -970,13 +958,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -1017,13 +1004,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                 fill="none"
                 height="1em"
                 style="font-size: 24px;"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                  d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1188,13 +1174,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -1235,13 +1220,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                 fill="none"
                 height="1em"
                 style="font-size: 24px;"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                  d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1268,13 +1252,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                       fill="none"
                       height="1em"
-                      viewBox="0 0 16 16"
+                      viewBox="0 0 24 24"
                       width="1em"
                     >
                       <path
-                        d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                        d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                         fill="currentColor"
-                        fill-opacity="0.9"
                       />
                     </svg>
                   </div>
@@ -1432,13 +1415,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -1479,13 +1461,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                 fill="none"
                 height="1em"
                 style="font-size: 24px;"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                  d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1512,13 +1493,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                       fill="none"
                       height="1em"
-                      viewBox="0 0 16 16"
+                      viewBox="0 0 24 24"
                       width="1em"
                     >
                       <path
-                        d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                        d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                         fill="currentColor"
-                        fill-opacity="0.9"
                       />
                     </svg>
                   </div>
@@ -1676,13 +1656,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -1723,13 +1702,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                 fill="none"
                 height="1em"
                 style="font-size: 24px;"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                  d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1756,13 +1734,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                       fill="none"
                       height="1em"
-                      viewBox="0 0 16 16"
+                      viewBox="0 0 24 24"
                       width="1em"
                     >
                       <path
-                        d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                        d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                         fill="currentColor"
-                        fill-opacity="0.9"
                       />
                     </svg>
                   </div>
@@ -1924,13 +1901,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -1971,13 +1947,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                 fill="none"
                 height="1em"
                 style="font-size: 24px;"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                  d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2004,13 +1979,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                       fill="none"
                       height="1em"
-                      viewBox="0 0 16 16"
+                      viewBox="0 0 24 24"
                       width="1em"
                     >
                       <path
-                        d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                        d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                         fill="currentColor"
-                        fill-opacity="0.9"
                       />
                     </svg>
                   </div>
@@ -2124,13 +2098,12 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -2171,13 +2144,12 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
             fill="none"
             height="1em"
             style="font-size: 24px;"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+              d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -2325,13 +2297,12 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -2372,13 +2343,12 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
             fill="none"
             height="1em"
             style="font-size: 24px;"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+              d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -2405,13 +2375,12 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                    d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -2560,13 +2529,12 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -2607,13 +2575,12 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
             fill="none"
             height="1em"
             style="font-size: 24px;"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+              d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -2640,13 +2607,12 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                    d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>

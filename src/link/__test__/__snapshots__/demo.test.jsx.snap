@@ -69,18 +69,12 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
         data-v-55ae5f74=""
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+          d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
           fill="currentColor"
-          fill-opacity="0.9"
-        />
-        <path
-          d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-          fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
       
@@ -109,18 +103,12 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
         data-v-55ae5f74=""
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+          d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
           fill="currentColor"
-          fill-opacity="0.9"
-        />
-        <path
-          d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-          fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
       
@@ -149,18 +137,12 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
         data-v-55ae5f74=""
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+          d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
           fill="currentColor"
-          fill-opacity="0.9"
-        />
-        <path
-          d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-          fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
       
@@ -338,18 +320,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-c9cd3e06=""
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M6.23 11.89l2.12-2.12.71.7-2.12 2.13A2.5 2.5 0 013.4 9.06l2.13-2.12.7.7-2.12 2.13a1.5 1.5 0 002.12 2.12zM10.47 9.06l-.7-.7 2.12-2.13a1.5 1.5 0 10-2.12-2.12L7.65 6.23l-.71-.7L9.06 3.4a2.5 2.5 0 013.54 3.54l-2.13 2.12z"
+                d="M13.3 3.96a4.77 4.77 0 116.74 6.75l-3.03 3.03-1.41-1.42 3.03-3.03a2.77 2.77 0 10-3.92-3.92L11.68 8.4 10.26 7l3.03-3.03zM15.4 10L10 15.41 8.58 14 14 8.59 15.4 10zm-7 1.68L5.36 14.7a2.77 2.77 0 103.92 3.92l3.03-3.03L13.74 17l-3.03 3.03a4.77 4.77 0 11-6.75-6.75l3.03-3.03 1.41 1.42z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M9.06 6.23L6.23 9.06l.71.7 2.83-2.82-.7-.7z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -378,18 +354,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-c9cd3e06=""
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M6.23 11.89l2.12-2.12.71.7-2.12 2.13A2.5 2.5 0 013.4 9.06l2.13-2.12.7.7-2.12 2.13a1.5 1.5 0 002.12 2.12zM10.47 9.06l-.7-.7 2.12-2.13a1.5 1.5 0 10-2.12-2.12L7.65 6.23l-.71-.7L9.06 3.4a2.5 2.5 0 013.54 3.54l-2.13 2.12z"
+                d="M13.3 3.96a4.77 4.77 0 116.74 6.75l-3.03 3.03-1.41-1.42 3.03-3.03a2.77 2.77 0 10-3.92-3.92L11.68 8.4 10.26 7l3.03-3.03zM15.4 10L10 15.41 8.58 14 14 8.59 15.4 10zm-7 1.68L5.36 14.7a2.77 2.77 0 103.92 3.92l3.03-3.03L13.74 17l-3.03 3.03a4.77 4.77 0 11-6.75-6.75l3.03-3.03 1.41 1.42z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M9.06 6.23L6.23 9.06l.71.7 2.83-2.82-.7-.7z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -451,18 +421,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-c6b7a388=""
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -491,18 +455,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-c6b7a388=""
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -561,18 +519,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-004b20ae=""
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -601,18 +553,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-004b20ae=""
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -641,18 +587,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-004b20ae=""
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -686,18 +626,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-004b20ae=""
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -726,18 +660,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-004b20ae=""
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -793,18 +721,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-0c766346=""
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -833,18 +755,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-0c766346=""
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -873,18 +789,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-0c766346=""
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -918,18 +828,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-0c766346=""
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -958,18 +862,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-0c766346=""
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -1028,18 +926,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-55ae5f74=""
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -1068,18 +960,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-55ae5f74=""
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -1108,18 +994,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-55ae5f74=""
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
                 fill="currentColor"
-                fill-opacity="0.9"
-              />
-              <path
-                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-                fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -1152,18 +1032,12 @@ exports[`Link > Link prefixVue demo works fine 1`] = `
         data-v-c9cd3e06=""
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M6.23 11.89l2.12-2.12.71.7-2.12 2.13A2.5 2.5 0 013.4 9.06l2.13-2.12.7.7-2.12 2.13a1.5 1.5 0 002.12 2.12zM10.47 9.06l-.7-.7 2.12-2.13a1.5 1.5 0 10-2.12-2.12L7.65 6.23l-.71-.7L9.06 3.4a2.5 2.5 0 013.54 3.54l-2.13 2.12z"
+          d="M13.3 3.96a4.77 4.77 0 116.74 6.75l-3.03 3.03-1.41-1.42 3.03-3.03a2.77 2.77 0 10-3.92-3.92L11.68 8.4 10.26 7l3.03-3.03zM15.4 10L10 15.41 8.58 14 14 8.59 15.4 10zm-7 1.68L5.36 14.7a2.77 2.77 0 103.92 3.92l3.03-3.03L13.74 17l-3.03 3.03a4.77 4.77 0 11-6.75-6.75l3.03-3.03 1.41 1.42z"
           fill="currentColor"
-          fill-opacity="0.9"
-        />
-        <path
-          d="M9.06 6.23L6.23 9.06l.71.7 2.83-2.82-.7-.7z"
-          fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
       
@@ -1192,18 +1066,12 @@ exports[`Link > Link prefixVue demo works fine 1`] = `
         data-v-c9cd3e06=""
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M6.23 11.89l2.12-2.12.71.7-2.12 2.13A2.5 2.5 0 013.4 9.06l2.13-2.12.7.7-2.12 2.13a1.5 1.5 0 002.12 2.12zM10.47 9.06l-.7-.7 2.12-2.13a1.5 1.5 0 10-2.12-2.12L7.65 6.23l-.71-.7L9.06 3.4a2.5 2.5 0 013.54 3.54l-2.13 2.12z"
+          d="M13.3 3.96a4.77 4.77 0 116.74 6.75l-3.03 3.03-1.41-1.42 3.03-3.03a2.77 2.77 0 10-3.92-3.92L11.68 8.4 10.26 7l3.03-3.03zM15.4 10L10 15.41 8.58 14 14 8.59 15.4 10zm-7 1.68L5.36 14.7a2.77 2.77 0 103.92 3.92l3.03-3.03L13.74 17l-3.03 3.03a4.77 4.77 0 11-6.75-6.75l3.03-3.03 1.41 1.42z"
           fill="currentColor"
-          fill-opacity="0.9"
-        />
-        <path
-          d="M9.06 6.23L6.23 9.06l.71.7 2.83-2.82-.7-.7z"
-          fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
       
@@ -1252,18 +1120,12 @@ exports[`Link > Link statusVue demo works fine 1`] = `
           data-v-0c766346=""
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
             fill="currentColor"
-            fill-opacity="0.9"
-          />
-          <path
-            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-            fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         
@@ -1292,18 +1154,12 @@ exports[`Link > Link statusVue demo works fine 1`] = `
           data-v-0c766346=""
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
             fill="currentColor"
-            fill-opacity="0.9"
-          />
-          <path
-            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-            fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         
@@ -1332,18 +1188,12 @@ exports[`Link > Link statusVue demo works fine 1`] = `
           data-v-0c766346=""
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
             fill="currentColor"
-            fill-opacity="0.9"
-          />
-          <path
-            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-            fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         
@@ -1377,18 +1227,12 @@ exports[`Link > Link statusVue demo works fine 1`] = `
           data-v-0c766346=""
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
             fill="currentColor"
-            fill-opacity="0.9"
-          />
-          <path
-            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-            fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         
@@ -1417,18 +1261,12 @@ exports[`Link > Link statusVue demo works fine 1`] = `
           data-v-0c766346=""
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
             fill="currentColor"
-            fill-opacity="0.9"
-          />
-          <path
-            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-            fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         
@@ -1467,18 +1305,12 @@ exports[`Link > Link suffixVue demo works fine 1`] = `
         data-v-c6b7a388=""
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+          d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
           fill="currentColor"
-          fill-opacity="0.9"
-        />
-        <path
-          d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-          fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
       
@@ -1507,18 +1339,12 @@ exports[`Link > Link suffixVue demo works fine 1`] = `
         data-v-c6b7a388=""
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+          d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
           fill="currentColor"
-          fill-opacity="0.9"
-        />
-        <path
-          d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-          fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
       
@@ -1559,18 +1385,12 @@ exports[`Link > Link themeVue demo works fine 1`] = `
           data-v-004b20ae=""
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
             fill="currentColor"
-            fill-opacity="0.9"
-          />
-          <path
-            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-            fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         
@@ -1599,18 +1419,12 @@ exports[`Link > Link themeVue demo works fine 1`] = `
           data-v-004b20ae=""
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
             fill="currentColor"
-            fill-opacity="0.9"
-          />
-          <path
-            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-            fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         
@@ -1639,18 +1453,12 @@ exports[`Link > Link themeVue demo works fine 1`] = `
           data-v-004b20ae=""
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
             fill="currentColor"
-            fill-opacity="0.9"
-          />
-          <path
-            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-            fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         
@@ -1684,18 +1492,12 @@ exports[`Link > Link themeVue demo works fine 1`] = `
           data-v-004b20ae=""
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
             fill="currentColor"
-            fill-opacity="0.9"
-          />
-          <path
-            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-            fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         
@@ -1724,18 +1526,12 @@ exports[`Link > Link themeVue demo works fine 1`] = `
           data-v-004b20ae=""
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
             fill="currentColor"
-            fill-opacity="0.9"
-          />
-          <path
-            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
-            fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         

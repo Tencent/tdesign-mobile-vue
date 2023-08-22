@@ -38,13 +38,12 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -57,13 +56,12 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -76,13 +74,12 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -95,13 +92,12 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -114,13 +110,12 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -166,13 +161,12 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
               class="t-icon t-icon-star-filled"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -180,13 +174,12 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -202,13 +195,12 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
               class="t-icon t-icon-star-filled"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -216,13 +208,12 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -238,13 +229,12 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
               class="t-icon t-icon-star-filled"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -252,13 +242,12 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -274,13 +263,12 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
               class="t-icon t-icon-star-filled"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -288,13 +276,12 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -310,13 +297,12 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
               class="t-icon t-icon-star-filled"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -324,13 +310,12 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -372,13 +357,12 @@ exports[`Rate > Rate baseVue demo works fine 1`] = `
           class="t-icon t-icon-star-filled"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -391,13 +375,12 @@ exports[`Rate > Rate baseVue demo works fine 1`] = `
           class="t-icon t-icon-star-filled"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -410,13 +393,12 @@ exports[`Rate > Rate baseVue demo works fine 1`] = `
           class="t-icon t-icon-star-filled"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -429,13 +411,12 @@ exports[`Rate > Rate baseVue demo works fine 1`] = `
           class="t-icon t-icon-star-filled"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -448,13 +429,12 @@ exports[`Rate > Rate baseVue demo works fine 1`] = `
           class="t-icon t-icon-star-filled"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -501,13 +481,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
               class="t-icon t-icon-star-filled"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -515,13 +494,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -537,13 +515,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
               class="t-icon t-icon-star-filled"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -551,13 +528,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -573,13 +549,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
               class="t-icon t-icon-star-filled"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -587,13 +562,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -609,13 +583,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
               class="t-icon t-icon-star-filled"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -623,13 +596,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -645,13 +617,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
               class="t-icon t-icon-star-filled"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -659,13 +630,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -705,13 +675,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
               class="t-icon t-icon-star-filled"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -719,13 +688,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -741,13 +709,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
               class="t-icon t-icon-star-filled"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -755,13 +722,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -777,13 +743,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
               class="t-icon t-icon-star-filled"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -791,13 +756,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -813,13 +777,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
               class="t-icon t-icon-star-filled"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -827,13 +790,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -849,13 +811,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
               class="t-icon t-icon-star-filled"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -863,13 +824,12 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -911,13 +871,12 @@ exports[`Rate > Rate countVue demo works fine 1`] = `
           class="t-icon t-icon-star-filled"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -930,13 +889,12 @@ exports[`Rate > Rate countVue demo works fine 1`] = `
           class="t-icon t-icon-star-filled"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -949,13 +907,12 @@ exports[`Rate > Rate countVue demo works fine 1`] = `
           class="t-icon t-icon-star-filled"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -995,13 +952,12 @@ exports[`Rate > Rate customVue demo works fine 1`] = `
           class="t-icon t-icon-thumb-up"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M10 6h3.22a1 1 0 01.97 1.24l-1.5 6a1 1 0 01-.97.76H3a1 1 0 01-1-1V8a1 1 0 011-1h2l2-5h2a1 1 0 011 1v3zM6 7.2V13h5.72l1.5-6H9V3H7.68L6 7.2zM5 8H3v5h2V8z"
+            d="M10.88 1.38l1.28.22a4 4 0 013.34 3.94V8h5.32a2 2 0 011.97 2.33l-1.66 10A2 2 0 0119.15 22H7V10.8l3.88-9.42zm1.23 2.26L9 11.2V20h10.15l1.67-10H13.5V5.54a2 2 0 00-1.39-1.9zM4 10v12H2V10h2z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -1014,13 +970,12 @@ exports[`Rate > Rate customVue demo works fine 1`] = `
           class="t-icon t-icon-thumb-up"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M10 6h3.22a1 1 0 01.97 1.24l-1.5 6a1 1 0 01-.97.76H3a1 1 0 01-1-1V8a1 1 0 011-1h2l2-5h2a1 1 0 011 1v3zM6 7.2V13h5.72l1.5-6H9V3H7.68L6 7.2zM5 8H3v5h2V8z"
+            d="M10.88 1.38l1.28.22a4 4 0 013.34 3.94V8h5.32a2 2 0 011.97 2.33l-1.66 10A2 2 0 0119.15 22H7V10.8l3.88-9.42zm1.23 2.26L9 11.2V20h10.15l1.67-10H13.5V5.54a2 2 0 00-1.39-1.9zM4 10v12H2V10h2z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -1033,13 +988,12 @@ exports[`Rate > Rate customVue demo works fine 1`] = `
           class="t-icon t-icon-thumb-up"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M10 6h3.22a1 1 0 01.97 1.24l-1.5 6a1 1 0 01-.97.76H3a1 1 0 01-1-1V8a1 1 0 011-1h2l2-5h2a1 1 0 011 1v3zM6 7.2V13h5.72l1.5-6H9V3H7.68L6 7.2zM5 8H3v5h2V8z"
+            d="M10.88 1.38l1.28.22a4 4 0 013.34 3.94V8h5.32a2 2 0 011.97 2.33l-1.66 10A2 2 0 0119.15 22H7V10.8l3.88-9.42zm1.23 2.26L9 11.2V20h10.15l1.67-10H13.5V5.54a2 2 0 00-1.39-1.9zM4 10v12H2V10h2z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -1052,13 +1006,12 @@ exports[`Rate > Rate customVue demo works fine 1`] = `
           class="t-icon t-icon-thumb-up"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M10 6h3.22a1 1 0 01.97 1.24l-1.5 6a1 1 0 01-.97.76H3a1 1 0 01-1-1V8a1 1 0 011-1h2l2-5h2a1 1 0 011 1v3zM6 7.2V13h5.72l1.5-6H9V3H7.68L6 7.2zM5 8H3v5h2V8z"
+            d="M10.88 1.38l1.28.22a4 4 0 013.34 3.94V8h5.32a2 2 0 011.97 2.33l-1.66 10A2 2 0 0119.15 22H7V10.8l3.88-9.42zm1.23 2.26L9 11.2V20h10.15l1.67-10H13.5V5.54a2 2 0 00-1.39-1.9zM4 10v12H2V10h2z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -1071,13 +1024,12 @@ exports[`Rate > Rate customVue demo works fine 1`] = `
           class="t-icon t-icon-thumb-up"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M10 6h3.22a1 1 0 01.97 1.24l-1.5 6a1 1 0 01-.97.76H3a1 1 0 01-1-1V8a1 1 0 011-1h2l2-5h2a1 1 0 011 1v3zM6 7.2V13h5.72l1.5-6H9V3H7.68L6 7.2zM5 8H3v5h2V8z"
+            d="M10.88 1.38l1.28.22a4 4 0 013.34 3.94V8h5.32a2 2 0 011.97 2.33l-1.66 10A2 2 0 0119.15 22H7V10.8l3.88-9.42zm1.23 2.26L9 11.2V20h10.15l1.67-10H13.5V5.54a2 2 0 00-1.39-1.9zM4 10v12H2V10h2z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -1151,13 +1103,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1170,13 +1121,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1189,13 +1139,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1208,13 +1157,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1227,13 +1175,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1290,13 +1237,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-thumb-up"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M10 6h3.22a1 1 0 01.97 1.24l-1.5 6a1 1 0 01-.97.76H3a1 1 0 01-1-1V8a1 1 0 011-1h2l2-5h2a1 1 0 011 1v3zM6 7.2V13h5.72l1.5-6H9V3H7.68L6 7.2zM5 8H3v5h2V8z"
+                  d="M10.88 1.38l1.28.22a4 4 0 013.34 3.94V8h5.32a2 2 0 011.97 2.33l-1.66 10A2 2 0 0119.15 22H7V10.8l3.88-9.42zm1.23 2.26L9 11.2V20h10.15l1.67-10H13.5V5.54a2 2 0 00-1.39-1.9zM4 10v12H2V10h2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1309,13 +1255,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-thumb-up"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M10 6h3.22a1 1 0 01.97 1.24l-1.5 6a1 1 0 01-.97.76H3a1 1 0 01-1-1V8a1 1 0 011-1h2l2-5h2a1 1 0 011 1v3zM6 7.2V13h5.72l1.5-6H9V3H7.68L6 7.2zM5 8H3v5h2V8z"
+                  d="M10.88 1.38l1.28.22a4 4 0 013.34 3.94V8h5.32a2 2 0 011.97 2.33l-1.66 10A2 2 0 0119.15 22H7V10.8l3.88-9.42zm1.23 2.26L9 11.2V20h10.15l1.67-10H13.5V5.54a2 2 0 00-1.39-1.9zM4 10v12H2V10h2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1328,13 +1273,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-thumb-up"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M10 6h3.22a1 1 0 01.97 1.24l-1.5 6a1 1 0 01-.97.76H3a1 1 0 01-1-1V8a1 1 0 011-1h2l2-5h2a1 1 0 011 1v3zM6 7.2V13h5.72l1.5-6H9V3H7.68L6 7.2zM5 8H3v5h2V8z"
+                  d="M10.88 1.38l1.28.22a4 4 0 013.34 3.94V8h5.32a2 2 0 011.97 2.33l-1.66 10A2 2 0 0119.15 22H7V10.8l3.88-9.42zm1.23 2.26L9 11.2V20h10.15l1.67-10H13.5V5.54a2 2 0 00-1.39-1.9zM4 10v12H2V10h2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1347,13 +1291,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-thumb-up"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M10 6h3.22a1 1 0 01.97 1.24l-1.5 6a1 1 0 01-.97.76H3a1 1 0 01-1-1V8a1 1 0 011-1h2l2-5h2a1 1 0 011 1v3zM6 7.2V13h5.72l1.5-6H9V3H7.68L6 7.2zM5 8H3v5h2V8z"
+                  d="M10.88 1.38l1.28.22a4 4 0 013.34 3.94V8h5.32a2 2 0 011.97 2.33l-1.66 10A2 2 0 0119.15 22H7V10.8l3.88-9.42zm1.23 2.26L9 11.2V20h10.15l1.67-10H13.5V5.54a2 2 0 00-1.39-1.9zM4 10v12H2V10h2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1366,13 +1309,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-thumb-up"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M10 6h3.22a1 1 0 01.97 1.24l-1.5 6a1 1 0 01-.97.76H3a1 1 0 01-1-1V8a1 1 0 011-1h2l2-5h2a1 1 0 011 1v3zM6 7.2V13h5.72l1.5-6H9V3H7.68L6 7.2zM5 8H3v5h2V8z"
+                  d="M10.88 1.38l1.28.22a4 4 0 013.34 3.94V8h5.32a2 2 0 011.97 2.33l-1.66 10A2 2 0 0119.15 22H7V10.8l3.88-9.42zm1.23 2.26L9 11.2V20h10.15l1.67-10H13.5V5.54a2 2 0 00-1.39-1.9zM4 10v12H2V10h2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1429,13 +1371,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1448,13 +1389,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1467,13 +1407,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1531,13 +1470,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1550,13 +1488,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1569,13 +1506,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1588,13 +1524,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1607,13 +1542,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1654,13 +1588,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1673,13 +1606,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1692,13 +1624,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1711,13 +1642,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1730,13 +1660,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1777,13 +1706,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1796,13 +1724,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1815,13 +1742,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1834,13 +1760,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1853,13 +1778,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1928,13 +1852,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1947,13 +1870,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1966,13 +1888,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1985,13 +1906,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2004,13 +1924,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2056,13 +1975,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -2070,13 +1988,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2092,13 +2009,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -2106,13 +2022,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2128,13 +2043,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -2142,13 +2056,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2164,13 +2077,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -2178,13 +2090,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2200,13 +2111,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -2214,13 +2124,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2283,13 +2192,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2302,13 +2210,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2321,13 +2228,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2340,13 +2246,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2359,13 +2264,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2402,13 +2306,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2421,13 +2324,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2440,13 +2342,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2459,13 +2360,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2478,13 +2378,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2546,13 +2445,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -2560,13 +2458,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2582,13 +2479,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -2596,13 +2492,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2618,13 +2513,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -2632,13 +2526,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2654,13 +2547,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -2668,13 +2560,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2690,13 +2581,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -2704,13 +2594,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2750,13 +2639,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -2764,13 +2652,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2786,13 +2673,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -2800,13 +2686,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2822,13 +2707,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -2836,13 +2720,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2858,13 +2741,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -2872,13 +2754,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2894,13 +2775,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                    d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -2908,13 +2788,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2970,13 +2849,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -2989,13 +2867,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -3008,13 +2885,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -3027,13 +2903,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -3046,13 +2921,12 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -3106,13 +2980,12 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3125,13 +2998,12 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3144,13 +3016,12 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3163,13 +3034,12 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3182,13 +3052,12 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3229,13 +3098,12 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3248,13 +3116,12 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3267,13 +3134,12 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3286,13 +3152,12 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3305,13 +3170,12 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3352,13 +3216,12 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3371,13 +3234,12 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3390,13 +3252,12 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3409,13 +3270,12 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3428,13 +3288,12 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3484,13 +3343,12 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3503,13 +3361,12 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3522,13 +3379,12 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3541,13 +3397,12 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3560,13 +3415,12 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3603,13 +3457,12 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3622,13 +3475,12 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3641,13 +3493,12 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3660,13 +3511,12 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3679,13 +3529,12 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+              d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -3721,13 +3570,12 @@ exports[`Rate > Rate specialVue demo works fine 1`] = `
           class="t-icon t-icon-star-filled"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -3740,13 +3588,12 @@ exports[`Rate > Rate specialVue demo works fine 1`] = `
           class="t-icon t-icon-star-filled"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -3759,13 +3606,12 @@ exports[`Rate > Rate specialVue demo works fine 1`] = `
           class="t-icon t-icon-star-filled"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -3778,13 +3624,12 @@ exports[`Rate > Rate specialVue demo works fine 1`] = `
           class="t-icon t-icon-star-filled"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>
@@ -3797,13 +3642,12 @@ exports[`Rate > Rate specialVue demo works fine 1`] = `
           class="t-icon t-icon-star-filled"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
       </div>

@@ -23,18 +23,12 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
             class="t-icon t-icon-lock-on"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6 10v1h4v-1H6z"
+              d="M5.5 7.5a6.5 6.5 0 0113 0V9h2v13h-17V9h2V7.5zm2 1.5h9V7.5a4.5 4.5 0 10-9 0V9zm-2 2v9h13v-9h-13zM9 14.5h6v2H9v-2z"
               fill="currentColor"
-              fill-opacity="0.9"
-            />
-            <path
-              d="M4.5 5v1H3a.5.5 0 00-.5.5v7c0 .28.22.5.5.5h10a.5.5 0 00.5-.5v-7A.5.5 0 0013 6h-1.5V5a3.5 3.5 0 00-7 0zm6 1h-5V5a2.5 2.5 0 015 0v1zm-7 1h9v6h-9V7z"
-              fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -58,13 +52,12 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -83,13 +76,12 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
             class="t-icon t-icon-service"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M2.52 6.37a5.5 5.5 0 0110.98.13v4c0 .05 0 .1-.02.15A4.5 4.5 0 019 14.7H8v-1h1a3.5 3.5 0 003.4-2.7h-1.9a.5.5 0 01-.5-.5v-4c0-.28.22-.5.5-.5h1.93a4.5 4.5 0 00-8.86 0H5.5c.28 0 .5.22.5.5v4a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5v-4c0-.04 0-.09.02-.13zM12.5 7H11v3h1.5V7zm-9 0v3H5V7H3.5z"
+              d="M2 11a10 10 0 1120 0v5.15C22 17.8 20.58 19 19 19h-3v-8h4a8 8 0 10-16 0h4v8H6.06A2 2 0 008 20.5h1.56c.32-.45.85-.75 1.44-.75h2a1.75 1.75 0 110 3.5h-2c-.6 0-1.12-.3-1.44-.75H8a4 4 0 01-3.99-3.66A2.85 2.85 0 012 16.15V11zm4 6v-4H4v3.15c0 .4.37.85 1 .85h1zm14-4h-2v4h1c.63 0 1-.45 1-.85V13z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -113,13 +105,12 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -138,13 +129,12 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
             class="t-icon t-icon-internet"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M1.1 7.9a6.9 6.9 0 1113.8 0v.2a6.9 6.9 0 11-13.8 0v-.2zm12.79.6h-3a9.86 9.86 0 01-1.96 5.43A5.9 5.9 0 0013.9 8.5zm-3-1h3a5.9 5.9 0 00-4.96-5.43A9.86 9.86 0 0110.9 7.5zm-1 0A8.87 8.87 0 008 2.5a8.87 8.87 0 00-1.89 5H9.9zm-4.78 1h-3a5.9 5.9 0 004.96 5.43A9.86 9.86 0 015.1 8.5zm0-1c.1-1.92.75-3.82 1.96-5.43A5.9 5.9 0 002.1 7.5h3zm4.78 1H6.1c.1 1.78.73 3.53 1.89 5a8.87 8.87 0 001.89-5z"
+              d="M3.05 11a9 9 0 016.28-7.6 16.9 16.9 0 00-2.3 7.6H3.05zM11 1.05a11 11 0 000 21.9l.01.01.43.03a12.48 12.48 0 001.14 0l.43-.03a11 11 0 000-21.91v-.01L12.57 1a11.16 11.16 0 00-1.14 0l-.43.03zM12 3c1.7 2.26 2.77 5 2.97 8H9.03c.2-3 1.27-5.74 2.97-8zM7.03 13a16.9 16.9 0 002.3 7.6A9 9 0 013.05 13h3.98zM12 21c-1.7-2.26-2.77-5-2.97-8h5.94c-.2 3-1.27 5.74-2.97 8zm2.67-.4a16.9 16.9 0 002.3-7.6h3.98a9 9 0 01-6.28 7.6zm2.3-9.6a16.9 16.9 0 00-2.3-7.6 9 9 0 016.28 7.6h-3.98z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -168,13 +158,12 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -258,13 +247,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-chevron-right"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -301,13 +289,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-chevron-right"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -362,13 +349,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-chevron-right"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -443,13 +429,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-chevron-right"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -468,18 +453,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-lock-on"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6 10v1h4v-1H6z"
+                  d="M5.5 7.5a6.5 6.5 0 0113 0V9h2v13h-17V9h2V7.5zm2 1.5h9V7.5a4.5 4.5 0 10-9 0V9zm-2 2v9h13v-9h-13zM9 14.5h6v2H9v-2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
-                />
-                <path
-                  d="M4.5 5v1H3a.5.5 0 00-.5.5v7c0 .28.22.5.5.5h10a.5.5 0 00.5-.5v-7A.5.5 0 0013 6h-1.5V5a3.5 3.5 0 00-7 0zm6 1h-5V5a2.5 2.5 0 015 0v1zm-7 1h9v6h-9V7z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -503,13 +482,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-chevron-right"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -576,13 +554,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-chevron-right"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -623,13 +600,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-chevron-right"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -688,13 +664,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-chevron-right"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -777,13 +752,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-chevron-right"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -803,18 +777,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-lock-on"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6 10v1h4v-1H6z"
+                  d="M5.5 7.5a6.5 6.5 0 0113 0V9h2v13h-17V9h2V7.5zm2 1.5h9V7.5a4.5 4.5 0 10-9 0V9zm-2 2v9h13v-9h-13zM9 14.5h6v2H9v-2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
-                />
-                <path
-                  d="M4.5 5v1H3a.5.5 0 00-.5.5v7c0 .28.22.5.5.5h10a.5.5 0 00.5-.5v-7A.5.5 0 0013 6h-1.5V5a3.5 3.5 0 00-7 0zm6 1h-5V5a2.5 2.5 0 015 0v1zm-7 1h9v6h-9V7z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               
@@ -843,13 +811,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-chevron-right"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1004,13 +971,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-chevron-right"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1089,18 +1055,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-lock-on"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6 10v1h4v-1H6z"
+                  d="M5.5 7.5a6.5 6.5 0 0113 0V9h2v13h-17V9h2V7.5zm2 1.5h9V7.5a4.5 4.5 0 10-9 0V9zm-2 2v9h13v-9h-13zM9 14.5h6v2H9v-2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
-                />
-                <path
-                  d="M4.5 5v1H3a.5.5 0 00-.5.5v7c0 .28.22.5.5.5h10a.5.5 0 00.5-.5v-7A.5.5 0 0013 6h-1.5V5a3.5 3.5 0 00-7 0zm6 1h-5V5a2.5 2.5 0 015 0v1zm-7 1h9v6h-9V7z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1124,13 +1084,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-chevron-right"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1149,13 +1108,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-service"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M2.52 6.37a5.5 5.5 0 0110.98.13v4c0 .05 0 .1-.02.15A4.5 4.5 0 019 14.7H8v-1h1a3.5 3.5 0 003.4-2.7h-1.9a.5.5 0 01-.5-.5v-4c0-.28.22-.5.5-.5h1.93a4.5 4.5 0 00-8.86 0H5.5c.28 0 .5.22.5.5v4a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5v-4c0-.04 0-.09.02-.13zM12.5 7H11v3h1.5V7zm-9 0v3H5V7H3.5z"
+                  d="M2 11a10 10 0 1120 0v5.15C22 17.8 20.58 19 19 19h-3v-8h4a8 8 0 10-16 0h4v8H6.06A2 2 0 008 20.5h1.56c.32-.45.85-.75 1.44-.75h2a1.75 1.75 0 110 3.5h-2c-.6 0-1.12-.3-1.44-.75H8a4 4 0 01-3.99-3.66A2.85 2.85 0 012 16.15V11zm4 6v-4H4v3.15c0 .4.37.85 1 .85h1zm14-4h-2v4h1c.63 0 1-.45 1-.85V13z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1179,13 +1137,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-chevron-right"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1204,13 +1161,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-internet"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M1.1 7.9a6.9 6.9 0 1113.8 0v.2a6.9 6.9 0 11-13.8 0v-.2zm12.79.6h-3a9.86 9.86 0 01-1.96 5.43A5.9 5.9 0 0013.9 8.5zm-3-1h3a5.9 5.9 0 00-4.96-5.43A9.86 9.86 0 0110.9 7.5zm-1 0A8.87 8.87 0 008 2.5a8.87 8.87 0 00-1.89 5H9.9zm-4.78 1h-3a5.9 5.9 0 004.96 5.43A9.86 9.86 0 015.1 8.5zm0-1c.1-1.92.75-3.82 1.96-5.43A5.9 5.9 0 002.1 7.5h3zm4.78 1H6.1c.1 1.78.73 3.53 1.89 5a8.87 8.87 0 001.89-5z"
+                  d="M3.05 11a9 9 0 016.28-7.6 16.9 16.9 0 00-2.3 7.6H3.05zM11 1.05a11 11 0 000 21.9l.01.01.43.03a12.48 12.48 0 001.14 0l.43-.03a11 11 0 000-21.91v-.01L12.57 1a11.16 11.16 0 00-1.14 0l-.43.03zM12 3c1.7 2.26 2.77 5 2.97 8H9.03c.2-3 1.27-5.74 2.97-8zM7.03 13a16.9 16.9 0 002.3 7.6A9 9 0 013.05 13h3.98zM12 21c-1.7-2.26-2.77-5-2.97-8h5.94c-.2 3-1.27 5.74-2.97 8zm2.67-.4a16.9 16.9 0 002.3-7.6h3.98a9 9 0 01-6.28 7.6zm2.3-9.6a16.9 16.9 0 00-2.3-7.6 9 9 0 016.28 7.6h-3.98z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1234,13 +1190,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-chevron-right"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1296,13 +1251,12 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -1343,13 +1297,12 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -1408,13 +1361,12 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -1497,13 +1449,12 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -1523,18 +1474,12 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
             class="t-icon t-icon-lock-on"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6 10v1h4v-1H6z"
+              d="M5.5 7.5a6.5 6.5 0 0113 0V9h2v13h-17V9h2V7.5zm2 1.5h9V7.5a4.5 4.5 0 10-9 0V9zm-2 2v9h13v-9h-13zM9 14.5h6v2H9v-2z"
               fill="currentColor"
-              fill-opacity="0.9"
-            />
-            <path
-              d="M4.5 5v1H3a.5.5 0 00-.5.5v7c0 .28.22.5.5.5h10a.5.5 0 00.5-.5v-7A.5.5 0 0013 6h-1.5V5a3.5 3.5 0 00-7 0zm6 1h-5V5a2.5 2.5 0 015 0v1zm-7 1h9v6h-9V7z"
-              fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           
@@ -1563,13 +1508,12 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -1724,13 +1668,12 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -1805,13 +1748,12 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -1848,13 +1790,12 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -1909,13 +1850,12 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -1990,13 +1930,12 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -2015,18 +1954,12 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
             class="t-icon t-icon-lock-on"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6 10v1h4v-1H6z"
+              d="M5.5 7.5a6.5 6.5 0 0113 0V9h2v13h-17V9h2V7.5zm2 1.5h9V7.5a4.5 4.5 0 10-9 0V9zm-2 2v9h13v-9h-13zM9 14.5h6v2H9v-2z"
               fill="currentColor"
-              fill-opacity="0.9"
-            />
-            <path
-              d="M4.5 5v1H3a.5.5 0 00-.5.5v7c0 .28.22.5.5.5h10a.5.5 0 00.5-.5v-7A.5.5 0 0013 6h-1.5V5a3.5 3.5 0 00-7 0zm6 1h-5V5a2.5 2.5 0 015 0v1zm-7 1h9v6h-9V7z"
-              fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -2050,13 +1983,12 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
         </div>
