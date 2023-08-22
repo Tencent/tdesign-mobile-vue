@@ -18,12 +18,13 @@ exports[`DropdownMenu > DropdownMenu customizedVue demo works fine 1`] = `
       class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      viewBox="0 0 24 24"
+      viewBox="0 0 16 16"
       width="1em"
     >
       <path
-        d="M12 16.5l7-7H5l7 7z"
+        d="M11 6H5l3 4.5L11 6z"
         fill="currentColor"
+        fill-opacity="0.9"
       />
     </svg>
   </div>
@@ -51,12 +52,13 @@ exports[`DropdownMenu > DropdownMenu directionVue demo works fine 1`] = `
       class="t-icon t-icon-caret-up-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      viewBox="0 0 24 24"
+      viewBox="0 0 16 16"
       width="1em"
     >
       <path
-        d="M12 7.5l7 7H5l7-7z"
+        d="M11 10.5H5L8 6l3 4.5z"
         fill="currentColor"
+        fill-opacity="0.9"
       />
     </svg>
   </div>
@@ -72,12 +74,13 @@ exports[`DropdownMenu > DropdownMenu directionVue demo works fine 1`] = `
       class="t-icon t-icon-caret-up-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      viewBox="0 0 24 24"
+      viewBox="0 0 16 16"
       width="1em"
     >
       <path
-        d="M12 7.5l7 7H5l7-7z"
+        d="M11 10.5H5L8 6l3 4.5z"
         fill="currentColor"
+        fill-opacity="0.9"
       />
     </svg>
   </div>
@@ -106,12 +109,13 @@ exports[`DropdownMenu > DropdownMenu disabledVue demo works fine 1`] = `
       class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      viewBox="0 0 24 24"
+      viewBox="0 0 16 16"
       width="1em"
     >
       <path
-        d="M12 16.5l7-7H5l7 7z"
+        d="M11 6H5l3 4.5L11 6z"
         fill="currentColor"
+        fill-opacity="0.9"
       />
     </svg>
   </div>
@@ -127,12 +131,13 @@ exports[`DropdownMenu > DropdownMenu disabledVue demo works fine 1`] = `
       class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      viewBox="0 0 24 24"
+      viewBox="0 0 16 16"
       width="1em"
     >
       <path
-        d="M12 16.5l7-7H5l7 7z"
+        d="M11 6H5l3 4.5L11 6z"
         fill="currentColor"
+        fill-opacity="0.9"
       />
     </svg>
   </div>
@@ -200,12 +205,13 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            viewBox="0 0 24 24"
+            viewBox="0 0 16 16"
             width="1em"
           >
             <path
-              d="M12 16.5l7-7H5l7 7z"
+              d="M11 6H5l3 4.5L11 6z"
               fill="currentColor"
+              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -221,12 +227,13 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            viewBox="0 0 24 24"
+            viewBox="0 0 16 16"
             width="1em"
           >
             <path
-              d="M12 16.5l7-7H5l7 7z"
+              d="M11 6H5l3 4.5L11 6z"
               fill="currentColor"
+              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -274,12 +281,13 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            viewBox="0 0 24 24"
+            viewBox="0 0 16 16"
             width="1em"
           >
             <path
-              d="M12 16.5l7-7H5l7 7z"
+              d="M11 6H5l3 4.5L11 6z"
               fill="currentColor"
+              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -295,12 +303,13 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            viewBox="0 0 24 24"
+            viewBox="0 0 16 16"
             width="1em"
           >
             <path
-              d="M12 16.5l7-7H5l7 7z"
+              d="M11 6H5l3 4.5L11 6z"
               fill="currentColor"
+              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -316,12 +325,13 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            viewBox="0 0 24 24"
+            viewBox="0 0 16 16"
             width="1em"
           >
             <path
-              d="M12 16.5l7-7H5l7 7z"
+              d="M11 6H5l3 4.5L11 6z"
               fill="currentColor"
+              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -370,12 +380,13 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-up-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            viewBox="0 0 24 24"
+            viewBox="0 0 16 16"
             width="1em"
           >
             <path
-              d="M12 7.5l7 7H5l7-7z"
+              d="M11 10.5H5L8 6l3 4.5z"
               fill="currentColor"
+              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -391,12 +402,13 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-up-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            viewBox="0 0 24 24"
+            viewBox="0 0 16 16"
             width="1em"
           >
             <path
-              d="M12 7.5l7 7H5l7-7z"
+              d="M11 10.5H5L8 6l3 4.5z"
               fill="currentColor"
+              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -448,12 +460,13 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            viewBox="0 0 24 24"
+            viewBox="0 0 16 16"
             width="1em"
           >
             <path
-              d="M12 16.5l7-7H5l7 7z"
+              d="M11 6H5l3 4.5L11 6z"
               fill="currentColor"
+              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -469,12 +482,13 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            viewBox="0 0 24 24"
+            viewBox="0 0 16 16"
             width="1em"
           >
             <path
-              d="M12 16.5l7-7H5l7 7z"
+              d="M11 6H5l3 4.5L11 6z"
               fill="currentColor"
+              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -523,12 +537,13 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            viewBox="0 0 24 24"
+            viewBox="0 0 16 16"
             width="1em"
           >
             <path
-              d="M12 16.5l7-7H5l7 7z"
+              d="M11 6H5l3 4.5L11 6z"
               fill="currentColor"
+              fill-opacity="0.9"
             />
           </svg>
         </div>
@@ -564,12 +579,13 @@ exports[`DropdownMenu > DropdownMenu multipleVue demo works fine 1`] = `
       class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      viewBox="0 0 24 24"
+      viewBox="0 0 16 16"
       width="1em"
     >
       <path
-        d="M12 16.5l7-7H5l7 7z"
+        d="M11 6H5l3 4.5L11 6z"
         fill="currentColor"
+        fill-opacity="0.9"
       />
     </svg>
   </div>
@@ -585,12 +601,13 @@ exports[`DropdownMenu > DropdownMenu multipleVue demo works fine 1`] = `
       class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      viewBox="0 0 24 24"
+      viewBox="0 0 16 16"
       width="1em"
     >
       <path
-        d="M12 16.5l7-7H5l7 7z"
+        d="M11 6H5l3 4.5L11 6z"
         fill="currentColor"
+        fill-opacity="0.9"
       />
     </svg>
   </div>
@@ -606,12 +623,13 @@ exports[`DropdownMenu > DropdownMenu multipleVue demo works fine 1`] = `
       class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      viewBox="0 0 24 24"
+      viewBox="0 0 16 16"
       width="1em"
     >
       <path
-        d="M12 16.5l7-7H5l7 7z"
+        d="M11 6H5l3 4.5L11 6z"
         fill="currentColor"
+        fill-opacity="0.9"
       />
     </svg>
   </div>
@@ -641,12 +659,13 @@ exports[`DropdownMenu > DropdownMenu singleVue demo works fine 1`] = `
       class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      viewBox="0 0 24 24"
+      viewBox="0 0 16 16"
       width="1em"
     >
       <path
-        d="M12 16.5l7-7H5l7 7z"
+        d="M11 6H5l3 4.5L11 6z"
         fill="currentColor"
+        fill-opacity="0.9"
       />
     </svg>
   </div>
@@ -662,12 +681,13 @@ exports[`DropdownMenu > DropdownMenu singleVue demo works fine 1`] = `
       class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      viewBox="0 0 24 24"
+      viewBox="0 0 16 16"
       width="1em"
     >
       <path
-        d="M12 16.5l7-7H5l7 7z"
+        d="M11 6H5l3 4.5L11 6z"
         fill="currentColor"
+        fill-opacity="0.9"
       />
     </svg>
   </div>

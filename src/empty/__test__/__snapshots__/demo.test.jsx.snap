@@ -14,12 +14,13 @@ exports[`Empty > Empty baseVue demo works fine 1`] = `
         class="t-icon t-icon-info-circle-filled"
         fill="none"
         height="1em"
-        viewBox="0 0 24 24"
+        viewBox="0 0 16 16"
         width="1em"
       >
         <path
-          d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
+          d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
           fill="currentColor"
+          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -47,12 +48,13 @@ exports[`Empty > Empty buttonEmptyVue demo works fine 1`] = `
         class="t-icon t-icon-info-circle-filled"
         fill="none"
         height="1em"
-        viewBox="0 0 24 24"
+        viewBox="0 0 16 16"
         width="1em"
       >
         <path
-          d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
+          d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
           fill="currentColor"
+          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -193,12 +195,13 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
               class="t-icon t-icon-info-circle-filled"
               fill="none"
               height="1em"
-              viewBox="0 0 24 24"
+              viewBox="0 0 16 16"
               width="1em"
             >
               <path
-                d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
+                d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
                 fill="currentColor"
+                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -322,12 +325,13 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
               class="t-icon t-icon-info-circle-filled"
               fill="none"
               height="1em"
-              viewBox="0 0 24 24"
+              viewBox="0 0 16 16"
               width="1em"
             >
               <path
-                d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
+                d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
                 fill="currentColor"
+                fill-opacity="0.9"
               />
             </svg>
           </div>

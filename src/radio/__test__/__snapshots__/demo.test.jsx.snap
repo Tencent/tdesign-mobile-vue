@@ -96,12 +96,13 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
           class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
           fill="none"
           height="1em"
-          viewBox="0 0 24 24"
+          viewBox="0 0 16 16"
           width="1em"
         >
           <path
-            d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+            d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
             fill="currentColor"
+            fill-opacity="0.9"
           />
         </svg>
         <!--v-if-->
@@ -195,12 +196,13 @@ exports[`Radio > Radio cardVue demo works fine 1`] = `
           class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
           fill="none"
           height="1em"
-          viewBox="0 0 24 24"
+          viewBox="0 0 16 16"
           width="1em"
         >
           <path
-            d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+            d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
             fill="currentColor"
+            fill-opacity="0.9"
           />
         </svg>
         <!--v-if-->
@@ -692,12 +694,13 @@ exports[`Radio > Radio horizontalVue demo works fine 1`] = `
         class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
         fill="none"
         height="1em"
-        viewBox="0 0 24 24"
+        viewBox="0 0 16 16"
         width="1em"
       >
         <path
-          d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+          d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
           fill="currentColor"
+          fill-opacity="0.9"
         />
       </svg>
       <!--v-if-->
@@ -745,12 +748,13 @@ exports[`Radio > Radio iconVue demo works fine 1`] = `
         class="t-icon t-icon-check t-radio__icon-wrap"
         fill="none"
         height="1em"
-        viewBox="0 0 24 24"
+        viewBox="0 0 16 16"
         width="1em"
       >
         <path
-          d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
+          d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
           fill="currentColor"
+          fill-opacity="0.9"
         />
       </svg>
       <!--v-if-->
@@ -943,12 +947,13 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
                 fill="none"
                 height="1em"
-                viewBox="0 0 24 24"
+                viewBox="0 0 16 16"
                 width="1em"
               >
                 <path
-                  d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+                  d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
                   fill="currentColor"
+                  fill-opacity="0.9"
                 />
               </svg>
               <!--v-if-->
@@ -1126,12 +1131,13 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
               fill="none"
               height="1em"
-              viewBox="0 0 24 24"
+              viewBox="0 0 16 16"
               width="1em"
             >
               <path
-                d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+                d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
                 fill="currentColor"
+                fill-opacity="0.9"
               />
             </svg>
             <!--v-if-->
@@ -1202,12 +1208,13 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
               fill="none"
               height="1em"
-              viewBox="0 0 24 24"
+              viewBox="0 0 16 16"
               width="1em"
             >
               <path
-                d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+                d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
                 fill="currentColor"
+                fill-opacity="0.9"
               />
             </svg>
             <!--v-if-->
@@ -1313,12 +1320,13 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             class="t-icon t-icon-check t-radio__icon-wrap"
             fill="none"
             height="1em"
-            viewBox="0 0 24 24"
+            viewBox="0 0 16 16"
             width="1em"
           >
             <path
-              d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
+              d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
               fill="currentColor"
+              fill-opacity="0.9"
             />
           </svg>
           <!--v-if-->
@@ -1415,12 +1423,13 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
             fill="none"
             height="1em"
-            viewBox="0 0 24 24"
+            viewBox="0 0 16 16"
             width="1em"
           >
             <path
-              d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+              d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
               fill="currentColor"
+              fill-opacity="0.9"
             />
           </svg>
           <!--v-if-->
@@ -1460,12 +1469,13 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
             fill="none"
             height="1em"
-            viewBox="0 0 24 24"
+            viewBox="0 0 16 16"
             width="1em"
           >
             <path
-              d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+              d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
               fill="currentColor"
+              fill-opacity="0.9"
             />
           </svg>
           <!--v-if-->
@@ -1533,12 +1543,13 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
                 fill="none"
                 height="1em"
-                viewBox="0 0 24 24"
+                viewBox="0 0 16 16"
                 width="1em"
               >
                 <path
-                  d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+                  d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
                   fill="currentColor"
+                  fill-opacity="0.9"
                 />
               </svg>
               <!--v-if-->
@@ -1981,12 +1992,13 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
         class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
         fill="none"
         height="1em"
-        viewBox="0 0 24 24"
+        viewBox="0 0 16 16"
         width="1em"
       >
         <path
-          d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+          d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
           fill="currentColor"
+          fill-opacity="0.9"
         />
       </svg>
       <!--v-if-->
@@ -2026,12 +2038,13 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
         class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
         fill="none"
         height="1em"
-        viewBox="0 0 24 24"
+        viewBox="0 0 16 16"
         width="1em"
       >
         <path
-          d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+          d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
           fill="currentColor"
+          fill-opacity="0.9"
         />
       </svg>
       <!--v-if-->
@@ -2083,12 +2096,13 @@ exports[`Radio > Radio statusVue demo works fine 1`] = `
         class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
         fill="none"
         height="1em"
-        viewBox="0 0 24 24"
+        viewBox="0 0 16 16"
         width="1em"
       >
         <path
-          d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+          d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
           fill="currentColor"
+          fill-opacity="0.9"
         />
       </svg>
       <!--v-if-->
