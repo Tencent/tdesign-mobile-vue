@@ -5,16 +5,27 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.0.2 `2023-08-22` 
+### 🚀 Features
+- `Table`: 支持 `cell` 属性，用于自定义单元格 @anlyyao ([#1046](https://github.com/Tencent/tdesign-mobile-vue/pull/1046))
+### 🐞 Bug Fixes
+- `RadioGroup`: 修复 `placement` 属性无效 @anlyyao ([#1049](https://github.com/Tencent/tdesign-mobile-vue/pull/1049))
+- `Noticebar`: 修复垂直滚动过程中出现的文字遮挡问题 @Gvonte ([#1051](https://github.com/Tencent/tdesign-mobile-vue/pull/1051))
+- `ImageViewer`: 修复图片放大异常问题 @ccccpj ([#1041](https://github.com/Tencent/tdesign-mobile-vue/pull/1041))
+- `Loading`: 修复组件渲染错误 @anlyyao ([#1053](https://github.com/Tencent/tdesign-mobile-vue/pull/1053))
+- `Calendar`: 修复 `value` 外部变更后不响应问题 @byq1213 ([#1045](https://github.com/Tencent/tdesign-mobile-vue/pull/1045))
+### 🚧 Others
+- other: 添加邮箱校验 @yaogengzhu ([#1050](https://github.com/Tencent/tdesign-mobile-vue/pull/1050)) 
+
+
 ## 🌈 1.0.0 `2023-08-16`
 ### ❗ Breaking Changes
 - `CellGroup`: 调整 `DOM` 结构 @anlyyao ([#1010](https://github.com/Tencent/tdesign-mobile-vue/pull/1010))
 - `Rate`: 移除 variant 废弃属性 @LeeJim ([#1005](https://github.com/Tencent/tdesign-mobile-vue/pull/1005))
 - `Icon`: 新增 `960` 个图标；调整图标命名 `photo` 为 `camera`，`books` 为 `bookmark`，`stop-cirle-1` 为 `stop-circle-stroke`；移除 `money-circle` 图标，具体请查看图标页面。 @anlyyao ([#1024](https://github.com/Tencent/tdesign-mobile-vue/pull/1024))
-
 ### 🚀 Features
 - `CollapsePanel`: 新增 `headerLeftIcon` 属性 @LeeJim ([#1009](https://github.com/Tencent/tdesign-mobile-vue/pull/1009))
 - `CellGroup`: `CellGroup` 支持最后一项 `Cell` 无 `border` @anlyyao ([#1010](https://github.com/Tencent/tdesign-mobile-vue/pull/1010))
-
 ### 🐞 Bug Fixes
 - `Avatar`: 修复 `src` 属性不支持应式的问题 @anlyyao ([#1008](https://github.com/Tencent/tdesign-mobile-vue/pull/1008))
 - `Badge`: 修复 count 不支持 slot 的问题 @LeeJim ([#1007](https://github.com/Tencent/tdesign-mobile-vue/pull/1007))
@@ -25,7 +36,6 @@ spline: explain
 - `CellGroup`: 修复 `bordered` 属性无效 @anlyyao ([#1010](https://github.com/Tencent/tdesign-mobile-vue/pull/1010))
 - `Drawer`: 修复按需引入时无法在 `SFC` 中使用 `Drawer` 组件 @anlyyao ([#1030](https://github.com/Tencent/tdesign-mobile-vue/pull/1030))
 - `TabBar`: 修复 `bordered` 属性无效的问题 @anlyyao ([#1569](https://github.com/Tencent/tdesign-common/pull/1569))
-
 ### 🚧 Others
 - `Upload`: 优化`Upload` 逻辑 @yaogengzhu ([#999](https://github.com/Tencent/tdesign-mobile-vue/pull/999))
 - `Tabs`: 隐藏滚动条样式  @anlyyao ([#1560](https://github.com/Tencent/tdesign-common/pull/1560))

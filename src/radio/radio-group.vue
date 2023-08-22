@@ -10,6 +10,7 @@
         :disabled="'disabled' in opt ? opt.disabled : disabled"
         :value="opt[keys?.value ?? 'value']"
         :label="opt[keys?.label ?? 'label']"
+        :placement="placement"
       ></radio>
     </template>
     <slot v-if="!options"></slot>
