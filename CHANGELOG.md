@@ -5,6 +5,18 @@ toc: false
 spline: explain
 ---
 
+   ## 🌈 1.0.2 `2023-08-22` 
+### 🚀 Features
+- `Table`: 支持 `cell` 属性，用于自定义单元格 @anlyyao ([#1046](https://github.com/Tencent/tdesign-mobile-vue/pull/1046))
+### 🐞 Bug Fixes
+- `RadioGroup`: 修复 `placement` 属性无效 @anlyyao ([#1049](https://github.com/Tencent/tdesign-mobile-vue/pull/1049))
+- `Noticebar`: 修复垂直滚动过程中出现的文字遮挡问题 @Gvonte ([#1051](https://github.com/Tencent/tdesign-mobile-vue/pull/1051))
+- `ImageViewer`: 修复图片放大异常问题 @ccccpj ([#1041](https://github.com/Tencent/tdesign-mobile-vue/pull/1041))
+- `Loading`: 修复组件渲染错误 @anlyyao ([#1053](https://github.com/Tencent/tdesign-mobile-vue/pull/1053))
+- `Calendar`: 修复 `value` 外部变更后不响应问题 @byq1213 ([#1045](https://github.com/Tencent/tdesign-mobile-vue/pull/1045))
+### 🚧 Others
+- other: 添加邮箱校验 @yaogengzhu ([#1050](https://github.com/Tencent/tdesign-mobile-vue/pull/1050)) 
+
   ## 🌈 1.0.1 `2023-08-17` 
 ### 🐞 Bug Fixes
 - `upload`:  修复`useUpload`导入异常 @linesoft2 ([#1038](https://github.com/Tencent/tdesign-mobile-vue/pull/1038)) 
