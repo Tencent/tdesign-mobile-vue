@@ -23,7 +23,7 @@ const variants = ['light', 'dark', 'outline', 'light-outline'];
   align-items: center;
 
   &__title {
-    color: rgba(0, 0, 0, 0.4);
+    color: var(--td-text-color-disabled, rgba(0, 0, 0, 0.4));
     font-size: 14px;
     width: 80px;
     margin-right: 16px;

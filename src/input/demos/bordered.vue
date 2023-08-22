@@ -15,14 +15,14 @@ import { ErrorCircleFilledIcon } from 'tdesign-icons-vue-next';
 
 <style lang="less" scoped>
 .input-demo {
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
   padding: 16px 16px 24px;
 
   --td-input-vertical-padding: 12px;
 }
 
 .input-demo__summary {
-  color: rgba(0, 0, 0, 0.9);
+  color: var(--td-text-color-primary, rgba(0, 0, 0, 0.9));
   font-size: 12px;
   line-height: 20px;
   margin-bottom: 8px;

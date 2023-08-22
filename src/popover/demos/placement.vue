@@ -115,7 +115,7 @@
 
   &__summary {
     font-size: 14px;
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--td-text-color-secondary, rgba(0, 0, 0, 0.6));
     line-height: 22px;
   }
 

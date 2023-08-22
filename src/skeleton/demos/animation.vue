@@ -23,7 +23,7 @@ const animationList = [
 <style lang="less" scoped>
 .demo-section__desc {
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--td-text-color-disabled, rgba(0, 0, 0, 0.4));
   margin-top: 8px;
   line-height: 22px;
 }

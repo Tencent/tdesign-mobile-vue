@@ -82,7 +82,7 @@ const onSideBarChange = (value: TdSideBarProps['value']) => {
 .side-bar-wrapper {
   display: flex;
   height: 100vh;
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
   overflow: hidden;
   .content {
     flex: 1;

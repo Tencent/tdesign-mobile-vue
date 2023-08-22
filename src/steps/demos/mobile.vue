@@ -27,11 +27,11 @@ import special from './special.vue';
 .steps-horizontal-demo-block {
   margin: 16px 0 24px;
   padding: 16px 0;
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
 }
 .steps-vertical-demo-block {
   margin: 16px 0 24px;
   padding: 16px;
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
 }
 </style>

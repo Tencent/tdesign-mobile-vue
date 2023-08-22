@@ -30,7 +30,7 @@ const imageSrc = ref('https://tdesign.gtimg.com/demo/demo-image-1.png');
 <style lang="less" scoped>
 .image-example {
   margin-bottom: 24px;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--td-text-color-secondary, rgba(0, 0, 0, 0.6));
 
   &-title {
     font-size: 14px;
@@ -56,7 +56,7 @@ const imageSrc = ref('https://tdesign.gtimg.com/demo/demo-image-1.png');
     }
 
     .image-demo-tip {
-      color: rgba(0, 0, 0, 0.6);
+      color: var(--td-text-color-secondary, rgba(0, 0, 0, 0.6));
       font-size: 14px;
       line-height: 22px;
       margin: 16px 0;

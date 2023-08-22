@@ -18,7 +18,7 @@ const value1 = ref(3);
 
 <style lang="less" scoped>
 .rate-demo-cell {
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
   padding: 12px 16px;
   line-height: 1;
   display: flex;
@@ -28,6 +28,7 @@ const value1 = ref(3);
     font-size: 16px;
     margin-right: 16px;
     min-width: 80px;
+    color: var(--td-text-color-primary, rgba(0, 0, 0, 0.9));
   }
 
   &--space {

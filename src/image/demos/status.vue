@@ -47,7 +47,7 @@ import { Loading as TLoading } from 'tdesign-mobile-vue';
 }
 
 .tips {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--td-text-color-secondary, rgba(0, 0, 0, 0.6));
   font-size: 14px;
   line-height: 22px;
   margin-bottom: 16px;
@@ -56,7 +56,7 @@ import { Loading as TLoading } from 'tdesign-mobile-vue';
 }
 
 .error-tips {
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--td-text-color-placeholder, rgba(0, 0, 0, 0.4));
   font-size: 10px;
 }
 </style>

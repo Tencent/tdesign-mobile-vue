@@ -52,7 +52,7 @@ const failFiles = [
 
 <style scoped lang="less">
 .upload-demo {
-  background: #fff;
+  background: var(--bg-color-demo, #fff);
 
   & + & {
     margin-top: 16px;
@@ -61,11 +61,11 @@ const failFiles = [
   &__title {
     font-size: 14px;
     margin: 24px 16px 16px;
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--td-text-color-secondary, rgba(0, 0, 0, 0.6));
   }
   .upload-title {
     font-size: 16px;
-    color: rgba(0, 0, 0, 0.9);
+    color: var(--td-text-color-primary, rgba(0, 0, 0, 0.9));
     padding: 12px 16px 0;
   }
 }

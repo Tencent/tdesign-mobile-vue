@@ -29,7 +29,7 @@ const value1 = ref([1, 2]);
   border-radius: 6px;
   overflow: hidden;
   box-sizing: border-box;
-  border: 1.5px solid #fff;
+  border: 1.5px solid var(--bg-color-demo, #fff);
 }
 .card--active {
   border-color: #0052d9;
