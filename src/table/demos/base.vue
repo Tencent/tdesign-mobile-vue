@@ -9,7 +9,17 @@
       @row-click="handleRowClick"
       @cell-click="handleCellClick"
       @scroll="handleScroll"
-    ></t-table>
+    >
+      <!-- 插槽方式 自定义单元格：cell 的值为插槽名称，参数有：{col, colIndex, row, rowIndex}  -->
+      <template #type-slot-name="{ col, row }">
+        {{ row[col.colKey] }}
+      </template>
+
+      <!-- 插槽方式 自定义单元格， colKey 的值默认为插槽名称  -->
+      <template #status="{ col, row }">
+        {{ row[col.colKey] }}
+      </template>
+    </t-table>
   </div>
 </template>
 
@@ -30,19 +40,28 @@ for (let i = 0; i < total; i++) {
   });
 }
 
-const stripe = ref(true);
-const bordered = ref(true);
 const showHeader = ref(true);
 
 const columns = ref([
-  { colKey: 'applicant', title: '标题', ellipsis: true },
+  { colKey: 'applicant', title: '标题', ellipsis: true, cell: 'type-slot-name' },
   {
     colKey: 'status',
     title: '标题',
     ellipsis: true,
   },
-  { colKey: 'channel', title: '标题', ellipsis: true },
-  { colKey: 'detail.email', title: '标题', ellipsis: true },
+  {
+    colKey: 'channel',
+    title: '标题',
+    // @ts-ignore
+    cell: (h, { col, row }) => row[col.colKey],
+    ellipsis: true,
+  },
+  {
+    colKey: 'detail.email',
+    title: '标题',
+    cell: () => '内容',
+    ellipsis: true,
+  },
 ]);
 
 const handleRowClick = (e: any) => {
