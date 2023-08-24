@@ -2,7 +2,7 @@
   <teleport v-if="!destroyOnClose || wrapperVisbile" :to="to" :disabled="!to">
     <t-overlay v-bind="overlayProps" :visible="innerVisible && showOverlay" @click="handleOverlayClick" />
     <transition :name="contentTransitionName" @after-enter="afterEnter" @after-leave="afterLeave">
-      <div v-show="innerVisible" :class="[name, $attrs.class, contentClasses]" :style="rootStyles">
+      <div :class="[name, $attrs.class, contentClasses]" :style="rootStyles">
         <div v-if="closeBtnNode" :class="`${name}__close`" @click="handleCloseClick">
           <t-node :content="closeBtnNode" />
         </div>
@@ -63,8 +63,8 @@ export default defineComponent({
 
     const rootStyles = computed(() => {
       const styles: Record<string, any> = {};
-
-      if (props.zIndex) {
+      styles.visibility = innerVisible.value ? 'visible' : 'hidden';
+      if (props.zIndex && innerVisible.value) {
         styles.zIndex = `${props.zIndex}`;
       }
       return { ...(context.attrs.style as Object), ...styles };
