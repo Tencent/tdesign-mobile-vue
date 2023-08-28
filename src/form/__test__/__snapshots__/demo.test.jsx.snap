@@ -397,7 +397,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             </div>
             <div
               class="t-popup t-popup--bottom"
-              style="display: none;"
+              style="visibility: hidden;"
             >
               <!--v-if-->
               
@@ -831,7 +831,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             </div>
             <div
               class="t-popup t-popup--bottom"
-              style="display: none;"
+              style="visibility: hidden;"
             >
               <!--v-if-->
               
@@ -2125,7 +2125,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   </div>
                   <div
                     class="t-popup t-popup--bottom"
-                    style="display: none;"
+                    style="visibility: hidden;"
                   >
                     <!--v-if-->
                     
@@ -2559,7 +2559,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   </div>
                   <div
                     class="t-popup t-popup--bottom"
-                    style="display: none;"
+                    style="visibility: hidden;"
                   >
                     <!--v-if-->
                     
@@ -3715,7 +3715,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             </div>
             <div
               class="t-popup t-popup--bottom"
-              style="display: none;"
+              style="visibility: hidden;"
             >
               <!--v-if-->
               
@@ -4147,7 +4147,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             </div>
             <div
               class="t-popup t-popup--bottom"
-              style="display: none;"
+              style="visibility: hidden;"
             >
               <!--v-if-->
               

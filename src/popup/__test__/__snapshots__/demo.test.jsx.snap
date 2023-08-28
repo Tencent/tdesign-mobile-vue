@@ -107,7 +107,7 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--top"
-      style="padding: 100px; display: none;"
+      style="padding: 100px; visibility: hidden;"
     >
       <!--v-if-->
       
@@ -151,7 +151,7 @@ exports[`Popup > Popup customCloseVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="width: 240px; height: 240px; display: none;"
+      style="width: 240px; height: 240px; visibility: hidden;"
     >
       <!--v-if-->
       
@@ -315,7 +315,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-popup t-popup--top"
-            style="padding: 100px; display: none;"
+            style="padding: 100px; visibility: hidden;"
           >
             <!--v-if-->
             
@@ -385,7 +385,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-popup t-popup--bottom"
-            style="height: 258px; display: none;"
+            style="height: 258px; visibility: hidden;"
           >
             <!--v-if-->
             
@@ -452,7 +452,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-popup t-popup--center"
-            style="width: 240px; height: 240px; display: none;"
+            style="width: 240px; height: 240px; visibility: hidden;"
           >
             <!--v-if-->
             
@@ -511,7 +511,7 @@ exports[`Popup > Popup withTitleVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="height: 258px; display: none;"
+      style="height: 258px; visibility: hidden;"
     >
       <!--v-if-->
       

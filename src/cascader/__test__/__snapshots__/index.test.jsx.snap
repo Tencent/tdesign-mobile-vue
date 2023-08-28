@@ -14,7 +14,7 @@ exports[`cascader > events > : pick 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="visibility: hidden;"
   >
     <!--v-if-->
     
