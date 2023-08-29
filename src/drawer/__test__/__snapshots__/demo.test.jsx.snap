@@ -18,7 +18,7 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--right"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -141,7 +141,7 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--left"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -286,7 +286,7 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--right"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -535,7 +535,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--right"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -673,7 +673,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--right"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -905,7 +905,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--left"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1046,7 +1046,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--left"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1254,7 +1254,7 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--left"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       

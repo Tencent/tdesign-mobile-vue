@@ -56,7 +56,7 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -244,7 +244,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -349,7 +349,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -560,7 +560,7 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -790,7 +790,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--bottom"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -895,7 +895,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--bottom"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1085,7 +1085,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--bottom"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1287,7 +1287,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--bottom"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1467,7 +1467,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       

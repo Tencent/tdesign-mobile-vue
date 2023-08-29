@@ -34,7 +34,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -140,7 +140,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -248,7 +248,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -341,7 +341,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -430,7 +430,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -533,7 +533,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -686,7 +686,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -844,7 +844,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -993,7 +993,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -1181,7 +1181,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1274,7 +1274,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1363,7 +1363,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1477,7 +1477,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1583,7 +1583,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1706,7 +1706,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1855,7 +1855,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -2027,7 +2027,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -2180,7 +2180,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -2353,7 +2353,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -2459,7 +2459,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -2565,7 +2565,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -2671,7 +2671,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -2794,7 +2794,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -2962,7 +2962,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -3068,7 +3068,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -3174,7 +3174,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -3280,7 +3280,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -3403,7 +3403,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
