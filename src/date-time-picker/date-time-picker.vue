@@ -173,7 +173,7 @@ export default defineComponent({
     });
 
     const onConfirm = () => {
-      props.onConfirm(dayjs(curDate.value).format(props.format));
+      props.onConfirm?.(dayjs(curDate.value).format(props.format));
       setDateTimePickerValue(dayjs(curDate.value).format(props.format));
     };
 
