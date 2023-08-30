@@ -9,9 +9,14 @@ interface MessageActionOptionsType extends TdMessageProps {
   context?: Element;
 }
 
+const instanceMap: Map<Element, Record<string, Element>> = new Map();
+
 function destroy(context: Element, root: Element) {
   if (context.contains(root)) {
     context.removeChild(root);
+    if (instanceMap.has(root)) {
+      instanceMap.delete(root);
+    }
   }
 }
 
@@ -47,6 +52,10 @@ function create(props: MessageActionOptionsType): void {
 
   createApp(component).mount(root);
 
+  instanceMap.set(root, {
+    context,
+  });
+
   nextTick(() => {
     visible.value = true;
   });
@@ -81,6 +90,15 @@ const defaultProps: TdMessageProps = {
   };
 });
 
+Message.closeAll = () => {
+  if (instanceMap instanceof Map) {
+    for (const [key, value] of instanceMap) {
+      const { context } = value;
+      destroy(context as Element, key);
+    }
+  }
+};
+
 Message.install = (app: App, name = '') => {
   app.component(name || Message.name, Message);
 
@@ -98,6 +116,8 @@ type MessageApi = {
   warning: (options?: MessageActionOptionsType | string) => void;
   /** 展示错误消息 */
   error: (options?: MessageActionOptionsType | string) => void;
+  /** 关闭全部 */
+  closeAll: () => void;
 };
 
 export const MessagePlugin: WithInstallType<typeof Message> & MessageApi = Message as any;

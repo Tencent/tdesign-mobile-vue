@@ -9,10 +9,15 @@
     <tdesign-demo-block title="02 组件风格" summary="消息组件风格" :padding="true">
       <themeDemo />
     </tdesign-demo-block>
+
+    <tdesign-demo-block title="03 关闭所有通知" summary="关闭所有通知" :padding="true">
+      <closeAllDemo />
+    </tdesign-demo-block>
   </div>
 </template>
 
 <script lang="ts" setup>
 import themeDemo from './theme.vue';
 import baseDemo from './base.vue';
+import closeAllDemo from './closeAll.vue';
 </script>
