@@ -10,7 +10,6 @@
         height: containerHeight,
       }"
       @transitionend="handleAnimationEnd"
-      @click="onItemClick"
     >
       <slot />
     </div>
@@ -173,6 +172,7 @@ const { lengthX, lengthY } = useSwipe(swiperContainer, {
   passive: false,
   onSwipeStart() {
     if (disabled.value) return;
+    onItemClick(); // use touchstart to simulate click on swipe start
     stopAutoplay();
   },
   onSwipe(e: TouchEvent) {
