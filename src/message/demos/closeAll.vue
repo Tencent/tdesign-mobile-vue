@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Message } from 'tdesign-mobile-vue';
+import { MessagePlugin } from 'tdesign-mobile-vue';
 
 const showMessage = ({
   theme,
@@ -19,8 +19,8 @@ const showMessage = ({
   duration?: number;
   index: number;
 }) => {
-  if (Message[theme]) {
-    Message[theme]({
+  if (MessagePlugin[theme]) {
+    MessagePlugin[theme]({
       offset: [58 * index + 10, 16],
       content,
       duration,
@@ -31,11 +31,13 @@ const showMessage = ({
   }
 };
 
-const closeAllMessage = () => Message.closeAll();
+const closeAllMessage = () => MessagePlugin.closeAll();
 
 const openAllMessage = () => {
   ['info', 'warning', 'success', 'error'].forEach((theme, index) => {
-    showMessage({ theme, index });
+    setTimeout(() => {
+      showMessage({ theme, index });
+    }, 300 * index);
   });
 };
 </script>
