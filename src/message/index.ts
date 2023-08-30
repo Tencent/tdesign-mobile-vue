@@ -41,10 +41,11 @@ function create(props: MessageActionOptionsType): void {
         onDurationEnd: () => {
           otherOptions.onDurationEnd?.();
           visible.value = false;
-          destroy(context, root);
         },
         onCloseBtnClick: () => {
           visible.value = false;
+        },
+        onAfterLeave: () => {
           destroy(context, root);
         },
       }),
