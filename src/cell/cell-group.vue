@@ -1,9 +1,11 @@
 <template>
-  <div v-if="titleContent" :class="`${name}__title`">
-    <t-node :content="titleContent" />
-  </div>
-  <div :class="contentClass">
-    <slot />
+  <div>
+    <div v-if="titleContent" :class="`${name}__title`">
+      <t-node :content="titleContent" />
+    </div>
+    <div :class="contentClass">
+      <slot />
+    </div>
   </div>
 </template>
 
