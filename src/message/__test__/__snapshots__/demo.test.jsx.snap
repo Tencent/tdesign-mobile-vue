@@ -342,6 +342,66 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
       
     </div>
   </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        03 关闭所有通知
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        关闭所有通知
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot with-padding"
+    >
+      
+      <div
+        class="button-demo button-demo-closeall"
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            打开多个通知
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            关闭所有通知
+            
+          </span>
+          <!---->
+        </button>
+      </div>
+      
+    </div>
+  </div>
 </div>
 `;
 

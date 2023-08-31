@@ -5,6 +5,18 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.0.3 `2023-08-31` 
+### 🚀 Features
+- `Message`: 支持 `closeAll` 方法 @fennghuang ([#1065](https://github.com/Tencent/tdesign-mobile-vue/pull/1065))
+### 🐞 Bug Fixes
+- `ImageViewer`: 修复单图时预览错误 @LoopZhou ([#1063](https://github.com/Tencent/tdesign-mobile-vue/pull/1063))
+- `CellGroup`: 修复组件层 `class` 属性无效和控制台告警 @anlyyao ([#1069](https://github.com/Tencent/tdesign-mobile-vue/pull/1069))
+- `Swiper`: 修复 `click` 事件无效的问题 @anlyyao ([#1064](https://github.com/Tencent/tdesign-mobile-vue/pull/1064))
+- `Swiper`: 修复条状（dots-bar)示例中高度错误问题 @LoopZhou ([#1067](https://github.com/Tencent/tdesign-mobile-vue/pull/1067))
+- `Picker`: 修复 `v-model/modelValue` 为空时组件报错 @anlyyao ([#1071](https://github.com/Tencent/tdesign-mobile-vue/pull/1071))
+- `DateTimePicker`:  修复 `onConfirm` 为空时控制台报错 @LoopZhou ([#1061](https://github.com/Tencent/tdesign-mobile-vue/pull/1061))
+ 
+ 
 ## 🌈 1.0.2 `2023-08-22` 
 ### 🚀 Features
 - `Table`: 支持 `cell` 属性，用于自定义单元格 @anlyyao ([#1046](https://github.com/Tencent/tdesign-mobile-vue/pull/1046))
