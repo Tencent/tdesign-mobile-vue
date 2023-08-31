@@ -15,7 +15,6 @@ exports[`calendar > props > : format 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="visibility: visible;"
     >
       <!--v-if-->
       

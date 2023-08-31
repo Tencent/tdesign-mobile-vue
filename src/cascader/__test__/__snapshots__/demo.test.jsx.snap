@@ -60,7 +60,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="visibility: hidden;"
+      style="display: none;"
     >
       <!--v-if-->
       
@@ -288,7 +288,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="visibility: hidden;"
+      style="display: none;"
     >
       <!--v-if-->
       
@@ -516,7 +516,7 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="visibility: hidden;"
+      style="display: none;"
     >
       <!--v-if-->
       
@@ -741,7 +741,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--bottom"
-          style="visibility: hidden;"
+          style="display: none;"
         >
           <!--v-if-->
           
@@ -982,7 +982,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--bottom"
-          style="visibility: hidden;"
+          style="display: none;"
         >
           <!--v-if-->
           
@@ -1198,7 +1198,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--bottom"
-          style="visibility: hidden;"
+          style="display: none;"
         >
           <!--v-if-->
           
@@ -1439,7 +1439,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--bottom"
-          style="visibility: hidden;"
+          style="display: none;"
         >
           <!--v-if-->
           
@@ -1680,7 +1680,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--bottom"
-          style="visibility: hidden;"
+          style="display: none;"
         >
           <!--v-if-->
           
@@ -1925,7 +1925,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--bottom"
-          style="visibility: hidden;"
+          style="display: none;"
         >
           <!--v-if-->
           
@@ -2122,7 +2122,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="visibility: hidden;"
+      style="display: none;"
     >
       <!--v-if-->
       
@@ -2321,7 +2321,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="visibility: hidden;"
+      style="display: none;"
     >
       <!--v-if-->
       
@@ -2553,7 +2553,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="visibility: hidden;"
+      style="display: none;"
     >
       <!--v-if-->
       

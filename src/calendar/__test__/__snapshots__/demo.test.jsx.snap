@@ -16,7 +16,7 @@ exports[`Calendar > Calendar baseVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="visibility: hidden;"
+        style="display: none;"
       >
         <!--v-if-->
         
@@ -2209,7 +2209,7 @@ exports[`Calendar > Calendar customButtonVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="visibility: hidden;"
+        style="display: none;"
       >
         <!--v-if-->
         
@@ -4403,7 +4403,7 @@ exports[`Calendar > Calendar customRangeVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="visibility: hidden;"
+        style="display: none;"
       >
         <!--v-if-->
         
@@ -4863,7 +4863,7 @@ exports[`Calendar > Calendar customTextVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="visibility: hidden;"
+        style="display: none;"
       >
         <!--v-if-->
         
@@ -5874,7 +5874,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-popup t-popup--bottom"
-                style="visibility: hidden;"
+                style="display: none;"
               >
                 <!--v-if-->
                 
@@ -8061,7 +8061,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-popup t-popup--bottom"
-                style="visibility: hidden;"
+                style="display: none;"
               >
                 <!--v-if-->
                 
@@ -10248,7 +10248,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-popup t-popup--bottom"
-                style="visibility: hidden;"
+                style="display: none;"
               >
                 <!--v-if-->
                 
@@ -12460,7 +12460,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-popup t-popup--bottom"
-            style="visibility: hidden;"
+            style="display: none;"
           >
             <!--v-if-->
             
@@ -13434,7 +13434,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-popup t-popup--bottom"
-            style="visibility: hidden;"
+            style="display: none;"
           >
             <!--v-if-->
             
@@ -15621,7 +15621,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-popup t-popup--bottom"
-            style="visibility: hidden;"
+            style="display: none;"
           >
             <!--v-if-->
             
@@ -18198,7 +18198,7 @@ exports[`Calendar > Calendar multipleVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="visibility: hidden;"
+        style="display: none;"
       >
         <!--v-if-->
         
@@ -20388,7 +20388,7 @@ exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="visibility: hidden;"
+        style="display: none;"
       >
         <!--v-if-->
         
