@@ -5,7 +5,7 @@ toc: false
 spline: explain
 ---
 
-    ## 🌈 1.0.3 `2023-08-31` 
+## 🌈 1.0.3 `2023-08-31` 
 ### 🚀 Features
 - `Message`: 支持 `closeAll` 方法 @fennghuang ([#1065](https://github.com/Tencent/tdesign-mobile-vue/pull/1065))
 ### 🐞 Bug Fixes
@@ -17,7 +17,7 @@ spline: explain
 - `DateTimePicker`:  修复 `onConfirm` 为空时控制台报错 @LoopZhou ([#1061](https://github.com/Tencent/tdesign-mobile-vue/pull/1061))
  
 
-   ## 🌈 1.0.2 `2023-08-22` 
+## 🌈 1.0.2 `2023-08-22` 
 ### 🚀 Features
 - `Table`: 支持 `cell` 属性，用于自定义单元格 @anlyyao ([#1046](https://github.com/Tencent/tdesign-mobile-vue/pull/1046))
 ### 🐞 Bug Fixes
@@ -29,11 +29,11 @@ spline: explain
 ### 🚧 Others
 - other: 添加邮箱校验 @yaogengzhu ([#1050](https://github.com/Tencent/tdesign-mobile-vue/pull/1050)) 
 
-  ## 🌈 1.0.1 `2023-08-17` 
+## 🌈 1.0.1 `2023-08-17` 
 ### 🐞 Bug Fixes
 - `upload`:  修复`useUpload`导入异常 @linesoft2 ([#1038](https://github.com/Tencent/tdesign-mobile-vue/pull/1038)) 
 
- ## 🌈 1.0.0 `2023-08-16` 
+## 🌈 1.0.0 `2023-08-16` 
 ### ❗ Breaking Changes
 - `CellGroup`: 调整 `DOM` 结构 @anlyyao ([#1010](https://github.com/Tencent/tdesign-mobile-vue/pull/1010))
 - `Rate`: 移除 variant 废弃属性 @LeeJim ([#1005](https://github.com/Tencent/tdesign-mobile-vue/pull/1005))
