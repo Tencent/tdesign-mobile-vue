@@ -67,3 +67,10 @@ export const reconvertUnit = (val: string | number | undefined) => {
   if (val == null) return 0;
   return isNumber(val) ? Number(val) : Number(val.slice(0, -2));
 };
+
+export type ScrollElement = Element | Window;
+
+export function getScrollTop(el: ScrollElement): number {
+  const top = 'scrollTop' in el ? el.scrollTop : el.pageYOffset;
+  return Math.max(top, 0);
+}

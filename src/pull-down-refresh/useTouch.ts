@@ -1,51 +1,78 @@
 import { ref } from 'vue';
 
-const isElement = (node: Element) => {
-  const ELEMENT_NODE_TYPE = 1;
-  return node.tagName !== 'HTML' && node.tagName !== 'BODY' && node.nodeType === ELEMENT_NODE_TYPE;
-};
+type Direction = '' | 'vertical' | 'horizontal';
+export const TAP_OFFSET = 5;
+
+function getDirection(x: number, y: number) {
+  if (x > y) {
+    return 'horizontal';
+  }
+  if (y > x) {
+    return 'vertical';
+  }
+  return '';
+}
 
 export function useTouch() {
+  const startX = ref(0);
   const startY = ref(0);
+  const deltaX = ref(0);
   const deltaY = ref(0);
-  const start = (event: TouchEvent) => {
-    startY.value = event.touches[0].clientY;
+  const offsetX = ref(0);
+  const offsetY = ref(0);
+  const direction = ref<Direction>('');
+  const isTap = ref(true);
+
+  const isVertical = () => direction.value === 'vertical';
+  const isHorizontal = () => direction.value === 'horizontal';
+
+  const reset = () => {
+    deltaX.value = 0;
     deltaY.value = 0;
+    offsetX.value = 0;
+    offsetY.value = 0;
+    direction.value = '';
+    isTap.value = true;
   };
-  const move = (event: TouchEvent) => {
+
+  const start = ((event: TouchEvent) => {
+    reset();
+    startX.value = event.touches[0].clientX;
+    startY.value = event.touches[0].clientY;
+  }) as EventListener;
+
+  const move = ((event: TouchEvent) => {
     const touch = event.touches[0];
+    // safari back will set clientX to negative number
+    deltaX.value = (touch.clientX < 0 ? 0 : touch.clientX) - startX.value;
     deltaY.value = touch.clientY - startY.value;
-  };
+    offsetX.value = Math.abs(deltaX.value);
+    offsetY.value = Math.abs(deltaY.value);
+
+    // lock direction when distance is greater than a certain value
+    const LOCK_DIRECTION_DISTANCE = 10;
+    if (!direction.value || (offsetX.value < LOCK_DIRECTION_DISTANCE && offsetY.value < LOCK_DIRECTION_DISTANCE)) {
+      direction.value = getDirection(offsetX.value, offsetY.value);
+    }
+
+    if (isTap.value && (offsetX.value > TAP_OFFSET || offsetY.value > TAP_OFFSET)) {
+      isTap.value = false;
+    }
+  }) as EventListener;
+
   return {
-    startY,
-    deltaY,
-    start,
     move,
+    start,
+    reset,
+    startX,
+    startY,
+    deltaX,
+    deltaY,
+    offsetX,
+    offsetY,
+    direction,
+    isVertical,
+    isHorizontal,
+    isTap,
   };
 }
-// 缓动函数
-export const easeDistance = (distance: number, pullDistance: number) => {
-  if (distance > pullDistance) {
-    if (distance < pullDistance * 2) {
-      distance = pullDistance + (distance - pullDistance) / 2;
-    } else {
-      distance = pullDistance * 1.5 + (distance - pullDistance * 2) / 4;
-    }
-  }
-  return Math.round(distance);
-};
-// 获取最新的可滚动父元素
-export const getScrollParent = (node: Element) => {
-  let res = node;
-  while (res && isElement(res)) {
-    if (/auto|scroll/i.test(window.getComputedStyle(res).overflowY)) {
-      return res;
-    }
-    res = res.parentNode as Element;
-  }
-};
-// 确保可滚动的父元素此时处于未滚动状态
-export const isReachTop = (e: TouchEvent) => {
-  const scrollParent = getScrollParent(e.target as Element);
-  return !scrollParent || !scrollParent.scrollTop;
-};
