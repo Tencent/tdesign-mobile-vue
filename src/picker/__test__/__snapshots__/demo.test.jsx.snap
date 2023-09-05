@@ -43,10 +43,7 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -56,7 +53,7 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -232,8 +229,6 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
   </div>
   <teleport-stub
     data-v-049f57a8=""
-    disabled="false"
-    to="[object HTMLBodyElement]"
   >
     <div
       class="t-overlay"
@@ -244,7 +239,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -337,8 +332,6 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
   </teleport-stub>
   <teleport-stub
     data-v-049f57a8=""
-    disabled="false"
-    to="[object HTMLBodyElement]"
   >
     <div
       class="t-overlay"
@@ -349,7 +342,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -547,10 +540,7 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
       
     </div>
   </div>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -560,7 +550,7 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -778,8 +768,6 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       </div>
       <teleport-stub
         data-v-049f57a8=""
-        disabled="false"
-        to="[object HTMLBodyElement]"
       >
         <div
           class="t-overlay"
@@ -790,7 +778,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--bottom"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -883,8 +871,6 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       </teleport-stub>
       <teleport-stub
         data-v-049f57a8=""
-        disabled="false"
-        to="[object HTMLBodyElement]"
       >
         <div
           class="t-overlay"
@@ -895,7 +881,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--bottom"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1072,10 +1058,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1085,7 +1068,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--bottom"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1275,8 +1258,6 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       </div>
       <teleport-stub
         data-v-7ee35211=""
-        disabled="false"
-        to="[object HTMLBodyElement]"
       >
         <div
           class="t-overlay"
@@ -1287,7 +1268,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--bottom"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1455,8 +1436,6 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
   </div>
   <teleport-stub
     data-v-7ee35211=""
-    disabled="false"
-    to="[object HTMLBodyElement]"
   >
     <div
       class="t-overlay"
@@ -1467,7 +1446,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       

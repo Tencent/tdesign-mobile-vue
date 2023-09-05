@@ -94,9 +94,7 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
   
   <teleport-stub
     data-v-70969ba8=""
-    disabled="false"
     style="padding: 100px;"
-    to="[object HTMLBodyElement]"
   >
     <div
       class="t-overlay"
@@ -107,7 +105,7 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--top"
-      style="padding: 100px; display: none;"
+      style="padding: 100px; visibility: hidden;"
     >
       <!--v-if-->
       
@@ -138,9 +136,7 @@ exports[`Popup > Popup customCloseVue demo works fine 1`] = `
     <!---->
   </button>
   <teleport-stub
-    disabled="false"
     style="width: 240px; height: 240px;"
-    to="[object HTMLBodyElement]"
   >
     <div
       class="t-overlay"
@@ -151,7 +147,7 @@ exports[`Popup > Popup customCloseVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="width: 240px; height: 240px; display: none;"
+      style="width: 240px; height: 240px; visibility: hidden;"
     >
       <!--v-if-->
       
@@ -302,9 +298,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         
         <teleport-stub
           data-v-70969ba8=""
-          disabled="false"
           style="padding: 100px;"
-          to="[object HTMLBodyElement]"
         >
           <div
             class="t-overlay"
@@ -315,7 +309,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-popup t-popup--top"
-            style="padding: 100px; display: none;"
+            style="padding: 100px; visibility: hidden;"
           >
             <!--v-if-->
             
@@ -372,9 +366,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         </button>
         <teleport-stub
           data-v-099d70a8=""
-          disabled="false"
           style="height: 258px;"
-          to="[object HTMLBodyElement]"
         >
           <div
             class="t-overlay"
@@ -385,7 +377,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-popup t-popup--bottom"
-            style="height: 258px; display: none;"
+            style="height: 258px; visibility: hidden;"
           >
             <!--v-if-->
             
@@ -439,9 +431,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <teleport-stub
-          disabled="false"
           style="width: 240px; height: 240px;"
-          to="[object HTMLBodyElement]"
         >
           <div
             class="t-overlay"
@@ -452,7 +442,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-popup t-popup--center"
-            style="width: 240px; height: 240px; display: none;"
+            style="width: 240px; height: 240px; visibility: hidden;"
           >
             <!--v-if-->
             
@@ -498,9 +488,7 @@ exports[`Popup > Popup withTitleVue demo works fine 1`] = `
   </button>
   <teleport-stub
     data-v-099d70a8=""
-    disabled="false"
     style="height: 258px;"
-    to="[object HTMLBodyElement]"
   >
     <div
       class="t-overlay"
@@ -511,7 +499,7 @@ exports[`Popup > Popup withTitleVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="height: 258px; display: none;"
+      style="height: 258px; visibility: hidden;"
     >
       <!--v-if-->
       

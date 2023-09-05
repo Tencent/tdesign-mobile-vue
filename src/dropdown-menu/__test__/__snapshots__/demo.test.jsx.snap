@@ -55,8 +55,10 @@ exports[`DropdownMenu > DropdownMenu directionVue demo works fine 1`] = `
       width="1em"
     >
       <path
+        clip-rule="evenodd"
         d="M12 7.5l7 7H5l7-7z"
         fill="currentColor"
+        fill-rule="evenodd"
       />
     </svg>
   </div>
@@ -76,8 +78,10 @@ exports[`DropdownMenu > DropdownMenu directionVue demo works fine 1`] = `
       width="1em"
     >
       <path
+        clip-rule="evenodd"
         d="M12 7.5l7 7H5l7-7z"
         fill="currentColor"
+        fill-rule="evenodd"
       />
     </svg>
   </div>
@@ -374,8 +378,10 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
+              clip-rule="evenodd"
               d="M12 7.5l7 7H5l7-7z"
               fill="currentColor"
+              fill-rule="evenodd"
             />
           </svg>
         </div>
@@ -395,8 +401,10 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
+              clip-rule="evenodd"
               d="M12 7.5l7 7H5l7-7z"
               fill="currentColor"
+              fill-rule="evenodd"
             />
           </svg>
         </div>

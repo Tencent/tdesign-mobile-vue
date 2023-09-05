@@ -21,10 +21,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -34,7 +31,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -127,10 +124,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -140,7 +134,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -235,10 +229,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -248,7 +239,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -328,10 +319,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -341,7 +329,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -417,10 +405,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -430,7 +415,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -521,8 +506,6 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   </button>
   <teleport-stub
     data-v-ddf95d52=""
-    disabled="false"
-    to="[object HTMLBodyElement]"
   >
     <div
       class="t-overlay"
@@ -533,7 +516,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -674,8 +657,6 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   </button>
   <teleport-stub
     data-v-ddf95d52=""
-    disabled="false"
-    to="[object HTMLBodyElement]"
   >
     <div
       class="t-overlay"
@@ -686,7 +667,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -832,8 +813,6 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
   </button>
   <teleport-stub
     data-v-4a76bf3d=""
-    disabled="false"
-    to="[object HTMLBodyElement]"
   >
     <div
       class="t-overlay"
@@ -844,7 +823,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -981,8 +960,6 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
   </button>
   <teleport-stub
     data-v-4a76bf3d=""
-    disabled="false"
-    to="[object HTMLBodyElement]"
   >
     <div
       class="t-overlay"
@@ -993,7 +970,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -1168,10 +1145,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1181,7 +1155,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1261,10 +1235,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1274,7 +1245,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1350,10 +1321,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1363,7 +1331,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1464,10 +1432,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1477,7 +1442,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1570,10 +1535,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1583,7 +1545,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1694,8 +1656,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </button>
       <teleport-stub
         data-v-4a76bf3d=""
-        disabled="false"
-        to="[object HTMLBodyElement]"
       >
         <div
           class="t-overlay"
@@ -1706,7 +1666,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1843,8 +1803,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </button>
       <teleport-stub
         data-v-4a76bf3d=""
-        disabled="false"
-        to="[object HTMLBodyElement]"
       >
         <div
           class="t-overlay"
@@ -1855,7 +1813,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -2015,8 +1973,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </button>
       <teleport-stub
         data-v-ddf95d52=""
-        disabled="false"
-        to="[object HTMLBodyElement]"
       >
         <div
           class="t-overlay"
@@ -2027,7 +1983,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -2168,8 +2124,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </button>
       <teleport-stub
         data-v-ddf95d52=""
-        disabled="false"
-        to="[object HTMLBodyElement]"
       >
         <div
           class="t-overlay"
@@ -2180,7 +2134,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -2340,10 +2294,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -2353,7 +2304,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -2446,10 +2397,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -2459,7 +2407,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -2552,10 +2500,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -2565,7 +2510,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -2658,10 +2603,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -2671,7 +2613,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -2781,10 +2723,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -2794,7 +2733,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -2949,10 +2888,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -2962,7 +2898,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -3055,10 +2991,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -3068,7 +3001,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -3161,10 +3094,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -3174,7 +3104,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -3267,10 +3197,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -3280,7 +3207,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -3390,10 +3317,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -3403,7 +3327,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--center"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       

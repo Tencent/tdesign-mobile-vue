@@ -5,10 +5,7 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
   data-v-app=""
 >
   
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -18,7 +15,7 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--right"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -128,10 +125,7 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
   data-v-app=""
 >
   
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -141,7 +135,7 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--left"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -274,8 +268,6 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
   
   <teleport-stub
     data-v-6846568d=""
-    disabled="false"
-    to="[object HTMLBodyElement]"
   >
     <div
       class="t-overlay"
@@ -286,7 +278,7 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--right"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
@@ -522,10 +514,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
     >
       
       
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -535,7 +524,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--right"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -661,8 +650,6 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       
       <teleport-stub
         data-v-6846568d=""
-        disabled="false"
-        to="[object HTMLBodyElement]"
       >
         <div
           class="t-overlay"
@@ -673,7 +660,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--right"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -892,10 +879,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
     >
       
       
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -905,7 +889,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--left"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1033,10 +1017,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
     >
       
       
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1046,7 +1027,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--left"
-          style="display: none;"
+          style="visibility: hidden;"
         >
           <!--v-if-->
           
@@ -1241,10 +1222,7 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
   data-v-app=""
 >
   
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1254,7 +1232,7 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--left"
-      style="display: none;"
+      style="visibility: hidden;"
     >
       <!--v-if-->
       
