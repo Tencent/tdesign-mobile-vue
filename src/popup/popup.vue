@@ -2,7 +2,7 @@
   <teleport v-if="!destroyOnClose || wrapperVisbile" :to="to" :disabled="!to">
     <t-overlay v-bind="overlayProps" :visible="innerVisible && showOverlay" @click="handleOverlayClick" />
     <transition :name="contentTransitionName" @after-enter="afterEnter" @after-leave="afterLeave">
-      <div v-show="innerVisible" :class="[name, $attrs.class, contentClasses]" :style="rootStyles">
+      <div v-visibility="innerVisible" :class="[name, $attrs.class, contentClasses]" :style="rootStyles">
         <div v-if="closeBtnNode" :class="`${name}__close`" @click="handleCloseClick">
           <t-node :content="closeBtnNode" />
         </div>
@@ -32,6 +32,30 @@ let lockTimes = 0;
 export default defineComponent({
   name,
   components: { TNode, TOverlay },
+  directives: {
+    visibility: {
+      mounted(el, { value }) {
+        // 核心在于挂载时，先设置 visibility，防止默认的 display: none 导致 touch绑定问题
+        el.style.visibility = value ? 'visible' : 'hidden';
+      },
+      updated(el, { value, oldValue }, { transition }) {
+        if (!value === !oldValue) {
+          return;
+        }
+        if (value) {
+          transition.beforeEnter(el);
+          el.style.visibility = 'visible';
+          el.style.display = 'block';
+          transition.enter(el);
+        } else {
+          transition.leave(el, () => {
+            el.style.visibility = 'hidden';
+            el.style.display = 'none';
+          });
+        }
+      },
+    },
+  },
   props: popupProps,
   emits: ['open', 'close', 'opened', 'closed', 'visible-change', 'update:visible', 'update:modelValue'],
   setup(props, context) {
