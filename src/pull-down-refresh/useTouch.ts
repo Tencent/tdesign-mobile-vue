@@ -6,23 +6,32 @@ const isElement = (node: Element) => {
 };
 
 export function useTouch() {
+  const startX = ref(0);
   const startY = ref(0);
-  const deltaY = ref(0);
+  const diffX = ref(0);
+  const diffY = ref(0);
   const start = (event: TouchEvent) => {
-    startY.value = event.touches[0].clientY;
-    deltaY.value = 0;
+    const { clientX, clientY } = event.touches[0];
+    startX.value = clientX;
+    startY.value = clientY;
+    diffY.value = 0;
+    diffX.value = 0;
   };
   const move = (event: TouchEvent) => {
-    const touch = event.touches[0];
-    deltaY.value = touch.clientY - startY.value;
+    const { clientX, clientY } = event.touches[0];
+    diffY.value = clientY - startY.value;
+    diffX.value = clientX - startX.value;
   };
   return {
+    startX,
     startY,
-    deltaY,
+    diffX,
+    diffY,
     start,
     move,
   };
 }
+
 // 缓动函数
 export const easeDistance = (distance: number, pullDistance: number) => {
   if (distance > pullDistance) {
