@@ -3,6 +3,14 @@
 ### Install tdesign-icons-vue-next
 
 Icons are published and managed as a separate npm package. If you want to use it directly in your project, please install `tdesign-icons-vue-next`. At the same time, `tdesign-vue-next` also includes icons and supports direct use through `t-icon`.
+
+
+### Import on-demand
+
+SVG icons can be imported on demand. When using the Icon component in component development, SVG icons are imported on demand.
+
+{{ single }}
+
 ### Full import
 
 The icon size supports multiple units, such as 'small', 'medium', 'large', '35px', '3em', etc.
@@ -10,12 +18,6 @@ The icon color is controlled by CSS, for example, using style="color: red" or st
 Click on the 「All Icons」 navigation on the right to view all icons in the component library.
 
 {{ base }}
-
-### Import on-demand
-
-SVG icons can be imported on demand. When using the Icon component in component development, SVG icons are imported on demand.
-
-{{ single }}
 
 ### Advanced usage of SVG
 

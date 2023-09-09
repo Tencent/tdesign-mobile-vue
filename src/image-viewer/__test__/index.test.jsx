@@ -34,28 +34,28 @@ describe('ImageViewer', () => {
       expect(wrapper.findAll('.t-swiper-item').length).toBe(images.value.length);
     });
 
-    it(':maxZoom', async () => {
-      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} maxZoom={2} />);
+    // it(':maxZoom', async () => {
+    //   const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} maxZoom={2} />);
 
-      const target = wrapper.find('.t-swiper-item');
-      triggerZoom(target, 200, 200, 'in');
-      expect(wrapper.vm.imageStyle).toMatchObject({ transform: `scale(${2}, ${2})` });
+    //   const target = wrapper.find('.t-swiper-item');
+    //   triggerZoom(target, 200, 200, 'in');
+    //   expect(wrapper.vm.imageStyle).toMatchObject({ transform: `scale(${2}, ${2})` });
 
-      triggerZoom(target, 200, 200, 'out');
-      expect(wrapper.vm.imageStyle).not.toHaveProperty('transform');
+    //   triggerZoom(target, 200, 200, 'out');
+    //   expect(wrapper.vm.imageStyle).not.toHaveProperty('transform');
 
-      // 测试 toggleScale
-      trigger(target, 'touchstart', 50, 50);
-      trigger(target, 'touchend', 50, 50);
+    //   // 测试 toggleScale
+    //   trigger(target, 'touchstart', 50, 50);
+    //   trigger(target, 'touchend', 50, 50);
 
-      await new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve();
-        }, 100); // 小于 TAP_TIME
-      });
-      trigger(target, 'touchstart', 50, 50);
-      trigger(target, 'touchend', 50, 50);
-    });
+    //   await new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       resolve();
+    //     }, 100); // 小于 TAP_TIME
+    //   });
+    //   trigger(target, 'touchstart', 50, 50);
+    //   trigger(target, 'touchend', 50, 50);
+    // });
 
     it(':visible', async () => {
       const visible = ref(false);

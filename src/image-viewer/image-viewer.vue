@@ -17,18 +17,21 @@
         :autoplay="false"
         :class="`${name}__content`"
         height="100vh"
-        :current="currentIndex"
+        :default-current="currentIndex"
         @change="onSwiperChange"
       >
         <t-swiper-item
           v-for="(image, index) in images"
           :key="index"
           :class="`${name}__swiper-item`"
-          @touchstart="onTouchStart"
+          @touchstart="onTouchStart($event, index)"
           @touchmove="onTouchMove"
           @touchend="onTouchEnd"
         >
-          <t-image :src="image" :style="imageStyle" />
+          <t-image
+            :src="image"
+            :style="`${imageTransitionDuration}; ${index === touchIndex ? `transform: ${imageTransform}` : ''}`"
+          />
         </t-swiper-item>
       </t-swiper>
     </div>
@@ -43,11 +46,11 @@ import config from '../config';
 import ImagediverProps from './props';
 import { renderTNode, TNode, useDefault, useTouch } from '../shared';
 import { preventDefault } from '../shared/dom';
-import { TdImageViewerProps } from './type';
 
 // inner components
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
 import TImage from '../image';
+import { TdImageViewerProps } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-image-viewer`;
@@ -65,12 +68,13 @@ export default defineComponent({
     TImage,
   },
   props: ImagediverProps,
-  emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'delete'],
+  emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'update:index', 'delete'],
   setup(props, { emit }) {
     const internalInstance = getCurrentInstance();
     const state = reactive({
       zooming: false,
       scale: 1,
+      touchIndex: 0,
       swiperStyle: [] as string[],
     });
     const [visible, setVisible] = useDefault(props, emit, 'visible', 'change');
@@ -81,8 +85,6 @@ export default defineComponent({
       'index-change',
     );
     const touch = useTouch();
-
-    // node
     const closeNode = computed(() =>
       renderTNode(internalInstance, 'close-btn', {
         defaultNode: h(CloseIcon),
@@ -94,17 +96,14 @@ export default defineComponent({
       }),
     );
 
-    const imageStyle = computed(() => {
-      const { scale, zooming } = state;
-      const style: CSSProperties = {
-        transitionDuration: zooming ? '0s' : '.3s',
-      };
+    const imageTransform = computed(() => {
+      const { scale } = state;
+      return `scale(${scale}, ${scale})`;
+    });
 
-      if (scale !== 1) {
-        style.transform = `scale(${scale}, ${scale})`;
-      }
-
-      return style;
+    const imageTransitionDuration = computed(() => {
+      const { zooming } = state;
+      return zooming ? 'transition-duration: 0s' : 'transition-duration: 0.3s';
     });
 
     const handleClose = (e: Event, trigger: string) => {
@@ -125,7 +124,7 @@ export default defineComponent({
     let startDistance: number;
     let doubleTapTimer: number | null;
     let touchStartTime: number;
-    const onTouchStart = (event: TouchEvent) => {
+    const onTouchStart = (event: TouchEvent, index: number) => {
       preventDefault(event, true);
       const { touches } = event;
 
@@ -134,6 +133,7 @@ export default defineComponent({
       fingerNum = touches.length;
       touchStartTime = Date.now();
       state.zooming = fingerNum === 2;
+      state.touchIndex = index;
       if (state.zooming) {
         startScale = state.scale;
         startDistance = getDistance(event.touches);
@@ -177,6 +177,8 @@ export default defineComponent({
       if (fingerNum > 1) {
         return;
       }
+
+      resetScale();
 
       const { offsetX, offsetY } = touch;
       const deltaTime = Date.now() - touchStartTime;
@@ -227,7 +229,8 @@ export default defineComponent({
       closeNode,
       deleteNode,
       currentIndex,
-      imageStyle,
+      imageTransform,
+      imageTransitionDuration,
       visible,
       handleClose,
       handleDelete,

@@ -63,13 +63,13 @@
               ]"
               @click="handleCellClick(tr_item, td_item, tr_index, td_index, $event)"
             >
-              <div
-                v-if="![undefined, '', null].includes(get(tr_item, td_item.colKey || ''))"
-                :class="td_item.ellipsis && ellipsisClasses"
-              >
-                {{ get(tr_item, td_item.colKey || '') }}
+              <div :class="td_item.ellipsis && ellipsisClasses">
+                <t-node
+                  :content="
+                    renderCell({ row: tr_item, col: td_item, rowIndex: tr_index, colIndex: td_index }, cellEmptyContent)
+                  "
+                ></t-node>
               </div>
-              <t-node v-else :content="renderCellEmptyContent"></t-node>
             </td>
           </tr>
         </tbody>
@@ -82,15 +82,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, toRefs, getCurrentInstance, h } from 'vue';
+import { defineComponent, computed, toRefs, getCurrentInstance, h, SetupContext } from 'vue';
 import get from 'lodash/get';
-import TdBaseTableProps from './base-table-props';
+import isFunction from 'lodash/isFunction';
+import isString from 'lodash/isString';
+import baseTableProps from './base-table-props';
 import config from '../config';
 import useClassName from './hooks/useClassName';
 import useStyle, { formatCSSUnit } from './hooks/useStyle';
 import { renderTNode, TNode } from '../shared';
-import { TableRowData } from './type';
+import { BaseTableCellParams, TableRowData, TdBaseTableProps } from './type';
 import TLoading from '../loading';
+import { TdLoadingProps } from '../loading/type';
 
 const { prefix } = config;
 const name = `${prefix}-base-table`;
@@ -98,12 +101,12 @@ const name = `${prefix}-base-table`;
 export default defineComponent({
   name,
   components: { TNode },
-  props: TdBaseTableProps,
+  props: baseTableProps,
   emits: ['cell-click', 'row-click', 'scroll'],
-  setup(props) {
+  setup(props, context) {
     const { classPrefix, tableLayoutClasses, tableHeaderClasses, tableBaseClass, tdAlignClasses, tdEllipsisClass } =
       useClassName();
-    const defaultLoadingContent = h(TLoading, { ...props.loadingProps });
+    const defaultLoadingContent = h(TLoading, { ...(props.loadingProps as TdLoadingProps) });
     // 表格基础样式类
     const { tableClasses, tableContentStyles, tableElementStyles } = useStyle(props);
 
@@ -138,6 +141,35 @@ export default defineComponent({
     const internalInstance = getCurrentInstance();
     const renderContentEmpty = computed(() => renderTNode(internalInstance, 'empty'));
     const renderCellEmptyContent = computed(() => renderTNode(internalInstance, 'cellEmptyContent'));
+
+    const renderCell = (
+      params: BaseTableCellParams<TableRowData>,
+      cellEmptyContent?: TdBaseTableProps['cellEmptyContent'],
+    ) => {
+      const { col, row } = params;
+      if (isFunction(col.cell)) {
+        return col.cell(h, params);
+      }
+      if (context.slots[col.colKey]) {
+        return context.slots[col.colKey](params);
+      }
+
+      if (isString(col.cell) && context.slots?.[col.cell]) {
+        return context.slots[col.cell](params);
+      }
+      const r = get(row, col.colKey);
+      // 0 和 false 属于正常可用值，不能使用兜底逻辑 cellEmptyContent
+      if (![undefined, '', null].includes(r)) return r;
+
+      // cellEmptyContent 作为空数据兜底显示，用户可自定义
+      if (cellEmptyContent) {
+        return isFunction(cellEmptyContent) ? cellEmptyContent(h, params) : cellEmptyContent;
+      }
+      if (context.slots.cellEmptyContent) return context.slots.cellEmptyContent(params);
+      if (context.slots['cell-empty-content']) return context.slots['cell-empty-content'](params);
+      return r;
+    };
+
     const loadingClasses = computed(() => [`${classPrefix}-table__loading--full`]);
     const loadingContent = computed(() =>
       renderTNode(internalInstance, 'loading', { defaultNode: defaultLoadingContent }),
@@ -170,6 +202,7 @@ export default defineComponent({
       get,
       handleCellClick,
       handleRowClick,
+      renderCell,
     };
   },
 });

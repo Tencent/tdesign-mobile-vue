@@ -79,6 +79,10 @@ export interface TdCollapsePanelProps {
    */
   header?: string | TNode;
   /**
+   * 面板头左侧图标
+   */
+  headerLeftIcon?: string | TNode;
+  /**
    * 面板头的右侧区域，一般用于呈现面板操作
    */
   headerRightContent?: string | TNode;

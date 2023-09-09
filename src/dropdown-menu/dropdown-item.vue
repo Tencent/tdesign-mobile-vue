@@ -83,6 +83,7 @@ import { useVModel, uniqueFactory } from '../shared';
 import DropdownItemProps from './dropdown-item-props';
 import { DropdownMenuState, DropdownMenuControl } from './context';
 import { TdDropdownMenuProps, DropdownValue } from './type';
+import { KeysType } from '../common';
 
 const { prefix } = config;
 const name = `${prefix}-dropdown-item`;
@@ -121,8 +122,8 @@ export default defineComponent({
       options: computed(() => {
         if (props.keys) {
           return props.options?.map((item) => ({
-            value: item[props.keys?.value ?? 'value'],
-            label: item[props.keys?.label ?? 'label'],
+            value: item[(props.keys as KeysType)?.value ?? 'value'],
+            label: item[(props.keys as KeysType)?.label ?? 'label'],
             disabled: item.disabled,
           }));
         }
@@ -254,12 +255,10 @@ export default defineComponent({
       }
       if (props.multiple) return;
       if (!state.isShowItems) return;
-      const value = passInValue.value || [];
+      const value: any = passInValue.value || [];
       if (value[0] === val) return;
-      if (val) {
-        props.onChange?.(val);
-        setValue(val);
-      }
+      props.onChange?.(val);
+      setValue(val);
       collapseMenu();
       emitEvents('menuClosed', 'content');
     });

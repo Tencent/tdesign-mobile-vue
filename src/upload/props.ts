@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdUploadProps } from './type';
+import { TdUploadProps, UploadFile } from './type';
 import { PropType } from 'vue';
 
 export default {
@@ -29,6 +29,10 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 如果是自动上传模式 `autoUpload=true`，表示全部文件上传之前的钩子函数，函数参数为上传的文件，函数返回值决定是否继续上传，若返回值为 `false` 则终止上传。<br/>如果是非自动上传模式 `autoUpload=false`，则函数返回值为 `false` 时表示本次选中的文件不会加入到文件列表中，即不触发 `onChange` 事件 */
+  beforeAllFilesUpload: {
+    type: Function as PropType<TdUploadProps['beforeAllFilesUpload']>,
+  },
   /** 如果是自动上传模式 `autoUpload=true`，表示单个文件上传之前的钩子函数，若函数返回值为 `false` 则表示不上传当前文件。<br/>如果是非自动上传模式 `autoUpload=false`，函数返回值为 `false` 时表示从上传文件中剔除当前文件 */
   beforeUpload: {
     type: Function as PropType<TdUploadProps['beforeUpload']>,
@@ -39,7 +43,7 @@ export default {
   },
   /** 是否禁用 */
   disabled: Boolean,
-  /** 用于完全自定义文件列表内容 */
+  /** 用于完全自定义文件列表界面内容(UI)，单文件和多文件均有效 */
   fileListDisplay: {
     type: Function as PropType<TdUploadProps['fileListDisplay']>,
   },
@@ -73,6 +77,8 @@ export default {
   imageProps: {
     type: Object as PropType<TdUploadProps['imageProps']>,
   },
+  /** 多个文件是否作为一个独立文件包，整体替换，整体删除。不允许追加文件，只允许替换文件。`theme=file-flow` 时有效 */
+  isBatchUpload: Boolean,
   /** 用于控制文件上传数量，值为 0 则不限制 */
   max: {
     type: Number,
@@ -87,8 +93,17 @@ export default {
       return ['POST', 'GET', 'PUT', 'OPTION', 'PATCH', 'post', 'get', 'put', 'option', 'patch'].includes(val);
     },
   },
+  /** 模拟进度间隔时间，单位：毫秒，默认：300。由于原始的上传请求，小文件上传进度只有 0 和 100，故而新增模拟进度，每间隔 `mockProgressDuration` 毫秒刷新一次模拟进度。小文件设置小一点，大文件设置大一点。注意：当 `useMockProgress` 为真时，当前设置有效 */
+  mockProgressDuration: {
+    type: Number,
+  },
   /** 支持多文件上传 */
   multiple: Boolean,
+  /** 文件上传时的名称 */
+  name: {
+    type: String,
+    default: 'file',
+  },
   /** 自定义上传方法。返回值 `status` 表示上传成功或失败；`error` 或 `response.error` 表示上传失败的原因；<br/>`response` 表示请求上传成功后的返回数据，`response.url` 表示上传成功后的图片/文件地址，`response.files` 表示一个请求上传多个文件/图片后的返回值。<br/>示例一：`{ status: 'fail', error: '上传失败', response }`。<br/>示例二：`{ status: 'success', response: { url: 'https://tdesign.gtimg.com/site/avatar.jpg' } }`。<br/> 示例三：`{ status: 'success', files: [{ url: 'https://xxx.png', name: 'xxx.png' }]}` */
   requestMethod: {
     type: Function as PropType<TdUploadProps['requestMethod']>,
@@ -97,17 +112,40 @@ export default {
   sizeLimit: {
     type: [Number, Object] as PropType<TdUploadProps['sizeLimit']>,
   },
+
   /** 是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传。 */
   useMockProgress: {
     type: Boolean,
     default: true,
   },
+  /** 是否在同一个请求中上传全部文件，默认一个请求上传一个文件。多文件上传时有效 */
+  uploadAllFilesInOneRequest: Boolean,
+  /** 已上传文件列表，同 `files`。TS 类型：`UploadFile` */
+  value: {
+    type: Array as PropType<TdUploadProps['value']>,
+    default: undefined,
+  },
+  modelValue: {
+    type: Array as PropType<TdUploadProps['value']>,
+    default: undefined,
+  },
+  /** 已上传文件列表，同 `files`。TS 类型：`UploadFile`，非受控属性 */
+  defaultValue: {
+    type: Array as PropType<TdUploadProps['defaultValue']>,
+    default: (): TdUploadProps['defaultValue'] => [],
+  },
   /** 上传请求时是否携带 cookie */
   withCredentials: Boolean,
+  /** 点击「取消上传」时触发 */
+  onCancelUpload: Function as PropType<TdUploadProps['onCancelUpload']>,
   /** 已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源 */
   onChange: Function as PropType<TdUploadProps['onChange']>,
   /** 上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构。如果是多文件多请求上传场景，请到事件 `onOneFileFail` 中查看 `response` */
   onFail: Function as PropType<TdUploadProps['onFail']>,
+  /** 多文件/图片场景下，单个文件上传失败后触发，如果一个请求上传一个文件，则会触发多次。单文件/图片不会触发 */
+  onOneFileFail: Function as PropType<TdUploadProps['onOneFileFail']>,
+  /** 单个文件上传成功后触发，在多文件场景下会触发多次。`context.file` 表示当前上传成功的单个文件，`context.response` 表示上传请求的返回数据 */
+  onOneFileSuccess: Function as PropType<TdUploadProps['onOneFileSuccess']>,
   /** 点击图片预览时触发，文件没有预览 */
   onPreview: Function as PropType<TdUploadProps['onPreview']>,
   /** 上传进度变化时触发，真实进度和模拟进度都会触发。<br/>⚠️ 原始上传请求，小文件的上传进度只有 0 和 100，故而不会触发 `progress` 事件；只有大文件才有真实的中间进度。如果你希望很小的文件也显示上传进度，保证 `useMockProgress=true` 的情况下，设置 `mockProgressDuration` 为更小的值。<br/>参数 `options.type=real` 表示真实上传进度，`options.type=mock` 表示模拟上传进度 */
@@ -120,4 +158,6 @@ export default {
   onSuccess: Function as PropType<TdUploadProps['onSuccess']>,
   /** 文件上传校验结束事件，文件数量超出、文件大小超出限制、文件同名、`beforeAllFilesUpload` 返回值为假、`beforeUpload` 返回值为假等场景会触发。<br/>注意：如果设置允许上传同名文件，即 `allowUploadDuplicateFile=true`，则不会因为文件重名触发该事件。<br/>结合 `status` 和 `tips` 可以在组件中呈现不同类型的错误（或告警）提示 */
   onValidate: Function as PropType<TdUploadProps['onValidate']>,
+  /** 待上传文件列表发生变化时触发。`context.files` 表示事件参数为待上传文件，`context.trigger` 引起此次变化的触发来源 */
+  onWaitingUploadFilesChange: Function as PropType<TdUploadProps['onWaitingUploadFilesChange']>,
 };

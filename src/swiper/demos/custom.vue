@@ -1,6 +1,6 @@
 <template>
   <div style="padding: 0 16px">
-    <t-swiper :autoplay="true" height="192" :navigation="{ type: 'dots-bar' }" @change="handleChange">
+    <t-swiper :autoplay="true" height="192px" :navigation="{ type: 'dots-bar' }" @change="handleChange">
       <t-swiper-item v-for="(item, index) in swiperList" :key="index">
         <img :src="item" class="img" />
       </t-swiper-item>
@@ -17,7 +17,7 @@ const swiperList = [
   `${imageCdn}/swiper1.png`,
 ];
 
-const handleChange = (index: number) => {
-  console.log('基础示例,页数变化到》》》', index);
+const handleChange = (index: number, context: any) => {
+  console.log('基础示例,页数变化到》》》', index, context);
 };
 </script>

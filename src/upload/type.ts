@@ -35,6 +35,10 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
   /**
    * 如果是自动上传模式 `autoUpload=true`，表示单个文件上传之前的钩子函数，若函数返回值为 `false` 则表示不上传当前文件。<br/>如果是非自动上传模式 `autoUpload=false`，函数返回值为 `false` 时表示从上传文件中剔除当前文件
    */
+  /**
+   * 如果是自动上传模式 `autoUpload=true`，表示全部文件上传之前的钩子函数，函数参数为上传的文件，函数返回值决定是否继续上传，若返回值为 `false` 则终止上传。<br/>如果是非自动上传模式 `autoUpload=false`，则函数返回值为 `false` 时表示本次选中的文件不会加入到文件列表中，即不触发 `onChange` 事件
+   */
+  beforeAllFilesUpload?: (file: UploadFile[]) => boolean | Promise<boolean>;
   beforeUpload?: (file: UploadFile) => boolean | Promise<boolean>;
   /**
    * 上传请求所需的额外字段，默认字段有 `file`，表示文件信息。可以添加额外的文件名字段，如：`{file_name: "custom-file-name.txt"}`。`autoUpload=true` 时有效。也可以使用 `formatRequest` 完全自定义上传请求的字段
@@ -45,7 +49,7 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   disabled?: boolean;
   /**
-   * 用于完全自定义文件列表内容
+   * 用于完全自定义文件列表界面内容(UI)，单文件和多文件均有效
    */
   fileListDisplay?: TNode<{ files: UploadFile[]; dragEvents?: UploadDisplayDragEvents }>;
   /**
@@ -82,6 +86,11 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    * 用于控制文件上传数量，值为 0 则不限制
    * @default 0
    */
+  /**
+   * 多个文件是否作为一个独立文件包，整体替换，整体删除。不允许追加文件，只允许替换文件。`theme=file-flow` 时有效
+   * @default false
+   */
+  isBatchUpload?: boolean;
   max?: number;
   /**
    * HTTP 请求类型
@@ -92,6 +101,15 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    * 支持多文件上传
    * @default false
    */
+  /**
+   * 文件上传时的名称
+   * @default file
+   */
+  name?: string;
+  /**
+   * 模拟进度间隔时间，单位：毫秒，默认：300。由于原始的上传请求，小文件上传进度只有 0 和 100，故而新增模拟进度，每间隔 `mockProgressDuration` 毫秒刷新一次模拟进度。小文件设置小一点，大文件设置大一点。注意：当 `useMockProgress` 为真时，当前设置有效
+   */
+  mockProgressDuration?: number;
   multiple?: boolean;
   /**
    * 自定义上传方法。返回值 `status` 表示上传成功或失败；`error` 或 `response.error` 表示上传失败的原因；<br/>`response` 表示请求上传成功后的返回数据，`response.url` 表示上传成功后的图片/文件地址，`response.files` 表示一个请求上传多个文件/图片后的返回值。<br/>示例一：`{ status: 'fail', error: '上传失败', response }`。<br/>示例二：`{ status: 'success', response: { url: 'https://tdesign.gtimg.com/site/avatar.jpg' } }`。<br/> 示例三：`{ status: 'success', files: [{ url: 'https://xxx.png', name: 'xxx.png' }]}`
@@ -107,6 +125,30 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   useMockProgress?: boolean;
   /**
+   * 是否在同一个请求中上传全部文件，默认一个请求上传一个文件。多文件上传时有效
+   * @default false
+   */
+  uploadAllFilesInOneRequest?: boolean;
+  /**
+   * 已上传文件列表，同 `files`。TS 类型：`UploadFile`
+   * @default []
+   */
+  value?: Array<T>;
+  /**
+   * 已上传文件列表，同 `files`。TS 类型：`UploadFile`，非受控属性
+   * @default []
+   */
+  defaultValue?: Array<T>;
+  /**
+   * 已上传文件列表，同 `files`。TS 类型：`UploadFile`
+   * @default []
+   */
+  modelValue?: Array<T>;
+  /**
+   * 点击「取消上传」时触发
+   */
+  onCancelUpload?: () => void;
+  /**
    * 上传请求时是否携带 cookie
    * @default false
    */
@@ -119,6 +161,14 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    * 上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构。如果是多文件多请求上传场景，请到事件 `onOneFileFail` 中查看 `response`
    */
   onFail?: (options: UploadFailContext) => void;
+  /**
+   * 多文件/图片场景下，单个文件上传失败后触发，如果一个请求上传一个文件，则会触发多次。单文件/图片不会触发
+   */
+  onOneFileFail?: (options: UploadFailContext) => void;
+  /**
+   * 单个文件上传成功后触发，在多文件场景下会触发多次。`context.file` 表示当前上传成功的单个文件，`context.response` 表示上传请求的返回数据
+   */
+  onOneFileSuccess?: (context: Pick<SuccessContext, 'e' | 'file' | 'response' | 'XMLHttpRequest'>) => void;
   /**
    * 点击图片预览时触发，文件没有预览
    */
@@ -143,6 +193,13 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    * 文件上传校验结束事件，文件数量超出、文件大小超出限制、文件同名、`beforeAllFilesUpload` 返回值为假、`beforeUpload` 返回值为假等场景会触发。<br/>注意：如果设置允许上传同名文件，即 `allowUploadDuplicateFile=true`，则不会因为文件重名触发该事件。<br/>结合 `status` 和 `tips` 可以在组件中呈现不同类型的错误（或告警）提示
    */
   onValidate?: (context: { type: UploadValidateType; files: UploadFile[] }) => void;
+  /**
+   * 待上传文件列表发生变化时触发。`context.files` 表示事件参数为待上传文件，`context.trigger` 引起此次变化的触发来源
+   */
+  onWaitingUploadFilesChange?: (context: {
+    files: Array<UploadFile>;
+    trigger: 'validate' | 'remove' | 'uploaded';
+  }) => void;
 }
 
 export interface UploadFile extends PlainObject {
@@ -248,7 +305,7 @@ export interface ProgressContext {
 export type UploadProgressType = 'real' | 'mock';
 
 export interface UploadRemoveContext {
-  index?: number;
+  index: number;
   file?: UploadFile;
   e: MouseEvent;
 }

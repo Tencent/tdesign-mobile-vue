@@ -18,6 +18,6 @@ import operationDemo from './operation.vue';
 <style scoped>
 .tdesign-mobile-demo {
   background-color: #fff;
-  min-height: 100vh;
+  min-height: 100%;
 }
 </style>

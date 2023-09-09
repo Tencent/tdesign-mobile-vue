@@ -42,9 +42,10 @@ export default {
   maxcharacter: {
     type: Number,
   },
-  /** 用户最多可以输入的字符个数 */
+  /** 用户最多可以输入的字符个数。默认为 -1，不限制输入长度 */
   maxlength: {
     type: Number,
+    default: -1,
   },
   /** 名称，HTML 元素原生属性 */
   name: {

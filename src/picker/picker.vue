@@ -10,7 +10,7 @@
       <div v-for="(item, index) in realColumns" :key="index" :class="`${name}-item__group`">
         <picker-item
           :options="item"
-          :value="pickerValue[index]"
+          :value="pickerValue?.[index]"
           :render-label="renderLabel"
           @pick="handlePick($event, index)"
         />
@@ -57,7 +57,7 @@ export default defineComponent({
     const confirmButtonText = computed(() => getDefaultText(props.confirmBtn, '确认'));
     const cancelButtonText = computed(() => getDefaultText(props.cancelBtn, '取消'));
     const header = computed(() => renderTNode(internalInstance, 'header'));
-    const curValueArray = ref(pickerValue.value.map((item: PickerValue) => item));
+    const curValueArray = ref(pickerValue.value?.map((item: PickerValue) => item) || []);
     const realColumns = computed(() => {
       if (typeof props.columns === 'function') {
         return props.columns(curValueArray.value);
@@ -65,7 +65,7 @@ export default defineComponent({
       return props.columns;
     });
     const curIndexArray = realColumns.value.map((item: PickerColumn, index: number) => {
-      return getIndexFromColumns(item, pickerValue?.value[index]);
+      return getIndexFromColumns(item, pickerValue.value?.[index]);
     });
     const pickerItemInstanceArray = ref([]) as any;
 
@@ -91,7 +91,7 @@ export default defineComponent({
       const { index } = context;
 
       curIndexArray[column] = index;
-      curValueArray.value[column] = realColumns.value[column][index]?.value;
+      curValueArray.value[column] = realColumns.value?.[column][index]?.value;
 
       props.onPick?.(curValueArray.value, { index, column });
     };

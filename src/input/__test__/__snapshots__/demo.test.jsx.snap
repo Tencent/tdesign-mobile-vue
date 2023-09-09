@@ -342,13 +342,12 @@ exports[`Input > Input borderedVue demo works fine 1`] = `
             data-v-0b3942c8=""
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M15 8A7 7 0 101 8a7 7 0 0014 0zM8.5 4v5.5h-1V4h1zm-1.1 7h1.2v1.2H7.4V11z"
+              d="M12 1a11 11 0 110 22 11 11 0 010-22zm-1 13h2V6.5h-2V14zm2 1.5h-2v2h2v-2z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           
@@ -490,13 +489,12 @@ exports[`Input > Input layoutVue demo works fine 1`] = `
           class="t-icon t-icon-error-circle-filled"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M15 8A7 7 0 101 8a7 7 0 0014 0zM8.5 4v5.5h-1V4h1zm-1.1 7h1.2v1.2H7.4V11z"
+            d="M12 1a11 11 0 110 22 11 11 0 010-22zm-1 13h2V6.5h-2V14zm2 1.5h-2v2h2v-2z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         
@@ -919,13 +917,12 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-info-circle-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+                  d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               
@@ -1034,15 +1031,11 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-user-avatar"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 10.5c1.24 0 2.42.31 3.5.88v1.12h1v-1.14a.94.94 0 00-.49-.84 8.48 8.48 0 00-8.02 0 .94.94 0 00-.49.84v1.14h1v-1.12A7.47 7.47 0 018 10.5zM10.5 6a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm-1 0a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M2.5 1.5a1 1 0 00-1 1v11a1 1 0 001 1h11a1 1 0 001-1v-11a1 1 0 00-1-1h-11zm11 1v11h-11v-11h11z"
+                  d="M2 2h20v20H2V2zm17.5 18h.5V4H4v16h.5a5 5 0 015-5h5a5 5 0 015 5zM12 7a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM7.5 9.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zm2 7.5a3 3 0 00-3 3h11a3 3 0 00-3-3h-5z"
                   fill="currentColor"
                 />
               </svg>
@@ -1088,13 +1081,12 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               class="t-icon t-icon-app"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+                d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -1140,13 +1132,12 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               class="t-icon t-icon-app"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+                d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -1240,18 +1231,12 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-browse-off"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 26 24"
                 width="1em"
               >
                 <path
-                  d="M10.77 11.98l1.38 1.37.7-.7-9.7-9.7-.7.7 1.2 1.21a7.9 7.9 0 00-2.53 2.91L1 8l.12.23a7.72 7.72 0 009.65 3.75zM10 11.2A6.67 6.67 0 012.11 8c.56-1 1.34-1.83 2.26-2.43l1.08 1.09a2.88 2.88 0 003.9 3.9l.64.64zM6.21 7.42l2.37 2.37a1.88 1.88 0 01-2.37-2.37zM14.88 8.23L15 8l-.12-.23a7.73 7.73 0 00-9.35-3.86l.8.8A6.7 6.7 0 0113.9 8a6.87 6.87 0 01-2.02 2.26l.7.7a7.9 7.9 0 002.3-2.73z"
+                  d="M4 1.59l6.17 6.17 7.07 7.07L23.41 21 22 22.41l-2.97-2.96A12.5 12.5 0 011.08 12.3L1 12l.1-.3c.77-2.4 2.24-4.5 4.18-6.02L2.59 3 4 1.59zM6.7 7.1A10.53 10.53 0 003.1 12a10.5 10.5 0 0014.45 5.97l-1.8-1.8a5 5 0 01-6.93-6.93L6.7 7.11zm3.6 3.6a3 3 0 004 4l-4-4zM13 5c-.58 0-1.14.05-1.7.14l-.98.16L10 3.32l.99-.16A12.5 12.5 0 0124.9 11.7l.1.31-.1.3c-.41 1.3-1.03 2.5-1.82 3.58l-.59.8-1.61-1.18.59-.8c.6-.82 1.08-1.73 1.42-2.7A10.5 10.5 0 0013 5zm.51 1.93l.96.29a5 5 0 013.31 3.31l.3.96-1.92.58-.3-.95a3 3 0 00-1.98-1.99l-.95-.3.58-1.9z"
                   fill="currentColor"
-                  fill-opacity="0.9"
-                />
-                <path
-                  d="M10.88 8c0 .37-.07.73-.2 1.06l-.82-.82.02-.24a1.88 1.88 0 00-2.12-1.86l-.82-.82A2.87 2.87 0 0110.88 8z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               
@@ -1862,13 +1847,12 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-error-circle-filled"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M15 8A7 7 0 101 8a7 7 0 0014 0zM8.5 4v5.5h-1V4h1zm-1.1 7h1.2v1.2H7.4V11z"
+                  d="M12 1a11 11 0 110 22 11 11 0 010-22zm-1 13h2V6.5h-2V14zm2 1.5h-2v2h2v-2z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               
@@ -2009,13 +1993,12 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                   data-v-0b3942c8=""
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M15 8A7 7 0 101 8a7 7 0 0014 0zM8.5 4v5.5h-1V4h1zm-1.1 7h1.2v1.2H7.4V11z"
+                    d="M12 1a11 11 0 110 22 11 11 0 010-22zm-1 13h2V6.5h-2V14zm2 1.5h-2v2h2v-2z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
                 
@@ -2114,13 +2097,12 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
           class="t-icon t-icon-app"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+            d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         
@@ -2166,13 +2148,12 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
           class="t-icon t-icon-app"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+            d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         
@@ -2253,18 +2234,12 @@ exports[`Input > Input specialVue demo works fine 1`] = `
             class="t-icon t-icon-browse-off"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 26 24"
             width="1em"
           >
             <path
-              d="M10.77 11.98l1.38 1.37.7-.7-9.7-9.7-.7.7 1.2 1.21a7.9 7.9 0 00-2.53 2.91L1 8l.12.23a7.72 7.72 0 009.65 3.75zM10 11.2A6.67 6.67 0 012.11 8c.56-1 1.34-1.83 2.26-2.43l1.08 1.09a2.88 2.88 0 003.9 3.9l.64.64zM6.21 7.42l2.37 2.37a1.88 1.88 0 01-2.37-2.37zM14.88 8.23L15 8l-.12-.23a7.73 7.73 0 00-9.35-3.86l.8.8A6.7 6.7 0 0113.9 8a6.87 6.87 0 01-2.02 2.26l.7.7a7.9 7.9 0 002.3-2.73z"
+              d="M4 1.59l6.17 6.17 7.07 7.07L23.41 21 22 22.41l-2.97-2.96A12.5 12.5 0 011.08 12.3L1 12l.1-.3c.77-2.4 2.24-4.5 4.18-6.02L2.59 3 4 1.59zM6.7 7.1A10.53 10.53 0 003.1 12a10.5 10.5 0 0014.45 5.97l-1.8-1.8a5 5 0 01-6.93-6.93L6.7 7.11zm3.6 3.6a3 3 0 004 4l-4-4zM13 5c-.58 0-1.14.05-1.7.14l-.98.16L10 3.32l.99-.16A12.5 12.5 0 0124.9 11.7l.1.31-.1.3c-.41 1.3-1.03 2.5-1.82 3.58l-.59.8-1.61-1.18.59-.8c.6-.82 1.08-1.73 1.42-2.7A10.5 10.5 0 0013 5zm.51 1.93l.96.29a5 5 0 013.31 3.31l.3.96-1.92.58-.3-.95a3 3 0 00-1.98-1.99l-.95-.3.58-1.9z"
               fill="currentColor"
-              fill-opacity="0.9"
-            />
-            <path
-              d="M10.88 8c0 .37-.07.73-.2 1.06l-.82-.82.02-.24a1.88 1.88 0 00-2.12-1.86l-.82-.82A2.87 2.87 0 0110.88 8z"
-              fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           
@@ -2648,13 +2623,12 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
             class="t-icon t-icon-info-circle-filled"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+              d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           
@@ -2763,15 +2737,11 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
             class="t-icon t-icon-user-avatar"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 10.5c1.24 0 2.42.31 3.5.88v1.12h1v-1.14a.94.94 0 00-.49-.84 8.48 8.48 0 00-8.02 0 .94.94 0 00-.49.84v1.14h1v-1.12A7.47 7.47 0 018 10.5zM10.5 6a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm-1 0a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z"
-              fill="currentColor"
-            />
-            <path
-              d="M2.5 1.5a1 1 0 00-1 1v11a1 1 0 001 1h11a1 1 0 001-1v-11a1 1 0 00-1-1h-11zm11 1v11h-11v-11h11z"
+              d="M2 2h20v20H2V2zm17.5 18h.5V4H4v16h.5a5 5 0 015-5h5a5 5 0 015 5zM12 7a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM7.5 9.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zm2 7.5a3 3 0 00-3 3h11a3 3 0 00-3-3h-5z"
               fill="currentColor"
             />
           </svg>

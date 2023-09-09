@@ -11,7 +11,6 @@ export default {
   /** 透传至 Badge 组件 */
   badgeProps: {
     type: Object as PropType<TdTabPanelProps['badgeProps']>,
-    default: () => null,
   },
   /** 选项卡内容隐藏时是否销毁 */
   destroyOnHide: {

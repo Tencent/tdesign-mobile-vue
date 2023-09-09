@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, getCurrentInstance, computed, ref, watch, toRefs, h } from 'vue';
+import { defineComponent, getCurrentInstance, computed, ref, watch, toRefs, h, setBlockTracking } from 'vue';
 import GradientIcon from './icon/gradient.vue';
 import SpinnerIcon from './icon/spinner.vue';
 import { renderTNode, TNode, renderContent } from '../shared';
@@ -62,9 +62,7 @@ export default defineComponent({
       },
     ]);
 
-    const textContent = computed(() => {
-      return renderTNode(internalInstance, 'text');
-    });
+    const textContent = computed(() => renderTNode(internalInstance, 'text'));
 
     const defaultContent = computed(() => renderContent(internalInstance, 'default', 'content'));
 
@@ -84,46 +82,55 @@ export default defineComponent({
       spinner: SpinnerIcon,
     };
 
-    const indicatorContent = computed(() =>
-      renderTNode(internalInstance, 'indicator', {
-        defaultNode:
-          props.theme === 'dots'
-            ? h(
-                'div',
-                {
-                  class: `${name}__dots`,
-                  style: {
-                    animationPlayState: props.pause ? 'paused' : '',
-                    animationDirection: props.reverse ? 'reverse' : '',
-                    animationDuration: `${props.duration}ms`,
-                    width: props.size,
-                    height: props.size,
-                  },
-                },
-                [
-                  Array.from({ length: 3 }).map((val, i) => {
-                    return h('div', {
-                      class: `${name}__dot`,
-                      style: props.duration
-                        ? `animation-duration: ${props.duration / 1000}s; animation-delay: ${
-                            (props.duration * i) / 3000
-                          }s`
-                        : '',
-                    });
-                  }),
-                ],
-              )
-            : h(defaultIndicator[props.theme || 'circular'], {
-                style: {
-                  animationPlayState: props.pause ? 'paused' : '',
-                  animationDirection: props.reverse ? 'reverse' : '',
-                  animationDuration: `${props.duration}ms`,
-                  width: props.size,
-                  height: props.size,
-                },
-              }),
-      }),
-    );
+    const dotsLoading = computed(() => {
+      setBlockTracking(-1);
+      const node = h(
+        'div',
+        {
+          class: `${name}__dots`,
+          style: {
+            animationPlayState: props.pause ? 'paused' : '',
+            animationDirection: props.reverse ? 'reverse' : '',
+            animationDuration: `${props.duration}ms`,
+            width: props.size,
+            height: props.size,
+          },
+        },
+        [
+          Array.from({ length: 3 }).map((val, i) => {
+            return h('div', {
+              class: `${name}__dot`,
+              style: props.duration
+                ? `animation-duration: ${props.duration / 1000}s; animation-delay: ${(props.duration * i) / 3000}s`
+                : '',
+            });
+          }),
+        ],
+      );
+      setBlockTracking(1);
+      return node;
+    });
+
+    const defaultLoading = computed(() => {
+      setBlockTracking(-1);
+      const node = h(defaultIndicator[props.theme || 'circular'], {
+        style: {
+          animationPlayState: props.pause ? 'paused' : '',
+          animationDirection: props.reverse ? 'reverse' : '',
+          animationDuration: `${props.duration}ms`,
+          width: props.size,
+          height: props.size,
+        },
+      });
+      setBlockTracking(1);
+      return node;
+    });
+
+    const indicatorContent = computed(() => {
+      return renderTNode(internalInstance, 'indicator', {
+        defaultNode: props.theme === 'dots' ? dotsLoading.value : defaultLoading.value,
+      });
+    });
 
     return {
       name,

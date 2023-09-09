@@ -112,6 +112,6 @@ export interface SwiperNavigation {
   type?: SwiperNavigationType;
 }
 
-export type SwiperChangeSource = 'autoplay' | 'touch' | '';
+export type SwiperChangeSource = 'autoplay' | 'touch' | 'nav';
 
 export type SwiperNavigationType = 'dots' | 'dots-bar' | 'fraction';

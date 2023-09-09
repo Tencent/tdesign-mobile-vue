@@ -2,7 +2,7 @@
   <div class="upload-demo">
     <div class="upload-title">单选上传</div>
     <t-upload
-      :default-files="[]"
+      v-model="files"
       :multiple="false"
       :max="1"
       :size-limit="{ size: 3000000, unit: 'B' }"
@@ -15,8 +15,10 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue';
 import { Message } from 'tdesign-mobile-vue';
 
+const files = ref([]);
 const onValidate = (context: any) => {
   if (context.type === 'FILE_OVER_SIZE_LIMIT') {
     Message.warning('文件大小超出上限');

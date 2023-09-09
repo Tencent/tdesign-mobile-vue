@@ -30,3 +30,19 @@ change | `(value: Date)` | 不显示 confirm-btn 时，完成选择时触发（�
 close | `(trigger: CalendarTrigger)` | 关闭按钮时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts)。<br/>`type CalendarTrigger = 'close-btn' \| 'confirm-btn' \| 'overlay'`<br/>
 confirm | `(value: Date)` | 点击确认按钮时触发
 select | `(value: Date)` | 点击日期时触发
+
+
+### CSS 变量
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-calendar-active-color | @brand-color | - 
+--td-calendar-bg-color | @bg-color-container | - 
+--td-calendar-days-color | @font-gray-2 | - 
+--td-calendar-item-centre-color | @brand-color-light | - 
+--td-calendar-item-disabled-color | @font-gray-4 | - 
+--td-calendar-item-suffix-color | @font-gray-3 | - 
+--td-calendar-radius | 12px | - 
+--td-calendar-selected-color | @font-white-1 | - 
+--td-calendar-title-color | @font-gray-1 | - 
+--td-calendar-title-font-size | 18px | - 

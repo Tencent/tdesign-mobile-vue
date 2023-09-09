@@ -29,11 +29,9 @@ const direction = computed(() => (isVertical.value ? 'Y' : 'X'));
 const calcTranslateStyle = (index: number, activeIndex: number) => {
   const distance = root.value?.[isVertical.value ? 'offsetHeight' : 'offsetWidth'] ?? 0;
   const lastItemIndex = items.value.length - 1;
-  let step = Math.min(index + 1, Math.abs(activeIndex - index));
+  let step = activeIndex === lastItemIndex && index === 0 ? 1 : index - activeIndex;
 
   if (activeIndex === index) step = 0;
-  else if (index === activeIndex + 1 || (loop && activeIndex === lastItemIndex && index === 0)) step = 1;
-  else if (index === activeIndex - 1 || (loop && activeIndex === 0 && index === lastItemIndex)) step = -1;
 
   rootStyle.value = `transform: translate${direction.value}(${step * distance}px)`;
 };

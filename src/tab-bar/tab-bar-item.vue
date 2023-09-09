@@ -17,15 +17,9 @@
       :aria-selected="(!hasChildren || !isSpread) && isChecked"
       :aria-expanded="hasChildren && isSpread"
       :role="hasChildren ? 'button' : 'tab'"
-      :aria-label="ariaLabel"
       @click="toggle"
     >
-      <div
-        v-if="!!iconContent"
-        :class="`${name}__icon`"
-        :style="{ height: `${iconOnly ? 24 : 20}px` }"
-        :aria-hidden="!!badgeProps?.dot || !!badgeProps?.count"
-      >
+      <div v-if="!!iconContent" :class="`${name}__icon`" :style="{ height: `${iconOnly ? 24 : 20}px` }">
         <t-badge
           v-if="badgeProps?.dot || badgeProps?.count"
           :count="badgeProps?.count || 0"
@@ -79,6 +73,7 @@ import {
 } from 'vue';
 import { ViewListIcon as TViewListIcon } from 'tdesign-icons-vue-next';
 import TBadge from '../badge';
+import { TdBadgeProps } from '../badge/type';
 import config from '../config';
 import { initName } from './useTabBar';
 import TabBarItemProps from './tab-bar-item-props';
@@ -97,8 +92,10 @@ export default defineComponent({
 
     const textNode = ref<HTMLElement>();
 
+    const badgeProps = computed((): TdBadgeProps => props.badgeProps);
+
     const getBadgeAriaLabel = () => {
-      const options = props.badgeProps;
+      const options = badgeProps.value;
       if (options?.dot || options?.count) {
         const maxCount = options.maxCount || 99;
         if (options.dot) {
@@ -188,6 +185,7 @@ export default defineComponent({
 
     return {
       ...toRefs(props),
+      badgeProps,
       name,
       split,
       shape,

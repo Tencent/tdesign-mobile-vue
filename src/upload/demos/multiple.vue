@@ -22,7 +22,7 @@
 import { ref } from 'vue';
 import { UploadChangeContext, UploadFile, UploadRemoveContext, SuccessContext, ProgressContext } from '../type';
 
-const onFail = ({ file, e }: { file: UploadFile; e: ProgressEvent }) => {
+const onFail = ({ file, e }: { file: UploadFile; e: ProgressEvent }): any => {
   console.log('---onFail', file, e);
   return null;
 };

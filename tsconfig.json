@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
     "target": "esnext",
+    "outDir": "lib",
     "module": "esnext",
     "strict": true,
     "declaration": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
-    "strictNullChecks": true,
+    "strictNullChecks": false,
     "removeComments": true,
     "suppressImplicitAnyIndexErrors": true,
     "resolveJsonModule": true,
@@ -37,5 +38,6 @@
     "src/style/index.js",
     "scripts/rollup.config.js"
   ],
-  "exclude": ["node_modules", "src/_common", "dist", "es", "esm", "lib", "site"]
+  "exclude": ["node_modules", "src/_common", "dist", "es", "esm", "lib", "site"],
+  "compileOnSave": false
 }

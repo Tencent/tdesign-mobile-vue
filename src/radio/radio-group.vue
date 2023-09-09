@@ -10,6 +10,7 @@
         :disabled="'disabled' in opt ? opt.disabled : disabled"
         :value="opt[keys?.value ?? 'value']"
         :label="opt[keys?.label ?? 'label']"
+        :placement="placement"
       ></radio>
     </template>
     <slot v-if="!options"></slot>
@@ -23,6 +24,7 @@ import RadioGroupProps from '../radio/radio-group-props';
 import { RadioOption, RadioOptionObj, RadioValue, TdRadioGroupProps } from '../radio/type';
 import Radio from './radio.vue';
 import config from '../config';
+import { KeysType } from '../common';
 
 const { prefix } = config;
 const componentName = `${prefix}-radio-group`;
@@ -39,6 +41,8 @@ export default defineComponent({
       'value',
       'change',
     );
+
+    const keys = computed((): KeysType => props.keys);
     const groupOptions = computed(() => {
       return props.options?.map((option: RadioOption) => {
         let opt = option as RadioOptionObj;
@@ -61,6 +65,7 @@ export default defineComponent({
     provide('rootGroupChange', handleRadioChange);
     return {
       ...toRefs(props),
+      keys,
       componentName,
       groupOptions,
     };

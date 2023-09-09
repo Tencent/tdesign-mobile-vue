@@ -182,13 +182,12 @@ exports[`Switch > Switch labelVue demo works fine 1`] = `
                 fill="none"
                 height="1em"
                 style="font-size: 20px;"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                  d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -387,13 +386,12 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                     fill="none"
                     height="1em"
                     style="font-size: 20px;"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                      d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                 </div>
