@@ -256,7 +256,6 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
 exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  style="background-color: rgb(255, 255, 255);"
 >
   <h1
     class="title"

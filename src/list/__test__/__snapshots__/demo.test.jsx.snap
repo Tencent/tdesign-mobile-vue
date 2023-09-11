@@ -75,7 +75,7 @@ exports[`List > List mobileVue demo works fine 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle"
+            class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
             role="button"
             type="button"
           >
@@ -91,7 +91,7 @@ exports[`List > List mobileVue demo works fine 1`] = `
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle"
+            class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
             role="button"
             type="button"
           >
@@ -107,7 +107,7 @@ exports[`List > List mobileVue demo works fine 1`] = `
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle"
+            class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
             role="button"
             type="button"
           >

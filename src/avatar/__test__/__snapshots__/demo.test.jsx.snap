@@ -486,12 +486,13 @@ exports[`Avatar > Avatar badgeAvatarVue demo works fine 1`] = `
                 class="t-icon t-icon-user"
                 fill="none"
                 height="1em"
-                viewBox="0 0 24 24"
+                viewBox="0 0 16 16"
                 width="1em"
               >
                 <path
-                  d="M12 4a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM6.5 7.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0zM3 19a5 5 0 015-5h8a5 5 0 015 5v3H3v-3zm5-3a3 3 0 00-3 3v1h14v-1a3 3 0 00-3-3H8z"
+                  d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
                   fill="currentColor"
+                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -960,12 +961,13 @@ exports[`Avatar > Avatar iconAvatarVue demo works fine 1`] = `
                 class="t-icon t-icon-user"
                 fill="none"
                 height="1em"
-                viewBox="0 0 24 24"
+                viewBox="0 0 16 16"
                 width="1em"
               >
                 <path
-                  d="M12 4a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM6.5 7.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0zM3 19a5 5 0 015-5h8a5 5 0 015 5v3H3v-3zm5-3a3 3 0 00-3 3v1h14v-1a3 3 0 00-3-3H8z"
+                  d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
                   fill="currentColor"
+                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1000,12 +1002,13 @@ exports[`Avatar > Avatar iconAvatarVue demo works fine 1`] = `
                 class="t-icon t-icon-user"
                 fill="none"
                 height="1em"
-                viewBox="0 0 24 24"
+                viewBox="0 0 16 16"
                 width="1em"
               >
                 <path
-                  d="M12 4a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM6.5 7.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0zM3 19a5 5 0 015-5h8a5 5 0 015 5v3H3v-3zm5-3a3 3 0 00-3 3v1h14v-1a3 3 0 00-3-3H8z"
+                  d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
                   fill="currentColor"
+                  fill-opacity="0.9"
                 />
               </svg>
             </div>
@@ -1164,20 +1167,23 @@ exports[`Avatar > Avatar imageAvatarVue demo works fine 1`] = `
 exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  style="background-color: rgb(255, 255, 255);"
+  data-v-c7b11864=""
 >
   <h1
     class="title"
+    data-v-c7b11864=""
   >
     Avatar 头像
   </h1>
   <p
     class="summary"
+    data-v-c7b11864=""
   >
     用于展示用户头像信息，除了纯展示也可点击进入个人详情等操作。
   </p>
   <div
     class="tdesign-mobile-demo-block"
+    data-v-c7b11864=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1199,6 +1205,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
       
       <div
         class="avatar-demo"
+        data-v-c7b11864=""
       >
         <div
           class="t-avatar__wrapper avatar-example"
@@ -1340,6 +1347,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-c7b11864=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1357,6 +1365,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
       
       <div
         class="avatar-demo"
+        data-v-c7b11864=""
       >
         <div
           aria-label="字符头像"
@@ -1423,6 +1432,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-c7b11864=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1440,6 +1450,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
       
       <div
         class="avatar-demo"
+        data-v-c7b11864=""
       >
         <div
           class="t-avatar__wrapper avatar-example"
@@ -1464,12 +1475,13 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-user"
                       fill="none"
                       height="1em"
-                      viewBox="0 0 24 24"
+                      viewBox="0 0 16 16"
                       width="1em"
                     >
                       <path
-                        d="M12 4a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM6.5 7.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0zM3 19a5 5 0 015-5h8a5 5 0 015 5v3H3v-3zm5-3a3 3 0 00-3 3v1h14v-1a3 3 0 00-3-3H8z"
+                        d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
                         fill="currentColor"
+                        fill-opacity="0.9"
                       />
                     </svg>
                   </div>
@@ -1504,12 +1516,13 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-user"
                       fill="none"
                       height="1em"
-                      viewBox="0 0 24 24"
+                      viewBox="0 0 16 16"
                       width="1em"
                     >
                       <path
-                        d="M12 4a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM6.5 7.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0zM3 19a5 5 0 015-5h8a5 5 0 015 5v3H3v-3zm5-3a3 3 0 00-3 3v1h14v-1a3 3 0 00-3-3H8z"
+                        d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
                         fill="currentColor"
+                        fill-opacity="0.9"
                       />
                     </svg>
                   </div>
@@ -1527,6 +1540,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
+    data-v-c7b11864=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1548,6 +1562,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
       
       <div
         class="avatar-group-demo"
+        data-v-c7b11864=""
       >
         <div
           class="t-avatar-group t-avatar-group-offset-left-medium"
@@ -1902,6 +1917,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-c7b11864=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1919,6 +1935,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
       
       <div
         class="avatar-group-demo"
+        data-v-c7b11864=""
       >
         <div
           class="t-avatar-group t-avatar-group-offset-right-medium"
@@ -2268,6 +2285,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-c7b11864=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -2285,6 +2303,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
       
       <div
         class="avatar-demo"
+        data-v-c7b11864=""
       >
         <div
           class="t-avatar__wrapper avatar-example"
@@ -2419,12 +2438,13 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-user"
                       fill="none"
                       height="1em"
-                      viewBox="0 0 24 24"
+                      viewBox="0 0 16 16"
                       width="1em"
                     >
                       <path
-                        d="M12 4a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM6.5 7.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0zM3 19a5 5 0 015-5h8a5 5 0 015 5v3H3v-3zm5-3a3 3 0 00-3 3v1h14v-1a3 3 0 00-3-3H8z"
+                        d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
                         fill="currentColor"
+                        fill-opacity="0.9"
                       />
                     </svg>
                   </div>
@@ -2449,6 +2469,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
+    data-v-c7b11864=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -2470,6 +2491,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
       
       <div
         class="tdesign-demo-avatar"
+        data-v-c7b11864=""
       >
         <div
           class="avatar-demo"
@@ -2599,12 +2621,13 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-user"
                         fill="none"
                         height="1em"
-                        viewBox="0 0 24 24"
+                        viewBox="0 0 16 16"
                         width="1em"
                       >
                         <path
-                          d="M12 4a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM6.5 7.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0zM3 19a5 5 0 015-5h8a5 5 0 015 5v3H3v-3zm5-3a3 3 0 00-3 3v1h14v-1a3 3 0 00-3-3H8z"
+                          d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
                           fill="currentColor"
+                          fill-opacity="0.9"
                         />
                       </svg>
                     </div>
@@ -2745,12 +2768,13 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-user"
                         fill="none"
                         height="1em"
-                        viewBox="0 0 24 24"
+                        viewBox="0 0 16 16"
                         width="1em"
                       >
                         <path
-                          d="M12 4a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM6.5 7.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0zM3 19a5 5 0 015-5h8a5 5 0 015 5v3H3v-3zm5-3a3 3 0 00-3 3v1h14v-1a3 3 0 00-3-3H8z"
+                          d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
                           fill="currentColor"
+                          fill-opacity="0.9"
                         />
                       </svg>
                     </div>
@@ -2891,12 +2915,13 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-user"
                         fill="none"
                         height="1em"
-                        viewBox="0 0 24 24"
+                        viewBox="0 0 16 16"
                         width="1em"
                       >
                         <path
-                          d="M12 4a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM6.5 7.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0zM3 19a5 5 0 015-5h8a5 5 0 015 5v3H3v-3zm5-3a3 3 0 00-3 3v1h14v-1a3 3 0 00-3-3H8z"
+                          d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
                           fill="currentColor"
+                          fill-opacity="0.9"
                         />
                       </svg>
                     </div>
@@ -3048,12 +3073,13 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
                   class="t-icon t-icon-user"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 24 24"
+                  viewBox="0 0 16 16"
                   width="1em"
                 >
                   <path
-                    d="M12 4a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM6.5 7.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0zM3 19a5 5 0 015-5h8a5 5 0 015 5v3H3v-3zm5-3a3 3 0 00-3 3v1h14v-1a3 3 0 00-3-3H8z"
+                    d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
                     fill="currentColor"
+                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -3194,12 +3220,13 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
                   class="t-icon t-icon-user"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 24 24"
+                  viewBox="0 0 16 16"
                   width="1em"
                 >
                   <path
-                    d="M12 4a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM6.5 7.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0zM3 19a5 5 0 015-5h8a5 5 0 015 5v3H3v-3zm5-3a3 3 0 00-3 3v1h14v-1a3 3 0 00-3-3H8z"
+                    d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
                     fill="currentColor"
+                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
@@ -3340,12 +3367,13 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
                   class="t-icon t-icon-user"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 24 24"
+                  viewBox="0 0 16 16"
                   width="1em"
                 >
                   <path
-                    d="M12 4a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM6.5 7.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0zM3 19a5 5 0 015-5h8a5 5 0 015 5v3H3v-3zm5-3a3 3 0 00-3 3v1h14v-1a3 3 0 00-3-3H8z"
+                    d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
                     fill="currentColor"
+                    fill-opacity="0.9"
                   />
                 </svg>
               </div>
