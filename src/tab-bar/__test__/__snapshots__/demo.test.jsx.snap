@@ -1091,13 +1091,12 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-view-list t-tab-bar-item__icon-menu"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M14 4.5H2v-1h12v1zM14 8.5H2v-1h12v1zM2 12.5h12v-1H2v1z"
+                  d="M2 4h20v2H2V4zm0 7h20v2H2v-2zm1 7H2v2h20v-2H3z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               
@@ -2064,13 +2063,12 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
           class="t-icon t-icon-view-list t-tab-bar-item__icon-menu"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M14 4.5H2v-1h12v1zM14 8.5H2v-1h12v1zM2 12.5h12v-1H2v1z"
+            d="M2 4h20v2H2V4zm0 7h20v2H2v-2zm1 7H2v2h20v-2H3z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         

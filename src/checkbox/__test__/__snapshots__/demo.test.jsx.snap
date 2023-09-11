@@ -18,13 +18,12 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
             class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+              d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           
@@ -58,13 +57,12 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
             class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+              d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           
@@ -98,13 +96,12 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
             class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+              d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           
@@ -138,13 +135,12 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
             class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
             fill="none"
             height="1em"
-            viewBox="0 0 16 16"
+            viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+              d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           
@@ -190,13 +186,12 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
           class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+            d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         
@@ -230,13 +225,12 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
           class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
           fill="none"
           height="1em"
-          viewBox="0 0 16 16"
+          viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+            d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
             fill="currentColor"
-            fill-opacity="0.9"
           />
         </svg>
         
@@ -348,13 +342,12 @@ exports[`Checkbox > Checkbox cardVue demo works fine 1`] = `
         class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+          d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
       
@@ -389,13 +382,12 @@ exports[`Checkbox > Checkbox cardVue demo works fine 1`] = `
         class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+          d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
       
@@ -475,13 +467,12 @@ exports[`Checkbox > Checkbox horizontalVue demo works fine 1`] = `
         class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+          d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
       
@@ -516,13 +507,12 @@ exports[`Checkbox > Checkbox horizontalVue demo works fine 1`] = `
         class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+          d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
       
@@ -635,13 +625,12 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+                    d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
                 
@@ -675,13 +664,12 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                   fill="none"
                   height="1em"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+                    d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
                     fill="currentColor"
-                    fill-opacity="0.9"
                   />
                 </svg>
                 
@@ -811,13 +799,12 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+                  d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               
@@ -852,13 +839,12 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+                  d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               
@@ -954,13 +940,12 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+                      d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -994,13 +979,12 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+                      d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -1034,13 +1018,12 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+                      d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -1074,13 +1057,12 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
                     <path
-                      d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+                      d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
                       fill="currentColor"
-                      fill-opacity="0.9"
                     />
                   </svg>
                   
@@ -1146,13 +1128,12 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+                  d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               
@@ -1280,13 +1261,12 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               class="t-icon t-icon-check-rectangle-filled t-checkbox__icon-wrapper"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M2 13a1 1 0 001 1h10a1 1 0 001-1V3a1 1 0 00-1-1H3a1 1 0 00-1 1v10zm5-3.64l3.77-3.78.71.7L7 10.79l-2.49-2.5.71-.7L7 9.36z"
+                d="M22 2H2v20h20V2zM6.09 12l1.41-1.41 3 3 6-6L17.91 9l-7.41 7.41L6.09 12z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -1378,13 +1358,12 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+                d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -1422,13 +1401,12 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+                d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
             
@@ -1489,13 +1467,12 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+                  d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               
@@ -1530,13 +1507,12 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                 fill="none"
                 height="1em"
-                viewBox="0 0 16 16"
+                viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
-                  d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+                  d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               
@@ -1905,13 +1881,12 @@ exports[`Checkbox > Checkbox rightVue demo works fine 1`] = `
         class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+          d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
       
@@ -1949,13 +1924,12 @@ exports[`Checkbox > Checkbox rightVue demo works fine 1`] = `
         class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+          d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
       
@@ -2268,13 +2242,12 @@ exports[`Checkbox > Checkbox statusVue demo works fine 1`] = `
         class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+          d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
       
@@ -2384,13 +2357,12 @@ exports[`Checkbox > Checkbox typeVue demo works fine 1`] = `
         class="t-icon t-icon-check-rectangle-filled t-checkbox__icon-wrapper"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M2 13a1 1 0 001 1h10a1 1 0 001-1V3a1 1 0 00-1-1H3a1 1 0 00-1 1v10zm5-3.64l3.77-3.78.71.7L7 10.79l-2.49-2.5.71-.7L7 9.36z"
+          d="M22 2H2v20h20V2zM6.09 12l1.41-1.41 3 3 6-6L17.91 9l-7.41 7.41L6.09 12z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
       

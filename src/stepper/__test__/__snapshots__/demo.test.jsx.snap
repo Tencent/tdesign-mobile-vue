@@ -14,13 +14,12 @@ exports[`Stepper > Stepper baseVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          d="M4 11h16v2H4v-2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -36,13 +35,12 @@ exports[`Stepper > Stepper baseVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -64,13 +62,12 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          d="M4 11h16v2H4v-2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -86,13 +83,12 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -107,13 +103,12 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          d="M4 11h16v2H4v-2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -129,13 +124,12 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -150,13 +144,12 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          d="M4 11h16v2H4v-2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -172,13 +165,12 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -234,13 +226,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3.5 7.35h9v1.3h-9v-1.3z"
+                d="M4 11h16v2H4v-2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -256,13 +247,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -305,13 +295,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3.5 7.35h9v1.3h-9v-1.3z"
+                d="M4 11h16v2H4v-2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -327,13 +316,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -348,13 +336,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3.5 7.35h9v1.3h-9v-1.3z"
+                d="M4 11h16v2H4v-2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -370,13 +357,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -391,13 +377,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3.5 7.35h9v1.3h-9v-1.3z"
+                d="M4 11h16v2H4v-2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -413,13 +398,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -458,13 +442,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3.5 7.35h9v1.3h-9v-1.3z"
+                d="M4 11h16v2H4v-2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -481,13 +464,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -530,13 +512,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3.5 7.35h9v1.3h-9v-1.3z"
+                d="M4 11h16v2H4v-2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -552,13 +533,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -573,13 +553,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3.5 7.35h9v1.3h-9v-1.3z"
+                d="M4 11h16v2H4v-2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -595,13 +574,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -616,13 +594,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3.5 7.35h9v1.3h-9v-1.3z"
+                d="M4 11h16v2H4v-2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -638,13 +615,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -683,13 +659,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3.5 7.35h9v1.3h-9v-1.3z"
+                d="M4 11h16v2H4v-2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -705,13 +680,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -726,13 +700,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3.5 7.35h9v1.3h-9v-1.3z"
+                d="M4 11h16v2H4v-2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -748,13 +721,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -769,13 +741,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3.5 7.35h9v1.3h-9v-1.3z"
+                d="M4 11h16v2H4v-2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -791,13 +762,12 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
                 fill="currentColor"
-                fill-opacity="0.9"
               />
             </svg>
           </div>
@@ -823,13 +793,12 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          d="M4 11h16v2H4v-2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -845,13 +814,12 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -866,13 +834,12 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          d="M4 11h16v2H4v-2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -888,13 +855,12 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -909,13 +875,12 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          d="M4 11h16v2H4v-2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -931,13 +896,12 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -959,13 +923,12 @@ exports[`Stepper > Stepper statusVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          d="M4 11h16v2H4v-2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -982,13 +945,12 @@ exports[`Stepper > Stepper statusVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -1010,13 +972,12 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          d="M4 11h16v2H4v-2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -1032,13 +993,12 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -1053,13 +1013,12 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          d="M4 11h16v2H4v-2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -1075,13 +1034,12 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -1096,13 +1054,12 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          d="M4 11h16v2H4v-2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
@@ -1118,13 +1075,12 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
           fill="currentColor"
-          fill-opacity="0.9"
         />
       </svg>
     </div>
