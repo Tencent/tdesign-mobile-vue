@@ -66,6 +66,10 @@ export default defineComponent({
     const { height: maxBarHeight } = useElementSize(maxBar);
     const actualLoadingBarHeight = ref(0);
 
+    // 默认 0 左右移动 1 上下移动 -1
+    let touchDir: -1 | 0 | 1;
+    const touchThreshold = 5;
+
     watch(
       [loading, loadingBarHeight],
       ([val], [prevVal]) => {
@@ -113,22 +117,38 @@ export default defineComponent({
       timer = null;
       distance.value = 0;
       touch.start(e);
+      touchDir = 0;
     };
 
     const onTouchMove = (e: TouchEvent) => {
       if (!isReachTop(e) || loading.value) return;
+      touch.move(e);
 
-      const { deltaY } = touch;
-      actualLoadingBarHeight.value = deltaY.value;
-      const nextDistance = easeDistance(deltaY.value, loadingBarHeight.value);
+      const { diffY, diffX } = touch;
+      const absX = Math.abs(diffX.value);
+      const absY = Math.abs(diffY.value);
+
+      if (!touchDir && absX < touchThreshold && absY < touchThreshold) {
+        return;
+      }
+      if (!touchDir && absX < absY) {
+        touchDir = -1;
+      } else if (!touchDir && absX >= absY) {
+        touchDir = 1;
+      }
+
+      // 左右移动时，不进行后续操作
+      if (touchDir === 1) return;
+
+      actualLoadingBarHeight.value = diffY.value;
+      const nextDistance = easeDistance(diffY.value, loadingBarHeight.value);
       // 下拉时，防止下拉整个页面
-      if (deltaY.value > 0) {
+      if (diffY.value > 0) {
         preventDefault(e, false);
       }
       if (nextDistance >= 0 && nextDistance < maxBarHeight.value) {
         distance.value = nextDistance;
       }
-      touch.move(e);
     };
 
     const onTouchEnd = (e: TouchEvent) => {
