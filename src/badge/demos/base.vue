@@ -37,3 +37,8 @@ import { h } from 'vue';
 
 const IconNotification = () => h(NotificationIcon);
 </script>
+<style lang="less">
+.badge-demo {
+  color: var(--td-text-color-primary, rgba(0, 0, 0, 0.9));
+}
+</style>

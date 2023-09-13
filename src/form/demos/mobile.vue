@@ -56,7 +56,7 @@ const onChangeSwitch = (val: any) => {
   margin-bottom: 12px;
 }
 .button-group {
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
   box-sizing: border-box;
   padding: 8px 4px;
   display: flex;

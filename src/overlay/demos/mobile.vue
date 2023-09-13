@@ -18,7 +18,7 @@ import BaseDemo from './base.vue';
 body,
 #app,
 .tdesign-mobile-demo {
-  background: #fff;
+  background-color: var(--bg-color-demo, #fff);
 
   .demo-block {
     padding: 0 16px;

@@ -12,7 +12,7 @@ const clickHandle = () => {
 <style scoped>
 .tdesign-mobile-link-demo {
   height: 48px;
-  background: #ffffffff;
+  background-color: var(--bg-color-demo, #fff);
   display: flex;
   justify-content: space-around;
   margin-bottom: 6.4vw;
