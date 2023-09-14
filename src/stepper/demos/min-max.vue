@@ -36,6 +36,6 @@ const onOverlimit = ($type: string) => {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
 }
 </style>

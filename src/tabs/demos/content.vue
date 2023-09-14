@@ -46,7 +46,7 @@ const onChange = (value: string) => {
   align-items: center;
   justify-content: center;
   display: flex;
-  color: rgba(#000000, 0.66);
+  color: var(--td-text-color-secondary, rgba(#000000, 0.66));
   margin: 0;
   font-size: 14px;
   font-weight: 400;

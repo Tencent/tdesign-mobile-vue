@@ -13,6 +13,6 @@ const number = ref(3);
 <style lang="less">
 .stepper-example {
   padding: 16px;
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
 }
 </style>

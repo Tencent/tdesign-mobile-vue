@@ -118,7 +118,6 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
   data-v-806aae90=""
-  style="background-color: rgb(255, 255, 255);"
 >
   <h1
     class="title"

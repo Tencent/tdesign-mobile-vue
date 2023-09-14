@@ -14,7 +14,7 @@ const texts = ref(['非常糟糕', '有些糟糕', '可以尝试', '可以前往
 
 <style lang="less" scoped>
 .rate-demo-cell {
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
   padding: 12px 16px;
   line-height: 1;
   display: flex;
@@ -29,6 +29,7 @@ const texts = ref(['非常糟糕', '有些糟糕', '可以尝试', '可以前往
   .desc {
     text-align: center;
     margin-top: 12px;
+    color: var(--td-text-color-primary, rgba(0, 0, 0, 0.9));
 
     &--active {
       color: #ed7b2f;

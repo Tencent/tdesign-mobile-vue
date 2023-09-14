@@ -124,7 +124,7 @@ const onScroll = (e: WheelEvent | Event) => {
 .side-bar-wrapper {
   display: flex;
   height: 100vh;
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
   .content {
     flex: 1;
     overflow-y: scroll;

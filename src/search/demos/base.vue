@@ -39,7 +39,7 @@ const value = ref('');
 </script>
 <style lang="less">
 .example-search {
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
   padding: 8px 16px;
 }
 </style>

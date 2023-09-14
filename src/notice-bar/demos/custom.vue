@@ -16,11 +16,11 @@ import { SoundIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 <style lang="less">
 .cover-class {
   .t-icon {
-    color: rgba(0, 0, 0, 0.9) !important;
+    color: var(--td-text-color-primary, rgba(0, 0, 0, 0.9)) !important;
   }
   .t-notice-bar__text {
-    color: #ffffff !important;
+    color: var(--bg-color-demo, #fff) !important;
   }
-  background-color: rgba(243, 243, 243, 1);
+  background-color: var(--bg-color-demo, #fff);
 }
 </style>

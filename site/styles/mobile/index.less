@@ -3,9 +3,61 @@
 @import './components.less';
 @import './demo.less';
 
+
+:root[theme-mode="dark"] {
+  --bg-color-demo: #181818;
+  --bg-color-demo-secondary: #2c2c2c;
+  --bg-color-scroll: #434343;
+
+  body{
+    background-color: var(--bg-color-demo);
+  }
+  .tdesign-demo-topnav {
+    background-color: var(--bg-color-demo);
+    &-title {
+      color: #fff;
+    }
+    &__back {
+      color: #fff;
+    }
+  }
+  .tdesign-demo-main .tdesign-mobile-demo {
+    background-color: var(--bg-color-demo);
+  }
+  .tdesign-demo-main .title,
+  .tdesign-demo-main .summary,
+  .tdesign-mobile-demo-block__title,
+  .tdesign-mobile-demo-block__summary {
+    color: #fff;
+  }
+}
+
+  html::-webkit-scrollbar, body::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+    background: transparent;
+  }
+
+  html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+    background: var(--bg-color-demo);
+  }
+
+  html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+    background-color: var(--bg-color-scroll);
+  }
+  html::-webkit-scrollbar-corner, body::-webkit-scrollbar-corner {
+    width: 0;
+  }
+
+
 body {
   background-color: #F6F6F6;
+  color: var(--bg-color-tab);
 }
+
 
 #app {
   height: 100%;
@@ -102,3 +154,5 @@ body {
     cursor: pointer;
   }
 }
+
+

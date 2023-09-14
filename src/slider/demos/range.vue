@@ -16,7 +16,7 @@ function onChange($event: number | number[]) {
 
 <style lang="less" scoped>
 .wrapper {
-  background: #fff;
+  background: var(--bg-color-demo, #fff);
   padding: 18px 0;
 }
 </style>

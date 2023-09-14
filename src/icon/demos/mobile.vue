@@ -35,4 +35,10 @@ import single from './single.vue';
     margin-right: 24px;
   }
 }
+
+:root[theme-mode='dark'] {
+  .tdesign-mobile-demo {
+    color: var(--td-text-color-primary);
+  }
+}
 </style>

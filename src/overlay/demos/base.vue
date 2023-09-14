@@ -1,5 +1,5 @@
 <template>
-  <t-button size="large" block variant="outline" @click="visible = true">基础用法</t-button>
+  <t-button size="large" block variant="outline" theme="primary" @click="visible = true">基础用法</t-button>
   <t-overlay :visible="visible" @click="visible = false" />
 </template>
 

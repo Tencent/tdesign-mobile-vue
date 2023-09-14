@@ -36,6 +36,7 @@ const onHide = () => (visible.value = false);
   text-align: center;
   font-weight: 600;
   font-size: 18px;
+  color: var(--td-text-color-primary, rgba(0, 0, 0, 0.9));
 }
 
 .btn {
@@ -44,7 +45,7 @@ const onHide = () => (visible.value = false);
 }
 
 .btn--cancel {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--td-text-color-secondary, rgba(0, 0, 0, 0.6));
 }
 
 .btn--confirm {

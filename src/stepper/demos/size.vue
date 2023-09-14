@@ -22,6 +22,6 @@ const handleChange = ($event: number) => {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
 }
 </style>

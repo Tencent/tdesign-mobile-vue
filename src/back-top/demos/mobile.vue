@@ -1,5 +1,5 @@
 <template>
-  <div class="tdesign-mobile-demo" :style="{ 'background-color': '#fff' }">
+  <div class="tdesign-mobile-demo">
     <h1 class="title">BackTop 回到顶部</h1>
     <p class="summary">当页面过长往下滑动是会出现返回顶部的便捷操作，帮助用户快速回到页面顶部</p>
     <tdesign-demo-block title="01 类型" summary="圆型返回顶部">
