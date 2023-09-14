@@ -6,7 +6,7 @@
           <div ref="navWrap" :class="`${name}__wrapper ${name}__wrapper--${theme}`">
             <div
               v-for="(item, index) in itemProps"
-              :key="item.value"
+              :key="item.label"
               :class="{
                 [`${name}__item ${name}__item--top`]: true,
                 [`${name}__item--evenly`]: spaceEvenly,
