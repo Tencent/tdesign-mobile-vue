@@ -392,7 +392,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-772b64ec=""
           role="button"
           type="button"

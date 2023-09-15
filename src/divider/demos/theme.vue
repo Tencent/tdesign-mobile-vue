@@ -10,7 +10,7 @@
 <style lang="less" scoped>
 .divider-demo__title {
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--td-text-color-secondary, rgba(0, 0, 0, 0.6));
   padding: 8px 16px;
   line-height: 20px;
 }

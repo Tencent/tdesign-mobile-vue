@@ -20,6 +20,6 @@ import customClose from './custom-close.vue';
 
 <style scoped>
 .tdesign-mobile-demo {
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
 }
 </style>

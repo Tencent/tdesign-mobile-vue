@@ -22,6 +22,12 @@ const list = ref([
 </script>
 
 <style lang="less" scoped>
+:root[theme-mode='dark'] {
+  .wrapper {
+    --td-tab-bar-color: rgba(0, 0, 0, 0.9);
+  }
+}
+
 .wrapper {
   --td-tab-bar-border-color: #e7e7e7;
   --td-tab-bar-bg-color: #eee;

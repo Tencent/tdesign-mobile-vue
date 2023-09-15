@@ -31,9 +31,9 @@ import { Icon as TIcon } from 'tdesign-icons-vue-next';
   font-size: 28px;
   line-height: 36px;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.9);
+  color: var(--td-text-color-primary, rgba(0, 0, 0, 0.9));
   padding: 0px 20px 16px;
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
 }
 
 .t-icon-home {

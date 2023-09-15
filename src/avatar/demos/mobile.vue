@@ -1,5 +1,5 @@
 <template>
-  <div class="tdesign-mobile-demo" style="background-color: #fff">
+  <div class="tdesign-mobile-demo">
     <h1 class="title">Avatar 头像</h1>
     <p class="summary">用于展示用户头像信息，除了纯展示也可点击进入个人详情等操作。</p>
     <tdesign-demo-block title="01 组件类型" summary="图片头像">
@@ -35,3 +35,8 @@ import action from './action.vue';
 import badgeAvatar from './badge-avatar.vue';
 import size from './size.vue';
 </script>
+<style scoped>
+.tdesign-mobile-demo {
+  background-color: var(--bg-color-demo, #fff);
+}
+</style>

@@ -38,6 +38,6 @@ const handleClick = (t = 'base') => {
 }
 
 .tdesign-mobile-demo {
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
 }
 </style>

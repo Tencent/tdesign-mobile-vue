@@ -21,7 +21,7 @@ const Hover = {
           el?.classList.add(className);
         }, startTime);
       },
-      false,
+      { capture: false, passive: true },
     );
 
     el.addEventListener(

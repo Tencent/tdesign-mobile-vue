@@ -1,5 +1,5 @@
 <template>
-  <div class="tdesign-mobile-demo" :style="{ 'background-color': '#fff' }">
+  <div class="tdesign-mobile-demo">
     <h1 class="title">ActionSheet 动作面板</h1>
     <p class="summary">从底部弹出的模态框，提供和当前场景相关的操作动作，也支持提供信息输入和描述。</p>
     <tdesign-demo-block title="01 类型" summary="列表型">
@@ -27,6 +27,10 @@ import StatusVue from './status.vue';
 </script>
 
 <style lang="less">
+.tdesign-mobile-demo {
+  background-color: var(--bg-color-demo, #fff);
+}
+
 .action-sheet-grid-demo {
   > div {
     margin-top: 8px;

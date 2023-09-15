@@ -20,6 +20,6 @@ const checkboxGroupChange = (value: any, context: { e: Event }) => {
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
 }
 </style>

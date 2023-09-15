@@ -56,7 +56,7 @@ const time = 96 * 60 * 1000;
 
 <style lang="less">
 .demo-count-down-desc {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--td-text-color-secondary, rgba(0, 0, 0, 0.6));
   font-size: 14px;
 }
 

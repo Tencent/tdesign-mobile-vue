@@ -28,7 +28,7 @@ import Size from './size.vue';
 
 <style lang="less">
 .tdesign-mobile-demo {
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
 }
 .tag-demo {
   padding: 0 16px;
@@ -38,7 +38,7 @@ import Size from './size.vue';
 }
 .group {
   padding: 16px;
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
   display: flex;
   align-items: center;
 

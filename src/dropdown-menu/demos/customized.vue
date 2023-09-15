@@ -131,6 +131,7 @@ function confirmSelect() {
   &_label {
     padding: 16px 0 0 16px;
     font-size: 14px;
+    color: var(--td-text-color-primary, rgba(0, 0, 0, 0.9));
   }
   &_footer {
     display: flex;

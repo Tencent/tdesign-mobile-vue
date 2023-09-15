@@ -5,6 +5,19 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.0.4 `2023-09-15` 
+### 🐞 Bug Fixes
+- `Cascader`: 修复选项卡模式中选中值不更新的问题 @fennghuang ([#1091](https://github.com/Tencent/tdesign-mobile-vue/pull/1091))
+- `SideBar`: 修复按需引入时控制台告警 @anlyyao ([#1092](https://github.com/Tencent/tdesign-mobile-vue/pull/1092))
+- `Grid`: 修复 `boder `边框缺失 @anlyyao ([#1090](https://github.com/Tencent/tdesign-mobile-vue/pull/1090))
+- `PullDownRefresh`: 修复与 `SwipeCell` 同用时左滑操作易触发下拉的问题 @fennghuang ([#1080](https://github.com/Tencent/tdesign-mobile-vue/pull/1080))
+- `Message`: 改用`min-height`自适应文本高度 @anlyyao ([#1596](https://github.com/Tencent/tdesign-common/pull/1596))
+- `Input`: 新增`CSS Variables: --td-input-label-width` @anlyyao ([#1588](https://github.com/Tencent/tdesign-common/pull/1588))
+### 🚧 Others
+- other: 修复 `CHANGELOG` 自动生成时缩进格式异常 @liweijie0812 ([#1077](https://github.com/Tencent/tdesign-mobile-vue/pull/1077))
+- other: 修复 `v-hover` 产生的控制台告警 @anlyyao ([#1078](https://github.com/Tencent/tdesign-mobile-vue/pull/1078))
+- other: 支持暗色模式，以适配官网暗色模式下的展示体验 @novlan1 ([#1082](https://github.com/Tencent/tdesign-mobile-vue/pull/1082))
+
 ## 🌈 1.0.3 `2023-08-31` 
 ### 🚀 Features
 - `Message`: 支持 `closeAll` 方法 @fennghuang ([#1065](https://github.com/Tencent/tdesign-mobile-vue/pull/1065))

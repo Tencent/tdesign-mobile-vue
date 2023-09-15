@@ -21,6 +21,6 @@ import placementDemo from './placement.vue';
 
 <style lang="less" scoped>
 .tdesign-mobile-demo {
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
 }
 </style>

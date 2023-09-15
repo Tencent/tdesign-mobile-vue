@@ -13,7 +13,7 @@
 
     <tdesign-demo-block title="" summary="页面位置展示">
       <div class="padding">
-        <t-button size="large" variant="outline" block @click="handleClick"> 页面位置展示 </t-button>
+        <t-button size="large" variant="outline" block theme="primary" @click="handleClick"> 页面位置展示 </t-button>
       </div>
     </tdesign-demo-block>
   </div>
@@ -24,7 +24,7 @@
         <t-result theme="success" title="成功状态" description="描述文字" />
       </div>
       <div class="demo-section__wrapper">
-        <t-button size="large" variant="outline" block @click="handleClick"> 返回 </t-button>
+        <t-button size="large" variant="outline" block theme="primary" @click="handleClick"> 返回 </t-button>
       </div>
     </div>
   </template>
@@ -45,7 +45,7 @@ const handleClick = () => {
 
 <style lang="less" scoped>
 .tdesign-mobile-demo {
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
 
   .padding {
     padding: 0 16px 16px;
@@ -54,7 +54,7 @@ const handleClick = () => {
 
 .result-page {
   height: calc(100vh - 50px);
-  background-color: #fff;
+  background-color: var(--bg-color-demo, #fff);
 
   .demo-section__wrapper {
     padding: 24px 16px;

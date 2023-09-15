@@ -7,7 +7,7 @@ exports[`Overlay > Overlay baseVue demo works fine 1`] = `
   
   <button
     aria-disabled="false"
-    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     role="button"
     type="button"
   >
@@ -73,7 +73,7 @@ exports[`Overlay > Overlay mobileVue demo works fine 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           role="button"
           type="button"
         >

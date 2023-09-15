@@ -24,7 +24,7 @@ const marks = ref({
 
 <style lang="less" scoped>
 .wrapper {
-  background: #fff;
+  background: var(--bg-color-demo, #fff);
   margin-top: 16px;
   padding: 18px 0;
 }

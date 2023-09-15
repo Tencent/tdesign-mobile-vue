@@ -57,7 +57,7 @@ const onCancel = () => {
 .t-input {
   margin-top: 16px;
   --td-input-vertical-padding: 12px;
-  --td-bg-color-container: #f3f3f3;
+  --td-bg-color-container: var(--td-bg-color-page, #f3f3f3);
   border-radius: 6px;
 }
 </style>
