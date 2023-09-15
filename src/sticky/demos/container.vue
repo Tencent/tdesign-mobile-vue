@@ -15,7 +15,7 @@ const onScroll = (context: { scrollTop: number; isFixed: boolean }) => {
 .sticky-demo {
   width: 100%;
   height: 150px;
-  background-color: var(--bg-color-demo-secondary, #2c2c2c);
+  background-color: var(--bg-color-demo-secondary, rgba(255, 255, 255, 1));
 }
 .common-button {
   color: #fff;
