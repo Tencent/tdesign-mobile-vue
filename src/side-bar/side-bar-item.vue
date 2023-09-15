@@ -15,6 +15,7 @@
 
 <script lang="ts">
 import { defineComponent, getCurrentInstance, ComponentInternalInstance, computed, inject, onUnmounted } from 'vue';
+import TBadge from '../badge';
 import { renderTNode, TNode } from '../shared';
 import SideBarItemProps from './side-bar-item-props';
 
@@ -25,7 +26,7 @@ const name = `${prefix}-side-bar-item`;
 
 export default defineComponent({
   name,
-  components: { TNode },
+  components: { TNode, TBadge },
   props: SideBarItemProps,
   setup(props) {
     const internalInstance = getCurrentInstance();
