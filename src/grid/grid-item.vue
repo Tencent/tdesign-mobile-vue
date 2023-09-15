@@ -49,7 +49,6 @@ export default defineComponent({
   setup(props, context) {
     const internalInstance = getCurrentInstance();
     const { column, border, align, gutter } = inject<any>('grid');
-    console.log('==', gutter.value);
     const imageContent = computed(() => renderTNode(internalInstance, 'image'));
     const textContent = computed(() => renderTNode(internalInstance, 'text'));
     const descContent = computed(() => renderTNode(internalInstance, 'description'));
