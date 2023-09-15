@@ -1,5 +1,12 @@
 <template>
-  <div :class="[`${name}`, `${name}--${layout}`, { [`${name}--bordered`]: border }]" :style="rootStyle">
+  <div
+    :class="[
+      `${name}`,
+      `${name}--${layout}`,
+      { [`${name}--bordered`]: border, [`${name}--surround`]: border && gutter },
+    ]"
+    :style="rootStyle"
+  >
     <div :class="[`${name}__image`, `${name}__image--${size}`]">
       <t-badge v-if="badge" v-bind="badge">
         <t-image v-if="realImage" shape="round" v-bind="realImage" />
@@ -41,8 +48,7 @@ export default defineComponent({
   props: gridItemProps,
   setup(props, context) {
     const internalInstance = getCurrentInstance();
-    const { column, border, align } = inject<any>('grid');
-
+    const { column, border, align, gutter } = inject<any>('grid');
     const imageContent = computed(() => renderTNode(internalInstance, 'image'));
     const textContent = computed(() => renderTNode(internalInstance, 'text'));
     const descContent = computed(() => renderTNode(internalInstance, 'description'));
@@ -77,6 +83,7 @@ export default defineComponent({
       name,
       size,
       border,
+      gutter,
       rootStyle,
       rootClass,
       realImage,

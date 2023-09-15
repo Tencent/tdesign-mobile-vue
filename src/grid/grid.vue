@@ -1,6 +1,13 @@
 <template>
   <div
-    :class="[`${name}`, { [`${name}--card`]: theme === 'card', [`${name}--auto-size`]: column === 0 }]"
+    :class="[
+      `${name}`,
+      {
+        [`${name}--card`]: theme === 'card',
+        [`${name}--auto-size`]: column === 0,
+        [`${name}--bordered`]: border && !gutter,
+      },
+    ]"
     :style="rootStyle"
   >
     <slot />
@@ -36,6 +43,7 @@ export default defineComponent({
       column,
       border,
       align,
+      gutter,
     });
 
     return {

@@ -1189,7 +1189,7 @@ exports[`Grid > Grid borderedVue demo works fine 1`] = `
 >
   
   <div
-    class="t-grid grid-demo"
+    class="t-grid t-grid--bordered grid-demo"
     data-v-fb92dfac=""
     style="grid-template-columns: repeat(3, 1fr);"
   >
@@ -1599,7 +1599,7 @@ exports[`Grid > Grid borderedVue demo works fine 1`] = `
     
   </div>
   <div
-    class="t-grid grid-demo"
+    class="t-grid t-grid--bordered grid-demo"
     data-v-fb92dfac=""
     style="grid-template-columns: repeat(2, 1fr);"
   >
@@ -3978,7 +3978,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-grid grid-demo"
+        class="t-grid t-grid--bordered grid-demo"
         data-v-fb92dfac=""
         style="grid-template-columns: repeat(3, 1fr);"
       >
@@ -4388,7 +4388,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         
       </div>
       <div
-        class="t-grid grid-demo"
+        class="t-grid t-grid--bordered grid-demo"
         data-v-fb92dfac=""
         style="grid-template-columns: repeat(2, 1fr);"
       >
