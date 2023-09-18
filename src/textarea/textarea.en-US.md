@@ -17,6 +17,7 @@ maxcharacter | Number | - | \- | N
 maxlength | Number | - | \- | N
 name | String | - | \- | N
 placeholder | String | undefined | \- | N
+readonly | Boolean | false | \- | N
 value | String / Number | - | `v-model` and `v-model:value` is supported。Typescript：`TextareaValue` `type TextareaValue = string`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/textarea/type.ts) | N
 defaultValue | String / Number | - | uncontrolled property。Typescript：`TextareaValue` `type TextareaValue = string`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/textarea/type.ts) | N
 onBlur | Function |  | Typescript：`(value: TextareaValue, context: { e: FocusEvent }) => void`<br/> | N
