@@ -65,6 +65,11 @@ export interface TdTextareaProps {
    */
   placeholder?: string;
   /**
+   * 只读状态
+   * @default false
+   */
+  readonly?: boolean;
+  /**
    * 文本框值
    */
   value?: TextareaValue;

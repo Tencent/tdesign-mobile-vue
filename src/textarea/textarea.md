@@ -17,6 +17,7 @@ maxcharacter | Number | - | 用户最多可以输入的字符个数，一个中�
 maxlength | Number | - | 用户最多可以输入的字符个数 | N
 name | String | - | 名称，HTML 元素原生属性 | N
 placeholder | String | undefined | 占位符 | N
+readonly | Boolean | false | 只读状态 | N
 value | String / Number | - | 文本框值。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`TextareaValue` `type TextareaValue = string`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/textarea/type.ts) | N
 defaultValue | String / Number | - | 文本框值。非受控属性。TS 类型：`TextareaValue` `type TextareaValue = string`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/textarea/type.ts) | N
 onBlur | Function |  | TS 类型：`(value: TextareaValue, context: { e: FocusEvent }) => void`<br/>失去焦点时触发 | N

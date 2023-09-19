@@ -13,6 +13,7 @@
         :maxlength="maxlength"
         :disabled="disabled"
         :placeholder="placeholder"
+        :readonly="readonly"
         @focus="handleFocus"
         @blur="handleBlur"
         @input="handleInput"
@@ -26,7 +27,7 @@
 </template>
 
 <script lang="ts">
-import { computed, ref, onMounted, defineComponent, getCurrentInstance, toRefs, nextTick, watch } from 'vue';
+import { computed, ref, onMounted, defineComponent, getCurrentInstance, toRefs, nextTick, watch, readonly } from 'vue';
 import { renderTNode, TNode, getCharacterLength, useVModel } from '../shared';
 import config from '../config';
 import TextareaProps from './props';
@@ -64,6 +65,7 @@ export default defineComponent({
       `${componentName}__wrapper-inner`,
       {
         [`${componentName}--disabled`]: disabled.value,
+        [`${componentName}--readonly`]: props.readonly,
       },
     ]);
     const internalInstance = getCurrentInstance();
