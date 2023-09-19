@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ [`${name}`]: true, [`${name}--popup`]: usePopup }">
+  <div ref="templateRef" :class="{ [`${name}`]: true, [`${name}--popup`]: usePopup }">
     <div :class="`${name}__title`">
       <slot name="title">{{ title || '请选择日期' }}</slot>
     </div>
@@ -82,6 +82,7 @@ const getYearMonthDay = (date: Date) => {
 
 const title = computed(() => props.title);
 const usePopup = computed(() => props.usePopup);
+const templateRef = ref(null);
 const valueRef = ref(props.value);
 const selectedDate = ref();
 const firstDayOfWeek = computed(() => props.firstDayOfWeek || 0);
@@ -253,5 +254,6 @@ watch(
 );
 defineExpose({
   valueRef,
+  templateRef,
 });
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <calendarTemplate v-if="!usePopup">
+    <calendarTemplate v-if="!usePopup" ref="calendarTemplateRef">
       <template #confirmBtn>
         <slot name="confirmBtn"></slot>
       </template>
@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import { defineEmits, defineProps, provide, watch, ref, reactive } from 'vue';
+import { defineEmits, defineProps, provide, watch, ref, reactive, nextTick, onMounted } from 'vue';
 
 import TPopup from '../popup';
 import config from '../config';
@@ -36,19 +36,40 @@ export default {
 
 <script setup lang="ts">
 const props = defineProps(calendarProps);
+const calendarTemplateRef = ref();
 
 provide('templateProps', reactive(props));
 
 const emit = defineEmits(['update:visible']);
 
+const selectedValueIntoView = () => {
+  const type = props.type === 'range' ? 'start' : 'selected';
+  const { templateRef } = calendarTemplateRef.value;
+  const scrollContainer = templateRef.querySelector(`.${name}__months`);
+  const selectedDate = templateRef.querySelector(`.${name}__dates-item--${type}`)?.parentNode?.previousElementSibling;
+  if (selectedDate) {
+    scrollContainer.scrollTop = selectedDate.offsetTop - scrollContainer.offsetTop;
+  }
+};
+
 const onVisibleChange = (v: boolean) => {
   emit('update:visible', v);
 };
 const onPopupVisibleChange = (v: boolean) => {
-  if (!v) props.onClose?.('overlay');
+  if (!v) {
+    props.onClose?.('overlay');
+  } else {
+    nextTick(() => {
+      selectedValueIntoView();
+    });
+  }
   emit('update:visible', v);
 };
-const calendarTemplateRef = ref();
+
+onMounted(() => {
+  if (!props.usePopup) selectedValueIntoView();
+});
+
 watch(
   () => props.value,
   (val) => {
