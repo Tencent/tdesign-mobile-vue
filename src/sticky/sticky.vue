@@ -25,9 +25,9 @@ export default defineComponent({
 
     // box 用于占位和记录边界
     // content 用于实际定位
-    const boxRef = templateRef('boxRef');
+    const boxRef = templateRef<HTMLElement | null>('boxRef', null);
     const { top: boxTop } = useElementBounding(boxRef);
-    const contentRef = templateRef('contentRef');
+    const contentRef = templateRef<HTMLElement | null>('contentRef', null);
     const { top: contentTop, height } = useElementBounding(contentRef);
 
     const boxStyles = computed(() => `height:${height.value}px;`);
