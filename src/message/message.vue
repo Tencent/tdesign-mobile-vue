@@ -38,7 +38,7 @@ import {
   onMounted,
 } from 'vue';
 import { CheckCircleFilledIcon, CloseIcon, InfoCircleFilledIcon } from 'tdesign-icons-vue-next';
-import { isObject, isString } from '@vueuse/core';
+import { isObject, isString } from 'lodash';
 
 import Link from '../link';
 import messageProps from './props';

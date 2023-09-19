@@ -1,4 +1,4 @@
-import { isNumber } from '@vueuse/core';
+import isNumber from 'lodash/isNumber';
 import config from '../config';
 
 const { prefix } = config;
