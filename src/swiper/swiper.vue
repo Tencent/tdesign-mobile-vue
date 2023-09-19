@@ -9,13 +9,13 @@
         transform: translateContainer,
         height: containerHeight,
       }"
-      @transitionend="handleAnimationEnd"
+      @transitionend.self="handleAnimationEnd"
     >
       <slot />
     </div>
     <!-- 导航器 -->
     <template v-if="navigation && enableNavigation">
-      <span v-if="!isVertical && 'showControls' in navigation && navigation.showControls" :class="`${navName}__btn`">
+      <span v-if="!isVertical && !!navigation?.showControls" :class="`${navName}__btn`">
         <span :class="`${navName}__btn--prev`" @click="goPrev('nav')" />
         <span :class="`${navName}__btn--next`" @click="goNext('nav')" />
       </span>
@@ -36,7 +36,8 @@
               { [`${navName}__${navigation.type}-item--active`]: index === current },
               `${navName}__${navigation.type}-item--${direction}`,
             ]"
-          ></span>
+          >
+          </span>
         </template>
         <span v-if="navigation.type && navigation.type === 'fraction'">
           {{ (current ?? 0) + 1 + '/' + items.length }}
@@ -50,7 +51,18 @@
 </template>
 
 <script lang="ts">
-import { getCurrentInstance, onMounted, computed, ref, provide, defineEmits, defineProps, watch } from 'vue';
+import {
+  getCurrentInstance,
+  onMounted,
+  computed,
+  ref,
+  provide,
+  defineProps,
+  defineEmits,
+  watch,
+  onUnmounted,
+  reactive,
+} from 'vue';
 import { useSwipe } from '@vueuse/core';
 import isObject from 'lodash/isObject';
 import isNumber from 'lodash/isNumber';
@@ -88,6 +100,7 @@ const computedNavigation = computed(() => (isObject(props.navigation) ? '' : ren
 
 const animating = ref(false);
 const disabled = ref(false);
+const isSwiperDisabled = computed(() => props.disabled === true);
 const translateContainer = ref('');
 
 const isVertical = computed(() => props.direction === 'vertical');
@@ -112,14 +125,14 @@ const onItemClick = () => {
   props.onClick?.(current.value ?? 0);
 };
 
-const move = (step: number, source: SwiperChangeSource) => {
+const move = (step: number, source: SwiperChangeSource, isReset = false) => {
   animating.value = true;
-  processIndex((current.value as number) + step, source);
+  processIndex(isReset ? step : (current.value as number) + step, source);
 
   const moveDirection = !isVertical.value ? 'X' : 'Y';
   const distance = root.value?.[isVertical.value ? 'offsetHeight' : 'offsetWidth'] ?? 0;
 
-  translateContainer.value = `translate${moveDirection}(${-1 * distance * step}px)`;
+  translateContainer.value = `translate${moveDirection}(${isReset ? 0 : -1 * distance * step}px)`;
 };
 
 const handleAnimationEnd = () => {
@@ -165,27 +178,46 @@ const processIndex = (index: number, source: SwiperChangeSource) => {
   }
 
   setCurrent(val);
-  props.onChange?.(val, { source });
+  emit('change', val, { source });
 };
 
-const { lengthX, lengthY } = useSwipe(swiperContainer, {
+const coordsStart = reactive({
+  x: 0,
+  y: 0,
+});
+
+const lengthX = ref(0);
+const lengthY = ref(0);
+
+useSwipe(swiperContainer, {
   passive: false,
-  onSwipeStart() {
-    if (disabled.value) return;
+  onSwipeStart(e: TouchEvent) {
+    if (e.touches.length > 1 || disabled.value || isSwiperDisabled.value) return;
+    coordsStart.x = undefined;
+    coordsStart.y = undefined;
     onItemClick(); // use touchstart to simulate click on swipe start
     stopAutoplay();
   },
   onSwipe(e: TouchEvent) {
-    if (disabled.value) return;
+    if (e.touches.length > 1 || disabled.value || isSwiperDisabled.value) return;
+    const { clientX, clientY } = e.touches[0];
+    if (coordsStart.x === undefined || coordsStart.y === undefined) {
+      coordsStart.x = clientX;
+      coordsStart.y = clientY;
+    }
+
+    lengthX.value = coordsStart.x - clientX;
+    lengthY.value = coordsStart.y - clientY;
+
     onTouchMove(e);
   },
   onSwipeEnd() {
+    if (disabled.value || isSwiperDisabled.value) return;
     onTouchEnd();
   },
 });
 
 const onTouchMove = (event: TouchEvent) => {
-  if (animating.value) return;
   preventDefault(event, false);
   const distanceX = lengthX.value;
   const distanceY = lengthY.value;
@@ -208,7 +240,7 @@ const onTouchEnd = () => {
   } else if ((!isVertical.value && distanceX > 100) || (isVertical.value && distanceY > 100)) {
     move(1, 'touch');
   } else {
-    move(current.value as number, 'touch');
+    move(current.value as number, 'touch', true);
   }
   startAutoplay();
 };
@@ -258,5 +290,9 @@ onMounted(() => {
   startAutoplay();
   updateItemPosition();
   updateContainerHeight();
+});
+
+onUnmounted(() => {
+  stopAutoplay();
 });
 </script>

@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div v-if="visible" :class="`${prefix}-image-viewer`">
+    <div v-if="visible" :ref="(el) => (rootRef = el)" :class="`${prefix}-image-viewer`">
       <div :class="`${name}__mask`" @click="handleClose($event, 'overlay')" />
       <div :class="`${name}__nav`">
         <div v-if="closeNode" :class="`${name}__nav-close`" @click="handleClose($event, 'close-btn')">
@@ -18,6 +18,7 @@
         :class="`${name}__content`"
         height="100vh"
         :default-current="currentIndex"
+        :disabled="disabled"
         @change="onSwiperChange"
       >
         <t-swiper-item
@@ -39,7 +40,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, reactive, getCurrentInstance, CSSProperties, h, Transition, toRefs } from 'vue';
+import { computed, defineComponent, reactive, getCurrentInstance, h, Transition, toRefs, ref, watch } from 'vue';
 import { CloseIcon, DeleteIcon } from 'tdesign-icons-vue-next';
 
 import config from '../config';
@@ -76,6 +77,11 @@ export default defineComponent({
       scale: 1,
       touchIndex: 0,
       swiperStyle: [] as string[],
+
+      dragging: false,
+      draggedX: 0,
+      draggedY: 0,
+      extraDraggedX: 0,
     });
     const [visible, setVisible] = useDefault(props, emit, 'visible', 'change');
     const [currentIndex, setIndex] = useDefault<TdImageViewerProps['index'], TdImageViewerProps>(
@@ -85,6 +91,10 @@ export default defineComponent({
       'index-change',
     );
     const touch = useTouch();
+
+    const disabled = ref(false);
+    const rootRef = ref();
+
     const closeNode = computed(() =>
       renderTNode(internalInstance, 'close-btn', {
         defaultNode: h(CloseIcon),
@@ -97,16 +107,25 @@ export default defineComponent({
     );
 
     const imageTransform = computed(() => {
-      const { scale } = state;
-      return `scale(${scale}, ${scale})`;
+      const { scale, draggedX, draggedY } = state;
+      return `matrix(${scale}, 0, 0, ${scale}, ${draggedX}, ${draggedY})`;
     });
 
     const imageTransitionDuration = computed(() => {
-      const { zooming } = state;
-      return zooming ? 'transition-duration: 0s' : 'transition-duration: 0.3s';
+      const { zooming, dragging } = state;
+      return zooming || dragging ? 'transition-duration: 0s' : 'transition-duration: 0.3s';
     });
 
+    const beforeClose = () => {
+      state.zooming = false;
+      state.scale = 1;
+      state.dragging = false;
+      state.draggedX = 0;
+      state.draggedY = 0;
+    };
+
     const handleClose = (e: Event, trigger: string) => {
+      beforeClose();
       setVisible(false);
       emit('close', { trigger, e });
     };
@@ -116,14 +135,33 @@ export default defineComponent({
     };
 
     const onSwiperChange = (index: number, context: any) => {
-      setIndex(index, { context });
+      if (currentIndex.value !== index) {
+        setIndex(index, { context });
+        setScale(1);
+      }
     };
+
+    const maxDraggedX = computed(() => {
+      const rootOffsetWidth = rootRef.value?.offsetWidth || 0;
+      const scaledWidth = state.scale * rootOffsetWidth;
+      return Math.max(0, (scaledWidth - rootOffsetWidth) / 2);
+    });
+
+    const maxDraggedY = computed(() => {
+      const rootOffsetHeight = rootRef.value?.offsetHeight || 0;
+      const scaledHeight = state.scale * rootOffsetHeight;
+      return Math.max(0, (scaledHeight - rootOffsetHeight) / 2);
+    });
 
     let fingerNum: number;
     let startScale: number;
     let startDistance: number;
     let doubleTapTimer: number | null;
     let touchStartTime: number;
+    let startDraggedX: number;
+    let startDraggedY: number;
+    let isDragged = false;
+
     const onTouchStart = (event: TouchEvent, index: number) => {
       preventDefault(event, true);
       const { touches } = event;
@@ -132,8 +170,13 @@ export default defineComponent({
 
       fingerNum = touches.length;
       touchStartTime = Date.now();
+      startDraggedX = state.draggedX;
+      startDraggedY = state.draggedY;
+
+      state.dragging = fingerNum === 1;
       state.zooming = fingerNum === 2;
       state.touchIndex = index;
+
       if (state.zooming) {
         startScale = state.scale;
         startDistance = getDistance(event.touches);
@@ -144,15 +187,30 @@ export default defineComponent({
       const { touches } = event;
 
       touch.move(event);
-      preventDefault(event, true);
       if (state.zooming) {
         preventDefault(event, true);
-      }
-      if (state.zooming && touches.length === 2) {
-        const distance = getDistance(touches);
-        const scale = (startScale * distance) / startDistance;
+        if (touches.length === 2) {
+          const distance = getDistance(touches);
+          const scale = (startScale * distance) / startDistance;
 
-        setScale(scale);
+          setScale(scale);
+        }
+      }
+
+      if (state.dragging) {
+        const { deltaX, deltaY, isHorizontal } = touch;
+        const draggedX = deltaX.value + startDraggedX;
+        const draggedY = deltaY.value + startDraggedY;
+        state.extraDraggedX = draggedX;
+        if ((draggedX > maxDraggedX.value || draggedX < -maxDraggedX.value) && !isDragged && isHorizontal()) {
+          state.dragging = false;
+          return;
+        }
+
+        isDragged = true;
+        preventDefault(event, true);
+        state.draggedX = Math.min(Math.max(draggedX, -maxDraggedX.value), maxDraggedX.value);
+        state.draggedY = Math.min(Math.max(draggedY, -maxDraggedY.value), maxDraggedY.value);
       }
     };
 
@@ -161,6 +219,8 @@ export default defineComponent({
 
       if (scale !== state.scale) {
         state.scale = scale;
+        state.draggedX = 0;
+        state.draggedY = 0;
       }
     };
     const resetScale = () => {
@@ -178,7 +238,7 @@ export default defineComponent({
         return;
       }
 
-      resetScale();
+      // resetScale();
 
       const { offsetX, offsetY } = touch;
       const deltaTime = Date.now() - touchStartTime;
@@ -200,14 +260,27 @@ export default defineComponent({
     };
 
     const onTouchEnd = (event: TouchEvent) => {
-      // eliminate tap delay on safari
-      preventDefault(event, false);
-      if (state.zooming) {
-        event.stopPropagation();
+      let stopPropagation = false;
+
+      if (state.zooming || state.dragging) {
+        stopPropagation = true;
+
+        if (state.dragging && startDraggedX === state.draggedX && startDraggedY === state.draggedY) {
+          stopPropagation = false;
+        }
+
         if (!event.touches.length) {
           if (state.zooming) {
+            state.draggedX = Math.min(Math.max(state.draggedX, -maxDraggedX.value), maxDraggedX.value);
+            state.draggedY = Math.min(Math.max(state.draggedY, -maxDraggedY.value), maxDraggedY.value);
             state.zooming = false;
           }
+
+          state.dragging = false;
+          startDraggedX = 0;
+          startDraggedY = 0;
+          startScale = 1;
+
           startScale = 1;
           if (state.scale < 1) {
             resetScale();
@@ -218,11 +291,38 @@ export default defineComponent({
         }
       }
 
+      // eliminate tap delay on safari
+      preventDefault(event, stopPropagation);
+
       checkTap(event);
       touch.reset();
     };
 
+    watch(
+      () => state.scale,
+      (newVal) => {
+        if (newVal !== 1) {
+          disabled.value = true;
+        } else {
+          disabled.value = false;
+        }
+      },
+    );
+
+    watch(
+      () => state.extraDraggedX,
+      (newVal) => {
+        if (newVal > maxDraggedX.value || newVal < -maxDraggedX.value) {
+          disabled.value = false;
+        } else {
+          disabled.value = true;
+        }
+      },
+    );
+
     return {
+      rootRef,
+      disabled,
       name,
       ...toRefs(state),
       prefix,

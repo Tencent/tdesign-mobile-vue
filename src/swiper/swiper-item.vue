@@ -29,7 +29,15 @@ const direction = computed(() => (isVertical.value ? 'Y' : 'X'));
 const calcTranslateStyle = (index: number, activeIndex: number) => {
   const distance = root.value?.[isVertical.value ? 'offsetHeight' : 'offsetWidth'] ?? 0;
   const lastItemIndex = items.value.length - 1;
-  let step = activeIndex === lastItemIndex && index === 0 ? 1 : index - activeIndex;
+  let step = index - activeIndex;
+  // lastItem
+  if (activeIndex === lastItemIndex && index === 0) {
+    step = 1;
+  }
+  // firstItem
+  if (activeIndex === 0 && index === lastItemIndex) {
+    step = -1;
+  }
 
   if (activeIndex === index) step = 0;
 
