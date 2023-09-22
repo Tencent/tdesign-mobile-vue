@@ -136,8 +136,8 @@ export default defineComponent({
       if (disabled.value) {
         return;
       }
-      if (rootGroupChange !== NOOP && props.value !== undefined) {
-        rootGroupChange(props.value, e);
+      if (rootGroupChange) {
+        rootGroupChange(props.allowUncheck && radioChecked.value ? '' : props.value, e);
       } else {
         if (!props.allowUncheck && radioChecked.value) return;
         setInnerChecked(!radioChecked.value, { e });
