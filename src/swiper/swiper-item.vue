@@ -35,7 +35,7 @@ const calcTranslateStyle = (index: number, activeIndex: number) => {
     step = 1;
   }
   // firstItem
-  if (activeIndex === 0 && index === lastItemIndex) {
+  if (activeIndex === 0 && index === lastItemIndex && index !== 1) {
     step = -1;
   }
 
