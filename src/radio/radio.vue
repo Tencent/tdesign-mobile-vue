@@ -66,7 +66,9 @@ export default defineComponent({
     const rootGroupValue = inject('rootGroupValue', {}) as Ref;
     const rootGroupChange = inject('rootGroupChange', NOOP) as (val: RadioValue, e: Event) => void;
 
-    const formDisabled = useFormDisabled();
+    // extend radioGroup disabled props
+    const groupDisabled = computed(() => rootGroupProps?.disabled);
+    const formDisabled = useFormDisabled(groupDisabled);
 
     const disabled = computed(() => {
       if (formDisabled.value == null && 'disabled' in rootGroupProps) return rootGroupProps.disabled;
