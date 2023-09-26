@@ -10,6 +10,7 @@
         :disabled="'disabled' in opt ? opt.disabled : disabled"
         :value="opt[keys?.value ?? 'value']"
         :label="opt[keys?.label ?? 'label']"
+        :allow-uncheck="opt?.allowUncheck ?? allowUncheck"
         :placement="placement"
       ></radio>
     </template>
