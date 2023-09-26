@@ -100,7 +100,7 @@ export default defineComponent({
     };
 
     const updateValue = (value: TdStepperProps['value']) => {
-      stepperValue.value = formatNumber(`${value}`, !integer.value);
+      stepperValue.value = Number(formatNumber(`${value}`, !integer.value));
     };
 
     const plusValue = () => {
@@ -121,7 +121,7 @@ export default defineComponent({
 
     const handleInput = (e: Event) => {
       const value = formatNumber((e.target as HTMLTextAreaElement).value, !integer.value);
-      stepperValue.value = value;
+      stepperValue.value = Number(value);
     };
 
     const handleChange = () => {
