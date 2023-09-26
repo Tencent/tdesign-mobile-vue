@@ -19,7 +19,8 @@
         `${name}__input--${size}`,
         `${disabled ? name + '--' + theme + '-disabled' : ''}`,
       ]"
-      type="tel"
+      :type="integer ? 'tel' : 'text'"
+      :inputmode="integer ? 'numeric' : 'decimal'"
       :style="inputStyle"
       :disabled="disableInput || disabled"
       :readonly="disableInput"
@@ -47,7 +48,7 @@ import { toRefs, computed, defineComponent } from 'vue';
 import { AddIcon, RemoveIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import StepperProps from './props';
-import { useDefault } from '../shared';
+import { useDefault, formatNumber } from '../shared';
 import { TdStepperProps } from './type';
 import { useFormDisabled } from '../form/hooks';
 
@@ -64,7 +65,7 @@ export default defineComponent({
   setup(props, context) {
     const [stepperValue] = useDefault<TdStepperProps['value'], TdStepperProps>(props, context.emit, 'value', 'change');
     const disabled = useFormDisabled();
-    const { min, max, step } = toRefs(props);
+    const { min, max, step, integer } = toRefs(props);
     const inputStyle = computed(() => (props.inputWidth ? { width: `${props.inputWidth}px` } : ''));
 
     const isDisabled = (type: 'minus' | 'plus') => {
@@ -94,12 +95,12 @@ export default defineComponent({
 
     const formatValue = (value: number) => {
       return Math.max(Math.min(max.value, value, Number.MAX_SAFE_INTEGER), min.value, Number.MIN_SAFE_INTEGER).toFixed(
-        getLen(step.value),
+        Math.max(getLen(step.value), getLen(value)),
       );
     };
 
     const updateValue = (value: TdStepperProps['value']) => {
-      stepperValue.value = value;
+      stepperValue.value = formatNumber(`${value}`, !integer.value);
     };
 
     const plusValue = () => {
@@ -119,8 +120,8 @@ export default defineComponent({
     };
 
     const handleInput = (e: Event) => {
-      const value = (e.target as HTMLTextAreaElement).value.replace(/[^\d]/g, '');
-      stepperValue.value = Number(value);
+      const value = formatNumber((e.target as HTMLTextAreaElement).value, !integer.value);
+      stepperValue.value = value;
     };
 
     const handleChange = () => {
@@ -148,6 +149,7 @@ export default defineComponent({
       handleBlur,
       ...toRefs(props),
       disabled,
+      integer,
     };
   },
 });
