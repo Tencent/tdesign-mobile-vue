@@ -73,7 +73,7 @@ export const reconvertUnit = (val: string | number | undefined) => {
  * @param value 传入的数字字符串
  * @param allowDecimal 是否允许小数，默认为 true
  * @param allowNegative 是否允许负数，默认为 true
- * @reutrns 返回格式化后的数字字符串
+ * @returns 返回格式化后的数字字符串
  */
 export const formatNumber = (value: string, allowDecimal = true, allowNegative = true) => {
   if (allowDecimal) {
