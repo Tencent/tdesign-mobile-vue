@@ -32,6 +32,7 @@
           <t-image
             :src="image"
             :style="`${imageTransitionDuration}; ${index === touchIndex ? `transform: ${imageTransform}` : ''}`"
+            :on-load="({ e }) => onLoad(e, index)"
           />
         </t-swiper-item>
       </t-swiper>
@@ -94,6 +95,7 @@ export default defineComponent({
 
     const disabled = ref(false);
     const rootRef = ref();
+    const imagesSize = reactive({});
 
     const closeNode = computed(() =>
       renderTNode(internalInstance, 'close-btn', {
@@ -141,6 +143,11 @@ export default defineComponent({
       }
     };
 
+    const onLoad = (e: Event, index: number) => {
+      const { height } = e.target as HTMLImageElement;
+      imagesSize[index] = { height };
+    };
+
     const maxDraggedX = computed(() => {
       const rootOffsetWidth = rootRef.value?.offsetWidth || 0;
       const scaledWidth = state.scale * rootOffsetWidth;
@@ -149,8 +156,9 @@ export default defineComponent({
 
     const maxDraggedY = computed(() => {
       const rootOffsetHeight = rootRef.value?.offsetHeight || 0;
-      const scaledHeight = state.scale * rootOffsetHeight;
-      return Math.max(0, (scaledHeight - rootOffsetHeight) / 2);
+      const currentImageScaledHeight = state.scale * (imagesSize?.[currentIndex.value]?.height || 0);
+      if (currentImageScaledHeight <= rootOffsetHeight) return 0;
+      return Math.max(0, (currentImageScaledHeight - rootOffsetHeight) / 2);
     });
 
     let fingerNum: number;
@@ -338,6 +346,7 @@ export default defineComponent({
       onTouchStart,
       onTouchMove,
       onTouchEnd,
+      onLoad,
     };
   },
 });
