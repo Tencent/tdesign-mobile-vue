@@ -2,17 +2,6 @@
   <transition name="fade">
     <div v-if="visible" :ref="(el) => (rootRef = el)" :class="`${prefix}-image-viewer`">
       <div :class="`${name}__mask`" @click="handleClose($event, 'overlay')" />
-      <div :class="`${name}__nav`">
-        <div v-if="closeNode" :class="`${name}__nav-close`" @click="handleClose($event, 'close-btn')">
-          <t-node :content="closeNode" />
-        </div>
-
-        <div v-if="showIndex" :class="`${name}__nav-index`">{{ (currentIndex ?? 0) + 1 }}/{{ images?.length }}</div>
-
-        <div v-if="deleteNode" :class="`${name}__nav-delete`" @click="handleDelete">
-          <t-node :content="deleteNode" />
-        </div>
-      </div>
       <t-swiper
         :autoplay="false"
         :class="`${name}__content`"
@@ -36,6 +25,17 @@
           />
         </t-swiper-item>
       </t-swiper>
+      <div :class="`${name}__nav`">
+        <div v-if="closeNode" :class="`${name}__nav-close`" @click="handleClose($event, 'close-btn')">
+          <t-node :content="closeNode" />
+        </div>
+
+        <div v-if="showIndex" :class="`${name}__nav-index`">{{ (currentIndex ?? 0) + 1 }}/{{ images?.length }}</div>
+
+        <div v-if="deleteNode" :class="`${name}__nav-delete`" @click="handleDelete">
+          <t-node :content="deleteNode" />
+        </div>
+      </div>
     </div>
   </transition>
 </template>
