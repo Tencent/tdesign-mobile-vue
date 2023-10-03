@@ -189,7 +189,7 @@ describe('stepper', () => {
       const wrapper = mount(<Stepper v-model={data.value} onChange={handleChange} />);
       const $input = wrapper.find('.t-stepper__input').element;
 
-      const inputValue = 12;
+      const inputValue = '12';
       await simulateEvent($input, inputValue, 'input');
       expect(value.value).toBe(inputValue);
     });
