@@ -8,6 +8,7 @@ name | type | default | description | required
 disableInput | Boolean | false | \- | N
 disabled | Boolean | false | \- | N
 inputWidth | Number | - | \- | N
+integer | Boolean | true | \- | N
 max | Number | 100 | \- | N
 min | Number | 0 | \- | N
 size | String | medium | options：small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N

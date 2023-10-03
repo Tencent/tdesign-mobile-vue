@@ -79,7 +79,11 @@ export class MockResizeObserver {
   }
 
   disconnect() {
-    this._element.removeEventListener('resize', this.trigger);
+    // unmount后监听的元素this._element可能为null，因此先判断元素是否为null，再依据此来是否执行removeEventListener
+    if (this._element) {
+      this._element.removeEventListener('resize', this.trigger);
+    }
+    this._element = null;
   }
 
   /**

@@ -57,6 +57,8 @@ export default {
     type: String,
     default: undefined,
   },
+  /** 只读状态 */
+  readonly: Boolean,
   /** 文本框值 */
   value: {
     type: [String, Number] as PropType<TdTextareaProps['value']>,

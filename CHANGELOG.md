@@ -5,6 +5,18 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.0.5 `2023-10-03` 
+### 🚀 Features
+- `Calendar`: 日历选择器支持自动定位到选中日期 @ShinyHwong ([#1102](https://github.com/Tencent/tdesign-mobile-vue/pull/1102))
+- `Textarea`:  新增 `readonly` 属性 @anlyyao ([#1100](https://github.com/Tencent/tdesign-mobile-vue/pull/1100))
+### 🐞 Bug Fixes
+- `Sticky`: 修复组件只能针对浏览器窗口进行定位的问题 @demoadminjie ([#1103](https://github.com/Tencent/tdesign-mobile-vue/pull/1103))
+- `Cascader`: 修复 `change` 事件被触发两次和 `v-model` 没有响应式的问题 @bitjian ([#1096](https://github.com/Tencent/tdesign-mobile-vue/pull/1096))
+- `Cascader`: 修复 `title` 不存在时关闭按钮样式错位的问题 @bitjian ([#1597](https://github.com/Tencent/tdesign-common/pull/1597))
+- `Radio`: 修复 `allowUncheck` 属性无效的问题 @betavs ([#1108](https://github.com/Tencent/tdesign-mobile-vue/pull/1108))
+- `RadioGroup`: 修复 `disabled` 属性无效的问题 @anlyyao ([#1112](https://github.com/Tencent/tdesign-mobile-vue/pull/1112))
+- `Stepper`: 新增 `integer` 属性，并修复组件不支持输入小数的问题 @fennghuang ([#1113](https://github.com/Tencent/tdesign-mobile-vue/pull/1113))
+
 ## 🌈 1.0.4 `2023-09-15` 
 ### 🐞 Bug Fixes
 - `Cascader`: 修复选项卡模式中选中值不更新的问题 @fennghuang ([#1091](https://github.com/Tencent/tdesign-mobile-vue/pull/1091))

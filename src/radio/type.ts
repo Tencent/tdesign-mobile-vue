@@ -153,6 +153,7 @@ export interface RadioOptionObj {
   label?: string | TNode;
   value?: string | number | boolean;
   disabled?: boolean;
+  allowUncheck?: boolean;
 }
 
 export type RadioValue = string | number | boolean;
