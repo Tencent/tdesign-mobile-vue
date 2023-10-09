@@ -2,7 +2,7 @@
   <div>
     <t-overlay v-bind="customOverlayProps" />
     <div :class="classes" :style="{ top: placement === 'top' ? '25%' : placement === 'bottom' ? '75%' : '45%' }">
-      <div :class="iconClasses">
+      <div v-if="iconContent" :class="iconClasses">
         <t-node :content="iconContent"></t-node>
       </div>
       <div v-if="messageContent" :class="textClasses">
@@ -61,7 +61,7 @@ export default defineComponent({
     const textClasses = computed(() => [
       {
         [`${name}__text`]: !iconContent.value,
-        [`${name}__text--${props.direction}`]: props.direction,
+        [`${name}__text--${props.direction}`]: iconContent.value && props.direction,
       },
     ]);
 
