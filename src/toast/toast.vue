@@ -61,7 +61,7 @@ export default defineComponent({
     const textClasses = computed(() => [
       {
         [`${name}__text`]: !iconContent.value,
-        [`${name}__text--${props.direction}`]: iconContent.value && props.direction,
+        [`${name}__text--${props.direction}`]: props.direction,
       },
     ]);
 
