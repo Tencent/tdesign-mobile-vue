@@ -6,8 +6,6 @@
         :class="classes + '__left'"
         :style="{
           width: initData.leftWidth ? `${initData.leftWidth}px` : 'auto',
-          display: 'flex',
-          'flex-flow': 'row-reverse',
         }"
       >
         <t-node v-if="swipeLeftMenu" :content="swipeLeftMenu"></t-node>
