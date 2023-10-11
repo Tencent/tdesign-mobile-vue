@@ -2,7 +2,7 @@
   <div>
     <t-overlay v-bind="customOverlayProps" />
     <div :class="classes" :style="{ top: placement === 'top' ? '25%' : placement === 'bottom' ? '75%' : '45%' }">
-      <div :class="iconClasses">
+      <div v-if="iconContent" :class="iconClasses">
         <t-node :content="iconContent"></t-node>
       </div>
       <div v-if="messageContent" :class="textClasses">
