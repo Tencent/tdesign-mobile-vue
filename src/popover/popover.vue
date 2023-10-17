@@ -7,7 +7,7 @@
     <div v-show="currentVisible" ref="popoverRef" data-popper-placement :class="[`${name}`]">
       <div :class="contentClasses">
         <t-node :content="content"></t-node>
-        <div v-if="showArrow" :class="`${name}__arrow`" />
+        <div v-if="showArrow" :class="`${name}__arrow`" data-popper-arrow />
       </div>
     </div>
   </Transition>
@@ -53,11 +53,72 @@ export default defineComponent({
 
     const getPopoverOptions = () => ({
       placement: getPopperPlacement(props.placement),
+      modifiers: [
+        {
+          name: 'arrow',
+          options: {
+            padding: placementPadding,
+          },
+        },
+      ],
     });
+
+    const placementPadding = ({
+      popper,
+      reference,
+      placement,
+    }: {
+      popper: {
+        width: number;
+        height: number;
+        x: number;
+        y: number;
+      };
+      reference: {
+        width: number;
+        height: number;
+        x: number;
+        y: number;
+      };
+      placement: String;
+    }) => {
+      const horizontal = ['top', 'bottom'];
+      const vertical = ['left', 'right'];
+      const isBase = [...horizontal, ...vertical].find((item) => item === placement);
+      if (isBase) {
+        return 0;
+      }
+
+      const { width, x } = reference;
+      const { width: popperWidth, height: popperHeight } = popper;
+      const { width: windowWidth } = window.screen;
+
+      const isHorizontal = horizontal.find((item) => placement.includes(item));
+      const isEnd = placement.includes('end');
+      const small = (a: number, b: number) => {
+        return a < b ? a : b;
+      };
+
+      if (isHorizontal) {
+        const padding = isEnd ? small(width + x, popperWidth) : small(windowWidth - x, popperWidth);
+        return {
+          // border-radius: 6, arrow width: 16;
+          [isEnd ? 'left' : 'right']: padding - 22,
+        };
+      }
+
+      const isVertical = vertical.find((item) => placement.includes(item));
+      if (isVertical) {
+        return {
+          // border-radius: 6, arrow height: 16;
+          [isEnd ? 'top' : 'bottom']: popperHeight - 22,
+        };
+      }
+    };
 
     // @ts-ignore
     const updatePopper = () => {
-      if (referenceRef.value && popoverRef.value) {
+      if (currentVisible.value && referenceRef.value && popoverRef.value) {
         popper = createPopper(referenceRef.value, popoverRef.value, getPopoverOptions());
       }
       return null;
