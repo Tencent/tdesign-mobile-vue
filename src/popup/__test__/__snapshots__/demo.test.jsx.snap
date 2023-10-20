@@ -95,7 +95,6 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
   <teleport-stub
     data-v-70969ba8=""
     disabled="false"
-    style="padding: 100px;"
     to="[object HTMLBodyElement]"
   >
     <div
@@ -139,7 +138,6 @@ exports[`Popup > Popup customCloseVue demo works fine 1`] = `
   </button>
   <teleport-stub
     disabled="false"
-    style="width: 240px; height: 240px;"
     to="[object HTMLBodyElement]"
   >
     <div
@@ -303,7 +301,6 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         <teleport-stub
           data-v-70969ba8=""
           disabled="false"
-          style="padding: 100px;"
           to="[object HTMLBodyElement]"
         >
           <div
@@ -373,7 +370,6 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         <teleport-stub
           data-v-099d70a8=""
           disabled="false"
-          style="height: 258px;"
           to="[object HTMLBodyElement]"
         >
           <div
@@ -440,7 +436,6 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         </button>
         <teleport-stub
           disabled="false"
-          style="width: 240px; height: 240px;"
           to="[object HTMLBodyElement]"
         >
           <div
@@ -499,7 +494,6 @@ exports[`Popup > Popup withTitleVue demo works fine 1`] = `
   <teleport-stub
     data-v-099d70a8=""
     disabled="false"
-    style="height: 258px;"
     to="[object HTMLBodyElement]"
   >
     <div
