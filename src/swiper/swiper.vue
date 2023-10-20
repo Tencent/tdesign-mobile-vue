@@ -234,7 +234,7 @@ const removeChild = (uid: number) => {
   items.value.splice(index, 1);
 
   if (current.value + 1 > items.value.length) {
-    goNext('nav');
+    goNext('autoplay');
   }
 };
 
