@@ -16,6 +16,7 @@ export * from './useScrollParent';
 export * from './useExpose';
 export * from './useTest';
 export * from './useClickAway';
+export * from './useGesture';
 
 /* directives */
 export { default as Hover } from './hover';

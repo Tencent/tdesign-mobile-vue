@@ -3,6 +3,7 @@
     <div v-if="visible" :ref="(el) => (rootRef = el)" :class="`${prefix}-image-viewer`">
       <div :class="`${name}__mask`" @click="handleClose($event, 'overlay')" />
       <t-swiper
+        ref="swiperRootRef"
         :autoplay="false"
         :class="`${name}__content`"
         height="100vh"
@@ -12,16 +13,15 @@
       >
         <t-swiper-item
           v-for="(image, index) in images"
+          ref="swiperItemRefs"
           :key="index"
           :class="`${name}__swiper-item`"
-          @touchstart="onTouchStart($event, index)"
-          @touchmove="onTouchMove"
-          @touchend="onTouchEnd"
+          style="touch-action: none"
         >
           <t-image
             :src="image"
             :style="`${imageTransitionDuration}; ${index === touchIndex ? `transform: ${imageTransform}` : ''}`"
-            :on-load="({ e }) => onLoad(e, index)"
+            :on-load="({ e }) => onImgLoad(e, index)"
           />
         </t-swiper-item>
       </t-swiper>
@@ -30,7 +30,9 @@
           <t-node :content="closeNode" />
         </div>
 
-        <div v-if="showIndex" :class="`${name}__nav-index`">{{ (currentIndex ?? 0) + 1 }}/{{ images?.length }}</div>
+        <div v-if="showIndex" :class="`${name}__nav-index`">
+          {{ Math.min((currentIndex ?? 0) + 1, images?.length) }}/{{ images?.length }}
+        </div>
 
         <div v-if="deleteNode" :class="`${name}__nav-delete`" @click="handleDelete">
           <t-node :content="deleteNode" />
@@ -41,13 +43,24 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, reactive, getCurrentInstance, h, Transition, toRefs, ref, watch } from 'vue';
+import {
+  computed,
+  defineComponent,
+  reactive,
+  getCurrentInstance,
+  h,
+  Transition,
+  toRefs,
+  ref,
+  watch,
+  nextTick,
+  onUnmounted,
+} from 'vue';
 import { CloseIcon, DeleteIcon } from 'tdesign-icons-vue-next';
 
 import config from '../config';
 import ImagediverProps from './props';
-import { renderTNode, TNode, useDefault, useTouch } from '../shared';
-import { preventDefault } from '../shared/dom';
+import { renderTNode, TNode, useDefault, inBrowser, useGesture, DragState, PinchState } from '../shared';
 
 // inner components
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
@@ -56,9 +69,6 @@ import { TdImageViewerProps } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-image-viewer`;
-
-const getDistance = (touches: TouchList) =>
-  Math.sqrt((touches[0].clientX - touches[1].clientX) ** 2 + (touches[0].clientY - touches[1].clientY) ** 2);
 
 export default defineComponent({
   name,
@@ -77,8 +87,6 @@ export default defineComponent({
       zooming: false,
       scale: 1,
       touchIndex: 0,
-      swiperStyle: [] as string[],
-
       dragging: false,
       draggedX: 0,
       draggedY: 0,
@@ -91,11 +99,13 @@ export default defineComponent({
       'index',
       'index-change',
     );
-    const touch = useTouch();
 
     const disabled = ref(false);
     const rootRef = ref();
     const imagesSize = reactive({});
+    const swiperRootRef = ref();
+    const swiperItemRefs = ref();
+    const gestureRef = ref();
 
     const closeNode = computed(() =>
       renderTNode(internalInstance, 'close-btn', {
@@ -124,6 +134,7 @@ export default defineComponent({
       state.dragging = false;
       state.draggedX = 0;
       state.draggedY = 0;
+      state.extraDraggedX = 0;
     };
 
     const handleClose = (e: Event, trigger: string) => {
@@ -143,122 +154,55 @@ export default defineComponent({
       }
     };
 
-    const onLoad = (e: Event, index: number) => {
+    const onImgLoad = (e: Event, index: number) => {
       const { height } = e.target as HTMLImageElement;
       imagesSize[index] = { height };
     };
 
-    const maxDraggedX = computed(() => {
+    const getMaxDraggedX = () => {
       const rootOffsetWidth = rootRef.value?.offsetWidth || 0;
       const scaledWidth = state.scale * rootOffsetWidth;
       return Math.max(0, (scaledWidth - rootOffsetWidth) / 2);
-    });
-
-    const maxDraggedY = computed(() => {
-      const rootOffsetHeight = rootRef.value?.offsetHeight || 0;
-      const currentImageScaledHeight = state.scale * (imagesSize?.[currentIndex.value]?.height || 0);
-      if (currentImageScaledHeight <= rootOffsetHeight) return 0;
-      return Math.max(0, (currentImageScaledHeight - rootOffsetHeight) / 2);
-    });
-
-    let fingerNum: number;
-    let startScale: number;
-    let startDistance: number;
-    let doubleTapTimer: number | null;
-    let touchStartTime: number;
-    let startDraggedX: number;
-    let startDraggedY: number;
-    let isDragged = false;
-
-    const onTouchStart = (event: TouchEvent, index: number) => {
-      preventDefault(event, true);
-      const { touches } = event;
-
-      touch.start(event);
-
-      fingerNum = touches.length;
-      touchStartTime = Date.now();
-      startDraggedX = state.draggedX;
-      startDraggedY = state.draggedY;
-
-      state.dragging = fingerNum === 1;
-      state.zooming = fingerNum === 2;
-      state.touchIndex = index;
-
-      if (state.zooming) {
-        startScale = state.scale;
-        startDistance = getDistance(event.touches);
-      }
     };
 
-    const onTouchMove = (event: TouchEvent) => {
-      const { touches } = event;
-
-      touch.move(event);
-      if (state.zooming) {
-        preventDefault(event, true);
-        if (touches.length === 2) {
-          const distance = getDistance(touches);
-          const scale = (startScale * distance) / startDistance;
-
-          setScale(scale);
-        }
-      }
-
-      if (state.dragging) {
-        const { deltaX, deltaY, isHorizontal } = touch;
-        const draggedX = deltaX.value + startDraggedX;
-        const draggedY = deltaY.value + startDraggedY;
-        state.extraDraggedX = draggedX;
-        if ((draggedX > maxDraggedX.value || draggedX < -maxDraggedX.value) && !isDragged && isHorizontal()) {
-          state.dragging = false;
-          return;
-        }
-
-        isDragged = true;
-        preventDefault(event, true);
-        state.draggedX = Math.min(Math.max(draggedX, -maxDraggedX.value), maxDraggedX.value);
-        state.draggedY = Math.min(Math.max(draggedY, -maxDraggedY.value), maxDraggedY.value);
-      }
+    const getMaxDraggedY = (index: number) => {
+      const rootOffsetHeight = rootRef.value?.offsetHeight || 0;
+      const currentImageScaledHeight = state.scale * (imagesSize?.[index]?.height || 0);
+      if (currentImageScaledHeight <= rootOffsetHeight) return 0;
+      return Math.max(0, (currentImageScaledHeight - rootOffsetHeight) / 2);
     };
 
     const setScale = (scale: number) => {
       scale = Math.min(scale, +props.maxZoom + 1);
-
       if (scale !== state.scale) {
         state.scale = scale;
-        state.draggedX = 0;
-        state.draggedY = 0;
+
+        if (scale === 1) {
+          state.draggedX = 0;
+          state.draggedY = 0;
+        }
       }
     };
-    const resetScale = () => {
-      setScale(1);
-    };
+
+    let dragStartTime: number;
+    let doubleTapTimer: number | null;
 
     const toggleScale = () => {
       const scale = state.scale > 1 ? 1 : 2;
-
       setScale(scale);
     };
 
-    const checkTap = (event: Event) => {
-      if (fingerNum > 1) {
-        return;
-      }
-
-      // resetScale();
-
-      const { offsetX, offsetY } = touch;
-      const deltaTime = Date.now() - touchStartTime;
+    const checkTap = (e: DragState) => {
+      const { event } = e;
+      const deltaTime = Date.now() - dragStartTime;
       const TAP_TIME = 250;
-      const TAP_OFFSET = 5;
-
-      if (offsetX.value < TAP_OFFSET && offsetY.value < TAP_OFFSET && deltaTime < TAP_TIME) {
+      if (deltaTime < TAP_TIME) {
         if (doubleTapTimer) {
           clearTimeout(doubleTapTimer);
           doubleTapTimer = null;
+          state.dragging = false;
           toggleScale();
-        } else {
+        } else if (inBrowser) {
           doubleTapTimer = window.setTimeout(() => {
             handleClose(event, 'overlay');
             doubleTapTimer = null;
@@ -267,44 +211,135 @@ export default defineComponent({
       }
     };
 
-    const onTouchEnd = (event: TouchEvent) => {
-      let stopPropagation = false;
+    const onPinchChange = (scale: number, index: number) => {
+      state.zooming = true;
+      state.touchIndex = index;
+      setScale(scale);
+    };
 
-      if (state.zooming || state.dragging) {
-        stopPropagation = true;
+    const onPinchEnd = () => {
+      state.zooming = false;
+      if (state.scale < 1) {
+        setScale(1);
+      }
+      if (state.scale > props.maxZoom) {
+        state.scale = +props.maxZoom;
+      }
+    };
 
-        if (state.dragging && startDraggedX === state.draggedX && startDraggedY === state.draggedY) {
-          stopPropagation = false;
-        }
+    const handlePinch = (pinState: PinchState, index: number) => {
+      const {
+        last,
+        offset: [d],
+      } = pinState;
+      // 图片未加载完毕，禁止拖拽
+      if (!imagesSize?.[index]) return;
+      if (!last) {
+        onPinchChange(d, index);
+      } else {
+        onPinchEnd();
+      }
+    };
 
-        if (!event.touches.length) {
-          if (state.zooming) {
-            state.draggedX = Math.min(Math.max(state.draggedX, -maxDraggedX.value), maxDraggedX.value);
-            state.draggedY = Math.min(Math.max(state.draggedY, -maxDraggedY.value), maxDraggedY.value);
-            state.zooming = false;
-          }
+    const handleDrag = (dragState: DragState, index: number) => {
+      state.touchIndex = index;
+      const { setOffset } = swiperRootRef.value;
 
-          state.dragging = false;
-          startDraggedX = 0;
-          startDraggedY = 0;
-          startScale = 1;
-
-          startScale = 1;
-          if (state.scale < 1) {
-            resetScale();
-          }
-          if (state.scale > props.maxZoom) {
-            state.scale = +props.maxZoom;
-          }
-        }
+      // 图片未加载完毕，禁止拖拽
+      if (!imagesSize?.[index]) return;
+      const { first, movement, _movement, elapsedTime, tap, offset, overflow, _delta } = dragState;
+      if (first) {
+        dragStartTime = Date.now();
       }
 
-      // eliminate tap delay on safari
-      preventDefault(event, stopPropagation);
+      if (tap && elapsedTime > 0 && elapsedTime < 300) {
+        checkTap(dragState);
+        return;
+      }
+      // 过高图片允许上下滑动
+      state.draggedY = offset?.[1] || 0;
 
-      checkTap(event);
-      touch.reset();
+      if (state.scale === 1) return;
+
+      state.draggedX = offset?.[0] || 0;
+      state.dragging = true;
+
+      if (movement[0] !== _movement[0] && overflow[0] !== 0) {
+        state.extraDraggedX += _delta[0] / 5;
+        setOffset(state.extraDraggedX, 'X');
+      } else if (state.extraDraggedX !== 0) {
+        state.extraDraggedX = 0;
+        setOffset(state.extraDraggedX, 'X');
+      }
     };
+
+    const handleDragEnd = (dragState: DragState) => {
+      const { overflow, last } = dragState;
+      const { goPrev, goNext, swiperContainer } = swiperRootRef.value;
+
+      state.dragging = false;
+
+      if (state.extraDraggedX !== 0 && last) {
+        if (Math.abs(state.extraDraggedX) > 50) {
+          state.extraDraggedX = 0;
+          overflow[0] < 0 ? goNext('touch') : goPrev('touch');
+          return;
+        }
+        state.extraDraggedX = 0;
+        nextTick(() => {
+          swiperContainer.style.setProperty('transform', 'translateX(0)');
+          swiperContainer.style.setProperty('transition', 'transform 300ms');
+        });
+      }
+    };
+
+    const gestureOptions = reactive({
+      destroyInvisible: true,
+      visible: !!visible.value,
+    });
+
+    gestureRef.value = useGesture(gestureOptions);
+
+    watch(
+      () => visible.value,
+      (newVal) => (gestureOptions.visible = !!newVal),
+    );
+
+    watch(
+      () => [visible.value, swiperItemRefs.value],
+      ([newVisible, newRefs]) => {
+        if (!newVisible) return;
+        nextTick(() => {
+          newRefs?.forEach?.((item: any, index: number) => {
+            const { $el } = item;
+            gestureRef.value?.create(
+              $el as Element,
+              {
+                onDrag: (dragState: DragState) => handleDrag(dragState, index),
+                onDragEnd: (dragState: DragState) => handleDragEnd(dragState),
+                onPinch: (pinchState: PinchState) => handlePinch(pinchState, index),
+              },
+              {
+                drag: {
+                  from: () => [state.draggedX, state.draggedY],
+                  pointer: { touch: true },
+                  bounds: () => ({
+                    top: -getMaxDraggedY(index),
+                    right: getMaxDraggedX(),
+                    bottom: getMaxDraggedY(index),
+                    left: -getMaxDraggedX(),
+                  }),
+                },
+                pinch: {
+                  from: () => [state.scale, 0],
+                  pointer: { touch: true },
+                },
+              },
+            );
+          });
+        });
+      },
+    );
 
     watch(
       () => state.scale,
@@ -317,18 +352,13 @@ export default defineComponent({
       },
     );
 
-    watch(
-      () => state.extraDraggedX,
-      (newVal) => {
-        if (newVal > maxDraggedX.value || newVal < -maxDraggedX.value) {
-          disabled.value = false;
-        } else {
-          disabled.value = true;
-        }
-      },
-    );
+    onUnmounted(() => {
+      clearTimeout(doubleTapTimer);
+    });
 
     return {
+      swiperRootRef,
+      swiperItemRefs,
       rootRef,
       disabled,
       name,
@@ -343,10 +373,7 @@ export default defineComponent({
       handleClose,
       handleDelete,
       onSwiperChange,
-      onTouchStart,
-      onTouchMove,
-      onTouchEnd,
-      onLoad,
+      onImgLoad,
     };
   },
 });

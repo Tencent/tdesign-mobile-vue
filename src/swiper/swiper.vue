@@ -57,11 +57,11 @@ import {
   computed,
   ref,
   provide,
-  defineProps,
   defineEmits,
+  defineExpose,
+  defineProps,
   watch,
   onUnmounted,
-  reactive,
 } from 'vue';
 import { useSwipe } from '@vueuse/core';
 import isObject from 'lodash/isObject';
@@ -176,43 +176,23 @@ const processIndex = (index: number, source: SwiperChangeSource) => {
   if (index >= max) {
     val = props.loop ? 0 : max - 1;
   }
-
   setCurrent(val);
   emit('change', val, { source });
 };
 
-const coordsStart = reactive({
-  x: 0,
-  y: 0,
-});
-
-const lengthX = ref(0);
-const lengthY = ref(0);
-
-useSwipe(swiperContainer, {
+const { lengthX, lengthY } = useSwipe(swiperContainer, {
   passive: false,
-  onSwipeStart(e: TouchEvent) {
-    if (e.touches.length > 1 || disabled.value || isSwiperDisabled.value) return;
-    coordsStart.x = undefined;
-    coordsStart.y = undefined;
+  onSwipeStart() {
+    if (disabled.value || isSwiperDisabled.value || !items.value.length) return;
     onItemClick(); // use touchstart to simulate click on swipe start
     stopAutoplay();
   },
   onSwipe(e: TouchEvent) {
-    if (e.touches.length > 1 || disabled.value || isSwiperDisabled.value) return;
-    const { clientX, clientY } = e.touches[0];
-    if (coordsStart.x === undefined || coordsStart.y === undefined) {
-      coordsStart.x = clientX;
-      coordsStart.y = clientY;
-    }
-
-    lengthX.value = coordsStart.x - clientX;
-    lengthY.value = coordsStart.y - clientY;
-
+    if (disabled.value || isSwiperDisabled.value || !items.value.length) return;
     onTouchMove(e);
   },
   onSwipeEnd() {
-    if (disabled.value || isSwiperDisabled.value) return;
+    if (disabled.value || isSwiperDisabled.value || !items.value.length) return;
     onTouchEnd();
   },
 });
@@ -251,7 +231,11 @@ const addChild = (item: any) => {
 
 const removeChild = (uid: number) => {
   const index = items.value.findIndex((item: any) => item.uid === uid);
-  items.value.splice(index, 0);
+  items.value.splice(index, 1);
+
+  if (current.value + 1 > items.value.length) {
+    goNext('nav');
+  }
 };
 
 const updateItemPosition = () => {
@@ -294,5 +278,12 @@ onMounted(() => {
 
 onUnmounted(() => {
   stopAutoplay();
+});
+
+defineExpose({
+  swiperContainer,
+  goPrev,
+  goNext,
+  setOffset,
 });
 </script>
