@@ -22,6 +22,11 @@ export interface TdStepperProps {
    */
   inputWidth?: number;
   /**
+   * 是否整数
+   * @default true
+   */
+  integer?: boolean;
+  /**
    * 最大值
    * @default 100
    */

@@ -63,6 +63,11 @@ export default {
     type: [String, Number] as PropType<TdStepperProps['defaultValue']>,
     default: 0,
   },
+  /** 是否整数，为 true 仅允许输入不带小数点的数，为 false 允许输入带小数点的数 */
+  integer: {
+    type: Boolean,
+    default: true,
+  },
   /** 输入框失去焦点时触发 */
   onBlur: Function as PropType<TdStepperProps['onBlur']>,
   /** 数值发生变更时触发 */

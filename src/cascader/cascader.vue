@@ -218,8 +218,7 @@ export default defineComponent({
         childrenInfo.value = e;
         childrenInfo.level = level;
       } else {
-        setCascaderValue(item[(keys as Ref<KeysType>).value?.value ?? 'value']);
-        props.onChange?.(
+        setCascaderValue(
           item[(keys as Ref<KeysType>).value?.value ?? 'value'],
           items.map((item, index) => toRaw(item?.[selectedIndexes[index]])),
         );
