@@ -53,7 +53,7 @@ type UseGrestureReturn = {
  *   drag: dragOptions
  * }
  * gesture.create(element, handler, config);
- * gesture.destory();
+ * gesture.destroy();
  */
 
 export function useGesture(config: UseGestureConfig): UseGrestureReturn {
