@@ -52,4 +52,3 @@ const onHide = () => (visible.value = false);
   color: #0052d9;
 }
 </style>
->

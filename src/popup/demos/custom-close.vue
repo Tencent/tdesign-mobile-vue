@@ -34,4 +34,3 @@ const onClose = () => (visible.value = false);
   display: block;
 }
 </style>
->
