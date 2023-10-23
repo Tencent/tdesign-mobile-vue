@@ -34,4 +34,3 @@ const onClick = (item: any) => {
   }
 }
 </style>
->
