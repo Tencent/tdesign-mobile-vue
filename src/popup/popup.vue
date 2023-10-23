@@ -2,7 +2,7 @@
   <teleport v-if="!destroyOnClose || wrapperVisbile" :to="to" :disabled="!to">
     <t-overlay v-bind="overlayProps" :visible="innerVisible && showOverlay" @click="handleOverlayClick" />
     <transition :name="contentTransitionName" @after-enter="afterEnter" @after-leave="afterLeave">
-      <div v-show="innerVisible" :class="[name, $attrs.class, contentClasses]" :style="rootStyles">
+      <div v-show="innerVisible" :class="[name, $attrs.class, contentClasses]" :style="rootStyles" v-bind="$attrs">
         <div v-if="closeBtnNode" :class="`${name}__close`" @click="handleCloseClick">
           <t-node :content="closeBtnNode" />
         </div>
@@ -32,6 +32,7 @@ let lockTimes = 0;
 export default defineComponent({
   name,
   components: { TNode, TOverlay },
+  inheritAttrs: false,
   props: popupProps,
   emits: ['open', 'close', 'opened', 'closed', 'visible-change', 'update:visible', 'update:modelValue'],
   setup(props, context) {
