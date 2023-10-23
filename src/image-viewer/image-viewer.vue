@@ -195,14 +195,17 @@ export default defineComponent({
     const checkTap = (e: DragState) => {
       const { event } = e;
       const deltaTime = Date.now() - dragStartTime;
-      const TAP_TIME = 250;
-      if (deltaTime < TAP_TIME) {
+      const TAP_TIME = 300;
+      if (deltaTime < TAP_TIME && inBrowser) {
         if (doubleTapTimer) {
           clearTimeout(doubleTapTimer);
-          doubleTapTimer = null;
-          state.dragging = false;
-          toggleScale();
-        } else if (inBrowser) {
+          doubleTapTimer = window.setTimeout(() => {
+            clearTimeout(doubleTapTimer);
+            doubleTapTimer = null;
+            state.dragging = false;
+            toggleScale();
+          }, TAP_TIME);
+        } else {
           doubleTapTimer = window.setTimeout(() => {
             handleClose(event, 'overlay');
             doubleTapTimer = null;
@@ -243,7 +246,7 @@ export default defineComponent({
 
     const handleDrag = (dragState: DragState, index: number) => {
       state.touchIndex = index;
-      const { setOffset } = swiperRootRef.value;
+      const { setOffset } = swiperRootRef.value || {};
 
       // 图片未加载完毕，禁止拖拽
       if (!imagesSize?.[index]) return;
@@ -266,29 +269,29 @@ export default defineComponent({
 
       if (movement[0] !== _movement[0] && overflow[0] !== 0) {
         state.extraDraggedX += _delta[0] / 5;
-        setOffset(state.extraDraggedX, 'X');
+        setOffset?.(state.extraDraggedX, 'X');
       } else if (state.extraDraggedX !== 0) {
         state.extraDraggedX = 0;
-        setOffset(state.extraDraggedX, 'X');
+        setOffset?.(state.extraDraggedX, 'X');
       }
     };
 
     const handleDragEnd = (dragState: DragState) => {
       const { overflow, last } = dragState;
-      const { goPrev, goNext, swiperContainer } = swiperRootRef.value;
+      const { goPrev, goNext, swiperContainer } = swiperRootRef.value || {};
 
       state.dragging = false;
 
       if (state.extraDraggedX !== 0 && last) {
         if (Math.abs(state.extraDraggedX) > 50) {
           state.extraDraggedX = 0;
-          overflow[0] < 0 ? goNext('touch') : goPrev('touch');
+          overflow[0] < 0 ? goNext?.('touch') : goPrev?.('touch');
           return;
         }
         state.extraDraggedX = 0;
         nextTick(() => {
-          swiperContainer.style.setProperty('transform', 'translateX(0)');
-          swiperContainer.style.setProperty('transition', 'transform 300ms');
+          swiperContainer?.style?.setProperty?.('transform', 'translateX(0)');
+          swiperContainer?.style?.setProperty?.('transition', 'transform 300ms');
         });
       }
     };
