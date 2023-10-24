@@ -15,7 +15,7 @@ title | String / Slot / Function | - | Typescript：`string \| TNode`。[see mor
 value | String / Number | - | `v-model` and `v-model:value` is supported | N
 defaultValue | String / Number | - | uncontrolled property | N
 visible | Boolean | false | \- | N
-placeholder | String / Slot / Function | 选择选项 | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+placeholder | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 onChange | Function |  | Typescript：`(value: string \| number, selectedOptions: string[]) => void`<br/> | N
 onClose | Function |  | Typescript：`(trigger: TriggerSource) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/> | N
 onPick | Function |  | Typescript：`(context: { level: number; value: string | number; index: number }) => void`<br/> | N
