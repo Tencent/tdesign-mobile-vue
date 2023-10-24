@@ -53,6 +53,10 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   visible?: boolean;
   /**
+   * 未选中时的提示文案
+   */
+  placeholder?: string | TNode;
+  /**
    * 值发生变更时触发
    */
   onChange?: (value: string | number, selectedOptions: string[]) => void;

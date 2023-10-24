@@ -53,6 +53,10 @@ export default {
   defaultValue: {
     type: [String, Number] as PropType<TdCascaderProps['defaultValue']>,
   },
+  /** 未选中时的提示文案 */
+  placeholder: {
+    type: [String, Function] as PropType<TdCascaderProps['placeholder']>,
+  },
   /** 是否展示 */
   visible: Boolean,
   /** 值发生变更时触发 */

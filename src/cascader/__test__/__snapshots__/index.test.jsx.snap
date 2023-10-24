@@ -60,7 +60,9 @@ exports[`cascader > events > : pick 1`] = `
               <div
                 class="t-cascader__step-label t-cascader__step-label--active"
               >
+                
                 选择选项
+                
               </div>
               <svg
                 class="t-icon t-icon-chevron-right t-cascader__step-arrow"

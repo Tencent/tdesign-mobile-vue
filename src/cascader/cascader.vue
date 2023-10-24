@@ -16,7 +16,7 @@
                 :class="[
                   `${name}__step-dot`,
                   {
-                    't-cascader__step-dot--active': item !== defaultOptionLabel,
+                    't-cascader__step-dot--active': item !== placeholder,
                     't-cascader__step-dot--last': index === steps.length - 1,
                   },
                 ]"
@@ -29,7 +29,11 @@
                   },
                 ]"
               >
-                {{ item }}
+                <t-node
+                  v-if="placeholderTNode && !(typeof placeholderTNode === 'string') && item === placeholder"
+                  :content="placeholderTNode"
+                />
+                <template v-else>{{ item }}</template>
               </div>
               <chevron-right-icon :class="`${name}__step-arrow`" size="22" />
             </div>
@@ -93,7 +97,6 @@ import { TreeOptionData } from '../common';
 
 const { prefix } = config;
 const name = `${prefix}-cascader`;
-const defaultOptionLabel = '选择选项';
 
 interface ChildrenInfoType {
   value: string | number;
@@ -128,12 +131,20 @@ export default defineComponent({
     const open = ref(visible.value || false);
     const [cascaderValue, setCascaderValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
     const title = computed(() => props.title || '标题');
+    const placeholder = computed(() => props.placeholder || '选择选项');
 
     const stepIndex = ref(0);
     const selectedIndexes = reactive<string[] | number[]>([]);
     const selectedValue = reactive<string[]>([]);
     const items: Array<Array<TreeOptionData>> = reactive([options.value ?? []]);
-    const steps = reactive([defaultOptionLabel]);
+    const steps = reactive([placeholder.value]);
+
+    watch(placeholder, (newValue, oldValue) => {
+      const index = steps.indexOf(oldValue);
+      if (index !== -1) {
+        steps[index] = newValue;
+      }
+    });
 
     onMounted(() => {
       initWithValue();
@@ -146,6 +157,7 @@ export default defineComponent({
       });
     });
     const titleTNode = computed(() => renderTNode(internalInstance, 'title'));
+    const placeholderTNode = computed(() => renderTNode(internalInstance, 'placeholder'));
 
     const initWithValue = () => {
       if (value.value != null) {
@@ -172,7 +184,7 @@ export default defineComponent({
         }
       }
       if (steps.length < items.length) {
-        steps.push(defaultOptionLabel);
+        steps.push(placeholder.value);
       }
       stepIndex.value = items.length - 1;
     };
@@ -212,7 +224,7 @@ export default defineComponent({
         items[level + 1] = item[(keys as Ref<KeysType>).value?.children ?? 'children'];
         items.length = level + 2;
         stepIndex.value += 1;
-        steps[level + 1] = '选择选项';
+        steps[level + 1] = placeholder.value;
         steps.length = level + 2;
       } else if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length === 0) {
         childrenInfo.value = e;
@@ -269,13 +281,14 @@ export default defineComponent({
 
     return {
       open,
-      defaultOptionLabel,
+      placeholder,
       onVisibleChange,
       onStepClick,
       onTabChange,
       handleSelect,
       closeBtnTNode,
       titleTNode,
+      placeholderTNode,
       stepIndex,
       name,
       title,
