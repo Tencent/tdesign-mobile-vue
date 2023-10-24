@@ -20,8 +20,12 @@
         >
           <t-image
             :src="image"
-            :style="`${imageTransitionDuration}; ${index === touchIndex ? `transform: ${imageTransform}` : ''}`"
+            :style="`${imageTransitionDuration}; ${
+              index === touchIndex ? `transform: ${imageTransform}` : 'transform: matrix(1, 0, 0, 1, 0, 0)'
+            }`"
             :on-load="({ e }) => onImgLoad(e, index)"
+            @transitionend.self="onTransitionEnd(index)"
+            @transitionstart.self="onTransitionStart(index)"
           />
         </t-swiper-item>
       </t-swiper>
@@ -70,6 +74,8 @@ import { TdImageViewerProps } from './type';
 const { prefix } = config;
 const name = `${prefix}-image-viewer`;
 
+const TAP_TIME = 300;
+
 export default defineComponent({
   name,
   components: {
@@ -84,7 +90,8 @@ export default defineComponent({
   setup(props, { emit }) {
     const internalInstance = getCurrentInstance();
     const state = reactive({
-      zooming: false,
+      dblTapZooming: false, // double tap zooming
+      zooming: false, // pinch zooming
       scale: 1,
       touchIndex: 0,
       dragging: false,
@@ -129,6 +136,7 @@ export default defineComponent({
     });
 
     const beforeClose = () => {
+      state.dblTapZooming = false;
       state.zooming = false;
       state.scale = 1;
       state.dragging = false;
@@ -185,30 +193,43 @@ export default defineComponent({
     };
 
     let dragStartTime: number;
-    let doubleTapTimer: number | null;
+    let dblTapTimer: number | null;
 
     const toggleScale = () => {
       const scale = state.scale > 1 ? 1 : 2;
       setScale(scale);
     };
 
+    const onTransitionEnd = (index: number) => {
+      if (index === state.touchIndex) {
+        state.dblTapZooming = false;
+        clearTimeout(dblTapTimer);
+        dblTapTimer = null;
+      }
+    };
+
+    const onTransitionStart = (index: number) => {
+      if (index === state.touchIndex) {
+        state.dblTapZooming = true;
+        clearTimeout(dblTapTimer);
+      }
+    };
+
     const checkTap = (e: DragState) => {
       const { event } = e;
       const deltaTime = Date.now() - dragStartTime;
-      const TAP_TIME = 300;
       if (deltaTime < TAP_TIME && inBrowser) {
-        if (doubleTapTimer) {
-          clearTimeout(doubleTapTimer);
-          doubleTapTimer = window.setTimeout(() => {
-            clearTimeout(doubleTapTimer);
-            doubleTapTimer = null;
+        if (dblTapTimer) {
+          clearTimeout(dblTapTimer);
+          dblTapTimer = window.setTimeout(() => {
+            clearTimeout(dblTapTimer);
             state.dragging = false;
             toggleScale();
           }, TAP_TIME);
         } else {
-          doubleTapTimer = window.setTimeout(() => {
+          dblTapTimer = window.setTimeout(() => {
             handleClose(event, 'overlay');
-            doubleTapTimer = null;
+            dblTapTimer = null;
           }, TAP_TIME);
         }
       }
@@ -237,6 +258,7 @@ export default defineComponent({
       } = pinState;
       // 图片未加载完毕，禁止拖拽
       if (!imagesSize?.[index]) return;
+      if (state.dblTapZooming) return;
       if (!last) {
         onPinchChange(d, index);
       } else {
@@ -259,6 +281,13 @@ export default defineComponent({
         checkTap(dragState);
         return;
       }
+
+      // 双击缩放时取消拖拽事件
+      if (state.dblTapZooming) {
+        dragState?.cancel();
+        return;
+      }
+
       // 过高图片允许上下滑动
       state.draggedY = offset?.[1] || 0;
 
@@ -291,7 +320,7 @@ export default defineComponent({
         state.extraDraggedX = 0;
         nextTick(() => {
           swiperContainer?.style?.setProperty?.('transform', 'translateX(0)');
-          swiperContainer?.style?.setProperty?.('transition', 'transform 300ms');
+          swiperContainer?.style?.setProperty?.('transition', 'transform 0.3s');
         });
       }
     };
@@ -356,7 +385,7 @@ export default defineComponent({
     );
 
     onUnmounted(() => {
-      clearTimeout(doubleTapTimer);
+      clearTimeout(dblTapTimer);
     });
 
     return {
@@ -377,6 +406,8 @@ export default defineComponent({
       handleDelete,
       onSwiperChange,
       onImgLoad,
+      onTransitionEnd,
+      onTransitionStart,
     };
   },
 });
