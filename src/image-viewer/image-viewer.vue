@@ -1,51 +1,70 @@
 <template>
   <transition name="fade">
-    <div v-if="visible" :class="`${prefix}-image-viewer`">
+    <div v-if="visible" :ref="(el) => (rootRef = el)" :class="`${prefix}-image-viewer`">
       <div :class="`${name}__mask`" @click="handleClose($event, 'overlay')" />
+      <t-swiper
+        ref="swiperRootRef"
+        :autoplay="false"
+        :class="`${name}__content`"
+        height="100vh"
+        :default-current="currentIndex"
+        :disabled="disabled"
+        @change="onSwiperChange"
+      >
+        <t-swiper-item
+          v-for="(image, index) in images"
+          ref="swiperItemRefs"
+          :key="index"
+          :class="`${name}__swiper-item`"
+          style="touch-action: none"
+        >
+          <t-image
+            :src="image"
+            :style="`${imageTransitionDuration}; ${
+              index === touchIndex ? `transform: ${imageTransform}` : 'transform: matrix(1, 0, 0, 1, 0, 0)'
+            }`"
+            :on-load="({ e }) => onImgLoad(e, index)"
+            @transitionend.self="onTransitionEnd(index)"
+            @transitionstart.self="onTransitionStart(index)"
+          />
+        </t-swiper-item>
+      </t-swiper>
       <div :class="`${name}__nav`">
         <div v-if="closeNode" :class="`${name}__nav-close`" @click="handleClose($event, 'close-btn')">
           <t-node :content="closeNode" />
         </div>
 
-        <div v-if="showIndex" :class="`${name}__nav-index`">{{ (currentIndex ?? 0) + 1 }}/{{ images?.length }}</div>
+        <div v-if="showIndex" :class="`${name}__nav-index`">
+          {{ Math.min((currentIndex ?? 0) + 1, images?.length) }}/{{ images?.length }}
+        </div>
 
         <div v-if="deleteNode" :class="`${name}__nav-delete`" @click="handleDelete">
           <t-node :content="deleteNode" />
         </div>
       </div>
-      <t-swiper
-        :autoplay="false"
-        :class="`${name}__content`"
-        height="100vh"
-        :default-current="currentIndex"
-        @change="onSwiperChange"
-      >
-        <t-swiper-item
-          v-for="(image, index) in images"
-          :key="index"
-          :class="`${name}__swiper-item`"
-          @touchstart="onTouchStart($event, index)"
-          @touchmove="onTouchMove"
-          @touchend="onTouchEnd"
-        >
-          <t-image
-            :src="image"
-            :style="`${imageTransitionDuration}; ${index === touchIndex ? `transform: ${imageTransform}` : ''}`"
-          />
-        </t-swiper-item>
-      </t-swiper>
     </div>
   </transition>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, reactive, getCurrentInstance, CSSProperties, h, Transition, toRefs } from 'vue';
+import {
+  computed,
+  defineComponent,
+  reactive,
+  getCurrentInstance,
+  h,
+  Transition,
+  toRefs,
+  ref,
+  watch,
+  nextTick,
+  onUnmounted,
+} from 'vue';
 import { CloseIcon, DeleteIcon } from 'tdesign-icons-vue-next';
 
 import config from '../config';
 import ImagediverProps from './props';
-import { renderTNode, TNode, useDefault, useTouch } from '../shared';
-import { preventDefault } from '../shared/dom';
+import { renderTNode, TNode, useDefault, inBrowser, useGesture, DragState, PinchState } from '../shared';
 
 // inner components
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
@@ -55,8 +74,7 @@ import { TdImageViewerProps } from './type';
 const { prefix } = config;
 const name = `${prefix}-image-viewer`;
 
-const getDistance = (touches: TouchList) =>
-  Math.sqrt((touches[0].clientX - touches[1].clientX) ** 2 + (touches[0].clientY - touches[1].clientY) ** 2);
+const TAP_TIME = 300;
 
 export default defineComponent({
   name,
@@ -72,10 +90,14 @@ export default defineComponent({
   setup(props, { emit }) {
     const internalInstance = getCurrentInstance();
     const state = reactive({
-      zooming: false,
+      dblTapZooming: false, // double tap zooming
+      zooming: false, // pinch zooming
       scale: 1,
       touchIndex: 0,
-      swiperStyle: [] as string[],
+      dragging: false,
+      draggedX: 0,
+      draggedY: 0,
+      extraDraggedX: 0,
     });
     const [visible, setVisible] = useDefault(props, emit, 'visible', 'change');
     const [currentIndex, setIndex] = useDefault<TdImageViewerProps['index'], TdImageViewerProps>(
@@ -84,7 +106,14 @@ export default defineComponent({
       'index',
       'index-change',
     );
-    const touch = useTouch();
+
+    const disabled = ref(false);
+    const rootRef = ref();
+    const imagesSize = reactive({});
+    const swiperRootRef = ref();
+    const swiperItemRefs = ref();
+    const gestureRef = ref();
+
     const closeNode = computed(() =>
       renderTNode(internalInstance, 'close-btn', {
         defaultNode: h(CloseIcon),
@@ -97,16 +126,27 @@ export default defineComponent({
     );
 
     const imageTransform = computed(() => {
-      const { scale } = state;
-      return `scale(${scale}, ${scale})`;
+      const { scale, draggedX, draggedY } = state;
+      return `matrix(${scale}, 0, 0, ${scale}, ${draggedX}, ${draggedY})`;
     });
 
     const imageTransitionDuration = computed(() => {
-      const { zooming } = state;
-      return zooming ? 'transition-duration: 0s' : 'transition-duration: 0.3s';
+      const { zooming, dragging } = state;
+      return zooming || dragging ? 'transition-duration: 0s' : 'transition-duration: 0.3s';
     });
 
+    const beforeClose = () => {
+      state.dblTapZooming = false;
+      state.zooming = false;
+      state.scale = 1;
+      state.dragging = false;
+      state.draggedX = 0;
+      state.draggedY = 0;
+      state.extraDraggedX = 0;
+    };
+
     const handleClose = (e: Event, trigger: string) => {
+      beforeClose();
       setVisible(false);
       emit('close', { trigger, e });
     };
@@ -116,113 +156,238 @@ export default defineComponent({
     };
 
     const onSwiperChange = (index: number, context: any) => {
-      setIndex(index, { context });
-    };
-
-    let fingerNum: number;
-    let startScale: number;
-    let startDistance: number;
-    let doubleTapTimer: number | null;
-    let touchStartTime: number;
-    const onTouchStart = (event: TouchEvent, index: number) => {
-      preventDefault(event, true);
-      const { touches } = event;
-
-      touch.start(event);
-
-      fingerNum = touches.length;
-      touchStartTime = Date.now();
-      state.zooming = fingerNum === 2;
-      state.touchIndex = index;
-      if (state.zooming) {
-        startScale = state.scale;
-        startDistance = getDistance(event.touches);
+      if (currentIndex.value !== index) {
+        setIndex(index, { context });
+        setScale(1);
       }
     };
 
-    const onTouchMove = (event: TouchEvent) => {
-      const { touches } = event;
+    const onImgLoad = (e: Event, index: number) => {
+      const { height } = e.target as HTMLImageElement;
+      imagesSize[index] = { height };
+    };
 
-      touch.move(event);
-      preventDefault(event, true);
-      if (state.zooming) {
-        preventDefault(event, true);
-      }
-      if (state.zooming && touches.length === 2) {
-        const distance = getDistance(touches);
-        const scale = (startScale * distance) / startDistance;
+    const getMaxDraggedX = () => {
+      const rootOffsetWidth = rootRef.value?.offsetWidth || 0;
+      const scaledWidth = state.scale * rootOffsetWidth;
+      return Math.max(0, (scaledWidth - rootOffsetWidth) / 2);
+    };
 
-        setScale(scale);
-      }
+    const getMaxDraggedY = (index: number) => {
+      const rootOffsetHeight = rootRef.value?.offsetHeight || 0;
+      const currentImageScaledHeight = state.scale * (imagesSize?.[index]?.height || 0);
+      if (currentImageScaledHeight <= rootOffsetHeight) return 0;
+      return Math.max(0, (currentImageScaledHeight - rootOffsetHeight) / 2);
     };
 
     const setScale = (scale: number) => {
       scale = Math.min(scale, +props.maxZoom + 1);
-
       if (scale !== state.scale) {
         state.scale = scale;
+
+        if (scale === 1) {
+          state.draggedX = 0;
+          state.draggedY = 0;
+        }
       }
     };
-    const resetScale = () => {
-      setScale(1);
-    };
+
+    let dragStartTime: number;
+    let dblTapTimer: number | null;
 
     const toggleScale = () => {
       const scale = state.scale > 1 ? 1 : 2;
-
       setScale(scale);
     };
 
-    const checkTap = (event: Event) => {
-      if (fingerNum > 1) {
-        return;
+    const onTransitionEnd = (index: number) => {
+      if (index === state.touchIndex) {
+        state.dblTapZooming = false;
+        clearTimeout(dblTapTimer);
+        dblTapTimer = null;
       }
+    };
 
-      resetScale();
+    const onTransitionStart = (index: number) => {
+      if (index === state.touchIndex) {
+        state.dblTapZooming = true;
+        clearTimeout(dblTapTimer);
+      }
+    };
 
-      const { offsetX, offsetY } = touch;
-      const deltaTime = Date.now() - touchStartTime;
-      const TAP_TIME = 250;
-      const TAP_OFFSET = 5;
-
-      if (offsetX.value < TAP_OFFSET && offsetY.value < TAP_OFFSET && deltaTime < TAP_TIME) {
-        if (doubleTapTimer) {
-          clearTimeout(doubleTapTimer);
-          doubleTapTimer = null;
-          toggleScale();
+    const checkTap = (e: DragState) => {
+      const { event } = e;
+      const deltaTime = Date.now() - dragStartTime;
+      if (deltaTime < TAP_TIME && inBrowser) {
+        if (dblTapTimer) {
+          clearTimeout(dblTapTimer);
+          dblTapTimer = window.setTimeout(() => {
+            clearTimeout(dblTapTimer);
+            state.dragging = false;
+            toggleScale();
+          }, TAP_TIME);
         } else {
-          doubleTapTimer = window.setTimeout(() => {
+          dblTapTimer = window.setTimeout(() => {
             handleClose(event, 'overlay');
-            doubleTapTimer = null;
+            dblTapTimer = null;
           }, TAP_TIME);
         }
       }
     };
 
-    const onTouchEnd = (event: TouchEvent) => {
-      // eliminate tap delay on safari
-      preventDefault(event, false);
-      if (state.zooming) {
-        event.stopPropagation();
-        if (!event.touches.length) {
-          if (state.zooming) {
-            state.zooming = false;
-          }
-          startScale = 1;
-          if (state.scale < 1) {
-            resetScale();
-          }
-          if (state.scale > props.maxZoom) {
-            state.scale = +props.maxZoom;
-          }
-        }
-      }
-
-      checkTap(event);
-      touch.reset();
+    const onPinchChange = (scale: number, index: number) => {
+      state.zooming = true;
+      state.touchIndex = index;
+      setScale(scale);
     };
 
+    const onPinchEnd = () => {
+      state.zooming = false;
+      if (state.scale < 1) {
+        setScale(1);
+      }
+      if (state.scale > props.maxZoom) {
+        state.scale = +props.maxZoom;
+      }
+    };
+
+    const handlePinch = (pinState: PinchState, index: number) => {
+      const {
+        last,
+        offset: [d],
+      } = pinState;
+      // 图片未加载完毕，禁止拖拽
+      if (!imagesSize?.[index]) return;
+      if (state.dblTapZooming) return;
+      if (!last) {
+        onPinchChange(d, index);
+      } else {
+        onPinchEnd();
+      }
+    };
+
+    const handleDrag = (dragState: DragState, index: number) => {
+      state.touchIndex = index;
+      const { setOffset } = swiperRootRef.value || {};
+
+      // 图片未加载完毕，禁止拖拽
+      if (!imagesSize?.[index]) return;
+      const { first, movement, _movement, elapsedTime, tap, offset, overflow, _delta } = dragState;
+      if (first) {
+        dragStartTime = Date.now();
+      }
+
+      if (tap && elapsedTime > 0 && elapsedTime < 300) {
+        checkTap(dragState);
+        return;
+      }
+
+      // 双击缩放时取消拖拽事件
+      if (state.dblTapZooming) {
+        dragState?.cancel();
+        return;
+      }
+
+      state.dragging = true;
+
+      // 过高图片允许上下滑动
+      state.draggedY = offset?.[1] || 0;
+
+      if (state.scale === 1) return;
+
+      state.draggedX = offset?.[0] || 0;
+
+      if (movement[0] !== _movement[0] && overflow[0] !== 0) {
+        state.extraDraggedX += _delta[0] / 5;
+        setOffset?.(state.extraDraggedX, 'X');
+      } else if (state.extraDraggedX !== 0) {
+        state.extraDraggedX = 0;
+        setOffset?.(state.extraDraggedX, 'X');
+      }
+    };
+
+    const handleDragEnd = (dragState: DragState) => {
+      const { overflow, last } = dragState;
+      const { goPrev, goNext, swiperContainer } = swiperRootRef.value || {};
+
+      state.dragging = false;
+
+      if (state.extraDraggedX !== 0 && last) {
+        if (Math.abs(state.extraDraggedX) > 50) {
+          state.extraDraggedX = 0;
+          overflow[0] < 0 ? goNext?.('touch') : goPrev?.('touch');
+          return;
+        }
+        state.extraDraggedX = 0;
+        nextTick(() => {
+          swiperContainer?.style?.setProperty?.('transform', 'translateX(0)');
+          swiperContainer?.style?.setProperty?.('transition', 'transform 0.3s');
+        });
+      }
+    };
+
+    const gestureOptions = reactive({
+      destroyInvisible: true,
+      visible: !!visible.value,
+    });
+
+    gestureRef.value = useGesture(gestureOptions);
+
+    watch(
+      () => visible.value,
+      (newVal) => (gestureOptions.visible = !!newVal),
+    );
+
+    watch(
+      () => [visible.value, swiperItemRefs.value],
+      ([newVisible, newRefs]) => {
+        if (!newVisible) return;
+        nextTick(() => {
+          newRefs?.forEach?.((item: any, index: number) => {
+            const { $el } = item;
+            gestureRef.value?.create(
+              $el as Element,
+              {
+                onDrag: (dragState: DragState) => handleDrag(dragState, index),
+                onDragEnd: (dragState: DragState) => handleDragEnd(dragState),
+                onPinch: (pinchState: PinchState) => handlePinch(pinchState, index),
+              },
+              {
+                drag: {
+                  from: () => [state.draggedX, state.draggedY],
+                  pointer: { touch: true },
+                  bounds: () => ({
+                    top: -getMaxDraggedY(index),
+                    right: getMaxDraggedX(),
+                    bottom: getMaxDraggedY(index),
+                    left: -getMaxDraggedX(),
+                  }),
+                },
+                pinch: {
+                  from: () => [state.scale, 0],
+                  pointer: { touch: true },
+                },
+              },
+            );
+          });
+        });
+      },
+    );
+
+    watch(
+      () => state.scale,
+      (newVal) => (disabled.value = newVal !== 1),
+    );
+
+    onUnmounted(() => {
+      clearTimeout(dblTapTimer);
+    });
+
     return {
+      swiperRootRef,
+      swiperItemRefs,
+      rootRef,
+      disabled,
       name,
       ...toRefs(state),
       prefix,
@@ -235,9 +400,9 @@ export default defineComponent({
       handleClose,
       handleDelete,
       onSwiperChange,
-      onTouchStart,
-      onTouchMove,
-      onTouchEnd,
+      onImgLoad,
+      onTransitionEnd,
+      onTransitionStart,
     };
   },
 });
