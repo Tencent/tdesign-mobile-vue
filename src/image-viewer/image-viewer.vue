@@ -288,13 +288,14 @@ export default defineComponent({
         return;
       }
 
+      state.dragging = true;
+
       // 过高图片允许上下滑动
       state.draggedY = offset?.[1] || 0;
 
       if (state.scale === 1) return;
 
       state.draggedX = offset?.[0] || 0;
-      state.dragging = true;
 
       if (movement[0] !== _movement[0] && overflow[0] !== 0) {
         state.extraDraggedX += _delta[0] / 5;
@@ -375,13 +376,7 @@ export default defineComponent({
 
     watch(
       () => state.scale,
-      (newVal) => {
-        if (newVal !== 1) {
-          disabled.value = true;
-        } else {
-          disabled.value = false;
-        }
-      },
+      (newVal) => (disabled.value = newVal !== 1),
     );
 
     onUnmounted(() => {
