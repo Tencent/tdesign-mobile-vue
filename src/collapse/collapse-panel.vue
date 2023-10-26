@@ -93,30 +93,39 @@ export default defineComponent({
     const headRef = ref();
     const wrapperHeight = ref('');
     const updatePanelState = () => {
-      if (!wrapRef.value) {
-        return;
-      }
-      const { height: headHeight } = headRef.value.getBoundingClientRect();
-      if (!isActive.value) {
-        wrapperHeight.value = `${headHeight}px`;
-        return;
-      }
-      const { height: bodyHeight } = bodyRef.value.getBoundingClientRect();
-      const height = headHeight + bodyHeight;
-      wrapperHeight.value = `${height}px`;
+      nextTick(() => {
+        if (!wrapRef.value) {
+          return;
+        }
+        const { height: headHeight } = headRef.value.getBoundingClientRect();
+        if (!isActive.value) {
+          wrapperHeight.value = `${headHeight}px`;
+          return;
+        }
+        const { height: bodyHeight } = bodyRef.value.getBoundingClientRect();
+        const height = headHeight + bodyHeight;
+        wrapperHeight.value = `${height}px`;
+      });
     };
 
-    watch(isActive, () => {
-      nextTick(() => {
-        updatePanelState();
-      });
+    watch(
+      isActive,
+      () => {
+        nextTick(() => updatePanelState());
+      },
+      {
+        immediate: true,
+      },
+    );
+
+    watch(panelContent, () => {
+      nextTick(() => updatePanelState());
     });
 
     onMounted(() => {
       if (parent?.defaultExpandAll) {
         updatePanelValue();
       }
-      updatePanelState();
     });
 
     return {

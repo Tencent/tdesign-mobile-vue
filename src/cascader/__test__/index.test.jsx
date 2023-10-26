@@ -158,6 +158,8 @@ const itemList = [
 
 const subTitles = ['请选择省份', '请选择城市', '请选择区/县'];
 
+const defaultPlaceholder = "默认选项标签";
+
 describe('cascader', () => {
   describe('props', () => {
     it(':visible	', async () => {
@@ -214,6 +216,12 @@ describe('cascader', () => {
       });
     });
 
+    it(': placeholder', async () => {
+      const wrapper = mount(<Cascader options={options} placeholder={defaultPlaceholder} />);
+      const $placeholder = wrapper.find(`.${name}__step-label`);
+      expect($placeholder.text()).toEqual(defaultPlaceholder);
+    });
+
     it(': subTitles', async () => {
       const wrapper = mount(<Cascader options={options} subTitles={subTitles} />);
       const $subTitles = wrapper.find(`.${name}__options-title`);
@@ -254,6 +262,16 @@ describe('cascader', () => {
       });
       const $title = wrapper.find(`.${name}__title`);
       expect($title.text()).toBe(title);
+    });
+
+    it(': placeholder', () => {
+      const wrapper = mount(<Cascader options={options} />, {
+        slots: {
+          placeholder: defaultPlaceholder,
+        },
+      });
+      const $placeholder = wrapper.find(`.${name}__step-label`);
+      expect($placeholder.text()).toBe(defaultPlaceholder);
     });
 
     it(': closeBtn', () => {

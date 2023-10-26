@@ -83,6 +83,8 @@ export interface TdSwiperProps {
    * 点击轮播项时触发
    */
   onClick?: (index: number) => void;
+  /** 是否禁用 */
+  disabled?: Boolean;
 }
 
 export interface SwiperNavigation {

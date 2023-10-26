@@ -66,8 +66,10 @@ export default defineComponent({
     // 通过 slots.default 子成员，计算标题栏选项
     const menuTitles = computed(() =>
       menuItems.value.map((item: any, index: number) => {
-        const { keys, label, value, disabled, options } = item.props;
-        const target = options?.find((item: any) => item[keys?.value ?? 'value'] === value);
+        const { keys, label, value, modelValue, defaultValue, disabled, options } = item.props;
+        const currentValue = value || modelValue || defaultValue;
+        const target = options?.find((item: any) => item[keys?.value ?? 'value'] === currentValue);
+
         if (state.itemsLabel.length < index + 1) {
           if (!label) {
             state.itemsLabel.push((target && target[keys?.label ?? 'label']) || '');
@@ -81,7 +83,7 @@ export default defineComponent({
           };
         }
         return {
-          label: menuTitles.value[index].label,
+          label: label || menuTitles.value[index].label,
           disabled: disabled !== undefined && disabled !== false,
         };
       }),

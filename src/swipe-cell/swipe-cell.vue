@@ -6,8 +6,6 @@
         :class="classes + '__left'"
         :style="{
           width: initData.leftWidth ? `${initData.leftWidth}px` : 'auto',
-          display: 'flex',
-          'flex-flow': 'row-reverse',
         }"
       >
         <t-node v-if="swipeLeftMenu" :content="swipeLeftMenu"></t-node>
@@ -183,6 +181,7 @@ export default defineComponent({
         if (props.disabled) {
           return;
         }
+        setPanelWidth();
         swipeDir = 0;
         initData.moved = false;
         initData.offset = initData.pos;
@@ -233,12 +232,16 @@ export default defineComponent({
       },
     });
 
-    const classes = computed(() => [`${name}`]);
-    onMounted(() => {
+    const setPanelWidth = () => {
       const leftWidth = leftRef.value?.clientWidth as number;
       const rightWidth = rightRef.value?.clientWidth as number;
       initData.leftWidth = leftWidth > 0 ? leftWidth : 0;
       initData.rightWidth = rightWidth > 0 ? rightWidth : 0;
+    };
+
+    const classes = computed(() => [`${name}`]);
+    onMounted(async () => {
+      setPanelWidth();
       renderMenuStatus();
     });
     onUnmounted(() => {

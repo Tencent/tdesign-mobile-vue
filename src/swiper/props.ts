@@ -87,6 +87,11 @@ export default {
       return ['default', 'card'].includes(val);
     },
   },
+  /** 是否禁用 */
+  disabled: {
+    type: Boolean as PropType<TdSwiperProps['disabled']>,
+    default: false,
+  },
   /** 轮播切换时触发 */
   onChange: Function as PropType<TdSwiperProps['onChange']>,
   /** 点击轮播项时触发 */

@@ -5,6 +5,22 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.0.6 `2023-10-26` 
+### 🚀 Features
+- `Cascader`: 新增 `placeholder` 属性，支持自定义未选中时的提示文案 @yiqia ([#1133](https://github.com/Tencent/tdesign-mobile-vue/pull/1133))
+### 🐞 Bug Fixes
+- `Toast`: 修复纯文字不能居中的问题 @fennghuang ([#1120](https://github.com/Tencent/tdesign-mobile-vue/pull/1120))
+- `SwipeCell`: 修复操作项显示不全的问题 @fennghuang ([#1122](https://github.com/Tencent/tdesign-mobile-vue/pull/1122))
+- `SwipeCell`: 修复组件在 `Popup` 中无法左右滑动 @yiqia ([#1141](https://github.com/Tencent/tdesign-mobile-vue/pull/1141))
+- `DropdownMenu`: 修复 `label` 不能响应式更新的问题 @LoopZhou ([#1123](https://github.com/Tencent/tdesign-mobile-vue/pull/1123))
+- `Table`: 修正 `empty`属性优先级过高的问题 @fennghuang ([#1136](https://github.com/Tencent/tdesign-mobile-vue/pull/1136))
+- `Popover`: 修复气泡首次弹出被遮挡的问题以及优化箭头 @LoopZhou ([#1132](https://github.com/Tencent/tdesign-mobile-vue/pull/1132))
+- `Popup`: 修复在组件上使用 `class`和`style` 时控制台警告 @aomnisz ([#1135](https://github.com/Tencent/tdesign-mobile-vue/pull/1135))
+- `Collapse`: 修复在 `Popup` 等窗体组件中使用时渲染错误 @fennghuang ([#1140](https://github.com/Tencent/tdesign-mobile-vue/pull/1140))
+- `ImageViewer`: 修复图片预览拖拽问题 @fennghuang ([#1104](https://github.com/Tencent/tdesign-mobile-vue/pull/1104))
+
+
+
 ## 🌈 1.0.5 `2023-10-03` 
 ### 🚀 Features
 - `Calendar`: 日历选择器支持自动定位到选中日期 @ShinyHwong ([#1102](https://github.com/Tencent/tdesign-mobile-vue/pull/1102))

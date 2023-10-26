@@ -39,39 +39,39 @@
           </tr>
         </thead>
         <tbody :class="tbodyClasses">
-          <tr v-if="renderContentEmpty" :class="tableBaseClass.emptyRow">
+          <tr v-if="!data?.length && renderContentEmpty" :class="tableBaseClass.emptyRow">
             <td :colspan="columns?.length">
               <div :class="tableBaseClass.empty">
                 <t-node :content="renderContentEmpty"></t-node>
               </div>
             </td>
           </tr>
-          <tr
-            v-for="(tr_item, tr_index) in data"
-            v-else
-            :key="tr_index"
-            @click="handleRowClick(tr_item, tr_index, $event)"
-          >
-            <td
-              v-for="(td_item, td_index) in columns"
-              :key="td_index"
-              :class="[
-                {
-                  [tdEllipsisClass]: td_item.ellipsis,
-                  [tdAlignClasses[`${td_item.align}`]]: td_item.align && td_item.align !== 'left',
-                },
-              ]"
-              @click="handleCellClick(tr_item, td_item, tr_index, td_index, $event)"
-            >
-              <div :class="td_item.ellipsis && ellipsisClasses">
-                <t-node
-                  :content="
-                    renderCell({ row: tr_item, col: td_item, rowIndex: tr_index, colIndex: td_index }, cellEmptyContent)
-                  "
-                ></t-node>
-              </div>
-            </td>
-          </tr>
+          <template v-else-if="data?.length">
+            <tr v-for="(tr_item, tr_index) in data" :key="tr_index" @click="handleRowClick(tr_item, tr_index, $event)">
+              <td
+                v-for="(td_item, td_index) in columns"
+                :key="td_index"
+                :class="[
+                  {
+                    [tdEllipsisClass]: td_item.ellipsis,
+                    [tdAlignClasses[`${td_item.align}`]]: td_item.align && td_item.align !== 'left',
+                  },
+                ]"
+                @click="handleCellClick(tr_item, td_item, tr_index, td_index, $event)"
+              >
+                <div :class="td_item.ellipsis && ellipsisClasses">
+                  <t-node
+                    :content="
+                      renderCell(
+                        { row: tr_item, col: td_item, rowIndex: tr_index, colIndex: td_index },
+                        cellEmptyContent,
+                      )
+                    "
+                  ></t-node>
+                </div>
+              </td>
+            </tr>
+          </template>
         </tbody>
       </table>
       <div v-if="loadingContent" :class="loadingClasses">
