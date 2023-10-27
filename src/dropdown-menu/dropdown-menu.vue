@@ -4,8 +4,8 @@
       <div :class="`${name}__title`">
         {{ item.label }}
       </div>
-      <caret-down-small-icon v-if="$props.direction === 'down'" :class="styleIcon(item, idx)" size="24" />
-      <caret-up-small-icon v-else :class="styleIcon(item, idx)" size="24" />
+      <caret-down-small-icon v-if="$props.direction === 'down'" :class="styleIcon(item, idx)" />
+      <caret-up-small-icon v-else :class="styleIcon(item, idx)" />
     </div>
     <slot />
   </div>
