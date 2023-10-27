@@ -69,21 +69,19 @@ export default defineComponent({
         const { keys, label, value, modelValue, defaultValue, disabled, options } = item.props;
         const currentValue = value || modelValue || defaultValue;
         const target = options?.find((item: any) => item[keys?.value ?? 'value'] === currentValue);
-
         if (state.itemsLabel.length < index + 1) {
-          if (!label) {
-            state.itemsLabel.push((target && target[keys?.label ?? 'label']) || '');
-          } else {
-            state.itemsLabel.push(label || '');
-          }
-          const computedLabel = target?.[keys?.label ?? 'label'] || '';
+          const targetLabel = (target && target[keys?.label ?? 'label']) || '';
+          const computedLabel = label || targetLabel;
+
+          state.itemsLabel.push(computedLabel);
+
           return {
-            label: label || computedLabel,
+            label: computedLabel,
             disabled: disabled !== undefined && disabled !== false,
           };
         }
         return {
-          label: label || menuTitles.value[index].label,
+          label: label || target.label,
           disabled: disabled !== undefined && disabled !== false,
         };
       }),
@@ -124,6 +122,7 @@ export default defineComponent({
       }
       props.onMenuOpened?.('menuOpened');
       state.activeId = idx;
+      state.itemsLabel[idx] = item.label;
 
       // 获取菜单定位
       const bar = refBar.value as any;
