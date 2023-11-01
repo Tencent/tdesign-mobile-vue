@@ -87,7 +87,7 @@ app.use(TButton);
 ```js
 import { createApp } from 'vue';
 // 引入组件库的少量全局样式变量
-import 'tdesign-mobile-vue//es/style/index.css';
+import 'tdesign-mobile-vue/es/style/index.css';
 
 const app = createApp(App);
 ```
