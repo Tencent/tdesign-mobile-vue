@@ -84,7 +84,7 @@ You can also use `unplugin-vue-components` and `unplugin-auto-import` to achieve
 ```js
 import { createApp } from 'vue';
 // import global design variables
-import 'tdesign-mobile-vue//es/style/index.css';
+import 'tdesign-mobile-vue/es/style/index.css';
 
 const app = createApp(App);
 ```
