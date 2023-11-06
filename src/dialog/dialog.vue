@@ -5,6 +5,7 @@
     :show-overlay="showOverlay"
     :overlay-props="overlayProps"
     :prevent-scroll-through="preventScrollThrough"
+    :destroy-on-close="destroyOnClose"
     @close="handleOverlayClick"
   >
     <div id="root" :class="`${name}`" :style="rootStyles">
