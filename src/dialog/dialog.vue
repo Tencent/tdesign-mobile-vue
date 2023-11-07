@@ -7,8 +7,9 @@
     :prevent-scroll-through="preventScrollThrough"
     :destroy-on-close="destroyOnClose"
     @close="handleOverlayClick"
+    @closed="handleClosed"
   >
-    <div id="root" :class="`${name}`" :style="rootStyles">
+    <div :class="`${name}`" :style="rootStyles">
       <slot name="top" />
       <div v-if="closeBtn" :class="`${name}__close-btn`">
         <close-icon @click="handleClose" />
@@ -69,7 +70,7 @@ export default defineComponent({
   name,
   components: { TPopup, TNode, TButton, CloseIcon },
   props: DialogProps,
-  emits: ['update:visible', 'confirm', 'overlay-click', 'cancel', 'close'],
+  emits: ['update:visible', 'confirm', 'overlay-click', 'cancel', 'close', 'closed'],
   setup(props, context) {
     const internalInstance = getCurrentInstance();
     const contentNode = computed(() => renderContent(internalInstance, 'default', 'content'));
@@ -103,6 +104,10 @@ export default defineComponent({
       const { e } = args;
       context.emit('update:visible', false);
       context.emit('close', { e, trigger: 'close-btn' });
+    };
+
+    const handleClosed = () => {
+      context.emit('closed');
     };
 
     const handleConfirm = (e: MouseEvent) => {
@@ -147,6 +152,7 @@ export default defineComponent({
       cancelBtnProps,
       actionsBtnProps,
       handleClose,
+      handleClosed,
       handleConfirm,
       handleCancel,
       handleOverlayClick,
