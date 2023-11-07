@@ -40,7 +40,6 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
       
       <div
         class="t-dialog"
-        id="root"
       >
         
         
@@ -146,7 +145,6 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
       
       <div
         class="t-dialog"
-        id="root"
       >
         
         
@@ -254,7 +252,6 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
       
       <div
         class="t-dialog"
-        id="root"
       >
         
         
@@ -347,7 +344,6 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
       
       <div
         class="t-dialog"
-        id="root"
       >
         
         
@@ -436,7 +432,6 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
       
       <div
         class="t-dialog"
-        id="root"
       >
         
         
@@ -539,7 +534,6 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       
       <div
         class="t-dialog"
-        id="root"
       >
         
         <div
@@ -692,7 +686,6 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       
       <div
         class="t-dialog"
-        id="root"
       >
         
         
@@ -850,7 +843,6 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
       
       <div
         class="t-dialog"
-        id="root"
       >
         
         
@@ -999,7 +991,6 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
       
       <div
         class="t-dialog"
-        id="root"
       >
         
         
@@ -1187,7 +1178,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-dialog"
-            id="root"
           >
             
             
@@ -1280,7 +1270,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-dialog"
-            id="root"
           >
             
             
@@ -1369,7 +1358,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-dialog"
-            id="root"
           >
             
             
@@ -1483,7 +1471,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-dialog"
-            id="root"
           >
             
             
@@ -1589,7 +1576,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-dialog"
-            id="root"
           >
             
             
@@ -1712,7 +1698,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-dialog"
-            id="root"
           >
             
             
@@ -1861,7 +1846,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-dialog"
-            id="root"
           >
             
             
@@ -2033,7 +2017,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-dialog"
-            id="root"
           >
             
             <div
@@ -2186,7 +2169,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-dialog"
-            id="root"
           >
             
             
@@ -2359,7 +2341,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-dialog"
-            id="root"
           >
             
             
@@ -2465,7 +2446,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-dialog"
-            id="root"
           >
             
             
@@ -2571,7 +2551,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-dialog"
-            id="root"
           >
             
             
@@ -2677,7 +2656,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-dialog"
-            id="root"
           >
             
             
@@ -2800,7 +2778,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-dialog"
-            id="root"
           >
             
             
@@ -2968,7 +2945,6 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       
       <div
         class="t-dialog"
-        id="root"
       >
         
         
@@ -3074,7 +3050,6 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       
       <div
         class="t-dialog"
-        id="root"
       >
         
         
@@ -3180,7 +3155,6 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       
       <div
         class="t-dialog"
-        id="root"
       >
         
         
@@ -3286,7 +3260,6 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       
       <div
         class="t-dialog"
-        id="root"
       >
         
         
@@ -3409,7 +3382,6 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       
       <div
         class="t-dialog"
-        id="root"
       >
         
         
