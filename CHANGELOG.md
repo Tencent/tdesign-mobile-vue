@@ -5,6 +5,14 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.0.7 `2023-11-22` 
+### 🐞 Bug Fixes
+- `DropdownMenu`:  修复`--td-dropdown-menu-icon-sizem` 变量无效 @LoopZhou ([#1144](https://github.com/Tencent/tdesign-mobile-vue/pull/1144))
+- `DropdownMenu`: 解决 `DropdownItem` 组件的 `label` 属性不受控 @yiqia ([#1145](https://github.com/Tencent/tdesign-mobile-vue/pull/1145))
+- `Input`: 新增 `pattern ` 和 `inputmode` 属性 @LoopZhou ([#1162](https://github.com/Tencent/tdesign-mobile-vue/pull/1162))
+- `Dialog`: 修复`destroyOnClose` 属性无效并支持组件实例生成和返回 @fennghuang ([#1149](https://github.com/Tencent/tdesign-mobile-vue/pull/1149))
+
+
 ## 🌈 1.0.6 `2023-10-26` 
 ### 🚀 Features
 - `Cascader`: 新增 `placeholder` 属性，支持自定义未选中时的提示文案 @yiqia ([#1133](https://github.com/Tencent/tdesign-mobile-vue/pull/1133))
