@@ -1,8 +1,8 @@
-import { createApp, defineComponent, h, VNode, App, ref, DefineComponent, nextTick } from 'vue';
+import { createApp, h, App, ref, nextTick, reactive } from 'vue';
 
 import Dialog from './dialog.vue';
 import { WithInstallType } from '../shared';
-import { DialogCloseContext, TdDialogProps } from './type';
+import { DialogCloseContext, TdDialogProps, DialogInstance } from './type';
 
 import './style';
 
@@ -20,73 +20,88 @@ export const DialogPropsDefault = {
   closeOnOverlayClick: false,
 };
 
-let instance: DefineComponent;
+const propsFn = ['onConfirm', 'onCancel', 'onOverlayClick', 'onClose', 'onClosed'] as const;
+type DialogPropsFnName = (typeof propsFn)[number];
 
-function create(props: Partial<TdDialogProps> | string): DefineComponent {
-  const visible = ref(false);
+function create(options: Partial<TdDialogProps> | string): DialogInstance {
   const root = document.createElement('div');
   document.body.appendChild(root);
 
+  const props = ref<Partial<TdDialogProps>>({});
   const propsObject = {
     ...DialogPropsDefault,
-    ...(typeof props === 'string' ? { content: props } : props),
+    ...(typeof options === 'string' ? { content: options } : options),
   };
 
-  if (instance) {
-    instance.clear();
-    // instance = null;
+  function callFn<T>(fnType: DialogPropsFnName, context?: T): void {
+    const fn = props.value[fnType] || propsObject[fnType];
+    typeof fn === 'function' && fn(context as any);
   }
 
-  // eslint-disable-next-line vue/one-component-per-file
-  instance = defineComponent({
-    render: (): VNode =>
-      // @ts-ignore
-      h(Dialog, {
-        ...propsObject,
-        visible: visible.value,
-        onConfirm: (context: { e: MouseEvent }) => {
-          if (typeof propsObject.onConfirm === 'function') {
-            propsObject.onConfirm(context);
-          }
-          visible.value = false;
-        },
-        onCancel: (context: { e: MouseEvent }) => {
-          if (typeof propsObject.onCancel === 'function') {
-            propsObject.onCancel(context);
-          }
-          visible.value = false;
-        },
-        onOverlayClick: (context: { e: MouseEvent }) => {
-          if (typeof propsObject.onOverlayClick === 'function') {
-            propsObject.onOverlayClick(context);
-          }
-          visible.value = false;
-        },
-        onClose: (context: DialogCloseContext) => {
-          root.remove();
-          if (typeof propsObject.onClose === 'function') {
-            propsObject.onClose(context);
-          }
-        },
-      }),
+  const params = reactive({
+    ...propsObject,
+    onConfirm: (context: { e: MouseEvent }) => {
+      callFn('onConfirm', context);
+      params.visible = false;
+    },
+    onCancel: (context: { e: MouseEvent }) => {
+      callFn('onCancel', context);
+      params.visible = false;
+    },
+    onOverlayClick: (context: { e: MouseEvent }) => {
+      callFn('onOverlayClick', context);
+      params.visible = false;
+    },
+    onClose: (context: DialogCloseContext) => {
+      callFn('onClose', context);
+      root.remove();
+    },
+    onClosed: () => {
+      callFn('onClosed');
+      // 卸载创建的app
+      params.destroyOnClose && app.unmount();
+    },
   });
 
-  instance.clear = () => {
-    root.remove();
+  const app = createApp(() => h(Dialog, params));
+  app.mount(root);
+
+  const handler = {
+    destroy() {
+      params.destroyOnClose = true;
+      nextTick(() => {
+        params.visible = false;
+        root.remove();
+      });
+    },
+    hide() {
+      params.visible = false;
+    },
+    show() {
+      params.visible = true;
+    },
+    update(options: Partial<TdDialogProps> | string) {
+      if (typeof options === 'string') {
+        params.content = options;
+      } else {
+        for (const key in options) {
+          if (propsFn.includes(key as DialogPropsFnName)) {
+            props.value[key] = options[key];
+          } else {
+            params[key] = options[key];
+          }
+        }
+      }
+    },
   };
 
-  // eslint-disable-next-line vue/one-component-per-file
-  createApp(instance).mount(root);
+  nextTick(() => (params.visible = true));
 
-  nextTick(() => {
-    visible.value = true;
-  });
-
-  return instance;
+  return handler;
 }
 
 (['show', 'alert', 'confirm'] as DialogType[]).forEach((type: DialogType): void => {
-  Dialog[type] = (options: Partial<TdDialogProps> | string) => {
+  Dialog[type] = (options: Partial<TdDialogProps> | string): DialogInstance => {
     let props: any = { content: '' };
 
     if (typeof options === 'string') {
@@ -113,11 +128,11 @@ Dialog.install = (app: App, name = '') => {
 
 type DialogApi = {
   /** 通用对话框 */
-  show: (options: Partial<TdDialogProps> | string) => void;
+  show: (options: Partial<TdDialogProps> | string) => DialogInstance;
   /** 基础对话框 */
-  alert: (options: Partial<TdDialogProps> | string) => void;
+  alert: (options: Partial<TdDialogProps> | string) => DialogInstance;
   /** 选择对话框 */
-  confirm: (options: Partial<TdDialogProps> | string) => void;
+  confirm: (options: Partial<TdDialogProps> | string) => DialogInstance;
 };
 
 export const DialogPlugin: WithInstallType<typeof Dialog> & DialogApi = Dialog as any;
