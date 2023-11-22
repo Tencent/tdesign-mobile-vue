@@ -23,6 +23,8 @@
           :placeholder="placeholder"
           :readonly="readonly"
           :maxlength="maxlength || -1"
+          :pattern="pattern"
+          :inputmode="inputmode"
           @focus="handleFocus"
           @blur="handleBlur"
           @input="handleInput"
@@ -50,8 +52,8 @@
 </template>
 
 <script lang="ts">
+import { PropType, ref, computed, defineComponent, getCurrentInstance, toRefs, nextTick, watch } from 'vue';
 import { CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
-import { ref, computed, defineComponent, getCurrentInstance, toRefs, nextTick, watch } from 'vue';
 import { useFocus } from '@vueuse/core';
 import config from '../config';
 import InputProps from './props';
@@ -73,6 +75,16 @@ export default defineComponent({
     labelAlign: {
       type: String,
       default: 'top',
+    },
+    pattern: {
+      type: String,
+    },
+    inputmode: {
+      type: String as PropType<'search' | 'text' | 'none' | 'url' | 'tel' | 'email' | 'numeric' | 'decimal'>,
+      validator(val: string): boolean {
+        if (!val) return true;
+        return ['search', 'text', 'none', 'url', 'tel', 'email', 'numeric', 'decimal'].includes(val);
+      },
     },
   },
   emits: ['update:value', 'update:modelValue', 'click-icon', 'focus', 'blur', 'change', 'clear'],
