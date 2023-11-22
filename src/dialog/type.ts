@@ -78,6 +78,10 @@ export interface TdDialogProps {
    */
   onClose?: (context: DialogCloseContext) => void;
   /**
+   * 组件关闭且动画结束后执行
+   */
+  onClosed?: () => void;
+  /**
    * 如果“确认”按钮存在，则点击“确认”按钮时触发
    */
   onConfirm?: (context: { e: MouseEvent }) => void;
