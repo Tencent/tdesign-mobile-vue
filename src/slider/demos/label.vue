@@ -11,8 +11,8 @@
 import { ref } from 'vue';
 
 const value = ref(10);
-const onChange = (e: any) => {
-  value.value = e.value;
+const onChange = (e: number) => {
+  value.value = e;
 };
 </script>
 
