@@ -5,7 +5,7 @@
         <t-node v-if="!(typeof titleTNode === 'string')" :content="titleTNode" />
         <template v-else>{{ title }}</template>
       </div>
-      <div :class="`${name}__close-btn`" @click="onClose">
+      <div :class="`${name}__close-btn`" @click="onCloseBtn">
         <t-node v-if="closeBtnTNode" :content="closeBtnTNode" />
       </div>
       <div :class="`${name}__content`">
@@ -55,7 +55,7 @@
             <transition appear name="slide">
               <div :class="`cascader-radio-group-${index}`">
                 <t-radio-group
-                  :value="selectedValue[index]"
+                  :value="selectedValue[index] || ''"
                   :keys="keys"
                   :options="options"
                   placement="right"
@@ -124,10 +124,15 @@ export default defineComponent({
     TTabPanel,
     TRadioGroup,
   },
-  props: TdCascaderProps,
+  // props: TdCascaderProps,
+  props: {
+    ...TdCascaderProps,
+    /** 父子节点选中状态不再关联，可各自选中或取消 */
+    checkStrictly: Boolean,
+  },
   emits: ['change', 'close', 'pick', 'update:modelValue', 'update:value', 'update:visible'],
   setup(props, context) {
-    const { visible, value, modelValue, subTitles, options, keys } = toRefs(props);
+    const { visible, value, modelValue, subTitles, options, keys, checkStrictly } = toRefs(props);
     const open = ref(visible.value || false);
     const [cascaderValue, setCascaderValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
     const title = computed(() => props.title || '标题');
@@ -229,7 +234,7 @@ export default defineComponent({
       } else if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length === 0) {
         childrenInfo.value = e;
         childrenInfo.level = level;
-      } else {
+      } else if (!checkStrictly.value) {
         setCascaderValue(
           item[(keys as Ref<KeysType>).value?.value ?? 'value'],
           items.map((item, index) => toRaw(item?.[selectedIndexes[index]])),
@@ -271,12 +276,47 @@ export default defineComponent({
       close('close-btn');
     };
 
+    const onConfirm = () => {
+      if (!selectedValue.length) {
+        onClose();
+        return;
+      }
+
+      setCascaderValue(
+        selectedValue[selectedValue.length - 1],
+        items
+          .filter((item, index) => !!item && selectedIndexes.length > index)
+          .map((item, index) => toRaw(item?.[selectedIndexes[index]])),
+      );
+      close('finish');
+    };
+
+    const onCloseBtn = () => {
+      if (checkStrictly.value) {
+        onConfirm();
+      } else {
+        onClose();
+      }
+    };
+
     const onStepClick = (index: number) => {
+      if (checkStrictly.value) {
+        const result = selectedValue.length >= index && selectedValue[index];
+        result && handleSelect(result, index);
+      }
+
       stepIndex.value = index;
     };
 
     const onTabChange = (value: number | string) => {
-      stepIndex.value = Number(value);
+      const index = Number(value);
+
+      if (checkStrictly.value) {
+        const result = selectedValue.length >= index && selectedValue[index];
+        result && handleSelect(result, index);
+      }
+
+      stepIndex.value = index;
     };
 
     return {
@@ -300,6 +340,8 @@ export default defineComponent({
       items,
       setCascaderValue,
       onClose,
+      onConfirm,
+      onCloseBtn,
     };
   },
 });
