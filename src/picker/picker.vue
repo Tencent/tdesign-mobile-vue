@@ -9,6 +9,7 @@
     <div :class="`${name}__main`">
       <div v-for="(item, index) in realColumns" :key="index" :class="`${name}-item__group`">
         <picker-item
+          :ref="(item) => setPickerItemRef(item, index)"
           :options="item"
           :value="pickerValue?.[index]"
           :render-label="renderLabel"
@@ -23,14 +24,14 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, toRefs, onMounted, ref, getCurrentInstance, watch } from 'vue';
+import { computed, defineComponent, toRefs, ref, getCurrentInstance, watch } from 'vue';
 import isString from 'lodash/isString';
 import isBoolean from 'lodash/isBoolean';
 
 import config from '../config';
 import PickerProps from './props';
 import { PickerValue, PickerColumn, PickerColumnItem } from './type';
-import { useVModel, useChildSlots, TNode, renderTNode } from '../shared';
+import { useVModel, TNode, renderTNode } from '../shared';
 import PickerItem from './picker-item.vue';
 
 const { prefix } = config;
@@ -67,12 +68,11 @@ export default defineComponent({
     const curIndexArray = realColumns.value.map((item: PickerColumn, index: number) => {
       return getIndexFromColumns(item, pickerValue.value?.[index]);
     });
-    const pickerItemInstanceArray = ref([]) as any;
-
-    onMounted(() => {
-      // 获取pickerItem实例，用于更新每个item的value和index
-      pickerItemInstanceArray.value = useChildSlots('t-picker-item').map((item) => item.component);
-    });
+    const pickerItemInstanceArray = ref<any[]>([]);
+    // 获取pickerItem实例，用于更新每个item的value和index
+    function setPickerItemRef(item: any, index: number) {
+      pickerItemInstanceArray.value[index] = item;
+    }
 
     const handleConfirm = (e: MouseEvent) => {
       const target = realColumns.value.map((item: PickerColumnItem, index: number) => item[curIndexArray[index]]);
@@ -83,7 +83,7 @@ export default defineComponent({
     };
     const handleCancel = (e: MouseEvent) => {
       pickerItemInstanceArray.value.forEach((item: any, index: number) => {
-        item.exposed?.setIndex(curIndexArray[index]);
+        item?.setIndex(curIndexArray[index]);
       });
       props.onCancel?.({ e });
     };
@@ -104,7 +104,7 @@ export default defineComponent({
       realColumns.value.forEach((col: PickerColumn, idx: number) => {
         const index = col.findIndex((item: PickerColumnItem) => item.value === curValueArray.value[idx]);
         curIndexArray[idx] = index > -1 ? index : 0;
-        pickerItemInstanceArray.value[idx].exposed?.setIndex(curIndexArray[idx]);
+        pickerItemInstanceArray.value[idx]?.setIndex(curIndexArray[idx]);
       });
     });
 
@@ -119,6 +119,7 @@ export default defineComponent({
       handleCancel,
       handlePick,
       realColumns,
+      setPickerItemRef,
     };
   },
 });
