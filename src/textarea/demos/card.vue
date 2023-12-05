@@ -4,7 +4,7 @@
       class="textarea"
       label="标签文字"
       placeholder="请输入文字"
-      maxlength="500"
+      :maxlength="500"
       indicator
       layout="vertical"
     />
@@ -12,7 +12,7 @@
 
   <div class="textarea-example card">
     <div class="textarea-example__summary">卡片样式</div>
-    <t-textarea class="textarea" label="标签文字" placeholder="请输入文字" maxlength="500" indicator />
+    <t-textarea class="textarea" label="标签文字" placeholder="请输入文字" :maxlength="500" indicator />
   </div>
 </template>
 
