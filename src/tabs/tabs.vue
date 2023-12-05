@@ -59,6 +59,7 @@ import {
   Fragment,
   watch,
   CSSProperties,
+  onActivated,
 } from 'vue';
 import config from '../config';
 import TabsProps from './props';
@@ -174,6 +175,9 @@ export default defineComponent({
     });
     onBeforeUnmount(() => {
       window.removeEventListener('resize', moveToActiveTab);
+    });
+    onActivated(() => {
+      moveToActiveTab();
     });
 
     watch(value, () => {
