@@ -33,16 +33,16 @@ export default {
   },
   /** 选中值 */
   value: {
-    type: [String, Number] as PropType<TdDropdownItemProps['value']>,
+    type: [String, Number, Array] as PropType<TdDropdownItemProps['value']>,
     default: undefined,
   },
   modelValue: {
-    type: [String, Number] as PropType<TdDropdownItemProps['value']>,
+    type: [String, Number, Array] as PropType<TdDropdownItemProps['value']>,
     default: undefined,
   },
   /** 选中值，非受控属性 */
   defaultValue: {
-    type: [String, Number] as PropType<TdDropdownItemProps['defaultValue']>,
+    type: [String, Number, Array] as PropType<TdDropdownItemProps['defaultValue']>,
     default: undefined,
   },
   /** 值改变时触发 */
