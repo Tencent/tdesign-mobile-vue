@@ -52,7 +52,6 @@ export default defineComponent({
     const textareaLength = ref(0);
     const { value, modelValue } = toRefs(props);
     const [innerValue, setInnerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
-
     const textareaClass = computed(() => [
       `${componentName}`,
       {
@@ -85,6 +84,8 @@ export default defineComponent({
     const adjustTextareaHeight = () => {
       if (props.autosize === true) {
         textareaStyle.value = calcTextareaHeight(textareaRef.value as HTMLTextAreaElement);
+      } else if (props.autosize === false) {
+        textareaStyle.value = calcTextareaHeight(textareaRef.value as HTMLTextAreaElement, 1, 1);
       } else if (typeof props.autosize === 'object') {
         const { minRows, maxRows } = props.autosize;
         textareaStyle.value = calcTextareaHeight(textareaRef.value as HTMLTextAreaElement, minRows, maxRows);
@@ -144,6 +145,12 @@ export default defineComponent({
         adjustTextareaHeight();
       });
     });
+    watch(
+      () => props.autosize,
+      () => {
+        adjustTextareaHeight();
+      },
+    );
     return {
       componentName,
       ...toRefs(props),
