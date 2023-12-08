@@ -5,6 +5,18 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.0.8 `2023-12-08` 
+### 🚀 Features
+- `Textarea`: 支持 `autosize` 属性值变更后输入框高度重新计算 @QuentinHsu ([#1175](https://github.com/Tencent/tdesign-mobile-vue/pull/1175))
+### 🐞 Bug Fixes
+- `DropdownMenu`:  `value` 属性新增 `Array` 类型 @LoopZhou ([#1166](https://github.com/Tencent/tdesign-mobile-vue/pull/1166))
+- `Tabs`: 修复组件在 `keep-alive` 下底部激活态蓝线样式位置错误 @LoopZhou ([#1165](https://github.com/Tencent/tdesign-mobile-vue/pull/1165))
+- `Picker`: 修复`columns` 为异步加载数据时点选报错 @hkaikai ([#1171](https://github.com/Tencent/tdesign-mobile-vue/pull/1171))
+- `SideBar`: 修复页面高度较小时组件背景色错误[#1646](https://github.com/Tencent/tdesign-common/pull/1646)
+### 🚧 Others
+- `Slider`: 修复示例错误 @LoopZhou ([#1168](https://github.com/Tencent/tdesign-mobile-vue/pull/1168))
+- `Textarea`: 修复示例错误 @QuentinHsu ([#1172](https://github.com/Tencent/tdesign-mobile-vue/pull/1172))
+
 ## 🌈 1.0.7 `2023-11-22` 
 ### 🐞 Bug Fixes
 - `DropdownMenu`:  修复`--td-dropdown-menu-icon-sizem` 变量无效 @LoopZhou ([#1144](https://github.com/Tencent/tdesign-mobile-vue/pull/1144))
