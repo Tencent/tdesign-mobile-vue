@@ -70,9 +70,9 @@ export default defineComponent({
     });
     const pickerItemInstanceArray = ref<any[]>([]);
     // 获取pickerItem实例，用于更新每个item的value和index
-    function setPickerItemRef(item: any, index: number) {
+    const setPickerItemRef = (item: any, index: number) => {
       pickerItemInstanceArray.value[index] = item;
-    }
+    };
 
     const handleConfirm = (e: MouseEvent) => {
       const target = realColumns.value.map((item: PickerColumnItem, index: number) => item[curIndexArray[index]]);
