@@ -10,6 +10,7 @@
         height: containerHeight,
       }"
       @transitionend.self="handleAnimationEnd"
+      @click="onItemClick"
     >
       <slot />
     </div>
@@ -63,9 +64,9 @@ import {
   watch,
   onUnmounted,
 } from 'vue';
-import { useSwipe } from '@vueuse/core';
 import isObject from 'lodash/isObject';
 import isNumber from 'lodash/isNumber';
+import { useSwipe } from '../swipe-cell/useSwipe';
 
 import config from '../config';
 import SwiperProps from './props';
@@ -181,10 +182,9 @@ const processIndex = (index: number, source: SwiperChangeSource) => {
 };
 
 const { lengthX, lengthY } = useSwipe(swiperContainer, {
-  passive: false,
+  threshold: 0,
   onSwipeStart() {
     if (disabled.value || isSwiperDisabled.value || !items.value.length) return;
-    onItemClick(); // use touchstart to simulate click on swipe start
     stopAutoplay();
   },
   onSwipe(e: TouchEvent) {
