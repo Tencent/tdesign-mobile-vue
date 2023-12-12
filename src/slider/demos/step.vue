@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <t-slider v-model="value" :marks="marks" :step="20" />
+    <t-slider v-model="value" :marks="marksRange" :min="5" :max="10" :step="0.5" />
   </div>
 
   <div class="wrapper">
@@ -11,7 +11,15 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const value = ref(60);
+const value = ref(6.5);
+const marksRange = ref({
+  5: '5',
+  6: '6',
+  7: '7',
+  8: '8',
+  9: '9',
+  10: '10',
+});
 const marks = ref({
   0: '0',
   20: '20',
