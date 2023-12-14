@@ -14,6 +14,7 @@ title | String / Slot / Function | - | 标题。TS 类型：`string \| TNode`。
 value | String / Number | - | 选项值。支持语法糖 `v-model` 或 `v-model:value` | N
 defaultValue | String / Number | - | 选项值。非受控属性 | N
 visible | Boolean | false | 是否展示 | N
+checkStrictly | Boolean | false | 父子节点选中状态不再关联，可各自选中或取消 | N
 placeholder | String / Slot / Function | 选择选项 | 未选中时的提示文案。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 onChange | Function |  | TS 类型：`(value: string \| number, selectedOptions: string[]) => void`<br/>值发生变更时触发 | N
 onClose | Function |  | TS 类型：`(trigger: TriggerSource) => void`<br/>关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/> | N

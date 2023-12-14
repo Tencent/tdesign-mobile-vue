@@ -266,7 +266,24 @@ export default defineComponent({
       close('overlay');
     };
 
+    const onCloseChange = () => {
+      if (!stepIndex.value) {
+        setCascaderValue('', []);
+      } else {
+        const item = items[stepIndex.value - 1][selectedIndexes[stepIndex.value - 1]];
+
+        setCascaderValue(
+          item[(keys as Ref<KeysType>).value?.value ?? 'value'],
+          items.slice(0, stepIndex.value).map((item, index) => toRaw(item?.[selectedIndexes[index]])),
+        );
+      }
+    };
+
     const onClose = () => {
+      if (props.checkStrictly) {
+        onCloseChange();
+      }
+
       open.value = false;
       close('close-btn');
     };
