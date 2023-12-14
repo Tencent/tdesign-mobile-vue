@@ -39,7 +39,7 @@ export default defineComponent({
     ActionSheetGrid,
   },
   props: ActionSheetProps,
-  emits: ['selected', 'update:modelValue', 'cancel', 'close'],
+  emits: ['selected', 'update:modelValue', 'cancel', 'close', 'update:visible'],
   setup(props: any, context) {
     const actionItems = computed(() => {
       return props.items.map((item: String | ActionSheetItem) => {
