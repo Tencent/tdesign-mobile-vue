@@ -267,8 +267,8 @@ export default defineComponent({
       props.onClose?.({ trigger });
     };
 
-    const onVisibleChange = (visible: boolean) => {
-      close('overlay');
+    const onVisibleChange = (visible: boolean, e: any) => {
+      if (e?.trigger === 'overlay') close('overlay');
     };
 
     const onClose = () => {
