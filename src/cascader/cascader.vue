@@ -208,22 +208,12 @@ export default defineComponent({
       }
     };
 
-    const handleSelect = (e: string | number, level: number) => {
-      const value = e;
-      const index = items[level].findIndex(
-        (item: any) => item[(keys as Ref<KeysType>).value?.value ?? 'value'] === value,
-      );
-      const item = items[level][index];
+    const chooseSelect = (e: string | number, level: number, index: number, item: any) => {
       selectedIndexes[level] = index;
       selectedIndexes.length = level + 1;
       selectedValue[level] = String(e);
       selectedValue.length = level + 1;
       steps[level] = item[(keys as Ref<KeysType>).value?.label ?? 'label'] as string;
-
-      if (item.disabled) {
-        return;
-      }
-      props.onPick?.({ level, value: item[(keys as Ref<KeysType>).value?.value ?? 'value'], index });
 
       if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length) {
         items[level + 1] = item[(keys as Ref<KeysType>).value?.children ?? 'children'];
@@ -234,12 +224,40 @@ export default defineComponent({
       } else if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length === 0) {
         childrenInfo.value = e;
         childrenInfo.level = level;
-      } else if (!checkStrictly.value) {
-        setCascaderValue(
-          item[(keys as Ref<KeysType>).value?.value ?? 'value'],
-          items.map((item, index) => toRaw(item?.[selectedIndexes[index]])),
-        );
-        close('finish');
+      }
+    };
+
+    const cancelSelect = (e: string | number, level: number, index: number, item: any) => {
+      selectedIndexes[level] = index;
+      selectedIndexes.length = level;
+      selectedValue.length = level;
+      steps[level] = String(placeholder.value);
+      steps[level + 1] = placeholder.value;
+      steps.length = level + 1;
+
+      if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length) {
+        items[level + 1] = item[(keys as Ref<KeysType>).value?.children ?? 'children'];
+      } else if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length === 0) {
+        childrenInfo.value = e;
+        childrenInfo.level = level;
+      }
+    };
+
+    const handleSelect = (e: string | number, level: number) => {
+      const value = e;
+      const index = items[level].findIndex(
+        (item: any) => item[(keys as Ref<KeysType>).value?.value ?? 'value'] === value,
+      );
+      const item = items[level][index];
+      if (item.disabled) {
+        return;
+      }
+      props.onPick?.({ level, value: item[(keys as Ref<KeysType>).value?.value ?? 'value'], index });
+
+      if (selectedValue.includes(String(value))) {
+        cancelSelect(e, level, index, item);
+      } else {
+        chooseSelect(e, level, index, item);
       }
     };
 
@@ -268,7 +286,18 @@ export default defineComponent({
     };
 
     const onVisibleChange = (visible: boolean, e: any) => {
-      if (e?.trigger === 'overlay') close('overlay');
+      if (e?.trigger !== 'overlay') return;
+      close('overlay');
+      updateCascaderValue();
+    };
+
+    const updateCascaderValue = () => {
+      setCascaderValue(
+        selectedValue[selectedValue.length - 1],
+        items
+          .filter((item, index) => !!item && selectedIndexes.length > index)
+          .map((item, index) => toRaw(item?.[selectedIndexes[index]])),
+      );
     };
 
     const onClose = () => {
@@ -276,47 +305,21 @@ export default defineComponent({
       close('close-btn');
     };
 
-    const onConfirm = () => {
-      if (!selectedValue.length) {
-        onClose();
-        return;
-      }
-
-      setCascaderValue(
-        selectedValue[selectedValue.length - 1],
-        items
-          .filter((item, index) => !!item && selectedIndexes.length > index)
-          .map((item, index) => toRaw(item?.[selectedIndexes[index]])),
-      );
-      close('finish');
-    };
-
     const onCloseBtn = () => {
       if (checkStrictly.value) {
-        onConfirm();
+        updateCascaderValue();
+        onClose();
       } else {
         onClose();
       }
     };
 
     const onStepClick = (index: number) => {
-      if (checkStrictly.value) {
-        const result = selectedValue.length >= index && selectedValue[index];
-        result && handleSelect(result, index);
-      }
-
       stepIndex.value = index;
     };
 
     const onTabChange = (value: number | string) => {
-      const index = Number(value);
-
-      if (checkStrictly.value) {
-        const result = selectedValue.length >= index && selectedValue[index];
-        result && handleSelect(result, index);
-      }
-
-      stepIndex.value = index;
+      stepIndex.value = Number(value);
     };
 
     return {
@@ -340,7 +343,6 @@ export default defineComponent({
       items,
       setCascaderValue,
       onClose,
-      onConfirm,
       onCloseBtn,
     };
   },
