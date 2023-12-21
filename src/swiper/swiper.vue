@@ -182,7 +182,6 @@ const processIndex = (index: number, source: SwiperChangeSource) => {
 };
 
 const { lengthX, lengthY } = useSwipe(swiperContainer, {
-  threshold: 0,
   onSwipeStart() {
     if (disabled.value || isSwiperDisabled.value || !items.value.length) return;
     stopAutoplay();
