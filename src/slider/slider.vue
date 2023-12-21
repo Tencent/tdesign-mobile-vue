@@ -217,6 +217,14 @@ export default defineComponent({
       },
     ]);
 
+    const precision = computed(() => {
+      const precisions = [min.value, max.value, step.value].map((item) => {
+        const decimalArr = `${item}`.split('.');
+        return decimalArr[1] ? decimalArr[1].length : 0;
+      });
+      return Math.max.apply(null, precisions);
+    });
+
     const lineBarWidth = ref<number>();
     const setSingleBarWidth = (value: number) => {
       const halfBlock = theme.value === 'capsule' ? Number(state.blockSize) / 2 : 0;
@@ -276,8 +284,7 @@ export default defineComponent({
       if (disabled.value) return;
       const [{ pageX }] = e.changedTouches;
       const value = convertPosToValue(pageX - state.initialLeft);
-
-      changeValue(value);
+      changeValue(calcByStep(value));
     };
 
     const changeValue = (value: SliderValue) => {
@@ -285,10 +292,10 @@ export default defineComponent({
     };
 
     const calcByStep = (value: number): number => {
-      if (step.value < 1 || step.value > scope.value) return value;
+      if (step.value < 0 || step.value > scope.value) return Number(parseFloat(`${value}`).toFixed(precision.value));
       const closestStep = trimSingleValue(Math.round(value / step.value) * step.value, min.value, max.value);
 
-      return closestStep as number;
+      return Number(parseFloat(`${closestStep}`).toFixed(precision.value));
     };
 
     const getValue = (label: any, value: any) => {
@@ -324,7 +331,8 @@ export default defineComponent({
       const raw = isLeft
         ? (posValue / state.maxRange) * scope.value + min.value
         : max.value - (posValue / state.maxRange) * scope.value;
-      return Math.round(raw);
+
+      return raw;
     };
 
     const onTouchMoveLeft = (e: TouchEvent) => {
@@ -353,7 +361,7 @@ export default defineComponent({
       if (!sliderLine.value) return;
       const currentLeft = e.clientX - state.initialLeft;
       const value = convertPosToValue(currentLeft);
-      changeValue(value);
+      changeValue(calcByStep(value));
     };
 
     const onLineClick = (e: MouseEvent) => {
