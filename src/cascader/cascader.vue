@@ -259,11 +259,12 @@ export default defineComponent({
     );
 
     const close = (trigger: string) => {
+      if (props.checkStrictly) onCloseChange();
       props.onClose?.({ trigger });
     };
 
-    const onVisibleChange = (visible: boolean) => {
-      close('overlay');
+    const onVisibleChange = (visible: boolean, e?: any) => {
+      if (e?.trigger === 'overlay') close('overlay');
     };
 
     const onCloseChange = () => {
@@ -280,10 +281,6 @@ export default defineComponent({
     };
 
     const onClose = () => {
-      if (props.checkStrictly) {
-        onCloseChange();
-      }
-
       open.value = false;
       close('close-btn');
     };
