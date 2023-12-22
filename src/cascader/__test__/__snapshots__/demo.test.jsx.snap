@@ -2075,6 +2075,246 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
     </div>
   </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        选择任意一项
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="t-cell t-cell--middle"
+        data-v-e4157e3c=""
+      >
+        <div
+          class="t-cell__left"
+        >
+          <!--v-if-->
+          <!---->
+        </div>
+        <div
+          class="t-cell__title"
+        >
+          地址
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__note"
+        >
+          请选择地址
+        </div>
+        <div
+          class="t-cell__right"
+        >
+          <div
+            class="t-cell__right-icon"
+          >
+            <svg
+              class="t-icon t-icon-chevron-right"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <teleport-stub
+        data-v-e4157e3c=""
+        disabled="false"
+        to="[object HTMLBodyElement]"
+      >
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
+        >
+          
+          
+        </div>
+        <div
+          class="t-popup t-popup--bottom"
+          style="display: none;"
+        >
+          <!--v-if-->
+          
+          <div
+            class="t-cascader"
+          >
+            <div
+              class="t-cascader__title"
+            >
+              
+              选择地址
+              
+            </div>
+            <div
+              class="t-cascader__close-btn"
+            >
+              
+              <span
+                class="confirm-btn"
+                data-v-e4157e3c=""
+              >
+                确定
+              </span>
+              
+            </div>
+            <div
+              class="t-cascader__content"
+            >
+              <div>
+                <div
+                  class="t-cascader__steps"
+                >
+                  
+                  <div
+                    class="t-cascader__step"
+                  >
+                    <div
+                      class="t-cascader__step-dot t-cascader__step-dot--last"
+                    />
+                    <div
+                      class="t-cascader__step-label t-cascader__step-label--active"
+                    >
+                      
+                      选择选项
+                      
+                    </div>
+                    <svg
+                      class="t-icon t-icon-chevron-right t-cascader__step-arrow"
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <path
+                        d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                  
+                </div>
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+              <div
+                class="t-cascader__options-container"
+                style="width: 200vw; transform: translateX(-000vw);"
+              >
+                
+                <div
+                  class="t-cascader__options"
+                >
+                  <div
+                    class="cascader-radio-group-0 slide-enter-from slide-enter-active"
+                  >
+                    <div
+                      class="t-radio-group"
+                      role="radiogroup"
+                    >
+                      
+                      <div
+                        class="t-radio t-radio--right t-radio--block"
+                      >
+                        <input
+                          class="t-radio__original"
+                          name=""
+                          type="radio"
+                          value="110000"
+                        />
+                        <div
+                          class="t-radio__icon t-radio__icon--right"
+                        >
+                          <!--v-if-->
+                          <!--v-if-->
+                          <!--v-if-->
+                          <!--v-if-->
+                          <div
+                            class="placeholder"
+                          />
+                          <!---->
+                        </div>
+                        <div
+                          class="t-radio__content"
+                        >
+                          <span
+                            class="t-radio__title"
+                            style=""
+                          >
+                            北京市
+                          </span>
+                          <!--v-if-->
+                        </div>
+                        <!--v-if-->
+                      </div>
+                      <div
+                        class="t-radio t-radio--right t-radio--block"
+                      >
+                        <input
+                          class="t-radio__original"
+                          name=""
+                          type="radio"
+                          value="120000"
+                        />
+                        <div
+                          class="t-radio__icon t-radio__icon--right"
+                        >
+                          <!--v-if-->
+                          <!--v-if-->
+                          <!--v-if-->
+                          <!--v-if-->
+                          <div
+                            class="placeholder"
+                          />
+                          <!---->
+                        </div>
+                        <div
+                          class="t-radio__content"
+                        >
+                          <span
+                            class="t-radio__title"
+                            style=""
+                          >
+                            天津市
+                          </span>
+                          <!--v-if-->
+                        </div>
+                        <!--v-if-->
+                      </div>
+                      
+                      <!--v-if-->
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </teleport-stub>
+      
+      
+    </div>
+  </div>
 </div>
 `;
 

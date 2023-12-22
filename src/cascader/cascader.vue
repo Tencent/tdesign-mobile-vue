@@ -5,7 +5,7 @@
         <t-node v-if="!(typeof titleTNode === 'string')" :content="titleTNode" />
         <template v-else>{{ title }}</template>
       </div>
-      <div :class="`${name}__close-btn`" @click="onClose">
+      <div :class="`${name}__close-btn`" @click="onCloseBtn">
         <t-node v-if="closeBtnTNode" :content="closeBtnTNode" />
       </div>
       <div :class="`${name}__content`">
@@ -55,7 +55,7 @@
             <transition appear name="slide">
               <div :class="`cascader-radio-group-${index}`">
                 <t-radio-group
-                  :value="selectedValue[index]"
+                  :value="selectedValue[index] || ''"
                   :keys="keys"
                   :options="options"
                   placement="right"
@@ -127,7 +127,7 @@ export default defineComponent({
   props: TdCascaderProps,
   emits: ['change', 'close', 'pick', 'update:modelValue', 'update:value', 'update:visible'],
   setup(props, context) {
-    const { visible, value, modelValue, subTitles, options, keys } = toRefs(props);
+    const { visible, value, modelValue, subTitles, options, keys, checkStrictly } = toRefs(props);
     const open = ref(visible.value || false);
     const [cascaderValue, setCascaderValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
     const title = computed(() => props.title || '标题');
@@ -203,22 +203,12 @@ export default defineComponent({
       }
     };
 
-    const handleSelect = (e: string | number, level: number) => {
-      const value = e;
-      const index = items[level].findIndex(
-        (item: any) => item[(keys as Ref<KeysType>).value?.value ?? 'value'] === value,
-      );
-      const item = items[level][index];
+    const chooseSelect = (e: string | number, level: number, index: number, item: any) => {
       selectedIndexes[level] = index;
       selectedIndexes.length = level + 1;
       selectedValue[level] = String(e);
       selectedValue.length = level + 1;
       steps[level] = item[(keys as Ref<KeysType>).value?.label ?? 'label'] as string;
-
-      if (item.disabled) {
-        return;
-      }
-      props.onPick?.({ level, value: item[(keys as Ref<KeysType>).value?.value ?? 'value'], index });
 
       if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length) {
         items[level + 1] = item[(keys as Ref<KeysType>).value?.children ?? 'children'];
@@ -235,6 +225,40 @@ export default defineComponent({
           items.map((item, index) => toRaw(item?.[selectedIndexes[index]])),
         );
         close('finish');
+      }
+    };
+
+    const cancelSelect = (e: string | number, level: number, index: number, item: any) => {
+      selectedIndexes[level] = index;
+      selectedIndexes.length = level;
+      selectedValue.length = level;
+      steps[level] = String(placeholder.value);
+      steps[level + 1] = placeholder.value;
+      steps.length = level + 1;
+
+      if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length) {
+        items[level + 1] = item[(keys as Ref<KeysType>).value?.children ?? 'children'];
+      } else if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length === 0) {
+        childrenInfo.value = e;
+        childrenInfo.level = level;
+      }
+    };
+
+    const handleSelect = (e: string | number, level: number) => {
+      const value = e;
+      const index = items[level].findIndex(
+        (item: any) => item[(keys as Ref<KeysType>).value?.value ?? 'value'] === value,
+      );
+      const item = items[level][index];
+      if (item.disabled) {
+        return;
+      }
+      props.onPick?.({ level, value: item[(keys as Ref<KeysType>).value?.value ?? 'value'], index });
+
+      if (checkStrictly.value && selectedValue.includes(String(value))) {
+        cancelSelect(e, level, index, item);
+      } else {
+        chooseSelect(e, level, index, item);
       }
     };
 
@@ -262,13 +286,32 @@ export default defineComponent({
       props.onClose?.({ trigger });
     };
 
-    const onVisibleChange = (visible: boolean) => {
+    const onVisibleChange = (visible: boolean, e: any) => {
+      if (e?.trigger !== 'overlay') return;
       close('overlay');
+    };
+
+    const updateCascaderValue = () => {
+      setCascaderValue(
+        selectedValue[selectedValue.length - 1],
+        items
+          .filter((item, index) => !!item && selectedIndexes.length > index)
+          .map((item, index) => toRaw(item?.[selectedIndexes[index]])),
+      );
     };
 
     const onClose = () => {
       open.value = false;
       close('close-btn');
+    };
+
+    const onCloseBtn = () => {
+      if (checkStrictly.value) {
+        updateCascaderValue();
+        onClose();
+      } else {
+        onClose();
+      }
     };
 
     const onStepClick = (index: number) => {
@@ -300,6 +343,7 @@ export default defineComponent({
       items,
       setCascaderValue,
       onClose,
+      onCloseBtn,
     };
   },
 });
