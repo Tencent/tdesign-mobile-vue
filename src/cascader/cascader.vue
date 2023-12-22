@@ -224,6 +224,12 @@ export default defineComponent({
       } else if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length === 0) {
         childrenInfo.value = e;
         childrenInfo.level = level;
+      } else {
+        setCascaderValue(
+          item[(keys as Ref<KeysType>).value?.value ?? 'value'],
+          items.map((item, index) => toRaw(item?.[selectedIndexes[index]])),
+        );
+        close('finish');
       }
     };
 
@@ -254,7 +260,7 @@ export default defineComponent({
       }
       props.onPick?.({ level, value: item[(keys as Ref<KeysType>).value?.value ?? 'value'], index });
 
-      if (selectedValue.includes(String(value))) {
+      if (checkStrictly.value && selectedValue.includes(String(value))) {
         cancelSelect(e, level, index, item);
       } else {
         chooseSelect(e, level, index, item);
@@ -288,7 +294,6 @@ export default defineComponent({
     const onVisibleChange = (visible: boolean, e: any) => {
       if (e?.trigger !== 'overlay') return;
       close('overlay');
-      updateCascaderValue();
     };
 
     const updateCascaderValue = () => {
