@@ -124,12 +124,7 @@ export default defineComponent({
     TTabPanel,
     TRadioGroup,
   },
-  // props: TdCascaderProps,
-  props: {
-    ...TdCascaderProps,
-    /** 父子节点选中状态不再关联，可各自选中或取消 */
-    checkStrictly: Boolean,
-  },
+  props: TdCascaderProps,
   emits: ['change', 'close', 'pick', 'update:modelValue', 'update:value', 'update:visible'],
   setup(props, context) {
     const { visible, value, modelValue, subTitles, options, keys, checkStrictly } = toRefs(props);
