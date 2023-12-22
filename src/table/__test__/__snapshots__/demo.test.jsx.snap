@@ -1590,7 +1590,6 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
       <div>
         <div
           class="t-table t-vertical-align-middle"
-          layout-table="auto"
           style="position: relative;"
         >
           <div
@@ -2885,7 +2884,6 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
 <div>
   <div
     class="t-table t-vertical-align-middle"
-    layout-table="auto"
     style="position: relative;"
   >
     <div

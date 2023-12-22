@@ -2,7 +2,6 @@
   <div>
     <t-table
       row-key="index"
-      layout-table="auto"
       :data="data"
       :columns="columns"
       :show-header="showHeader"

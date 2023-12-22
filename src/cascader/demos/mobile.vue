@@ -20,6 +20,9 @@
     <tdesign-demo-block summary="异步加载">
       <lazyDemo />
     </tdesign-demo-block>
+    <tdesign-demo-block summary="选择任意一项">
+      <checkStrictlyDemo />
+    </tdesign-demo-block>
   </div>
 </template>
 <script lang="ts" setup>
@@ -29,4 +32,5 @@ import keysDemo from './keys.vue';
 import withValueDemo from './with-value.vue';
 import withTitleDemo from './with-title.vue';
 import lazyDemo from './lazy.vue';
+import checkStrictlyDemo from './check-strictly.vue';
 </script>
