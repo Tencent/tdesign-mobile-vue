@@ -5,6 +5,17 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.0.9 `2023-12-22` 
+### 🚀 Features
+- `Cascader`:  新增 `checkStrictly` @LoopZhou ([#1192](https://github.com/Tencent/tdesign-mobile-vue/pull/1192))
+- `Slider`: `step` 属性支持小数 @LoopZhou ([#1180](https://github.com/Tencent/tdesign-mobile-vue/pull/1180))
+### 🐞 Bug Fixes
+- `Swiper`: 修复滑动场景下触发 `click` 事件的问题 @hkaikai ([#1182](https://github.com/Tencent/tdesign-mobile-vue/pull/1182))
+### 🚧 Others
+- `Table`: 修复示例错误 @anlyyao ([#1184](https://github.com/Tencent/tdesign-mobile-vue/pull/1184))
+- `ActionSheet`: 处理控制台告警 @QuentinHsu ([#1185](https://github.com/Tencent/tdesign-mobile-vue/pull/1185))
+
+
 ## 🌈 1.0.8 `2023-12-08` 
 ### 🚀 Features
 - `Textarea`: 支持 `autosize` 属性值变更后输入框高度重新计算 @QuentinHsu ([#1175](https://github.com/Tencent/tdesign-mobile-vue/pull/1175))
