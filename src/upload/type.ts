@@ -200,6 +200,10 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
     files: Array<UploadFile>;
     trigger: 'validate' | 'remove' | 'uploaded';
   }) => void;
+  /**
+   * 点击上传区域时触发。TS 类型：`(context: { e: MouseEvent })`
+   */
+  onClickUpload?: (context: { e: MouseEvent }) => void;
 }
 
 export interface UploadFile extends PlainObject {

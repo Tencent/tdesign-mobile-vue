@@ -14,6 +14,7 @@
       :on-success="onSuccess"
       :on-remove="onRemove"
       :on-select-change="onSelectChange"
+      :on-click-upload="onClickUpload"
     >
     </t-upload>
   </div>
@@ -46,6 +47,9 @@ const onRemove = ({ index, file, e }: UploadRemoveContext) => {
 };
 const onSelectChange = (files: Array<UploadFile>) => {
   console.log('====onSelectChange', files);
+};
+const onClickUpload = ({ e }: { e: MouseEvent }) => {
+  console.log('====onClickUpload', e);
 };
 const action = 'https://service-bv448zsw-1257786608.gz.apigw.tencentcs.com/api/upload-demo';
 const files = ref([

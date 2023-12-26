@@ -81,6 +81,7 @@ export default defineComponent({
     'success',
     'select-change',
     'validate',
+    'click-upload',
   ],
   setup(props) {
     const {
@@ -116,10 +117,13 @@ export default defineComponent({
       });
     };
 
-    const triggerUpload = () => {
+    const triggerUpload = (e: MouseEvent) => {
       const input = inputRef.value as HTMLInputElement;
       if (disabled?.value) return;
       input.click();
+      props.onClickUpload?.({
+        e,
+      });
     };
 
     const previewImgs = computed(() => {
