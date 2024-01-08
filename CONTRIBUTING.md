@@ -171,4 +171,5 @@ git merge upstream/develop
 
 ### CSS 规范
 
-组件样式在 `common` 子仓库开发，遵循 [tdesign-common 仓库 UI 开发规范](https://github.com/Tencent/tdesign-common/blob/main/style/web/README.md)
+
+组件样式在 `common` 子仓库开发，遵循 [tdesign-common 仓库 UI 开发规范](https://github.com/Tencent/tdesign-common/blob/main/style/mobile/README.md)
