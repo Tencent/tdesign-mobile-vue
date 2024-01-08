@@ -390,6 +390,11 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
               <li
                 class="t-picker-item__item t-picker-item__item--active"
               >
+                2024
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
                 2023
               </li>
               <li
@@ -431,11 +436,6 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
                 class="t-picker-item__item"
               >
                 2015
-              </li>
-              <li
-                class="t-picker-item__item"
-              >
-                2014
               </li>
               
             </ul>
@@ -936,6 +936,11 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
                   <li
                     class="t-picker-item__item t-picker-item__item--active"
                   >
+                    2024
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
                     2023
                   </li>
                   <li
@@ -977,11 +982,6 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
                     class="t-picker-item__item"
                   >
                     2015
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    2014
                   </li>
                   
                 </ul>
