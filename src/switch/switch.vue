@@ -63,7 +63,11 @@ export default defineComponent({
       if (disabled.value || props.loading) {
         return;
       }
-      toggle();
+
+      if (state.value === innerValue.value) {
+        toggle();
+      }
+
       innerValue.value = state.value;
     }
     return {
