@@ -21,8 +21,8 @@ export default defineComponent({
   props,
   setup(props) {
     const boxClasses = name;
-    const stickyContent = computed(() => renderContent(getCurrentInstance(), 'default', ''));
-
+    const internalInstance = getCurrentInstance();
+    const stickyContent = computed(() => renderContent(internalInstance, 'default', ''));
     // box 用于占位和记录边界
     // content 用于实际定位
     const boxRef = templateRef<HTMLElement | null>('boxRef', null);
