@@ -1,5 +1,5 @@
 <template>
-  <teleport v-if="!destroyOnClose || wrapperVisbile" :to="to" :disabled="!to">
+  <teleport v-if="!destroyOnClose || wrapperVisible" :to="to" :disabled="!to">
     <t-overlay v-bind="overlayProps" :visible="innerVisible && showOverlay" @click="handleOverlayClick" />
     <transition :name="contentTransitionName" @after-enter="afterEnter" @after-leave="afterLeave">
       <div v-show="innerVisible" :class="[name, $attrs.class, contentClasses]" :style="rootStyles" v-bind="$attrs">
@@ -43,13 +43,14 @@ export default defineComponent({
       'visible',
       'visible-change',
     );
-    const wrapperVisbile = ref(currentVisible.value);
+    const wrapperVisible = ref(currentVisible.value);
     const innerVisible = ref(currentVisible.value);
 
     // 因为开启 destroyOnClose，会影响 transition 的动画，因此需要前后设置 visible
     watch(currentVisible, (v) => {
+      wrapperVisible.value = v;
+
       if (v) {
-        wrapperVisbile.value = v;
         if (props.destroyOnClose) {
           nextTick(() => {
             innerVisible.value = v;
@@ -104,7 +105,7 @@ export default defineComponent({
     };
 
     const afterLeave = () => {
-      wrapperVisbile.value = false;
+      wrapperVisible.value = false;
       props.onClosed?.();
     };
     const afterEnter = () => props.onOpened?.();
@@ -138,7 +139,7 @@ export default defineComponent({
       }
     };
 
-    const shouldLock = computed(() => wrapperVisbile.value && props.preventScrollThrough);
+    const shouldLock = computed(() => wrapperVisible.value && props.preventScrollThrough);
 
     watch(
       () => shouldLock.value,
@@ -150,7 +151,7 @@ export default defineComponent({
     return {
       name,
       to,
-      wrapperVisbile,
+      wrapperVisible,
       innerVisible,
       currentVisible,
       rootStyles,
