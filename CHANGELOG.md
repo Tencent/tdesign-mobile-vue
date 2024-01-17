@@ -5,6 +5,17 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.0.10 `2024-01-17` 
+### 🚀 Features
+- `Upload`: 新增 `clickUpload` 事件 @Lyan-u ([#1195](https://github.com/Tencent/tdesign-mobile-vue/pull/1195))
+### 🐞 Bug Fixes
+- `Sticky`:  修复 `getCurrentInstance` 在 `computed` 中无法获取元素的问题 @LoopZhou ([#1206](https://github.com/Tencent/tdesign-mobile-vue/pull/1206))
+- `Popup`: 处理 `t-popup-overflow-hidden` 类名未移除的问题 @betavs ([#1199](https://github.com/Tencent/tdesign-mobile-vue/pull/1199))
+- `Switch`: 修复 `v-model` 值变更后需点击两次切换开关状态的问题 @LoopZhou ([#1204](https://github.com/Tencent/tdesign-mobile-vue/pull/1204))
+- `Table`: 修复 `colKey` 值取 `serial-number` 时无效的问题 @anlyyao ([#1210](https://github.com/Tencent/tdesign-mobile-vue/pull/1210))
+- `SwipeCell`: 修复收起单元格时卡顿的问题 @Lyan-u ([#1209](https://github.com/Tencent/tdesign-mobile-vue/pull/1209))
+
+
 ## 🌈 1.0.9 `2023-12-22` 
 ### 🚀 Features
 - `Cascader`:  新增 `checkStrictly` @LoopZhou ([#1192](https://github.com/Tencent/tdesign-mobile-vue/pull/1192))
