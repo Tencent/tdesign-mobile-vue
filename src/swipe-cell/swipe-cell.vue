@@ -204,7 +204,7 @@ export default defineComponent({
         }
         preventDefault(e, false);
 
-        if (props.disabled || Math.abs(lengthX.value) < distance) {
+        if (props.disabled || (!initData.moved && Math.abs(lengthX.value) < distance)) {
           return;
         }
 
