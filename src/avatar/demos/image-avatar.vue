@@ -1,9 +1,9 @@
 <template>
   <div class="avatar-demo">
-    <t-avatar class="avatar-example" image="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"></t-avatar>
+    <t-avatar class="avatar-example" image="https://tdesign.gtimg.com/mobile/demos/avatar1.png"></t-avatar>
     <t-avatar
       class="avatar-example"
-      image="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+      image="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
       shape="round"
     ></t-avatar>
   </div>

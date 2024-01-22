@@ -1435,7 +1435,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   <img
                     alt=""
                     class="t-image__img"
-                    src="https://tdesign.gtimg.com/miniprogram/images/example4.png"
+                    src="https://tdesign.gtimg.com/mobile/demos/example4.png"
                     style="object-fit: fill; object-position: center;"
                   />
                 </picture>
@@ -1495,7 +1495,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   <img
                     alt=""
                     class="t-image__img"
-                    src="https://tdesign.gtimg.com/miniprogram/images/example6.png"
+                    src="https://tdesign.gtimg.com/mobile/demos/example6.png"
                     style="object-fit: fill; object-position: center;"
                   />
                 </picture>
@@ -3166,7 +3166,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         <img
                           alt=""
                           class="t-image__img"
-                          src="https://tdesign.gtimg.com/miniprogram/images/example4.png"
+                          src="https://tdesign.gtimg.com/mobile/demos/example4.png"
                           style="object-fit: fill; object-position: center;"
                         />
                       </picture>
@@ -3226,7 +3226,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         <img
                           alt=""
                           class="t-image__img"
-                          src="https://tdesign.gtimg.com/miniprogram/images/example6.png"
+                          src="https://tdesign.gtimg.com/mobile/demos/example6.png"
                           style="object-fit: fill; object-position: center;"
                         />
                       </picture>
@@ -4749,7 +4749,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   <img
                     alt=""
                     class="t-image__img"
-                    src="https://tdesign.gtimg.com/miniprogram/images/example4.png"
+                    src="https://tdesign.gtimg.com/mobile/demos/example4.png"
                     style="object-fit: fill; object-position: center;"
                   />
                 </picture>
@@ -4809,7 +4809,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   <img
                     alt=""
                     class="t-image__img"
-                    src="https://tdesign.gtimg.com/miniprogram/images/example6.png"
+                    src="https://tdesign.gtimg.com/mobile/demos/example6.png"
                     style="object-fit: fill; object-position: center;"
                   />
                 </picture>

@@ -25,13 +25,13 @@
 <script setup lang="ts">
 const files = [
   {
-    url: 'https://tdesign.gtimg.com/site/upload1.png',
+    url: 'https://tdesign.gtimg.com/mobile/demos/upload6.png',
     name: 'uploaded1.png',
     type: 'image',
     status: 'progress',
   },
   {
-    url: 'https://tdesign.gtimg.com/site/upload1.png',
+    url: 'https://tdesign.gtimg.com/mobile/demos/upload4.png',
     name: 'uploaded1.png',
     type: 'image',
     status: 'progress',
@@ -41,7 +41,7 @@ const files = [
 
 const failFiles = [
   {
-    url: 'https://tdesign.gtimg.com/site/upload1.png',
+    url: 'https://tdesign.gtimg.com/mobile/demos/upload4.png',
     name: 'uploaded1.png',
     type: 'image',
     status: 'fail',
