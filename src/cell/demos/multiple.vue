@@ -37,6 +37,6 @@ import { h } from 'vue';
 import { ChevronRightIcon, LockOnIcon } from 'tdesign-icons-vue-next';
 
 const chevronRightIcon = () => h(ChevronRightIcon);
-const avatarUrl = 'https://tdesign.gtimg.com/mobile/demos/avatar_1.png';
-const imgUrl = 'https://tdesign.gtimg.com/miniprogram/images/example1.png';
+const avatarUrl = 'https://tdesign.gtimg.com/mobile/demos/avatar1.png';
+const imgUrl = 'https://tdesign.gtimg.com/mobile/demos/example4.png';
 </script>

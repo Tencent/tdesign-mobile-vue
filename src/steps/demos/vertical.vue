@@ -49,7 +49,7 @@
         >
           <template v-if="index === 1" #extra>
             <t-image
-              src="https://tdesign.gtimg.com/miniprogram/images/steps1.png"
+              src="https://tdesign.gtimg.com/mobile/demos/steps1.png"
               alt="图标"
               style="width: 100%"
               mode="widthFix"

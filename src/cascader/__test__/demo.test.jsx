@@ -4,6 +4,7 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/cascader/demos/base.vue';
+import checkStrictlyVue from '@/cascader/demos/check-strictly.vue';
 import keysVue from '@/cascader/demos/keys.vue';
 import lazyVue from '@/cascader/demos/lazy.vue';
 import mobileVue from '@/cascader/demos/mobile.vue';
@@ -13,6 +14,7 @@ import withValueVue from '@/cascader/demos/with-value.vue';
 
 const mapper = {
   baseVue,
+  checkStrictlyVue,
   keysVue,
   lazyVue,
   mobileVue,

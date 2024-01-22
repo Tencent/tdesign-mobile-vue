@@ -26,7 +26,7 @@
 import { reactive, ref, onMounted, computed } from 'vue';
 import { TdSideBarProps, TdSideBarItemProps } from '../type';
 
-const image = 'https://tdesign.gtimg.com/miniprogram/images/example2.png';
+const image = 'https://tdesign.gtimg.com/mobile/demos/example2.png';
 const items = new Array(12).fill({ label: '标题文字', image }, 0, 12);
 const sideBarIndex = ref<TdSideBarProps['value']>(1);
 

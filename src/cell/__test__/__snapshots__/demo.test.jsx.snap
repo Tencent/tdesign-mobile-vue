@@ -932,7 +932,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                               <img
                                 alt=""
                                 class="t-image__img"
-                                src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                                src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
                                 style="object-fit: fill; object-position: center;"
                               />
                             </picture>
@@ -991,7 +991,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
               <!--v-if-->
               <img
                 class="t-cell__left-image"
-                src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
+                src="https://tdesign.gtimg.com/mobile/demos/example4.png"
               />
             </div>
             <div
@@ -1628,7 +1628,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
                         <img
                           alt=""
                           class="t-image__img"
-                          src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                          src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
                           style="object-fit: fill; object-position: center;"
                         />
                       </picture>
@@ -1687,7 +1687,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
         <!--v-if-->
         <img
           class="t-cell__left-image"
-          src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
+          src="https://tdesign.gtimg.com/mobile/demos/example4.png"
         />
       </div>
       <div

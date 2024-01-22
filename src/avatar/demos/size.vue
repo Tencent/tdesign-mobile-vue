@@ -5,7 +5,7 @@
         class="avatar-example--large"
         shape="circle"
         size="large"
-        image="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+        image="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
         alt="示例图片"
         :badge-props="{ count: 10 }"
       ></t-avatar>
@@ -17,7 +17,7 @@
         class="avatar-example--medium"
         shape="circle"
         size="medium"
-        image="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+        image="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
         alt="示例图片"
         :badge-props="{ count: 10 }"
       ></t-avatar>
@@ -29,7 +29,7 @@
         class="avatar-example--small"
         shape="circle"
         size="small"
-        image="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+        image="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
         alt="示例图片"
         :badge-props="{ dot: true }"
       ></t-avatar>

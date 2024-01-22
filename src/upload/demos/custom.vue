@@ -16,7 +16,7 @@
           <div class="add-content">
             <t-image
               style="width: 32px; height: 32px"
-              src="https://oteam-tdesign-1258344706.cos-internal.ap-guangzhou.tencentcos.cn/mobile/demos/upload3.png"
+              src="https://tdesign.gtimg.com/mobile/demos/upload3.png"
               alt=""
             />
           </div>
@@ -39,7 +39,7 @@
           <div class="add-content">
             <t-image
               style="width: 32px; height: 32px"
-              src="https://oteam-tdesign-1258344706.cos-internal.ap-guangzhou.tencentcos.cn/mobile/demos/upload3.png"
+              src="https://tdesign.gtimg.com/mobile/demos/upload3.png"
               alt=""
             />
           </div>

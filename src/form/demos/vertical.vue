@@ -134,12 +134,12 @@ const onSelectChange = (files: Array<UploadFile>) => {
 const action = 'https://service-bv448zsw-1257786608.gz.apigw.tencentcs.com/api/upload-demo';
 const files = ref([
   {
-    url: 'https://tdesign.gtimg.com/miniprogram/images/example4.png',
+    url: 'https://tdesign.gtimg.com/mobile/demos/example4.png',
     name: 'uploaded1.png',
     type: 'image',
   },
   {
-    url: 'https://tdesign.gtimg.com/miniprogram/images/example6.png',
+    url: 'https://tdesign.gtimg.com/mobile/demos/example6.png',
     name: 'uploaded2.png',
     type: 'image',
   },

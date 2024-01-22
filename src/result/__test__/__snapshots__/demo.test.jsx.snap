@@ -47,7 +47,7 @@ exports[`Result > Result customVue demo works fine 1`] = `
         <img
           alt=""
           class="t-image__img"
-          src="https://tdesign.gtimg.com/mobile/demos/illustration%402x.png"
+          src="https://tdesign.gtimg.com/mobile/demos/result1.png"
           style="object-fit: fill; object-position: center;"
         />
       </picture>
@@ -338,7 +338,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
               <img
                 alt=""
                 class="t-image__img"
-                src="https://tdesign.gtimg.com/mobile/demos/illustration%402x.png"
+                src="https://tdesign.gtimg.com/mobile/demos/result1.png"
                 style="object-fit: fill; object-position: center;"
               />
             </picture>
