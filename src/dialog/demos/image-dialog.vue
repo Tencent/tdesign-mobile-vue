@@ -35,7 +35,7 @@ import { ref } from 'vue';
 const isShowDialog5 = ref(false);
 const isShowDialog7 = ref(false);
 
-const imageSrc = ref('https://tdesign.gtimg.com/miniprogram/images/dialog1.png');
+const imageSrc = ref('https://tdesign.gtimg.com/mobile/demos/dialog1.png');
 
 const onConfirm = () => {
   console.log('dialog:confirm');

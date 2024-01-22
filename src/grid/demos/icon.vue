@@ -34,7 +34,7 @@
 <script lang="ts" setup>
 import { ShareIcon, StarIcon, DownloadIcon, Edit1Icon } from 'tdesign-icons-vue-next';
 
-const imgUrl = 'https://tdesign.gtimg.com/miniprogram/images/example1.png';
+const imgUrl = 'https://tdesign.gtimg.com/mobile/demos/example1.png';
 </script>
 <style scoped lang="less">
 .icon-wrapper {

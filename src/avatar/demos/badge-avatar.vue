@@ -2,7 +2,7 @@
   <div class="avatar-demo">
     <t-avatar
       class="avatar-example"
-      image="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+      image="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
       :badge-props="{ dot: true, offset: [4, 4] }"
     />
     <t-avatar class="avatar-example external-class-content" :badge-props="{ count: 8, offset: [6, 6] }">A</t-avatar>

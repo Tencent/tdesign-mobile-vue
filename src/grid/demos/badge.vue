@@ -8,5 +8,5 @@
 </template>
 
 <script lang="ts" setup>
-const imgUrl = 'https://tdesign.gtimg.com/miniprogram/images/example1.png';
+const imgUrl = 'https://tdesign.gtimg.com/mobile/demos/example1.png';
 </script>

@@ -21,19 +21,19 @@ import { ActionSheetItem } from '../type';
 const items = ref([
   {
     label: '微信',
-    icon: 'https://tdesign.gtimg.com/miniprogram/logo/wechat.png',
+    icon: 'https://tdesign.gtimg.com/mobile/demos/wechat.png',
   },
   {
     label: '朋友圈',
-    icon: 'https://tdesign.gtimg.com/miniprogram/logo/times.png',
+    icon: 'https://tdesign.gtimg.com/mobile/demos/times.png',
   },
   {
     label: 'QQ',
-    icon: 'https://tdesign.gtimg.com/miniprogram/logo/qq.png',
+    icon: 'https://tdesign.gtimg.com/mobile/demos/qq.png',
   },
   {
     label: '企业微信',
-    icon: 'https://tdesign.gtimg.com/miniprogram/logo/wecom.png',
+    icon: 'https://tdesign.gtimg.com/mobile/demos/wecom.png',
   },
   {
     label: '收藏',

@@ -13,7 +13,7 @@
   </t-swiper>
 </template>
 <script lang="ts" setup>
-const imageCdn = 'https://tdesign.gtimg.com/miniprogram/images';
+const imageCdn = 'https://tdesign.gtimg.com/mobile/demos';
 const swiperList = [
   `${imageCdn}/swiper1.png`,
   `${imageCdn}/swiper2.png`,
