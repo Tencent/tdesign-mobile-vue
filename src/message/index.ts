@@ -62,7 +62,7 @@ function create(props: MessageActionOptionsType): void {
   });
 }
 
-const defaultProps: TdMessageProps = {
+const defaultProps: MessageActionOptionsType = {
   align: 'left',
   closeBtn: false,
   content: '',
@@ -70,6 +70,7 @@ const defaultProps: TdMessageProps = {
   theme: 'info',
   visible: false,
   zIndex: 5000,
+  context: document.body,
   onDurationEnd: () => {},
   onCloseBtnClick: () => {},
 };
