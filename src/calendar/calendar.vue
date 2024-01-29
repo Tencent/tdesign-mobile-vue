@@ -1,12 +1,18 @@
 <template>
   <div>
     <calendarTemplate v-if="!usePopup" ref="calendarTemplateRef">
+      <template #title>
+        <slot name="title"></slot>
+      </template>
       <template #confirmBtn>
         <slot name="confirmBtn"></slot>
       </template>
     </calendarTemplate>
     <t-popup v-else :visible="props.visible" placement="bottom" @visible-change="onPopupVisibleChange">
       <calendarTemplate ref="calendarTemplateRef" @visible-change="onVisibleChange">
+        <template #title>
+          <slot name="title"></slot>
+        </template>
         <template #confirmBtn>
           <slot name="confirmBtn"></slot>
         </template>
