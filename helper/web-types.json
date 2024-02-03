@@ -529,6 +529,428 @@
           ]
         },
         {
+          "name": "t-base-table",
+          "source": {
+            "symbol": "BaseTable"
+          },
+          "description": "BaseTable\n\n基础表格",
+          "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table",
+          "props": [
+            {
+              "name": "bordered",
+              "description": "show table bordered\n\n是否显示表格边框",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "cell-empty-content",
+              "description": "单元格数据为空时呈现的内容",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "columns",
+              "description": "table column configs\n\n列配置，泛型 T 指表格数据类型",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "Array"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "data",
+              "description": "table data\n\n数据源，泛型 T 指表格数据类型",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "Array"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "empty",
+              "description": "empty text or empty element\n\n空表格呈现样式，支持全局配置 `GlobalConfigProvider`",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "String",
+                "TNode"
+              ],
+              "default": "''"
+            },
+            {
+              "name": "fixed-rows",
+              "description": "固定行（冻结行），示例：[M, N]，表示冻结表头 M 行和表尾 N 行。M 和 N 值为 0 时，表示不冻结行",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "Array"
+              ]
+            },
+            {
+              "name": "height",
+              "description": "table height\n\n表格高度，超出后会出现滚动条。示例：100,  '30%',  '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定表格高度，建议使用 `maxHeight`",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "String",
+                "Number"
+              ]
+            },
+            {
+              "name": "loading",
+              "description": "loading state table\n\n加载中状态。值为 `true` 会显示默认加载中样式，可以通过 Function 和 插槽 自定义加载状态呈现内容和样式。值为 `false` 则会取消加载状态",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "Boolean",
+                "TNode"
+              ],
+              "default": "undefined"
+            },
+            {
+              "name": "max-height",
+              "description": "table max height\n\n表格最大高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "String",
+                "Number"
+              ]
+            },
+            {
+              "name": "row-key",
+              "description": "unique key for each row data\n\n唯一标识一行数据的字段名，来源于 `data` 中的字段。如果是字段嵌套多层，可以设置形如 `item.a.id` 的方法",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "String"
+              ],
+              "default": "'id'"
+            },
+            {
+              "name": "show-header",
+              "description": "show table header\n\n是否显示表头",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "true"
+            },
+            {
+              "name": "stripe",
+              "description": "show stripe style\n\n是否显示斑马纹",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "table-content-width",
+              "description": "表格内容的总宽度，注意不是表格可见宽度。主要应用于 `table-layout: auto` 模式下的固定列显示。`tableContentWidth` 内容宽度的值必须大于表格可见宽度",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "String"
+              ]
+            },
+            {
+              "name": "table-layout",
+              "description": "table-layout css properties, [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout). set value to be `fixed` on `resizable=true` please\n\n表格布局方式，`<table>` 元素原生属性。[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout)。注意，在列宽调整下场景只能使用 `fixed` 模式",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "String"
+              ],
+              "default": "fixed",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "auto"
+                },
+                {
+                  "name": "fixed"
+                }
+              ]
+            },
+            {
+              "name": "vertical-align",
+              "description": "vertical align\n\n行内容上下方向对齐",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "String"
+              ],
+              "default": "middle",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "top"
+                },
+                {
+                  "name": "middle"
+                },
+                {
+                  "name": "bottom"
+                }
+              ]
+            }
+          ],
+          "js": {
+            "events": [
+              {
+                "name": "cell-click",
+                "description": "trigger on cell clicked\n\n单元格点击时触发",
+                "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-events"
+              },
+              {
+                "name": "row-click",
+                "description": "trigger on row click\n\n行点击时触发，泛型 T 指表格数据类型",
+                "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-events"
+              },
+              {
+                "name": "scroll",
+                "description": "trigger on table content scroll\n\n表格内容滚动时触发",
+                "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-events"
+              }
+            ]
+          },
+          "slots": [
+            {
+              "name": "cellEmptyContent",
+              "description": "单元格数据为空时呈现的内容类型和参数：string | TNode<BaseTableCellParams<T>>",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props"
+            },
+            {
+              "name": "cell-empty-content",
+              "description": "单元格数据为空时呈现的内容类型和参数：string | TNode<BaseTableCellParams<T>>",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props"
+            },
+            {
+              "name": "empty",
+              "description": "empty text or empty element\n\n空表格呈现样式，支持全局配置 `GlobalConfigProvider`",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props"
+            },
+            {
+              "name": "loading",
+              "description": "loading state table\n\n加载中状态。值为 `true` 会显示默认加载中样式，可以通过 Function 和 插槽 自定义加载状态呈现内容和样式。值为 `false` 则会取消加载状态",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props"
+            }
+          ]
+        },
+        {
+          "name": "t-table",
+          "source": {
+            "symbol": "BaseTable"
+          },
+          "description": "BaseTable\n\n基础表格",
+          "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table",
+          "props": [
+            {
+              "name": "bordered",
+              "description": "show table bordered\n\n是否显示表格边框",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "cell-empty-content",
+              "description": "单元格数据为空时呈现的内容",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "columns",
+              "description": "table column configs\n\n列配置，泛型 T 指表格数据类型",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "Array"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "data",
+              "description": "table data\n\n数据源，泛型 T 指表格数据类型",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "Array"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "empty",
+              "description": "empty text or empty element\n\n空表格呈现样式，支持全局配置 `GlobalConfigProvider`",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "String",
+                "TNode"
+              ],
+              "default": "''"
+            },
+            {
+              "name": "fixed-rows",
+              "description": "固定行（冻结行），示例：[M, N]，表示冻结表头 M 行和表尾 N 行。M 和 N 值为 0 时，表示不冻结行",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "Array"
+              ]
+            },
+            {
+              "name": "height",
+              "description": "table height\n\n表格高度，超出后会出现滚动条。示例：100,  '30%',  '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定表格高度，建议使用 `maxHeight`",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "String",
+                "Number"
+              ]
+            },
+            {
+              "name": "loading",
+              "description": "loading state table\n\n加载中状态。值为 `true` 会显示默认加载中样式，可以通过 Function 和 插槽 自定义加载状态呈现内容和样式。值为 `false` 则会取消加载状态",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "Boolean",
+                "TNode"
+              ],
+              "default": "undefined"
+            },
+            {
+              "name": "max-height",
+              "description": "table max height\n\n表格最大高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "String",
+                "Number"
+              ]
+            },
+            {
+              "name": "row-key",
+              "description": "unique key for each row data\n\n唯一标识一行数据的字段名，来源于 `data` 中的字段。如果是字段嵌套多层，可以设置形如 `item.a.id` 的方法",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "String"
+              ],
+              "default": "'id'"
+            },
+            {
+              "name": "show-header",
+              "description": "show table header\n\n是否显示表头",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "true"
+            },
+            {
+              "name": "stripe",
+              "description": "show stripe style\n\n是否显示斑马纹",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "table-content-width",
+              "description": "表格内容的总宽度，注意不是表格可见宽度。主要应用于 `table-layout: auto` 模式下的固定列显示。`tableContentWidth` 内容宽度的值必须大于表格可见宽度",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "String"
+              ]
+            },
+            {
+              "name": "table-layout",
+              "description": "table-layout css properties, [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout). set value to be `fixed` on `resizable=true` please\n\n表格布局方式，`<table>` 元素原生属性。[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout)。注意，在列宽调整下场景只能使用 `fixed` 模式",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "String"
+              ],
+              "default": "fixed",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "auto"
+                },
+                {
+                  "name": "fixed"
+                }
+              ]
+            },
+            {
+              "name": "vertical-align",
+              "description": "vertical align\n\n行内容上下方向对齐",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props",
+              "type": [
+                "String"
+              ],
+              "default": "middle",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "top"
+                },
+                {
+                  "name": "middle"
+                },
+                {
+                  "name": "bottom"
+                }
+              ]
+            }
+          ],
+          "js": {
+            "events": [
+              {
+                "name": "cell-click",
+                "description": "trigger on cell clicked\n\n单元格点击时触发",
+                "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-events"
+              },
+              {
+                "name": "row-click",
+                "description": "trigger on row click\n\n行点击时触发，泛型 T 指表格数据类型",
+                "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-events"
+              },
+              {
+                "name": "scroll",
+                "description": "trigger on table content scroll\n\n表格内容滚动时触发",
+                "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-events"
+              }
+            ]
+          },
+          "slots": [
+            {
+              "name": "cellEmptyContent",
+              "description": "单元格数据为空时呈现的内容类型和参数：string | TNode<BaseTableCellParams<T>>",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props"
+            },
+            {
+              "name": "cell-empty-content",
+              "description": "单元格数据为空时呈现的内容类型和参数：string | TNode<BaseTableCellParams<T>>",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props"
+            },
+            {
+              "name": "empty",
+              "description": "empty text or empty element\n\n空表格呈现样式，支持全局配置 `GlobalConfigProvider`",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props"
+            },
+            {
+              "name": "loading",
+              "description": "loading state table\n\n加载中状态。值为 `true` 会显示默认加载中样式，可以通过 Function 和 插槽 自定义加载状态呈现内容和样式。值为 `false` 则会取消加载状态",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/base-table?tab=api#basetable-props"
+            }
+          ]
+        },
+        {
           "name": "t-button",
           "source": {
             "symbol": "Button"
@@ -950,6 +1372,24 @@
               ]
             },
             {
+              "name": "lazy",
+              "description": "是否异步加载",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "load-completed",
+              "description": "是否完成异步加载",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
               "name": "options",
               "description": "可选项数据源",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props",
@@ -1287,6 +1727,14 @@
               ]
             },
             {
+              "name": "checked-props",
+              "description": "used to set checked tag props\n\n透传标签选中态属性",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/check-tag?tab=api#checktag-props",
+              "type": [
+                "Object"
+              ]
+            },
+            {
               "name": "closable",
               "description": "标签是否可关闭",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/check-tag?tab=api#checktag-props",
@@ -1379,6 +1827,14 @@
               ]
             },
             {
+              "name": "unchecked-props",
+              "description": "used to set unchecked tag props\n\n透传标签未选态属性",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/check-tag?tab=api#checktag-props",
+              "type": [
+                "Object"
+              ]
+            },
+            {
               "name": "variant",
               "description": "标签风格变体",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/check-tag?tab=api#checktag-props",
@@ -1436,6 +1892,33 @@
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/check-tag?tab=api#checktag-props"
             }
           ]
+        },
+        {
+          "name": "t-check-tag-group",
+          "source": {
+            "symbol": "CheckTagGroup"
+          },
+          "description": "CheckTagGroup\n\n可选标签组",
+          "doc-url": "https://tdesign.tencent.com/mobile-vue/components/check-tag-group",
+          "props": [
+            {
+              "name": "checked-props",
+              "description": "used to set checked tag props\n\n透传标签选中态属性",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/check-tag-group?tab=api#checktaggroup-props",
+              "type": [
+                "Object"
+              ]
+            },
+            {
+              "name": "unchecked-props",
+              "description": "used to set unchecked tag props\n\n透传标签未选态属性",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/check-tag-group?tab=api#checktaggroup-props",
+              "type": [
+                "Object"
+              ]
+            }
+          ],
+          "slots": []
         },
         {
           "name": "t-checkbox",
@@ -1898,6 +2381,15 @@
               ]
             },
             {
+              "name": "header-left-icon",
+              "description": "面板头左侧图标",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/collapse-panel?tab=api#collapsepanel-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
               "name": "header-right-content",
               "description": "面板头的右侧区域，一般用于呈现面板操作",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/collapse-panel?tab=api#collapsepanel-props",
@@ -1960,6 +2452,16 @@
             {
               "name": "header",
               "description": "面板头内容",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/collapse-panel?tab=api#collapsepanel-props"
+            },
+            {
+              "name": "headerLeftIcon",
+              "description": "面板头左侧图标",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/collapse-panel?tab=api#collapsepanel-props"
+            },
+            {
+              "name": "header-left-icon",
+              "description": "面板头左侧图标",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/collapse-panel?tab=api#collapsepanel-props"
             },
             {
@@ -2509,6 +3011,15 @@
               ]
             },
             {
+              "name": "confirm-loading",
+              "description": "confirm button loading status\n\n确认按钮加载状态",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "undefined"
+            },
+            {
               "name": "content",
               "description": "内容",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props",
@@ -2957,9 +3468,19 @@
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dropdown-item?tab=api#dropdownitem-props",
               "type": [
                 "String",
-                "Number"
+                "Number",
+                "Array"
               ],
               "default": "undefined"
+            },
+            {
+              "name": "visible",
+              "description": "是否展示",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dropdown-item?tab=api#dropdownitem-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
             }
           ],
           "js": {
@@ -3041,7 +3562,7 @@
           "props": [
             {
               "name": "action",
-              "description": "操作按钮",
+              "description": "action block\n\n操作区域",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/empty?tab=api#empty-props",
               "type": [
                 "TNode"
@@ -3049,7 +3570,7 @@
             },
             {
               "name": "description",
-              "description": "描述文字",
+              "description": "empty component description\n\n描述文字",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/empty?tab=api#empty-props",
               "type": [
                 "String",
@@ -3058,7 +3579,7 @@
             },
             {
               "name": "image",
-              "description": "图片地址",
+              "description": "image url, or Image component props, or custom any node you need.\n\n组件图片，可以完全自定义内容。值类型为字符串时，表示图片地址；值类型为对象时，则表示透传全部属性到图片组件，示例：`<Empty image={{ src: '', shape: 'round' }} />`",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/empty?tab=api#empty-props",
               "type": [
                 "String",
@@ -3069,17 +3590,17 @@
           "slots": [
             {
               "name": "action",
-              "description": "操作按钮",
+              "description": "action block\n\n操作区域",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/empty?tab=api#empty-props"
             },
             {
               "name": "description",
-              "description": "描述文字",
+              "description": "empty component description\n\n描述文字",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/empty?tab=api#empty-props"
             },
             {
               "name": "image",
-              "description": "图片地址",
+              "description": "image url, or Image component props, or custom any node you need.\n\n组件图片，可以完全自定义内容。值类型为字符串时，表示图片地址；值类型为对象时，则表示透传全部属性到图片组件，示例：`<Empty image={{ src: '', shape: 'round' }} />`类型和参数：string | ImageProps | TNode 【import { ImageProps } from '@Image'】",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/empty?tab=api#empty-props"
             }
           ]
@@ -3484,8 +4005,7 @@
               "description": "表单字段名称",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/form-item?tab=api#formitem-props",
               "type": [
-                "String",
-                "Number"
+                "String"
               ]
             },
             {
@@ -3971,7 +4491,6 @@
               "type": [
                 "String"
               ],
-              "default": "strict-origin-when-cross-origin",
               "attribute-value": {
                 "type": "enum"
               },
@@ -4113,7 +4632,8 @@
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props",
               "type": [
                 "Number"
-              ]
+              ],
+              "default": "0"
             },
             {
               "name": "max-zoom",
@@ -4135,7 +4655,7 @@
             },
             {
               "name": "visible",
-              "description": "隐藏/显示预览",
+              "description": "hide or show image viewer\n\n隐藏/显示预览",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props",
               "type": [
                 "Boolean"
@@ -4275,7 +4795,7 @@
           "props": [
             {
               "name": "align",
-              "description": "文本内容位置，居左/居中/居右",
+              "description": "text align type\n\n文本内容位置，居左/居中/居右",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props",
               "type": [
                 "String"
@@ -4298,7 +4818,7 @@
             },
             {
               "name": "allow-input-over-max",
-              "description": "超出 `maxlength` 或 `maxcharacter` 之后是否允许继续输入",
+              "description": "allow to continue input on value length is over `maxlength` or `maxcharacter`\n\n超出 `maxlength` 或 `maxcharacter` 之后是否允许继续输入",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props",
               "type": [
                 "Boolean"
@@ -4307,7 +4827,7 @@
             },
             {
               "name": "autocomplete",
-              "description": "是否开启自动填充功能，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete)",
+              "description": "attribute of input element, [see here](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete)\n\n是否开启自动填充功能，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete)",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props",
               "type": [
                 "String"
@@ -4316,7 +4836,16 @@
             },
             {
               "name": "autofocus",
-              "description": "自动聚焦",
+              "description": "autofocus on first rendered\n\n自动聚焦",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "borderless",
+              "description": "input without border\n\n【开发中】无边框模式",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props",
               "type": [
                 "Boolean"
@@ -4325,7 +4854,7 @@
             },
             {
               "name": "clearable",
-              "description": "是否可清空",
+              "description": "show clear icon, clicked to clear input value\n\n是否可清空",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props",
               "type": [
                 "Boolean"
@@ -4334,7 +4863,7 @@
             },
             {
               "name": "disabled",
-              "description": "是否禁用输入框",
+              "description": "make input to be disabled\n\n是否禁用输入框",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props",
               "type": [
                 "Boolean"
@@ -4350,7 +4879,7 @@
             },
             {
               "name": "format",
-              "description": "指定输入框展示值的格式",
+              "description": "input value formatter, `type=number` does not work. if you need to format number, `InputNumber` Component might be better\n\n指定输入框展示值的格式。注意 `type=number` 时请勿使用，此功能建议更为使用 `InputNumber` 组件",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props",
               "type": [
                 "Function"
@@ -4358,7 +4887,7 @@
             },
             {
               "name": "label",
-              "description": "左侧文本",
+              "description": "text on the left of input\n\n左侧文本",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props",
               "type": [
                 "String",
@@ -4378,6 +4907,7 @@
               "description": "用户最多可以输入的文本长度，一个中文等于一个计数长度。值为空，则表示不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props",
               "type": [
+                "String",
                 "Number"
               ]
             },
@@ -4463,7 +4993,7 @@
             },
             {
               "name": "suffix",
-              "description": "后置图标前的后置内容",
+              "description": "suffix content before suffixIcon\n\n后置图标前的后置内容",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props",
               "type": [
                 "String",
@@ -4472,7 +5002,7 @@
             },
             {
               "name": "suffix-icon",
-              "description": "组件后置图标",
+              "description": "suffix icon of input\n\n组件后置图标",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props",
               "type": [
                 "TNode"
@@ -4480,7 +5010,7 @@
             },
             {
               "name": "tips",
-              "description": "输入框下方提示文本，会根据不同的 `status` 呈现不同的样式",
+              "description": "tips on the bottom of input, different `status` can make tips to be different color\n\n输入框下方提示文本，会根据不同的 `status` 呈现不同的样式",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props",
               "type": [
                 "String",
@@ -4489,7 +5019,7 @@
             },
             {
               "name": "type",
-              "description": "输入框类型",
+              "description": "type attribute of input element. if you are using `type=number`, `InputNumber` Component might be better\n\n输入框类型。`type=number` 仅支持最基础的数字输入功能，更多功能建议使用 `InputNumber` 组件",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props",
               "type": [
                 "String"
@@ -4527,12 +5057,12 @@
             },
             {
               "name": "value",
-              "description": "输入框的值",
+              "description": "input value\n\n输入框的值",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props",
               "type": [
-                "String"
-              ],
-              "default": "''"
+                "String",
+                "Number"
+              ]
             }
           ],
           "js": {
@@ -4544,7 +5074,7 @@
               },
               {
                 "name": "change",
-                "description": "输入框值发生变化时触发。`trigger=initial` 表示传入的数据不符合预期，组件自动处理后触发 change 告知父组件。如：初始值长度超过 `maxlength` 限制",
+                "description": "trigger on input value changed\n\n输入框值发生变化时触发。参数 `trigger=initial` 表示传入的数据不符合预期，组件自动处理后触发 change 告知父组件。如：初始值长度超过 `maxlength` 限制",
                 "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-events"
               },
               {
@@ -4567,7 +5097,7 @@
           "slots": [
             {
               "name": "label",
-              "description": "左侧文本",
+              "description": "text on the left of input\n\n左侧文本",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props"
             },
             {
@@ -4582,22 +5112,22 @@
             },
             {
               "name": "suffix",
-              "description": "后置图标前的后置内容",
+              "description": "suffix content before suffixIcon\n\n后置图标前的后置内容",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props"
             },
             {
               "name": "suffixIcon",
-              "description": "组件后置图标",
+              "description": "suffix icon of input\n\n组件后置图标",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props"
             },
             {
               "name": "suffix-icon",
-              "description": "组件后置图标",
+              "description": "suffix icon of input\n\n组件后置图标",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props"
             },
             {
               "name": "tips",
-              "description": "输入框下方提示文本，会根据不同的 `status` 呈现不同的样式",
+              "description": "tips on the bottom of input, different `status` can make tips to be different color\n\n输入框下方提示文本，会根据不同的 `status` 呈现不同的样式",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props"
             }
           ]
@@ -4994,14 +5524,6 @@
               "default": "false"
             },
             {
-              "name": "progress",
-              "description": "加载进度",
-              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/loading?tab=api#loading-props",
-              "type": [
-                "Number"
-              ]
-            },
-            {
               "name": "reverse",
               "description": "加载动画是否反向",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/loading?tab=api#loading-props",
@@ -5311,6 +5833,14 @@
               ]
             },
             {
+              "name": "capsule",
+              "description": "左侧胶囊区域",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/navbar?tab=api#navbar-props",
+              "type": [
+                "TNode"
+              ]
+            },
+            {
               "name": "fixed",
               "description": "是否固定在顶部",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/navbar?tab=api#navbar-props",
@@ -5330,7 +5860,7 @@
             },
             {
               "name": "left-arrow",
-              "description": "是否显示左侧箭头",
+              "description": "是否展示左侧箭头",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/navbar?tab=api#navbar-props",
               "type": [
                 "Boolean"
@@ -5388,6 +5918,11 @@
             ]
           },
           "slots": [
+            {
+              "name": "capsule",
+              "description": "左侧胶囊区域",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/navbar?tab=api#navbar-props"
+            },
             {
               "name": "left",
               "description": "左侧区域。值为 `string` 表示文本，为其他表示自定义内容",
@@ -6191,7 +6726,7 @@
             "events": [
               {
                 "name": "close",
-                "description": "组件准备关闭时触发",
+                "description": "组件开始关闭时触发",
                 "doc-url": "https://tdesign.tencent.com/mobile-vue/components/popup?tab=api#popup-events"
               },
               {
@@ -6228,6 +6763,82 @@
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/popup?tab=api#popup-props"
             }
           ]
+        },
+        {
+          "name": "t-primary-table",
+          "source": {
+            "symbol": "PrimaryTable"
+          },
+          "description": "PrimaryTable\n\n主表格",
+          "doc-url": "https://tdesign.tencent.com/mobile-vue/components/primary-table",
+          "props": [
+            {
+              "name": "row-selection-allow-uncheck",
+              "description": "allow to uncheck selection in table with single row selection\n\n行选中单选场景，是否允许取消选中",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/primary-table?tab=api#primarytable-props",
+              "type": [
+                "Boolean"
+              ]
+            },
+            {
+              "name": "row-selection-type",
+              "description": "single row selection, or multiple row selection\n\n行选中类型，单选或多选。效果和 `columns` 中配置的 `{ colKey: 'row-select', type: 'single' }` 一样",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/primary-table?tab=api#primarytable-props",
+              "type": [
+                "String"
+              ],
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "single"
+                },
+                {
+                  "name": "multiple"
+                }
+              ]
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "t-table",
+          "source": {
+            "symbol": "PrimaryTable"
+          },
+          "description": "PrimaryTable\n\n主表格",
+          "doc-url": "https://tdesign.tencent.com/mobile-vue/components/primary-table",
+          "props": [
+            {
+              "name": "row-selection-allow-uncheck",
+              "description": "allow to uncheck selection in table with single row selection\n\n行选中单选场景，是否允许取消选中",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/primary-table?tab=api#primarytable-props",
+              "type": [
+                "Boolean"
+              ]
+            },
+            {
+              "name": "row-selection-type",
+              "description": "single row selection, or multiple row selection\n\n行选中类型，单选或多选。效果和 `columns` 中配置的 `{ colKey: 'row-select', type: 'single' }` 一样",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/primary-table?tab=api#primarytable-props",
+              "type": [
+                "String"
+              ],
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "single"
+                },
+                {
+                  "name": "multiple"
+                }
+              ]
+            }
+          ],
+          "slots": []
         },
         {
           "name": "t-progress",
@@ -6420,6 +7031,11 @@
                 "doc-url": "https://tdesign.tencent.com/mobile-vue/components/pull-down-refresh?tab=api#pulldownrefresh-events"
               },
               {
+                "name": "scrolltolower",
+                "description": "滚动到页面底部时触发",
+                "doc-url": "https://tdesign.tencent.com/mobile-vue/components/pull-down-refresh?tab=api#pulldownrefresh-events"
+              },
+              {
                 "name": "timeout",
                 "description": "刷新超时触发",
                 "doc-url": "https://tdesign.tencent.com/mobile-vue/components/pull-down-refresh?tab=api#pulldownrefresh-events"
@@ -6579,7 +7195,7 @@
               "type": [
                 "String"
               ],
-              "default": "left",
+              "default": "undefined",
               "attribute-value": {
                 "type": "enum"
               },
@@ -6782,7 +7398,7 @@
               "type": [
                 "String"
               ],
-              "default": "left",
+              "default": "undefined",
               "attribute-value": {
                 "type": "enum"
               },
@@ -6867,6 +7483,16 @@
               "type": [
                 "Boolean"
               ]
+            },
+            {
+              "name": "icon",
+              "description": "自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/radio-group?tab=api#radiogroup-props",
+              "type": [
+                "String",
+                "Array"
+              ],
+              "default": "'circle'"
             },
             {
               "name": "keys",
@@ -7729,6 +8355,99 @@
           "slots": []
         },
         {
+          "name": "t-side-bar",
+          "source": {
+            "symbol": "SideBar"
+          },
+          "description": "SideBar\n\n侧边导航",
+          "doc-url": "https://tdesign.tencent.com/mobile-vue/components/side-bar",
+          "props": [
+            {
+              "name": "value",
+              "description": "选项值",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/side-bar?tab=api#sidebar-props",
+              "type": [
+                "String",
+                "Number"
+              ]
+            }
+          ],
+          "js": {
+            "events": [
+              {
+                "name": "change",
+                "description": "选项值发生变化时触发",
+                "doc-url": "https://tdesign.tencent.com/mobile-vue/components/side-bar?tab=api#sidebar-events"
+              },
+              {
+                "name": "click",
+                "description": "点击选项时触发",
+                "doc-url": "https://tdesign.tencent.com/mobile-vue/components/side-bar?tab=api#sidebar-events"
+              }
+            ]
+          },
+          "slots": []
+        },
+        {
+          "name": "t-side-bar-item",
+          "source": {
+            "symbol": "SideBarItem"
+          },
+          "description": "SideBarItem\n\n侧边导航项",
+          "doc-url": "https://tdesign.tencent.com/mobile-vue/components/side-bar-item",
+          "props": [
+            {
+              "name": "badge-props",
+              "description": "透传至 Badge 组件",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/side-bar-item?tab=api#sidebaritem-props",
+              "type": [
+                "Object"
+              ]
+            },
+            {
+              "name": "disabled",
+              "description": "是否禁用",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/side-bar-item?tab=api#sidebaritem-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "icon",
+              "description": "图标",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/side-bar-item?tab=api#sidebaritem-props",
+              "type": [
+                "TNode"
+              ]
+            },
+            {
+              "name": "label",
+              "description": "展示的标签",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/side-bar-item?tab=api#sidebaritem-props",
+              "type": [
+                "String"
+              ]
+            },
+            {
+              "name": "value",
+              "description": "当前选项的值",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/side-bar-item?tab=api#sidebaritem-props",
+              "type": [
+                "String",
+                "Number"
+              ]
+            }
+          ],
+          "slots": [
+            {
+              "name": "icon",
+              "description": "图标",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/side-bar-item?tab=api#sidebaritem-props"
+            }
+          ]
+        },
+        {
           "name": "t-skeleton",
           "source": {
             "symbol": "Skeleton"
@@ -8038,6 +8757,16 @@
           ]
         },
         {
+          "name": "t-statistic",
+          "source": {
+            "symbol": "Statistic"
+          },
+          "description": "Statistic\n\n统计数值",
+          "doc-url": "https://tdesign.tencent.com/mobile-vue/components/statistic",
+          "props": [],
+          "slots": []
+        },
+        {
           "name": "t-step-item",
           "source": {
             "symbol": "StepItem"
@@ -8090,6 +8819,15 @@
                   "name": "error"
                 }
               ]
+            },
+            {
+              "name": "sub-step-items",
+              "description": "子步骤条，仅支持 layout  = 'vertical' 时",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/step-item?tab=api#stepitem-props",
+              "type": [
+                "Array"
+              ],
+              "default": "[]"
             },
             {
               "name": "title",
@@ -8274,6 +9012,32 @@
               "type": [
                 "String",
                 "Number"
+              ]
+            },
+            {
+              "name": "current-status",
+              "description": "用于控制 current 指向的步骤条的状态",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#steps-props",
+              "type": [
+                "String"
+              ],
+              "default": "process",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "default"
+                },
+                {
+                  "name": "process"
+                },
+                {
+                  "name": "finish"
+                },
+                {
+                  "name": "error"
+                }
               ]
             },
             {
@@ -8516,7 +9280,7 @@
             },
             {
               "name": "default",
-              "description": "子内容，同 content",
+              "description": "操作项以外的内容，同 content",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/swipe-cell?tab=api#swipecell-props",
               "type": [
                 "String",
@@ -8529,25 +9293,6 @@
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/swipe-cell?tab=api#swipecell-props",
               "type": [
                 "Boolean"
-              ]
-            },
-            {
-              "name": "expanded",
-              "description": "操作项是否呈现为打开态",
-              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/swipe-cell?tab=api#swipecell-props",
-              "type": [
-                "String"
-              ],
-              "attribute-value": {
-                "type": "enum"
-              },
-              "values": [
-                {
-                  "name": "left"
-                },
-                {
-                  "name": "right"
-                }
               ]
             },
             {
@@ -8601,7 +9346,7 @@
             },
             {
               "name": "default",
-              "description": "子内容，同 content",
+              "description": "操作项以外的内容，同 content",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/swipe-cell?tab=api#swipecell-props"
             },
             {
@@ -9273,15 +10018,6 @@
               ]
             },
             {
-              "name": "space-evenly",
-              "description": "选项卡头部空间是否均分",
-              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/tabs?tab=api#tabs-props",
-              "type": [
-                "Boolean"
-              ],
-              "default": "true"
-            },
-            {
               "name": "sticky",
               "description": "是否开启粘性布局",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/tabs?tab=api#tabs-props",
@@ -9644,6 +10380,7 @@
               "description": "用户最多可以输入的字符个数",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/textarea?tab=api#textarea-props",
               "type": [
+                "String",
                 "Number"
               ]
             },
@@ -9898,6 +10635,15 @@
               ]
             }
           ],
+          "js": {
+            "events": [
+              {
+                "name": "click",
+                "description": "trigger on click\n\n点击时触发",
+                "doc-url": "https://tdesign.tencent.com/mobile-vue/components/timeline-item?tab=api#timelineitem-events"
+              }
+            ]
+          },
           "slots": [
             {
               "name": "content",
@@ -10127,7 +10873,7 @@
             },
             {
               "name": "keys",
-              "description": "用来定义 `value / label / children` 在 `data` 数据中对应的字段别名，示例：`{ value: 'key', label 'name', children: 'list' }`",
+              "description": "alias filed name in data\n\n用来定义 `value / label / disabled / children` 在 `data` 数据中对应的字段别名，示例：`{ value: 'key', label: 'name', children: 'list' }`",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/tree-select?tab=api#treeselect-props",
               "type": [
                 "Object"
@@ -10256,6 +11002,15 @@
               ]
             },
             {
+              "name": "add-content",
+              "description": "添加按钮内容。值为空，使用默认图标渲染；值为 slot 则表示使用插槽渲染；其他值无效。",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/upload?tab=api#upload-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
               "name": "allow-upload-duplicate-file",
               "description": "allow to upload duplicate name files\n\n是否允许重复上传相同文件名的文件",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/upload?tab=api#upload-props",
@@ -10324,7 +11079,7 @@
             },
             {
               "name": "format-request",
-              "description": "redefine request data\n\n用于新增或修改文件上传请求参数。`action` 存在时有效。一个请求上传一个文件时，默认请求字段有 `file`；<br/>一个请求上传多个文件时，默认字段有 `file[0]/file[1]/file[2]/.../length`，其中 `length` 表示本次上传的文件数量。<br/>⚠️非常注意，此处的 `file[0]/file[1]` 仅仅是一个字段名，并非表示 `file` 是一个数组，接口获取字段时注意区分。<br/>可以使用 `name` 定义 `file` 字段的别名，也可以使用 `formatRequest` 自定义任意字段",
+              "description": "redefine request data\n\n用于新增或修改文件上传请求 参数。`action` 存在时有效。一个请求上传一个文件时，默认请求字段有 `file`。<br/>一个请求上传多个文件时，默认字段有 `file[0]/file[1]/file[2]/.../length`，其中 `length` 表示本次上传的文件数量。<br/>⚠️非常注意，此处的 `file[0]/file[1]` 仅仅是一个字段名，并非表示 `file` 是一个数组，接口获取字段时注意区分。<br/>可以使用 `name` 定义 `file` 字段的别名。<br/>也可以使用 `formatRequest` 自定义任意字段，如添加一个字段 `fileList` ，存储文件数组",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/upload?tab=api#upload-props",
               "type": [
                 "Function"
@@ -10332,7 +11087,7 @@
             },
             {
               "name": "format-response",
-              "description": "redefine response data structure\n\n用于格式化文件上传后的接口响应数据，`response` 便是接口响应的原始数据。`action` 存在时有效。<br/> 此函数的返回值 `error` 或 `response.error` 会作为错误文本提醒，如果存在会判定为本次上传失败。<br/> 此函数的返回值 `url` 或 `response.url` 会作为上传成功后的链接",
+              "description": "redefine response data structure\n\n用于格式化文件上传后的接口响应数据，`response` 便是接口响应的原始数据。`action` 存在时有效。<br/> 示例返回值：`{ error, url, status, files }` <br/> 此函数的返回值 `error` 会作为错误文本提醒，表示上传失败的原因，如果存在会判定为本次上传失败。<br/> 此函数的返回值 `url` 会作为单个文件上传成功后的链接。<br/> `files` 表示一个请求同时上传多个文件后的文件列表",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/upload?tab=api#upload-props",
               "type": [
                 "Function"
@@ -10356,7 +11111,7 @@
             },
             {
               "name": "max",
-              "description": "max count of files limit\n\n用于控制文件上传数量，值为 0 则不限制",
+              "description": "max count of files limit\n\n用于控制文件上传数量，值为 0 则不限制。注意，单文件上传场景，请勿设置 `max` 属性",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/upload?tab=api#upload-props",
               "type": [
                 "Number"
@@ -10443,6 +11198,15 @@
               "default": "true"
             },
             {
+              "name": "value",
+              "description": "file list\n\n已上传文件列表，同 `files`。TS 类型：`UploadFile`",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/upload?tab=api#upload-props",
+              "type": [
+                "Array"
+              ],
+              "default": "[]"
+            },
+            {
               "name": "with-credentials",
               "description": "uploading request with cookie\n\n上传请求时是否携带 cookie",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/upload?tab=api#upload-props",
@@ -10497,6 +11261,16 @@
             ]
           },
           "slots": [
+            {
+              "name": "addContent",
+              "description": "添加按钮内容。值为空，使用默认图标渲染；值为 slot 则表示使用插槽渲染；其他值无效。",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/upload?tab=api#upload-props"
+            },
+            {
+              "name": "add-content",
+              "description": "添加按钮内容。值为空，使用默认图标渲染；值为 slot 则表示使用插槽渲染；其他值无效。",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/upload?tab=api#upload-props"
+            },
             {
               "name": "fileListDisplay",
               "description": "used to render file list UI\n\n用于完全自定义文件列表界面内容(UI)，单文件和多文件均有效类型和参数：TNode<{ files: UploadFile[]; dragEvents?: UploadDisplayDragEvents }>",
