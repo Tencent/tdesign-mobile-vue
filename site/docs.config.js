@@ -496,6 +496,14 @@ export const docs = [
         componentEn: () => import('@/dialog/dialog.en-US.md'),
       },
       {
+        title: 'Guide 引导',
+        titleEn: 'Guide',
+        name: 'guide',
+        path: '/mobile-vue/components/guide',
+        component: () => import('@/guide/guide.md'),
+        componentEn: () => import('@/guide/guide.en-US.md'),
+      },
+      {
         title: 'Popover 弹出气泡',
         titleEn: 'Popover',
         name: 'popover',
