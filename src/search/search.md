@@ -11,7 +11,7 @@ center | Boolean | false | 是否居中 | N
 clearable | Boolean | true | 是否可清空 | N
 disabled | Boolean | - | 禁用状态 | N
 focus | Boolean | false | 是否聚焦 | N
-leftIcon | String / Slot / Function | 'search' | 左侧图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+leftIcon | String / Slot / Function | 'search' | 左侧图标。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 placeholder | String | '' | 占位符 | N
 readonly | Boolean | false | 只读状态 | N
 shape | String | 'square' | 搜索框形状。可选项：square/round | N
@@ -31,25 +31,8 @@ onSubmit | Function |  | TS 类型：`(context: { value: string; e: KeyboardEven
 -- | -- | --
 action-click | `(context: { e: MouseEvent })` | 点击搜索框右侧操作内容时触发
 blur | `(context: { value: string; e: FocusEvent })` | 失去焦点时触发
-change | `(value: string, context: { e?: InputEvent \| MouseEvent })` | 搜索关键词发生变化时触发，可能场景有：搜索框内容发生变化、点击联想词
+change | `(value: string, context: { trigger: 'input-change' \| 'option-click'; e?: InputEvent \| MouseEvent })` | 搜索关键词发生变化时触发，可能场景有：搜索框内容发生变化、点击联想词
 clear | `(context: { e: MouseEvent })` | 点击清除时触发
 focus | `(context: { value: string; e: FocusEvent })` | 获得焦点时触发
 search | `(context?: { value: string; trigger: 'submit' \| 'option-click' \| 'clear'; e?: InputEvent \| MouseEvent })` | 【讨论中】搜索触发，包含：手机键盘提交健、联想关键词点击、清空按钮点击等
 submit | `(context: { value: string; e: KeyboardEvent })` | 提交时触发，如：手机键盘提交按钮点击
-
-
-### CSS 变量
-组件提供了下列 CSS 变量，可用于自定义样式。
-名称 | 默认值 | 描述 
--- | -- | --
---search-label-color | @font-gray-1 | - 
---td-search-action-color | @brand-color | - 
---td-search-bg-color | @bg-color-secondarycontainer | - 
---td-search-clear-icon-color | @font-gray-3 | - 
---td-search-font-size | @font-size-m | - 
---td-search-height | 40px | - 
---td-search-icon-color | @font-gray-3 | - 
---td-search-padding | 8px 12px | - 
---td-search-placeholder-color | @font-gray-3 | - 
---td-search-square-radius | @radius-default | - 
---td-search-text-color | @font-gray-1 | - 

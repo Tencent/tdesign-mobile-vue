@@ -17,27 +17,13 @@ theme | String | default | 滑块风格。可选项：default/capsule | N
 value | Number / Array | 0 | 滑块值。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`SliderValue` `type SliderValue = number \| Array<number>`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/slider/type.ts) | N
 defaultValue | Number / Array | 0 | 滑块值。非受控属性。TS 类型：`SliderValue` `type SliderValue = number \| Array<number>`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/slider/type.ts) | N
 onChange | Function |  | TS 类型：`(value: SliderValue) => void`<br/>滑块值变化时触发 | N
+onDragend | Function |  | TS 类型：`() => void`<br/>结束拖动时触发 | N
+onDragstart | Function |  | TS 类型：`() => void`<br/>开始拖动时触发 | N
 
 ### Slider Events
 
 名称 | 参数 | 描述
 -- | -- | --
 change | `(value: SliderValue)` | 滑块值变化时触发
-
-
-### CSS 变量
-组件提供了下列 CSS 变量，可用于自定义样式。
-名称 | 默认值 | 描述 
--- | -- | --
---td-slider-active-color | @brand-color | - 
---td-slider-bar-height | 4px | - 
---td-slider-capsule-bar-color | @bg-color-component | - 
---td-slider-capsule-bar-heihgt | 24px | - 
---td-slider-capsule-line-heihgt | 18px | - 
---td-slider-default-color | @bg-color-component-disabled | - 
---td-slider-default-color | @bg-color-secondarycomponent | - 
---td-slider-disabled-color | @brand-color-disabled | - 
---td-slider-disabled-text-color | @font-gray-4 | - 
---td-slider-dot-bg-color | @bg-color-container | - 
---td-slider-dot-color | @bg-color-secondarycontainer | - 
---td-slider-dot-size | 20px | - 
+dragend | \- | 结束拖动时触发
+dragstart | \- | 开始拖动时触发

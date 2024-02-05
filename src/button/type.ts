@@ -4,7 +4,6 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { LoadingProps } from '../loading';
 import { TNode, SizeEnum } from '../common';
 
 export interface TdButtonProps {
@@ -37,10 +36,6 @@ export interface TdButtonProps {
    */
   loading?: boolean;
   /**
-   * 透传加载组件全部属性
-   */
-  loadingProps?: LoadingProps;
-  /**
    * 按钮形状，有 4 种：长方形、正方形、圆角长方形、圆形
    * @default rectangle
    */
@@ -68,7 +63,7 @@ export interface TdButtonProps {
    * 按钮形式，基础、线框、文字
    * @default base
    */
-  variant?: 'base' | 'outline' | 'text';
+  variant?: 'base' | 'outline' | 'dashed' | 'text';
   /**
    * 点击时触发
    */
