@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### PullDownRefresh Props
 
 名称 | 类型 | 默认值 | 说明 | 必传
@@ -25,10 +26,3 @@ change | `(value: boolean)` | 下拉或收起时触发，用户手势往下滑�
 refresh | \- | 结束下拉时触发
 scrolltolower | \- | 滚动到页面底部时触发
 timeout | \- | 刷新超时触发
-
-
-### CSS 变量
-组件提供了下列 CSS 变量，可用于自定义样式。
-名称 | 默认值 | 描述 
--- | -- | --
---td-pull-down-refresh-color | @font-gray-3 | - 

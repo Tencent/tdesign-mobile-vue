@@ -29,30 +29,3 @@ cascading | String | 'right-up' | 图片之间的层叠关系，可选值：左�
 collapseAvatar | String / Slot / Function | - | 头像数量超出时，会出现一个头像折叠元素。该元素内容可自定义。默认为 `+N`。示例：`+5`，`...`, `更多`。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 max | Number | - | 能够同时显示的最多头像数量 | N
 size | String | medium | 尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size | N
-
-
-### CSS 变量
-组件提供了下列 CSS 变量，可用于自定义样式。
-名称 | 默认值 | 描述 
--- | -- | --
---td-avatar-group-margin-left-large | -8px | - 
---td-avatar-group-margin-left-medium | -6px | - 
---td-avatar-group-margin-left-small | -4px | - 
---td-avatar-bg-color | @brand-color-light-active | - 
---td-avatar-border-color | #fff | - 
---td-avatar-border-width-large | 4px | - 
---td-avatar-border-width-medium | 3px | - 
---td-avatar-border-width-small | 2px | - 
---td-avatar-circle-border-radius | @radius-circle | - 
---td-avatar-content-color | @brand-color | - 
---td-avatar-icon-large-font-size | 32px | - 
---td-avatar-icon-medium-font-size | 24px | - 
---td-avatar-icon-small-font-size | 20px | - 
---td-avatar-large-width | 64px | - 
---td-avatar-margin-left | 0 | - 
---td-avatar-medium-width | 48px | - 
---td-avatar-round-border-radius | @radius-default | - 
---td-avatar-small-width | 40px | - 
---td-avatar-text-large-font-size | 16px | - 
---td-avatar-text-medium-font-size | @font-size-base | - 
---td-avatar-text-small-font-size | @font-size-s | - 

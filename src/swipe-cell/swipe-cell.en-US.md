@@ -21,9 +21,3 @@ name | params | description
 -- | -- | --
 change | `(value: string)` | \-
 click | `(action: SwipeActionItem, source: SwipeSource)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swipe-cell/type.ts)。<br/>`type SwipeSource = 'left' \| 'right'`<br/>
-
-### SwipeCellInstanceFunctions
-
-名称 | 参数 | 返回值 | 描述
--- | -- | -- | --
-showSure | `(sure: string | TNode, onClick?: SwipeActionItem['onClick'])` | `void` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swipe-cell/type.ts)。<br/>

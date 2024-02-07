@@ -25,11 +25,6 @@ export default {
   cancelBtn: {
     type: [String, Object, Function] as PropType<TdDialogProps['cancelBtn']>,
   },
-  /** 是否显示关闭按钮 */
-  closeBtn: {
-    type: Boolean,
-    default: false,
-  },
   /** 点击蒙层时是否触发关闭事件 */
   closeOnOverlayClick: {
     type: Boolean,
@@ -78,8 +73,6 @@ export default {
   onCancel: Function as PropType<TdDialogProps['onCancel']>,
   /** 关闭事件，点击 取消按钮 或 点击蒙层 时触发 */
   onClose: Function as PropType<TdDialogProps['onClose']>,
-  /** 组件关闭且动画结束后执行 */
-  onClosed: Function as PropType<TdDialogProps['onClosed']>,
   /** 如果“确认”按钮存在，则点击“确认”按钮时触发 */
   onConfirm: Function as PropType<TdDialogProps['onConfirm']>,
   /** 如果蒙层存在，点击蒙层时触发 */

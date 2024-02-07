@@ -47,26 +47,3 @@ onChange | Function |  | Typescript：`(value: T, context: CheckboxGroupChangeCo
 name | params | description
 -- | -- | --
 change | `(value: T, context: CheckboxGroupChangeContext)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/checkbox/type.ts)。<br/>`interface CheckboxGroupChangeContext { e: Event; current: string \| number; option: CheckboxOption \| TdCheckboxProps; type: 'check' \| 'uncheck' }`<br/>
-
-
-### CSS Variables
-The component provides the following CSS variables, which can be used to customize styles.
-Name | Default Value | Description 
--- | -- | --
---td-checkbox-bg-color | @bg-color-container | - 
---td-checkbox-border-color | @component-stroke | - 
---td-checkbox-description-color | @font-gray-2 | - 
---td-checkbox-description-disabled-color | @font-gray-4 | - 
---td-checkbox-description-line-height | 22px | - 
---td-checkbox-font-size | 16px | - 
---td-checkbox-icon-checked-color | @brand-color | - 
---td-checkbox-icon-color | @gray-color-4 | - 
---td-checkbox-icon-disabled-bg-color | @bg-color-component-disabled | - 
---td-checkbox-icon-disabled-color | @brand-color-disabled | - 
---td-checkbox-icon-size | 24px | - 
---td-checkbox-tag-active-bg-color | @brand-color-light | - 
---td-checkbox-tag-active-color | @brand-color | - 
---td-checkbox-title-color | @font-gray-1 | - 
---td-checkbox-title-disabled-color | @font-gray-4 | - 
---td-checkbox-title-line-height | 24px | - 
---td-checkbox-vertical-padding | 16px | - 

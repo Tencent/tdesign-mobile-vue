@@ -59,6 +59,7 @@ export interface TdDialogProps {
   title?: string | TNode;
   /**
    * 控制对话框是否显示
+   * @default false
    */
   visible?: boolean;
   /**
@@ -77,10 +78,6 @@ export interface TdDialogProps {
    * 关闭事件，点击 取消按钮 或 点击蒙层 时触发
    */
   onClose?: (context: DialogCloseContext) => void;
-  /**
-   * 组件关闭且动画结束后执行
-   */
-  onClosed?: () => void;
   /**
    * 如果“确认”按钮存在，则点击“确认”按钮时触发
    */
@@ -107,19 +104,19 @@ export interface DialogInstance {
   /**
    * 销毁弹框
    */
-  destroy: () => void;
+  destroy?: () => void;
   /**
    * 隐藏弹框
    */
-  hide: () => void;
+  hide?: () => void;
   /**
    * 显示弹框
    */
-  show: () => void;
+  show?: () => void;
   /**
    * 更新弹框内容
    */
-  update: (props: DialogOptions) => void;
+  update?: (props: DialogOptions) => void;
 }
 
 export type DialogEventSource = 'cancel' | 'overlay';

@@ -29,20 +29,3 @@ badgeProps | Object | - | 图标右上角提示信息。TS 类型：`BadgeProps`
 icon | Slot / Function | - | 图标名称。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 subTabBar | Array | - | 二级菜单。TS 类型：`SubTabBarItem[] ` `interface SubTabBarItem { value: string; label: string }`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tab-bar/type.ts) | N
 value | String / Number | - | 标识符 | N
-
-
-### CSS 变量
-组件提供了下列 CSS 变量，可用于自定义样式。
-名称 | 默认值 | 描述 
--- | -- | --
---td-tab-bar-active-bg | @brand-color-light | - 
---td-tab-bar-active-color | @brand-color | - 
---td-tab-bar-bg-color | @bg-color-container | - 
---td-tab-bar-border-color | @border-color | - 
---td-tab-bar-color | @font-gray-1 | - 
---td-tab-bar-height | 40px | - 
---td-tab-bar-hover-bg-color | rgba(0, 0, 0, .05) | - 
---td-tab-bar-spread-border-color | @border-color | - 
---td-tab-bar-spread-shadow | @shadow-3 | - 
---td-tab-bar-border-color | @border-color | - 
---td-tab-bar-round-shadow | @shadow-3 | - 
