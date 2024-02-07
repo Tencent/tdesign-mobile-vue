@@ -13,27 +13,28 @@ export interface TdNavbarProps {
    */
   animation?: boolean;
   /**
-   * 左侧胶囊区域
+   * 背景
+   * @default ''
    */
-  capsule?: TNode;
+  background?: string;
   /**
    * 是否固定在顶部
    * @default true
    */
   fixed?: boolean;
   /**
-   * 左侧区域
+   * 左侧区域。值为 `string` 表示文本，为其他表示自定义内容
    */
-  left?: TNode;
+  left?: string | TNode;
   /**
-   * 是否展示左侧箭头
+   * 是否显示左侧箭头
    * @default false
    */
   leftArrow?: boolean;
   /**
-   * 右侧区域
+   * 右侧区域。值为 `string` 表示文本，为其他表示自定义内容
    */
-  right?: TNode;
+  right?: string | TNode;
   /**
    * 页面标题
    */

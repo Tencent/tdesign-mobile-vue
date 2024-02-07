@@ -14,22 +14,3 @@ offset | Array | - | 设置状态点的位置偏移，示例：[-10, 20] 或 ['1
 shape | String | circle | 形状。可选项：circle/square/bubble/ribbon | N
 showZero | Boolean | false | 当数值为 0 时，是否展示徽标 | N
 size | String | medium | 尺寸。可选项：medium/large | N
-
-
-### CSS 变量
-组件提供了下列 CSS 变量，可用于自定义样式。
-名称 | 默认值 | 描述 
--- | -- | --
---td-badge-basic-height | 16px | - 
---td-badge-basic-padding | 4px | - 
---td-badge-basic-width | 16px | - 
---td-badge-bg-color | @error-color | - 
---td-badge-border-radius | 2px | - 
---td-badge-bubble-border-radius | 10px 10px 10px 1px | - 
---td-badge-dot-size | 8px | - 
---td-badge-font-size | @font-size-xs | - 
---td-badge-font-weight | 600 | - 
---td-badge-large-font-size | @font-size-s | - 
---td-badge-large-height | 20px | - 
---td-badge-large-padding | 5px | - 
---td-badge-text-color | @font-white-1 | - 

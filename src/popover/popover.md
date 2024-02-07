@@ -20,10 +20,3 @@ onVisibleChange | Function |  | TS 类型：`(visible: boolean) => void`<br/>确
 名称 | 参数 | 描述
 -- | -- | --
 visible-change | `(visible: boolean)` | 确认框显示或隐藏时触发
-
-
-### CSS 变量
-组件提供了下列 CSS 变量，可用于自定义样式。
-名称 | 默认值 | 描述 
--- | -- | --
---td-popover-padding | 12px | - 

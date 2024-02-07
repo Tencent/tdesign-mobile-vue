@@ -17,29 +17,24 @@ theme | String | info | 消息组件风格。可选项：info/success/warning/er
 visible | Boolean | false | 是否显示，隐藏时默认销毁组件。支持语法糖 `v-model` 或 `v-model:visible` | N
 defaultVisible | Boolean | false | 是否显示，隐藏时默认销毁组件。非受控属性 | N
 zIndex | Number | - | 元素层级，样式默认为 5000 | N
+onChange | Function |  | TS 类型：`(visible: boolean) => void`<br/>已废弃。可见性变化时触发 | N
+onClose | Function |  | TS 类型：`(context: { trigger: 'close-click' \| 'duration-end', e?: MouseEvent }) => void`<br/>已废弃。关闭消息时触发。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 onCloseBtnClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>当关闭按钮存在时，用户点击关闭按钮触发 | N
+onClosed | Function |  | TS 类型：`() => void`<br/>已废弃。关闭消息并且动画结束后触发 | N
 onDurationEnd | Function |  | TS 类型：`() => void`<br/>计时结束后触发 | N
 onLinkClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>当link链接存在时，点击链接文本时触发 | N
+onOpen | Function |  | TS 类型：`() => void`<br/>已废弃。展示Message时触发 | N
+onOpened | Function |  | TS 类型：`() => void`<br/>已废弃。展示Message时并且动画结束后触发 | N
 
 ### Message Events
 
 名称 | 参数 | 描述
 -- | -- | --
+change | `(visible: boolean)` | 已废弃。可见性变化时触发
+close | `(context: { trigger: 'close-click' \| 'duration-end', e?: MouseEvent })` | 已废弃。关闭消息时触发。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)
 close-btn-click | `(context: { e: MouseEvent })` | 当关闭按钮存在时，用户点击关闭按钮触发
+closed | \- | 已废弃。关闭消息并且动画结束后触发
 duration-end | \- | 计时结束后触发
 link-click | `(context: { e: MouseEvent })` | 当link链接存在时，点击链接文本时触发
-
-
-### CSS 变量
-组件提供了下列 CSS 变量，可用于自定义样式。
-名称 | 默认值 | 描述 
--- | -- | --
---td-message-bg-color | @bg-color-container | - 
---td-message-border-radius | @radius-default | - 
---td-message-box-shadow | @shadow-4 | - 
---td-message-close-icon-color | @font-gray-3 | - 
---td-message-content-font-color | @font-gray-1 | - 
---td-message-error-color | @error-color | - 
---td-message-info-color | @brand-color | - 
---td-message-success-color | @success-color | - 
---td-message-warning-color | @warning-color | - 
+open | \- | 已废弃。展示Message时触发
+opened | \- | 已废弃。展示Message时并且动画结束后触发

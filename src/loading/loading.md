@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Loading Props
 
 名称 | 类型 | 默认值 | 说明 | 必传
@@ -18,12 +19,3 @@ reverse | Boolean | - | 加载动画是否反向 | N
 size | String | '20px' | 尺寸，示例：20px | N
 text | String / Slot / Function | - | 加载提示文案。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 theme | String | circular | 加载组件类型。可选项：circular/spinner/dots | N
-
-
-### CSS 变量
-组件提供了下列 CSS 变量，可用于自定义样式。
-名称 | 默认值 | 描述 
--- | -- | --
---td-loading-color | @brand-color | - 
---td-loading-text-font-size | 12px | - 
---td-loading-text-line-height | 20px | - 
