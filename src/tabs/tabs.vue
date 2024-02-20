@@ -69,13 +69,14 @@ import { preventDefault } from '../shared/dom';
 import CLASSNAMES from '../shared/constants';
 import TSticky from '../sticky';
 import { TdStickyProps } from '../sticky/type';
+import TBadge from '../badge';
 
 const { prefix } = config;
 const name = `${prefix}-tabs`;
 
 export default defineComponent({
   name,
-  components: { TabNavItem, TSticky },
+  components: { TabNavItem, TSticky, TBadge },
   props: TabsProps,
   emits: ['update:value', 'update:modelValue'],
   setup(props, context) {
