@@ -11,7 +11,7 @@ export default {
   /** 取消按钮文字 */
   cancelBtn: {
     type: String,
-    default: '取消',
+    default: '',
   },
   /** 确定按钮文字 */
   confirmBtn: {
@@ -45,7 +45,7 @@ export default {
   /** 标题 */
   title: {
     type: String,
-    default: '选择时间',
+    default: '',
   },
   /** 选中值 */
   value: {

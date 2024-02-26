@@ -25,6 +25,7 @@ import { getMeaningColumn } from './shared';
 import { useVModel } from '../shared';
 import { Picker as TPicker } from '../picker';
 import { PickerColumn, PickerColumnItem, PickerValue, PickerContext } from '../picker/type';
+import { useConfig } from '../config-provider/useConfig';
 
 dayjs.extend(weekday);
 dayjs.extend(customParseFormat);
@@ -47,6 +48,7 @@ export default defineComponent({
   props: DateTimePickerProps,
   emits: ['change', 'cancel', 'confirm', 'pick', 'update:modelValue', 'update:value'],
   setup(props: any) {
+    const { t, globalConfig } = useConfig('dateTimePicker');
     const className = computed(() => [`${name}`]);
     const { value } = toRefs(props);
     const [innerValue, setDateTimePickerValue] = useVModel(
@@ -56,10 +58,10 @@ export default defineComponent({
       props.onChange,
     );
     const title = computed(() => {
-      return props.title || '选择时间';
+      return props.title || t(globalConfig.value.title);
     });
-    const confirmButtonText = computed(() => props.confirmBtn || '确定');
-    const cancelButtonText = computed(() => props.cancelBtn || '取消');
+    const confirmButtonText = computed(() => props.confirmBtn || t(globalConfig.value.confirmBtn));
+    const cancelButtonText = computed(() => props.cancelBtn || t(globalConfig.value.cancelBtn));
     const normalize = (val: string | number, defaultDay: Dayjs) =>
       val && dayjs(val).isValid() ? dayjs(val) : defaultDay;
     const start = computed(() => normalize(props.start, dayjs().subtract(10, 'year')));
@@ -116,12 +118,12 @@ export default defineComponent({
       const isInMaxMinute = isInMaxHour && curMinute === maxMinute;
 
       const typeUnit = {
-        year: '年',
-        month: '月',
-        date: '日',
-        hour: '时',
-        minute: '分',
-        second: '秒',
+        year: t(globalConfig.value.yearLable),
+        month: t(globalConfig.value.monthLable),
+        date: t(globalConfig.value.dateLable),
+        hour: t(globalConfig.value.hourLable),
+        minute: t(globalConfig.value.minuteLable),
+        second: t(globalConfig.value.secondLable),
       };
 
       const generateColumn = (start: number, end: number, type: string) => {

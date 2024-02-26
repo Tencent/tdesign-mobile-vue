@@ -94,6 +94,7 @@ import { renderTNode, TNode } from '../shared';
 import { BaseTableCellParams, TableRowData, TdBaseTableProps } from './type';
 import TLoading from '../loading';
 import { TdLoadingProps } from '../loading/type';
+import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
 const name = `${prefix}-base-table`;
@@ -106,6 +107,7 @@ export default defineComponent({
   setup(props, context) {
     const { classPrefix, tableLayoutClasses, tableHeaderClasses, tableBaseClass, tdAlignClasses, tdEllipsisClass } =
       useClassName();
+    const { t, globalConfig } = useConfig('table');
     const defaultLoadingContent = h(TLoading, { ...(props.loadingProps as TdLoadingProps) });
     // 表格基础样式类
     const { tableClasses, tableContentStyles, tableElementStyles } = useStyle(props);
@@ -139,7 +141,7 @@ export default defineComponent({
 
     const tableElmClasses = computed(() => [[tableLayoutClasses[props.tableLayout || 'fixed']]]);
     const internalInstance = getCurrentInstance();
-    const renderContentEmpty = computed(() => renderTNode(internalInstance, 'empty'));
+    const renderContentEmpty = computed(() => renderTNode(internalInstance, 'empty') || t(globalConfig.value.empty));
     const renderCellEmptyContent = computed(() => renderTNode(internalInstance, 'cellEmptyContent'));
 
     const renderCell = (

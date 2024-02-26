@@ -35,6 +35,14 @@ export const docs = [
     type: 'component', // 组件文档
     children: [
       {
+        title: 'ConfigProvider 全局配置',
+        titleEn: 'ConfigProvider',
+        name: 'config-provider',
+        path: '/mobile-vue/components/config-provider',
+        component: () => import('@/config-provider/config-provider.md'),
+        componentEn: () => import('@/config-provider/config-provider.en-US.md'),
+      },
+      {
         title: 'Button 按钮',
         titleEn: 'Button',
         name: 'button',

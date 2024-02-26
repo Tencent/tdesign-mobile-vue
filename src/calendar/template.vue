@@ -1,7 +1,7 @@
 <template>
   <div ref="templateRef" :class="{ [`${name}`]: true, [`${name}--popup`]: usePopup }">
     <div :class="`${name}__title`">
-      <slot name="title">{{ title || '请选择日期' }}</slot>
+      <slot name="title">{{ title || t(globalConfig.title) }}</slot>
     </div>
     <CloseIcon v-if="usePopup" :class="`${name}__close-btn`" size="24" @click="handleClose" />
     <div :class="`${name}__days`">
@@ -9,7 +9,9 @@
     </div>
     <div :class="`${name}__months`" style="overflow: auto">
       <template v-for="(item, index) in months" :key="index">
-        <div :class="`${name}__month`">{{ item.year }} 年 {{ item.month + 1 }} 月</div>
+        <div :class="`${name}__month`">
+          {{ t(globalConfig.monthTitle(item.year, item.month)) }}
+        </div>
         <div :class="`${name}__dates`">
           <div v-for="emptyItem in (item.weekdayOfFirstDay - firstDayOfWeek + 7) % 7" :key="emptyItem"></div>
           <template v-for="(dateItem, dateIndex) in item.months" :key="dateIndex">
@@ -55,6 +57,7 @@ import { CloseIcon } from 'tdesign-icons-vue-next';
 import TButton from '../button';
 import config from '../config';
 import { TdCalendarProps, TDate, TDateType } from './type';
+import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
 const name = `${prefix}-calendar`;
@@ -68,6 +71,7 @@ export default {
 </script>
 
 <script setup lang="ts">
+const { t, globalConfig } = useConfig('calendar');
 const emit = defineEmits(['visible-change']);
 
 const props = inject('templateProps') as TdCalendarProps;
@@ -87,7 +91,7 @@ const valueRef = ref(props.value);
 const selectedDate = ref();
 const firstDayOfWeek = computed(() => props.firstDayOfWeek || 0);
 const days = computed(() => {
-  const raw = '日一二三四五六';
+  const raw = globalConfig.value.weekdays;
   const ans = [];
   let i = firstDayOfWeek.value % 7;
 
@@ -108,7 +112,7 @@ const maxDate = computed(() =>
 const getDate = (year: number, month: number, day: number) => new Date(year, month, day);
 
 const confirmBtn = computed(() => {
-  if (typeof props.confirmBtn === 'string') return { content: props.confirmBtn || '确认' };
+  if (typeof props.confirmBtn === 'string') return { content: props.confirmBtn || t(globalConfig.value.confirmBtn) };
   return props.confirmBtn;
 });
 
