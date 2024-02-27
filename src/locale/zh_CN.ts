@@ -30,4 +30,11 @@ export default {
   input: {
     placeholder: '请输入',
   },
+  list: {
+    loading: '加载中...',
+    loadingMoreText: '点击加载更多',
+    pulling: '下拉即可刷新...',
+    loosing: '释放即可刷新...',
+    success: '刷新成功',
+  },
 } as const;

@@ -30,4 +30,11 @@ export default {
   input: {
     placeholder: 'please enter',
   },
+  list: {
+    loading: 'Loading...',
+    loadingMoreText: 'Click to load more',
+    pulling: 'Pull to refresh...',
+    loosing: 'Loose to refresh...',
+    success: 'Refresh successful',
+  },
 } as const;

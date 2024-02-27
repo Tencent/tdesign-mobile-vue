@@ -5,6 +5,9 @@
     <tdesign-demo-block title="01 组件类型" summary="组件国际化">
       <tableEn />
     </tdesign-demo-block>
+    <tdesign-demo-block title="01 列表组件" summary="组件国际化">
+      <listEn />
+    </tdesign-demo-block>
     <tdesign-demo-block summary="日历组件国际化">
       <calendarEn />
     </tdesign-demo-block>
@@ -17,4 +20,5 @@
 import tableEn from './table-en.vue';
 import calendarEn from './calendar-en.vue';
 import otherEn from './other-en.vue';
+import listEn from './list-en.vue';
 </script>
