@@ -1,5 +1,18 @@
 <template>
   <t-config-provider :global-config="globalConfig">
+    <div class="rate-demo-cell rate-demo-cell--space">
+      <div class="rate-demo-cell__label">Rating with description</div>
+      <t-rate v-model="rateValue" show-text variant="filled" />
+    </div>
+
+    <t-calendar
+      v-model:visible="visibleCalendar"
+      @close="onCalendarClose"
+      @confirm="handleCalendarConfirm"
+      @select="handleCalendarSelect"
+    />
+    <t-cell title="Single select date" arrow :note="calendarDateNote" @click="visibleCalendar = true" />
+
     <t-cell title="select time" :note="pickerValueText || 'YY-MM-DD'" @click="visible = true" />
     <t-popup v-model="visible" placement="bottom">
       <t-date-time-picker
@@ -31,6 +44,28 @@ const globalConfig = merge(enConfig, {
 const visible = ref(false);
 const pickerValue = ref('2021-12-23');
 const pickerValueText = ref('');
+
+const rateValue = ref(0);
+
+const visibleCalendar = ref(false);
+const calendarDateNote = ref('');
+
+const format = (val: Date) => {
+  const date = new Date(val);
+  return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+};
+
+const handleCalendarConfirm = (val: Date) => {
+  console.log(val);
+  calendarDateNote.value = format(val);
+};
+const handleCalendarSelect = (val: Date) => {
+  console.log(val);
+};
+const onCalendarClose = (trigger: string) => {
+  console.log('closed by', trigger);
+};
+
 const onChange = (value: string) => {
   console.log('change: ', value);
 };
@@ -51,3 +86,24 @@ const onConfirm = (value: string) => {
   visible.value = false;
 };
 </script>
+
+<style lang="less" scoped>
+.rate-demo-cell {
+  background-color: var(--bg-color-demo, #fff);
+  padding: 12px 16px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__label {
+    font-size: 16px;
+    margin-right: 16px;
+    min-width: 80px;
+    color: var(--td-text-color-primary, rgba(0, 0, 0, 0.9));
+  }
+
+  &--space {
+    margin-bottom: 16px;
+  }
+}
+</style>

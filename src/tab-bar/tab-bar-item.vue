@@ -78,6 +78,7 @@ import config from '../config';
 import { initName } from './useTabBar';
 import TabBarItemProps from './tab-bar-item-props';
 import { renderContent, renderTNode, TNode } from '../shared';
+import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
 const name = `${prefix}-tab-bar-item`;
@@ -87,6 +88,7 @@ export default defineComponent({
   components: { TNode, TBadge, TViewListIcon },
   props: TabBarItemProps,
   setup(props) {
+    const { t, globalConfig } = useConfig('tabBar');
     const { split, shape, theme, defaultIndex, activeValue, itemCount, updateChild } = inject<any>('tab-bar');
     const currentName = initName(defaultIndex);
 
@@ -99,17 +101,17 @@ export default defineComponent({
       if (options?.dot || options?.count) {
         const maxCount = options.maxCount || 99;
         if (options.dot) {
-          return '有新的消息';
+          return globalConfig.value.newsAriaLabel;
         }
         if (options.count === '...') {
-          return '有很多消息';
+          return globalConfig.value.moreNewsAriaLabel;
         }
         const count = Number(options.count);
         if (isNaN(count)) {
           return `${options.count}`;
         }
-        const str1 = `有${maxCount}+条消息`;
-        const str2 = `有${options.count}条消息`;
+        const str1 = t(globalConfig.value.haveMoreNewsAriaLabel, { value: maxCount });
+        const str2 = t(globalConfig.value.haveNewsAriaLabel, { value: options.count });
         return `${Number(options.count) > maxCount ? str1 : str2}`;
       }
       return 'TabBar';

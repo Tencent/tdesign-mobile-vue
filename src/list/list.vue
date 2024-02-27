@@ -24,13 +24,8 @@ import { renderTNode, TNode, useScrollParent } from '../shared';
 import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
-const { t, globalConfig } = useConfig('list');
 
 const name = `${prefix}-list`;
-const LOADING_TEXT_MAP = {
-  loading: globalConfig.value.loading,
-  'load-more': globalConfig.value.loadingMoreText,
-};
 
 export default defineComponent({
   name,
@@ -41,6 +36,13 @@ export default defineComponent({
   props: ListProps,
   emits: ['load-more', 'scroll'],
   setup(props, context) {
+    const { globalConfig } = useConfig('list');
+
+    const LOADING_TEXT_MAP = {
+      loading: globalConfig.value.loading,
+      'load-more': globalConfig.value.loadingMoreText,
+    };
+
     const root = ref<HTMLElement>();
     const empty = ref<HTMLElement>();
     const scrollParent = useScrollParent(root);

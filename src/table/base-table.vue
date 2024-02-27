@@ -107,7 +107,7 @@ export default defineComponent({
   setup(props, context) {
     const { classPrefix, tableLayoutClasses, tableHeaderClasses, tableBaseClass, tdAlignClasses, tdEllipsisClass } =
       useClassName();
-    const { t, globalConfig } = useConfig('table');
+    const { globalConfig } = useConfig('table');
     const defaultLoadingContent = h(TLoading, { ...(props.loadingProps as TdLoadingProps) });
     // 表格基础样式类
     const { tableClasses, tableContentStyles, tableElementStyles } = useStyle(props);
@@ -141,7 +141,7 @@ export default defineComponent({
 
     const tableElmClasses = computed(() => [[tableLayoutClasses[props.tableLayout || 'fixed']]]);
     const internalInstance = getCurrentInstance();
-    const renderContentEmpty = computed(() => renderTNode(internalInstance, 'empty') || t(globalConfig.value.empty));
+    const renderContentEmpty = computed(() => renderTNode(internalInstance, 'empty') || globalConfig.value.empty);
     const renderCellEmptyContent = computed(() => renderTNode(internalInstance, 'cellEmptyContent'));
 
     const renderCell = (

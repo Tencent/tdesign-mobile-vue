@@ -1,7 +1,7 @@
 <template>
   <div ref="templateRef" :class="{ [`${name}`]: true, [`${name}--popup`]: usePopup }">
     <div :class="`${name}__title`">
-      <slot name="title">{{ title || t(globalConfig.title) }}</slot>
+      <slot name="title">{{ title || globalConfig.title }}</slot>
     </div>
     <CloseIcon v-if="usePopup" :class="`${name}__close-btn`" size="24" @click="handleClose" />
     <div :class="`${name}__days`">
@@ -10,7 +10,7 @@
     <div :class="`${name}__months`" style="overflow: auto">
       <template v-for="(item, index) in months" :key="index">
         <div :class="`${name}__month`">
-          {{ t(globalConfig.monthTitle(item.year, item.month)) }}
+          {{ t(globalConfig.monthTitle, { year: item.year, month: item.month }) }}
         </div>
         <div :class="`${name}__dates`">
           <div v-for="emptyItem in (item.weekdayOfFirstDay - firstDayOfWeek + 7) % 7" :key="emptyItem"></div>
@@ -112,7 +112,7 @@ const maxDate = computed(() =>
 const getDate = (year: number, month: number, day: number) => new Date(year, month, day);
 
 const confirmBtn = computed(() => {
-  if (typeof props.confirmBtn === 'string') return { content: props.confirmBtn || t(globalConfig.value.confirmBtn) };
+  if (typeof props.confirmBtn === 'string') return { content: props.confirmBtn || globalConfig.value.confirm };
   return props.confirmBtn;
 });
 

@@ -33,6 +33,7 @@ import PickerProps from './props';
 import { PickerValue, PickerColumn, PickerColumnItem } from './type';
 import { useVModel, TNode, renderTNode } from '../shared';
 import PickerItem from './picker-item.vue';
+import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
 const name = `${prefix}-picker`;
@@ -47,6 +48,7 @@ export default defineComponent({
   props: PickerProps,
   emits: ['change', 'cancel', 'pick', 'update:modelValue', 'update:value'],
   setup(props: any) {
+    const { globalConfig } = useConfig('calendar');
     const internalInstance = getCurrentInstance();
     const { value, modelValue } = toRefs(props);
     const [pickerValue = ref([]), setPickerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
@@ -55,8 +57,8 @@ export default defineComponent({
       if (isBoolean(prop) && prop) return defaultText;
       return '';
     };
-    const confirmButtonText = computed(() => getDefaultText(props.confirmBtn, '确认'));
-    const cancelButtonText = computed(() => getDefaultText(props.cancelBtn, '取消'));
+    const confirmButtonText = computed(() => getDefaultText(props.confirmBtn, globalConfig.value.confirm));
+    const cancelButtonText = computed(() => getDefaultText(props.cancelBtn, globalConfig.value.cancel));
     const header = computed(() => renderTNode(internalInstance, 'header'));
     const curValueArray = ref(pickerValue.value?.map((item: PickerValue) => item) || []);
     const realColumns = computed(() => {

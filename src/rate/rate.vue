@@ -84,6 +84,7 @@ import config from '../config';
 import { TdRateProps } from './type';
 import { useDefault } from '../shared';
 import { useFormDisabled } from '../form/hooks';
+import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
 const name = `${prefix}-rate`;
@@ -93,6 +94,7 @@ export default defineComponent({
   props: rateProps,
   emits: ['change', 'update:value', 'update:modelValue'],
   setup(props, context) {
+    const { t, globalConfig } = useConfig('rate');
     const disabled = useFormDisabled();
 
     const rateWrapper = ref<HTMLElement | null>(null);
@@ -102,7 +104,9 @@ export default defineComponent({
         return props.texts[actualVal.value - 1];
       }
 
-      return actualVal.value > 0 ? `${actualVal.value} 分` : '未评分';
+      return actualVal.value > 0
+        ? t(globalConfig.value.valueText, { value: actualVal.value })
+        : globalConfig.value.noValueText;
     });
     const colors = computed(() => {
       const { color } = props;

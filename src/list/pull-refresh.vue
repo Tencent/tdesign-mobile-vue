@@ -11,7 +11,7 @@
       <div :class="`${name}__head`">
         <div v-if="SHOW_TEXT_LIST.includes(state.status)">{{ TEXT_MAP[state.status] }}</div>
         <div v-if="state.status === 'loading'">
-          <t-loading :text="t(globalConfig.loading)" />
+          <t-loading :text="globalConfig.loading" />
         </div>
       </div>
       <slot />
@@ -27,7 +27,7 @@ import TLoading from '../loading';
 import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
-const { t, globalConfig } = useConfig('list');
+const { globalConfig } = useConfig('list');
 const name = `${prefix}-pull-refresh`;
 type PullRefreshStatus = 'normal' | 'loading' | 'loosing' | 'pulling' | 'success';
 
@@ -179,6 +179,7 @@ export default defineComponent({
       name,
       state,
       trackStyle,
+      globalConfig,
       TEXT_MAP,
       SHOW_TEXT_LIST,
       onTouchStart,
