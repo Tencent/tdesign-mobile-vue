@@ -12,10 +12,12 @@
       <div v-if="file.status === 'fail' || file.status === 'progress'" :class="`${name}__progress-mask`">
         <template v-if="file.status === 'progress'">
           <loading-icon :class="`${name}__progress-loading`" size="24" />
-          <div :class="`${name}__progress-text`">{{ file.percent ? file.percent + '%' : '上传中...' }}</div>
+          <div :class="`${name}__progress-text`">
+            {{ file.percent ? file.percent + '%' : globalConfig.progress.uploadingText }}
+          </div>
         </template>
         <close-circle-icon v-else size="24" />
-        <div v-if="file.status === 'fail'" :class="`${name}__progress-text`">上传失败</div>
+        <div v-if="file.status === 'fail'" :class="`${name}__progress-text`">{{ globalConfig.progress.failText }}</div>
       </div>
       <close-icon :class="`${name}__delete-btn`" @click="({ e }) => onInnerRemove({ e, file, index })" />
     </div>
@@ -54,6 +56,7 @@ import { UploadFile } from './type';
 import UploadProps from './props';
 import config from '../config';
 import useUpload from './hooks/useUpload';
+import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
 const name = `${prefix}-upload`;
@@ -84,6 +87,8 @@ export default defineComponent({
     'click-upload',
   ],
   setup(props) {
+    const { globalConfig } = useConfig('upload');
+
     const {
       toUploadFiles,
       uploadValue,
@@ -132,6 +137,7 @@ export default defineComponent({
 
     return {
       name,
+      globalConfig,
       triggerUpload,
       initialIndex,
       showViewer,

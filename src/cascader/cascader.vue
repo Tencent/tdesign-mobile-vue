@@ -94,6 +94,7 @@ import config from '../config';
 import TdCascaderProps from './props';
 import { useVModel, renderTNode, TNode } from '../shared';
 import { TreeOptionData } from '../common';
+import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
 const name = `${prefix}-cascader`;
@@ -127,11 +128,13 @@ export default defineComponent({
   props: TdCascaderProps,
   emits: ['change', 'close', 'pick', 'update:modelValue', 'update:value', 'update:visible'],
   setup(props, context) {
+    const { globalConfig } = useConfig('cascader');
+
     const { visible, value, modelValue, subTitles, options, keys, checkStrictly } = toRefs(props);
     const open = ref(visible.value || false);
     const [cascaderValue, setCascaderValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
-    const title = computed(() => props.title || '标题');
-    const placeholder = computed(() => props.placeholder || '选择选项');
+    const title = computed(() => props.title || globalConfig.value.title);
+    const placeholder = computed(() => props.placeholder || globalConfig.value.placeholder);
 
     const stepIndex = ref(0);
     const selectedIndexes = reactive<string[] | number[]>([]);

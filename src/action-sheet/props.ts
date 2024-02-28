@@ -20,7 +20,7 @@ export default {
   /** 设置取消按钮的文本 */
   cancelText: {
     type: String,
-    default: '取消',
+    default: '',
   },
   /** 设置每页展示菜单的数量，仅当 type=grid 时有效 */
   count: {

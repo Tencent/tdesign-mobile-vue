@@ -21,13 +21,11 @@ import TLoading from '../loading';
 import config from '../config';
 import ListProps from './props';
 import { renderTNode, TNode, useScrollParent } from '../shared';
+import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
+
 const name = `${prefix}-list`;
-const LOADING_TEXT_MAP = {
-  loading: '加载中...',
-  'load-more': '点击加载更多',
-};
 
 export default defineComponent({
   name,
@@ -38,6 +36,13 @@ export default defineComponent({
   props: ListProps,
   emits: ['load-more', 'scroll'],
   setup(props, context) {
+    const { globalConfig } = useConfig('list');
+
+    const LOADING_TEXT_MAP = {
+      loading: globalConfig.value.loading,
+      'load-more': globalConfig.value.loadingMoreText,
+    };
+
     const root = ref<HTMLElement>();
     const empty = ref<HTMLElement>();
     const scrollParent = useScrollParent(root);

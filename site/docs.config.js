@@ -30,6 +30,21 @@ export const docs = [
     ],
   },
   {
+    title: '全局配置',
+    titleEn: 'Global Config',
+    type: 'component',
+    children: [
+      {
+        title: '全局特性配置',
+        titleEn: 'Global Configuration',
+        name: 'config-provider',
+        path: '/mobile-vue/components/config-provider',
+        component: () => import('@/config-provider/config-provider.md'),
+        componentEn: () => import('@/config-provider/config-provider.en-US.md'),
+      },
+    ],
+  },
+  {
     title: '基础组件',
     titleEn: 'Base',
     type: 'component', // 组件文档
