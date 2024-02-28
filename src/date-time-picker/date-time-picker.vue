@@ -118,12 +118,12 @@ export default defineComponent({
       const isInMaxMinute = isInMaxHour && curMinute === maxMinute;
 
       const typeUnit = {
-        year: globalConfig.value.yearLable,
-        month: globalConfig.value.monthLable,
-        date: globalConfig.value.dateLable,
-        hour: globalConfig.value.hourLable,
-        minute: globalConfig.value.minuteLable,
-        second: globalConfig.value.secondLable,
+        year: globalConfig.value.yearLabel,
+        month: globalConfig.value.monthLabel,
+        date: globalConfig.value.dateLabel,
+        hour: globalConfig.value.hourLabel,
+        minute: globalConfig.value.minuteLabel,
+        second: globalConfig.value.secondLabel,
       };
 
       const generateColumn = (start: number, end: number, type: string) => {

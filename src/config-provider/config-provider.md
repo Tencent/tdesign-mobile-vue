@@ -61,9 +61,6 @@ cancel | String | - | 语言配置，“取消”按钮描述文本。| N
 -- | -- | -- | -- | --
 confirm | String | - | 语言配置，“确定”按钮描述文本。| N
 title | String | - | 语言配置，组件标题“请选择日期”描述文本。| N
-yearLable | String | - | 语言配置，“年”描述文本。| N
-monthLable | String | - | 语言配置，“月”描述文本。| N
-dateLable | String | - | 语言配置，“日”描述文本。| N
 weekdays | Object | - | 星期文本描述，默认值：['日', '一', '二', '三', '四', '五', '六']。TS 类型：`string[]` | N
 monthTitle | String | - | 语言配置，日期月面板标题描述文本。示例：“{year} / {month}”| N
 
@@ -90,13 +87,13 @@ title | String | - | 语言配置，组件标题“选择时间”描述文本�
 cancel | String | - | 语言配置，“取消”按钮描述文本。| N
 confirm | String | - | 语言配置，“确定”按钮描述文本。| N
 format | String | 'YYYY-MM-DD' | 日期格式化规则 | N
-yearLable | String | - | 语言配置，“年” 描述文本 | N
-yearLable | String | - | 语言配置，“年”描述文本。| N
-monthLable | String | - | 语言配置，“月”描述文本。| N
-dateLable | String | - | 语言配置，“日”描述文本。| N
-hourLable | String | - | 语言配置，“时”描述文本。| N
-minuteLable | String | - | 语言配置，“分”描述文本。| N
-secondLable | String | - | 语言配置，“秒”描述文本。| N
+yearLabel | String | - | 语言配置，“年” 描述文本 | N
+yearLabel | String | - | 语言配置，“年”描述文本。| N
+monthLabel | String | - | 语言配置，“月”描述文本。| N
+dateLabel | String | - | 语言配置，“日”描述文本。| N
+hourLabel | String | - | 语言配置，“时”描述文本。| N
+minuteLabel | String | - | 语言配置，“分”描述文本。| N
+secondLabel | String | - | 语言配置，“秒”描述文本。| N
 
 
 ### ListConfig

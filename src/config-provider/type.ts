@@ -70,9 +70,6 @@ export interface ActionSheetConfig {
 export interface CalendarConfig {
   confirm?: string;
   title?: string;
-  yearLable?: string;
-  monthLable?: string;
-  dateLable?: string;
   weekdays?: string[];
   monthTitle?: string;
 }
@@ -107,12 +104,12 @@ export interface DateTimePickerConfig {
    * @default 'YYYY-MM-DD';
    */
   format?: string;
-  yearLable?: string;
-  monthLable?: string;
-  dateLable?: string;
-  hourLable?: string;
-  minuteLable?: string;
-  secondLable?: string;
+  yearLabel?: string;
+  monthLabel?: string;
+  dateLabel?: string;
+  hourLabel?: string;
+  minuteLabel?: string;
+  secondLabel?: string;
 }
 export interface PickerConfig {
   /**
