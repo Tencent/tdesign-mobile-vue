@@ -63,7 +63,7 @@ export default {
   },
   upload: {
     progress: {
-      uploadingText: 'Uploading',
+      uploadingText: 'Uploading...',
       waitingText: 'Waiting',
       failText: 'Failed',
       successText: 'Success',

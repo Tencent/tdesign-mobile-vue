@@ -90,7 +90,7 @@ exports[`calendar > props > : format 1`] = `
           <div
             class="t-calendar__month"
           >
-            2022 年 1 月
+            2022 年 0 月
           </div>
           <div
             class="t-calendar__dates"

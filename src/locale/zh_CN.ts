@@ -36,7 +36,7 @@ export default {
   },
   picker: {
     cancel: '取消',
-    confirm: '确定',
+    confirm: '确认',
   },
   pullDownRefresh: {
     loadingTexts: ['下拉刷新', '松手刷新', '正在刷新', '刷新完成'],
@@ -63,7 +63,7 @@ export default {
   },
   upload: {
     progress: {
-      uploadingText: '上传中',
+      uploadingText: '上传中...',
       waitingText: '待上传',
       failText: '上传失败',
       successText: '上传成功',
