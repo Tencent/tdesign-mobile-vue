@@ -2,7 +2,6 @@
   <t-config-provider :global-config="globalConfig">
     <!-- 全局配置：空数据呈现，演示 -->
     <t-table :data="[]" :columns="columns" bordered row-key="property"></t-table>
-    <br /><br />
   </t-config-provider>
 </template>
 
@@ -39,7 +38,7 @@ const data = [
 // 全局特性配置，可以引入英文默认配置 enConfig，还可以在默认配置的基础上进行自定义配置
 const globalConfig = merge(enConfig, {
   table: {
-    empty: 'Empty Data',
+    empty: 'Empty Data Test',
   },
 });
 </script>

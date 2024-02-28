@@ -69,4 +69,4 @@ export default {
       successText: '上传成功',
     },
   },
-} as const;
+};

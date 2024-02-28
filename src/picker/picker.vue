@@ -48,7 +48,7 @@ export default defineComponent({
   props: PickerProps,
   emits: ['change', 'cancel', 'pick', 'update:modelValue', 'update:value'],
   setup(props: any) {
-    const { globalConfig } = useConfig('calendar');
+    const { globalConfig } = useConfig('picker');
     const internalInstance = getCurrentInstance();
     const { value, modelValue } = toRefs(props);
     const [pickerValue = ref([]), setPickerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);

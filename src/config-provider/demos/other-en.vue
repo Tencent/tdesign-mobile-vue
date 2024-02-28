@@ -1,7 +1,7 @@
 <template>
   <t-config-provider :global-config="globalConfig">
     <div class="rate-demo-cell rate-demo-cell--space">
-      <div class="rate-demo-cell__label">Rating with description</div>
+      <div class="rate-demo-cell__label">Rating</div>
       <t-rate v-model="rateValue" show-text variant="filled" />
     </div>
 
@@ -13,7 +13,7 @@
     />
     <t-cell title="Single select date" arrow :note="calendarDateNote" @click="visibleCalendar = true" />
 
-    <t-cell title="select time" :note="pickerValueText || 'YY-MM-DD'" @click="visible = true" />
+    <t-cell title="Select time" :note="pickerValueText || 'YY-MM-DD'" @click="visible = true" />
     <t-popup v-model="visible" placement="bottom">
       <t-date-time-picker
         :value="pickerValue"

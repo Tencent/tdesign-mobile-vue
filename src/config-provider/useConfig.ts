@@ -25,8 +25,9 @@ export function useConfig<T extends keyof GlobalConfigProvider>(
 ) {
   const injectGlobalConfig = getCurrentInstance() ? inject(configProviderInjectKey, null) : globalConfigCopy;
   const mergedGlobalConfig = computed(() => injectGlobalConfig?.value || (defaultGlobalConfig as GlobalConfigProvider));
-  const globalConfig = computed(() => ({ ...mergedGlobalConfig.value[componentName], ...componentLocale }));
-  console.log('----', globalConfig.value);
+  // eslint-disable-next-line
+  const globalConfig = computed(() => Object.assign({}, mergedGlobalConfig.value[componentName], componentLocale));
+
   const classPrefix = computed(() => {
     return mergedGlobalConfig.value.classPrefix;
   });

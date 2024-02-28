@@ -69,4 +69,4 @@ export default {
       successText: 'Success',
     },
   },
-} as const;
+};

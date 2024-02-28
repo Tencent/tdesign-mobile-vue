@@ -5,11 +5,6 @@ import { TNode } from '../common';
 
 export interface GlobalConfigProvider {
   /**
-   * CSS 类名前缀
-   * @default t
-   */
-  classPrefix?: string;
-  /**
    * 动作面板全局配置
    */
   actionSheet?: ActionSheetConfig;
@@ -22,6 +17,11 @@ export interface GlobalConfigProvider {
    */
   cascader?: CascaderConfig;
   /**
+   * CSS 类名前缀 【开发中】
+   * @default t
+   */
+  classPrefix?: string;
+  /**
    * 下拉菜单全局配置
    */
   dropdownMenu?: DropdownMenuConfig;
@@ -30,11 +30,7 @@ export interface GlobalConfigProvider {
    */
   dateTimePicker?: DateTimePickerConfig;
   /**
-   * 图标全局配置
-   */
-  icon?: IconConfig;
-  /**
-   * 列表全局配置
+   * 列表组件全局配置
    */
   list?: ListConfig;
   /**
@@ -71,13 +67,6 @@ export interface ActionSheetConfig {
   cancel?: string;
 }
 
-export interface InputConfig {
-  /**
-   * 语言配置，“请输入”占位符描述文本
-   * @default ''
-   */
-  placeholder?: string;
-}
 export interface CalendarConfig {
   confirm?: string;
   title?: string;
@@ -156,10 +145,10 @@ export interface RateConfig {
   noValueText?: string;
 }
 export interface TabBarConfig {
-  newsAriaLabel: string;
-  moreNewsAriaLabel: string;
-  haveNewsAriaLabel: string;
-  haveMoreNewsAriaLabel: string;
+  newsAriaLabel?: string;
+  moreNewsAriaLabel?: string;
+  haveNewsAriaLabel?: string;
+  haveMoreNewsAriaLabel?: string;
 }
 
 export interface TableConfig {
