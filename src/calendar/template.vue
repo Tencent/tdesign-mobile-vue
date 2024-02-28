@@ -10,7 +10,7 @@
     <div :class="`${name}__months`" style="overflow: auto">
       <template v-for="(item, index) in months" :key="index">
         <div :class="`${name}__month`">
-          {{ t(globalConfig.monthTitle, { year: item.year, month: item.month }) }}
+          {{ t(globalConfig.monthTitle, { year: item.year, month: globalConfig.months[item.month] }) }}
         </div>
         <div :class="`${name}__dates`">
           <div v-for="emptyItem in (item.weekdayOfFirstDay - firstDayOfWeek + 7) % 7" :key="emptyItem"></div>

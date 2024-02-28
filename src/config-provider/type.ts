@@ -72,6 +72,7 @@ export interface CalendarConfig {
   title?: string;
   weekdays?: string[];
   monthTitle?: string;
+  months?: string[];
 }
 export interface CascaderConfig {
   title?: string;
