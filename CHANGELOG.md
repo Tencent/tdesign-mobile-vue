@@ -5,6 +5,15 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.1.0 `2024-02-29` 
+### 🚀 Features
+- `ConfigProvider`: 全局配置组件，支持组件国际化 @anlyyao ([#1240](https://github.com/Tencent/tdesign-mobile-vue/pull/1240))
+- `Message`: `MessagePlugin`的 `context` 默认指向 `document.body` @backrunner ([#1220](https://github.com/Tencent/tdesign-mobile-vue/pull/1220))
+### 🐞 Bug Fixes
+- `Calendar`: 修复日历组件 `title` 插槽缺失的问题 @Delevin888 ([#1223](https://github.com/Tencent/tdesign-mobile-vue/pull/1223))
+- `Tabs`: 修复按需引入时控制台告警 @zhouxhere ([#1239](https://github.com/Tencent/tdesign-mobile-vue/pull/1239))
+
+
 ## 🌈 1.0.10 `2024-01-17` 
 ### 🚀 Features
 - `Upload`: 新增 `clickUpload` 事件 @Lyan-u ([#1195](https://github.com/Tencent/tdesign-mobile-vue/pull/1195))
