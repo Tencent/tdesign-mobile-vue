@@ -33,11 +33,11 @@ export const renderTNode = (
 
   // 同名优先处理插槽
   if (instance.slots[name]) {
-    return instance.slots[name]?.(params);
+    return instance.slots[name]?.call(params);
   }
 
   if (propsNode === true && defaultNode) {
-    return instance.slots[name] ? instance.slots[name]?.(params) : defaultNode;
+    return instance.slots[name] ? instance.slots[name]?.call(params) : defaultNode;
   }
 
   if (typeof propsNode === 'function') {
@@ -48,7 +48,7 @@ export const renderTNode = (
   }
 
   const isPropsEmpty = [undefined, params, ''].includes(propsNode);
-  if (isPropsEmpty && instance.slots[name]) return instance.slots[name]?.(params);
+  if (isPropsEmpty && instance.slots[name]) return instance.slots[name]?.call(params);
   return propsNode;
 };
 

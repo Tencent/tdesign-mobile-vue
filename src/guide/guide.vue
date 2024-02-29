@@ -92,7 +92,7 @@ import TPopover, { PopoverProps } from '../popover';
 import TPopup, { PopupProps } from '../popup';
 import TButton, { ButtonProps } from '../button';
 import config from '../config';
-import { useVModel, TNode, renderTNode } from '../shared';
+import { useVModel, TNode } from '../shared';
 import { addClass, getWindowScroll, removeClass } from '../shared/dom';
 import setStyle from '../_common/js/utils/set-style';
 import guideProps from './props';
@@ -278,9 +278,16 @@ export default defineComponent({
         total: stepsTotal.value,
         current: innerCurrent.value,
       };
-      const node =
-        renderTNode(getCurrentInstance(), 'counter', { params }) || ` (${innerCurrent.value + 1}/${stepsTotal.value})`;
-      return node;
+      let renderCounter: any = null;
+      const { counter } = props;
+      if (isFunction(counter)) {
+        renderCounter = counter(h, params);
+      } else if (context.slots.counter) {
+        renderCounter = context.slots.counter(hWithParams(params));
+      } else if (counter) {
+        renderCounter = h(counter, params);
+      }
+      return renderCounter || ` (${innerCurrent.value + 1}/${stepsTotal.value})`;
     });
 
     const isLast = computed(() => innerCurrent.value === stepsTotal.value - 1);
