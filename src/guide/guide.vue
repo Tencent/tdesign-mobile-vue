@@ -342,13 +342,13 @@ export default defineComponent({
       setStyle(highlightLayer, style);
     };
 
-    const setRefenceFullW = (refernceElements: HTMLElement[]): void => {
+    const setReferenceFullW = (referenceElements: HTMLElement[]): void => {
       const style = {
         left: 0,
         width: '100vw',
       };
 
-      refernceElements.forEach((elem) => setStyle(elem, style));
+      referenceElements.forEach((elem) => setStyle(elem, style));
     };
 
     const showPopoverGuide = () => {
@@ -360,7 +360,7 @@ export default defineComponent({
         setHighlightLayerPosition(popoverWrapperRef.value, true);
         setHighlightLayerPosition(referenceLayerRef.value, true);
         scrollToElm(currentHighlightLayerElm.value);
-        isPopoverCenter.value && setRefenceFullW([referenceLayerRef.value, popoverWrapperRef.value]);
+        isPopoverCenter.value && setReferenceFullW([referenceLayerRef.value, popoverWrapperRef.value]);
       });
     };
 
