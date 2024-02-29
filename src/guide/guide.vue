@@ -28,7 +28,7 @@
                 theme="light"
                 :size="buttonSize"
                 variant="base"
-                content="跳过"
+                :content="globalConfig.skip"
                 v-bind="getCurrentCrossProps('skipButtonProps')"
                 @click="handleSkip"
               >
@@ -44,7 +44,9 @@
                 @click="handleNext"
               >
                 <template #content>
-                  <t-node :content="renderButtonContent(getCurrentCrossProps('nextButtonProps'), '下一步')"></t-node>
+                  <t-node
+                    :content="renderButtonContent(getCurrentCrossProps('nextButtonProps'), globalConfig.next)"
+                  ></t-node>
                   <t-node v-if="!hideCounter" :content="counterNode"></t-node>
                 </template>
               </t-button>
@@ -55,7 +57,7 @@
                 theme="light"
                 :size="buttonSize"
                 variant="base"
-                content="返回"
+                :content="globalConfig.back"
                 v-bind="getCurrentCrossProps('backButtonProps')"
                 @click="handleBack"
               ></t-button>
@@ -70,7 +72,7 @@
                 @click="handleFinish"
               >
                 <template #content>
-                  <t-node :content="renderButtonContent(finishButtonProps, '完成')"></t-node>
+                  <t-node :content="renderButtonContent(finishButtonProps, globalConfig.finish)"></t-node>
                   <t-node v-if="!hideCounter" :content="counterNode"></t-node>
                 </template>
               </t-button>
@@ -86,7 +88,6 @@
 import { computed, defineComponent, ref, toRefs, h, getCurrentInstance, nextTick, onMounted, watch } from 'vue';
 import isFunction from 'lodash/isFunction';
 
-import isString from 'lodash/isString';
 import TPopover, { PopoverProps } from '../popover';
 import TPopup, { PopupProps } from '../popup';
 import TButton, { ButtonProps } from '../button';
@@ -98,6 +99,7 @@ import guideProps from './props';
 import { GuideStep, TdGuideProps } from './type';
 import { isFixed, getRelativePosition, getTargetElm, scrollToParentVisibleArea, scrollToElm } from './utils';
 import { GuideCrossProps } from './interface';
+import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
 const name = `${prefix}-guide`;
@@ -120,6 +122,7 @@ export default defineComponent({
       props.onChange,
       'current',
     );
+    const { globalConfig } = useConfig('guide');
     // 覆盖层，用于覆盖所有元素
     const overlayLayerRef = ref<HTMLElement>();
     // 高亮层，用于高亮元素
@@ -337,7 +340,6 @@ export default defineComponent({
         left: 0,
         width: '100vw',
       };
-      console.log('set width');
 
       refernceElements.forEach((elem) => setStyle(elem, style));
     };
@@ -351,10 +353,6 @@ export default defineComponent({
         setHighlightLayerPosition(popoverWrapperRef.value, true);
         setHighlightLayerPosition(referenceLayerRef.value, true);
         scrollToElm(currentHighlightLayerElm.value);
-        console.log(currentStepInfo.value);
-
-        console.log(isPopoverCenter.value);
-
         isPopoverCenter.value && setRefenceFullW([referenceLayerRef.value, popoverWrapperRef.value]);
       });
     };
@@ -488,6 +486,7 @@ export default defineComponent({
       isFirst,
       finishButtonProps,
       buttonSize,
+      globalConfig,
       getCurrentCrossProps,
       handleSkip,
       handleNext,
