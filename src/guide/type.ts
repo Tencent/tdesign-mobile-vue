@@ -5,10 +5,14 @@
  * */
 
 import { ButtonProps } from '../button';
-import { PopupProps } from '../popup';
+import { PopoverProps } from '../popover';
 import { TNode, AttachNode } from '../common';
 
 export interface TdGuideProps {
+  /**
+   * 透传 返回 的全部属性，示例：`{ content: '返回', theme: 'default' }`
+   */
+  backButtonProps?: ButtonProps;
   /**
    * 用于自定义渲染计数部分
    */
@@ -46,9 +50,9 @@ export interface TdGuideProps {
   highlightPadding?: number;
   /**
    * 引导框的类型
-   * @default popup
+   * @default popover
    */
-  mode?: 'popup' | 'dialog';
+  mode?: 'popover' | 'dialog';
   /**
    * 透传 下一步按钮 的全部属性，示例：{ content: '下一步', theme: 'primary' }
    */
@@ -72,6 +76,10 @@ export interface TdGuideProps {
    */
   zIndex?: number;
   /**
+   * 点击返回按钮时触发
+   */
+  onBack?: (context: { e: MouseEvent; current: number; total: number }) => void;
+  /**
    * 当前步骤发生变化时触发
    */
   onChange?: (current: number, context?: { e: MouseEvent; total: number }) => void;
@@ -91,6 +99,10 @@ export interface TdGuideProps {
 
 export interface GuideStep {
   /**
+   * 用于自定义当前引导框的返回按钮的内容
+   */
+  backButtonProps?: ButtonProps;
+  /**
    * 当前步骤提示框的内容
    */
   body?: string | TNode;
@@ -103,7 +115,7 @@ export interface GuideStep {
    */
   element: AttachNode;
   /**
-   * 用户自定义的高亮框 (仅当 `mode` 为 `popup` 时生效)
+   * 用户自定义的高亮框 (仅当 `mode` 为 `popover` 时生效)
    */
   highlightContent?: TNode;
   /**
@@ -113,7 +125,7 @@ export interface GuideStep {
   /**
    * 引导框的类型
    */
-  mode?: 'popup' | 'dialog';
+  mode?: 'popover' | 'dialog';
   /**
    * 用于自定义当前引导框的下一步按钮的内容
    */
@@ -123,18 +135,14 @@ export interface GuideStep {
    */
   offset?: Array<string | number>;
   /**
-   * 引导框相对于高亮元素出现的位置
+   * 引导框相对于高亮元素出现的位置，(仅当 `mode` 为 `popover` 时生效)
    * @default 'top'
    */
-  placement?: StepPopupPlacement | StepDialogPlacement;
+  placement?: StepPopoverPlacement;
   /**
-   * 透传全部属性到 Popup 组件。`mode=popup` 时有效
+   * 透传全部属性到 Popover 组件。`mode=popover` 时有效
    */
-  popupProps?: PopupProps;
-  /**
-   * 用于自定义当前引导框的上一步按钮的内容
-   */
-  prevButtonProps?: ButtonProps;
+  popoverProps?: PopoverProps;
   /**
    * 是否出现遮罩层
    * @default true
@@ -145,18 +153,12 @@ export interface GuideStep {
    */
   skipButtonProps?: ButtonProps;
   /**
-   * 覆盖引导框的类名
-   * @default ''
-   */
-  stepOverlayClass?: string;
-  /**
    * 当前步骤的标题内容
-   * @default ''
    */
-  title?: string;
+  title?: string | TNode;
 }
 
-export type StepPopupPlacement =
+export type StepPopoverPlacement =
   | 'top'
   | 'left'
   | 'right'
@@ -168,6 +170,5 @@ export type StepPopupPlacement =
   | 'left-top'
   | 'left-bottom'
   | 'right-top'
-  | 'right-bottom';
-
-export type StepDialogPlacement = 'top' | 'center';
+  | 'right-bottom'
+  | 'center';

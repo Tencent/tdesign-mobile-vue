@@ -8,6 +8,10 @@ import { TdGuideProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 透传 返回 的全部属性，示例：`{ content: '返回', theme: 'default' }` */
+  backButtonProps: {
+    type: Object as PropType<TdGuideProps['backButtonProps']>,
+  },
   /** 用于自定义渲染计数部分 */
   counter: {
     type: Function as PropType<TdGuideProps['counter']>,
@@ -41,10 +45,10 @@ export default {
   /** 引导框的类型 */
   mode: {
     type: String as PropType<TdGuideProps['mode']>,
-    default: 'popup' as TdGuideProps['mode'],
+    default: 'popover' as TdGuideProps['mode'],
     validator(val: TdGuideProps['mode']): boolean {
       if (!val) return true;
-      return ['popup', 'dialog'].includes(val);
+      return ['popover', 'dialog'].includes(val);
     },
   },
   /** 透传 下一步按钮 的全部属性，示例：{ content: '下一步', theme: 'primary' } */
@@ -69,6 +73,8 @@ export default {
     type: Number,
     default: 999999,
   },
+  /** 点击返回按钮时触发 */
+  onBack: Function as PropType<TdGuideProps['onBack']>,
   /** 当前步骤发生变化时触发 */
   onChange: Function as PropType<TdGuideProps['onChange']>,
   /** 点击完成按钮时触发 */
