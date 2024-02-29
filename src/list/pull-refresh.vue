@@ -11,7 +11,7 @@
       <div :class="`${name}__head`">
         <div v-if="SHOW_TEXT_LIST.includes(state.status)">{{ TEXT_MAP[state.status] }}</div>
         <div v-if="state.status === 'loading'">
-          <t-loading text="加载中..." />
+          <t-loading :text="globalConfig.loading" />
         </div>
       </div>
       <slot />
@@ -24,8 +24,10 @@ import { defineComponent, nextTick, reactive, ref, computed, watch } from 'vue';
 import { preventDefault } from '../shared/dom';
 import config from '../config';
 import TLoading from '../loading';
+import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
+const { globalConfig } = useConfig('list');
 const name = `${prefix}-pull-refresh`;
 type PullRefreshStatus = 'normal' | 'loading' | 'loosing' | 'pulling' | 'success';
 
@@ -52,10 +54,10 @@ function useTouch() {
 const PULL_DISTANCE = 50;
 const ANIMATION_DURATION = 300;
 const TEXT_MAP = {
-  loading: '加载中',
-  pulling: '下拉即可刷新...',
-  loosing: '释放即可刷新...',
-  success: '刷新成功',
+  loading: globalConfig.value.loading,
+  pulling: globalConfig.value.pulling,
+  loosing: globalConfig.value.loosing,
+  success: globalConfig.value.success,
 };
 const SHOW_TEXT_LIST = ['pulling', 'loosing', 'success'];
 const PullRefreshProps = {
@@ -177,6 +179,7 @@ export default defineComponent({
       name,
       state,
       trackStyle,
+      globalConfig,
       TEXT_MAP,
       SHOW_TEXT_LIST,
       onTouchStart,

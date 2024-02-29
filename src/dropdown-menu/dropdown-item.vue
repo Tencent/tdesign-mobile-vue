@@ -56,14 +56,14 @@
               :class="`${name}__footer-btn ${name}__reset-btn`"
               :disabled="isBtnDisabled"
               @click="resetSelect"
-              >重置</t-button
+              >{{ globalConfig.reset }}</t-button
             >
             <t-button
               theme="primary"
               :class="`${name}__footer-btn ${name}__confirm-btn`"
               :disabled="isBtnDisabled"
               @click="confirmSelect"
-              >确定</t-button
+              >{{ globalConfig.confirm }}</t-button
             >
           </div>
         </slot>
@@ -84,6 +84,7 @@ import DropdownItemProps from './dropdown-item-props';
 import { DropdownMenuState, DropdownMenuControl } from './context';
 import { TdDropdownMenuProps, DropdownValue } from './type';
 import { KeysType } from '../common';
+import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
 const name = `${prefix}-dropdown-item`;
@@ -95,6 +96,8 @@ export default defineComponent({
   props: DropdownItemProps,
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
   setup(props) {
+    const { globalConfig } = useConfig('dropdownMenu');
+
     // 受控 value 属性
     const { value, modelValue } = toRefs(props);
     const [passInValue, setValue] = useVModel(value, modelValue, props.defaultValue);
@@ -274,6 +277,7 @@ export default defineComponent({
       name: ref(name),
       ...toRefs(props),
       ...toRefs(state),
+      globalConfig,
       classes,
       popupStyle,
       styleContent,
