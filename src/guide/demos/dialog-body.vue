@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup lang="ts"></script>
 
 <style lang="less" scoped>
 .dialog-body {
