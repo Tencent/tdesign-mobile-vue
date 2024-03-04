@@ -296,7 +296,6 @@ export default defineComponent({
 
     // 设置高亮层的位置
     const setHighlightLayerPosition = (highlightLayer: HTMLElement, isReference = false) => {
-      // 这里预留了一个相对元素的功能，暂未使用，也是这里导致了 fix #2111
       let { top, left } = getRelativePosition(currentHighlightLayerElm.value);
       let { width, height } = currentHighlightLayerElm.value.getBoundingClientRect();
       const highlightPadding = getCurrentCrossProps('highlightPadding');
