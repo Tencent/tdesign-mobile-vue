@@ -100,6 +100,7 @@ import { GuideStep, TdGuideProps } from './type';
 import { isFixed, getRelativePosition, getTargetElm, scrollToParentVisibleArea, scrollToElm } from './utils';
 import { GuideCrossProps } from './interface';
 import { useConfig } from '../config-provider/useConfig';
+import { SizeEnum } from '@/common';
 
 const { prefix } = config;
 const name = `${prefix}-guide`;
@@ -292,7 +293,7 @@ export default defineComponent({
 
     const isLast = computed(() => innerCurrent.value === stepsTotal.value - 1);
     const isFirst = computed(() => innerCurrent.value === 0);
-    const buttonSize = computed(() => (isPopover.value ? 'small' : 'medium'));
+    const buttonSize = computed(() => (isPopover.value ? 'extra-small' : 'medium') as SizeEnum);
 
     // 设置高亮层的位置
     const setHighlightLayerPosition = (highlightLayer: HTMLElement, isReference = false) => {
