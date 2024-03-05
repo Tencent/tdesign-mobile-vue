@@ -1,22 +1,22 @@
 <template>
   <div class="guide-demo">
-    <t-button theme="primary" @click="handleClick">Button</t-button>
-    <t-popup v-model="visible" placement="bottom" style="height: 100vh" destroy-on-close>
+    <t-button theme="primary" @click="handleClick">用户引导</t-button>
+    <t-popup v-model="visible" placement="bottom" style="height: 100vh; border-radius: 0" destroy-on-close>
       <template #default>
         <div class="guide-container">
           <div class="main-title">
-            <div class="title-major">User guide title</div>
-            <div class="title-sub">User guide description copy.</div>
+            <div class="title-major">用户引导标题</div>
+            <div class="title-sub">按钮用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。</div>
           </div>
           <div class="field label-field">
-            <t-input label="Label" layout="vertical" placeholder="placeholder" />
+            <t-input label="标签文字" layout="vertical" placeholder="请输入内容" />
           </div>
           <div class="field">
-            <t-input label="Label" layout="vertical" placeholder="placeholder" />
+            <t-input label="标签文字" layout="vertical" placeholder="请输入内容" />
           </div>
           <div class="action">
-            <t-button theme="light" variant="base" size="large">Reset</t-button>
-            <t-button theme="primary" size="large">Confirm</t-button>
+            <t-button theme="light" variant="base" size="large">重置</t-button>
+            <t-button theme="primary" size="large">确定</t-button>
           </div>
         </div>
 
@@ -46,21 +46,21 @@ const current = ref(-1);
 const steps: TdGuideProps['steps'] = [
   {
     element: '.main-title',
-    title: 'User guide title',
-    body: 'User guide description copy.',
+    title: '用户引导标题',
+    body: '用户引导的说明文案',
     placement: 'center',
   },
   {
     element: '.label-field',
-    title: 'User guide title',
-    body: 'User guide description copy.',
+    title: '用户引导标题',
+    body: '用户引导的说明文案',
     placement: 'bottom',
     highlightPadding: 0,
   },
   {
     element: '.action',
-    title: 'User guide title',
-    body: 'User guide description copy.',
+    title: '用户引导标题',
+    body: '用户引导的说明文案',
     placement: 'bottom-right',
   },
 ];
@@ -115,6 +115,7 @@ const handleBack: TdGuideProps['onBack'] = ({ e, current, total }) => {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  margin-top: 4px;
   color: rgba(0, 0, 0, 0.6);
 }
 .action {

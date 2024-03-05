@@ -1,6 +1,6 @@
 <template>
   <div class="dialog-body">
-    <p>User guide description copy.</p>
+    <p>用户引导的说明文案</p>
     <div class="img-wrapper">
       <img src="https://tdesign.gtimg.com/demo/demo-image-1.png" alt="demo" />
     </div>
@@ -23,7 +23,7 @@
   p {
     margin-bottom: 24px;
     color: var(--td-text-color-secondary);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 22px;
   }
