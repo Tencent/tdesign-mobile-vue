@@ -22,10 +22,6 @@
 
   p {
     margin-bottom: 24px;
-    color: var(--td-text-color-secondary);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
   }
 }
 </style>
