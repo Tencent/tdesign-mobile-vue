@@ -41,7 +41,7 @@ export function useSureConfirm(instance: ComponentInternalInstance | null, initD
       height: '100%',
       backgroundColor: 'rgba(0,0,0,0)',
       transition: closedSure.value ? 'none' : 'background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1)',
-      transform: `translate3d(${-initData.rightWidth}px, 0, 0)`,
+      transform: `translate3d(${initData.rightWidth}px, 0, 0)`,
       pointerEvents: 'none',
     } as CSSProperties;
 
@@ -85,10 +85,11 @@ export function useSureConfirm(instance: ComponentInternalInstance | null, initD
     } as CSSProperties;
 
     if (showSureRight.value) {
-      style.transform = `translate3d(${-initData.rightWidth}px, 0, 0)`;
-    } else {
       style.transform = `translate3d(0, 0, 0)`;
+    } else {
+      style.transform = `translate3d(${initData.rightWidth}px, 0, 0)`;
     }
+
     return style;
   });
 
