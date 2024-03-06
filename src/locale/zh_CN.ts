@@ -67,4 +67,10 @@ export default {
       successText: '上传成功',
     },
   },
+  guide: {
+    next: '下一步',
+    skip: '跳过',
+    finish: '完成',
+    back: '返回',
+  },
 };

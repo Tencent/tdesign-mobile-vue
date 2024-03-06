@@ -80,4 +80,10 @@ export default {
       successText: 'Success',
     },
   },
+  guide: {
+    next: 'Next',
+    skip: 'Skip',
+    finish: 'Finish',
+    back: 'Back',
+  },
 };
