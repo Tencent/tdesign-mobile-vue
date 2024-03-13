@@ -57,6 +57,10 @@ export interface GlobalConfigProvider {
    * 上传组件全局配置
    */
   upload?: UploadConfig;
+  /**
+   * 引导组件全局配置
+   * */
+  guide?: GuideConfig;
 }
 
 export interface ActionSheetConfig {
@@ -194,4 +198,15 @@ export interface UploadConfigProgress {
    * @default ''
    */
   waitingText?: string;
+}
+
+export interface GuideConfig {
+  /** 语言配置， “下一步” 描述文本 */
+  next?: string;
+  /** 语言配置， “跳过” 描述文本 */
+  skip?: string;
+  /** 语言配置， “完成” 描述文本 */
+  finish?: string;
+  /** 语言配置， “返回” 描述文本 */
+  back?: string;
 }

@@ -8,4 +8,4 @@ ded = "ded"
 Hel = "Hel"
 
 [files]
-extend-exclude = ["CHANGELOG.md"]
+extend-exclude = ["CHANGELOG.md", "*.snap"]
