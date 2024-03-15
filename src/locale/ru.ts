@@ -36,7 +36,7 @@ export default {
     title: 'Выберите время',
     cancel: 'Отмена',
     confirm: 'Подтвердить',
-    format: 'DD-MM-YYYY',
+    format: 'DD.MM.YYYY',
     yearLabel: 'Год',
     monthLabel: 'Месяц',
     dateLabel: 'День',
