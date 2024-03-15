@@ -216,7 +216,8 @@ exports[`Tag > Tag closableVue demo works fine 1`] = `
       <span
         class="t-tag__icon"
       >
-        <!---->
+        
+        
       </span>
       <span
         class="t-tag__text"
@@ -250,7 +251,8 @@ exports[`Tag > Tag closableVue demo works fine 1`] = `
       <span
         class="t-tag__icon"
       >
-        <!---->
+        
+        
       </span>
       <span
         class="t-tag__text"
@@ -328,7 +330,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             <span
               class="t-tag__icon"
             >
-              <!---->
+              
+              
             </span>
             <span
               class="t-tag__text"
@@ -347,7 +350,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             <span
               class="t-tag__icon"
             >
-              <!---->
+              
+              
             </span>
             <span
               class="t-tag__text"
@@ -375,7 +379,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             <span
               class="t-tag__icon"
             >
-              <!---->
+              
+              
             </span>
             <span
               class="t-tag__text"
@@ -394,7 +399,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             <span
               class="t-tag__icon"
             >
-              <!---->
+              
+              
             </span>
             <span
               class="t-tag__text"
@@ -413,7 +419,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             <span
               class="t-tag__icon"
             >
-              <!---->
+              
+              
             </span>
             <span
               class="t-tag__text"
@@ -505,7 +512,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             <span
               class="t-tag__icon"
             >
-              <!---->
+              
+              
             </span>
             <span
               class="t-tag__text"
@@ -535,7 +543,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             <span
               class="t-tag__icon"
             >
-              <!---->
+              
+              
             </span>
             <span
               class="t-tag__text"
@@ -569,7 +578,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             <span
               class="t-tag__icon"
             >
-              <!---->
+              
+              
             </span>
             <span
               class="t-tag__text"
@@ -833,7 +843,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -852,7 +863,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -871,7 +883,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -890,7 +903,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -909,7 +923,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -932,7 +947,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -951,7 +967,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -970,7 +987,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -989,7 +1007,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -1008,7 +1027,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -1031,7 +1051,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -1050,7 +1071,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -1069,7 +1091,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -1088,7 +1111,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -1107,7 +1131,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -1130,7 +1155,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -1149,7 +1175,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -1168,7 +1195,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -1187,7 +1215,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -1206,7 +1235,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!---->
+                  
+                  
                 </span>
                 <span
                   class="t-tag__text"
@@ -1261,7 +1291,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
               <span
                 class="t-tag__icon"
               >
-                <!---->
+                
+                
               </span>
               <span
                 class="t-tag__text"
@@ -1281,7 +1312,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
               <span
                 class="t-tag__icon"
               >
-                <!---->
+                
+                
               </span>
               <span
                 class="t-tag__text"
@@ -1301,7 +1333,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
               <span
                 class="t-tag__icon"
               >
-                <!---->
+                
+                
               </span>
               <span
                 class="t-tag__text"
@@ -1321,7 +1354,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
               <span
                 class="t-tag__icon"
               >
-                <!---->
+                
+                
               </span>
               <span
                 class="t-tag__text"
@@ -1346,7 +1380,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
               <span
                 class="t-tag__icon"
               >
-                <!---->
+                
+                
               </span>
               <span
                 class="t-tag__text"
@@ -1381,7 +1416,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
               <span
                 class="t-tag__icon"
               >
-                <!---->
+                
+                
               </span>
               <span
                 class="t-tag__text"
@@ -1416,7 +1452,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
               <span
                 class="t-tag__icon"
               >
-                <!---->
+                
+                
               </span>
               <span
                 class="t-tag__text"
@@ -1451,7 +1488,8 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
               <span
                 class="t-tag__icon"
               >
-                <!---->
+                
+                
               </span>
               <span
                 class="t-tag__text"
@@ -1504,7 +1542,8 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
       <span
         class="t-tag__icon"
       >
-        <!---->
+        
+        
       </span>
       <span
         class="t-tag__text"
@@ -1524,7 +1563,8 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
       <span
         class="t-tag__icon"
       >
-        <!---->
+        
+        
       </span>
       <span
         class="t-tag__text"
@@ -1544,7 +1584,8 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
       <span
         class="t-tag__icon"
       >
-        <!---->
+        
+        
       </span>
       <span
         class="t-tag__text"
@@ -1564,7 +1605,8 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
       <span
         class="t-tag__icon"
       >
-        <!---->
+        
+        
       </span>
       <span
         class="t-tag__text"
@@ -1589,7 +1631,8 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
       <span
         class="t-tag__icon"
       >
-        <!---->
+        
+        
       </span>
       <span
         class="t-tag__text"
@@ -1624,7 +1667,8 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
       <span
         class="t-tag__icon"
       >
-        <!---->
+        
+        
       </span>
       <span
         class="t-tag__text"
@@ -1659,7 +1703,8 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
       <span
         class="t-tag__icon"
       >
-        <!---->
+        
+        
       </span>
       <span
         class="t-tag__text"
@@ -1694,7 +1739,8 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
       <span
         class="t-tag__icon"
       >
-        <!---->
+        
+        
       </span>
       <span
         class="t-tag__text"
@@ -1746,7 +1792,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -1765,7 +1812,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -1784,7 +1832,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -1803,7 +1852,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -1822,7 +1872,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -1845,7 +1896,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -1864,7 +1916,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -1883,7 +1936,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -1902,7 +1956,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -1921,7 +1976,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -1944,7 +2000,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -1963,7 +2020,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -1982,7 +2040,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -2001,7 +2060,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -2020,7 +2080,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -2043,7 +2104,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -2062,7 +2124,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -2081,7 +2144,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -2100,7 +2164,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -2119,7 +2184,8 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
-            <!---->
+            
+            
           </span>
           <span
             class="t-tag__text"
@@ -2154,7 +2220,8 @@ exports[`Tag > Tag typeVue demo works fine 1`] = `
       <span
         class="t-tag__icon"
       >
-        <!---->
+        
+        
       </span>
       <span
         class="t-tag__text"
@@ -2173,7 +2240,8 @@ exports[`Tag > Tag typeVue demo works fine 1`] = `
       <span
         class="t-tag__icon"
       >
-        <!---->
+        
+        
       </span>
       <span
         class="t-tag__text"
@@ -2201,7 +2269,8 @@ exports[`Tag > Tag typeVue demo works fine 1`] = `
       <span
         class="t-tag__icon"
       >
-        <!---->
+        
+        
       </span>
       <span
         class="t-tag__text"
@@ -2220,7 +2289,8 @@ exports[`Tag > Tag typeVue demo works fine 1`] = `
       <span
         class="t-tag__icon"
       >
-        <!---->
+        
+        
       </span>
       <span
         class="t-tag__text"
@@ -2239,7 +2309,8 @@ exports[`Tag > Tag typeVue demo works fine 1`] = `
       <span
         class="t-tag__icon"
       >
-        <!---->
+        
+        
       </span>
       <span
         class="t-tag__text"
@@ -2331,7 +2402,8 @@ exports[`Tag > Tag typeVue demo works fine 1`] = `
       <span
         class="t-tag__icon"
       >
-        <!---->
+        
+        
       </span>
       <span
         class="t-tag__text"
