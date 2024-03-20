@@ -2,7 +2,7 @@ import { h } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
-import Tag from '../tag.vue';
+import Tag from '../tag.tsx';
 import TCheckTag from '../check-tag.vue';
 
 const TEXT = 'tdesign-mobile-vue';
