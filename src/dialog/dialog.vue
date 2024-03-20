@@ -6,6 +6,7 @@
     :overlay-props="overlayProps"
     :prevent-scroll-through="preventScrollThrough"
     :destroy-on-close="destroyOnClose"
+    :z-index="zIndex"
     @close="handleOverlayClick"
     @closed="handleClosed"
   >
@@ -96,7 +97,6 @@ export default defineComponent({
     ]);
 
     const rootStyles = computed(() => ({
-      zIndex: props.zIndex,
       width: isString(props.width) ? props.width : `${props.width}px`,
     }));
 
