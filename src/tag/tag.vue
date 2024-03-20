@@ -1,10 +1,13 @@
 <template>
   <span :class="classes" :style="tagStyle" :aria-disabled="disabled" role="button" @click="handleClick">
     <span :class="`${baseClass}__icon`">
-      <t-node :content="iconContent"></t-node>
+      <slot name="icon"></slot>
     </span>
     <span :class="`${baseClass}__text`">
-      <t-node :content="tagContent"></t-node>
+      <slot v-if="slotDefault"></slot>
+      <slot v-else name="content">
+        {{ content }}
+      </slot>
     </span>
     <span v-if="closable" :class="`${baseClass}__icon-close`" @click.stop="onClickClose">
       <close-icon />
@@ -14,10 +17,9 @@
 
 <script lang="ts">
 import { CloseIcon } from 'tdesign-icons-vue-next';
-import { defineComponent, computed, getCurrentInstance } from 'vue';
+import { defineComponent, computed, useSlots, toRefs } from 'vue';
 import config from '../config';
 import TagProps from './props';
-import { renderContent, renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-tag`;
@@ -26,14 +28,11 @@ const Tag = defineComponent({
   name,
   components: {
     CloseIcon,
-    TNode,
   },
   props: TagProps,
   emits: ['close', 'click'],
   setup(props) {
-    const internalInstance = getCurrentInstance();
-    const tagContent = computed(() => renderContent(internalInstance, 'default', 'content'));
-    const iconContent = computed(() => renderTNode(internalInstance, 'icon'));
+    const slotDefault = !!useSlots().default;
     const baseClass = name;
 
     const tagStyle = computed(() => {
@@ -67,13 +66,13 @@ const Tag = defineComponent({
     };
 
     return {
+      ...toRefs(props),
       baseClass,
       classes,
       tagStyle,
       onClickClose,
       handleClick,
-      iconContent,
-      tagContent,
+      slotDefault,
     };
   },
 });
