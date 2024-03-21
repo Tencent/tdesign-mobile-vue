@@ -6,6 +6,7 @@ Colum = "Colum"
 ba = "ba"
 ded = "ded"
 Hel = "Hel"
+Successivo = "Successivo"
 
 [files]
 extend-exclude = ["CHANGELOG.md", "*.snap"]
