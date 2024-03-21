@@ -5,7 +5,8 @@ toc: false
 spline: explain
 ---
 
-## 🌈 1.1.1 `2024-03-21` ### 🚀 Features
+## 🌈 1.1.1 `2024-03-21` 
+### 🚀 Features
 - `Guide`: 新增 `Guide` 组件 @Lyan-u ([#1243](https://github.com/Tencent/tdesign-mobile-vue/pull/1243))
 - `Locale`: 新增繁體中文语言包 @ssmyaojiayouya ([#1258](https://github.com/Tencent/tdesign-mobile-vue/pull/1258))
 - `Locale`: 新增韩语语言包 @ssmyaojiayouya ([#1262](https://github.com/Tencent/tdesign-mobile-vue/pull/1262))
