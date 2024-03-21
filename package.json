@@ -103,6 +103,7 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-typescript": "^7.16.0",
     "@babel/runtime": "^7.16.5",
+    "@babel/helper-module-imports": "7.22.5",
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
     "@popperjs/core": "^2.11.8",

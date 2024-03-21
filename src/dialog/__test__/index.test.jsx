@@ -154,12 +154,12 @@ describe('dialog', () => {
         },
       });
       // expect(wrapper).toMatchSnapshot()
-      expect(wrapper.find('.t-dialog').attributes('style').includes(`z-index: ${zIndex}`)).toBeTruthy();
+      expect(wrapper.find('.t-popup').attributes('style').includes(`z-index: ${zIndex}`)).toBeTruthy();
       const newZIndex = 12000;
       await wrapper.setProps({
         zIndex: newZIndex,
       });
-      expect(wrapper.find('.t-dialog').attributes('style').includes(`z-index: ${newZIndex}`)).toBeTruthy();
+      expect(wrapper.find('.t-popup').attributes('style').includes(`z-index: ${newZIndex}`)).toBeTruthy();
     });
 
     it(': closeOnOverlayClick', async () => {
