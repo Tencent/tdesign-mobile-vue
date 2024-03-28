@@ -220,6 +220,7 @@
       "name",
       "placement",
       "readonly",
+      "title",
       "value",
       "change"
     ],
@@ -499,6 +500,29 @@
       "text"
     ],
     "description": "GridItem\n\n宫格子项\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/grid-item)"
+  },
+  "t-guide": {
+    "attributes": [
+      "back-button-props",
+      "counter",
+      "current",
+      "finish-button-props",
+      "hide-counter",
+      "hide-skip",
+      "highlight-padding",
+      "mode",
+      "next-button-props",
+      "show-overlay",
+      "skip-button-props",
+      "steps",
+      "z-index",
+      "back",
+      "change",
+      "finish",
+      "next-step-click",
+      "skip"
+    ],
+    "description": "Guide\n\n引导\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide)"
   },
   "t-icon-svg": {
     "attributes": [

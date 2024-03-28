@@ -767,6 +767,10 @@
     "type": "Boolean",
     "description": "只读状态\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/checkbox?tab=api#checkbox-props)"
   },
+  "t-checkbox/title": {
+    "type": "String",
+    "description": "html attribute\n\nHTML 原生属性\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/checkbox?tab=api#checkbox-props)"
+  },
   "t-checkbox/value": {
     "type": "String|Number|Boolean",
     "description": "value of checkbox\n\n多选框的值\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/checkbox?tab=api#checkbox-props)"
@@ -996,7 +1000,7 @@
     "description": "选择器的最大可选时间，默认为当前时间+10年\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/date-time-picker?tab=api#datetimepicker-props)"
   },
   "t-date-time-picker/footer": {
-    "type": "Boolean|TNode",
+    "type": "TNode",
     "description": "底部内容\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/date-time-picker?tab=api#datetimepicker-props)"
   },
   "t-date-time-picker/format": {
@@ -1530,6 +1534,82 @@
   "t-grid-item/text": {
     "type": "String|TNode",
     "description": "文本，可以通过 Props 传入文本，也可以自定义标题节点\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/grid-item?tab=api#griditem-props)"
+  },
+  "t-guide/back-button-props": {
+    "type": "Object",
+    "description": "透传 返回 的全部属性，示例：`{ content: '返回', theme: 'default' }`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-props)"
+  },
+  "t-guide/counter": {
+    "type": "TNode",
+    "description": "用于自定义渲染计数部分\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-props)"
+  },
+  "t-guide/current": {
+    "type": "Number",
+    "description": "当前步骤，即整个引导的进度。-1 则不展示，用于需要中断展示的场景\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-props)"
+  },
+  "t-guide/finish-button-props": {
+    "type": "Object",
+    "description": "透传 完成 的全部属性，示例：`{ content: '完成', theme: 'primary' }`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-props)"
+  },
+  "t-guide/hide-counter": {
+    "type": "Boolean",
+    "description": "是否隐藏计数\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-props)"
+  },
+  "t-guide/hide-skip": {
+    "type": "Boolean",
+    "description": "是否隐藏跳过按钮\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-props)"
+  },
+  "t-guide/highlight-padding": {
+    "type": "Number",
+    "description": "高亮框的内边距\n\ndefault: 8\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-props)"
+  },
+  "t-guide/mode": {
+    "type": "String",
+    "options": [
+      "popover",
+      "dialog"
+    ],
+    "description": "引导框的类型\n\ndefault: popover\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-props)"
+  },
+  "t-guide/next-button-props": {
+    "type": "Object",
+    "description": "透传 下一步按钮 的全部属性，示例：{ content: '下一步', theme: 'primary' }\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-props)"
+  },
+  "t-guide/show-overlay": {
+    "type": "Boolean",
+    "description": "是否出现遮罩层\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-props)"
+  },
+  "t-guide/skip-button-props": {
+    "type": "Object",
+    "description": "透传 跳过按钮 的全部属性，{ content: '跳过', theme: 'default' }\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-props)"
+  },
+  "t-guide/steps": {
+    "type": "Array",
+    "description": "用于定义每个步骤的内容，包括高亮的节点、相对位置和具体的文案内容等。\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-props)"
+  },
+  "t-guide/z-index": {
+    "type": "Number",
+    "description": "提示框的层级\n\ndefault: 999999\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-props)"
+  },
+  "t-guide/back": {
+    "type": "event",
+    "description": "点击返回按钮时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-events)"
+  },
+  "t-guide/change": {
+    "type": "event",
+    "description": "当前步骤发生变化时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-events)"
+  },
+  "t-guide/finish": {
+    "type": "event",
+    "description": "点击完成按钮时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-events)"
+  },
+  "t-guide/next-step-click": {
+    "type": "event",
+    "description": "点击下一步时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-events)"
+  },
+  "t-guide/skip": {
+    "type": "event",
+    "description": "点击跳过按钮时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-events)"
   },
   "t-icon-svg/load-default-icons": {
     "type": "Boolean",
