@@ -24,14 +24,13 @@
 import { defineComponent, onUnmounted, ref, toRefs, computed, watch, onMounted } from 'vue';
 import { useElementSize } from '@vueuse/core';
 import debounce from 'lodash/debounce';
-import isArray from 'lodash/isArray';
-
 import PullDownRefreshProps from './props';
 import { useVModel, convertUnit, reconvertUnit } from '../shared';
 import { preventDefault } from '../shared/dom';
 import config from '../config';
 import TLoading from '../loading';
 import { useTouch, isReachTop, easeDistance } from './useTouch';
+import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
 const name = `${prefix}-pull-down-refresh`;
@@ -43,6 +42,8 @@ export default defineComponent({
   props: PullDownRefreshProps,
   emits: ['refresh', 'timeout', 'scrolltolower', 'update:value', 'update:modelValue'],
   setup(props) {
+    const { globalConfig } = useConfig('pullDownRefresh');
+
     let timer: any = null;
 
     // 滑动距离
@@ -53,9 +54,7 @@ export default defineComponent({
 
     const loadingText = computed(() => {
       const index = statusName.indexOf(status.value);
-      const loadingTexts = isArray(props.loadingTexts)
-        ? props.loadingTexts
-        : ['下拉刷新', '松手刷新', '正在刷新', '刷新完成'];
+      const loadingTexts = props.loadingTexts?.length > 0 ? props.loadingTexts : globalConfig.value.loadingTexts;
       return index >= 0 ? loadingTexts[index] : '';
     });
 

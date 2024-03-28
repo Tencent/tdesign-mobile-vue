@@ -8,7 +8,7 @@
         <div :class="`${name}__footer`">
           <div :class="`${name}__gap-${theme}`"></div>
           <t-button :class="`${name}__cancel`" variant="text" block @click="handleCancel">
-            {{ cancelText }}
+            {{ cancelText || globalConfig.cancel }}
           </t-button>
         </div>
       </template>
@@ -26,6 +26,7 @@ import TButton from '../button';
 import config from '../config';
 import { TdActionSheetProps, ActionSheetItem } from './type';
 import ActionSheetProps from './props';
+import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
 const name = `${prefix}-action-sheet`;
@@ -41,6 +42,8 @@ export default defineComponent({
   props: ActionSheetProps,
   emits: ['selected', 'update:modelValue', 'cancel', 'close', 'update:visible'],
   setup(props: any, context) {
+    const { globalConfig } = useConfig('actionSheet');
+
     const actionItems = computed(() => {
       return props.items.map((item: String | ActionSheetItem) => {
         if (typeof item === 'string') {
@@ -98,6 +101,7 @@ export default defineComponent({
     return {
       prefix,
       name: ref(name),
+      globalConfig,
       rootClasses,
       descriptionClasses,
       actionItems,

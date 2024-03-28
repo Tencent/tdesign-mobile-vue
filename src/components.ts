@@ -56,3 +56,7 @@ export { default as Icon } from './icon';
 export { default as Table } from './table';
 export { SideBar, SideBarItem } from './side-bar';
 export { default as TPopover } from './popover';
+export { default as Guide } from './guide';
+
+// 全局配置
+export * from './config-provider';

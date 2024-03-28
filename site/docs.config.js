@@ -30,6 +30,21 @@ export const docs = [
     ],
   },
   {
+    title: '全局配置',
+    titleEn: 'Global Config',
+    type: 'component',
+    children: [
+      {
+        title: '全局特性配置',
+        titleEn: 'Global Configuration',
+        name: 'config-provider',
+        path: '/mobile-vue/components/config-provider',
+        component: () => import('@/config-provider/config-provider.md'),
+        componentEn: () => import('@/config-provider/config-provider.en-US.md'),
+      },
+    ],
+  },
+  {
     title: '基础组件',
     titleEn: 'Base',
     type: 'component', // 组件文档
@@ -479,6 +494,14 @@ export const docs = [
         path: '/mobile-vue/components/dialog',
         component: () => import('@/dialog/dialog.md'),
         componentEn: () => import('@/dialog/dialog.en-US.md'),
+      },
+      {
+        title: 'Guide 引导',
+        titleEn: 'Guide',
+        name: 'guide',
+        path: '/mobile-vue/components/guide',
+        component: () => import('@/guide/guide.md'),
+        componentEn: () => import('@/guide/guide.en-US.md'),
       },
       {
         title: 'Popover 弹出气泡',
