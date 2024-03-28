@@ -64,7 +64,7 @@ import { CloseIcon, DeleteIcon } from 'tdesign-icons-vue-next';
 
 import config from '../config';
 import ImagediverProps from './props';
-import { renderTNode, TNode, useDefault, inBrowser, useGesture, DragState, PinchState } from '../shared';
+import { renderTNode, TNode, useDefault, isBrowser, useGesture, DragState, PinchState } from '../shared';
 
 // inner components
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
@@ -218,7 +218,7 @@ export default defineComponent({
     const checkTap = (e: DragState) => {
       const { event } = e;
       const deltaTime = Date.now() - dragStartTime;
-      if (deltaTime < TAP_TIME && inBrowser) {
+      if (deltaTime < TAP_TIME && isBrowser) {
         if (dblTapTimer) {
           clearTimeout(dblTapTimer);
           dblTapTimer = window.setTimeout(() => {

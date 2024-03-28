@@ -1,10 +1,10 @@
 import { ref, Ref, onMounted } from 'vue';
-import { inBrowser } from '../util';
+import { isBrowser } from '../util';
 
 type ScrollElement = HTMLElement | Window;
 
 const overflowScrollReg = /scroll|auto/i;
-const defaultRoot = inBrowser ? window : undefined;
+const defaultRoot = isBrowser ? window : undefined;
 
 function isElement(node: Element) {
   const ELEMENT_NODE_TYPE = 1;

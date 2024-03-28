@@ -10,7 +10,7 @@ import { computed, defineComponent, getCurrentInstance, h } from 'vue';
 import { useElementBounding } from '@vueuse/core';
 import { BacktopIcon as TIconBackTop } from 'tdesign-icons-vue-next';
 
-import { renderTNode, TNode } from '../shared';
+import { renderTNode, TNode, isBrowser } from '../shared';
 import BackTopProps from './props';
 import config from '../config';
 
@@ -22,6 +22,7 @@ export default defineComponent({
   props: BackTopProps,
   setup(props, context) {
     const el = computed(() => {
+      if (!isBrowser) return undefined;
       return props.target ? props.target() : window.document.documentElement;
     });
     const { top } = useElementBounding(el);
@@ -43,8 +44,10 @@ export default defineComponent({
     });
 
     const clickBackBtn = () => {
-      window.document.documentElement.scrollTop += top.value;
-      props.onToTop?.();
+      if (isBrowser) {
+        window.document.documentElement.scrollTop += top.value;
+        props.onToTop?.();
+      }
     };
     return {
       name,

@@ -1,7 +1,7 @@
 import { createApp, App, DefineComponent } from 'vue';
 import vueToast from './toast.vue';
 import { TdToastProps } from './type';
-import { WithInstallType } from '../shared';
+import { WithInstallType, isBrowser } from '../shared';
 
 import './style';
 
@@ -13,6 +13,7 @@ let app: App<Element>;
 
 /** 展示提示 */
 function Toast(props: string | Partial<TdToastProps>): DefineComponent<TdToastProps> {
+  if (!isBrowser) return;
   const root = document.createElement('div');
   document.body.appendChild(root);
 

@@ -1,11 +1,13 @@
 import isFunction from 'lodash/isFunction';
 import isString from 'lodash/isString';
-
 import { AttachNode } from '../common';
+import { isBrowser } from './util';
 
 const trim = (str: string): string => (str || '').replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g, '');
 
 export function getAttach(node: AttachNode) {
+  if (!isBrowser) return;
+
   const attachNode = isFunction(node) ? node() : node;
 
   if (isString(attachNode)) {

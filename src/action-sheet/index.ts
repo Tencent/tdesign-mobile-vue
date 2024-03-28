@@ -1,6 +1,6 @@
 import { createApp, DefineComponent, ref, h, VNode, App, nextTick } from 'vue';
 import ActionSheetVue from './action-sheet.vue';
-import { WithInstallType } from '../shared';
+import { WithInstallType, isBrowser } from '../shared';
 
 import './style';
 import { TdActionSheetProps } from './type';
@@ -12,6 +12,8 @@ let instance: any = null;
 let app: App<Element>;
 
 function create(props: Partial<TdActionSheetProps>): DefineComponent<TdActionSheetProps> {
+  if (!isBrowser) return;
+
   const root = document.createElement('div');
   document.body.appendChild(root);
 

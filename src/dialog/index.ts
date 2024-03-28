@@ -1,7 +1,7 @@
 import { createApp, h, App, ref, nextTick, reactive } from 'vue';
 
 import Dialog from './dialog.vue';
-import { WithInstallType } from '../shared';
+import { WithInstallType, isBrowser } from '../shared';
 import { DialogCloseContext, TdDialogProps, DialogInstance } from './type';
 
 import './style';
@@ -24,6 +24,8 @@ const propsFn = ['onConfirm', 'onCancel', 'onOverlayClick', 'onClose', 'onClosed
 type DialogPropsFnName = (typeof propsFn)[number];
 
 function create(options: Partial<TdDialogProps> | string): DialogInstance {
+  if (!isBrowser) return;
+
   const root = document.createElement('div');
   document.body.appendChild(root);
 
