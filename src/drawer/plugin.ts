@@ -1,11 +1,12 @@
 import { createApp, App, h, ref, nextTick } from 'vue';
 import vueDrawer from './drawer.vue';
-import { WithInstallType } from '../shared';
+import { WithInstallType, isBrowser } from '../shared';
 import { TdDrawerProps } from './type';
 
 type DrawerOptions = Omit<TdDrawerProps, 'attach'>;
 
 const Drawer = (options: DrawerOptions) => {
+  if (!isBrowser) return;
   const root = document.createElement('div');
   document.body.appendChild(root);
   const visible = ref(false);

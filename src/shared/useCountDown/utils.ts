@@ -1,4 +1,5 @@
 import { TimeData, TdUseCountDownShowTimes } from './type';
+import { isBrowser } from '../util';
 
 export const TimeDataUnit = {
   DD: '天',
@@ -111,6 +112,7 @@ export const getShowTimes = (
  * @return {Promise<number>}
  */
 export const getScreenFps = (() => {
+  if (!isBrowser) return;
   const { requestAnimationFrame, mozRequestAnimationFrame, webkitRequestAnimationFrame } = window as any;
   // 先做一下兼容性处理
   const nextFrame = [requestAnimationFrame, mozRequestAnimationFrame, webkitRequestAnimationFrame]?.find?.((fn) => fn);

@@ -3,6 +3,7 @@ import { computed, reactive, ref } from 'vue';
 import { useEventListener } from '@vueuse/core';
 import isObject from 'lodash/isObject';
 import { preventDefault } from '../shared/dom';
+import { isBrowser } from '../shared';
 
 const noop = () => {};
 
@@ -105,7 +106,7 @@ export function useSwipe(
     coordsEnd.y = y;
   };
 
-  const isPassiveEventSupported = checkPassiveEventSupport(window?.document);
+  const isPassiveEventSupported = checkPassiveEventSupport();
 
   const onTouchEnd = (e: TouchEvent) => {
     if (isSwiping.value) onSwipeEnd?.(e, direction.value);
@@ -167,7 +168,7 @@ export function useSwipe(
  * This is a polyfill for passive event support detection
  * @see https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
  */
-function checkPassiveEventSupport(document?: Document) {
+function checkPassiveEventSupport(document = isBrowser ? window.document : undefined) {
   if (!document) return false;
   let supportsPassive = false;
   const optionsBlock: AddEventListenerOptions = {
