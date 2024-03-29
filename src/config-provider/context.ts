@@ -2,8 +2,8 @@ import { InjectionKey, ComputedRef } from 'vue';
 import _mergeWith from 'lodash/mergeWith';
 import merge from 'lodash/merge';
 import isArray from 'lodash/isArray';
-import defaultConfig from '../locale/default-config';
-import defaultZhLocale from '../locale/zh_CN';
+import defaultConfig from '../_common/js/global-config/mobile/default-config';
+import defaultZhLocale from '../_common/js/global-config/mobile/locale/zh_CN';
 import { GlobalConfigProvider } from './type';
 
 export const defaultGlobalConfig = merge(defaultConfig, defaultZhLocale);
