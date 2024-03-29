@@ -1,6 +1,6 @@
 import { createApp, defineComponent, ref, h, VNode, App, nextTick } from 'vue';
 import Message from './message.vue';
-import { WithInstallType } from '../shared';
+import { WithInstallType, isBrowser } from '../shared';
 import { TdMessageProps, MessageThemeList } from './type';
 
 import './style';
@@ -21,6 +21,8 @@ function destroy(context: Element, root: Element) {
 }
 
 function create(props: MessageActionOptionsType): void {
+  if (!isBrowser) return;
+
   const { context, ...otherOptions } = props;
 
   if (!context) {
