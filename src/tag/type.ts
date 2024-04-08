@@ -84,7 +84,7 @@ export interface TdCheckTagProps {
   /**
    * 组件子元素；传入数组时：[选中内容，非选中内容]
    */
-  content?: string | number | string[];
+  content?: string | number | string[] | TNode;
   /**
    * 组件子元素，默认插槽
    */
