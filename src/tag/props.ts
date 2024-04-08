@@ -9,7 +9,10 @@ import { PropType } from 'vue';
 
 export default {
   /** 标签是否可关闭 */
-  closable: Boolean,
+  closable: {
+    type: [Boolean, Object, Function] as PropType<TdTagProps['closable']>,
+    default: false,
+  },
   /** 组件子元素 */
   content: {
     type: [String, Function] as PropType<TdTagProps['content']>,
@@ -22,7 +25,7 @@ export default {
   disabled: Boolean,
   /** 标签中的图标，可自定义图标呈现 */
   icon: {
-    type: [Function] as PropType<TdTagProps['icon']>,
+    type: Function as PropType<TdTagProps['icon']>,
     default: undefined,
   },
   /** 标签最大宽度，宽度超出后会出现省略号。示例：'50px' / 80 */
