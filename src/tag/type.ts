@@ -11,7 +11,7 @@ export interface TdTagProps {
    * 标签是否可关闭
    * @default false
    */
-  closable?: boolean | object | TNode;
+  closable?: boolean;
   /**
    * 组件子元素
    */

@@ -9,10 +9,7 @@ import { PropType } from 'vue';
 
 export default {
   /** 标签是否可关闭 */
-  closable: {
-    type: [Boolean, Object, Function] as PropType<TdTagProps['closable']>,
-    default: false,
-  },
+  closable: Boolean,
   /** 组件子元素 */
   content: {
     type: [String, Function] as PropType<TdTagProps['content']>,
