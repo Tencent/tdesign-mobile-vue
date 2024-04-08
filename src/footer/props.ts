@@ -13,7 +13,7 @@ export default {
     type: Array as PropType<TdFooterProps['links']>,
     default: (): TdFooterProps['links'] => [],
   },
-  /** 图标配置，type 为`logo`生效。`logo.icon` 表示图标链接地址，`logo.title` 表示标题文本，`logo.url` 表示链接跳转地址，`logo.target` 表示跳转方式 */
+  /** 图标配置。`logo.icon` 表示图标链接地址，`logo.title` 表示标题文本，`logo.url` 表示链接跳转地址，`logo.target` 表示跳转方式 */
   logo: {
     type: Object as PropType<TdFooterProps['logo']>,
   },
