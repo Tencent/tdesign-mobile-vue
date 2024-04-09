@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Result Props
 
 name | type | default | description | required
@@ -8,11 +9,11 @@ name | type | default | description | required
 description | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 icon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 image | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-theme | String | default | options：default/success/warning/error | N
+theme | String | default | options: default/success/warning/error | N
 title | String / Slot / Function | '' | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 
+### CSS 变量
 
-### CSS Variables
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
@@ -27,4 +28,4 @@ Name | Default Value | Description
 --td-result-title-color | @font-gray-1 | - 
 --td-result-title-font-size | @font-size-l | - 
 --td-result-title-line-height | 28px | - 
---td-result-title-margin-top | @spacer-1 | - 
+--td-result-title-margin-top | @spacer-1 | -

@@ -20,7 +20,7 @@ export interface TdResultProps {
    */
   image?: string | TNode;
   /**
-   * 内置主题。
+   * 内置主题
    * @default default
    */
   theme?: 'default' | 'success' | 'warning' | 'error';
