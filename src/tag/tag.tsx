@@ -1,40 +1,23 @@
-<template>
-  <span :class="classes" :style="tagStyle" :aria-disabled="disabled" role="button" @click="handleClick">
-    <span :class="`${baseClass}__icon`">
-      <t-node :content="iconContent"></t-node>
-    </span>
-    <span :class="`${baseClass}__text`">
-      <t-node :content="tagContent"></t-node>
-    </span>
-    <span v-if="closable" :class="`${baseClass}__icon-close`" @click.stop="onClickClose">
-      <close-icon />
-    </span>
-  </span>
-</template>
-
-<script lang="ts">
+import { computed, defineComponent } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
-import { defineComponent, computed, getCurrentInstance } from 'vue';
+import { useTNodeJSX, useContent } from '../hooks/tnode';
 import config from '../config';
 import TagProps from './props';
-import { renderContent, renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-tag`;
 
-const Tag = defineComponent({
+export default defineComponent({
   name,
   components: {
     CloseIcon,
-    TNode,
   },
   props: TagProps,
   emits: ['close', 'click'],
   setup(props) {
-    const internalInstance = getCurrentInstance();
-    const tagContent = computed(() => renderContent(internalInstance, 'default', 'content'));
-    const iconContent = computed(() => renderTNode(internalInstance, 'icon'));
     const baseClass = name;
+    const renderTNodeJSX = useTNodeJSX();
+    const renderContent = useContent();
 
     const tagStyle = computed(() => {
       return props.maxWidth
@@ -55,6 +38,7 @@ const Tag = defineComponent({
     ]);
 
     const onClickClose = (e: MouseEvent): void => {
+      e.stopPropagation();
       if (!props.disabled) {
         props.onClose?.({ e });
       }
@@ -66,17 +50,28 @@ const Tag = defineComponent({
       }
     };
 
-    return {
-      baseClass,
-      classes,
-      tagStyle,
-      onClickClose,
-      handleClick,
-      iconContent,
-      tagContent,
+    return () => {
+      // 标签内容
+      const tagContent = renderContent('default', 'content');
+      // 图标
+      const icon = renderTNodeJSX('icon');
+      return (
+        <span
+          class={classes.value}
+          style={tagStyle.value}
+          aria-disabled={props.disabled}
+          role="button"
+          onClick={handleClick}
+        >
+          <span class={`${baseClass}__icon`}>{icon}</span>
+          <span class={`${baseClass}__text`}>{tagContent}</span>
+          {props.closable && (
+            <span class={`${baseClass}__icon-close`} onClick={onClickClose}>
+              <close-icon />
+            </span>
+          )}
+        </span>
+      );
     };
   },
 });
-
-export default Tag;
-</script>

@@ -15,5 +15,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: ['@babel/plugin-transform-runtime', '@babel/plugin-proposal-class-properties'],
+  plugins: ['@babel/plugin-transform-runtime', '@babel/plugin-proposal-class-properties', '@vue/babel-plugin-jsx'],
 };
