@@ -59,10 +59,13 @@ app.use(TDesign);
 </a>
 
 # 参与贡献
+
 TDesign 欢迎任何愿意参与贡献的参与者。如果需要本地运行代码或参与贡献，请先阅读[参与贡献](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/CONTRIBUTING.md)。
 
 # 反馈
+
 有任何问题，建议通过 [Github issues](https://github.com/Tencent/tdesign-mobile-vue/issues) 反馈或扫码加入用户微信群。
+
 <img src="https://raw.githubusercontent.com/Tencent/tdesign/main/packages/components/src/images/groups/vue3-group.png" width="200" />
 
 # 开源协议
