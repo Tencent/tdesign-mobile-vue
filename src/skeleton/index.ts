@@ -1,4 +1,4 @@
-import Skeleton from './skeleton.vue';
+import Skeleton from './skeleton';
 import { withInstall, WithInstallType } from '../shared';
 
 import { TdSkeletonProps } from './type';
