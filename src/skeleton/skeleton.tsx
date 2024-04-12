@@ -71,7 +71,7 @@ export default defineComponent({
       } else {
         cols = [_cols as SkeletonRowColObj];
       }
-      console.log('----', cols);
+
       return cols.map((obj) => (
         <div class={getColItemClass(obj)} style={getColItemStyle(obj)}>
           {isFunction(obj.content) ? obj.content(h) : obj.content}
@@ -118,7 +118,15 @@ export default defineComponent({
         children.push(renderRowCol(ThemeMap[props.theme]));
       } else if (!props.theme && !props.rowCol) {
         // 什么都不传时，传入默认 rowCol
-        children.push(renderRowCol([1, 1, 1, { width: '70%' }]));
+        children.push(
+          renderRowCol([
+            [
+              { width: '24%', height: '16px', marginRight: '16px' },
+              { width: '76%', height: '16px' },
+            ],
+            1,
+          ]),
+        );
       }
 
       return <div class={name}>{children}</div>;
