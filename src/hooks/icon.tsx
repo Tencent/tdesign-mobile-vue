@@ -7,11 +7,10 @@ import { getCurrentInstance, h } from 'vue';
  * @returns renderIconTNode
  * @param iconType 要渲染的icon元素
  * @param defaultIcons 默认icon集合
- * @param options 渲染icon元素的参数
  */
 export function useIcon() {
   const instance = getCurrentInstance();
-  return function renderIconTNode(iconType: string, defaultIcons?: Record<string, any>, options?: Record<string, any>) {
+  return function renderIconTNode(iconType: string, defaultIcons?: Record<string, any>) {
     let iconContent;
     // 传入的是渲染函数
     if (isFunction(instance.props[iconType])) {
@@ -21,7 +20,7 @@ export function useIcon() {
       iconContent = instance.slots[iconType] && instance.slots[iconType](null)[0];
     } else if (defaultIcons) {
       const Component = defaultIcons[instance.props.theme as string];
-      iconContent = h(Component, options);
+      iconContent = Component;
     }
     return iconContent;
   };

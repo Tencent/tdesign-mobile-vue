@@ -24,8 +24,8 @@ export default defineComponent({
         warning: InfoCircleIcon,
         error: CloseCircleIcon,
       };
-      const iconContent = renderIconTNode('icon', defaultIcons, { class: `${classPrefix}__icon` });
-      return iconContent || null;
+      const iconContent = renderIconTNode('icon', defaultIcons);
+      return iconContent ? <iconContent class={`${classPrefix}__icon`}></iconContent> : null;
     };
 
     const renderImage = () => {
