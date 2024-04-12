@@ -1,4 +1,4 @@
-import Result from './result.vue';
+import Result from './result';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';

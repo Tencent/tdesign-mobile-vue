@@ -2,7 +2,7 @@ import { h } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import { InfoCircleIcon, CheckCircleIcon, CloseCircleIcon, AppIcon } from 'tdesign-icons-vue-next';
-import Result from '../result.vue';
+import Result from '../result';
 import Image from '../../image/image.vue';
 
 const appIcon = () => h(AppIcon);
