@@ -65,13 +65,16 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
               data-v-9c770ec0=""
             >
               
+              
               <div
                 class="t-skeleton__row"
               >
                 
                 <div
                   class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-                />
+                >
+                  <!---->
+                </div>
                 
               </div>
               <div
@@ -81,7 +84,9 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
                 <div
                   class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                   style="width: 100px;"
-                />
+                >
+                  <!---->
+                </div>
                 
               </div>
               <div
@@ -91,9 +96,12 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
                 <div
                   class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                   style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-                />
+                >
+                  <!---->
+                </div>
                 
               </div>
+              
               
             </div>
             <div
@@ -101,13 +109,16 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
               data-v-9c770ec0=""
             >
               
+              
               <div
                 class="t-skeleton__row"
               >
                 
                 <div
                   class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-                />
+                >
+                  <!---->
+                </div>
                 
               </div>
               <div
@@ -117,7 +128,9 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
                 <div
                   class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                   style="width: 100px;"
-                />
+                >
+                  <!---->
+                </div>
                 
               </div>
               <div
@@ -127,9 +140,12 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
                 <div
                   class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                   style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-                />
+                >
+                  <!---->
+                </div>
                 
               </div>
+              
               
             </div>
             <div
@@ -137,13 +153,16 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
               data-v-9c770ec0=""
             >
               
+              
               <div
                 class="t-skeleton__row"
               >
                 
                 <div
                   class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-                />
+                >
+                  <!---->
+                </div>
                 
               </div>
               <div
@@ -153,7 +172,9 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
                 <div
                   class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                   style="width: 100px;"
-                />
+                >
+                  <!---->
+                </div>
                 
               </div>
               <div
@@ -163,9 +184,12 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
                 <div
                   class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                   style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-                />
+                >
+                  <!---->
+                </div>
                 
               </div>
+              
               
             </div>
             <div
@@ -173,13 +197,16 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
               data-v-9c770ec0=""
             >
               
+              
               <div
                 class="t-skeleton__row"
               >
                 
                 <div
                   class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-                />
+                >
+                  <!---->
+                </div>
                 
               </div>
               <div
@@ -189,7 +216,9 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
                 <div
                   class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                   style="width: 100px;"
-                />
+                >
+                  <!---->
+                </div>
                 
               </div>
               <div
@@ -199,9 +228,12 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
                 <div
                   class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                   style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-                />
+                >
+                  <!---->
+                </div>
                 
               </div>
+              
               
             </div>
             <div
@@ -209,13 +241,16 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
               data-v-9c770ec0=""
             >
               
+              
               <div
                 class="t-skeleton__row"
               >
                 
                 <div
                   class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-                />
+                >
+                  <!---->
+                </div>
                 
               </div>
               <div
@@ -225,7 +260,9 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
                 <div
                   class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                   style="width: 100px;"
-                />
+                >
+                  <!---->
+                </div>
                 
               </div>
               <div
@@ -235,9 +272,12 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
                 <div
                   class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                   style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-                />
+                >
+                  <!---->
+                </div>
                 
               </div>
+              
               
             </div>
             <div
@@ -245,13 +285,16 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
               data-v-9c770ec0=""
             >
               
+              
               <div
                 class="t-skeleton__row"
               >
                 
                 <div
                   class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-                />
+                >
+                  <!---->
+                </div>
                 
               </div>
               <div
@@ -261,7 +304,9 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
                 <div
                   class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                   style="width: 100px;"
-                />
+                >
+                  <!---->
+                </div>
                 
               </div>
               <div
@@ -271,9 +316,12 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
                 <div
                   class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                   style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-                />
+                >
+                  <!---->
+                </div>
                 
               </div>
+              
               
             </div>
             
@@ -396,13 +444,16 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
                 data-v-9c770ec0=""
               >
                 
+                
                 <div
                   class="t-skeleton__row"
                 >
                   
                   <div
                     class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-                  />
+                  >
+                    <!---->
+                  </div>
                   
                 </div>
                 <div
@@ -412,7 +463,9 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
                   <div
                     class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                     style="width: 100px;"
-                  />
+                  >
+                    <!---->
+                  </div>
                   
                 </div>
                 <div
@@ -422,9 +475,12 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
                   <div
                     class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                     style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-                  />
+                  >
+                    <!---->
+                  </div>
                   
                 </div>
+                
                 
               </div>
               <div
@@ -432,13 +488,16 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
                 data-v-9c770ec0=""
               >
                 
+                
                 <div
                   class="t-skeleton__row"
                 >
                   
                   <div
                     class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-                  />
+                  >
+                    <!---->
+                  </div>
                   
                 </div>
                 <div
@@ -448,7 +507,9 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
                   <div
                     class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                     style="width: 100px;"
-                  />
+                  >
+                    <!---->
+                  </div>
                   
                 </div>
                 <div
@@ -458,9 +519,12 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
                   <div
                     class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                     style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-                  />
+                  >
+                    <!---->
+                  </div>
                   
                 </div>
+                
                 
               </div>
               <div
@@ -468,13 +532,16 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
                 data-v-9c770ec0=""
               >
                 
+                
                 <div
                   class="t-skeleton__row"
                 >
                   
                   <div
                     class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-                  />
+                  >
+                    <!---->
+                  </div>
                   
                 </div>
                 <div
@@ -484,7 +551,9 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
                   <div
                     class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                     style="width: 100px;"
-                  />
+                  >
+                    <!---->
+                  </div>
                   
                 </div>
                 <div
@@ -494,9 +563,12 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
                   <div
                     class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                     style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-                  />
+                  >
+                    <!---->
+                  </div>
                   
                 </div>
+                
                 
               </div>
               <div
@@ -504,13 +576,16 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
                 data-v-9c770ec0=""
               >
                 
+                
                 <div
                   class="t-skeleton__row"
                 >
                   
                   <div
                     class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-                  />
+                  >
+                    <!---->
+                  </div>
                   
                 </div>
                 <div
@@ -520,7 +595,9 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
                   <div
                     class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                     style="width: 100px;"
-                  />
+                  >
+                    <!---->
+                  </div>
                   
                 </div>
                 <div
@@ -530,9 +607,12 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
                   <div
                     class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                     style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-                  />
+                  >
+                    <!---->
+                  </div>
                   
                 </div>
+                
                 
               </div>
               <div
@@ -540,13 +620,16 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
                 data-v-9c770ec0=""
               >
                 
+                
                 <div
                   class="t-skeleton__row"
                 >
                   
                   <div
                     class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-                  />
+                  >
+                    <!---->
+                  </div>
                   
                 </div>
                 <div
@@ -556,7 +639,9 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
                   <div
                     class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                     style="width: 100px;"
-                  />
+                  >
+                    <!---->
+                  </div>
                   
                 </div>
                 <div
@@ -566,9 +651,12 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
                   <div
                     class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                     style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-                  />
+                  >
+                    <!---->
+                  </div>
                   
                 </div>
+                
                 
               </div>
               <div
@@ -576,13 +664,16 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
                 data-v-9c770ec0=""
               >
                 
+                
                 <div
                   class="t-skeleton__row"
                 >
                   
                   <div
                     class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-                  />
+                  >
+                    <!---->
+                  </div>
                   
                 </div>
                 <div
@@ -592,7 +683,9 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
                   <div
                     class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                     style="width: 100px;"
-                  />
+                  >
+                    <!---->
+                  </div>
                   
                 </div>
                 <div
@@ -602,9 +695,12 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
                   <div
                     class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                     style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-                  />
+                  >
+                    <!---->
+                  </div>
                   
                 </div>
+                
                 
               </div>
               
