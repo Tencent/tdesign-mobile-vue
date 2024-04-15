@@ -26,6 +26,7 @@ npm i tdesign-mobile-vue
 </script>
 ```
 
+> Please note that unpkg usage is not recommended as it will download the entire component library. Production projects will be directly affected by version updates, and may also be affected by the stability of the CDN.
 
 The package of tdesign-vue-next provides kinds of bundles, read [the documentation](https://github.com/Tencent/tdesign/blob/main/docs/develop-install.md) for the detail of differences between bundles.
 
