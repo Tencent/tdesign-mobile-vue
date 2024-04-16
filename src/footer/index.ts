@@ -1,4 +1,4 @@
-import Footer from './footer.vue';
+import Footer from './footer';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';

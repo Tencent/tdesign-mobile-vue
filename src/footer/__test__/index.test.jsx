@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
-import Footer from '../footer.vue';
+import Footer from '../footer';
 
 describe('footer', () => {
   describe('props', () => {
