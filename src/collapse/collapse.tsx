@@ -1,13 +1,7 @@
-<template>
-  <div :class="rootClass">
-    <slot></slot>
-  </div>
-</template>
-
-<script lang="ts">
 import { toRefs, provide, defineComponent, computed, Ref, ComputedRef } from 'vue';
 import props from './props';
 import config from '../config';
+import { useTNodeJSX } from '../hooks/tnode';
 import { useVModel } from '../shared';
 import { CollapseValue, TdCollapseProps } from './type';
 
@@ -21,11 +15,12 @@ export interface CollapseProvide {
 
 const { prefix } = config;
 const name = `${prefix}-collapse`;
+
 export default defineComponent({
   name,
   props,
-  emits: ['update:value', 'change'],
-  setup(props, context) {
+  setup(props, { slots }) {
+    const renderTNodeJSX = useTNodeJSX();
     const { value, modelValue } = toRefs(props);
     const [activeValue, setActiveValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
     const calcActiveValues = (activeValues: any[], panelValue: any, expandMutex: boolean) => {
@@ -57,14 +52,8 @@ export default defineComponent({
       onPanelChange,
       defaultExpandAll: props.defaultExpandAll,
     });
+    provide('renderParentTNode', renderTNodeJSX);
 
-    return {
-      prefix,
-      activeValue,
-      rootClass,
-    };
+    return () => <div class={rootClass.value}>{slots.default?.()}</div>;
   },
 });
-</script>
-
-<style></style>
