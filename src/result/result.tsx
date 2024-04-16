@@ -1,21 +1,25 @@
 import { computed, defineComponent } from 'vue';
 import { InfoCircleIcon, CheckCircleIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
-import TResultProps from './props';
+import ResultProps from './props';
 import { useTNodeJSX } from '../hooks/tnode';
 import TImage from '../image';
 import { useIcon } from '../hooks/icon';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
 const name = `${prefix}-result`;
 export default defineComponent({
   name,
-  props: TResultProps,
+  props: ResultProps,
   setup(props) {
-    const classPrefix = name;
+    const resultClass = usePrefixClass('result');
     const renderTNodeJSX = useTNodeJSX();
     const renderIconTNode = useIcon();
-    const resultClass = computed(() => [`${classPrefix}`, `${classPrefix}--theme-${props.theme || 'default'}`]);
+    const resultClasses = computed(() => [
+      `${resultClass.value}`,
+      `${resultClass.value}--theme-${props.theme || 'default'}`,
+    ]);
 
     const renderIcon = () => {
       const defaultIcons = {
@@ -25,7 +29,7 @@ export default defineComponent({
         error: CloseCircleIcon,
       };
       const iconContent = renderIconTNode('icon', defaultIcons);
-      return iconContent ? <iconContent class={`${classPrefix}__icon`}></iconContent> : null;
+      return iconContent ? <iconContent class={`${resultClass.value}__icon`}></iconContent> : null;
     };
 
     const renderImage = () => {
@@ -41,20 +45,22 @@ export default defineComponent({
 
     const renderThumb = () => {
       const image = renderImage();
-      return <div class={`${classPrefix}__thumb`}>{image || renderIcon()}</div>;
+      return <div class={`${resultClass.value}__thumb`}>{image || renderIcon()}</div>;
     };
 
     const renderTitle = () => {
       const title = renderTNodeJSX('title');
-      return title ? <div class={[`${classPrefix}__title`]}>{title}</div> : null;
+      return title ? <div class={[`${resultClass.value}__title`]}>{title}</div> : null;
     };
+
     const renderDescription = () => {
       const description = renderTNodeJSX('description');
-      return description ? <div class={[`${classPrefix}__description`]}>{description}</div> : null;
+      return description ? <div class={[`${resultClass.value}__description`]}>{description}</div> : null;
     };
+
     return () => {
       return (
-        <div class={[resultClass.value]}>
+        <div class={[resultClasses.value]}>
           {renderThumb()}
           {renderTitle()}
           {renderDescription()}
