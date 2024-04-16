@@ -3,6 +3,7 @@ import isNumber from 'lodash/isNumber';
 import isArray from 'lodash/isArray';
 import isFunction from 'lodash/isFunction';
 import { useContent } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 import config from '../config';
 import SkeletonProps from './props';
 import { SkeletonRowCol, SkeletonRowColObj, TdSkeletonProps } from './type';
@@ -56,10 +57,12 @@ export default defineComponent({
     const isShow = ref(false);
     const renderContent = useContent();
 
+    const componentName = usePrefixClass('skeleton');
+
     const getColItemClass = (obj: SkeletonRowColObj): ClassName => [
-      `${name}__col`,
-      `${name}--type-${obj.type || 'text'}`,
-      { [`${name}--animation-${props.animation}`]: props.animation },
+      `${componentName.value}__col`,
+      `${componentName.value}--type-${obj.type || 'text'}`,
+      { [`${componentName.value}--animation-${props.animation}`]: props.animation },
     ];
 
     const renderCols = (_cols: Number | SkeletonRowColObj | Array<SkeletonRowColObj>) => {
@@ -129,7 +132,7 @@ export default defineComponent({
         );
       }
 
-      return <div class={name}>{children}</div>;
+      return <div class={componentName.value}>{children}</div>;
     };
   },
 });
