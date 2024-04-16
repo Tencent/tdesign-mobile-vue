@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Link Props
 
 name | type | default | description | required
@@ -11,10 +12,10 @@ disabled | Boolean | - | make link to be disabled | N
 hover | Boolean | - | \- | N
 href | String | - | \- | N
 prefixIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-size | String | medium | options：small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+size | String | medium | options: small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 suffixIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 target | String | - | target is an attribute of `<a>` | N
-theme | String | default | options：default/primary/danger/warning/success | N
+theme | String | default | options: default/primary/danger/warning/success | N
 underline | Boolean | - | \- | N
 onClick | Function |  | Typescript：`(e: MouseEvent) => void`<br/>click event, it won't trigger when it's disabled | N
 
@@ -24,8 +25,8 @@ name | params | description
 -- | -- | --
 click | `(e: MouseEvent)` | click event, it won't trigger when it's disabled
 
+### CSS 变量
 
-### CSS Variables
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
@@ -43,4 +44,4 @@ Name | Default Value | Description
 --td-link-success-disabled-color | @success-color-disabled | - 
 --td-link-warning-active-color | @warning-color-active | - 
 --td-link-warning-color | @warning-color | - 
---td-link-warning-disabled-color | @warning-color-disabled | - 
+--td-link-warning-disabled-color | @warning-color-disabled | -
