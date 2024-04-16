@@ -3,7 +3,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import Tag from '../tag.tsx';
-import TCheckTag from '../check-tag.vue';
+import TCheckTag from '../check-tag';
 
 const TEXT = 'tdesign-mobile-vue';
 const iconFunc = () => h(TIconApp);
@@ -71,7 +71,7 @@ describe('Tag.vue', async () => {
 
   it('disabled render', async () => {
     const wrapper = mount(() => <Tag disabled>{TEXT}</Tag>);
-    expect(wrapper.classes()).toContain('t-is-disabled');
+    expect(wrapper.classes()).toContain('t-tag--disabled');
   });
 
   it('maxWidth render', async () => {
@@ -121,7 +121,7 @@ describe('CheckTag render', async () => {
 
   it('disabled render', async () => {
     const wrapper = mount(() => <TCheckTag disabled>{TEXT}</TCheckTag>);
-    expect(wrapper.classes()).toContain('t-is-disabled');
+    expect(wrapper.classes()).toContain('t-tag--disabled');
   });
 
   it('icon render', async () => {
