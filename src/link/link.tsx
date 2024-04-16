@@ -1,7 +1,7 @@
 import { defineComponent, computed } from 'vue';
 import config from '../config';
 import LinkProps from './props';
-import { useTNodeJSX } from '../hooks/tnode';
+import { useContent, useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
@@ -12,6 +12,7 @@ export default defineComponent({
   setup(props) {
     const linkClass = usePrefixClass('link');
     const renderTNodeJSX = useTNodeJSX();
+    const renderTNodeContent = useContent();
 
     const linkClasses = computed(() => [
       linkClass.value,
@@ -30,7 +31,7 @@ export default defineComponent({
     };
 
     const renderContent = () => {
-      const content = renderTNodeJSX('default', 'content');
+      const content = renderTNodeContent('default', 'content');
       return content ? <span class={[`${linkClass.value}__content`]}>{content}</span> : null;
     };
 
