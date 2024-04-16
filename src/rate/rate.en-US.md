@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Rate Props
 
 name | type | default | description | required
@@ -24,8 +25,8 @@ name | params | description
 -- | -- | --
 change | `(value: number)` | \-
 
+### CSS 变量
 
-### CSS Variables
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
@@ -37,4 +38,4 @@ Name | Default Value | Description
 --td-rate-text-active-font-weight | 600 | - 
 --td-rate-text-color | @font-gray-4 | - 
 --td-rate-text-font-size | @font-size-m | - 
---td-rate-unselected-color | @bg-color-secondarycomponent | - 
+--td-rate-unselected-color | @bg-color-secondarycomponent | -

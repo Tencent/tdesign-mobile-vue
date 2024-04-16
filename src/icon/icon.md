@@ -66,9 +66,10 @@ TDesign 支持通过使用 Iconfont 图标，使用时需要单独引入 Iconfon
 <td-icons-view />
 
 ## API
+
 ### IconSVG Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 loadDefaultIcons | Boolean | true | 是否加载组件库内置图标 | N
 name | String | - | 必需。图标名称 | Y
@@ -83,9 +84,10 @@ onClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>�
 -- | -- | --
 click | `(context: { e: MouseEvent })` | 点击时触发
 
+
 ### Iconfont Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 loadDefaultIcons | Boolean | true | 是否加载组件库内置图标 | N
 name | String | - | 必需。图标名称 | Y

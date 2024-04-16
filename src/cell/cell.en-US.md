@@ -1,11 +1,12 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Cell Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-align | String | middle | options：top/middle/bottom | N
+align | String | middle | options: top/middle/bottom | N
 arrow | Boolean | false | \- | N
 bordered | Boolean | true | \- | N
 description | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
@@ -24,16 +25,17 @@ name | params | description
 -- | -- | --
 click | `(context: { e: MouseEvent })` | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)
 
+
 ### CellGroup Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
 bordered | Boolean | false | \- | N
-theme | String | default | `0.15.0`。options：default/card | N
+theme | String | default | `0.15.0`。options: default/card | N
 title | String | - | \- | N
 
+### CSS 变量
 
-### CSS Variables
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
@@ -66,4 +68,4 @@ Name | Default Value | Description
 --td-cell-group-title-color | @font-gray-3 | - 
 --td-cell-group-title-font-size | 14px | - 
 --td-cell-group-title-line-height | 45px | - 
---td-cell-group-title-padding-left | 16px | - 
+--td-cell-group-title-padding-left | 16px | -

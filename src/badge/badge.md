@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Badge Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 color | String | - | 颜色 | N
 content | String / Slot / Function | - | 徽标内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
@@ -15,8 +16,8 @@ shape | String | circle | 形状。可选项：circle/square/bubble/ribbon | N
 showZero | Boolean | false | 当数值为 0 时，是否展示徽标 | N
 size | String | medium | 尺寸。可选项：medium/large | N
 
-
 ### CSS 变量
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
@@ -32,4 +33,4 @@ size | String | medium | 尺寸。可选项：medium/large | N
 --td-badge-large-font-size | @font-size-s | - 
 --td-badge-large-height | 20px | - 
 --td-badge-large-padding | 5px | - 
---td-badge-text-color | @font-white-1 | - 
+--td-badge-text-color | @font-white-1 | -

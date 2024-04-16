@@ -7,13 +7,14 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 actions | Array / Slot / Function | - | Typescript：`Array<ButtonProps>`，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts) | N
-buttonLayout | String | horizontal | options：horizontal/vertical | N
+buttonLayout | String | horizontal | options: horizontal/vertical | N
 cancelBtn | String / Object / Slot / Function | - | Typescript：`string \| ButtonProps \| TNode \| null`，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts) | N
+closeBtn | Boolean | false | \- | N
 closeOnOverlayClick | Boolean | undefined | \- | N
 confirmBtn | String / Object / Slot / Function | - | Typescript：`string \| ButtonProps \| TNode \| null`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 content | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 destroyOnClose | Boolean | false | \- | N
-overlayProps | Object | {} | \- | N
+overlayProps | Object | {} | Typescript：`OverlayProps`，[Overlay API Documents](./overlay?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts) | N
 preventScrollThrough | Boolean | true | \- | N
 showOverlay | Boolean | true | \- | N
 title | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
@@ -32,6 +33,7 @@ name | params | description
 -- | -- | --
 cancel | `(context: { e: MouseEvent })` | \-
 close | `(context: DialogCloseContext)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay'`<br/><br/>`interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent }`<br/>
+closed | `()` | \-
 confirm | `(context: { e: MouseEvent })` | \-
 overlay-click | `(context: { e: MouseEvent })` | \-
 
@@ -70,8 +72,6 @@ name | params | default | description
 -- | -- | -- | --
 options | \- | - | Typescript：`DialogOptions`
 
-插件返回值：`DialogInstance`
-
 ### DialogPlugin.alert
 
 同时也支持 `this.$dialog.alert`。
@@ -80,10 +80,8 @@ name | params | default | description
 -- | -- | -- | --
 options | Object | - | Typescript：`Omit<DialogOptions, 'cancelBtn'>`
 
-插件返回值：`DialogInstance`
+### CSS 变量
 
-
-### CSS Variables
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
@@ -97,4 +95,4 @@ Name | Default Value | Description
 --td-dialog-title-color | @font-gray-1 | - 
 --td-dialog-title-font-size | 18px | - 
 --td-dialog-title-line-height | 26px | - 
---td-dialog-width | 311px | - 
+--td-dialog-width | 311px | -

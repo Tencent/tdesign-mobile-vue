@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### PullDownRefresh Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 loadingBarHeight | String / Number | 50 | 加载中下拉高度，如果值为数字则单位是：'px' | N
 loadingProps | Object | - | 加载loading样式。TS 类型：`LoadingProps`，[Loading API Documents](./loading?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/pull-down-refresh/type.ts) | N
@@ -26,9 +27,9 @@ refresh | \- | 结束下拉时触发
 scrolltolower | \- | 滚动到页面底部时触发
 timeout | \- | 刷新超时触发
 
-
 ### CSS 变量
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-pull-down-refresh-color | @font-gray-3 | - 
+--td-pull-down-refresh-color | @font-gray-3 | -

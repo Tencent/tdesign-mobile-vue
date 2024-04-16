@@ -7,10 +7,10 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 links | Array | [] | Typescript：`Array<LinkObj>` `interface LinkObj { name: string; url?: string; target?: string}`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/footer/type.ts) | N
-logo | Object | - | Typescript：`FooterLogo` `interface FooterLogo { icon: string; title?: string; url?: string; target?: string; }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/footer/type.ts) | N
+logo | Object | - | Typescript：`FooterLogo` `interface FooterLogo { icon: string; title?: string; url?: string; target: string }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/footer/type.ts) | N
 text | String | '' | \- | N
 
-### CSS Variables
+### CSS 变量
 
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 

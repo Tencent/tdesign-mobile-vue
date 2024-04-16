@@ -56,6 +56,7 @@ if your project is in a no-network scenario, please use on-demand loading of ico
 
 
 ## API
+
 ### IconSVG Props
 
 name | type | default | description | required
@@ -72,6 +73,7 @@ onClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/>
 name | params | description
 -- | -- | --
 click | `(context: { e: MouseEvent })` | \-
+
 
 ### Iconfont Props
 

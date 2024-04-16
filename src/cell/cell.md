@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Cell Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 align | String | middle | 内容的对齐方式，默认居中对齐。可选项：top/middle/bottom | N
 arrow | Boolean | false | 是否显示右侧箭头 | N
@@ -24,16 +25,17 @@ onClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>�
 -- | -- | --
 click | `(context: { e: MouseEvent })` | 右侧内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)
 
+
 ### CellGroup Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 bordered | Boolean | false | 是否显示组边框 | N
-theme | String | default | `0.15.0`。单元格组风格。可选项：default/card | N
+theme | String | default | `0.15.0`。单元格风格。可选项：default/card | N
 title | String | - | 单元格组标题 | N
 
-
 ### CSS 变量
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
@@ -66,4 +68,4 @@ title | String | - | 单元格组标题 | N
 --td-cell-group-title-color | @font-gray-3 | - 
 --td-cell-group-title-font-size | 14px | - 
 --td-cell-group-title-line-height | 45px | - 
---td-cell-group-title-padding-left | 16px | - 
+--td-cell-group-title-padding-left | 16px | -

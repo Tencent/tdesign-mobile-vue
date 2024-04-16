@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Stepper Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 disableInput | Boolean | false | 禁用输入框 | N
 disabled | Boolean | false | 禁用全部操作 | N
@@ -30,8 +31,8 @@ change | `(value: string \| number)` | 数值发生变更时触发
 focus | `(value: string \| number)` | 输入框聚焦时触发
 overlimit | `(type: 'minus' \| 'plus')` | 数值超出限制时触发
 
-
 ### CSS 变量
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
@@ -39,4 +40,4 @@ overlimit | `(type: 'minus' \| 'plus')` | 数值超出限制时触发
 --td-stepper-border-radius | @radius-small | - 
 --td-stepper-input-color | @font-gray-1 | - 
 --td-stepper-input-disabled-bg | @bg-color-component-disabled | - 
---td-stepper-input-disabled-color | @font-gray-4 | - 
+--td-stepper-input-disabled-color | @font-gray-4 | -

@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### ActionSheet Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 align | String | center | 水平对齐方式。可选项：center/left | N
 cancelText | String | - | 设置取消按钮的文本 | N
@@ -26,8 +27,8 @@ cancel | `(context: { e: MouseEvent })` | 点击取消按钮时触发
 close | `(trigger: TriggerSource)` | 关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/action-sheet/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'command' \| 'select' `<br/>
 selected | `(selected: ActionSheetItem \| string, index: number)` | 选择菜单项时触发
 
-
 ### CSS 变量
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
@@ -42,4 +43,4 @@ selected | `(selected: ActionSheetItem \| string, index: number)` | 选择菜单
 --td-action-sheet-list-item-disabled-color | @font-gray-4 | - 
 --td-action-sheet-list-item-height | 56px | - 
 --td-action-sheet-text-align | center | - 
---td-action-sheet-text-weight | 400 | - 
+--td-action-sheet-text-weight | 400 | -

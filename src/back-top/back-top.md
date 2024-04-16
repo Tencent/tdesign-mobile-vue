@@ -1,12 +1,13 @@
 :: BASE_DOC ::
 
 ## API
+
 ### BackTop Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 fixed | Boolean | true | 是否绝对定位固定到屏幕右下方 | N
-icon | Slot / Function / Boolean | true | 图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+icon | Boolean / Slot / Function | true | 图标。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 target | Function | - | 定位滚动到指定对象。TS 类型：`() => HTMLElement` | N
 text | String | '' | 文案 | N
 theme | String | round | 预设的样式类型。可选项：round/half-round/round-dark/half-round-dark | N
@@ -18,8 +19,8 @@ onToTop | Function |  | TS 类型：`() => void`<br/>点击触发 | N
 -- | -- | --
 to-top | \- | 点击触发
 
-
 ### CSS 变量
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
@@ -30,4 +31,4 @@ to-top | \- | 点击触发
 --td-back-top-round-border-radius | @radius-circle | - 
 --td-back-top-round-color | @font-gray-1 | - 
 --td-back-top-round-dark-bg-color | @gray-color-14 | - 
---td-back-top-round-dark-color | @font-white-1 | - 
+--td-back-top-round-dark-color | @font-white-1 | -

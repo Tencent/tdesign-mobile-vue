@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Checkbox Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 block | Boolean | true | 是否为块级元素 | N
 checkAll | Boolean | false | 用于标识是否为「全选选项」。单独使用无效，需在 CheckboxGroup 中使用 | N
@@ -30,9 +31,10 @@ onChange | Function |  | TS 类型：`(checked: boolean, context: { e: Event }) 
 -- | -- | --
 change | `(checked: boolean, context: { e: Event })` | 值变化时触发
 
+
 ### CheckboxGroup Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 disabled | Boolean | - | 是否禁用组件，默认为 false。CheckboxGroup.disabled 优先级低于 Checkbox.disabled | N
 max | Number | undefined | 支持最多选中的数量 | N
@@ -48,8 +50,8 @@ onChange | Function |  | TS 类型：`(value: T, context: CheckboxGroupChangeCon
 -- | -- | --
 change | `(value: T, context: CheckboxGroupChangeContext)` | 值变化时触发。`context.current` 表示当前变化的数据项，如果是全选则为空；`context.type` 表示引起选中数据变化的是选中或是取消选中，`context.option` 表示当前变化的数据项。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/checkbox/type.ts)。<br/>`interface CheckboxGroupChangeContext { e: Event; current: string \| number; option: CheckboxOption \| TdCheckboxProps; type: 'check' \| 'uncheck' }`<br/>
 
-
 ### CSS 变量
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
@@ -69,4 +71,4 @@ change | `(value: T, context: CheckboxGroupChangeContext)` | 值变化时触发�
 --td-checkbox-title-color | @font-gray-1 | - 
 --td-checkbox-title-disabled-color | @font-gray-4 | - 
 --td-checkbox-title-line-height | 24px | - 
---td-checkbox-vertical-padding | 16px | - 
+--td-checkbox-vertical-padding | 16px | -

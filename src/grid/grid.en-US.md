@@ -1,15 +1,32 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Grid Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-align | String | center | options：left/center | N
+align | String | center | options: left/center | N
 border | Boolean | false | \- | N
 column | Number | 4 | \- | N
 gutter | Number | - | \- | N
-theme | String | default | options：default/card | N
+theme | String | default | options: default/card | N
+
+
+### Col Props
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+offset | String / Number | - | \- | N
+span | String / Number | - | \- | N
+
+
+### Row Props
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+gutter | String / Number | - | \- | N
+
 
 ### GridItem Props
 
@@ -18,11 +35,11 @@ name | type | default | description | required
 badge | Object | null | Typescript：`BadgeProps`，[Badge API Documents](./badge?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/grid/type.ts) | N
 description | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 image | String / Object / Slot / Function | - | Typescript：`string \| object \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-layout | String | vertical | options：vertical/horizontal | N
+layout | String | vertical | options: vertical/horizontal | N
 text | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 
+### CSS 变量
 
-### CSS Variables
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
@@ -47,4 +64,4 @@ Name | Default Value | Description
 --td-grid-item-text-font-size | 14px | - 
 --td-grid-item-text-line-height | 22px | - 
 --td-grid-item-text-padding-top | 8px | - 
---td-grid-item-vertical-padding | 16px 0 12px | - 
+--td-grid-item-vertical-padding | 16px 0 12px | -

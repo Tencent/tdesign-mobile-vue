@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Image Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 alt | String | - | 图片描述 | N
 error | String / Slot / Function | - | 自定义图片加载失败状态下的显示内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
@@ -24,12 +25,12 @@ onLoad | Function |  | TS 类型：`(context: { e: ImageEvent }) => void`<br/>�
 error | `(context: { e: ImageEvent })` | 图片加载失败时触发
 load | `(context: { e: ImageEvent })` | 图片加载完成时触发
 
-
 ### CSS 变量
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
 --td-image-color | @font-gray-3 | - 
 --td-image-loading-bg-color | @bg-color-secondarycontainer | - 
 --td-image-loading-color | @font-gray-3 | - 
---td-image-round-radius | @radius-default | - 
+--td-image-round-radius | @radius-default | -

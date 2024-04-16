@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Progress Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 color | String / Object / Array | '' | 进度条颜色。示例：'#ED7B2F' 或 'orange' 或 `['#f00', '#0ff', '#f0f']` 或 `{ '0%': '#f00', '100%': '#0ff' }` 或  `{ from: '#000', to: '#000' }` 等。TS 类型：`string \| Array<string> \| Record<string, string>` | N
 label | String / Boolean / Slot / Function | true | 进度百分比，可自定义。TS 类型：`string \| boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
@@ -13,11 +14,11 @@ strokeWidth | String / Number | - | 进度条线宽。宽度数值不能超过 s
 theme | String | line | 进度条风格。值为 line，标签（label）显示在进度条右侧；值为 plump，标签（label）显示在进度条里面；值为 circle，标签（label）显示在进度条正中间。可选项：line/plump/circle。TS 类型：`ThemeEnum` `type ThemeEnum = 'line' \| 'plump' \| 'circle'`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/progress/type.ts) | N
 trackColor | String | '' | 进度条未完成部分颜色 | N
 
-
 ### CSS 变量
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
 --td-progress-circle-inner-bg-color | @font-white-1 | - 
 --td-progress-inner-bg-color | @brand-color | - 
---td-progress-track-bg-color | @bg-color-component | - 
+--td-progress-track-bg-color | @bg-color-component | -

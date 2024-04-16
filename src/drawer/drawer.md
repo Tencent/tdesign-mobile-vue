@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Drawer Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 attach | String / Function | - | 抽屉挂载的节点，默认挂在组件本身的位置。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body。TS 类型：`AttachNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 closeOnOverlayClick | Boolean | undefined | 点击蒙层时是否触发抽屉关闭事件 | N
@@ -29,7 +30,7 @@ overlay-click | `(context: { e: MouseEvent })` | 如果蒙层存在，点击蒙�
 
 ### DrawerOptions
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 className | String | - | 抽屉类名，示例：'t-class-drawer-first t-class-drawer-second' | N
 style | String / Object | - | 弹框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)。TS 类型：`string \| Styles`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
@@ -48,12 +49,12 @@ update | `(props: DrawerOptions)` | \- | 更新抽屉内容
 
 同时也支持 `this.$drawer`。
 
-参数名称 | 参数类型 | 参数默认值 | 参数说明
+参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 options | \- | - | TS 类型：`DrawerOptions`
 
-
 ### CSS 变量
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
@@ -69,4 +70,4 @@ options | \- | - | TS 类型：`DrawerOptions`
 --td-drawer-title-color | @font-gray-1 | - 
 --td-drawer-title-font-size | 18px | - 
 --td-drawer-title-padding | 24px 16px 8px | - 
---td-drawer-width | 280px | - 
+--td-drawer-width | 280px | -

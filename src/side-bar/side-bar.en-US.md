@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### SideBar Props
 
 name | type | default | description | required
@@ -17,6 +18,7 @@ name | params | description
 change | `(value: number \| string)` | \-
 click | `(value: number \| string, label: string)` | \-
 
+
 ### SideBarItem Props
 
 name | type | default | description | required
@@ -27,8 +29,8 @@ icon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](htt
 label | String | - | \- | N
 value | String / Number | - | \- | N
 
+### CSS 变量
 
-### CSS Variables
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
@@ -43,4 +45,4 @@ Name | Default Value | Description
 --td-side-bar-icon-size | 20px | - 
 --td-side-bar-item-height | 56px | - 
 --td-side-bar-item-line-height | 24px | - 
---td-side-bar-width | 103px | - 
+--td-side-bar-width | 103px | -

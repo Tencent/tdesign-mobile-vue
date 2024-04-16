@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Collapse Props
 
 name | type | default | description | required
@@ -20,6 +21,7 @@ name | params | description
 -- | -- | --
 change | `(value: CollapseValue, context: { e: MouseEvent })` | \-
 
+
 ### CollapsePanel Props
 
 name | type | default | description | required
@@ -35,8 +37,8 @@ headerRightContent | String / Slot / Function | - | Typescript：`string \| TNod
 placement | String | bottom | options: bottom/top | N
 value | String / Number | - | \- | N
 
+### CSS 变量
 
-### CSS Variables
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
@@ -49,4 +51,4 @@ Name | Default Value | Description
 --td-collapse-header-text-color | @font-gray-1 | - 
 --td-collapse-header-text-disabled-color | @font-gray-4 | - 
 --td-collapse-panel-bg-color | @bg-color-container | - 
---td-collapse-title-font-size | @font-size-m | - 
+--td-collapse-title-font-size | @font-size-m | -

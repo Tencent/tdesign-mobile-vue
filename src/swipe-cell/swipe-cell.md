@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### SwipeCell Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 content | String / Slot / Function | - | 操作项以外的内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 default | String / Slot / Function | - | 操作项以外的内容，同 content。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
@@ -25,4 +26,4 @@ click | `(action: SwipeActionItem, source: SwipeSource)` | 操作项点击时触
 
 名称 | 参数 | 返回值 | 描述
 -- | -- | -- | --
-showSure | `(sure: string | TNode, onClick?: SwipeActionItem['onClick'])` | `void` | 显示二次确认内容的函数。<br/>【关于参数】`sure` 表示二次确认的具体内容，同content，TS 类型：`string | TNode`；如果设置了 `onClick`，则点击二次确认内容时，会执行此onClick方法。<br />[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swipe-cell/type.ts)。<br/>
+showSure | `(sure: string \| TNode, onClick?: SwipeActionItem['onClick'])` | `void` | 显示二次确认内容的函数。<br/>【关于参数】`sure` 表示二次确认的具体内容，同content。TS 类型：`string \| TNode；如果设置了 `onClick`，则点击二次确认内容时，会执行此onClick方法。<br />[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swipe-cell/type.ts)。<br/>`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)
