@@ -5,6 +5,7 @@ import props from './collapse-panel-props';
 import config from '../config';
 import { findIndex } from './util';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 import { CollapseProvide } from './collapse';
 
 const { prefix } = config;
@@ -18,15 +19,17 @@ export default defineComponent({
     const renderTNodeJSX = useTNodeJSX();
     const renderContent = useContent();
 
+    const componentName = usePrefixClass('collapse-panel');
+
     const parent = inject<CollapseProvide>('collapse');
     const renderParentTNode: Function = inject('renderParentTNode');
 
     const disabled = computed(() => parent?.disabled.value || props.disabled);
     const rootClass = computed(() => ({
-      [`${name}`]: true,
-      [`${name}--${props.placement}`]: true,
-      [`${name}--active`]: isActive.value,
-      [`${name}--disabled`]: disabled.value,
+      [`${componentName.value}`]: true,
+      [`${componentName.value}--${props.placement}`]: true,
+      [`${componentName.value}--active`]: isActive.value,
+      [`${componentName.value}--disabled`]: disabled.value,
     }));
     const isActive = computed(() => findIndex(props.value, parent?.activeValue.value) > -1);
     const updatePanelValue = (args?: any) => {
@@ -89,7 +92,7 @@ export default defineComponent({
     const panelExpandIcon = computed(() => slots.expandIcon || props.expandIcon);
     const renderRightIcon = () => {
       const tNodeRender = panelExpandIcon.value === undefined ? renderParentTNode : renderTNodeJSX;
-      return <div class={`${name}__header-icon`}>{tNodeRender('expandIcon', renderDefaultIcon())}</div>;
+      return <div class={`${componentName.value}__header-icon`}>{tNodeRender('expandIcon', renderDefaultIcon())}</div>;
     };
 
     return () => {
@@ -100,12 +103,12 @@ export default defineComponent({
 
       return (
         <div ref={wrapRef} class={rootClass.value} style={{ height: wrapperHeight.value }}>
-          <div ref={headRef} class={`${name}__title`} onClick={handleClick}>
+          <div ref={headRef} class={`${componentName.value}__title`} onClick={handleClick}>
             <TCell
               class={[
-                `${name}__header`,
-                `${name}__header--${props.placement}`,
-                { [`${name}__header--expanded`]: isActive.value },
+                `${componentName.value}__header`,
+                `${componentName.value}__header--${props.placement}`,
+                { [`${componentName.value}__header--expanded`]: isActive.value },
               ]}
               v-slots={{
                 leftIcon: () => leftIcon,
@@ -115,7 +118,7 @@ export default defineComponent({
               }}
             ></TCell>
           </div>
-          <div ref={bodyRef} class={`${name}__content`}>
+          <div ref={bodyRef} class={`${componentName.value}__content`}>
             {panelContent}
           </div>
         </div>

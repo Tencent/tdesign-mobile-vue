@@ -2,6 +2,7 @@ import { toRefs, provide, defineComponent, computed, Ref, ComputedRef } from 'vu
 import props from './props';
 import config from '../config';
 import { useTNodeJSX } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 import { useVModel } from '../shared';
 import { CollapseValue, TdCollapseProps } from './type';
 
@@ -21,6 +22,9 @@ export default defineComponent({
   props,
   setup(props, { slots }) {
     const renderTNodeJSX = useTNodeJSX();
+
+    const componentName = usePrefixClass('collapse');
+
     const { value, modelValue } = toRefs(props);
     const [activeValue, setActiveValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
     const calcActiveValues = (activeValues: any[], panelValue: any, expandMutex: boolean) => {
@@ -43,7 +47,7 @@ export default defineComponent({
 
     const disabled = computed(() => props.disabled);
     const expandIcon = computed(() => props.expandIcon);
-    const rootClass = computed(() => [name, `${name}--${props.theme}`]);
+    const rootClass = computed(() => [componentName.value, `${componentName.value}--${props.theme}`]);
 
     provide<CollapseProvide>('collapse', {
       activeValue,
