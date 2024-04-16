@@ -12,7 +12,7 @@ exports[`Link > Link baseVue demo works fine 1`] = `
     href="/mobile-vue/overview"
     target=""
   >
-    <!--v-if-->
+    <!---->
     <span
       class="t-link__content"
     >
@@ -20,7 +20,7 @@ exports[`Link > Link baseVue demo works fine 1`] = `
       跳转链接
       
     </span>
-    <!--v-if-->
+    <!---->
   </a>
   <a
     aria-disabled="false"
@@ -28,7 +28,7 @@ exports[`Link > Link baseVue demo works fine 1`] = `
     data-v-8b54d308=""
     target=""
   >
-    <!--v-if-->
+    <!---->
     <span
       class="t-link__content"
     >
@@ -36,7 +36,7 @@ exports[`Link > Link baseVue demo works fine 1`] = `
       跳转链接
       
     </span>
-    <!--v-if-->
+    <!---->
   </a>
 </div>
 `;
@@ -52,7 +52,7 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
     data-v-55ae5f74=""
     target=""
   >
-    <!--v-if-->
+    <!---->
     <span
       class="t-link__content"
     >
@@ -61,7 +61,7 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
       
     </span>
     <span
-      class="t-link__suffix-icon t-class-suffix-icon"
+      class="t-link__suffix-icon"
     >
       
       <svg
@@ -86,7 +86,7 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
     data-v-55ae5f74=""
     target=""
   >
-    <!--v-if-->
+    <!---->
     <span
       class="t-link__content"
     >
@@ -95,7 +95,7 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
       
     </span>
     <span
-      class="t-link__suffix-icon t-class-suffix-icon"
+      class="t-link__suffix-icon"
     >
       
       <svg
@@ -120,7 +120,7 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
     data-v-55ae5f74=""
     target=""
   >
-    <!--v-if-->
+    <!---->
     <span
       class="t-link__content"
     >
@@ -129,7 +129,7 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
       
     </span>
     <span
-      class="t-link__suffix-icon t-class-suffix-icon"
+      class="t-link__suffix-icon"
     >
       
       <svg
@@ -197,7 +197,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           href="/mobile-vue/overview"
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -205,7 +205,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             跳转链接
             
           </span>
-          <!--v-if-->
+          <!---->
         </a>
         <a
           aria-disabled="false"
@@ -213,7 +213,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           data-v-8b54d308=""
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -221,7 +221,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             跳转链接
             
           </span>
-          <!--v-if-->
+          <!---->
         </a>
       </div>
       
@@ -254,7 +254,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           data-v-ed7bec9e=""
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -262,7 +262,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             跳转链接
             
           </span>
-          <!--v-if-->
+          <!---->
         </a>
         <a
           aria-disabled="false"
@@ -270,7 +270,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           data-v-ed7bec9e=""
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -278,7 +278,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             跳转链接
             
           </span>
-          <!--v-if-->
+          <!---->
         </a>
       </div>
       
@@ -312,7 +312,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           target=""
         >
           <span
-            class="t-link__prefix-icon t-class-prefix-icon"
+            class="t-link__prefix-icon"
           >
             
             <svg
@@ -337,7 +337,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
              跳转链接 
             
           </span>
-          <!--v-if-->
+          <!---->
         </a>
         <a
           aria-disabled="false"
@@ -346,7 +346,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           target=""
         >
           <span
-            class="t-link__prefix-icon t-class-prefix-icon"
+            class="t-link__prefix-icon"
           >
             
             <svg
@@ -371,7 +371,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
              跳转链接 
             
           </span>
-          <!--v-if-->
+          <!---->
         </a>
       </div>
       
@@ -404,7 +404,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           data-v-c6b7a388=""
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -413,7 +413,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
           </span>
           <span
-            class="t-link__suffix-icon t-class-suffix-icon"
+            class="t-link__suffix-icon"
           >
             
             <svg
@@ -438,7 +438,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           data-v-c6b7a388=""
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -447,7 +447,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
           </span>
           <span
-            class="t-link__suffix-icon t-class-suffix-icon"
+            class="t-link__suffix-icon"
           >
             
             <svg
@@ -502,7 +502,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           data-v-004b20ae=""
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -511,7 +511,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
           </span>
           <span
-            class="t-link__suffix-icon t-class-suffix-icon"
+            class="t-link__suffix-icon"
           >
             
             <svg
@@ -536,7 +536,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           data-v-004b20ae=""
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -545,7 +545,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
           </span>
           <span
-            class="t-link__suffix-icon t-class-suffix-icon"
+            class="t-link__suffix-icon"
           >
             
             <svg
@@ -570,7 +570,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           data-v-004b20ae=""
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -579,7 +579,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
           </span>
           <span
-            class="t-link__suffix-icon t-class-suffix-icon"
+            class="t-link__suffix-icon"
           >
             
             <svg
@@ -609,7 +609,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           data-v-004b20ae=""
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -618,7 +618,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
           </span>
           <span
-            class="t-link__suffix-icon t-class-suffix-icon"
+            class="t-link__suffix-icon"
           >
             
             <svg
@@ -643,7 +643,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           data-v-004b20ae=""
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -652,7 +652,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
           </span>
           <span
-            class="t-link__suffix-icon t-class-suffix-icon"
+            class="t-link__suffix-icon"
           >
             
             <svg
@@ -704,7 +704,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           data-v-0c766346=""
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -713,7 +713,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
           </span>
           <span
-            class="t-link__suffix-icon t-class-suffix-icon"
+            class="t-link__suffix-icon"
           >
             
             <svg
@@ -738,7 +738,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           data-v-0c766346=""
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -747,7 +747,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
           </span>
           <span
-            class="t-link__suffix-icon t-class-suffix-icon"
+            class="t-link__suffix-icon"
           >
             
             <svg
@@ -772,7 +772,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           data-v-0c766346=""
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -781,7 +781,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
           </span>
           <span
-            class="t-link__suffix-icon t-class-suffix-icon"
+            class="t-link__suffix-icon"
           >
             
             <svg
@@ -811,7 +811,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           data-v-0c766346=""
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -820,7 +820,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
           </span>
           <span
-            class="t-link__suffix-icon t-class-suffix-icon"
+            class="t-link__suffix-icon"
           >
             
             <svg
@@ -845,7 +845,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           data-v-0c766346=""
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -854,7 +854,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
           </span>
           <span
-            class="t-link__suffix-icon t-class-suffix-icon"
+            class="t-link__suffix-icon"
           >
             
             <svg
@@ -909,7 +909,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           data-v-55ae5f74=""
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -918,7 +918,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
           </span>
           <span
-            class="t-link__suffix-icon t-class-suffix-icon"
+            class="t-link__suffix-icon"
           >
             
             <svg
@@ -943,7 +943,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           data-v-55ae5f74=""
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -952,7 +952,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
           </span>
           <span
-            class="t-link__suffix-icon t-class-suffix-icon"
+            class="t-link__suffix-icon"
           >
             
             <svg
@@ -977,7 +977,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           data-v-55ae5f74=""
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -986,7 +986,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
           </span>
           <span
-            class="t-link__suffix-icon t-class-suffix-icon"
+            class="t-link__suffix-icon"
           >
             
             <svg
@@ -1024,7 +1024,7 @@ exports[`Link > Link prefixVue demo works fine 1`] = `
     target=""
   >
     <span
-      class="t-link__prefix-icon t-class-prefix-icon"
+      class="t-link__prefix-icon"
     >
       
       <svg
@@ -1049,7 +1049,7 @@ exports[`Link > Link prefixVue demo works fine 1`] = `
        跳转链接 
       
     </span>
-    <!--v-if-->
+    <!---->
   </a>
   <a
     aria-disabled="false"
@@ -1058,7 +1058,7 @@ exports[`Link > Link prefixVue demo works fine 1`] = `
     target=""
   >
     <span
-      class="t-link__prefix-icon t-class-prefix-icon"
+      class="t-link__prefix-icon"
     >
       
       <svg
@@ -1083,7 +1083,7 @@ exports[`Link > Link prefixVue demo works fine 1`] = `
        跳转链接 
       
     </span>
-    <!--v-if-->
+    <!---->
   </a>
 </div>
 `;
@@ -1103,7 +1103,7 @@ exports[`Link > Link statusVue demo works fine 1`] = `
       data-v-0c766346=""
       target=""
     >
-      <!--v-if-->
+      <!---->
       <span
         class="t-link__content"
       >
@@ -1112,7 +1112,7 @@ exports[`Link > Link statusVue demo works fine 1`] = `
         
       </span>
       <span
-        class="t-link__suffix-icon t-class-suffix-icon"
+        class="t-link__suffix-icon"
       >
         
         <svg
@@ -1137,7 +1137,7 @@ exports[`Link > Link statusVue demo works fine 1`] = `
       data-v-0c766346=""
       target=""
     >
-      <!--v-if-->
+      <!---->
       <span
         class="t-link__content"
       >
@@ -1146,7 +1146,7 @@ exports[`Link > Link statusVue demo works fine 1`] = `
         
       </span>
       <span
-        class="t-link__suffix-icon t-class-suffix-icon"
+        class="t-link__suffix-icon"
       >
         
         <svg
@@ -1171,7 +1171,7 @@ exports[`Link > Link statusVue demo works fine 1`] = `
       data-v-0c766346=""
       target=""
     >
-      <!--v-if-->
+      <!---->
       <span
         class="t-link__content"
       >
@@ -1180,7 +1180,7 @@ exports[`Link > Link statusVue demo works fine 1`] = `
         
       </span>
       <span
-        class="t-link__suffix-icon t-class-suffix-icon"
+        class="t-link__suffix-icon"
       >
         
         <svg
@@ -1210,7 +1210,7 @@ exports[`Link > Link statusVue demo works fine 1`] = `
       data-v-0c766346=""
       target=""
     >
-      <!--v-if-->
+      <!---->
       <span
         class="t-link__content"
       >
@@ -1219,7 +1219,7 @@ exports[`Link > Link statusVue demo works fine 1`] = `
         
       </span>
       <span
-        class="t-link__suffix-icon t-class-suffix-icon"
+        class="t-link__suffix-icon"
       >
         
         <svg
@@ -1244,7 +1244,7 @@ exports[`Link > Link statusVue demo works fine 1`] = `
       data-v-0c766346=""
       target=""
     >
-      <!--v-if-->
+      <!---->
       <span
         class="t-link__content"
       >
@@ -1253,7 +1253,7 @@ exports[`Link > Link statusVue demo works fine 1`] = `
         
       </span>
       <span
-        class="t-link__suffix-icon t-class-suffix-icon"
+        class="t-link__suffix-icon"
       >
         
         <svg
@@ -1288,7 +1288,7 @@ exports[`Link > Link suffixVue demo works fine 1`] = `
     data-v-c6b7a388=""
     target=""
   >
-    <!--v-if-->
+    <!---->
     <span
       class="t-link__content"
     >
@@ -1297,7 +1297,7 @@ exports[`Link > Link suffixVue demo works fine 1`] = `
       
     </span>
     <span
-      class="t-link__suffix-icon t-class-suffix-icon"
+      class="t-link__suffix-icon"
     >
       
       <svg
@@ -1322,7 +1322,7 @@ exports[`Link > Link suffixVue demo works fine 1`] = `
     data-v-c6b7a388=""
     target=""
   >
-    <!--v-if-->
+    <!---->
     <span
       class="t-link__content"
     >
@@ -1331,7 +1331,7 @@ exports[`Link > Link suffixVue demo works fine 1`] = `
       
     </span>
     <span
-      class="t-link__suffix-icon t-class-suffix-icon"
+      class="t-link__suffix-icon"
     >
       
       <svg
@@ -1368,7 +1368,7 @@ exports[`Link > Link themeVue demo works fine 1`] = `
       data-v-004b20ae=""
       target=""
     >
-      <!--v-if-->
+      <!---->
       <span
         class="t-link__content"
       >
@@ -1377,7 +1377,7 @@ exports[`Link > Link themeVue demo works fine 1`] = `
         
       </span>
       <span
-        class="t-link__suffix-icon t-class-suffix-icon"
+        class="t-link__suffix-icon"
       >
         
         <svg
@@ -1402,7 +1402,7 @@ exports[`Link > Link themeVue demo works fine 1`] = `
       data-v-004b20ae=""
       target=""
     >
-      <!--v-if-->
+      <!---->
       <span
         class="t-link__content"
       >
@@ -1411,7 +1411,7 @@ exports[`Link > Link themeVue demo works fine 1`] = `
         
       </span>
       <span
-        class="t-link__suffix-icon t-class-suffix-icon"
+        class="t-link__suffix-icon"
       >
         
         <svg
@@ -1436,7 +1436,7 @@ exports[`Link > Link themeVue demo works fine 1`] = `
       data-v-004b20ae=""
       target=""
     >
-      <!--v-if-->
+      <!---->
       <span
         class="t-link__content"
       >
@@ -1445,7 +1445,7 @@ exports[`Link > Link themeVue demo works fine 1`] = `
         
       </span>
       <span
-        class="t-link__suffix-icon t-class-suffix-icon"
+        class="t-link__suffix-icon"
       >
         
         <svg
@@ -1475,7 +1475,7 @@ exports[`Link > Link themeVue demo works fine 1`] = `
       data-v-004b20ae=""
       target=""
     >
-      <!--v-if-->
+      <!---->
       <span
         class="t-link__content"
       >
@@ -1484,7 +1484,7 @@ exports[`Link > Link themeVue demo works fine 1`] = `
         
       </span>
       <span
-        class="t-link__suffix-icon t-class-suffix-icon"
+        class="t-link__suffix-icon"
       >
         
         <svg
@@ -1509,7 +1509,7 @@ exports[`Link > Link themeVue demo works fine 1`] = `
       data-v-004b20ae=""
       target=""
     >
-      <!--v-if-->
+      <!---->
       <span
         class="t-link__content"
       >
@@ -1518,7 +1518,7 @@ exports[`Link > Link themeVue demo works fine 1`] = `
         
       </span>
       <span
-        class="t-link__suffix-icon t-class-suffix-icon"
+        class="t-link__suffix-icon"
       >
         
         <svg
@@ -1553,7 +1553,7 @@ exports[`Link > Link underlineVue demo works fine 1`] = `
     data-v-ed7bec9e=""
     target=""
   >
-    <!--v-if-->
+    <!---->
     <span
       class="t-link__content"
     >
@@ -1561,7 +1561,7 @@ exports[`Link > Link underlineVue demo works fine 1`] = `
       跳转链接
       
     </span>
-    <!--v-if-->
+    <!---->
   </a>
   <a
     aria-disabled="false"
@@ -1569,7 +1569,7 @@ exports[`Link > Link underlineVue demo works fine 1`] = `
     data-v-ed7bec9e=""
     target=""
   >
-    <!--v-if-->
+    <!---->
     <span
       class="t-link__content"
     >
@@ -1577,7 +1577,7 @@ exports[`Link > Link underlineVue demo works fine 1`] = `
       跳转链接
       
     </span>
-    <!--v-if-->
+    <!---->
   </a>
 </div>
 `;

@@ -1,4 +1,4 @@
-import Link from './link.vue';
+import Link from './link';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';

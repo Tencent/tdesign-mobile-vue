@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Link Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 content | String / Slot / Function | - | 链接内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 default | String / Slot / Function | - | 链接内容，同 content。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
@@ -24,8 +25,8 @@ onClick | Function |  | TS 类型：`(e: MouseEvent) => void`<br/>点击事件�
 -- | -- | --
 click | `(e: MouseEvent)` | 点击事件，禁用状态不会触发点击事件
 
-
 ### CSS 变量
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
@@ -43,4 +44,4 @@ click | `(e: MouseEvent)` | 点击事件，禁用状态不会触发点击事件
 --td-link-success-disabled-color | @success-color-disabled | - 
 --td-link-warning-active-color | @warning-color-active | - 
 --td-link-warning-color | @warning-color | - 
---td-link-warning-disabled-color | @warning-color-disabled | - 
+--td-link-warning-disabled-color | @warning-color-disabled | -
