@@ -31,9 +31,9 @@ close | `(context: { e: MouseEvent })` | 如果关闭按钮存在，点击关闭
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-checked | Boolean | undefined | 标签选中的状态，默认风格（theme=default）才有选中态。支持语法糖 `v-model` 或 `v-model:checked` | N
-defaultChecked | Boolean | undefined | 标签选中的状态，默认风格（theme=default）才有选中态。非受控属性 | N
-closable | Boolean | false | 标签是否可关闭 | N
+checked | Boolean | - | 标签选中的状态，默认风格（theme=default）才有选中态。支持语法糖 `v-model` 或 `v-model:checked` | N
+defaultChecked | Boolean | - | 标签选中的状态，默认风格（theme=default）才有选中态。非受控属性 | N
+closable | Boolean | false | 已废弃。标签是否可关闭 | N
 content | String / Number / Array / Slot / Function | - | 组件子元素；传入数组时：[选中内容，非选中内容]。TS 类型：`string \| number \| string[] \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 default | String / Slot / Function | - | 组件子元素，默认插槽。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 disabled | Boolean | false | 标签禁用态，失效标签不能触发事件。默认风格（theme=default）才有禁用态 | N
@@ -43,7 +43,6 @@ size | String | medium | 标签尺寸。可选项：small/medium/large。TS 类�
 variant | String | dark | 标签风格变体。可选项：dark/light/outline/light-outline | N
 onChange | Function |  | TS 类型：`(checked: boolean) => void`<br/>状态切换时触发 | N
 onClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击标签时触发 | N
-onClose | Function |  | TS 类型：`() => void`<br/>如果关闭按钮存在，点击关闭按钮时触发 | N
 
 ### CheckTag Events
 
@@ -51,7 +50,6 @@ onClose | Function |  | TS 类型：`() => void`<br/>如果关闭按钮存在，
 -- | -- | --
 change | `(checked: boolean)` | 状态切换时触发
 click | `(context: { e: MouseEvent })` | 点击标签时触发
-close | \- | 如果关闭按钮存在，点击关闭按钮时触发
 
 ### CSS 变量
 
