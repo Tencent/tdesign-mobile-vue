@@ -1,9 +1,10 @@
-import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
+import { defineComponent, computed, toRefs } from 'vue';
+import { CloseIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import CheckTagProps from './check-tag-props';
 import { usePrefixClass } from '../hooks/useClass';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
-import { TNode, useVModel } from '../shared';
+import { useVModel } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-check-tag`;
@@ -52,6 +53,13 @@ export default defineComponent({
       }
     };
 
+    const handleClose = (e: MouseEvent): void => {
+      e.stopPropagation();
+      if (!props.disabled) {
+        props.onClose?.({ e });
+      }
+    };
+
     return () => {
       const icon = renderTNodeJSX('icon');
 
@@ -69,6 +77,11 @@ export default defineComponent({
         <span class={tagClasses.value} aria-disabled={props.disabled} role="button" onClick={handleClick}>
           {icon && <span class={`${tagClass.value}__icon`}>{icon}</span>}
           <span class={`${tagClass.value}__text`}>{readerText()}</span>
+          {props.closable && (
+            <span class={`${tagClass.value}__icon-close`} onClick={handleClose}>
+              <CloseIcon />
+            </span>
+          )}
         </span>
       );
     };

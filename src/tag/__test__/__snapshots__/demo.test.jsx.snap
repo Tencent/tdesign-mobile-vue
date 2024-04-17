@@ -31,6 +31,7 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
           >
             未选中态
           </span>
+          <!---->
         </span>
         <span
           aria-disabled="false"
@@ -43,6 +44,7 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
           >
             已选中态
           </span>
+          <!---->
         </span>
       </div>
       <div
@@ -64,6 +66,7 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
           >
             未选中态
           </span>
+          <!---->
         </span>
         <span
           aria-disabled="false"
@@ -76,6 +79,7 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
           >
             已选中态
           </span>
+          <!---->
         </span>
       </div>
       <div
@@ -97,6 +101,7 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
           >
             未选中态
           </span>
+          <!---->
         </span>
         <span
           aria-disabled="false"
@@ -109,6 +114,7 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
           >
             已选中态
           </span>
+          <!---->
         </span>
       </div>
       <div
@@ -130,6 +136,7 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
           >
             未选中态
           </span>
+          <!---->
         </span>
         <span
           aria-disabled="false"
@@ -142,6 +149,7 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
           >
             已选中态
           </span>
+          <!---->
         </span>
       </div>
       
@@ -539,6 +547,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 >
                   未选中态
                 </span>
+                <!---->
               </span>
               <span
                 aria-disabled="false"
@@ -551,6 +560,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 >
                   已选中态
                 </span>
+                <!---->
               </span>
             </div>
             <div
@@ -572,6 +582,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 >
                   未选中态
                 </span>
+                <!---->
               </span>
               <span
                 aria-disabled="false"
@@ -584,6 +595,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 >
                   已选中态
                 </span>
+                <!---->
               </span>
             </div>
             <div
@@ -605,6 +617,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 >
                   未选中态
                 </span>
+                <!---->
               </span>
               <span
                 aria-disabled="false"
@@ -617,6 +630,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 >
                   已选中态
                 </span>
+                <!---->
               </span>
             </div>
             <div
@@ -638,6 +652,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 >
                   未选中态
                 </span>
+                <!---->
               </span>
               <span
                 aria-disabled="false"
@@ -650,6 +665,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 >
                   已选中态
                 </span>
+                <!---->
               </span>
             </div>
             

@@ -77,6 +77,11 @@ export interface TdCheckTagProps {
    */
   modelValue?: boolean;
   /**
+   * 标签是否可关闭
+   * @default false
+   */
+  closable?: boolean;
+  /**
    * 组件子元素；传入数组时：[选中内容，非选中内容]
    */
   content?: string | number | string[] | TNode;
@@ -116,4 +121,8 @@ export interface TdCheckTagProps {
    * 点击标签时触发
    */
   onClick?: (context: { e: MouseEvent }) => void;
+  /**
+   * 如果关闭按钮存在，点击关闭按钮时触发
+   */
+  onClose?: (context: { e: MouseEvent }) => void;
 }
