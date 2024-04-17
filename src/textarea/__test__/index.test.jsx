@@ -1,7 +1,7 @@
 import { nextTick, ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import Textarea from '../textarea.vue';
+import Textarea from '../textarea';
 
 const simulateEvent = (target, text, event) => {
   target.value = text;
