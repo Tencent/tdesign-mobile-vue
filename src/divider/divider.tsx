@@ -1,7 +1,7 @@
 import { defineComponent, computed } from 'vue';
 import config from '../config';
 import DividerProps from './props';
-import { useContent, useTNodeJSX } from '../hooks/tnode';
+import { useContent } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
@@ -10,10 +10,9 @@ export default defineComponent({
   name,
   props: DividerProps,
   setup(props) {
-    const dividerClass = usePrefixClass('divider');
-    const renderTNodeJSX = useTNodeJSX();
     const renderTNodeContent = useContent();
 
+    const dividerClass = usePrefixClass('divider');
     const dividerClasses = computed(() => [
       `${dividerClass.value}`,
       `${dividerClass.value}--${props.layout}`,
