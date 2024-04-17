@@ -1,4 +1,4 @@
-import _Divider from './divider.vue';
+import _Divider from './divider';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';

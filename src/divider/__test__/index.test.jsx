@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
-import Divider from '../divider.vue';
+import Divider from '../divider';
 import config from '../../config';
 
 const { prefix } = config;
