@@ -62,7 +62,7 @@ export interface TdCollapsePanelProps {
    */
   default?: string | TNode;
   /**
-   * 当前面板处理折叠状态时，是否销毁面板内容
+   * 【暂不支持】当前面板处理折叠状态时，是否销毁面板内容
    * @default false
    */
   destroyOnCollapse?: boolean;
