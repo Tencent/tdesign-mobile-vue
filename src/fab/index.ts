@@ -1,4 +1,4 @@
-import Fab from './fab.vue';
+import Fab from './fab';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';
