@@ -29,7 +29,7 @@ export interface TdCountDownProps {
   millisecond?: boolean;
   /**
    * 倒计时尺寸
-   * @default 'small'
+   * @default 'medium'
    */
   size?: 'small' | 'medium' | 'large';
   /**
