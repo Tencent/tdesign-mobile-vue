@@ -41,6 +41,7 @@ export default defineComponent({
       `${tagClass.value}--${props.size}`,
       `${tagClass.value}--${props.variant}`,
       {
+        [`${tagClass.value}--closable`]: props.closable,
         [`${tagClass.value}--disabled`]: props.disabled,
         [`${tagClass.value}--checked`]: !props.disabled && innerChecked.value,
       },

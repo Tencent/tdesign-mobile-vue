@@ -180,4 +180,15 @@ describe('CheckTag render', async () => {
     await wrapper.trigger('click');
     expect(wrapper.vm.checked).toBe(false);
   });
+  it('close render', async () => {
+    const onClose = vi.fn();
+    const wrapper = mount(() => <TCheckTag closable onClose={onClose}>{TEXT}</TCheckTag>);
+    const com = wrapper.findComponent(TCheckTag);
+    expect(wrapper.classes()).toContain('t-tag--closable');
+    const closeBtn = com.find('.t-tag__icon-close');
+    expect(closeBtn.exists()).toBeTruthy();
+
+    await closeBtn.trigger('click');
+    expect(onClose).toBeCalledWith({ e: expect.any(MouseEvent)});
+  });
 });
