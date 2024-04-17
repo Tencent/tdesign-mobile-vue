@@ -1,13 +1,8 @@
+default.check-filename = true
+
 [default.extend-words]
 actived = "actived"
-formated = "formated"
-formate = "formate"
-Colum = "Colum"
-ans = "ans"
-ba = "ba"
-ded = "ded"
-Hel = "Hel"
-Successivo = "Successivo"
+colum = "colum"
 
 [files]
 extend-exclude = ["CHANGELOG.md", "*.snap"]
