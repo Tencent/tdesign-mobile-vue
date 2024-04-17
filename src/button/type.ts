@@ -5,7 +5,7 @@
  * */
 
 import { LoadingProps } from '../loading';
-import { TNode, SizeEnum } from '../common';
+import { TNode } from '../common';
 
 export interface TdButtonProps {
   /**
@@ -49,7 +49,7 @@ export interface TdButtonProps {
    * 组件尺寸
    * @default medium
    */
-  size?: SizeEnum;
+  size?: 'extra-small' | 'small' | 'medium' | 'large';
   /**
    * 右侧内容，可用于定义右侧图标
    */

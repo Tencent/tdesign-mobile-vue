@@ -2,7 +2,7 @@ import { h } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
-import Button from '../button.vue';
+import Button from '../button';
 import Loading from '../../loading';
 
 const prefix = 't';

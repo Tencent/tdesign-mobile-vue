@@ -1,4 +1,4 @@
-import Button from './button.vue';
+import Button from './button';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';
