@@ -16,7 +16,7 @@ export default {
   default: {
     type: [String, Function] as PropType<TdCollapsePanelProps['default']>,
   },
-  /** 当前面板处理折叠状态时，是否销毁面板内容 */
+  /** 【暂不支持】当前面板处理折叠状态时，是否销毁面板内容 */
   destroyOnCollapse: Boolean,
   /** 禁止当前面板展开，优先级大于 Collapse 的同名属性 */
   disabled: {
