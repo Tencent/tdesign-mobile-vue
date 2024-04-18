@@ -23,13 +23,16 @@ exports[`Skeleton > Skeleton animationVue demo works fine 1`] = `
         data-v-5431dabc=""
       >
         
+        
         <div
           class="t-skeleton__row"
         >
           
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
-          />
+          >
+            <!---->
+          </div>
           
         </div>
         <div
@@ -38,7 +41,9 @@ exports[`Skeleton > Skeleton animationVue demo works fine 1`] = `
           
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
-          />
+          >
+            <!---->
+          </div>
           
         </div>
         <div
@@ -47,7 +52,9 @@ exports[`Skeleton > Skeleton animationVue demo works fine 1`] = `
           
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
-          />
+          >
+            <!---->
+          </div>
           
         </div>
         <div
@@ -57,9 +64,12 @@ exports[`Skeleton > Skeleton animationVue demo works fine 1`] = `
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
             style="width: 55%;"
-          />
+          >
+            <!---->
+          </div>
           
         </div>
+        
         
       </div>
     </div>
@@ -82,13 +92,16 @@ exports[`Skeleton > Skeleton animationVue demo works fine 1`] = `
         data-v-5431dabc=""
       >
         
+        
         <div
           class="t-skeleton__row"
         >
           
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
-          />
+          >
+            <!---->
+          </div>
           
         </div>
         <div
@@ -97,7 +110,9 @@ exports[`Skeleton > Skeleton animationVue demo works fine 1`] = `
           
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
-          />
+          >
+            <!---->
+          </div>
           
         </div>
         <div
@@ -106,7 +121,9 @@ exports[`Skeleton > Skeleton animationVue demo works fine 1`] = `
           
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
-          />
+          >
+            <!---->
+          </div>
           
         </div>
         <div
@@ -116,9 +133,12 @@ exports[`Skeleton > Skeleton animationVue demo works fine 1`] = `
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
             style="width: 55%;"
-          />
+          >
+            <!---->
+          </div>
           
         </div>
+        
         
       </div>
     </div>
@@ -141,6 +161,7 @@ exports[`Skeleton > Skeleton cellGroupVue demo works fine 1`] = `
       data-v-b5595f68=""
     >
       
+      
       <div
         class="t-skeleton__row"
       >
@@ -148,15 +169,19 @@ exports[`Skeleton > Skeleton cellGroupVue demo works fine 1`] = `
         <div
           class="t-skeleton__col t-skeleton--type-circle t-skeleton--animation-none"
           style="width: 48px; height: 48px;"
-        />
+        >
+          <!---->
+        </div>
         
       </div>
+      
       
     </div>
     <div
       class="t-skeleton group-content"
       data-v-b5595f68=""
     >
+      
       
       <div
         class="t-skeleton__row"
@@ -165,7 +190,9 @@ exports[`Skeleton > Skeleton cellGroupVue demo works fine 1`] = `
         <div
           class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
           style="width: 50%;"
-        />
+        >
+          <!---->
+        </div>
         
       </div>
       <div
@@ -175,9 +202,12 @@ exports[`Skeleton > Skeleton cellGroupVue demo works fine 1`] = `
         <div
           class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
           style="width: 100%;"
-        />
+        >
+          <!---->
+        </div>
         
       </div>
+      
       
     </div>
   </div>
@@ -190,6 +220,7 @@ exports[`Skeleton > Skeleton cellGroupVue demo works fine 1`] = `
       data-v-b5595f68=""
     >
       
+      
       <div
         class="t-skeleton__row"
       >
@@ -197,15 +228,19 @@ exports[`Skeleton > Skeleton cellGroupVue demo works fine 1`] = `
         <div
           class="t-skeleton__col t-skeleton--type-rect t-skeleton--animation-none"
           style="width: 48px; height: 48px;"
-        />
+        >
+          <!---->
+        </div>
         
       </div>
+      
       
     </div>
     <div
       class="t-skeleton group-content"
       data-v-b5595f68=""
     >
+      
       
       <div
         class="t-skeleton__row"
@@ -214,7 +249,9 @@ exports[`Skeleton > Skeleton cellGroupVue demo works fine 1`] = `
         <div
           class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
           style="width: 50%;"
-        />
+        >
+          <!---->
+        </div>
         
       </div>
       <div
@@ -224,9 +261,12 @@ exports[`Skeleton > Skeleton cellGroupVue demo works fine 1`] = `
         <div
           class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
           style="width: 100%;"
-        />
+        >
+          <!---->
+        </div>
         
       </div>
+      
       
     </div>
   </div>
@@ -239,6 +279,7 @@ exports[`Skeleton > Skeleton gridVue demo works fine 1`] = `
   class="t-skeleton"
 >
   
+  
   <div
     class="t-skeleton__row"
   >
@@ -246,23 +287,33 @@ exports[`Skeleton > Skeleton gridVue demo works fine 1`] = `
     <div
       class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
       style="width: 48px; height: 48px; border-radius: 6px;"
-    />
+    >
+      <!---->
+    </div>
     <div
       class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
       style="width: 48px; height: 48px; border-radius: 6px;"
-    />
+    >
+      <!---->
+    </div>
     <div
       class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
       style="width: 48px; height: 48px; border-radius: 6px;"
-    />
+    >
+      <!---->
+    </div>
     <div
       class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
       style="width: 48px; height: 48px; border-radius: 6px;"
-    />
+    >
+      <!---->
+    </div>
     <div
       class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
       style="width: 48px; height: 48px; border-radius: 6px;"
-    />
+    >
+      <!---->
+    </div>
     
   </div>
   <div
@@ -272,25 +323,36 @@ exports[`Skeleton > Skeleton gridVue demo works fine 1`] = `
     <div
       class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
       style="width: 48px; height: 16px; border-radius: 3px;"
-    />
+    >
+      <!---->
+    </div>
     <div
       class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
       style="width: 48px; height: 16px; border-radius: 3px;"
-    />
+    >
+      <!---->
+    </div>
     <div
       class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
       style="width: 48px; height: 16px; border-radius: 3px;"
-    />
+    >
+      <!---->
+    </div>
     <div
       class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
       style="width: 48px; height: 16px; border-radius: 3px;"
-    />
+    >
+      <!---->
+    </div>
     <div
       class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
       style="width: 48px; height: 16px; border-radius: 3px;"
-    />
+    >
+      <!---->
+    </div>
     
   </div>
+  
   
 </div>
 `;
@@ -305,6 +367,7 @@ exports[`Skeleton > Skeleton imageGroupVue demo works fine 1`] = `
     data-v-ac6b2376=""
   >
     
+    
     <div
       class="t-skeleton__row"
     >
@@ -312,7 +375,9 @@ exports[`Skeleton > Skeleton imageGroupVue demo works fine 1`] = `
       <div
         class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
         style="width: 163.5px; height: 163.5px; border-radius: 12px;"
-      />
+      >
+        <!---->
+      </div>
       
     </div>
     <div
@@ -321,7 +386,9 @@ exports[`Skeleton > Skeleton imageGroupVue demo works fine 1`] = `
       
       <div
         class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-      />
+      >
+        <!---->
+      </div>
       
     </div>
     <div
@@ -331,9 +398,12 @@ exports[`Skeleton > Skeleton imageGroupVue demo works fine 1`] = `
       <div
         class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
         style="width: 61%;"
-      />
+      >
+        <!---->
+      </div>
       
     </div>
+    
     
   </div>
   <div
@@ -341,6 +411,7 @@ exports[`Skeleton > Skeleton imageGroupVue demo works fine 1`] = `
     data-v-ac6b2376=""
   >
     
+    
     <div
       class="t-skeleton__row"
     >
@@ -348,7 +419,9 @@ exports[`Skeleton > Skeleton imageGroupVue demo works fine 1`] = `
       <div
         class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
         style="width: 163.5px; height: 163.5px; border-radius: 12px;"
-      />
+      >
+        <!---->
+      </div>
       
     </div>
     <div
@@ -357,7 +430,9 @@ exports[`Skeleton > Skeleton imageGroupVue demo works fine 1`] = `
       
       <div
         class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-      />
+      >
+        <!---->
+      </div>
       
     </div>
     <div
@@ -367,9 +442,12 @@ exports[`Skeleton > Skeleton imageGroupVue demo works fine 1`] = `
       <div
         class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
         style="width: 61%;"
-      />
+      >
+        <!---->
+      </div>
       
     </div>
+    
     
   </div>
 </div>
@@ -429,6 +507,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             data-v-7e69da81=""
           >
             
+            
             <div
               class="t-skeleton__row"
             >
@@ -436,9 +515,12 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
               <div
                 class="t-skeleton__col t-skeleton--type-circle t-skeleton--animation-none"
                 style="width: 48px; height: 48px;"
-              />
+              >
+                <!---->
+              </div>
               
             </div>
+            
             
           </div>
         </div>
@@ -461,6 +543,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             data-v-7e69da81=""
           >
             
+            
             <div
               class="t-skeleton__row"
             >
@@ -468,9 +551,12 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
               <div
                 class="t-skeleton__col t-skeleton--type-rect t-skeleton--animation-none"
                 style="width: 72px; height: 72px;"
-              />
+              >
+                <!---->
+              </div>
               
             </div>
+            
             
           </div>
         </div>
@@ -493,6 +579,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             data-v-7e69da81=""
           >
             
+            
             <div
               class="t-skeleton__row"
             >
@@ -500,11 +587,15 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
               <div
                 class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                 style="width: 24%; height: 16px; margin-right: 16px;"
-              />
+              >
+                <!---->
+              </div>
               <div
                 class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                 style="width: 76%; height: 16px;"
-              />
+              >
+                <!---->
+              </div>
               
             </div>
             <div
@@ -513,9 +604,12 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
               
               <div
                 class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              />
+              >
+                <!---->
+              </div>
               
             </div>
+            
             
           </div>
         </div>
@@ -538,13 +632,16 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             data-v-7e69da81=""
           >
             
+            
             <div
               class="t-skeleton__row"
             >
               
               <div
                 class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              />
+              >
+                <!---->
+              </div>
               
             </div>
             <div
@@ -553,7 +650,9 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
               
               <div
                 class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              />
+              >
+                <!---->
+              </div>
               
             </div>
             <div
@@ -562,7 +661,9 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
               
               <div
                 class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              />
+              >
+                <!---->
+              </div>
               
             </div>
             <div
@@ -572,9 +673,12 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
               <div
                 class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
                 style="width: 55%;"
-              />
+              >
+                <!---->
+              </div>
               
             </div>
+            
             
           </div>
         </div>
@@ -611,6 +715,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
           data-v-b5595f68=""
         >
           
+          
           <div
             class="t-skeleton__row"
           >
@@ -618,15 +723,19 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             <div
               class="t-skeleton__col t-skeleton--type-circle t-skeleton--animation-none"
               style="width: 48px; height: 48px;"
-            />
+            >
+              <!---->
+            </div>
             
           </div>
+          
           
         </div>
         <div
           class="t-skeleton group-content"
           data-v-b5595f68=""
         >
+          
           
           <div
             class="t-skeleton__row"
@@ -635,7 +744,9 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             <div
               class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
               style="width: 50%;"
-            />
+            >
+              <!---->
+            </div>
             
           </div>
           <div
@@ -645,9 +756,12 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             <div
               class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
               style="width: 100%;"
-            />
+            >
+              <!---->
+            </div>
             
           </div>
+          
           
         </div>
       </div>
@@ -660,6 +774,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
           data-v-b5595f68=""
         >
           
+          
           <div
             class="t-skeleton__row"
           >
@@ -667,15 +782,19 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             <div
               class="t-skeleton__col t-skeleton--type-rect t-skeleton--animation-none"
               style="width: 48px; height: 48px;"
-            />
+            >
+              <!---->
+            </div>
             
           </div>
+          
           
         </div>
         <div
           class="t-skeleton group-content"
           data-v-b5595f68=""
         >
+          
           
           <div
             class="t-skeleton__row"
@@ -684,7 +803,9 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             <div
               class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
               style="width: 50%;"
-            />
+            >
+              <!---->
+            </div>
             
           </div>
           <div
@@ -694,9 +815,12 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             <div
               class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
               style="width: 100%;"
-            />
+            >
+              <!---->
+            </div>
             
           </div>
+          
           
         </div>
       </div>
@@ -727,6 +851,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
         data-v-9b6b90cc=""
       >
         
+        
         <div
           class="t-skeleton__row"
         >
@@ -734,23 +859,33 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
             style="width: 48px; height: 48px; border-radius: 6px;"
-          />
+          >
+            <!---->
+          </div>
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
             style="width: 48px; height: 48px; border-radius: 6px;"
-          />
+          >
+            <!---->
+          </div>
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
             style="width: 48px; height: 48px; border-radius: 6px;"
-          />
+          >
+            <!---->
+          </div>
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
             style="width: 48px; height: 48px; border-radius: 6px;"
-          />
+          >
+            <!---->
+          </div>
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
             style="width: 48px; height: 48px; border-radius: 6px;"
-          />
+          >
+            <!---->
+          </div>
           
         </div>
         <div
@@ -760,25 +895,36 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
             style="width: 48px; height: 16px; border-radius: 3px;"
-          />
+          >
+            <!---->
+          </div>
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
             style="width: 48px; height: 16px; border-radius: 3px;"
-          />
+          >
+            <!---->
+          </div>
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
             style="width: 48px; height: 16px; border-radius: 3px;"
-          />
+          >
+            <!---->
+          </div>
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
             style="width: 48px; height: 16px; border-radius: 3px;"
-          />
+          >
+            <!---->
+          </div>
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
             style="width: 48px; height: 16px; border-radius: 3px;"
-          />
+          >
+            <!---->
+          </div>
           
         </div>
+        
         
       </div>
       
@@ -812,6 +958,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
           data-v-ac6b2376=""
         >
           
+          
           <div
             class="t-skeleton__row"
           >
@@ -819,7 +966,9 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             <div
               class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
               style="width: 163.5px; height: 163.5px; border-radius: 12px;"
-            />
+            >
+              <!---->
+            </div>
             
           </div>
           <div
@@ -828,7 +977,9 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             
             <div
               class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-            />
+            >
+              <!---->
+            </div>
             
           </div>
           <div
@@ -838,9 +989,12 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             <div
               class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
               style="width: 61%;"
-            />
+            >
+              <!---->
+            </div>
             
           </div>
+          
           
         </div>
         <div
@@ -848,6 +1002,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
           data-v-ac6b2376=""
         >
           
+          
           <div
             class="t-skeleton__row"
           >
@@ -855,7 +1010,9 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             <div
               class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
               style="width: 163.5px; height: 163.5px; border-radius: 12px;"
-            />
+            >
+              <!---->
+            </div>
             
           </div>
           <div
@@ -864,7 +1021,9 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             
             <div
               class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-            />
+            >
+              <!---->
+            </div>
             
           </div>
           <div
@@ -874,9 +1033,12 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             <div
               class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
               style="width: 61%;"
-            />
+            >
+              <!---->
+            </div>
             
           </div>
+          
           
         </div>
       </div>
@@ -920,13 +1082,16 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             data-v-5431dabc=""
           >
             
+            
             <div
               class="t-skeleton__row"
             >
               
               <div
                 class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
-              />
+              >
+                <!---->
+              </div>
               
             </div>
             <div
@@ -935,7 +1100,9 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
               
               <div
                 class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
-              />
+              >
+                <!---->
+              </div>
               
             </div>
             <div
@@ -944,7 +1111,9 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
               
               <div
                 class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
-              />
+              >
+                <!---->
+              </div>
               
             </div>
             <div
@@ -954,9 +1123,12 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
               <div
                 class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
                 style="width: 55%;"
-              />
+              >
+                <!---->
+              </div>
               
             </div>
+            
             
           </div>
         </div>
@@ -979,13 +1151,16 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             data-v-5431dabc=""
           >
             
+            
             <div
               class="t-skeleton__row"
             >
               
               <div
                 class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
-              />
+              >
+                <!---->
+              </div>
               
             </div>
             <div
@@ -994,7 +1169,9 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
               
               <div
                 class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
-              />
+              >
+                <!---->
+              </div>
               
             </div>
             <div
@@ -1003,7 +1180,9 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
               
               <div
                 class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
-              />
+              >
+                <!---->
+              </div>
               
             </div>
             <div
@@ -1013,9 +1192,12 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
               <div
                 class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
                 style="width: 55%;"
-              />
+              >
+                <!---->
+              </div>
               
             </div>
+            
             
           </div>
         </div>
@@ -1050,6 +1232,7 @@ exports[`Skeleton > Skeleton themeVue demo works fine 1`] = `
         data-v-7e69da81=""
       >
         
+        
         <div
           class="t-skeleton__row"
         >
@@ -1057,9 +1240,12 @@ exports[`Skeleton > Skeleton themeVue demo works fine 1`] = `
           <div
             class="t-skeleton__col t-skeleton--type-circle t-skeleton--animation-none"
             style="width: 48px; height: 48px;"
-          />
+          >
+            <!---->
+          </div>
           
         </div>
+        
         
       </div>
     </div>
@@ -1082,6 +1268,7 @@ exports[`Skeleton > Skeleton themeVue demo works fine 1`] = `
         data-v-7e69da81=""
       >
         
+        
         <div
           class="t-skeleton__row"
         >
@@ -1089,9 +1276,12 @@ exports[`Skeleton > Skeleton themeVue demo works fine 1`] = `
           <div
             class="t-skeleton__col t-skeleton--type-rect t-skeleton--animation-none"
             style="width: 72px; height: 72px;"
-          />
+          >
+            <!---->
+          </div>
           
         </div>
+        
         
       </div>
     </div>
@@ -1114,6 +1304,7 @@ exports[`Skeleton > Skeleton themeVue demo works fine 1`] = `
         data-v-7e69da81=""
       >
         
+        
         <div
           class="t-skeleton__row"
         >
@@ -1121,11 +1312,15 @@ exports[`Skeleton > Skeleton themeVue demo works fine 1`] = `
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
             style="width: 24%; height: 16px; margin-right: 16px;"
-          />
+          >
+            <!---->
+          </div>
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
             style="width: 76%; height: 16px;"
-          />
+          >
+            <!---->
+          </div>
           
         </div>
         <div
@@ -1134,9 +1329,12 @@ exports[`Skeleton > Skeleton themeVue demo works fine 1`] = `
           
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-          />
+          >
+            <!---->
+          </div>
           
         </div>
+        
         
       </div>
     </div>
@@ -1159,13 +1357,16 @@ exports[`Skeleton > Skeleton themeVue demo works fine 1`] = `
         data-v-7e69da81=""
       >
         
+        
         <div
           class="t-skeleton__row"
         >
           
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-          />
+          >
+            <!---->
+          </div>
           
         </div>
         <div
@@ -1174,7 +1375,9 @@ exports[`Skeleton > Skeleton themeVue demo works fine 1`] = `
           
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-          />
+          >
+            <!---->
+          </div>
           
         </div>
         <div
@@ -1183,7 +1386,9 @@ exports[`Skeleton > Skeleton themeVue demo works fine 1`] = `
           
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-          />
+          >
+            <!---->
+          </div>
           
         </div>
         <div
@@ -1193,9 +1398,12 @@ exports[`Skeleton > Skeleton themeVue demo works fine 1`] = `
           <div
             class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
             style="width: 55%;"
-          />
+          >
+            <!---->
+          </div>
           
         </div>
+        
         
       </div>
     </div>
