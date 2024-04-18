@@ -10,7 +10,7 @@ import { computed, defineComponent, ref } from 'vue';
 import config from '../config';
 import PickerProps from './props';
 import { PickerColumn, PickerValue } from './type';
-import Picker from './picker.vue';
+import Picker from './picker';
 
 const { prefix } = config;
 const name = `${prefix}-cascade`;

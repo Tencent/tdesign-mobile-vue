@@ -1,12 +1,3 @@
-<template>
-  <ul ref="root" :class="className">
-    <li v-for="(option, index) in options" :key="index" :class="itemClassName">
-      {{ renderLabel ? renderLabel(option) : option.label }}
-    </li>
-  </ul>
-</template>
-
-<script lang="ts">
 import { ref, computed, onMounted, toRefs, defineComponent, PropType, watch } from 'vue';
 import config from '../config';
 import Picker from './picker.class';
@@ -46,7 +37,6 @@ export default defineComponent({
     };
 
     const className = computed(() => `${name}`);
-    const wrapperClassName = computed(() => [`${name}__wrapper`]);
     const itemClassName = computed(() => [`${name}__item`]);
     const setIndex = (index: number) => {
       if (picker) {
@@ -97,13 +87,16 @@ export default defineComponent({
       { flush: 'post', deep: true },
     );
 
-    return {
-      root,
-      className,
-      wrapperClassName,
-      itemClassName,
-      ...toRefs(props),
+    return () => {
+      return (
+        <ul ref={root} class={className.value}>
+          {props.options.map((option, index) => (
+            <li key={index} class={itemClassName.value}>
+              {props.renderLabel ? props.renderLabel(option) : option.label}
+            </li>
+          ))}
+        </ul>
+      );
     };
   },
 });
-</script>
