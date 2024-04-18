@@ -31,8 +31,8 @@ close | `(context: { e: MouseEvent })` | \-
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-checked | Boolean | undefined | `v-model` and `v-model:checked` is supported | N
-defaultChecked | Boolean | undefined | uncontrolled property | N
+checked | Boolean | - | `v-model` and `v-model:checked` is supported | N
+defaultChecked | Boolean | - | uncontrolled property | N
 closable | Boolean | false | \- | N
 content | String / Number / Array / Slot / Function | - | Typescript：`string \| number \| string[] \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 default | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
@@ -43,7 +43,7 @@ size | String | medium | options: small/medium/large。Typescript：`SizeEnum`�
 variant | String | dark | options: dark/light/outline/light-outline | N
 onChange | Function |  | Typescript：`(checked: boolean) => void`<br/> | N
 onClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
-onClose | Function |  | Typescript：`() => void`<br/> | N
+onClose | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 
 ### CheckTag Events
 
@@ -51,7 +51,7 @@ name | params | description
 -- | -- | --
 change | `(checked: boolean)` | \-
 click | `(context: { e: MouseEvent })` | \-
-close | \- | \-
+close | `(context: { e: MouseEvent })` | \-
 
 ### CSS 变量
 

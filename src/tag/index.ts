@@ -1,5 +1,5 @@
 import LocalTag from './tag';
-import LocalCheckTag from './check-tag.vue';
+import LocalCheckTag from './check-tag';
 import { withInstall, WithInstallType } from '../shared';
 import { TdCheckTagProps, TdTagProps } from './type';
 

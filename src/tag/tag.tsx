@@ -3,6 +3,7 @@ import { CloseIcon } from 'tdesign-icons-vue-next';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
 import config from '../config';
 import TagProps from './props';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
 const name = `${prefix}-tag`;
@@ -15,7 +16,7 @@ export default defineComponent({
   props: TagProps,
   emits: ['close', 'click'],
   setup(props) {
-    const baseClass = name;
+    const tagClass = usePrefixClass('tag');
     const renderTNodeJSX = useTNodeJSX();
     const renderContent = useContent();
 
@@ -25,19 +26,19 @@ export default defineComponent({
         : {};
     });
 
-    const classes = computed(() => [
-      `${baseClass}`,
-      `${baseClass}--${props.theme}`,
-      `${baseClass}--${props.shape}`,
-      `${baseClass}--${props.variant}`,
-      `${baseClass}--${props.size}`,
+    const tagClasses = computed(() => [
+      `${tagClass.value}`,
+      `${tagClass.value}--${props.theme}`,
+      `${tagClass.value}--${props.shape}`,
+      `${tagClass.value}--${props.variant}`,
+      `${tagClass.value}--${props.size}`,
       {
-        [`${prefix}-is-closable ${baseClass}--closable`]: props.closable,
-        [`${prefix}-is-disabled ${baseClass}--disabled`]: props.disabled,
+        [`${tagClass.value}--closable`]: props.closable,
+        [`${tagClass.value}--disabled`]: props.disabled,
       },
     ]);
 
-    const onClickClose = (e: MouseEvent): void => {
+    const handleClose = (e: MouseEvent): void => {
       e.stopPropagation();
       if (!props.disabled) {
         props.onClose?.({ e });
@@ -57,16 +58,16 @@ export default defineComponent({
       const icon = renderTNodeJSX('icon');
       return (
         <span
-          class={classes.value}
+          class={tagClasses.value}
           style={tagStyle.value}
           aria-disabled={props.disabled}
           role="button"
           onClick={handleClick}
         >
-          <span class={`${baseClass}__icon`}>{icon}</span>
-          <span class={`${baseClass}__text`}>{tagContent}</span>
+          {icon && <span class={`${tagClass.value}__icon`}>{icon}</span>}
+          <span class={`${tagClass.value}__text`}>{tagContent}</span>
           {props.closable && (
-            <span class={`${baseClass}__icon-close`} onClick={onClickClose}>
+            <span class={`${tagClass.value}__icon-close`} onClick={handleClose}>
               <close-icon />
             </span>
           )}

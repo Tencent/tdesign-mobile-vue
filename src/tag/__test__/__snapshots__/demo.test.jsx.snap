@@ -25,36 +25,26 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
           class="t-tag t-tag--checkable t-tag--square t-tag--default t-tag--large t-tag--light"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
-            
             未选中态
-            
           </span>
+          <!---->
         </span>
         <span
           aria-disabled="false"
-          class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--light t-is-checked t-tag--checked"
+          class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--light t-tag--checked"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
-            
             已选中态
-            
           </span>
+          <!---->
         </span>
       </div>
       <div
@@ -70,36 +60,26 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
           class="t-tag t-tag--checkable t-tag--square t-tag--default t-tag--large t-tag--dark"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
-            
             未选中态
-            
           </span>
+          <!---->
         </span>
         <span
           aria-disabled="false"
-          class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--dark t-is-checked t-tag--checked"
+          class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--dark t-tag--checked"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
-            
             已选中态
-            
           </span>
+          <!---->
         </span>
       </div>
       <div
@@ -115,36 +95,26 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
           class="t-tag t-tag--checkable t-tag--square t-tag--default t-tag--large t-tag--outline"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
-            
             未选中态
-            
           </span>
+          <!---->
         </span>
         <span
           aria-disabled="false"
-          class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--outline t-is-checked t-tag--checked"
+          class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--outline t-tag--checked"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
-            
             已选中态
-            
           </span>
+          <!---->
         </span>
       </div>
       <div
@@ -160,36 +130,26 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
           class="t-tag t-tag--checkable t-tag--square t-tag--default t-tag--large t-tag--light-outline"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
-            
             未选中态
-            
           </span>
+          <!---->
         </span>
         <span
           aria-disabled="false"
-          class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--light-outline t-is-checked t-tag--checked"
+          class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--light-outline t-tag--checked"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
-            
             已选中态
-            
           </span>
+          <!---->
         </span>
       </div>
       
@@ -210,14 +170,10 @@ exports[`Tag > Tag closableVue demo works fine 1`] = `
   >
     <span
       aria-disabled="false"
-      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium t-is-closable t-tag--closable"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium t-tag--closable"
       role="button"
     >
-      <span
-        class="t-tag__icon"
-      >
-        <!---->
-      </span>
+      <!---->
       <span
         class="t-tag__text"
       >
@@ -244,14 +200,10 @@ exports[`Tag > Tag closableVue demo works fine 1`] = `
     </span>
     <span
       aria-disabled="false"
-      class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium t-is-closable t-tag--closable"
+      class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium t-tag--closable"
       role="button"
     >
-      <span
-        class="t-tag__icon"
-      >
-        <!---->
-      </span>
+      <!---->
       <span
         class="t-tag__text"
       >
@@ -325,11 +277,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
             role="button"
           >
-            <span
-              class="t-tag__icon"
-            >
-              <!---->
-            </span>
+            <!---->
             <span
               class="t-tag__text"
             >
@@ -344,11 +292,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium"
             role="button"
           >
-            <span
-              class="t-tag__icon"
-            >
-              <!---->
-            </span>
+            <!---->
             <span
               class="t-tag__text"
             >
@@ -372,11 +316,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             class="t-tag t-tag--default t-tag--round t-tag--light t-tag--medium"
             role="button"
           >
-            <span
-              class="t-tag__icon"
-            >
-              <!---->
-            </span>
+            <!---->
             <span
               class="t-tag__text"
             >
@@ -391,11 +331,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             class="t-tag t-tag--default t-tag--round t-tag--outline t-tag--medium"
             role="button"
           >
-            <span
-              class="t-tag__icon"
-            >
-              <!---->
-            </span>
+            <!---->
             <span
               class="t-tag__text"
             >
@@ -410,11 +346,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             class="t-tag t-tag--default t-tag--mark t-tag--outline t-tag--medium"
             role="button"
           >
-            <span
-              class="t-tag__icon"
-            >
-              <!---->
-            </span>
+            <!---->
             <span
               class="t-tag__text"
             >
@@ -502,11 +434,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             role="button"
             style="max-width: 130px;"
           >
-            <span
-              class="t-tag__icon"
-            >
-              <!---->
-            </span>
+            <!---->
             <span
               class="t-tag__text"
             >
@@ -529,14 +457,10 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
         >
           <span
             aria-disabled="false"
-            class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium t-is-closable t-tag--closable"
+            class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium t-tag--closable"
             role="button"
           >
-            <span
-              class="t-tag__icon"
-            >
-              <!---->
-            </span>
+            <!---->
             <span
               class="t-tag__text"
             >
@@ -563,14 +487,10 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
           </span>
           <span
             aria-disabled="false"
-            class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium t-is-closable t-tag--closable"
+            class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium t-tag--closable"
             role="button"
           >
-            <span
-              class="t-tag__icon"
-            >
-              <!---->
-            </span>
+            <!---->
             <span
               class="t-tag__text"
             >
@@ -621,36 +541,26 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--checkable t-tag--square t-tag--default t-tag--large t-tag--light"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
-                  
                   未选中态
-                  
                 </span>
+                <!---->
               </span>
               <span
                 aria-disabled="false"
-                class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--light t-is-checked t-tag--checked"
+                class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--light t-tag--checked"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
-                  
                   已选中态
-                  
                 </span>
+                <!---->
               </span>
             </div>
             <div
@@ -666,36 +576,26 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--checkable t-tag--square t-tag--default t-tag--large t-tag--dark"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
-                  
                   未选中态
-                  
                 </span>
+                <!---->
               </span>
               <span
                 aria-disabled="false"
-                class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--dark t-is-checked t-tag--checked"
+                class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--dark t-tag--checked"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
-                  
                   已选中态
-                  
                 </span>
+                <!---->
               </span>
             </div>
             <div
@@ -711,36 +611,26 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--checkable t-tag--square t-tag--default t-tag--large t-tag--outline"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
-                  
                   未选中态
-                  
                 </span>
+                <!---->
               </span>
               <span
                 aria-disabled="false"
-                class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--outline t-is-checked t-tag--checked"
+                class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--outline t-tag--checked"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
-                  
                   已选中态
-                  
                 </span>
+                <!---->
               </span>
             </div>
             <div
@@ -756,36 +646,26 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--checkable t-tag--square t-tag--default t-tag--large t-tag--light-outline"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
-                  
                   未选中态
-                  
                 </span>
+                <!---->
               </span>
               <span
                 aria-disabled="false"
-                class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--light-outline t-is-checked t-tag--checked"
+                class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--light-outline t-tag--checked"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
-                  
                   已选中态
-                  
                 </span>
+                <!---->
               </span>
             </div>
             
@@ -830,11 +710,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -849,11 +725,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--primary t-tag--square t-tag--light t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -868,11 +740,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--warning t-tag--square t-tag--light t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -887,11 +755,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--danger t-tag--square t-tag--light t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -906,11 +770,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--success t-tag--square t-tag--light t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -929,11 +789,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--default t-tag--square t-tag--dark t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -948,11 +804,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--primary t-tag--square t-tag--dark t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -967,11 +819,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--warning t-tag--square t-tag--dark t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -986,11 +834,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--danger t-tag--square t-tag--dark t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -1005,11 +849,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--success t-tag--square t-tag--dark t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -1028,11 +868,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -1047,11 +883,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--primary t-tag--square t-tag--outline t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -1066,11 +898,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--warning t-tag--square t-tag--outline t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -1085,11 +913,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--danger t-tag--square t-tag--outline t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -1104,11 +928,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--success t-tag--square t-tag--outline t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -1127,11 +947,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--default t-tag--square t-tag--light-outline t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -1146,11 +962,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--primary t-tag--square t-tag--light-outline t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -1165,11 +977,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--warning t-tag--square t-tag--light-outline t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -1184,11 +992,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--danger t-tag--square t-tag--light-outline t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -1203,11 +1007,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 class="t-tag t-tag--success t-tag--square t-tag--light-outline t-tag--medium"
                 role="button"
               >
-                <span
-                  class="t-tag__icon"
-                >
-                  <!---->
-                </span>
+                <!---->
                 <span
                   class="t-tag__text"
                 >
@@ -1258,11 +1058,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
               data-v-aac3f224=""
               role="button"
             >
-              <span
-                class="t-tag__icon"
-              >
-                <!---->
-              </span>
+              <!---->
               <span
                 class="t-tag__text"
               >
@@ -1278,11 +1074,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
               data-v-aac3f224=""
               role="button"
             >
-              <span
-                class="t-tag__icon"
-              >
-                <!---->
-              </span>
+              <!---->
               <span
                 class="t-tag__text"
               >
@@ -1298,11 +1090,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
               data-v-aac3f224=""
               role="button"
             >
-              <span
-                class="t-tag__icon"
-              >
-                <!---->
-              </span>
+              <!---->
               <span
                 class="t-tag__text"
               >
@@ -1318,11 +1106,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
               data-v-aac3f224=""
               role="button"
             >
-              <span
-                class="t-tag__icon"
-              >
-                <!---->
-              </span>
+              <!---->
               <span
                 class="t-tag__text"
               >
@@ -1339,15 +1123,11 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
           >
             <span
               aria-disabled="false"
-              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large t-is-closable t-tag--closable"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large t-tag--closable"
               data-v-aac3f224=""
               role="button"
             >
-              <span
-                class="t-tag__icon"
-              >
-                <!---->
-              </span>
+              <!---->
               <span
                 class="t-tag__text"
               >
@@ -1374,15 +1154,11 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             </span>
             <span
               aria-disabled="false"
-              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large t-is-closable t-tag--closable"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large t-tag--closable"
               data-v-aac3f224=""
               role="button"
             >
-              <span
-                class="t-tag__icon"
-              >
-                <!---->
-              </span>
+              <!---->
               <span
                 class="t-tag__text"
               >
@@ -1409,15 +1185,11 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             </span>
             <span
               aria-disabled="false"
-              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium t-is-closable t-tag--closable"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium t-tag--closable"
               data-v-aac3f224=""
               role="button"
             >
-              <span
-                class="t-tag__icon"
-              >
-                <!---->
-              </span>
+              <!---->
               <span
                 class="t-tag__text"
               >
@@ -1444,15 +1216,11 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             </span>
             <span
               aria-disabled="false"
-              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small t-is-closable t-tag--closable"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small t-tag--closable"
               data-v-aac3f224=""
               role="button"
             >
-              <span
-                class="t-tag__icon"
-              >
-                <!---->
-              </span>
+              <!---->
               <span
                 class="t-tag__text"
               >
@@ -1501,11 +1269,7 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
       data-v-aac3f224=""
       role="button"
     >
-      <span
-        class="t-tag__icon"
-      >
-        <!---->
-      </span>
+      <!---->
       <span
         class="t-tag__text"
       >
@@ -1521,11 +1285,7 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
       data-v-aac3f224=""
       role="button"
     >
-      <span
-        class="t-tag__icon"
-      >
-        <!---->
-      </span>
+      <!---->
       <span
         class="t-tag__text"
       >
@@ -1541,11 +1301,7 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
       data-v-aac3f224=""
       role="button"
     >
-      <span
-        class="t-tag__icon"
-      >
-        <!---->
-      </span>
+      <!---->
       <span
         class="t-tag__text"
       >
@@ -1561,11 +1317,7 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
       data-v-aac3f224=""
       role="button"
     >
-      <span
-        class="t-tag__icon"
-      >
-        <!---->
-      </span>
+      <!---->
       <span
         class="t-tag__text"
       >
@@ -1582,15 +1334,11 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
   >
     <span
       aria-disabled="false"
-      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large t-is-closable t-tag--closable"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large t-tag--closable"
       data-v-aac3f224=""
       role="button"
     >
-      <span
-        class="t-tag__icon"
-      >
-        <!---->
-      </span>
+      <!---->
       <span
         class="t-tag__text"
       >
@@ -1617,15 +1365,11 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
     </span>
     <span
       aria-disabled="false"
-      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large t-is-closable t-tag--closable"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large t-tag--closable"
       data-v-aac3f224=""
       role="button"
     >
-      <span
-        class="t-tag__icon"
-      >
-        <!---->
-      </span>
+      <!---->
       <span
         class="t-tag__text"
       >
@@ -1652,15 +1396,11 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
     </span>
     <span
       aria-disabled="false"
-      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium t-is-closable t-tag--closable"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium t-tag--closable"
       data-v-aac3f224=""
       role="button"
     >
-      <span
-        class="t-tag__icon"
-      >
-        <!---->
-      </span>
+      <!---->
       <span
         class="t-tag__text"
       >
@@ -1687,15 +1427,11 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
     </span>
     <span
       aria-disabled="false"
-      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small t-is-closable t-tag--closable"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small t-tag--closable"
       data-v-aac3f224=""
       role="button"
     >
-      <span
-        class="t-tag__icon"
-      >
-        <!---->
-      </span>
+      <!---->
       <span
         class="t-tag__text"
       >
@@ -1743,11 +1479,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -1762,11 +1494,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--primary t-tag--square t-tag--light t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -1781,11 +1509,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--warning t-tag--square t-tag--light t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -1800,11 +1524,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--danger t-tag--square t-tag--light t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -1819,11 +1539,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--success t-tag--square t-tag--light t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -1842,11 +1558,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--default t-tag--square t-tag--dark t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -1861,11 +1573,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--primary t-tag--square t-tag--dark t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -1880,11 +1588,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--warning t-tag--square t-tag--dark t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -1899,11 +1603,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--danger t-tag--square t-tag--dark t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -1918,11 +1618,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--success t-tag--square t-tag--dark t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -1941,11 +1637,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -1960,11 +1652,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--primary t-tag--square t-tag--outline t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -1979,11 +1667,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--warning t-tag--square t-tag--outline t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -1998,11 +1682,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--danger t-tag--square t-tag--outline t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -2017,11 +1697,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--success t-tag--square t-tag--outline t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -2040,11 +1716,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--default t-tag--square t-tag--light-outline t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -2059,11 +1731,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--primary t-tag--square t-tag--light-outline t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -2078,11 +1746,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--warning t-tag--square t-tag--light-outline t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -2097,11 +1761,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--danger t-tag--square t-tag--light-outline t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -2116,11 +1776,7 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
           class="t-tag t-tag--success t-tag--square t-tag--light-outline t-tag--medium"
           role="button"
         >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
+          <!---->
           <span
             class="t-tag__text"
           >
@@ -2151,11 +1807,7 @@ exports[`Tag > Tag typeVue demo works fine 1`] = `
       class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
       role="button"
     >
-      <span
-        class="t-tag__icon"
-      >
-        <!---->
-      </span>
+      <!---->
       <span
         class="t-tag__text"
       >
@@ -2170,11 +1822,7 @@ exports[`Tag > Tag typeVue demo works fine 1`] = `
       class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium"
       role="button"
     >
-      <span
-        class="t-tag__icon"
-      >
-        <!---->
-      </span>
+      <!---->
       <span
         class="t-tag__text"
       >
@@ -2198,11 +1846,7 @@ exports[`Tag > Tag typeVue demo works fine 1`] = `
       class="t-tag t-tag--default t-tag--round t-tag--light t-tag--medium"
       role="button"
     >
-      <span
-        class="t-tag__icon"
-      >
-        <!---->
-      </span>
+      <!---->
       <span
         class="t-tag__text"
       >
@@ -2217,11 +1861,7 @@ exports[`Tag > Tag typeVue demo works fine 1`] = `
       class="t-tag t-tag--default t-tag--round t-tag--outline t-tag--medium"
       role="button"
     >
-      <span
-        class="t-tag__icon"
-      >
-        <!---->
-      </span>
+      <!---->
       <span
         class="t-tag__text"
       >
@@ -2236,11 +1876,7 @@ exports[`Tag > Tag typeVue demo works fine 1`] = `
       class="t-tag t-tag--default t-tag--mark t-tag--outline t-tag--medium"
       role="button"
     >
-      <span
-        class="t-tag__icon"
-      >
-        <!---->
-      </span>
+      <!---->
       <span
         class="t-tag__text"
       >
@@ -2328,11 +1964,7 @@ exports[`Tag > Tag typeVue demo works fine 1`] = `
       role="button"
       style="max-width: 130px;"
     >
-      <span
-        class="t-tag__icon"
-      >
-        <!---->
-      </span>
+      <!---->
       <span
         class="t-tag__text"
       >

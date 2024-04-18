@@ -18,10 +18,7 @@ export default {
     default: undefined,
   },
   /** 标签选中的状态，默认风格（theme=default）才有选中态，非受控属性 */
-  defaultChecked: {
-    type: Boolean,
-    default: undefined,
-  },
+  defaultChecked: Boolean,
   /** 标签是否可关闭 */
   closable: Boolean,
   /** 组件子元素；传入数组时：[选中内容，非选中内容] */
