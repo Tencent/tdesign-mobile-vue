@@ -1,12 +1,13 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Switch Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 customValue | Array | - | 用于自定义开关的值，[打开时的值，关闭时的值]。默认为 [true, false]。示例：[1, 0]、['open', 'close']。TS 类型：`Array<SwitchValue>` | N
-disabled | Boolean | - | 是否禁用组件，默认为 false | N
+disabled | Boolean | false | 是否禁用组件 | N
 icon | Array | [] | 开关的图标；[打开时的图标，关闭时的图标]。TS 类型：`TNode[]`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 label | Array | [] | 开关的标签；[打开时的标签，关闭时的标签]。TS 类型：`string[]` | N
 loading | Boolean | false | 是否处于加载中状态 | N
@@ -21,8 +22,8 @@ onChange | Function |  | TS 类型：`(value: T, context: { e: MouseEvent }) => 
 -- | -- | --
 change | `(value: T, context: { e: MouseEvent })` | 数据发生变化时触发
 
-
 ### CSS 变量
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
@@ -56,4 +57,4 @@ change | `(value: T, context: { e: MouseEvent })` | 数据发生变化时触发
 --td-switch-width | 45px | - 
 --td-switch-label-font-size | 12px | - 
 --td-switch-label-font-size | 14px | - 
---td-switch-label-font-size | 16px | - 
+--td-switch-label-font-size | 16px | -
