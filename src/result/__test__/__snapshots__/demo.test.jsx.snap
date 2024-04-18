@@ -8,7 +8,6 @@ exports[`Result > Result customVue demo works fine 1`] = `
     class="t-result__thumb"
   >
     
-    
     <div
       class="t-image t-image--square external-class-image"
     >
@@ -52,7 +51,6 @@ exports[`Result > Result customVue demo works fine 1`] = `
         />
       </picture>
     </div>
-    
     
   </div>
   <div
@@ -140,7 +138,6 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
           <div
             class="t-result__thumb"
           >
-            
             <svg
               class="t-icon t-icon-check-circle t-result__icon"
               fill="none"
@@ -153,7 +150,6 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
                 fill="currentColor"
               />
             </svg>
-            
           </div>
           <div
             class="t-result__title"
@@ -174,7 +170,6 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
           <div
             class="t-result__thumb"
           >
-            
             <svg
               class="t-icon t-icon-close-circle t-result__icon"
               fill="none"
@@ -187,7 +182,6 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
                 fill="currentColor"
               />
             </svg>
-            
           </div>
           <div
             class="t-result__title"
@@ -208,7 +202,6 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
           <div
             class="t-result__thumb"
           >
-            
             <svg
               class="t-icon t-icon-info-circle t-result__icon"
               fill="none"
@@ -221,7 +214,6 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
                 fill="currentColor"
               />
             </svg>
-            
           </div>
           <div
             class="t-result__title"
@@ -242,7 +234,6 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
           <div
             class="t-result__thumb"
           >
-            
             <svg
               class="t-icon t-icon-info-circle t-result__icon"
               fill="none"
@@ -255,7 +246,6 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
                 fill="currentColor"
               />
             </svg>
-            
           </div>
           <div
             class="t-result__title"
@@ -298,7 +288,6 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
         <div
           class="t-result__thumb"
         >
-          
           
           <div
             class="t-image t-image--square external-class-image"
@@ -343,7 +332,6 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
               />
             </picture>
           </div>
-          
           
         </div>
         <div
@@ -426,7 +414,6 @@ exports[`Result > Result themeVue demo works fine 1`] = `
       <div
         class="t-result__thumb"
       >
-        
         <svg
           class="t-icon t-icon-check-circle t-result__icon"
           fill="none"
@@ -439,7 +426,6 @@ exports[`Result > Result themeVue demo works fine 1`] = `
             fill="currentColor"
           />
         </svg>
-        
       </div>
       <div
         class="t-result__title"
@@ -460,7 +446,6 @@ exports[`Result > Result themeVue demo works fine 1`] = `
       <div
         class="t-result__thumb"
       >
-        
         <svg
           class="t-icon t-icon-close-circle t-result__icon"
           fill="none"
@@ -473,7 +458,6 @@ exports[`Result > Result themeVue demo works fine 1`] = `
             fill="currentColor"
           />
         </svg>
-        
       </div>
       <div
         class="t-result__title"
@@ -494,7 +478,6 @@ exports[`Result > Result themeVue demo works fine 1`] = `
       <div
         class="t-result__thumb"
       >
-        
         <svg
           class="t-icon t-icon-info-circle t-result__icon"
           fill="none"
@@ -507,7 +490,6 @@ exports[`Result > Result themeVue demo works fine 1`] = `
             fill="currentColor"
           />
         </svg>
-        
       </div>
       <div
         class="t-result__title"
@@ -528,7 +510,6 @@ exports[`Result > Result themeVue demo works fine 1`] = `
       <div
         class="t-result__thumb"
       >
-        
         <svg
           class="t-icon t-icon-info-circle t-result__icon"
           fill="none"
@@ -541,7 +522,6 @@ exports[`Result > Result themeVue demo works fine 1`] = `
             fill="currentColor"
           />
         </svg>
-        
       </div>
       <div
         class="t-result__title"

@@ -2,6 +2,7 @@ import { ref, reactive } from 'vue';
 import { useRafFn } from '@vueuse/core';
 import { TdUseCountDownProps, TdUseCountDown } from './type';
 import { getRemainTimes, getShowTimes, getScreenFps } from './utils';
+import { isBrowser } from '../util';
 
 export function useCountDown(props: TdUseCountDownProps): TdUseCountDown {
   const {
@@ -21,6 +22,7 @@ export function useCountDown(props: TdUseCountDownProps): TdUseCountDown {
   // raf
   const { pause, resume } = useRafFn(
     async () => {
+      if (!isBrowser) return;
       if (!fps.value) {
         const res = await getScreenFps?.();
         fps.value = res || 60;

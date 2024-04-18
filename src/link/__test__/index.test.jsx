@@ -1,8 +1,7 @@
-import { h } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { Icon, AppIcon as TIconApp } from 'tdesign-icons-vue-next';
-import Link from '../link.vue';
+import Link from '../link';
 // const iconFunc = () => h(TIconApp);
 
 // every component needs four parts: props/events/slots/functions.

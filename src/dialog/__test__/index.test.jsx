@@ -1,7 +1,7 @@
 import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Dialog from '../dialog.vue';
-import Button from '../../button/button.vue';
+import Button from '../../button/button';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
 import prefixConfig from '../../config';

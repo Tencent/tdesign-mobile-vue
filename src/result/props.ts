@@ -20,7 +20,7 @@ export default {
   image: {
     type: [String, Function] as PropType<TdResultProps['image']>,
   },
-  /** 内置主题。 */
+  /** 内置主题 */
   theme: {
     type: String as PropType<TdResultProps['theme']>,
     default: 'default' as TdResultProps['theme'],

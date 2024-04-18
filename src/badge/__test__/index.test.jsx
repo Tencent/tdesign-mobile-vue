@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
-import Badge from '../badge.vue';
-import Button from '../../button/button.vue';
+import Badge from '../badge';
+import Button from '../../button/button';
 import config from '../../config';
 
 const { prefix } = config;
@@ -58,7 +58,7 @@ describe('Badge', () => {
     ['circle', 'ribbon', 'round'].forEach((s) => {
       expect(inner.classes().includes(`${name}--${s}`)).toBeFalsy();
     });
-    expect($badge.text()).toEqual(`${TEXT} ${count}`);
+    expect($badge.text()).toEqual(`${TEXT}${count}`);
 
     const shape = 'ribbon';
     await wrapper.setProps({

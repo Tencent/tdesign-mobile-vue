@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
-import Skeleton from '../skeleton.vue';
+import Skeleton from '../skeleton';
 
 const prefix = 't';
 const name = `${prefix}-skeleton`;

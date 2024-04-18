@@ -63,6 +63,7 @@ import {
   defineProps,
   watch,
   onUnmounted,
+  toRefs,
 } from 'vue';
 import isObject from 'lodash/isObject';
 import isNumber from 'lodash/isNumber';
@@ -95,7 +96,9 @@ const items = ref<any>([]);
 const props = defineProps(SwiperProps);
 const emit = defineEmits(['change', 'update:current', 'update:modelValue']);
 
-const [current, setCurrent] = useVModel(ref(props.current), ref(props.modelValue), props.defaultCurrent);
+const { current: value, modelValue } = toRefs(props);
+
+const [current, setCurrent] = useVModel(value, modelValue, props.defaultCurrent);
 const swiperContainer = ref<HTMLElement | null>(null);
 const computedNavigation = computed(() => (isObject(props.navigation) ? '' : renderTNode(self, 'navigation')));
 
@@ -255,6 +258,7 @@ const updateContainerHeight = () => {
   } else if (rect) {
     setContainerHeight(rect.height);
   }
+  updateItemPosition();
 };
 
 watch(current, updateContainerHeight);

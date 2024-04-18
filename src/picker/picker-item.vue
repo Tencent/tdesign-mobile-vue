@@ -36,8 +36,7 @@ export default defineComponent({
   emits: ['pick'],
   setup(props, context) {
     let picker: Picker | null = null;
-    const el = document.createElement('ul');
-    const root = ref(el);
+    const root = ref();
     const getIndexByValue = (val: number | string | undefined) => {
       let defaultIndex = 0;
       if (val !== undefined) {

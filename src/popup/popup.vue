@@ -20,7 +20,7 @@ import popupProps from './props';
 import TOverlay from '../overlay';
 import config from '../config';
 import { TdPopupProps } from './type';
-import { useDefault, TNode, renderTNode } from '../shared';
+import { useDefault, TNode, renderTNode, isBrowser } from '../shared';
 import { getAttach } from '../shared/dom';
 
 const { prefix } = config;
@@ -109,7 +109,10 @@ export default defineComponent({
       props.onClosed?.();
     };
     const afterEnter = () => props.onOpened?.();
-    const to = computed(() => getAttach(props.attach ?? 'body'));
+    const to = computed(() => {
+      if (!isBrowser || !props.attach) return undefined;
+      return getAttach(props.attach ?? 'body');
+    });
 
     watch(
       () => currentVisible.value,
@@ -122,7 +125,7 @@ export default defineComponent({
     );
 
     const lock = () => {
-      if (!lockTimes) {
+      if (!lockTimes && isBrowser) {
         document.body.classList.add(bodyLockClass);
       }
 
@@ -133,7 +136,7 @@ export default defineComponent({
       if (lockTimes) {
         lockTimes--;
 
-        if (!lockTimes) {
+        if (!lockTimes && isBrowser) {
           document.body.classList.remove(bodyLockClass);
         }
       }

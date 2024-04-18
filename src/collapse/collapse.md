@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Collapse Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 defaultExpandAll | Boolean | false | 默认是否展开全部 | N
 disabled | Boolean | - | 是否禁用面板展开/收起操作 | N
@@ -20,9 +21,10 @@ onChange | Function |  | TS 类型：`(value: CollapseValue, context: { e: Mouse
 -- | -- | --
 change | `(value: CollapseValue, context: { e: MouseEvent })` | 切换面板时触发，返回变化的值
 
+
 ### CollapsePanel Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 content | String / Slot / Function | - | 折叠面板内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 default | String / Slot / Function | - | 折叠面板内容，同 content。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
@@ -35,8 +37,8 @@ headerRightContent | String / Slot / Function | - | 面板头的右侧区域，�
 placement | String | bottom | 选项卡内容的位置。可选项：bottom/top | N
 value | String / Number | - | 当前面板唯一标识，如果值为空则取当前面下标兜底作为唯一标识 | N
 
-
 ### CSS 变量
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
@@ -49,4 +51,4 @@ value | String / Number | - | 当前面板唯一标识，如果值为空则取�
 --td-collapse-header-text-color | @font-gray-1 | - 
 --td-collapse-header-text-disabled-color | @font-gray-4 | - 
 --td-collapse-panel-bg-color | @bg-color-container | - 
---td-collapse-title-font-size | @font-size-m | - 
+--td-collapse-title-font-size | @font-size-m | -

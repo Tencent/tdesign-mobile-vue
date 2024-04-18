@@ -1,4 +1,4 @@
-import Badge from './badge.vue';
+import Badge from './badge';
 import { withInstall, WithInstallType } from '../shared';
 import { TdBadgeProps } from './type';
 

@@ -44,9 +44,9 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
             class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
             style="right: 0px; top: 0px;"
           >
-            <!--v-if-->
-             16 
-            <!--v-if-->
+            <!---->
+            16
+            <!---->
           </div>
           <!---->
         </div>
@@ -99,9 +99,9 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
             class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
             style="right: 0px; top: 0px;"
           >
-            <!--v-if-->
-              
-            <!--v-if-->
+            <!---->
+            
+            <!---->
           </div>
           <!---->
         </div>
@@ -154,9 +154,9 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
             class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
             style="right: 0px; top: 0px;"
           >
-            <!--v-if-->
-             New 
-            <!--v-if-->
+            <!---->
+            New
+            <!---->
           </div>
           <!---->
         </div>
@@ -209,9 +209,9 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
             class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
             style="right: 0px; top: 0px;"
           >
-            <!--v-if-->
-             ··· 
-            <!--v-if-->
+            <!---->
+            ···
+            <!---->
           </div>
           <!---->
         </div>
@@ -1178,9 +1178,9 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                   class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
                   style="right: 0px; top: 0px;"
                 >
-                  <!--v-if-->
-                   16 
-                  <!--v-if-->
+                  <!---->
+                  16
+                  <!---->
                 </div>
                 <!---->
               </div>
@@ -1233,9 +1233,9 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                   class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
                   style="right: 0px; top: 0px;"
                 >
-                  <!--v-if-->
-                    
-                  <!--v-if-->
+                  <!---->
+                  
+                  <!---->
                 </div>
                 <!---->
               </div>
@@ -1288,9 +1288,9 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                   class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
                   style="right: 0px; top: 0px;"
                 >
-                  <!--v-if-->
-                   New 
-                  <!--v-if-->
+                  <!---->
+                  New
+                  <!---->
                 </div>
                 <!---->
               </div>
@@ -1343,9 +1343,9 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                   class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
                   style="right: 0px; top: 0px;"
                 >
-                  <!--v-if-->
-                   ··· 
-                  <!--v-if-->
+                  <!---->
+                  ···
+                  <!---->
                 </div>
                 <!---->
               </div>

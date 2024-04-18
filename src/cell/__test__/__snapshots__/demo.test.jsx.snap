@@ -329,9 +329,9 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 <div
                   class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
                 >
-                  <!--v-if-->
-                   16 
-                  <!--v-if-->
+                  <!---->
+                  16
+                  <!---->
                 </div>
                 <!---->
               </div>
@@ -646,9 +646,9 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 <div
                   class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
                 >
-                  <!--v-if-->
-                   16 
-                  <!--v-if-->
+                  <!---->
+                  16
+                  <!---->
                 </div>
                 <!---->
               </div>
@@ -940,7 +940,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                         </div>
                         
                       </div>
-                      <!--v-if-->
+                      <!---->
                       <!---->
                     </div>
                   </div>
@@ -1342,9 +1342,9 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
           <div
             class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
           >
-            <!--v-if-->
-             16 
-            <!--v-if-->
+            <!---->
+            16
+            <!---->
           </div>
           <!---->
         </div>
@@ -1636,7 +1636,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!--v-if-->
+                <!---->
                 <!---->
               </div>
             </div>
@@ -1827,9 +1827,9 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
           <div
             class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
           >
-            <!--v-if-->
-             16 
-            <!--v-if-->
+            <!---->
+            16
+            <!---->
           </div>
           <!---->
         </div>

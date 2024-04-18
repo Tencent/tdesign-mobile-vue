@@ -1,6 +1,6 @@
 import { MaybeElementRef, UnRefElementReturn, unrefElement, useEventListener } from '@vueuse/core';
 import isArray from 'lodash/isArray';
-import { inBrowser } from '../util';
+import { isBrowser } from '../util';
 
 export interface UseClickAwayOptions {
   /**
@@ -39,7 +39,7 @@ export function useClickAway<T extends UseClickAwayOptions>(
   fn: UseClickAwayHandler<{ detectIframe: T['detectIframe'] }>,
   options: T = {} as T,
 ) {
-  if (!inBrowser) return;
+  if (!isBrowser) return;
 
   const { eventName = 'touchstart', capture = true, ignore = [], detectIframe = false } = options;
 

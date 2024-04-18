@@ -4,16 +4,13 @@ exports[`Footer > Footer baseVue demo works fine 1`] = `
 <div
   class="t-footer"
 >
-  <!-- logo -->
-  
-  <!-- text -->
-  <!--v-if-->
+  <!---->
+  <!---->
   <div
     class="t-footer__text"
   >
     Copyright © 2019-2023 TDesign.All Rights Reserved.
   </div>
-  
 </div>
 `;
 
@@ -29,9 +26,7 @@ exports[`Footer > Footer linkVue demo works fine 1`] = `
     <div
       class="t-footer"
     >
-      <!-- logo -->
-      
-      <!-- text -->
+      <!---->
       <div
         class="t-footer__link-list"
       >
@@ -43,7 +38,7 @@ exports[`Footer > Footer linkVue demo works fine 1`] = `
         >
           底部链接
         </a>
-        <!--v-if-->
+        <!---->
         
         
       </div>
@@ -52,7 +47,6 @@ exports[`Footer > Footer linkVue demo works fine 1`] = `
       >
         Copyright © 2021-2031 TD.All Rights Reserved.
       </div>
-      
     </div>
   </div>
   <div
@@ -61,9 +55,7 @@ exports[`Footer > Footer linkVue demo works fine 1`] = `
     <div
       class="t-footer"
     >
-      <!-- logo -->
-      
-      <!-- text -->
+      <!---->
       <div
         class="t-footer__link-list"
       >
@@ -88,7 +80,7 @@ exports[`Footer > Footer linkVue demo works fine 1`] = `
         >
           底部链接
         </a>
-        <!--v-if-->
+        <!---->
         
         
       </div>
@@ -97,7 +89,6 @@ exports[`Footer > Footer linkVue demo works fine 1`] = `
       >
         Copyright © 2021-2031 TD.All Rights Reserved.
       </div>
-      
     </div>
   </div>
   
@@ -113,7 +104,6 @@ exports[`Footer > Footer logoVue demo works fine 1`] = `
   <div
     class="t-footer"
   >
-    <!-- logo -->
     <a
       class="t-footer__logo"
     >
@@ -166,6 +156,8 @@ exports[`Footer > Footer logoVue demo works fine 1`] = `
         品牌名称
       </span>
     </a>
+    <!---->
+    <!---->
   </div>
   
 </div>
@@ -205,16 +197,13 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
       <div
         class="t-footer"
       >
-        <!-- logo -->
-        
-        <!-- text -->
-        <!--v-if-->
+        <!---->
+        <!---->
         <div
           class="t-footer__text"
         >
           Copyright © 2019-2023 TDesign.All Rights Reserved.
         </div>
-        
       </div>
       
     </div>
@@ -244,9 +233,7 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
         <div
           class="t-footer"
         >
-          <!-- logo -->
-          
-          <!-- text -->
+          <!---->
           <div
             class="t-footer__link-list"
           >
@@ -258,7 +245,7 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
             >
               底部链接
             </a>
-            <!--v-if-->
+            <!---->
             
             
           </div>
@@ -267,7 +254,6 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
           >
             Copyright © 2021-2031 TD.All Rights Reserved.
           </div>
-          
         </div>
       </div>
       <div
@@ -276,9 +262,7 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
         <div
           class="t-footer"
         >
-          <!-- logo -->
-          
-          <!-- text -->
+          <!---->
           <div
             class="t-footer__link-list"
           >
@@ -303,7 +287,7 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
             >
               底部链接
             </a>
-            <!--v-if-->
+            <!---->
             
             
           </div>
@@ -312,7 +296,6 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
           >
             Copyright © 2021-2031 TD.All Rights Reserved.
           </div>
-          
         </div>
       </div>
       
@@ -341,7 +324,6 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
       <div
         class="t-footer"
       >
-        <!-- logo -->
         <a
           class="t-footer__logo"
         >
@@ -394,6 +376,8 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
             品牌名称
           </span>
         </a>
+        <!---->
+        <!---->
       </div>
       
       

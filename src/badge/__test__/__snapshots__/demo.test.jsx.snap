@@ -26,9 +26,9 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
         class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
         style="right: -4px; top: 4px;"
       >
-        <!--v-if-->
-          
-        <!--v-if-->
+        <!---->
+        
+        <!---->
       </div>
       <!---->
     </div>
@@ -53,9 +53,9 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
         class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
         style="right: 1px; top: -1px;"
       >
-        <!--v-if-->
-          
-        <!--v-if-->
+        <!---->
+        
+        <!---->
       </div>
       <!---->
     </div>
@@ -88,9 +88,9 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
         class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
         style="right: 1px; top: 1px;"
       >
-        <!--v-if-->
-          
-        <!--v-if-->
+        <!---->
+        
+        <!---->
       </div>
       <!---->
     </div>
@@ -119,9 +119,9 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
         class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         style="right: -8px; top: 0px;"
       >
-        <!--v-if-->
-         8 
-        <!--v-if-->
+        <!---->
+        8
+        <!---->
       </div>
       <!---->
     </div>
@@ -146,9 +146,9 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
         class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         style="right: -2px; top: -2px;"
       >
-        <!--v-if-->
-         2 
-        <!--v-if-->
+        <!---->
+        2
+        <!---->
       </div>
       <!---->
     </div>
@@ -181,9 +181,9 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
         class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         style="right: 2px; top: 2px;"
       >
-        <!--v-if-->
-         8 
-        <!--v-if-->
+        <!---->
+        8
+        <!---->
       </div>
       <!---->
     </div>
@@ -236,9 +236,9 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
         class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         style="right: 0px; top: 2px;"
       >
-        <!--v-if-->
-         NEW 
-        <!--v-if-->
+        <!---->
+        NEW
+        <!---->
       </div>
       <!---->
     </div>
@@ -302,9 +302,9 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
               class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
               style="right: -4px; top: 4px;"
             >
-              <!--v-if-->
-                
-              <!--v-if-->
+              <!---->
+              
+              <!---->
             </div>
             <!---->
           </div>
@@ -329,9 +329,9 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
               class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
               style="right: 1px; top: -1px;"
             >
-              <!--v-if-->
-                
-              <!--v-if-->
+              <!---->
+              
+              <!---->
             </div>
             <!---->
           </div>
@@ -364,9 +364,9 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
               class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
               style="right: 1px; top: 1px;"
             >
-              <!--v-if-->
-                
-              <!--v-if-->
+              <!---->
+              
+              <!---->
             </div>
             <!---->
           </div>
@@ -395,9 +395,9 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
               class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
               style="right: -8px; top: 0px;"
             >
-              <!--v-if-->
-               8 
-              <!--v-if-->
+              <!---->
+              8
+              <!---->
             </div>
             <!---->
           </div>
@@ -422,9 +422,9 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
               class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
               style="right: -2px; top: -2px;"
             >
-              <!--v-if-->
-               2 
-              <!--v-if-->
+              <!---->
+              2
+              <!---->
             </div>
             <!---->
           </div>
@@ -457,9 +457,9 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
               class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
               style="right: 2px; top: 2px;"
             >
-              <!--v-if-->
-               8 
-              <!--v-if-->
+              <!---->
+              8
+              <!---->
             </div>
             <!---->
           </div>
@@ -512,9 +512,9 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
               class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
               style="right: 0px; top: 2px;"
             >
-              <!--v-if-->
-               NEW 
-              <!--v-if-->
+              <!---->
+              NEW
+              <!---->
             </div>
             <!---->
           </div>
@@ -570,9 +570,9 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
               class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
               style="right: -2px; top: -2px;"
             >
-              <!--v-if-->
-               2 
-              <!--v-if-->
+              <!---->
+              2
+              <!---->
             </div>
             <!---->
           </div>
@@ -606,9 +606,9 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
               class="t-badge--basic t-badge--medium t-badge--square t-badge--count t-has-count"
               style="right: -2px; top: -2px;"
             >
-              <!--v-if-->
-               2 
-              <!--v-if-->
+              <!---->
+              2
+              <!---->
             </div>
             <!---->
           </div>
@@ -660,9 +660,9 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
             <div
               class="t-badge--basic t-badge--medium t-badge--bubble t-badge--count t-has-count"
             >
-              <!--v-if-->
-               领积分 
-              <!--v-if-->
+              <!---->
+              领积分
+              <!---->
             </div>
             <!---->
           </div>
@@ -709,7 +709,7 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                   class="t-badge__ribbon--before"
                   style=""
                 />
-                 New 
+                New
                 <div
                   class="t-badge__ribbon--after"
                   style=""
@@ -790,9 +790,9 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                   class="t-badge--basic t-badge--large t-badge--circle t-badge--count t-has-count"
                   style="right: 7px; top: 7px;"
                 >
-                  <!--v-if-->
-                   8 
-                  <!--v-if-->
+                  <!---->
+                  8
+                  <!---->
                 </div>
                 <!---->
               </div>
@@ -846,9 +846,9 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                   class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
                   style="right: 5px; top: 5px;"
                 >
-                  <!--v-if-->
-                   8 
-                  <!--v-if-->
+                  <!---->
+                  8
+                  <!---->
                 </div>
                 <!---->
               </div>
@@ -911,9 +911,9 @@ exports[`Badge > Badge sizeVue demo works fine 1`] = `
             class="t-badge--basic t-badge--large t-badge--circle t-badge--count t-has-count"
             style="right: 7px; top: 7px;"
           >
-            <!--v-if-->
-             8 
-            <!--v-if-->
+            <!---->
+            8
+            <!---->
           </div>
           <!---->
         </div>
@@ -967,9 +967,9 @@ exports[`Badge > Badge sizeVue demo works fine 1`] = `
             class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
             style="right: 5px; top: 5px;"
           >
-            <!--v-if-->
-             8 
-            <!--v-if-->
+            <!---->
+            8
+            <!---->
           </div>
           <!---->
         </div>
@@ -1010,9 +1010,9 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
         class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         style="right: -2px; top: -2px;"
       >
-        <!--v-if-->
-         2 
-        <!--v-if-->
+        <!---->
+        2
+        <!---->
       </div>
       <!---->
     </div>
@@ -1046,9 +1046,9 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
         class="t-badge--basic t-badge--medium t-badge--square t-badge--count t-has-count"
         style="right: -2px; top: -2px;"
       >
-        <!--v-if-->
-         2 
-        <!--v-if-->
+        <!---->
+        2
+        <!---->
       </div>
       <!---->
     </div>
@@ -1100,9 +1100,9 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
       <div
         class="t-badge--basic t-badge--medium t-badge--bubble t-badge--count t-has-count"
       >
-        <!--v-if-->
-         领积分 
-        <!--v-if-->
+        <!---->
+        领积分
+        <!---->
       </div>
       <!---->
     </div>
@@ -1149,7 +1149,7 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
             class="t-badge__ribbon--before"
             style=""
           />
-           New 
+          New
           <div
             class="t-badge__ribbon--after"
             style=""

@@ -120,7 +120,7 @@ exports[`NoticeBar > NoticeBar customizationVue demo works fine 1`] = `
           style="margin-left: 2px;"
           target=""
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-link__content"
           >
@@ -128,7 +128,7 @@ exports[`NoticeBar > NoticeBar customizationVue demo works fine 1`] = `
             详情
             
           </span>
-          <!--v-if-->
+          <!---->
         </a>
         
       </span>
@@ -200,7 +200,7 @@ exports[`NoticeBar > NoticeBar eventVue demo works fine 1`] = `
             style="margin-left: 5px;"
             target=""
           >
-            <!--v-if-->
+            <!---->
             <span
               class="t-link__content"
             >
@@ -208,7 +208,7 @@ exports[`NoticeBar > NoticeBar eventVue demo works fine 1`] = `
               详情
               
             </span>
-            <!--v-if-->
+            <!---->
           </a>
           
         </span>
@@ -566,7 +566,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
                 style="margin-left: 5px;"
                 target=""
               >
-                <!--v-if-->
+                <!---->
                 <span
                   class="t-link__content"
                 >
@@ -574,7 +574,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
                   详情
                   
                 </span>
-                <!--v-if-->
+                <!---->
               </a>
               
             </span>
@@ -782,7 +782,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
                 style="margin-left: 2px;"
                 target=""
               >
-                <!--v-if-->
+                <!---->
                 <span
                   class="t-link__content"
                 >
@@ -790,7 +790,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
                   详情
                   
                 </span>
-                <!--v-if-->
+                <!---->
               </a>
               
             </span>
