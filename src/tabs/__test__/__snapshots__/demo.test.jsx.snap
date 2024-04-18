@@ -51,9 +51,9 @@ exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
                     class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
                     style="right: -4px; top: 1px;"
                   >
-                    <!--v-if-->
-                      
-                    <!--v-if-->
+                    <!---->
+                    
+                    <!---->
                   </div>
                   <!---->
                 </div>
@@ -83,9 +83,9 @@ exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
                     class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
                     style="right: -8px; top: 3px;"
                   >
-                    <!--v-if-->
-                     8 
-                    <!--v-if-->
+                    <!---->
+                    8
+                    <!---->
                   </div>
                   <!---->
                 </div>
@@ -111,7 +111,7 @@ exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -213,7 +213,7 @@ exports[`Tabs > Tabs contentVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -238,7 +238,7 @@ exports[`Tabs > Tabs contentVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -263,7 +263,7 @@ exports[`Tabs > Tabs contentVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -383,7 +383,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -408,7 +408,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -492,7 +492,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -517,7 +517,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -542,7 +542,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -636,7 +636,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -661,7 +661,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -686,7 +686,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -711,7 +711,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -817,7 +817,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -842,7 +842,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -867,7 +867,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -892,7 +892,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -917,7 +917,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -1054,7 +1054,7 @@ exports[`Tabs > Tabs iconVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -1092,7 +1092,7 @@ exports[`Tabs > Tabs iconVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -1130,7 +1130,7 @@ exports[`Tabs > Tabs iconVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -1232,7 +1232,7 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -1257,7 +1257,7 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -1282,7 +1282,7 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -1307,7 +1307,7 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -1332,7 +1332,7 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -1357,7 +1357,7 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -1382,7 +1382,7 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -1407,7 +1407,7 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -1432,7 +1432,7 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -1543,7 +1543,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -1568,7 +1568,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -1652,7 +1652,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -1677,7 +1677,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -1702,7 +1702,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -1796,7 +1796,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -1821,7 +1821,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -1846,7 +1846,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -1871,7 +1871,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -1977,7 +1977,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2002,7 +2002,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2027,7 +2027,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2052,7 +2052,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2077,7 +2077,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2218,7 +2218,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2243,7 +2243,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2268,7 +2268,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2293,7 +2293,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2318,7 +2318,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2343,7 +2343,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2368,7 +2368,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2393,7 +2393,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2418,7 +2418,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2521,7 +2521,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2559,7 +2559,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2597,7 +2597,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2720,9 +2720,9 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
                           style="right: -4px; top: 1px;"
                         >
-                          <!--v-if-->
-                            
-                          <!--v-if-->
+                          <!---->
+                          
+                          <!---->
                         </div>
                         <!---->
                       </div>
@@ -2752,9 +2752,9 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
                           style="right: -8px; top: 3px;"
                         >
-                          <!--v-if-->
-                           8 
-                          <!--v-if-->
+                          <!---->
+                          8
+                          <!---->
                         </div>
                         <!---->
                       </div>
@@ -2780,7 +2780,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2899,7 +2899,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2924,7 +2924,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -2949,7 +2949,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3086,7 +3086,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3111,7 +3111,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3136,7 +3136,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3259,7 +3259,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3284,7 +3284,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3309,7 +3309,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3334,7 +3334,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3440,7 +3440,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3465,7 +3465,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3490,7 +3490,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3515,7 +3515,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3646,7 +3646,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3671,7 +3671,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3696,7 +3696,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3721,7 +3721,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3825,7 +3825,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3850,7 +3850,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3877,7 +3877,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -3902,7 +3902,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           </div>
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                       <!--v-if-->
@@ -4018,7 +4018,7 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -4043,7 +4043,7 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -4068,7 +4068,7 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -4093,7 +4093,7 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -4199,7 +4199,7 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -4224,7 +4224,7 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -4249,7 +4249,7 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -4274,7 +4274,7 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -4388,7 +4388,7 @@ exports[`Tabs > Tabs statusVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -4413,7 +4413,7 @@ exports[`Tabs > Tabs statusVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -4438,7 +4438,7 @@ exports[`Tabs > Tabs statusVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -4540,7 +4540,7 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -4565,7 +4565,7 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -4590,7 +4590,7 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -4615,7 +4615,7 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -4719,7 +4719,7 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -4744,7 +4744,7 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -4771,7 +4771,7 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
@@ -4796,7 +4796,7 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
                 <!--v-if-->
