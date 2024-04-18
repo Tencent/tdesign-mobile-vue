@@ -1,5 +1,5 @@
-import LocalCollapse from './collapse.vue';
-import LocalCollapsePanel from './collapse-panel.vue';
+import LocalCollapse from './collapse';
+import LocalCollapsePanel from './collapse-panel';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';
