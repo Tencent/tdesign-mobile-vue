@@ -1,34 +1,22 @@
-<template>
-  <div ref="referenceRef" :class="`${name}__wrapper`" @click="onClickReference">
-    <t-node :content="triggerElementContent"></t-node>
-  </div>
-
-  <Transition :name="`${name}--animation`" appear @enter="updatePopper" @after-leave="destroyPopper">
-    <div v-show="currentVisible" ref="popoverRef" data-popper-placement :class="[`${name}`]">
-      <div :class="contentClasses">
-        <t-node :content="content"></t-node>
-        <div v-if="showArrow" :class="`${name}__arrow`" data-popper-arrow />
-      </div>
-    </div>
-  </Transition>
-</template>
-<script lang="ts">
-import { defineComponent, getCurrentInstance, computed, ref, watch, onUnmounted } from 'vue';
+import { defineComponent, computed, ref, watch, onUnmounted, Transition } from 'vue';
 import { createPopper, Placement } from '@popperjs/core';
 import PopoverProps from './props';
 import { TdPopoverProps } from './type';
 import config from '../config';
-import { renderContent, renderTNode, TNode, useDefault, useClickAway } from '../shared';
+import { useTNodeJSX, useContent } from '../hooks/tnode';
+import { useDefault, useClickAway } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-popover`;
 
 export default defineComponent({
   name,
-  components: { TNode },
   props: PopoverProps,
   emits: ['visible-change', 'update:visible', 'update:modelValue'],
   setup(props, context) {
+    const renderTNodeJSX = useTNodeJSX();
+    const renderContent = useContent();
+
     const [currentVisible, setVisible] = useDefault<TdPopoverProps['visible'], TdPopoverProps>(
       props,
       context.emit,
@@ -36,7 +24,6 @@ export default defineComponent({
       'visible-change',
     );
 
-    const internalInstance = getCurrentInstance();
     const referenceRef = ref<HTMLElement>();
     const popoverRef = ref<HTMLElement>();
 
@@ -44,8 +31,6 @@ export default defineComponent({
 
     /** popperjs instance */
     let popper: ReturnType<typeof createPopper>;
-    const content = computed(() => renderTNode(internalInstance, 'content'));
-    const triggerElementContent = computed(() => renderContent(internalInstance, 'default', 'triggerElement'));
 
     const getPopperPlacement = (placement: TdPopoverProps['placement']): Placement => {
       return placement?.replace(/-(left|top)$/, '-start').replace(/-(right|bottom)$/, '-end') as Placement;
@@ -171,18 +156,36 @@ export default defineComponent({
       },
     );
 
-    return {
-      name,
-      currentVisible,
-      referenceRef,
-      popoverRef,
-      triggerElementContent,
-      content,
-      contentClasses,
-      updatePopper,
-      destroyPopper,
-      onClickReference,
+    const renderArrow = () => {
+      return props.showArrow && <div class={`${name}__arrow`} data-popper-arrow />;
+    };
+
+    const renderContentNode = () => {
+      return (
+        currentVisible.value && (
+          <div ref={popoverRef} data-popper-placement class={`${name}`}>
+            <div class={contentClasses.value}>
+              {renderTNodeJSX('content')}
+              {renderArrow()}
+            </div>
+          </div>
+        )
+      );
+    };
+
+    return () => {
+      const triggerElementContent = renderContent('default', 'triggerElement');
+
+      return (
+        <>
+          <div ref={referenceRef} class={`${name}__wrapper`} onClick={onClickReference}>
+            {triggerElementContent}
+          </div>
+          <Transition name={`${name}--animation`} appear onEnter={updatePopper} onAfterLeave={destroyPopper}>
+            {renderContentNode()}
+          </Transition>
+        </>
+      );
     };
   },
 });
-</script>
