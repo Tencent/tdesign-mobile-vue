@@ -1,8 +1,8 @@
 import { nextTick, ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import Picker from '../picker.vue';
-import PickerItem from '../picker-item.vue';
+import Picker from '../picker';
+import PickerItem from '../picker-item';
 
 import { DEFAULT_ITEM_HEIGHT, ANIMATION_TIME_LIMIT } from '../picker.class';
 

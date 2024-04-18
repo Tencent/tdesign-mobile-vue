@@ -68,15 +68,17 @@ export default defineComponent({
     });
 
     onMounted(() => {
-      picker = new Picker({
-        el: root.value,
-        defaultIndex: getIndexByValue(props.value) || 0,
-        onChange: (index: number) => {
-          const curItem = props.options[index];
-          const changeValue = { value: curItem.value, index };
-          props.onPick?.(changeValue);
-        },
-      });
+      if (root.value) {
+        picker = new Picker({
+          el: root.value,
+          defaultIndex: getIndexByValue(props.value) || 0,
+          onChange: (index: number) => {
+            const curItem = props.options[index];
+            const changeValue = { value: curItem.value, index };
+            props.onPick?.(changeValue);
+          },
+        });
+      }
     });
 
     watch(
@@ -90,7 +92,7 @@ export default defineComponent({
     return () => {
       return (
         <ul ref={root} class={className.value}>
-          {props.options.map((option, index) => (
+          {(props.options || []).map((option, index) => (
             <li key={index} class={itemClassName.value}>
               {props.renderLabel ? props.renderLabel(option) : option.label}
             </li>

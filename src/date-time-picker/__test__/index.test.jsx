@@ -3,8 +3,8 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import dayjs from 'dayjs';
 
-import DateTimePicker from '../date-time-picker.vue';
-import PickerItem from '../../picker/picker-item.vue';
+import DateTimePicker from '../date-time-picker';
+import PickerItem from '../../picker/picker-item';
 import { DEFAULT_ITEM_HEIGHT, ANIMATION_TIME_LIMIT } from '../../picker/picker.class';
 
 const makeTouch = (el, eventName, touchPosition) => {
@@ -139,7 +139,7 @@ describe('DateTimePicker', () => {
           start: '2023-06-13'
         },
       });
-      expect(wrapper.vm.valueOfPicker).toStrictEqual(['10', '0', '0'])
+      expect(wrapper.vm.value).toStrictEqual('10:00:00')
     })
 
     it(': start && end ', async () => {

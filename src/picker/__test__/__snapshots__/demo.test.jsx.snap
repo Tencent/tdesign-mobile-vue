@@ -73,7 +73,9 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
           </div>
           <div
             class="t-picker__title"
-          />
+          >
+            
+          </div>
           <div
             class="t-picker__confirm"
           >
@@ -262,7 +264,9 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
           </div>
           <div
             class="t-picker__title"
-          />
+          >
+            
+          </div>
           <div
             class="t-picker__confirm"
           >
@@ -367,7 +371,9 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
           </div>
           <div
             class="t-picker__title"
-          />
+          >
+            
+          </div>
           <div
             class="t-picker__confirm"
           >
@@ -808,7 +814,9 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-picker__title"
-              />
+              >
+                
+              </div>
               <div
                 class="t-picker__confirm"
               >
@@ -913,7 +921,9 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-picker__title"
-              />
+              >
+                
+              </div>
               <div
                 class="t-picker__confirm"
               >
@@ -1102,7 +1112,9 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-picker__title"
-              />
+              >
+                
+              </div>
               <div
                 class="t-picker__confirm"
               >
@@ -1305,7 +1317,9 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-picker__title"
-              />
+              >
+                
+              </div>
               <div
                 class="t-picker__confirm"
               >
@@ -1485,7 +1499,9 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
           </div>
           <div
             class="t-picker__title"
-          />
+          >
+            
+          </div>
           <div
             class="t-picker__confirm"
           >
