@@ -66,12 +66,6 @@ export default defineComponent({
     // @ts-ignore
     const formRef = ref<HTMLFormElement>(null);
     const children = ref<FormItemContext[]>([]);
-    const sortedValidateResult = ref<FormItemValidateResult<Data>[]>([]);
-    const getFirstErr = (): (() => string | null) => {
-      const first = sortedValidateResult.value?.[0];
-      if (!first) return null;
-      return first[Object.keys(first)?.[0]]?.[0]?.message;
-    };
 
     provide<FormDisabledProvider>('formDisabled', {
       disabled,
@@ -115,25 +109,22 @@ export default defineComponent({
       const list = children.value
         .filter((child) => isFunction(child.validate) && needValidate(String(child.name), fields))
         .map((child) => child.validate(trigger, showErrorMessage));
-      sortedValidateResult.value = await Promise.all(list);
-      const result = formatValidateResult(sortedValidateResult.value);
+      const arr = await Promise.all(list);
+      const result = formatValidateResult(arr);
       props.onValidate?.({
         validateResult: result,
       });
       return result;
     };
+
     const submitParams = ref<Pick<FormValidateParams, 'showErrorMessage'>>();
     const onSubmit = (e?: FormSubmitEvent) => {
       if (props.preventSubmitDefault && e) {
         preventDefault(e, true);
       }
       validate(submitParams.value).then((r) => {
-        const firstError = getFirstErr();
         // @ts-ignore
-        props.onSubmit?.({
-          validateResult: r,
-          ...(firstError ? { firstError } : {}),
-        });
+        props.onSubmit?.({ validateResult: r });
       });
       submitParams.value = undefined;
     };
