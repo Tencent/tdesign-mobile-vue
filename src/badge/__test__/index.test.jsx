@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
-import Badge from '../badge.vue';
+import Badge from '../badge';
 import Button from '../../button/button';
 import config from '../../config';
 

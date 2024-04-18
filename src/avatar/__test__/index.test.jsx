@@ -4,7 +4,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { UserIcon } from 'tdesign-icons-vue-next';
 import Avatar from '../avatar.vue';
 import AvatarGroup from '../avatar-group.vue';
-import Badge from '../../badge/badge.vue';
+import Badge from '../../badge/badge';
 
 const IMAGE = 'https://tdesign.gtimg.com/site/avatar.jpg';
 const IMAGE_FAIL = 'https://tdesign.gtimg.com/mobile/demos/avatar_11112233.png';

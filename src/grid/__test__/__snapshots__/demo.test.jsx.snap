@@ -68,9 +68,9 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
         >
-          <!--v-if-->
-            
-          <!--v-if-->
+          <!---->
+          
+          <!---->
         </div>
         <!---->
       </div>
@@ -152,9 +152,9 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         >
-          <!--v-if-->
-           8 
-          <!--v-if-->
+          <!---->
+          8
+          <!---->
         </div>
         <!---->
       </div>
@@ -236,9 +236,9 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         >
-          <!--v-if-->
-           13 
-          <!--v-if-->
+          <!---->
+          13
+          <!---->
         </div>
         <!---->
       </div>
@@ -320,9 +320,9 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         >
-          <!--v-if-->
-           NEW 
-          <!--v-if-->
+          <!---->
+          NEW
+          <!---->
         </div>
         <!---->
       </div>
@@ -4617,9 +4617,9 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
               <div
                 class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
               >
-                <!--v-if-->
-                  
-                <!--v-if-->
+                <!---->
+                
+                <!---->
               </div>
               <!---->
             </div>
@@ -4701,9 +4701,9 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
               >
-                <!--v-if-->
-                 8 
-                <!--v-if-->
+                <!---->
+                8
+                <!---->
               </div>
               <!---->
             </div>
@@ -4785,9 +4785,9 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
               >
-                <!--v-if-->
-                 13 
-                <!--v-if-->
+                <!---->
+                13
+                <!---->
               </div>
               <!---->
             </div>
@@ -4869,9 +4869,9 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
               >
-                <!--v-if-->
-                 NEW 
-                <!--v-if-->
+                <!---->
+                NEW
+                <!---->
               </div>
               <!---->
             </div>
