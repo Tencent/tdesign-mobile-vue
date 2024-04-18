@@ -1709,7 +1709,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 <div
                   class="t-switch__label t-switch__label--medium"
                 >
-                  <!--v-if-->
                   <!---->
                 </div>
               </div>
