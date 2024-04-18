@@ -15,8 +15,10 @@ export default defineComponent({
   name,
   props: TextareaProps,
   setup(props, context) {
-    const textareaClass = usePrefixClass('textarea');
     const renderTNodeJSX = useTNodeJSX();
+    const disabled = useFormDisabled();
+
+    const textareaClass = usePrefixClass('textarea');
 
     const textareaClasses = computed(() => [
       `${textareaClass.value}`,
@@ -33,12 +35,10 @@ export default defineComponent({
       },
     ]);
 
-    const disabled = useFormDisabled();
     const textareaRef = ref<HTMLTextAreaElement>();
     const textareaStyle = ref();
     const textareaLength = ref(0);
     const { value, modelValue } = toRefs(props);
-
     const [innerValue, setInnerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
     const setInputValue = (v: TextareaValue = '') => {

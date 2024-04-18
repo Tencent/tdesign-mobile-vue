@@ -1339,7 +1339,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             class="t-textarea t-textarea--layout-horizontal textarea"
             data-v-799be585=""
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-textarea__wrapper"
             >
@@ -3070,7 +3070,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   class="t-textarea t-textarea--layout-horizontal textarea"
                   data-v-799be585=""
                 >
-                  <!--v-if-->
+                  <!---->
                   <div
                     class="t-textarea__wrapper"
                   >
@@ -4655,7 +4655,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             class="t-textarea t-textarea--layout-horizontal textarea"
             data-v-713b33d2=""
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-textarea__wrapper"
             >
