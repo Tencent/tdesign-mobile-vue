@@ -29,7 +29,7 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
             选项一
           </span>
         </div>
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
@@ -64,9 +64,9 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
         >
-          <!--v-if-->
-            
-          <!--v-if-->
+          <!---->
+          
+          <!---->
         </div>
         <!---->
       </div>
@@ -89,7 +89,7 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
             选项三
           </span>
         </div>
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
@@ -114,9 +114,9 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         >
-          <!--v-if-->
-           6 
-          <!--v-if-->
+          <!---->
+          6
+          <!---->
         </div>
         <!---->
       </div>
@@ -139,7 +139,7 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
             选项五
           </span>
         </div>
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
@@ -3106,7 +3106,7 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
             选项一
           </span>
         </div>
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
@@ -3141,9 +3141,9 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
         >
-          <!--v-if-->
-            
-          <!--v-if-->
+          <!---->
+          
+          <!---->
         </div>
         <!---->
       </div>
@@ -3166,7 +3166,7 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
             选项三
           </span>
         </div>
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
@@ -3191,9 +3191,9 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         >
-          <!--v-if-->
-           6 
-          <!--v-if-->
+          <!---->
+          6
+          <!---->
         </div>
         <!---->
       </div>
@@ -3216,7 +3216,7 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
             选项五
           </span>
         </div>
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
@@ -6332,7 +6332,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             选项一
           </span>
         </div>
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
@@ -6367,9 +6367,9 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
         >
-          <!--v-if-->
-            
-          <!--v-if-->
+          <!---->
+          
+          <!---->
         </div>
         <!---->
       </div>
@@ -6392,7 +6392,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             选项三
           </span>
         </div>
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
@@ -6417,9 +6417,9 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         >
-          <!--v-if-->
-           6 
-          <!--v-if-->
+          <!---->
+          6
+          <!---->
         </div>
         <!---->
       </div>
@@ -6442,7 +6442,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             选项五
           </span>
         </div>
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
@@ -9264,7 +9264,7 @@ exports[`SideBar > SideBar withIconVue demo works fine 1`] = `
             选项一
           </span>
         </div>
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
@@ -9315,9 +9315,9 @@ exports[`SideBar > SideBar withIconVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
         >
-          <!--v-if-->
-            
-          <!--v-if-->
+          <!---->
+          
+          <!---->
         </div>
         <!---->
       </div>
@@ -9356,7 +9356,7 @@ exports[`SideBar > SideBar withIconVue demo works fine 1`] = `
             选项三
           </span>
         </div>
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
@@ -9397,9 +9397,9 @@ exports[`SideBar > SideBar withIconVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         >
-          <!--v-if-->
-           6 
-          <!--v-if-->
+          <!---->
+          6
+          <!---->
         </div>
         <!---->
       </div>
@@ -9438,7 +9438,7 @@ exports[`SideBar > SideBar withIconVue demo works fine 1`] = `
             选项五
           </span>
         </div>
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
