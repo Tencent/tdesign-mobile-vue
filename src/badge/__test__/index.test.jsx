@@ -58,7 +58,7 @@ describe('Badge', () => {
     ['circle', 'ribbon', 'round'].forEach((s) => {
       expect(inner.classes().includes(`${name}--${s}`)).toBeFalsy();
     });
-    expect($badge.text()).toEqual(`${TEXT} ${count}`);
+    expect($badge.text()).toEqual(`${TEXT}${count}`);
 
     const shape = 'ribbon';
     await wrapper.setProps({
