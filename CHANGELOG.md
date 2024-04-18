@@ -5,6 +5,29 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.2.0 `2024-04-18` 
+### 🚀 Features
+- `Result`: `sfc` 改 `tsx` @liweijie0812 ([#1303](https://github.com/Tencent/tdesign-mobile-vue/pull/1303))
+- `Footer`: `sfc` 改 `tsx` @liweijie0812 ([#1304](https://github.com/Tencent/tdesign-mobile-vue/pull/1304))
+- `Link`: `sfc` 改 `tsx` @liweijie0812 ([#1307](https://github.com/Tencent/tdesign-mobile-vue/pull/1307))
+- `Fab`: `sfc` 改 `tsx` @liweijie0812 ([#1315](https://github.com/Tencent/tdesign-mobile-vue/pull/1315))
+- `Button`: `sfc` 改 `tsx` @liweijie0812 ([#1313](https://github.com/Tencent/tdesign-mobile-vue/pull/1313))
+- `Divider`: `sfc` 改 `tsx` @liweijie0812 ([#1314](https://github.com/Tencent/tdesign-mobile-vue/pull/1314))
+- `Tag`: `sfc` 改 `tsx` @dexterBo ([#1270](https://github.com/Tencent/tdesign-mobile-vue/pull/1270))
+- `CheckTag`: `sfc`改`tsx` @liweijie0812 ([#1311](https://github.com/Tencent/tdesign-mobile-vue/pull/1311))
+- `Skeleton`: `sfc` 改 `tsx` @anlyyao ([#1301](https://github.com/Tencent/tdesign-mobile-vue/pull/1301))
+- `Badge`: `sfc` 改 `tsx` @liweijie0812 ([#1319](https://github.com/Tencent/tdesign-mobile-vue/pull/1319))
+- `Collapse`:  `sfc`改 `tsx` @anlyyao ([#1308](https://github.com/Tencent/tdesign-mobile-vue/pull/1308))
+- `Locale`: 新增阿拉伯语言包 @catiwang ([#1277](https://github.com/Tencent/tdesign-mobile-vue/pull/1277))
+### 🐞 Bug Fixes
+- `Locale`: 语言包迁移至 `common` 子仓库 @anlyyao ([#1281](https://github.com/Tencent/tdesign-mobile-vue/pull/1281))
+- `Swiper`: `current` 动态修改异常 @betavs ([#1288](https://github.com/Tencent/tdesign-mobile-vue/pull/1288))
+- `CheckTag`: 修复禁用态样式错误 @anlyyao ([#1769](https://github.com/Tencent/tdesign-common/pull/1769)) 
+- `Skeleton`: 修复 `delay` 属性无效的问题 @anlyyao ([#1301](https://github.com/Tencent/tdesign-mobile-vue/pull/1301))
+### 🚧 Others
+- feat(other): 修复组件库在 `ssr` 环境中报错 `window is not defined` @anlyyao ([#1280](https://github.com/Tencent/tdesign-mobile-vue/pull/1280))
+
+
 ## 🌈 1.1.1 `2024-03-21` 
 ### 🚀 Features
 - `Guide`: 新增 `Guide` 组件 @Lyan-u ([#1243](https://github.com/Tencent/tdesign-mobile-vue/pull/1243))
