@@ -1,7 +1,7 @@
 import { nextTick } from 'vue';
 import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
-import CountDown from '../count-down.vue';
+import CountDown from '../count-down';
 
 const sleep = (duration) =>
   new Promise((resolve) =>

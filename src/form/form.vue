@@ -8,6 +8,7 @@
 import { computed, defineComponent, provide, reactive, ref, toRefs } from 'vue';
 import isEmpty from 'lodash/isEmpty';
 import isArray from 'lodash/isArray';
+import isBoolean from 'lodash/isBoolean';
 import isFunction from 'lodash/isFunction';
 import {
   Data,
@@ -117,14 +118,22 @@ export default defineComponent({
       return result;
     };
 
+    const getFirstError = (r: Result) => {
+      if (isBoolean(r)) return '';
+      return r?.[Object.keys(r)?.[0]]?.[0]?.message || '';
+    };
     const submitParams = ref<Pick<FormValidateParams, 'showErrorMessage'>>();
     const onSubmit = (e?: FormSubmitEvent) => {
       if (props.preventSubmitDefault && e) {
         preventDefault(e, true);
       }
       validate(submitParams.value).then((r) => {
+        const firstError = getFirstError(r);
         // @ts-ignore
-        props.onSubmit?.({ validateResult: r });
+        props.onSubmit?.({
+          validateResult: r,
+          firstError,
+        });
       });
       submitParams.value = undefined;
     };
