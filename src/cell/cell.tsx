@@ -21,7 +21,7 @@ export default defineComponent({
     const disabled = useFormDisabled();
     const cellClass = usePrefixClass('cell');
 
-    const styleCell = computed(() => [
+    const cellClasses = computed(() => [
       `${cellClass.value}`,
       `${cellClass.value}--${props.align}`,
       {
@@ -86,7 +86,7 @@ export default defineComponent({
     return () => (
       <div
         v-hover={{ className: `${cellClass.value}--hover`, disabledName: hoverDisabled.value }}
-        class={styleCell.value}
+        class={cellClasses.value}
         onClick={handleClick}
       >
         {readerLeft()}
