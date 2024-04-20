@@ -224,14 +224,15 @@ export default defineComponent({
                 state.activeSidebar === item ? `${indexesClass.value}__sidebar-item--active` : '',
               ]}
               data-index={item}
-              onClick={(e: MouseEvent) => handleSidebarItemClick(item)}
+              onClick={(e: MouseEvent) => {
+                e.preventDefault();
+                handleSidebarItemClick(item);
+              }}
               onTouchmove={handleSidebarTouchmove}
             >
               {item}
               {state.showSidebarTip && state.activeSidebar === item && (
-                <div v-if="showSidebarTip && activeSidebar === item" class={`${indexesClass.value}__sidebar-tips`}>
-                  {state.activeSidebar}
-                </div>
+                <div class={`${indexesClass.value}__sidebar-tips`}>{state.activeSidebar}</div>
               )}
             </div>
           ))}
