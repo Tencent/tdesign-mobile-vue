@@ -2,7 +2,7 @@
 
 exports[`Cell > Cell groupVue demo works fine 1`] = `
 <div>
-  
+  <!---->
   <div
     class="t-cell-group t-cell-group--card"
   >
@@ -213,7 +213,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
       <div
         data-v-f4324ab6=""
       >
-        
+        <!---->
         <div
           class="t-cell-group t-cell-group--default t-cell-group--bordered"
         >
@@ -518,7 +518,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
       <div
         data-v-f4324ab6=""
       >
-        
+        <!---->
         <div
           class="t-cell-group t-cell-group--default"
         >
@@ -1039,7 +1039,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
       <div
         data-v-f4324ab6=""
       >
-        
+        <!---->
         <div
           class="t-cell-group t-cell-group--card"
         >
@@ -1214,7 +1214,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
 
 exports[`Cell > Cell multipleVue demo works fine 1`] = `
 <div>
-  
+  <!---->
   <div
     class="t-cell-group t-cell-group--default"
   >
@@ -1711,7 +1711,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
 
 exports[`Cell > Cell singleVue demo works fine 1`] = `
 <div>
-  
+  <!---->
   <div
     class="t-cell-group t-cell-group--default t-cell-group--bordered"
   >

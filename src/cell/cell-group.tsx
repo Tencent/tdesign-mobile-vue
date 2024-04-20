@@ -25,7 +25,7 @@ export default defineComponent({
       const title = renderTNodeJSX('title');
       return (
         <div>
-          {title && <div class={`${cellGroupClass.value}__title`}>{title}</div>}
+          {title ? <div class={`${cellGroupClass.value}__title`}>{title}</div> : null}
           <div class={contentClasses.value}>{renderTNodeJSX('default')}</div>
         </div>
       );

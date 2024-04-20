@@ -497,7 +497,7 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
   
   <!-- 联动选择 -->
   <div>
-    
+    <!---->
     <div
       class="t-cell-group t-cell-group--default"
     >
