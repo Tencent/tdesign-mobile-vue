@@ -1,4 +1,4 @@
-import _SwipeCell from './swipe-cell.vue';
+import _SwipeCell from './swipe-cell';
 import { withInstall, WithInstallType } from '../shared';
 import { TdSwipeCellProps } from './type';
 

@@ -11,7 +11,7 @@ import {
 } from 'vue';
 import isFunction from 'lodash/isFunction';
 import isString from 'lodash/isString';
-import { SwipeInitData } from './swipe-cell.vue';
+import { SwipeInitData } from './swipe-cell';
 import { renderTNode } from '../shared';
 import { SwipeActionItem } from './type';
 import { TNode } from '../common';
