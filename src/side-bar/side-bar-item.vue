@@ -14,10 +14,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, getCurrentInstance, ComponentInternalInstance, computed, inject, onUnmounted } from 'vue';
+import { defineComponent, getCurrentInstance, ComponentPublicInstance, computed, inject, onUnmounted } from 'vue';
 import TBadge from '../badge';
 import { renderTNode, TNode } from '../shared';
 import SideBarItemProps from './side-bar-item-props';
+import { TdSideBarItemProps } from './type';
 
 import config from '../config';
 
@@ -30,13 +31,12 @@ export default defineComponent({
   props: SideBarItemProps,
   setup(props) {
     const internalInstance = getCurrentInstance();
-    const { proxy } = internalInstance as ComponentInternalInstance;
+    const proxy = internalInstance.proxy as ComponentPublicInstance<TdSideBarItemProps>;
     const sideBarProvide: any = inject('sideBarProvide', undefined);
     sideBarProvide.relation(proxy);
 
-    const index = computed(() => sideBarProvide.children.value.indexOf(proxy));
     const iconNode = computed(() => renderTNode(internalInstance, 'icon'));
-    const isActive = computed(() => index.value === sideBarProvide.currentValue.value);
+    const isActive = computed(() => proxy.value === sideBarProvide.currentValue.value);
 
     const rootClassName = computed(() => [
       name,
@@ -45,7 +45,7 @@ export default defineComponent({
     ]);
 
     const onClick = (e: MouseEvent) => {
-      sideBarProvide.onClickItem(index.value, props.label);
+      sideBarProvide.onClickItem(proxy.value, props.label);
     };
 
     onUnmounted(() => {
