@@ -19,14 +19,15 @@ name | params | description
 change | `(index: string \| number)` | \-
 select | `(index: string \| number)` | \-
 
+
 ### IndexesAnchor Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
 index | String / Number | - | \- | N
 
+### CSS 变量
 
-### CSS Variables
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
@@ -48,4 +49,4 @@ Name | Default Value | Description
 --td-indexes-anchor-bg-color | @bg-color-secondarycontainer | - 
 --td-indexes-anchor-color | @font-gray-1 | - 
 --td-indexes-anchor-font-size | 14px | - 
---td-indexes-anchor-line-height | 22px | - 
+--td-indexes-anchor-line-height | 22px | -
