@@ -243,8 +243,7 @@ describe('Indexes & IndexesAnchor', () => {
         );
       },
     });
-    // sfc to tsx
-    // expect(wrapper.element).toMatchSnapshot();
+    expect(wrapper.element).toMatchSnapshot();
   });
 });
 
