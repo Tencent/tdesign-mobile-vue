@@ -1,5 +1,5 @@
 import { computed, defineComponent, ref, watch } from 'vue';
-import { useElementBounding, templateRef } from '@vueuse/core';
+import { useElementBounding } from '@vueuse/core';
 import StickyProps from './props';
 import config from '../config';
 import { usePrefixClass } from '@/hooks/useClass';
@@ -16,9 +16,9 @@ export default defineComponent({
 
     // box 用于占位和记录边界
     // content 用于实际定位
-    const boxRef = templateRef<HTMLElement>('boxRef');
+    const boxRef = ref<HTMLElement>();
     const { top: boxTop } = useElementBounding(boxRef);
-    const contentRef = templateRef<HTMLElement>('contentRef');
+    const contentRef = ref<HTMLElement>();
     const { top: contentTop, height } = useElementBounding(contentRef);
 
     const stickyStyle = computed(() => `height:${height.value}px;`);
