@@ -131,5 +131,7 @@ describe('avatar-group', async () => {
     ));
     const avatarList = wrapper.findAllComponents(Avatar);
      expect(avatarList.length).toBe(2);
+     expect(avatarList[0].find('img').exists()).toBeTruthy()
+     expect(avatarList[1].text()).toBe('+4');
   });
 });
