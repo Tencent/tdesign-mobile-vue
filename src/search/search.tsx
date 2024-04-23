@@ -20,8 +20,8 @@ export default defineComponent({
     const renderTNodeJSX = useTNodeJSX();
     const searchClass = usePrefixClass('search');
 
-    const searchInput = ref<HTMLInputElement>();
-    const { focused } = useFocus(searchInput, { initialValue: props.focus });
+    const inputRef = ref<HTMLInputElement>();
+    const { focused } = useFocus(inputRef, { initialValue: props.focus });
     const [searchValue] = useDefault<TdSearchProps['value'], TdSearchProps>(props, context.emit, 'value', 'change');
 
     const boxClasses = computed(() => [
@@ -32,8 +32,13 @@ export default defineComponent({
       },
     ]);
 
+    const inputClasses = computed(() => [
+      `${prefix}-input__keyword`,
+      { [`${searchClass.value}--center`]: props.center },
+    ]);
+
     const setInputValue = (v: TdSearchProps['value']) => {
-      const input = searchInput.value;
+      const input = inputRef.value;
       const sV = String(v);
       if (!input) {
         return;
@@ -96,6 +101,16 @@ export default defineComponent({
         }
         return renderTNodeJSX('leftIcon');
       };
+      const readerClear = () => {
+        if (props.clearable && searchValue.value) {
+          return (
+            <div class={`${searchClass.value}__clear`} onClick={handleClear}>
+              <TIconClear size="24" />
+            </div>
+          );
+        }
+        return null;
+      };
       const readerAction = () => {
         const action = renderTNodeJSX('action');
         if (action && searchValue.value) {
@@ -113,10 +128,10 @@ export default defineComponent({
           <div class={boxClasses.value}>
             {readerLeftIcon()}
             <input
-              ref={searchInput}
+              ref={inputRef}
               value={searchValue.value}
               type="search"
-              class={[`${prefix}-input__keyword`, { [`${searchClass.value}--center`]: props.center }]}
+              class={inputClasses.value}
               autofocus={props.focus}
               placeholder={props.placeholder}
               readonly={props.readonly}
@@ -127,11 +142,7 @@ export default defineComponent({
               onInput={handleInput}
               onCompositionend={handleCompositionend}
             />
-            {props.clearable && searchValue.value && (
-              <div class={`${searchClass.value}__clear`} onClick={handleClear}>
-                <TIconClear size="24" />
-              </div>
-            )}
+            {readerClear()}
           </div>
           {readerAction()}
         </div>
