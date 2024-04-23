@@ -1,7 +1,7 @@
 import { ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import Search from '../search.vue';
+import Search from '../search';
 import { CloseCircleFilledIcon as TIconClear } from 'tdesign-icons-vue-next';
 
 const prefix = 't';
@@ -143,13 +143,18 @@ describe('search', () => {
   describe('slots', () => {
     it(': action', async () => {
       const action = '插槽';
+
       const wrapper = mount(Search, {
+        props:{
+          value: 'test'
+        },
         slots: {
           action,
         },
       });
       // TODO: 插槽实现的 dom 结构不正确，后期另提 pr 修复
       const $search = wrapper.find(`.${name}`);
+      
       expect($search.text()).toEqual(action);
     });
 
