@@ -631,6 +631,7 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
     
     <div
       class="t-avatar__wrapper"
+      style="z-index: 100;"
     >
       <div
         class="t-avatar__badge"
@@ -698,6 +699,7 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
     </div>
     <div
       class="t-avatar__wrapper"
+      style="z-index: 90;"
     >
       <div
         class="t-avatar__badge"
@@ -765,6 +767,7 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
     </div>
     <div
       class="t-avatar__wrapper"
+      style="z-index: 80;"
     >
       <div
         class="t-avatar__badge"
@@ -832,6 +835,7 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
     </div>
     <div
       class="t-avatar__wrapper"
+      style="z-index: 70;"
     >
       <div
         class="t-avatar__badge"
@@ -899,6 +903,7 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
     </div>
     <div
       class="t-avatar__wrapper"
+      style="z-index: 60;"
     >
       <div
         class="t-avatar__badge"
@@ -1630,6 +1635,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
           
           <div
             class="t-avatar__wrapper"
+            style="z-index: 100;"
           >
             <div
               class="t-avatar__badge"
@@ -1697,6 +1703,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-avatar__wrapper"
+            style="z-index: 90;"
           >
             <div
               class="t-avatar__badge"
@@ -1764,6 +1771,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-avatar__wrapper"
+            style="z-index: 80;"
           >
             <div
               class="t-avatar__badge"
@@ -1831,6 +1839,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-avatar__wrapper"
+            style="z-index: 70;"
           >
             <div
               class="t-avatar__badge"
@@ -1898,6 +1907,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-avatar__wrapper"
+            style="z-index: 60;"
           >
             <div
               class="t-avatar__badge"

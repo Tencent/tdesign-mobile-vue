@@ -26,8 +26,10 @@ export default defineComponent({
       `${avatarGroupClass.value}-offset-${direction}-${props.size.indexOf('px') > -1 ? 'medium' : props.size}`,
     ]);
 
-    const readerAvatarItems = (children: Array<RendererNode>) => {
+    const readerAvatar = () => {
+      const children: Array<RendererNode> = renderTNodeJSX('default');
       const allChildren: Array<RendererNode> = [];
+
       children.forEach((child) => {
         if (child.type === Fragment) {
           allChildren.push(...child.children);
@@ -36,37 +38,36 @@ export default defineComponent({
         }
       });
 
-      let avatarItems: Array<RendererNode> = [];
       let isShowCollapse = false;
+      let avatarList: Array<RendererNode> = [];
       if (allChildren.length > props.max) {
-        avatarItems = allChildren.slice(0, props.max);
+        avatarList = allChildren.slice(0, props.max);
         isShowCollapse = true;
       } else {
-        avatarItems = allChildren;
+        avatarList = allChildren;
       }
 
       if (props.cascading === 'left-up') {
         const defaultZIndex = 100;
-        for (let index = 0; index < avatarItems.length; index++) {
-          avatarItems[index].props.style = { style: `z-index: ${defaultZIndex - index * 10}` };
+        for (let index = 0; index < avatarList.length; index++) {
+          avatarList[index].props.style = `z-index: ${defaultZIndex - index * 10}`;
         }
       }
 
       if (isShowCollapse) {
         const collapseAvatar = renderTNodeJSX('collapseAvatar');
-        avatarItems.push(
-          <TAvatar size={avatarItems[0].size || props.size}>
+        avatarList.push(
+          <TAvatar size={avatarList[0].size || props.size}>
             {collapseAvatar || `+${allChildren.length - props.max}`}
           </TAvatar>,
         );
       }
 
-      return avatarItems;
+      return avatarList;
     };
 
     return () => {
-      const children = renderTNodeJSX('default');
-      return <div class={avatarGroupClasses.value}>{props.max ? readerAvatarItems(children) : children}</div>;
+      return <div class={avatarGroupClasses.value}>{readerAvatar()}</div>;
     };
   },
 });

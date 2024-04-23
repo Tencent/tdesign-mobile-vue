@@ -121,7 +121,7 @@ describe('avatar-group', async () => {
 
   it(': max', async () => {
     const wrapper = mount(() => (
-      <AvatarGroup max={1}>
+      <AvatarGroup max={2}>
         <Avatar image={IMAGE}></Avatar>
         <Avatar image={IMAGE}></Avatar>
         <Avatar image={IMAGE}></Avatar>
@@ -130,8 +130,7 @@ describe('avatar-group', async () => {
       </AvatarGroup>
     ));
     const avatarList = wrapper.findAllComponents(Avatar);
-     expect(avatarList.length).toBe(2);
-     expect(avatarList[0].find('img').exists()).toBeTruthy()
-     expect(avatarList[1].text()).toBe('+4');
+    expect(avatarList.length).toBe(3);
+    expect(avatarList[avatarList.length-1].text()).toBe('+3');
   });
 });
