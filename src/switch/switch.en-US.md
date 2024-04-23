@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Switch Props
 
 name | type | default | description | required
@@ -10,7 +11,7 @@ disabled | Boolean | - | \- | N
 icon | Array | [] | Typescript：`TNode[]`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 label | Array | [] | Typescript：`string[]` | N
 loading | Boolean | false | \- | N
-size | String | medium | options：small/medium/large | N
+size | String | medium | options: small/medium/large | N
 value | String / Number / Boolean | - | `v-model` and `v-model:value` is supported。Typescript：`T` `type SwitchValue = string \| number \| boolean`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/switch/type.ts) | N
 defaultValue | String / Number / Boolean | - | uncontrolled property。Typescript：`T` `type SwitchValue = string \| number \| boolean`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/switch/type.ts) | N
 onChange | Function |  | Typescript：`(value: T, context: { e: MouseEvent }) => void`<br/> | N
@@ -21,8 +22,8 @@ name | params | description
 -- | -- | --
 change | `(value: T, context: { e: MouseEvent })` | \-
 
+### CSS 变量
 
-### CSS Variables
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
@@ -56,4 +57,4 @@ Name | Default Value | Description
 --td-switch-width | 45px | - 
 --td-switch-label-font-size | 12px | - 
 --td-switch-label-font-size | 14px | - 
---td-switch-label-font-size | 16px | - 
+--td-switch-label-font-size | 16px | -

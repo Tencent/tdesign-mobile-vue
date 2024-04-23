@@ -34,7 +34,6 @@ exports[`Switch > Switch baseVue demo works fine 1`] = `
           <div
             class="t-switch__label t-switch__label--medium t-switch__label--checked"
           >
-            <!--v-if-->
             <!---->
           </div>
         </div>
@@ -79,7 +78,6 @@ exports[`Switch > Switch colorVue demo works fine 1`] = `
           <div
             class="t-switch__label t-switch__label--medium t-switch__label--checked"
           >
-            <!--v-if-->
             <!---->
           </div>
         </div>
@@ -128,10 +126,7 @@ exports[`Switch > Switch labelVue demo works fine 1`] = `
             <div
               class="t-switch__label t-switch__label--medium t-switch__label--checked"
             >
-              
               开
-              
-              <!---->
             </div>
           </div>
         </div>
@@ -176,7 +171,6 @@ exports[`Switch > Switch labelVue demo works fine 1`] = `
             <div
               class="t-switch__label t-switch__label--medium t-switch__label--checked"
             >
-              <!--v-if-->
               <svg
                 class="t-icon t-icon-check"
                 fill="none"
@@ -269,7 +263,6 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                 <div
                   class="t-switch__label t-switch__label--medium t-switch__label--checked"
                 >
-                  <!--v-if-->
                   <!---->
                 </div>
               </div>
@@ -332,10 +325,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                 <div
                   class="t-switch__label t-switch__label--medium t-switch__label--checked"
                 >
-                  
                   开
-                  
-                  <!---->
                 </div>
               </div>
             </div>
@@ -380,7 +370,6 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                 <div
                   class="t-switch__label t-switch__label--medium t-switch__label--checked"
                 >
-                  <!--v-if-->
                   <svg
                     class="t-icon t-icon-check"
                     fill="none"
@@ -455,7 +444,6 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                 <div
                   class="t-switch__label t-switch__label--medium t-switch__label--checked"
                 >
-                  <!--v-if-->
                   <!---->
                 </div>
               </div>
@@ -549,7 +537,6 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                     <!--v-if-->
                     <!---->
                   </div>
-                  <!---->
                 </div>
               </div>
             </div>
@@ -617,7 +604,6 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                     <!--v-if-->
                     <!---->
                   </div>
-                  <!---->
                 </div>
               </div>
             </div>
@@ -663,7 +649,6 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                 <div
                   class="t-switch__label t-switch__label--medium"
                 >
-                  <!--v-if-->
                   <!---->
                 </div>
               </div>
@@ -705,7 +690,6 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                 <div
                   class="t-switch__label t-switch__label--medium t-switch__label--checked"
                 >
-                  <!--v-if-->
                   <!---->
                 </div>
               </div>
@@ -775,7 +759,6 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                 <div
                   class="t-switch__label t-switch__label--large t-switch__label--checked"
                 >
-                  <!--v-if-->
                   <!---->
                 </div>
               </div>
@@ -819,7 +802,6 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                 <div
                   class="t-switch__label t-switch__label--medium t-switch__label--checked"
                 >
-                  <!--v-if-->
                   <!---->
                 </div>
               </div>
@@ -863,7 +845,6 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                 <div
                   class="t-switch__label t-switch__label--small t-switch__label--checked"
                 >
-                  <!--v-if-->
                   <!---->
                 </div>
               </div>
@@ -919,7 +900,6 @@ exports[`Switch > Switch sizeVue demo works fine 1`] = `
             <div
               class="t-switch__label t-switch__label--large t-switch__label--checked"
             >
-              <!--v-if-->
               <!---->
             </div>
           </div>
@@ -963,7 +943,6 @@ exports[`Switch > Switch sizeVue demo works fine 1`] = `
             <div
               class="t-switch__label t-switch__label--medium t-switch__label--checked"
             >
-              <!--v-if-->
               <!---->
             </div>
           </div>
@@ -1007,7 +986,6 @@ exports[`Switch > Switch sizeVue demo works fine 1`] = `
             <div
               class="t-switch__label t-switch__label--small t-switch__label--checked"
             >
-              <!--v-if-->
               <!---->
             </div>
           </div>
@@ -1085,7 +1063,6 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
                 <!--v-if-->
                 <!---->
               </div>
-              <!---->
             </div>
           </div>
         </div>
@@ -1153,7 +1130,6 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
                 <!--v-if-->
                 <!---->
               </div>
-              <!---->
             </div>
           </div>
         </div>
@@ -1199,7 +1175,6 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
             <div
               class="t-switch__label t-switch__label--medium"
             >
-              <!--v-if-->
               <!---->
             </div>
           </div>
@@ -1241,7 +1216,6 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
             <div
               class="t-switch__label t-switch__label--medium t-switch__label--checked"
             >
-              <!--v-if-->
               <!---->
             </div>
           </div>
