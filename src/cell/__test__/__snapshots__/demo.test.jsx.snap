@@ -2,7 +2,7 @@
 
 exports[`Cell > Cell groupVue demo works fine 1`] = `
 <div>
-  <!--v-if-->
+  <!---->
   <div
     class="t-cell-group t-cell-group--card"
   >
@@ -35,10 +35,10 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
         class="t-cell__title"
       >
         单行标题
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
-      <!--v-if-->
+      <!---->
       <div
         class="t-cell__right"
       >
@@ -88,10 +88,10 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
         class="t-cell__title"
       >
         单行标题
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
-      <!--v-if-->
+      <!---->
       <div
         class="t-cell__right"
       >
@@ -141,10 +141,10 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
         class="t-cell__title"
       >
         单行标题
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
-      <!--v-if-->
+      <!---->
       <div
         class="t-cell__right"
       >
@@ -213,7 +213,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
       <div
         data-v-f4324ab6=""
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell-group t-cell-group--default t-cell-group--bordered"
         >
@@ -224,17 +224,17 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__left"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
             <div
               class="t-cell__title"
             >
               单行标题
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
-            <!--v-if-->
+            <!---->
             <div
               class="t-cell__right"
             >
@@ -262,7 +262,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__left"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
             <div
@@ -274,9 +274,9 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
               >
                  *
               </span>
-              <!--v-if-->
+              <!---->
             </div>
-            <!--v-if-->
+            <!---->
             <div
               class="t-cell__right"
             >
@@ -304,15 +304,15 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__left"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
             <div
               class="t-cell__title"
             >
               单行标题
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
             <div
               class="t-cell__note"
@@ -364,15 +364,15 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__left"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
             <div
               class="t-cell__title"
             >
               单行标题
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
             <div
               class="t-cell__note"
@@ -394,7 +394,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
               </div>
               
             </div>
-            <!--v-if-->
+            <!---->
           </div>
           <div
             class="t-cell t-cell--middle"
@@ -402,15 +402,15 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__left"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
             <div
               class="t-cell__title"
             >
               单行标题
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
             <div
               class="t-cell__note"
@@ -466,10 +466,10 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
               class="t-cell__title"
             >
               单行标题
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
-            <!--v-if-->
+            <!---->
             <div
               class="t-cell__right"
             >
@@ -518,7 +518,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
       <div
         data-v-f4324ab6=""
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell-group t-cell-group--default"
         >
@@ -529,21 +529,21 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__left"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
             <div
               class="t-cell__title"
             >
               单行标题
-              <!--v-if-->
+              <!---->
               <div
                 class="t-cell__description"
               >
                 一段很长很长的内容文字
               </div>
             </div>
-            <!--v-if-->
+            <!---->
             <div
               class="t-cell__right"
             >
@@ -571,7 +571,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__left"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
             <div
@@ -589,7 +589,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 一段很长很长的内容文字
               </div>
             </div>
-            <!--v-if-->
+            <!---->
             <div
               class="t-cell__right"
             >
@@ -617,14 +617,14 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__left"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
             <div
               class="t-cell__title"
             >
               单行标题
-              <!--v-if-->
+              <!---->
               <div
                 class="t-cell__description"
               >
@@ -681,14 +681,14 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__left"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
             <div
               class="t-cell__title"
             >
               单行标题
-              <!--v-if-->
+              <!---->
               <div
                 class="t-cell__description"
               >
@@ -715,7 +715,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
               </div>
               
             </div>
-            <!--v-if-->
+            <!---->
           </div>
           <div
             class="t-cell t-cell--middle"
@@ -723,14 +723,14 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__left"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
             <div
               class="t-cell__title"
             >
               单行标题
-              <!--v-if-->
+              <!---->
               <div
                 class="t-cell__description"
               >
@@ -793,14 +793,14 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
               class="t-cell__title"
             >
               单行标题
-              <!--v-if-->
+              <!---->
               <div
                 class="t-cell__description"
               >
                 一段很长很长的内容文字
               </div>
             </div>
-            <!--v-if-->
+            <!---->
             <div
               class="t-cell__right"
             >
@@ -828,22 +828,22 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__left"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
             <div
               class="t-cell__title"
             >
               单行标题
-              <!--v-if-->
+              <!---->
               <div
                 class="t-cell__description"
               >
                 一段很长很长的内容文字，长文本自动换行，该选项的描述是一段很长的内容
               </div>
             </div>
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
           <div
             class="t-cell t-cell--middle"
@@ -851,22 +851,22 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__left"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
             <div
               class="t-cell__title"
             >
               多行高度不定，长文本自动换行，该选项的描述是一段很长的内容
-              <!--v-if-->
+              <!---->
               <div
                 class="t-cell__description"
               >
                 一段很长很长的内容文字，长文本自动换行，该选项的描述是一段很长的内容
               </div>
             </div>
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
           <div
             class="t-cell t-cell--middle"
@@ -953,14 +953,14 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
               class="t-cell__title"
             >
               多行带头像
-              <!--v-if-->
+              <!---->
               <div
                 class="t-cell__description"
               >
                 一段很长很长的内容文字
               </div>
             </div>
-            <!--v-if-->
+            <!---->
             <div
               class="t-cell__right"
             >
@@ -988,7 +988,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__left"
             >
-              <!--v-if-->
+              <!---->
               <img
                 class="t-cell__left-image"
                 src="https://tdesign.gtimg.com/mobile/demos/example4.png"
@@ -998,15 +998,15 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
               class="t-cell__title"
             >
               多行带图片
-              <!--v-if-->
+              <!---->
               <div
                 class="t-cell__description"
               >
                 一段很长很长的内容文字
               </div>
             </div>
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
           
         </div>
@@ -1039,7 +1039,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
       <div
         data-v-f4324ab6=""
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell-group t-cell-group--card"
         >
@@ -1072,10 +1072,10 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
               class="t-cell__title"
             >
               单行标题
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
-            <!--v-if-->
+            <!---->
             <div
               class="t-cell__right"
             >
@@ -1125,10 +1125,10 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
               class="t-cell__title"
             >
               单行标题
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
-            <!--v-if-->
+            <!---->
             <div
               class="t-cell__right"
             >
@@ -1178,10 +1178,10 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
               class="t-cell__title"
             >
               单行标题
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
-            <!--v-if-->
+            <!---->
             <div
               class="t-cell__right"
             >
@@ -1214,7 +1214,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
 
 exports[`Cell > Cell multipleVue demo works fine 1`] = `
 <div>
-  <!--v-if-->
+  <!---->
   <div
     class="t-cell-group t-cell-group--default"
   >
@@ -1225,21 +1225,21 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       <div
         class="t-cell__left"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
       <div
         class="t-cell__title"
       >
         单行标题
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell__description"
         >
           一段很长很长的内容文字
         </div>
       </div>
-      <!--v-if-->
+      <!---->
       <div
         class="t-cell__right"
       >
@@ -1267,7 +1267,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       <div
         class="t-cell__left"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
       <div
@@ -1285,7 +1285,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
           一段很长很长的内容文字
         </div>
       </div>
-      <!--v-if-->
+      <!---->
       <div
         class="t-cell__right"
       >
@@ -1313,14 +1313,14 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       <div
         class="t-cell__left"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
       <div
         class="t-cell__title"
       >
         单行标题
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell__description"
         >
@@ -1377,14 +1377,14 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       <div
         class="t-cell__left"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
       <div
         class="t-cell__title"
       >
         单行标题
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell__description"
         >
@@ -1411,7 +1411,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
         </div>
         
       </div>
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-cell t-cell--middle"
@@ -1419,14 +1419,14 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       <div
         class="t-cell__left"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
       <div
         class="t-cell__title"
       >
         单行标题
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell__description"
         >
@@ -1489,14 +1489,14 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
         class="t-cell__title"
       >
         单行标题
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell__description"
         >
           一段很长很长的内容文字
         </div>
       </div>
-      <!--v-if-->
+      <!---->
       <div
         class="t-cell__right"
       >
@@ -1524,22 +1524,22 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       <div
         class="t-cell__left"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
       <div
         class="t-cell__title"
       >
         单行标题
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell__description"
         >
           一段很长很长的内容文字，长文本自动换行，该选项的描述是一段很长的内容
         </div>
       </div>
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
     <div
       class="t-cell t-cell--middle"
@@ -1547,22 +1547,22 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       <div
         class="t-cell__left"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
       <div
         class="t-cell__title"
       >
         多行高度不定，长文本自动换行，该选项的描述是一段很长的内容
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell__description"
         >
           一段很长很长的内容文字，长文本自动换行，该选项的描述是一段很长的内容
         </div>
       </div>
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
     <div
       class="t-cell t-cell--middle"
@@ -1649,14 +1649,14 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
         class="t-cell__title"
       >
         多行带头像
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell__description"
         >
           一段很长很长的内容文字
         </div>
       </div>
-      <!--v-if-->
+      <!---->
       <div
         class="t-cell__right"
       >
@@ -1684,7 +1684,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       <div
         class="t-cell__left"
       >
-        <!--v-if-->
+        <!---->
         <img
           class="t-cell__left-image"
           src="https://tdesign.gtimg.com/mobile/demos/example4.png"
@@ -1694,15 +1694,15 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
         class="t-cell__title"
       >
         多行带图片
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell__description"
         >
           一段很长很长的内容文字
         </div>
       </div>
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
     
   </div>
@@ -1711,7 +1711,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
 
 exports[`Cell > Cell singleVue demo works fine 1`] = `
 <div>
-  <!--v-if-->
+  <!---->
   <div
     class="t-cell-group t-cell-group--default t-cell-group--bordered"
   >
@@ -1722,17 +1722,17 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
       <div
         class="t-cell__left"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
       <div
         class="t-cell__title"
       >
         单行标题
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
-      <!--v-if-->
+      <!---->
       <div
         class="t-cell__right"
       >
@@ -1760,7 +1760,7 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
       <div
         class="t-cell__left"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
       <div
@@ -1772,9 +1772,9 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
         >
            *
         </span>
-        <!--v-if-->
+        <!---->
       </div>
-      <!--v-if-->
+      <!---->
       <div
         class="t-cell__right"
       >
@@ -1802,15 +1802,15 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
       <div
         class="t-cell__left"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
       <div
         class="t-cell__title"
       >
         单行标题
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
       <div
         class="t-cell__note"
@@ -1862,15 +1862,15 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
       <div
         class="t-cell__left"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
       <div
         class="t-cell__title"
       >
         单行标题
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
       <div
         class="t-cell__note"
@@ -1892,7 +1892,7 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
         </div>
         
       </div>
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-cell t-cell--middle"
@@ -1900,15 +1900,15 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
       <div
         class="t-cell__left"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
       <div
         class="t-cell__title"
       >
         单行标题
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
       <div
         class="t-cell__note"
@@ -1964,10 +1964,10 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
         class="t-cell__title"
       >
         单行标题
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
-      <!--v-if-->
+      <!---->
       <div
         class="t-cell__right"
       >

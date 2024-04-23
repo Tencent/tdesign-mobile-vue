@@ -2155,17 +2155,17 @@ exports[`Calendar > Calendar baseVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       单个选择日期
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
-    <!--v-if-->
+    <!---->
     <div
       class="t-cell__right"
     >
@@ -4348,17 +4348,17 @@ exports[`Calendar > Calendar customButtonVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       自定义按钮
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
-    <!--v-if-->
+    <!---->
     <div
       class="t-cell__right"
     >
@@ -4808,17 +4808,17 @@ exports[`Calendar > Calendar customRangeVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       自定义日期区间
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
-    <!--v-if-->
+    <!---->
     <div
       class="t-cell__right"
     >
@@ -5789,17 +5789,17 @@ exports[`Calendar > Calendar customTextVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       自定义文案
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
-    <!--v-if-->
+    <!---->
     <div
       class="t-cell__right"
     >
@@ -8013,17 +8013,17 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             <div
               class="t-cell__left"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
             <div
               class="t-cell__title"
             >
               单个选择日期
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
-            <!--v-if-->
+            <!---->
             <div
               class="t-cell__right"
             >
@@ -10200,17 +10200,17 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             <div
               class="t-cell__left"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
             <div
               class="t-cell__title"
             >
               多个选择日期
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
-            <!--v-if-->
+            <!---->
             <div
               class="t-cell__right"
             >
@@ -12387,17 +12387,17 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             <div
               class="t-cell__left"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
             <div
               class="t-cell__title"
             >
               区间选择日期
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
-            <!--v-if-->
+            <!---->
             <div
               class="t-cell__right"
             >
@@ -13386,17 +13386,17 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           自定义文案
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell__right"
         >
@@ -15573,17 +15573,17 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           自定义按钮
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell__right"
         >
@@ -16026,17 +16026,17 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           自定义日期区间
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell__right"
         >
@@ -20337,17 +20337,17 @@ exports[`Calendar > Calendar multipleVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       多个选择日期
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
-    <!--v-if-->
+    <!---->
     <div
       class="t-cell__right"
     >
@@ -22527,17 +22527,17 @@ exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       区间选择日期
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
-    <!--v-if-->
+    <!---->
     <div
       class="t-cell__right"
     >

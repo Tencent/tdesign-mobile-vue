@@ -18,13 +18,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!---->
           <!---->
         </div>
         <div
@@ -33,8 +27,8 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
           
           折叠面板标题
           
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
         <div
           class="t-cell__note"
@@ -95,13 +89,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!---->
           <!---->
         </div>
         <div
@@ -110,8 +98,8 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
           
           折叠面板标题
           
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
         <div
           class="t-cell__note"
@@ -172,13 +160,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!---->
           <!---->
         </div>
         <div
@@ -187,8 +169,8 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
           
           折叠面板标题
           
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
         <div
           class="t-cell__note"
@@ -249,13 +231,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!---->
           <!---->
         </div>
         <div
@@ -264,8 +240,8 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
           
           折叠面板标题
           
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
         <div
           class="t-cell__note"
@@ -336,13 +312,7 @@ exports[`Collapse > Collapse actionVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!---->
           <!---->
         </div>
         <div
@@ -351,8 +321,8 @@ exports[`Collapse > Collapse actionVue demo works fine 1`] = `
           
           折叠面板标题
           
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
         <div
           class="t-cell__note"
@@ -422,13 +392,7 @@ exports[`Collapse > Collapse baseVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!---->
           <!---->
         </div>
         <div
@@ -437,16 +401,10 @@ exports[`Collapse > Collapse baseVue demo works fine 1`] = `
           
           折叠面板标题
           
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
           <!---->
-          
+          <!---->
         </div>
+        <!---->
         <div
           class="t-cell__right"
         >
@@ -509,13 +467,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!---->
           <!---->
         </div>
         <div
@@ -524,16 +476,10 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
           
           折叠面板标题
           
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
           <!---->
-          
+          <!---->
         </div>
+        <!---->
         <div
           class="t-cell__right"
         >
@@ -586,13 +532,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!---->
           <!---->
         </div>
         <div
@@ -601,16 +541,10 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
           
           折叠面板标题
           
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
           <!---->
-          
+          <!---->
         </div>
+        <!---->
         <div
           class="t-cell__right"
         >
@@ -663,13 +597,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!---->
           <!---->
         </div>
         <div
@@ -678,16 +606,10 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
           
           折叠面板标题
           
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
           <!---->
-          
+          <!---->
         </div>
+        <!---->
         <div
           class="t-cell__right"
         >
@@ -740,13 +662,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!---->
           <!---->
         </div>
         <div
@@ -755,16 +671,10 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
           
           折叠面板标题
           
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
           <!---->
-          
+          <!---->
         </div>
+        <!---->
         <div
           class="t-cell__right"
         >
@@ -861,13 +771,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!---->
                 <!---->
               </div>
               <div
@@ -876,16 +780,10 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                 
                 折叠面板标题
                 
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                
                 <!---->
-                
+                <!---->
               </div>
+              <!---->
               <div
                 class="t-cell__right"
               >
@@ -964,13 +862,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!---->
                 <!---->
               </div>
               <div
@@ -979,16 +871,10 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                 
                 折叠面板标题
                 
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                
                 <!---->
-                
+                <!---->
               </div>
+              <!---->
               <div
                 class="t-cell__right"
               >
@@ -1063,13 +949,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!---->
                 <!---->
               </div>
               <div
@@ -1078,8 +958,8 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                 
                 折叠面板标题
                 
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-cell__note"
@@ -1167,13 +1047,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!---->
                 <!---->
               </div>
               <div
@@ -1182,8 +1056,8 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                 
                 折叠面板标题
                 
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-cell__note"
@@ -1244,13 +1118,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!---->
                 <!---->
               </div>
               <div
@@ -1259,8 +1127,8 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                 
                 折叠面板标题
                 
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-cell__note"
@@ -1321,13 +1189,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!---->
                 <!---->
               </div>
               <div
@@ -1336,8 +1198,8 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                 
                 折叠面板标题
                 
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-cell__note"
@@ -1398,13 +1260,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!---->
                 <!---->
               </div>
               <div
@@ -1413,8 +1269,8 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                 
                 折叠面板标题
                 
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-cell__note"
@@ -1507,13 +1363,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!---->
                 <!---->
               </div>
               <div
@@ -1522,16 +1372,10 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                 
                 折叠面板标题
                 
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                
                 <!---->
-                
+                <!---->
               </div>
+              <!---->
               <div
                 class="t-cell__right"
               >
@@ -1584,13 +1428,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!---->
                 <!---->
               </div>
               <div
@@ -1599,16 +1437,10 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                 
                 折叠面板标题
                 
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                
                 <!---->
-                
+                <!---->
               </div>
+              <!---->
               <div
                 class="t-cell__right"
               >
@@ -1661,13 +1493,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!---->
                 <!---->
               </div>
               <div
@@ -1676,16 +1502,10 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                 
                 折叠面板标题
                 
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                
                 <!---->
-                
+                <!---->
               </div>
+              <!---->
               <div
                 class="t-cell__right"
               >
@@ -1738,13 +1558,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               <div
                 class="t-cell__left"
               >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <!---->
-                  
-                </div>
+                <!---->
                 <!---->
               </div>
               <div
@@ -1753,16 +1567,10 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                 
                 折叠面板标题
                 
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                
                 <!---->
-                
+                <!---->
               </div>
+              <!---->
               <div
                 class="t-cell__right"
               >
@@ -1829,13 +1637,7 @@ exports[`Collapse > Collapse placementVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            
-            <!---->
-            
-          </div>
+          <!---->
           <!---->
         </div>
         <div
@@ -1844,16 +1646,10 @@ exports[`Collapse > Collapse placementVue demo works fine 1`] = `
           
           折叠面板标题
           
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
           <!---->
-          
+          <!---->
         </div>
+        <!---->
         <div
           class="t-cell__right"
         >
