@@ -1,4 +1,4 @@
-import Empty from './empty.vue';
+import Empty from './empty';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';
