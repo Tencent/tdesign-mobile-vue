@@ -1,5 +1,5 @@
-import Cell from './cell.vue';
-import _CellGroup from './cell-group.vue';
+import Cell from './cell';
+import _CellGroup from './cell-group';
 import { withInstall, WithInstallType } from '../shared';
 import { TdCellProps, TdCellGroupProps } from './type';
 
