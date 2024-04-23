@@ -12,50 +12,50 @@ exports[`Indexes & IndexesAnchor > render 1`] = `
       class="t-indexes__sidebar-item"
       data-index="1"
     >
-      1 
-      <!--v-if-->
+      1
+      <!---->
     </div>
     <div
       class="t-indexes__sidebar-item"
       data-index="3"
     >
-      3 
-      <!--v-if-->
+      3
+      <!---->
     </div>
     <div
       class="t-indexes__sidebar-item"
       data-index="5"
     >
-      5 
-      <!--v-if-->
+      5
+      <!---->
     </div>
     <div
       class="t-indexes__sidebar-item"
       data-index="7"
     >
-      7 
-      <!--v-if-->
+      7
+      <!---->
     </div>
     <div
       class="t-indexes__sidebar-item"
       data-index="8"
     >
-      8 
-      <!--v-if-->
+      8
+      <!---->
     </div>
     <div
       class="t-indexes__sidebar-item"
       data-index="10"
     >
-      10 
-      <!--v-if-->
+      10
+      <!---->
     </div>
     <div
       class="t-indexes__sidebar-item"
       data-index="#"
     >
-      # 
-      <!--v-if-->
+      #
+      <!---->
     </div>
     
   </div>
@@ -71,8 +71,7 @@ exports[`Indexes & IndexesAnchor > render 1`] = `
         <div
           class="t-indexes-anchor__slot"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-indexes-anchor__header"
@@ -190,8 +189,7 @@ exports[`Indexes & IndexesAnchor > render 1`] = `
         <div
           class="t-indexes-anchor__slot"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-indexes-anchor__header"
@@ -309,8 +307,7 @@ exports[`Indexes & IndexesAnchor > render 1`] = `
         <div
           class="t-indexes-anchor__slot"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-indexes-anchor__header"
@@ -428,8 +425,7 @@ exports[`Indexes & IndexesAnchor > render 1`] = `
         <div
           class="t-indexes-anchor__slot"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-indexes-anchor__header"
@@ -547,8 +543,7 @@ exports[`Indexes & IndexesAnchor > render 1`] = `
         <div
           class="t-indexes-anchor__slot"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-indexes-anchor__header"
@@ -666,8 +661,7 @@ exports[`Indexes & IndexesAnchor > render 1`] = `
         <div
           class="t-indexes-anchor__slot"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-indexes-anchor__header"
@@ -785,8 +779,7 @@ exports[`Indexes & IndexesAnchor > render 1`] = `
         <div
           class="t-indexes-anchor__slot"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-indexes-anchor__header"
