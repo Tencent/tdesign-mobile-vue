@@ -66,7 +66,9 @@ export default defineComponent({
     };
 
     const handleInput = (e: Event) => {
-      // if (e.isComposing || e.inputType === 'insertCompositionText') return;
+      if (e instanceof InputEvent) {
+        if (e.isComposing || e.inputType === 'insertCompositionText') return;
+      }
       textareaValueChangeHandle();
     };
 
