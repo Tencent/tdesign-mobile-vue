@@ -1,4 +1,4 @@
-import Sticky from './sticky.vue';
+import Sticky from './sticky';
 import { withInstall, WithInstallType } from '../shared';
 import { TdStickyProps } from './type';
 

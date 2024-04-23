@@ -1,36 +1,27 @@
-<template>
-  <div ref="boxRef" :class="boxClasses" :style="boxStyles">
-    <div ref="contentRef" :class="`${boxClasses}__content`" :style="contentStyles">
-      <t-node :content="stickyContent"></t-node>
-    </div>
-  </div>
-</template>
-
-<script lang="ts">
-import { computed, getCurrentInstance, defineComponent, ref, watch } from 'vue';
+import { computed, defineComponent, ref, watch } from 'vue';
 import { useElementBounding, templateRef } from '@vueuse/core';
-import props from './props';
+import StickyProps from './props';
 import config from '../config';
-import { renderContent, TNode } from '../shared';
+import { usePrefixClass } from '@/hooks/useClass';
+import { useTNodeJSX } from '@/hooks/tnode';
 
 const name = `${config.prefix}-sticky`;
 
 export default defineComponent({
   name,
-  components: { TNode },
-  props,
+  props: StickyProps,
   setup(props) {
-    const boxClasses = name;
-    const internalInstance = getCurrentInstance();
-    const stickyContent = computed(() => renderContent(internalInstance, 'default', ''));
+    const renderTNodeJSX = useTNodeJSX();
+    const stickyBarClass = usePrefixClass('sticky');
+
     // box 用于占位和记录边界
     // content 用于实际定位
-    const boxRef = templateRef<HTMLElement | null>('boxRef', null);
+    const boxRef = templateRef<HTMLElement>('boxRef');
     const { top: boxTop } = useElementBounding(boxRef);
-    const contentRef = templateRef<HTMLElement | null>('contentRef', null);
+    const contentRef = templateRef<HTMLElement>('contentRef');
     const { top: contentTop, height } = useElementBounding(contentRef);
 
-    const boxStyles = computed(() => `height:${height.value}px;`);
+    const stickyStyle = computed(() => `height:${height.value}px;`);
 
     // container 容器，sticky不会超出该边界
     let container: HTMLElement;
@@ -69,12 +60,12 @@ export default defineComponent({
       return styleStr;
     });
 
-    return {
-      boxClasses,
-      boxStyles,
-      contentStyles,
-      stickyContent,
-    };
+    return () => (
+      <div ref={boxRef} class={stickyBarClass.value} style={stickyStyle.value}>
+        <div ref={contentRef} class={`${stickyBarClass.value}__content`} style={contentStyles.value}>
+          {renderTNodeJSX('default')}
+        </div>
+      </div>
+    );
   },
 });
-</script>
