@@ -1,78 +1,3 @@
-<template>
-  <div v-if="wrapperVisible" :id="popupId" :class="classes" :style="{ ...expandStyle }">
-    <t-popup
-      :visible="isShowItems"
-      :duration="duration"
-      :show-overlay="showOverlay"
-      :style="popupStyle"
-      :overlay-props="{ style: 'position: absolute' }"
-      :class="`${name}__popup-host`"
-      :attach="`#${popupId}`"
-      @visible-change="onVisibleChange"
-    >
-      <div ref="popupContent" :class="styleContent" :style="contentStyle">
-        <div :class="`${name}__body`">
-          <slot>
-            <template v-if="!multiple">
-              <!-- 单选列表 -->
-              <t-radio-group v-model="radioSelect" placement="right" :class="`${name}__radio-group`">
-                <template v-for="option in options" :key="option.value">
-                  <t-radio
-                    :value="option.value"
-                    :label="option.label"
-                    :disabled="option.disabled"
-                    :class="styleDropRadio(option.value)"
-                    :checked="isCheckedRadio(option.value)"
-                    icon="line"
-                  />
-                </template>
-              </t-radio-group>
-            </template>
-            <template v-else>
-              <!-- 多选列表 -->
-              <t-checkbox-group
-                v-model="checkSelect"
-                :class="`${name}__checkbox-group`"
-                :style="`grid-template-columns: repeat(${$props.optionsColumns}, 1fr)`"
-              >
-                <template v-for="option in options" :key="option.value">
-                  <t-checkbox
-                    :class="`${name}__checkbox-item t-checkbox--tag`"
-                    :icon="false"
-                    borderless
-                    :value="option.value"
-                    :label="option.label"
-                    :disabled="option.disabled"
-                  />
-                </template>
-              </t-checkbox-group>
-            </template>
-          </slot>
-        </div>
-        <slot name="footer">
-          <div v-if="multiple" :class="`${name}__footer`">
-            <t-button
-              theme="light"
-              :class="`${name}__footer-btn ${name}__reset-btn`"
-              :disabled="isBtnDisabled"
-              @click="resetSelect"
-              >{{ globalConfig.reset }}</t-button
-            >
-            <t-button
-              theme="primary"
-              :class="`${name}__footer-btn ${name}__confirm-btn`"
-              :disabled="isBtnDisabled"
-              @click="confirmSelect"
-              >{{ globalConfig.confirm }}</t-button
-            >
-          </div>
-        </slot>
-      </div>
-    </t-popup>
-  </div>
-</template>
-
-<script lang="ts">
 import { ref, watch, toRefs, inject, computed, reactive, onBeforeMount, defineComponent, nextTick } from 'vue';
 import TRadio, { RadioGroup as TRadioGroup } from '../radio';
 import config from '../config';
@@ -85,6 +10,7 @@ import { DropdownMenuState, DropdownMenuControl } from './context';
 import { TdDropdownMenuProps, DropdownValue } from './type';
 import { KeysType } from '../common';
 import { useConfig } from '../config-provider/useConfig';
+import { useContent, useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
 const name = `${prefix}-dropdown-item`;
@@ -97,6 +23,9 @@ export default defineComponent({
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
   setup(props) {
     const { globalConfig } = useConfig('dropdownMenu');
+    const renderContent = useContent();
+    const renderTNodeJSX = useTNodeJSX();
+    const popupContent = ref(null);
 
     // 受控 value 属性
     const { value, modelValue } = toRefs(props);
@@ -186,8 +115,6 @@ export default defineComponent({
       setTimeout(() => {
         props[`on${val ? 'Opened' : 'Closed'}`]?.();
       }, Number(duration));
-
-      const popupContent = ref(null);
     };
 
     // 根据父组件状态，判断当前是否展开
@@ -272,28 +199,111 @@ export default defineComponent({
         emitEvents('menuClosed', 'overlay');
       }
     };
+    const { showOverlay, duration, isShowItems, wrapperVisible, expandStyle, multiple, options } = toRefs(state);
 
-    return {
-      name: ref(name),
-      ...toRefs(props),
-      ...toRefs(state),
-      globalConfig,
-      classes,
-      popupStyle,
-      styleContent,
-      contentStyle,
-      isBtnDisabled,
-      radioSelect,
-      checkSelect,
-      popupId,
-      isCheckedRadio,
-      styleDropRadio,
-      expandMenu,
-      collapseMenu,
-      resetSelect,
-      confirmSelect,
-      onVisibleChange,
+    return () => {
+      const handleRadioChange = (value: any) => {
+        radioSelect.value = value;
+      };
+      const handleCheckboxChange = (value: any) => {
+        checkSelect.value = value;
+      };
+      const defaultSlot = () => {
+        if (!multiple.value) {
+          // 单选列表
+          return (
+            <t-radio-group
+              value={radioSelect.value}
+              onChange={handleRadioChange}
+              placement="right"
+              class={`${name}__radio-group`}
+            >
+              {(options.value || []).map((option) => (
+                <t-radio
+                  key={option.value}
+                  value={option.value}
+                  label={option.label}
+                  disabled={option.disabled}
+                  class={styleDropRadio(option.value)}
+                  checked={isCheckedRadio(option.value)}
+                  icon="line"
+                />
+              ))}
+            </t-radio-group>
+          );
+        }
+        // 多选列表
+        return (
+          <t-checkbox-group
+            value={checkSelect.value}
+            onChange={handleCheckboxChange}
+            class={`${name}__checkbox-group`}
+            style={`grid-template-columns: repeat(${props.optionsColumns}, 1fr)`}
+          >
+            {(options.value || []).map((option) => (
+              <t-checkbox
+                key={option.value}
+                class={`${name}__checkbox-item t-checkbox--tag`}
+                icon={false}
+                borderless
+                value={option.value}
+                label={option.label}
+                disabled={option.disabled}
+              />
+            ))}
+          </t-checkbox-group>
+        );
+      };
+
+      const footerSlot = () => {
+        if (multiple.value) {
+          return (
+            <div class={`${name}__footer`}>
+              <t-button
+                theme="light"
+                class={`${name}__footer-btn ${name}__reset-btn`}
+                disabled={isBtnDisabled.value}
+                onClick={resetSelect}
+              >
+                {globalConfig.value.reset}
+              </t-button>
+              <t-button
+                theme="primary"
+                class={`${name}__footer-btn ${name}__confirm-btn`}
+                disabled={isBtnDisabled.value}
+                onClick={confirmSelect}
+              >
+                {globalConfig.value.confirm}
+              </t-button>
+            </div>
+          );
+        }
+      };
+
+      const content = renderContent('default', 'content');
+
+      const footer = renderTNodeJSX('footer');
+      return (
+        wrapperVisible.value && (
+          <div id={popupId} class={classes.value} style={{ ...expandStyle.value }}>
+            <t-popup
+              visible={isShowItems.value}
+              duration={duration.value}
+              showOverlay={showOverlay.value}
+              style={popupStyle.value}
+              overlayProps={{ style: 'position: absolute' }}
+              class={`${name}__popup-host`}
+              attach={`#${popupId}`}
+              onVisibleChange={onVisibleChange}
+            >
+              <div ref={popupContent} class={styleContent.value} style={contentStyle.value}>
+                <div class={`${name}__body`}>{content || defaultSlot()}</div>
+                {footer || footerSlot()}
+              </div>
+            </t-popup>
+          </div>
+        )
+      );
     };
   },
 });
-</script>

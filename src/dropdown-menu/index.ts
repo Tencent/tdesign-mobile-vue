@@ -1,5 +1,5 @@
-import LocalDropdownMenu from './dropdown-menu.vue';
-import LocalDropdownItem from './dropdown-item.vue';
+import LocalDropdownMenu from './dropdown-menu';
+import LocalDropdownItem from './dropdown-item';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';
