@@ -679,15 +679,15 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
           <div
             class="t-cell__title"
           >
             单行标题
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
           <div
             class="t-cell__note"
@@ -719,7 +719,7 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       
@@ -1119,15 +1119,15 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       单行标题
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
     <div
       class="t-cell__note"
@@ -1159,7 +1159,7 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
       </div>
       
     </div>
-    <!--v-if-->
+    <!---->
   </div>
 </div>
 `;

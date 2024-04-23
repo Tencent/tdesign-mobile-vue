@@ -11,17 +11,17 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       选择地区
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
-    <!--v-if-->
+    <!---->
     <div
       class="t-cell__right"
     >
@@ -73,7 +73,9 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
           </div>
           <div
             class="t-picker__title"
-          />
+          >
+            
+          </div>
           <div
             class="t-picker__confirm"
           >
@@ -159,17 +161,17 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       选择地区
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
-    <!--v-if-->
+    <!---->
     <div
       class="t-cell__right"
     >
@@ -198,17 +200,17 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       选择时间
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
-    <!--v-if-->
+    <!---->
     <div
       class="t-cell__right"
     >
@@ -262,7 +264,9 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
           </div>
           <div
             class="t-picker__title"
-          />
+          >
+            
+          </div>
           <div
             class="t-picker__confirm"
           >
@@ -367,7 +371,9 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
           </div>
           <div
             class="t-picker__title"
-          />
+          >
+            
+          </div>
           <div
             class="t-picker__confirm"
           >
@@ -497,7 +503,7 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
   
   <!-- 联动选择 -->
   <div>
-    <!--v-if-->
+    <!---->
     <div
       class="t-cell-group t-cell-group--default"
     >
@@ -508,15 +514,15 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           英雄
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
         <div
           class="t-cell__note"
@@ -705,17 +711,17 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           选择地区
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell__right"
         >
@@ -744,17 +750,17 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           选择时间
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell__right"
         >
@@ -808,7 +814,9 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-picker__title"
-              />
+              >
+                
+              </div>
               <div
                 class="t-picker__confirm"
               >
@@ -913,7 +921,9 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-picker__title"
-              />
+              >
+                
+              </div>
               <div
                 class="t-picker__confirm"
               >
@@ -1040,17 +1050,17 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           选择地区
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell__right"
         >
@@ -1102,7 +1112,9 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-picker__title"
-              />
+              >
+                
+              </div>
               <div
                 class="t-picker__confirm"
               >
@@ -1202,17 +1214,17 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           带标题选择器
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell__right"
         >
@@ -1241,17 +1253,17 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           无标题选择器
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
-        <!--v-if-->
+        <!---->
         <div
           class="t-cell__right"
         >
@@ -1305,7 +1317,9 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-picker__title"
-              />
+              >
+                
+              </div>
               <div
                 class="t-picker__confirm"
               >
@@ -1382,17 +1396,17 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       带标题选择器
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
-    <!--v-if-->
+    <!---->
     <div
       class="t-cell__right"
     >
@@ -1421,17 +1435,17 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       无标题选择器
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
-    <!--v-if-->
+    <!---->
     <div
       class="t-cell__right"
     >
@@ -1485,7 +1499,9 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
           </div>
           <div
             class="t-picker__title"
-          />
+          >
+            
+          </div>
           <div
             class="t-picker__confirm"
           >

@@ -1,22 +1,8 @@
-<template>
-  <t-picker
-    :class="className"
-    :value="valueOfPicker"
-    :title="title"
-    :confirm-btn="confirmButtonText"
-    :cancel-btn="cancelButtonText"
-    :columns="columns"
-    @confirm="onConfirm"
-    @cancel="onCancel"
-    @pick="onPick"
-  />
-</template>
-
-<script lang="ts">
 import { ref, computed, defineComponent, toRefs, watch, nextTick } from 'vue';
 import dayjs, { Dayjs, UnitType } from 'dayjs';
 import weekday from 'dayjs/plugin/weekday';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
+import objectSupport from 'dayjs/plugin/objectSupport';
 import isArray from 'lodash/isArray';
 
 import config from '../config';
@@ -29,25 +15,17 @@ import { useConfig } from '../config-provider/useConfig';
 
 dayjs.extend(weekday);
 dayjs.extend(customParseFormat);
+dayjs.extend(objectSupport);
 
 const { prefix } = config;
 const name = `${prefix}-date-time-picker`;
-
-const precisionRankRecord: Record<string, number> = {
-  year: 0,
-  month: 1,
-  date: 2,
-  hour: 3,
-  minute: 4,
-  second: 5,
-};
 
 export default defineComponent({
   name,
   components: { TPicker },
   props: DateTimePickerProps,
   emits: ['change', 'cancel', 'confirm', 'pick', 'update:modelValue', 'update:value'],
-  setup(props: any) {
+  setup(props) {
     const { globalConfig } = useConfig('dateTimePicker');
     const className = computed(() => [`${name}`]);
     const { value } = toRefs(props);
@@ -60,6 +38,7 @@ export default defineComponent({
     const title = computed(() => {
       return props.title || globalConfig.value.title;
     });
+
     const confirmButtonText = computed(() => props.confirmBtn || globalConfig.value.confirm);
     const cancelButtonText = computed(() => props.cancelBtn || globalConfig.value.cancel);
     const normalize = (val: string | number, defaultDay: Dayjs) =>
@@ -84,7 +63,6 @@ export default defineComponent({
         const dateStr = dayjs(start.value).format('YYYY-MM-DD');
         currentValue = `${dateStr} ${currentValue}`;
       }
-
       return currentValue && dayjs(currentValue).isValid() ? rationalize(dayjs(currentValue)) : start.value;
     };
     const curDate = ref(calcDate(innerValue.value));
@@ -174,9 +152,15 @@ export default defineComponent({
       return ret;
     });
 
-    const onConfirm = () => {
-      props.onConfirm?.(dayjs(curDate.value).format(props.format));
-      setDateTimePickerValue(dayjs(curDate.value).format(props.format));
+    const onConfirm = (value: string[]) => {
+      const dayObject = value.reduce((map, cur, index) => {
+        const type = meaningColumn.value[index];
+        map[type] = cur;
+        return map;
+      }, {});
+      const cur = dayjs(dayObject);
+      props.onConfirm?.(dayjs(cur || curDate.value).format(props.format));
+      setDateTimePickerValue(dayjs(cur || curDate.value).format(props.format));
     };
 
     const onCancel = (context: { e: MouseEvent }) => {
@@ -196,19 +180,20 @@ export default defineComponent({
       curDate.value = calcDate(val);
     });
 
-    return {
-      className,
-      confirmButtonText,
-      cancelButtonText,
-      title,
-      start,
-      end,
-      valueOfPicker,
-      columns,
-      onConfirm,
-      onCancel,
-      onPick,
+    return () => {
+      return (
+        <t-picker
+          class={className.value}
+          value={valueOfPicker.value}
+          title={title.value}
+          confirm-btn={confirmButtonText.value}
+          cancel-btn={cancelButtonText.value}
+          columns={columns.value}
+          onConfirm={onConfirm}
+          onCancel={onCancel}
+          onPick={onPick}
+        />
+      );
     };
   },
 });
-</script>

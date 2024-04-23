@@ -1685,15 +1685,15 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
           <div
             class="t-cell__title"
           >
             禁用态
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
           <div
             class="t-cell__note"
@@ -1709,14 +1709,13 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 <div
                   class="t-switch__label t-switch__label--medium"
                 >
-                  <!--v-if-->
                   <!---->
                 </div>
               </div>
             </div>
             
           </div>
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       

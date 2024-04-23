@@ -12,7 +12,7 @@ export interface TdSwitchProps<T = SwitchValue> {
    */
   customValue?: Array<SwitchValue>;
   /**
-   * 是否禁用组件，默认为 false
+   * 是否禁用组件
    */
   disabled?: boolean;
   /**
