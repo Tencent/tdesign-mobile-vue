@@ -2,8 +2,8 @@ import { h, nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { UserIcon } from 'tdesign-icons-vue-next';
-import Avatar from '../avatar.vue';
-import AvatarGroup from '../avatar-group.vue';
+import Avatar from '../avatar';
+import AvatarGroup from '../avatar-group';
 import Badge from '../../badge/badge';
 
 const IMAGE = 'https://tdesign.gtimg.com/site/avatar.jpg';
@@ -130,6 +130,6 @@ describe('avatar-group', async () => {
       </AvatarGroup>
     ));
     const avatarList = wrapper.findAllComponents(Avatar);
-    expect(avatarList.length).toBe(1);
+     expect(avatarList.length).toBe(2);
   });
 });
