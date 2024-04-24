@@ -29,7 +29,7 @@ exports[`DropdownMenu > DropdownMenu customizedVue demo works fine 1`] = `
   </div>
   
   
-  <!--v-if-->
+  <!---->
   
 </div>
 `;
@@ -83,8 +83,8 @@ exports[`DropdownMenu > DropdownMenu directionVue demo works fine 1`] = `
   </div>
   
   
-  <!--v-if-->
-  <!--v-if-->
+  <!---->
+  <!---->
   
 </div>
 `;
@@ -138,8 +138,8 @@ exports[`DropdownMenu > DropdownMenu disabledVue demo works fine 1`] = `
   </div>
   
   
-  <!--v-if-->
-  <!--v-if-->
+  <!---->
+  <!---->
   
 </div>
 `;
@@ -232,8 +232,8 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
         </div>
         
         
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
         
       </div>
       
@@ -327,9 +327,9 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
         </div>
         
         
-        <!--v-if-->
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
+        <!---->
         
       </div>
       
@@ -402,8 +402,8 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
         </div>
         
         
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
         
       </div>
       
@@ -480,8 +480,8 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
         </div>
         
         
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
         
       </div>
       
@@ -534,7 +534,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
         </div>
         
         
-        <!--v-if-->
+        <!---->
         
       </div>
       
@@ -617,9 +617,9 @@ exports[`DropdownMenu > DropdownMenu multipleVue demo works fine 1`] = `
   </div>
   
   
-  <!--v-if-->
-  <!--v-if-->
-  <!--v-if-->
+  <!---->
+  <!---->
+  <!---->
   
 </div>
 `;
@@ -673,8 +673,8 @@ exports[`DropdownMenu > DropdownMenu singleVue demo works fine 1`] = `
   </div>
   
   
-  <!--v-if-->
-  <!--v-if-->
+  <!---->
+  <!---->
   
 </div>
 `;

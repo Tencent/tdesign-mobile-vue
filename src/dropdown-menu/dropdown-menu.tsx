@@ -1,18 +1,4 @@
-<template>
-  <div ref="refBar" :class="classes">
-    <div v-for="(item, idx) in menuTitles" :key="idx" :class="styleBarItem(item, idx)" @click="expandMenu(item, idx)">
-      <div :class="`${name}__title`">
-        {{ item.label }}
-      </div>
-      <caret-down-small-icon v-if="$props.direction === 'down'" :class="styleIcon(item, idx)" />
-      <caret-up-small-icon v-else :class="styleIcon(item, idx)" />
-    </div>
-    <slot />
-  </div>
-</template>
-
-<script lang="ts">
-import { defineComponent, computed, toRefs, ref, reactive, watch, provide } from 'vue';
+import { defineComponent, computed, ref, reactive, watch, provide } from 'vue';
 
 import { CaretDownSmallIcon, CaretUpSmallIcon } from 'tdesign-icons-vue-next';
 import camelCase from 'lodash/camelCase';
@@ -27,6 +13,7 @@ import {
 } from './context';
 import { useExpose } from '../shared';
 import { findRelativeRect, findRelativeContainer } from './dom-utils';
+import { useContent } from '../hooks/tnode';
 import DropdownMenuProps from './props';
 
 const { prefix } = config;
@@ -38,6 +25,8 @@ export default defineComponent({
   props: DropdownMenuProps,
   emits: ['menuOpened', 'menuClosed'],
   setup(props, { slots }) {
+    const renderContent = useContent();
+
     // 菜单状态
     const state = reactive<DropdownMenuState>({
       activeId: null,
@@ -93,7 +82,7 @@ export default defineComponent({
     // 根结点样式
     const classes = computed(() => [`${name}`]);
     // 标题栏结点引用
-    const refBar = ref(null);
+    const refBar = ref();
     const styleBarItem = computed(() => (item: any, idx: number) => [
       `${name}__item`,
       {
@@ -169,18 +158,27 @@ export default defineComponent({
       collapseMenu,
     });
 
-    return {
-      name: ref(name),
-      classes,
-      ...toRefs(props),
-      refBar,
-      state,
-      styleBarItem,
-      styleIcon,
-      menuItems,
-      menuTitles,
-      expandMenu,
+    return () => {
+      const defaultSlot = renderContent('default', 'content');
+
+      const renderDownIcon = (item: any, idx: number) => {
+        if (props.direction === 'down') {
+          return <caret-down-small-icon class={styleIcon.value(item, idx)} />;
+        }
+        return <caret-up-small-icon class={styleIcon.value(item, idx)} />;
+      };
+
+      return (
+        <div ref={refBar} class={classes.value}>
+          {(menuTitles.value || []).map((item: { label: any }, idx: number) => (
+            <div class={styleBarItem.value(item, idx)} onClick={() => expandMenu(item, idx)}>
+              <div class={`${name}__title`}>{item.label}</div>
+              {renderDownIcon(item, idx)}
+            </div>
+          ))}
+          {defaultSlot}
+        </div>
+      );
     };
   },
 });
-</script>
