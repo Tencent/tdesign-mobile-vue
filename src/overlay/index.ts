@@ -1,7 +1,10 @@
+import _Overlay from './overlay';
 import { withInstall, WithInstallType } from '../shared';
-import _Overlay from './overlay.vue';
 
+import { TdOverlayProps } from './type';
 import './style';
+
+export type OverlayProps = TdOverlayProps;
 
 const Overlay: WithInstallType<typeof _Overlay> = withInstall(_Overlay);
 export default Overlay;

@@ -392,8 +392,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
             >
-              
-              
+              <!---->
             </div>
             <div
               class="t-popup t-popup--bottom"
@@ -826,8 +825,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
             >
-              
-              
+              <!---->
             </div>
             <div
               class="t-popup t-popup--bottom"
@@ -2122,8 +2120,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     class="t-overlay"
                     style="z-index: 1000; transition-duration: 300ms; display: none;"
                   >
-                    
-                    
+                    <!---->
                   </div>
                   <div
                     class="t-popup t-popup--bottom"
@@ -2556,8 +2553,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     class="t-overlay"
                     style="z-index: 1000; transition-duration: 300ms; display: none;"
                   >
-                    
-                    
+                    <!---->
                   </div>
                   <div
                     class="t-popup t-popup--bottom"
@@ -3715,8 +3711,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
             >
-              
-              
+              <!---->
             </div>
             <div
               class="t-popup t-popup--bottom"
@@ -4147,8 +4142,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
             >
-              
-              
+              <!---->
             </div>
             <div
               class="t-popup t-popup--bottom"

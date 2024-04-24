@@ -11,8 +11,7 @@ exports[`Calendar > Calendar baseVue demo works fine 1`] = `
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
       >
-        
-        
+        <!---->
       </div>
       <div
         class="t-popup t-popup--bottom"
@@ -2204,8 +2203,7 @@ exports[`Calendar > Calendar customButtonVue demo works fine 1`] = `
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
       >
-        
-        
+        <!---->
       </div>
       <div
         class="t-popup t-popup--bottom"
@@ -4398,8 +4396,7 @@ exports[`Calendar > Calendar customRangeVue demo works fine 1`] = `
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
       >
-        
-        
+        <!---->
       </div>
       <div
         class="t-popup t-popup--bottom"
@@ -4858,8 +4855,7 @@ exports[`Calendar > Calendar customTextVue demo works fine 1`] = `
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
       >
-        
-        
+        <!---->
       </div>
       <div
         class="t-popup t-popup--bottom"
@@ -5869,8 +5865,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 class="t-overlay"
                 style="z-index: 1000; transition-duration: 300ms; display: none;"
               >
-                
-                
+                <!---->
               </div>
               <div
                 class="t-popup t-popup--bottom"
@@ -8056,8 +8051,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 class="t-overlay"
                 style="z-index: 1000; transition-duration: 300ms; display: none;"
               >
-                
-                
+                <!---->
               </div>
               <div
                 class="t-popup t-popup--bottom"
@@ -10243,8 +10237,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 class="t-overlay"
                 style="z-index: 1000; transition-duration: 300ms; display: none;"
               >
-                
-                
+                <!---->
               </div>
               <div
                 class="t-popup t-popup--bottom"
@@ -12455,8 +12448,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             class="t-overlay"
             style="z-index: 1000; transition-duration: 300ms; display: none;"
           >
-            
-            
+            <!---->
           </div>
           <div
             class="t-popup t-popup--bottom"
@@ -13429,8 +13421,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             class="t-overlay"
             style="z-index: 1000; transition-duration: 300ms; display: none;"
           >
-            
-            
+            <!---->
           </div>
           <div
             class="t-popup t-popup--bottom"
@@ -15616,8 +15607,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             class="t-overlay"
             style="z-index: 1000; transition-duration: 300ms; display: none;"
           >
-            
-            
+            <!---->
           </div>
           <div
             class="t-popup t-popup--bottom"
@@ -18193,8 +18183,7 @@ exports[`Calendar > Calendar multipleVue demo works fine 1`] = `
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
       >
-        
-        
+        <!---->
       </div>
       <div
         class="t-popup t-popup--bottom"
@@ -20383,8 +20372,7 @@ exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
       >
-        
-        
+        <!---->
       </div>
       <div
         class="t-popup t-popup--bottom"
