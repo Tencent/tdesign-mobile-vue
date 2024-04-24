@@ -9,8 +9,7 @@ exports[`cascader > events > : pick 1`] = `
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
   >
-    
-    
+    <!---->
   </div>
   <div
     class="t-popup t-popup--bottom"
