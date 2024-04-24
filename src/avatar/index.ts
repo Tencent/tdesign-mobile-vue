@@ -1,5 +1,5 @@
-import _Avatar from './avatar.vue';
-import _AvatarGroup from './avatar-group.vue';
+import _Avatar from './avatar';
+import _AvatarGroup from './avatar-group';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';
