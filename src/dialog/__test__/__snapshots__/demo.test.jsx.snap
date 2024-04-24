@@ -29,8 +29,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -134,8 +133,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -241,8 +239,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -333,8 +330,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -421,8 +417,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -523,8 +518,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -675,8 +669,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -832,8 +825,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -980,8 +972,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -1167,8 +1158,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -1259,8 +1249,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -1347,8 +1336,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -1460,8 +1448,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -1565,8 +1552,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -1687,8 +1673,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -1835,8 +1820,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -2006,8 +1990,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -2158,8 +2141,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -2330,8 +2312,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -2435,8 +2416,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -2540,8 +2520,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -2645,8 +2624,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -2767,8 +2745,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -2934,8 +2911,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -3039,8 +3015,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -3144,8 +3119,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -3249,8 +3223,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -3371,8 +3344,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"

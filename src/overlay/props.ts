@@ -8,7 +8,7 @@ import { TdOverlayProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 遮罩层的背景色	 */
+  /** 遮罩层的背景色 */
   backgroundColor: {
     type: String,
     default: '',
@@ -23,7 +23,7 @@ export default {
     type: Number,
     default: 300,
   },
-  /** 防止滚动穿透，即不允许点击和滚动 */
+  /** 是否阻止背景滚动，阻止时蒙层里的内容也将无法滚动 */
   preventScrollThrough: {
     type: Boolean,
     default: true,

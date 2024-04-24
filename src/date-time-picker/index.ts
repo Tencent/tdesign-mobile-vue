@@ -1,4 +1,4 @@
-import DateTimePicker from './date-time-picker.vue';
+import DateTimePicker from './date-time-picker';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';

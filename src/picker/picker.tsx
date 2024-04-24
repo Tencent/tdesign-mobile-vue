@@ -1,55 +1,31 @@
-<template>
-  <div :class="`${name}`">
-    <div :class="`${name}__toolbar`">
-      <div v-if="cancelButtonText" :class="`${name}__cancel`" @click="handleCancel">{{ cancelButtonText }}</div>
-      <div :class="`${name}__title`">{{ title }}</div>
-      <div v-if="confirmButtonText" :class="`${name}__confirm`" @click="handleConfirm">{{ confirmButtonText }}</div>
-    </div>
-    <t-node :content="header" />
-    <div :class="`${name}__main`">
-      <div v-for="(item, index) in realColumns" :key="index" :class="`${name}-item__group`">
-        <picker-item
-          :ref="(item) => setPickerItemRef(item, index)"
-          :options="item"
-          :value="pickerValue?.[index]"
-          :render-label="renderLabel"
-          @pick="handlePick($event, index)"
-        />
-      </div>
-      <div :class="`${name}__mask ${name}__mask--top`" />
-      <div :class="`${name}__mask ${name}__mask--bottom`" />
-      <div :class="`${name}__indicator`" />
-    </div>
-  </div>
-</template>
-
-<script lang="ts">
-import { computed, defineComponent, toRefs, ref, getCurrentInstance, watch } from 'vue';
+import { computed, defineComponent, toRefs, ref, watch } from 'vue';
 import isString from 'lodash/isString';
 import isBoolean from 'lodash/isBoolean';
 
 import config from '../config';
 import PickerProps from './props';
 import { PickerValue, PickerColumn, PickerColumnItem } from './type';
-import { useVModel, TNode, renderTNode } from '../shared';
-import PickerItem from './picker-item.vue';
+import { useVModel } from '../shared';
+import { useTNodeJSX } from '../hooks/tnode';
+import PickerItem from './picker-item';
 import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
 const name = `${prefix}-picker`;
-// 通过value和columns，生成对应的indexArray
 const getIndexFromColumns = (column: PickerColumn, value: PickerValue) => {
   if (!value) return 0;
   return column?.findIndex((item: PickerColumnItem) => item.value === value);
 };
+
 export default defineComponent({
   name,
-  components: { PickerItem, TNode },
+  components: { PickerItem },
   props: PickerProps,
   emits: ['change', 'cancel', 'pick', 'update:modelValue', 'update:value'],
-  setup(props: any) {
+  setup(props) {
     const { globalConfig } = useConfig('picker');
-    const internalInstance = getCurrentInstance();
+    const renderTNodeJSX = useTNodeJSX();
+
     const { value, modelValue } = toRefs(props);
     const [pickerValue = ref([]), setPickerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
     const getDefaultText = (prop: string | boolean, defaultText: string): string => {
@@ -59,7 +35,6 @@ export default defineComponent({
     };
     const confirmButtonText = computed(() => getDefaultText(props.confirmBtn, globalConfig.value.confirm));
     const cancelButtonText = computed(() => getDefaultText(props.cancelBtn, globalConfig.value.cancel));
-    const header = computed(() => renderTNode(internalInstance, 'header'));
     const curValueArray = ref(pickerValue.value?.map((item: PickerValue) => item) || []);
     const realColumns = computed(() => {
       if (typeof props.columns === 'function') {
@@ -77,7 +52,9 @@ export default defineComponent({
     };
 
     const handleConfirm = (e: MouseEvent) => {
-      const target = realColumns.value.map((item: PickerColumnItem, index: number) => item[curIndexArray[index]]);
+      const target = realColumns.value.map((item, index) => {
+        return item[curIndexArray[index]];
+      });
       const label = target.map((item: PickerColumnItem) => item.label);
       const value = target.map((item: PickerColumnItem) => item.value);
       setPickerValue(value);
@@ -110,19 +87,42 @@ export default defineComponent({
       });
     });
 
-    return {
-      name,
-      header,
-      pickerValue,
-      curIndexArray,
-      confirmButtonText,
-      cancelButtonText,
-      handleConfirm,
-      handleCancel,
-      handlePick,
-      realColumns,
-      setPickerItemRef,
+    return () => {
+      const header = renderTNodeJSX('header');
+      return (
+        <div class={`${name}`}>
+          <div class={`${name}__toolbar`}>
+            {cancelButtonText.value && (
+              <div class={`${name}__cancel`} onClick={handleCancel}>
+                {cancelButtonText.value}
+              </div>
+            )}
+            <div class={`${name}__title`}>{props.title}</div>
+            {confirmButtonText.value && (
+              <div class={`${name}__confirm`} onClick={handleConfirm}>
+                {confirmButtonText.value}
+              </div>
+            )}
+          </div>
+          {header}
+          <div class={`${name}__main`}>
+            {realColumns.value.map((item, index) => (
+              <div key={index} class={`${name}-item__group`}>
+                <picker-item
+                  ref={(item: any) => setPickerItemRef(item, index)}
+                  options={item}
+                  value={pickerValue.value?.[index]}
+                  render-label={props.renderLabel}
+                  onPick={($event: any) => handlePick($event, index)}
+                />
+              </div>
+            ))}
+            <div class={`${name}__mask ${name}__mask--top`} />
+            <div class={`${name}__mask ${name}__mask--bottom`} />
+            <div class={`${name}__indicator`} />
+          </div>
+        </div>
+      );
     };
   },
 });
-</script>

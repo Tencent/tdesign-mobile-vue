@@ -10,8 +10,7 @@ exports[`calendar > props > : format 1`] = `
       class="t-overlay t-overlay--active"
       style="z-index: 1000; transition-duration: 300ms;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--bottom"
