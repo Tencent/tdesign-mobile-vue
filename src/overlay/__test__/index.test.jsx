@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import Overlay from '../overlay.vue';
+import Overlay from '../overlay';
 import { mount } from '@vue/test-utils';
 
 describe('Overlay', () => {

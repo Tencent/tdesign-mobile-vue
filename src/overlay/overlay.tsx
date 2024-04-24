@@ -1,30 +1,26 @@
-<template>
-  <Transition :name="name">
-    <div v-show="visible" :class="classes" :style="rootStyles" @click="handleClick" @touchmove="handleTouchMove">
-      <slot />
-    </div>
-  </Transition>
-</template>
-
-<script lang="ts">
-import { computed, defineComponent } from 'vue';
+import { Transition, computed, defineComponent } from 'vue';
 import { preventDefault } from '../shared/dom';
 import config from '../config';
-import props from './props';
+import OverlayProps from './props';
+import { usePrefixClass } from '../hooks/useClass';
+import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
 const name = `${prefix}-overlay`;
 
 export default defineComponent({
   name,
-  props,
+  props: OverlayProps,
   setup(props) {
-    const classes = computed(() => ({
-      [`${name}`]: true,
-      [`${name}--active`]: props.visible,
+    const renderTNodeJSX = useTNodeJSX();
+    const overlayClass = usePrefixClass('overlay');
+
+    const overlayClasses = computed(() => ({
+      [`${overlayClass.value}`]: true,
+      [`${overlayClass.value}--active`]: props.visible,
     }));
 
-    const rootStyles = computed(() => {
+    const overlayStyles = computed(() => {
       const arr = [];
 
       if (props.customStyle) {
@@ -51,13 +47,18 @@ export default defineComponent({
       props.onClick?.({ e });
     };
 
-    return {
-      name,
-      classes,
-      rootStyles,
-      handleClick,
-      handleTouchMove,
-    };
+    return () => (
+      <Transition name={name}>
+        <div
+          v-show={props.visible}
+          class={overlayClasses.value}
+          style={overlayStyles.value}
+          onClick={handleClick}
+          onTouchmove={handleTouchMove}
+        >
+          {renderTNodeJSX('default')}
+        </div>
+      </Transition>
+    );
   },
 });
-</script>

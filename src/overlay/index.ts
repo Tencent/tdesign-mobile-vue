@@ -1,5 +1,5 @@
 import { withInstall, WithInstallType } from '../shared';
-import _Overlay from './overlay.vue';
+import _Overlay from './overlay';
 
 import './style';
 

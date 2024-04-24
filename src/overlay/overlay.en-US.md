@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Overlay Props
 
 name | type | default | description | required
@@ -19,11 +20,11 @@ name | params | description
 -- | -- | --
 click | `(context: { e: MouseEvent })` | \-
 
+### CSS 变量
 
-### CSS Variables
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
 --td-overlay-bg-color | @font-gray-1 | - 
 --td-overlay-transition-duration | 300ms | - 
---td-overlay-zindex | 1000 | - 
+--td-overlay-zindex | 1000 | -
