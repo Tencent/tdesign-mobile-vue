@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Search Props
 
 name | type | default | description | required
@@ -11,15 +12,15 @@ center | Boolean | false | \- | N
 clearable | Boolean | true | \- | N
 disabled | Boolean | - | \- | N
 focus | Boolean | false | \- | N
-leftIcon | Slot / Function | 'search' | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+leftIcon | String / Slot / Function | 'search' | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 placeholder | String | '' | \- | N
 readonly | Boolean | false | \- | N
-shape | String | 'square' | options：square/round | N
+shape | String | 'square' | options: square/round | N
 value | String | - | `v-model` and `v-model:value` is supported | N
 defaultValue | String | - | uncontrolled property | N
 onActionClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onBlur | Function |  | Typescript：`(context: { value: string; e: FocusEvent }) => void`<br/> | N
-onChange | Function |  | Typescript：`(value: string, context: { trigger: 'input-change' \| 'option-click'; e?: InputEvent \| MouseEvent }) => void`<br/> | N
+onChange | Function |  | Typescript：`(value: string, context: { e?: InputEvent \| MouseEvent }) => void`<br/> | N
 onClear | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onFocus | Function |  | Typescript：`(context: { value: string; e: FocusEvent }) => void`<br/> | N
 onSearch | Function |  | Typescript：`(context?: { value: string; trigger: 'submit' \| 'option-click' \| 'clear'; e?: InputEvent \| MouseEvent }) => void`<br/> | N
@@ -37,8 +38,8 @@ focus | `(context: { value: string; e: FocusEvent })` | \-
 search | `(context?: { value: string; trigger: 'submit' \| 'option-click' \| 'clear'; e?: InputEvent \| MouseEvent })` | \-
 submit | `(context: { value: string; e: KeyboardEvent })` | \-
 
+### CSS 变量
 
-### CSS Variables
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
@@ -52,4 +53,4 @@ Name | Default Value | Description
 --td-search-padding | 8px 12px | - 
 --td-search-placeholder-color | @font-gray-3 | - 
 --td-search-square-radius | @radius-default | - 
---td-search-text-color | @font-gray-1 | - 
+--td-search-text-color | @font-gray-1 | -

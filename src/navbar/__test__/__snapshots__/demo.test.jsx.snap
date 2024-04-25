@@ -737,7 +737,6 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               <div
                 class="t-search__input-box t-search__input-box--round"
               >
-                
                 <svg
                   class="t-icon t-icon-search"
                   fill="none"
@@ -751,17 +750,14 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
                     fill="currentColor"
                   />
                 </svg>
-                
                 <input
                   class="t-input__keyword"
                   placeholder="搜索预设文案"
                   type="search"
                 />
-                <!--v-if-->
+                <!---->
               </div>
-              
-              <!--v-if-->
-              
+              <!---->
             </div>
             
             <!--v-if-->
@@ -1299,7 +1295,6 @@ exports[`Navbar > Navbar searchVue demo works fine 1`] = `
         <div
           class="t-search__input-box t-search__input-box--round"
         >
-          
           <svg
             class="t-icon t-icon-search"
             fill="none"
@@ -1313,17 +1308,14 @@ exports[`Navbar > Navbar searchVue demo works fine 1`] = `
               fill="currentColor"
             />
           </svg>
-          
           <input
             class="t-input__keyword"
             placeholder="搜索预设文案"
             type="search"
           />
-          <!--v-if-->
+          <!---->
         </div>
-        
-        <!--v-if-->
-        
+        <!---->
       </div>
       
       <!--v-if-->
