@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { nextTick } from 'vue';
-import Sticky from '../sticky.vue';
+import Sticky from '../sticky';
 import { useTestUtils, useVitest } from '../../shared';
 
 const _mount = (template, data = () => ({}), methods = {}) =>
