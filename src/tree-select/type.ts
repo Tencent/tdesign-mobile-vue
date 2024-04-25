@@ -4,16 +4,9 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { SelectInputProps, SelectInputBlurContext, SelectInputValueChangeContext } from '../select-input';
-import { TagProps } from '../tag';
 import { TreeOptionData, TreeKeysType } from '../common';
 
-export interface TdTreeSelectProps {
-  /**
-   * 是否允许清空
-   * @default false
-   */
-  clearable?: boolean;
+export interface TdTreeSelectProps<DataOption extends TreeOptionData = TreeOptionData> {
   /**
    * 自定义组件样式
    * @default ''
@@ -39,60 +32,28 @@ export interface TdTreeSelectProps {
    */
   multiple?: boolean;
   /**
-   * 是否多选
-   * @default false
-   */
-  multiple?: boolean;
-  /**
    * 选项
    * @default []
    */
   options?: Array<DataOption>;
   /**
-   * 占位符
+   * 选中值
    */
-  placeholder?: string;
+  value?: TreeSelectValue;
   /**
-   * 【开发中】透传 SelectInput 筛选器输入框组件的全部属性
+   * 选中值，非受控属性
    */
-  selectInputProps?: SelectInputProps;
+  defaultValue?: TreeSelectValue;
   /**
-   * 尺寸
-   * @default medium
+   * 选中值
    */
-  size?: 'small' | 'medium' | 'large';
+  modelValue?: TreeSelectValue;
   /**
-   * 透传 Tag 标签组件全部属性
+   * 点击任何节点均会触发；level 代表当前点击的层级，0 代表最左侧，依次递进
    */
-  tagProps?: TagProps;
-  /**
-   * 选中值，泛型 `TreeValueType` 继承自 `TreeSelectValue`
-   */
-  value?: TreeValueType;
-  /**
-   * 选中值，泛型 `TreeValueType` 继承自 `TreeSelectValue`，非受控属性
-   */
-  defaultValue?: TreeValueType;
-  /**
-   * 选中值，泛型 `TreeValueType` 继承自 `TreeSelectValue`
-   */
-  modelValue?: TreeValueType;
-  /**
-   * 节点选中状态变化时触发，`context.node` 表示当前变化的选项，`context. trigger` 表示触发变化的来源。泛型 `TreeValueType` 继承自 `TreeSelectValue`
-   */
-  onChange?: (value: TreeValueType, context: TreeSelectChangeContext<DataOption>) => void;
+  onChange?: (value: TreeSelectValue, level: TreeLevel) => void;
 }
 
-export type TreeSelectValue = string | number | TreeOptionData | Array<string | number | TreeOptionData>;
+export type TreeSelectValue = string | number | Array<TreeSelectValue>;
 
-export type TreeSelectValue = string | number | TreeOptionData | Array<string | number | TreeOptionData>;
-
-export interface TreeSelectChangeContext<DataOption> {
-  node: TreeNodeModel<DataOption>;
-  data: DataOption;
-  index?: number;
-  trigger: TreeSelectValueChangeTrigger;
-  e?: MouseEvent | KeyboardEvent | Event;
-}
-
-export type TreeSelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck';
+export type TreeLevel = 0 | 1 | 2;
