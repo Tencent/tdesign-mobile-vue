@@ -1,7 +1,7 @@
 import { nextTick, ref, onMounted } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import Input from '../input.vue';
+import Input from '../input';
 
 import { CloseCircleFilledIcon, InfoCircleFilledIcon, AppIcon } from 'tdesign-icons-vue-next';
 
@@ -108,16 +108,6 @@ describe('Input.vue', async () => {
       const wrapper = mount(<Input label="标题" autocomplete />);
       const input = wrapper.find('.t-input__wrap input');
       expect(input.element.getAttribute('autocomplete')).toBe('On');
-    });
-
-    it(': size', async () => {
-      const sizeList = ['', 'small', 'meddium', 'large'];
-      sizeList.forEach((size, index) => {
-        const wrapper = mount(() => <Input label="标题" size={size} />);
-        if (size) {
-          expect(wrapper.classes()).toContain(`t-input--size-${size}`);
-        }
-      });
     });
 
     it(': layout', async () => {

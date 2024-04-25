@@ -1,5 +1,5 @@
 import { withInstall, WithInstallType } from '../shared';
-import Input from './input.vue';
+import Input from './input';
 
 import './style';
 import { TdInputProps } from './type';
