@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Textarea Props
 
 name | type | default | description | required
@@ -12,7 +13,7 @@ bordered | Boolean | false | \- | N
 disabled | Boolean | false | \- | N
 indicator | Boolean | false | \- | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-layout | String | horizontal | 
+layout | String | horizontal | options: vertical/horizontal | N
 maxcharacter | Number | - | \- | N
 maxlength | Number | - | \- | N
 name | String | - | \- | N
@@ -32,8 +33,8 @@ blur | `(value: TextareaValue, context: { e: FocusEvent })` | \-
 change | `(value: TextareaValue, context?: { e?: InputEvent })` | \-
 focus | `(value: TextareaValue, context : { e: FocusEvent })` | \-
 
+### CSS 变量
 
-### CSS Variables
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
@@ -46,4 +47,4 @@ Name | Default Value | Description
 --td-textarea-label-width | 64px | - 
 --td-textarea-padding | @textarea-vertical-padding @textarea-horizontal-padding | - 
 --td-textarea-placeholder-color | @font-gray-3 | - 
---td-textarea-text-color | @font-gray-1 | - 
+--td-textarea-text-color | @font-gray-1 | -
