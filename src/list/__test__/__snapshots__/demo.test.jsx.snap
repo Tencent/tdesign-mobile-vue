@@ -136,6 +136,7 @@ exports[`List > List pullRefreshVue demo works fine 1`] = `
 <div
   class="t-pull-down-refresh"
 >
+  <!---->
   <div
     class="t-pull-down-refresh__track t-pull-down-refresh__track--loosing"
     style="transform: translate3d(0, 0px, 0);"
@@ -150,7 +151,9 @@ exports[`List > List pullRefreshVue demo works fine 1`] = `
       >
         <div
           class="t-pull-down-refresh__text"
-        />
+        >
+          <!---->
+        </div>
       </div>
     </div>
     
