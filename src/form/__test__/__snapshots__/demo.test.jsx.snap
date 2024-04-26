@@ -839,9 +839,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 <div
                   class="t-cascader__title"
                 >
-                  
                   选择地址
-                  
                 </div>
                 <div
                   class="t-cascader__close-btn"
@@ -877,9 +875,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                         <div
                           class="t-cascader__step-label t-cascader__step-label--active"
                         >
-                          
                           选择选项
-                          
                         </div>
                         <svg
                           class="t-icon t-icon-chevron-right t-cascader__step-arrow"
@@ -896,9 +892,8 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                       </div>
                       
                     </div>
-                    <!--v-if-->
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <div
                     class="t-cascader__options-container"
                     style="width: 200vw; transform: translateX(-000vw);"
@@ -2567,9 +2562,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       <div
                         class="t-cascader__title"
                       >
-                        
                         选择地址
-                        
                       </div>
                       <div
                         class="t-cascader__close-btn"
@@ -2605,9 +2598,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                               <div
                                 class="t-cascader__step-label t-cascader__step-label--active"
                               >
-                                
                                 选择选项
-                                
                               </div>
                               <svg
                                 class="t-icon t-icon-chevron-right t-cascader__step-arrow"
@@ -2624,9 +2615,8 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                             </div>
                             
                           </div>
-                          <!--v-if-->
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <div
                           class="t-cascader__options-container"
                           style="width: 200vw; transform: translateX(-000vw);"
@@ -4156,9 +4146,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 <div
                   class="t-cascader__title"
                 >
-                  
                   选择地址
-                  
                 </div>
                 <div
                   class="t-cascader__close-btn"
@@ -4194,9 +4182,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                         <div
                           class="t-cascader__step-label t-cascader__step-label--active"
                         >
-                          
                           选择选项
-                          
                         </div>
                         <svg
                           class="t-icon t-icon-chevron-right t-cascader__step-arrow"
@@ -4213,9 +4199,8 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                       </div>
                       
                     </div>
-                    <!--v-if-->
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <div
                     class="t-cascader__options-container"
                     style="width: 200vw; transform: translateX(-000vw);"

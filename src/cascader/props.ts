@@ -8,6 +8,8 @@ import { TdCascaderProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 父子节点选中状态不再关联，可各自选中或取消 */
+  checkStrictly: Boolean,
   /** 关闭按钮 */
   closeBtn: {
     type: [Boolean, Function] as PropType<TdCascaderProps['closeBtn']>,
@@ -21,6 +23,10 @@ export default {
   options: {
     type: Array as PropType<TdCascaderProps['options']>,
     default: (): TdCascaderProps['options'] => [],
+  },
+  /** 未选中时的提示文案 */
+  placeholder: {
+    type: [String, Function] as PropType<TdCascaderProps['placeholder']>,
   },
   /** 每级展示的次标题 */
   subTitles: {
@@ -53,17 +59,8 @@ export default {
   defaultValue: {
     type: [String, Number] as PropType<TdCascaderProps['defaultValue']>,
   },
-  /** 未选中时的提示文案 */
-  placeholder: {
-    type: [String, Function] as PropType<TdCascaderProps['placeholder']>,
-  },
   /** 是否展示 */
   visible: Boolean,
-  /** 父子节点选中状态不再关联，可各自选中或取消 */
-  checkStrictly: {
-    type: Boolean,
-    default: false,
-  },
   /** 值发生变更时触发 */
   onChange: Function as PropType<TdCascaderProps['onChange']>,
   /** 关闭时触发 */

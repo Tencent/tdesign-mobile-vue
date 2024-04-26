@@ -1,78 +1,3 @@
-<template>
-  <t-popup v-model="open" placement="bottom" @visible-change="onVisibleChange">
-    <div :class="`${name}`">
-      <div :class="`${name}__title`">
-        <t-node v-if="!(typeof titleTNode === 'string')" :content="titleTNode" />
-        <template v-else>{{ title }}</template>
-      </div>
-      <div :class="`${name}__close-btn`" @click="onCloseBtn">
-        <t-node v-if="closeBtnTNode" :content="closeBtnTNode" />
-      </div>
-      <div :class="`${name}__content`">
-        <div v-if="steps && steps.length">
-          <div v-if="theme === 'step'" :class="`${name}__steps`">
-            <div v-for="(item, index) in steps" :key="index" :class="`${name}__step`" @click="onStepClick(index)">
-              <div
-                :class="[
-                  `${name}__step-dot`,
-                  {
-                    't-cascader__step-dot--active': item !== placeholder,
-                    't-cascader__step-dot--last': index === steps.length - 1,
-                  },
-                ]"
-              ></div>
-              <div
-                :class="[
-                  `${name}__step-label`,
-                  {
-                    't-cascader__step-label--active': index === stepIndex,
-                  },
-                ]"
-              >
-                <t-node
-                  v-if="placeholderTNode && !(typeof placeholderTNode === 'string') && item === placeholder"
-                  :content="placeholderTNode"
-                />
-                <template v-else>{{ item }}</template>
-              </div>
-              <chevron-right-icon :class="`${name}__step-arrow`" size="22" />
-            </div>
-          </div>
-          <div v-if="open && theme === 'tab'">
-            <t-tabs id="tabs" :value="stepIndex" :space-evenly="false" @change="onTabChange">
-              <t-tab-panel v-for="(item, index) in steps" :key="index" :value="index" :label="item" />
-            </t-tabs>
-          </div>
-        </div>
-        <div v-if="subTitles && subTitles[stepIndex]" :class="`${name}__options-title`">
-          {{ subTitles[stepIndex] }}
-        </div>
-        <div
-          :class="`${name}__options-container`"
-          :style="`width: ${items.length + 1}00vw; transform: translateX(-${stepIndex}00vw);`"
-        >
-          <div v-for="(options, index) in items" :key="index" :class="`${name}__options`">
-            <transition appear name="slide">
-              <div :class="`cascader-radio-group-${index}`">
-                <t-radio-group
-                  :value="selectedValue[index] || ''"
-                  :keys="keys"
-                  :options="options"
-                  placement="right"
-                  icon="line"
-                  borderless
-                  @change="handleSelect($event, index)"
-                />
-              </div>
-            </transition>
-          </div>
-        </div>
-      </div>
-    </div>
-  </t-popup>
-</template>
-
-<script lang="ts">
 import { CloseIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import {
   defineComponent,
@@ -86,21 +11,25 @@ import {
   onMounted,
   Ref,
   h,
+  Transition,
 } from 'vue';
-import TPopup from '../popup';
+import TPopup, { PopupSource } from '../popup';
 import { Tabs as TTabs, TabPanel as TTabPanel } from '../tabs';
-import { RadioGroup as TRadioGroup } from '../radio';
+import { RadioValue, RadioGroup as TRadioGroup } from '../radio';
 import config from '../config';
 import TdCascaderProps from './props';
 import { useVModel, renderTNode, TNode } from '../shared';
 import { TreeOptionData } from '../common';
 import { useConfig } from '../config-provider/useConfig';
+import { useTNodeJSX } from '@/hooks/tnode';
+import { usePrefixClass } from '@/hooks/useClass';
+import { TriggerSource } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-cascader`;
 
 interface ChildrenInfoType {
-  value: string | number;
+  value: string | number | boolean;
   level: number;
 }
 
@@ -117,23 +46,17 @@ interface KeysType {
 
 export default defineComponent({
   name,
-  components: {
-    ChevronRightIcon,
-    TNode,
-    TPopup,
-    TTabs,
-    TTabPanel,
-    TRadioGroup,
-  },
   props: TdCascaderProps,
-  emits: ['change', 'close', 'pick', 'update:modelValue', 'update:value', 'update:visible'],
+  emits: ['update:visible'],
   setup(props, context) {
+    const renderTNodeJSX = useTNodeJSX();
+    const cascaderClass = usePrefixClass('cascader');
     const { globalConfig } = useConfig('cascader');
 
     const { visible, value, modelValue, subTitles, options, keys, checkStrictly } = toRefs(props);
     const open = ref(visible.value || false);
     const [cascaderValue, setCascaderValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
-    const title = computed(() => props.title || globalConfig.value.title);
+
     const placeholder = computed(() => props.placeholder || globalConfig.value.placeholder);
 
     const stepIndex = ref(0);
@@ -152,15 +75,6 @@ export default defineComponent({
     onMounted(() => {
       initWithValue();
     });
-
-    const internalInstance = getCurrentInstance();
-    const closeBtnTNode = computed(() => {
-      return renderTNode(internalInstance, 'closeBtn', {
-        defaultNode: h(CloseIcon, { size: '24px' }),
-      });
-    });
-    const titleTNode = computed(() => renderTNode(internalInstance, 'title'));
-    const placeholderTNode = computed(() => renderTNode(internalInstance, 'placeholder'));
 
     const initWithValue = () => {
       if (value.value != null) {
@@ -206,10 +120,10 @@ export default defineComponent({
       }
     };
 
-    const chooseSelect = (e: string | number, level: number, index: number, item: any) => {
+    const chooseSelect = (value: RadioValue, level: number, index: number, item: any) => {
       selectedIndexes[level] = index;
       selectedIndexes.length = level + 1;
-      selectedValue[level] = String(e);
+      selectedValue[level] = String(value);
       selectedValue.length = level + 1;
       steps[level] = item[(keys as Ref<KeysType>).value?.label ?? 'label'] as string;
 
@@ -220,7 +134,7 @@ export default defineComponent({
         steps[level + 1] = placeholder.value;
         steps.length = level + 2;
       } else if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length === 0) {
-        childrenInfo.value = e;
+        childrenInfo.value = value;
         childrenInfo.level = level;
       } else {
         setCascaderValue(
@@ -231,7 +145,7 @@ export default defineComponent({
       }
     };
 
-    const cancelSelect = (e: string | number, level: number, index: number, item: any) => {
+    const cancelSelect = (value: RadioValue, level: number, index: number, item: any) => {
       selectedIndexes[level] = index;
       selectedIndexes.length = level;
       selectedValue.length = level;
@@ -242,13 +156,12 @@ export default defineComponent({
       if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length) {
         items[level + 1] = item[(keys as Ref<KeysType>).value?.children ?? 'children'];
       } else if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length === 0) {
-        childrenInfo.value = e;
+        childrenInfo.value = value;
         childrenInfo.level = level;
       }
     };
 
-    const handleSelect = (e: string | number, level: number) => {
-      const value = e;
+    const handleSelect = (value: RadioValue, level: number) => {
       const index = items[level].findIndex(
         (item: any) => item[(keys as Ref<KeysType>).value?.value ?? 'value'] === value,
       );
@@ -259,9 +172,9 @@ export default defineComponent({
       props.onPick?.({ level, value: item[(keys as Ref<KeysType>).value?.value ?? 'value'], index });
 
       if (checkStrictly.value && selectedValue.includes(String(value))) {
-        cancelSelect(e, level, index, item);
+        cancelSelect(value, level, index, item);
       } else {
-        chooseSelect(e, level, index, item);
+        chooseSelect(value, level, index, item);
       }
     };
 
@@ -285,12 +198,12 @@ export default defineComponent({
       },
     );
 
-    const close = (trigger: string) => {
-      props.onClose?.({ trigger });
+    const close = (trigger: TriggerSource) => {
+      props.onClose?.(trigger);
     };
 
-    const onVisibleChange = (visible: boolean, e: any) => {
-      if (e?.trigger !== 'overlay') return;
+    const handleVisibleChange = (visible: boolean, trigger: TriggerSource) => {
+      if (trigger !== 'overlay') return;
       close('overlay');
     };
 
@@ -324,30 +237,117 @@ export default defineComponent({
     const onTabChange = (value: number | string) => {
       stepIndex.value = Number(value);
     };
+    return () => {
+      const title = renderTNodeJSX('title') || globalConfig.value.title;
+      const closeBtn = renderTNodeJSX('closeBtn', { defaultNode: <CloseIcon size="24px" /> });
+      const PlaceholderNode = renderTNodeJSX('placeholder');
 
-    return {
-      open,
-      placeholder,
-      onVisibleChange,
-      onStepClick,
-      onTabChange,
-      handleSelect,
-      closeBtnTNode,
-      titleTNode,
-      placeholderTNode,
-      stepIndex,
-      name,
-      title,
-      subTitles,
-      cascaderValue,
-      steps,
-      selectedValue,
-      selectedIndexes,
-      items,
-      setCascaderValue,
-      onClose,
-      onCloseBtn,
+      const readerStep = () => {
+        return (
+          <div>
+            <div class={`${cascaderClass.value}__steps`}>
+              {steps.map((step, index) => {
+                return (
+                  <div
+                    class={`${cascaderClass.value}__step`}
+                    onClick={() => {
+                      onStepClick(index);
+                    }}
+                  >
+                    <div
+                      class={[
+                        `${cascaderClass.value}__step-dot`,
+                        {
+                          [`${cascaderClass.value}__step-dot--active`]: step !== placeholder.value,
+                          [`${cascaderClass.value}__step-dot--last`]: index === steps.length - 1,
+                        },
+                      ]}
+                    />
+                    <div
+                      class={[
+                        `${cascaderClass.value}__step-label`,
+                        {
+                          [`${cascaderClass.value}__step-label--active`]: index === stepIndex.value,
+                        },
+                      ]}
+                    >
+                      {PlaceholderNode && !(typeof PlaceholderNode === 'string') && step === placeholder.value
+                        ? PlaceholderNode
+                        : step}
+                    </div>
+                    <ChevronRightIcon class={`${cascaderClass.value}__step-arrow`} size="22" />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        );
+      };
+      const readerSteps = () => {
+        if (steps.length === 0) {
+          return null;
+        }
+        if (props.theme === 'step') {
+          return readerStep();
+        }
+
+        if (open.value && props.theme === 'tab') {
+          return (
+            <TTabs value={stepIndex.value} spaceEvenly={false} onChange={onTabChange}>
+              {steps.map((item, index) => (
+                <TTabPanel value={index} label={item} />
+              ))}
+            </TTabs>
+          );
+        }
+      };
+      return (
+        <TPopup v-model={open.value} placement="bottom" onVisibleChange={handleVisibleChange}>
+          <div class={`${cascaderClass.value}`}>
+            <div class={`${cascaderClass.value}__title`}>{title}</div>
+            <div class={`${cascaderClass.value}__close-btn`} onClick={onCloseBtn}>
+              {closeBtn}
+            </div>
+            <div class={`${cascaderClass.value}__content`}>
+              {readerSteps()}
+              {subTitles.value && subTitles.value[stepIndex.value] && (
+                <div class={`${cascaderClass.value}__options-title`}>{subTitles.value[stepIndex.value]}</div>
+              )}
+              <div
+                class={`${cascaderClass.value}__options-container`}
+                style={`width: ${items.length + 1}00vw; transform: translateX(-${stepIndex.value}00vw);`}
+              >
+                {items.map((options, index) => {
+                  return (
+                    <div class={`${cascaderClass.value}__options`}>
+                      <Transition appear name="slide">
+                        <div class={`${cascaderClass.value}-radio-group-${index}`}>
+                          <TRadioGroup
+                            value={selectedValue[index] || ''}
+                            keys={keys}
+                            options={options}
+                            placement="right"
+                            icon="line"
+                            borderless
+                            onChange={(
+                              value: RadioValue,
+                              context: {
+                                e: Event;
+                              },
+                            ) => {
+                              handleSelect(value, index);
+                            }}
+                          />
+                        </div>
+                      </Transition>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </TPopup>
+      );
     };
   },
 });
-</script>

@@ -69,9 +69,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
         <div
           class="t-cascader__title"
         >
-          
           选择地址
-          
         </div>
         <div
           class="t-cascader__close-btn"
@@ -107,9 +105,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
                 <div
                   class="t-cascader__step-label t-cascader__step-label--active"
                 >
-                  
                   选择选项
-                  
                 </div>
                 <svg
                   class="t-icon t-icon-chevron-right t-cascader__step-arrow"
@@ -126,9 +122,8 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
               </div>
               
             </div>
-            <!--v-if-->
           </div>
-          <!--v-if-->
+          <!---->
           <div
             class="t-cascader__options-container"
             style="width: 200vw; transform: translateX(-000vw);"
@@ -300,9 +295,7 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
         <div
           class="t-cascader__title"
         >
-          
           选择地址
-          
         </div>
         <div
           class="t-cascader__close-btn"
@@ -333,9 +326,7 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
                 <div
                   class="t-cascader__step-label t-cascader__step-label--active"
                 >
-                  
                   选择选项
-                  
                 </div>
                 <svg
                   class="t-icon t-icon-chevron-right t-cascader__step-arrow"
@@ -352,9 +343,8 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
               </div>
               
             </div>
-            <!--v-if-->
           </div>
-          <!--v-if-->
+          <!---->
           <div
             class="t-cascader__options-container"
             style="width: 200vw; transform: translateX(-000vw);"
@@ -524,9 +514,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
         <div
           class="t-cascader__title"
         >
-          
           选择地址
-          
         </div>
         <div
           class="t-cascader__close-btn"
@@ -562,9 +550,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                 <div
                   class="t-cascader__step-label t-cascader__step-label--active"
                 >
-                  
                   选择选项
-                  
                 </div>
                 <svg
                   class="t-icon t-icon-chevron-right t-cascader__step-arrow"
@@ -581,9 +567,8 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
               </div>
               
             </div>
-            <!--v-if-->
           </div>
-          <!--v-if-->
+          <!---->
           <div
             class="t-cascader__options-container"
             style="width: 200vw; transform: translateX(-000vw);"
@@ -607,7 +592,6 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                       class="t-radio__original"
                       name=""
                       type="radio"
-                      value="110000"
                     />
                     <div
                       class="t-radio__icon t-radio__icon--right"
@@ -624,12 +608,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                     <div
                       class="t-radio__content"
                     >
-                      <span
-                        class="t-radio__title"
-                        style=""
-                      >
-                        北京市
-                      </span>
+                      <!--v-if-->
                       <!--v-if-->
                     </div>
                     <!--v-if-->
@@ -641,7 +620,6 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                       class="t-radio__original"
                       name=""
                       type="radio"
-                      value="120000"
                     />
                     <div
                       class="t-radio__icon t-radio__icon--right"
@@ -658,12 +636,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                     <div
                       class="t-radio__content"
                     >
-                      <span
-                        class="t-radio__title"
-                        style=""
-                      >
-                        天津市
-                      </span>
+                      <!--v-if-->
                       <!--v-if-->
                     </div>
                     <!--v-if-->
@@ -753,9 +726,7 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
         <div
           class="t-cascader__title"
         >
-          
           选择地址
-          
         </div>
         <div
           class="t-cascader__close-btn"
@@ -791,9 +762,7 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
                 <div
                   class="t-cascader__step-label t-cascader__step-label--active"
                 >
-                  
                   选择选项
-                  
                 </div>
                 <svg
                   class="t-icon t-icon-chevron-right t-cascader__step-arrow"
@@ -810,9 +779,8 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
               </div>
               
             </div>
-            <!--v-if-->
           </div>
-          <!--v-if-->
+          <!---->
           <div
             class="t-cascader__options-container"
             style="width: 200vw; transform: translateX(-000vw);"
@@ -979,9 +947,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
             <div
               class="t-cascader__title"
             >
-              
               选择地址
-              
             </div>
             <div
               class="t-cascader__close-btn"
@@ -1017,9 +983,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                     <div
                       class="t-cascader__step-label t-cascader__step-label--active"
                     >
-                      
                       选择选项
-                      
                     </div>
                     <svg
                       class="t-icon t-icon-chevron-right t-cascader__step-arrow"
@@ -1036,9 +1000,8 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!--v-if-->
               </div>
-              <!--v-if-->
+              <!---->
               <div
                 class="t-cascader__options-container"
                 style="width: 200vw; transform: translateX(-000vw);"
@@ -1221,9 +1184,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
             <div
               class="t-cascader__title"
             >
-              
               选择地址
-              
             </div>
             <div
               class="t-cascader__close-btn"
@@ -1245,11 +1206,8 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
             <div
               class="t-cascader__content"
             >
-              <div>
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
+              <!---->
+              <!---->
               <div
                 class="t-cascader__options-container"
                 style="width: 200vw; transform: translateX(-000vw);"
@@ -1436,9 +1394,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
             <div
               class="t-cascader__title"
             >
-              
               选择地址
-              
             </div>
             <div
               class="t-cascader__close-btn"
@@ -1474,9 +1430,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                     <div
                       class="t-cascader__step-label t-cascader__step-label--active"
                     >
-                      
                       选择选项
-                      
                     </div>
                     <svg
                       class="t-icon t-icon-chevron-right t-cascader__step-arrow"
@@ -1493,9 +1447,8 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!--v-if-->
               </div>
-              <!--v-if-->
+              <!---->
               <div
                 class="t-cascader__options-container"
                 style="width: 200vw; transform: translateX(-000vw);"
@@ -1678,9 +1631,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
             <div
               class="t-cascader__title"
             >
-              
               选择地址
-              
             </div>
             <div
               class="t-cascader__close-btn"
@@ -1716,9 +1667,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                     <div
                       class="t-cascader__step-label t-cascader__step-label--active"
                     >
-                      
                       选择选项
-                      
                     </div>
                     <svg
                       class="t-icon t-icon-chevron-right t-cascader__step-arrow"
@@ -1735,9 +1684,8 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!--v-if-->
               </div>
-              <!--v-if-->
+              <!---->
               <div
                 class="t-cascader__options-container"
                 style="width: 200vw; transform: translateX(-000vw);"
@@ -1761,7 +1709,6 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           class="t-radio__original"
                           name=""
                           type="radio"
-                          value="110000"
                         />
                         <div
                           class="t-radio__icon t-radio__icon--right"
@@ -1778,12 +1725,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <div
                           class="t-radio__content"
                         >
-                          <span
-                            class="t-radio__title"
-                            style=""
-                          >
-                            北京市
-                          </span>
+                          <!--v-if-->
                           <!--v-if-->
                         </div>
                         <!--v-if-->
@@ -1795,7 +1737,6 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           class="t-radio__original"
                           name=""
                           type="radio"
-                          value="120000"
                         />
                         <div
                           class="t-radio__icon t-radio__icon--right"
@@ -1812,12 +1753,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <div
                           class="t-radio__content"
                         >
-                          <span
-                            class="t-radio__title"
-                            style=""
-                          >
-                            天津市
-                          </span>
+                          <!--v-if-->
                           <!--v-if-->
                         </div>
                         <!--v-if-->
@@ -1920,9 +1856,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
             <div
               class="t-cascader__title"
             >
-              
               选择地址
-              
             </div>
             <div
               class="t-cascader__close-btn"
@@ -1958,9 +1892,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                     <div
                       class="t-cascader__step-label t-cascader__step-label--active"
                     >
-                      
                       选择选项
-                      
                     </div>
                     <svg
                       class="t-icon t-icon-chevron-right t-cascader__step-arrow"
@@ -1977,7 +1909,6 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!--v-if-->
               </div>
               <div
                 class="t-cascader__options-title"
@@ -2166,9 +2097,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
             <div
               class="t-cascader__title"
             >
-              
               选择地址
-              
             </div>
             <div
               class="t-cascader__close-btn"
@@ -2204,9 +2133,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                     <div
                       class="t-cascader__step-label t-cascader__step-label--active"
                     >
-                      
                       选择选项
-                      
                     </div>
                     <svg
                       class="t-icon t-icon-chevron-right t-cascader__step-arrow"
@@ -2223,9 +2150,8 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!--v-if-->
               </div>
-              <!--v-if-->
+              <!---->
               <div
                 class="t-cascader__options-container"
                 style="width: 200vw; transform: translateX(-000vw);"
@@ -2376,9 +2302,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
             <div
               class="t-cascader__title"
             >
-              
               选择地址
-              
             </div>
             <div
               class="t-cascader__close-btn"
@@ -2409,9 +2333,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                     <div
                       class="t-cascader__step-label t-cascader__step-label--active"
                     >
-                      
                       选择选项
-                      
                     </div>
                     <svg
                       class="t-icon t-icon-chevron-right t-cascader__step-arrow"
@@ -2428,9 +2350,8 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!--v-if-->
               </div>
-              <!--v-if-->
+              <!---->
               <div
                 class="t-cascader__options-container"
                 style="width: 200vw; transform: translateX(-000vw);"
@@ -2603,9 +2524,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
         <div
           class="t-cascader__title"
         >
-          
           选择地址
-          
         </div>
         <div
           class="t-cascader__close-btn"
@@ -2627,11 +2546,8 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
         <div
           class="t-cascader__content"
         >
-          <div>
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
+          <!---->
+          <!---->
           <div
             class="t-cascader__options-container"
             style="width: 200vw; transform: translateX(-000vw);"
@@ -2801,9 +2717,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
         <div
           class="t-cascader__title"
         >
-          
           选择地址
-          
         </div>
         <div
           class="t-cascader__close-btn"
@@ -2839,9 +2753,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
                 <div
                   class="t-cascader__step-label t-cascader__step-label--active"
                 >
-                  
                   选择选项
-                  
                 </div>
                 <svg
                   class="t-icon t-icon-chevron-right t-cascader__step-arrow"
@@ -2858,7 +2770,6 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
               </div>
               
             </div>
-            <!--v-if-->
           </div>
           <div
             class="t-cascader__options-title"
@@ -3034,9 +2945,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
         <div
           class="t-cascader__title"
         >
-          
           选择地址
-          
         </div>
         <div
           class="t-cascader__close-btn"
@@ -3072,9 +2981,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
                 <div
                   class="t-cascader__step-label t-cascader__step-label--active"
                 >
-                  
                   选择选项
-                  
                 </div>
                 <svg
                   class="t-icon t-icon-chevron-right t-cascader__step-arrow"
@@ -3091,9 +2998,8 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
               </div>
               
             </div>
-            <!--v-if-->
           </div>
-          <!--v-if-->
+          <!---->
           <div
             class="t-cascader__options-container"
             style="width: 200vw; transform: translateX(-000vw);"

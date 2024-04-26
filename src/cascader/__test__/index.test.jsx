@@ -1,7 +1,7 @@
 import { ref, h, nextTick } from 'vue';
 import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import Cascader from '../cascader.vue';
+import Cascader from '../cascader';
 import { AppIcon as TIconApp, CloseIcon } from 'tdesign-icons-vue-next';
 import Radio from '../../radio/index';
 import { Tabs as TTabs, TabPanel as TTabPanel } from '../../tabs';
