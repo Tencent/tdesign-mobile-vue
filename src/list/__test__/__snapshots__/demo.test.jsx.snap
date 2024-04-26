@@ -150,7 +150,9 @@ exports[`List > List pullRefreshVue demo works fine 1`] = `
       >
         <div
           class="t-pull-down-refresh__text"
-        />
+        >
+          <!---->
+        </div>
       </div>
     </div>
     
