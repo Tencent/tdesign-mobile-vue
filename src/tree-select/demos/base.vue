@@ -1,5 +1,5 @@
 <template>
-  <t-tree-select :options="options" :value="value" @change="onChange"></t-tree-select>
+  <t-tree-select v-model="value" :options="options" @change="onChange"></t-tree-select>
 </template>
 
 <script lang="ts" setup>
@@ -32,6 +32,6 @@ const value: Ref<TreeSelectValue> = ref(['1', '1-0']);
 
 const onChange: TdTreeSelectProps['onChange'] = (itemValue) => {
   console.log(itemValue);
-  value.value = itemValue;
+  console.log(value.value);
 };
 </script>
