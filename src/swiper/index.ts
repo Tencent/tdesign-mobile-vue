@@ -1,5 +1,5 @@
 import _Swiper from './swiper.vue';
-import _SwiperItem from './swiper-item.vue';
+import _SwiperItem from './swiper-item';
 import { withInstall, WithInstallType } from '../shared';
 import { TdSwiperProps } from './type';
 
