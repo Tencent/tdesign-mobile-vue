@@ -118,7 +118,7 @@ export default defineComponent({
       const tmpTreeOptions: TreeOptionData[][] = [];
       let node: TreeOptionData = { children: options };
       if (options.length === 0 || (Array.isArray(value) && value.length === 0)) return;
-      while (node && node.children && node.children.length) {
+      while (node && node.children) {
         level += 1;
         const list = (node.children as TreeOptionData[]).map((item: TreeOptionData) => ({
           label: item[keys?.label || 'label'],
@@ -154,13 +154,12 @@ export default defineComponent({
     };
 
     const onRootChange = (itemValue: string | number, level: TreeLevel) => {
-      // setInnerValue(itemValue, level)
-      props.onChange?.(innerValue.value, level);
+      setInnerValue(innerValue.value, level);
     };
 
     const handleTreeClick = (itemValue: string | number, level: TreeLevel) => {
       innerValue.value[level] = itemValue;
-      props.onChange?.(innerValue.value, level);
+      setInnerValue(innerValue.value, level);
     };
 
     watch(
