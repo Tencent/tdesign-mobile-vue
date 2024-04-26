@@ -204,8 +204,8 @@ export default defineComponent({
               {readerClearable()}
               {readerSuffix()}
               {readerSuffixIcon()}
-              {readerTips()}
             </div>
+            {readerTips()}
           </div>
         </div>
       );

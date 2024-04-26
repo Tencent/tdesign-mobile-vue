@@ -35,8 +35,8 @@ exports[`Input > Input alignVue demo works fine 1`] = `
         <!---->
         <!---->
         <!---->
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
   <div
@@ -69,8 +69,8 @@ exports[`Input > Input alignVue demo works fine 1`] = `
         <!---->
         <!---->
         <!---->
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
   <div
@@ -103,8 +103,8 @@ exports[`Input > Input alignVue demo works fine 1`] = `
         <!---->
         <!---->
         <!---->
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
   
@@ -143,8 +143,8 @@ exports[`Input > Input bannerVue demo works fine 1`] = `
       <!---->
       <!---->
       <!---->
-      <!---->
     </div>
+    <!---->
   </div>
 </div>
 `;
@@ -184,8 +184,8 @@ exports[`Input > Input baseVue demo works fine 1`] = `
         <!---->
         <!---->
         <!---->
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
   <div
@@ -218,8 +218,8 @@ exports[`Input > Input baseVue demo works fine 1`] = `
         <!---->
         <!---->
         <!---->
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
   <div
@@ -252,8 +252,8 @@ exports[`Input > Input baseVue demo works fine 1`] = `
         <!---->
         <!---->
         <!---->
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
   
@@ -320,8 +320,8 @@ exports[`Input > Input borderedVue demo works fine 1`] = `
           </svg>
           
         </div>
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
 </div>
@@ -363,8 +363,8 @@ exports[`Input > Input customVue demo works fine 1`] = `
         <!---->
         <!---->
         <!---->
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
 </div>
@@ -401,8 +401,8 @@ exports[`Input > Input labelVue demo works fine 1`] = `
       <!---->
       <!---->
       <!---->
-      <!---->
     </div>
+    <!---->
   </div>
 </div>
 `;
@@ -455,8 +455,8 @@ exports[`Input > Input layoutVue demo works fine 1`] = `
         </svg>
         
       </div>
-      <!---->
     </div>
+    <!---->
   </div>
 </div>
 `;
@@ -496,11 +496,11 @@ exports[`Input > Input maxLengthVue demo works fine 1`] = `
         <!---->
         <!---->
         <!---->
-        <div
-          class="t-input__tips t-input--left"
-        >
-          最大输入10个字符
-        </div>
+      </div>
+      <div
+        class="t-input__tips t-input--left"
+      >
+        最大输入10个字符
       </div>
     </div>
   </div>
@@ -534,11 +534,11 @@ exports[`Input > Input maxLengthVue demo works fine 1`] = `
         <!---->
         <!---->
         <!---->
-        <div
-          class="t-input__tips t-input--left"
-        >
-          最大输入10个字符，汉字算两个
-        </div>
+      </div>
+      <div
+        class="t-input__tips t-input--left"
+      >
+        最大输入10个字符，汉字算两个
       </div>
     </div>
   </div>
@@ -612,8 +612,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <!---->
             <!---->
             <!---->
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       <div
@@ -646,8 +646,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <!---->
             <!---->
             <!---->
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       <div
@@ -680,8 +680,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <!---->
             <!---->
             <!---->
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       
@@ -736,11 +736,11 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <!---->
             <!---->
             <!---->
-            <div
-              class="t-input__tips t-input--left"
-            >
-              最大输入10个字符
-            </div>
+          </div>
+          <div
+            class="t-input__tips t-input--left"
+          >
+            最大输入10个字符
           </div>
         </div>
       </div>
@@ -774,11 +774,11 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <!---->
             <!---->
             <!---->
-            <div
-              class="t-input__tips t-input--left"
-            >
-              最大输入10个字符，汉字算两个
-            </div>
+          </div>
+          <div
+            class="t-input__tips t-input--left"
+          >
+            最大输入10个字符，汉字算两个
           </div>
         </div>
       </div>
@@ -851,8 +851,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       <div
@@ -906,8 +906,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               
             </div>
             <!---->
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       <div
@@ -957,8 +957,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       
@@ -1030,8 +1030,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <!---->
             <!---->
             <!---->
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       <div
@@ -1081,8 +1081,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <!---->
             <!---->
             <!---->
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       
@@ -1153,8 +1153,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       <div
@@ -1245,8 +1245,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               
             </div>
             <!---->
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       <div
@@ -1297,8 +1297,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               
             </div>
             <!---->
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       <div
@@ -1335,8 +1335,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               元
             </div>
             <!---->
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       <div
@@ -1373,8 +1373,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               个
             </div>
             <!---->
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       
@@ -1433,11 +1433,11 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <!---->
             <!---->
             <!---->
-            <div
-              class="t-input__tips t-input--left"
-            >
-              辅助说明
-            </div>
+          </div>
+          <div
+            class="t-input__tips t-input--left"
+          >
+            辅助说明
           </div>
         </div>
       </div>
@@ -1471,8 +1471,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <!---->
             <!---->
             <!---->
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       
@@ -1526,8 +1526,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <!---->
             <!---->
             <!---->
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       
@@ -1585,8 +1585,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <!---->
             <!---->
             <!---->
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       <div
@@ -1619,8 +1619,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <!---->
             <!---->
             <!---->
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       <div
@@ -1653,8 +1653,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <!---->
             <!---->
             <!---->
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       
@@ -1725,8 +1725,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       
@@ -1780,8 +1780,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <!---->
             <!---->
             <!---->
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
       
@@ -1863,8 +1863,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 </svg>
                 
               </div>
-              <!---->
             </div>
+            <!---->
           </div>
         </div>
       </div>
@@ -1923,8 +1923,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               <!---->
               <!---->
               <!---->
-              <!---->
             </div>
+            <!---->
           </div>
         </div>
       </div>
@@ -1986,8 +1986,8 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
         <!---->
         <!---->
         <!---->
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
   <div
@@ -2037,8 +2037,8 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
         <!---->
         <!---->
         <!---->
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
   
@@ -2096,8 +2096,8 @@ exports[`Input > Input specialVue demo works fine 1`] = `
           </svg>
           
         </div>
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
   <div
@@ -2188,8 +2188,8 @@ exports[`Input > Input specialVue demo works fine 1`] = `
           
         </div>
         <!---->
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
   <div
@@ -2240,8 +2240,8 @@ exports[`Input > Input specialVue demo works fine 1`] = `
           
         </div>
         <!---->
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
   <div
@@ -2278,8 +2278,8 @@ exports[`Input > Input specialVue demo works fine 1`] = `
           元
         </div>
         <!---->
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
   <div
@@ -2316,8 +2316,8 @@ exports[`Input > Input specialVue demo works fine 1`] = `
           个
         </div>
         <!---->
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
   
@@ -2359,11 +2359,11 @@ exports[`Input > Input statusVue demo works fine 1`] = `
         <!---->
         <!---->
         <!---->
-        <div
-          class="t-input__tips t-input--left"
-        >
-          辅助说明
-        </div>
+      </div>
+      <div
+        class="t-input__tips t-input--left"
+      >
+        辅助说明
       </div>
     </div>
   </div>
@@ -2397,8 +2397,8 @@ exports[`Input > Input statusVue demo works fine 1`] = `
         <!---->
         <!---->
         <!---->
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
   
@@ -2457,8 +2457,8 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
           </svg>
           
         </div>
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
   <div
@@ -2512,8 +2512,8 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
           
         </div>
         <!---->
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
   <div
@@ -2563,8 +2563,8 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
           </svg>
           
         </div>
-        <!---->
       </div>
+      <!---->
     </div>
   </div>
   

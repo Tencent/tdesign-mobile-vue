@@ -62,8 +62,8 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 <!---->
                 <!---->
                 <!---->
-                <!---->
               </div>
+              <!---->
             </div>
           </div>
           
@@ -152,8 +152,8 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   </svg>
                   
                 </div>
-                <!---->
               </div>
+              <!---->
             </div>
           </div>
           
@@ -367,8 +367,8 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 <!---->
                 <!---->
                 <!---->
-                <!---->
               </div>
+              <!---->
             </div>
           </div>
           <teleport-stub
@@ -796,8 +796,8 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 <!---->
                 <!---->
                 <!---->
-                <!---->
               </div>
+              <!---->
             </div>
           </div>
           <teleport-stub
@@ -1774,8 +1774,8 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       <!---->
                       <!---->
                       <!---->
-                      <!---->
                     </div>
+                    <!---->
                   </div>
                 </div>
                 
@@ -1864,8 +1864,8 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         </svg>
                         
                       </div>
-                      <!---->
                     </div>
+                    <!---->
                   </div>
                 </div>
                 
@@ -2079,8 +2079,8 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       <!---->
                       <!---->
                       <!---->
-                      <!---->
                     </div>
+                    <!---->
                   </div>
                 </div>
                 <teleport-stub
@@ -2508,8 +2508,8 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       <!---->
                       <!---->
                       <!---->
-                      <!---->
                     </div>
+                    <!---->
                   </div>
                 </div>
                 <teleport-stub
@@ -3355,8 +3355,8 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 <!---->
                 <!---->
                 <!---->
-                <!---->
               </div>
+              <!---->
             </div>
           </div>
           
@@ -3443,8 +3443,8 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   </svg>
                   
                 </div>
-                <!---->
               </div>
+              <!---->
             </div>
           </div>
           
@@ -3654,8 +3654,8 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 <!---->
                 <!---->
                 <!---->
-                <!---->
               </div>
+              <!---->
             </div>
           </div>
           <teleport-stub
@@ -4081,8 +4081,8 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 <!---->
                 <!---->
                 <!---->
-                <!---->
               </div>
+              <!---->
             </div>
           </div>
           <teleport-stub

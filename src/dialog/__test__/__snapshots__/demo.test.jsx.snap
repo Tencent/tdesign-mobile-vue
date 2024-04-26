@@ -885,8 +885,8 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
                     <!---->
                     <!---->
                     <!---->
-                    <!---->
                   </div>
+                  <!---->
                 </div>
               </div>
               
@@ -1033,8 +1033,8 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
                     <!---->
                     <!---->
                     <!---->
-                    <!---->
                   </div>
+                  <!---->
                 </div>
               </div>
               
@@ -1725,8 +1725,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                         <!---->
-                        <!---->
                       </div>
+                      <!---->
                     </div>
                   </div>
                   
@@ -1873,8 +1873,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                         <!---->
-                        <!---->
                       </div>
+                      <!---->
                     </div>
                   </div>
                   
