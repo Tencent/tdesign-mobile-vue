@@ -18,7 +18,7 @@ import { Tabs as TTabs, TabPanel as TTabPanel } from '../tabs';
 import { RadioValue, RadioGroup as TRadioGroup } from '../radio';
 import config from '../config';
 import TdCascaderProps from './props';
-import { useVModel, renderTNode, TNode } from '../shared';
+import { useVModel } from '../shared';
 import { TreeOptionData } from '../common';
 import { useConfig } from '../config-provider/useConfig';
 import { useTNodeJSX } from '@/hooks/tnode';

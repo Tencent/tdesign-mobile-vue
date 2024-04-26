@@ -133,7 +133,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
               class="t-cascader__options"
             >
               <div
-                class="cascader-radio-group-0 slide-enter-from slide-enter-active"
+                class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
               >
                 <div
                   class="t-radio-group"
@@ -354,7 +354,7 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
               class="t-cascader__options"
             >
               <div
-                class="cascader-radio-group-0 slide-enter-from slide-enter-active"
+                class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
               >
                 <div
                   class="t-radio-group"
@@ -578,7 +578,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
               class="t-cascader__options"
             >
               <div
-                class="cascader-radio-group-0 slide-enter-from slide-enter-active"
+                class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
               >
                 <div
                   class="t-radio-group"
@@ -790,7 +790,7 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
               class="t-cascader__options"
             >
               <div
-                class="cascader-radio-group-0 slide-enter-from slide-enter-active"
+                class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
               >
                 <div
                   class="t-radio-group"
@@ -1011,7 +1011,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   class="t-cascader__options"
                 >
                   <div
-                    class="cascader-radio-group-0 slide-enter-from slide-enter-active"
+                    class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
                   >
                     <div
                       class="t-radio-group"
@@ -1217,7 +1217,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   class="t-cascader__options"
                 >
                   <div
-                    class="cascader-radio-group-0 slide-enter-from slide-enter-active"
+                    class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
                   >
                     <div
                       class="t-radio-group"
@@ -1458,7 +1458,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   class="t-cascader__options"
                 >
                   <div
-                    class="cascader-radio-group-0 slide-enter-from slide-enter-active"
+                    class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
                   >
                     <div
                       class="t-radio-group"
@@ -1695,7 +1695,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   class="t-cascader__options"
                 >
                   <div
-                    class="cascader-radio-group-0 slide-enter-from slide-enter-active"
+                    class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
                   >
                     <div
                       class="t-radio-group"
@@ -1924,7 +1924,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   class="t-cascader__options"
                 >
                   <div
-                    class="cascader-radio-group-0 slide-enter-from slide-enter-active"
+                    class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
                   >
                     <div
                       class="t-radio-group"
@@ -2161,7 +2161,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   class="t-cascader__options"
                 >
                   <div
-                    class="cascader-radio-group-0 slide-enter-from slide-enter-active"
+                    class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
                   >
                     <div
                       class="t-radio-group"
@@ -2361,7 +2361,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   class="t-cascader__options"
                 >
                   <div
-                    class="cascader-radio-group-0 slide-enter-from slide-enter-active"
+                    class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
                   >
                     <div
                       class="t-radio-group"
@@ -2557,7 +2557,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
               class="t-cascader__options"
             >
               <div
-                class="cascader-radio-group-0 slide-enter-from slide-enter-active"
+                class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
               >
                 <div
                   class="t-radio-group"
@@ -2785,7 +2785,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
               class="t-cascader__options"
             >
               <div
-                class="cascader-radio-group-0 slide-enter-from slide-enter-active"
+                class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
               >
                 <div
                   class="t-radio-group"
@@ -3009,7 +3009,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
               class="t-cascader__options"
             >
               <div
-                class="cascader-radio-group-0 slide-enter-from slide-enter-active"
+                class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
               >
                 <div
                   class="t-radio-group"

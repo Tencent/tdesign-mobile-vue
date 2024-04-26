@@ -23,7 +23,7 @@ exports[`cascader > events > : pick 1`] = `
       <div
         class="t-cascader__title"
       >
-        <!---->
+        标题
       </div>
       <div
         class="t-cascader__close-btn"
@@ -59,9 +59,7 @@ exports[`cascader > events > : pick 1`] = `
               <div
                 class="t-cascader__step-label t-cascader__step-label--active"
               >
-                
                 选择选项
-                
               </div>
               <svg
                 class="t-icon t-icon-chevron-right t-cascader__step-arrow"
@@ -78,9 +76,8 @@ exports[`cascader > events > : pick 1`] = `
             </div>
             
           </div>
-          <!--v-if-->
         </div>
-        <!--v-if-->
+        <!---->
         <div
           class="t-cascader__options-container"
           style="width: 200vw; transform: translateX(-000vw);"
@@ -90,7 +87,7 @@ exports[`cascader > events > : pick 1`] = `
             class="t-cascader__options"
           >
             <div
-              class="cascader-radio-group-0 slide-enter-from slide-enter-active"
+              class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
             >
               <div
                 class="t-radio-group"
