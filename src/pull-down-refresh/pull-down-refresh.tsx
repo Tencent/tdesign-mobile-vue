@@ -211,7 +211,6 @@ export default defineComponent({
       }
       return (
         <div class={name}>
-          {loadingText.value}
           <div
             class={className}
             style={trackStyle.value}
