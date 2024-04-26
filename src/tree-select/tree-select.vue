@@ -79,7 +79,7 @@ import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
 import config from '../config';
 import { convertUnit, useDefault } from '../shared';
 import TreeSelectProps from './props';
-import { TdTreeSelectProps, TreeLevel, TreeSelectValue } from './type';
+import { TdTreeSelectProps, TreeSelectValue } from './type';
 import { TreeOptionData } from '../_common/js/common';
 
 const { prefix } = config;
@@ -153,11 +153,11 @@ export default defineComponent({
       return 'left';
     };
 
-    const onRootChange = (itemValue: string | number, level: TreeLevel) => {
+    const onRootChange = (itemValue: string | number, level: number) => {
       setInnerValue(innerValue.value, level);
     };
 
-    const handleTreeClick = (itemValue: string | number, level: TreeLevel) => {
+    const handleTreeClick = (itemValue: string | number, level: number) => {
       innerValue.value[level] = itemValue;
       setInnerValue(innerValue.value, level);
     };
