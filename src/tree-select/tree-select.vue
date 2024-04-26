@@ -112,7 +112,7 @@ export default defineComponent({
     }));
 
     const buildTreeOptions = () => {
-      const { options, value, defaultValue, multiple, keys } = props;
+      const { options, multiple, keys } = props;
 
       let level = -1;
       const tmpTreeOptions: TreeOptionData[][] = [];
@@ -125,7 +125,7 @@ export default defineComponent({
           value: item[keys?.value || 'value'],
           children: item.children,
         }));
-        const thisValue = value?.[level];
+        const thisValue = innerValue.value?.[level];
 
         tmpTreeOptions.push([...list]);
         if (thisValue == null) {
@@ -140,7 +140,7 @@ export default defineComponent({
       treeOptions.value = tmpTreeOptions;
 
       if (multiple) {
-        const finalValue = value || defaultValue;
+        const finalValue = innerValue.value;
         if (finalValue[leafLevel.value] != null && !Array.isArray(finalValue[leafLevel.value])) {
           throw TypeError('应传入数组类型的 value');
         }
