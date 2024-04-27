@@ -1,17 +1,4 @@
-import {
-  getCurrentInstance,
-  onMounted,
-  computed,
-  ref,
-  provide,
-  defineEmits,
-  defineExpose,
-  defineProps,
-  watch,
-  onUnmounted,
-  toRefs,
-  defineComponent,
-} from 'vue';
+import { onMounted, computed, ref, provide, watch, onUnmounted, toRefs, defineComponent } from 'vue';
 import isObject from 'lodash/isObject';
 import isNumber from 'lodash/isNumber';
 import { useSwipe } from '../swipe-cell/useSwipe';
@@ -19,22 +6,19 @@ import { useSwipe } from '../swipe-cell/useSwipe';
 import config from '../config';
 import SwiperProps from './props';
 import { SwiperChangeSource, SwiperNavigation } from './type';
-import { renderTNode, TNode, useVModel } from '../shared';
+import { useVModel } from '../shared';
 import { preventDefault } from '../shared/dom';
-import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
 const name = `${prefix}-swiper`;
+const navName = `${prefix}-swiper-nav`;
 export default defineComponent({
   name,
   props: SwiperProps,
   emits: ['change', 'update:current', 'update:modelValue'],
-  setup(props) {
+  setup(props, context) {
     const readerTNodeJSX = useTNodeJSX();
-    const swiperClass = usePrefixClass('swiper');
-    const navName = usePrefixClass('swiper-nav`');
-    const self = getCurrentInstance();
 
     const setOffset = (offset: number, direction = 'X'): void => {
       translateContainer.value = `translate${direction}(${offset}px)`;
@@ -42,7 +26,6 @@ export default defineComponent({
 
     const root = ref();
     const items = ref<any>([]);
-    const emit = defineEmits(['change', 'update:current', 'update:modelValue']);
 
     const { current: value, modelValue } = toRefs(props);
 
@@ -130,7 +113,7 @@ export default defineComponent({
         val = props.loop ? 0 : max - 1;
       }
       setCurrent(val);
-      emit('change', val, { source });
+      context.emit('change', val, { source });
     };
 
     const { lengthX, lengthY } = useSwipe(swiperContainer, {
@@ -231,12 +214,95 @@ export default defineComponent({
     onUnmounted(() => {
       stopAutoplay();
     });
+    return () => {
+      const swiperNav = () => {
+        if (navigation.value && enableNavigation.value) {
+          const controlsNav = () => {
+            if (!isVertical.value && !!navigation.value?.showControls) {
+              return (
+                <span class={`${navName}__btn`}>
+                  <span class={`${navName}__btn--prev`} onClick={() => goPrev('nav')} />
+                  <span class={`${navName}__btn--next`} onClick={() => goNext('nav')} />
+                </span>
+              );
+            }
+          };
+          const typeNav = () => {
+            if ('type' in navigation.value) {
+              // dots
+              const dots = () => {
+                if (['dots', 'dots-bar'].includes(navigation.value.type || '')) {
+                  return (
+                    <>
+                      {items.value.map((_: any, index: number) => (
+                        <span
+                          key={`page${index}`}
+                          class={[
+                            `${navName}__${navigation.value.type}-item`,
+                            index === current.value ? `${navName}__${navigation.value.type}-item--active` : '',
+                            `${navName}__${navigation.value.type}-item--${props.direction}`,
+                          ]}
+                        />
+                      ))}
+                    </>
+                  );
+                }
+              };
+              // fraction
+              const fraction = () => {
+                if (navigation.value.type && navigation.value.type === 'fraction') {
+                  return <span>{`${(current.value ?? 0) + 1}/${items.value.length}`}</span>;
+                }
+              };
+              return (
+                <span
+                  class={[
+                    `${navName}--${props.direction}`,
+                    `${navName}__${navigation.value.type || ''}`,
+                    `${navName}--${navigation.value.paginationPosition || 'bottom'}`,
+                  ]}
+                >
+                  {dots()}
+                  {fraction()}
+                </span>
+              );
+            }
+          };
 
-    defineExpose({
-      swiperContainer,
-      goPrev,
-      goNext,
-      setOffset,
-    });
+          return (
+            <>
+              {controlsNav()}
+              {typeNav()}
+            </>
+          );
+        }
+        if (computedNavigation.value) {
+          return <t-node content={computedNavigation.value} />;
+        }
+      };
+      return (
+        <>
+          <div ref={root} class={rootClass.value}>
+            <div
+              ref={swiperContainer}
+              class={`${name}__container`}
+              style={{
+                flexDirection: !isVertical.value ? 'row' : 'column',
+                transition: animating.value ? `transform ${props.duration}ms` : 'none',
+                transform: translateContainer.value,
+                height: containerHeight.value,
+              }}
+              onAnimationend={() => {
+                handleAnimationEnd();
+              }}
+              onClick={onItemClick}
+            >
+              {readerTNodeJSX('default')}
+            </div>
+            {swiperNav()}
+          </div>
+        </>
+      );
+    };
   },
 });
