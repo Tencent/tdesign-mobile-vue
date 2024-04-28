@@ -58,6 +58,7 @@ export default defineComponent({
         `${name}`,
         `${name}--${props.type}`,
         `${isBottomPagination.value && navigation.value.placement ? `${name}--${navigation.value.placement}` : ''}`,
+        context.attrs.class,
       ];
     });
 
