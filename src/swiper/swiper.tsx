@@ -31,8 +31,6 @@ export default defineComponent({
 
     const [current, setCurrent] = useVModel(value, modelValue, props.defaultCurrent);
     const swiperContainer = ref<HTMLElement | null>(null);
-    // const computedNavigation = computed(() => (isObject(props.navigation) ? '' : renderTNode(self, 'navigation')));
-    // const computedNavigation = computed(() => (isObject(props.navigation) ? '' : readerTNodeJSX('navigation')));
 
     const animating = ref(false);
     const disabled = ref(false);
