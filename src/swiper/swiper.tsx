@@ -4,7 +4,7 @@ import isNumber from 'lodash/isNumber';
 import { useSwipe } from '../swipe-cell/useSwipe';
 
 import config from '../config';
-import SwiperProps from './props';
+import props from './props';
 import { SwiperChangeSource, SwiperNavigation } from './type';
 import { useVModel } from '../shared';
 import { preventDefault } from '../shared/dom';
@@ -15,7 +15,7 @@ const name = `${prefix}-swiper`;
 const navName = `${prefix}-swiper-nav`;
 export default defineComponent({
   name,
-  props: SwiperProps,
+  props,
   emits: ['change', 'update:current', 'update:modelValue'],
   setup(props, context) {
     const readerTNodeJSX = useTNodeJSX();
@@ -57,7 +57,7 @@ export default defineComponent({
       return [
         `${name}`,
         `${name}--${props.type}`,
-        `${isBottomPagination.value ? `${name}--${navigation.value.placement}` : ''}`,
+        `${isBottomPagination.value && navigation.value.placement ? `${name}--${navigation.value.placement}` : ''}`,
       ];
     });
 
@@ -273,7 +273,11 @@ export default defineComponent({
                     `${navName}--${props.direction}`,
                     `${navName}__${navigation.value.type || ''}`,
                     `${navName}--${navigation.value.paginationPosition || 'bottom'}`,
-                    `${isBottomPagination.value ? `${navName}--${navigation.value.placement}` : ''}`,
+                    `${
+                      isBottomPagination.value && navigation.value.placement
+                        ? `${navName}--${navigation.value.placement}`
+                        : ''
+                    }`,
                   ]}
                 >
                   {dots()}
