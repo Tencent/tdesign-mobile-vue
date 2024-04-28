@@ -81,19 +81,20 @@ export default defineComponent({
       );
     };
 
-    const note = readerTNodeContent('default', 'note');
-
-    return () => (
-      <div
-        v-hover={{ className: `${cellClass.value}--hover`, disabledName: hoverDisabled.value }}
-        class={cellClasses.value}
-        onClick={handleClick}
-      >
-        {readerLeft()}
-        {readerTitle()}
-        {note && <div class={`${cellClass.value}__note`}>{note}</div>}
-        {readerRight()}
-      </div>
-    );
+    return () => {
+      const note = readerTNodeContent('default', 'note');
+      return (
+        <div
+          v-hover={{ className: `${cellClass.value}--hover`, disabledName: hoverDisabled.value }}
+          class={cellClasses.value}
+          onClick={handleClick}
+        >
+          {readerLeft()}
+          {readerTitle()}
+          {note && <div class={`${cellClass.value}__note`}>{note}</div>}
+          {readerRight()}
+        </div>
+      );
+    };
   },
 });
