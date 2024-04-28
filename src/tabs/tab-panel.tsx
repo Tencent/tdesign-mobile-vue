@@ -1,4 +1,4 @@
-import { defineComponent, inject, Ref, computed } from 'vue';
+import { defineComponent, inject, Ref, computed, ref, watch } from 'vue';
 import config from '../config';
 import TabPanelProps from './tab-panel-props';
 import { useContent } from '../hooks/tnode';
@@ -18,11 +18,25 @@ export default defineComponent({
     const currentValue = inject<Ref<TabValue>>('currentValue');
     const isActive = computed(() => currentValue.value === props.value);
     const tabPanelClasses = computed(() => [`${tabPanelClass.value}`, `${tabslClass.value}__panel`]);
+    const isMount = ref(props.lazy ? isActive.value : true);
+
+    watch(
+      isActive,
+      () => {
+        if (isActive.value) {
+          if (!isMount.value) {
+            isMount.value = true;
+          }
+        } else if (props.destroyOnHide) {
+          isMount.value = false;
+        }
+      },
+      { immediate: true },
+    );
 
     return () => {
-      if (props.destroyOnHide && !isActive.value) {
-        return null;
-      }
+      if (!isMount.value) return null;
+
       return (
         <div v-show={isActive.value} class={tabPanelClasses.value}>
           {renderTNodeContent('default', 'panel')}

@@ -35,10 +35,11 @@ scroll | `(scrollTop: number, isFixed: boolean)` | 页面滚动时触发
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-badgeProps | Object | null | 透传至 Badge 组件 | N
+badgeProps | Object | - | 透传至 Badge 组件 | N
 destroyOnHide | Boolean | true | 选项卡内容隐藏时是否销毁 | N
 disabled | Boolean | false | 是否禁用当前选项卡 | N
 label | String / Slot / Function | - | 选项卡名称，可自定义选项卡导航内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+lazy | Boolean | false | 是否启用选项卡懒加载 | N
 panel | String / Slot / Function | - | 用于自定义选项卡面板内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 value | String / Number | - | 选项卡的值，唯一标识。TS 类型：`TabValue` | N
 

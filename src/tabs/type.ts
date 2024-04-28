@@ -84,7 +84,6 @@ export interface TdTabsProps {
 export interface TdTabPanelProps {
   /**
    * 透传至 Badge 组件
-   * @default null
    */
   badgeProps?: object;
   /**
@@ -101,6 +100,11 @@ export interface TdTabPanelProps {
    * 选项卡名称，可自定义选项卡导航内容
    */
   label?: string | TNode;
+  /**
+   * 是否启用选项卡懒加载
+   * @default false
+   */
+  lazy?: boolean;
   /**
    * 用于自定义选项卡面板内容
    */

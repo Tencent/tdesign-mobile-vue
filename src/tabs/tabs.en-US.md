@@ -35,10 +35,11 @@ scroll | `(scrollTop: number, isFixed: boolean)` | \-
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-badgeProps | Object | null | \- | N
+badgeProps | Object | - | \- | N
 destroyOnHide | Boolean | true | \- | N
 disabled | Boolean | false | \- | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+lazy | Boolean | false | Enable tab lazy loading | N
 panel | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 value | String / Number | - | Typescript：`TabValue` | N
 
