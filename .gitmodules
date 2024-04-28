@@ -1,4 +1,3 @@
 [submodule "src/_common"]
 	path = src/_common
-  url = https://github.com/zuiaiwanqian/tdesign-common.git
-	# url = https://github.com/Tencent/tdesign-common.git
+	url = https://github.com/Tencent/tdesign-common.git
