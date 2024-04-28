@@ -1,4 +1,4 @@
-import TreeSelect from './tree-select.vue';
+import TreeSelect from './tree-select';
 import { withInstall, WithInstallType } from '../shared';
 import { TdTreeSelectProps } from './type';
 
