@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
-import TabBar from '../tab-bar.vue';
-import TabBarItem from '../tab-bar-item.vue';
+import TabBar from '../tab-bar';
+import TabBarItem from '../tab-bar-item';
 import { ref } from 'vue';
 
 const list = [
