@@ -1,26 +1,3 @@
-<template>
-  <div :class="name">
-    <div
-      :class="[`${name}__track`, { [`${name}__track--loosing`]: status !== 'pulling' }]"
-      :style="trackStyle"
-      @touchstart.stop="onTouchStart"
-      @touchmove.stop="onTouchMove"
-      @touchend.stop="onTouchEnd"
-      @touchcancel.stop="onTouchEnd"
-      @transitionend="onTransitionEnd"
-    >
-      <div ref="maxBar" :class="`${name}__tips`" :style="maxBarStyles">
-        <div ref="loadingBar" :class="`${name}__loading`" :style="loadingBarStyles">
-          <t-loading v-if="status === 'loading'" size="24px" :text="loadingText" v-bind="loadingProps" />
-          <div v-else :class="`${name}__text`">{{ loadingText }}</div>
-        </div>
-      </div>
-      <slot />
-    </div>
-  </div>
-</template>
-
-<script lang="ts">
 import { defineComponent, onUnmounted, ref, toRefs, computed, watch, onMounted } from 'vue';
 import { useElementSize } from '@vueuse/core';
 import debounce from 'lodash/debounce';
@@ -29,6 +6,7 @@ import { useVModel, convertUnit, reconvertUnit } from '../shared';
 import { preventDefault } from '../shared/dom';
 import config from '../config';
 import TLoading from '../loading';
+import { useContent } from '../hooks/tnode';
 import { useTouch, isReachTop, easeDistance } from './useTouch';
 import { useConfig } from '../config-provider/useConfig';
 
@@ -43,6 +21,7 @@ export default defineComponent({
   emits: ['refresh', 'timeout', 'scrolltolower', 'update:value', 'update:modelValue'],
   setup(props) {
     const { globalConfig } = useConfig('pullDownRefresh');
+    const renderContent = useContent();
 
     let timer: any = null;
 
@@ -59,8 +38,8 @@ export default defineComponent({
     });
 
     const touch = useTouch();
-    const loadingBar = ref(null);
-    const maxBar = ref(null);
+    const loadingBar = ref();
+    const maxBar = ref();
     const { height: loadingBarHeight } = useElementSize(loadingBar);
     const { height: maxBarHeight } = useElementSize(maxBar);
     const actualLoadingBarHeight = ref(0);
@@ -110,6 +89,7 @@ export default defineComponent({
     });
 
     const onTouchStart = (e: TouchEvent) => {
+      e.stopPropagation();
       if (!isReachTop(e) || loading.value) return;
 
       clearTimeout(timer);
@@ -120,6 +100,7 @@ export default defineComponent({
     };
 
     const onTouchMove = (e: TouchEvent) => {
+      e.stopPropagation();
       if (!isReachTop(e) || loading.value) return;
       touch.move(e);
 
@@ -151,6 +132,7 @@ export default defineComponent({
     };
 
     const onTouchEnd = (e: TouchEvent) => {
+      e.stopPropagation();
       if (!isReachTop(e) || loading.value) return;
 
       if (status.value === 'loosing') {
@@ -215,23 +197,38 @@ export default defineComponent({
       clearTimeout(timer);
       window.removeEventListener('scroll', onReachBottom);
     });
-
-    return {
-      name,
-      status,
-      trackStyle,
-      loadingText,
-      maxBarStyles,
-      loadingBarStyles,
-      loadingBar,
-      maxBar,
-      loading,
-      distance,
-      onTouchStart,
-      onTouchMove,
-      onTouchEnd,
-      onTransitionEnd,
+    const renderLoading = () => {
+      if (status.value === 'loading') {
+        return <t-loading size="24px" text={loadingText.value} {...(props.loadingProps as object)}></t-loading>;
+      }
+      return <div class={`${name}__text`}>{loadingText.value}</div>;
+    };
+    return () => {
+      const content = renderContent('default', 'content');
+      let className = `${name}__track`;
+      if (status.value !== 'pulling') {
+        className = `${className} ${name}__track--loosing`;
+      }
+      return (
+        <div class={name}>
+          <div
+            class={className}
+            style={trackStyle.value}
+            onTouchstart={onTouchStart}
+            onTouchmove={onTouchMove}
+            onTouchend={onTouchEnd}
+            onTouchcancel={onTouchEnd}
+            onTransitionend={onTransitionEnd}
+          >
+            <div ref={maxBar} class={`${name}__tips`} style={maxBarStyles.value}>
+              <div ref={loadingBar} class={`${name}__loading`} style={loadingBarStyles.value}>
+                {renderLoading()}
+              </div>
+            </div>
+            {content}
+          </div>
+        </div>
+      );
     };
   },
 });
-</script>

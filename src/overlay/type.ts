@@ -21,7 +21,7 @@ export interface TdOverlayProps {
    */
   duration?: number;
   /**
-   * 防止滚动穿透，即不允许点击和滚动
+   * 是否阻止背景滚动，阻止时蒙层里的内容也将无法滚动
    * @default true
    */
   preventScrollThrough?: boolean;

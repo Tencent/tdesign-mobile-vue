@@ -1,35 +1,9 @@
-<template>
-  <div ref="indexesRoot" :class="componentName" @scroll="handleRootScroll">
-    <div :class="`${componentName}__sidebar`">
-      <div
-        v-for="item in indexList"
-        :key="item"
-        :class="[
-          `${componentName}__sidebar-item`,
-          activeSidebar === item ? `${componentName}__sidebar-item--active` : '',
-        ]"
-        :data-index="item"
-        @click.prevent="handleSidebarItemClick(item)"
-        @touchmove="handleSidebarTouchmove"
-      >
-        {{ item }}
-        <div v-if="showSidebarTip && activeSidebar === item" :class="`${componentName}__sidebar-tips`">
-          {{ activeSidebar }}
-        </div>
-      </div>
-    </div>
-    <slot />
-  </div>
-</template>
-
-<script lang="ts">
 import {
   ref,
   reactive,
   defineComponent,
   onMounted,
   watchEffect,
-  toRefs,
   onBeforeUnmount,
   provide,
   computed,
@@ -40,8 +14,8 @@ import throttle from 'lodash/throttle';
 import { preventDefault } from '../shared/dom';
 import config from '../config';
 import IndexesProps from './props';
-
-const { prefix } = config;
+import { usePrefixClass } from '../hooks/useClass';
+import { useTNodeJSX } from '../hooks/tnode';
 
 interface Child extends ComponentInternalInstance {
   [key: string]: any;
@@ -60,13 +34,16 @@ interface GroupTop {
   totalHeight: number;
 }
 
-const componentName = `${prefix}-indexes`;
+const { prefix } = config;
+const name = `${prefix}-indexes`;
 
 export default defineComponent({
-  name: componentName,
+  name,
   props: IndexesProps,
   emits: ['select', 'change'],
   setup(props) {
+    const readerTNodeJSX = useTNodeJSX();
+    const indexesClass = usePrefixClass('indexes');
     let timeOut: number;
     const indexesRoot = ref<HTMLElement>();
     const parentRect = ref();
@@ -106,8 +83,8 @@ export default defineComponent({
         const betwixt = offset < curGroup.height && offset > 0 && scrollTop > stickyTop;
         state.children.forEach((child, index) => {
           const { $el } = child;
-          const wrapperClass = `${componentName}-anchor__wrapper`;
-          const headerClass = `${componentName}-anchor__header`;
+          const wrapperClass = `${indexesClass.value}-anchor__wrapper`;
+          const headerClass = `${indexesClass.value}-anchor__header`;
           const wrapper = $el.querySelector(`.${wrapperClass}`);
           const header = $el.querySelector(`.${headerClass}`);
           if (index === curIndex) {
@@ -137,7 +114,7 @@ export default defineComponent({
     const scrollToByIndex = (index: number | string) => {
       const curGroup = groupTop.find((item) => item.anchor === index);
       if (indexesRoot.value) {
-        indexesRoot.value?.scrollTo(0, curGroup?.top ?? 0);
+        indexesRoot.value.scrollTo?.(0, curGroup.top ?? 0);
       }
     };
 
@@ -189,7 +166,7 @@ export default defineComponent({
       const { touches } = event;
       const { clientX, clientY } = touches[0];
       const target = document.elementFromPoint(clientX, clientY);
-      if (target && target.className === `${componentName}__sidebar-item` && target instanceof HTMLElement) {
+      if (target && target.className === `${indexesClass.value}__sidebar-item` && target instanceof HTMLElement) {
         const { index } = target.dataset;
         const curIndex = /^\d+$/.test(index ?? '') ? Number(index) : index;
         if (curIndex !== undefined && state.activeSidebar !== curIndex) {
@@ -237,15 +214,31 @@ export default defineComponent({
       relation,
     });
 
-    return {
-      ...toRefs(state),
-      componentName,
-      indexList,
-      indexesRoot,
-      handleSidebarItemClick,
-      handleRootScroll,
-      handleSidebarTouchmove,
-    };
+    return () => (
+      <div ref={indexesRoot} class={indexesClass.value} onScroll={handleRootScroll}>
+        <div class={`${indexesClass.value}__sidebar`}>
+          {indexList.value.map((item) => (
+            <div
+              class={[
+                `${indexesClass.value}__sidebar-item`,
+                state.activeSidebar === item ? `${indexesClass.value}__sidebar-item--active` : '',
+              ]}
+              data-index={item}
+              onClick={(e: MouseEvent) => {
+                e.preventDefault();
+                handleSidebarItemClick(item);
+              }}
+              onTouchmove={handleSidebarTouchmove}
+            >
+              {item}
+              {state.showSidebarTip && state.activeSidebar === item && (
+                <div class={`${indexesClass.value}__sidebar-tips`}>{state.activeSidebar}</div>
+              )}
+            </div>
+          ))}
+        </div>
+        {readerTNodeJSX('default')}
+      </div>
+    );
   },
 });
-</script>

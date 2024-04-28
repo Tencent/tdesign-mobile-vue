@@ -11,15 +11,15 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       地址
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
     <div
       class="t-cell__note"
@@ -55,8 +55,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--bottom"
@@ -242,15 +241,15 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       地址
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
     <div
       class="t-cell__note"
@@ -287,8 +286,7 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--bottom"
@@ -468,15 +466,15 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       地址
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
     <div
       class="t-cell__note"
@@ -512,8 +510,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--bottom"
@@ -698,15 +695,15 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       地址
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
     <div
       class="t-cell__note"
@@ -742,8 +739,7 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--bottom"
@@ -925,15 +921,15 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           地址
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
         <div
           class="t-cell__note"
@@ -969,8 +965,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--bottom"
@@ -1168,15 +1163,15 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           地址
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
         <div
           class="t-cell__note"
@@ -1212,8 +1207,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--bottom"
@@ -1384,15 +1378,15 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           地址
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
         <div
           class="t-cell__note"
@@ -1428,8 +1422,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--bottom"
@@ -1627,15 +1620,15 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           地址
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
         <div
           class="t-cell__note"
@@ -1671,8 +1664,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--bottom"
@@ -1870,15 +1862,15 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           地址
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
         <div
           class="t-cell__note"
@@ -1914,8 +1906,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--bottom"
@@ -2117,15 +2108,15 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           地址
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
         <div
           class="t-cell__note"
@@ -2161,8 +2152,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--bottom"
@@ -2327,15 +2317,15 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           地址
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
         <div
           class="t-cell__note"
@@ -2372,8 +2362,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--bottom"
@@ -2556,15 +2545,15 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       地址
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
     <div
       class="t-cell__note"
@@ -2600,8 +2589,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--bottom"
@@ -2755,15 +2743,15 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       地址
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
     <div
       class="t-cell__note"
@@ -2799,8 +2787,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--bottom"
@@ -2989,15 +2976,15 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       地址
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
     <div
       class="t-cell__note"
@@ -3033,8 +3020,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--bottom"

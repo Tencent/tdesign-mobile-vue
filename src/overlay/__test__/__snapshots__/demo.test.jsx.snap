@@ -25,8 +25,7 @@ exports[`Overlay > Overlay baseVue demo works fine 1`] = `
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
   >
-    
-    
+    <!---->
   </div>
   
 </div>
@@ -91,8 +90,7 @@ exports[`Overlay > Overlay mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         
       </div>
