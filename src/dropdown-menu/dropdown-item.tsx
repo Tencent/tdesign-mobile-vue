@@ -1,4 +1,5 @@
 import { ref, watch, toRefs, inject, computed, reactive, onBeforeMount, defineComponent, nextTick } from 'vue';
+import { onClickOutside } from '@vueuse/core';
 import TRadio, { RadioGroup as TRadioGroup } from '../radio';
 import config from '../config';
 import TButton from '../button';
@@ -283,9 +284,17 @@ export default defineComponent({
       const content = renderContent('default', 'content');
 
       const footer = renderTNodeJSX('footer');
+
+      const dropdownPopoverRef = ref(null);
+
+      // dropdown外面点击触发dropdown下拉框收起
+      onClickOutside(dropdownPopoverRef, () => {
+        onVisibleChange(false);
+      });
+
       return (
         wrapperVisible.value && (
-          <div id={popupId} class={classes.value} style={{ ...expandStyle.value }}>
+          <div id={popupId} class={classes.value} style={{ ...expandStyle.value }} ref={dropdownPopoverRef}>
             <t-popup
               visible={isShowItems.value}
               duration={duration.value}
