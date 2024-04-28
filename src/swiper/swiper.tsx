@@ -42,11 +42,26 @@ export default defineComponent({
     const isVertical = computed(() => props.direction === 'vertical');
     const containerHeight = ref('auto');
 
-    const rootClass = computed(() => {
-      return [`${name}`, `${name}--${props.type}`];
+    const navigation = computed((): SwiperNavigation => props.navigation);
+
+    const isBottomPagination = computed(() => {
+      let isShowSwiperNav = false;
+      if (typeof props.navigation === 'object') {
+        isShowSwiperNav =
+          (!navigation.value?.paginationPosition || navigation.value?.paginationPosition === 'bottom') &&
+          (navigation.value?.type === 'dots' || navigation.value?.type === 'dots-bar') &&
+          enableNavigation?.value;
+      }
+      return isShowSwiperNav;
     });
 
-    const navigation = computed((): SwiperNavigation => props.navigation);
+    const rootClass = computed(() => {
+      return [
+        `${name}`,
+        `${name}--${props.type}`,
+        `${isBottomPagination.value ? `${name}--${navigation.value.placement}` : ''}`,
+      ];
+    });
 
     const enableNavigation = computed(() => {
       if (typeof props.navigation === 'object') {
@@ -126,6 +141,7 @@ export default defineComponent({
         onTouchMove(e);
       },
       onSwipeEnd() {
+        console.log(11111111111111, disabled.value, isSwiperDisabled.value, !items.value.length);
         if (disabled.value || isSwiperDisabled.value || !items.value.length) return;
         onTouchEnd();
       },
@@ -260,6 +276,7 @@ export default defineComponent({
                     `${navName}--${props.direction}`,
                     `${navName}__${navigation.value.type || ''}`,
                     `${navName}--${navigation.value.paginationPosition || 'bottom'}`,
+                    `${isBottomPagination.value ? `${navName}--${navigation.value.placement}` : ''}`,
                   ]}
                 >
                   {dots()}
@@ -292,8 +309,10 @@ export default defineComponent({
                 transform: translateContainer.value,
                 height: containerHeight.value,
               }}
-              onAnimationend={() => {
-                handleAnimationEnd();
+              onTransitionend={(event: TransitionEvent) => {
+                if (event.target === event.currentTarget) {
+                  handleAnimationEnd();
+                }
               }}
               onClick={onItemClick}
             >
