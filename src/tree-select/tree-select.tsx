@@ -77,7 +77,7 @@ export default defineComponent({
       return 'left';
     };
 
-    const onRootChange = (itemValue: TreeSelectValue, level: number) => {
+    const onRootChange = (level: number) => {
       setInnerValue(innerValue.value, level);
     };
 
@@ -96,7 +96,11 @@ export default defineComponent({
 
     const renderSideBar = (treeOption: TreeOptionData[]) => {
       return (
-        <TSideBar v-model={innerValue.value[0]} class={`${treeSelectClass.value}-colum`} onChange={onRootChange}>
+        <TSideBar
+          v-model={innerValue.value[0]}
+          class={`${treeSelectClass.value}-colum`}
+          onChange={() => onRootChange(0)}
+        >
           {treeOption.map((item, index) => (
             <TSideBarItem key={index} label={item.label} value={item.value}></TSideBarItem>
           ))}
@@ -125,7 +129,7 @@ export default defineComponent({
           <TCheckboxGroup
             v-model={innerValue.value[level]}
             class={`${treeSelectClass.value}__checkbox`}
-            onChange={(value: TreeSelectValue) => onRootChange(value, level)}
+            onChange={() => onRootChange(level)}
           >
             {treeOption.map((item) => (
               <TCheckbox
@@ -147,7 +151,7 @@ export default defineComponent({
         <TRadioGroup
           v-model={innerValue.value[level]}
           class={`${treeSelectClass.value}__radio`}
-          onChange={(value: TreeSelectValue) => onRootChange(value, level)}
+          onChange={() => onRootChange(level)}
         >
           {treeOption.map((item) => (
             <TRadio

@@ -30,8 +30,7 @@ const generateTree = (deep = 0, count = 10, prefix = ''): TdTreeSelectProps['opt
 const options = generateTree(1);
 const value: Ref<TreeSelectValue> = ref(['1', '1-0']);
 
-const onChange: TdTreeSelectProps['onChange'] = (itemValue) => {
-  console.log(itemValue);
-  console.log(value.value);
+const onChange: TdTreeSelectProps['onChange'] = (itemValue, level) => {
+  console.log(itemValue, level);
 };
 </script>
