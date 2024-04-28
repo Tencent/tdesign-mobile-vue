@@ -13,6 +13,11 @@ export interface TdTabsProps {
    */
   animation?: TabAnimation;
   /**
+   * 激活下划线的模式
+   * @default fixed
+   */
+  bottomLineMode?: 'fixed' | 'auto' | 'full';
+  /**
    * 选项卡列表
    */
   list?: Array<TdTabPanelProps>;
@@ -21,11 +26,6 @@ export interface TdTabsProps {
    * @default true
    */
   showBottomLine?: boolean;
-  /**
-   * 激活下划线的模式
-   * @default fixed
-   */
-  bottomLineMode?: 'fixed' | 'auto' | 'full';
   /**
    * 组件尺寸
    * @default medium

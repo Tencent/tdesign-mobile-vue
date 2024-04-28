@@ -1,51 +1,3 @@
-<template>
-  <div :class="classes">
-    <t-sticky v-bind="stickyProps" @scroll="handlerScroll">
-      <div :class="navClasses">
-        <div ref="navScroll" :class="`${name}__scroll ${name}__scroll--top ${name}__scroll--${theme}`">
-          <div ref="navWrap" :class="`${name}__wrapper ${name}__wrapper--${theme}`">
-            <div
-              v-for="(item, index) in itemProps"
-              :key="item.label"
-              :class="{
-                [`${name}__item ${name}__item--top`]: true,
-                [`${name}__item--evenly`]: spaceEvenly,
-                [activeClass]: item.value === currentValue,
-                [disabledClass]: item.disabled,
-                [`${name}__item--${theme}`]: true,
-              }"
-              @click="(e) => tabClick(e, item)"
-            >
-              <t-badge v-bind="item['badge-props'] || item.badgeProps">
-                <div
-                  :class="{
-                    [`${name}__item-inner ${name}__item-inner--${theme}`]: true,
-                    [`${name}__item-inner--active`]: theme === 'tag' && item.value === currentValue,
-                  }"
-                >
-                  <tab-nav-item :label="item.label"></tab-nav-item>
-                </div>
-              </t-badge>
-              <div v-if="theme === 'card' && index === currentIndex - 1" :class="`${name}__item-prefix`"></div>
-              <div v-if="theme === 'card' && index === currentIndex + 1" :class="`${name}__item-suffix`"></div>
-            </div>
-            <div
-              v-if="theme === 'line' && showBottomLine"
-              ref="navLine"
-              :class="`${name}__track ${name}__track--top`"
-              :style="lineStyle"
-            ></div>
-          </div>
-        </div>
-      </div>
-    </t-sticky>
-    <div :class="`${name}__content`" @touchstart="moveStart" @touchmove="onMove" @touchend="moveEnd">
-      <slot></slot>
-    </div>
-  </div>
-</template>
-
-<script lang="ts">
 import {
   computed,
   defineComponent,
@@ -63,27 +15,25 @@ import {
 } from 'vue';
 import config from '../config';
 import TabsProps from './props';
-import TabNavItem from './tab-nav-item.vue';
+import TTabNavItem from './tab-nav-item';
 import { useVModel } from '../shared';
 import { preventDefault } from '../shared/dom';
 import CLASSNAMES from '../shared/constants';
 import TSticky from '../sticky';
 import { TdStickyProps } from '../sticky/type';
 import TBadge from '../badge';
+import { useContent, useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
 const name = `${prefix}-tabs`;
 
 export default defineComponent({
   name,
-  components: { TabNavItem, TSticky, TBadge },
   props: TabsProps,
-  emits: ['update:value', 'update:modelValue'],
   setup(props, context) {
-    const theme = computed(() => props.theme);
-    const spaceEvenly = computed(() => props.spaceEvenly);
-    const showBottomLine = computed(() => props.showBottomLine);
-    const swipeable = computed(() => props.swipeable);
+    const renderTNodeJSX = useTNodeJSX();
+    const renderTNodeContent = useContent();
+
     const stickyProps = computed(() => ({ ...(props.stickyProps as TdStickyProps), disabled: !props.sticky }));
     const activeClass = `${name}__item--active`;
     const disabledClass = `${name}__item--disabled`;
@@ -113,7 +63,6 @@ export default defineComponent({
         return props.list;
       }
       let children: any[] = context.slots.default ? context.slots.default() : [];
-
       const res: any[] = [];
       const label: any[] = [];
       children.forEach((child) => {
@@ -142,7 +91,7 @@ export default defineComponent({
     const navLine = ref<HTMLElement | null>(null);
     const lineStyle = ref();
     const moveToActiveTab = () => {
-      if (navWrap.value && navLine.value && showBottomLine.value) {
+      if (navWrap.value && navLine.value && props.showBottomLine) {
         const tab = navWrap.value.querySelector<HTMLElement>(`.${activeClass}`);
         if (!tab) return;
         const line = navLine.value;
@@ -208,13 +157,13 @@ export default defineComponent({
 
     // 手势滑动开始
     const moveStart = (e: any) => {
-      if (!swipeable.value) return;
+      if (!props.swipeable) return;
       startX.value = e.targetTouches[0].clientX;
       startY.value = e.targetTouches[0].clientY;
     };
 
     const onMove = (e: any) => {
-      if (!swipeable.value) return;
+      if (!props.swipeable) return;
       if (!canMove.value) return;
       endX.value = e.targetTouches[0].clientX;
       endY.value = e.targetTouches[0].clientY;
@@ -242,7 +191,7 @@ export default defineComponent({
 
     // 手势滑动结束
     const moveEnd = () => {
-      if (!swipeable.value) return;
+      if (!props.swipeable) return;
       canMove.value = true;
       startX.value = 0;
       endX.value = 0;
@@ -252,31 +201,56 @@ export default defineComponent({
 
     provide('currentValue', readonly(currentValue));
 
-    return {
-      name,
-      prefix,
-      classes,
-      navClasses,
-      activeClass,
-      disabledClass,
-      currentValue,
-      currentIndex,
-      tabClick,
-      showBottomLine,
-      itemProps,
-      navScroll,
-      navWrap,
-      navLine,
-      lineStyle,
-      moveToActiveTab,
-      stickyProps,
-      theme,
-      spaceEvenly,
-      moveStart,
-      onMove,
-      moveEnd,
-      handlerScroll,
+    const readerNav = () => {
+      return itemProps.value.map((item, index) => {
+        const badgeProps = item['badge-props'] || item.badgeProps;
+        return (
+          <div
+            class={{
+              [`${name}__item ${name}__item--top`]: true,
+              [`${name}__item--evenly`]: props.spaceEvenly,
+              [activeClass]: item.value === currentValue.value,
+              [disabledClass]: item.disabled,
+              [`${name}__item--${props.theme}`]: true,
+            }}
+            onClick={(e) => tabClick(e, item)}
+          >
+            <TBadge {...badgeProps}>
+              <div
+                class={{
+                  [`${name}__item-inner ${name}__item-inner--${props.theme}`]: true,
+                  [`${name}__item-inner--active`]: props.theme === 'tag' && item.value === currentValue.value,
+                }}
+              >
+                <TTabNavItem label={item.label} />
+              </div>
+            </TBadge>
+            {props.theme === 'card' && index === currentIndex.value - 1 && <div class={`${name}__item-prefix`} />}
+            {props.theme === 'card' && index === currentIndex.value + 1 && <div class={`${name}__item-suffix`} />}
+          </div>
+        );
+      });
+    };
+    return () => {
+      return (
+        <div class={classes.value}>
+          <TSticky {...stickyProps.value} onScroll={handlerScroll}>
+            <div class={navClasses.value}>
+              <div ref={navScroll} class={`${name}__scroll ${name}__scroll--top ${name}__scroll--${props.theme}`}>
+                <div ref={navWrap} class={`${name}__wrapper ${name}__wrapper--${props.theme}`}>
+                  {readerNav()}
+                  {props.theme === 'line' && props.showBottomLine && (
+                    <div ref={navLine} class={`${name}__track ${name}__track--top`} style={lineStyle.value}></div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </TSticky>
+          <div class={`${name}__content`} onTouchstart={moveStart} onTouchmove={onMove} onTouchend={moveEnd}>
+            {renderTNodeJSX('default')}
+          </div>
+        </div>
+      );
     };
   },
 });
-</script>
