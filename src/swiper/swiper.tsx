@@ -32,7 +32,7 @@ export default defineComponent({
     const [current, setCurrent] = useVModel(value, modelValue, props.defaultCurrent);
     const swiperContainer = ref<HTMLElement | null>(null);
     // const computedNavigation = computed(() => (isObject(props.navigation) ? '' : renderTNode(self, 'navigation')));
-    const computedNavigation = computed(() => (isObject(props.navigation) ? '' : readerTNodeJSX('navigation')));
+    // const computedNavigation = computed(() => (isObject(props.navigation) ? '' : readerTNodeJSX('navigation')));
 
     const animating = ref(false);
     const disabled = ref(false);
@@ -141,7 +141,6 @@ export default defineComponent({
         onTouchMove(e);
       },
       onSwipeEnd() {
-        console.log(11111111111111, disabled.value, isSwiperDisabled.value, !items.value.length);
         if (disabled.value || isSwiperDisabled.value || !items.value.length) return;
         onTouchEnd();
       },
@@ -293,9 +292,7 @@ export default defineComponent({
             </>
           );
         }
-        if (computedNavigation.value) {
-          return <t-node content={computedNavigation.value} />;
-        }
+        return isObject(props.navigation) ? '' : readerTNodeJSX('navigation');
       };
       return (
         <>
