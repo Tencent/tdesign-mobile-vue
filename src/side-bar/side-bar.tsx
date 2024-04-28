@@ -1,25 +1,19 @@
-<template>
-  <div :class="`${name}`">
-    <slot></slot>
-    <div :class="`${name}__padding`"></div>
-  </div>
-</template>
-
-<script lang="ts">
 import { defineComponent, ref, Ref, ComponentInternalInstance, provide, toRefs } from 'vue';
 import config from '../config';
-import SideBarProps from './props';
+import props from './props';
 import { TdSideBarProps } from './type';
 import { useDefault } from '../shared';
+import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
 const name = `${prefix}-side-bar`;
 
 export default defineComponent({
   name,
-  props: SideBarProps,
+  props,
   emits: ['update:value', 'update:modelValue', 'change'],
   setup(props, context) {
+    const renderTNodeJSX = useTNodeJSX();
     const [currentValue, setCurrentValue] = useDefault<TdSideBarProps['value'], TdSideBarProps>(
       props,
       context.emit,
@@ -51,10 +45,11 @@ export default defineComponent({
       onClickItem,
     });
 
-    return {
-      name,
-      onClickItem,
-    };
+    return () => (
+      <div class={`${name} ${context.attrs.class || ''}`}>
+        {renderTNodeJSX('default')}
+        <div class={`${name}__padding`}></div>
+      </div>
+    );
   },
 });
-</script>
