@@ -70,7 +70,7 @@ export default defineComponent({
       let children: Array<RendererNode> = renderTNodeJSX('default');
       const res: RendererNode[] = [];
       const label: RendererNode[] = [];
-      children.forEach((child) => {
+      children?.forEach((child) => {
         if (child.type === Fragment) {
           res.push(...child.children);
         } else {
