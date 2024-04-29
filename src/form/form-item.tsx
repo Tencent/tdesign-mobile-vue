@@ -65,10 +65,6 @@ export default defineComponent({
 
     const form = inject(FormInjectionKey, undefined);
 
-    const rightIconContent = computed(() => {
-      return h(ChevronRightIcon, { size: '24px', color: 'rgba(0, 0, 0, .4)' });
-    });
-
     const helpNode = computed(() => renderTNode(internalInstance, 'help'));
 
     const extraNode = computed(() => {
@@ -337,7 +333,7 @@ export default defineComponent({
         if (!props.arrow) {
           return null;
         }
-        return <ChevronRightIcon size="24px" color="rgba(0, 0, 0, .4)" />;
+        return h(ChevronRightIcon, { size: '24px', color: 'rgba(0, 0, 0, .4)' });
       };
       const renderLabelContent = () => {
         if (Number(labelWidth.value) === 0) {
