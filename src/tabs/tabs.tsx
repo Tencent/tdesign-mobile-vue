@@ -40,10 +40,10 @@ export default defineComponent({
     const tabsClass = usePrefixClass('tabs');
 
     const stickyProps = computed(() => ({ ...(props.stickyProps as TdStickyProps), disabled: !props.sticky }));
-    const activeClass = `${name}__item--active`;
-    const disabledClass = `${name}__item--disabled`;
-    const classes = computed(() => [`${name}`, props.size && CLASSNAMES.SIZE[props.size]]);
-    const navClasses = ref([`${name}__nav`]);
+    const activeClass = `${tabsClass.value}__item--active`;
+    const disabledClass = `${tabsClass.value}__item--disabled`;
+    const tabsClasses = computed(() => [`${tabsClass.value}`, props.size && CLASSNAMES.SIZE[props.size]]);
+    const navClasses = ref([`${tabsClass.value}__nav`]);
     const startX = ref(0);
     const startY = ref(0);
     const endX = ref(0);
@@ -213,47 +213,59 @@ export default defineComponent({
         return (
           <div
             class={{
-              [`${name}__item ${name}__item--top`]: true,
-              [`${name}__item--evenly`]: props.spaceEvenly,
+              [`${tabsClass.value}__item ${tabsClass.value}__item--top`]: true,
+              [`${tabsClass.value}__item--evenly`]: props.spaceEvenly,
               [activeClass]: item.value === currentValue.value,
               [disabledClass]: item.disabled,
-              [`${name}__item--${props.theme}`]: true,
+              [`${tabsClass.value}__item--${props.theme}`]: true,
             }}
             onClick={(e) => handleTabClick(e, item)}
           >
             <TBadge {...badgeProps}>
               <div
                 class={{
-                  [`${name}__item-inner ${name}__item-inner--${props.theme}`]: true,
-                  [`${name}__item-inner--active`]: props.theme === 'tag' && item.value === currentValue.value,
+                  [`${tabsClass.value}__item-inner ${tabsClass.value}__item-inner--${props.theme}`]: true,
+                  [`${tabsClass.value}__item-inner--active`]:
+                    props.theme === 'tag' && item.value === currentValue.value,
                 }}
               >
                 <TTabNavItem label={item.label} />
               </div>
             </TBadge>
-            {props.theme === 'card' && index === currentIndex.value - 1 && <div class={`${name}__item-prefix`} />}
-            {props.theme === 'card' && index === currentIndex.value + 1 && <div class={`${name}__item-suffix`} />}
+            {props.theme === 'card' && index === currentIndex.value - 1 && (
+              <div class={`${tabsClass.value}__item-prefix`} />
+            )}
+            {props.theme === 'card' && index === currentIndex.value + 1 && (
+              <div class={`${tabsClass.value}__item-suffix`} />
+            )}
           </div>
         );
       });
     };
     return () => {
       return (
-        <div class={classes.value}>
+        <div class={tabsClasses.value}>
           <TSticky {...stickyProps.value} onScroll={handlerScroll}>
             <div class={navClasses.value}>
-              <div ref={navScroll} class={`${name}__scroll ${name}__scroll--top ${name}__scroll--${props.theme}`}>
-                <div ref={navWrap} class={`${name}__wrapper ${name}__wrapper--${props.theme}`}>
+              <div
+                ref={navScroll}
+                class={`${tabsClass.value}__scroll ${tabsClass.value}__scroll--top ${tabsClass.value}__scroll--${props.theme}`}
+              >
+                <div ref={navWrap} class={`${tabsClass.value}__wrapper ${tabsClass.value}__wrapper--${props.theme}`}>
                   {readerNav()}
                   {props.theme === 'line' && props.showBottomLine && (
-                    <div ref={navLine} class={`${name}__track ${name}__track--top`} style={lineStyle.value}></div>
+                    <div
+                      ref={navLine}
+                      class={`${tabsClass.value}__track ${tabsClass.value}__track--top`}
+                      style={lineStyle.value}
+                    ></div>
                   )}
                 </div>
               </div>
             </div>
           </TSticky>
           <div
-            class={`${name}__content`}
+            class={`${tabsClass.value}__content`}
             onTouchstart={handleTouchstart}
             onTouchmove={handleTouchmove}
             onTouchend={handleTouchend}
