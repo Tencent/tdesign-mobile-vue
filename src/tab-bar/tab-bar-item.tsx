@@ -181,7 +181,7 @@ export default defineComponent({
             [`${name}--text-only`]: !iconContent(),
             [`${name}--crowded`]: crowded.value,
             [`${name}--${shape.value}`]: true,
-            [`${context.attrs.class}`]: true,
+            [`${context.attrs.class || ''}`]: true,
           }}
         >
           <div
