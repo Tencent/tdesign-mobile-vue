@@ -14,10 +14,10 @@ export default defineComponent({
   setup(props) {
     const renderTNodeContent = useContent();
     const tabPanelClass = usePrefixClass('tab-panel');
-    const tabslClass = usePrefixClass('tabs');
+    const tabsClass = usePrefixClass('tabs');
     const currentValue = inject<Ref<TabValue>>('currentValue');
     const isActive = computed(() => currentValue.value === props.value);
-    const tabPanelClasses = computed(() => [`${tabPanelClass.value}`, `${tabslClass.value}__panel`]);
+    const tabPanelClasses = computed(() => [`${tabPanelClass.value}`, `${tabsClass.value}__panel`]);
     const isMount = ref(props.lazy ? isActive.value : true);
 
     watch(

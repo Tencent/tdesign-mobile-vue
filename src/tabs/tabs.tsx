@@ -12,7 +12,10 @@ import {
   watch,
   CSSProperties,
   onActivated,
+  h,
+  RendererNode,
 } from 'vue';
+import isFunction from 'lodash/isFunction';
 import config from '../config';
 import TabsProps from './props';
 import TTabNavItem from './tab-nav-item';
@@ -22,7 +25,9 @@ import CLASSNAMES from '../shared/constants';
 import TSticky from '../sticky';
 import { TdStickyProps } from '../sticky/type';
 import TBadge from '../badge';
-import { useContent, useTNodeJSX } from '../hooks/tnode';
+import { useTNodeJSX } from '../hooks/tnode';
+import { TdTabPanelProps } from './type';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
 const name = `${prefix}-tabs`;
@@ -30,9 +35,9 @@ const name = `${prefix}-tabs`;
 export default defineComponent({
   name,
   props: TabsProps,
-  setup(props, context) {
+  setup(props) {
     const renderTNodeJSX = useTNodeJSX();
-    const renderTNodeContent = useContent();
+    const tabsClass = usePrefixClass('tabs');
 
     const stickyProps = computed(() => ({ ...(props.stickyProps as TdStickyProps), disabled: !props.sticky }));
     const activeClass = `${name}__item--active`;
@@ -58,13 +63,13 @@ export default defineComponent({
     const { value, modelValue } = toRefs(props);
     const [currentValue, setCurrentValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
-    const itemProps = computed(() => {
+    const itemProps = computed<Array<TdTabPanelProps>>(() => {
       if (props.list) {
         return props.list;
       }
-      let children: any[] = context.slots.default ? context.slots.default() : [];
-      const res: any[] = [];
-      const label: any[] = [];
+      let children: Array<RendererNode> = renderTNodeJSX('default');
+      const res: RendererNode[] = [];
+      const label: RendererNode[] = [];
       children.forEach((child) => {
         if (child.type === Fragment) {
           res.push(...child.children);
@@ -76,8 +81,8 @@ export default defineComponent({
         }
       });
 
-      children = res.filter((child: any) => child.type.name === `${prefix}-tab-panel`);
-      return children.map((item: any, index: number) => ({
+      children = res.filter((child: RendererNode) => child.type.name === `${prefix}-tab-panel`);
+      return children.map((item: RendererNode, index: number) => ({
         ...item.props,
         label: () => label[index] || item.props.label,
       }));
@@ -86,9 +91,9 @@ export default defineComponent({
     const valueList = computed(() => itemProps.value.map((v) => v.value));
     const currentIndex = computed(() => valueList.value.indexOf(currentValue.value));
 
-    const navScroll = ref<HTMLElement | null>(null);
-    const navWrap = ref<HTMLElement | null>(null);
-    const navLine = ref<HTMLElement | null>(null);
+    const navScroll = ref<HTMLElement>();
+    const navWrap = ref<HTMLElement>();
+    const navLine = ref<HTMLElement>();
     const lineStyle = ref();
     const moveToActiveTab = () => {
       if (navWrap.value && navLine.value && props.showBottomLine) {
@@ -136,13 +141,14 @@ export default defineComponent({
       });
     });
 
-    const tabClick = (event: Event, item: Record<string, unknown>) => {
-      const { value, disabled, label } = item as any;
+    const handleTabClick = (event: Event, item: TdTabPanelProps) => {
+      const { value, disabled } = item;
       if (disabled || currentValue.value === value) {
         return false;
       }
-      setCurrentValue(value, typeof label === 'function' ? label() : label);
-      props.onClick?.(value, typeof label === 'function' ? label() : label);
+      const label = isFunction(item.label) ? item.label(h).toString() : item.label;
+      setCurrentValue(value, label);
+      props.onClick?.(value, label);
       nextTick(() => {
         moveToActiveTab();
       });
@@ -156,13 +162,13 @@ export default defineComponent({
     };
 
     // 手势滑动开始
-    const moveStart = (e: any) => {
+    const handleTouchstart = (e: TouchEvent) => {
       if (!props.swipeable) return;
       startX.value = e.targetTouches[0].clientX;
       startY.value = e.targetTouches[0].clientY;
     };
 
-    const onMove = (e: any) => {
+    const handleTouchmove = (e: TouchEvent) => {
       if (!props.swipeable) return;
       if (!canMove.value) return;
       endX.value = e.targetTouches[0].clientX;
@@ -178,19 +184,19 @@ export default defineComponent({
             // 向左划
             if (tabIndex.value >= itemProps.value.length - 1) return;
             canMove.value = false;
-            tabClick(e, itemProps.value[tabIndex.value + 1]);
+            handleTabClick(e, itemProps.value[tabIndex.value + 1]);
           } else if (startX.value < endX.value) {
             // 向右划
             if (tabIndex.value <= 0) return;
             canMove.value = false;
-            tabClick(e, itemProps.value[tabIndex.value - 1]);
+            handleTabClick(e, itemProps.value[tabIndex.value - 1]);
           }
         }
       }
     };
 
     // 手势滑动结束
-    const moveEnd = () => {
+    const handleTouchend = () => {
       if (!props.swipeable) return;
       canMove.value = true;
       startX.value = 0;
@@ -213,7 +219,7 @@ export default defineComponent({
               [disabledClass]: item.disabled,
               [`${name}__item--${props.theme}`]: true,
             }}
-            onClick={(e) => tabClick(e, item)}
+            onClick={(e) => handleTabClick(e, item)}
           >
             <TBadge {...badgeProps}>
               <div
@@ -246,7 +252,12 @@ export default defineComponent({
               </div>
             </div>
           </TSticky>
-          <div class={`${name}__content`} onTouchstart={moveStart} onTouchmove={onMove} onTouchend={moveEnd}>
+          <div
+            class={`${name}__content`}
+            onTouchstart={handleTouchstart}
+            onTouchmove={handleTouchmove}
+            onTouchend={handleTouchend}
+          >
             {renderTNodeJSX('default')}
           </div>
         </div>
