@@ -1,4 +1,4 @@
-import { defineComponent, ref, Ref, ComponentInternalInstance, provide, toRefs } from 'vue';
+import { defineComponent, ref, Ref, ComponentInternalInstance, provide } from 'vue';
 import config from '../config';
 import props from './props';
 import { TdSideBarProps } from './type';

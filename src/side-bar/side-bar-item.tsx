@@ -1,6 +1,5 @@
 import { defineComponent, getCurrentInstance, ComponentPublicInstance, computed, inject, onUnmounted } from 'vue';
 import TBadge from '../badge';
-import { renderTNode, TNode } from '../shared';
 import SideBarItemProps from './side-bar-item-props';
 import { TdSideBarItemProps } from './type';
 import { useTNodeJSX } from '../hooks/tnode';
@@ -12,7 +11,7 @@ const name = `${prefix}-side-bar-item`;
 
 export default defineComponent({
   name,
-  components: { TNode, TBadge },
+  components: { TBadge },
   props: SideBarItemProps,
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();
