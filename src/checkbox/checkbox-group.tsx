@@ -1,7 +1,7 @@
 import { provide, ref, computed, defineComponent, watch, toRefs, VNode, reactive, onMounted } from 'vue';
 import config from '../config';
 import props from './checkbox-group-props';
-import Checkbox from './checkbox.vue';
+import Checkbox from './checkbox';
 import { CheckboxGroupValue, TdCheckboxGroupProps, TdCheckboxProps } from './type';
 import { useDefault } from '../shared';
 import { getOptions, setCheckAllStatus } from './hooks';
