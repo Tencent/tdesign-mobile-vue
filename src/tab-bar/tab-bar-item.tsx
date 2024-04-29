@@ -1,21 +1,10 @@
-import {
-  defineComponent,
-  inject,
-  computed,
-  ref,
-  watch,
-  Ref,
-  getCurrentInstance,
-  toRefs,
-  ComponentInternalInstance,
-} from 'vue';
+import { defineComponent, inject, computed, ref, watch, ComponentInternalInstance } from 'vue';
 import { ViewListIcon as TViewListIcon } from 'tdesign-icons-vue-next';
 import TBadge from '../badge';
 import { TdBadgeProps } from '../badge/type';
 import config from '../config';
 import { initName } from './useTabBar';
 import TabBarItemProps from './tab-bar-item-props';
-import { renderContent, renderTNode, TNode } from '../shared';
 import { useConfig } from '../config-provider/useConfig';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
 
@@ -24,9 +13,9 @@ const name = `${prefix}-tab-bar-item`;
 
 export default defineComponent({
   name,
-  components: { TNode, TBadge, TViewListIcon },
+  components: { TBadge, TViewListIcon },
   props: TabBarItemProps,
-  setup(props) {
+  setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();
     const renderContent = useContent();
 
@@ -192,6 +181,7 @@ export default defineComponent({
             [`${name}--text-only`]: !iconContent(),
             [`${name}--crowded`]: crowded.value,
             [`${name}--${shape.value}`]: true,
+            [`${context.attrs.class}`]: true,
           }}
         >
           <div

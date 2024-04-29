@@ -37,6 +37,7 @@ export default defineComponent({
         [`${name}--safe`]: props.safeAreaInsetBottom,
       },
       `${name}--${props.shape}`,
+      `${context.attrs.class || ''}`,
     ]);
 
     provide('tab-bar', {
