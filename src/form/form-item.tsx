@@ -61,11 +61,7 @@ export default defineComponent({
     const renderTNodeJSX = useTNodeJSX();
     const { name } = toRefs(props);
 
-    const internalInstance = getCurrentInstance();
-
     const form = inject(FormInjectionKey, undefined);
-
-    const helpNode = computed(() => renderTNode(internalInstance, 'help'));
 
     const extraNode = computed(() => {
       const list = errorList.value;
@@ -83,9 +79,6 @@ export default defineComponent({
       `${prefix}-form__item--bordered`,
       `${prefix}-form--${labelAlign.value}`,
       `${prefix}-form-item__${props.name}`,
-      {
-        [`${prefix}-form__item-with-help`]: helpNode.value,
-      },
     ]);
 
     const needRequiredMark = computed(() => {
@@ -117,11 +110,6 @@ export default defineComponent({
         return isNumber(labelWidth.value) ? { width: `${labelWidth.value}px` } : { width: labelWidth.value };
       }
       return {};
-    });
-
-    const labelContent = computed(() => {
-      if (Number(labelWidth.value) === 0) return;
-      return renderTNode(internalInstance, 'label');
     });
 
     const freeShowErrorMessage = ref<boolean | undefined>(false);
@@ -360,7 +348,7 @@ export default defineComponent({
       };
 
       return (
-        <div class={formItemClass.value}>
+        <div class={[...formItemClass.value, renderHelpNode() ? `${prefix}-form__item-with-help` : '']}>
           <div class={[`${classPrefix}-wrap`, `${classPrefix}--${labelAlign.value}`]}>
             <div class={labelClasses.value} style={labelStyle.value}>
               <label for={props.for}>{renderLabelContent()}</label>
