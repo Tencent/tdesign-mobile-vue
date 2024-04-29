@@ -1,5 +1,5 @@
 import { CloseIcon } from 'tdesign-icons-vue-next';
-import { computed, toRefs, defineComponent, getCurrentInstance } from 'vue';
+import { computed, defineComponent } from 'vue';
 import get from 'lodash/get';
 import isString from 'lodash/isString';
 
@@ -7,7 +7,6 @@ import TButton, { ButtonProps } from '../button';
 import TPopup from '../popup';
 import config from '../config';
 import props from './props';
-import { renderContent, renderTNode, TNode } from '../shared';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
 
 const { prefix } = config;
@@ -15,7 +14,7 @@ const name = `${prefix}-dialog`;
 
 export default defineComponent({
   name,
-  components: { TPopup, TNode, TButton, CloseIcon },
+  components: { TPopup, TButton, CloseIcon },
   props,
   emits: ['update:visible', 'confirm', 'overlay-click', 'cancel', 'close', 'closed'],
   setup(props, context) {
@@ -145,7 +144,7 @@ export default defineComponent({
           onClose={handleOverlayClick}
           onClosed={handleClosed}
         >
-          <div class={`${name} ${context.attrs.class}`} style={rootStyles.value}>
+          <div class={`${name} ${context.attrs.class || ''}`} style={rootStyles.value}>
             {renderTNodeJSX('top')}
             {closeBtn && (
               <div class={`${name}__close-btn`}>
