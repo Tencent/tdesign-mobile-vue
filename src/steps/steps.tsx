@@ -1,28 +1,25 @@
-<template>
-  <div :class="baseClass">
-    <slot></slot>
-  </div>
-</template>
-
-<script lang="ts">
 import { toRefs, provide, computed, defineComponent, reactive, ComponentInternalInstance } from 'vue';
-import StepsProps from './props';
+import props from './props';
 import config from '../config';
 import { TdStepsProps } from './type';
 import { useDefault } from '../shared';
+import { useTNodeJSX } from '@/hooks/tnode';
+import { usePrefixClass } from '@/hooks/useClass';
 
 const { prefix } = config;
 const name = `${prefix}-steps`;
 export default defineComponent({
   name,
-  props: StepsProps,
+  props,
   emits: ['update:current', 'update:modelValue', 'change'],
   setup(props, context) {
+    const stepsClass = usePrefixClass('steps');
+    const renderTNodeJSX = useTNodeJSX();
     const baseClass = computed(() => [
-      name,
-      `${name}--${props.layout}`,
-      `${name}--${props.sequence}`,
-      { [`${name}--readonly`]: props.readonly },
+      stepsClass.value,
+      `${stepsClass.value}--${props.layout}`,
+      `${stepsClass.value}--${props.sequence}`,
+      { [`${stepsClass.value}--readonly`]: props.readonly },
     ]);
 
     const [current, setCurrent] = useDefault<TdStepsProps['current'], TdStepsProps>(
@@ -61,11 +58,9 @@ export default defineComponent({
       onClickItem,
     });
 
-    return {
-      baseClass,
-      onClickItem,
-      ...toRefs(props),
+    return () => {
+      const renderContent = renderTNodeJSX('default') || null;
+      return <div class={baseClass.value}>{renderContent}</div>;
     };
   },
 });
-</script>
