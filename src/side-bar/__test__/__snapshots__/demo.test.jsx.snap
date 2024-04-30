@@ -15,8 +15,8 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-7bc399f9=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -48,7 +48,7 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
           class="t-side-bar-item__suffix"
         />
       </div>
-      <!--v-if-->
+      <!---->
       <div
         class="t-badge"
       >
@@ -75,8 +75,8 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-7bc399f9=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -97,8 +97,8 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-7bc399f9=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -125,8 +125,8 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-7bc399f9=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -3092,8 +3092,8 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-aa9e6ace=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -3125,7 +3125,7 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
           class="t-side-bar-item__suffix"
         />
       </div>
-      <!--v-if-->
+      <!---->
       <div
         class="t-badge"
       >
@@ -3152,8 +3152,8 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-aa9e6ace=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -3174,8 +3174,8 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-aa9e6ace=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -3202,8 +3202,8 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-aa9e6ace=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -6318,8 +6318,8 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-17774648=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -6351,7 +6351,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           class="t-side-bar-item__suffix"
         />
       </div>
-      <!--v-if-->
+      <!---->
       <div
         class="t-badge"
       >
@@ -6378,8 +6378,8 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-17774648=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -6400,8 +6400,8 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-17774648=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -6428,8 +6428,8 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-17774648=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -9234,7 +9234,7 @@ exports[`SideBar > SideBar withIconVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-2e4c56b0=""
     >
-      <!--v-if-->
+      <!---->
       <div
         class="t-side-bar-item__icon"
       >
@@ -9326,7 +9326,7 @@ exports[`SideBar > SideBar withIconVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-2e4c56b0=""
     >
-      <!--v-if-->
+      <!---->
       <div
         class="t-side-bar-item__icon"
       >
@@ -9364,7 +9364,7 @@ exports[`SideBar > SideBar withIconVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-2e4c56b0=""
     >
-      <!--v-if-->
+      <!---->
       <div
         class="t-side-bar-item__icon"
       >
@@ -9408,7 +9408,7 @@ exports[`SideBar > SideBar withIconVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-2e4c56b0=""
     >
-      <!--v-if-->
+      <!---->
       <div
         class="t-side-bar-item__icon"
       >

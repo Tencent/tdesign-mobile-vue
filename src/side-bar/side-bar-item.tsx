@@ -13,7 +13,7 @@ export default defineComponent({
   name,
   components: { TBadge },
   props: SideBarItemProps,
-  setup(props, context) {
+  setup(props) {
     const renderTNodeJSX = useTNodeJSX();
     const internalInstance = getCurrentInstance();
     const proxy = internalInstance.proxy as ComponentPublicInstance<TdSideBarItemProps>;
@@ -26,7 +26,6 @@ export default defineComponent({
       name,
       { [`${name}--active`]: isActive.value },
       { [`${name}--disabled`]: props.disabled },
-      context.attrs.class || '',
     ]);
 
     const onClick = (e: MouseEvent) => {

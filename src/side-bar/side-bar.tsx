@@ -46,7 +46,7 @@ export default defineComponent({
     });
 
     return () => (
-      <div class={`${name} ${context.attrs.class || ''}`}>
+      <div class={`${name}`}>
         {renderTNodeJSX('default')}
         <div class={`${name}__padding`}></div>
       </div>
