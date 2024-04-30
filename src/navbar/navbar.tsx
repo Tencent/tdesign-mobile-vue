@@ -17,15 +17,15 @@ export default defineComponent({
     const navbarClass = usePrefixClass('navbar');
     const renderTNodeJSX = useTNodeJSX();
 
-    const animationSuffix = props.animation ? '-animation' : '';
+    const animationSuffix = computed(() => (props.animation ? '-animation' : ''));
     const navClass = computed(() => [
       navbarClass.value,
       {
         [`${navbarClass.value}--fixed`]: props.fixed,
       },
       props.visible
-        ? `${navbarClass.value}--visible${animationSuffix}`
-        : `${navbarClass.value}--hide${animationSuffix}`,
+        ? `${navbarClass.value}--visible${animationSuffix.value}`
+        : `${navbarClass.value}--hide${animationSuffix.value}`,
     ]);
 
     const handleLeftClick = () => {
