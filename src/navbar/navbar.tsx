@@ -1,7 +1,7 @@
 import { defineComponent, computed, getCurrentInstance } from 'vue';
 import { ChevronLeftIcon as TChevronLeftIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
-import NavbarProps from './props';
+import props from './props';
 import { usePrefixClass } from '@/hooks/useClass';
 import { useTNodeJSX } from '@/hooks/tnode';
 
@@ -11,9 +11,9 @@ const name = `${prefix}-navbar`;
 export default defineComponent({
   name,
   components: { TChevronLeftIcon },
-  props: NavbarProps,
+  props,
   emits: ['left-click', 'right-click'],
-  setup(props) {
+  setup(props, { slots }) {
     const navbarClass = usePrefixClass('navbar');
     const renderTNodeJSX = useTNodeJSX();
     const internalInstance = getCurrentInstance();
@@ -62,7 +62,7 @@ export default defineComponent({
       };
 
       const renderTitleContent = () => {
-        const isStringTitle = typeof title === 'string' && !internalInstance?.slots.title;
+        const isStringTitle = typeof title === 'string' && !slots.title;
         let titleContent = renderTNodeJSX('title');
         if (!titleContent) {
           return null;
