@@ -73,10 +73,10 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           输入用户名
         </div>
-        <!--v-if-->
+        <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-form__item t-form__item--bordered t-form--left t-form-item__password"
@@ -158,11 +158,11 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           </div>
           
         </div>
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-form__item t-form__item--bordered t-form--left t-form-item__gender"
@@ -305,11 +305,11 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           </div>
           
         </div>
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-form__item t-form__item--bordered t-form--left t-form-item__birth"
@@ -721,8 +721,8 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           </teleport-stub>
           
         </div>
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
     </div>
     <svg
@@ -981,8 +981,8 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           </teleport-stub>
           
         </div>
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
     </div>
     <svg
@@ -1070,11 +1070,11 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           </div>
           
         </div>
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-form__item t-form__item--bordered t-form--left t-form-item__description"
@@ -1286,11 +1286,11 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           </div>
           
         </div>
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-form__item t-form__item--bordered t-form--left t-form-item__resume"
@@ -1340,11 +1340,11 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           </div>
           
         </div>
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-form__item t-form__item--bordered t-form--left t-form-item__photo"
@@ -1529,11 +1529,11 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           </div>
           
         </div>
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="button-group"
@@ -1785,10 +1785,10 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 输入用户名
               </div>
-              <!--v-if-->
+              <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-form__item t-form__item--bordered t-form--left t-form-item__password"
@@ -1870,11 +1870,11 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 </div>
                 
               </div>
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-form__item t-form__item--bordered t-form--left t-form-item__gender"
@@ -2017,11 +2017,11 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 </div>
                 
               </div>
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-form__item t-form__item--bordered t-form--left t-form-item__birth"
@@ -2433,8 +2433,8 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 </teleport-stub>
                 
               </div>
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
           </div>
           <svg
@@ -2693,8 +2693,8 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 </teleport-stub>
                 
               </div>
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
           </div>
           <svg
@@ -2782,11 +2782,11 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 </div>
                 
               </div>
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-form__item t-form__item--bordered t-form--left t-form-item__description"
@@ -2998,11 +2998,11 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 </div>
                 
               </div>
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-form__item t-form__item--bordered t-form--left t-form-item__resume"
@@ -3052,11 +3052,11 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 </div>
                 
               </div>
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-form__item t-form__item--bordered t-form--left t-form-item__photo"
@@ -3241,11 +3241,11 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 </div>
                 
               </div>
-              <!--v-if-->
-              <!--v-if-->
+              <!---->
+              <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="button-group"
@@ -3366,10 +3366,10 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           输入用户名
         </div>
-        <!--v-if-->
+        <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-form__item t-form__item--bordered t-form--top t-form-item__password"
@@ -3449,11 +3449,11 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
           </div>
           
         </div>
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-form__item t-form__item--bordered t-form--top t-form-item__gender"
@@ -3594,11 +3594,11 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
           </div>
           
         </div>
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-form__item t-form__item--bordered t-form--top t-form-item__birth"
@@ -4008,8 +4008,8 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
           </teleport-stub>
           
         </div>
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
     </div>
     <svg
@@ -4266,8 +4266,8 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
           </teleport-stub>
           
         </div>
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
     </div>
     <svg
@@ -4353,11 +4353,11 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
           </div>
           
         </div>
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-form__item t-form__item--bordered t-form--top t-form-item__description"
@@ -4567,11 +4567,11 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
           </div>
           
         </div>
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-form__item t-form__item--bordered t-form--top t-form-item__resume"
@@ -4619,11 +4619,11 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
           </div>
           
         </div>
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-form__item t-form__item--bordered t-form--top t-form-item__photo"
@@ -4806,11 +4806,11 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
           </div>
           
         </div>
-        <!--v-if-->
-        <!--v-if-->
+        <!---->
+        <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="button-group"
