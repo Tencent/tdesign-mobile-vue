@@ -1,10 +1,10 @@
-import { computed, defineComponent, onMounted, ref, toRefs, watch } from 'vue';
+import { computed, defineComponent, ref, toRefs, watch } from 'vue';
 import { SideBar as TSideBar, SideBarItem as TSideBarItem } from '../side-bar';
 import TRadio, { RadioGroup as TRadioGroup } from '../radio';
 import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
 import config from '../config';
 import { convertUnit, useDefault } from '../shared';
-import TreeSelectProps from './props';
+import props from './props';
 import { TdTreeSelectProps, TreeSelectValue } from './type';
 import { TreeOptionData } from '../_common/js/common';
 import { usePrefixClass } from '@/hooks/useClass';
@@ -20,7 +20,7 @@ export default defineComponent({
     TRadio,
     TRadioGroup,
   },
-  props: TreeSelectProps,
+  props,
   emits: ['update:value', 'update:modelValue', 'change'],
   setup(props: TdTreeSelectProps, context) {
     const treeSelectClass = usePrefixClass('tree-select');
