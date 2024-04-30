@@ -1,4 +1,4 @@
-import { defineComponent, computed, getCurrentInstance } from 'vue';
+import { defineComponent, computed } from 'vue';
 import { ChevronLeftIcon as TChevronLeftIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import props from './props';
@@ -16,7 +16,6 @@ export default defineComponent({
   setup(props, { slots }) {
     const navbarClass = usePrefixClass('navbar');
     const renderTNodeJSX = useTNodeJSX();
-    const internalInstance = getCurrentInstance();
 
     const animationSuffix = props.animation ? '-animation' : '';
     const navClass = computed(() => [
