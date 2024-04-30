@@ -1,7 +1,7 @@
 import { h } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
-import NavBar from '../navbar.vue';
+import NavBar from '../navbar';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 
 const iconFunc = () => h(TIconApp);
@@ -9,10 +9,10 @@ describe('navbar', () => {
   describe('props', () => {
     it('fixed', async () => {
       const navbar = mount(<NavBar title="标题" />);
-      expect(navbar.vm.navStyle).toContain('position: fixed');
+      expect(navbar.element.style.position).toBe('fixed')
 
       await navbar.setProps({ fixed: false });
-      expect(navbar.vm.navStyle).toContain('position: relative');
+      expect(navbar.element.style.position).toBe('relative')
     });
 
     it('leftArrow', () => {
