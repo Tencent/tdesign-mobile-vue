@@ -1,10 +1,9 @@
-import { ref, watch, toRefs, computed, defineComponent, getCurrentInstance, h } from 'vue';
+import { ref, watch, toRefs, defineComponent, h } from 'vue';
 import TPopup from '../popup';
 import config from '../config';
-import { renderTNode, TNode } from '../shared';
-import DrawerProps from './props';
+import props from './props';
 import { DrawerItem } from './type';
-import { useContent, useTNodeJSX } from '@/hooks/tnode';
+import { useTNodeJSX } from '@/hooks/tnode';
 import { usePrefixClass } from '@/hooks/useClass';
 
 const { prefix } = config;
@@ -12,14 +11,13 @@ const name = `${prefix}-drawer`;
 
 export default defineComponent({
   name,
-  components: { TPopup, TNode },
-  props: DrawerProps,
+  components: { TPopup },
+  props,
   emits: ['update:visible', 'itemClick', 'overlayClick'],
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();
-    const currentInstance = getCurrentInstance();
     const drawerClass = usePrefixClass('drawer');
-    const { attach, visible, placement, showOverlay } = toRefs(props);
+    const { visible, showOverlay } = toRefs(props);
     const open = ref(visible.value || false);
 
     watch(open, () => {
@@ -45,7 +43,7 @@ export default defineComponent({
     };
 
     return () => {
-      const { attach, zIndex, closeOnOverlayClick, destroyOnClose, items } = props;
+      const { attach, zIndex, closeOnOverlayClick, destroyOnClose, items, placement, showOverlay } = props;
       const renderTitleNode = () => {
         const titleNode = renderTNodeJSX('title');
         if (!titleNode) {
@@ -63,9 +61,9 @@ export default defineComponent({
       return (
         <t-popup
           v-model={open.value}
-          placement={placement.value}
+          placement={placement}
           attach={attach}
-          showOverlay={showOverlay.value}
+          showOverlay={showOverlay}
           zIndex={zIndex}
           closeOnOverlayClick={closeOnOverlayClick}
           destroyOnClose={destroyOnClose}
