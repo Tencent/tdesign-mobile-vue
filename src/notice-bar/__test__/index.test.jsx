@@ -1,7 +1,7 @@
 import { nextTick } from 'vue';
 import { expect, it, vi, describe } from 'vitest';
 import { mount } from '@vue/test-utils';
-import NoticeBar from '../notice-bar.vue';
+import NoticeBar from '../notice-bar';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 
 describe('NoticeBar', async () => {
