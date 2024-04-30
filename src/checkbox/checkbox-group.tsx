@@ -128,7 +128,7 @@ export default defineComponent({
         );
       };
       return (
-        <div class={`${prefix}-checkbox-group ${context.attrs.class || ''}`}>
+        <div class={`${prefix}-checkbox-group`}>
           {!(props.options && props.options.length) ? renderTNodeJSX('default') : checkboxNode()}
         </div>
       );
