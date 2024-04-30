@@ -10,7 +10,7 @@ const name = `${prefix}-swiper-item`;
 export default defineComponent({
   name,
   setup() {
-    const { addChild, removeChild, isVertical, root, loop, items, setContainerHeight } = inject('parent') as any;
+    const { addChild, removeChild, isVertical, root, items, setContainerHeight } = inject('parent') as any;
     const swiperItemClass = usePrefixClass('swiper-item');
     const readerTNodeJSX = useTNodeJSX();
     const selfRef = ref(null);

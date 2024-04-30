@@ -9,6 +9,7 @@ import { SwiperChangeSource, SwiperNavigation } from './type';
 import { useVModel } from '../shared';
 import { preventDefault } from '../shared/dom';
 import { useTNodeJSX } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
 const name = `${prefix}-swiper`;
@@ -18,8 +19,8 @@ export default defineComponent({
   props,
   emits: ['change', 'update:current', 'update:modelValue'],
   setup(props, context) {
+    const swiperClass = usePrefixClass('swiper');
     const readerTNodeJSX = useTNodeJSX();
-
     const setOffset = (offset: number, direction = 'X'): void => {
       translateContainer.value = `translate${direction}(${offset}px)`;
     };
@@ -55,9 +56,13 @@ export default defineComponent({
 
     const rootClass = computed(() => {
       return [
-        `${name}`,
-        `${name}--${props.type}`,
-        `${isBottomPagination.value && navigation.value.placement ? `${name}--${navigation.value.placement}` : ''}`,
+        `${swiperClass.value}`,
+        `${swiperClass.value}--${props.type}`,
+        `${
+          isBottomPagination.value && navigation.value?.placement
+            ? `${swiperClass.value}--${navigation.value?.placement}`
+            : ''
+        }`,
       ];
     });
 
@@ -244,16 +249,16 @@ export default defineComponent({
             if ('type' in navigation.value) {
               // dots
               const dots = () => {
-                if (['dots', 'dots-bar'].includes(navigation.value.type || '')) {
+                if (['dots', 'dots-bar'].includes(navigation.value?.type || '')) {
                   return (
                     <>
                       {items.value.map((_: any, index: number) => (
                         <span
                           key={`page${index}`}
                           class={[
-                            `${navName}__${navigation.value.type}-item`,
-                            index === current.value ? `${navName}__${navigation.value.type}-item--active` : '',
-                            `${navName}__${navigation.value.type}-item--${props.direction}`,
+                            `${navName}__${navigation.value?.type}-item`,
+                            index === current.value ? `${navName}__${navigation.value?.type}-item--active` : '',
+                            `${navName}__${navigation.value?.type}-item--${props.direction}`,
                           ]}
                         />
                       ))}
@@ -263,7 +268,7 @@ export default defineComponent({
               };
               // fraction
               const fraction = () => {
-                if (navigation.value.type && navigation.value.type === 'fraction') {
+                if (navigation.value?.type === 'fraction') {
                   return <span>{`${(current.value ?? 0) + 1}/${items.value.length}`}</span>;
                 }
               };
@@ -271,11 +276,11 @@ export default defineComponent({
                 <span
                   class={[
                     `${navName}--${props.direction}`,
-                    `${navName}__${navigation.value.type || ''}`,
-                    `${navName}--${navigation.value.paginationPosition || 'bottom'}`,
+                    `${navName}__${navigation.value?.type || ''}`,
+                    `${navName}--${navigation.value?.paginationPosition || 'bottom'}`,
                     `${
-                      isBottomPagination.value && navigation.value.placement
-                        ? `${navName}--${navigation.value.placement}`
+                      isBottomPagination.value && navigation.value?.placement
+                        ? `${navName}--${navigation.value?.placement}`
                         : ''
                     }`,
                   ]}
@@ -300,7 +305,7 @@ export default defineComponent({
         <div ref={root} class={rootClass.value}>
           <div
             ref={swiperContainer}
-            class={`${name}__container`}
+            class={`${swiperClass.value}__container`}
             style={{
               flexDirection: !isVertical.value ? 'row' : 'column',
               transition: animating.value ? `transform ${props.duration}ms` : 'none',
