@@ -58,7 +58,6 @@ export default defineComponent({
         `${name}`,
         `${name}--${props.type}`,
         `${isBottomPagination.value && navigation.value.placement ? `${name}--${navigation.value.placement}` : ''}`,
-        context.attrs.class,
       ];
     });
 
@@ -298,29 +297,27 @@ export default defineComponent({
         return isObject(props.navigation) ? '' : readerTNodeJSX('navigation');
       };
       return (
-        <>
-          <div ref={root} class={rootClass.value}>
-            <div
-              ref={swiperContainer}
-              class={`${name}__container`}
-              style={{
-                flexDirection: !isVertical.value ? 'row' : 'column',
-                transition: animating.value ? `transform ${props.duration}ms` : 'none',
-                transform: translateContainer.value,
-                height: containerHeight.value,
-              }}
-              onTransitionend={(event: TransitionEvent) => {
-                if (event.target === event.currentTarget) {
-                  handleAnimationEnd();
-                }
-              }}
-              onClick={onItemClick}
-            >
-              {readerTNodeJSX('default')}
-            </div>
-            {swiperNav()}
+        <div ref={root} class={rootClass.value}>
+          <div
+            ref={swiperContainer}
+            class={`${name}__container`}
+            style={{
+              flexDirection: !isVertical.value ? 'row' : 'column',
+              transition: animating.value ? `transform ${props.duration}ms` : 'none',
+              transform: translateContainer.value,
+              height: containerHeight.value,
+            }}
+            onTransitionend={(event: TransitionEvent) => {
+              if (event.target === event.currentTarget) {
+                handleAnimationEnd();
+              }
+            }}
+            onClick={onItemClick}
+          >
+            {readerTNodeJSX('default')}
           </div>
-        </>
+          {swiperNav()}
+        </div>
       );
     };
   },

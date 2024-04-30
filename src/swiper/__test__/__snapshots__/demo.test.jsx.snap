@@ -4,7 +4,6 @@ exports[`Swiper > Swiper baseVue demo works fine 1`] = `
 <div
   style="padding: 0px 16px;"
 >
-  
   <div
     class="t-swiper t-swiper--default"
   >
@@ -85,95 +84,88 @@ exports[`Swiper > Swiper baseVue demo works fine 1`] = `
     </span>
     
   </div>
-  
 </div>
 `;
 
 exports[`Swiper > Swiper cardVue demo works fine 1`] = `
 <div
-  data-v-app=""
+  class="t-swiper t-swiper--card"
 >
-  
   <div
-    class="t-swiper t-swiper--card"
+    class="t-swiper__container"
+    style="flex-direction: row; transition: none; height: auto;"
   >
+    
+    
     <div
-      class="t-swiper__container"
-      style="flex-direction: row; transition: none; height: auto;"
+      class="t-swiper-item"
+      style=""
     >
       
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+      />
       
-      <div
-        class="t-swiper-item"
-        style=""
-      >
-        
-        <img
-          class="img"
-          src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
-        />
-        
-      </div>
-      <div
-        class="t-swiper-item"
-        style=""
-      >
-        
-        <img
-          class="img"
-          src="https://tdesign.gtimg.com/mobile/demos/swiper2.png"
-        />
-        
-      </div>
-      <div
-        class="t-swiper-item"
-        style=""
-      >
-        
-        <img
-          class="img"
-          src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
-        />
-        
-      </div>
-      <div
-        class="t-swiper-item"
-        style=""
-      >
-        
-        <img
-          class="img"
-          src="https://tdesign.gtimg.com/mobile/demos/swiper2.png"
-        />
-        
-      </div>
-      <div
-        class="t-swiper-item"
-        style=""
-      >
-        
-        <img
-          class="img"
-          src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
-        />
-        
-      </div>
+    </div>
+    <div
+      class="t-swiper-item"
+      style=""
+    >
       
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/mobile/demos/swiper2.png"
+      />
+      
+    </div>
+    <div
+      class="t-swiper-item"
+      style=""
+    >
+      
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+      />
+      
+    </div>
+    <div
+      class="t-swiper-item"
+      style=""
+    >
+      
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/mobile/demos/swiper2.png"
+      />
+      
+    </div>
+    <div
+      class="t-swiper-item"
+      style=""
+    >
+      
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+      />
       
     </div>
     
-    <!---->
-    <span
-      class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
-    >
-      
-      
-      
-      
-      <!---->
-    </span>
     
   </div>
+  
+  <!---->
+  <span
+    class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
+  >
+    
+    
+    
+    
+    <!---->
+  </span>
   
 </div>
 `;
@@ -182,7 +174,6 @@ exports[`Swiper > Swiper controlVue demo works fine 1`] = `
 <div
   style="padding: 0px 16px;"
 >
-  
   <div
     class="t-swiper t-swiper--default"
   >
@@ -264,7 +255,6 @@ exports[`Swiper > Swiper controlVue demo works fine 1`] = `
     <!---->
     
   </div>
-  
 </div>
 `;
 
@@ -272,7 +262,6 @@ exports[`Swiper > Swiper customVue demo works fine 1`] = `
 <div
   style="padding: 0px 16px;"
 >
-  
   <div
     class="t-swiper t-swiper--default"
   >
@@ -353,7 +342,6 @@ exports[`Swiper > Swiper customVue demo works fine 1`] = `
     </span>
     
   </div>
-  
 </div>
 `;
 
@@ -361,7 +349,6 @@ exports[`Swiper > Swiper fractionVue demo works fine 1`] = `
 <div
   style="padding: 0px 16px;"
 >
-  
   <div
     class="t-swiper t-swiper--default"
   >
@@ -441,7 +428,6 @@ exports[`Swiper > Swiper fractionVue demo works fine 1`] = `
     </span>
     
   </div>
-  
 </div>
 `;
 
@@ -483,7 +469,6 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
       <div
         style="padding: 0px 16px;"
       >
-        
         <div
           class="t-swiper t-swiper--default"
         >
@@ -564,7 +549,6 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
           </span>
           
         </div>
-        
       </div>
       
     </div>
@@ -589,7 +573,6 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
       <div
         style="padding: 0px 16px;"
       >
-        
         <div
           class="t-swiper t-swiper--default"
         >
@@ -670,7 +653,6 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
           </span>
           
         </div>
-        
       </div>
       
     </div>
@@ -695,7 +677,6 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
       <div
         style="padding: 0px 16px;"
       >
-        
         <div
           class="t-swiper t-swiper--default"
         >
@@ -775,7 +756,6 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
           </span>
           
         </div>
-        
       </div>
       
     </div>
@@ -800,7 +780,6 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
       <div
         style="padding: 0px 16px;"
       >
-        
         <div
           class="t-swiper t-swiper--default"
         >
@@ -882,7 +861,6 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
           <!---->
           
         </div>
-        
       </div>
       
     </div>
@@ -914,7 +892,6 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
       <div
         style="padding: 0px 16px;"
       >
-        
         <div
           class="t-swiper t-swiper--default"
         >
@@ -995,7 +972,6 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
           </span>
           
         </div>
-        
       </div>
       
     </div>
@@ -1020,7 +996,6 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
       <div
         style="padding: 0px 16px;"
       >
-        
         <div
           class="t-swiper t-swiper--default t-swiper--outside"
         >
@@ -1101,7 +1076,6 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
           </span>
           
         </div>
-        
       </div>
       
     </div>
@@ -1113,7 +1087,6 @@ exports[`Swiper > Swiper outsideVue demo works fine 1`] = `
 <div
   style="padding: 0px 16px;"
 >
-  
   <div
     class="t-swiper t-swiper--default t-swiper--outside"
   >
@@ -1194,7 +1167,6 @@ exports[`Swiper > Swiper outsideVue demo works fine 1`] = `
     </span>
     
   </div>
-  
 </div>
 `;
 
@@ -1202,7 +1174,6 @@ exports[`Swiper > Swiper verticalVue demo works fine 1`] = `
 <div
   style="padding: 0px 16px;"
 >
-  
   <div
     class="t-swiper t-swiper--default"
   >
@@ -1283,6 +1254,5 @@ exports[`Swiper > Swiper verticalVue demo works fine 1`] = `
     </span>
     
   </div>
-  
 </div>
 `;

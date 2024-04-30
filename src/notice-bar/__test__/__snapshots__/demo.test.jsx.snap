@@ -1089,7 +1089,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
           class="t-notice-bar__content-wrap"
         >
           <div>
-            
             <div
               class="t-swiper t-swiper--default t-notice-bar__content--vertical"
             >
@@ -1164,7 +1163,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
               </div>
               <!---->
             </div>
-            
           </div>
         </div>
         <!-- suffixIcon -->
@@ -1264,7 +1262,6 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
       class="t-notice-bar__content-wrap"
     >
       <div>
-        
         <div
           class="t-swiper t-swiper--default t-notice-bar__content--vertical"
         >
@@ -1339,7 +1336,6 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
-        
       </div>
     </div>
     <!-- suffixIcon -->
