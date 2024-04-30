@@ -386,7 +386,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
 
 exports[`TabBar > TabBar customVue demo works fine 1`] = `
 <div
-  class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal wrapper wrapper"
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal wrapper"
   data-v-9a3dc706=""
   role="tablist"
 >
@@ -1553,7 +1553,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal wrapper wrapper"
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal wrapper"
         data-v-9a3dc706=""
         data-v-da85bda4=""
         role="tablist"
