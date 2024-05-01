@@ -17,7 +17,7 @@ import {
 } from 'vue';
 import isFunction from 'lodash/isFunction';
 import config from '../config';
-import TabsProps from './props';
+import props from './props';
 import TTabNavItem from './tab-nav-item';
 import { useVModel } from '../shared';
 import { preventDefault } from '../shared/dom';
@@ -34,7 +34,7 @@ const name = `${prefix}-tabs`;
 
 export default defineComponent({
   name,
-  props: TabsProps,
+  props,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();
     const tabsClass = usePrefixClass('tabs');
@@ -67,7 +67,7 @@ export default defineComponent({
       if (props.list) {
         return props.list;
       }
-      let children: Array<RendererNode> = renderTNodeJSX('default');
+      let children: RendererNode[] = renderTNodeJSX('default');
       const res: RendererNode[] = [];
       const label: RendererNode[] = [];
       children?.forEach((child) => {
