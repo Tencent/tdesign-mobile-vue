@@ -114,7 +114,7 @@ export default defineComponent({
     const scrollToByIndex = (index: number | string) => {
       const curGroup = groupTop.find((item) => item.anchor === index);
       if (indexesRoot.value) {
-        indexesRoot.value.scrollTo?.(0, curGroup?.top ?? 0);
+        indexesRoot.value.scrollTo?.(0, curGroup.top ?? 0);
       }
     };
 

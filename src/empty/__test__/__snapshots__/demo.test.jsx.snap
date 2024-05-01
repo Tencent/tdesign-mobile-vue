@@ -29,7 +29,7 @@ exports[`Empty > Empty baseVue demo works fine 1`] = `
   >
     描述文字
   </div>
-  <!--v-if-->
+  <!---->
 </div>
 `;
 
@@ -94,7 +94,6 @@ exports[`Empty > Empty imageEmptyVue demo works fine 1`] = `
   <div
     class="t-empty__thumb"
   >
-    
     <div
       class="t-image t-image--square"
     >
@@ -138,14 +137,13 @@ exports[`Empty > Empty imageEmptyVue demo works fine 1`] = `
         />
       </picture>
     </div>
-    
   </div>
   <div
     class="t-empty__description"
   >
     描述文字
   </div>
-  <!--v-if-->
+  <!---->
 </div>
 `;
 
@@ -208,7 +206,7 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
         >
           描述文字
         </div>
-        <!--v-if-->
+        <!---->
       </div>
       
     </div>
@@ -236,7 +234,6 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
         <div
           class="t-empty__thumb"
         >
-          
           <div
             class="t-image t-image--square"
           >
@@ -280,14 +277,13 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
               />
             </picture>
           </div>
-          
         </div>
         <div
           class="t-empty__description"
         >
           描述文字
         </div>
-        <!--v-if-->
+        <!---->
       </div>
       
     </div>

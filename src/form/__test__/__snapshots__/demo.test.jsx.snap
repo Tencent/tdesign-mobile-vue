@@ -32,17 +32,13 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-input t-input--layout-horizontal t-input--size-small"
+            class="t-input t-input--layout-horizontal"
             data-v-799be585=""
           >
             <div
               class="t-input__wrap--prefix"
             >
-              <div
-                class="t-input__icon--prefix"
-              >
-                <!--v-if-->
-              </div>
+              <!---->
               <div
                 class="t-input__label"
               >
@@ -63,11 +59,11 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   placeholder="请输入内容"
                   type="text"
                 />
-                <!--v-if-->
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
+                <!---->
               </div>
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -108,17 +104,13 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-input t-input--layout-horizontal t-input--size-small"
+            class="t-input t-input--layout-horizontal"
             data-v-799be585=""
           >
             <div
               class="t-input__wrap--prefix"
             >
-              <div
-                class="t-input__icon--prefix"
-              >
-                <!--v-if-->
-              </div>
+              <!---->
               <div
                 class="t-input__label"
               >
@@ -139,8 +131,8 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   placeholder="请输入内容"
                   type="password"
                 />
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
                 <div
                   class="t-input__wrap--suffix-icon"
                 >
@@ -161,7 +153,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   
                 </div>
               </div>
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -345,17 +337,13 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-input t-input--layout-horizontal t-input--size-small"
+            class="t-input t-input--layout-horizontal"
             data-v-799be585=""
           >
             <div
               class="t-input__wrap--prefix"
             >
-              <div
-                class="t-input__icon--prefix"
-              >
-                <!--v-if-->
-              </div>
+              <!---->
               <div
                 class="t-input__label"
               >
@@ -376,11 +364,11 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   placeholder="请输入内容"
                   type="text"
                 />
-                <!--v-if-->
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
+                <!---->
               </div>
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           <teleport-stub
@@ -778,17 +766,13 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-input t-input--layout-horizontal t-input--size-small"
+            class="t-input t-input--layout-horizontal"
             data-v-799be585=""
           >
             <div
               class="t-input__wrap--prefix"
             >
-              <div
-                class="t-input__icon--prefix"
-              >
-                <!--v-if-->
-              </div>
+              <!---->
               <div
                 class="t-input__label"
               >
@@ -809,11 +793,11 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   placeholder="请输入内容"
                   type="text"
                 />
-                <!--v-if-->
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
+                <!---->
               </div>
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           <teleport-stub
@@ -1337,7 +1321,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             class="t-textarea t-textarea--layout-horizontal textarea"
             data-v-799be585=""
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-textarea__wrapper"
             >
@@ -1760,17 +1744,13 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 
                 <div
-                  class="t-input t-input--layout-horizontal t-input--size-small"
+                  class="t-input t-input--layout-horizontal"
                   data-v-799be585=""
                 >
                   <div
                     class="t-input__wrap--prefix"
                   >
-                    <div
-                      class="t-input__icon--prefix"
-                    >
-                      <!--v-if-->
-                    </div>
+                    <!---->
                     <div
                       class="t-input__label"
                     >
@@ -1791,11 +1771,11 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         placeholder="请输入内容"
                         type="text"
                       />
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                 </div>
                 
@@ -1836,17 +1816,13 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 
                 <div
-                  class="t-input t-input--layout-horizontal t-input--size-small"
+                  class="t-input t-input--layout-horizontal"
                   data-v-799be585=""
                 >
                   <div
                     class="t-input__wrap--prefix"
                   >
-                    <div
-                      class="t-input__icon--prefix"
-                    >
-                      <!--v-if-->
-                    </div>
+                    <!---->
                     <div
                       class="t-input__label"
                     >
@@ -1867,8 +1843,8 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         placeholder="请输入内容"
                         type="password"
                       />
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                       <div
                         class="t-input__wrap--suffix-icon"
                       >
@@ -1889,7 +1865,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         
                       </div>
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                 </div>
                 
@@ -2073,17 +2049,13 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 
                 <div
-                  class="t-input t-input--layout-horizontal t-input--size-small"
+                  class="t-input t-input--layout-horizontal"
                   data-v-799be585=""
                 >
                   <div
                     class="t-input__wrap--prefix"
                   >
-                    <div
-                      class="t-input__icon--prefix"
-                    >
-                      <!--v-if-->
-                    </div>
+                    <!---->
                     <div
                       class="t-input__label"
                     >
@@ -2104,11 +2076,11 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         placeholder="请输入内容"
                         type="text"
                       />
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                 </div>
                 <teleport-stub
@@ -2506,17 +2478,13 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 
                 <div
-                  class="t-input t-input--layout-horizontal t-input--size-small"
+                  class="t-input t-input--layout-horizontal"
                   data-v-799be585=""
                 >
                   <div
                     class="t-input__wrap--prefix"
                   >
-                    <div
-                      class="t-input__icon--prefix"
-                    >
-                      <!--v-if-->
-                    </div>
+                    <!---->
                     <div
                       class="t-input__label"
                     >
@@ -2537,11 +2505,11 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         placeholder="请输入内容"
                         type="text"
                       />
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                 </div>
                 <teleport-stub
@@ -3065,7 +3033,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   class="t-textarea t-textarea--layout-horizontal textarea"
                   data-v-799be585=""
                 >
-                  <!--v-if-->
+                  <!---->
                   <div
                     class="t-textarea__wrapper"
                   >
@@ -3357,17 +3325,13 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-input t-input--layout-horizontal t-input--size-small"
+            class="t-input t-input--layout-horizontal"
             data-v-713b33d2=""
           >
             <div
               class="t-input__wrap--prefix"
             >
-              <div
-                class="t-input__icon--prefix"
-              >
-                <!--v-if-->
-              </div>
+              <!---->
               <div
                 class="t-input__label"
               >
@@ -3388,11 +3352,11 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   placeholder="请输入内容"
                   type="text"
                 />
-                <!--v-if-->
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
+                <!---->
               </div>
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -3431,17 +3395,13 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-input t-input--layout-horizontal t-input--size-small"
+            class="t-input t-input--layout-horizontal"
             data-v-713b33d2=""
           >
             <div
               class="t-input__wrap--prefix"
             >
-              <div
-                class="t-input__icon--prefix"
-              >
-                <!--v-if-->
-              </div>
+              <!---->
               <div
                 class="t-input__label"
               >
@@ -3462,8 +3422,8 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   placeholder="请输入内容"
                   type="password"
                 />
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
                 <div
                   class="t-input__wrap--suffix-icon"
                 >
@@ -3484,7 +3444,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   
                 </div>
               </div>
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -3664,17 +3624,13 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-input t-input--layout-horizontal t-input--size-small"
+            class="t-input t-input--layout-horizontal"
             data-v-713b33d2=""
           >
             <div
               class="t-input__wrap--prefix"
             >
-              <div
-                class="t-input__icon--prefix"
-              >
-                <!--v-if-->
-              </div>
+              <!---->
               <div
                 class="t-input__label"
               >
@@ -3695,11 +3651,11 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   placeholder="请输入内容"
                   type="text"
                 />
-                <!--v-if-->
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
+                <!---->
               </div>
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           <teleport-stub
@@ -4095,17 +4051,13 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-input t-input--layout-horizontal t-input--size-small"
+            class="t-input t-input--layout-horizontal"
             data-v-713b33d2=""
           >
             <div
               class="t-input__wrap--prefix"
             >
-              <div
-                class="t-input__icon--prefix"
-              >
-                <!--v-if-->
-              </div>
+              <!---->
               <div
                 class="t-input__label"
               >
@@ -4126,11 +4078,11 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   placeholder="请输入内容"
                   type="text"
                 />
-                <!--v-if-->
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
+                <!---->
               </div>
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           <teleport-stub
@@ -4648,7 +4600,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             class="t-textarea t-textarea--layout-horizontal textarea"
             data-v-713b33d2=""
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-textarea__wrapper"
             >

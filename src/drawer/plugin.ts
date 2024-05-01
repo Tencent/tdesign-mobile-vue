@@ -1,5 +1,5 @@
 import { createApp, App, h, ref, nextTick } from 'vue';
-import vueDrawer from './drawer.vue';
+import vueDrawer from './drawer';
 import { WithInstallType, isBrowser } from '../shared';
 import { TdDrawerProps } from './type';
 
