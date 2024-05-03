@@ -18,13 +18,9 @@ exports[`Radio > props > : checked 1`] = `
     <div
       class="t-radio__icon t-radio__icon--left"
     >
-      <!--v-if-->
-      <!--v-if-->
-      <!--v-if-->
       <div
         class="t-radio__icon-circle"
       />
-      <!--v-if-->
       <!---->
     </div>
     <div
@@ -36,7 +32,7 @@ exports[`Radio > props > : checked 1`] = `
       >
         0
       </span>
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-radio__border t-radio__border--left"
@@ -66,10 +62,6 @@ exports[`Radio > props > : checked 1`] = `
           fill="currentColor"
         />
       </svg>
-      <!--v-if-->
-      <!--v-if-->
-      <!--v-if-->
-      <!--v-if-->
       <!---->
     </div>
     <div
@@ -81,14 +73,14 @@ exports[`Radio > props > : checked 1`] = `
       >
         1
       </span>
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-radio__border t-radio__border--left"
     />
   </div>
   
-  <!--v-if-->
+  <!---->
 </div>
 `;
 
@@ -111,13 +103,9 @@ exports[`Radio > props > : keys 1`] = `
     <div
       class="t-radio__icon t-radio__icon--left t-radio__icon--disabled"
     >
-      <!--v-if-->
-      <!--v-if-->
-      <!--v-if-->
       <div
         class="t-radio__icon-circle t-radio__icon-circle--disabled"
       />
-      <!--v-if-->
       <!---->
     </div>
     <div
@@ -129,7 +117,7 @@ exports[`Radio > props > : keys 1`] = `
       >
         单选
       </span>
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-radio__border t-radio__border--left"
@@ -147,13 +135,9 @@ exports[`Radio > props > : keys 1`] = `
     <div
       class="t-radio__icon t-radio__icon--left"
     >
-      <!--v-if-->
-      <!--v-if-->
-      <!--v-if-->
       <div
         class="t-radio__icon-circle"
       />
-      <!--v-if-->
       <!---->
     </div>
     <div
@@ -165,14 +149,14 @@ exports[`Radio > props > : keys 1`] = `
       >
         单选
       </span>
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-radio__border t-radio__border--left"
     />
   </div>
   
-  <!--v-if-->
+  <!---->
 </div>
 `;
 
@@ -188,18 +172,14 @@ exports[`Radio > props > :placement 1`] = `
   <div
     class="t-radio__icon t-radio__icon--right t-radio__icon--checked"
   >
-    <!--v-if-->
-    <!--v-if-->
-    <!--v-if-->
-    <!--v-if-->
-    <!--v-if-->
+    <!---->
     line
   </div>
   <div
     class="t-radio__content"
   >
-    <!--v-if-->
-    <!--v-if-->
+    <!---->
+    <!---->
   </div>
   <div
     class="t-radio__border t-radio__border--right"

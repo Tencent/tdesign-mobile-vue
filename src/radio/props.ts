@@ -10,7 +10,7 @@ import { PropType } from 'vue';
 export default {
   /** 是否允许取消选中 */
   allowUncheck: Boolean,
-  /** 是否为块级元素	 */
+  /** 是否为块级元素 */
   block: {
     type: Boolean,
     default: true,
@@ -46,7 +46,7 @@ export default {
     type: Boolean,
     default: undefined,
   },
-  /** 自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标 */
+  /** 自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标、值为 'none' 则表示没有图标 */
   icon: {
     type: [String, Array] as PropType<TdRadioProps['icon']>,
     default: 'circle',
