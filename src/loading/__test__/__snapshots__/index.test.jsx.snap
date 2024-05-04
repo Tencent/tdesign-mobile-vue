@@ -1,5 +1,35 @@
 // Vitest Snapshot v1
 
+exports[`Loading.vue > props > :inheritColor 1`] = `
+<div
+  class="t-loading"
+  style="font-size: 20px;"
+>
+  <svg
+    class="t-loading__gradient t-icon-loading"
+    height="1em"
+    style="animation-duration: 800ms; width: 20px; height: 20px;"
+    version="1.1"
+    viewBox="0 0 12 12"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <foreignobject
+      height="12"
+      width="12"
+      x="0"
+      y="0"
+    >
+      <div
+        class="t-loading__gradient-conic"
+      />
+    </foreignobject>
+  </svg>
+  <!---->
+  <!---->
+</div>
+`;
+
 exports[`Loading.vue > props > :pause 1`] = `
 <div
   class="t-loading"
@@ -25,7 +55,7 @@ exports[`Loading.vue > props > :pause 1`] = `
       />
     </foreignobject>
   </svg>
-  <!--v-if-->
+  <!---->
   <!---->
 </div>
 `;
@@ -55,7 +85,7 @@ exports[`Loading.vue > props > :reverse 1`] = `
       />
     </foreignobject>
   </svg>
-  <!--v-if-->
+  <!---->
   <!---->
 </div>
 `;
