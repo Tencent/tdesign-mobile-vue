@@ -1,68 +1,19 @@
-<template>
-  <div :class="[`${name}`, `${name}--${size}`]">
-    <div
-      :class="[
-        `${name}__minus`,
-        `${name}__minus--${theme}`,
-        `${name}__icon--${size}`,
-        `${disabled || Number(stepperValue) <= min ? name + '--' + theme + '-disabled' : ''}`,
-      ]"
-      @click="minusValue"
-    >
-      <remove-icon :class="`${name}__minus-icon`" />
-    </div>
-    <input
-      v-model="stepperValue"
-      :class="[
-        `${name}__input`,
-        `${name}__input--${theme}`,
-        `${name}__input--${size}`,
-        `${disabled ? name + '--' + theme + '-disabled' : ''}`,
-      ]"
-      :type="integer ? 'tel' : 'text'"
-      :inputmode="integer ? 'numeric' : 'decimal'"
-      :style="inputStyle"
-      :disabled="disableInput || disabled"
-      :readonly="disableInput"
-      @focus="handleFocus"
-      @blur="handleBlur"
-      @input="handleInput"
-      @change="handleChange"
-    />
-    <div
-      :class="[
-        `${name}__plus`,
-        `${name}__plus--${theme}`,
-        `${name}__icon--${size}`,
-        `${disabled || Number(stepperValue) >= max ? name + '--' + theme + '-disabled' : ''}`,
-      ]"
-      @click="plusValue"
-    >
-      <add-icon :class="`${name}__plus-icon`" />
-    </div>
-  </div>
-</template>
-
-<script lang="ts">
 import { toRefs, computed, defineComponent } from 'vue';
 import { AddIcon, RemoveIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
-import StepperProps from './props';
+import props from './props';
 import { useDefault, formatNumber } from '../shared';
 import { TdStepperProps } from './type';
 import { useFormDisabled } from '../form/hooks';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-stepper`;
 export default defineComponent({
-  name,
-  components: {
-    AddIcon,
-    RemoveIcon,
-  },
-  props: StepperProps,
-  emits: ['update:value', 'update:modelValue', 'blur', 'change', 'overlimit'],
+  name: `${prefix}-stepper`,
+  props,
   setup(props, context) {
+    const stepperClass = usePrefixClass('stepper');
+
     const [stepperValue] = useDefault<TdStepperProps['value'], TdStepperProps>(props, context.emit, 'value', 'change');
     const disabled = useFormDisabled();
     const { min, max, step, integer } = toRefs(props);
@@ -137,20 +88,59 @@ export default defineComponent({
       props.onBlur?.(Number(stepperValue.value));
     };
 
-    return {
-      name,
-      minusValue,
-      stepperValue,
-      plusValue,
-      handleInput,
-      handleChange,
-      inputStyle,
-      handleFocus,
-      handleBlur,
-      ...toRefs(props),
-      disabled,
-      integer,
+    return () => {
+      return (
+        <div class={[`${stepperClass.value}`, `${stepperClass.value}--${props.size}`]}>
+          <div
+            class={[
+              `${stepperClass.value}__minus`,
+              `${stepperClass.value}__minus--${props.theme}`,
+              `${stepperClass.value}__icon--${props.size}`,
+              `${
+                disabled.value || Number(stepperValue.value) <= props.min
+                  ? `${stepperClass.value}--${props.theme}-disabled`
+                  : ''
+              }`,
+            ]}
+            onClick={minusValue}
+          >
+            <RemoveIcon class={`${stepperClass.value}__minus-icon`} />
+          </div>
+          <input
+            v-model={stepperValue}
+            class={[
+              `${stepperClass.value}__input`,
+              `${stepperClass.value}__input--${props.theme}`,
+              `${stepperClass.value}__input--${props.size}`,
+              `${disabled.value ? `${stepperClass.value}--${props.theme}-disabled` : ''}`,
+            ]}
+            type={integer.value ? 'tel' : 'text'}
+            inputmode={integer.value ? 'numeric' : 'decimal'}
+            style={inputStyle.value}
+            disabled={props.disableInput || disabled.value}
+            readonly={props.disableInput}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            onInput={handleInput}
+            onChange={handleChange}
+          />
+          <div
+            class={[
+              `${stepperClass.value}__plus`,
+              `${stepperClass.value}__plus--${props.theme}`,
+              `${stepperClass.value}__icon--${props.size}`,
+              `${
+                disabled.value || Number(stepperValue.value) >= props.max
+                  ? `${stepperClass.value}--${props.theme}-disabled`
+                  : ''
+              }`,
+            ]}
+            onClick={plusValue}
+          >
+            <AddIcon class={`${stepperClass.value}__plus-icon`} />
+          </div>
+        </div>
+      );
     };
   },
 });
-</script>
