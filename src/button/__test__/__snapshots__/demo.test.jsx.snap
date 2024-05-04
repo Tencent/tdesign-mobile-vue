@@ -295,7 +295,7 @@ exports[`Button > Button iconVue demo works fine 1`] = `
           />
         </foreignobject>
       </svg>
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <span
@@ -559,7 +559,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
                 />
               </foreignobject>
             </svg>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
           <span

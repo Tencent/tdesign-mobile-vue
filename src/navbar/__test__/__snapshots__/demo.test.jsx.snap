@@ -293,7 +293,7 @@ exports[`Navbar > Navbar imgVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -859,7 +859,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>

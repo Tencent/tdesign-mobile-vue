@@ -62,7 +62,7 @@ exports[`Image > Image baseVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -118,7 +118,7 @@ exports[`Image > Image baseVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -174,7 +174,7 @@ exports[`Image > Image baseVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -230,7 +230,7 @@ exports[`Image > Image baseVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -286,7 +286,7 @@ exports[`Image > Image baseVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -402,7 +402,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -458,7 +458,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -514,7 +514,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -570,7 +570,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -626,7 +626,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -705,7 +705,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -761,7 +761,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -817,7 +817,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -873,7 +873,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -929,7 +929,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -985,7 +985,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -1041,7 +1041,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -1097,7 +1097,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -1153,7 +1153,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -1209,7 +1209,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -1287,7 +1287,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -1342,7 +1342,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -1397,7 +1397,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -1480,7 +1480,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   />
                   
                 </div>
-                <!--v-if-->
+                <!---->
                 <!---->
               </div>
             </div>
@@ -1538,7 +1538,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                   </foreignobject>
                 </svg>
-                <!--v-if-->
+                <!---->
                 <!---->
               </div>
               
@@ -1599,7 +1599,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   />
                   
                 </div>
-                <!--v-if-->
+                <!---->
                 <!---->
               </div>
             </div>
@@ -1654,7 +1654,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   />
                   
                 </div>
-                <!--v-if-->
+                <!---->
                 <!---->
               </div>
             </div>
@@ -1739,7 +1739,7 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -1795,7 +1795,7 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -1851,7 +1851,7 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -1907,7 +1907,7 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -1963,7 +1963,7 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -2019,7 +2019,7 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -2075,7 +2075,7 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -2131,7 +2131,7 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -2187,7 +2187,7 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -2243,7 +2243,7 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -2323,7 +2323,7 @@ exports[`Image > Image shapeVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -2378,7 +2378,7 @@ exports[`Image > Image shapeVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -2433,7 +2433,7 @@ exports[`Image > Image shapeVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -2501,7 +2501,7 @@ exports[`Image > Image statusVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -2559,7 +2559,7 @@ exports[`Image > Image statusVue demo works fine 1`] = `
                 />
               </foreignobject>
             </svg>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
           
@@ -2620,7 +2620,7 @@ exports[`Image > Image statusVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -2675,7 +2675,7 @@ exports[`Image > Image statusVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>

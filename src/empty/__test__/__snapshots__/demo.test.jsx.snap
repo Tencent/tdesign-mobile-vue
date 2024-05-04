@@ -123,7 +123,7 @@ exports[`Empty > Empty imageEmptyVue demo works fine 1`] = `
             />
             
           </div>
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
       </div>
@@ -263,7 +263,7 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
                   />
                   
                 </div>
-                <!--v-if-->
+                <!---->
                 <!---->
               </div>
             </div>
