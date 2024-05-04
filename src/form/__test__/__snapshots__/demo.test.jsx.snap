@@ -194,7 +194,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             data-v-799be585=""
             role="radiogroup"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-radio t-radio--left"
@@ -209,13 +209,9 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               <div
                 class="t-radio__icon t-radio__icon--left"
               >
-                <!--v-if-->
-                <!--v-if-->
-                <!--v-if-->
                 <div
                   class="t-radio__icon-circle"
                 />
-                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -227,9 +223,9 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 >
                   男
                 </span>
-                <!--v-if-->
+                <!---->
               </div>
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-radio t-radio--left"
@@ -244,13 +240,9 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               <div
                 class="t-radio__icon t-radio__icon--left"
               >
-                <!--v-if-->
-                <!--v-if-->
-                <!--v-if-->
                 <div
                   class="t-radio__icon-circle"
                 />
-                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -262,9 +254,9 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 >
                   女
                 </span>
-                <!--v-if-->
+                <!---->
               </div>
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-radio t-radio--left"
@@ -279,13 +271,9 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               <div
                 class="t-radio__icon t-radio__icon--left"
               >
-                <!--v-if-->
-                <!--v-if-->
-                <!--v-if-->
                 <div
                   class="t-radio__icon-circle"
                 />
-                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -297,9 +285,9 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 >
                   保密
                 </span>
-                <!--v-if-->
+                <!---->
               </div>
-              <!--v-if-->
+              <!---->
             </div>
             
           </div>
@@ -911,10 +899,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                             <div
                               class="t-radio__icon t-radio__icon--right"
                             >
-                              <!--v-if-->
-                              <!--v-if-->
-                              <!--v-if-->
-                              <!--v-if-->
                               <div
                                 class="placeholder"
                               />
@@ -929,9 +913,9 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                               >
                                 北京市
                               </span>
-                              <!--v-if-->
+                              <!---->
                             </div>
-                            <!--v-if-->
+                            <!---->
                           </div>
                           <div
                             class="t-radio t-radio--right t-radio--block"
@@ -945,10 +929,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                             <div
                               class="t-radio__icon t-radio__icon--right"
                             >
-                              <!--v-if-->
-                              <!--v-if-->
-                              <!--v-if-->
-                              <!--v-if-->
                               <div
                                 class="placeholder"
                               />
@@ -963,12 +943,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                               >
                                 天津市
                               </span>
-                              <!--v-if-->
+                              <!---->
                             </div>
-                            <!--v-if-->
+                            <!---->
                           </div>
                           
-                          <!--v-if-->
+                          <!---->
                         </div>
                       </div>
                     </div>
@@ -1906,7 +1886,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   data-v-799be585=""
                   role="radiogroup"
                 >
-                  <!--v-if-->
+                  <!---->
                   
                   <div
                     class="t-radio t-radio--left"
@@ -1921,13 +1901,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     <div
                       class="t-radio__icon t-radio__icon--left"
                     >
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
                       <div
                         class="t-radio__icon-circle"
                       />
-                      <!--v-if-->
                       <!---->
                     </div>
                     <div
@@ -1939,9 +1915,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       >
                         男
                       </span>
-                      <!--v-if-->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                   <div
                     class="t-radio t-radio--left"
@@ -1956,13 +1932,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     <div
                       class="t-radio__icon t-radio__icon--left"
                     >
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
                       <div
                         class="t-radio__icon-circle"
                       />
-                      <!--v-if-->
                       <!---->
                     </div>
                     <div
@@ -1974,9 +1946,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       >
                         女
                       </span>
-                      <!--v-if-->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                   <div
                     class="t-radio t-radio--left"
@@ -1991,13 +1963,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     <div
                       class="t-radio__icon t-radio__icon--left"
                     >
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
                       <div
                         class="t-radio__icon-circle"
                       />
-                      <!--v-if-->
                       <!---->
                     </div>
                     <div
@@ -2009,9 +1977,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       >
                         保密
                       </span>
-                      <!--v-if-->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                   
                 </div>
@@ -2623,10 +2591,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                                   <div
                                     class="t-radio__icon t-radio__icon--right"
                                   >
-                                    <!--v-if-->
-                                    <!--v-if-->
-                                    <!--v-if-->
-                                    <!--v-if-->
                                     <div
                                       class="placeholder"
                                     />
@@ -2641,9 +2605,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                                     >
                                       北京市
                                     </span>
-                                    <!--v-if-->
+                                    <!---->
                                   </div>
-                                  <!--v-if-->
+                                  <!---->
                                 </div>
                                 <div
                                   class="t-radio t-radio--right t-radio--block"
@@ -2657,10 +2621,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                                   <div
                                     class="t-radio__icon t-radio__icon--right"
                                   >
-                                    <!--v-if-->
-                                    <!--v-if-->
-                                    <!--v-if-->
-                                    <!--v-if-->
                                     <div
                                       class="placeholder"
                                     />
@@ -2675,12 +2635,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                                     >
                                       天津市
                                     </span>
-                                    <!--v-if-->
+                                    <!---->
                                   </div>
-                                  <!--v-if-->
+                                  <!---->
                                 </div>
                                 
-                                <!--v-if-->
+                                <!---->
                               </div>
                             </div>
                           </div>
@@ -3483,7 +3443,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             data-v-713b33d2=""
             role="radiogroup"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-radio t-radio--left"
@@ -3498,13 +3458,9 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               <div
                 class="t-radio__icon t-radio__icon--left"
               >
-                <!--v-if-->
-                <!--v-if-->
-                <!--v-if-->
                 <div
                   class="t-radio__icon-circle"
                 />
-                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -3516,9 +3472,9 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 >
                   男
                 </span>
-                <!--v-if-->
+                <!---->
               </div>
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-radio t-radio--left"
@@ -3533,13 +3489,9 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               <div
                 class="t-radio__icon t-radio__icon--left"
               >
-                <!--v-if-->
-                <!--v-if-->
-                <!--v-if-->
                 <div
                   class="t-radio__icon-circle"
                 />
-                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -3551,9 +3503,9 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 >
                   女
                 </span>
-                <!--v-if-->
+                <!---->
               </div>
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-radio t-radio--left"
@@ -3568,13 +3520,9 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               <div
                 class="t-radio__icon t-radio__icon--left"
               >
-                <!--v-if-->
-                <!--v-if-->
-                <!--v-if-->
                 <div
                   class="t-radio__icon-circle"
                 />
-                <!--v-if-->
                 <!---->
               </div>
               <div
@@ -3586,9 +3534,9 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 >
                   保密
                 </span>
-                <!--v-if-->
+                <!---->
               </div>
-              <!--v-if-->
+              <!---->
             </div>
             
           </div>
@@ -4196,10 +4144,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                             <div
                               class="t-radio__icon t-radio__icon--right"
                             >
-                              <!--v-if-->
-                              <!--v-if-->
-                              <!--v-if-->
-                              <!--v-if-->
                               <div
                                 class="placeholder"
                               />
@@ -4214,9 +4158,9 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                               >
                                 北京市
                               </span>
-                              <!--v-if-->
+                              <!---->
                             </div>
-                            <!--v-if-->
+                            <!---->
                           </div>
                           <div
                             class="t-radio t-radio--right t-radio--block"
@@ -4230,10 +4174,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                             <div
                               class="t-radio__icon t-radio__icon--right"
                             >
-                              <!--v-if-->
-                              <!--v-if-->
-                              <!--v-if-->
-                              <!--v-if-->
                               <div
                                 class="placeholder"
                               />
@@ -4248,12 +4188,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                               >
                                 天津市
                               </span>
-                              <!--v-if-->
+                              <!---->
                             </div>
-                            <!--v-if-->
+                            <!---->
                           </div>
                           
-                          <!--v-if-->
+                          <!---->
                         </div>
                       </div>
                     </div>

@@ -157,10 +157,6 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
                     <div
                       class="t-radio__icon t-radio__icon--right"
                     >
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
                       <div
                         class="placeholder"
                       />
@@ -175,9 +171,9 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
                       >
                         北京市
                       </span>
-                      <!--v-if-->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                   <div
                     class="t-radio t-radio--right t-radio--block"
@@ -191,10 +187,6 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
                     <div
                       class="t-radio__icon t-radio__icon--right"
                     >
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
                       <div
                         class="placeholder"
                       />
@@ -209,12 +201,12 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
                       >
                         天津市
                       </span>
-                      <!--v-if-->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                   
-                  <!--v-if-->
+                  <!---->
                 </div>
               </div>
             </div>
@@ -383,10 +375,6 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
                     <div
                       class="t-radio__icon t-radio__icon--right"
                     >
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
                       <div
                         class="placeholder"
                       />
@@ -401,9 +389,9 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
                       >
                         北京市
                       </span>
-                      <!--v-if-->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                   <div
                     class="t-radio t-radio--right t-radio--block"
@@ -417,10 +405,6 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
                     <div
                       class="t-radio__icon t-radio__icon--right"
                     >
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
                       <div
                         class="placeholder"
                       />
@@ -435,12 +419,12 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
                       >
                         天津市
                       </span>
-                      <!--v-if-->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                   
-                  <!--v-if-->
+                  <!---->
                 </div>
               </div>
             </div>
@@ -612,10 +596,6 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                     <div
                       class="t-radio__icon t-radio__icon--right"
                     >
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
                       <div
                         class="placeholder"
                       />
@@ -630,9 +610,9 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                       >
                         北京市
                       </span>
-                      <!--v-if-->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                   <div
                     class="t-radio t-radio--right t-radio--block"
@@ -646,10 +626,6 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                     <div
                       class="t-radio__icon t-radio__icon--right"
                     >
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
                       <div
                         class="placeholder"
                       />
@@ -664,12 +640,12 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                       >
                         天津市
                       </span>
-                      <!--v-if-->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                   
-                  <!--v-if-->
+                  <!---->
                 </div>
               </div>
             </div>
@@ -841,10 +817,6 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
                     <div
                       class="t-radio__icon t-radio__icon--right"
                     >
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
                       <div
                         class="placeholder"
                       />
@@ -859,12 +831,12 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
                       >
                         深圳市
                       </span>
-                      <!--v-if-->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                   
-                  <!--v-if-->
+                  <!---->
                 </div>
               </div>
             </div>
@@ -1067,10 +1039,6 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <div
                           class="t-radio__icon t-radio__icon--right"
                         >
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
                           <div
                             class="placeholder"
                           />
@@ -1085,9 +1053,9 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           >
                             北京市
                           </span>
-                          <!--v-if-->
+                          <!---->
                         </div>
-                        <!--v-if-->
+                        <!---->
                       </div>
                       <div
                         class="t-radio t-radio--right t-radio--block"
@@ -1101,10 +1069,6 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <div
                           class="t-radio__icon t-radio__icon--right"
                         >
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
                           <div
                             class="placeholder"
                           />
@@ -1119,12 +1083,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           >
                             天津市
                           </span>
-                          <!--v-if-->
+                          <!---->
                         </div>
-                        <!--v-if-->
+                        <!---->
                       </div>
                       
-                      <!--v-if-->
+                      <!---->
                     </div>
                   </div>
                 </div>
@@ -1278,10 +1242,6 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <div
                           class="t-radio__icon t-radio__icon--right"
                         >
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
                           <div
                             class="placeholder"
                           />
@@ -1296,9 +1256,9 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           >
                             北京市
                           </span>
-                          <!--v-if-->
+                          <!---->
                         </div>
-                        <!--v-if-->
+                        <!---->
                       </div>
                       <div
                         class="t-radio t-radio--right t-radio--block"
@@ -1312,10 +1272,6 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <div
                           class="t-radio__icon t-radio__icon--right"
                         >
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
                           <div
                             class="placeholder"
                           />
@@ -1330,12 +1286,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           >
                             天津市
                           </span>
-                          <!--v-if-->
+                          <!---->
                         </div>
-                        <!--v-if-->
+                        <!---->
                       </div>
                       
-                      <!--v-if-->
+                      <!---->
                     </div>
                   </div>
                 </div>
@@ -1524,10 +1480,6 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <div
                           class="t-radio__icon t-radio__icon--right"
                         >
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
                           <div
                             class="placeholder"
                           />
@@ -1542,9 +1494,9 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           >
                             北京市
                           </span>
-                          <!--v-if-->
+                          <!---->
                         </div>
-                        <!--v-if-->
+                        <!---->
                       </div>
                       <div
                         class="t-radio t-radio--right t-radio--block"
@@ -1558,10 +1510,6 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <div
                           class="t-radio__icon t-radio__icon--right"
                         >
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
                           <div
                             class="placeholder"
                           />
@@ -1576,12 +1524,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           >
                             天津市
                           </span>
-                          <!--v-if-->
+                          <!---->
                         </div>
-                        <!--v-if-->
+                        <!---->
                       </div>
                       
-                      <!--v-if-->
+                      <!---->
                     </div>
                   </div>
                 </div>
@@ -1766,10 +1714,6 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <div
                           class="t-radio__icon t-radio__icon--right"
                         >
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
                           <div
                             class="placeholder"
                           />
@@ -1784,9 +1728,9 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           >
                             北京市
                           </span>
-                          <!--v-if-->
+                          <!---->
                         </div>
-                        <!--v-if-->
+                        <!---->
                       </div>
                       <div
                         class="t-radio t-radio--right t-radio--block"
@@ -1800,10 +1744,6 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <div
                           class="t-radio__icon t-radio__icon--right"
                         >
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
                           <div
                             class="placeholder"
                           />
@@ -1818,12 +1758,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           >
                             天津市
                           </span>
-                          <!--v-if-->
+                          <!---->
                         </div>
-                        <!--v-if-->
+                        <!---->
                       </div>
                       
-                      <!--v-if-->
+                      <!---->
                     </div>
                   </div>
                 </div>
@@ -2012,10 +1952,6 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <div
                           class="t-radio__icon t-radio__icon--right"
                         >
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
                           <div
                             class="placeholder"
                           />
@@ -2030,9 +1966,9 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           >
                             北京市
                           </span>
-                          <!--v-if-->
+                          <!---->
                         </div>
-                        <!--v-if-->
+                        <!---->
                       </div>
                       <div
                         class="t-radio t-radio--right t-radio--block"
@@ -2046,10 +1982,6 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <div
                           class="t-radio__icon t-radio__icon--right"
                         >
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
                           <div
                             class="placeholder"
                           />
@@ -2064,12 +1996,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           >
                             天津市
                           </span>
-                          <!--v-if-->
+                          <!---->
                         </div>
-                        <!--v-if-->
+                        <!---->
                       </div>
                       
-                      <!--v-if-->
+                      <!---->
                     </div>
                   </div>
                 </div>
@@ -2254,10 +2186,6 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <div
                           class="t-radio__icon t-radio__icon--right"
                         >
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
                           <div
                             class="placeholder"
                           />
@@ -2272,12 +2200,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           >
                             深圳市
                           </span>
-                          <!--v-if-->
+                          <!---->
                         </div>
-                        <!--v-if-->
+                        <!---->
                       </div>
                       
-                      <!--v-if-->
+                      <!---->
                     </div>
                   </div>
                 </div>
@@ -2459,10 +2387,6 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <div
                           class="t-radio__icon t-radio__icon--right"
                         >
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
                           <div
                             class="placeholder"
                           />
@@ -2477,9 +2401,9 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           >
                             北京市
                           </span>
-                          <!--v-if-->
+                          <!---->
                         </div>
-                        <!--v-if-->
+                        <!---->
                       </div>
                       <div
                         class="t-radio t-radio--right t-radio--block"
@@ -2493,10 +2417,6 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <div
                           class="t-radio__icon t-radio__icon--right"
                         >
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
-                          <!--v-if-->
                           <div
                             class="placeholder"
                           />
@@ -2511,12 +2431,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           >
                             天津市
                           </span>
-                          <!--v-if-->
+                          <!---->
                         </div>
-                        <!--v-if-->
+                        <!---->
                       </div>
                       
-                      <!--v-if-->
+                      <!---->
                     </div>
                   </div>
                 </div>
@@ -2660,10 +2580,6 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
                     <div
                       class="t-radio__icon t-radio__icon--right"
                     >
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
                       <div
                         class="placeholder"
                       />
@@ -2678,9 +2594,9 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
                       >
                         北京市
                       </span>
-                      <!--v-if-->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                   <div
                     class="t-radio t-radio--right t-radio--block"
@@ -2694,10 +2610,6 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
                     <div
                       class="t-radio__icon t-radio__icon--right"
                     >
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
                       <div
                         class="placeholder"
                       />
@@ -2712,12 +2624,12 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
                       >
                         天津市
                       </span>
-                      <!--v-if-->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                   
-                  <!--v-if-->
+                  <!---->
                 </div>
               </div>
             </div>
@@ -2893,10 +2805,6 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
                     <div
                       class="t-radio__icon t-radio__icon--right"
                     >
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
                       <div
                         class="placeholder"
                       />
@@ -2911,9 +2819,9 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
                       >
                         北京市
                       </span>
-                      <!--v-if-->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                   <div
                     class="t-radio t-radio--right t-radio--block"
@@ -2927,10 +2835,6 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
                     <div
                       class="t-radio__icon t-radio__icon--right"
                     >
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
                       <div
                         class="placeholder"
                       />
@@ -2945,12 +2849,12 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
                       >
                         天津市
                       </span>
-                      <!--v-if-->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                   
-                  <!--v-if-->
+                  <!---->
                 </div>
               </div>
             </div>
@@ -3122,10 +3026,6 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
                     <div
                       class="t-radio__icon t-radio__icon--right"
                     >
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
                       <div
                         class="placeholder"
                       />
@@ -3140,9 +3040,9 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
                       >
                         北京市
                       </span>
-                      <!--v-if-->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                   <div
                     class="t-radio t-radio--right t-radio--block"
@@ -3156,10 +3056,6 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
                     <div
                       class="t-radio__icon t-radio__icon--right"
                     >
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
-                      <!--v-if-->
                       <div
                         class="placeholder"
                       />
@@ -3174,12 +3070,12 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
                       >
                         天津市
                       </span>
-                      <!--v-if-->
+                      <!---->
                     </div>
-                    <!--v-if-->
+                    <!---->
                   </div>
                   
-                  <!--v-if-->
+                  <!---->
                 </div>
               </div>
             </div>
