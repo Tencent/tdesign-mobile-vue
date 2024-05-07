@@ -217,7 +217,10 @@ export default defineComponent({
       if (dateItem.type) {
         className = `${className} ${name}__dates-item--${dateItem.type}`;
       }
-      return `${className} ${dateItem.className ?? ''}`;
+      if (dateItem.className) {
+        className = `${className} ${dateItem.className}`;
+      }
+      return className;
     };
     return () => {
       const renderCell = (dateItem: TDate) => {
