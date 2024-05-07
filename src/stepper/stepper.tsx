@@ -107,7 +107,7 @@ export default defineComponent({
             <RemoveIcon class={`${stepperClass.value}__minus-icon`} />
           </div>
           <input
-            v-model={stepperValue}
+            v-model={stepperValue.value}
             class={[
               `${stepperClass.value}__input`,
               `${stepperClass.value}__input--${props.theme}`,
