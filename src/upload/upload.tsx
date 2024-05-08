@@ -154,44 +154,6 @@ export default defineComponent({
       renderStatus,
       content,
     };
-
-    // return () => {
-    //   return (
-    //     <div class={`${name}`}>
-    //       {displayFiles.value.map((file, index) => (
-    //         <div key={index} class={`${name}__item`}>
-    //           {file.url && (
-    //             <t-image
-    //               class={`${name}__image`}
-    //               shape="round"
-    //               {...(props.imageProps as object)}
-    //               src={file.url}
-    //               onClick={(e: MouseEvent) => handlePreview(e, file, index)}
-    //             />
-    //           )}
-    //           {renderStatus(file)}
-    //           <close-icon class={`${name}__delete-btn`} onClick={({ e }: any) => onInnerRemove({ e, file, index })} />
-    //         </div>
-    //       ))}
-    //       {content()}
-    //       <input
-    //         ref={inputRef}
-    //         value={props.files}
-    //         type="file"
-    //         multiple={props.multiple}
-    //         hidden
-    //         accept={props.accept}
-    //         onChange={onNormalFileChange}
-    //       />
-    //       <t-image-viewer
-    //         visible={showViewer.value}
-    //         images={previewImgs.value}
-    //         index={initialIndex.value}
-    //         onClose={handleImageClose}
-    //       />
-    //     </div>
-    //   );
-    // };
   },
   render() {
     return (
