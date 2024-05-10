@@ -2,7 +2,7 @@ import { computed, watch, inject, ref, toRaw, defineComponent } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 import TButton from '../button';
 import config from '../config';
-import calendarProps from './props';
+import calendarProps from './template-props';
 import { useTNodeJSX } from '../hooks/tnode';
 import { TdCalendarProps, TDate, TDateType } from './type';
 import { useConfig } from '../config-provider/useConfig';

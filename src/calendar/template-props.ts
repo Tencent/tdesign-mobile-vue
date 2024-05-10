@@ -31,7 +31,7 @@ export default {
   },
   /** 标题，不传默认为“请选择日期” */
   title: {
-    type: [String, Function] as PropType<TdCalendarProps['title']>,
+    type: [String, Function, Object] as PropType<TdCalendarProps['title']>,
   },
   /** 日历的选择类型，single = 单选；multiple = 多选; range = 区间选择 */
   type: {
