@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Input Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 align | String | left | 文本内容位置，居左/居中/居右。可选项：left/center/right | N
 allowInputOverMax | Boolean | false | 超出 `maxlength` 或 `maxcharacter` 之后是否允许继续输入 | N
@@ -33,7 +34,7 @@ onBlur | Function |  | TS 类型：`(value: InputValue, context: { e: FocusEvent
 onChange | Function |  | TS 类型：`(value: InputValue, context?: { e?: InputEvent \| MouseEvent \| CompositionEvent; trigger: 'input' \| 'initial' \| 'clear' }) => void`<br/>输入框值发生变化时触发。`trigger=initial` 表示传入的数据不符合预期，组件自动处理后触发 change 告知父组件。如：初始值长度超过 `maxlength` 限制 | N
 onClear | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>清空按钮点击时触发 | N
 onFocus | Function |  | TS 类型：`(value: InputValue, context: { e: FocusEvent }) => void`<br/>获得焦点时触发 | N
-onValidate | Function |  | 【暂不支持】TS 类型：`(context: { error?: 'exceed-maximum' \| 'below-minimum' }) => void`<br/>字数超出限制时触发 | N
+onValidate | Function |  | TS 类型：`(context: { error?: 'exceed-maximum' \| 'below-minimum' }) => void`<br/>【暂不支持】字数超出限制时触发 | N
 
 ### Input Events
 
@@ -43,10 +44,10 @@ blur | `(value: InputValue, context: { e: FocusEvent })` | 失去焦点时触发
 change | `(value: InputValue, context?: { e?: InputEvent \| MouseEvent \| CompositionEvent; trigger: 'input' \| 'initial' \| 'clear' })` | 输入框值发生变化时触发。`trigger=initial` 表示传入的数据不符合预期，组件自动处理后触发 change 告知父组件。如：初始值长度超过 `maxlength` 限制
 clear | `(context: { e: MouseEvent })` | 清空按钮点击时触发
 focus | `(value: InputValue, context: { e: FocusEvent })` | 获得焦点时触发
-validate | `(context: { error?: 'exceed-maximum' \| 'below-minimum' })` | 字数超出限制时触发
-
+validate | `(context: { error?: 'exceed-maximum' \| 'below-minimum' })` | 【暂不支持】字数超出限制时触发
 
 ### CSS 变量
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
@@ -69,4 +70,4 @@ validate | `(context: { error?: 'exceed-maximum' \| 'below-minimum' })` | 字数
 --td-input-suffix-text-color | @font-gray-1 | - 
 --td-input-vertical-padding | 16px | - 
 --td-input-warning-text-color | @warning-color | - 
---td-input-warning-tips-color | @warning-color | - 
+--td-input-warning-tips-color | @warning-color | -

@@ -16,17 +16,17 @@ const list = [
   {
     value: '1',
     label: '选项',
-    panel: '内容区',
+    panel: '内容区1',
   },
   {
     value: '2',
     label: '选项',
-    panel: '内容区',
+    panel: '内容区2',
   },
   {
     value: '3',
     label: '上限六个文字',
-    panel: '内容区',
+    panel: '内容区3',
   },
 ];
 

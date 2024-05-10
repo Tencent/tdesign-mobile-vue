@@ -41,7 +41,7 @@ export interface TdInputProps {
    */
   disabled?: boolean;
   /**
-   * 指定输入框展示值的格式
+   * 【暂不支持】指定输入框展示值的格式
    */
   format?: InputFormatType;
   /**
@@ -79,11 +79,6 @@ export interface TdInputProps {
    * @default false
    */
   readonly?: boolean;
-  /**
-   * 已废弃。输入框尺寸
-   * @default small
-   */
-  size?: 'medium' | 'small';
   /**
    * 输入框状态。默认情况会由组件内部根据实际情况呈现，如果文本过长引起的状态变化
    */
@@ -140,7 +135,7 @@ export interface TdInputProps {
    */
   onFocus?: (value: InputValue, context: { e: FocusEvent }) => void;
   /**
-   * 字数超出限制时触发
+   * 【暂不支持】字数超出限制时触发
    */
   onValidate?: (context: { error?: 'exceed-maximum' | 'below-minimum' }) => void;
 }

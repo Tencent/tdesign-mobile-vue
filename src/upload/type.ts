@@ -96,7 +96,7 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    * HTTP 请求类型
    * @default POST
    */
-  method?: 'POST' | 'GET' | 'PUT' | 'OPTION' | 'PATCH' | 'post' | 'get' | 'put' | 'option' | 'patch';
+  method?: 'POST' | 'GET' | 'PUT' | 'OPTIONS' | 'PATCH' | 'post' | 'get' | 'put' | 'options' | 'patch';
   /**
    * 支持多文件上传
    * @default false

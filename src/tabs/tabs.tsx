@@ -1,51 +1,3 @@
-<template>
-  <div :class="classes">
-    <t-sticky v-bind="stickyProps" @scroll="handlerScroll">
-      <div :class="navClasses">
-        <div ref="navScroll" :class="`${name}__scroll ${name}__scroll--top ${name}__scroll--${theme}`">
-          <div ref="navWrap" :class="`${name}__wrapper ${name}__wrapper--${theme}`">
-            <div
-              v-for="(item, index) in itemProps"
-              :key="item.label"
-              :class="{
-                [`${name}__item ${name}__item--top`]: true,
-                [`${name}__item--evenly`]: spaceEvenly,
-                [activeClass]: item.value === currentValue,
-                [disabledClass]: item.disabled,
-                [`${name}__item--${theme}`]: true,
-              }"
-              @click="(e) => tabClick(e, item)"
-            >
-              <t-badge v-bind="item['badge-props'] || item.badgeProps">
-                <div
-                  :class="{
-                    [`${name}__item-inner ${name}__item-inner--${theme}`]: true,
-                    [`${name}__item-inner--active`]: theme === 'tag' && item.value === currentValue,
-                  }"
-                >
-                  <tab-nav-item :label="item.label"></tab-nav-item>
-                </div>
-              </t-badge>
-              <div v-if="theme === 'card' && index === currentIndex - 1" :class="`${name}__item-prefix`"></div>
-              <div v-if="theme === 'card' && index === currentIndex + 1" :class="`${name}__item-suffix`"></div>
-            </div>
-            <div
-              v-if="theme === 'line' && showBottomLine"
-              ref="navLine"
-              :class="`${name}__track ${name}__track--top`"
-              :style="lineStyle"
-            ></div>
-          </div>
-        </div>
-      </div>
-    </t-sticky>
-    <div :class="`${name}__content`" @touchstart="moveStart" @touchmove="onMove" @touchend="moveEnd">
-      <slot></slot>
-    </div>
-  </div>
-</template>
-
-<script lang="ts">
 import {
   computed,
   defineComponent,
@@ -60,35 +12,38 @@ import {
   watch,
   CSSProperties,
   onActivated,
+  h,
+  RendererNode,
 } from 'vue';
+import isFunction from 'lodash/isFunction';
 import config from '../config';
-import TabsProps from './props';
-import TabNavItem from './tab-nav-item.vue';
+import props from './props';
+import TTabNavItem from './tab-nav-item';
 import { useVModel } from '../shared';
 import { preventDefault } from '../shared/dom';
 import CLASSNAMES from '../shared/constants';
 import TSticky from '../sticky';
 import { TdStickyProps } from '../sticky/type';
 import TBadge from '../badge';
+import { useTNodeJSX } from '../hooks/tnode';
+import { TdTabPanelProps } from './type';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
 const name = `${prefix}-tabs`;
 
 export default defineComponent({
   name,
-  components: { TabNavItem, TSticky, TBadge },
-  props: TabsProps,
-  emits: ['update:value', 'update:modelValue'],
-  setup(props, context) {
-    const theme = computed(() => props.theme);
-    const spaceEvenly = computed(() => props.spaceEvenly);
-    const showBottomLine = computed(() => props.showBottomLine);
-    const swipeable = computed(() => props.swipeable);
+  props,
+  setup(props) {
+    const renderTNodeJSX = useTNodeJSX();
+    const tabsClass = usePrefixClass('tabs');
+
     const stickyProps = computed(() => ({ ...(props.stickyProps as TdStickyProps), disabled: !props.sticky }));
-    const activeClass = `${name}__item--active`;
-    const disabledClass = `${name}__item--disabled`;
-    const classes = computed(() => [`${name}`, props.size && CLASSNAMES.SIZE[props.size]]);
-    const navClasses = ref([`${name}__nav`]);
+    const activeClass = `${tabsClass.value}__item--active`;
+    const disabledClass = `${tabsClass.value}__item--disabled`;
+    const tabsClasses = computed(() => [`${tabsClass.value}`, props.size && CLASSNAMES.SIZE[props.size]]);
+    const navClasses = ref([`${tabsClass.value}__nav`]);
     const startX = ref(0);
     const startY = ref(0);
     const endX = ref(0);
@@ -108,15 +63,14 @@ export default defineComponent({
     const { value, modelValue } = toRefs(props);
     const [currentValue, setCurrentValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
-    const itemProps = computed(() => {
+    const itemProps = computed<Array<TdTabPanelProps>>(() => {
       if (props.list) {
         return props.list;
       }
-      let children: any[] = context.slots.default ? context.slots.default() : [];
-
-      const res: any[] = [];
-      const label: any[] = [];
-      children.forEach((child) => {
+      let children: RendererNode[] = renderTNodeJSX('default');
+      const res: RendererNode[] = [];
+      const label: RendererNode[] = [];
+      children?.forEach((child) => {
         if (child.type === Fragment) {
           res.push(...child.children);
         } else {
@@ -127,8 +81,8 @@ export default defineComponent({
         }
       });
 
-      children = res.filter((child: any) => child.type.name === `${prefix}-tab-panel`);
-      return children.map((item: any, index: number) => ({
+      children = res.filter((child: RendererNode) => child.type.name === `${prefix}-tab-panel`);
+      return children.map((item: RendererNode, index: number) => ({
         ...item.props,
         label: () => label[index] || item.props.label,
       }));
@@ -137,12 +91,12 @@ export default defineComponent({
     const valueList = computed(() => itemProps.value.map((v) => v.value));
     const currentIndex = computed(() => valueList.value.indexOf(currentValue.value));
 
-    const navScroll = ref<HTMLElement | null>(null);
-    const navWrap = ref<HTMLElement | null>(null);
-    const navLine = ref<HTMLElement | null>(null);
+    const navScroll = ref<HTMLElement>();
+    const navWrap = ref<HTMLElement>();
+    const navLine = ref<HTMLElement>();
     const lineStyle = ref();
     const moveToActiveTab = () => {
-      if (navWrap.value && navLine.value && showBottomLine.value) {
+      if (navWrap.value && navLine.value && props.showBottomLine) {
         const tab = navWrap.value.querySelector<HTMLElement>(`.${activeClass}`);
         if (!tab) return;
         const line = navLine.value;
@@ -187,13 +141,14 @@ export default defineComponent({
       });
     });
 
-    const tabClick = (event: Event, item: Record<string, unknown>) => {
-      const { value, disabled, label } = item as any;
+    const handleTabClick = (event: Event, item: TdTabPanelProps) => {
+      const { value, disabled } = item;
       if (disabled || currentValue.value === value) {
         return false;
       }
-      setCurrentValue(value, typeof label === 'function' ? label() : label);
-      props.onClick?.(value, typeof label === 'function' ? label() : label);
+      const label = isFunction(item.label) ? item.label(h).toString() : item.label;
+      setCurrentValue(value, label);
+      props.onClick?.(value, label);
       nextTick(() => {
         moveToActiveTab();
       });
@@ -207,14 +162,14 @@ export default defineComponent({
     };
 
     // 手势滑动开始
-    const moveStart = (e: any) => {
-      if (!swipeable.value) return;
+    const handleTouchstart = (e: TouchEvent) => {
+      if (!props.swipeable) return;
       startX.value = e.targetTouches[0].clientX;
       startY.value = e.targetTouches[0].clientY;
     };
 
-    const onMove = (e: any) => {
-      if (!swipeable.value) return;
+    const handleTouchmove = (e: TouchEvent) => {
+      if (!props.swipeable) return;
       if (!canMove.value) return;
       endX.value = e.targetTouches[0].clientX;
       endY.value = e.targetTouches[0].clientY;
@@ -229,20 +184,20 @@ export default defineComponent({
             // 向左划
             if (tabIndex.value >= itemProps.value.length - 1) return;
             canMove.value = false;
-            tabClick(e, itemProps.value[tabIndex.value + 1]);
+            handleTabClick(e, itemProps.value[tabIndex.value + 1]);
           } else if (startX.value < endX.value) {
             // 向右划
             if (tabIndex.value <= 0) return;
             canMove.value = false;
-            tabClick(e, itemProps.value[tabIndex.value - 1]);
+            handleTabClick(e, itemProps.value[tabIndex.value - 1]);
           }
         }
       }
     };
 
     // 手势滑动结束
-    const moveEnd = () => {
-      if (!swipeable.value) return;
+    const handleTouchend = () => {
+      if (!props.swipeable) return;
       canMove.value = true;
       startX.value = 0;
       endX.value = 0;
@@ -252,31 +207,73 @@ export default defineComponent({
 
     provide('currentValue', readonly(currentValue));
 
-    return {
-      name,
-      prefix,
-      classes,
-      navClasses,
-      activeClass,
-      disabledClass,
-      currentValue,
-      currentIndex,
-      tabClick,
-      showBottomLine,
-      itemProps,
-      navScroll,
-      navWrap,
-      navLine,
-      lineStyle,
-      moveToActiveTab,
-      stickyProps,
-      theme,
-      spaceEvenly,
-      moveStart,
-      onMove,
-      moveEnd,
-      handlerScroll,
+    const readerNav = () => {
+      return itemProps.value.map((item, index) => {
+        const badgeProps = item['badge-props'] || item.badgeProps;
+        return (
+          <div
+            class={{
+              [`${tabsClass.value}__item ${tabsClass.value}__item--top`]: true,
+              [`${tabsClass.value}__item--evenly`]: props.spaceEvenly,
+              [activeClass]: item.value === currentValue.value,
+              [disabledClass]: item.disabled,
+              [`${tabsClass.value}__item--${props.theme}`]: true,
+            }}
+            onClick={(e) => handleTabClick(e, item)}
+          >
+            <TBadge {...badgeProps}>
+              <div
+                class={{
+                  [`${tabsClass.value}__item-inner ${tabsClass.value}__item-inner--${props.theme}`]: true,
+                  [`${tabsClass.value}__item-inner--active`]:
+                    props.theme === 'tag' && item.value === currentValue.value,
+                }}
+              >
+                <TTabNavItem label={item.label} />
+              </div>
+            </TBadge>
+            {props.theme === 'card' && index === currentIndex.value - 1 && (
+              <div class={`${tabsClass.value}__item-prefix`} />
+            )}
+            {props.theme === 'card' && index === currentIndex.value + 1 && (
+              <div class={`${tabsClass.value}__item-suffix`} />
+            )}
+          </div>
+        );
+      });
+    };
+    return () => {
+      return (
+        <div class={tabsClasses.value}>
+          <TSticky {...stickyProps.value} onScroll={handlerScroll}>
+            <div class={navClasses.value}>
+              <div
+                ref={navScroll}
+                class={`${tabsClass.value}__scroll ${tabsClass.value}__scroll--top ${tabsClass.value}__scroll--${props.theme}`}
+              >
+                <div ref={navWrap} class={`${tabsClass.value}__wrapper ${tabsClass.value}__wrapper--${props.theme}`}>
+                  {readerNav()}
+                  {props.theme === 'line' && props.showBottomLine && (
+                    <div
+                      ref={navLine}
+                      class={`${tabsClass.value}__track ${tabsClass.value}__track--top`}
+                      style={lineStyle.value}
+                    ></div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </TSticky>
+          <div
+            class={`${tabsClass.value}__content`}
+            onTouchstart={handleTouchstart}
+            onTouchmove={handleTouchmove}
+            onTouchend={handleTouchend}
+          >
+            {renderTNodeJSX('default')}
+          </div>
+        </div>
+      );
     };
   },
 });
-</script>

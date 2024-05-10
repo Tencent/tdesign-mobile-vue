@@ -17,7 +17,6 @@ exports[`Upload > Upload baseVue demo works fine 1`] = `
   >
     
     
-    
     <div
       class="t-upload__item t-upload__item--add"
     >
@@ -38,7 +37,6 @@ exports[`Upload > Upload baseVue demo works fine 1`] = `
         </svg>
       </div>
     </div>
-    
     <input
       accept="image/png"
       hidden=""
@@ -70,7 +68,6 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
     >
       
       
-      
       <div
         class="t-upload__item t-upload__item--add"
       >
@@ -131,7 +128,6 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
           
         </div>
       </div>
-      
       <input
         accept="image/png"
         hidden=""
@@ -156,7 +152,6 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
     >
       
       
-      
       <div
         class="t-upload__item t-upload__item--add"
       >
@@ -217,7 +212,6 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
           
         </div>
       </div>
-      
       <input
         accept="image/png"
         hidden=""
@@ -280,7 +274,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
         >
           
           
-          
           <div
             class="t-upload__item t-upload__item--add"
           >
@@ -301,7 +294,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </svg>
             </div>
           </div>
-          
           <input
             accept="image/png"
             hidden=""
@@ -392,7 +384,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 />
               </picture>
             </div>
-            <!--v-if-->
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -452,7 +444,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 />
               </picture>
             </div>
-            <!--v-if-->
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -512,7 +504,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 />
               </picture>
             </div>
-            <!--v-if-->
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -526,7 +518,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               />
             </svg>
           </div>
-          
           
           <div
             class="t-upload__item t-upload__item--add"
@@ -548,7 +539,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </svg>
             </div>
           </div>
-          
           <input
             accept=""
             hidden=""
@@ -667,7 +657,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 上传中...
               </div>
               
-              <!--v-if-->
+              <!---->
             </div>
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
@@ -751,7 +741,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 68%
               </div>
               
-              <!--v-if-->
+              <!---->
             </div>
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
@@ -766,7 +756,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               />
             </svg>
           </div>
-          
           
           <div
             class="t-upload__item t-upload__item--add"
@@ -788,7 +777,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </svg>
             </div>
           </div>
-          
           <input
             accept="image/png"
             hidden=""
@@ -900,7 +888,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             </svg>
           </div>
           
-          
           <div
             class="t-upload__item t-upload__item--add"
           >
@@ -921,7 +908,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </svg>
             </div>
           </div>
-          
           <input
             accept=""
             hidden=""
@@ -976,7 +962,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           >
             
             
-            
             <div
               class="t-upload__item t-upload__item--add"
             >
@@ -1037,7 +1022,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 
               </div>
             </div>
-            
             <input
               accept="image/png"
               hidden=""
@@ -1062,7 +1046,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           >
             
             
-            
             <div
               class="t-upload__item t-upload__item--add"
             >
@@ -1123,7 +1106,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 
               </div>
             </div>
-            
             <input
               accept="image/png"
               hidden=""
@@ -1202,7 +1184,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
           />
         </picture>
       </div>
-      <!--v-if-->
+      <!---->
       <svg
         class="t-icon t-icon-close t-upload__delete-btn"
         fill="none"
@@ -1262,7 +1244,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
           />
         </picture>
       </div>
-      <!--v-if-->
+      <!---->
       <svg
         class="t-icon t-icon-close t-upload__delete-btn"
         fill="none"
@@ -1322,7 +1304,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
           />
         </picture>
       </div>
-      <!--v-if-->
+      <!---->
       <svg
         class="t-icon t-icon-close t-upload__delete-btn"
         fill="none"
@@ -1336,7 +1318,6 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
         />
       </svg>
     </div>
-    
     
     <div
       class="t-upload__item t-upload__item--add"
@@ -1358,7 +1339,6 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
         </svg>
       </div>
     </div>
-    
     <input
       accept=""
       hidden=""
@@ -1459,7 +1439,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             上传中...
           </div>
           
-          <!--v-if-->
+          <!---->
         </div>
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
@@ -1543,7 +1523,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             68%
           </div>
           
-          <!--v-if-->
+          <!---->
         </div>
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
@@ -1558,7 +1538,6 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           />
         </svg>
       </div>
-      
       
       <div
         class="t-upload__item t-upload__item--add"
@@ -1580,7 +1559,6 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           </svg>
         </div>
       </div>
-      
       <input
         accept="image/png"
         hidden=""
@@ -1692,7 +1670,6 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
         </svg>
       </div>
       
-      
       <div
         class="t-upload__item t-upload__item--add"
       >
@@ -1713,7 +1690,6 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           </svg>
         </div>
       </div>
-      
       <input
         accept=""
         hidden=""
