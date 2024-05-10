@@ -1,5 +1,5 @@
 import { defineComponent, computed, ref, reactive, watch, provide } from 'vue';
-
+import { onClickOutside } from '@vueuse/core';
 import { CaretDownSmallIcon, CaretUpSmallIcon } from 'tdesign-icons-vue-next';
 import camelCase from 'lodash/camelCase';
 
@@ -133,6 +133,13 @@ export default defineComponent({
       const container = findRelativeContainer(bar) || document.body;
       menuContext.recordMenuExpanded(container, control, DropdownMenuExpandState.collapsed);
     };
+
+    // dropdown-menu外面点击触发dropdown下拉框收起
+    onClickOutside(refBar, () => {
+      collapseMenu();
+      props.onMenuClosed?.({ trigger: 'outside' });
+    });
+
     const control: DropdownMenuControl = {
       expandMenu,
       collapseMenu,
