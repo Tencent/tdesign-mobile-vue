@@ -96,28 +96,6 @@ export default defineComponent({
           })}
         </div>
       );
-      //   'div',
-      //   {
-      //     class: `${loadingClass.value}__dots`,
-      //     style: {
-      //       animationPlayState: props.pause ? 'paused' : '',
-      //       animationDirection: props.reverse ? 'reverse' : '',
-      //       animationDuration: `${props.duration}ms`,
-      //       width: props.size,
-      //       height: props.size,
-      //     },
-      //   },
-      //   [
-      //     Array.from({ length: 3 }).map((val, i) => {
-      //       return h('div', {
-      //         class: `${loadingClass.value}__dot`,
-      //         style: props.duration
-      //           ? `animation-duration: ${props.duration / 1000}s; animation-delay: ${(props.duration * i) / 3000}s`
-      //           : '',
-      //       });
-      //     }),
-      //   ],
-      // );
       setBlockTracking(1);
       return node;
     });
