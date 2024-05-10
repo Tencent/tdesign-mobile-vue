@@ -72,15 +72,6 @@ export default defineComponent({
     );
     const rootRef = ref<HTMLDivElement>();
 
-    // const labelContent = computed(
-    //   () =>
-    //     !props.range &&
-    //     props.label &&
-    //     (typeof renderTNode(internalInstance, 'label') === 'object'
-    //       ? renderTNode(internalInstance, 'label')
-    //       : `${innerValue.value}`),
-    // );
-
     const classes = computed(() => [
       `${sliderClass.value}`,
       {
