@@ -1,20 +1,21 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Tabs Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
 animation | Object | - | Typescript：`TabAnimation` `type TabAnimation = { duration: number } & Record<string, any>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tabs/type.ts) | N
+bottomLineMode | String | fixed | options: fixed/auto/full | N
 list | Array | - | Typescript：`Array<TdTabPanelProps>` | N
 showBottomLine | Boolean | true | \- | N
-bottomLineMode | String | fixed | options：fixed/auto/full ｜ N
-size | String | medium | options：medium/large | N
+size | String | medium | options: medium/large | N
 spaceEvenly | Boolean | true | \- | N
 sticky | Boolean | false | \- | N
 stickyProps | Object | - | Typescript：`StickyProps`，[Sticky API Documents](./sticky?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tabs/type.ts) | N
 swipeable | Boolean | true | \- | N
-theme | String | line | options：line/tag/card | N
+theme | String | line | options: line/tag/card | N
 value | String / Number | - | `v-model` and `v-model:value` is supported。Typescript：`TabValue` `type TabValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tabs/type.ts) | N
 defaultValue | String / Number | - | uncontrolled property。Typescript：`TabValue` `type TabValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tabs/type.ts) | N
 onChange | Function |  | Typescript：`(value: TabValue, label: string) => void`<br/> | N
@@ -29,19 +30,21 @@ change | `(value: TabValue, label: string)` | \-
 click | `(value: TabValue, label: string)` | \-
 scroll | `(scrollTop: number, isFixed: boolean)` | \-
 
+
 ### TabPanel Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-badgeProps | Object | null | \- | N
+badgeProps | Object | - | \- | N
 destroyOnHide | Boolean | true | \- | N
 disabled | Boolean | false | \- | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+lazy | Boolean | false | Enable tab lazy loading | N
 panel | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 value | String / Number | - | Typescript：`TabValue` | N
 
+### CSS 变量
 
-### CSS Variables
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
@@ -61,4 +64,4 @@ Name | Default Value | Description
 --td-tab-item-tag-bg | @bg-color-secondarycontainer | - 
 --td-tab-item-tag-height | 32px | - 
 --td-tab-item-vertical-height | 54px | - 
---td-tab-item-vertical-width | 104px | - 
+--td-tab-item-vertical-width | 104px | -
