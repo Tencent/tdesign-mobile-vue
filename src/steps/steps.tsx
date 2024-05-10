@@ -1,4 +1,4 @@
-import { provide, defineComponent, reactive, ComponentInternalInstance } from 'vue';
+import { provide, defineComponent, reactive, ComponentInternalInstance, computed } from 'vue';
 import props from './props';
 import config from '../config';
 import { TdStepsProps } from './type';
@@ -14,6 +14,12 @@ export default defineComponent({
   emits: ['update:current', 'update:modelValue', 'change'],
   setup(props, context) {
     const stepsClass = usePrefixClass('steps');
+    const baseClass = computed(() => [
+      stepsClass.value,
+      `${stepsClass.value}--${props.layout}`,
+      `${stepsClass.value}--${props.sequence}`,
+      { [`${stepsClass.value}--readonly`]: props.readonly },
+    ]);
     const renderTNodeJSX = useTNodeJSX();
 
     const [current, setCurrent] = useDefault<TdStepsProps['current'], TdStepsProps>(
@@ -53,14 +59,8 @@ export default defineComponent({
     });
 
     return () => {
-      const baseClass = [
-        stepsClass.value,
-        `${stepsClass.value}--${props.layout}`,
-        `${stepsClass.value}--${props.sequence}`,
-        { [`${stepsClass.value}--readonly`]: props.readonly },
-      ];
       const renderContent = renderTNodeJSX('default') || null;
-      return <div class={baseClass}>{renderContent}</div>;
+      return <div class={baseClass.value}>{renderContent}</div>;
     };
   },
 });
