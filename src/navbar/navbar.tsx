@@ -28,6 +28,8 @@ export default defineComponent({
         : `${navbarClass.value}--hide${animationSuffix.value}`,
     ]);
 
+    const navStyle = computed(() => `position: ${props.fixed ? 'fixed' : 'relative'};`);
+
     const handleLeftClick = () => {
       props.onLeftClick?.();
     };
@@ -38,7 +40,6 @@ export default defineComponent({
 
     return () => {
       const { fixed, titleMaxLength, title, leftArrow } = props;
-      const navStyle = `position: ${fixed ? 'fixed' : 'relative'};`;
 
       const renderRightContent = () => {
         const rightContent = renderTNodeJSX('right');
@@ -77,7 +78,7 @@ export default defineComponent({
         return isStringTitle ? <span class={`${navbarClass.value}__center-title`}>{titleContent}</span> : titleContent;
       };
       return (
-        <div class={navClass.value} style={navStyle}>
+        <div class={navClass.value} style={navStyle.value}>
           {fixed && <div class={`${navbarClass.value}____placeholder`}></div>}
           <div class={`${navbarClass.value}__content`}>
             <div class={`${navbarClass.value}__left`} onClick={handleLeftClick}>
