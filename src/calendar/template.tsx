@@ -2,7 +2,7 @@ import { computed, watch, inject, ref, toRaw, defineComponent } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 import TButton from '../button';
 import config from '../config';
-import calendarProps from './template-props';
+import Props from './template-props';
 import { useTNodeJSX } from '../hooks/tnode';
 import { TdCalendarProps, TDate, TDateType } from './type';
 import { useConfig } from '../config-provider/useConfig';
@@ -15,7 +15,7 @@ export default defineComponent({
   components: {
     TButton,
   },
-  props: calendarProps,
+  props: Props,
   emits: ['visible-change'],
   setup(_props, context) {
     const renderTNodeJSX = useTNodeJSX();
