@@ -1,28 +1,3 @@
-<template>
-  <div :class="formItemClass">
-    <div :class="[`${classPrefix}-wrap`, `${classPrefix}--${labelAlign}`]">
-      <div :class="labelClasses" :style="labelStyle">
-        <label :for="props.for">
-          <t-node :content="labelContent"></t-node>
-        </label>
-      </div>
-      <div :class="contentClasses" :style="contentStyle">
-        <div :class="contentSlotClasses">
-          <slot></slot>
-        </div>
-        <div v-if="helpNode" :class="[`${classPrefix}-help`, `${prefix}-form__controls--${contentAlign}`]">
-          <t-node :content="helpNode"></t-node>
-        </div>
-        <div v-if="extraNode" :class="[`${classPrefix}-extra`, `${prefix}-form__controls--${contentAlign}`]">
-          {{ extraNode }}
-        </div>
-      </div>
-    </div>
-    <t-node v-if="arrow" :content="rightIconContent" />
-  </div>
-</template>
-
-<script lang="ts">
 import {
   computed,
   defineComponent,
@@ -70,6 +45,7 @@ import {
   ValidateStatus,
 } from './const';
 import config from '../config';
+import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
 const name = `${prefix}-form-item`;
@@ -82,17 +58,10 @@ export default defineComponent({
   components: { TNode },
   props,
   setup(props, { slots }) {
+    const renderTNodeJSX = useTNodeJSX();
     const { name } = toRefs(props);
 
-    const internalInstance = getCurrentInstance();
-
     const form = inject(FormInjectionKey, undefined);
-
-    const rightIconContent = computed(() => {
-      return h(ChevronRightIcon, { size: '24px', color: 'rgba(0, 0, 0, .4)' });
-    });
-
-    const helpNode = computed(() => renderTNode(internalInstance, 'help'));
 
     const extraNode = computed(() => {
       const list = errorList.value;
@@ -110,9 +79,6 @@ export default defineComponent({
       `${prefix}-form__item--bordered`,
       `${prefix}-form--${labelAlign.value}`,
       `${prefix}-form-item__${props.name}`,
-      {
-        [`${prefix}-form__item-with-help`]: helpNode.value,
-      },
     ]);
 
     const needRequiredMark = computed(() => {
@@ -144,11 +110,6 @@ export default defineComponent({
         return isNumber(labelWidth.value) ? { width: `${labelWidth.value}px` } : { width: labelWidth.value };
       }
       return {};
-    });
-
-    const labelContent = computed(() => {
-      if (Number(labelWidth.value) === 0) return;
-      return renderTNode(internalInstance, 'label');
     });
 
     const freeShowErrorMessage = ref<boolean | undefined>(false);
@@ -355,22 +316,52 @@ export default defineComponent({
       },
     );
 
-    return {
-      props,
-      prefix,
-      classPrefix,
-      labelAlign,
-      formItemClass,
-      helpNode,
-      extraNode,
-      contentClasses,
-      contentSlotClasses,
-      contentStyle,
-      labelClasses,
-      labelStyle,
-      labelContent,
-      rightIconContent,
+    return () => {
+      const renderRightIconContent = () => {
+        if (!props.arrow) {
+          return null;
+        }
+        return h(ChevronRightIcon, { size: '24px', color: 'rgba(0, 0, 0, .4)' });
+      };
+      const renderLabelContent = () => {
+        if (Number(labelWidth.value) === 0) {
+          return null;
+        }
+        return renderTNodeJSX('label');
+      };
+      const renderHelpNode = () => {
+        const helpNode = renderTNodeJSX('help');
+        if (!helpNode) {
+          return null;
+        }
+        return <div class={[`${classPrefix}-help`, `${prefix}-form__controls--${contentAlign.value}`]}>{helpNode}</div>;
+      };
+      const renderExtraNode = () => {
+        if (!extraNode.value) {
+          return null;
+        }
+        return (
+          <div class={[`${classPrefix}-extra`, `${prefix}-form__controls--${contentAlign.value}`]}>
+            {extraNode.value}
+          </div>
+        );
+      };
+
+      return (
+        <div class={[...formItemClass.value, renderHelpNode() ? `${prefix}-form__item-with-help` : '']}>
+          <div class={[`${classPrefix}-wrap`, `${classPrefix}--${labelAlign.value}`]}>
+            <div class={labelClasses.value} style={labelStyle.value}>
+              <label for={props.for}>{renderLabelContent()}</label>
+            </div>
+            <div class={contentClasses.value} style={contentStyle.value}>
+              <div class={contentSlotClasses.value}>{renderTNodeJSX('default')}</div>
+              {renderHelpNode()}
+              {renderExtraNode()}
+            </div>
+          </div>
+          {renderRightIconContent()}
+        </div>
+      );
     };
   },
 });
-</script>
