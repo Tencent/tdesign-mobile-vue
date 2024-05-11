@@ -9,6 +9,7 @@ import controlVue from '@/swiper/demos/control.vue';
 import customVue from '@/swiper/demos/custom.vue';
 import fractionVue from '@/swiper/demos/fraction.vue';
 import mobileVue from '@/swiper/demos/mobile.vue';
+import outsideVue from '@/swiper/demos/outside.vue';
 import verticalVue from '@/swiper/demos/vertical.vue';
 
 const mapper = {
@@ -18,6 +19,7 @@ const mapper = {
   customVue,
   fractionVue,
   mobileVue,
+  outsideVue,
   verticalVue,
 };
 

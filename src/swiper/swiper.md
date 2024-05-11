@@ -53,3 +53,4 @@ type | String | dots | 导航器类型，点状(dots)、点条状(dots-bar)、�
 --td-swiper-nav-fraction-font-size | 12px | - 
 --td-swiper-nav-fraction-height | 24px | - 
 --td-swiper-border-radius | 8px | - 
+--td-swiper-placement-outside-padding | 18px | - 
