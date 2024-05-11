@@ -14,7 +14,7 @@ exports[`navbar > events > left-click 1`] = `
     <div
       class="t-navbar__left"
     >
-      <!--v-if-->
+      <!---->
       
       <svg
         class="t-icon t-icon-app"
@@ -29,7 +29,7 @@ exports[`navbar > events > left-click 1`] = `
         />
       </svg>
       
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-navbar__center"
@@ -40,7 +40,7 @@ exports[`navbar > events > left-click 1`] = `
         标题
       </span>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
 </div>
 `;
@@ -59,9 +59,9 @@ exports[`navbar > events > right-click 1`] = `
     <div
       class="t-navbar__left"
     >
-      <!--v-if-->
       <!---->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
     <div
       class="t-navbar__center"
