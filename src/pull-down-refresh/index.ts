@@ -1,4 +1,4 @@
-import PullDownRefresh from './pull-down-refresh.vue';
+import PullDownRefresh from './pull-down-refresh';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';

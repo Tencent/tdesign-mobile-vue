@@ -1,6 +1,6 @@
 import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import drawer from '../drawer.vue';
+import drawer from '../drawer';
 import { ref, h } from 'vue';
 import { AppIcon } from 'tdesign-icons-vue-next';
 

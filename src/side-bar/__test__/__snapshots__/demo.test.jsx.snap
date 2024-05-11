@@ -15,8 +15,8 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-7bc399f9=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -48,7 +48,7 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
           class="t-side-bar-item__suffix"
         />
       </div>
-      <!--v-if-->
+      <!---->
       <div
         class="t-badge"
       >
@@ -75,8 +75,8 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-7bc399f9=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -97,8 +97,8 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-7bc399f9=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -125,8 +125,8 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-7bc399f9=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -3092,8 +3092,8 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-aa9e6ace=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -3125,7 +3125,7 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
           class="t-side-bar-item__suffix"
         />
       </div>
-      <!--v-if-->
+      <!---->
       <div
         class="t-badge"
       >
@@ -3152,8 +3152,8 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-aa9e6ace=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -3174,8 +3174,8 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-aa9e6ace=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -3202,8 +3202,8 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-aa9e6ace=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -6318,8 +6318,8 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-17774648=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -6351,7 +6351,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           class="t-side-bar-item__suffix"
         />
       </div>
-      <!--v-if-->
+      <!---->
       <div
         class="t-badge"
       >
@@ -6378,8 +6378,8 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-17774648=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -6400,8 +6400,8 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-17774648=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -6428,8 +6428,8 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-17774648=""
     >
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       <div
         class="t-badge"
       >
@@ -6479,7 +6479,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -6531,11 +6531,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字0
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -6548,7 +6548,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -6600,11 +6600,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字0
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -6617,7 +6617,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -6669,11 +6669,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字0
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -6686,7 +6686,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -6738,11 +6738,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字0
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -6755,7 +6755,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -6807,11 +6807,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字0
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -6824,7 +6824,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -6876,11 +6876,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字0
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -6893,7 +6893,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -6945,11 +6945,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字0
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -6962,7 +6962,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -7014,11 +7014,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字0
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -7031,7 +7031,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -7083,11 +7083,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字0
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -7100,7 +7100,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -7152,11 +7152,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字0
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -7169,7 +7169,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -7221,11 +7221,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字0
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -7238,7 +7238,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -7290,11 +7290,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字0
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       
@@ -7320,7 +7320,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -7372,11 +7372,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字1
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -7389,7 +7389,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -7441,11 +7441,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字1
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -7458,7 +7458,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -7510,11 +7510,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字1
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -7527,7 +7527,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -7579,11 +7579,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字1
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -7596,7 +7596,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -7648,11 +7648,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字1
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -7665,7 +7665,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -7717,11 +7717,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字1
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -7734,7 +7734,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -7786,11 +7786,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字1
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -7803,7 +7803,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -7855,11 +7855,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字1
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -7872,7 +7872,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -7924,11 +7924,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字1
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       
@@ -7954,7 +7954,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -8006,11 +8006,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字2
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -8023,7 +8023,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -8075,11 +8075,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字2
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -8092,7 +8092,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -8144,11 +8144,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字2
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -8161,7 +8161,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -8213,11 +8213,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字2
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -8230,7 +8230,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -8282,11 +8282,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字2
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -8299,7 +8299,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -8351,11 +8351,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字2
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -8368,7 +8368,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -8420,11 +8420,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字2
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -8437,7 +8437,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -8489,11 +8489,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字2
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -8506,7 +8506,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -8558,11 +8558,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字2
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       
@@ -8588,7 +8588,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -8640,11 +8640,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字3
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -8657,7 +8657,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -8709,11 +8709,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字3
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -8726,7 +8726,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -8778,11 +8778,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字3
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -8795,7 +8795,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -8847,11 +8847,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字3
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -8864,7 +8864,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -8916,11 +8916,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字3
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -8933,7 +8933,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -8985,11 +8985,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字3
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       
@@ -9015,7 +9015,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -9067,11 +9067,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字4
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -9084,7 +9084,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -9136,11 +9136,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字4
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -9153,7 +9153,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--round image"
@@ -9205,11 +9205,11 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             class="t-cell__title"
           >
             标题文字4
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
       </div>
       
@@ -9234,7 +9234,7 @@ exports[`SideBar > SideBar withIconVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-2e4c56b0=""
     >
-      <!--v-if-->
+      <!---->
       <div
         class="t-side-bar-item__icon"
       >
@@ -9326,7 +9326,7 @@ exports[`SideBar > SideBar withIconVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-2e4c56b0=""
     >
-      <!--v-if-->
+      <!---->
       <div
         class="t-side-bar-item__icon"
       >
@@ -9364,7 +9364,7 @@ exports[`SideBar > SideBar withIconVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-2e4c56b0=""
     >
-      <!--v-if-->
+      <!---->
       <div
         class="t-side-bar-item__icon"
       >
@@ -9408,7 +9408,7 @@ exports[`SideBar > SideBar withIconVue demo works fine 1`] = `
       class="t-side-bar-item"
       data-v-2e4c56b0=""
     >
-      <!--v-if-->
+      <!---->
       <div
         class="t-side-bar-item__icon"
       >

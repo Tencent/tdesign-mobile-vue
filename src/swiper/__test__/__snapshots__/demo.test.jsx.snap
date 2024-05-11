@@ -71,15 +71,16 @@ exports[`Swiper > Swiper baseVue demo works fine 1`] = `
       
       
     </div>
-    <!-- 导航器 -->
     
-    <!--v-if-->
+    <!---->
     <span
       class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
     >
       
       
-      <!--v-if-->
+      
+      
+      <!---->
     </span>
     
   </div>
@@ -154,15 +155,16 @@ exports[`Swiper > Swiper cardVue demo works fine 1`] = `
     
     
   </div>
-  <!-- 导航器 -->
   
-  <!--v-if-->
+  <!---->
   <span
     class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
   >
     
     
-    <!--v-if-->
+    
+    
+    <!---->
   </span>
   
 </div>
@@ -239,7 +241,6 @@ exports[`Swiper > Swiper controlVue demo works fine 1`] = `
       
       
     </div>
-    <!-- 导航器 -->
     
     <span
       class="t-swiper-nav__btn"
@@ -251,7 +252,7 @@ exports[`Swiper > Swiper controlVue demo works fine 1`] = `
         class="t-swiper-nav__btn--next"
       />
     </span>
-    <!--v-if-->
+    <!---->
     
   </div>
 </div>
@@ -328,15 +329,16 @@ exports[`Swiper > Swiper customVue demo works fine 1`] = `
       
       
     </div>
-    <!-- 导航器 -->
     
-    <!--v-if-->
+    <!---->
     <span
       class="t-swiper-nav--horizontal t-swiper-nav__dots-bar t-swiper-nav--bottom"
     >
       
       
-      <!--v-if-->
+      
+      
+      <!---->
     </span>
     
   </div>
@@ -414,13 +416,12 @@ exports[`Swiper > Swiper fractionVue demo works fine 1`] = `
       
       
     </div>
-    <!-- 导航器 -->
     
-    <!--v-if-->
+    <!---->
     <span
       class="t-swiper-nav--horizontal t-swiper-nav__fraction t-swiper-nav--bottom-right"
     >
-      <!--v-if-->
+      <!---->
       <span>
         1/0
       </span>
@@ -535,15 +536,16 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             
             
           </div>
-          <!-- 导航器 -->
           
-          <!--v-if-->
+          <!---->
           <span
             class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
           >
             
             
-            <!--v-if-->
+            
+            
+            <!---->
           </span>
           
         </div>
@@ -638,15 +640,16 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             
             
           </div>
-          <!-- 导航器 -->
           
-          <!--v-if-->
+          <!---->
           <span
             class="t-swiper-nav--horizontal t-swiper-nav__dots-bar t-swiper-nav--bottom"
           >
             
             
-            <!--v-if-->
+            
+            
+            <!---->
           </span>
           
         </div>
@@ -741,13 +744,12 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             
             
           </div>
-          <!-- 导航器 -->
           
-          <!--v-if-->
+          <!---->
           <span
             class="t-swiper-nav--horizontal t-swiper-nav__fraction t-swiper-nav--bottom-right"
           >
-            <!--v-if-->
+            <!---->
             <span>
               1/0
             </span>
@@ -845,7 +847,6 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             
             
           </div>
-          <!-- 导航器 -->
           
           <span
             class="t-swiper-nav__btn"
@@ -857,7 +858,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
               class="t-swiper-nav__btn--next"
             />
           </span>
-          <!--v-if-->
+          <!---->
           
         </div>
       </div>
@@ -958,21 +959,213 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             
             
           </div>
-          <!-- 导航器 -->
           
-          <!--v-if-->
+          <!---->
           <span
             class="t-swiper-nav--vertical t-swiper-nav__dots-bar t-swiper-nav--right"
           >
             
             
-            <!--v-if-->
+            
+            
+            <!---->
           </span>
           
         </div>
       </div>
       
     </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        outside模式
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        style="padding: 0px 16px;"
+      >
+        <div
+          class="t-swiper t-swiper--default t-swiper--outside"
+        >
+          <div
+            class="t-swiper__container"
+            style="flex-direction: row; transition: none; height: auto;"
+          >
+            
+            
+            <div
+              class="t-swiper-item"
+              style="height: 192px;"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+              />
+              
+            </div>
+            <div
+              class="t-swiper-item"
+              style="height: 192px;"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/mobile/demos/swiper2.png"
+              />
+              
+            </div>
+            <div
+              class="t-swiper-item"
+              style="height: 192px;"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+              />
+              
+            </div>
+            <div
+              class="t-swiper-item"
+              style="height: 192px;"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/mobile/demos/swiper2.png"
+              />
+              
+            </div>
+            <div
+              class="t-swiper-item"
+              style="height: 192px;"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+              />
+              
+            </div>
+            
+            
+          </div>
+          
+          <!---->
+          <span
+            class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--outside"
+          >
+            
+            
+            
+            
+            <!---->
+          </span>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Swiper > Swiper outsideVue demo works fine 1`] = `
+<div
+  style="padding: 0px 16px;"
+>
+  <div
+    class="t-swiper t-swiper--default t-swiper--outside"
+  >
+    <div
+      class="t-swiper__container"
+      style="flex-direction: row; transition: none; height: auto;"
+    >
+      
+      
+      <div
+        class="t-swiper-item"
+        style="height: 192px;"
+      >
+        
+        <img
+          class="img"
+          src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+        />
+        
+      </div>
+      <div
+        class="t-swiper-item"
+        style="height: 192px;"
+      >
+        
+        <img
+          class="img"
+          src="https://tdesign.gtimg.com/mobile/demos/swiper2.png"
+        />
+        
+      </div>
+      <div
+        class="t-swiper-item"
+        style="height: 192px;"
+      >
+        
+        <img
+          class="img"
+          src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+        />
+        
+      </div>
+      <div
+        class="t-swiper-item"
+        style="height: 192px;"
+      >
+        
+        <img
+          class="img"
+          src="https://tdesign.gtimg.com/mobile/demos/swiper2.png"
+        />
+        
+      </div>
+      <div
+        class="t-swiper-item"
+        style="height: 192px;"
+      >
+        
+        <img
+          class="img"
+          src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+        />
+        
+      </div>
+      
+      
+    </div>
+    
+    <!---->
+    <span
+      class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--outside"
+    >
+      
+      
+      
+      
+      <!---->
+    </span>
+    
   </div>
 </div>
 `;
@@ -1048,15 +1241,16 @@ exports[`Swiper > Swiper verticalVue demo works fine 1`] = `
       
       
     </div>
-    <!-- 导航器 -->
     
-    <!--v-if-->
+    <!---->
     <span
       class="t-swiper-nav--vertical t-swiper-nav__dots-bar t-swiper-nav--right"
     >
       
       
-      <!--v-if-->
+      
+      
+      <!---->
     </span>
     
   </div>

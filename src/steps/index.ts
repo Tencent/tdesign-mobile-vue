@@ -1,5 +1,5 @@
-import LocalSteps from './steps.vue';
-import LocalStepItem from './step-item.vue';
+import LocalSteps from './steps';
+import LocalStepItem from './step-item';
 import { withInstall, WithInstallType } from '../shared';
 import { TdStepsProps, TdStepItemProps } from './type';
 

@@ -29,8 +29,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -134,8 +133,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -241,8 +239,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -333,8 +330,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -421,8 +417,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -523,8 +518,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -675,8 +669,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -832,8 +825,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -863,17 +855,13 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
             >
               
               <div
-                class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
+                class="t-input t-input--layout-horizontal t-input--border"
                 data-v-4a76bf3d=""
               >
                 <div
                   class="t-input__wrap--prefix"
                 >
-                  <div
-                    class="t-input__icon--prefix"
-                  >
-                    <!--v-if-->
-                  </div>
+                  <!---->
                   <div
                     class="t-input__label"
                   >
@@ -894,11 +882,11 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
                       placeholder="请输入文字"
                       type="text"
                     />
-                    <!--v-if-->
-                    <!--v-if-->
-                    <!--v-if-->
+                    <!---->
+                    <!---->
+                    <!---->
                   </div>
-                  <!--v-if-->
+                  <!---->
                 </div>
               </div>
               
@@ -980,8 +968,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -1016,17 +1003,13 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
                 告知当前状态、信息和解决方法等，描述文案尽可能控制在三行内
               </p>
               <div
-                class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
+                class="t-input t-input--layout-horizontal t-input--border"
                 data-v-4a76bf3d=""
               >
                 <div
                   class="t-input__wrap--prefix"
                 >
-                  <div
-                    class="t-input__icon--prefix"
-                  >
-                    <!--v-if-->
-                  </div>
+                  <!---->
                   <div
                     class="t-input__label"
                   >
@@ -1047,11 +1030,11 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
                       placeholder="请输入文字"
                       type="text"
                     />
-                    <!--v-if-->
-                    <!--v-if-->
-                    <!--v-if-->
+                    <!---->
+                    <!---->
+                    <!---->
                   </div>
-                  <!--v-if-->
+                  <!---->
                 </div>
               </div>
               
@@ -1167,8 +1150,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -1259,8 +1241,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -1347,8 +1328,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -1460,8 +1440,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -1565,8 +1544,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -1687,8 +1665,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -1718,17 +1695,13 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 >
                   
                   <div
-                    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
+                    class="t-input t-input--layout-horizontal t-input--border"
                     data-v-4a76bf3d=""
                   >
                     <div
                       class="t-input__wrap--prefix"
                     >
-                      <div
-                        class="t-input__icon--prefix"
-                      >
-                        <!--v-if-->
-                      </div>
+                      <!---->
                       <div
                         class="t-input__label"
                       >
@@ -1749,11 +1722,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                           placeholder="请输入文字"
                           type="text"
                         />
-                        <!--v-if-->
-                        <!--v-if-->
-                        <!--v-if-->
+                        <!---->
+                        <!---->
+                        <!---->
                       </div>
-                      <!--v-if-->
+                      <!---->
                     </div>
                   </div>
                   
@@ -1835,8 +1808,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -1871,17 +1843,13 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                     告知当前状态、信息和解决方法等，描述文案尽可能控制在三行内
                   </p>
                   <div
-                    class="t-input t-input--layout-horizontal t-input--size-small t-input--border"
+                    class="t-input t-input--layout-horizontal t-input--border"
                     data-v-4a76bf3d=""
                   >
                     <div
                       class="t-input__wrap--prefix"
                     >
-                      <div
-                        class="t-input__icon--prefix"
-                      >
-                        <!--v-if-->
-                      </div>
+                      <!---->
                       <div
                         class="t-input__label"
                       >
@@ -1902,11 +1870,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                           placeholder="请输入文字"
                           type="text"
                         />
-                        <!--v-if-->
-                        <!--v-if-->
-                        <!--v-if-->
+                        <!---->
+                        <!---->
+                        <!---->
                       </div>
-                      <!--v-if-->
+                      <!---->
                     </div>
                   </div>
                   
@@ -2006,8 +1974,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -2158,8 +2125,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -2330,8 +2296,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -2435,8 +2400,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -2540,8 +2504,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -2645,8 +2608,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -2767,8 +2729,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--center"
@@ -2934,8 +2895,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -3039,8 +2999,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -3144,8 +3103,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -3249,8 +3207,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"
@@ -3371,8 +3328,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--center"

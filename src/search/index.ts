@@ -1,4 +1,4 @@
-import Search from './search.vue';
+import Search from './search';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';

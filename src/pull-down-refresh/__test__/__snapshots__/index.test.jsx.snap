@@ -18,11 +18,12 @@ exports[`PullDownRefresh > :props > :others 1`] = `
       >
         <div
           class="t-pull-down-refresh__text"
-        />
+        >
+          <!---->
+        </div>
       </div>
     </div>
-    
-    
+    <!---->
   </div>
 </div>
 `;

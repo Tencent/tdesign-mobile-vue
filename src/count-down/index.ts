@@ -1,4 +1,4 @@
-import _CountDown from './count-down.vue';
+import _CountDown from './count-down';
 import { withInstall, WithInstallType } from '../shared';
 import { TdCountDownProps } from './type';
 

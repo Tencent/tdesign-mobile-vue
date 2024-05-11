@@ -275,8 +275,8 @@ const onSubmit = (e: any) => {
 };
 
 const rules = {
-  name: [{ validator: (val: any) => val === 8, message: '只能输入8个字符英文' }],
-  password: [{ validator: (val: any) => val > 6, message: '长度大于6个字符' }],
+  name: [{ validator: (val: any) => val.length === 8, message: '只能输入8个字符英文' }],
+  password: [{ validator: (val: any) => val.length > 6, message: '长度大于6个字符' }],
   gender: [{ validator: (val: any) => val !== '', message: '不能为空' }],
   birth: [{ validator: (val: any) => val !== '', message: '不能为空' }],
   place: [{ validator: (val: any) => val !== '', message: '不能为空' }],

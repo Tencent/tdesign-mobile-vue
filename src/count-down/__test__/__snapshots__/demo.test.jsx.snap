@@ -50,7 +50,7 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
         >
           00
         </span>
-        <!--v-if-->
+        <!---->
         
         
       </div>
@@ -113,7 +113,7 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
         >
           000
         </span>
-        <!--v-if-->
+        <!---->
         
         
       </div>
@@ -164,7 +164,7 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
         >
           00
         </span>
-        <!--v-if-->
+        <!---->
         
         
       </div>
@@ -215,7 +215,7 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
         >
           00
         </span>
-        <!--v-if-->
+        <!---->
         
         
       </div>
@@ -416,7 +416,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
             >
               00
             </span>
-            <!--v-if-->
+            <!---->
             
             
           </div>
@@ -479,7 +479,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
             >
               000
             </span>
-            <!--v-if-->
+            <!---->
             
             
           </div>
@@ -530,7 +530,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
             >
               00
             </span>
-            <!--v-if-->
+            <!---->
             
             
           </div>
@@ -581,7 +581,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
             >
               00
             </span>
-            <!--v-if-->
+            <!---->
             
             
           </div>
@@ -769,7 +769,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
             >
               00
             </span>
-            <!--v-if-->
+            <!---->
             
             
           </div>
@@ -811,7 +811,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
             >
               00
             </span>
-            <!--v-if-->
+            <!---->
             
             
           </div>
@@ -853,7 +853,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
             >
               00
             </span>
-            <!--v-if-->
+            <!---->
             
             
           </div>
@@ -916,7 +916,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
             >
               000
             </span>
-            <!--v-if-->
+            <!---->
             
             
           </div>
@@ -970,7 +970,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
             >
               000
             </span>
-            <!--v-if-->
+            <!---->
             
             
           </div>
@@ -1024,7 +1024,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
             >
               000
             </span>
-            <!--v-if-->
+            <!---->
             
             
           </div>
@@ -1075,7 +1075,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
             >
               00
             </span>
-            <!--v-if-->
+            <!---->
             
             
           </div>
@@ -1117,7 +1117,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
             >
               00
             </span>
-            <!--v-if-->
+            <!---->
             
             
           </div>
@@ -1159,7 +1159,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
             >
               00
             </span>
-            <!--v-if-->
+            <!---->
             
             
           </div>
@@ -1210,7 +1210,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
             >
               00
             </span>
-            <!--v-if-->
+            <!---->
             
             
           </div>
@@ -1252,7 +1252,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
             >
               00
             </span>
-            <!--v-if-->
+            <!---->
             
             
           </div>
@@ -1294,7 +1294,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
             >
               00
             </span>
-            <!--v-if-->
+            <!---->
             
             
           </div>
@@ -1504,7 +1504,7 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
         >
           00
         </span>
-        <!--v-if-->
+        <!---->
         
         
       </div>
@@ -1546,7 +1546,7 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
         >
           00
         </span>
-        <!--v-if-->
+        <!---->
         
         
       </div>
@@ -1588,7 +1588,7 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
         >
           00
         </span>
-        <!--v-if-->
+        <!---->
         
         
       </div>
@@ -1651,7 +1651,7 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
         >
           000
         </span>
-        <!--v-if-->
+        <!---->
         
         
       </div>
@@ -1705,7 +1705,7 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
         >
           000
         </span>
-        <!--v-if-->
+        <!---->
         
         
       </div>
@@ -1759,7 +1759,7 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
         >
           000
         </span>
-        <!--v-if-->
+        <!---->
         
         
       </div>
@@ -1810,7 +1810,7 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
         >
           00
         </span>
-        <!--v-if-->
+        <!---->
         
         
       </div>
@@ -1852,7 +1852,7 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
         >
           00
         </span>
-        <!--v-if-->
+        <!---->
         
         
       </div>
@@ -1894,7 +1894,7 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
         >
           00
         </span>
-        <!--v-if-->
+        <!---->
         
         
       </div>
@@ -1945,7 +1945,7 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
         >
           00
         </span>
-        <!--v-if-->
+        <!---->
         
         
       </div>
@@ -1987,7 +1987,7 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
         >
           00
         </span>
-        <!--v-if-->
+        <!---->
         
         
       </div>
@@ -2029,7 +2029,7 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
         >
           00
         </span>
-        <!--v-if-->
+        <!---->
         
         
       </div>

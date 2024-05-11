@@ -1161,8 +1161,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
                 
                 
               </div>
-              <!-- 导航器 -->
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1335,8 +1334,7 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
             
             
           </div>
-          <!-- 导航器 -->
-          <!--v-if-->
+          <!---->
         </div>
       </div>
     </div>

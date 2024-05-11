@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { nextTick } from 'vue';
-import Stepper from '../stepper.vue';
+import Stepper from '../stepper';
 import { ref } from 'vue';
 
 const simulateEvent = (target, text, event) => {

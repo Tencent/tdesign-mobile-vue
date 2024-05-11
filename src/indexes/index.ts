@@ -1,6 +1,6 @@
 import { withInstall, WithInstallType } from '../shared';
-import LocalIndexes from './indexes.vue';
-import LocalIndexesAnchor from './indexes-anchor.vue';
+import LocalIndexes from './indexes';
+import LocalIndexesAnchor from './indexes-anchor';
 
 import './style';
 

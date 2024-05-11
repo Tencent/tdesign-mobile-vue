@@ -1,5 +1,5 @@
-import Radio from './radio.vue';
-import _RadioGroup from './radio-group.vue';
+import Radio from './radio';
+import _RadioGroup from './radio-group';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';

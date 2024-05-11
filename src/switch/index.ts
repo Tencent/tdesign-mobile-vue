@@ -1,4 +1,4 @@
-import Switch from './switch.vue';
+import Switch from './switch';
 import { withInstall, WithInstallType } from '../shared';
 import { TdSwitchProps } from './type';
 

@@ -2,9 +2,9 @@ import { h } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import { ChevronRightIcon, AppIcon } from 'tdesign-icons-vue-next';
-import Cell from '../cell.vue';
-import CellGroup from '../cell-group.vue';
-import Avatar from '../../avatar/avatar.vue';
+import Cell from '../cell';
+import CellGroup from '../cell-group';
+import Avatar from '../../avatar/avatar';
 
 const appIcon = () => h(AppIcon);
 const chevronRightIcon = () => h(ChevronRightIcon);

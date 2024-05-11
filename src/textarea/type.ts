@@ -8,7 +8,7 @@ import { TNode } from '../common';
 
 export interface TdTextareaProps {
   /**
-   * 超出 `maxlength` 或 `maxcharacter` 之后是否允许继续输入
+   * 超出maxlength或maxcharacter之后是否还允许输入
    * @default false
    */
   allowInputOverMax?: boolean;
@@ -23,15 +23,15 @@ export interface TdTextareaProps {
    */
   autosize?: boolean;
   /**
+   * 是否显示外边框
+   * @default false
+   */
+  bordered?: boolean;
+  /**
    * 是否禁用文本框
    * @default false
    */
   disabled?: boolean;
-  /**
-   * 是否显示外边框
-   * @default true
-   */
-  bordered?: boolean;
   /**
    * 显示文本计数器，如 0/140。当 `maxlength < 0 && maxcharacter < 0` 成立时， indicator无效
    * @default false
@@ -51,8 +51,7 @@ export interface TdTextareaProps {
    */
   maxcharacter?: number;
   /**
-   * 用户最多可以输入的字符个数。默认为 -1，不限制输入长度
-   * @default -1
+   * 用户最多可以输入的字符个数
    */
   maxlength?: number;
   /**
@@ -77,6 +76,10 @@ export interface TdTextareaProps {
    * 文本框值，非受控属性
    */
   defaultValue?: TextareaValue;
+  /**
+   * 文本框值
+   */
+  modelValue?: TextareaValue;
   /**
    * 失去焦点时触发
    */

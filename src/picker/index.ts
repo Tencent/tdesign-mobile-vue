@@ -1,4 +1,4 @@
-import _Picker from './picker.vue';
+import _Picker from './picker';
 import _Cascade from './cascade.vue';
 import { withInstall, WithInstallType } from '../shared';
 

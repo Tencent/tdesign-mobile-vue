@@ -11,22 +11,22 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       选择日期(年月日)
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
     <div
       class="t-cell__note"
     >
       年 月 日
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <teleport-stub
     disabled="false"
@@ -36,8 +36,7 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--bottom"
@@ -450,22 +449,22 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       选择日期
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
     <div
       class="t-cell__note"
     >
       年 月 日
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <teleport-stub
     disabled="false"
@@ -475,8 +474,7 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--bottom"
@@ -819,22 +817,22 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       选择日期(年月日时分)
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
     <div
       class="t-cell__note"
     >
       2020-08-10 12:50:00
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <teleport-stub
     disabled="false"
@@ -844,8 +842,7 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--bottom"
@@ -2047,22 +2044,22 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           选择日期(年月日)
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
         <div
           class="t-cell__note"
         >
           年 月 日
         </div>
-        <!--v-if-->
+        <!---->
       </div>
       <teleport-stub
         disabled="false"
@@ -2072,8 +2069,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--bottom"
@@ -2479,22 +2475,22 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           选择日期(年月)
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
         <div
           class="t-cell__note"
         >
           年 月
         </div>
-        <!--v-if-->
+        <!---->
       </div>
       <teleport-stub
         disabled="false"
@@ -2504,8 +2500,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--bottom"
@@ -2750,22 +2745,22 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           选择日期(时分)
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
         <div
           class="t-cell__note"
         >
           时 分
         </div>
-        <!--v-if-->
+        <!---->
       </div>
       <teleport-stub
         disabled="false"
@@ -2775,8 +2770,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--bottom"
@@ -3300,22 +3294,22 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__left"
         >
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
           class="t-cell__title"
         >
           选择日期
-          <!--v-if-->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
         <div
           class="t-cell__note"
         >
           年 月 日
         </div>
-        <!--v-if-->
+        <!---->
       </div>
       <teleport-stub
         disabled="false"
@@ -3325,8 +3319,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--bottom"
@@ -3672,22 +3665,22 @@ exports[`DateTimePicker > DateTimePicker timeVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       选择日期(时分)
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
     <div
       class="t-cell__note"
     >
       时 分
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <teleport-stub
     disabled="false"
@@ -3697,8 +3690,7 @@ exports[`DateTimePicker > DateTimePicker timeVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--bottom"
@@ -4205,22 +4197,22 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
     <div
       class="t-cell__left"
     >
-      <!--v-if-->
+      <!---->
       <!---->
     </div>
     <div
       class="t-cell__title"
     >
       选择日期(年月)
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
     <div
       class="t-cell__note"
     >
       年 月
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <teleport-stub
     disabled="false"
@@ -4230,8 +4222,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--bottom"
