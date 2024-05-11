@@ -1,12 +1,13 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Radio Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 allowUncheck | Boolean | false | 是否允许取消选中 | N
-block | Boolean | true | 是否为块级元素	 | N
+block | Boolean | true | 是否为块级元素 | N
 borderless | Boolean | undefined | 是否开启无边框模式 | N
 checked | Boolean | false | 是否选中。支持语法糖 `v-model` 或 `v-model:checked` | N
 defaultChecked | Boolean | false | 是否选中。非受控属性 | N
@@ -29,9 +30,10 @@ onChange | Function |  | TS 类型：`(checked: boolean, context: { e: Event }) 
 -- | -- | --
 change | `(checked: boolean, context: { e: Event })` | 选中状态变化时触发
 
+
 ### RadioGroup Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 allowUncheck | Boolean | false | 是否允许取消选中 | N
 borderless | Boolean | false | 是否开启无边框模式；优先级低于 Radio | N
@@ -51,8 +53,8 @@ onChange | Function |  | TS 类型：`(value: T, context: { e: Event }) => void`
 -- | -- | --
 change | `(value: T, context: { e: Event })` | 选中值发生变化时触发
 
-
 ### CSS 变量
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
@@ -70,4 +72,4 @@ change | `(value: T, context: { e: Event })` | 选中值发生变化时触发
 --td-radio-label-color | @font-gray-1 | - 
 --td-radio-label-disabled-color | @text-color-disabled | - 
 --td-radio-label-line-height | 24px | - 
---td-radio-vertical-padding | 16px | - 
+--td-radio-vertical-padding | 16px | -

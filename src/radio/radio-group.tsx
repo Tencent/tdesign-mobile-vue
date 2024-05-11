@@ -1,41 +1,22 @@
-<template>
-  <div :class="componentName" role="radiogroup">
-    <template v-if="options">
-      <radio
-        v-for="(opt, idx) in groupOptions"
-        :key="`radio-group-options-${idx}-${Math.random()}`"
-        :name="name"
-        :icon="icon"
-        :checked="value === opt[keys?.value ?? 'value']"
-        :disabled="'disabled' in opt ? opt.disabled : disabled"
-        :value="opt[keys?.value ?? 'value']"
-        :label="opt[keys?.label ?? 'label']"
-        :allow-uncheck="opt?.allowUncheck ?? allowUncheck"
-        :placement="placement"
-      ></radio>
-    </template>
-    <slot v-if="!options"></slot>
-  </div>
-</template>
-
-<script lang="ts">
-import { provide, defineComponent, toRefs, computed } from 'vue';
+import { provide, defineComponent, computed } from 'vue';
 import { useDefault } from '../shared';
-import RadioGroupProps from '../radio/radio-group-props';
+import props from '../radio/radio-group-props';
 import { RadioOption, RadioOptionObj, RadioValue, TdRadioGroupProps } from '../radio/type';
-import Radio from './radio.vue';
+import TRadio from './radio';
 import config from '../config';
 import { KeysType } from '../common';
+import { usePrefixClass } from '../hooks/useClass';
+import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
-const componentName = `${prefix}-radio-group`;
 
 export default defineComponent({
-  name: componentName,
-  components: { Radio },
-  props: RadioGroupProps,
-  emits: ['update:value', 'update:modelValue', 'change'],
+  name: `${prefix}-radio-group`,
+  props,
   setup(props, context) {
+    const renderTNodeJSX = useTNodeJSX();
+    const radioGroupClass = usePrefixClass('radio-group');
+
     const [groupValue, setGroupValue] = useDefault<RadioValue, TdRadioGroupProps>(
       props,
       context.emit,
@@ -44,6 +25,7 @@ export default defineComponent({
     );
 
     const keys = computed((): KeysType => props.keys);
+
     const groupOptions = computed(() => {
       return props.options?.map((option: RadioOption) => {
         let opt = option as RadioOptionObj;
@@ -64,12 +46,24 @@ export default defineComponent({
     provide('rootGroupProps', props);
     provide('rootGroupValue', groupValue);
     provide('rootGroupChange', handleRadioChange);
-    return {
-      ...toRefs(props),
-      keys,
-      componentName,
-      groupOptions,
+    return () => {
+      return (
+        <div class={radioGroupClass.value} role="radiogroup">
+          {props.options &&
+            groupOptions.value.map((opt, index) => (
+              <TRadio
+                name={props.name}
+                icon={props.icon}
+                checked={groupValue.value === opt[keys.value?.value ?? 'value']}
+                disabled={opt?.disabled ?? props.disabled}
+                value={opt[keys.value?.value ?? 'value']}
+                label={opt[keys.value?.label ?? 'label']}
+                placement={props.placement}
+              />
+            ))}
+          {!props.options && renderTNodeJSX('default')}
+        </div>
+      );
     };
   },
 });
-</script>

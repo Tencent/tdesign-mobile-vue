@@ -61,7 +61,7 @@
                   placement="right"
                   icon="line"
                   borderless
-                  @change="handleSelect($event, index)"
+                  @change="handleSelect($event as string | number, index)"
                 />
               </div>
             </transition>
