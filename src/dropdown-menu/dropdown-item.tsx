@@ -283,6 +283,7 @@ export default defineComponent({
       const content = renderContent('default', 'content');
 
       const footer = renderTNodeJSX('footer');
+
       return (
         wrapperVisible.value && (
           <div id={popupId} class={classes.value} style={{ ...expandStyle.value }}>

@@ -519,7 +519,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
           
         </tbody>
       </table>
-      <!--v-if-->
+      <!---->
     </div>
   </div>
 </div>
@@ -1004,7 +1004,7 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
           
         </tbody>
       </table>
-      <!--v-if-->
+      <!---->
     </div>
   </div>
 </div>
@@ -1563,7 +1563,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 
               </tbody>
             </table>
-            <!--v-if-->
+            <!---->
           </div>
         </div>
       </div>
@@ -1622,36 +1622,28 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   <th
                     class="t-table__th-applicant"
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       标题
                     </div>
                   </th>
                   <th
                     class="t-table__th-status"
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       标题
                     </div>
                   </th>
                   <th
                     class="t-table__th-channel"
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       标题
                     </div>
                   </th>
                   <th
                     class="t-table__th-detail.email"
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       标题
                     </div>
                   </th>
@@ -1667,36 +1659,28 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       横向平铺内容不省略
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       横向平铺内容不省略
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       横向平铺内容不省略
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       横向平铺内容不省略
                     </div>
                   </td>
@@ -1707,36 +1691,28 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
@@ -1747,36 +1723,28 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
@@ -1787,36 +1755,28 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       横向平铺内容不省略
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       横向平铺内容不省略
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       横向平铺内容不省略
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       横向平铺内容不省略
                     </div>
                   </td>
@@ -1827,36 +1787,28 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
@@ -1865,7 +1817,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 
               </tbody>
             </table>
-            <!--v-if-->
+            <!---->
           </div>
         </div>
       </div>
@@ -1925,27 +1877,21 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   <th
                     class="t-table__th-applicant"
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       标题
                     </div>
                   </th>
                   <th
                     class="t-table__th-status"
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       标题
                     </div>
                   </th>
                   <th
                     class="t-table__th-channel"
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       标题
                     </div>
                   </th>
@@ -1970,27 +1916,21 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
@@ -2010,27 +1950,21 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
@@ -2050,27 +1984,21 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
@@ -2090,27 +2018,21 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
@@ -2130,27 +2052,21 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
@@ -2170,27 +2086,21 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
@@ -2210,27 +2120,21 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
@@ -2250,27 +2154,21 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
@@ -2290,27 +2188,21 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
@@ -2330,27 +2222,21 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
                   <td
                     class=""
                   >
-                    <div
-                      class=""
-                    >
+                    <div>
                       内容
                     </div>
                   </td>
@@ -2368,7 +2254,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 
               </tbody>
             </table>
-            <!--v-if-->
+            <!---->
           </div>
         </div>
       </div>
@@ -2870,7 +2756,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 
               </tbody>
             </table>
-            <!--v-if-->
+            <!---->
           </div>
         </div>
       </div>
@@ -2916,36 +2802,28 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
             <th
               class="t-table__th-applicant"
             >
-              <div
-                class=""
-              >
+              <div>
                 标题
               </div>
             </th>
             <th
               class="t-table__th-status"
             >
-              <div
-                class=""
-              >
+              <div>
                 标题
               </div>
             </th>
             <th
               class="t-table__th-channel"
             >
-              <div
-                class=""
-              >
+              <div>
                 标题
               </div>
             </th>
             <th
               class="t-table__th-detail.email"
             >
-              <div
-                class=""
-              >
+              <div>
                 标题
               </div>
             </th>
@@ -2961,36 +2839,28 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 横向平铺内容不省略
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 横向平铺内容不省略
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 横向平铺内容不省略
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 横向平铺内容不省略
               </div>
             </td>
@@ -3001,36 +2871,28 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
@@ -3041,36 +2903,28 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
@@ -3081,36 +2935,28 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 横向平铺内容不省略
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 横向平铺内容不省略
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 横向平铺内容不省略
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 横向平铺内容不省略
               </div>
             </td>
@@ -3121,36 +2967,28 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
@@ -3159,7 +2997,7 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
           
         </tbody>
       </table>
-      <!--v-if-->
+      <!---->
     </div>
   </div>
 </div>
@@ -3202,27 +3040,21 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             <th
               class="t-table__th-applicant"
             >
-              <div
-                class=""
-              >
+              <div>
                 标题
               </div>
             </th>
             <th
               class="t-table__th-status"
             >
-              <div
-                class=""
-              >
+              <div>
                 标题
               </div>
             </th>
             <th
               class="t-table__th-channel"
             >
-              <div
-                class=""
-              >
+              <div>
                 标题
               </div>
             </th>
@@ -3247,27 +3079,21 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
@@ -3287,27 +3113,21 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
@@ -3327,27 +3147,21 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
@@ -3367,27 +3181,21 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
@@ -3407,27 +3215,21 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
@@ -3447,27 +3249,21 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
@@ -3487,27 +3283,21 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
@@ -3527,27 +3317,21 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
@@ -3567,27 +3351,21 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
@@ -3607,27 +3385,21 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
             <td
               class=""
             >
-              <div
-                class=""
-              >
+              <div>
                 内容
               </div>
             </td>
@@ -3645,7 +3417,7 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
           
         </tbody>
       </table>
-      <!--v-if-->
+      <!---->
     </div>
   </div>
 </div>

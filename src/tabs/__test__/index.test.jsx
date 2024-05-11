@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { ref } from 'vue';
 import { Tabs, TabPanel } from '../index';
-import TTabNav from '../tab-nav-item.vue';
+import TTabNav from '../tab-nav-item';
 import { sleep } from '../../shared/util';
 import Sticky from '../../sticky/index';
 import { trigger } from '../../image-viewer/__test__/touch';

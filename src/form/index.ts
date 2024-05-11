@@ -1,5 +1,5 @@
-import _Form from './form.vue';
-import _FormItem from './form-item.vue';
+import _Form from './form';
+import _FormItem from './form-item';
 import { withInstall, WithInstallType } from '../shared';
 import { TdFormProps, TdFormItemProps } from './type';
 

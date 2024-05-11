@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import TTable from '../base-table.vue';
+import TTable from '../base-table';
 import config from '../../config';
 import { nextTick } from 'vue';
 

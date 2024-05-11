@@ -1,10 +1,3 @@
-<template>
-  <form ref="formRef" :class="formClass" :onSubmit="(e) => onSubmit(e)" :onReset="(e) => onReset(e)">
-    <slot></slot>
-  </form>
-</template>
-
-<script lang="ts">
 import { computed, defineComponent, provide, reactive, ref, toRefs } from 'vue';
 import isEmpty from 'lodash/isEmpty';
 import isArray from 'lodash/isArray';
@@ -24,7 +17,8 @@ import { FormDisabledProvider } from './hooks';
 import config from '../config';
 import { renderContent } from '../shared';
 import { preventDefault } from '../shared/dom';
-import { FormItemValidateResult } from './form-item.vue';
+import { FormItemValidateResult } from './form-item';
+import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
 const name = `${prefix}-form`;
@@ -50,6 +44,7 @@ export default defineComponent({
   name,
   props,
   setup(props, { expose }) {
+    const renderTNodeJSX = useTNodeJSX();
     const {
       disabled,
       showErrorMessage,
@@ -181,12 +176,12 @@ export default defineComponent({
 
     expose({ validate, submit, reset, clearValidate, setValidateMessage });
 
-    return {
-      formRef,
-      formClass,
-      onSubmit,
-      onReset,
+    return () => {
+      return (
+        <form ref={formRef} class={formClass.value} onSubmit={(e) => onSubmit(e)} onReset={(e) => onReset(e)}>
+          {renderTNodeJSX('default')}
+        </form>
+      );
     };
   },
 });
-</script>
