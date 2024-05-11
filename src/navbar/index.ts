@@ -1,4 +1,4 @@
-import Navbar from './navbar.vue';
+import Navbar from './navbar';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';
