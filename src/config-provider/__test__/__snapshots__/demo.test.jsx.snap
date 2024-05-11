@@ -114,7 +114,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 Uploading...
               </div>
               
-              <!--v-if-->
+              <!---->
             </div>
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
@@ -198,7 +198,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 68%
               </div>
               
-              <!--v-if-->
+              <!---->
             </div>
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
@@ -294,7 +294,6 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
             </svg>
           </div>
           
-          
           <div
             class="t-upload__item t-upload__item--add"
           >
@@ -315,7 +314,6 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               </svg>
             </div>
           </div>
-          
           <input
             accept="image/png"
             hidden=""
@@ -379,27 +377,21 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 <th
                   class="t-table__th-type"
                 >
-                  <div
-                    class=""
-                  >
+                  <div>
                     Type
                   </div>
                 </th>
                 <th
                   class="t-table__th-platform"
                 >
-                  <div
-                    class=""
-                  >
+                  <div>
                     Platform
                   </div>
                 </th>
                 <th
                   class="t-table__th-property"
                 >
-                  <div
-                    class=""
-                  >
+                  <div>
                     Property
                   </div>
                 </th>
@@ -424,7 +416,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               </tr>
             </tbody>
           </table>
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       
@@ -5936,27 +5928,21 @@ exports[`ConfigProvider > ConfigProvider tableEnVue demo works fine 1`] = `
             <th
               class="t-table__th-type"
             >
-              <div
-                class=""
-              >
+              <div>
                 Type
               </div>
             </th>
             <th
               class="t-table__th-platform"
             >
-              <div
-                class=""
-              >
+              <div>
                 Platform
               </div>
             </th>
             <th
               class="t-table__th-property"
             >
-              <div
-                class=""
-              >
+              <div>
                 Property
               </div>
             </th>
@@ -5981,7 +5967,7 @@ exports[`ConfigProvider > ConfigProvider tableEnVue demo works fine 1`] = `
           </tr>
         </tbody>
       </table>
-      <!--v-if-->
+      <!---->
     </div>
   </div>
   
@@ -6071,7 +6057,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
             Uploading...
           </div>
           
-          <!--v-if-->
+          <!---->
         </div>
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
@@ -6155,7 +6141,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
             68%
           </div>
           
-          <!--v-if-->
+          <!---->
         </div>
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
@@ -6251,7 +6237,6 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
         </svg>
       </div>
       
-      
       <div
         class="t-upload__item t-upload__item--add"
       >
@@ -6272,7 +6257,6 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
           </svg>
         </div>
       </div>
-      
       <input
         accept="image/png"
         hidden=""
