@@ -106,10 +106,6 @@ exports[`cascader > events > : pick 1`] = `
                   <div
                     class="t-radio__icon t-radio__icon--right"
                   >
-                    <!--v-if-->
-                    <!--v-if-->
-                    <!--v-if-->
-                    <!--v-if-->
                     <div
                       class="placeholder"
                     />
@@ -124,9 +120,9 @@ exports[`cascader > events > : pick 1`] = `
                     >
                       北京市
                     </span>
-                    <!--v-if-->
+                    <!---->
                   </div>
-                  <!--v-if-->
+                  <!---->
                 </div>
                 <div
                   class="t-radio t-radio--right t-radio--block"
@@ -140,10 +136,6 @@ exports[`cascader > events > : pick 1`] = `
                   <div
                     class="t-radio__icon t-radio__icon--right"
                   >
-                    <!--v-if-->
-                    <!--v-if-->
-                    <!--v-if-->
-                    <!--v-if-->
                     <div
                       class="placeholder"
                     />
@@ -158,12 +150,12 @@ exports[`cascader > events > : pick 1`] = `
                     >
                       天津市
                     </span>
-                    <!--v-if-->
+                    <!---->
                   </div>
-                  <!--v-if-->
+                  <!---->
                 </div>
                 
-                <!--v-if-->
+                <!---->
               </div>
             </div>
           </div>

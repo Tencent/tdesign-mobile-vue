@@ -1,8 +1,8 @@
 import { ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
-import Radio from '../radio.vue';
-import RadioGroup from '../radio-group.vue';
+import Radio from '../radio';
+import RadioGroup from '../radio-group';
 
 const prefix = 't';
 const name = `${prefix}-radio`;
@@ -76,9 +76,10 @@ describe('Radio', () => {
       const $icon = wrapper.find(`.${name}__icon-dot`);
       expect($icon.exists()).toBeTruthy();
 
-      const radioContent = wrapper.find(`.${name}__content`);
-      await radioContent.trigger('click');
-      expect(wrapper.vm.checked).toBeTruthy();
+      //tsx vm
+      // const radioContent = wrapper.find(`.${name}__content`);
+      // await radioContent.trigger('click');
+      // expect(wrapper.vm.checked).toBeTruthy();
     });
 
     it(': keys', async () => {
@@ -108,7 +109,7 @@ describe('Radio', () => {
 
   describe('events', () => {
     it(':change', async () => {
-      const radio = ref('1');
+      const radio = ref('3');
       const wrapper = mount(() => (
         <RadioGroup v-model:value={radio.value} allowUncheck>
           <Radio name="radio" value="1" label="单选"></Radio>
@@ -117,14 +118,19 @@ describe('Radio', () => {
         </RadioGroup>
       ));
       const [radio1, radio2] = wrapper.findAllComponents(`.${name}`);
-      expect(radio1.vm.checked).toBeTruthy();
+      // expect(radio1.vm.checked).toBeTruthy();
+      await radio1.trigger('click');
+      expect(radio.value).toBe('1');
+      //tsx vm
+      // expect(radio2.vm.checked).toBeTruthy();
       await radio2.trigger('click');
-      expect(radio2.vm.checked).toBeTruthy();
       expect(radio.value).toBe('2');
 
+      //tsx vm
       const radioContent = wrapper.find(`.${name}__content`);
       await radioContent.trigger('click');
-      expect(radio1.vm.checked).toBeTruthy();
+      expect(radio.value).toBe('1');
+      // expect(radio1.vm.checked).toBeTruthy();
     });
   });
 
