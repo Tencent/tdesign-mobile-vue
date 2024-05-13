@@ -1,6 +1,6 @@
 import isString from 'lodash/isString';
 import isFunction from 'lodash/isFunction';
-import { AttachNode } from '@/common';
+import { AttachNode } from '../../common';
 import { elementInViewport, getWindowScroll, getWindowSize } from '../../shared/dom';
 /**
  * 获取元素某个 css 对应的值

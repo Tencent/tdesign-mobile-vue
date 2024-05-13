@@ -3,8 +3,8 @@ import { CloseIcon, CheckIcon } from 'tdesign-icons-vue-next';
 
 import props from './step-item-props';
 import config from '../config';
-import { usePrefixClass } from '@/hooks/useClass';
-import { useTNodeJSX } from '@/hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
+import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
 const name = `${prefix}-step-item`;
