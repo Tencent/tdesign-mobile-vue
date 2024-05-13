@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 
-import Slider from '../slider.vue';
+import Slider from '../slider';
 import { trigger } from '../../image-viewer/__test__/touch';
 
 const classPrefix = 't-slider';
@@ -81,7 +81,9 @@ describe('slider', () => {
       
       await wrapper.setProps({ value: [0, 80]})
 
-      expect(wrapper.vm.state.lineRight).toBe(68)
+      expect(wrapper.find('.t-slider__line--default').attributes('style').includes(`right: 68px`)).toBeTruthy()
+      expect(wrapper.find('.t-slider__dot--left').text()).toBe('0')
+      expect(wrapper.find('.t-slider__dot--right').text()).toBe('80')
 
       // restore
       window.HTMLElement.prototype.getBoundingClientRect = original;
@@ -104,7 +106,7 @@ describe('slider', () => {
         },
       });
 
-      const $line = wrapper.find({ ref: 'sliderLine' })
+      const $line = wrapper.find('.t-slider__line')
       await $line.trigger('click', { clientX: 200 })
       expect(onChange).toHaveBeenCalledWith([0, calcValue(200)])
 
@@ -112,8 +114,8 @@ describe('slider', () => {
       // // restore
       window.HTMLElement.prototype.getBoundingClientRect = original;
       // mock dot bounding client rect
-      const $leftDot = wrapper.find({ ref: 'leftDot' });
-      const $rightDot = wrapper.find({ ref: 'rightDot' });
+      const $leftDot = wrapper.find('.t-slider__dot--left');
+      const $rightDot = wrapper.find('.t-slider__dot--right');
       vi.spyOn($leftDot.wrapperElement, 'getBoundingClientRect').mockReturnValue({ left: 16 })
       vi.spyOn($rightDot.wrapperElement, 'getBoundingClientRect').mockReturnValue({ left: 359 })
       await $line.trigger('click', { clientX: 50 })
@@ -136,7 +138,7 @@ describe('slider', () => {
         },
       });
       
-      const $line = wrapper.find({ ref: 'sliderLine' })
+      const $line = wrapper.find('.t-slider__line')
       
       await $line.trigger('click', { clientX })
 
@@ -183,14 +185,14 @@ describe('slider', () => {
         },
       });
       
-      const $line = wrapper.find({ ref: 'sliderLine' })
-      const $dot = wrapper.find({ ref: 'singleDot' })
+      const $line = wrapper.find('.t-slider__line')
+      const $dot = wrapper.find('.t-slider__dot')
 
       await $line.trigger('click', { clientX })
 
       expect(onChange).toHaveBeenCalledWith(calcValue(clientX))
       
-      await trigger($dot, 'touchmove', 100, 0);
+      await move($dot,100);
 
       expect(onChange).toHaveBeenCalledWith(calcValue(100))
 
@@ -215,8 +217,8 @@ describe('slider', () => {
         },
       });
       
-      const $leftDot = wrapper.find({ ref: 'leftDot' })
-      const $rightDot = wrapper.find({ ref: 'rightDot' })
+      const $leftDot = wrapper.find('.t-slider__dot--left')
+      const $rightDot = wrapper.find('.t-slider__dot--right')
       
       await move($leftDot, 100);
       const leftValue = round((100 - left) / (right - left) * 100);

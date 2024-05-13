@@ -901,12 +901,11 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           class="t-slider"
           data-v-0fadab4c=""
         >
-          
-          <!--v-if-->
+          <!---->
           <div
             class="t-slider__bar t-slider__bar--default"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__line t-slider__line--default t-slider__line--single"
               style=""
@@ -914,16 +913,14 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
               <div
                 class="t-slider__dot"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-slider__dot-slider"
                 />
               </div>
             </div>
           </div>
-          <!--v-if-->
-          
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       
@@ -1136,12 +1133,11 @@ exports[`Loading > Loading speedVue demo works fine 1`] = `
       class="t-slider"
       data-v-0fadab4c=""
     >
-      
-      <!--v-if-->
+      <!---->
       <div
         class="t-slider__bar t-slider__bar--default"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-slider__line t-slider__line--default t-slider__line--single"
           style=""
@@ -1149,16 +1145,14 @@ exports[`Loading > Loading speedVue demo works fine 1`] = `
           <div
             class="t-slider__dot"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__dot-slider"
             />
           </div>
         </div>
       </div>
-      <!--v-if-->
-      
-      <!--v-if-->
+      <!---->
     </div>
   </div>
   

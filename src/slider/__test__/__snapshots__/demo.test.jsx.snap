@@ -9,12 +9,11 @@ exports[`Slider > Slider baseVue demo works fine 1`] = `
     class="t-slider"
     data-v-5350d6f5=""
   >
-    
-    <!--v-if-->
+    <!---->
     <div
       class="t-slider__bar t-slider__bar--default"
     >
-      <!--v-if-->
+      <!---->
       <div
         class="t-slider__line t-slider__line--default t-slider__line--single"
         style=""
@@ -22,16 +21,14 @@ exports[`Slider > Slider baseVue demo works fine 1`] = `
         <div
           class="t-slider__dot"
         >
-          <!--v-if-->
+          <!---->
           <div
             class="t-slider__dot-slider"
           />
         </div>
       </div>
     </div>
-    <!--v-if-->
-    
-    <!--v-if-->
+    <!---->
   </div>
 </div>
 `;
@@ -49,12 +46,11 @@ exports[`Slider > Slider capsuleVue demo works fine 1`] = `
       class="t-slider"
       data-v-a6c0268e=""
     >
-      
-      <!--v-if-->
+      <!---->
       <div
         class="t-slider__bar t-slider__bar--capsule"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-slider__line t-slider__line--capsule t-slider__line--single"
           style=""
@@ -62,16 +58,14 @@ exports[`Slider > Slider capsuleVue demo works fine 1`] = `
           <div
             class="t-slider__dot"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__dot-slider"
             />
           </div>
         </div>
       </div>
-      <!--v-if-->
-      
-      <!--v-if-->
+      <!---->
     </div>
   </div>
   <div
@@ -82,13 +76,11 @@ exports[`Slider > Slider capsuleVue demo works fine 1`] = `
       class="t-slider t-slider--range"
       data-v-a6c0268e=""
     >
-      <!--v-if-->
-      
-      <!--v-if-->
+      <!---->
       <div
         class="t-slider__bar t-slider__bar--capsule"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-slider__line t-slider__line--capsule"
           style="left: 0px; right: 0px;"
@@ -96,7 +88,7 @@ exports[`Slider > Slider capsuleVue demo works fine 1`] = `
           <div
             class="t-slider__dot t-slider__dot--left"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__dot-slider"
             />
@@ -104,15 +96,14 @@ exports[`Slider > Slider capsuleVue demo works fine 1`] = `
           <div
             class="t-slider__dot t-slider__dot--right"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__dot-slider"
             />
           </div>
         </div>
       </div>
-      <!--v-if-->
-      
+      <!---->
     </div>
   </div>
   <div
@@ -123,13 +114,11 @@ exports[`Slider > Slider capsuleVue demo works fine 1`] = `
       class="t-slider t-slider--top t-slider--range"
       data-v-a6c0268e=""
     >
-      <!--v-if-->
-      
-      <!--v-if-->
+      <!---->
       <div
         class="t-slider__bar t-slider__bar--capsule"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-slider__line t-slider__line--capsule"
           style="left: 0px; right: 0px;"
@@ -160,8 +149,7 @@ exports[`Slider > Slider capsuleVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <!--v-if-->
-      
+      <!---->
     </div>
   </div>
   <div
@@ -172,12 +160,11 @@ exports[`Slider > Slider capsuleVue demo works fine 1`] = `
       class="t-slider"
       data-v-a6c0268e=""
     >
-      
-      <!--v-if-->
+      <!---->
       <div
         class="t-slider__bar t-slider__bar--capsule"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-slider__line t-slider__line--capsule t-slider__line--single"
           style=""
@@ -185,16 +172,14 @@ exports[`Slider > Slider capsuleVue demo works fine 1`] = `
           <div
             class="t-slider__dot"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__dot-slider"
             />
           </div>
         </div>
       </div>
-      <!--v-if-->
-      
-      <!--v-if-->
+      <!---->
     </div>
   </div>
   <div
@@ -205,13 +190,11 @@ exports[`Slider > Slider capsuleVue demo works fine 1`] = `
       class="t-slider t-slider--range"
       data-v-a6c0268e=""
     >
-      <!--v-if-->
-      
-      <!--v-if-->
+      <!---->
       <div
         class="t-slider__bar t-slider__bar--capsule"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-slider__line t-slider__line--capsule"
           style="left: 0px; right: 0px;"
@@ -219,7 +202,7 @@ exports[`Slider > Slider capsuleVue demo works fine 1`] = `
           <div
             class="t-slider__dot t-slider__dot--left"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__dot-slider"
             />
@@ -227,15 +210,14 @@ exports[`Slider > Slider capsuleVue demo works fine 1`] = `
           <div
             class="t-slider__dot t-slider__dot--right"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__dot-slider"
             />
           </div>
         </div>
       </div>
-      <!--v-if-->
-      
+      <!---->
     </div>
   </div>
   
@@ -255,12 +237,11 @@ exports[`Slider > Slider disabledVue demo works fine 1`] = `
       class="t-slider t-slider--disabled"
       data-v-53635720=""
     >
-      
-      <!--v-if-->
+      <!---->
       <div
         class="t-slider__bar t-slider__bar--default t-slider__bar--disabled"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-slider__line t-slider__line--default t-slider__line--single t-slider__line--disabled"
           style=""
@@ -268,16 +249,14 @@ exports[`Slider > Slider disabledVue demo works fine 1`] = `
           <div
             class="t-slider__dot"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__dot-slider"
             />
           </div>
         </div>
       </div>
-      <!--v-if-->
-      
-      <!--v-if-->
+      <!---->
     </div>
   </div>
   <div
@@ -288,8 +267,6 @@ exports[`Slider > Slider disabledVue demo works fine 1`] = `
       class="t-slider t-slider--top t-slider--disabled t-slider--range"
       data-v-53635720=""
     >
-      <!--v-if-->
-      
       <text
         class="t-slider__range-extreme t-slider__range-extreme--min"
       >
@@ -298,7 +275,7 @@ exports[`Slider > Slider disabledVue demo works fine 1`] = `
       <div
         class="t-slider__bar t-slider__bar--default t-slider__bar--disabled"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-slider__line t-slider__line--default t-slider__line--disabled"
           style="left: 0px; right: 0px;"
@@ -334,7 +311,6 @@ exports[`Slider > Slider disabledVue demo works fine 1`] = `
       >
         100
       </text>
-      
     </div>
   </div>
   <div
@@ -345,13 +321,11 @@ exports[`Slider > Slider disabledVue demo works fine 1`] = `
       class="t-slider t-slider--disabled t-slider--range"
       data-v-53635720=""
     >
-      <!--v-if-->
-      
-      <!--v-if-->
+      <!---->
       <div
         class="t-slider__bar t-slider__bar--default t-slider__bar--disabled"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-slider__line t-slider__line--default t-slider__line--disabled"
           style="left: 0px; right: 0px;"
@@ -359,7 +333,7 @@ exports[`Slider > Slider disabledVue demo works fine 1`] = `
           <div
             class="t-slider__dot t-slider__dot--left"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__dot-slider"
             />
@@ -367,15 +341,14 @@ exports[`Slider > Slider disabledVue demo works fine 1`] = `
           <div
             class="t-slider__dot t-slider__dot--right"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__dot-slider"
             />
           </div>
         </div>
       </div>
-      <!--v-if-->
-      
+      <!---->
     </div>
   </div>
   
@@ -395,12 +368,11 @@ exports[`Slider > Slider labelVue demo works fine 1`] = `
       class="t-slider t-slider--top"
       data-v-61756b00=""
     >
-      
-      <!--v-if-->
+      <!---->
       <div
         class="t-slider__bar t-slider__bar--default"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-slider__line t-slider__line--default t-slider__line--single"
           style=""
@@ -419,9 +391,7 @@ exports[`Slider > Slider labelVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <!--v-if-->
-      
-      <!--v-if-->
+      <!---->
     </div>
   </div>
   <div
@@ -432,8 +402,6 @@ exports[`Slider > Slider labelVue demo works fine 1`] = `
       class="t-slider t-slider--top t-slider--range"
       data-v-61756b00=""
     >
-      <!--v-if-->
-      
       <text
         class="t-slider__range-extreme t-slider__range-extreme--min"
       >
@@ -442,7 +410,7 @@ exports[`Slider > Slider labelVue demo works fine 1`] = `
       <div
         class="t-slider__bar t-slider__bar--default"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-slider__line t-slider__line--default"
           style="left: 0px; right: 0px;"
@@ -478,7 +446,6 @@ exports[`Slider > Slider labelVue demo works fine 1`] = `
       >
         100
       </text>
-      
     </div>
   </div>
   
@@ -533,12 +500,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           class="t-slider"
           data-v-5350d6f5=""
         >
-          
-          <!--v-if-->
+          <!---->
           <div
             class="t-slider__bar t-slider__bar--default"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__line t-slider__line--default t-slider__line--single"
               style=""
@@ -546,16 +512,14 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               <div
                 class="t-slider__dot"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-slider__dot-slider"
                 />
               </div>
             </div>
           </div>
-          <!--v-if-->
-          
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       
@@ -588,13 +552,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           class="t-slider t-slider--range"
           data-v-58e1d8c9=""
         >
-          <!--v-if-->
-          
-          <!--v-if-->
+          <!---->
           <div
             class="t-slider__bar t-slider__bar--default"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__line t-slider__line--default"
               style="left: 0px; right: 0px;"
@@ -602,7 +564,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               <div
                 class="t-slider__dot t-slider__dot--left"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-slider__dot-slider"
                 />
@@ -610,15 +572,14 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               <div
                 class="t-slider__dot t-slider__dot--right"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-slider__dot-slider"
                 />
               </div>
             </div>
           </div>
-          <!--v-if-->
-          
+          <!---->
         </div>
       </div>
       
@@ -651,12 +612,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           class="t-slider t-slider--top"
           data-v-61756b00=""
         >
-          
-          <!--v-if-->
+          <!---->
           <div
             class="t-slider__bar t-slider__bar--default"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__line t-slider__line--default t-slider__line--single"
               style=""
@@ -675,9 +635,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               </div>
             </div>
           </div>
-          <!--v-if-->
-          
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       <div
@@ -688,8 +646,6 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           class="t-slider t-slider--top t-slider--range"
           data-v-61756b00=""
         >
-          <!--v-if-->
-          
           <text
             class="t-slider__range-extreme t-slider__range-extreme--min"
           >
@@ -698,7 +654,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           <div
             class="t-slider__bar t-slider__bar--default"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__line t-slider__line--default"
               style="left: 0px; right: 0px;"
@@ -734,7 +690,6 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           >
             100
           </text>
-          
         </div>
       </div>
       
@@ -768,12 +723,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           class="t-slider"
           data-v-0f126170=""
         >
-          
-          <!--v-if-->
+          <!---->
           <div
             class="t-slider__bar t-slider__bar--default"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__line t-slider__line--default t-slider__line--single"
               style=""
@@ -781,16 +735,14 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               <div
                 class="t-slider__dot"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-slider__dot-slider"
                 />
               </div>
             </div>
           </div>
-          <!--v-if-->
-          
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       <div
@@ -801,13 +753,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           class="t-slider t-slider--range"
           data-v-0f126170=""
         >
-          <!--v-if-->
-          
-          <!--v-if-->
+          <!---->
           <div
             class="t-slider__bar t-slider__bar--default"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__line t-slider__line--default"
               style="left: 0px; right: 0px;"
@@ -815,7 +765,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               <div
                 class="t-slider__dot t-slider__dot--left"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-slider__dot-slider"
                 />
@@ -823,15 +773,14 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               <div
                 class="t-slider__dot t-slider__dot--right"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-slider__dot-slider"
                 />
               </div>
             </div>
           </div>
-          <!--v-if-->
-          
+          <!---->
         </div>
       </div>
       
@@ -869,12 +818,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           class="t-slider t-slider--disabled"
           data-v-53635720=""
         >
-          
-          <!--v-if-->
+          <!---->
           <div
             class="t-slider__bar t-slider__bar--default t-slider__bar--disabled"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__line t-slider__line--default t-slider__line--single t-slider__line--disabled"
               style=""
@@ -882,16 +830,14 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               <div
                 class="t-slider__dot"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-slider__dot-slider"
                 />
               </div>
             </div>
           </div>
-          <!--v-if-->
-          
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       <div
@@ -902,8 +848,6 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           class="t-slider t-slider--top t-slider--disabled t-slider--range"
           data-v-53635720=""
         >
-          <!--v-if-->
-          
           <text
             class="t-slider__range-extreme t-slider__range-extreme--min"
           >
@@ -912,7 +856,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           <div
             class="t-slider__bar t-slider__bar--default t-slider__bar--disabled"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__line t-slider__line--default t-slider__line--disabled"
               style="left: 0px; right: 0px;"
@@ -948,7 +892,6 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           >
             100
           </text>
-          
         </div>
       </div>
       <div
@@ -959,13 +902,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           class="t-slider t-slider--disabled t-slider--range"
           data-v-53635720=""
         >
-          <!--v-if-->
-          
-          <!--v-if-->
+          <!---->
           <div
             class="t-slider__bar t-slider__bar--default t-slider__bar--disabled"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__line t-slider__line--default t-slider__line--disabled"
               style="left: 0px; right: 0px;"
@@ -973,7 +914,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               <div
                 class="t-slider__dot t-slider__dot--left"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-slider__dot-slider"
                 />
@@ -981,15 +922,14 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               <div
                 class="t-slider__dot t-slider__dot--right"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-slider__dot-slider"
                 />
               </div>
             </div>
           </div>
-          <!--v-if-->
-          
+          <!---->
         </div>
       </div>
       
@@ -1027,12 +967,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           class="t-slider"
           data-v-a6c0268e=""
         >
-          
-          <!--v-if-->
+          <!---->
           <div
             class="t-slider__bar t-slider__bar--capsule"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__line t-slider__line--capsule t-slider__line--single"
               style=""
@@ -1040,16 +979,14 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               <div
                 class="t-slider__dot"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-slider__dot-slider"
                 />
               </div>
             </div>
           </div>
-          <!--v-if-->
-          
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       <div
@@ -1060,13 +997,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           class="t-slider t-slider--range"
           data-v-a6c0268e=""
         >
-          <!--v-if-->
-          
-          <!--v-if-->
+          <!---->
           <div
             class="t-slider__bar t-slider__bar--capsule"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__line t-slider__line--capsule"
               style="left: 0px; right: 0px;"
@@ -1074,7 +1009,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               <div
                 class="t-slider__dot t-slider__dot--left"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-slider__dot-slider"
                 />
@@ -1082,15 +1017,14 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               <div
                 class="t-slider__dot t-slider__dot--right"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-slider__dot-slider"
                 />
               </div>
             </div>
           </div>
-          <!--v-if-->
-          
+          <!---->
         </div>
       </div>
       <div
@@ -1101,13 +1035,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           class="t-slider t-slider--top t-slider--range"
           data-v-a6c0268e=""
         >
-          <!--v-if-->
-          
-          <!--v-if-->
+          <!---->
           <div
             class="t-slider__bar t-slider__bar--capsule"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__line t-slider__line--capsule"
               style="left: 0px; right: 0px;"
@@ -1138,8 +1070,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               </div>
             </div>
           </div>
-          <!--v-if-->
-          
+          <!---->
         </div>
       </div>
       <div
@@ -1150,12 +1081,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           class="t-slider"
           data-v-a6c0268e=""
         >
-          
-          <!--v-if-->
+          <!---->
           <div
             class="t-slider__bar t-slider__bar--capsule"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__line t-slider__line--capsule t-slider__line--single"
               style=""
@@ -1163,16 +1093,14 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               <div
                 class="t-slider__dot"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-slider__dot-slider"
                 />
               </div>
             </div>
           </div>
-          <!--v-if-->
-          
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       <div
@@ -1183,13 +1111,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           class="t-slider t-slider--range"
           data-v-a6c0268e=""
         >
-          <!--v-if-->
-          
-          <!--v-if-->
+          <!---->
           <div
             class="t-slider__bar t-slider__bar--capsule"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__line t-slider__line--capsule"
               style="left: 0px; right: 0px;"
@@ -1197,7 +1123,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               <div
                 class="t-slider__dot t-slider__dot--left"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-slider__dot-slider"
                 />
@@ -1205,15 +1131,14 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               <div
                 class="t-slider__dot t-slider__dot--right"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-slider__dot-slider"
                 />
               </div>
             </div>
           </div>
-          <!--v-if-->
-          
+          <!---->
         </div>
       </div>
       
@@ -1232,13 +1157,11 @@ exports[`Slider > Slider rangeVue demo works fine 1`] = `
     class="t-slider t-slider--range"
     data-v-58e1d8c9=""
   >
-    <!--v-if-->
-    
-    <!--v-if-->
+    <!---->
     <div
       class="t-slider__bar t-slider__bar--default"
     >
-      <!--v-if-->
+      <!---->
       <div
         class="t-slider__line t-slider__line--default"
         style="left: 0px; right: 0px;"
@@ -1246,7 +1169,7 @@ exports[`Slider > Slider rangeVue demo works fine 1`] = `
         <div
           class="t-slider__dot t-slider__dot--left"
         >
-          <!--v-if-->
+          <!---->
           <div
             class="t-slider__dot-slider"
           />
@@ -1254,15 +1177,14 @@ exports[`Slider > Slider rangeVue demo works fine 1`] = `
         <div
           class="t-slider__dot t-slider__dot--right"
         >
-          <!--v-if-->
+          <!---->
           <div
             class="t-slider__dot-slider"
           />
         </div>
       </div>
     </div>
-    <!--v-if-->
-    
+    <!---->
   </div>
 </div>
 `;
@@ -1280,12 +1202,11 @@ exports[`Slider > Slider stepVue demo works fine 1`] = `
       class="t-slider"
       data-v-0f126170=""
     >
-      
-      <!--v-if-->
+      <!---->
       <div
         class="t-slider__bar t-slider__bar--default"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-slider__line t-slider__line--default t-slider__line--single"
           style=""
@@ -1293,16 +1214,14 @@ exports[`Slider > Slider stepVue demo works fine 1`] = `
           <div
             class="t-slider__dot"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__dot-slider"
             />
           </div>
         </div>
       </div>
-      <!--v-if-->
-      
-      <!--v-if-->
+      <!---->
     </div>
   </div>
   <div
@@ -1313,13 +1232,11 @@ exports[`Slider > Slider stepVue demo works fine 1`] = `
       class="t-slider t-slider--range"
       data-v-0f126170=""
     >
-      <!--v-if-->
-      
-      <!--v-if-->
+      <!---->
       <div
         class="t-slider__bar t-slider__bar--default"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-slider__line t-slider__line--default"
           style="left: 0px; right: 0px;"
@@ -1327,7 +1244,7 @@ exports[`Slider > Slider stepVue demo works fine 1`] = `
           <div
             class="t-slider__dot t-slider__dot--left"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__dot-slider"
             />
@@ -1335,15 +1252,14 @@ exports[`Slider > Slider stepVue demo works fine 1`] = `
           <div
             class="t-slider__dot t-slider__dot--right"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__dot-slider"
             />
           </div>
         </div>
       </div>
-      <!--v-if-->
-      
+      <!---->
     </div>
   </div>
   

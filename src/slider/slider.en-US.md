@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Slider Props
 
 name | type | default | description | required
@@ -13,23 +14,19 @@ min | Number | 0 | \- | N
 range | Boolean | false | \- | N
 showExtremeValue | Boolean | false | \- | N
 step | Number | 1 | \- | N
-theme | String | default | options：default/capsule | N
+theme | String | default | options: default/capsule | N
 value | Number / Array | 0 | `v-model` and `v-model:value` is supported。Typescript：`SliderValue` `type SliderValue = number \| Array<number>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/slider/type.ts) | N
 defaultValue | Number / Array | 0 | uncontrolled property。Typescript：`SliderValue` `type SliderValue = number \| Array<number>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/slider/type.ts) | N
 onChange | Function |  | Typescript：`(value: SliderValue) => void`<br/> | N
-onDragend | Function |  | Typescript：`() => void`<br/> | N
-onDragstart | Function |  | Typescript：`() => void`<br/> | N
 
 ### Slider Events
 
 name | params | description
 -- | -- | --
 change | `(value: SliderValue)` | \-
-dragend | \- | \-
-dragstart | \- | \-
 
+### CSS 变量
 
-### CSS Variables
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
@@ -44,4 +41,4 @@ Name | Default Value | Description
 --td-slider-disabled-text-color | @font-gray-4 | - 
 --td-slider-dot-bg-color | @bg-color-container | - 
 --td-slider-dot-color | @bg-color-secondarycontainer | - 
---td-slider-dot-size | 20px | - 
+--td-slider-dot-size | 20px | -
