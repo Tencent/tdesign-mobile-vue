@@ -3,8 +3,8 @@ import props from './props';
 import config from '../config';
 import { TdStepsProps } from './type';
 import { useDefault } from '../shared';
-import { useTNodeJSX } from '@/hooks/tnode';
-import { usePrefixClass } from '@/hooks/useClass';
+import { useTNodeJSX } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
 const name = `${prefix}-steps`;

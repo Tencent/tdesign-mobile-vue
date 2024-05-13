@@ -6,8 +6,8 @@ import InputProps from './props';
 import { InputValue, TdInputProps } from './type';
 import { getCharacterLength, useDefault, extendAPI } from '../shared';
 import { useFormDisabled } from '../form/hooks';
-import { usePrefixClass } from '@/hooks/useClass';
-import { useTNodeJSX } from '@/hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
+import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
 const name = `${prefix}-input`;

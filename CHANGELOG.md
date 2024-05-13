@@ -5,6 +5,10 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.2.2 `2024-05-13` 
+### 🚧 Others
+- chore: aliases are not used inside components @anlyyao ([#1394](https://github.com/Tencent/tdesign-mobile-vue/pull/1394))
+
 ## 🌈 1.2.1 `2024-05-11` 
 ### 🚀 Features
 - `Indexes`: `sfc` to `tsx`. @liweijie0812 ([#1327](https://github.com/Tencent/tdesign-mobile-vue/pull/1327))

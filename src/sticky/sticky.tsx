@@ -2,8 +2,8 @@ import { computed, defineComponent, ref, watch } from 'vue';
 import { useElementBounding } from '@vueuse/core';
 import StickyProps from './props';
 import config from '../config';
-import { usePrefixClass } from '@/hooks/useClass';
-import { useTNodeJSX } from '@/hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
+import { useTNodeJSX } from '../hooks/tnode';
 
 const name = `${config.prefix}-sticky`;
 
