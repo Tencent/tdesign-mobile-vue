@@ -3,7 +3,7 @@ import TImage from '../image';
 import EmptyProps from './props';
 import config from '../config';
 
-import { usePrefixClass } from '@/hooks/useClass';
+import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
