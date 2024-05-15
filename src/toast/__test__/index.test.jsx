@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import Toast from '../toast.vue';
+import Toast from '../toast';
 import Overlay from '../../overlay';
 import { mount } from '@vue/test-utils';
 import { LoadingIcon } from 'tdesign-icons-vue-next';
