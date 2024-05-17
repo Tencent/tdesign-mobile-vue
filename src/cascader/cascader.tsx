@@ -21,8 +21,8 @@ import TdCascaderProps from './props';
 import { useVModel } from '../shared';
 import { TreeOptionData } from '../common';
 import { useConfig } from '../config-provider/useConfig';
-import { useTNodeJSX } from '@/hooks/tnode';
-import { usePrefixClass } from '@/hooks/useClass';
+import { useTNodeJSX } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 import { TriggerSource } from './type';
 
 const { prefix } = config;
@@ -66,7 +66,7 @@ export default defineComponent({
     const steps = reactive([placeholder.value]);
 
     const initWithValue = () => {
-      if (value.value != null) {
+      if (cascaderValue.value != null) {
         steps.pop();
         const path = getIndexesByValue(props.options, value.value);
         path?.forEach((e: number) => {

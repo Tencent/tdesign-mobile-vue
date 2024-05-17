@@ -287,19 +287,26 @@ describe('cascader', () => {
   });
 
   describe('events', () => {
-    it(': close', async () => {
+    it(': close trigger closeBtn', async () => {
       const onClose = vi.fn();
       const wrapper = mount(<Cascader options={options} onClose={onClose} />);
       const $closeBtn = wrapper.find(`.${name}__close-btn`);
       await $closeBtn.trigger('click');
       expect(onClose).toHaveBeenCalledTimes(1);
-      expect(onClose).toHaveBeenLastCalledWith({ trigger: 'close-btn' });
+      expect(onClose).toHaveBeenLastCalledWith('close-btn');
 
+
+    });
+
+    it(': close trigger overlay', async () => {
+      const onClose = vi.fn();
+      const wrapper = mount(<Cascader options={options} onClose={onClose} visible={true}/>);
       // overlay
-      const $overlay = wrapper.find(`.${prefix}-overlay`);
+      const $overlay = wrapper.find(`.${prefix}-overlay--active`);
+      expect($overlay.exists()).toBeTruthy()
       $overlay.trigger('click');
-      expect(onClose).toBeCalledTimes(2);
-      expect(onClose).toHaveBeenLastCalledWith({ trigger: 'overlay' });
+      expect(onClose).toBeCalledTimes(1);
+      expect(onClose).toHaveBeenLastCalledWith('overlay');
     });
 
     it(': pick', async () => {
