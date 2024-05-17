@@ -576,6 +576,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                       class="t-radio__original"
                       name=""
                       type="radio"
+                      value="110000"
                     />
                     <div
                       class="t-radio__icon t-radio__icon--right"
@@ -588,8 +589,13 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                     <div
                       class="t-radio__content"
                     >
-                      <!--v-if-->
-                      <!--v-if-->
+                      <span
+                        class="t-radio__title"
+                        style=""
+                      >
+                        北京市
+                      </span>
+                      <!---->
                     </div>
                     <!---->
                   </div>
@@ -600,6 +606,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                       class="t-radio__original"
                       name=""
                       type="radio"
+                      value="120000"
                     />
                     <div
                       class="t-radio__icon t-radio__icon--right"
@@ -612,8 +619,13 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                     <div
                       class="t-radio__content"
                     >
-                      <!--v-if-->
-                      <!--v-if-->
+                      <span
+                        class="t-radio__title"
+                        style=""
+                      >
+                        天津市
+                      </span>
+                      <!---->
                     </div>
                     <!---->
                   </div>
@@ -1657,6 +1669,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           class="t-radio__original"
                           name=""
                           type="radio"
+                          value="110000"
                         />
                         <div
                           class="t-radio__icon t-radio__icon--right"
@@ -1669,8 +1682,13 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <div
                           class="t-radio__content"
                         >
-                          <!--v-if-->
-                          <!--v-if-->
+                          <span
+                            class="t-radio__title"
+                            style=""
+                          >
+                            北京市
+                          </span>
+                          <!---->
                         </div>
                         <!---->
                       </div>
@@ -1681,6 +1699,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           class="t-radio__original"
                           name=""
                           type="radio"
+                          value="120000"
                         />
                         <div
                           class="t-radio__icon t-radio__icon--right"
@@ -1693,8 +1712,13 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         <div
                           class="t-radio__content"
                         >
-                          <!--v-if-->
-                          <!--v-if-->
+                          <span
+                            class="t-radio__title"
+                            style=""
+                          >
+                            天津市
+                          </span>
+                          <!---->
                         </div>
                         <!---->
                       </div>

@@ -53,10 +53,10 @@ export default defineComponent({
     const cascaderClass = usePrefixClass('cascader');
     const { globalConfig } = useConfig('cascader');
 
-    const { visible, value, modelValue, keys } = toRefs(props);
-    const open = ref(visible.value || false);
+    const { visible, value, modelValue } = toRefs(props);
     const [cascaderValue, setCascaderValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
+    const open = ref(visible.value || false);
     const placeholder = computed(() => props.placeholder || globalConfig.value.placeholder);
 
     const stepIndex = ref(0);
@@ -79,13 +79,14 @@ export default defineComponent({
 
     const watchSelectedIndexes = () => {
       if (props.options && props.options.length > 0) {
+        const keys = props.keys as KeysType;
         for (let i = 0, size = selectedIndexes.length; i < size; i += 1) {
           const index = selectedIndexes[i];
           const next = items[i]?.[index];
-          selectedValue.push(next[(keys as Ref<KeysType>).value?.value ?? 'value']);
-          steps.push(next[(keys as Ref<KeysType>).value?.label ?? 'label']);
-          if (next[(keys as Ref<KeysType>).value?.children ?? 'children']) {
-            items.push(next[(keys as Ref<KeysType>).value?.children ?? 'children']);
+          selectedValue.push(next[keys?.value ?? 'value']);
+          steps.push(next[keys?.label ?? 'label']);
+          if (next[keys?.children ?? 'children']) {
+            items.push(next[keys?.children ?? 'children']);
           }
         }
       }
@@ -96,12 +97,13 @@ export default defineComponent({
     };
 
     const getIndexesByValue = (options: any, value: any) => {
+      const keys = props.keys as KeysType;
       for (let i = 0; i < options.length; i++) {
-        if (options[i][(keys as Ref<KeysType>).value?.value ?? 'value'] === value) {
+        if (options[i][keys?.value ?? 'value'] === value) {
           return [i];
         }
-        if (options[i][(keys as Ref<KeysType>).value?.children ?? 'children']) {
-          const res: any = getIndexesByValue(options[i][(keys as Ref<KeysType>).value?.children ?? 'children'], value);
+        if (options[i][keys?.children ?? 'children']) {
+          const res: any = getIndexesByValue(options[i][keys?.children ?? 'children'], value);
           if (res) {
             return [i, ...res];
           }
@@ -110,24 +112,25 @@ export default defineComponent({
     };
 
     const chooseSelect = (value: RadioValue, level: number, index: number, item: any) => {
+      const keys = props.keys as KeysType;
       selectedIndexes[level] = index;
       selectedIndexes.length = level + 1;
       selectedValue[level] = String(value);
       selectedValue.length = level + 1;
-      steps[level] = item[(keys as Ref<KeysType>).value?.label ?? 'label'] as string;
+      steps[level] = item[keys?.label ?? 'label'] as string;
 
-      if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length) {
-        items[level + 1] = item[(keys as Ref<KeysType>).value?.children ?? 'children'];
+      if (item[keys?.children ?? 'children']?.length) {
+        items[level + 1] = item[keys?.children ?? 'children'];
         items.length = level + 2;
         stepIndex.value += 1;
         steps[level + 1] = placeholder.value;
         steps.length = level + 2;
-      } else if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length === 0) {
+      } else if (item[keys?.children ?? 'children']?.length === 0) {
         childrenInfo.value = value;
         childrenInfo.level = level;
       } else {
         setCascaderValue(
-          item[(keys as Ref<KeysType>).value?.value ?? 'value'],
+          item[keys?.value ?? 'value'],
           items.map((item, index) => toRaw(item?.[selectedIndexes[index]])),
         );
         close('finish');
@@ -135,6 +138,7 @@ export default defineComponent({
     };
 
     const cancelSelect = (value: RadioValue, level: number, index: number, item: any) => {
+      const keys = props.keys as KeysType;
       selectedIndexes[level] = index;
       selectedIndexes.length = level;
       selectedValue.length = level;
@@ -142,23 +146,22 @@ export default defineComponent({
       steps[level + 1] = placeholder.value;
       steps.length = level + 1;
 
-      if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length) {
-        items[level + 1] = item[(keys as Ref<KeysType>).value?.children ?? 'children'];
-      } else if (item[(keys as Ref<KeysType>).value?.children ?? 'children']?.length === 0) {
+      if (item[keys?.children ?? 'children']?.length) {
+        items[level + 1] = item[keys?.children ?? 'children'];
+      } else if (item[keys?.children ?? 'children']?.length === 0) {
         childrenInfo.value = value;
         childrenInfo.level = level;
       }
     };
 
     const handleSelect = (value: RadioValue, level: number) => {
-      const index = items[level].findIndex(
-        (item: any) => item[(keys as Ref<KeysType>).value?.value ?? 'value'] === value,
-      );
+      const keys = props.keys as KeysType;
+      const index = items[level].findIndex((item: any) => item[keys?.value ?? 'value'] === value);
       const item = items[level][index];
       if (item.disabled) {
         return;
       }
-      props.onPick?.({ level, value: item[(keys as Ref<KeysType>).value?.value ?? 'value'], index });
+      props.onPick?.({ level, value: item[keys?.value ?? 'value'], index });
 
       if (props.checkStrictly && selectedValue.includes(String(value))) {
         cancelSelect(value, level, index, item);
@@ -325,7 +328,7 @@ export default defineComponent({
                         <div class={`${cascaderClass.value}-radio-group-${index}`}>
                           <TRadioGroup
                             value={selectedValue[index] || ''}
-                            keys={keys.value}
+                            keys={props.keys}
                             options={options}
                             placement="right"
                             icon="line"
