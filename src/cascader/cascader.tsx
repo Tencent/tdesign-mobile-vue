@@ -53,7 +53,7 @@ export default defineComponent({
     const cascaderClass = usePrefixClass('cascader');
     const { globalConfig } = useConfig('cascader');
 
-    const { visible, value, modelValue, subTitles, options, keys, checkStrictly } = toRefs(props);
+    const { visible, value, modelValue, keys } = toRefs(props);
     const open = ref(visible.value || false);
     const [cascaderValue, setCascaderValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
@@ -62,24 +62,13 @@ export default defineComponent({
     const stepIndex = ref(0);
     const selectedIndexes = reactive<string[] | number[]>([]);
     const selectedValue = reactive<string[]>([]);
-    const items: Array<Array<TreeOptionData>> = reactive([options.value ?? []]);
+    const items: Array<Array<TreeOptionData>> = reactive([props.options ?? []]);
     const steps = reactive([placeholder.value]);
-
-    watch(placeholder, (newValue, oldValue) => {
-      const index = steps.indexOf(oldValue);
-      if (index !== -1) {
-        steps[index] = newValue;
-      }
-    });
-
-    onMounted(() => {
-      initWithValue();
-    });
 
     const initWithValue = () => {
       if (value.value != null) {
         steps.pop();
-        const path = getIndexesByValue(options.value, value.value);
+        const path = getIndexesByValue(props.options, value.value);
         path?.forEach((e: number) => {
           // @ts-ignore
           selectedIndexes.push(e);
@@ -89,7 +78,7 @@ export default defineComponent({
     };
 
     const watchSelectedIndexes = () => {
-      if (options.value && options.value.length > 0) {
+      if (props.options && props.options.length > 0) {
         for (let i = 0, size = selectedIndexes.length; i < size; i += 1) {
           const index = selectedIndexes[i];
           const next = items[i]?.[index];
@@ -171,32 +160,12 @@ export default defineComponent({
       }
       props.onPick?.({ level, value: item[(keys as Ref<KeysType>).value?.value ?? 'value'], index });
 
-      if (checkStrictly.value && selectedValue.includes(String(value))) {
+      if (props.checkStrictly && selectedValue.includes(String(value))) {
         cancelSelect(value, level, index, item);
       } else {
         chooseSelect(value, level, index, item);
       }
     };
-
-    watch(open, () => {
-      context.emit('update:visible', open.value);
-    });
-
-    watch(visible, () => {
-      open.value = visible.value;
-    });
-
-    watch(
-      () => props.options,
-      () => {
-        if (open.value) {
-          handleSelect(childrenInfo.value, childrenInfo.level);
-        }
-      },
-      {
-        deep: true,
-      },
-    );
 
     const close = (trigger: TriggerSource) => {
       props.onClose?.(trigger);
@@ -222,7 +191,7 @@ export default defineComponent({
     };
 
     const onCloseBtn = () => {
-      if (checkStrictly.value) {
+      if (props.checkStrictly) {
         updateCascaderValue();
         onClose();
       } else {
@@ -237,6 +206,38 @@ export default defineComponent({
     const onTabChange = (value: number | string) => {
       stepIndex.value = Number(value);
     };
+
+    watch(open, () => {
+      context.emit('update:visible', open.value);
+    });
+
+    watch(visible, () => {
+      open.value = visible.value;
+    });
+
+    watch(
+      () => props.options,
+      () => {
+        if (open.value) {
+          handleSelect(childrenInfo.value, childrenInfo.level);
+        }
+      },
+      {
+        deep: true,
+      },
+    );
+
+    watch(placeholder, (newValue, oldValue) => {
+      const index = steps.indexOf(oldValue);
+      if (index !== -1) {
+        steps[index] = newValue;
+      }
+    });
+
+    onMounted(() => {
+      initWithValue();
+    });
+
     return () => {
       const title = renderTNodeJSX('title') || globalConfig.value.title;
       const closeBtn = renderTNodeJSX('closeBtn', { defaultNode: <CloseIcon size="24px" /> });
@@ -310,8 +311,8 @@ export default defineComponent({
             </div>
             <div class={`${cascaderClass.value}__content`}>
               {readerSteps()}
-              {subTitles.value && subTitles.value[stepIndex.value] && (
-                <div class={`${cascaderClass.value}__options-title`}>{subTitles.value[stepIndex.value]}</div>
+              {props.subTitles && props.subTitles[stepIndex.value] && (
+                <div class={`${cascaderClass.value}__options-title`}>{props.subTitles[stepIndex.value]}</div>
               )}
               <div
                 class={`${cascaderClass.value}__options-container`}
@@ -324,7 +325,7 @@ export default defineComponent({
                         <div class={`${cascaderClass.value}-radio-group-${index}`}>
                           <TRadioGroup
                             value={selectedValue[index] || ''}
-                            keys={keys}
+                            keys={keys.value}
                             options={options}
                             placement="right"
                             icon="line"
