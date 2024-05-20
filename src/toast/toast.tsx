@@ -1,6 +1,6 @@
 import { LoadingIcon, CheckCircleIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
-import { computed, defineComponent, getCurrentInstance, h, onUnmounted } from 'vue';
-import { renderTNode, TNode } from '../shared';
+import { computed, defineComponent, h, onUnmounted } from 'vue';
+import { useContent, useTNodeJSX } from '@/hooks/tnode';
 import TOverlay from '../overlay';
 import ToastProps from './props';
 import config from '../config';
@@ -11,7 +11,6 @@ const bodyLockClass = `${name}-overflow-hidden`;
 
 export default defineComponent({
   name,
-  components: { TOverlay, TNode },
   props: ToastProps,
   setup(props) {
     const toastTypeIcon = {
@@ -20,7 +19,9 @@ export default defineComponent({
       error: CloseCircleIcon,
     };
 
-    const internalInstance = getCurrentInstance();
+    const renderTNodeJSX = useTNodeJSX();
+
+    const renderContent = useContent();
 
     const customOverlayProps = computed(() => {
       const toastOverlayProps = {
@@ -59,7 +60,7 @@ export default defineComponent({
     ]);
 
     const iconContent = computed(() => {
-      let iconNode = renderTNode(internalInstance, 'icon');
+      let iconNode = renderTNodeJSX('icon');
       if (iconNode === undefined && props.theme) {
         iconNode = h(toastTypeIcon[props.theme]);
       }
@@ -80,7 +81,7 @@ export default defineComponent({
       },
     ]);
 
-    const messageContent = computed(() => renderTNode(internalInstance, 'message'));
+    const messageContent = computed(() => renderContent('default', 'message'));
 
     const renderMessageContent = computed(() => {
       if (messageContent.value) {
