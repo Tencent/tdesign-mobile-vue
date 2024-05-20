@@ -1,5 +1,5 @@
 import { createApp, defineComponent, ref, h, VNode, App, nextTick } from 'vue';
-import Message from './message.vue';
+import Message from './message';
 import { WithInstallType, isBrowser } from '../shared';
 import { TdMessageProps, MessageThemeList } from './type';
 

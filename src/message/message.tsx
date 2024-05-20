@@ -1,30 +1,3 @@
-<template>
-  <transition name="message">
-    <div v-if="currentVisible" ref="root" :class="rootClasses" :style="rootStyles">
-      <div v-if="prefixIconContent" :class="`${name}__icon--left`">
-        <t-node :content="prefixIconContent" />
-      </div>
-      <div ref="textWrapDOM" :class="textWrapClasses">
-        <div
-          ref="textDOM"
-          :class="`${name}__text`"
-          :style="scroll.marquee ? animateStyle : ''"
-          @transitionend="handleTransitionend"
-        >
-          <t-node v-if="computedContent" :content="computedContent"></t-node>
-        </div>
-      </div>
-      <div v-if="linkContent" :class="`${name}__link`" @click="onLinkClick">
-        <t-node :content="linkContent"></t-node>
-      </div>
-      <div v-if="closeBtnContent" :class="[`${name}__close-wrap`, `${name}__icon--right`]" @click="onCloseBtnClick">
-        <t-node :content="closeBtnContent"></t-node>
-      </div>
-    </div>
-  </transition>
-</template>
-
-<script lang="ts">
 import {
   h,
   ref,
@@ -36,6 +9,7 @@ import {
   reactive,
   nextTick,
   onMounted,
+  Transition,
 } from 'vue';
 import { CheckCircleFilledIcon, CloseIcon, InfoCircleFilledIcon } from 'tdesign-icons-vue-next';
 import isObject from 'lodash/isObject';
@@ -49,13 +23,16 @@ import { renderContent, renderTNode, TNode, useVModel } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-message`;
+
 const iconDefault = {
   info: h(InfoCircleFilledIcon),
   success: h(CheckCircleFilledIcon),
   warning: h(InfoCircleFilledIcon),
   error: h(InfoCircleFilledIcon),
 };
+
 const closeBtnDefault = h(CloseIcon);
+
 export default defineComponent({
   name,
   components: { TNode },
@@ -251,24 +228,58 @@ export default defineComponent({
       },
     );
 
-    return {
-      name: ref(name),
-      ...toRefs(state),
-      currentVisible,
-      rootClasses,
-      textWrapClasses,
-      rootStyles,
-      prefixIconContent,
-      computedContent,
-      closeBtnContent,
-      linkContent,
-      textWrapDOM,
-      textDOM,
-      animateStyle,
-      onCloseBtnClick,
-      onLinkClick,
-      handleTransitionend,
+    return () => {
+      const renderPrefixIconContent = computed(() =>
+        prefixIconContent.value ? <div class={`${name}__icon--left`}>{prefixIconContent.value}</div> : '',
+      );
+
+      const renderTextWrapDOM = computed(() => (
+        <div ref={textWrapDOM} class={textWrapClasses.value}>
+          <div
+            ref={textDOM}
+            class={`${name}__text`}
+            style={state.scroll.marquee ? animateStyle.value : ''}
+            onTransitionend={handleTransitionend}
+          >
+            {computedContent.value ?? ''}
+          </div>
+        </div>
+      ));
+
+      const renderLinkContent = computed(() =>
+        linkContent.value ? (
+          <div class={`${name}__link`} onClick={onLinkClick}>
+            {linkContent.value}
+          </div>
+        ) : (
+          ''
+        ),
+      );
+
+      const renderCloseBtnContent = computed(() =>
+        closeBtnContent.value ? (
+          <div class={[`${name}__close-wrap`, `${name}__icon--right`]} onClick={onCloseBtnClick}>
+            {closeBtnContent.value}
+          </div>
+        ) : (
+          ''
+        ),
+      );
+
+      const renderMessageContent = computed(() =>
+        currentVisible.value ? (
+          <div ref="root" class={rootClasses.value} style={rootStyles.value}>
+            {renderPrefixIconContent.value}
+            {renderTextWrapDOM.value}
+            {renderLinkContent.value}
+            {renderCloseBtnContent.value}
+          </div>
+        ) : (
+          ''
+        ),
+      );
+
+      return <Transition name="message">{renderMessageContent.value}</Transition>;
     };
   },
 });
-</script>
