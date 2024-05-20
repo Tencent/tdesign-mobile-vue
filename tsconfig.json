@@ -38,6 +38,6 @@
     "src/style/index.js",
     "scripts/rollup.config.js"
   ],
-  "exclude": ["node_modules", "src/_common","dist", "es", "esm", "lib", "site"],
+  "exclude": ["node_modules", "src/_common", "dist", "es", "esm", "lib", "site"],
   "compileOnSave": false
 }
