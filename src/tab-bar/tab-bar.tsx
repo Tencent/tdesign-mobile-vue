@@ -1,14 +1,8 @@
-<template>
-  <div :class="tabBarClass" role="tablist">
-    <slot />
-  </div>
-</template>
-
-<script lang="ts">
 import { defineComponent, ref, provide, Ref, computed, toRefs, onMounted } from 'vue';
 import TabBarProps from './props';
 import config from '../config';
 import { useDefault, useChildSlots } from '../shared';
+import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
 const name = `${prefix}-tab-bar`;
@@ -18,6 +12,7 @@ export default defineComponent({
   props: TabBarProps,
   emits: ['update:value', 'update:modelValue', 'change'],
   setup(props, context) {
+    const renderTNodeJSX = useTNodeJSX();
     const [activeValue] = useDefault(props, context.emit, 'value', 'change');
     const defaultIndex: Ref<number> = ref(-1);
     const itemCount = ref(0);
@@ -52,9 +47,10 @@ export default defineComponent({
       updateChild,
     });
 
-    return {
-      tabBarClass,
-    };
+    return () => (
+      <div class={tabBarClass.value} role="tablist">
+        {renderTNodeJSX('default')}
+      </div>
+    );
   },
 });
-</script>
