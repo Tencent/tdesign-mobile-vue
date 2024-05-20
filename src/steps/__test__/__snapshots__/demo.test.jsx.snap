@@ -1697,7 +1697,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                           />
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                     </div>
@@ -4241,7 +4241,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>

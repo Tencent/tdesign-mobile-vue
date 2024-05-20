@@ -534,7 +534,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                         />
                       </foreignobject>
                     </svg>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -601,7 +601,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                         />
                       </foreignobject>
                     </svg>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -1060,7 +1060,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
                     />
                   </foreignobject>
                 </svg>
-                <!--v-if-->
+                <!---->
                 <!---->
               </div>
             </div>
@@ -1127,7 +1127,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
                     />
                   </foreignobject>
                 </svg>
-                <!--v-if-->
+                <!---->
                 <!---->
               </div>
             </div>

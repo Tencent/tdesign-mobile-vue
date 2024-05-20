@@ -560,7 +560,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
                 />
                 
               </div>
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
@@ -732,7 +732,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
                 />
                 
               </div>
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
@@ -2016,7 +2016,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -2188,7 +2188,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>

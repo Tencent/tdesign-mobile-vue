@@ -37,7 +37,7 @@ exports[`Result > Result customVue demo works fine 1`] = `
             />
             
           </div>
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
       </div>
@@ -318,7 +318,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
                   />
                   
                 </div>
-                <!--v-if-->
+                <!---->
                 <!---->
               </div>
             </div>

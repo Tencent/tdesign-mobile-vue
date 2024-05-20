@@ -1227,7 +1227,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                         />
                         
                       </div>
-                      <!--v-if-->
+                      <!---->
                       <!---->
                     </div>
                   </div>
@@ -2170,7 +2170,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>

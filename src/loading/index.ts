@@ -1,4 +1,4 @@
-import Loading from './loading.vue';
+import Loading from './loading';
 import { withInstall, WithInstallType } from '../shared';
 
 import { TdLoadingProps } from './type';
