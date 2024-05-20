@@ -1,38 +1,11 @@
-<template>
-  <div :class="`${prefix}-checkbox-group`">
-    <slot v-if="!(options && options.length)" />
-    <span v-else>
-      <checkbox
-        v-for="(item, idx) in optionList"
-        :key="idx"
-        :name="item.name || ''"
-        :label="item.label || item.text || ''"
-        :value="item.value"
-        :check-all="item.checkAll"
-        :block="item.block || true"
-        :checked="item.checked || false"
-        :content="item.content || ''"
-        :content-disabled="item.contentDisabled || false"
-        :icon="item.icon || 'circle'"
-        :indeterminate="item.indeterminate || false"
-        :disabled="item.disabled"
-        :max-content-row="item.maxContentRow || 5"
-        :max-label-row="item.maxLabelRow || 3"
-        :readonly="item.readonly || false"
-        :placement="item.placement || 'left'"
-      />
-    </span>
-  </div>
-</template>
-
-<script lang="ts">
 import { provide, ref, computed, defineComponent, watch, toRefs, VNode, reactive, onMounted } from 'vue';
 import config from '../config';
-import CheckboxProps from './checkbox-group-props';
-import Checkbox from './checkbox.vue';
+import props from './checkbox-group-props';
+import Checkbox from './checkbox';
 import { CheckboxGroupValue, TdCheckboxGroupProps, TdCheckboxProps } from './type';
 import { useDefault } from '../shared';
 import { getOptions, setCheckAllStatus } from './hooks';
+import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
 const name = `${prefix}-checkbox-group`;
@@ -46,9 +19,10 @@ export default defineComponent({
   components: {
     Checkbox,
   },
-  props: CheckboxProps,
+  props,
   emits: ['update:value', 'update:modelValue', 'change'],
   setup(props: any, context) {
+    const renderTNodeJSX = useTNodeJSX();
     const { isArray } = Array;
     const [innerValue, setInnerValue] = useDefault<CheckboxGroupValue, TdCheckboxGroupProps>(
       props,
@@ -126,10 +100,38 @@ export default defineComponent({
       checkedSet,
       onCheckedChange,
     });
-    return {
-      prefix,
-      optionList,
+    return () => {
+      const checkboxNode = () => {
+        return (
+          <span>
+            {optionList.value.map((item, idx) => (
+              <checkbox
+                key={idx}
+                name={item.name || ''}
+                label={item.label || item.text || ''}
+                value={item.value}
+                check-all={item.checkAll}
+                block={item.block || true}
+                checked={item.checked || false}
+                content={item.content || ''}
+                content-disabled={item.contentDisabled || false}
+                icon={item.icon || 'circle'}
+                indeterminate={item.indeterminate || false}
+                disabled={item.disabled}
+                max-content-row={item.maxContentRow || 5}
+                max-label-row={item.maxLabelRow || 3}
+                readonly={item.readonly || false}
+                placement={item.placement || 'left'}
+              />
+            ))}
+          </span>
+        );
+      };
+      return (
+        <div class={`${prefix}-checkbox-group`}>
+          {!(props.options && props.options.length) ? renderTNodeJSX('default') : checkboxNode()}
+        </div>
+      );
     };
   },
 });
-</script>
