@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
 <div
@@ -77,7 +77,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -161,7 +161,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -245,7 +245,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -6860,7 +6860,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
                 />
                 
               </div>
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
@@ -6944,7 +6944,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
                 />
                 
               </div>
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
@@ -7028,7 +7028,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
                 />
                 
               </div>
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
