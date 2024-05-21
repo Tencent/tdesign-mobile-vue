@@ -6,7 +6,6 @@ import { useSwipe } from '../swipe-cell/useSwipe';
 import config from '../config';
 import props from './props';
 import { SwiperChangeSource, SwiperNavigation } from './type';
-import { useVModel } from '../shared';
 import { preventDefault } from '../shared/dom';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
@@ -17,7 +16,7 @@ const navName = `${prefix}-swiper-nav`;
 export default defineComponent({
   name,
   props,
-  emits: ['change', 'update:current', 'update:modelValue'],
+  emits: ['update:currentIndex'],
   setup(props, context) {
     const swiperClass = usePrefixClass('swiper');
     const readerTNodeJSX = useTNodeJSX();
@@ -27,10 +26,7 @@ export default defineComponent({
 
     const root = ref();
     const items = ref<any>([]);
-
-    const { current: value, modelValue } = toRefs(props);
-
-    const [current, setCurrent] = useVModel(value, modelValue, props.defaultCurrent);
+    const currentIndex = ref(props.current || props.defaultCurrent || 0);
     const swiperContainer = ref<HTMLElement | null>(null);
 
     const animating = ref(false);
@@ -76,12 +72,12 @@ export default defineComponent({
     let autoplayTimer: any = null;
 
     const onItemClick = () => {
-      props.onClick?.(current.value ?? 0);
+      props.onClick?.(currentIndex.value ?? 0);
     };
 
     const move = (step: number, source: SwiperChangeSource, isReset = false) => {
       animating.value = true;
-      processIndex(isReset ? step : (current.value as number) + step, source);
+      processIndex(isReset ? step : (currentIndex.value as number) + step, source);
 
       const moveDirection = !isVertical.value ? 'X' : 'Y';
       const distance = root.value?.[isVertical.value ? 'offsetHeight' : 'offsetWidth'] ?? 0;
@@ -104,7 +100,6 @@ export default defineComponent({
     };
 
     const startAutoplay = () => {
-      if (typeof props.current === 'number') return false;
       if (!props?.autoplay || autoplayTimer !== null) return false; // stop repeat autoplay
       autoplayTimer = setInterval(() => {
         goNext('autoplay');
@@ -130,8 +125,9 @@ export default defineComponent({
       if (index >= max) {
         val = props.loop ? 0 : max - 1;
       }
-      setCurrent(val);
-      context.emit('change', val, { source });
+      currentIndex.value = val;
+      context.emit('update:currentIndex', val);
+      props.onChange?.(val, { source });
     };
 
     const { lengthX, lengthY } = useSwipe(swiperContainer, {
@@ -172,7 +168,7 @@ export default defineComponent({
       } else if ((!isVertical.value && distanceX > 100) || (isVertical.value && distanceY > 100)) {
         move(1, 'touch');
       } else {
-        move(current.value as number, 'touch', true);
+        move(currentIndex.value as number, 'touch', true);
       }
       startAutoplay();
     };
@@ -185,14 +181,14 @@ export default defineComponent({
       const index = items.value.findIndex((item: any) => item.uid === uid);
       items.value.splice(index, 1);
 
-      if (current.value + 1 > items.value.length) {
+      if (currentIndex.value + 1 > items.value.length) {
         goNext('autoplay');
       }
     };
 
     const updateItemPosition = () => {
       items.value.forEach((item: any, index: number) => {
-        item.calcTranslateStyle(index, current.value);
+        item.calcTranslateStyle(index, currentIndex.value);
       });
     };
 
@@ -200,7 +196,7 @@ export default defineComponent({
       (containerHeight.value = isNumber(height) ? `${height}px` : height);
 
     const updateContainerHeight = () => {
-      const target = items.value[current.value ?? 0];
+      const target = items.value[currentIndex.value ?? 0];
       const rect = target?.proxy?.$el.getBoundingClientRect();
 
       if (props.height) {
@@ -208,10 +204,19 @@ export default defineComponent({
       } else if (rect) {
         setContainerHeight(rect.height);
       }
-      updateItemPosition();
     };
 
-    watch(current, updateContainerHeight);
+    watch(currentIndex, updateContainerHeight);
+    watch(
+      () => props.current,
+      () => {
+        // v-model动态更新时不触发move逻辑
+        if (props.current === currentIndex.value) return;
+        stopAutoplay();
+        move(props.current - currentIndex.value, 'autoplay');
+        startAutoplay();
+      },
+    );
 
     provide('parent', {
       loop: props.loop,
@@ -257,7 +262,7 @@ export default defineComponent({
                           key={`page${index}`}
                           class={[
                             `${navName}__${navigation.value?.type}-item`,
-                            index === current.value ? `${navName}__${navigation.value?.type}-item--active` : '',
+                            index === currentIndex.value ? `${navName}__${navigation.value?.type}-item--active` : '',
                             `${navName}__${navigation.value?.type}-item--${props.direction}`,
                           ]}
                         />
@@ -269,7 +274,7 @@ export default defineComponent({
               // fraction
               const fraction = () => {
                 if (navigation.value?.type === 'fraction') {
-                  return <span>{`${(current.value ?? 0) + 1}/${items.value.length}`}</span>;
+                  return <span>{`${(currentIndex.value ?? 0) + 1}/${items.value.length}`}</span>;
                 }
               };
               return (
