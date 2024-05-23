@@ -12,7 +12,7 @@
     />
   </div>
   <div :style="{ ...style }">
-    <t-back-top v-show="visible" :theme="theme" :text="text" :on-to-top="handleToTop" />
+    <t-back-top v-show="visible" :theme="theme" :text="text" :on-to-top="handleToTop" :target="target" />
   </div>
 </template>
 
@@ -20,7 +20,7 @@
 import { ref, defineProps, defineEmits, h } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
-defineProps({
+const props = defineProps({
   visible: {
     type: Boolean,
     default: false,
@@ -28,6 +28,9 @@ defineProps({
   style: {
     type: Object,
     default: () => {},
+  },
+  target: {
+    type: Function,
   },
 });
 const emit = defineEmits(['close']);
@@ -40,7 +43,7 @@ const onClick = (tem: string, txt: string) => {
   text.value = txt;
   theme.value = tem;
   emit('close');
-  window.scrollTo(0, 1200);
+  props.target().scrollTo(0, 1200);
 };
 function handleToTop() {
   console.log('handleToTop');
@@ -50,6 +53,7 @@ function handleToTop() {
 <style lang="less" scoped>
 .button-group {
   padding: 8px 16px 16px;
+
   .t-button {
     margin-bottom: 10px;
   }

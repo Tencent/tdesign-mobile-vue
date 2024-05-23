@@ -12,14 +12,14 @@
     />
   </div>
   <div :style="{ ...style }">
-    <t-back-top v-show="visible" :theme="theme" text="返回顶部" />
+    <t-back-top v-show="visible" :theme="theme" text="返回顶部" :target="target" />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref, defineProps, defineEmits } from 'vue';
 
-defineProps({
+const props = defineProps({
   visible: {
     type: Boolean,
     default: false,
@@ -28,6 +28,9 @@ defineProps({
     type: Object,
     default: () => {},
   },
+  target: {
+    type: Function,
+  },
 });
 const theme = ref('half-round');
 const emit = defineEmits(['close']);
@@ -35,7 +38,7 @@ const emit = defineEmits(['close']);
 const onBtnClick1 = (tem: string) => {
   theme.value = tem;
   emit('close');
-  window.scrollTo(0, 1200);
+  props.target().scrollTo(0, 1200);
 };
 </script>
 
