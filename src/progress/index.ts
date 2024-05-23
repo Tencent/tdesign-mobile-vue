@@ -1,5 +1,5 @@
 import { withInstall, WithInstallType } from '../shared';
-import Progress from './progress.vue';
+import Progress from './progress';
 
 import './style';
 
