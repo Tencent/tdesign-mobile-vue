@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
 <div
@@ -19,7 +19,9 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
       >
         <div
           class="t-pull-down-refresh__text"
-        />
+        >
+          <!---->
+        </div>
       </div>
     </div>
     
@@ -364,7 +366,9 @@ exports[`PullDownRefresh > PullDownRefresh loadingTextsVue demo works fine 1`] =
             >
               <div
                 class="t-pull-down-refresh__text"
-              />
+              >
+                <!---->
+              </div>
             </div>
           </div>
           
@@ -398,7 +402,9 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
         >
           <div
             class="t-pull-down-refresh__text"
-          />
+          >
+            <!---->
+          </div>
         </div>
       </div>
       
@@ -744,7 +750,9 @@ exports[`PullDownRefresh > PullDownRefresh timeoutVue demo works fine 1`] = `
             >
               <div
                 class="t-pull-down-refresh__text"
-              />
+              >
+                <!---->
+              </div>
             </div>
           </div>
           

@@ -1,4 +1,4 @@
-import BaseTable from './base-table.vue';
+import BaseTable from './base-table';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';

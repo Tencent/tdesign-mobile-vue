@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Drawer > Drawer baseVue demo works fine 1`] = `
 <div
@@ -13,8 +13,7 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--right"
@@ -25,9 +24,8 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
       <div
         class="t-drawer"
       >
-        <!--v-if-->
-        
-        
+        <!---->
+        <!---->
         <div
           class="t-drawer__sidebar"
         >
@@ -35,7 +33,7 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
           <div
             class="t-drawer__sidebar-item"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-drawer__sidebar-item-title"
             >
@@ -45,7 +43,7 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
           <div
             class="t-drawer__sidebar-item"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-drawer__sidebar-item-title"
             >
@@ -55,7 +53,7 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
           <div
             class="t-drawer__sidebar-item"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-drawer__sidebar-item-title"
             >
@@ -65,7 +63,7 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
           <div
             class="t-drawer__sidebar-item"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-drawer__sidebar-item-title"
             >
@@ -75,7 +73,7 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
           <div
             class="t-drawer__sidebar-item"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-drawer__sidebar-item-title"
             >
@@ -85,7 +83,7 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
           <div
             class="t-drawer__sidebar-item"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-drawer__sidebar-item-title"
             >
@@ -94,11 +92,7 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
           </div>
           
         </div>
-        <div
-          class="t-drawer__footer"
-        >
-          <!---->
-        </div>
+        <!---->
       </div>
       
     </div>
@@ -136,8 +130,7 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--left"
@@ -148,9 +141,8 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
       <div
         class="t-drawer"
       >
-        <!--v-if-->
-        
-        
+        <!---->
+        <!---->
         <div
           class="t-drawer__sidebar"
         >
@@ -158,7 +150,7 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
           <div
             class="t-drawer__sidebar-item"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-drawer__sidebar-item-title"
             >
@@ -168,7 +160,7 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
           <div
             class="t-drawer__sidebar-item"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-drawer__sidebar-item-title"
             >
@@ -178,7 +170,7 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
           <div
             class="t-drawer__sidebar-item"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-drawer__sidebar-item-title"
             >
@@ -188,7 +180,7 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
           <div
             class="t-drawer__sidebar-item"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-drawer__sidebar-item-title"
             >
@@ -198,7 +190,7 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
           <div
             class="t-drawer__sidebar-item"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-drawer__sidebar-item-title"
             >
@@ -208,7 +200,7 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
           <div
             class="t-drawer__sidebar-item"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-drawer__sidebar-item-title"
             >
@@ -281,8 +273,7 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--right"
@@ -293,9 +284,8 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
       <div
         class="t-drawer"
       >
-        <!--v-if-->
-        
-        
+        <!---->
+        <!---->
         <div
           class="t-drawer__sidebar"
         >
@@ -452,11 +442,7 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
           </div>
           
         </div>
-        <div
-          class="t-drawer__footer"
-        >
-          <!---->
-        </div>
+        <!---->
       </div>
       
     </div>
@@ -530,8 +516,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--right"
@@ -542,9 +527,8 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
           <div
             class="t-drawer"
           >
-            <!--v-if-->
-            
-            
+            <!---->
+            <!---->
             <div
               class="t-drawer__sidebar"
             >
@@ -552,7 +536,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               <div
                 class="t-drawer__sidebar-item"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-drawer__sidebar-item-title"
                 >
@@ -562,7 +546,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               <div
                 class="t-drawer__sidebar-item"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-drawer__sidebar-item-title"
                 >
@@ -572,7 +556,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               <div
                 class="t-drawer__sidebar-item"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-drawer__sidebar-item-title"
                 >
@@ -582,7 +566,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               <div
                 class="t-drawer__sidebar-item"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-drawer__sidebar-item-title"
                 >
@@ -592,7 +576,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               <div
                 class="t-drawer__sidebar-item"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-drawer__sidebar-item-title"
                 >
@@ -602,7 +586,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               <div
                 class="t-drawer__sidebar-item"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-drawer__sidebar-item-title"
                 >
@@ -611,11 +595,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               </div>
               
             </div>
-            <div
-              class="t-drawer__footer"
-            >
-              <!---->
-            </div>
+            <!---->
           </div>
           
         </div>
@@ -668,8 +648,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--right"
@@ -680,9 +659,8 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
           <div
             class="t-drawer"
           >
-            <!--v-if-->
-            
-            
+            <!---->
+            <!---->
             <div
               class="t-drawer__sidebar"
             >
@@ -839,11 +817,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               </div>
               
             </div>
-            <div
-              class="t-drawer__footer"
-            >
-              <!---->
-            </div>
+            <!---->
           </div>
           
         </div>
@@ -900,8 +874,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--left"
@@ -917,8 +890,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
             >
               标题
             </div>
-            
-            
+            <!---->
             <div
               class="t-drawer__sidebar"
             >
@@ -926,7 +898,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               <div
                 class="t-drawer__sidebar-item"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-drawer__sidebar-item-title"
                 >
@@ -936,7 +908,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               <div
                 class="t-drawer__sidebar-item"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-drawer__sidebar-item-title"
                 >
@@ -946,7 +918,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               <div
                 class="t-drawer__sidebar-item"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-drawer__sidebar-item-title"
                 >
@@ -956,7 +928,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               <div
                 class="t-drawer__sidebar-item"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-drawer__sidebar-item-title"
                 >
@@ -966,7 +938,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               <div
                 class="t-drawer__sidebar-item"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-drawer__sidebar-item-title"
                 >
@@ -976,7 +948,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               <div
                 class="t-drawer__sidebar-item"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-drawer__sidebar-item-title"
                 >
@@ -985,11 +957,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               </div>
               
             </div>
-            <div
-              class="t-drawer__footer"
-            >
-              <!---->
-            </div>
+            <!---->
           </div>
           
         </div>
@@ -1041,8 +1009,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--left"
@@ -1053,9 +1020,8 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
           <div
             class="t-drawer"
           >
-            <!--v-if-->
-            
-            
+            <!---->
+            <!---->
             <div
               class="t-drawer__sidebar"
             >
@@ -1063,7 +1029,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               <div
                 class="t-drawer__sidebar-item"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-drawer__sidebar-item-title"
                 >
@@ -1073,7 +1039,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               <div
                 class="t-drawer__sidebar-item"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-drawer__sidebar-item-title"
                 >
@@ -1083,7 +1049,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               <div
                 class="t-drawer__sidebar-item"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-drawer__sidebar-item-title"
                 >
@@ -1093,7 +1059,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               <div
                 class="t-drawer__sidebar-item"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-drawer__sidebar-item-title"
                 >
@@ -1103,7 +1069,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               <div
                 class="t-drawer__sidebar-item"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-drawer__sidebar-item-title"
                 >
@@ -1113,7 +1079,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               <div
                 class="t-drawer__sidebar-item"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-drawer__sidebar-item-title"
                 >
@@ -1249,8 +1215,7 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--left"
@@ -1266,8 +1231,7 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
         >
           标题
         </div>
-        
-        
+        <!---->
         <div
           class="t-drawer__sidebar"
         >
@@ -1275,7 +1239,7 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
           <div
             class="t-drawer__sidebar-item"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-drawer__sidebar-item-title"
             >
@@ -1285,7 +1249,7 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
           <div
             class="t-drawer__sidebar-item"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-drawer__sidebar-item-title"
             >
@@ -1295,7 +1259,7 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
           <div
             class="t-drawer__sidebar-item"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-drawer__sidebar-item-title"
             >
@@ -1305,7 +1269,7 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
           <div
             class="t-drawer__sidebar-item"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-drawer__sidebar-item-title"
             >
@@ -1315,7 +1279,7 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
           <div
             class="t-drawer__sidebar-item"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-drawer__sidebar-item-title"
             >
@@ -1325,7 +1289,7 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
           <div
             class="t-drawer__sidebar-item"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-drawer__sidebar-item-title"
             >
@@ -1334,11 +1298,7 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
           </div>
           
         </div>
-        <div
-          class="t-drawer__footer"
-        >
-          <!---->
-        </div>
+        <!---->
       </div>
       
     </div>

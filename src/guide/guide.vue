@@ -100,7 +100,7 @@ import { GuideStep, TdGuideProps } from './type';
 import { isFixed, getRelativePosition, getTargetElm, scrollToParentVisibleArea, scrollToElm } from './utils';
 import { GuideCrossProps } from './interface';
 import { useConfig } from '../config-provider/useConfig';
-import { SizeEnum } from '@/common';
+import { SizeEnum } from '../common';
 
 const { prefix } = config;
 const name = `${prefix}-guide`;

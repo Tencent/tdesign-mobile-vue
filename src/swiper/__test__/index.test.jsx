@@ -1,8 +1,8 @@
 import { describe, it, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import { ref } from 'vue';
-import Swiper from '../swiper.vue';
-import SwiperItem from '../swiper-item.vue';
+import Swiper from '../swiper';
+import SwiperItem from '../swiper-item';
 
 const sleep = (duration) =>
   new Promise((resolve) =>

@@ -1,4 +1,4 @@
-import Popover from './popover.vue';
+import Popover from './popover';
 import { withInstall, WithInstallType } from '../shared';
 import { TdPopoverProps } from './type';
 

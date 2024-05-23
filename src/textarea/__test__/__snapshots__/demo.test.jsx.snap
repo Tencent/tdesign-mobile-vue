@@ -1,20 +1,19 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Textarea > Textarea autosizeVue demo works fine 1`] = `
 <div
   class="t-textarea t-textarea--layout-horizontal"
 >
-  <!--v-if-->
+  <!---->
   <div
     class="t-textarea__wrapper"
   >
     <textarea
       class="t-textarea__wrapper-inner"
-      maxlength="-1"
       name="标签文字"
       placeholder="请输入文字"
     />
-    <!--v-if-->
+    <!---->
   </div>
 </div>
 `;
@@ -24,17 +23,16 @@ exports[`Textarea > Textarea baseVue demo works fine 1`] = `
   class="t-textarea t-textarea--layout-horizontal textarea-example"
   data-v-dc028088=""
 >
-  <!--v-if-->
+  <!---->
   <div
     class="t-textarea__wrapper"
   >
     <textarea
       class="t-textarea__wrapper-inner"
-      maxlength="-1"
       name=""
       placeholder="请输入文字"
     />
-    <!--v-if-->
+    <!---->
   </div>
 </div>
 `;
@@ -129,7 +127,7 @@ exports[`Textarea > Textarea customVue demo works fine 1`] = `
     class="t-textarea t-textarea--layout-horizontal t-textarea--border textarea"
     data-v-1eb98b9c=""
   >
-    <!--v-if-->
+    <!---->
     <div
       class="t-textarea__wrapper"
     >
@@ -165,11 +163,10 @@ exports[`Textarea > Textarea disabledVue demo works fine 1`] = `
     <textarea
       class="t-textarea__wrapper-inner t-textarea--disabled"
       disabled=""
-      maxlength="-1"
       name=""
       placeholder="请输入文字"
     />
-    <!--v-if-->
+    <!---->
   </div>
 </div>
 `;
@@ -189,11 +186,10 @@ exports[`Textarea > Textarea labelVue demo works fine 1`] = `
   >
     <textarea
       class="t-textarea__wrapper-inner"
-      maxlength="-1"
       name="标签文字"
       placeholder="请输入文字"
     />
-    <!--v-if-->
+    <!---->
   </div>
 </div>
 `;
@@ -212,7 +208,6 @@ exports[`Textarea > Textarea maxcharacterVue demo works fine 1`] = `
   >
     <textarea
       class="t-textarea__wrapper-inner"
-      maxlength="-1"
       name="标签文字"
       placeholder="请输入文字"
     />
@@ -291,17 +286,16 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
         class="t-textarea t-textarea--layout-horizontal textarea-example"
         data-v-dc028088=""
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-textarea__wrapper"
         >
           <textarea
             class="t-textarea__wrapper-inner"
-            maxlength="-1"
             name=""
             placeholder="请输入文字"
           />
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       
@@ -338,11 +332,10 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
         >
           <textarea
             class="t-textarea__wrapper-inner"
-            maxlength="-1"
             name="标签文字"
             placeholder="请输入文字"
           />
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       
@@ -368,17 +361,16 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
       <div
         class="t-textarea t-textarea--layout-horizontal"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-textarea__wrapper"
         >
           <textarea
             class="t-textarea__wrapper-inner"
-            maxlength="-1"
             name="标签文字"
             placeholder="请输入文字"
           />
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       
@@ -449,7 +441,6 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
         >
           <textarea
             class="t-textarea__wrapper-inner"
-            maxlength="-1"
             name="标签文字"
             placeholder="请输入文字"
           />
@@ -499,11 +490,10 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
           <textarea
             class="t-textarea__wrapper-inner t-textarea--disabled"
             disabled=""
-            maxlength="-1"
             name=""
             placeholder="请输入文字"
           />
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       
@@ -636,7 +626,7 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
           class="t-textarea t-textarea--layout-horizontal t-textarea--border textarea"
           data-v-1eb98b9c=""
         >
-          <!--v-if-->
+          <!---->
           <div
             class="t-textarea__wrapper"
           >

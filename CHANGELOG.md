@@ -5,6 +5,48 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.2.2 `2024-05-13` 
+### 🚧 Others
+- chore: aliases are not used inside components @anlyyao ([#1394](https://github.com/Tencent/tdesign-mobile-vue/pull/1394))
+
+## 🌈 1.2.1 `2024-05-11` 
+### 🚀 Features
+- `Indexes`: `sfc` to `tsx`. @liweijie0812 ([#1327](https://github.com/Tencent/tdesign-mobile-vue/pull/1327))
+- `Cell`: `sfc` to `tsx` @liweijie0812 ([#1326](https://github.com/Tencent/tdesign-mobile-vue/pull/1326))
+- `Switch`: `sfc` 改 `tsx` @liweijie0812 ([#1322](https://github.com/Tencent/tdesign-mobile-vue/pull/1322))
+- `DropdownMenu`: `sfc` 改 `tsx` @dexterBo ([#1332](https://github.com/Tencent/tdesign-mobile-vue/pull/1332))
+- `DropdownMenu`: 支持点击外部区域收起下拉框 @aaronmhl ([#1369](https://github.com/Tencent/tdesign-mobile-vue/pull/1369))
+- `Avatar`: `sfc` 改 `tsx`  @liweijie0812 ([#1331](https://github.com/Tencent/tdesign-mobile-vue/pull/1331))
+- `Overlay`: `sfc` 改 `tsx` @liweijie0812 ([#1339](https://github.com/Tencent/tdesign-mobile-vue/pull/1339))
+- `Sticky`: `sfc` 改 `tsx` @liweijie0812 ([#1337](https://github.com/Tencent/tdesign-mobile-vue/pull/1337))
+- `Empty`: `sfc` 改 `tsx` @liweijie0812 ([#1334](https://github.com/Tencent/tdesign-mobile-vue/pull/1334))
+- `Search`: `sfc` 改 `tsx` @liweijie0812 ([#1336](https://github.com/Tencent/tdesign-mobile-vue/pull/1336))
+- `Textarea`: `sfc` 改 `tsx` @liweijie0812 ([#1318](https://github.com/Tencent/tdesign-mobile-vue/pull/1318))
+- `Popover`: `sfc` 改 `tsx` @anlyyao ([#1323](https://github.com/Tencent/tdesign-mobile-vue/pull/1323))
+- `PullDownRefresh`: `sfc` 改 `tsx` @dexterBo ([#1343](https://github.com/Tencent/tdesign-mobile-vue/pull/1343))
+- `Input`: `sfc` to `tsx` @liweijie0812 ([#1342](https://github.com/Tencent/tdesign-mobile-vue/pull/1342))
+- `Upload`: `sfc` 改 `tsx` @dexterBo ([#1388](https://github.com/Tencent/tdesign-mobile-vue/pull/1388))
+- `Stepper`: `sfc` 改 `tsx` @liweijie0812 ([#1383](https://github.com/Tencent/tdesign-mobile-vue/pull/1383))
+- `Table`: `sfc` 改 `tsx` @dexterBo ([#1374](https://github.com/Tencent/tdesign-mobile-vue/pull/1374))
+- `Form`: `sfc` 改 `tsx` @zuiaiwanqian ([#1372](https://github.com/Tencent/tdesign-mobile-vue/pull/1372))
+- `Tabs`: `sfc` 改 `tsx` @liweijie0812 ([#1368](https://github.com/Tencent/tdesign-mobile-vue/pull/1368))
+- `Tabs`:  标签页支持懒加载 @liweijie0812 ([#1368](https://github.com/Tencent/tdesign-mobile-vue/pull/1368))
+- `SideBar`: `sfc` 改 `tsx` @zuiaiwanqian ([#1370](https://github.com/Tencent/tdesign-mobile-vue/pull/1370))
+- `Calendar`: `sfc` 改 `tsx` @dexterBo ([#1385](https://github.com/Tencent/tdesign-mobile-vue/pull/1385))
+- `Navbar`: `sfc` 改 `tsx` @Lyan-u ([#1377](https://github.com/Tencent/tdesign-mobile-vue/pull/1377))
+- `Swiper`: `sfc` 改 `tsx` @zuiaiwanqian ([#1349](https://github.com/Tencent/tdesign-mobile-vue/pull/1349))
+- `Radio`: `sfc` 改 `tsx` @liweijie0812 ([#1381](https://github.com/Tencent/tdesign-mobile-vue/pull/1381))
+- `CountDown`: `sfc` to `tsx` @liweijie0812 ([#1317](https://github.com/Tencent/tdesign-mobile-vue/pull/1317))
+- `Steps`: `sfc` to `tsx` @Lyan-u ([#1379](https://github.com/Tencent/tdesign-mobile-vue/pull/1379))
+- `Drawer`: `sfc` to `tsx` @Lyan-u ([#1376](https://github.com/Tencent/tdesign-mobile-vue/pull/1376))
+
+### 🐞 Bug Fixes
+- `Form`: `submit` 事件补齐 `firstError` 参数 @KYSpring ([#1320](https://github.com/Tencent/tdesign-mobile-vue/pull/1320))
+- `Swiper`: 修复 `placement` 值为 `outside` 无效的问题 @zuiaiwanqian ([#1349](https://github.com/Tencent/tdesign-mobile-vue/pull/1349))
+- `DateTimePicker`: 修复使用了动态的start值无法在第一次渲染时正确的限制时间  @dexterBo ([#1324](https://github.com/Tencent/tdesign-mobile-vue/pull/1324))
+- `SideBar`: 修复 `SideBarItem`项 `value` 值错误的问题 @Lyan-u ([#1330](https://github.com/Tencent/tdesign-mobile-vue/pull/1330))
+
+
 ## 🌈 1.2.0 `2024-04-18` 
 ### 🚀 Features
 - `Result`: `sfc` 改 `tsx` @liweijie0812 ([#1303](https://github.com/Tencent/tdesign-mobile-vue/pull/1303))

@@ -4,7 +4,7 @@ import { describe, it, expect } from 'vitest';
 import { ChevronRightIcon, AppIcon } from 'tdesign-icons-vue-next';
 import Cell from '../cell';
 import CellGroup from '../cell-group';
-import Avatar from '../../avatar/avatar.vue';
+import Avatar from '../../avatar/avatar';
 
 const appIcon = () => h(AppIcon);
 const chevronRightIcon = () => h(ChevronRightIcon);

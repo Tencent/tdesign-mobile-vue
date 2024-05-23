@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Popover > Popover mobileVue demo works fine 1`] = `
 <div
@@ -74,21 +74,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             </button>
             
           </div>
-          <div
-            class="t-popover"
-            data-popper-placement=""
-            style="display: none;"
-          >
-            <div
-              class="t-popover__content t-popover--dark"
-            >
-              弹出气泡内容
-              <div
-                class="t-popover__arrow"
-                data-popper-arrow=""
-              />
-            </div>
-          </div>
+          <!---->
           
         </div>
       </div>
@@ -130,18 +116,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             </button>
             
           </div>
-          <div
-            class="t-popover"
-            data-popper-placement=""
-            style="display: none;"
-          >
-            <div
-              class="t-popover__content t-popover--dark"
-            >
-              弹出气泡内容
-              <!--v-if-->
-            </div>
-          </div>
+          <!---->
           
         </div>
       </div>
@@ -183,47 +158,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             </button>
             
           </div>
-          <div
-            class="t-popover"
-            data-popper-placement=""
-            style="display: none;"
-          >
-            <div
-              class="t-popover__content t-popover--dark"
-            >
-              
-              <div
-                class="custom__list"
-                data-v-3b645a88=""
-              >
-                
-                <div
-                  class="custom__item"
-                  data-v-3b645a88=""
-                >
-                  选项1
-                </div>
-                <div
-                  class="custom__item"
-                  data-v-3b645a88=""
-                >
-                  选项2
-                </div>
-                <div
-                  class="custom__item"
-                  data-v-3b645a88=""
-                >
-                  选项3
-                </div>
-                
-              </div>
-              
-              <div
-                class="t-popover__arrow"
-                data-popper-arrow=""
-              />
-            </div>
-          </div>
+          <!---->
           
         </div>
       </div>
@@ -282,21 +217,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             </button>
             
           </div>
-          <div
-            class="t-popover"
-            data-popper-placement=""
-            style="display: none;"
-          >
-            <div
-              class="t-popover__content t-popover--dark"
-            >
-              弹出气泡内容
-              <div
-                class="t-popover__arrow"
-                data-popper-arrow=""
-              />
-            </div>
-          </div>
+          <!---->
           
         </div>
         <div
@@ -327,21 +248,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             </button>
             
           </div>
-          <div
-            class="t-popover"
-            data-popper-placement=""
-            style="display: none;"
-          >
-            <div
-              class="t-popover__content t-popover--light"
-            >
-              弹出气泡内容
-              <div
-                class="t-popover__arrow"
-                data-popper-arrow=""
-              />
-            </div>
-          </div>
+          <!---->
           
         </div>
         <div
@@ -372,21 +279,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             </button>
             
           </div>
-          <div
-            class="t-popover"
-            data-popper-placement=""
-            style="display: none;"
-          >
-            <div
-              class="t-popover__content t-popover--brand"
-            >
-              弹出气泡内容
-              <div
-                class="t-popover__arrow"
-                data-popper-arrow=""
-              />
-            </div>
-          </div>
+          <!---->
           
         </div>
       </div>
@@ -422,21 +315,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             </button>
             
           </div>
-          <div
-            class="t-popover"
-            data-popper-placement=""
-            style="display: none;"
-          >
-            <div
-              class="t-popover__content t-popover--success"
-            >
-              弹出气泡内容
-              <div
-                class="t-popover__arrow"
-                data-popper-arrow=""
-              />
-            </div>
-          </div>
+          <!---->
           
         </div>
         <div
@@ -467,21 +346,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             </button>
             
           </div>
-          <div
-            class="t-popover"
-            data-popper-placement=""
-            style="display: none;"
-          >
-            <div
-              class="t-popover__content t-popover--warning"
-            >
-              弹出气泡内容
-              <div
-                class="t-popover__arrow"
-                data-popper-arrow=""
-              />
-            </div>
-          </div>
+          <!---->
           
         </div>
         <div
@@ -512,21 +377,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             </button>
             
           </div>
-          <div
-            class="t-popover"
-            data-popper-placement=""
-            style="display: none;"
-          >
-            <div
-              class="t-popover__content t-popover--error"
-            >
-              弹出气泡内容
-              <div
-                class="t-popover__arrow"
-                data-popper-arrow=""
-              />
-            </div>
-          </div>
+          <!---->
           
         </div>
       </div>
@@ -586,21 +437,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
               </button>
               
             </div>
-            <div
-              class="t-popover"
-              data-popper-placement=""
-              style="display: none;"
-            >
-              <div
-                class="t-popover__content t-popover--dark"
-              >
-                弹出气泡内容
-                <div
-                  class="t-popover__arrow"
-                  data-popper-arrow=""
-                />
-              </div>
-            </div>
+            <!---->
             
           </div>
           <div
@@ -631,21 +468,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
               </button>
               
             </div>
-            <div
-              class="t-popover"
-              data-popper-placement=""
-              style="display: none;"
-            >
-              <div
-                class="t-popover__content t-popover--dark"
-              >
-                弹出气泡内容
-                <div
-                  class="t-popover__arrow"
-                  data-popper-arrow=""
-                />
-              </div>
-            </div>
+            <!---->
             
           </div>
           <div
@@ -676,21 +499,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
               </button>
               
             </div>
-            <div
-              class="t-popover"
-              data-popper-placement=""
-              style="display: none;"
-            >
-              <div
-                class="t-popover__content t-popover--dark"
-              >
-                弹出气泡内容
-                <div
-                  class="t-popover__arrow"
-                  data-popper-arrow=""
-                />
-              </div>
-            </div>
+            <!---->
             
           </div>
         </div>
@@ -737,21 +546,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
               </button>
               
             </div>
-            <div
-              class="t-popover"
-              data-popper-placement=""
-              style="display: none;"
-            >
-              <div
-                class="t-popover__content t-popover--dark"
-              >
-                弹出气泡内容
-                <div
-                  class="t-popover__arrow"
-                  data-popper-arrow=""
-                />
-              </div>
-            </div>
+            <!---->
             
           </div>
           <div
@@ -782,21 +577,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
               </button>
               
             </div>
-            <div
-              class="t-popover"
-              data-popper-placement=""
-              style="display: none;"
-            >
-              <div
-                class="t-popover__content t-popover--dark"
-              >
-                弹出气泡内容
-                <div
-                  class="t-popover__arrow"
-                  data-popper-arrow=""
-                />
-              </div>
-            </div>
+            <!---->
             
           </div>
           <div
@@ -827,21 +608,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
               </button>
               
             </div>
-            <div
-              class="t-popover"
-              data-popper-placement=""
-              style="display: none;"
-            >
-              <div
-                class="t-popover__content t-popover--dark"
-              >
-                弹出气泡内容
-                <div
-                  class="t-popover__arrow"
-                  data-popper-arrow=""
-                />
-              </div>
-            </div>
+            <!---->
             
           </div>
         </div>
@@ -888,21 +655,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
               </button>
               
             </div>
-            <div
-              class="t-popover"
-              data-popper-placement=""
-              style="display: none;"
-            >
-              <div
-                class="t-popover__content t-popover--dark"
-              >
-                气泡内容
-                <div
-                  class="t-popover__arrow"
-                  data-popper-arrow=""
-                />
-              </div>
-            </div>
+            <!---->
             
           </div>
           <div
@@ -933,21 +686,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
               </button>
               
             </div>
-            <div
-              class="t-popover"
-              data-popper-placement=""
-              style="display: none;"
-            >
-              <div
-                class="t-popover__content t-popover--dark"
-              >
-                气泡内容
-                <div
-                  class="t-popover__arrow"
-                  data-popper-arrow=""
-                />
-              </div>
-            </div>
+            <!---->
             
           </div>
           <div
@@ -978,21 +717,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
               </button>
               
             </div>
-            <div
-              class="t-popover"
-              data-popper-placement=""
-              style="display: none;"
-            >
-              <div
-                class="t-popover__content t-popover--dark"
-              >
-                气泡内容
-                <div
-                  class="t-popover__arrow"
-                  data-popper-arrow=""
-                />
-              </div>
-            </div>
+            <!---->
             
           </div>
         </div>
@@ -1039,21 +764,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
               </button>
               
             </div>
-            <div
-              class="t-popover"
-              data-popper-placement=""
-              style="display: none;"
-            >
-              <div
-                class="t-popover__content t-popover--dark"
-              >
-                气泡内容
-                <div
-                  class="t-popover__arrow"
-                  data-popper-arrow=""
-                />
-              </div>
-            </div>
+            <!---->
             
           </div>
           <div
@@ -1084,21 +795,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
               </button>
               
             </div>
-            <div
-              class="t-popover"
-              data-popper-placement=""
-              style="display: none;"
-            >
-              <div
-                class="t-popover__content t-popover--dark"
-              >
-                气泡内容
-                <div
-                  class="t-popover__arrow"
-                  data-popper-arrow=""
-                />
-              </div>
-            </div>
+            <!---->
             
           </div>
           <div
@@ -1129,21 +826,7 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
               </button>
               
             </div>
-            <div
-              class="t-popover"
-              data-popper-placement=""
-              style="display: none;"
-            >
-              <div
-                class="t-popover__content t-popover--dark"
-              >
-                气泡内容
-                <div
-                  class="t-popover__arrow"
-                  data-popper-arrow=""
-                />
-              </div>
-            </div>
+            <!---->
             
           </div>
         </div>
@@ -1202,21 +885,7 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
           </button>
           
         </div>
-        <div
-          class="t-popover"
-          data-popper-placement=""
-          style="display: none;"
-        >
-          <div
-            class="t-popover__content t-popover--dark"
-          >
-            弹出气泡内容
-            <div
-              class="t-popover__arrow"
-              data-popper-arrow=""
-            />
-          </div>
-        </div>
+        <!---->
         
       </div>
       <div
@@ -1247,21 +916,7 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
           </button>
           
         </div>
-        <div
-          class="t-popover"
-          data-popper-placement=""
-          style="display: none;"
-        >
-          <div
-            class="t-popover__content t-popover--dark"
-          >
-            弹出气泡内容
-            <div
-              class="t-popover__arrow"
-              data-popper-arrow=""
-            />
-          </div>
-        </div>
+        <!---->
         
       </div>
       <div
@@ -1292,21 +947,7 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
           </button>
           
         </div>
-        <div
-          class="t-popover"
-          data-popper-placement=""
-          style="display: none;"
-        >
-          <div
-            class="t-popover__content t-popover--dark"
-          >
-            弹出气泡内容
-            <div
-              class="t-popover__arrow"
-              data-popper-arrow=""
-            />
-          </div>
-        </div>
+        <!---->
         
       </div>
     </div>
@@ -1353,21 +994,7 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
           </button>
           
         </div>
-        <div
-          class="t-popover"
-          data-popper-placement=""
-          style="display: none;"
-        >
-          <div
-            class="t-popover__content t-popover--dark"
-          >
-            弹出气泡内容
-            <div
-              class="t-popover__arrow"
-              data-popper-arrow=""
-            />
-          </div>
-        </div>
+        <!---->
         
       </div>
       <div
@@ -1398,21 +1025,7 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
           </button>
           
         </div>
-        <div
-          class="t-popover"
-          data-popper-placement=""
-          style="display: none;"
-        >
-          <div
-            class="t-popover__content t-popover--dark"
-          >
-            弹出气泡内容
-            <div
-              class="t-popover__arrow"
-              data-popper-arrow=""
-            />
-          </div>
-        </div>
+        <!---->
         
       </div>
       <div
@@ -1443,21 +1056,7 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
           </button>
           
         </div>
-        <div
-          class="t-popover"
-          data-popper-placement=""
-          style="display: none;"
-        >
-          <div
-            class="t-popover__content t-popover--dark"
-          >
-            弹出气泡内容
-            <div
-              class="t-popover__arrow"
-              data-popper-arrow=""
-            />
-          </div>
-        </div>
+        <!---->
         
       </div>
     </div>
@@ -1504,21 +1103,7 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
           </button>
           
         </div>
-        <div
-          class="t-popover"
-          data-popper-placement=""
-          style="display: none;"
-        >
-          <div
-            class="t-popover__content t-popover--dark"
-          >
-            气泡内容
-            <div
-              class="t-popover__arrow"
-              data-popper-arrow=""
-            />
-          </div>
-        </div>
+        <!---->
         
       </div>
       <div
@@ -1549,21 +1134,7 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
           </button>
           
         </div>
-        <div
-          class="t-popover"
-          data-popper-placement=""
-          style="display: none;"
-        >
-          <div
-            class="t-popover__content t-popover--dark"
-          >
-            气泡内容
-            <div
-              class="t-popover__arrow"
-              data-popper-arrow=""
-            />
-          </div>
-        </div>
+        <!---->
         
       </div>
       <div
@@ -1594,21 +1165,7 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
           </button>
           
         </div>
-        <div
-          class="t-popover"
-          data-popper-placement=""
-          style="display: none;"
-        >
-          <div
-            class="t-popover__content t-popover--dark"
-          >
-            气泡内容
-            <div
-              class="t-popover__arrow"
-              data-popper-arrow=""
-            />
-          </div>
-        </div>
+        <!---->
         
       </div>
     </div>
@@ -1655,21 +1212,7 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
           </button>
           
         </div>
-        <div
-          class="t-popover"
-          data-popper-placement=""
-          style="display: none;"
-        >
-          <div
-            class="t-popover__content t-popover--dark"
-          >
-            气泡内容
-            <div
-              class="t-popover__arrow"
-              data-popper-arrow=""
-            />
-          </div>
-        </div>
+        <!---->
         
       </div>
       <div
@@ -1700,21 +1243,7 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
           </button>
           
         </div>
-        <div
-          class="t-popover"
-          data-popper-placement=""
-          style="display: none;"
-        >
-          <div
-            class="t-popover__content t-popover--dark"
-          >
-            气泡内容
-            <div
-              class="t-popover__arrow"
-              data-popper-arrow=""
-            />
-          </div>
-        </div>
+        <!---->
         
       </div>
       <div
@@ -1745,21 +1274,7 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
           </button>
           
         </div>
-        <div
-          class="t-popover"
-          data-popper-placement=""
-          style="display: none;"
-        >
-          <div
-            class="t-popover__content t-popover--dark"
-          >
-            气泡内容
-            <div
-              class="t-popover__arrow"
-              data-popper-arrow=""
-            />
-          </div>
-        </div>
+        <!---->
         
       </div>
     </div>
@@ -1805,21 +1320,7 @@ exports[`Popover > Popover themeVue demo works fine 1`] = `
         </button>
         
       </div>
-      <div
-        class="t-popover"
-        data-popper-placement=""
-        style="display: none;"
-      >
-        <div
-          class="t-popover__content t-popover--dark"
-        >
-          弹出气泡内容
-          <div
-            class="t-popover__arrow"
-            data-popper-arrow=""
-          />
-        </div>
-      </div>
+      <!---->
       
     </div>
     <div
@@ -1850,21 +1351,7 @@ exports[`Popover > Popover themeVue demo works fine 1`] = `
         </button>
         
       </div>
-      <div
-        class="t-popover"
-        data-popper-placement=""
-        style="display: none;"
-      >
-        <div
-          class="t-popover__content t-popover--light"
-        >
-          弹出气泡内容
-          <div
-            class="t-popover__arrow"
-            data-popper-arrow=""
-          />
-        </div>
-      </div>
+      <!---->
       
     </div>
     <div
@@ -1895,21 +1382,7 @@ exports[`Popover > Popover themeVue demo works fine 1`] = `
         </button>
         
       </div>
-      <div
-        class="t-popover"
-        data-popper-placement=""
-        style="display: none;"
-      >
-        <div
-          class="t-popover__content t-popover--brand"
-        >
-          弹出气泡内容
-          <div
-            class="t-popover__arrow"
-            data-popper-arrow=""
-          />
-        </div>
-      </div>
+      <!---->
       
     </div>
   </div>
@@ -1945,21 +1418,7 @@ exports[`Popover > Popover themeVue demo works fine 1`] = `
         </button>
         
       </div>
-      <div
-        class="t-popover"
-        data-popper-placement=""
-        style="display: none;"
-      >
-        <div
-          class="t-popover__content t-popover--success"
-        >
-          弹出气泡内容
-          <div
-            class="t-popover__arrow"
-            data-popper-arrow=""
-          />
-        </div>
-      </div>
+      <!---->
       
     </div>
     <div
@@ -1990,21 +1449,7 @@ exports[`Popover > Popover themeVue demo works fine 1`] = `
         </button>
         
       </div>
-      <div
-        class="t-popover"
-        data-popper-placement=""
-        style="display: none;"
-      >
-        <div
-          class="t-popover__content t-popover--warning"
-        >
-          弹出气泡内容
-          <div
-            class="t-popover__arrow"
-            data-popper-arrow=""
-          />
-        </div>
-      </div>
+      <!---->
       
     </div>
     <div
@@ -2035,21 +1480,7 @@ exports[`Popover > Popover themeVue demo works fine 1`] = `
         </button>
         
       </div>
-      <div
-        class="t-popover"
-        data-popper-placement=""
-        style="display: none;"
-      >
-        <div
-          class="t-popover__content t-popover--error"
-        >
-          弹出气泡内容
-          <div
-            class="t-popover__arrow"
-            data-popper-arrow=""
-          />
-        </div>
-      </div>
+      <!---->
       
     </div>
   </div>
@@ -2100,21 +1531,7 @@ exports[`Popover > Popover typeVue demo works fine 1`] = `
         </button>
         
       </div>
-      <div
-        class="t-popover"
-        data-popper-placement=""
-        style="display: none;"
-      >
-        <div
-          class="t-popover__content t-popover--dark"
-        >
-          弹出气泡内容
-          <div
-            class="t-popover__arrow"
-            data-popper-arrow=""
-          />
-        </div>
-      </div>
+      <!---->
       
     </div>
   </div>
@@ -2156,18 +1573,7 @@ exports[`Popover > Popover typeVue demo works fine 1`] = `
         </button>
         
       </div>
-      <div
-        class="t-popover"
-        data-popper-placement=""
-        style="display: none;"
-      >
-        <div
-          class="t-popover__content t-popover--dark"
-        >
-          弹出气泡内容
-          <!--v-if-->
-        </div>
-      </div>
+      <!---->
       
     </div>
   </div>
@@ -2209,47 +1615,7 @@ exports[`Popover > Popover typeVue demo works fine 1`] = `
         </button>
         
       </div>
-      <div
-        class="t-popover"
-        data-popper-placement=""
-        style="display: none;"
-      >
-        <div
-          class="t-popover__content t-popover--dark"
-        >
-          
-          <div
-            class="custom__list"
-            data-v-3b645a88=""
-          >
-            
-            <div
-              class="custom__item"
-              data-v-3b645a88=""
-            >
-              选项1
-            </div>
-            <div
-              class="custom__item"
-              data-v-3b645a88=""
-            >
-              选项2
-            </div>
-            <div
-              class="custom__item"
-              data-v-3b645a88=""
-            >
-              选项3
-            </div>
-            
-          </div>
-          
-          <div
-            class="t-popover__arrow"
-            data-popper-arrow=""
-          />
-        </div>
-      </div>
+      <!---->
       
     </div>
   </div>

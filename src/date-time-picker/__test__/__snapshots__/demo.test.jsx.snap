@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
 <div
@@ -36,8 +36,7 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--bottom"
@@ -475,8 +474,7 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--bottom"
@@ -844,8 +842,7 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--bottom"
@@ -2072,8 +2069,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--bottom"
@@ -2504,8 +2500,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--bottom"
@@ -2775,8 +2770,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--bottom"
@@ -3325,8 +3319,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          
-          
+          <!---->
         </div>
         <div
           class="t-popup t-popup--bottom"
@@ -3697,8 +3690,7 @@ exports[`DateTimePicker > DateTimePicker timeVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--bottom"
@@ -4230,8 +4222,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      
-      
+      <!---->
     </div>
     <div
       class="t-popup t-popup--bottom"

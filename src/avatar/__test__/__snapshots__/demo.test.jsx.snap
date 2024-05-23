@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Avatar > Avatar actionVue demo works fine 1`] = `
 <div
@@ -53,7 +53,7 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -120,7 +120,7 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -187,7 +187,7 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -254,7 +254,7 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -321,7 +321,7 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -343,8 +343,50 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
         </div>
       </div>
     </div>
+    <div
+      class="t-avatar__wrapper"
+    >
+      <div
+        class="t-avatar__badge"
+      >
+        <div
+          class="t-badge"
+        >
+          <div
+            class="t-badge__content"
+          >
+            
+            <div
+              class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+            >
+              <span>
+                
+                
+                <svg
+                  class="t-icon t-icon-user-add"
+                  fill="none"
+                  height="1em"
+                  style="font-size: 24px;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M11.5 4a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM6 7.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0zM19 13v4h4v2h-4v4h-2v-4h-4v-2h4v-4h2zM8 16a4 4 0 00-4 4h8.05v2H2v-2a6 6 0 016-6h4v2H8z"
+                    fill="currentColor"
+                  />
+                </svg>
+                
+                
+              </span>
+            </div>
+            
+          </div>
+          <!---->
+          <!---->
+        </div>
+      </div>
+    </div>
     
-    <!--v-if-->
   </div>
 </div>
 `;
@@ -398,7 +440,7 @@ exports[`Avatar > Avatar badgeAvatarVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -633,7 +675,7 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -701,7 +743,7 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -769,7 +811,7 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -837,7 +879,7 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -905,7 +947,7 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -927,8 +969,36 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
         </div>
       </div>
     </div>
+    <div
+      class="t-avatar__wrapper"
+    >
+      <div
+        class="t-avatar__badge"
+      >
+        <div
+          class="t-badge"
+        >
+          <div
+            class="t-badge__content"
+          >
+            
+            <div
+              class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+            >
+              <span>
+                
+                +5
+                
+              </span>
+            </div>
+            
+          </div>
+          <!---->
+          <!---->
+        </div>
+      </div>
+    </div>
     
-    <!--v-if-->
   </div>
 </div>
 `;
@@ -1069,7 +1139,7 @@ exports[`Avatar > Avatar imageAvatarVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -1136,7 +1206,7 @@ exports[`Avatar > Avatar imageAvatarVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -1249,7 +1319,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                           />
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                     </div>
@@ -1316,7 +1386,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                           />
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                     </div>
@@ -1609,7 +1679,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                             />
                             
                           </div>
-                          <!--v-if-->
+                          <!---->
                           <!---->
                         </div>
                       </div>
@@ -1677,7 +1747,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                             />
                             
                           </div>
-                          <!--v-if-->
+                          <!---->
                           <!---->
                         </div>
                       </div>
@@ -1745,7 +1815,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                             />
                             
                           </div>
-                          <!--v-if-->
+                          <!---->
                           <!---->
                         </div>
                       </div>
@@ -1813,7 +1883,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                             />
                             
                           </div>
-                          <!--v-if-->
+                          <!---->
                           <!---->
                         </div>
                       </div>
@@ -1881,7 +1951,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                             />
                             
                           </div>
-                          <!--v-if-->
+                          <!---->
                           <!---->
                         </div>
                       </div>
@@ -1903,8 +1973,36 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               </div>
             </div>
           </div>
+          <div
+            class="t-avatar__wrapper"
+          >
+            <div
+              class="t-avatar__badge"
+            >
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  
+                  <div
+                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+                  >
+                    <span>
+                      
+                      +5
+                      
+                    </span>
+                  </div>
+                  
+                </div>
+                <!---->
+                <!---->
+              </div>
+            </div>
+          </div>
           
-          <!--v-if-->
         </div>
       </div>
       
@@ -1981,7 +2079,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                             />
                             
                           </div>
-                          <!--v-if-->
+                          <!---->
                           <!---->
                         </div>
                       </div>
@@ -2048,7 +2146,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                             />
                             
                           </div>
-                          <!--v-if-->
+                          <!---->
                           <!---->
                         </div>
                       </div>
@@ -2115,7 +2213,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                             />
                             
                           </div>
-                          <!--v-if-->
+                          <!---->
                           <!---->
                         </div>
                       </div>
@@ -2182,7 +2280,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                             />
                             
                           </div>
-                          <!--v-if-->
+                          <!---->
                           <!---->
                         </div>
                       </div>
@@ -2249,7 +2347,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                             />
                             
                           </div>
-                          <!--v-if-->
+                          <!---->
                           <!---->
                         </div>
                       </div>
@@ -2271,8 +2369,50 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               </div>
             </div>
           </div>
+          <div
+            class="t-avatar__wrapper"
+          >
+            <div
+              class="t-avatar__badge"
+            >
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  
+                  <div
+                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+                  >
+                    <span>
+                      
+                      
+                      <svg
+                        class="t-icon t-icon-user-add"
+                        fill="none"
+                        height="1em"
+                        style="font-size: 24px;"
+                        viewBox="0 0 24 24"
+                        width="1em"
+                      >
+                        <path
+                          d="M11.5 4a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM6 7.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0zM19 13v4h4v2h-4v4h-2v-4h-4v-2h4v-4h2zM8 16a4 4 0 00-4 4h8.05v2H2v-2a6 6 0 016-6h4v2H8z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      
+                      
+                    </span>
+                  </div>
+                  
+                </div>
+                <!---->
+                <!---->
+              </div>
+            </div>
+          </div>
           
-          <!--v-if-->
         </div>
       </div>
       
@@ -2345,7 +2485,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                           />
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                     </div>
@@ -2535,7 +2675,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                             />
                             
                           </div>
-                          <!--v-if-->
+                          <!---->
                           <!---->
                         </div>
                       </div>
@@ -2681,7 +2821,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                             />
                             
                           </div>
-                          <!--v-if-->
+                          <!---->
                           <!---->
                         </div>
                       </div>
@@ -2827,7 +2967,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                             />
                             
                           </div>
-                          <!--v-if-->
+                          <!---->
                           <!---->
                         </div>
                       </div>
@@ -2984,7 +3124,7 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -3130,7 +3270,7 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -3276,7 +3416,7 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>

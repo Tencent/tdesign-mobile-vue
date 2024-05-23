@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Loading > Loading baseVue demo works fine 1`] = `
 <div
@@ -30,7 +30,7 @@ exports[`Loading > Loading baseVue demo works fine 1`] = `
         />
       </foreignobject>
     </svg>
-    <!--v-if-->
+    <!---->
     <!---->
   </div>
   <div
@@ -81,7 +81,7 @@ exports[`Loading > Loading baseVue demo works fine 1`] = `
       />
       
     </span>
-    <!--v-if-->
+    <!---->
     <!---->
   </div>
   <div
@@ -108,7 +108,7 @@ exports[`Loading > Loading baseVue demo works fine 1`] = `
       />
       
     </div>
-    <!--v-if-->
+    <!---->
     <!---->
   </div>
   
@@ -149,8 +149,8 @@ exports[`Loading > Loading delayVue demo works fine 1`] = `
     data-v-559e6688=""
     style="font-size: 20px;"
   >
-    <!--v-if-->
-    <!--v-if-->
+    <!---->
+    <!---->
     <!---->
   </div>
   
@@ -322,7 +322,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
               />
             </foreignobject>
           </svg>
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
@@ -373,7 +373,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
             />
             
           </span>
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         <div
@@ -400,7 +400,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
             />
             
           </div>
-          <!--v-if-->
+          <!---->
           <!---->
         </div>
         
@@ -669,7 +669,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           data-v-448d2bed=""
           style="font-size: 20px;"
         >
-          <!--v-if-->
+          <!---->
           <span
             class="t-loading__text t-loading__text--only"
           >
@@ -901,12 +901,11 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           class="t-slider"
           data-v-0fadab4c=""
         >
-          
-          <!--v-if-->
+          <!---->
           <div
             class="t-slider__bar t-slider__bar--default"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__line t-slider__line--default t-slider__line--single"
               style=""
@@ -914,16 +913,14 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
               <div
                 class="t-slider__dot"
               >
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-slider__dot-slider"
                 />
               </div>
             </div>
           </div>
-          <!--v-if-->
-          
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       
@@ -938,7 +935,7 @@ exports[`Loading > Loading pureTextVue demo works fine 1`] = `
   class="t-loading"
   style="font-size: 20px;"
 >
-  <!--v-if-->
+  <!---->
   <span
     class="t-loading__text t-loading__text--only"
   >
@@ -1136,12 +1133,11 @@ exports[`Loading > Loading speedVue demo works fine 1`] = `
       class="t-slider"
       data-v-0fadab4c=""
     >
-      
-      <!--v-if-->
+      <!---->
       <div
         class="t-slider__bar t-slider__bar--default"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-slider__line t-slider__line--default t-slider__line--single"
           style=""
@@ -1149,16 +1145,14 @@ exports[`Loading > Loading speedVue demo works fine 1`] = `
           <div
             class="t-slider__dot"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-slider__dot-slider"
             />
           </div>
         </div>
       </div>
-      <!--v-if-->
-      
-      <!--v-if-->
+      <!---->
     </div>
   </div>
   

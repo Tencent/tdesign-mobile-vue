@@ -32,7 +32,7 @@ export default {
   clearable: Boolean,
   /** 是否禁用输入框 */
   disabled: Boolean,
-  /** 指定输入框展示值的格式 */
+  /** 【暂不支持】指定输入框展示值的格式 */
   format: {
     type: Function as PropType<TdInputProps['format']>,
   },
@@ -73,15 +73,6 @@ export default {
   },
   /** 只读状态 */
   readonly: Boolean,
-  /** 已废弃。输入框尺寸 */
-  size: {
-    type: String as PropType<TdInputProps['size']>,
-    default: 'small' as TdInputProps['size'],
-    validator(val: TdInputProps['size']): boolean {
-      if (!val) return true;
-      return ['small', 'medium'].includes(val);
-    },
-  },
   /** 输入框状态。默认情况会由组件内部根据实际情况呈现，如果文本过长引起的状态变化 */
   status: {
     type: String as PropType<TdInputProps['status']>,
@@ -134,6 +125,6 @@ export default {
   onClear: Function as PropType<TdInputProps['onClear']>,
   /** 获得焦点时触发 */
   onFocus: Function as PropType<TdInputProps['onFocus']>,
-  /** 字数超出限制时触发 */
+  /** 【暂不支持】字数超出限制时触发 */
   onValidate: Function as PropType<TdInputProps['onValidate']>,
 };

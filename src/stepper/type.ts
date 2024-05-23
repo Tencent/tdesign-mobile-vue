@@ -22,7 +22,7 @@ export interface TdStepperProps {
    */
   inputWidth?: number;
   /**
-   * 是否整数
+   * 是否整型
    * @default true
    */
   integer?: boolean;

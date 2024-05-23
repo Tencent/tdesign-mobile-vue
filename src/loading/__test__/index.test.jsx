@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
-import Loading from '../loading.vue';
-import Spinner from '../icon/spinner.vue';
+import Loading from '../loading';
+import Spinner from '../icon/spinner';
 import { nextTick } from 'vue';
 
 const sleep = (duration) =>
@@ -28,7 +28,7 @@ describe('Loading.vue', () => {
           inheritColor: true,
         },
       });
-      expect(wrapper.vm.rootStyle).toContain('color: inherit');
+      expect(wrapper.element).toMatchSnapshot();
     });
 
     it(':pause', () => {

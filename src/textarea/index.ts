@@ -1,5 +1,5 @@
 import { withInstall, WithInstallType } from '../shared';
-import Textarea from './textarea.vue';
+import Textarea from './textarea';
 
 import './style';
 

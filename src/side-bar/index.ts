@@ -1,5 +1,5 @@
-import _SideBar from './side-bar.vue';
-import _SideBarItem from './side-bar-item.vue';
+import _SideBar from './side-bar';
+import _SideBarItem from './side-bar-item';
 import { withInstall, WithInstallType } from '../shared';
 import { TdSideBarProps, TdSideBarItemProps } from './type';
 
