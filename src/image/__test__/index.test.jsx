@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils';
 import { vi, describe, it, expect } from 'vitest';
 import { LoadingIcon } from 'tdesign-icons-vue-next';
 import { nextTick } from 'vue';
-import Image from '../image.vue';
+import Image from '../image';
 import { MockIntersectionObserver } from './utils';
 
 const prefix = 't';
