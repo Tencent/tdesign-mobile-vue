@@ -1,6 +1,6 @@
 import { LoadingIcon, CheckCircleIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
 import { computed, defineComponent, h, onUnmounted } from 'vue';
-import { useContent, useTNodeJSX } from '@/hooks/tnode';
+import { useContent, useTNodeJSX } from '../hooks/tnode';
 import TOverlay from '../overlay';
 import ToastProps from './props';
 import config from '../config';
