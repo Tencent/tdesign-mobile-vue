@@ -166,7 +166,7 @@ describe('grid-item', () => {
       </Grid>
     ));
     const badge = wrapper.find('.t-badge--basic ');
-    // expect(wrapper.findComponent(Badge).exists()).toBeTruthy();
+    expect(wrapper.findComponent(Badge).exists()).toBeTruthy();
     expect(badge.exists()).toBeTruthy();
     expect(badge.text()).toBe('1');
   });
