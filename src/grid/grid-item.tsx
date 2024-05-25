@@ -48,7 +48,7 @@ export default defineComponent({
     const gridItemClasses = computed(() => [
       `${name}`,
       `${name}--${props.layout}`,
-      { [`${name}--bordered`]: border, [`${name}--surround`]: border && gutter },
+      { [`${name}--bordered`]: border.value, [`${name}--surround`]: border.value && gutter.value },
     ]);
 
     return () => {

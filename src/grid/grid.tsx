@@ -34,7 +34,7 @@ export default defineComponent({
       {
         [`${name}--card`]: props.theme === 'card',
         [`${name}--auto-size`]: props.column === 0,
-        [`${name}--bordered`]: border && !gutter,
+        [`${name}--bordered`]: props.border && !props.gutter,
       },
     ]);
     return () => (
