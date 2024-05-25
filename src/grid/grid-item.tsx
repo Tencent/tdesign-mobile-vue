@@ -6,12 +6,15 @@ import isFunction from 'lodash/isFunction';
 import config from '../config';
 import gridItemProps from './grid-item-props';
 import { useTNodeJSX } from '../hooks/tnode';
+import TImage from '../image';
+import TBadge from '../badge';
 
 const { prefix } = config;
 const name = `${prefix}-grid-item`;
 
 export default defineComponent({
   name,
+  components: { TImage, TBadge },
   props: gridItemProps,
   setup(props, context) {
     const internalInstance = getCurrentInstance();
