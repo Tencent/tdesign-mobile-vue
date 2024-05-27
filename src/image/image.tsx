@@ -70,7 +70,7 @@ export default defineComponent({
       isError.value = true;
     };
 
-    return () => {
+    const maskContent = computed(() => {
       const statusContent = () => {
         if (context.slots?.loading && isLoading.value) {
           return renderTNodeJSX('loading');
@@ -84,17 +84,28 @@ export default defineComponent({
         if (!context.slots?.error && isError.value) {
           return closeIcon;
         }
-        return '';
+        return false;
       };
+      const node = () => {
+        if (isLoading.value || isError.value) {
+          if (props.lazy && realSrc.value === '') {
+            return;
+          }
+          return <div class={`${name}__mask`}>{statusContent()}</div>;
+        }
+      };
+      return node();
+    });
 
+    return () => {
       return (
         <div class={imageClasses.value}>
-          {(isLoading.value || isError.value) && <div class={`${name}__mask`}>{statusContent()}</div>}
+          {maskContent.value}
           <picture>
             {props.srcset &&
               Object.entries(props.srcset).map((item, index) => <source key={index} type={item[0]} srcset={item[1]} />)}
             <img
-              ref="imageDOM"
+              ref={imageDOM}
               class={`${name}__img`}
               style={imageStyles.value}
               src={realSrc.value}
