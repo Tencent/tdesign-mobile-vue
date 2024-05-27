@@ -4,7 +4,7 @@ import isString from 'lodash/isString';
 import isFunction from 'lodash/isFunction';
 
 import config from '../config';
-import gridItemProps from './grid-item-props';
+import props from './grid-item-props';
 import { useTNodeJSX } from '../hooks/tnode';
 import TImage from '../image';
 import TBadge from '../badge';
@@ -15,9 +15,8 @@ const name = `${prefix}-grid-item`;
 export default defineComponent({
   name,
   components: { TImage, TBadge },
-  props: gridItemProps,
+  props,
   setup(props, context) {
-    const internalInstance = getCurrentInstance();
     const renderTNodeJSX = useTNodeJSX();
     const { column, border, align, gutter } = inject<any>('grid');
 
@@ -58,13 +57,7 @@ export default defineComponent({
       return (
         <div class={gridItemClasses.value} style={rootStyle.value}>
           <div class={`${name}__image ${name}__image--${size.value}`}>
-            {props.badge ? (
-              <t-badge {...(props.badge as Object)}>
-                {realImage.value ? <t-image shape="round" {...realImage.value} /> : renderTNodeJSX('image')}
-              </t-badge>
-            ) : (
-              renderImage()
-            )}
+            {props.badge ? <t-badge {...(props.badge as Object)}>{renderImage()}</t-badge> : renderImage()}
           </div>
 
           <div class={`${name}__content ${name}__content--${props.layout}`}>

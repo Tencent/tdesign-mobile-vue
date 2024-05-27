@@ -1,14 +1,14 @@
 import { defineComponent, provide, toRefs, computed } from 'vue';
 
 import config from '../config';
-import gridProps from './props';
+import props from './props';
 
 const { prefix } = config;
 const name = `${prefix}-grid`;
 
 export default defineComponent({
   name,
-  props: gridProps,
+  props,
   setup(props, { slots }) {
     const { column, gutter, border, align } = toRefs(props);
     const rootStyle = computed(() => {
