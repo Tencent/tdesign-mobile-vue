@@ -1,5 +1,5 @@
-import LocalTabBar from './tab-bar.vue';
-import LocalTabBarItem from './tab-bar-item.vue';
+import LocalTabBar from './tab-bar';
+import LocalTabBarItem from './tab-bar-item';
 import { withInstall, WithInstallType } from '../shared';
 import { TdTabBarProps, TdTabBarItemProps } from './type';
 

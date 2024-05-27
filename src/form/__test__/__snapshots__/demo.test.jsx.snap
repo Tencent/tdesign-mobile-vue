@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Form > Form horizontalVue demo works fine 1`] = `
 <form
@@ -1388,7 +1388,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -1448,7 +1448,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -3078,7 +3078,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                             />
                             
                           </div>
-                          <!--v-if-->
+                          <!---->
                           <!---->
                         </div>
                       </div>
@@ -3138,7 +3138,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                             />
                             
                           </div>
-                          <!--v-if-->
+                          <!---->
                           <!---->
                         </div>
                       </div>
@@ -4621,7 +4621,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -4681,7 +4681,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                       />
                       
                     </div>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>

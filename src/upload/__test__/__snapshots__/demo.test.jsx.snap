@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Upload > Upload baseVue demo works fine 1`] = `
 <div
@@ -110,7 +110,7 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -194,7 +194,7 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -370,7 +370,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -430,7 +430,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -490,7 +490,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -620,7 +620,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -704,7 +704,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -839,7 +839,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -1004,7 +1004,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                           />
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                     </div>
@@ -1088,7 +1088,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                           />
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                     </div>
@@ -1170,7 +1170,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -1230,7 +1230,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -1290,7 +1290,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -1402,7 +1402,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
                 />
                 
               </div>
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
@@ -1486,7 +1486,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
                 />
                 
               </div>
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
@@ -1621,7 +1621,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
                 />
                 
               </div>
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>

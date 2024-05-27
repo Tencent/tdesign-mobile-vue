@@ -108,7 +108,7 @@ describe('DateTimePicker', () => {
     });
 
     it(': mode', async () => {
-      const onPick = vi.mock();
+      const onPick = vi.fn();
       const wrapper = mount(DateTimePicker, {
         props: {
           defaultValue: defaultDateTime,

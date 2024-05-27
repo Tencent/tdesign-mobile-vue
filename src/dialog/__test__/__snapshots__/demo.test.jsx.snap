@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
 <div
@@ -38,11 +38,10 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
       <!--v-if-->
       
       <div
-        class="t-dialog"
+        class="t-dialog "
       >
-        
-        
-        <!--v-if-->
+        <!---->
+        <!---->
         <div
           class="t-dialog__content"
         >
@@ -61,15 +60,11 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
             </div>
           </div>
         </div>
-        
-        
+        <!---->
         <div
           class="t-dialog__footer"
         >
-          
-          <!--v-if-->
-          
-          
+          <!---->
           <button
             aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -84,8 +79,6 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
-          
           <button
             aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -100,7 +93,6 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
         </div>
       </div>
       
@@ -142,15 +134,14 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
       <!--v-if-->
       
       <div
-        class="t-dialog"
+        class="t-dialog "
       >
-        
-        
-        <!--v-if-->
+        <!---->
+        <!---->
         <div
           class="t-dialog__content"
         >
-          <!--v-if-->
+          <!---->
           <div
             class="t-dialog__body"
           >
@@ -161,15 +152,11 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
             </div>
           </div>
         </div>
-        
-        
+        <!---->
         <div
           class="t-dialog__footer"
         >
-          
-          <!--v-if-->
-          
-          
+          <!---->
           <button
             aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -184,8 +171,6 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
-          
           <button
             aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--danger t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -200,7 +185,6 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
         </div>
       </div>
       
@@ -248,11 +232,10 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
       <!--v-if-->
       
       <div
-        class="t-dialog"
+        class="t-dialog "
       >
-        
-        
-        <!--v-if-->
+        <!---->
+        <!---->
         <div
           class="t-dialog__content"
         >
@@ -271,18 +254,12 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
             </div>
           </div>
         </div>
-        
-        
+        <!---->
         <div
           class="t-dialog__footer"
         >
-          
-          <!--v-if-->
-          
-          
-          <!--v-if-->
-          
-          
+          <!---->
+          <!---->
           <button
             aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -297,7 +274,6 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
         </div>
       </div>
       
@@ -339,15 +315,14 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
       <!--v-if-->
       
       <div
-        class="t-dialog"
+        class="t-dialog "
       >
-        
-        
-        <!--v-if-->
+        <!---->
+        <!---->
         <div
           class="t-dialog__content"
         >
-          <!--v-if-->
+          <!---->
           <div
             class="t-dialog__body"
           >
@@ -358,18 +333,12 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
             </div>
           </div>
         </div>
-        
-        
+        <!---->
         <div
           class="t-dialog__footer"
         >
-          
-          <!--v-if-->
-          
-          
-          <!--v-if-->
-          
-          
+          <!---->
+          <!---->
           <button
             aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -384,7 +353,6 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
         </div>
       </div>
       
@@ -426,11 +394,10 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
       <!--v-if-->
       
       <div
-        class="t-dialog"
+        class="t-dialog "
       >
-        
-        
-        <!--v-if-->
+        <!---->
+        <!---->
         <div
           class="t-dialog__content"
         >
@@ -451,18 +418,12 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
             </div>
           </div>
         </div>
-        
-        
+        <!---->
         <div
           class="t-dialog__footer"
         >
-          
-          <!--v-if-->
-          
-          
-          <!--v-if-->
-          
-          
+          <!---->
+          <!---->
           <button
             aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -477,7 +438,6 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
         </div>
       </div>
       
@@ -527,7 +487,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       <!--v-if-->
       
       <div
-        class="t-dialog"
+        class="t-dialog "
       >
         
         <div
@@ -560,7 +520,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
                 />
                 
               </div>
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
@@ -575,7 +535,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
           </picture>
         </div>
         
-        <!--v-if-->
+        <!---->
         <div
           class="t-dialog__content"
         >
@@ -594,15 +554,11 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
             </div>
           </div>
         </div>
-        
-        
+        <!---->
         <div
           class="t-dialog__footer"
         >
-          
-          <!--v-if-->
-          
-          
+          <!---->
           <button
             aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -617,8 +573,6 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
-          
           <button
             aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -633,7 +587,6 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
         </div>
       </div>
       
@@ -678,11 +631,10 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       <!--v-if-->
       
       <div
-        class="t-dialog"
+        class="t-dialog "
       >
-        
-        
-        <!--v-if-->
+        <!---->
+        <!---->
         <div
           class="t-dialog__content"
         >
@@ -732,7 +684,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
                 />
                 
               </div>
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
@@ -750,10 +702,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
         <div
           class="t-dialog__footer"
         >
-          
-          <!--v-if-->
-          
-          
+          <!---->
           <button
             aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -768,8 +717,6 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
-          
           <button
             aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -784,7 +731,6 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
         </div>
       </div>
       
@@ -834,11 +780,10 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
       <!--v-if-->
       
       <div
-        class="t-dialog"
+        class="t-dialog "
       >
-        
-        
-        <!--v-if-->
+        <!---->
+        <!---->
         <div
           class="t-dialog__content"
         >
@@ -893,15 +838,11 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
             </div>
           </div>
         </div>
-        
-        
+        <!---->
         <div
           class="t-dialog__footer t-dialog__footer--full"
         >
-          
-          <!--v-if-->
-          
-          
+          <!---->
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle t-dialog__button t-dialog__button--text"
@@ -916,8 +857,6 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
-          
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-dialog__button t-dialog__button--text"
@@ -932,7 +871,6 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
         </div>
       </div>
       
@@ -977,11 +915,10 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
       <!--v-if-->
       
       <div
-        class="t-dialog"
+        class="t-dialog "
       >
-        
-        
-        <!--v-if-->
+        <!---->
+        <!---->
         <div
           class="t-dialog__content"
         >
@@ -1041,15 +978,11 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
             </div>
           </div>
         </div>
-        
-        
+        <!---->
         <div
           class="t-dialog__footer t-dialog__footer--full"
         >
-          
-          <!--v-if-->
-          
-          
+          <!---->
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle t-dialog__button t-dialog__button--text"
@@ -1064,8 +997,6 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
-          
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-dialog__button t-dialog__button--text"
@@ -1080,7 +1011,6 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
         </div>
       </div>
       
@@ -1159,11 +1089,10 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           <!--v-if-->
           
           <div
-            class="t-dialog"
+            class="t-dialog "
           >
-            
-            
-            <!--v-if-->
+            <!---->
+            <!---->
             <div
               class="t-dialog__content"
             >
@@ -1182,18 +1111,12 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </div>
               </div>
             </div>
-            
-            
+            <!---->
             <div
               class="t-dialog__footer"
             >
-              
-              <!--v-if-->
-              
-              
-              <!--v-if-->
-              
-              
+              <!---->
+              <!---->
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -1208,7 +1131,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
             </div>
           </div>
           
@@ -1250,15 +1172,14 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           <!--v-if-->
           
           <div
-            class="t-dialog"
+            class="t-dialog "
           >
-            
-            
-            <!--v-if-->
+            <!---->
+            <!---->
             <div
               class="t-dialog__content"
             >
-              <!--v-if-->
+              <!---->
               <div
                 class="t-dialog__body"
               >
@@ -1269,18 +1190,12 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </div>
               </div>
             </div>
-            
-            
+            <!---->
             <div
               class="t-dialog__footer"
             >
-              
-              <!--v-if-->
-              
-              
-              <!--v-if-->
-              
-              
+              <!---->
+              <!---->
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -1295,7 +1210,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
             </div>
           </div>
           
@@ -1337,11 +1251,10 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           <!--v-if-->
           
           <div
-            class="t-dialog"
+            class="t-dialog "
           >
-            
-            
-            <!--v-if-->
+            <!---->
+            <!---->
             <div
               class="t-dialog__content"
             >
@@ -1362,18 +1275,12 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </div>
               </div>
             </div>
-            
-            
+            <!---->
             <div
               class="t-dialog__footer"
             >
-              
-              <!--v-if-->
-              
-              
-              <!--v-if-->
-              
-              
+              <!---->
+              <!---->
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -1388,7 +1295,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
             </div>
           </div>
           
@@ -1449,11 +1355,10 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           <!--v-if-->
           
           <div
-            class="t-dialog"
+            class="t-dialog "
           >
-            
-            
-            <!--v-if-->
+            <!---->
+            <!---->
             <div
               class="t-dialog__content"
             >
@@ -1472,15 +1377,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </div>
               </div>
             </div>
-            
-            
+            <!---->
             <div
               class="t-dialog__footer"
             >
-              
-              <!--v-if-->
-              
-              
+              <!---->
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -1495,8 +1396,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
-              
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -1511,7 +1410,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
             </div>
           </div>
           
@@ -1553,15 +1451,14 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           <!--v-if-->
           
           <div
-            class="t-dialog"
+            class="t-dialog "
           >
-            
-            
-            <!--v-if-->
+            <!---->
+            <!---->
             <div
               class="t-dialog__content"
             >
-              <!--v-if-->
+              <!---->
               <div
                 class="t-dialog__body"
               >
@@ -1572,15 +1469,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </div>
               </div>
             </div>
-            
-            
+            <!---->
             <div
               class="t-dialog__footer"
             >
-              
-              <!--v-if-->
-              
-              
+              <!---->
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -1595,8 +1488,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
-              
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--danger t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -1611,7 +1502,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
             </div>
           </div>
           
@@ -1674,11 +1564,10 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           <!--v-if-->
           
           <div
-            class="t-dialog"
+            class="t-dialog "
           >
-            
-            
-            <!--v-if-->
+            <!---->
+            <!---->
             <div
               class="t-dialog__content"
             >
@@ -1733,15 +1622,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </div>
               </div>
             </div>
-            
-            
+            <!---->
             <div
               class="t-dialog__footer t-dialog__footer--full"
             >
-              
-              <!--v-if-->
-              
-              
+              <!---->
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle t-dialog__button t-dialog__button--text"
@@ -1756,8 +1641,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
-              
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-dialog__button t-dialog__button--text"
@@ -1772,7 +1655,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
             </div>
           </div>
           
@@ -1817,11 +1699,10 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           <!--v-if-->
           
           <div
-            class="t-dialog"
+            class="t-dialog "
           >
-            
-            
-            <!--v-if-->
+            <!---->
+            <!---->
             <div
               class="t-dialog__content"
             >
@@ -1881,15 +1762,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </div>
               </div>
             </div>
-            
-            
+            <!---->
             <div
               class="t-dialog__footer t-dialog__footer--full"
             >
-              
-              <!--v-if-->
-              
-              
+              <!---->
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle t-dialog__button t-dialog__button--text"
@@ -1904,8 +1781,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
-              
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-dialog__button t-dialog__button--text"
@@ -1920,7 +1795,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
             </div>
           </div>
           
@@ -1983,7 +1857,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           <!--v-if-->
           
           <div
-            class="t-dialog"
+            class="t-dialog "
           >
             
             <div
@@ -2016,7 +1890,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -2031,7 +1905,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               </picture>
             </div>
             
-            <!--v-if-->
+            <!---->
             <div
               class="t-dialog__content"
             >
@@ -2050,15 +1924,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </div>
               </div>
             </div>
-            
-            
+            <!---->
             <div
               class="t-dialog__footer"
             >
-              
-              <!--v-if-->
-              
-              
+              <!---->
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -2073,8 +1943,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
-              
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -2089,7 +1957,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
             </div>
           </div>
           
@@ -2134,11 +2001,10 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           <!--v-if-->
           
           <div
-            class="t-dialog"
+            class="t-dialog "
           >
-            
-            
-            <!--v-if-->
+            <!---->
+            <!---->
             <div
               class="t-dialog__content"
             >
@@ -2188,7 +2054,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
@@ -2206,10 +2072,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
             <div
               class="t-dialog__footer"
             >
-              
-              <!--v-if-->
-              
-              
+              <!---->
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -2224,8 +2087,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
-              
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -2240,7 +2101,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
             </div>
           </div>
           
@@ -2305,11 +2165,10 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           <!--v-if-->
           
           <div
-            class="t-dialog"
+            class="t-dialog "
           >
-            
-            
-            <!--v-if-->
+            <!---->
+            <!---->
             <div
               class="t-dialog__content"
             >
@@ -2328,15 +2187,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </div>
               </div>
             </div>
-            
-            
+            <!---->
             <div
               class="t-dialog__footer t-dialog__footer--full"
             >
-              
-              <!--v-if-->
-              
-              
+              <!---->
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle t-dialog__button t-dialog__button--text"
@@ -2351,8 +2206,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
-              
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-dialog__button t-dialog__button--text"
@@ -2367,7 +2220,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
             </div>
           </div>
           
@@ -2409,11 +2261,10 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           <!--v-if-->
           
           <div
-            class="t-dialog"
+            class="t-dialog "
           >
-            
-            
-            <!--v-if-->
+            <!---->
+            <!---->
             <div
               class="t-dialog__content"
             >
@@ -2432,15 +2283,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </div>
               </div>
             </div>
-            
-            
+            <!---->
             <div
               class="t-dialog__footer"
             >
-              
-              <!--v-if-->
-              
-              
+              <!---->
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -2455,8 +2302,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
-              
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -2471,7 +2316,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
             </div>
           </div>
           
@@ -2513,11 +2357,10 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           <!--v-if-->
           
           <div
-            class="t-dialog"
+            class="t-dialog "
           >
-            
-            
-            <!--v-if-->
+            <!---->
+            <!---->
             <div
               class="t-dialog__content"
             >
@@ -2536,15 +2379,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </div>
               </div>
             </div>
-            
-            
+            <!---->
             <div
               class="t-dialog__footer t-dialog__footer--column"
             >
-              
-              <!--v-if-->
-              
-              
+              <!---->
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--vertical"
@@ -2559,8 +2398,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
-              
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--vertical"
@@ -2575,7 +2412,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
             </div>
           </div>
           
@@ -2617,11 +2453,10 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           <!--v-if-->
           
           <div
-            class="t-dialog"
+            class="t-dialog "
           >
-            
-            
-            <!--v-if-->
+            <!---->
+            <!---->
             <div
               class="t-dialog__content"
             >
@@ -2640,12 +2475,10 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </div>
               </div>
             </div>
-            
-            
+            <!---->
             <div
               class="t-dialog__footer t-dialog__footer--column"
             >
-              
               
               <button
                 aria-disabled="false"
@@ -2690,13 +2523,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 <!---->
               </button>
               
-              
-              
-              <!--v-if-->
-              
-              
-              <!--v-if-->
-              
+              <!---->
+              <!---->
             </div>
           </div>
           
@@ -2738,10 +2566,9 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           <!--v-if-->
           
           <div
-            class="t-dialog"
+            class="t-dialog "
           >
-            
-            
+            <!---->
             <div
               class="t-dialog__close-btn"
             >
@@ -2776,15 +2603,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </div>
               </div>
             </div>
-            
-            
+            <!---->
             <div
               class="t-dialog__footer t-dialog__footer--column"
             >
-              
-              <!--v-if-->
-              
-              
+              <!---->
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--vertical"
@@ -2799,8 +2622,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
-              
               <button
                 aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--vertical"
@@ -2815,7 +2636,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </span>
                 <!---->
               </button>
-              
             </div>
           </div>
           
@@ -2904,11 +2724,10 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       <!--v-if-->
       
       <div
-        class="t-dialog"
+        class="t-dialog "
       >
-        
-        
-        <!--v-if-->
+        <!---->
+        <!---->
         <div
           class="t-dialog__content"
         >
@@ -2927,15 +2746,11 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
             </div>
           </div>
         </div>
-        
-        
+        <!---->
         <div
           class="t-dialog__footer t-dialog__footer--full"
         >
-          
-          <!--v-if-->
-          
-          
+          <!---->
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle t-dialog__button t-dialog__button--text"
@@ -2950,8 +2765,6 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
-          
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-dialog__button t-dialog__button--text"
@@ -2966,7 +2779,6 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
         </div>
       </div>
       
@@ -3008,11 +2820,10 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       <!--v-if-->
       
       <div
-        class="t-dialog"
+        class="t-dialog "
       >
-        
-        
-        <!--v-if-->
+        <!---->
+        <!---->
         <div
           class="t-dialog__content"
         >
@@ -3031,15 +2842,11 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
             </div>
           </div>
         </div>
-        
-        
+        <!---->
         <div
           class="t-dialog__footer"
         >
-          
-          <!--v-if-->
-          
-          
+          <!---->
           <button
             aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -3054,8 +2861,6 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
-          
           <button
             aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
@@ -3070,7 +2875,6 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
         </div>
       </div>
       
@@ -3112,11 +2916,10 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       <!--v-if-->
       
       <div
-        class="t-dialog"
+        class="t-dialog "
       >
-        
-        
-        <!--v-if-->
+        <!---->
+        <!---->
         <div
           class="t-dialog__content"
         >
@@ -3135,15 +2938,11 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
             </div>
           </div>
         </div>
-        
-        
+        <!---->
         <div
           class="t-dialog__footer t-dialog__footer--column"
         >
-          
-          <!--v-if-->
-          
-          
+          <!---->
           <button
             aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--vertical"
@@ -3158,8 +2957,6 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
-          
           <button
             aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--vertical"
@@ -3174,7 +2971,6 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
         </div>
       </div>
       
@@ -3216,11 +3012,10 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       <!--v-if-->
       
       <div
-        class="t-dialog"
+        class="t-dialog "
       >
-        
-        
-        <!--v-if-->
+        <!---->
+        <!---->
         <div
           class="t-dialog__content"
         >
@@ -3239,12 +3034,10 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
             </div>
           </div>
         </div>
-        
-        
+        <!---->
         <div
           class="t-dialog__footer t-dialog__footer--column"
         >
-          
           
           <button
             aria-disabled="false"
@@ -3289,13 +3082,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
             <!---->
           </button>
           
-          
-          
-          <!--v-if-->
-          
-          
-          <!--v-if-->
-          
+          <!---->
+          <!---->
         </div>
       </div>
       
@@ -3337,10 +3125,9 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       <!--v-if-->
       
       <div
-        class="t-dialog"
+        class="t-dialog "
       >
-        
-        
+        <!---->
         <div
           class="t-dialog__close-btn"
         >
@@ -3375,15 +3162,11 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
             </div>
           </div>
         </div>
-        
-        
+        <!---->
         <div
           class="t-dialog__footer t-dialog__footer--column"
         >
-          
-          <!--v-if-->
-          
-          
+          <!---->
           <button
             aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--vertical"
@@ -3398,8 +3181,6 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
-          
           <button
             aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--vertical"
@@ -3414,7 +3195,6 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
-          
         </div>
       </div>
       

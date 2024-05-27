@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Navbar > Navbar baseVue demo works fine 1`] = `
 <div
@@ -293,7 +293,7 @@ exports[`Navbar > Navbar imgVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
@@ -859,7 +859,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>

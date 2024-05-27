@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Input > Input alignVue demo works fine 1`] = `
 <div
@@ -1227,7 +1227,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                         />
                         
                       </div>
-                      <!--v-if-->
+                      <!---->
                       <!---->
                     </div>
                   </div>
@@ -2170,7 +2170,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
