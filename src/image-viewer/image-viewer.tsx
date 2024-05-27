@@ -58,6 +58,17 @@ export default defineComponent({
       'index-change',
     );
 
+    // 预加载前后几张图片，以保持预览流畅也节省资源
+    // 需要预加载的图片索引，第一张、第二张、最后一张，保持当前图片和当前图左右两边的图片预加载
+    const preloadImageIndex = [0, 1, props.images.length - 1];
+    // 图片列表信息，包含是否需要预加载标志
+    const imageInfoList = reactive(
+      props.images.map((image, index) => ({
+        image,
+        preload: preloadImageIndex.includes(index),
+      })),
+    );
+
     const disabled = ref(false);
     const rootRef = ref();
     const imagesSize = reactive({});
@@ -106,10 +117,19 @@ export default defineComponent({
       emit('delete', currentIndex.value ?? 0);
     };
 
+    // 设置当前索引图片上一张、下一张预加载
+    const setImagePreload = (index: number) => {
+      const nextIndex = index >= imageInfoList.length - 1 ? 0 : index + 1;
+      const preIndex = index <= 0 ? imageInfoList.length - 1 : index - 1;
+      imageInfoList[preIndex].preload = true;
+      imageInfoList[nextIndex].preload = true;
+    };
+
     const onSwiperChange = (index: number, context: any) => {
       if (currentIndex.value !== index) {
         setIndex(index, { context });
         setScale(1);
+        setImagePreload(index);
       }
     };
 
@@ -348,32 +368,34 @@ export default defineComponent({
               disabled={disabled.value}
               onChange={onSwiperChange}
             >
-              {props.images.map((image, index) => (
+              {imageInfoList.map((info, index) => (
                 <TSwiperItem
                   ref={(item: any) => (swiperItemRefs.value[index] = item)}
                   key={index}
                   class={`${name}__swiper-item`}
                   style="touch-action: none"
                 >
-                  <img
-                    src={image}
-                    style={`${
-                      index === state.touchIndex
-                        ? `transform: ${imageTransform.value}`
-                        : 'transform: matrix(1, 0, 0, 1, 0, 0)'
-                    }; ${imageTransitionDuration.value};`}
-                    onLoad={(event: Event) => onImgLoad(event, index)}
-                    onTransitionstart={(event: TransitionEvent) => {
-                      if (event.target === event.currentTarget) {
-                        onTransitionStart(index);
-                      }
-                    }}
-                    onTransitionend={(event: TransitionEvent) => {
-                      if (event.target === event.currentTarget) {
-                        onTransitionEnd(index);
-                      }
-                    }}
-                  />
+                  {info.preload ? (
+                    <img
+                      src={info.image}
+                      style={`
+                      transform: ${index === state.touchIndex ? imageTransform.value : 'matrix(1, 0, 0, 1, 0, 0)'}; 
+                      ${imageTransitionDuration.value};`}
+                      onLoad={(event: Event) => onImgLoad(event, index)}
+                      onTransitionstart={(event: TransitionEvent) => {
+                        if (event.target === event.currentTarget) {
+                          onTransitionStart(index);
+                        }
+                      }}
+                      onTransitionend={(event: TransitionEvent) => {
+                        if (event.target === event.currentTarget) {
+                          onTransitionEnd(index);
+                        }
+                      }}
+                    />
+                  ) : (
+                    <span></span>
+                  )}
                 </TSwiperItem>
               ))}
             </TSwiper>
