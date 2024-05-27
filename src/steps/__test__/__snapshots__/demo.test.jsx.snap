@@ -1702,7 +1702,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                       </div>
                     </div>
                     <picture>
-                      <!--v-if-->
+                      <!---->
                       <img
                         alt="图标"
                         class="t-image__img"
@@ -4246,7 +4246,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt="图标"
                   class="t-image__img"

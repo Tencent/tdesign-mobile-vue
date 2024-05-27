@@ -1232,7 +1232,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                     </div>
                   </div>
                   <picture>
-                    <!--v-if-->
+                    <!---->
                     <img
                       alt=""
                       class="t-image__img"
@@ -2175,7 +2175,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"

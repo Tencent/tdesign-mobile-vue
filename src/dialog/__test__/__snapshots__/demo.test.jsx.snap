@@ -525,7 +525,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
             </div>
           </div>
           <picture>
-            <!--v-if-->
+            <!---->
             <img
               alt=""
               class="t-image__img"
@@ -689,7 +689,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
             </div>
           </div>
           <picture>
-            <!--v-if-->
+            <!---->
             <img
               alt=""
               class="t-image__img"
@@ -1895,7 +1895,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -2059,7 +2059,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
