@@ -72,7 +72,7 @@ const defaultProps: MessageActionOptionsType = {
   theme: 'info',
   visible: false,
   zIndex: 5000,
-  context: document.body,
+  context: isBrowser ? document.body : null,
   onDurationEnd: () => {},
   onCloseBtnClick: () => {},
 };
