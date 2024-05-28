@@ -15,13 +15,13 @@ const name = `${prefix}-rate`;
 export default defineComponent({
   name,
   props: rateProps,
-  setup(props, content) {
+  setup(props, context) {
     const rateClass = usePrefixClass('rate');
     const { t, globalConfig } = useConfig('rate');
     const disabled = useFormDisabled();
 
     const rateWrapper = ref<HTMLElement | null>(null);
-    const [actualVal] = useDefault<number, TdRateProps>(props, content.emit, 'value', 'change');
+    const [actualVal] = useDefault<number, TdRateProps>(props, context.emit, 'value', 'change');
     const rateText = computed(() => {
       if (Array.isArray(props.texts) && props.texts.length > 0) {
         return props.texts[actualVal.value - 1];
