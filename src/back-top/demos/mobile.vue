@@ -5,14 +5,6 @@
     <tdesign-demo-block title="形状" summary="">
       <BaseDemo :visible="visible" :style="style" :container="() => container?.parentElement" @close="handleClose" />
     </tdesign-demo-block>
-    <!-- <tdesign-demo-block summary="半圆型返回顶部">
-      <HalfRoundDemo
-        :visible="visible1"
-        :style="style"
-        :container="() => container?.parentElement"
-        @close="handleClose1"
-      />
-    </tdesign-demo-block> -->
     <tdesign-demo-block>
       <div class="group">
         <t-skeleton v-for="i in 6" :key="i" :row-col="rowCols" class="item" />
@@ -26,7 +18,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import BaseDemo from './base.vue';
-import HalfRoundDemo from './half-round.vue';
 
 const visible = ref(false);
 const visible1 = ref(false);

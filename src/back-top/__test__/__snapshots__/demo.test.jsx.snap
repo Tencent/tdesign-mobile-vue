@@ -175,14 +175,6 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
       
     </div>
   </div>
-  <!-- &lt;tdesign-demo-block summary="半圆型返回顶部"&gt;
-      &lt;HalfRoundDemo
-        :visible="visible1"
-        :style="style"
-        :container="() =&gt; container?.parentElement"
-        @close="handleClose1"
-      /&gt;
-    &lt;/tdesign-demo-block&gt; -->
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-806aae90=""
