@@ -217,7 +217,6 @@ export default defineComponent({
 
       const renderRateWrapper = () => {
         const countList = Array.from(Array(props.count), (_, k) => k + 1);
-        console.log('countList', countList);
         return (
           <div
             ref={rateWrapper}
