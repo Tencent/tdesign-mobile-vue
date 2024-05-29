@@ -10,9 +10,19 @@
       }"
       @click="onClick('round', '顶部')"
     />
+    <t-button
+      v-bind="{
+        block: true,
+        size: 'large',
+        theme: 'primary',
+        variant: 'outline',
+        content: '半圆形返回顶部',
+      }"
+      @click="onClick('half-round', '返回顶部')"
+    />
   </div>
   <div :style="{ ...style }">
-    <t-back-top v-show="visible" :theme="theme" :text="text" :on-to-top="handleToTop" :target="target" />
+    <t-back-top :theme="theme" :text="text" :on-to-top="handleToTop" :container="container" />
   </div>
 </template>
 
@@ -29,7 +39,7 @@ const props = defineProps({
     type: Object,
     default: () => {},
   },
-  target: {
+  container: {
     type: Function,
   },
 });
@@ -43,7 +53,7 @@ const onClick = (tem: string, txt: string) => {
   text.value = txt;
   theme.value = tem;
   emit('close');
-  props.target().scrollTo(0, 1200);
+  props.container().scrollTo(0, 1200);
 };
 function handleToTop() {
   console.log('handleToTop');

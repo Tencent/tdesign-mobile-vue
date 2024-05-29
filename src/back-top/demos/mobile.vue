@@ -1,13 +1,18 @@
 <template>
-  <div ref="target" class="tdesign-mobile-demo">
+  <div ref="container" class="tdesign-mobile-demo">
     <h1 class="title">BackTop 回到顶部</h1>
     <p class="summary">当页面过长往下滑动是会出现返回顶部的便捷操作，帮助用户快速回到页面顶部</p>
-    <tdesign-demo-block title="01 类型" summary="圆型返回顶部">
-      <BaseDemo :visible="visible" :style="style" :target="() => target?.parentElement" @close="handleClose" />
+    <tdesign-demo-block title="形状" summary="">
+      <BaseDemo :visible="visible" :style="style" :container="() => container?.parentElement" @close="handleClose" />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="半圆型返回顶部">
-      <HalfRoundDemo :visible="visible1" :style="style" :target="() => target?.parentElement" @close="handleClose1" />
-    </tdesign-demo-block>
+    <!-- <tdesign-demo-block summary="半圆型返回顶部">
+      <HalfRoundDemo
+        :visible="visible1"
+        :style="style"
+        :container="() => container?.parentElement"
+        @close="handleClose1"
+      />
+    </tdesign-demo-block> -->
     <tdesign-demo-block>
       <div class="group">
         <t-skeleton v-for="i in 6" :key="i" :row-col="rowCols" class="item" />
@@ -26,7 +31,7 @@ import HalfRoundDemo from './half-round.vue';
 const visible = ref(false);
 const visible1 = ref(false);
 const style = ref({});
-const target = ref<HTMLElement>();
+const container = ref<HTMLElement>();
 
 const handleClose = () => {
   visible.value = true;
