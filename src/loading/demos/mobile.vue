@@ -28,6 +28,9 @@
     <tdesign-demo-block title="03 加载速度" summary="加载速度调整">
       <speed />
     </tdesign-demo-block>
+    <tdesign-demo-block title="04 插件" summary="插件形式调用">
+      <plugin />
+    </tdesign-demo-block>
   </div>
 </template>
 
@@ -38,6 +41,7 @@ import vert from './vert.vue';
 import pureText from './pure-text.vue';
 import speed from './speed.vue';
 import size from './size.vue';
+import plugin from './plugin.vue';
 </script>
 
 <style scoped lang="less">

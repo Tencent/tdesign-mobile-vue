@@ -927,6 +927,53 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
       
     </div>
   </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-448d2bed=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        04 插件
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        插件形式调用
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        data-v-448d2bed=""
+        data-v-a8334c04=""
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
+          data-v-a8334c04=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            plugin形式调用
+            
+          </span>
+          <!---->
+        </button>
+      </div>
+      
+    </div>
+  </div>
 </div>
 `;
 

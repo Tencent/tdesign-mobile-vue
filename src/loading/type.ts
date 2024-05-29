@@ -69,3 +69,8 @@ export interface TdLoadingProps {
    */
   theme?: 'circular' | 'spinner' | 'dots';
 }
+export interface LoadingInstance {
+  hide: () => void;
+}
+
+export type LoadingMethod = (options: boolean | TdLoadingProps) => LoadingInstance;
