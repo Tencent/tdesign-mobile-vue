@@ -8,6 +8,10 @@ import { TdBackTopProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 滚动的容器 */
+  container: {
+    type: Function as PropType<TdBackTopProps['container']>,
+  },
   /** 是否绝对定位固定到屏幕右下方 */
   fixed: {
     type: Boolean,
@@ -35,6 +39,11 @@ export default {
       if (!val) return true;
       return ['round', 'half-round', 'round-dark', 'half-round-dark'].includes(val);
     },
+  },
+  /** 滚动高度达到此参数值才出现 */
+  visibilityHeight: {
+    type: Number,
+    default: 200,
   },
   /** 点击触发 */
   onToTop: Function as PropType<TdBackTopProps['onToTop']>,
