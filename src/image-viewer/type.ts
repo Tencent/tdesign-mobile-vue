@@ -5,6 +5,7 @@
  * */
 
 import { TNode } from '../common';
+import { ImageInfo } from './image-viewer-interface';
 
 export interface TdImageViewerProps {
   /**
@@ -21,7 +22,7 @@ export interface TdImageViewerProps {
    * 图片数组
    * @default []
    */
-  images?: Array<string>;
+  images?: Array<string | ImageInfo>;
   /**
    * 当前预览图片所在的下标
    */

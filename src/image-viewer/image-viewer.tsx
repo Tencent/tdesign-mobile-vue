@@ -21,6 +21,7 @@ import { renderTNode, TNode, useDefault, isBrowser, useGesture, DragState, Pinch
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
 import TImage from '../image';
 import { TdImageViewerProps } from './type';
+import { ImageInfo } from './image-viewer-interface';
 
 const { prefix } = config;
 const name = `${prefix}-image-viewer`;
@@ -63,10 +64,21 @@ export default defineComponent({
     const preloadImageIndex = [0, 1, props.images.length - 1];
     // 图片列表信息，包含是否需要预加载标志
     const imageInfoList = reactive(
-      props.images.map((image, index) => ({
-        image,
-        preload: preloadImageIndex.includes(index),
-      })),
+      props.images.map((image, index) => {
+        let imageInfo: ImageInfo;
+        if (typeof image === 'string') {
+          imageInfo = {
+            url: image,
+            align: 'center',
+          };
+        } else {
+          imageInfo = image;
+        }
+        return {
+          image: imageInfo,
+          preload: preloadImageIndex.includes(index),
+        };
+      }),
     );
 
     const disabled = ref(false);
@@ -373,11 +385,11 @@ export default defineComponent({
                   ref={(item: any) => (swiperItemRefs.value[index] = item)}
                   key={index}
                   class={`${name}__swiper-item`}
-                  style="touch-action: none"
+                  style={`touch-action: none; align-items:${info.image.align};`}
                 >
                   {info.preload ? (
                     <img
-                      src={info.image}
+                      src={info.image.url}
                       style={`
                       transform: ${index === state.touchIndex ? imageTransform.value : 'matrix(1, 0, 0, 1, 0, 0)'}; 
                       ${imageTransitionDuration.value};`}
