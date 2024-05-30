@@ -2,12 +2,12 @@ import { ref, computed, defineComponent, watchEffect } from 'vue';
 import { useIntersectionObserver } from '@vueuse/core';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
-import Loading from '@/loading';
-import config from '@/config';
-import { useTNodeJSX } from '@/hooks/tnode';
-import { usePrefixClass } from '@/hooks/useClass';
+import Loading from '../loading';
+import config from '../config';
+import { useTNodeJSX } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 
-import ImageProps from './props';
+import props from './props';
 
 const { prefix } = config;
 const name = `${prefix}-image`;
@@ -15,7 +15,7 @@ const name = `${prefix}-image`;
 export default defineComponent({
   name,
   components: { CloseIcon, Loading },
-  props: ImageProps,
+  props,
   setup(props, context) {
     const imageClass = usePrefixClass('image');
     const renderTNodeJSX = useTNodeJSX();
