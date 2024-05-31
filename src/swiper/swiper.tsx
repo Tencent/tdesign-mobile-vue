@@ -6,6 +6,7 @@ import { useSwipe } from '../swipe-cell/useSwipe';
 import config from '../config';
 import props from './props';
 import { SwiperChangeSource, SwiperNavigation } from './type';
+import { useVModel } from '../shared';
 import { preventDefault } from '../shared/dom';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
@@ -16,7 +17,7 @@ const navName = `${prefix}-swiper-nav`;
 export default defineComponent({
   name,
   props,
-  emits: ['update:currentIndex'],
+  emits: ['change', 'update:current', 'update:modelValue'],
   setup(props, context) {
     const swiperClass = usePrefixClass('swiper');
     const readerTNodeJSX = useTNodeJSX();
@@ -26,7 +27,8 @@ export default defineComponent({
 
     const root = ref();
     const items = ref<any>([]);
-    const currentIndex = ref(props.current || props.defaultCurrent || 0);
+    const { current: value, modelValue } = toRefs(props);
+    const [currentIndex, setCurrent] = useVModel(value, modelValue, props.defaultCurrent);
     const swiperContainer = ref<HTMLElement | null>(null);
 
     const animating = ref(false);
@@ -125,9 +127,9 @@ export default defineComponent({
       if (index >= max) {
         val = props.loop ? 0 : max - 1;
       }
-      currentIndex.value = val;
-      context.emit('update:currentIndex', val);
-      props.onChange?.(val, { source });
+      setCurrent(val);
+      context.emit('update:current', val);
+      context.emit('change', val, { source });
     };
 
     const { lengthX, lengthY } = useSwipe(swiperContainer, {
