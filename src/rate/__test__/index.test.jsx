@@ -2,7 +2,7 @@ import { ref, nextTick, markRaw } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { ThumbUpIcon, ThumbDownIcon, StarFilledIcon } from 'tdesign-icons-vue-next';
-import Rate from '../rate.vue';
+import Rate from '../rate';
 import { trigger } from '../../image-viewer/__test__/touch';
 
 const move = async (target) => {

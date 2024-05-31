@@ -1,4 +1,4 @@
-import Rate from './rate.vue';
+import Rate from './rate';
 import { withInstall, WithInstallType } from '../shared';
 import { TdRateProps } from './type';
 

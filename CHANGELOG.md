@@ -5,6 +5,19 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.2.3 `2024-05-27` 
+### 🚀 Features
+- `Slider`: `sfc` 改 `tsx` @liweijie0812 ([#1384](https://github.com/Tencent/tdesign-mobile-vue/pull/1384))
+- `Loading`: `sfc` 改 `tsx` @liweijie0812 ([#1382](https://github.com/Tencent/tdesign-mobile-vue/pull/1382))
+- `TabBar`:  `sfc` 改 `tsx` @zuiaiwanqian ([#1365](https://github.com/Tencent/tdesign-mobile-vue/pull/1365))
+- `Progress`: `sfc` 改 `tsx` @anlyyao ([#1413](https://github.com/Tencent/tdesign-mobile-vue/pull/1413))
+- `Grid`: `sfc` 改 `tsx` @novlan1 ([#1415](https://github.com/Tencent/tdesign-mobile-vue/pull/1415))
+- `Dialog`: `sfc` 改 `tsx` @zuiaiwanqian ([#1371](https://github.com/Tencent/tdesign-mobile-vue/pull/1371))
+- `Checkbox`: `sfc` 改 `tsx` @zuiaiwanqian ([#1375](https://github.com/Tencent/tdesign-mobile-vue/pull/1375))
+### 🐞 Bug Fixes
+- `Message`: 修复 `ssr` 下报错 @anlyyao ([#1416](https://github.com/Tencent/tdesign-mobile-vue/pull/1416))
+
+
 ## 🌈 1.2.2 `2024-05-13` 
 ### 🚧 Others
 - chore: aliases are not used inside components @anlyyao ([#1394](https://github.com/Tencent/tdesign-mobile-vue/pull/1394))

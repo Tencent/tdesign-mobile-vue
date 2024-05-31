@@ -1,32 +1,15 @@
-<template>
-  <div
-    :class="[
-      `${name}`,
-      {
-        [`${name}--card`]: theme === 'card',
-        [`${name}--auto-size`]: column === 0,
-        [`${name}--bordered`]: border && !gutter,
-      },
-    ]"
-    :style="rootStyle"
-  >
-    <slot />
-  </div>
-</template>
-
-<script lang="ts">
 import { defineComponent, provide, toRefs, computed } from 'vue';
 
 import config from '../config';
-import gridProps from './props';
+import props from './props';
 
 const { prefix } = config;
 const name = `${prefix}-grid`;
 
 export default defineComponent({
   name,
-  props: gridProps,
-  setup(props) {
+  props,
+  setup(props, { slots }) {
     const { column, gutter, border, align } = toRefs(props);
     const rootStyle = computed(() => {
       if (column.value === 0) return [];
@@ -46,11 +29,18 @@ export default defineComponent({
       gutter,
     });
 
-    return {
-      name,
-      column,
-      rootStyle,
-    };
+    const classes = computed(() => [
+      `${name}`,
+      {
+        [`${name}--card`]: props.theme === 'card',
+        [`${name}--auto-size`]: props.column === 0,
+        [`${name}--bordered`]: props.border && !props.gutter,
+      },
+    ]);
+    return () => (
+      <div class={classes.value} style={rootStyle.value}>
+        {slots.default?.()}
+      </div>
+    );
   },
 });
-</script>

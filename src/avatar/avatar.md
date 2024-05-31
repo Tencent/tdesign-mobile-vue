@@ -32,7 +32,7 @@ collapseAvatar | String / Slot / Function | - | 头像数量超出时，会出�
 max | Number | - | 能够同时显示的最多头像数量 | N
 size | String | medium | 尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size | N
 
-### CSS 变量
+### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 

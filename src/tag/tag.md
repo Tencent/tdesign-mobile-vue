@@ -53,7 +53,7 @@ change | `(checked: boolean)` | 状态切换时触发
 click | `(context: { e: MouseEvent })` | 点击标签时触发
 close | `(context: { e: MouseEvent })` | 如果关闭按钮存在，点击关闭按钮时触发
 
-### CSS 变量
+### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 

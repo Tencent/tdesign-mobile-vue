@@ -1,5 +1,5 @@
-import LocalGrid from './grid.vue';
-import LocalGridItem from './grid-item.vue';
+import LocalGrid from './grid';
+import LocalGridItem from './grid-item';
 import { withInstall, WithInstallType } from '../shared';
 
 import { TdGridItemProps, TdGridProps } from './type';

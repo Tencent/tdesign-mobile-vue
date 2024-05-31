@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { getBackgroundColor } from '../utils';
-import Progress from '../progress.vue';
+import Progress from '../progress';
 import { mount } from '@vue/test-utils';
 
 describe('Progress', () => {
