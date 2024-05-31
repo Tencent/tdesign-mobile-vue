@@ -63,8 +63,8 @@ export default defineComponent({
     // 需要预加载的图片索引，第一张、第二张、最后一张，保持当前图片和当前图左右两边的图片预加载
     const preloadImageIndex = [0, 1, props.images.length - 1];
     // 图片列表信息，包含是否需要预加载标志
-    const imageInfoList = reactive(
-      props.images.map((image, index) => {
+    const imageInfoList = computed(() => {
+      return props.images.map((image, index) => {
         let imageInfo: ImageInfo;
         if (typeof image === 'string') {
           imageInfo = {
@@ -78,8 +78,8 @@ export default defineComponent({
           image: imageInfo,
           preload: preloadImageIndex.includes(index),
         };
-      }),
-    );
+      });
+    });
 
     const disabled = ref(false);
     const rootRef = ref();
@@ -131,10 +131,10 @@ export default defineComponent({
 
     // 设置当前索引图片上一张、下一张预加载
     const setImagePreload = (index: number) => {
-      const nextIndex = index >= imageInfoList.length - 1 ? 0 : index + 1;
-      const preIndex = index <= 0 ? imageInfoList.length - 1 : index - 1;
-      imageInfoList[preIndex].preload = true;
-      imageInfoList[nextIndex].preload = true;
+      const nextIndex = index >= imageInfoList.value.length - 1 ? 0 : index + 1;
+      const preIndex = index <= 0 ? imageInfoList.value.length - 1 : index - 1;
+      imageInfoList.value[preIndex].preload = true;
+      imageInfoList.value[nextIndex].preload = true;
     };
 
     const onSwiperChange = (index: number, context: any) => {
@@ -380,7 +380,7 @@ export default defineComponent({
               disabled={disabled.value}
               onChange={onSwiperChange}
             >
-              {imageInfoList.map((info, index) => (
+              {imageInfoList.value.map((info, index) => (
                 <TSwiperItem
                   ref={(item: any) => (swiperItemRefs.value[index] = item)}
                   key={index}
