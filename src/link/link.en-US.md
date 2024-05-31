@@ -25,7 +25,7 @@ name | params | description
 -- | -- | --
 click | `(e: MouseEvent)` | click event, it won't trigger when it's disabled
 
-### CSS 变量
+### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
