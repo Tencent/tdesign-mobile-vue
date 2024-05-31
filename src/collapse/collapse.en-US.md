@@ -37,7 +37,7 @@ headerRightContent | String / Slot / Function | - | Typescript：`string \| TNod
 placement | String | bottom | options: bottom/top | N
 value | String / Number | - | \- | N
 
-### CSS 变量
+### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 

@@ -12,7 +12,7 @@ image | String / Slot / Function | - | Typescript：`string \| TNode`。[see mor
 theme | String | default | options: default/success/warning/error | N
 title | String / Slot / Function | '' | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 
-### CSS 变量
+### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 

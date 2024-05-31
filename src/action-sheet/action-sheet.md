@@ -27,7 +27,7 @@ close | `(trigger: TriggerSource)` | 关闭时触发。[详细类型定义](http
 selected | `(selected: ActionSheetItem \| string, index: number)` | 选择菜单项时触发
 
 
-### CSS 变量
+### CSS Variables
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --

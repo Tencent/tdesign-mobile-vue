@@ -38,7 +38,7 @@ focus | `(context: { value: string; e: FocusEvent })` | \-
 search | `(context?: { value: string; trigger: 'submit' \| 'option-click' \| 'clear'; e?: InputEvent \| MouseEvent })` | \-
 submit | `(context: { value: string; e: KeyboardEvent })` | \-
 
-### CSS 变量
+### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
