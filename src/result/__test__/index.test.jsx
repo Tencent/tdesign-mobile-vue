@@ -3,7 +3,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import { InfoCircleIcon, CheckCircleIcon, CloseCircleIcon, AppIcon } from 'tdesign-icons-vue-next';
 import Result from '../result';
-import Image from '../../image/image.vue';
+import Image from '../../image/image';
 
 const appIcon = () => h(AppIcon);
 const imageUrl = 'https://tdesign.gtimg.com/mobile/demos/avatar_1.png';
@@ -50,7 +50,6 @@ describe('Result.vue', () => {
     const wrapper2 = mount(() => <Result theme="warning"></Result>);
     const wrapper3 = mount(() => <Result theme="error"></Result>);
     const wrapper4 = mount(() => <Result theme={''}></Result>);
-
 
     expect(wrapper1.classes()).toContain('t-result--theme-success');
     expect(wrapper1.findComponent(CheckCircleIcon).exists()).toBeTruthy();

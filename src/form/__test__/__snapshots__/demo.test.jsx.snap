@@ -1388,7 +1388,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   </div>
                 </div>
                 <picture>
-                  <!--v-if-->
+                  <!---->
                   <img
                     alt=""
                     class="t-image__img"
@@ -1448,7 +1448,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   </div>
                 </div>
                 <picture>
-                  <!--v-if-->
+                  <!---->
                   <img
                     alt=""
                     class="t-image__img"
@@ -3073,7 +3073,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         </div>
                       </div>
                       <picture>
-                        <!--v-if-->
+                        <!---->
                         <img
                           alt=""
                           class="t-image__img"
@@ -3133,7 +3133,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         </div>
                       </div>
                       <picture>
-                        <!--v-if-->
+                        <!---->
                         <img
                           alt=""
                           class="t-image__img"
@@ -4611,7 +4611,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   </div>
                 </div>
                 <picture>
-                  <!--v-if-->
+                  <!---->
                   <img
                     alt=""
                     class="t-image__img"
@@ -4671,7 +4671,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   </div>
                 </div>
                 <picture>
-                  <!--v-if-->
+                  <!---->
                   <img
                     alt=""
                     class="t-image__img"

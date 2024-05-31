@@ -926,7 +926,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                               </div>
                             </div>
                             <picture>
-                              <!--v-if-->
+                              <!---->
                               <img
                                 alt=""
                                 class="t-image__img"
@@ -1621,7 +1621,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
                         </div>
                       </div>
                       <picture>
-                        <!--v-if-->
+                        <!---->
                         <img
                           alt=""
                           class="t-image__img"
