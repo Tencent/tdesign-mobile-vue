@@ -33,7 +33,7 @@ theme | String | default | `0.15.0`。单元格组风格。可选项：default/c
 title | String | - | 单元格组标题 | N
 
 
-### CSS 变量
+### CSS Variables
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --

@@ -14,7 +14,7 @@ theme | String | line | 进度条风格。值为 line，标签（label）显示�
 trackColor | String | '' | 进度条未完成部分颜色 | N
 
 
-### CSS 变量
+### CSS Variables
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --

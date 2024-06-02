@@ -12,7 +12,7 @@ image | String / Slot / Function | - | 图片地址。TS 类型：`string \| TNo
 theme | String | default | 内置主题。可选项：default/success/warning/error | N
 title | String / Slot / Function | '' | 标题。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 
-### CSS 变量
+### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 

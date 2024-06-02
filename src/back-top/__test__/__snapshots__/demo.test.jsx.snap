@@ -24,6 +24,21 @@ exports[`BackTop > BackTop baseVue demo works fine 1`] = `
       </span>
       <!---->
     </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+      data-v-33e4f6e7=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        半圆形返回顶部
+      </span>
+      <!---->
+    </button>
   </div>
   <div
     data-v-33e4f6e7=""
@@ -50,63 +65,6 @@ exports[`BackTop > BackTop baseVue demo works fine 1`] = `
         class="t-back-top__text--round"
       >
         顶部
-      </span>
-    </div>
-  </div>
-  
-</div>
-`;
-
-exports[`BackTop > BackTop halfRoundVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <div
-    class="button-group"
-    data-v-924378ec=""
-  >
-    <button
-      aria-disabled="false"
-      class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-924378ec=""
-      role="button"
-      type="button"
-    >
-      <!---->
-      <span
-        class="t-button__content"
-      >
-        半圆形返回顶部
-      </span>
-      <!---->
-    </button>
-  </div>
-  <div
-    data-v-924378ec=""
-  >
-    <div
-      class="t-back-top t-back-top--fixed t-back-top--half-round"
-      data-v-924378ec=""
-      style="display: none;"
-    >
-      <svg
-        class="t-icon t-icon-backtop"
-        fill="none"
-        height="1em"
-        style="font-size: 22px;"
-        viewBox="0 0 24 24"
-        width="1em"
-      >
-        <path
-          d="M4 4h16v2H4V4zm8 3.59l6.91 6.91-1.41 1.41-4.5-4.5V21h-2v-9.59l-4.5 4.5-1.41-1.41L12 7.59z"
-          fill="currentColor"
-        />
-      </svg>
-      <span
-        class="t-back-top__text--half-round"
-      >
-        返回顶部
       </span>
     </div>
   </div>
@@ -141,13 +99,9 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        01 类型
+        形状
       </h2>
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        圆型返回顶部
-      </p>
+      <!--v-if-->
     </div>
     <div
       class="tdesign-mobile-demo-block__slot"
@@ -170,6 +124,21 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
             class="t-button__content"
           >
             圆形返回顶部
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+          data-v-33e4f6e7=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            半圆形返回顶部
           </span>
           <!---->
         </button>
@@ -199,77 +168,6 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
             class="t-back-top__text--round"
           >
             顶部
-          </span>
-        </div>
-      </div>
-      
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-806aae90=""
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        半圆型返回顶部
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      
-      <div
-        class="button-group"
-        data-v-924378ec=""
-      >
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-924378ec=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            半圆形返回顶部
-          </span>
-          <!---->
-        </button>
-      </div>
-      <div
-        data-v-924378ec=""
-      >
-        <div
-          class="t-back-top t-back-top--fixed t-back-top--half-round"
-          data-v-924378ec=""
-          style="display: none;"
-        >
-          <svg
-            class="t-icon t-icon-backtop"
-            fill="none"
-            height="1em"
-            style="font-size: 22px;"
-            viewBox="0 0 24 24"
-            width="1em"
-          >
-            <path
-              d="M4 4h16v2H4V4zm8 3.59l6.91 6.91-1.41 1.41-4.5-4.5V21h-2v-9.59l-4.5 4.5-1.41-1.41L12 7.59z"
-              fill="currentColor"
-            />
-          </svg>
-          <span
-            class="t-back-top__text--half-round"
-          >
-            返回顶部
           </span>
         </div>
       </div>
@@ -315,6 +213,28 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
             
             <div
               class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 100px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          
+          
+        </div>
+        <div
+          class="t-skeleton item"
+          data-v-806aae90=""
+        >
+          
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
             >
               <!---->
             </div>
@@ -359,6 +279,28 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
             
             <div
               class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 100px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          
+          
+        </div>
+        <div
+          class="t-skeleton item"
+          data-v-806aae90=""
+        >
+          
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
             >
               <!---->
             </div>
@@ -403,17 +345,6 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
             
             <div
               class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
               style="width: 100px;"
             >
               <!---->
@@ -436,105 +367,6 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
             <div
               class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
               style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 100px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          
-          
-        </div>
-        <div
-          class="t-skeleton item"
-          data-v-806aae90=""
-        >
-          
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 100px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          
-          
-        </div>
-        <div
-          class="t-skeleton item"
-          data-v-806aae90=""
-        >
-          
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
             >
               <!---->
             </div>

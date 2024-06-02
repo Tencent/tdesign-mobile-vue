@@ -1091,7 +1091,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               
               <div
                 class="t-rate__icon t-rate__icon--selected"
-                size="24px"
                 style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -1125,7 +1124,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               </div>
               <div
                 class="t-rate__icon t-rate__icon--selected"
-                size="24px"
                 style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -1159,7 +1157,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               </div>
               <div
                 class="t-rate__icon t-rate__icon--unselected"
-                size="24px"
                 style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -1193,7 +1190,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               </div>
               <div
                 class="t-rate__icon t-rate__icon--unselected"
-                size="24px"
                 style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -1227,7 +1223,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               </div>
               <div
                 class="t-rate__icon t-rate__icon--unselected"
-                size="24px"
                 style="font-size: 24px; margin-right: 0px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -1261,8 +1256,8 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               </div>
               
             </div>
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
           
         </div>
@@ -1393,7 +1388,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   </div>
                 </div>
                 <picture>
-                  <!--v-if-->
+                  <!---->
                   <img
                     alt=""
                     class="t-image__img"
@@ -1453,7 +1448,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   </div>
                 </div>
                 <picture>
-                  <!--v-if-->
+                  <!---->
                   <img
                     alt=""
                     class="t-image__img"
@@ -2781,7 +2776,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     
                     <div
                       class="t-rate__icon t-rate__icon--selected"
-                      size="24px"
                       style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
                     >
                       <div
@@ -2815,7 +2809,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     </div>
                     <div
                       class="t-rate__icon t-rate__icon--selected"
-                      size="24px"
                       style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
                     >
                       <div
@@ -2849,7 +2842,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     </div>
                     <div
                       class="t-rate__icon t-rate__icon--unselected"
-                      size="24px"
                       style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
                     >
                       <div
@@ -2883,7 +2875,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     </div>
                     <div
                       class="t-rate__icon t-rate__icon--unselected"
-                      size="24px"
                       style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
                     >
                       <div
@@ -2917,7 +2908,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     </div>
                     <div
                       class="t-rate__icon t-rate__icon--unselected"
-                      size="24px"
                       style="font-size: 24px; margin-right: 0px; --td-rate-selected-color: #ED7B2F;"
                     >
                       <div
@@ -2951,8 +2941,8 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     </div>
                     
                   </div>
-                  <!--v-if-->
-                  <!--v-if-->
+                  <!---->
+                  <!---->
                 </div>
                 
               </div>
@@ -3083,7 +3073,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         </div>
                       </div>
                       <picture>
-                        <!--v-if-->
+                        <!---->
                         <img
                           alt=""
                           class="t-image__img"
@@ -3143,7 +3133,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         </div>
                       </div>
                       <picture>
-                        <!--v-if-->
+                        <!---->
                         <img
                           alt=""
                           class="t-image__img"
@@ -4328,7 +4318,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               
               <div
                 class="t-rate__icon t-rate__icon--selected"
-                size="24px"
                 style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -4362,7 +4351,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               </div>
               <div
                 class="t-rate__icon t-rate__icon--selected"
-                size="24px"
                 style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -4396,7 +4384,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               </div>
               <div
                 class="t-rate__icon t-rate__icon--unselected"
-                size="24px"
                 style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -4430,7 +4417,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               </div>
               <div
                 class="t-rate__icon t-rate__icon--unselected"
-                size="24px"
                 style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -4464,7 +4450,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               </div>
               <div
                 class="t-rate__icon t-rate__icon--unselected"
-                size="24px"
                 style="font-size: 24px; margin-right: 0px; --td-rate-selected-color: #ED7B2F;"
               >
                 <div
@@ -4498,8 +4483,8 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               </div>
               
             </div>
-            <!--v-if-->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
           
         </div>
@@ -4626,7 +4611,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   </div>
                 </div>
                 <picture>
-                  <!--v-if-->
+                  <!---->
                   <img
                     alt=""
                     class="t-image__img"
@@ -4686,7 +4671,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   </div>
                 </div>
                 <picture>
-                  <!--v-if-->
+                  <!---->
                   <img
                     alt=""
                     class="t-image__img"

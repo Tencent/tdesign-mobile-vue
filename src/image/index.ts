@@ -1,4 +1,4 @@
-import Image from './image.vue';
+import Image from './image';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';

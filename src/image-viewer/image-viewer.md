@@ -28,7 +28,7 @@ delete | `(index: Number)` | 点击删除操作按钮时触发
 index-change | `(index: number, context: { trigger: 'prev' \| 'next' })` | 预览图片切换时触发，`context.prev` 切换到上一张图片，`context.next` 切换到下一张图片
 
 
-### CSS 变量
+### CSS Variables
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --

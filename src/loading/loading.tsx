@@ -5,7 +5,7 @@ import SpinnerIcon from './icon/spinner';
 import config from '../config';
 import props from './props';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
-import { usePrefixClass } from '@/hooks/useClass';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
 
