@@ -104,7 +104,7 @@ export default defineComponent({
 
     return () => {
       return (
-        <div>
+        <div class={props.className}>
           <TOverlay {...customOverlayProps.value} />
 
           <div class={classes.value} style={computedStyle.value}>

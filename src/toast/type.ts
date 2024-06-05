@@ -4,10 +4,15 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdOverlayProps } from '../overlay/type';
+import { OverlayProps } from '../overlay';
 import { TNode } from '../common';
 
 export interface TdToastProps {
+  /**
+   * 类名
+   * @default ''
+   */
+  className?: string;
   /**
    * 图标排列方式
    * @default row
@@ -30,7 +35,7 @@ export interface TdToastProps {
    * 遮罩层属性，透传至 Overlay
    * @default {}
    */
-  overlayProps?: TdOverlayProps;
+  overlayProps?: OverlayProps;
   /**
    * 弹窗展示位置
    * @default middle
