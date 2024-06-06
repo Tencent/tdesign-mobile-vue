@@ -57,6 +57,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="请输入内容"
+                  spellcheck="false"
                   type="text"
                 />
                 <!---->
@@ -129,6 +130,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="请输入内容"
+                  spellcheck="false"
                   type="password"
                 />
                 <!---->
@@ -350,6 +352,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="请输入内容"
+                  spellcheck="false"
                   type="text"
                 />
                 <!---->
@@ -779,6 +782,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="请输入内容"
+                  spellcheck="false"
                   type="text"
                 />
                 <!---->
@@ -1742,6 +1746,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         maxlength="-1"
                         name=""
                         placeholder="请输入内容"
+                        spellcheck="false"
                         type="text"
                       />
                       <!---->
@@ -1814,6 +1819,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         maxlength="-1"
                         name=""
                         placeholder="请输入内容"
+                        spellcheck="false"
                         type="password"
                       />
                       <!---->
@@ -2035,6 +2041,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         maxlength="-1"
                         name=""
                         placeholder="请输入内容"
+                        spellcheck="false"
                         type="text"
                       />
                       <!---->
@@ -2464,6 +2471,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         maxlength="-1"
                         name=""
                         placeholder="请输入内容"
+                        spellcheck="false"
                         type="text"
                       />
                       <!---->
@@ -3296,6 +3304,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="请输入内容"
+                  spellcheck="false"
                   type="text"
                 />
                 <!---->
@@ -3366,6 +3375,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="请输入内容"
+                  spellcheck="false"
                   type="password"
                 />
                 <!---->
@@ -3583,6 +3593,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="请输入内容"
+                  spellcheck="false"
                   type="text"
                 />
                 <!---->
@@ -4010,6 +4021,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="请输入内容"
+                  spellcheck="false"
                   type="text"
                 />
                 <!---->

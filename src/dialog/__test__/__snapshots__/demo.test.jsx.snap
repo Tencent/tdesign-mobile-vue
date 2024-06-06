@@ -825,6 +825,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
                       maxlength="-1"
                       name=""
                       placeholder="请输入文字"
+                      spellcheck="false"
                       type="text"
                     />
                     <!---->
@@ -965,6 +966,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
                       maxlength="-1"
                       name=""
                       placeholder="请输入文字"
+                      spellcheck="false"
                       type="text"
                     />
                     <!---->
@@ -1609,6 +1611,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                           maxlength="-1"
                           name=""
                           placeholder="请输入文字"
+                          spellcheck="false"
                           type="text"
                         />
                         <!---->
@@ -1749,6 +1752,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                           maxlength="-1"
                           name=""
                           placeholder="请输入文字"
+                          spellcheck="false"
                           type="text"
                         />
                         <!---->
