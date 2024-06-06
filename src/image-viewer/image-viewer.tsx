@@ -14,8 +14,9 @@ import {
 import { CloseIcon, DeleteIcon } from 'tdesign-icons-vue-next';
 
 import config from '../config';
-import ImagediverProps from './props';
-import { renderTNode, TNode, useDefault, isBrowser, useGesture, DragState, PinchState } from '../shared';
+import props from './props';
+import { useDefault, isBrowser, useGesture, DragState, PinchState } from '../shared';
+import { useTNodeJSX } from '../hooks/tnode';
 
 // inner components
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
@@ -34,13 +35,11 @@ export default defineComponent({
     Transition,
     TSwiper,
     TSwiperItem,
-    TNode,
     TImage,
   },
-  props: ImagediverProps,
+  props,
   emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'update:index', 'delete'],
   setup(props, { emit }) {
-    const internalInstance = getCurrentInstance();
     const state = reactive({
       dblTapZooming: false, // double tap zooming
       zooming: false, // pinch zooming
@@ -88,16 +87,10 @@ export default defineComponent({
     const swiperItemRefs = ref<any[]>([]);
     const gestureRef = ref();
 
-    const closeNode = computed(() =>
-      renderTNode(internalInstance, 'close-btn', {
-        defaultNode: h(CloseIcon),
-      }),
-    );
-    const deleteNode = computed(() =>
-      renderTNode(internalInstance, 'delete-btn', {
-        defaultNode: h(DeleteIcon),
-      }),
-    );
+    const renderTNodeJSX = useTNodeJSX();
+
+    const closeNode = computed(() => renderTNodeJSX('closeBtn', h(CloseIcon)));
+    const deleteNode = computed(() => renderTNodeJSX('deleteBtn', h(DeleteIcon)));
 
     const imageTransform = computed(() => {
       const { scale, draggedX, draggedY } = state;
@@ -414,7 +407,7 @@ export default defineComponent({
             <div class={`${name}__nav`}>
               {closeNode.value && (
                 <div class={`${name}__nav-close`} onClick={(e) => handleClose(e, 'close-btn')}>
-                  <TNode content={closeNode.value} />
+                  {closeNode.value}
                 </div>
               )}
               {props.showIndex && (
@@ -424,7 +417,7 @@ export default defineComponent({
               )}
               {deleteNode.value && (
                 <div class={`${name}__nav-delete`} onClick={handleDelete}>
-                  <TNode content={deleteNode.value} />
+                  {deleteNode.value}
                 </div>
               )}
             </div>
