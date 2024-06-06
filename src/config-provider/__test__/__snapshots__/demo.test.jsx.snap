@@ -320,7 +320,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
             multiple=""
             type="file"
           />
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       
@@ -7103,7 +7103,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
         multiple=""
         type="file"
       />
-      <!--v-if-->
+      <!---->
     </div>
   </div>
   
