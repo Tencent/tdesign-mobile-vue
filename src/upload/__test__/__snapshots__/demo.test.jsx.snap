@@ -42,7 +42,7 @@ exports[`Upload > Upload baseVue demo works fine 1`] = `
       hidden=""
       type="file"
     />
-    <!--v-if-->
+    <!---->
   </div>
 </div>
 `;
@@ -133,7 +133,7 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
         hidden=""
         type="file"
       />
-      <!--v-if-->
+      <!---->
     </div>
   </div>
   <div
@@ -217,7 +217,7 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
         hidden=""
         type="file"
       />
-      <!--v-if-->
+      <!---->
     </div>
   </div>
 </div>
@@ -299,7 +299,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             hidden=""
             type="file"
           />
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       
@@ -545,7 +545,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             multiple=""
             type="file"
           />
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       
@@ -783,7 +783,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             multiple=""
             type="file"
           />
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       <div
@@ -914,7 +914,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             multiple=""
             type="file"
           />
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       
@@ -1027,7 +1027,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               hidden=""
               type="file"
             />
-            <!--v-if-->
+            <!---->
           </div>
         </div>
         <div
@@ -1111,7 +1111,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               hidden=""
               type="file"
             />
-            <!--v-if-->
+            <!---->
           </div>
         </div>
       </div>
@@ -1345,7 +1345,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
       multiple=""
       type="file"
     />
-    <!--v-if-->
+    <!---->
   </div>
 </div>
 `;
@@ -1565,7 +1565,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
         multiple=""
         type="file"
       />
-      <!--v-if-->
+      <!---->
     </div>
   </div>
   <div
@@ -1696,7 +1696,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
         multiple=""
         type="file"
       />
-      <!--v-if-->
+      <!---->
     </div>
   </div>
   
