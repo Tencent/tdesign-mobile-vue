@@ -1,20 +1,3 @@
-<template>
-  <div ref="root" :class="name" @scroll="handleScroll">
-    <t-node :content="headerContent" />
-    <slot />
-    <div :class="`${name}__loading--wrapper`" @click.stop="onLoadMore">
-      <t-loading
-        v-if="typeof asyncLoading === 'string' && ['loading', 'load-more'].includes(asyncLoading)"
-        :indicator="asyncLoading === 'loading'"
-        :text="typeof asyncLoading === 'string' ? LOADING_TEXT_MAP[asyncLoading] : ''"
-        :class="`${name}__loading`"
-      />
-    </div>
-    <t-node :content="footerContent" />
-  </div>
-</template>
-
-<script lang="ts">
 import { defineComponent, ref, computed, getCurrentInstance } from 'vue';
 import { useWindowSize, useEventListener } from '@vueuse/core';
 import TLoading from '../loading';
@@ -24,7 +7,6 @@ import { renderTNode, TNode, useScrollParent } from '../shared';
 import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
-
 const name = `${prefix}-list`;
 
 export default defineComponent({
@@ -34,8 +16,7 @@ export default defineComponent({
     TNode,
   },
   props: ListProps,
-  emits: ['load-more', 'scroll'],
-  setup(props, context) {
+  setup(props, { slots }) {
     const { globalConfig } = useConfig('list');
 
     const LOADING_TEXT_MAP = {
@@ -44,7 +25,6 @@ export default defineComponent({
     };
 
     const root = ref<HTMLElement>();
-    const empty = ref<HTMLElement>();
     const scrollParent = useScrollParent(root);
     const { height } = useWindowSize();
     const internalInstance = getCurrentInstance();
@@ -71,16 +51,21 @@ export default defineComponent({
 
     useEventListener(scrollParent, 'scroll', handleScroll);
 
-    return {
-      name,
-      root,
-      empty,
-      onLoadMore,
-      handleScroll,
-      headerContent,
-      footerContent,
-      LOADING_TEXT_MAP,
-    };
+    return () => (
+      <div ref={root} class={name} onScroll={handleScroll}>
+        <TNode content={headerContent.value} />
+        {slots.default && slots.default()}
+        <div class={`${name}__loading--wrapper`} onClick={onLoadMore}>
+          {typeof props.asyncLoading === 'string' && ['loading', 'load-more'].includes(props.asyncLoading) && (
+            <TLoading
+              indicator={props.asyncLoading === 'loading'}
+              text={typeof props.asyncLoading === 'string' ? LOADING_TEXT_MAP[props.asyncLoading] : ''}
+              class={`${name}__loading`}
+            />
+          )}
+        </div>
+        <TNode content={footerContent.value} />
+      </div>
+    );
   },
 });
-</script>

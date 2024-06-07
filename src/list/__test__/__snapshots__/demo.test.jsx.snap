@@ -7,10 +7,12 @@ exports[`List > List baseVue demo works fine 1`] = `
   <!---->
   
   
+  
+  
   <div
     class="t-list__loading--wrapper"
   >
-    <!--v-if-->
+    <!---->
   </div>
   <!---->
 </div>
@@ -23,10 +25,12 @@ exports[`List > List errTipVue demo works fine 1`] = `
   <!---->
   
   
+  
+  
   <div
     class="t-list__loading--wrapper"
   >
-    <!--v-if-->
+    <!---->
   </div>
   
   <!--v-if-->
@@ -162,10 +166,12 @@ exports[`List > List pullRefreshVue demo works fine 1`] = `
       <!---->
       
       
+      
+      
       <div
         class="t-list__loading--wrapper"
       >
-        <!--v-if-->
+        <!---->
       </div>
       <!---->
     </div>
