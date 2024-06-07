@@ -17,7 +17,7 @@ const navName = `${prefix}-swiper-nav`;
 export default defineComponent({
   name,
   props,
-  emits: ['change', 'update:current', 'update:modelValue'],
+  emits: ['change', 'update:current', 'update:modelValue', 'transitionenter', 'transitionleave'],
   setup(props, context) {
     const swiperClass = usePrefixClass('swiper');
     const readerTNodeJSX = useTNodeJSX();
@@ -175,6 +175,14 @@ export default defineComponent({
       startAutoplay();
     };
 
+    const onTransitionstart = (event: TransitionEvent) => {
+      context.emit('transitionenter', event);
+    };
+
+    const onTransitionend = (event: TransitionEvent) => {
+      context.emit('transitionleave', event);
+    };
+
     const addChild = (item: any) => {
       items.value.push(item);
     };
@@ -319,8 +327,10 @@ export default defineComponent({
               transform: translateContainer.value,
               height: containerHeight.value,
             }}
+            onTransitionstart={onTransitionstart}
             onTransitionend={(event: TransitionEvent) => {
               if (event.target === event.currentTarget) {
+                onTransitionend(event);
                 handleAnimationEnd();
               }
             }}
