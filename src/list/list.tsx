@@ -16,6 +16,7 @@ export default defineComponent({
     TNode,
   },
   props: ListProps,
+  emits: ['load-more', 'scroll'],
   setup(props, { slots }) {
     const { globalConfig } = useConfig('list');
 
@@ -37,7 +38,6 @@ export default defineComponent({
         props.onLoadMore?.();
       }
     };
-
     const handleScroll = (e: WheelEvent | Event) => {
       const scrollHeight =
         (e.target as HTMLElement).scrollHeight ||
@@ -50,7 +50,6 @@ export default defineComponent({
     };
 
     useEventListener(scrollParent, 'scroll', handleScroll);
-
     return () => (
       <div ref={root} class={name} onScroll={handleScroll}>
         <TNode content={headerContent.value} />

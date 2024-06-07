@@ -9,7 +9,7 @@ asyncLoading | String / Slot / Function | - | 自定义加载中。值为空不�
 footer | String / Slot / Function | - | 底部。TS 类型：`string | TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 header | String / Slot / Function | - | 头部。TS 类型：`string | TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 onLoadMore | Function |  | TS 类型：`() => void`<br/>点击加载更多时触发 | N
-onScroll | Function |  | TS 类型：`(scrollTop: number) => void`<br/>列表滚动时触发，scrollTop 表示顶部滚动距离 | N
+onScroll | Function |  | TS 类型：`(bottomDistance:number, scrollTop: number) => void`<br/>列表滚动时触发，scrollTop 表示顶部滚动距离 | N
 
 ### List Events
 
