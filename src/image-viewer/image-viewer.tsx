@@ -152,8 +152,33 @@ export default defineComponent({
     const getMaxDraggedY = (index: number) => {
       const rootOffsetHeight = rootRef.value?.offsetHeight || 0;
       const currentImageScaledHeight = state.scale * (imagesSize?.[index]?.height || 0);
-      if (currentImageScaledHeight <= rootOffsetHeight) return 0;
-      return Math.max(0, (currentImageScaledHeight - rootOffsetHeight) / 2);
+      if (currentImageScaledHeight <= rootOffsetHeight) {
+        return {
+          top: 0,
+          bottom: 0,
+        };
+      }
+      // 图片和外层root元素高度差
+      const diffHeight = currentImageScaledHeight - rootOffsetHeight;
+      const centerDraggedY = diffHeight / 2;
+      // 图片align配置对应的滚动区域
+      const alignmentDraggedY = {
+        start: {
+          top: -diffHeight,
+          bottom: 0,
+        },
+        center: {
+          top: -centerDraggedY,
+          bottom: centerDraggedY,
+        },
+        end: {
+          top: 0,
+          bottom: diffHeight,
+        },
+      };
+      // 当前图片align值
+      const alignment = imageInfoList.value[index]?.image?.align || 'center';
+      return alignmentDraggedY[alignment];
     };
 
     const setScale = (scale: number) => {
@@ -333,9 +358,9 @@ export default defineComponent({
                   from: () => [state.draggedX, state.draggedY],
                   pointer: { touch: true },
                   bounds: () => ({
-                    top: -getMaxDraggedY(index),
+                    top: getMaxDraggedY(index).top,
                     right: getMaxDraggedX(),
-                    bottom: getMaxDraggedY(index),
+                    bottom: getMaxDraggedY(index).bottom,
                     left: -getMaxDraggedX(),
                   }),
                 },
