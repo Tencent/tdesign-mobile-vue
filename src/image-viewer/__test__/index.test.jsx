@@ -2,7 +2,7 @@ import { nextTick, ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { AddCircleIcon } from 'tdesign-icons-vue-next';
 import { describe, it, vi } from 'vitest';
-import ImageViewer from '../image-viewer.vue';
+import ImageViewer from '../image-viewer';
 import { Swiper } from '../../swiper';
 import { trigger, triggerZoom } from './touch';
 

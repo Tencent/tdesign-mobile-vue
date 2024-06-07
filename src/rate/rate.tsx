@@ -1,82 +1,4 @@
-<template>
-  <div :class="rootClasses">
-    <div
-      ref="rateWrapper"
-      :class="`${name}__wrapper`"
-      @touchstart="onTouchstart"
-      @touchmove="onTouchmove"
-      @touchend="onTouchEnd"
-      @touchcancel="onTouchEnd"
-    >
-      <component
-        :is="iconComponent(n, actualVal)"
-        v-for="n in count"
-        :key="n"
-        :class="classes(n)"
-        :size="size"
-        :style="{ marginRight: `${count > n ? gap : 0}px`, ...colors }"
-        @click="onClick"
-      />
-    </div>
-
-    <span v-if="showText" :class="{ [`${name}__text`]: true, [`${name}__text--active`]: actualVal > 0 }">
-      {{ rateText }}
-    </span>
-
-    <div v-if="tipsVisible" ref="ratePopoverRef" :class="`${name}__tips`" :style="{ left: `${tipsLeft}px` }">
-      <div v-if="actionType === 'tap'" style="display: flex">
-        <div
-          v-if="allowHalf"
-          :class="{
-            [`${name}__tips-item`]: true,
-            [`${name}__tips-item--active`]: actualVal === Math.ceil(popoverValue) - 0.5,
-          }"
-          @click="() => onSelect(Math.ceil(popoverValue) - 0.5)"
-        >
-          <component
-            :is="iconComponent(Math.ceil(popoverValue), Math.ceil(popoverValue) - 0.5)"
-            :style="{ ...colors }"
-            :size="size"
-            :class="`${name}__icon ${name}__icon--unselected`"
-          />
-          <span :class="`${name}__tips-text`">{{ Math.ceil(popoverValue) - 0.5 }}</span>
-        </div>
-        <div
-          :class="{
-            [`${name}__tips-item`]: true,
-            [`${name}__tips-item--active`]: allowHalf && actualVal === Math.ceil(popoverValue),
-          }"
-          @click="() => onSelect(Math.ceil(popoverValue))"
-        >
-          <component
-            :is="iconComponent(Math.ceil(popoverValue), Math.ceil(popoverValue))"
-            :style="{ ...colors }"
-            :size="size"
-            :class="`${name}__icon ${name}__icon--selected`"
-          />
-          <span :class="`${name}__tips-text`">{{ Math.ceil(popoverValue) }}</span>
-        </div>
-      </div>
-
-      <div v-else :class="`${name}__tips-item`" @click="() => onSelect(popoverValue)">
-        <component
-          :is="iconComponent(Math.ceil(popoverValue), popoverValue)"
-          :style="{ ...colors }"
-          :size="size"
-          :class="{
-            [`${name}__icon`]: true,
-            [`${name}__icon--selected`]: Math.ceil(popoverValue) === popoverValue,
-            [`${name}__icon--unselected`]: Math.ceil(popoverValue) !== popoverValue,
-          }"
-        />
-        <span :class="`${name}__tips-text`">{{ popoverValue }}</span>
-      </div>
-    </div>
-  </div>
-</template>
-
-<script lang="ts">
-import { ref, computed, defineComponent, h } from 'vue';
+import { computed, defineComponent, ref, h } from 'vue';
 import { StarFilledIcon } from 'tdesign-icons-vue-next';
 import { onClickOutside } from '@vueuse/core';
 import rateProps from './props';
@@ -85,6 +7,7 @@ import { TdRateProps } from './type';
 import { useDefault } from '../shared';
 import { useFormDisabled } from '../form/hooks';
 import { useConfig } from '../config-provider/useConfig';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
 const name = `${prefix}-rate`;
@@ -92,8 +15,8 @@ const name = `${prefix}-rate`;
 export default defineComponent({
   name,
   props: rateProps,
-  emits: ['change', 'update:value', 'update:modelValue'],
   setup(props, context) {
+    const rateClass = usePrefixClass('rate');
     const { t, globalConfig } = useConfig('rate');
     const disabled = useFormDisabled();
 
@@ -159,31 +82,10 @@ export default defineComponent({
       return unSelect || startComponent;
     };
 
-    const iconComponent = (n: number, value: number) => {
-      const { allowHalf, size } = props;
-      const classPrefix = `${name}__icon-left`;
-      const select = value >= n;
-      const selectHalf = Math.ceil(value) >= n;
-      return h(
-        'div',
-        { style: { fontSize: regSize(size) } },
-        allowHalf
-          ? [
-              h(
-                'div',
-                { class: `${classPrefix} ${selectHalf ? `${classPrefix}--selected` : `${classPrefix}--unselected`}` },
-                h(icon(selectHalf)),
-              ),
-              h(icon(select)),
-            ]
-          : h(icon(select)),
-      );
-    };
-
-    const rootClasses = computed(() => [`${name}`, { [`${name}--disabled`]: disabled.value }]);
+    const rootClasses = computed(() => [`${rateClass.value}`, { [`${rateClass.value}--disabled`]: disabled.value }]);
 
     const classes = (n: number) => {
-      const classPrefix = `${name}__icon`;
+      const classPrefix = `${rateClass.value}__icon`;
 
       return {
         [classPrefix]: true,
@@ -294,28 +196,121 @@ export default defineComponent({
       hideTips();
     };
 
-    return {
-      name: ref(name),
-      rootClasses,
-      classes,
-      rateWrapper,
-      actualVal,
-      regSize,
-      unitConvert,
-      colors,
-      rateText,
-      onClick,
-      onTouchstart,
-      onTouchmove,
-      onTouchEnd,
-      tipsVisible,
-      tipsLeft,
-      actionType,
-      onSelect,
-      popoverValue,
-      ratePopoverRef,
-      iconComponent,
+    return () => {
+      const iconComponent = (n: number, value: number) => {
+        const classPrefix = `${rateClass.value}__icon-left`;
+        const select = value >= n;
+        const selectHalf = Math.ceil(value) >= n;
+        const SelectIcon = icon(select);
+        const SelectHalfIcon = icon(selectHalf);
+        return (
+          <div style={{ fontSize: regSize(props.size) }}>
+            {props.allowHalf ? (
+              <div class={`${classPrefix} ${selectHalf ? `${classPrefix}--selected` : `${classPrefix}--unselected`}`}>
+                {<SelectHalfIcon />}
+              </div>
+            ) : null}
+            {<SelectIcon />}
+          </div>
+        );
+      };
+
+      const renderRateWrapper = () => {
+        const countList = Array.from(Array(props.count), (_, k) => k + 1);
+        return (
+          <div
+            ref={rateWrapper}
+            class={`${rateClass.value}__wrapper`}
+            onTouchstart={onTouchstart}
+            onTouchmove={onTouchmove}
+            onTouchend={onTouchEnd}
+            onTouchcancel={onTouchEnd}
+          >
+            {countList.map((n) => {
+              // 这里没有好的代替component组件的方法，用h函数代替
+              return h(iconComponent(n, actualVal.value), {
+                key: n,
+                class: classes(n),
+                style: { marginRight: `${props.count > n ? props.gap : 0}px`, ...colors.value },
+                onClick,
+              });
+            })}
+          </div>
+        );
+      };
+
+      const renderRateText = () => {
+        if (!props.showText) return null;
+        return (
+          <span
+            class={{ [`${rateClass.value}__text`]: true, [`${rateClass.value}__text--active`]: actualVal.value > 0 }}
+          >
+            {rateText.value}
+          </span>
+        );
+      };
+
+      const renderRateTips = () => {
+        if (!tipsVisible.value) return null;
+        return (
+          <div ref={ratePopoverRef} class={`${rateClass.value}__tips`} style={{ left: `${tipsLeft.value}px` }}>
+            {actionType.value === 'tap' ? (
+              <div style="display: flex">
+                {props.allowHalf && (
+                  <div
+                    class={{
+                      [`${rateClass.value}__tips-item`]: true,
+                      [`${rateClass.value}__tips-item--active`]:
+                        actualVal.value === Math.ceil(popoverValue.value) - 0.5,
+                    }}
+                    onClick={() => onSelect(Math.ceil(popoverValue.value) - 0.5)}
+                  >
+                    {h(iconComponent(Math.ceil(popoverValue.value), Math.ceil(popoverValue.value) - 0.5), {
+                      style: { ...colors.value },
+                      class: `${rateClass.value}__icon ${rateClass.value}__icon--unselected`,
+                    })}
+                    <span class={`${rateClass.value}__tips-text`}>{Math.ceil(popoverValue.value) - 0.5}</span>
+                  </div>
+                )}
+                <div
+                  class={{
+                    [`${rateClass.value}__tips-item`]: true,
+                    [`${rateClass.value}__tips-item--active`]:
+                      props.allowHalf && actualVal.value === Math.ceil(popoverValue.value),
+                  }}
+                  onClick={() => onSelect(Math.ceil(popoverValue.value))}
+                >
+                  {h(iconComponent(Math.ceil(popoverValue.value), Math.ceil(popoverValue.value)), {
+                    style: { ...colors.value },
+                    class: `${rateClass.value}__icon ${rateClass.value}__icon--selected`,
+                  })}
+                  <span class={`${rateClass.value}__tips-text`}>{Math.ceil(popoverValue.value)}</span>
+                </div>
+              </div>
+            ) : (
+              <div class={`${rateClass.value}__tips-item`} onClick={() => onSelect(popoverValue.value)}>
+                {h(iconComponent(Math.ceil(popoverValue.value), popoverValue.value), {
+                  style: { ...colors.value },
+                  class: {
+                    [`${rateClass.value}__icon`]: true,
+                    [`${rateClass.value}__icon--selected`]: Math.ceil(popoverValue.value) === popoverValue.value,
+                    [`${rateClass.value}__icon--unselected`]: Math.ceil(popoverValue.value) !== popoverValue.value,
+                  },
+                })}
+                <span class={`${rateClass.value}__tips-text`}>{popoverValue.value}</span>
+              </div>
+            )}
+          </div>
+        );
+      };
+
+      return (
+        <div class={rootClasses.value}>
+          {renderRateWrapper()}
+          {renderRateText()}
+          {renderRateTips()}
+        </div>
+      );
     };
   },
 });
-</script>

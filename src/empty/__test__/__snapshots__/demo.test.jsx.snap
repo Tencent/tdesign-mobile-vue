@@ -128,7 +128,7 @@ exports[`Empty > Empty imageEmptyVue demo works fine 1`] = `
         </div>
       </div>
       <picture>
-        <!--v-if-->
+        <!---->
         <img
           alt=""
           class="t-image__img"
@@ -268,7 +268,7 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
               </div>
             </div>
             <picture>
-              <!--v-if-->
+              <!---->
               <img
                 alt=""
                 class="t-image__img"

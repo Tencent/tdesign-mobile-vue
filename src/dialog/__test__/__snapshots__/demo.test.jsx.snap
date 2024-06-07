@@ -525,7 +525,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
             </div>
           </div>
           <picture>
-            <!--v-if-->
+            <!---->
             <img
               alt=""
               class="t-image__img"
@@ -689,7 +689,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
             </div>
           </div>
           <picture>
-            <!--v-if-->
+            <!---->
             <img
               alt=""
               class="t-image__img"
@@ -825,6 +825,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
                       maxlength="-1"
                       name=""
                       placeholder="请输入文字"
+                      spellcheck="false"
                       type="text"
                     />
                     <!---->
@@ -965,6 +966,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
                       maxlength="-1"
                       name=""
                       placeholder="请输入文字"
+                      spellcheck="false"
                       type="text"
                     />
                     <!---->
@@ -1609,6 +1611,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                           maxlength="-1"
                           name=""
                           placeholder="请输入文字"
+                          spellcheck="false"
                           type="text"
                         />
                         <!---->
@@ -1749,6 +1752,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                           maxlength="-1"
                           name=""
                           placeholder="请输入文字"
+                          spellcheck="false"
                           type="text"
                         />
                         <!---->
@@ -1895,7 +1899,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -2059,7 +2063,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"

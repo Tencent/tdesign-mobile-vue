@@ -196,6 +196,7 @@ export default defineComponent({
                 maxlength={props.maxlength || -1}
                 pattern={props.pattern}
                 inputmode={props.inputmode}
+                spellcheck={props.spellCheck}
                 onFocus={handleFocus}
                 onBlur={handleBlur}
                 onInput={handleInput}

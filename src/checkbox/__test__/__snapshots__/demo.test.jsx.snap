@@ -1242,7 +1242,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           >
             <img
               class="t-checkbox__icon-image t-checkbox__icon-wrapper"
-              src="https://tdesign.gtimg.com/miniprogram/checkbox.png"
+              src="https://tdesign.gtimg.com/mobile/demos/checkbox.png"
             />
           </div>
           <div
@@ -2288,7 +2288,7 @@ exports[`Checkbox > Checkbox typeVue demo works fine 1`] = `
     >
       <img
         class="t-checkbox__icon-image t-checkbox__icon-wrapper"
-        src="https://tdesign.gtimg.com/miniprogram/checkbox.png"
+        src="https://tdesign.gtimg.com/mobile/demos/checkbox.png"
       />
     </div>
     <div

@@ -1,52 +1,3 @@
-<template>
-  <div v-if="isShow" :class="rootClasses">
-    <!-- prefixIcon -->
-    <div
-      v-if="prefixIcon && prefixIconContent"
-      :class="`${name}__prefix-icon`"
-      @click="() => handleClick('prefix-icon')"
-    >
-      <t-node :content="prefixIconContent"></t-node>
-    </div>
-    <!-- content -->
-    <div ref="listDOM" :class="`${name}__content-wrap`" @click="() => handleClick('content')">
-      <div v-if="direction === 'vertical' && isArray(content)">
-        <t-swiper
-          autoplay
-          loop
-          direction="vertical"
-          :duration="2000"
-          :height="22"
-          :class="`${name}__content--vertical`"
-        >
-          <template v-for="(item, index) in content" :key="index">
-            <t-swiper-item>
-              <div :class="`${name}__content--vertical-item`">{{ item }}</div>
-            </t-swiper-item>
-          </template>
-        </t-swiper>
-      </div>
-      <div
-        v-else
-        ref="itemDOM"
-        :class="[`${name}__content`, !scroll.marquee ? `${name}__content-wrapable` : '']"
-        :style="scroll.marquee ? animateStyle : ''"
-        @transitionend="handleTransitionend()"
-      >
-        <t-node v-if="showContent" :content="showContent"></t-node>
-        <span v-if="operationContent" :class="`${name}__operation`" @click.stop="() => handleClick('operation')">
-          <t-node :content="operationContent"></t-node>
-        </span>
-      </div>
-    </div>
-    <!-- suffixIcon -->
-    <div v-if="suffixIconContent" :class="`${name}__suffix-icon`" @click="() => handleClick('suffix-icon')">
-      <t-node :content="suffixIconContent"></t-node>
-    </div>
-  </div>
-</template>
-
-<script lang="ts">
 import {
   reactive,
   ref,
@@ -66,6 +17,7 @@ import NoticeBarProps from './props';
 import { NoticeBarTrigger, DrawMarquee } from './type';
 import config from '../config';
 import { renderTNode, TNode, useVModel } from '../shared';
+import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
 const name = `${prefix}-notice-bar`;
@@ -80,8 +32,8 @@ export default defineComponent({
   components: { TNode, TSwiper, TSwiperItem },
   props: NoticeBarProps,
   emits: ['click'],
-  setup(props, context) {
-    const internalInstance = getCurrentInstance();
+  setup(props) {
+    const renderTNodeJSX = useTNodeJSX();
     // 初始化数据
     const state = reactive({
       duration: 0,
@@ -100,17 +52,6 @@ export default defineComponent({
 
     const rootClasses = computed(() => [`${name}`, `${name}--${props.theme}`]);
 
-    // prefix-icon
-    const prefixIconContent = computed(() =>
-      renderTNode(internalInstance, 'prefixIcon', { defaultNode: iconDefault[props.theme || 'info'] }),
-    );
-
-    // suffix-icon
-    const suffixIconContent = computed(() => renderTNode(internalInstance, 'suffixIcon'));
-    // operation
-    const operationContent = computed(() => renderTNode(internalInstance, 'operation'));
-    // content
-    const showContent = computed(() => renderTNode(internalInstance, 'content'));
     // click
     function handleClick(trigger: NoticeBarTrigger) {
       props.onClick?.(trigger);
@@ -193,24 +134,98 @@ export default defineComponent({
       },
     );
 
-    return {
-      isArray,
-      name,
-      ...toRefs(props),
-      ...toRefs(state),
-      rootClasses,
-      prefixIconContent,
-      suffixIconContent,
-      operationContent,
-      showContent,
-      isShow,
-      handleClick,
-      listDOM,
-      itemDOM,
-      animateStyle,
-      handleScrolling,
-      handleTransitionend,
+    return () => {
+      if (isShow.value) {
+        // prefixIcon
+        const renderPrefixIcon = () => {
+          const prefixIconContent = renderTNodeJSX('prefixIcon', { defaultNode: iconDefault[props.theme || 'info'] });
+          if (props.prefixIcon && prefixIconContent) {
+            return (
+              <div class={`${name}__prefix-icon`} onClick={() => handleClick('prefix-icon')}>
+                {prefixIconContent}
+              </div>
+            );
+          }
+        };
+        // content
+        const renderContent = () => {
+          const renderShowContent = () => {
+            const showContent = renderTNodeJSX('content');
+            if (!showContent) {
+              return null;
+            }
+            return showContent;
+          };
+          const renderOperationContent = () => {
+            const operationContent = renderTNodeJSX('operation');
+            if (!operationContent) {
+              return null;
+            }
+            return (
+              <span
+                class={`${name}__operation`}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  handleClick('operation');
+                }}
+              >
+                {operationContent}
+              </span>
+            );
+          };
+          return (
+            <div ref={listDOM} class={`${name}__content-wrap`} onClick={() => handleClick('content')}>
+              {props.direction === 'vertical' && isArray(props.content) ? (
+                <div>
+                  <t-swiper
+                    autoplay
+                    loop
+                    direction="vertical"
+                    duration={2000}
+                    height={22}
+                    class={`${name}__content--vertical`}
+                  >
+                    {props.content.map((item, index) => (
+                      <t-swiper-item key={index}>
+                        <div class={`${name}__content--vertical-item`}>{item}</div>
+                      </t-swiper-item>
+                    ))}
+                  </t-swiper>
+                </div>
+              ) : (
+                <div
+                  ref={itemDOM}
+                  class={[`${name}__content`, !state.scroll.marquee ? `${name}__content-wrapable` : '']}
+                  style={state.scroll.marquee ? animateStyle.value : ''}
+                  onTransitionend={handleTransitionend}
+                >
+                  {renderShowContent()}
+                  {renderOperationContent()}
+                </div>
+              )}
+            </div>
+          );
+        };
+        const renderSuffixIconContent = () => {
+          const suffixIconContent = renderTNodeJSX('suffixIcon');
+          if (!suffixIconContent) {
+            return null;
+          }
+          return (
+            <div class={`${name}__suffix-icon`} onClick={() => handleClick('suffix-icon')}>
+              {suffixIconContent}
+            </div>
+          );
+        };
+        return (
+          <div class={rootClasses.value}>
+            {renderPrefixIcon()}
+            {renderContent()}
+            {renderSuffixIconContent()}
+          </div>
+        );
+      }
+      return null;
     };
   },
 });
-</script>

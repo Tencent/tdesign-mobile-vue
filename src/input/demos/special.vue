@@ -26,8 +26,8 @@
       </div>
     </template>
   </t-input>
-  <t-input label="价格" align="right" placeholder="0.00" suffix="元" />
-  <t-input label="数量" align="right" placeholder="填写个数" suffix="个" />
+  <t-input label="价格" align="right" placeholder="0.00" suffix="元" type="number" />
+  <t-input label="数量" align="right" placeholder="填写个数" suffix="个" type="number" />
 </template>
 
 <script lang="ts" setup>
