@@ -10,6 +10,7 @@ const name = `${prefix}-action-sheet`;
 
 export default defineComponent({
   name,
+  components: { TButton, TBadge },
   props: {
     items: {
       type: Array as PropType<ActionSheetItem[]>,
@@ -20,7 +21,6 @@ export default defineComponent({
       default: 'center',
     },
   },
-  components: { TButton, TBadge },
   emits: ['selected'],
   setup(props, { emit }) {
     const renderTNodeJSX = useTNodeDefault();
