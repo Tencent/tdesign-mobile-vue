@@ -7,7 +7,7 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue';
-import TSwitch from '../../switch';
+import { Switch as TSwitch } from 'tdesign-mobile-vue';
 
 const loading = ref(false);
 </script>

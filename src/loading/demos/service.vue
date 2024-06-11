@@ -12,8 +12,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { LoadingPlugin } from '../plugin';
-import TButton from '../../button';
+import { LoadingPlugin, Button as TButton } from 'tdesign-mobile-vue';
 
 const content = ref(null);
 const attachLoading = ref(false);
