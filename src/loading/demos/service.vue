@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 import { LoadingPlugin } from '../plugin';
 import TButton from '../../button';

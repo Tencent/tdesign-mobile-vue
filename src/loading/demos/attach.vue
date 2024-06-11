@@ -5,7 +5,7 @@
     <t-switch v-model="loading" :custom-value="[true, false]" size="small" :label="['开', '关']" />
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 import TSwitch from '../../switch';
 
