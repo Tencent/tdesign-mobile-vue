@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
-import ActionSheet from '../action-sheet.vue';
-import MenuGrid from '../action-sheet-grid.vue';
+import ActionSheet from '../action-sheet';
+import MenuGrid from '../action-sheet-grid';
 import { GridItem as TGridItem } from '../../grid/index';
 import TBadge from '../../badge/index';
 import config from '../../config';
