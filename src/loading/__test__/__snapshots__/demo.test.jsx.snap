@@ -927,6 +927,183 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
       
     </div>
   </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-448d2bed=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        04 全屏加载
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        全屏展示加载状态，阻止用户操作。
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="loading-demo"
+        data-v-448d2bed=""
+        data-v-d41a5df4=""
+      >
+        <!---->
+        <div
+          data-v-d41a5df4=""
+        >
+           全局加载开关（开启加载1秒后自动归位）： 
+          <div
+            class="t-switch t-switch--small"
+            data-v-d41a5df4=""
+          >
+            <div
+              class="t-switch__dot t-switch__dot--small t-switch__dot--plain"
+            >
+              <div
+                class="t-switch__label t-switch__label--small"
+              >
+                <!---->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-448d2bed=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        05 挂载到指定元素
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        可通过 attach 挂载到指定元素。注：被挂载元素（loading的父元素）需设置：position: relative;
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="loading-demo"
+        data-v-448d2bed=""
+        data-v-4de40010=""
+      >
+        <div
+          class="loading-attach-demo__title"
+          data-v-4de40010=""
+          id="alice"
+        >
+          Hello, I'm Alice. I'm going to be a front-end developer.
+        </div>
+        <!---->
+        <div
+          class="t-switch t-switch--small"
+          data-v-4de40010=""
+        >
+          <div
+            class="t-switch__dot t-switch__dot--small"
+          >
+            <div
+              class="t-switch__label t-switch__label--small"
+            >
+              关
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-448d2bed=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        06 函数方式调用
+      </h2>
+      <!--v-if-->
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="loading-demo"
+        data-v-2b16437a=""
+        data-v-448d2bed=""
+      >
+        <div
+          class="loading-service-demo"
+          data-v-2b16437a=""
+          id="loading-service-demo"
+        >
+          Loading 挂载容器
+        </div>
+        <div
+          class="space"
+          data-v-2b16437a=""
+        >
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-small t-button--base t-button--default t-button--rectangle t-loading__btn"
+            data-v-2b16437a=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+               函数方式加载（局部） 
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-small t-button--base t-button--default t-button--rectangle"
+            data-v-2b16437a=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              函数方式加载（全屏）
+              
+            </span>
+            <!---->
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 </div>
 `;
 

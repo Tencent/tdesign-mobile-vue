@@ -28,6 +28,18 @@
     <tdesign-demo-block title="03 加载速度" summary="加载速度调整">
       <speed />
     </tdesign-demo-block>
+    <tdesign-demo-block title="04 全屏加载" summary="全屏展示加载状态，阻止用户操作。">
+      <fullscreen />
+    </tdesign-demo-block>
+    <tdesign-demo-block
+      title="05 挂载到指定元素"
+      summary="可通过 attach 挂载到指定元素。注：被挂载元素（loading的父元素）需设置：position: relative;"
+    >
+      <attach />
+    </tdesign-demo-block>
+    <tdesign-demo-block title="06 函数方式调用">
+      <service />
+    </tdesign-demo-block>
   </div>
 </template>
 
@@ -38,6 +50,9 @@ import vert from './vert.vue';
 import pureText from './pure-text.vue';
 import speed from './speed.vue';
 import size from './size.vue';
+import service from './service.vue';
+import fullscreen from './fullscreen.vue';
+import attach from './attach.vue';
 </script>
 
 <style scoped lang="less">
