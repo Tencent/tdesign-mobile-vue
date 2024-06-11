@@ -151,7 +151,12 @@ export default defineComponent({
 
     const getMaxDraggedY = (index: number) => {
       const rootOffsetHeight = rootRef.value?.offsetHeight || 0;
-      const currentImageScaledHeight = state.scale * (imagesSize?.[index]?.height || 0);
+      // 当前图片高度
+      const currentImageHeight = imagesSize?.[index]?.height || 0;
+      // 当前图片Scaled后总高度
+      const currentImageScaledHeight = state.scale * currentImageHeight;
+      // 当前图片Scaled后总高度与原图片高度差值的一半，作为图片Scaled后top和bottom的增量(scale是以图片中心点进行的，align为start和end时会影响)
+      const halfScaleHeight = (currentImageScaledHeight - currentImageHeight) / 2;
       if (currentImageScaledHeight <= rootOffsetHeight) {
         return {
           top: 0,
@@ -164,16 +169,16 @@ export default defineComponent({
       // 图片align配置对应的滚动区域
       const alignmentDraggedY = {
         start: {
-          top: -diffHeight,
-          bottom: 0,
+          top: -diffHeight + halfScaleHeight,
+          bottom: halfScaleHeight,
         },
         center: {
           top: -centerDraggedY,
           bottom: centerDraggedY,
         },
         end: {
-          top: 0,
-          bottom: diffHeight,
+          top: -halfScaleHeight,
+          bottom: diffHeight - halfScaleHeight,
         },
       };
       // 当前图片align值
