@@ -927,6 +927,19 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
       
     </div>
   </div>
+  <!-- 视觉稿待定，暂时注释 -->
+  <!-- &lt;tdesign-demo-block title="04 全屏加载" summary="全屏展示加载状态，阻止用户操作。"&gt;
+      &lt;fullscreen /&gt;
+    &lt;/tdesign-demo-block&gt;
+    &lt;tdesign-demo-block
+      title="05 挂载到指定元素"
+      summary="可通过 attach 挂载到指定元素。注：被挂载元素（loading的父元素）需设置：position: relative;"
+    &gt;
+      &lt;attach /&gt;
+    &lt;/tdesign-demo-block&gt;
+    &lt;tdesign-demo-block title="06 函数方式调用"&gt;
+      &lt;service /&gt;
+    &lt;/tdesign-demo-block&gt; -->
 </div>
 `;
 
