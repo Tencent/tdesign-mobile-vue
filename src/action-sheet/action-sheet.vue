@@ -19,7 +19,7 @@
 <script lang="ts">
 import { ref, watch, defineComponent, computed } from 'vue';
 import { useDefault } from '../shared';
-import ActionSheetList from './action-sheet-list.vue';
+import ActionSheetList from './action-sheet-list';
 import ActionSheetGrid from './action-sheet-grid.vue';
 import TPopup from '../popup';
 import TButton from '../button';
