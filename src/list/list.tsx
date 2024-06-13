@@ -1,10 +1,10 @@
-import { defineComponent, ref, computed, getCurrentInstance } from 'vue';
+import { defineComponent, ref } from 'vue';
 import { useWindowSize, useEventListener } from '@vueuse/core';
-import { useTNodeJSX, useContent } from '../hooks/tnode';
+import { useTNodeJSX } from '../hooks/tnode';
 import TLoading from '../loading';
 import config from '../config';
 import ListProps from './props';
-import { renderTNode, TNode, useScrollParent } from '../shared';
+import { useScrollParent } from '../shared';
 import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
@@ -14,13 +14,12 @@ export default defineComponent({
   name,
   components: {
     TLoading,
-    TNode,
   },
   props: ListProps,
   emits: ['load-more', 'scroll'],
   setup(props, { slots }) {
     const { globalConfig } = useConfig('list');
-    const renderContent = useContent();
+    const renderTNodeJSX = useTNodeJSX();
 
     const LOADING_TEXT_MAP = {
       loading: globalConfig.value.loading,
@@ -30,7 +29,6 @@ export default defineComponent({
     const root = ref<HTMLElement>();
     const scrollParent = useScrollParent(root);
     const { height } = useWindowSize();
-    const internalInstance = getCurrentInstance();
 
     const onLoadMore = (e: MouseEvent) => {
       if (props.asyncLoading === 'load-more') {
@@ -50,11 +48,11 @@ export default defineComponent({
 
     useEventListener(scrollParent, 'scroll', handleScroll);
     return () => {
-      const headerContent = renderContent('header');
-      const footerContent = renderContent('footer');
+      const headerContent = renderTNodeJSX('header');
+      const footerContent = renderTNodeJSX('footer');
       return (
         <div ref={root} class={name} onScroll={handleScroll}>
-          <span class={`${name}__header`}>{headerContent}</span>
+          {headerContent && <span class={`${name}__header`}>{headerContent}</span>}
           {slots.default && slots.default()}
           <div class={`${name}__loading--wrapper`} onClick={onLoadMore}>
             {typeof props.asyncLoading === 'string' && ['loading', 'load-more'].includes(props.asyncLoading) && (
@@ -65,7 +63,7 @@ export default defineComponent({
               />
             )}
           </div>
-          <span class={`${name}__footer`}>{footerContent}</span>
+          {footerContent && <span class={`${name}__footer`}>{footerContent}</span>}
         </div>
       );
     };
