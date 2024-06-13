@@ -1,51 +1,15 @@
-<template>
-  <transition name="message">
-    <div v-if="currentVisible" ref="root" :class="rootClasses" :style="rootStyles">
-      <div v-if="prefixIconContent" :class="`${name}__icon--left`">
-        <t-node :content="prefixIconContent" />
-      </div>
-      <div ref="textWrapDOM" :class="textWrapClasses">
-        <div
-          ref="textDOM"
-          :class="`${name}__text`"
-          :style="scroll.marquee ? animateStyle : ''"
-          @transitionend="handleTransitionend"
-        >
-          <t-node v-if="computedContent" :content="computedContent"></t-node>
-        </div>
-      </div>
-      <div v-if="linkContent" :class="`${name}__link`" @click="onLinkClick">
-        <t-node :content="linkContent"></t-node>
-      </div>
-      <div v-if="closeBtnContent" :class="[`${name}__close-wrap`, `${name}__icon--right`]" @click="onCloseBtnClick">
-        <t-node :content="closeBtnContent"></t-node>
-      </div>
-    </div>
-  </transition>
-</template>
-
-<script lang="ts">
-import {
-  h,
-  ref,
-  computed,
-  watch,
-  defineComponent,
-  getCurrentInstance,
-  toRefs,
-  reactive,
-  nextTick,
-  onMounted,
-} from 'vue';
+import { h, ref, computed, watch, defineComponent, toRefs, reactive, nextTick, onMounted, Transition } from 'vue';
 import { CheckCircleFilledIcon, CloseIcon, InfoCircleFilledIcon } from 'tdesign-icons-vue-next';
 import isObject from 'lodash/isObject';
 import isString from 'lodash/isString';
 
 import Link from '../link';
-import messageProps from './props';
+import props from './props';
 import { DrawMarquee, TdMessageProps } from './type';
 import config from '../config';
-import { renderContent, renderTNode, TNode, useVModel } from '../shared';
+import { useVModel } from '../shared';
+import { usePrefixClass } from '../hooks/useClass';
+import { useTNodeJSX, useContent, useTNodeDefault } from '../hooks/tnode';
 
 const { prefix } = config;
 const name = `${prefix}-message`;
@@ -56,13 +20,16 @@ const iconDefault = {
   error: h(InfoCircleFilledIcon),
 };
 const closeBtnDefault = h(CloseIcon);
+
 export default defineComponent({
   name,
-  components: { TNode },
-  props: messageProps,
+  props,
   emits: ['durationEnd', 'closeBtnClick', 'update:value'],
+
   setup(props, context) {
-    const internalInstance = getCurrentInstance();
+    const componentName = usePrefixClass('message');
+    const renderTNodeJSX = useTNodeJSX();
+    const renderContent = useContent();
 
     // 初始化动画相关数据
     const state = reactive({
@@ -80,15 +47,16 @@ export default defineComponent({
 
     const { visible, modelValue } = toRefs(props);
     const [currentVisible, setVisible] = useVModel(visible, modelValue, props.defaultVisible);
+
     const rootClasses = computed(() => ({
-      [name]: true,
-      [`${name}--${props.theme}`]: true,
-      [`${name}-align--${props.align}`]: !!props.align,
+      [componentName.value]: true,
+      [`${componentName.value}--${props.theme}`]: true,
+      [`${componentName.value}-align--${props.align}`]: !!props.align,
     }));
 
     const textWrapClasses = computed(() => ({
-      [`${name}__text-wrap`]: true,
-      [`${name}__text-nowrap`]: props.marquee,
+      [`${componentName.value}__text-wrap`]: true,
+      [`${componentName.value}__text-nowrap`]: props.marquee,
     }));
 
     const changeNumToStr = (arr: TdMessageProps['offset'] = []) => {
@@ -115,19 +83,10 @@ export default defineComponent({
       };
     });
 
-    const prefixIconContent = computed(() =>
-      renderTNode(internalInstance, 'icon', { defaultNode: iconDefault?.[props.theme || 'info'] }),
-    );
-    // content
-    const computedContent = computed(() => renderContent(internalInstance, 'default', 'content'));
-
-    // closeBtn
-    const closeBtnContent = computed(() => renderTNode(internalInstance, 'closeBtn', { defaultNode: closeBtnDefault }));
-
     // link
     const linkContent = computed(() => {
       if (typeof props.link === 'function' || context.slots?.link) {
-        return renderTNode(internalInstance, 'link');
+        return renderTNodeJSX('link');
       }
 
       if (isObject(props.link) || isString(props.link)) {
@@ -136,6 +95,7 @@ export default defineComponent({
       }
       return null;
     });
+
     // 动画
     const animateStyle = computed(() => ({
       transform: state.offset ? `translateX(${state.offset}px)` : '',
@@ -251,24 +211,43 @@ export default defineComponent({
       },
     );
 
-    return {
-      name: ref(name),
-      ...toRefs(state),
-      currentVisible,
-      rootClasses,
-      textWrapClasses,
-      rootStyles,
-      prefixIconContent,
-      computedContent,
-      closeBtnContent,
-      linkContent,
-      textWrapDOM,
-      textDOM,
-      animateStyle,
-      onCloseBtnClick,
-      onLinkClick,
-      handleTransitionend,
+    return () => {
+      const prefixIconContent = renderTNodeJSX('icon', { defaultNode: iconDefault?.[props.theme || 'info'] });
+      const computedContent = renderContent('default', 'content');
+      const closeBtnContent = renderTNodeJSX('closeBtn', { defaultNode: closeBtnDefault });
+
+      return (
+        <Transition name="message">
+          {currentVisible.value && (
+            <div ref="root" class={rootClasses.value} style={rootStyles.value}>
+              {prefixIconContent && <div class={`${componentName.value}__icon--left`}>{prefixIconContent}</div>}
+              <div ref={textDOM} class={textWrapClasses.value}>
+                <div
+                  ref={textDOM}
+                  class={`${componentName.value}__text`}
+                  style={state.scroll.marquee ? animateStyle.value : ''}
+                  onTransitionend={handleTransitionend}
+                >
+                  {computedContent}
+                </div>
+              </div>
+              {linkContent.value && (
+                <div class={`${componentName.value}__link`} onClick={onLinkClick}>
+                  {linkContent.value}
+                </div>
+              )}
+              {closeBtnContent && (
+                <div
+                  class={[`${componentName.value}__close-wrap`, `${componentName.value}__icon--right`]}
+                  onClick={onCloseBtnClick}
+                >
+                  {closeBtnContent}
+                </div>
+              )}
+            </div>
+          )}
+        </Transition>
+      );
     };
   },
 });
-</script>
