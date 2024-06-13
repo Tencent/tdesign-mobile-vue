@@ -1,5 +1,6 @@
 import { defineComponent, ref, computed, getCurrentInstance } from 'vue';
 import { useWindowSize, useEventListener } from '@vueuse/core';
+import { useTNodeJSX, useContent } from '../hooks/tnode';
 import TLoading from '../loading';
 import config from '../config';
 import ListProps from './props';
@@ -19,6 +20,7 @@ export default defineComponent({
   emits: ['load-more', 'scroll'],
   setup(props, { slots }) {
     const { globalConfig } = useConfig('list');
+    const renderContent = useContent();
 
     const LOADING_TEXT_MAP = {
       loading: globalConfig.value.loading,
@@ -29,9 +31,6 @@ export default defineComponent({
     const scrollParent = useScrollParent(root);
     const { height } = useWindowSize();
     const internalInstance = getCurrentInstance();
-
-    const headerContent = computed(() => renderTNode(internalInstance, 'header'));
-    const footerContent = computed(() => renderTNode(internalInstance, 'footer'));
 
     const onLoadMore = (e: MouseEvent) => {
       if (props.asyncLoading === 'load-more') {
@@ -50,21 +49,25 @@ export default defineComponent({
     };
 
     useEventListener(scrollParent, 'scroll', handleScroll);
-    return () => (
-      <div ref={root} class={name} onScroll={handleScroll}>
-        <TNode content={headerContent.value} />
-        {slots.default && slots.default()}
-        <div class={`${name}__loading--wrapper`} onClick={onLoadMore}>
-          {typeof props.asyncLoading === 'string' && ['loading', 'load-more'].includes(props.asyncLoading) && (
-            <TLoading
-              indicator={props.asyncLoading === 'loading'}
-              text={typeof props.asyncLoading === 'string' ? LOADING_TEXT_MAP[props.asyncLoading] : ''}
-              class={`${name}__loading`}
-            />
-          )}
+    return () => {
+      const headerContent = renderContent('header');
+      const footerContent = renderContent('footer');
+      return (
+        <div ref={root} class={name} onScroll={handleScroll}>
+          <span class={`${name}__header`}>{headerContent}</span>
+          {slots.default && slots.default()}
+          <div class={`${name}__loading--wrapper`} onClick={onLoadMore}>
+            {typeof props.asyncLoading === 'string' && ['loading', 'load-more'].includes(props.asyncLoading) && (
+              <TLoading
+                indicator={props.asyncLoading === 'loading'}
+                text={typeof props.asyncLoading === 'string' ? LOADING_TEXT_MAP[props.asyncLoading] : ''}
+                class={`${name}__loading`}
+              />
+            )}
+          </div>
+          <span class={`${name}__footer`}>{footerContent}</span>
         </div>
-        <TNode content={footerContent.value} />
-      </div>
-    );
+      );
+    };
   },
 });
