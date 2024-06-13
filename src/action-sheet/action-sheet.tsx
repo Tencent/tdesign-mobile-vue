@@ -1,31 +1,12 @@
-<template>
-  <t-popup :visible="currentVisible" :placement="`bottom`" :destroy-on-close="true" :class="name" @close="handleClose">
-    <div :class="rootClasses">
-      <p v-if="description" :class="descriptionClasses">{{ description }}</p>
-      <action-sheet-list v-if="theme === 'list'" :align="align" :items="actionItems" @selected="handleSelected" />
-      <action-sheet-grid v-if="theme === 'grid'" :items="actionItems" :count="count" @selected="handleSelected" />
-      <template v-if="showCancel">
-        <div :class="`${name}__footer`">
-          <div :class="`${name}__gap-${theme}`"></div>
-          <t-button :class="`${name}__cancel`" variant="text" block @click="handleCancel">
-            {{ cancelText || globalConfig.cancel }}
-          </t-button>
-        </div>
-      </template>
-    </div>
-  </t-popup>
-</template>
-
-<script lang="ts">
-import { ref, watch, defineComponent, computed } from 'vue';
+import { watch, defineComponent, computed } from 'vue';
 import { useDefault } from '../shared';
-import ActionSheetList from './action-sheet-list.vue';
-import ActionSheetGrid from './action-sheet-grid.vue';
+import ActionSheetList from './action-sheet-list';
+import ActionSheetGrid from './action-sheet-grid';
 import TPopup from '../popup';
 import TButton from '../button';
 import config from '../config';
 import { TdActionSheetProps, ActionSheetItem } from './type';
-import ActionSheetProps from './props';
+import props from './props';
 import { useConfig } from '../config-provider/useConfig';
 
 const { prefix } = config;
@@ -39,9 +20,9 @@ export default defineComponent({
     ActionSheetList,
     ActionSheetGrid,
   },
-  props: ActionSheetProps,
+  props,
   emits: ['selected', 'update:modelValue', 'cancel', 'close', 'update:visible'],
-  setup(props: any, context) {
+  setup(props, context) {
     const { globalConfig } = useConfig('actionSheet');
 
     const actionItems = computed(() => {
@@ -98,18 +79,56 @@ export default defineComponent({
       hide('overlay');
     };
 
-    return {
-      prefix,
-      name: ref(name),
-      globalConfig,
-      rootClasses,
-      descriptionClasses,
-      actionItems,
-      currentVisible,
-      handleCancel,
-      handleSelected,
-      handleClose,
+    return () => {
+      const root = () => {
+        const description = () => {
+          if (props.description) {
+            return <p class={descriptionClasses.value}>{props.description}</p>;
+          }
+          return null;
+        };
+        const list = () => {
+          if (props.theme === 'list') {
+            return <action-sheet-list align={props.align} items={actionItems.value} onSelected={handleSelected} />;
+          }
+        };
+        const grid = () => {
+          if (props.theme === 'grid') {
+            return <action-sheet-grid items={actionItems.value} count={props.count} onSelected={handleSelected} />;
+          }
+        };
+        const cancel = () => {
+          if (props.showCancel) {
+            return (
+              <div class={`${name}__footer`}>
+                <div class={`${name}__gap-${props.theme}`}></div>
+                <t-button class={`${name}__cancel`} variant="text" block onClick={handleCancel}>
+                  {props.cancelText || globalConfig.value.cancel}
+                </t-button>
+              </div>
+            );
+          }
+        };
+        return (
+          <div class={rootClasses.value}>
+            {description()}
+            {list()}
+            {grid()}
+            {cancel()}
+          </div>
+        );
+      };
+      return (
+        <t-popup
+          visible={currentVisible.value}
+          placement="bottom"
+          destroy-on-close={true}
+          class={name}
+          onClose={handleClose}
+        >
+          {root()}
+        </t-popup>
+      );
     };
   },
 });
-</script>

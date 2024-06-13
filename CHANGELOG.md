@@ -5,6 +5,25 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.2.4 `2024-06-07` 
+### 🚀 Features
+- `Rate`: `sfc` 改 `tsx` @1379255913 ([#1417](https://github.com/Tencent/tdesign-mobile-vue/pull/1417))
+- `BackTop`: `sfc` 改 `tsx`  @liweijie0812 ([#1333](https://github.com/Tencent/tdesign-mobile-vue/pull/1333))
+- `Image`: `sfc` 改 `tsx` @jiasy1616 ([#1414](https://github.com/Tencent/tdesign-mobile-vue/pull/1414))
+- `NoticeBar`: `sfc` 改 `tsx` @zuiaiwanqian ([#1378](https://github.com/Tencent/tdesign-mobile-vue/pull/1378))
+- `Toast`: 新增 `className` 属性 @anlyyao ([#1432](https://github.com/Tencent/tdesign-mobile-vue/pull/1432))
+- `Toast`: `sfc` to `tsx` @betavs ([#1397](https://github.com/Tencent/tdesign-mobile-vue/pull/1397))
+- `Input`: 新增`spellCheck` 是否开启拼写检查 @liweijie0812 ([#1435](https://github.com/Tencent/tdesign-mobile-vue/pull/1435))
+- `Input`: TS类型 `InputValue` 支持 `number` @liweijie0812 ([#1435](https://github.com/Tencent/tdesign-mobile-vue/pull/1435))
+- `Input`:  `maxlength` 属性扩展支持 `string` 类型 @liweijie0812 ([#1436](https://github.com/Tencent/tdesign-mobile-vue/pull/1436))
+- `ImageViewer`: `sfc` 改 `tsx` @aaronmhl ([#1422](https://github.com/Tencent/tdesign-mobile-vue/pull/1422))
+ 
+### 🐞 Bug Fixes
+- `Swiper`: 修复 `current` 动态更新问题 @zuiaiwanqian ([#1404](https://github.com/Tencent/tdesign-mobile-vue/pull/1404))
+- `Image`: 修复 `lazy` 为 `true` 时，图片无法正常显示 @jiasy1616 ([#1414](https://github.com/Tencent/tdesign-mobile-vue/pull/1414))
+ 
+
+
 ## 🌈 1.2.3 `2024-05-27` 
 ### 🚀 Features
 - `Slider`: `sfc` 改 `tsx` @liweijie0812 ([#1384](https://github.com/Tencent/tdesign-mobile-vue/pull/1384))

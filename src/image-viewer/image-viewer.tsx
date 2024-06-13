@@ -1,52 +1,3 @@
-<template>
-  <transition name="fade">
-    <div v-if="visible" :ref="(el) => (rootRef = el)" :class="`${prefix}-image-viewer`">
-      <div :class="`${name}__mask`" @click="handleClose($event, 'overlay')" />
-      <t-swiper
-        ref="swiperRootRef"
-        :autoplay="false"
-        :class="`${name}__content`"
-        height="100vh"
-        :default-current="currentIndex"
-        :disabled="disabled"
-        @change="onSwiperChange"
-      >
-        <t-swiper-item
-          v-for="(image, index) in images"
-          ref="swiperItemRefs"
-          :key="index"
-          :class="`${name}__swiper-item`"
-          style="touch-action: none"
-        >
-          <t-image
-            :src="image"
-            :style="`${imageTransitionDuration}; ${
-              index === touchIndex ? `transform: ${imageTransform}` : 'transform: matrix(1, 0, 0, 1, 0, 0)'
-            }`"
-            :on-load="({ e }) => onImgLoad(e, index)"
-            @transitionend.self="onTransitionEnd(index)"
-            @transitionstart.self="onTransitionStart(index)"
-          />
-        </t-swiper-item>
-      </t-swiper>
-      <div :class="`${name}__nav`">
-        <div v-if="closeNode" :class="`${name}__nav-close`" @click="handleClose($event, 'close-btn')">
-          <t-node :content="closeNode" />
-        </div>
-
-        <div v-if="showIndex" :class="`${name}__nav-index`">
-          {{ Math.min((currentIndex ?? 0) + 1, images?.length) }}/{{ images?.length }}
-        </div>
-
-        <div v-if="deleteNode" :class="`${name}__nav-delete`" @click="handleDelete">
-          <t-node :content="deleteNode" />
-        </div>
-      </div>
-    </div>
-  </transition>
-</template>
-
-<script lang="ts">
 import {
   computed,
   defineComponent,
@@ -54,8 +5,8 @@ import {
   getCurrentInstance,
   h,
   Transition,
-  toRefs,
   ref,
+  Ref,
   watch,
   nextTick,
   onUnmounted,
@@ -63,13 +14,15 @@ import {
 import { CloseIcon, DeleteIcon } from 'tdesign-icons-vue-next';
 
 import config from '../config';
-import ImagediverProps from './props';
-import { renderTNode, TNode, useDefault, isBrowser, useGesture, DragState, PinchState } from '../shared';
+import props from './props';
+import { useDefault, isBrowser, useGesture, DragState, PinchState } from '../shared';
+import { useTNodeJSX } from '../hooks/tnode';
 
 // inner components
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
 import TImage from '../image';
 import { TdImageViewerProps } from './type';
+import { ImageInfo } from './image-viewer-interface';
 
 const { prefix } = config;
 const name = `${prefix}-image-viewer`;
@@ -82,13 +35,11 @@ export default defineComponent({
     Transition,
     TSwiper,
     TSwiperItem,
-    TNode,
     TImage,
   },
-  props: ImagediverProps,
+  props,
   emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'update:index', 'delete'],
   setup(props, { emit }) {
-    const internalInstance = getCurrentInstance();
     const state = reactive({
       dblTapZooming: false, // double tap zooming
       zooming: false, // pinch zooming
@@ -107,23 +58,39 @@ export default defineComponent({
       'index-change',
     );
 
+    // 预加载前后几张图片，以保持预览流畅也节省资源
+    // 需要预加载的图片索引，第一张、第二张、最后一张，保持当前图片和当前图左右两边的图片预加载
+    const preloadImageIndex = [0, 1, props.images.length - 1];
+    // 图片列表信息，包含是否需要预加载标志
+    const imageInfoList = computed(() => {
+      return props.images.map((image, index) => {
+        let imageInfo: ImageInfo;
+        if (typeof image === 'string') {
+          imageInfo = {
+            url: image,
+            align: 'center',
+          };
+        } else {
+          imageInfo = image;
+        }
+        return {
+          image: imageInfo,
+          preload: preloadImageIndex.includes(index),
+        };
+      });
+    });
+
     const disabled = ref(false);
     const rootRef = ref();
     const imagesSize = reactive({});
     const swiperRootRef = ref();
-    const swiperItemRefs = ref();
+    const swiperItemRefs = ref<any[]>([]);
     const gestureRef = ref();
 
-    const closeNode = computed(() =>
-      renderTNode(internalInstance, 'close-btn', {
-        defaultNode: h(CloseIcon),
-      }),
-    );
-    const deleteNode = computed(() =>
-      renderTNode(internalInstance, 'delete-btn', {
-        defaultNode: h(DeleteIcon),
-      }),
-    );
+    const renderTNodeJSX = useTNodeJSX();
+
+    const closeNode = computed(() => renderTNodeJSX('closeBtn', h(CloseIcon)));
+    const deleteNode = computed(() => renderTNodeJSX('deleteBtn', h(DeleteIcon)));
 
     const imageTransform = computed(() => {
       const { scale, draggedX, draggedY } = state;
@@ -155,10 +122,19 @@ export default defineComponent({
       emit('delete', currentIndex.value ?? 0);
     };
 
+    // 设置当前索引图片上一张、下一张预加载
+    const setImagePreload = (index: number) => {
+      const nextIndex = index >= imageInfoList.value.length - 1 ? 0 : index + 1;
+      const preIndex = index <= 0 ? imageInfoList.value.length - 1 : index - 1;
+      imageInfoList.value[preIndex].preload = true;
+      imageInfoList.value[nextIndex].preload = true;
+    };
+
     const onSwiperChange = (index: number, context: any) => {
       if (currentIndex.value !== index) {
         setIndex(index, { context });
         setScale(1);
+        setImagePreload(index);
       }
     };
 
@@ -175,9 +151,39 @@ export default defineComponent({
 
     const getMaxDraggedY = (index: number) => {
       const rootOffsetHeight = rootRef.value?.offsetHeight || 0;
-      const currentImageScaledHeight = state.scale * (imagesSize?.[index]?.height || 0);
-      if (currentImageScaledHeight <= rootOffsetHeight) return 0;
-      return Math.max(0, (currentImageScaledHeight - rootOffsetHeight) / 2);
+      // 当前图片高度
+      const currentImageHeight = imagesSize?.[index]?.height || 0;
+      // 当前图片Scaled后总高度
+      const currentImageScaledHeight = state.scale * currentImageHeight;
+      // 当前图片Scaled后总高度与原图片高度差值的一半，作为图片Scaled后top和bottom的增量(scale是以图片中心点进行的，align为start和end时会影响)
+      const halfScaleHeight = (currentImageScaledHeight - currentImageHeight) / 2;
+      if (currentImageScaledHeight <= rootOffsetHeight) {
+        return {
+          top: 0,
+          bottom: 0,
+        };
+      }
+      // 图片和外层root元素高度差
+      const diffHeight = currentImageScaledHeight - rootOffsetHeight;
+      const centerDraggedY = diffHeight / 2;
+      // 图片align配置对应的滚动区域
+      const alignmentDraggedY = {
+        start: {
+          top: -diffHeight + halfScaleHeight,
+          bottom: halfScaleHeight,
+        },
+        center: {
+          top: -centerDraggedY,
+          bottom: centerDraggedY,
+        },
+        end: {
+          top: -halfScaleHeight,
+          bottom: diffHeight - halfScaleHeight,
+        },
+      };
+      // 当前图片align值
+      const alignment = imageInfoList.value[index]?.image?.align || 'center';
+      return alignmentDraggedY[alignment];
     };
 
     const setScale = (scale: number) => {
@@ -343,7 +349,7 @@ export default defineComponent({
       ([newVisible, newRefs]) => {
         if (!newVisible) return;
         nextTick(() => {
-          newRefs?.forEach?.((item: any, index: number) => {
+          (newRefs as any[]).forEach?.((item: any, index: number) => {
             const { $el } = item;
             gestureRef.value?.create(
               $el as Element,
@@ -357,9 +363,9 @@ export default defineComponent({
                   from: () => [state.draggedX, state.draggedY],
                   pointer: { touch: true },
                   bounds: () => ({
-                    top: -getMaxDraggedY(index),
+                    top: getMaxDraggedY(index).top,
                     right: getMaxDraggedX(),
-                    bottom: getMaxDraggedY(index),
+                    bottom: getMaxDraggedY(index).bottom,
                     left: -getMaxDraggedX(),
                   }),
                 },
@@ -383,27 +389,71 @@ export default defineComponent({
       clearTimeout(dblTapTimer);
     });
 
-    return {
-      swiperRootRef,
-      swiperItemRefs,
-      rootRef,
-      disabled,
-      name,
-      ...toRefs(state),
-      prefix,
-      closeNode,
-      deleteNode,
-      currentIndex,
-      imageTransform,
-      imageTransitionDuration,
-      visible,
-      handleClose,
-      handleDelete,
-      onSwiperChange,
-      onImgLoad,
-      onTransitionEnd,
-      onTransitionStart,
-    };
+    return () => (
+      <transition name="fade">
+        {visible.value && (
+          <div ref={rootRef} class={`${prefix}-image-viewer`}>
+            <div class={`${name}__mask`} onClick={(e) => handleClose(e, 'overlay')} />
+            <TSwiper
+              ref={swiperRootRef}
+              autoplay={false}
+              class={`${name}__content`}
+              height="100vh"
+              defaultCurrent={currentIndex.value}
+              disabled={disabled.value}
+              onChange={onSwiperChange}
+            >
+              {imageInfoList.value.map((info, index) => (
+                <TSwiperItem
+                  ref={(item: any) => (swiperItemRefs.value[index] = item)}
+                  key={index}
+                  class={`${name}__swiper-item`}
+                  style={`touch-action: none; align-items:${info.image.align};`}
+                >
+                  {info.preload ? (
+                    <img
+                      src={info.image.url}
+                      style={`
+                      transform: ${index === state.touchIndex ? imageTransform.value : 'matrix(1, 0, 0, 1, 0, 0)'}; 
+                      ${imageTransitionDuration.value};`}
+                      onLoad={(event: Event) => onImgLoad(event, index)}
+                      onTransitionstart={(event: TransitionEvent) => {
+                        if (event.target === event.currentTarget) {
+                          onTransitionStart(index);
+                        }
+                      }}
+                      onTransitionend={(event: TransitionEvent) => {
+                        if (event.target === event.currentTarget) {
+                          onTransitionEnd(index);
+                        }
+                      }}
+                    />
+                  ) : (
+                    <span></span>
+                  )}
+                </TSwiperItem>
+              ))}
+            </TSwiper>
+            <div class={`${name}__nav`}>
+              {closeNode.value && (
+                <div class={`${name}__nav-close`} onClick={(e) => handleClose(e, 'close-btn')}>
+                  {closeNode.value}
+                </div>
+              )}
+              {props.showIndex && (
+                <div class={`${name}__nav-index`}>
+                  {`${Math.min((currentIndex.value ?? 0) + 1, props.images?.length)}/${props.images?.length}`}
+                </div>
+              )}
+              {deleteNode.value && (
+                <div class={`${name}__nav-delete`} onClick={handleDelete}>
+                  {deleteNode.value}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+      </transition>
+    );
   },
 });
-</script>
