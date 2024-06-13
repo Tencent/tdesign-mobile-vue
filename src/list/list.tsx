@@ -52,7 +52,7 @@ export default defineComponent({
       const footerContent = renderTNodeJSX('footer');
       return (
         <div ref={root} class={name} onScroll={handleScroll}>
-          {headerContent && <span class={`${name}__header`}>{headerContent}</span>}
+          {headerContent}
           {slots.default && slots.default()}
           <div class={`${name}__loading--wrapper`} onClick={onLoadMore}>
             {typeof props.asyncLoading === 'string' && ['loading', 'load-more'].includes(props.asyncLoading) && (
@@ -63,7 +63,7 @@ export default defineComponent({
               />
             )}
           </div>
-          {footerContent && <span class={`${name}__footer`}>{footerContent}</span>}
+          {footerContent}
         </div>
       );
     };
