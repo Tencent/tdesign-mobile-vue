@@ -1,4 +1,4 @@
-import { defineComponent, computed, ref, watch, h, setBlockTracking } from 'vue';
+import { defineComponent, computed, ref, watch, h, setBlockTracking, Teleport, onMounted } from 'vue';
 import TGradientIcon from './icon/gradient';
 import SpinnerIcon from './icon/spinner';
 
@@ -6,6 +6,7 @@ import config from '../config';
 import props from './props';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
+import { addClass, getAttach, removeClass } from '@/shared/dom';
 
 const { prefix } = config;
 
@@ -18,6 +19,7 @@ export default defineComponent({
     const loadingClass = usePrefixClass('loading');
 
     const delayShowLoading = ref(false);
+    const teleportElement = ref();
 
     const countDelay = () => {
       delayShowLoading.value = false;
@@ -44,6 +46,8 @@ export default defineComponent({
     const rootClass = computed(() => [
       loadingClass.value,
       { [`${loadingClass.value}--vertical`]: props.layout === 'vertical' },
+      { [`${loadingClass.value}--fullscreen`]: props.fullscreen },
+      { [`${loadingClass.value}--full`]: !props.fullscreen && !!props.attach },
     ]);
 
     const textClass = computed(() => [
@@ -68,6 +72,20 @@ export default defineComponent({
       circular: TGradientIcon,
       spinner: SpinnerIcon,
     };
+
+    onMounted(() => {
+      if (props.attach) {
+        const attach = getAttach(props.attach);
+        if (!attach) {
+          console.error('attach is not exist');
+        } else {
+          teleportElement.value = attach;
+        }
+      }
+      if (props.fullscreen) {
+        teleportElement.value = getAttach('body');
+      }
+    });
 
     const dotsLoading = computed(() => {
       setBlockTracking(-1);
@@ -119,12 +137,38 @@ export default defineComponent({
       return node;
     });
 
+    watch(
+      () => props.loading,
+      (isLoading) => {
+        if (isLoading && props.fullscreen) {
+          countDelay();
+          addClass(document.body, `${loadingClass.value}--lock`);
+        } else {
+          removeClass(document.body, `${loadingClass.value}--lock`);
+        }
+      },
+    );
+
     return () => {
       const indicator = renderTNodeJSX('indicator', {
         defaultNode: props.theme === 'dots' ? dotsLoading.value : defaultLoading.value,
       });
       const text = renderTNodeJSX('text');
       const TNodeContent = renderTNodeContent('default', 'content');
+
+      if (props.fullscreen || props.attach) {
+        if (!props.loading) return null;
+        return (
+          <Teleport disabled={!props.attach || !teleportElement.value} to={teleportElement.value}>
+            <div class={rootClass.value} style={rootStyle.value}>
+              {realLoading.value && indicator}
+              {text && realLoading.value && <span class={textClass.value}>{text}</span>}
+              {TNodeContent}
+            </div>
+          </Teleport>
+        );
+      }
+
       return (
         <div class={rootClass.value} style={rootStyle.value}>
           {realLoading.value && indicator}

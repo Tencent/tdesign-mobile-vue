@@ -5,13 +5,17 @@
     <tdesign-demo-block title="01 组件类型" summary="图片预览类型" padding="true">
       <BaseDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="带操作图片预览" padding="true">
+    <tdesign-demo-block title="02 组件类型" summary="图片预览类型，可设置垂直对齐方式" padding="true">
+      <AlignDemo />
+    </tdesign-demo-block>
+    <tdesign-demo-block title="03 组件类型" summary="带操作图片预览" padding="true">
       <operationDemo />
     </tdesign-demo-block>
   </div>
 </template>
 <script lang="ts" setup>
 import BaseDemo from './base.vue';
+import AlignDemo from './align.vue';
 import operationDemo from './operation.vue';
 </script>
 
