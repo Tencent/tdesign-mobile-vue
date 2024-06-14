@@ -470,7 +470,7 @@ exports[`list > event > : load-more 1`] = `
   <div
     class="t-list__loading--wrapper"
   >
-    <!--v-if-->
+    <!---->
   </div>
   <!---->
 </div>

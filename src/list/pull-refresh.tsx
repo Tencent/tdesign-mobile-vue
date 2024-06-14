@@ -1,25 +1,3 @@
-<template>
-  <div :class="name">
-    <div
-      :class="`${name}__track`"
-      :style="trackStyle"
-      @touchstart.stop="onTouchStart"
-      @touchmove.stop="onTouchMove"
-      @touchend.stop="onTouchEnd"
-      @touchcancel.stop="onTouchEnd"
-    >
-      <div :class="`${name}__head`">
-        <div v-if="SHOW_TEXT_LIST.includes(state.status)">{{ TEXT_MAP[state.status] }}</div>
-        <div v-if="state.status === 'loading'">
-          <t-loading :text="globalConfig.loading" />
-        </div>
-      </div>
-      <slot />
-    </div>
-  </div>
-</template>
-
-<script lang="ts">
 import { defineComponent, nextTick, reactive, ref, computed, watch } from 'vue';
 import { preventDefault } from '../shared/dom';
 import config from '../config';
@@ -79,6 +57,7 @@ function isElement(node: Element) {
   const ELEMENT_NODE_TYPE = 1;
   return node.tagName !== 'HTML' && node.tagName !== 'BODY' && node.nodeType === ELEMENT_NODE_TYPE;
 }
+
 const getScrollParent = (node: Element) => {
   let res = node;
   while (res && isElement(res)) {
@@ -94,7 +73,7 @@ export default defineComponent({
   components: { TLoading },
   props: PullRefreshProps,
   emits: ['refresh', 'update:modelValue'],
-  setup(props, { emit }) {
+  setup(props, { emit, slots }) {
     const state = reactive({
       status: 'normal' as PullRefreshStatus,
       distance: 0,
@@ -175,17 +154,23 @@ export default defineComponent({
       },
     );
 
-    return {
-      name,
-      state,
-      trackStyle,
-      globalConfig,
-      TEXT_MAP,
-      SHOW_TEXT_LIST,
-      onTouchStart,
-      onTouchMove,
-      onTouchEnd,
-    };
+    return () => (
+      <div class={name}>
+        <div
+          class={`${name}__track`}
+          style={trackStyle.value}
+          onTouchstart={onTouchStart}
+          onTouchmove={onTouchMove}
+          onTouchend={onTouchEnd}
+          onTouchcancel={onTouchEnd}
+        >
+          <div class={`${name}__head`}>
+            {SHOW_TEXT_LIST.includes(state.status) && <div>{TEXT_MAP[state.status]}</div>}
+            {state.status === 'loading' && <TLoading text={globalConfig.value.loading} />}
+          </div>
+          {slots.default && slots.default()}
+        </div>
+      </div>
+    );
   },
 });
-</script>
