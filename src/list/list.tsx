@@ -3,7 +3,7 @@ import { useWindowSize, useEventListener } from '@vueuse/core';
 import { useTNodeJSX } from '../hooks/tnode';
 import TLoading from '../loading';
 import config from '../config';
-import ListProps from './props';
+import props from './props';
 import { useScrollParent } from '../shared';
 import { useConfig } from '../config-provider/useConfig';
 
@@ -15,7 +15,7 @@ export default defineComponent({
   components: {
     TLoading,
   },
-  props: ListProps,
+  props,
   emits: ['load-more', 'scroll'],
   setup(props, { slots }) {
     const { globalConfig } = useConfig('list');
