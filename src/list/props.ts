@@ -22,6 +22,6 @@ export default {
   },
   /** 点击加载更多时触发 */
   onLoadMore: Function as PropType<TdListProps['onLoadMore']>,
-  /** 列表滚动时触发，scrollTop 表示顶部滚动距离 */
+  /** 列表滚动时触发，bottomDistance 表示底部距离；scrollTop 表示顶部滚动距离 */
   onScroll: Function as PropType<TdListProps['onScroll']>,
 };
