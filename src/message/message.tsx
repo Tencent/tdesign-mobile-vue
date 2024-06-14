@@ -9,7 +9,7 @@ import { DrawMarquee, TdMessageProps } from './type';
 import config from '../config';
 import { useVModel } from '../shared';
 import { usePrefixClass } from '../hooks/useClass';
-import { useTNodeJSX, useContent, useTNodeDefault } from '../hooks/tnode';
+import { useTNodeJSX, useContent } from '../hooks/tnode';
 
 const { prefix } = config;
 const name = `${prefix}-message`;
@@ -49,7 +49,7 @@ export default defineComponent({
     const [currentVisible, setVisible] = useVModel(visible, modelValue, props.defaultVisible);
 
     const rootClasses = computed(() => ({
-      [componentName.value]: true,
+      [`${componentName.value}`]: true,
       [`${componentName.value}--${props.theme}`]: true,
       [`${componentName.value}-align--${props.align}`]: !!props.align,
     }));
@@ -221,7 +221,7 @@ export default defineComponent({
           {currentVisible.value && (
             <div ref="root" class={rootClasses.value} style={rootStyles.value}>
               {prefixIconContent && <div class={`${componentName.value}__icon--left`}>{prefixIconContent}</div>}
-              <div ref={textDOM} class={textWrapClasses.value}>
+              <div ref={textWrapDOM} class={textWrapClasses.value}>
                 <div
                   ref={textDOM}
                   class={`${componentName.value}__text`}
