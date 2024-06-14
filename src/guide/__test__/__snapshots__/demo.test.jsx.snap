@@ -1,0 +1,451 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Guide > Guide baseVue demo works fine 1`] = `
+<div
+  class="guide-demo"
+  data-v-0878fddc=""
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
+    data-v-0878fddc=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      用户引导
+    </span>
+    <!---->
+  </button>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Guide > Guide customPopoverVue demo works fine 1`] = `
+<div
+  class="guide-demo"
+  data-v-3d2ff394=""
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
+    data-v-3d2ff394=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      用户引导
+      
+    </span>
+    <!---->
+  </button>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Guide > Guide dialogBodyVue demo works fine 1`] = `
+<div
+  class="dialog-body"
+  data-v-36c645cc=""
+>
+  <p
+    data-v-36c645cc=""
+  >
+    用户引导的说明文案
+  </p>
+  <div
+    class="img-wrapper"
+    data-v-36c645cc=""
+  >
+    <img
+      alt="demo"
+      data-v-36c645cc=""
+      src="https://tdesign.gtimg.com/demo/demo-image-1.png"
+    />
+  </div>
+</div>
+`;
+
+exports[`Guide > Guide dialogVue demo works fine 1`] = `
+<div
+  class="guide-demo"
+  data-v-29551fda=""
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
+    data-v-29551fda=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      用户引导
+      
+    </span>
+    <!---->
+  </button>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Guide > Guide mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+  data-v-810e7326=""
+>
+  <h1
+    class="title"
+    data-v-810e7326=""
+  >
+    Guide 引导
+  </h1>
+  <p
+    class="summary"
+    data-v-810e7326=""
+  >
+    逐步骤进行指引或解释说明的组件，常用于用户不熟悉的或需进行特别强调的页面。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-810e7326=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        01 组件类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        基础引导
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="guide-demo"
+        data-v-0878fddc=""
+        data-v-810e7326=""
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
+          data-v-0878fddc=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            用户引导
+          </span>
+          <!---->
+        </button>
+        <!--v-if-->
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-810e7326=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        不带遮罩的引导
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="guide-demo"
+        data-v-810e7326=""
+        data-v-f1ceb786=""
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
+          data-v-f1ceb786=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            用户引导
+            
+          </span>
+          <!---->
+        </button>
+        <!--v-if-->
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-810e7326=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        弹窗形式的引导
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="guide-demo"
+        data-v-29551fda=""
+        data-v-810e7326=""
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
+          data-v-29551fda=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            用户引导
+            
+          </span>
+          <!---->
+        </button>
+        <!--v-if-->
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-810e7326=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        气泡与弹窗混合的引导
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="guide-demo"
+        data-v-810e7326=""
+        data-v-f2851d8a=""
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
+          data-v-f2851d8a=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            用户引导
+            
+          </span>
+          <!---->
+        </button>
+        <!--v-if-->
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-810e7326=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        自定义气泡
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="guide-demo"
+        data-v-3d2ff394=""
+        data-v-810e7326=""
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
+          data-v-3d2ff394=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            用户引导
+            
+          </span>
+          <!---->
+        </button>
+        <!--v-if-->
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Guide > Guide myPopoverVue demo works fine 1`] = `
+<div
+  class="my-popover"
+  data-v-7cb786cf=""
+>
+  <svg
+    class="t-icon t-icon-arrow-up pop-icon"
+    data-v-7cb786cf=""
+    fill="none"
+    height="1em"
+    viewBox="0 0 24 24"
+    width="1em"
+  >
+    <path
+      d="M11 19.5V7.91l-4.5 4.5L5.09 11 12 4.09 18.91 11l-1.41 1.41-4.5-4.5V19.5h-2z"
+      fill="currentColor"
+    />
+  </svg>
+  <p
+    class="popover-desc"
+    data-v-7cb786cf=""
+  >
+    自定义的图形或说明文案，用来解释或指导该功能使用。
+  </p>
+  <div
+    class="popover-action"
+    data-v-7cb786cf=""
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-extra-small t-button--base t-button--light t-button--rectangle"
+      data-v-7cb786cf=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+         跳过 
+        
+      </span>
+      <!---->
+    </button>
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Guide > Guide noMaskVue demo works fine 1`] = `
+<div
+  class="guide-demo"
+  data-v-f1ceb786=""
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
+    data-v-f1ceb786=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      用户引导
+      
+    </span>
+    <!---->
+  </button>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Guide > Guide popoverDialogVue demo works fine 1`] = `
+<div
+  class="guide-demo"
+  data-v-f2851d8a=""
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
+    data-v-f2851d8a=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      用户引导
+      
+    </span>
+    <!---->
+  </button>
+  <!--v-if-->
+</div>
+`;

@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Switch > Switch baseVue demo works fine 1`] = `
 <div
@@ -534,7 +534,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                         />
                       </foreignobject>
                     </svg>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -601,7 +601,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                         />
                       </foreignobject>
                     </svg>
-                    <!--v-if-->
+                    <!---->
                     <!---->
                   </div>
                 </div>
@@ -1060,7 +1060,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
                     />
                   </foreignobject>
                 </svg>
-                <!--v-if-->
+                <!---->
                 <!---->
               </div>
             </div>
@@ -1127,7 +1127,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
                     />
                   </foreignobject>
                 </svg>
-                <!--v-if-->
+                <!---->
                 <!---->
               </div>
             </div>

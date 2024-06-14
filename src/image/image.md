@@ -25,7 +25,7 @@ error | `(context: { e: ImageEvent })` | 图片加载失败时触发
 load | `(context: { e: ImageEvent })` | 图片加载完成时触发
 
 
-### CSS 变量
+### CSS Variables
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --

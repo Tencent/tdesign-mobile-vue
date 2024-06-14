@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Slider Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 disabled | Boolean | false | 是否禁用组件 | N
 label | String / Boolean / Slot / Function | false | 滑块当前值文本。<br />值为 true 显示默认文案；值为 false 不显示滑块当前值文本；<br />值为 `${value}%` 则表示组件会根据占位符渲染文案；<br />值类型为函数时，参数 `value` 标识滑块值，参数 `position=start` 表示范围滑块的起始值，参数 `position=end` 表示范围滑块的终点值。TS 类型：`string \| boolean \| TNode<{ value: SliderValue; position?: 'start' \| 'end' }>`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
@@ -24,8 +25,8 @@ onChange | Function |  | TS 类型：`(value: SliderValue) => void`<br/>滑块�
 -- | -- | --
 change | `(value: SliderValue)` | 滑块值变化时触发
 
+### CSS Variables
 
-### CSS 变量
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
@@ -40,4 +41,4 @@ change | `(value: SliderValue)` | 滑块值变化时触发
 --td-slider-disabled-text-color | @font-gray-4 | - 
 --td-slider-dot-bg-color | @bg-color-container | - 
 --td-slider-dot-color | @bg-color-secondarycontainer | - 
---td-slider-dot-size | 20px | - 
+--td-slider-dot-size | 20px | -

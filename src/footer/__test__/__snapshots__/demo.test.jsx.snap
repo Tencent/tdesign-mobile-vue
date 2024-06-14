@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Footer > Footer baseVue demo works fine 1`] = `
 <div
@@ -136,12 +136,12 @@ exports[`Footer > Footer logoVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -356,12 +356,12 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
                   />
                   
                 </div>
-                <!--v-if-->
+                <!---->
                 <!---->
               </div>
             </div>
             <picture>
-              <!--v-if-->
+              <!---->
               <img
                 alt=""
                 class="t-image__img"

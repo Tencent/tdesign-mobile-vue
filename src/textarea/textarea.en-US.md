@@ -33,7 +33,7 @@ blur | `(value: TextareaValue, context: { e: FocusEvent })` | \-
 change | `(value: TextareaValue, context?: { e?: InputEvent })` | \-
 focus | `(value: TextareaValue, context : { e: FocusEvent })` | \-
 
-### CSS 变量
+### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 

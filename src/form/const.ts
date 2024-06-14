@@ -1,5 +1,5 @@
 import { InjectionKey } from 'vue';
-import { FormItemValidateResult } from './form-item.vue';
+import { FormItemValidateResult } from './form-item';
 import {
   AllValidateResult,
   Data,

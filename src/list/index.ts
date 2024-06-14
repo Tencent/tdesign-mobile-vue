@@ -1,4 +1,4 @@
-import List from './list.vue';
+import List from './list';
 import { withInstall, WithInstallType } from '../shared';
 
 import { TdListProps } from './type';

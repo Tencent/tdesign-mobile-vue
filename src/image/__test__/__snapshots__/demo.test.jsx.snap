@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Image > Image baseVue demo works fine 1`] = `
 <div
@@ -62,12 +62,12 @@ exports[`Image > Image baseVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -118,12 +118,12 @@ exports[`Image > Image baseVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -174,12 +174,12 @@ exports[`Image > Image baseVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -230,12 +230,12 @@ exports[`Image > Image baseVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -286,12 +286,12 @@ exports[`Image > Image baseVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -402,12 +402,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -458,12 +458,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -514,12 +514,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -570,12 +570,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -626,12 +626,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -705,12 +705,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -761,12 +761,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -817,12 +817,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -873,12 +873,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -929,12 +929,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -985,12 +985,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -1041,12 +1041,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -1097,12 +1097,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -1153,12 +1153,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -1209,12 +1209,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -1287,12 +1287,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -1342,12 +1342,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -1397,12 +1397,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt="一张图片"
                   class="t-image__img"
@@ -1480,12 +1480,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   />
                   
                 </div>
-                <!--v-if-->
+                <!---->
                 <!---->
               </div>
             </div>
             <picture>
-              <!--v-if-->
+              <!---->
               <img
                 alt=""
                 class="t-image__img"
@@ -1538,13 +1538,13 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                     />
                   </foreignobject>
                 </svg>
-                <!--v-if-->
+                <!---->
                 <!---->
               </div>
               
             </div>
             <picture>
-              <!--v-if-->
+              <!---->
               <img
                 alt=""
                 class="t-image__img"
@@ -1599,12 +1599,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   />
                   
                 </div>
-                <!--v-if-->
+                <!---->
                 <!---->
               </div>
             </div>
             <picture>
-              <!--v-if-->
+              <!---->
               <img
                 alt=""
                 class="t-image__img"
@@ -1654,12 +1654,12 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
                   />
                   
                 </div>
-                <!--v-if-->
+                <!---->
                 <!---->
               </div>
             </div>
             <picture>
-              <!--v-if-->
+              <!---->
               <img
                 alt=""
                 class="t-image__img"
@@ -1739,12 +1739,12 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -1795,12 +1795,12 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -1851,12 +1851,12 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -1907,12 +1907,12 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -1963,12 +1963,12 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -2019,12 +2019,12 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -2075,12 +2075,12 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -2131,12 +2131,12 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -2187,12 +2187,12 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -2243,12 +2243,12 @@ exports[`Image > Image positionVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -2323,12 +2323,12 @@ exports[`Image > Image shapeVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -2378,12 +2378,12 @@ exports[`Image > Image shapeVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -2433,12 +2433,12 @@ exports[`Image > Image shapeVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt="一张图片"
             class="t-image__img"
@@ -2501,12 +2501,12 @@ exports[`Image > Image statusVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -2559,13 +2559,13 @@ exports[`Image > Image statusVue demo works fine 1`] = `
                 />
               </foreignobject>
             </svg>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
           
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -2620,12 +2620,12 @@ exports[`Image > Image statusVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -2675,12 +2675,12 @@ exports[`Image > Image statusVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"

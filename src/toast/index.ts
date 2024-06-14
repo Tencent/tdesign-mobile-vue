@@ -1,5 +1,5 @@
 import { createApp, App, DefineComponent } from 'vue';
-import vueToast from './toast.vue';
+import vueToast from './toast';
 import { TdToastProps } from './type';
 import { WithInstallType, isBrowser } from '../shared';
 

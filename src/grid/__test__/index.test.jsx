@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
-import Grid from '../grid.vue';
-import GridItem from '../grid-item.vue';
+import Grid from '../grid';
+import GridItem from '../grid-item';
 import Badge from '../../badge/badge';
 
 const prefix = 't';

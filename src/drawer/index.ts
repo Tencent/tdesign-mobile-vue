@@ -1,4 +1,4 @@
-import _Drawer from './drawer.vue';
+import _Drawer from './drawer';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';

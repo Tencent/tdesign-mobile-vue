@@ -14,11 +14,14 @@
     <tdesign-demo-block summary="切换按钮（controls）">
       <control />
     </tdesign-demo-block>
-    <!-- <tdesign-demo-block summary="卡片模式">
-      <card />
-    </tdesign-demo-block> -->
+    <tdesign-demo-block summary="手动跳转（current）">
+      <current />
+    </tdesign-demo-block>
     <tdesign-demo-block title="02 组件样式" summary="垂直模式">
       <vertical />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="outside模式">
+      <outside />
     </tdesign-demo-block>
   </div>
 </template>
@@ -29,6 +32,8 @@ import fraction from './fraction.vue';
 import control from './control.vue';
 import card from './card.vue';
 import vertical from './vertical.vue';
+import outside from './outside.vue';
+import current from './current.vue';
 </script>
 
 <style lang="less">

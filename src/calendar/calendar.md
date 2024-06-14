@@ -32,7 +32,7 @@ confirm | `(value: Date)` | 点击确认按钮时触发
 select | `(value: Date)` | 点击日期时触发
 
 
-### CSS 变量
+### CSS Variables
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --

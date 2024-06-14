@@ -2,7 +2,7 @@ import { ref } from 'vue';
 import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Button from '../../button/index';
-import Calendar from '../calendar.vue';
+import Calendar from '../calendar';
 
 config.global.stubs = {
   teleport: true,
