@@ -41,7 +41,7 @@ exports[`SwipeCell > SwipeCell doubleVue demo works fine 1`] = `
           <div
             style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
           >
-            <!--v-if-->
+            <!---->
           </div>
         </div>
         
@@ -91,7 +91,7 @@ exports[`SwipeCell > SwipeCell doubleVue demo works fine 1`] = `
           <div
             style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
           >
-            <!--v-if-->
+            <!---->
           </div>
         </div>
       </div>
@@ -151,7 +151,7 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
           <div
             style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
           >
-            <!--v-if-->
+            <!---->
           </div>
         </div>
         
@@ -204,7 +204,7 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
           <div
             style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
           >
-            <!--v-if-->
+            <!---->
           </div>
         </div>
       </div>
@@ -246,15 +246,14 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -340,7 +339,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -366,15 +365,14 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -423,7 +421,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-swipe-cell__content btn delete-btn"
@@ -441,7 +439,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <!--v-if-->
+              <!---->
             </div>
             
             <div
@@ -450,7 +448,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -476,15 +474,14 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -574,7 +571,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -622,15 +619,14 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -675,7 +671,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -702,15 +698,14 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -759,7 +754,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -786,15 +781,14 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -831,7 +825,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
               class="t-swipe-cell__content btn edit-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -842,7 +836,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
               class="t-swipe-cell__content btn delete-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -856,7 +850,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -883,15 +877,14 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -928,7 +921,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
               class="t-swipe-cell__content btn favor-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -939,7 +932,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
               class="t-swipe-cell__content btn edit-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -950,7 +943,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
               class="t-swipe-cell__content btn delete-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -964,7 +957,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1022,15 +1015,14 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -1075,7 +1067,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1102,15 +1094,14 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -1159,7 +1150,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1186,15 +1177,14 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -1231,7 +1221,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-swipe-cell__content btn edit-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -1242,7 +1232,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-swipe-cell__content btn delete-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -1256,7 +1246,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1283,15 +1273,14 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -1328,7 +1317,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-swipe-cell__content btn favor-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -1339,7 +1328,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-swipe-cell__content btn edit-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -1350,7 +1339,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-swipe-cell__content btn delete-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -1364,7 +1353,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1413,7 +1402,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -1445,15 +1434,14 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             class="t-swipe-cell__right"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1501,7 +1489,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -1551,7 +1539,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1587,15 +1575,14 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -1681,7 +1668,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1707,15 +1694,14 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -1764,7 +1750,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-swipe-cell__content btn delete-btn"
@@ -1782,7 +1768,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <!--v-if-->
+              <!---->
             </div>
             
             <div
@@ -1791,7 +1777,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1817,15 +1803,14 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -1915,7 +1900,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1973,7 +1958,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -2026,7 +2011,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -2078,7 +2063,7 @@ exports[`SwipeCell > SwipeCell rightVue demo works fine 1`] = `
           <div
             style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
           >
-            <!--v-if-->
+            <!---->
           </div>
         </div>
         
@@ -2110,15 +2095,14 @@ exports[`SwipeCell > SwipeCell rightVue demo works fine 1`] = `
           class="t-swipe-cell__right"
           style="width: auto;"
         >
-          
-          
+          <!---->
           <div
             style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); pointer-events: none;"
           />
           <div
             style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
           >
-            <!--v-if-->
+            <!---->
           </div>
         </div>
       </div>

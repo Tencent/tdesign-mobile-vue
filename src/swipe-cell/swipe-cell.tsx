@@ -1,76 +1,3 @@
-<template>
-  <div ref="swipeCell" :class="classes" @click.capture="handleCellClick">
-    <div :style="wrapperStyle">
-      <div
-        ref="leftRef"
-        :class="classes + '__left'"
-        :style="{
-          width: initData.leftWidth ? `${initData.leftWidth}px` : 'auto',
-        }"
-      >
-        <t-node v-if="swipeLeftMenu" :content="swipeLeftMenu"></t-node>
-        <template v-else>
-          <template v-for="(btn, index) of left" :key="index">
-            <div
-              :class="[classes + '__content', btn.className || '']"
-              :style="btn.style || 'height: 100%;'"
-              @click="
-                handleClickBtn({
-                  action: { ...btn },
-                  source: 'left',
-                })
-              "
-            >
-              <t-node v-if="btn.icon" :class="classes + '__icon'" :content="btn.icon"></t-node>
-              <span v-if="btn.text" :class="classes + '__text'">
-                <t-node :content="btn.text"></t-node>
-              </span>
-            </div>
-          </template>
-        </template>
-        <div :style="sureLeftBgStyle"></div>
-        <div ref="sureLeftRef" :style="sureLeftStyle" @click="handleSureClick">
-          <t-node v-if="sureLeftContent" :content="sureLeftContent"></t-node>
-        </div>
-      </div>
-      <t-node v-if="swipeContent" :content="swipeContent"></t-node>
-      <div
-        ref="rightRef"
-        :class="classes + '__right'"
-        :style="{
-          width: initData.rightWidth ? `${initData.rightWidth}px` : 'auto',
-        }"
-      >
-        <t-node v-if="swipeRightMenu" :content="swipeRightMenu"></t-node>
-        <template v-else>
-          <template v-for="(btn, index) of right" :key="index">
-            <div
-              :class="[classes + '__content', btn.className || '']"
-              :style="btn.style || 'height: 100%;'"
-              @click="
-                handleClickBtn({
-                  action: { ...btn },
-                  source: 'right',
-                })
-              "
-            >
-              <t-node v-if="btn.icon" :class="classes + '__icon'" :content="btn.icon"></t-node>
-              <span v-if="btn.text" :class="classes + '__text'">
-                <t-node :content="btn.text"></t-node>
-              </span>
-            </div>
-          </template>
-        </template>
-        <div :style="sureRightBgStyle"></div>
-        <div ref="sureRightRef" :style="sureRightStyle" @click="handleSureClick">
-          <t-node v-if="sureRightContent" :content="sureRightContent"></t-node>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
-<script lang="ts">
 import {
   ref,
   watch,
@@ -93,6 +20,7 @@ import { SwipeActionItem } from './type';
 import { renderContent, renderTNode, TNode, useClickAway } from '../shared';
 import { preventDefault } from '../shared/dom';
 import { useSureConfirm } from './useSureConfirm';
+import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
 const name = `${prefix}-swipe-cell`;
@@ -113,6 +41,7 @@ export default defineComponent({
   props,
   emits: ['click', 'change'],
   setup(props, context) {
+    const readerTNodeJSX = useTNodeJSX();
     const internalInstance = getCurrentInstance();
     const swipeContent = computed(() => renderContent(internalInstance, 'default', 'content'));
     const swipeLeftMenu = computed(() =>
@@ -243,9 +172,11 @@ export default defineComponent({
     onMounted(async () => {
       setPanelWidth();
       renderMenuStatus();
+      watchSwipeClick();
     });
     onUnmounted(() => {
       stop();
+      clearSwipeClick();
       stopClickAway.value?.();
     });
     watch(
@@ -406,34 +337,104 @@ export default defineComponent({
     context.expose({
       showSure,
     });
-    return {
-      ...toRefs(props),
-      swipeContent,
-      swipeLeftMenu,
-      swipeRightMenu,
-      initData,
-      classes,
-      wrapperRef,
-      wrapperStyle,
-      swipeCell,
-      leftRef,
-      rightRef,
-      handleClickBtn,
-      end,
-      handleCellClick,
-      showSureRight,
-      showSureLeft,
-      sureLeftBgStyle,
-      sureRightBgStyle,
-      sureRightStyle,
-      sureLeftStyle,
-      sureRightRef,
-      sureLeftRef,
-      sureRightContent,
-      sureLeftContent,
-      showSure,
-      handleSureClick,
+
+    const watchSwipeClick = () => {
+      if (swipeCell.value) {
+        swipeCell.value.addEventListener('click', handleCellClick, true);
+      }
+    };
+
+    const clearSwipeClick = () => {
+      if (swipeCell.value) {
+        swipeCell.value.removeEventListener('click', handleCellClick, true);
+      }
+    };
+    return () => {
+      const renderSwipeLeftMenu = () => {
+        if (isFunction(props.left) || internalInstance?.slots.left) {
+          return readerTNodeJSX('left');
+        }
+        return false;
+      };
+
+      const renderSwipeRightMenu = () => {
+        if (isFunction(props.right) || internalInstance?.slots.right) {
+          return readerTNodeJSX('right');
+        }
+        return false;
+      };
+      const renderSwipeContent = () => {
+        const swipeContent = readerTNodeJSX('default');
+        if (swipeContent) {
+          return swipeContent;
+        }
+      };
+      return (
+        <div ref={swipeCell} class={classes.value}>
+          <div style={wrapperStyle.value}>
+            <div
+              ref={leftRef}
+              class={`${classes.value}__left`}
+              style={{
+                width: initData.leftWidth ? `${initData.leftWidth}px` : 'auto',
+              }}
+            >
+              {renderSwipeLeftMenu() ||
+                (Array.isArray(props.left) &&
+                  props.left.map((btn, index) => (
+                    <div
+                      key={index}
+                      class={`${classes.value}__content ${btn.className || ''}`}
+                      style={btn.style || 'height: 100%;'}
+                      onClick={() => handleClickBtn({ action: { ...btn }, source: 'left' })}
+                    >
+                      {btn.icon && <t-node class={`${classes.value}__icon`} content={btn.icon} />}
+                      {btn.text && (
+                        <span class={`${classes.value}__text`}>
+                          <t-node content={btn.text} />
+                        </span>
+                      )}
+                    </div>
+                  )))}
+
+              <div style={sureLeftBgStyle.value}></div>
+              <div ref={sureLeftRef} style={sureLeftStyle.value} onClick={handleSureClick.value}>
+                {sureLeftContent.value && <t-node content={sureLeftContent.value}></t-node>}
+              </div>
+            </div>
+            {renderSwipeContent()}
+            <div
+              ref={rightRef}
+              class={`${classes.value}__right`}
+              style={{
+                width: initData.rightWidth ? `${initData.rightWidth}px` : 'auto',
+              }}
+            >
+              {renderSwipeRightMenu() ||
+                (Array.isArray(props.right) &&
+                  props.right.map((btn, index) => (
+                    <div
+                      key={index}
+                      class={`${classes.value}__content ${btn.className || ''}`}
+                      style={btn.style || 'height: 100%;'}
+                      onClick={() => handleClickBtn({ action: { ...btn }, source: 'right' })}
+                    >
+                      {btn.icon && <t-node class={`${classes.value}__icon`} content={btn.icon} />}
+                      {btn.text && (
+                        <span class={`${classes.value}__text`}>
+                          <t-node content={btn.text} />
+                        </span>
+                      )}
+                    </div>
+                  )))}
+              <div style={sureRightBgStyle.value}></div>
+              <div ref={sureRightRef} style={sureRightStyle.value} onClick={handleSureClick.value}>
+                {sureRightContent.value && <t-node content={sureRightContent.value}></t-node>}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
     };
   },
 });
-</script>
