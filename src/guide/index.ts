@@ -1,4 +1,4 @@
-import Guide from './guide.vue';
+import Guide from './guide';
 import { withInstall, WithInstallType } from '../shared';
 import { TdGuideProps, GuideStep } from './type';
 
