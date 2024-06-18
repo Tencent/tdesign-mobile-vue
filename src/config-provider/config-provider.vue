@@ -1,8 +1,12 @@
+<template>
+  <slot />
+</template>
+
+<script lang="ts">
 import { defineComponent, PropType } from 'vue';
 import config from '../config';
 import { GlobalConfigProvider } from './type';
 import { provideConfig } from './useConfig';
-import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
 const name = `${prefix}-config-provider`;
@@ -22,8 +26,9 @@ export default defineComponent({
   setup(props) {
     provideConfig(props);
 
-    const renderTNodeJSX = useTNodeJSX();
-
-    return () => <>{renderTNodeJSX('default')}</>;
+    return {
+      name,
+    };
   },
 });
+</script>

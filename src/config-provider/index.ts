@@ -1,5 +1,5 @@
 import { withInstall } from '../shared';
-import _ConfigProvider from './config-provider';
+import _ConfigProvider from './config-provider.vue';
 
 export * from './type';
 
