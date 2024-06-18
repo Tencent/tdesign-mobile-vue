@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`List > List baseVue demo works fine 1`] = `
 <div
@@ -7,10 +7,12 @@ exports[`List > List baseVue demo works fine 1`] = `
   <!---->
   
   
+  
+  
   <div
     class="t-list__loading--wrapper"
   >
-    <!--v-if-->
+    <!---->
   </div>
   <!---->
 </div>
@@ -23,14 +25,14 @@ exports[`List > List errTipVue demo works fine 1`] = `
   <!---->
   
   
+  
+  
   <div
     class="t-list__loading--wrapper"
   >
-    <!--v-if-->
+    <!---->
   </div>
-  
-  <!--v-if-->
-  
+  <!---->
 </div>
 `;
 
@@ -162,10 +164,12 @@ exports[`List > List pullRefreshVue demo works fine 1`] = `
       <!---->
       
       
+      
+      
       <div
         class="t-list__loading--wrapper"
       >
-        <!--v-if-->
+        <!---->
       </div>
       <!---->
     </div>

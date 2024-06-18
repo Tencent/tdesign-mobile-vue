@@ -16,7 +16,7 @@ shape | String | circle | options: circle/square/bubble/ribbon | N
 showZero | Boolean | false | \- | N
 size | String | medium | options: medium/large | N
 
-### CSS 变量
+### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 

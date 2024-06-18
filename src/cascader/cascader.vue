@@ -89,7 +89,7 @@ import {
 } from 'vue';
 import TPopup from '../popup';
 import { Tabs as TTabs, TabPanel as TTabPanel } from '../tabs';
-import { RadioGroup as TRadioGroup } from '../radio';
+import { RadioValue, RadioGroup as TRadioGroup } from '../radio';
 import config from '../config';
 import TdCascaderProps from './props';
 import { useVModel, renderTNode, TNode } from '../shared';
@@ -100,7 +100,7 @@ const { prefix } = config;
 const name = `${prefix}-cascader`;
 
 interface ChildrenInfoType {
-  value: string | number;
+  value: RadioValue;
   level: number;
 }
 
@@ -206,7 +206,7 @@ export default defineComponent({
       }
     };
 
-    const chooseSelect = (e: string | number, level: number, index: number, item: any) => {
+    const chooseSelect = (e: RadioValue, level: number, index: number, item: any) => {
       selectedIndexes[level] = index;
       selectedIndexes.length = level + 1;
       selectedValue[level] = String(e);
@@ -231,7 +231,7 @@ export default defineComponent({
       }
     };
 
-    const cancelSelect = (e: string | number, level: number, index: number, item: any) => {
+    const cancelSelect = (e: RadioValue, level: number, index: number, item: any) => {
       selectedIndexes[level] = index;
       selectedIndexes.length = level;
       selectedValue.length = level;
@@ -247,7 +247,7 @@ export default defineComponent({
       }
     };
 
-    const handleSelect = (e: string | number, level: number) => {
+    const handleSelect = (e: RadioValue, level: number) => {
       const value = e;
       const index = items[level].findIndex(
         (item: any) => item[(keys as Ref<KeysType>).value?.value ?? 'value'] === value,

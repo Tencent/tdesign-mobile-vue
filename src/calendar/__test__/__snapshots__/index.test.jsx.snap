@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`calendar > props > : format 1`] = `
 <div>
@@ -23,9 +23,7 @@ exports[`calendar > props > : format 1`] = `
         <div
           class="t-calendar__title"
         >
-          
           请选择日期
-          
         </div>
         <svg
           class="t-icon t-icon-close t-calendar__close-btn"
@@ -103,402 +101,13 @@ exports[`calendar > props > : format 1`] = `
             <div />
             
             
+            
             <div
               class="t-calendar__dates-item"
             >
               
-              <!--v-if-->
-               1 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               2 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               3 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               4 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               5 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               6 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               7 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               8 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               9 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               10 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               11 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               12 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               13 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               14 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item t-calendar__dates-item--selected"
-            >
-              
-              <!--v-if-->
-               15 
-              <div
-                class="t-calendar__dates-item-suffix t-calendar__dates-item-suffix--selected"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               16 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               17 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               18 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               19 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               20 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               21 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               22 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               23 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               24 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               25 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               26 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               27 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               28 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               29 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               30 
-              <div
-                class="t-calendar__dates-item-suffix"
-              >
-                ¥60
-              </div>
-              
-            </div>
-            <div
-              class="t-calendar__dates-item"
-            >
-              
-              <!--v-if-->
-               31 
+              <!---->
+              1
               <div
                 class="t-calendar__dates-item-suffix"
               >
@@ -507,6 +116,457 @@ exports[`calendar > props > : format 1`] = `
               
             </div>
             
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              2
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              3
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              4
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              5
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              6
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              7
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              8
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              9
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              10
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              11
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              12
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              13
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              14
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item t-calendar__dates-item--selected"
+            >
+              
+              <!---->
+              15
+              <div
+                class="t-calendar__dates-item-suffix t-calendar__dates-item-suffix--selected"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              16
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              17
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              18
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              19
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              20
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              21
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              22
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              23
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              24
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              25
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              26
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              27
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              28
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              29
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              30
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
+            <div
+              class="t-calendar__dates-item"
+            >
+              
+              <!---->
+              31
+              <div
+                class="t-calendar__dates-item-suffix"
+              >
+                ¥60
+              </div>
+              
+            </div>
+            
+            
           </div>
           
           
@@ -514,7 +574,6 @@ exports[`calendar > props > : format 1`] = `
         <div
           class="t-calendar__footer"
         >
-          
           <button
             aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
@@ -529,7 +588,6 @@ exports[`calendar > props > : format 1`] = `
             </span>
             <!---->
           </button>
-          
         </div>
       </div>
       

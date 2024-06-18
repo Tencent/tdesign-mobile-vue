@@ -60,7 +60,7 @@ name | params | description
 change | `(time: TimeData)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/count-down/type.ts)。<br/>`interface TimeData {  days: number; hours: number; minutes: number; seconds: number; milliseconds: number }`<br/>
 finish | \- | \-
 
-### CSS 变量
+### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 

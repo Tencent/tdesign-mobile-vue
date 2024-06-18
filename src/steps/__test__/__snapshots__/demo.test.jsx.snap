@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Steps > Steps horizontalVue demo works fine 1`] = `
 <div>
@@ -18,7 +18,6 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
       <div
         class="t-step-item t-step-item--horizontal t-step-item--finish"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -39,7 +38,6 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             </svg>
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -60,13 +58,11 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--horizontal t-step-item--process"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -76,7 +72,6 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             2
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -97,13 +92,11 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--horizontal t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -113,7 +106,6 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             3
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -134,13 +126,11 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--horizontal t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -150,7 +140,6 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             4
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -171,8 +160,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       
       
@@ -194,7 +182,6 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
       <div
         class="t-step-item t-step-item--horizontal t-step-item--finish"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -218,7 +205,6 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -239,13 +225,11 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--horizontal t-step-item--process"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -269,7 +253,6 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -290,13 +273,11 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--horizontal t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -320,7 +301,6 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -341,13 +321,11 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--horizontal t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -371,7 +349,6 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -392,8 +369,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       
       
@@ -415,7 +391,6 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
       <div
         class="t-step-item t-step-item--horizontal t-step-item--finish"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -423,7 +398,6 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--finish"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -444,13 +418,11 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--horizontal t-step-item--process"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -458,7 +430,6 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--process"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -479,13 +450,11 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--horizontal t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -493,7 +462,6 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--default"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -514,13 +482,11 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--horizontal t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -528,7 +494,6 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--default"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -549,8 +514,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       
       
@@ -607,7 +571,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
             <div
               class="t-step-item t-step-item--horizontal t-step-item--finish"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -628,7 +591,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   </svg>
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -649,13 +611,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--horizontal t-step-item--process"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -665,7 +625,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   2
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -686,13 +645,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--horizontal t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -702,7 +659,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   3
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -723,13 +679,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--horizontal t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -739,7 +693,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   4
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -760,8 +713,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             
             
@@ -783,7 +735,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
             <div
               class="t-step-item t-step-item--horizontal t-step-item--finish"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -807,7 +758,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -828,13 +778,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--horizontal t-step-item--process"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -858,7 +806,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -879,13 +826,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--horizontal t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -909,7 +854,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -930,13 +874,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--horizontal t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -960,7 +902,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -981,8 +922,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             
             
@@ -1004,7 +944,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
             <div
               class="t-step-item t-step-item--horizontal t-step-item--finish"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -1012,7 +951,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--finish"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -1033,13 +971,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--horizontal t-step-item--process"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -1047,7 +983,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--process"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -1068,13 +1003,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--horizontal t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -1082,7 +1015,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--default"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -1103,13 +1035,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--horizontal t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -1117,7 +1047,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--default"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -1138,8 +1067,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             
             
@@ -1163,7 +1091,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
             <div
               class="t-step-item t-step-item--vertical t-step-item--finish"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -1184,7 +1111,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   </svg>
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -1205,13 +1131,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--vertical t-step-item--process"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -1221,7 +1145,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   2
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -1242,13 +1165,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--vertical t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -1258,7 +1179,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   3
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -1279,13 +1199,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--vertical t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -1295,7 +1213,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   4
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -1316,8 +1233,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             
             
@@ -1339,7 +1255,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
             <div
               class="t-step-item t-step-item--vertical t-step-item--finish"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -1363,7 +1278,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -1384,13 +1298,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--vertical t-step-item--process"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -1414,7 +1326,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -1435,13 +1346,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--vertical t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -1465,7 +1374,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -1486,13 +1394,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--vertical t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -1516,7 +1422,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -1537,8 +1442,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             
             
@@ -1560,7 +1464,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
             <div
               class="t-step-item t-step-item--vertical t-step-item--finish"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -1568,7 +1471,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--finish"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -1589,13 +1491,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--vertical t-step-item--process"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -1603,7 +1503,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--process"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -1624,13 +1523,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--vertical t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -1638,7 +1535,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--default"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -1659,13 +1555,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--vertical t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -1673,7 +1567,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--default"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -1694,8 +1587,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             
             
@@ -1717,7 +1609,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
             <div
               class="t-step-item t-step-item--vertical t-step-item--finish"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -1725,7 +1616,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--finish"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -1746,13 +1636,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--vertical t-step-item--process"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -1760,7 +1648,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--process"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -1810,12 +1697,12 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                           />
                           
                         </div>
-                        <!--v-if-->
+                        <!---->
                         <!---->
                       </div>
                     </div>
                     <picture>
-                      <!--v-if-->
+                      <!---->
                       <img
                         alt="图标"
                         class="t-image__img"
@@ -1827,13 +1714,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--vertical t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -1841,7 +1726,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--default"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -1862,13 +1746,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--vertical t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -1876,7 +1758,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--default"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -1897,8 +1778,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             
             
@@ -1942,7 +1822,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
             <div
               class="t-step-item t-step-item--horizontal t-step-item--finish"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -1963,7 +1842,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   </svg>
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -1984,13 +1862,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--horizontal t-step-item--error"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -2011,7 +1887,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   </svg>
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -2032,13 +1907,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--horizontal t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -2048,7 +1921,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   3
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -2069,13 +1941,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--horizontal t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -2085,7 +1955,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   4
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -2106,8 +1975,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             
             
@@ -2124,7 +1992,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
             <div
               class="t-step-item t-step-item--horizontal t-step-item--finish"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -2148,7 +2015,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -2169,13 +2035,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--horizontal t-step-item--error"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -2199,7 +2063,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -2220,13 +2083,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--horizontal t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -2250,7 +2111,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -2271,13 +2131,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--horizontal t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -2301,7 +2159,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   
                 </div>
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -2322,8 +2179,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             
             
@@ -2340,7 +2196,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
             <div
               class="t-step-item t-step-item--horizontal t-step-item--finish"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -2348,7 +2203,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--finish"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -2369,13 +2223,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--horizontal t-step-item--error"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -2383,7 +2235,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--error"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -2404,13 +2255,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--horizontal t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -2418,7 +2267,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--default"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -2439,13 +2287,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--horizontal t-step-item--default"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--horizontal"
               >
@@ -2453,7 +2299,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--default"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
               >
@@ -2474,8 +2319,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             
             
@@ -2519,7 +2363,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
             <div
               class="t-step-item t-step-item--vertical t-step-item--finish"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -2527,7 +2370,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--finish"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -2563,13 +2405,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--vertical t-step-item--finish"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -2577,7 +2417,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--finish"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -2613,13 +2452,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--vertical t-step-item--finish"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -2627,7 +2464,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--finish"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -2663,13 +2499,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--vertical t-step-item--process"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -2677,7 +2511,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--process"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -2713,8 +2546,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             
             
@@ -2753,7 +2585,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
             <div
               class="t-step-item t-step-item--vertical t-step-item--default t-step-item--finish"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -2761,7 +2592,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--finish"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -2782,13 +2612,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--vertical t-step-item--default t-step-item--finish"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -2796,7 +2624,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--finish"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -2817,13 +2644,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--vertical t-step-item--default t-step-item--finish"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -2831,7 +2656,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--finish"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -2852,13 +2676,11 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-step-item t-step-item--vertical t-step-item--default t-step-item--finish"
             >
-              <!-- icon -->
               <div
                 class="t-step-item__anchor t-step-item__anchor--vertical"
               >
@@ -2866,7 +2688,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__dot t-step-item__dot--finish"
                 />
               </div>
-              <!-- content -->
               <div
                 class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
               >
@@ -2887,8 +2708,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!-- line -->
-              <!--v-if-->
+              <!---->
             </div>
             
             
@@ -2919,7 +2739,6 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
       <div
         class="t-step-item t-step-item--vertical t-step-item--finish"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -2927,7 +2746,6 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--finish"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -2963,13 +2781,11 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--vertical t-step-item--finish"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -2977,7 +2793,6 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--finish"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -3013,13 +2828,11 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--vertical t-step-item--finish"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -3027,7 +2840,6 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--finish"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -3063,13 +2875,11 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--vertical t-step-item--process"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -3077,7 +2887,6 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--process"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -3113,8 +2922,7 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       
       
@@ -3153,7 +2961,6 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
       <div
         class="t-step-item t-step-item--vertical t-step-item--default t-step-item--finish"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -3161,7 +2968,6 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--finish"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -3182,13 +2988,11 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--vertical t-step-item--default t-step-item--finish"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -3196,7 +3000,6 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--finish"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -3217,13 +3020,11 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--vertical t-step-item--default t-step-item--finish"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -3231,7 +3032,6 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--finish"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -3252,13 +3052,11 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--vertical t-step-item--default t-step-item--finish"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -3266,7 +3064,6 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--finish"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -3287,8 +3084,7 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       
       
@@ -3315,7 +3111,6 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
       <div
         class="t-step-item t-step-item--horizontal t-step-item--finish"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -3336,7 +3131,6 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             </svg>
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -3357,13 +3151,11 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--horizontal t-step-item--error"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -3384,7 +3176,6 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             </svg>
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -3405,13 +3196,11 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--horizontal t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -3421,7 +3210,6 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             3
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -3442,13 +3230,11 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--horizontal t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -3458,7 +3244,6 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             4
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -3479,8 +3264,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       
       
@@ -3497,7 +3281,6 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
       <div
         class="t-step-item t-step-item--horizontal t-step-item--finish"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -3521,7 +3304,6 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -3542,13 +3324,11 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--horizontal t-step-item--error"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -3572,7 +3352,6 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -3593,13 +3372,11 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--horizontal t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -3623,7 +3400,6 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -3644,13 +3420,11 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--horizontal t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -3674,7 +3448,6 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -3695,8 +3468,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       
       
@@ -3713,7 +3485,6 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
       <div
         class="t-step-item t-step-item--horizontal t-step-item--finish"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -3721,7 +3492,6 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--finish"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -3742,13 +3512,11 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--horizontal t-step-item--error"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -3756,7 +3524,6 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--error"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -3777,13 +3544,11 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--horizontal t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -3791,7 +3556,6 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--default"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -3812,13 +3576,11 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--horizontal t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--horizontal"
         >
@@ -3826,7 +3588,6 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--default"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--horizontal t-step-item__content--horizontal t-step-item__content--last"
         >
@@ -3847,8 +3608,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       
       
@@ -3875,7 +3635,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
       <div
         class="t-step-item t-step-item--vertical t-step-item--finish"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -3896,7 +3655,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             </svg>
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -3917,13 +3675,11 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--vertical t-step-item--process"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -3933,7 +3689,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             2
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -3954,13 +3709,11 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--vertical t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -3970,7 +3723,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             3
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -3991,13 +3743,11 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--vertical t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -4007,7 +3757,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             4
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -4028,8 +3777,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       
       
@@ -4051,7 +3799,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
       <div
         class="t-step-item t-step-item--vertical t-step-item--finish"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -4075,7 +3822,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -4096,13 +3842,11 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--vertical t-step-item--process"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -4126,7 +3870,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -4147,13 +3890,11 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--vertical t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -4177,7 +3918,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -4198,13 +3938,11 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--vertical t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -4228,7 +3966,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             
           </div>
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -4249,8 +3986,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       
       
@@ -4272,7 +4008,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
       <div
         class="t-step-item t-step-item--vertical t-step-item--finish"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -4280,7 +4015,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--finish"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -4301,13 +4035,11 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--vertical t-step-item--process"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -4315,7 +4047,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--process"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -4336,13 +4067,11 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--vertical t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -4350,7 +4079,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--default"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -4371,13 +4099,11 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--vertical t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -4385,7 +4111,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--default"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -4406,8 +4131,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       
       
@@ -4429,7 +4153,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
       <div
         class="t-step-item t-step-item--vertical t-step-item--finish"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -4437,7 +4160,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--finish"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -4458,13 +4180,11 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--vertical t-step-item--process"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -4472,7 +4192,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--process"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -4522,12 +4241,12 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt="图标"
                   class="t-image__img"
@@ -4539,13 +4258,11 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--vertical t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -4553,7 +4270,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--default"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -4574,13 +4290,11 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-step-item t-step-item--vertical t-step-item--default"
       >
-        <!-- icon -->
         <div
           class="t-step-item__anchor t-step-item__anchor--vertical"
         >
@@ -4588,7 +4302,6 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__dot t-step-item__dot--default"
           />
         </div>
-        <!-- content -->
         <div
           class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
         >
@@ -4609,8 +4322,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!-- line -->
-        <!--v-if-->
+        <!---->
       </div>
       
       

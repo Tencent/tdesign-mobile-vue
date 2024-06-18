@@ -10,9 +10,19 @@
       }"
       @click="onClick('round', '顶部')"
     />
+    <t-button
+      v-bind="{
+        block: true,
+        size: 'large',
+        theme: 'primary',
+        variant: 'outline',
+        content: '半圆形返回顶部',
+      }"
+      @click="onClick('half-round', '返回顶部')"
+    />
   </div>
   <div :style="{ ...style }">
-    <t-back-top v-show="visible" :theme="theme" :text="text" :on-to-top="handleToTop" />
+    <t-back-top :theme="theme" :text="text" :on-to-top="handleToTop" :container="container" />
   </div>
 </template>
 
@@ -20,7 +30,7 @@
 import { ref, defineProps, defineEmits, h } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
-defineProps({
+const props = defineProps({
   visible: {
     type: Boolean,
     default: false,
@@ -28,6 +38,9 @@ defineProps({
   style: {
     type: Object,
     default: () => {},
+  },
+  container: {
+    type: Function,
   },
 });
 const emit = defineEmits(['close']);
@@ -40,7 +53,7 @@ const onClick = (tem: string, txt: string) => {
   text.value = txt;
   theme.value = tem;
   emit('close');
-  window.scrollTo(0, 1200);
+  props.container().scrollTo(0, 1200);
 };
 function handleToTop() {
   console.log('handleToTop');
@@ -50,6 +63,7 @@ function handleToTop() {
 <style lang="less" scoped>
 .button-group {
   padding: 8px 16px 16px;
+
   .t-button {
     margin-bottom: 10px;
   }

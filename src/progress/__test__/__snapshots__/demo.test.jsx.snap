@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Progress > Progress baseVue demo works fine 1`] = `
 <div
@@ -13,7 +13,6 @@ exports[`Progress > Progress baseVue demo works fine 1`] = `
       class="t-progress"
       data-v-0843df2e=""
     >
-      <!-- LINE -->
       <div
         class="t-progress--thin t-progress--status-default"
       >
@@ -31,10 +30,8 @@ exports[`Progress > Progress baseVue demo works fine 1`] = `
           80%
         </div>
       </div>
-      <!-- PLUMP -->
-      <!--v-if-->
-      <!-- CIRCLE -->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
   </div>
   <div
@@ -45,9 +42,7 @@ exports[`Progress > Progress baseVue demo works fine 1`] = `
       class="t-progress"
       data-v-0843df2e=""
     >
-      <!-- LINE -->
-      <!--v-if-->
-      <!-- PLUMP -->
+      <!---->
       <div
         class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-default"
       >
@@ -61,10 +56,9 @@ exports[`Progress > Progress baseVue demo works fine 1`] = `
             80%
           </div>
         </div>
-        <!--v-if-->
+        <!---->
       </div>
-      <!-- CIRCLE -->
-      <!--v-if-->
+      <!---->
     </div>
   </div>
   <div
@@ -75,11 +69,8 @@ exports[`Progress > Progress baseVue demo works fine 1`] = `
       class="t-progress"
       data-v-0843df2e=""
     >
-      <!-- LINE -->
-      <!--v-if-->
-      <!-- PLUMP -->
-      <!--v-if-->
-      <!-- CIRCLE -->
+      <!---->
+      <!---->
       <div
         class="t-progress--circle t-progress--status-default"
         style="width: 112px; height: 112px;"
@@ -133,11 +124,8 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
       class="t-progress"
       data-v-abd06230=""
     >
-      <!-- LINE -->
-      <!--v-if-->
-      <!-- PLUMP -->
-      <!--v-if-->
-      <!-- CIRCLE -->
+      <!---->
+      <!---->
       <div
         class="t-progress--circle t-progress--status-default"
         style="width: 112px; height: 112px;"
@@ -183,11 +171,8 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
       class="t-progress"
       data-v-abd06230=""
     >
-      <!-- LINE -->
-      <!--v-if-->
-      <!-- PLUMP -->
-      <!--v-if-->
-      <!-- CIRCLE -->
+      <!---->
+      <!---->
       <div
         class="t-progress--circle t-progress--status-warning"
         style="width: 112px; height: 112px;"
@@ -244,11 +229,8 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
       class="t-progress"
       data-v-abd06230=""
     >
-      <!-- LINE -->
-      <!--v-if-->
-      <!-- PLUMP -->
-      <!--v-if-->
-      <!-- CIRCLE -->
+      <!---->
+      <!---->
       <div
         class="t-progress--circle t-progress--status-error"
         style="width: 112px; height: 112px;"
@@ -305,11 +287,8 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
       class="t-progress"
       data-v-abd06230=""
     >
-      <!-- LINE -->
-      <!--v-if-->
-      <!-- PLUMP -->
-      <!--v-if-->
-      <!-- CIRCLE -->
+      <!---->
+      <!---->
       <div
         class="t-progress--circle t-progress--status-success"
         style="width: 112px; height: 112px;"
@@ -374,7 +353,6 @@ exports[`Progress > Progress customVue demo works fine 1`] = `
       class="t-progress"
       data-v-e3f135ee=""
     >
-      <!-- LINE -->
       <div
         class="t-progress--thin t-progress--status-default"
       >
@@ -400,10 +378,8 @@ exports[`Progress > Progress customVue demo works fine 1`] = `
           
         </div>
       </div>
-      <!-- PLUMP -->
-      <!--v-if-->
-      <!-- CIRCLE -->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
   </div>
   <div
@@ -414,7 +390,6 @@ exports[`Progress > Progress customVue demo works fine 1`] = `
       class="t-progress radius--round"
       data-v-e3f135ee=""
     >
-      <!-- LINE -->
       <div
         class="t-progress--thin t-progress--status-default"
       >
@@ -432,10 +407,8 @@ exports[`Progress > Progress customVue demo works fine 1`] = `
           88%
         </div>
       </div>
-      <!-- PLUMP -->
-      <!--v-if-->
-      <!-- CIRCLE -->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
   </div>
 </div>
@@ -454,7 +427,6 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
       class="t-progress"
       data-v-ad591fe8=""
     >
-      <!-- LINE -->
       <div
         class="t-progress--thin t-progress--status-default"
       >
@@ -472,10 +444,8 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
           80%
         </div>
       </div>
-      <!-- PLUMP -->
-      <!--v-if-->
-      <!-- CIRCLE -->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
   </div>
   <div
@@ -486,7 +456,6 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
       class="t-progress"
       data-v-ad591fe8=""
     >
-      <!-- LINE -->
       <div
         class="t-progress--thin t-progress--status-warning"
       >
@@ -515,10 +484,8 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
           </svg>
         </div>
       </div>
-      <!-- PLUMP -->
-      <!--v-if-->
-      <!-- CIRCLE -->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
   </div>
   <div
@@ -529,7 +496,6 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
       class="t-progress"
       data-v-ad591fe8=""
     >
-      <!-- LINE -->
       <div
         class="t-progress--thin t-progress--status-error"
       >
@@ -558,10 +524,8 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
           </svg>
         </div>
       </div>
-      <!-- PLUMP -->
-      <!--v-if-->
-      <!-- CIRCLE -->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
   </div>
   <div
@@ -572,7 +536,6 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
       class="t-progress"
       data-v-ad591fe8=""
     >
-      <!-- LINE -->
       <div
         class="t-progress--thin t-progress--status-success"
       >
@@ -601,10 +564,8 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
           </svg>
         </div>
       </div>
-      <!-- PLUMP -->
-      <!--v-if-->
-      <!-- CIRCLE -->
-      <!--v-if-->
+      <!---->
+      <!---->
     </div>
   </div>
 </div>
@@ -662,7 +623,6 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             class="t-progress"
             data-v-0843df2e=""
           >
-            <!-- LINE -->
             <div
               class="t-progress--thin t-progress--status-default"
             >
@@ -680,10 +640,8 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                 80%
               </div>
             </div>
-            <!-- PLUMP -->
-            <!--v-if-->
-            <!-- CIRCLE -->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
         </div>
         <div
@@ -694,9 +652,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             class="t-progress"
             data-v-0843df2e=""
           >
-            <!-- LINE -->
-            <!--v-if-->
-            <!-- PLUMP -->
+            <!---->
             <div
               class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-default"
             >
@@ -710,10 +666,9 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                   80%
                 </div>
               </div>
-              <!--v-if-->
+              <!---->
             </div>
-            <!-- CIRCLE -->
-            <!--v-if-->
+            <!---->
           </div>
         </div>
         <div
@@ -724,11 +679,8 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             class="t-progress"
             data-v-0843df2e=""
           >
-            <!-- LINE -->
-            <!--v-if-->
-            <!-- PLUMP -->
-            <!--v-if-->
-            <!-- CIRCLE -->
+            <!---->
+            <!---->
             <div
               class="t-progress--circle t-progress--status-default"
               style="width: 112px; height: 112px;"
@@ -797,7 +749,6 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
           class="t-progress"
           data-v-1cf0f4ed=""
         >
-          <!-- LINE -->
           <div
             class="t-progress--thin t-progress--status-default"
           >
@@ -815,10 +766,8 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
               88%
             </div>
           </div>
-          <!-- PLUMP -->
-          <!--v-if-->
-          <!-- CIRCLE -->
-          <!--v-if-->
+          <!---->
+          <!---->
         </div>
         <div
           class="button-group"
@@ -898,7 +847,6 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             class="t-progress"
             data-v-e3f135ee=""
           >
-            <!-- LINE -->
             <div
               class="t-progress--thin t-progress--status-default"
             >
@@ -924,10 +872,8 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                 
               </div>
             </div>
-            <!-- PLUMP -->
-            <!--v-if-->
-            <!-- CIRCLE -->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
         </div>
         <div
@@ -938,7 +884,6 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             class="t-progress radius--round"
             data-v-e3f135ee=""
           >
-            <!-- LINE -->
             <div
               class="t-progress--thin t-progress--status-default"
             >
@@ -956,10 +901,8 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                 88%
               </div>
             </div>
-            <!-- PLUMP -->
-            <!--v-if-->
-            <!-- CIRCLE -->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
         </div>
       </div>
@@ -1001,7 +944,6 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             class="t-progress"
             data-v-ad591fe8=""
           >
-            <!-- LINE -->
             <div
               class="t-progress--thin t-progress--status-default"
             >
@@ -1019,10 +961,8 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                 80%
               </div>
             </div>
-            <!-- PLUMP -->
-            <!--v-if-->
-            <!-- CIRCLE -->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
         </div>
         <div
@@ -1033,7 +973,6 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             class="t-progress"
             data-v-ad591fe8=""
           >
-            <!-- LINE -->
             <div
               class="t-progress--thin t-progress--status-warning"
             >
@@ -1062,10 +1001,8 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                 </svg>
               </div>
             </div>
-            <!-- PLUMP -->
-            <!--v-if-->
-            <!-- CIRCLE -->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
         </div>
         <div
@@ -1076,7 +1013,6 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             class="t-progress"
             data-v-ad591fe8=""
           >
-            <!-- LINE -->
             <div
               class="t-progress--thin t-progress--status-error"
             >
@@ -1105,10 +1041,8 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                 </svg>
               </div>
             </div>
-            <!-- PLUMP -->
-            <!--v-if-->
-            <!-- CIRCLE -->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
         </div>
         <div
@@ -1119,7 +1053,6 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             class="t-progress"
             data-v-ad591fe8=""
           >
-            <!-- LINE -->
             <div
               class="t-progress--thin t-progress--status-success"
             >
@@ -1148,10 +1081,8 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                 </svg>
               </div>
             </div>
-            <!-- PLUMP -->
-            <!--v-if-->
-            <!-- CIRCLE -->
-            <!--v-if-->
+            <!---->
+            <!---->
           </div>
         </div>
       </div>
@@ -1189,9 +1120,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             class="t-progress"
             data-v-e578db18=""
           >
-            <!-- LINE -->
-            <!--v-if-->
-            <!-- PLUMP -->
+            <!---->
             <div
               class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-default"
             >
@@ -1205,10 +1134,9 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                   80%
                 </div>
               </div>
-              <!--v-if-->
+              <!---->
             </div>
-            <!-- CIRCLE -->
-            <!--v-if-->
+            <!---->
           </div>
         </div>
         <div
@@ -1219,9 +1147,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             class="t-progress"
             data-v-e578db18=""
           >
-            <!-- LINE -->
-            <!--v-if-->
-            <!-- PLUMP -->
+            <!---->
             <div
               class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-warning"
             >
@@ -1235,10 +1161,9 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                   88%
                 </div>
               </div>
-              <!--v-if-->
+              <!---->
             </div>
-            <!-- CIRCLE -->
-            <!--v-if-->
+            <!---->
           </div>
         </div>
         <div
@@ -1249,9 +1174,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             class="t-progress"
             data-v-e578db18=""
           >
-            <!-- LINE -->
-            <!--v-if-->
-            <!-- PLUMP -->
+            <!---->
             <div
               class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-error"
             >
@@ -1265,10 +1188,9 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                   88%
                 </div>
               </div>
-              <!--v-if-->
+              <!---->
             </div>
-            <!-- CIRCLE -->
-            <!--v-if-->
+            <!---->
           </div>
         </div>
         <div
@@ -1279,9 +1201,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             class="t-progress"
             data-v-e578db18=""
           >
-            <!-- LINE -->
-            <!--v-if-->
-            <!-- PLUMP -->
+            <!---->
             <div
               class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-success"
             >
@@ -1295,10 +1215,9 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                   88%
                 </div>
               </div>
-              <!--v-if-->
+              <!---->
             </div>
-            <!-- CIRCLE -->
-            <!--v-if-->
+            <!---->
           </div>
         </div>
       </div>
@@ -1336,11 +1255,8 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             class="t-progress"
             data-v-abd06230=""
           >
-            <!-- LINE -->
-            <!--v-if-->
-            <!-- PLUMP -->
-            <!--v-if-->
-            <!-- CIRCLE -->
+            <!---->
+            <!---->
             <div
               class="t-progress--circle t-progress--status-default"
               style="width: 112px; height: 112px;"
@@ -1386,11 +1302,8 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             class="t-progress"
             data-v-abd06230=""
           >
-            <!-- LINE -->
-            <!--v-if-->
-            <!-- PLUMP -->
-            <!--v-if-->
-            <!-- CIRCLE -->
+            <!---->
+            <!---->
             <div
               class="t-progress--circle t-progress--status-warning"
               style="width: 112px; height: 112px;"
@@ -1447,11 +1360,8 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             class="t-progress"
             data-v-abd06230=""
           >
-            <!-- LINE -->
-            <!--v-if-->
-            <!-- PLUMP -->
-            <!--v-if-->
-            <!-- CIRCLE -->
+            <!---->
+            <!---->
             <div
               class="t-progress--circle t-progress--status-error"
               style="width: 112px; height: 112px;"
@@ -1508,11 +1418,8 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             class="t-progress"
             data-v-abd06230=""
           >
-            <!-- LINE -->
-            <!--v-if-->
-            <!-- PLUMP -->
-            <!--v-if-->
-            <!-- CIRCLE -->
+            <!---->
+            <!---->
             <div
               class="t-progress--circle t-progress--status-success"
               style="width: 112px; height: 112px;"
@@ -1581,9 +1488,7 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
       class="t-progress"
       data-v-e578db18=""
     >
-      <!-- LINE -->
-      <!--v-if-->
-      <!-- PLUMP -->
+      <!---->
       <div
         class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-default"
       >
@@ -1597,10 +1502,9 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
             80%
           </div>
         </div>
-        <!--v-if-->
+        <!---->
       </div>
-      <!-- CIRCLE -->
-      <!--v-if-->
+      <!---->
     </div>
   </div>
   <div
@@ -1611,9 +1515,7 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
       class="t-progress"
       data-v-e578db18=""
     >
-      <!-- LINE -->
-      <!--v-if-->
-      <!-- PLUMP -->
+      <!---->
       <div
         class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-warning"
       >
@@ -1627,10 +1529,9 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
             88%
           </div>
         </div>
-        <!--v-if-->
+        <!---->
       </div>
-      <!-- CIRCLE -->
-      <!--v-if-->
+      <!---->
     </div>
   </div>
   <div
@@ -1641,9 +1542,7 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
       class="t-progress"
       data-v-e578db18=""
     >
-      <!-- LINE -->
-      <!--v-if-->
-      <!-- PLUMP -->
+      <!---->
       <div
         class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-error"
       >
@@ -1657,10 +1556,9 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
             88%
           </div>
         </div>
-        <!--v-if-->
+        <!---->
       </div>
-      <!-- CIRCLE -->
-      <!--v-if-->
+      <!---->
     </div>
   </div>
   <div
@@ -1671,9 +1569,7 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
       class="t-progress"
       data-v-e578db18=""
     >
-      <!-- LINE -->
-      <!--v-if-->
-      <!-- PLUMP -->
+      <!---->
       <div
         class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-success"
       >
@@ -1687,10 +1583,9 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
             88%
           </div>
         </div>
-        <!--v-if-->
+        <!---->
       </div>
-      <!-- CIRCLE -->
-      <!--v-if-->
+      <!---->
     </div>
   </div>
 </div>
@@ -1705,7 +1600,6 @@ exports[`Progress > Progress transitionVue demo works fine 1`] = `
     class="t-progress"
     data-v-1cf0f4ed=""
   >
-    <!-- LINE -->
     <div
       class="t-progress--thin t-progress--status-default"
     >
@@ -1723,10 +1617,8 @@ exports[`Progress > Progress transitionVue demo works fine 1`] = `
         88%
       </div>
     </div>
-    <!-- PLUMP -->
-    <!--v-if-->
-    <!-- CIRCLE -->
-    <!--v-if-->
+    <!---->
+    <!---->
   </div>
   <div
     class="button-group"

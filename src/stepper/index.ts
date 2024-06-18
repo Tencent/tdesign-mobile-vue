@@ -1,4 +1,4 @@
-import _Stepper from './stepper.vue';
+import _Stepper from './stepper';
 import { withInstall, WithInstallType } from '../shared';
 import { TdStepperProps } from './type';
 

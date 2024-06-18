@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Navbar > Navbar baseVue demo works fine 1`] = `
 <div
@@ -10,7 +10,7 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
     data-v-7388e034=""
     style="position: relative;"
   >
-    <!--v-if-->
+    <!---->
     <div
       class="t-navbar__content"
     >
@@ -30,7 +30,7 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
           />
         </svg>
         <!---->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-navbar__center"
@@ -41,7 +41,7 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
           标题文字
         </span>
       </div>
-      <!--v-if-->
+      <!---->
     </div>
   </div>
   <div
@@ -49,7 +49,7 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
     data-v-7388e034=""
     style="position: relative;"
   >
-    <!--v-if-->
+    <!---->
     <div
       class="t-navbar__content"
     >
@@ -79,7 +79,7 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
           />
         </svg>
         
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-navbar__center"
@@ -112,14 +112,14 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
     data-v-7388e034=""
     style="position: relative;"
   >
-    <!--v-if-->
+    <!---->
     <div
       class="t-navbar__content"
     >
       <div
         class="t-navbar__left"
       >
-        <!--v-if-->
+        <!---->
         <!---->
         <div
           class="t-navbar__capsule"
@@ -198,7 +198,7 @@ exports[`Navbar > Navbar customColorVue demo works fine 1`] = `
   data-v-b4f331c8=""
   style="position: relative;"
 >
-  <!--v-if-->
+  <!---->
   <div
     class="t-navbar__content"
   >
@@ -218,7 +218,7 @@ exports[`Navbar > Navbar customColorVue demo works fine 1`] = `
         />
       </svg>
       <!---->
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-navbar__center"
@@ -254,14 +254,14 @@ exports[`Navbar > Navbar imgVue demo works fine 1`] = `
   data-v-0848b63e=""
   style="position: relative;"
 >
-  <!--v-if-->
+  <!---->
   <div
     class="t-navbar__content"
   >
     <div
       class="t-navbar__left"
     >
-      <!--v-if-->
+      <!---->
       
       <div
         class="t-image t-image--square logo"
@@ -293,12 +293,12 @@ exports[`Navbar > Navbar imgVue demo works fine 1`] = `
               />
               
             </div>
-            <!--v-if-->
+            <!---->
             <!---->
           </div>
         </div>
         <picture>
-          <!--v-if-->
+          <!---->
           <img
             alt=""
             class="t-image__img"
@@ -308,7 +308,7 @@ exports[`Navbar > Navbar imgVue demo works fine 1`] = `
         </picture>
       </div>
       
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-navbar__center"
@@ -353,7 +353,7 @@ exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
     data-v-63d9f832=""
     style="position: relative;"
   >
-    <!--v-if-->
+    <!---->
     <div
       class="t-navbar__content"
     >
@@ -373,7 +373,7 @@ exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
           />
         </svg>
         <!---->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-navbar__center"
@@ -406,7 +406,7 @@ exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
     data-v-63d9f832=""
     style="position: relative;"
   >
-    <!--v-if-->
+    <!---->
     <div
       class="t-navbar__content"
     >
@@ -433,7 +433,7 @@ exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
           标题左对齐
         </span>
         
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-navbar__center"
@@ -515,7 +515,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         data-v-7388e034=""
         style="position: relative;"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-navbar__content"
         >
@@ -535,7 +535,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               />
             </svg>
             <!---->
-            <!--v-if-->
+            <!---->
           </div>
           <div
             class="t-navbar__center"
@@ -546,7 +546,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               标题文字
             </span>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       <div
@@ -554,7 +554,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         data-v-7388e034=""
         style="position: relative;"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-navbar__content"
         >
@@ -584,7 +584,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               />
             </svg>
             
-            <!--v-if-->
+            <!---->
           </div>
           <div
             class="t-navbar__center"
@@ -617,14 +617,14 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         data-v-7388e034=""
         style="position: relative;"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-navbar__content"
         >
           <div
             class="t-navbar__left"
           >
-            <!--v-if-->
+            <!---->
             <!---->
             <div
               class="t-navbar__capsule"
@@ -721,14 +721,14 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         data-v-6af0dffd=""
         style="position: relative;"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-navbar__content"
         >
           <div
             class="t-navbar__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-search"
@@ -760,7 +760,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               <!---->
             </div>
             
-            <!--v-if-->
+            <!---->
           </div>
           <div
             class="t-navbar__center"
@@ -820,14 +820,14 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         data-v-16defdf7=""
         style="position: relative;"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-navbar__content"
         >
           <div
             class="t-navbar__left"
           >
-            <!--v-if-->
+            <!---->
             
             <div
               class="t-image t-image--square logo"
@@ -859,12 +859,12 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -874,7 +874,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               </picture>
             </div>
             
-            <!--v-if-->
+            <!---->
           </div>
           <div
             class="t-navbar__center"
@@ -938,7 +938,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         data-v-63d9f832=""
         style="position: relative;"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-navbar__content"
         >
@@ -958,7 +958,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               />
             </svg>
             <!---->
-            <!--v-if-->
+            <!---->
           </div>
           <div
             class="t-navbar__center"
@@ -991,7 +991,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         data-v-63d9f832=""
         style="position: relative;"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-navbar__content"
         >
@@ -1018,7 +1018,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               标题左对齐
             </span>
             
-            <!--v-if-->
+            <!---->
           </div>
           <div
             class="t-navbar__center"
@@ -1079,7 +1079,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         data-v-5f535116=""
         style="position: relative;"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-navbar__content"
         >
@@ -1099,7 +1099,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               />
             </svg>
             <!---->
-            <!--v-if-->
+            <!---->
           </div>
           <div
             class="t-navbar__center"
@@ -1132,7 +1132,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         data-v-5f535116=""
         style="position: relative;"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-navbar__content"
         >
@@ -1152,7 +1152,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               />
             </svg>
             <!---->
-            <!--v-if-->
+            <!---->
           </div>
           <div
             class="t-navbar__center"
@@ -1219,7 +1219,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         data-v-b4f331c8=""
         style="position: relative;"
       >
-        <!--v-if-->
+        <!---->
         <div
           class="t-navbar__content"
         >
@@ -1239,7 +1239,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               />
             </svg>
             <!---->
-            <!--v-if-->
+            <!---->
           </div>
           <div
             class="t-navbar__center"
@@ -1279,14 +1279,14 @@ exports[`Navbar > Navbar searchVue demo works fine 1`] = `
   data-v-6af0dffd=""
   style="position: relative;"
 >
-  <!--v-if-->
+  <!---->
   <div
     class="t-navbar__content"
   >
     <div
       class="t-navbar__left"
     >
-      <!--v-if-->
+      <!---->
       
       <div
         class="t-search"
@@ -1318,7 +1318,7 @@ exports[`Navbar > Navbar searchVue demo works fine 1`] = `
         <!---->
       </div>
       
-      <!--v-if-->
+      <!---->
     </div>
     <div
       class="t-navbar__center"
@@ -1363,7 +1363,7 @@ exports[`Navbar > Navbar sizeVue demo works fine 1`] = `
     data-v-5f535116=""
     style="position: relative;"
   >
-    <!--v-if-->
+    <!---->
     <div
       class="t-navbar__content"
     >
@@ -1383,7 +1383,7 @@ exports[`Navbar > Navbar sizeVue demo works fine 1`] = `
           />
         </svg>
         <!---->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-navbar__center"
@@ -1416,7 +1416,7 @@ exports[`Navbar > Navbar sizeVue demo works fine 1`] = `
     data-v-5f535116=""
     style="position: relative;"
   >
-    <!--v-if-->
+    <!---->
     <div
       class="t-navbar__content"
     >
@@ -1436,7 +1436,7 @@ exports[`Navbar > Navbar sizeVue demo works fine 1`] = `
           />
         </svg>
         <!---->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-navbar__center"

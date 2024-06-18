@@ -1,5 +1,5 @@
 import { createApp, defineComponent, ref, h, VNode, App, nextTick } from 'vue';
-import Message from './message.vue';
+import Message from './message';
 import { WithInstallType, isBrowser } from '../shared';
 import { TdMessageProps, MessageThemeList } from './type';
 
@@ -72,7 +72,7 @@ const defaultProps: MessageActionOptionsType = {
   theme: 'info',
   visible: false,
   zIndex: 5000,
-  context: document.body,
+  context: isBrowser ? document.body : null,
   onDurationEnd: () => {},
   onCloseBtnClick: () => {},
 };

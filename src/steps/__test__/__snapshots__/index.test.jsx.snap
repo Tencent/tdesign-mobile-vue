@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`steps > props > : layout 1`] = `
 <div
@@ -9,7 +9,6 @@ exports[`steps > props > : layout 1`] = `
   <div
     class="t-step-item t-step-item--vertical t-step-item--default t-step-item--error"
   >
-    <!-- icon -->
     <div
       class="t-step-item__anchor t-step-item__anchor--vertical"
     >
@@ -30,7 +29,6 @@ exports[`steps > props > : layout 1`] = `
         </svg>
       </div>
     </div>
-    <!-- content -->
     <div
       class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
     >
@@ -51,13 +49,11 @@ exports[`steps > props > : layout 1`] = `
         <!---->
       </div>
     </div>
-    <!-- line -->
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-step-item t-step-item--vertical t-step-item--default t-step-item--process"
   >
-    <!-- icon -->
     <div
       class="t-step-item__anchor t-step-item__anchor--vertical"
     >
@@ -67,7 +63,6 @@ exports[`steps > props > : layout 1`] = `
         2
       </div>
     </div>
-    <!-- content -->
     <div
       class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
     >
@@ -88,8 +83,7 @@ exports[`steps > props > : layout 1`] = `
         <!---->
       </div>
     </div>
-    <!-- line -->
-    <!--v-if-->
+    <!---->
   </div>
   
 </div>

@@ -1,5 +1,5 @@
-import LocalTabs from './tabs.vue';
-import LocalTabPanel from './tab-panel.vue';
+import LocalTabs from './tabs';
+import LocalTabPanel from './tab-panel';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';

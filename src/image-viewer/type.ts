@@ -21,7 +21,7 @@ export interface TdImageViewerProps {
    * 图片数组
    * @default []
    */
-  images?: Array<string>;
+  images?: Array<string | { url: string; align: 'start' | 'center' | 'end' }>;
   /**
    * 当前预览图片所在的下标
    */

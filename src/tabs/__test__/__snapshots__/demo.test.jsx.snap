@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
 <div
@@ -57,8 +57,8 @@ exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
                   </div>
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -89,8 +89,8 @@ exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
                   </div>
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -114,8 +114,8 @@ exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               
               <div
@@ -134,32 +134,11 @@ exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
       <div
         class="t-tab-panel t-tabs__panel"
         data-v-c93875e8=""
-        value="first"
       >
-        
         <!---->
-        
       </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-c93875e8=""
-        style="display: none;"
-        value="second"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-c93875e8=""
-        style="display: none;"
-        value="third"
-      >
-        
-        <!---->
-        
-      </div>
+      <!---->
+      <!---->
       
     </div>
   </div>
@@ -216,8 +195,8 @@ exports[`Tabs > Tabs contentVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -241,8 +220,8 @@ exports[`Tabs > Tabs contentVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -266,8 +245,8 @@ exports[`Tabs > Tabs contentVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               
               <div
@@ -287,44 +266,17 @@ exports[`Tabs > Tabs contentVue demo works fine 1`] = `
       <div
         class="t-tab-panel t-tabs__panel"
         data-v-7ef59abc=""
-        value="1"
       >
         
         <p
           data-v-7ef59abc=""
         >
-          内容区
+          内容区1
         </p>
         
       </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-7ef59abc=""
-        style="display: none;"
-        value="2"
-      >
-        
-        <p
-          data-v-7ef59abc=""
-        >
-          内容区
-        </p>
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-7ef59abc=""
-        style="display: none;"
-        value="3"
-      >
-        
-        <p
-          data-v-7ef59abc=""
-        >
-          内容区
-        </p>
-        
-      </div>
+      <!---->
+      <!---->
       
       
     </div>
@@ -386,8 +338,8 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -411,8 +363,8 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               
               <div
@@ -431,22 +383,10 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
       <div
         class="t-tab-panel t-tabs__panel"
         data-v-7ca59de4=""
-        value="first"
       >
-        
         <!---->
-        
       </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-7ca59de4=""
-        style="display: none;"
-        value="second"
-      >
-        
-        <!---->
-        
-      </div>
+      <!---->
       
     </div>
   </div>
@@ -495,8 +435,8 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -520,8 +460,8 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -545,8 +485,8 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               
               <div
@@ -565,32 +505,11 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
       <div
         class="t-tab-panel t-tabs__panel"
         data-v-7ca59de4=""
-        value="0"
       >
-        
         <!---->
-        
       </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-7ca59de4=""
-        style="display: none;"
-        value="1"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-7ca59de4=""
-        style="display: none;"
-        value="2"
-      >
-        
-        <!---->
-        
-      </div>
+      <!---->
+      <!---->
       
     </div>
   </div>
@@ -639,8 +558,8 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -664,8 +583,8 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -689,8 +608,8 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -714,8 +633,8 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               
               <div
@@ -735,42 +654,12 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
       <div
         class="t-tab-panel t-tabs__panel"
         data-v-7ca59de4=""
-        value="first"
       >
-        
         <!---->
-        
       </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-7ca59de4=""
-        style="display: none;"
-        value="second"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-7ca59de4=""
-        style="display: none;"
-        value="third"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-7ca59de4=""
-        style="display: none;"
-        value="four"
-      >
-        
-        <!---->
-        
-      </div>
+      <!---->
+      <!---->
+      <!---->
       
       
     </div>
@@ -820,8 +709,8 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -845,8 +734,8 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -870,8 +759,8 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -895,8 +784,8 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -920,8 +809,8 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               
               <div
@@ -941,52 +830,13 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
       <div
         class="t-tab-panel t-tabs__panel"
         data-v-7ca59de4=""
-        value="1"
       >
-        
         <!---->
-        
       </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-7ca59de4=""
-        style="display: none;"
-        value="2"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-7ca59de4=""
-        style="display: none;"
-        value="3"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-7ca59de4=""
-        style="display: none;"
-        value="4"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-7ca59de4=""
-        style="display: none;"
-        value="5"
-      >
-        
-        <!---->
-        
-      </div>
+      <!---->
+      <!---->
+      <!---->
+      <!---->
       
       
     </div>
@@ -1057,8 +907,8 @@ exports[`Tabs > Tabs iconVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -1095,8 +945,8 @@ exports[`Tabs > Tabs iconVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -1133,8 +983,8 @@ exports[`Tabs > Tabs iconVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               
               <div
@@ -1153,32 +1003,11 @@ exports[`Tabs > Tabs iconVue demo works fine 1`] = `
       <div
         class="t-tab-panel t-tabs__panel"
         data-v-fb5b87c0=""
-        value="first"
       >
-        
         <!---->
-        
       </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-fb5b87c0=""
-        style="display: none;"
-        value="second"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-fb5b87c0=""
-        style="display: none;"
-        value="third"
-      >
-        
-        <!---->
-        
-      </div>
+      <!---->
+      <!---->
       
     </div>
   </div>
@@ -1235,8 +1064,8 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--line"
@@ -1260,8 +1089,8 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--line"
@@ -1285,8 +1114,8 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--line"
@@ -1310,8 +1139,8 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--line"
@@ -1335,8 +1164,8 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--line"
@@ -1360,8 +1189,8 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--line"
@@ -1385,8 +1214,8 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--line"
@@ -1410,8 +1239,8 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--line"
@@ -1435,8 +1264,8 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               
               <div
@@ -1451,8 +1280,7 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
     <div
       class="t-tabs__content"
     >
-      
-      
+      <!---->
     </div>
   </div>
 </div>
@@ -1546,8 +1374,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -1571,8 +1399,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     
                     <div
@@ -1591,22 +1419,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             <div
               class="t-tab-panel t-tabs__panel"
               data-v-7ca59de4=""
-              value="first"
             >
-              
               <!---->
-              
             </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-7ca59de4=""
-              style="display: none;"
-              value="second"
-            >
-              
-              <!---->
-              
-            </div>
+            <!---->
             
           </div>
         </div>
@@ -1655,8 +1471,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -1680,8 +1496,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -1705,8 +1521,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     
                     <div
@@ -1725,32 +1541,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             <div
               class="t-tab-panel t-tabs__panel"
               data-v-7ca59de4=""
-              value="0"
             >
-              
               <!---->
-              
             </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-7ca59de4=""
-              style="display: none;"
-              value="1"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-7ca59de4=""
-              style="display: none;"
-              value="2"
-            >
-              
-              <!---->
-              
-            </div>
+            <!---->
+            <!---->
             
           </div>
         </div>
@@ -1799,8 +1594,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -1824,8 +1619,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -1849,8 +1644,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -1874,8 +1669,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     
                     <div
@@ -1895,42 +1690,12 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             <div
               class="t-tab-panel t-tabs__panel"
               data-v-7ca59de4=""
-              value="first"
             >
-              
               <!---->
-              
             </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-7ca59de4=""
-              style="display: none;"
-              value="second"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-7ca59de4=""
-              style="display: none;"
-              value="third"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-7ca59de4=""
-              style="display: none;"
-              value="four"
-            >
-              
-              <!---->
-              
-            </div>
+            <!---->
+            <!---->
+            <!---->
             
             
           </div>
@@ -1980,8 +1745,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -2005,8 +1770,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -2030,8 +1795,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -2055,8 +1820,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -2080,8 +1845,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     
                     <div
@@ -2101,52 +1866,13 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             <div
               class="t-tab-panel t-tabs__panel"
               data-v-7ca59de4=""
-              value="1"
             >
-              
               <!---->
-              
             </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-7ca59de4=""
-              style="display: none;"
-              value="2"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-7ca59de4=""
-              style="display: none;"
-              value="3"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-7ca59de4=""
-              style="display: none;"
-              value="4"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-7ca59de4=""
-              style="display: none;"
-              value="5"
-            >
-              
-              <!---->
-              
-            </div>
+            <!---->
+            <!---->
+            <!---->
+            <!---->
             
             
           </div>
@@ -2221,8 +1947,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--line"
@@ -2246,8 +1972,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--line"
@@ -2271,8 +1997,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--line"
@@ -2296,8 +2022,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--line"
@@ -2321,8 +2047,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--line"
@@ -2346,8 +2072,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--line"
@@ -2371,8 +2097,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--line"
@@ -2396,8 +2122,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--line"
@@ -2421,8 +2147,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     
                     <div
@@ -2437,8 +2163,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
           <div
             class="t-tabs__content"
           >
-            
-            
+            <!---->
           </div>
         </div>
       </div>
@@ -2524,8 +2249,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -2562,8 +2287,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -2600,8 +2325,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     
                     <div
@@ -2620,32 +2345,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             <div
               class="t-tab-panel t-tabs__panel"
               data-v-fb5b87c0=""
-              value="first"
             >
-              
               <!---->
-              
             </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-fb5b87c0=""
-              style="display: none;"
-              value="second"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-fb5b87c0=""
-              style="display: none;"
-              value="third"
-            >
-              
-              <!---->
-              
-            </div>
+            <!---->
+            <!---->
             
           </div>
         </div>
@@ -2726,8 +2430,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         </div>
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -2758,8 +2462,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         </div>
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -2783,8 +2487,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     
                     <div
@@ -2803,32 +2507,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             <div
               class="t-tab-panel t-tabs__panel"
               data-v-c93875e8=""
-              value="first"
             >
-              
               <!---->
-              
             </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-c93875e8=""
-              style="display: none;"
-              value="second"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-c93875e8=""
-              style="display: none;"
-              value="third"
-            >
-              
-              <!---->
-              
-            </div>
+            <!---->
+            <!---->
             
           </div>
         </div>
@@ -2902,8 +2585,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -2927,8 +2610,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -2952,8 +2635,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     
                     <div
@@ -2973,44 +2656,17 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             <div
               class="t-tab-panel t-tabs__panel"
               data-v-7ef59abc=""
-              value="1"
             >
               
               <p
                 data-v-7ef59abc=""
               >
-                内容区
+                内容区1
               </p>
               
             </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-7ef59abc=""
-              style="display: none;"
-              value="2"
-            >
-              
-              <p
-                data-v-7ef59abc=""
-              >
-                内容区
-              </p>
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-7ef59abc=""
-              style="display: none;"
-              value="3"
-            >
-              
-              <p
-                data-v-7ef59abc=""
-              >
-                内容区
-              </p>
-              
-            </div>
+            <!---->
+            <!---->
             
             
           </div>
@@ -3089,8 +2745,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -3114,8 +2770,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--disabled t-tabs__item--line"
@@ -3139,8 +2795,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     
                     <div
@@ -3159,32 +2815,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             <div
               class="t-tab-panel t-tabs__panel"
               data-v-bbdf794e=""
-              value="0"
             >
-              
               <!---->
-              
             </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-bbdf794e=""
-              style="display: none;"
-              value="1"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-bbdf794e=""
-              style="display: none;"
-              value="2"
-            >
-              
-              <!---->
-              
-            </div>
+            <!---->
+            <!---->
             
           </div>
         </div>
@@ -3262,8 +2897,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -3287,8 +2922,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -3312,8 +2947,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -3337,8 +2972,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     
                     <div
@@ -3358,42 +2993,12 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             <div
               class="t-tab-panel t-tabs__panel"
               data-v-3e6c48b0=""
-              value="1"
             >
-              
               <!---->
-              
             </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-3e6c48b0=""
-              style="display: none;"
-              value="2"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-3e6c48b0=""
-              style="display: none;"
-              value="3"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-3e6c48b0=""
-              style="display: none;"
-              value="4"
-            >
-              
-              <!---->
-              
-            </div>
+            <!---->
+            <!---->
+            <!---->
             
             
           </div>
@@ -3443,8 +3048,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -3468,8 +3073,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -3493,8 +3098,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -3518,8 +3123,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     
                     <div
@@ -3539,42 +3144,12 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             <div
               class="t-tab-panel t-tabs__panel"
               data-v-3e6c48b0=""
-              value="1"
             >
-              
               <!---->
-              
             </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-3e6c48b0=""
-              style="display: none;"
-              value="2"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-3e6c48b0=""
-              style="display: none;"
-              value="3"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-3e6c48b0=""
-              style="display: none;"
-              value="4"
-            >
-              
-              <!---->
-              
-            </div>
+            <!---->
+            <!---->
+            <!---->
             
             
           </div>
@@ -3649,8 +3224,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--tag"
@@ -3674,8 +3249,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--tag"
@@ -3699,8 +3274,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--tag"
@@ -3724,11 +3299,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     
-                    <!--v-if-->
+                    <!---->
                   </div>
                 </div>
               </div>
@@ -3743,42 +3318,12 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             <div
               class="t-tab-panel t-tabs__panel"
               data-v-1e7f1c32=""
-              value="1"
             >
-              
               <!---->
-              
             </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-1e7f1c32=""
-              style="display: none;"
-              value="2"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-1e7f1c32=""
-              style="display: none;"
-              value="3"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-1e7f1c32=""
-              style="display: none;"
-              value="4"
-            >
-              
-              <!---->
-              
-            </div>
+            <!---->
+            <!---->
+            <!---->
             
             
           </div>
@@ -3828,8 +3373,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--card"
@@ -3853,7 +3398,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
+                      <!---->
                       <div
                         class="t-tabs__item-suffix"
                       />
@@ -3880,8 +3425,8 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     <div
                       class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--card"
@@ -3905,11 +3450,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         <!---->
                         <!---->
                       </div>
-                      <!--v-if-->
-                      <!--v-if-->
+                      <!---->
+                      <!---->
                     </div>
                     
-                    <!--v-if-->
+                    <!---->
                   </div>
                 </div>
               </div>
@@ -3924,42 +3469,12 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             <div
               class="t-tab-panel t-tabs__panel"
               data-v-1e7f1c32=""
-              value="1"
             >
-              
               <!---->
-              
             </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-1e7f1c32=""
-              style="display: none;"
-              value="2"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-1e7f1c32=""
-              style="display: none;"
-              value="3"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-1e7f1c32=""
-              style="display: none;"
-              value="4"
-            >
-              
-              <!---->
-              
-            </div>
+            <!---->
+            <!---->
+            <!---->
             
             
           </div>
@@ -4021,8 +3536,8 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -4046,8 +3561,8 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -4071,8 +3586,8 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -4096,8 +3611,8 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               
               <div
@@ -4117,42 +3632,12 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
       <div
         class="t-tab-panel t-tabs__panel"
         data-v-3e6c48b0=""
-        value="1"
       >
-        
         <!---->
-        
       </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-3e6c48b0=""
-        style="display: none;"
-        value="2"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-3e6c48b0=""
-        style="display: none;"
-        value="3"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-3e6c48b0=""
-        style="display: none;"
-        value="4"
-      >
-        
-        <!---->
-        
-      </div>
+      <!---->
+      <!---->
+      <!---->
       
       
     </div>
@@ -4202,8 +3687,8 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -4227,8 +3712,8 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -4252,8 +3737,8 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -4277,8 +3762,8 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               
               <div
@@ -4298,42 +3783,12 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
       <div
         class="t-tab-panel t-tabs__panel"
         data-v-3e6c48b0=""
-        value="1"
       >
-        
         <!---->
-        
       </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-3e6c48b0=""
-        style="display: none;"
-        value="2"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-3e6c48b0=""
-        style="display: none;"
-        value="3"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-3e6c48b0=""
-        style="display: none;"
-        value="4"
-      >
-        
-        <!---->
-        
-      </div>
+      <!---->
+      <!---->
+      <!---->
       
       
     </div>
@@ -4391,8 +3846,8 @@ exports[`Tabs > Tabs statusVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--line"
@@ -4416,8 +3871,8 @@ exports[`Tabs > Tabs statusVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--disabled t-tabs__item--line"
@@ -4441,8 +3896,8 @@ exports[`Tabs > Tabs statusVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               
               <div
@@ -4461,32 +3916,11 @@ exports[`Tabs > Tabs statusVue demo works fine 1`] = `
       <div
         class="t-tab-panel t-tabs__panel"
         data-v-bbdf794e=""
-        value="0"
       >
-        
         <!---->
-        
       </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-bbdf794e=""
-        style="display: none;"
-        value="1"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-bbdf794e=""
-        style="display: none;"
-        value="2"
-      >
-        
-        <!---->
-        
-      </div>
+      <!---->
+      <!---->
       
     </div>
   </div>
@@ -4543,8 +3977,8 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--tag"
@@ -4568,8 +4002,8 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--tag"
@@ -4593,8 +4027,8 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--tag"
@@ -4618,11 +4052,11 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -4637,42 +4071,12 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
       <div
         class="t-tab-panel t-tabs__panel"
         data-v-1e7f1c32=""
-        value="1"
       >
-        
         <!---->
-        
       </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-1e7f1c32=""
-        style="display: none;"
-        value="2"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-1e7f1c32=""
-        style="display: none;"
-        value="3"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-1e7f1c32=""
-        style="display: none;"
-        value="4"
-      >
-        
-        <!---->
-        
-      </div>
+      <!---->
+      <!---->
+      <!---->
       
       
     </div>
@@ -4722,8 +4126,8 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--card"
@@ -4747,7 +4151,7 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
+                <!---->
                 <div
                   class="t-tabs__item-suffix"
                 />
@@ -4774,8 +4178,8 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               <div
                 class="t-tabs__item t-tabs__item--top t-tabs__item--evenly t-tabs__item--card"
@@ -4799,11 +4203,11 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                   <!---->
                   <!---->
                 </div>
-                <!--v-if-->
-                <!--v-if-->
+                <!---->
+                <!---->
               </div>
               
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -4818,42 +4222,12 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
       <div
         class="t-tab-panel t-tabs__panel"
         data-v-1e7f1c32=""
-        value="1"
       >
-        
         <!---->
-        
       </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-1e7f1c32=""
-        style="display: none;"
-        value="2"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-1e7f1c32=""
-        style="display: none;"
-        value="3"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-1e7f1c32=""
-        style="display: none;"
-        value="4"
-      >
-        
-        <!---->
-        
-      </div>
+      <!---->
+      <!---->
+      <!---->
       
       
     </div>
