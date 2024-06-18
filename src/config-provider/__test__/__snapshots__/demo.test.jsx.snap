@@ -36,7 +36,6 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
     >
       
       
-      
       <div
         class="upload-demo"
         data-v-41cb315a=""
@@ -326,7 +325,6 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
       </div>
       
       
-      
     </div>
   </div>
   <div
@@ -345,7 +343,6 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
     <div
       class="tdesign-mobile-demo-block__slot"
     >
-      
       
       
       <!-- 全局配置：空数据呈现，演示 -->
@@ -424,7 +421,6 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
       </div>
       
       
-      
     </div>
   </div>
   <div
@@ -443,7 +439,6 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
     <div
       class="tdesign-mobile-demo-block__slot"
     >
-      
       
       
       <div
@@ -3585,7 +3580,6 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
       </teleport-stub>
       
       
-      
     </div>
   </div>
 </div>
@@ -3595,7 +3589,6 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
 <div
   data-v-app=""
 >
-  
   
   <div
     class="rate-demo-cell rate-demo-cell--space"
@@ -6735,7 +6728,6 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
     </div>
   </teleport-stub>
   
-  
 </div>
 `;
 
@@ -6743,7 +6735,6 @@ exports[`ConfigProvider > ConfigProvider tableEnVue demo works fine 1`] = `
 <div
   data-v-app=""
 >
-  
   
   <!-- 全局配置：空数据呈现，演示 -->
   <div
@@ -6820,7 +6811,6 @@ exports[`ConfigProvider > ConfigProvider tableEnVue demo works fine 1`] = `
     </div>
   </div>
   
-  
 </div>
 `;
 
@@ -6828,7 +6818,6 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
 <div
   data-v-app=""
 >
-  
   
   <div
     class="upload-demo"
@@ -7117,7 +7106,6 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
       <!---->
     </div>
   </div>
-  
   
 </div>
 `;
