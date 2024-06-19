@@ -1,5 +1,7 @@
-import { defineComponent, h, toRefs, computed, inject, getCurrentInstance } from 'vue';
+import { defineComponent, h, computed, inject } from 'vue';
 import {
+  CheckIcon,
+  MinusIcon,
   CheckCircleFilledIcon,
   CircleIcon,
   MinusCircleFilledIcon,
@@ -10,8 +12,6 @@ import config from '../config';
 import CheckboxProps from './props';
 import { TNode, useDefault } from '../shared';
 import { TdCheckboxProps } from '../checkbox/type';
-import MinusLineFilledIcon from './assets/minus-line-filled-icon.svg';
-import CheckLineFilledIcon from './assets/check-line-filled-icon.svg';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
 
 const { prefix } = config;
@@ -59,8 +59,7 @@ export default defineComponent({
         return indeterminate.value ? h(MinusCircleFilledIcon) : h(CheckCircleFilledIcon);
       if (props.icon === 'rectangle')
         return indeterminate.value ? h(MinusRectangleFilledIcon) : h(CheckRectangleFilledIcon);
-      if (props.icon === 'line')
-        return indeterminate.value ? h('img', { src: MinusLineFilledIcon }) : h('img', { src: CheckLineFilledIcon });
+      if (props.icon === 'line') return indeterminate.value ? h(MinusIcon) : h(CheckIcon);
       return null;
     });
 
