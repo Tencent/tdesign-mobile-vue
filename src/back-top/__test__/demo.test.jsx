@@ -4,12 +4,10 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/back-top/demos/base.vue';
-import halfRoundVue from '@/back-top/demos/half-round.vue';
 import mobileVue from '@/back-top/demos/mobile.vue';
 
 const mapper = {
   baseVue,
-  halfRoundVue,
   mobileVue,
 };
 

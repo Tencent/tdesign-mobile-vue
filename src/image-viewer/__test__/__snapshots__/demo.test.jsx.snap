@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`ImageViewer > ImageViewer baseVue demo works fine 1`] = `
 <div
@@ -21,7 +21,7 @@ exports[`ImageViewer > ImageViewer baseVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <!--v-if-->
+  <!---->
   
 </div>
 `;
@@ -82,21 +82,69 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
-      <!--v-if-->
+      <!---->
       
       
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-ef8302fa=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
-      <!--v-if-->
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        02 组件类型
+      </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
+      >
+        图片预览类型，可设置垂直对齐方式
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot with-padding"
+    >
+      
+      
+      <button
+        aria-disabled="false"
+        class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+        role="button"
+        type="button"
+      >
+        <!---->
+        <span
+          class="t-button__content"
+        >
+          
+           基础图片预览 + 对齐方式 
+          
+        </span>
+        <!---->
+      </button>
+      <!---->
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-ef8302fa=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        03 组件类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
       >
         带操作图片预览
       </p>
@@ -122,7 +170,7 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
-      <!--v-if-->
+      <!---->
       
       
     </div>
@@ -151,7 +199,7 @@ exports[`ImageViewer > ImageViewer operationVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <!--v-if-->
+  <!---->
   
 </div>
 `;

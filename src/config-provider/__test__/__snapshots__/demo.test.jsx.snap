@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
 <div
@@ -34,6 +34,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
     <div
       class="tdesign-mobile-demo-block__slot"
     >
+      
       
       
       <div
@@ -77,12 +78,12 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -161,12 +162,12 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -245,12 +246,12 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -320,9 +321,10 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
             multiple=""
             type="file"
           />
-          <!--v-if-->
+          <!---->
         </div>
       </div>
+      
       
       
     </div>
@@ -343,6 +345,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
     <div
       class="tdesign-mobile-demo-block__slot"
     >
+      
       
       
       <!-- 全局配置：空数据呈现，演示 -->
@@ -421,6 +424,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
       </div>
       
       
+      
     </div>
   </div>
   <div
@@ -439,6 +443,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
     <div
       class="tdesign-mobile-demo-block__slot"
     >
+      
       
       
       <div
@@ -461,9 +466,9 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
             
             <div
               class="t-rate__icon t-rate__icon--unselected"
-              size="24px"
               style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
+              <!---->
               <svg
                 class="t-icon t-icon-star-filled"
                 fill="none"
@@ -479,9 +484,9 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-rate__icon t-rate__icon--unselected"
-              size="24px"
               style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
+              <!---->
               <svg
                 class="t-icon t-icon-star-filled"
                 fill="none"
@@ -497,9 +502,9 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-rate__icon t-rate__icon--unselected"
-              size="24px"
               style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
+              <!---->
               <svg
                 class="t-icon t-icon-star-filled"
                 fill="none"
@@ -515,9 +520,9 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-rate__icon t-rate__icon--unselected"
-              size="24px"
               style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
+              <!---->
               <svg
                 class="t-icon t-icon-star-filled"
                 fill="none"
@@ -533,9 +538,9 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-rate__icon t-rate__icon--unselected"
-              size="24px"
               style="font-size: 24px; margin-right: 0px; --td-rate-selected-color: #ED7B2F;"
             >
+              <!---->
               <svg
                 class="t-icon t-icon-star-filled"
                 fill="none"
@@ -556,7 +561,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
           >
             No score
           </span>
-          <!--v-if-->
+          <!---->
         </div>
       </div>
       <div
@@ -3580,6 +3585,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
       </teleport-stub>
       
       
+      
     </div>
   </div>
 </div>
@@ -3589,6 +3595,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
 <div
   data-v-app=""
 >
+  
   
   <div
     class="rate-demo-cell rate-demo-cell--space"
@@ -3610,9 +3617,9 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
         
         <div
           class="t-rate__icon t-rate__icon--unselected"
-          size="24px"
           style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
+          <!---->
           <svg
             class="t-icon t-icon-star-filled"
             fill="none"
@@ -3628,9 +3635,9 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
         </div>
         <div
           class="t-rate__icon t-rate__icon--unselected"
-          size="24px"
           style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
+          <!---->
           <svg
             class="t-icon t-icon-star-filled"
             fill="none"
@@ -3646,9 +3653,9 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
         </div>
         <div
           class="t-rate__icon t-rate__icon--unselected"
-          size="24px"
           style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
+          <!---->
           <svg
             class="t-icon t-icon-star-filled"
             fill="none"
@@ -3664,9 +3671,9 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
         </div>
         <div
           class="t-rate__icon t-rate__icon--unselected"
-          size="24px"
           style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
+          <!---->
           <svg
             class="t-icon t-icon-star-filled"
             fill="none"
@@ -3682,9 +3689,9 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
         </div>
         <div
           class="t-rate__icon t-rate__icon--unselected"
-          size="24px"
           style="font-size: 24px; margin-right: 0px; --td-rate-selected-color: #ED7B2F;"
         >
+          <!---->
           <svg
             class="t-icon t-icon-star-filled"
             fill="none"
@@ -3705,7 +3712,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
       >
         No score
       </span>
-      <!--v-if-->
+      <!---->
     </div>
   </div>
   <div
@@ -6728,6 +6735,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
     </div>
   </teleport-stub>
   
+  
 </div>
 `;
 
@@ -6735,6 +6743,7 @@ exports[`ConfigProvider > ConfigProvider tableEnVue demo works fine 1`] = `
 <div
   data-v-app=""
 >
+  
   
   <!-- 全局配置：空数据呈现，演示 -->
   <div
@@ -6811,6 +6820,7 @@ exports[`ConfigProvider > ConfigProvider tableEnVue demo works fine 1`] = `
     </div>
   </div>
   
+  
 </div>
 `;
 
@@ -6818,6 +6828,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
 <div
   data-v-app=""
 >
+  
   
   <div
     class="upload-demo"
@@ -6860,12 +6871,12 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
                 />
                 
               </div>
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
           <picture>
-            <!--v-if-->
+            <!---->
             <img
               alt=""
               class="t-image__img"
@@ -6944,12 +6955,12 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
                 />
                 
               </div>
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
           <picture>
-            <!--v-if-->
+            <!---->
             <img
               alt=""
               class="t-image__img"
@@ -7028,12 +7039,12 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
                 />
                 
               </div>
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
           <picture>
-            <!--v-if-->
+            <!---->
             <img
               alt=""
               class="t-image__img"
@@ -7103,9 +7114,10 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
         multiple=""
         type="file"
       />
-      <!--v-if-->
+      <!---->
     </div>
   </div>
+  
   
 </div>
 `;

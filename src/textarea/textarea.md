@@ -33,7 +33,7 @@ blur | `(value: TextareaValue, context: { e: FocusEvent })` | 失去焦点时触
 change | `(value: TextareaValue, context?: { e?: InputEvent })` | 输入内容变化时触发
 focus | `(value: TextareaValue, context : { e: FocusEvent })` | 获得焦点时触发
 
-### CSS 变量
+### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 

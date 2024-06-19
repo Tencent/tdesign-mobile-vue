@@ -29,6 +29,7 @@ export default defineComponent({
     ]);
 
     const onClick = (e: MouseEvent) => {
+      if (props.disabled) return;
       sideBarProvide.onClickItem(proxy.value, props.label);
     };
 

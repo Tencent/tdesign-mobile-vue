@@ -2,7 +2,7 @@ import { ref } from 'vue';
 import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import { BacktopIcon as TIconBackTop, AppIcon as TIconApp } from 'tdesign-icons-vue-next';
-import BackTop from '../back-top.vue';
+import BackTop from '../back-top';
 
 describe('BackTop', () => {
   describe('props', () => {

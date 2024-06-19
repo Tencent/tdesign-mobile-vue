@@ -10,7 +10,7 @@ links | Array | [] | 链接列表。name 表示链接名称， url 表示跳转�
 logo | Object | - | 图标配置。`logo.icon` 表示图标链接地址，`logo.title` 表示标题文本，`logo.url` 表示链接跳转地址，`logo.target` 表示跳转方式。TS 类型：`FooterLogo` `interface FooterLogo { icon: string; title?: string; url?: string; target?: string; }`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/footer/type.ts) | N
 text | String | '' | 版权信息 | N
 
-### CSS 变量
+### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 

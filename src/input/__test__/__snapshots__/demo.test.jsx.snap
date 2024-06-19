@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Input > Input alignVue demo works fine 1`] = `
 <div
@@ -30,6 +30,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="请输入文字"
+          spellcheck="false"
           type="text"
         />
         <!---->
@@ -64,6 +65,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="请输入文字"
+          spellcheck="false"
           type="text"
         />
         <!---->
@@ -98,6 +100,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="请输入文字"
+          spellcheck="false"
           type="text"
         />
         <!---->
@@ -138,6 +141,7 @@ exports[`Input > Input bannerVue demo works fine 1`] = `
         maxlength="-1"
         name=""
         placeholder="请输入文字"
+        spellcheck="false"
         type="text"
       />
       <!---->
@@ -179,6 +183,7 @@ exports[`Input > Input baseVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="请输入文字"
+          spellcheck="false"
           type="text"
         />
         <!---->
@@ -213,6 +218,7 @@ exports[`Input > Input baseVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="请输入文字(选填)"
+          spellcheck="false"
           type="text"
         />
         <!---->
@@ -247,6 +253,7 @@ exports[`Input > Input baseVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="请输入文字"
+          spellcheck="false"
           type="text"
         />
         <!---->
@@ -297,6 +304,7 @@ exports[`Input > Input borderedVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="请输入文字"
+          spellcheck="false"
           type="text"
         />
         <!---->
@@ -358,6 +366,7 @@ exports[`Input > Input customVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="请输入文字"
+          spellcheck="false"
           type="text"
         />
         <!---->
@@ -396,6 +405,7 @@ exports[`Input > Input labelVue demo works fine 1`] = `
         maxlength="-1"
         name=""
         placeholder="请输入文字"
+        spellcheck="false"
         type="text"
       />
       <!---->
@@ -433,6 +443,7 @@ exports[`Input > Input layoutVue demo works fine 1`] = `
         maxlength="-1"
         name=""
         placeholder="请输入文字"
+        spellcheck="false"
         type="text"
       />
       <!---->
@@ -491,6 +502,7 @@ exports[`Input > Input maxLengthVue demo works fine 1`] = `
           maxlength="10"
           name=""
           placeholder="请输入文字"
+          spellcheck="false"
           type="text"
         />
         <!---->
@@ -529,6 +541,7 @@ exports[`Input > Input maxLengthVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="请输入文字"
+          spellcheck="false"
           type="text"
         />
         <!---->
@@ -607,6 +620,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="请输入文字"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -641,6 +655,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="请输入文字(选填)"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -675,6 +690,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="请输入文字"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -731,6 +747,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="10"
               name=""
               placeholder="请输入文字"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -769,6 +786,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="请输入文字"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -829,6 +847,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="请输入文字"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -880,6 +899,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="请输入手机号码"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -935,6 +955,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="请输入文字"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -1025,6 +1046,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="请输入文字"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -1076,6 +1098,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="请输入文字"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -1131,6 +1154,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               class="t-input__control t-input--default"
               maxlength="-1"
               name=""
+              spellcheck="false"
               type="password"
             />
             <!---->
@@ -1182,6 +1206,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="输入验证码"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -1227,12 +1252,12 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                         />
                         
                       </div>
-                      <!--v-if-->
+                      <!---->
                       <!---->
                     </div>
                   </div>
                   <picture>
-                    <!--v-if-->
+                    <!---->
                     <img
                       alt=""
                       class="t-image__img"
@@ -1274,6 +1299,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="输入手机号码"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -1326,7 +1352,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="0.00"
-              type="text"
+              spellcheck="false"
+              type="number"
             />
             <!---->
             <div
@@ -1364,7 +1391,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="填写个数"
-              type="text"
+              spellcheck="false"
+              type="number"
             />
             <!---->
             <div
@@ -1428,6 +1456,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="请输入文字"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -1466,6 +1495,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               disabled=""
               maxlength="-1"
               name=""
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -1521,6 +1551,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="请输入文字"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -1580,6 +1611,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="请输入文字"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -1614,6 +1646,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="请输入文字"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -1648,6 +1681,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="请输入文字"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -1703,6 +1737,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="请输入文字"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -1775,6 +1810,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               maxlength="-1"
               name=""
               placeholder="请输入文字"
+              spellcheck="false"
               type="text"
             />
             <!---->
@@ -1840,6 +1876,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 maxlength="-1"
                 name=""
                 placeholder="请输入文字"
+                spellcheck="false"
                 type="text"
               />
               <!---->
@@ -1918,6 +1955,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 maxlength="-1"
                 name=""
                 placeholder="请输入文字"
+                spellcheck="false"
                 type="text"
               />
               <!---->
@@ -1981,6 +2019,7 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="请输入文字"
+          spellcheck="false"
           type="text"
         />
         <!---->
@@ -2032,6 +2071,7 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="请输入文字"
+          spellcheck="false"
           type="text"
         />
         <!---->
@@ -2074,6 +2114,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
           class="t-input__control t-input--default"
           maxlength="-1"
           name=""
+          spellcheck="false"
           type="password"
         />
         <!---->
@@ -2125,6 +2166,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="输入验证码"
+          spellcheck="false"
           type="text"
         />
         <!---->
@@ -2170,12 +2212,12 @@ exports[`Input > Input specialVue demo works fine 1`] = `
                     />
                     
                   </div>
-                  <!--v-if-->
+                  <!---->
                   <!---->
                 </div>
               </div>
               <picture>
-                <!--v-if-->
+                <!---->
                 <img
                   alt=""
                   class="t-image__img"
@@ -2217,6 +2259,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="输入手机号码"
+          spellcheck="false"
           type="text"
         />
         <!---->
@@ -2269,7 +2312,8 @@ exports[`Input > Input specialVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="0.00"
-          type="text"
+          spellcheck="false"
+          type="number"
         />
         <!---->
         <div
@@ -2307,7 +2351,8 @@ exports[`Input > Input specialVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="填写个数"
-          type="text"
+          spellcheck="false"
+          type="number"
         />
         <!---->
         <div
@@ -2354,6 +2399,7 @@ exports[`Input > Input statusVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="请输入文字"
+          spellcheck="false"
           type="text"
         />
         <!---->
@@ -2392,6 +2438,7 @@ exports[`Input > Input statusVue demo works fine 1`] = `
           disabled=""
           maxlength="-1"
           name=""
+          spellcheck="false"
           type="text"
         />
         <!---->
@@ -2435,6 +2482,7 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="请输入文字"
+          spellcheck="false"
           type="text"
         />
         <!---->
@@ -2486,6 +2534,7 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="请输入手机号码"
+          spellcheck="false"
           type="text"
         />
         <!---->
@@ -2541,6 +2590,7 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
           maxlength="-1"
           name=""
           placeholder="请输入文字"
+          spellcheck="false"
           type="text"
         />
         <!---->

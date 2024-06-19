@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils';
 import { vi, describe, it, expect } from 'vitest';
 import { LoadingIcon } from 'tdesign-icons-vue-next';
 import { nextTick } from 'vue';
-import Image from '../image.vue';
+import Image from '../image';
 import { MockIntersectionObserver } from './utils';
 
 const prefix = 't';
@@ -23,7 +23,7 @@ describe('Image', () => {
       const wrapper = mount(() => <Image src={IMAGE} lazy />);
       await nextTick();
       const $image = wrapper.find(`.${name}__img`);
-      expect(wrapper.find(`.${name}__mask`).exists()).toBeTruthy();
+      expect(wrapper.find(`.${name}__mask`).exists()).toBeFalsy();
       // 触发 IntersectionObserver , 但图片加载完成不会触发 load 回调,
       $image.trigger('resize');
       await nextTick();

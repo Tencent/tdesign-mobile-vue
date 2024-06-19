@@ -1,4 +1,4 @@
-import NoticeBar from './notice-bar.vue';
+import NoticeBar from './notice-bar';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';

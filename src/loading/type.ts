@@ -4,9 +4,14 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import { TNode, AttachNode } from '../common';
 
 export interface TdLoadingProps {
+  /**
+   * 挂载元素，默认挂载到组件本身所在的位置。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body
+   * @default ''
+   */
+  attach?: AttachNode;
   /**
    * 子元素
    */
@@ -25,6 +30,11 @@ export interface TdLoadingProps {
    * @default 800
    */
   duration?: number;
+  /**
+   * 是否显示为全屏加载
+   * @default false
+   */
+  fullscreen?: boolean;
   /**
    * 加载指示符，值为 true 显示默认指示符，值为 false 则不显示，也可以自定义指示符
    * @default true
@@ -69,3 +79,9 @@ export interface TdLoadingProps {
    */
   theme?: 'circular' | 'spinner' | 'dots';
 }
+
+export interface LoadingInstance {
+  hide: () => void;
+}
+
+export type LoadingMethod = (options: boolean | TdLoadingProps) => LoadingInstance;

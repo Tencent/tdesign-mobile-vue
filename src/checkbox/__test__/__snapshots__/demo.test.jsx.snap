@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
 <div>
@@ -13,7 +13,6 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
         >
-          
           <svg
             class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
             fill="none"
@@ -26,7 +25,6 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
               fill="currentColor"
             />
           </svg>
-          
         </div>
         <div
           class="t-checkbox__content"
@@ -52,7 +50,6 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
         >
-          
           <svg
             class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
             fill="none"
@@ -65,7 +62,6 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
               fill="currentColor"
             />
           </svg>
-          
         </div>
         <div
           class="t-checkbox__content"
@@ -91,7 +87,6 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
         >
-          
           <svg
             class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
             fill="none"
@@ -104,7 +99,6 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
               fill="currentColor"
             />
           </svg>
-          
         </div>
         <div
           class="t-checkbox__content"
@@ -130,7 +124,6 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
         >
-          
           <svg
             class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
             fill="none"
@@ -143,7 +136,6 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
               fill="currentColor"
             />
           </svg>
-          
         </div>
         <div
           class="t-checkbox__content"
@@ -181,7 +173,6 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
       <div
         class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
       >
-        
         <svg
           class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
           fill="none"
@@ -194,7 +185,6 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
             fill="currentColor"
           />
         </svg>
-        
       </div>
       <div
         class="t-checkbox__content"
@@ -220,7 +210,6 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
       <div
         class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
       >
-        
         <svg
           class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
           fill="none"
@@ -233,7 +222,6 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
             fill="currentColor"
           />
         </svg>
-        
       </div>
       <div
         class="t-checkbox__content"
@@ -260,12 +248,10 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
         class="t-checkbox__icon t-checkbox__icon--left"
       >
         
-        
         <div
           class="t-checkbox__icon-circle"
         />
-        <!--v-if-->
-        
+        <!---->
         
       </div>
       <div
@@ -293,12 +279,10 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
         class="t-checkbox__icon t-checkbox__icon--left"
       >
         
-        
         <div
           class="t-checkbox__icon-circle"
         />
-        <!--v-if-->
-        
+        <!---->
         
       </div>
       <div
@@ -337,7 +321,6 @@ exports[`Checkbox > Checkbox cardVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
     >
-      
       <svg
         class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
         fill="none"
@@ -350,7 +333,6 @@ exports[`Checkbox > Checkbox cardVue demo works fine 1`] = `
           fill="currentColor"
         />
       </svg>
-      
     </div>
     <div
       class="t-checkbox__content"
@@ -377,7 +359,6 @@ exports[`Checkbox > Checkbox cardVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
     >
-      
       <svg
         class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
         fill="none"
@@ -390,7 +371,6 @@ exports[`Checkbox > Checkbox cardVue demo works fine 1`] = `
           fill="currentColor"
         />
       </svg>
-      
     </div>
     <div
       class="t-checkbox__content"
@@ -418,12 +398,10 @@ exports[`Checkbox > Checkbox cardVue demo works fine 1`] = `
       class="t-checkbox__icon t-checkbox__icon--left"
     >
       
-      
       <div
         class="t-checkbox__icon-circle"
       />
-      <!--v-if-->
-      
+      <!---->
       
     </div>
     <div
@@ -462,7 +440,6 @@ exports[`Checkbox > Checkbox horizontalVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
     >
-      
       <svg
         class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
         fill="none"
@@ -475,7 +452,6 @@ exports[`Checkbox > Checkbox horizontalVue demo works fine 1`] = `
           fill="currentColor"
         />
       </svg>
-      
     </div>
     <div
       class="t-checkbox__content"
@@ -502,7 +478,6 @@ exports[`Checkbox > Checkbox horizontalVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
     >
-      
       <svg
         class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
         fill="none"
@@ -515,7 +490,6 @@ exports[`Checkbox > Checkbox horizontalVue demo works fine 1`] = `
           fill="currentColor"
         />
       </svg>
-      
     </div>
     <div
       class="t-checkbox__content"
@@ -543,12 +517,10 @@ exports[`Checkbox > Checkbox horizontalVue demo works fine 1`] = `
       class="t-checkbox__icon t-checkbox__icon--left"
     >
       
-      
       <div
         class="t-checkbox__icon-circle"
       />
-      <!--v-if-->
-      
+      <!---->
       
     </div>
     <div
@@ -620,7 +592,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
               >
-                
                 <svg
                   class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                   fill="none"
@@ -633,7 +604,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                     fill="currentColor"
                   />
                 </svg>
-                
               </div>
               <div
                 class="t-checkbox__content"
@@ -659,7 +629,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
               >
-                
                 <svg
                   class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                   fill="none"
@@ -672,7 +641,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                     fill="currentColor"
                   />
                 </svg>
-                
               </div>
               <div
                 class="t-checkbox__content"
@@ -699,12 +667,10 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 class="t-checkbox__icon t-checkbox__icon--left"
               >
                 
-                
                 <div
                   class="t-checkbox__icon-circle"
                 />
-                <!--v-if-->
-                
+                <!---->
                 
               </div>
               <div
@@ -732,12 +698,10 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 class="t-checkbox__icon t-checkbox__icon--left"
               >
                 
-                
                 <div
                   class="t-checkbox__icon-circle"
                 />
-                <!--v-if-->
-                
+                <!---->
                 
               </div>
               <div
@@ -794,7 +758,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
             >
-              
               <svg
                 class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                 fill="none"
@@ -807,7 +770,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              
             </div>
             <div
               class="t-checkbox__content"
@@ -834,7 +796,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
             >
-              
               <svg
                 class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                 fill="none"
@@ -847,7 +808,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              
             </div>
             <div
               class="t-checkbox__content"
@@ -875,12 +835,10 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               class="t-checkbox__icon t-checkbox__icon--left"
             >
               
-              
               <div
                 class="t-checkbox__icon-circle"
               />
-              <!--v-if-->
-              
+              <!---->
               
             </div>
             <div
@@ -935,7 +893,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 <div
                   class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
                 >
-                  
                   <svg
                     class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                     fill="none"
@@ -948,7 +905,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                  
                 </div>
                 <div
                   class="t-checkbox__content"
@@ -974,7 +930,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 <div
                   class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
                 >
-                  
                   <svg
                     class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                     fill="none"
@@ -987,7 +942,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                  
                 </div>
                 <div
                   class="t-checkbox__content"
@@ -1013,7 +967,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 <div
                   class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
                 >
-                  
                   <svg
                     class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                     fill="none"
@@ -1026,7 +979,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                  
                 </div>
                 <div
                   class="t-checkbox__content"
@@ -1052,7 +1004,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 <div
                   class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
                 >
-                  
                   <svg
                     class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                     fill="none"
@@ -1065,7 +1016,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                  
                 </div>
                 <div
                   class="t-checkbox__content"
@@ -1123,7 +1073,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked t-checkbox__icon--disabled"
             >
-              
               <svg
                 class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                 fill="none"
@@ -1136,7 +1085,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              
             </div>
             <div
               class="t-checkbox__content"
@@ -1163,12 +1111,10 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--disabled"
             >
               
-              
               <div
                 class="t-checkbox__icon-circle t-checkbox__icon-circle--disabled"
               />
-              <!--v-if-->
-              
+              <!---->
               
             </div>
             <div
@@ -1222,12 +1168,18 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           <div
             class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
           >
-            
-            <img
-              class="t-checkbox__icon-wrapper"
-              src="/src/checkbox/assets/check-line-filled-icon.svg"
-            />
-            
+            <svg
+              class="t-icon t-icon-check t-checkbox__icon-wrapper"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
+                fill="currentColor"
+              />
+            </svg>
           </div>
           <div
             class="t-checkbox__content"
@@ -1256,7 +1208,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           <div
             class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
           >
-            
             <svg
               class="t-icon t-icon-check-rectangle-filled t-checkbox__icon-wrapper"
               fill="none"
@@ -1269,7 +1220,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 fill="currentColor"
               />
             </svg>
-            
           </div>
           <div
             class="t-checkbox__content"
@@ -1298,14 +1248,10 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           <div
             class="t-checkbox__icon t-checkbox__icon--left"
           >
-            <div
-              class="t-checkbox__icon"
-            >
-              <img
-                class="t-checkbox__icon-image t-checkbox__icon-wrapper"
-                src="https://tdesign.gtimg.com/miniprogram/checkbox.png"
-              />
-            </div>
+            <img
+              class="t-checkbox__icon-image t-checkbox__icon-wrapper"
+              src="https://tdesign.gtimg.com/mobile/demos/checkbox.png"
+            />
           </div>
           <div
             class="t-checkbox__content"
@@ -1353,7 +1299,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           <div
             class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
           >
-            
             <svg
               class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
               fill="none"
@@ -1366,7 +1311,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 fill="currentColor"
               />
             </svg>
-            
           </div>
           <div
             class="t-checkbox__content"
@@ -1396,7 +1340,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           <div
             class="t-checkbox__icon t-checkbox__icon--right t-checkbox__icon--checked"
           >
-            
             <svg
               class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
               fill="none"
@@ -1409,7 +1352,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 fill="currentColor"
               />
             </svg>
-            
           </div>
           <div
             class="t-checkbox__content"
@@ -1462,7 +1404,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
             >
-              
               <svg
                 class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                 fill="none"
@@ -1475,7 +1416,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              
             </div>
             <div
               class="t-checkbox__content"
@@ -1502,7 +1442,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
             >
-              
               <svg
                 class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
                 fill="none"
@@ -1515,7 +1454,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              
             </div>
             <div
               class="t-checkbox__content"
@@ -1543,12 +1481,10 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               class="t-checkbox__icon t-checkbox__icon--left"
             >
               
-              
               <div
                 class="t-checkbox__icon-circle"
               />
-              <!--v-if-->
-              
+              <!---->
               
             </div>
             <div
@@ -1622,9 +1558,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
               >
-                
                 <!---->
-                
               </div>
               <div
                 class="t-checkbox__content"
@@ -1640,7 +1574,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   描述信息描述信息描述信息描述信息描述信息
                 </div>
               </div>
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           <div
@@ -1663,9 +1597,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
               >
-                
                 <!---->
-                
               </div>
               <div
                 class="t-checkbox__content"
@@ -1681,7 +1613,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   描述信息描述信息描述信息描述信息描述信息
                 </div>
               </div>
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           <div
@@ -1697,10 +1629,8 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 class="t-checkbox__icon t-checkbox__icon--left"
               >
                 
-                
-                <!--v-if-->
-                <!--v-if-->
-                
+                <!---->
+                <!---->
                 
               </div>
               <div
@@ -1717,7 +1647,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   描述信息描述信息描述信息描述信息描述信息
                 </div>
               </div>
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -1756,9 +1686,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
               >
-                
                 <!---->
-                
               </div>
               <div
                 class="t-checkbox__content"
@@ -1774,7 +1702,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           <div
@@ -1797,9 +1725,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
               >
-                
                 <!---->
-                
               </div>
               <div
                 class="t-checkbox__content"
@@ -1815,7 +1741,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           <div
@@ -1831,10 +1757,8 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 class="t-checkbox__icon t-checkbox__icon--left"
               >
                 
-                
-                <!--v-if-->
-                <!--v-if-->
-                
+                <!---->
+                <!---->
                 
               </div>
               <div
@@ -1851,7 +1775,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   <!---->
                 </div>
               </div>
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
@@ -1876,7 +1800,6 @@ exports[`Checkbox > Checkbox rightVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
     >
-      
       <svg
         class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
         fill="none"
@@ -1889,7 +1812,6 @@ exports[`Checkbox > Checkbox rightVue demo works fine 1`] = `
           fill="currentColor"
         />
       </svg>
-      
     </div>
     <div
       class="t-checkbox__content"
@@ -1919,7 +1841,6 @@ exports[`Checkbox > Checkbox rightVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--right t-checkbox__icon--checked"
     >
-      
       <svg
         class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
         fill="none"
@@ -1932,7 +1853,6 @@ exports[`Checkbox > Checkbox rightVue demo works fine 1`] = `
           fill="currentColor"
         />
       </svg>
-      
     </div>
     <div
       class="t-checkbox__content"
@@ -1987,9 +1907,7 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
         >
-          
           <!---->
-          
         </div>
         <div
           class="t-checkbox__content"
@@ -2005,7 +1923,7 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
             描述信息描述信息描述信息描述信息描述信息
           </div>
         </div>
-        <!--v-if-->
+        <!---->
       </div>
     </div>
     <div
@@ -2028,9 +1946,7 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
         >
-          
           <!---->
-          
         </div>
         <div
           class="t-checkbox__content"
@@ -2046,7 +1962,7 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
             描述信息描述信息描述信息描述信息描述信息
           </div>
         </div>
-        <!--v-if-->
+        <!---->
       </div>
     </div>
     <div
@@ -2062,10 +1978,8 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
           class="t-checkbox__icon t-checkbox__icon--left"
         >
           
-          
-          <!--v-if-->
-          <!--v-if-->
-          
+          <!---->
+          <!---->
           
         </div>
         <div
@@ -2082,7 +1996,7 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
             描述信息描述信息描述信息描述信息描述信息
           </div>
         </div>
-        <!--v-if-->
+        <!---->
       </div>
     </div>
     
@@ -2121,9 +2035,7 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
         >
-          
           <!---->
-          
         </div>
         <div
           class="t-checkbox__content"
@@ -2139,7 +2051,7 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!--v-if-->
+        <!---->
       </div>
     </div>
     <div
@@ -2162,9 +2074,7 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
         >
-          
           <!---->
-          
         </div>
         <div
           class="t-checkbox__content"
@@ -2180,7 +2090,7 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!--v-if-->
+        <!---->
       </div>
     </div>
     <div
@@ -2196,10 +2106,8 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
           class="t-checkbox__icon t-checkbox__icon--left"
         >
           
-          
-          <!--v-if-->
-          <!--v-if-->
-          
+          <!---->
+          <!---->
           
         </div>
         <div
@@ -2216,7 +2124,7 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
             <!---->
           </div>
         </div>
-        <!--v-if-->
+        <!---->
       </div>
     </div>
     
@@ -2237,7 +2145,6 @@ exports[`Checkbox > Checkbox statusVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked t-checkbox__icon--disabled"
     >
-      
       <svg
         class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
         fill="none"
@@ -2250,7 +2157,6 @@ exports[`Checkbox > Checkbox statusVue demo works fine 1`] = `
           fill="currentColor"
         />
       </svg>
-      
     </div>
     <div
       class="t-checkbox__content"
@@ -2277,12 +2183,10 @@ exports[`Checkbox > Checkbox statusVue demo works fine 1`] = `
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--disabled"
     >
       
-      
       <div
         class="t-checkbox__icon-circle t-checkbox__icon-circle--disabled"
       />
-      <!--v-if-->
-      
+      <!---->
       
     </div>
     <div
@@ -2318,12 +2222,18 @@ exports[`Checkbox > Checkbox typeVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
     >
-      
-      <img
-        class="t-checkbox__icon-wrapper"
-        src="/src/checkbox/assets/check-line-filled-icon.svg"
-      />
-      
+      <svg
+        class="t-icon t-icon-check t-checkbox__icon-wrapper"
+        fill="none"
+        height="1em"
+        viewBox="0 0 24 24"
+        width="1em"
+      >
+        <path
+          d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
+          fill="currentColor"
+        />
+      </svg>
     </div>
     <div
       class="t-checkbox__content"
@@ -2352,7 +2262,6 @@ exports[`Checkbox > Checkbox typeVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
     >
-      
       <svg
         class="t-icon t-icon-check-rectangle-filled t-checkbox__icon-wrapper"
         fill="none"
@@ -2365,7 +2274,6 @@ exports[`Checkbox > Checkbox typeVue demo works fine 1`] = `
           fill="currentColor"
         />
       </svg>
-      
     </div>
     <div
       class="t-checkbox__content"
@@ -2394,14 +2302,10 @@ exports[`Checkbox > Checkbox typeVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left"
     >
-      <div
-        class="t-checkbox__icon"
-      >
-        <img
-          class="t-checkbox__icon-image t-checkbox__icon-wrapper"
-          src="https://tdesign.gtimg.com/miniprogram/checkbox.png"
-        />
-      </div>
+      <img
+        class="t-checkbox__icon-image t-checkbox__icon-wrapper"
+        src="https://tdesign.gtimg.com/mobile/demos/checkbox.png"
+      />
     </div>
     <div
       class="t-checkbox__content"

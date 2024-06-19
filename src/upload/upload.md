@@ -71,7 +71,7 @@ url | String | - | 文件上传成功后的下载/访问地址 | N
 `PlainObject` | \- | - | `PlainObject` 不是 UploadFile 中的属性，而表示 UploadFile 本身支持添加任意属性，`type PlainObject = {[key: string]: any}`' | N
 
 
-### CSS 变量
+### CSS Variables
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --

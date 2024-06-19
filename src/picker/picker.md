@@ -29,7 +29,7 @@ confirm | `(value: Array<PickerValue>, context: { index: number[], e: MouseEvent
 pick | `(value: Array<PickerValue>,context: PickerContext)` | 任何一列选中都会触发，不同的列参数不同。`context.column` 表示第几列变化，`context.index` 表示变化那一列的选中项下标
 
 
-### CSS 变量
+### CSS Variables
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --

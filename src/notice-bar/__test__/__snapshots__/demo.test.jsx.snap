@@ -1,12 +1,10 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`NoticeBar > NoticeBar baseVue demo works fine 1`] = `
 <div
   class="t-notice-bar t-notice-bar--info"
 >
-  <!-- prefixIcon -->
-  <!--v-if-->
-  <!-- content -->
+  <!---->
   <div
     class="t-notice-bar__content-wrap"
   >
@@ -15,11 +13,10 @@ exports[`NoticeBar > NoticeBar baseVue demo works fine 1`] = `
       style=""
     >
       这是一条普通的通知信息
-      <!--v-if-->
+      <!---->
     </div>
   </div>
-  <!-- suffixIcon -->
-  <!--v-if-->
+  <!---->
 </div>
 `;
 
@@ -27,7 +24,6 @@ exports[`NoticeBar > NoticeBar customVue demo works fine 1`] = `
 <div
   class="t-notice-bar t-notice-bar--info cover-class"
 >
-  <!-- prefixIcon -->
   <div
     class="t-notice-bar__prefix-icon"
   >
@@ -46,7 +42,6 @@ exports[`NoticeBar > NoticeBar customVue demo works fine 1`] = `
     </svg>
     
   </div>
-  <!-- content -->
   <div
     class="t-notice-bar__content-wrap"
   >
@@ -55,10 +50,9 @@ exports[`NoticeBar > NoticeBar customVue demo works fine 1`] = `
       style=""
     >
       提示文字描述提示文字描述提示文字描述
-      <!--v-if-->
+      <!---->
     </div>
   </div>
-  <!-- suffixIcon -->
   <div
     class="t-notice-bar__suffix-icon"
   >
@@ -84,7 +78,6 @@ exports[`NoticeBar > NoticeBar customizationVue demo works fine 1`] = `
 <div
   class="t-notice-bar t-notice-bar--info"
 >
-  <!-- prefixIcon -->
   <div
     class="t-notice-bar__prefix-icon"
   >
@@ -101,7 +94,6 @@ exports[`NoticeBar > NoticeBar customizationVue demo works fine 1`] = `
       />
     </svg>
   </div>
-  <!-- content -->
   <div
     class="t-notice-bar__content-wrap"
   >
@@ -134,7 +126,6 @@ exports[`NoticeBar > NoticeBar customizationVue demo works fine 1`] = `
       </span>
     </div>
   </div>
-  <!-- suffixIcon -->
   <div
     class="t-notice-bar__suffix-icon"
   >
@@ -164,7 +155,6 @@ exports[`NoticeBar > NoticeBar eventVue demo works fine 1`] = `
   <div
     class="t-notice-bar t-notice-bar--info notice-bar-demo-block"
   >
-    <!-- prefixIcon -->
     <div
       class="t-notice-bar__prefix-icon"
     >
@@ -181,7 +171,6 @@ exports[`NoticeBar > NoticeBar eventVue demo works fine 1`] = `
         />
       </svg>
     </div>
-    <!-- content -->
     <div
       class="t-notice-bar__content-wrap"
     >
@@ -214,7 +203,6 @@ exports[`NoticeBar > NoticeBar eventVue demo works fine 1`] = `
         </span>
       </div>
     </div>
-    <!-- suffixIcon -->
     <div
       class="t-notice-bar__suffix-icon"
     >
@@ -235,7 +223,6 @@ exports[`NoticeBar > NoticeBar eventVue demo works fine 1`] = `
   <div
     class="t-notice-bar t-notice-bar--info"
   >
-    <!-- prefixIcon -->
     <div
       class="t-notice-bar__prefix-icon"
     >
@@ -252,7 +239,6 @@ exports[`NoticeBar > NoticeBar eventVue demo works fine 1`] = `
         />
       </svg>
     </div>
-    <!-- content -->
     <div
       class="t-notice-bar__content-wrap"
     >
@@ -261,10 +247,9 @@ exports[`NoticeBar > NoticeBar eventVue demo works fine 1`] = `
         style=""
       >
         这是一条普通的通知信息
-        <!--v-if-->
+        <!---->
       </div>
     </div>
-    <!-- suffixIcon -->
     <div
       class="t-notice-bar__suffix-icon"
     >
@@ -290,7 +275,6 @@ exports[`NoticeBar > NoticeBar iconDemoVue demo works fine 1`] = `
 <div
   class="t-notice-bar t-notice-bar--info"
 >
-  <!-- prefixIcon -->
   <div
     class="t-notice-bar__prefix-icon"
   >
@@ -307,7 +291,6 @@ exports[`NoticeBar > NoticeBar iconDemoVue demo works fine 1`] = `
       />
     </svg>
   </div>
-  <!-- content -->
   <div
     class="t-notice-bar__content-wrap"
   >
@@ -316,11 +299,10 @@ exports[`NoticeBar > NoticeBar iconDemoVue demo works fine 1`] = `
       style=""
     >
       提示文字描述提示文字描述提示文字描述
-      <!--v-if-->
+      <!---->
     </div>
   </div>
-  <!-- suffixIcon -->
-  <!--v-if-->
+  <!---->
 </div>
 `;
 
@@ -362,9 +344,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
       <div
         class="t-notice-bar t-notice-bar--info"
       >
-        <!-- prefixIcon -->
-        <!--v-if-->
-        <!-- content -->
+        <!---->
         <div
           class="t-notice-bar__content-wrap"
         >
@@ -373,11 +353,10 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             style=""
           >
             这是一条普通的通知信息
-            <!--v-if-->
+            <!---->
           </div>
         </div>
-        <!-- suffixIcon -->
-        <!--v-if-->
+        <!---->
       </div>
       
     </div>
@@ -402,7 +381,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
       <div
         class="t-notice-bar t-notice-bar--info"
       >
-        <!-- prefixIcon -->
         <div
           class="t-notice-bar__prefix-icon"
         >
@@ -419,7 +397,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             />
           </svg>
         </div>
-        <!-- content -->
         <div
           class="t-notice-bar__content-wrap"
         >
@@ -428,11 +405,10 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             style=""
           >
             提示文字描述提示文字描述提示文字描述
-            <!--v-if-->
+            <!---->
           </div>
         </div>
-        <!-- suffixIcon -->
-        <!--v-if-->
+        <!---->
       </div>
       
     </div>
@@ -457,7 +433,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
       <div
         class="t-notice-bar t-notice-bar--info"
       >
-        <!-- prefixIcon -->
         <div
           class="t-notice-bar__prefix-icon"
         >
@@ -474,7 +449,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             />
           </svg>
         </div>
-        <!-- content -->
         <div
           class="t-notice-bar__content-wrap"
         >
@@ -483,10 +457,9 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             style=""
           >
             这是一条普通的通知信息
-            <!--v-if-->
+            <!---->
           </div>
         </div>
-        <!-- suffixIcon -->
         <div
           class="t-notice-bar__suffix-icon"
         >
@@ -530,7 +503,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
       <div
         class="t-notice-bar t-notice-bar--info notice-bar-demo-block"
       >
-        <!-- prefixIcon -->
         <div
           class="t-notice-bar__prefix-icon"
         >
@@ -547,7 +519,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             />
           </svg>
         </div>
-        <!-- content -->
         <div
           class="t-notice-bar__content-wrap"
         >
@@ -580,7 +551,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             </span>
           </div>
         </div>
-        <!-- suffixIcon -->
         <div
           class="t-notice-bar__suffix-icon"
         >
@@ -601,7 +571,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
       <div
         class="t-notice-bar t-notice-bar--info"
       >
-        <!-- prefixIcon -->
         <div
           class="t-notice-bar__prefix-icon"
         >
@@ -618,7 +587,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             />
           </svg>
         </div>
-        <!-- content -->
         <div
           class="t-notice-bar__content-wrap"
         >
@@ -627,10 +595,9 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             style=""
           >
             这是一条普通的通知信息
-            <!--v-if-->
+            <!---->
           </div>
         </div>
-        <!-- suffixIcon -->
         <div
           class="t-notice-bar__suffix-icon"
         >
@@ -672,7 +639,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
       <div
         class="t-notice-bar t-notice-bar--info cover-class"
       >
-        <!-- prefixIcon -->
         <div
           class="t-notice-bar__prefix-icon"
         >
@@ -691,7 +657,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
           </svg>
           
         </div>
-        <!-- content -->
         <div
           class="t-notice-bar__content-wrap"
         >
@@ -700,10 +665,9 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             style=""
           >
             提示文字描述提示文字描述提示文字描述
-            <!--v-if-->
+            <!---->
           </div>
         </div>
-        <!-- suffixIcon -->
         <div
           class="t-notice-bar__suffix-icon"
         >
@@ -746,7 +710,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
       <div
         class="t-notice-bar t-notice-bar--info"
       >
-        <!-- prefixIcon -->
         <div
           class="t-notice-bar__prefix-icon"
         >
@@ -763,7 +726,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             />
           </svg>
         </div>
-        <!-- content -->
         <div
           class="t-notice-bar__content-wrap"
         >
@@ -796,7 +758,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             </span>
           </div>
         </div>
-        <!-- suffixIcon -->
         <div
           class="t-notice-bar__suffix-icon"
         >
@@ -844,7 +805,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
       <div
         class="t-notice-bar t-notice-bar--info notice-bar-demo-block"
       >
-        <!-- prefixIcon -->
         <div
           class="t-notice-bar__prefix-icon"
         >
@@ -861,7 +821,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             />
           </svg>
         </div>
-        <!-- content -->
         <div
           class="t-notice-bar__content-wrap"
         >
@@ -870,16 +829,14 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             style=""
           >
             默认状态公告栏默认状态公告栏
-            <!--v-if-->
+            <!---->
           </div>
         </div>
-        <!-- suffixIcon -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-notice-bar t-notice-bar--success notice-bar-demo-block"
       >
-        <!-- prefixIcon -->
         <div
           class="t-notice-bar__prefix-icon"
         >
@@ -896,7 +853,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             />
           </svg>
         </div>
-        <!-- content -->
         <div
           class="t-notice-bar__content-wrap"
         >
@@ -905,16 +861,14 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             style=""
           >
             成功状态公告栏成功状态公告栏
-            <!--v-if-->
+            <!---->
           </div>
         </div>
-        <!-- suffixIcon -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-notice-bar t-notice-bar--warning notice-bar-demo-block"
       >
-        <!-- prefixIcon -->
         <div
           class="t-notice-bar__prefix-icon"
         >
@@ -931,7 +885,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             />
           </svg>
         </div>
-        <!-- content -->
         <div
           class="t-notice-bar__content-wrap"
         >
@@ -940,16 +893,14 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             style=""
           >
             警示状态公告栏警示状态公告栏
-            <!--v-if-->
+            <!---->
           </div>
         </div>
-        <!-- suffixIcon -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-notice-bar t-notice-bar--error"
       >
-        <!-- prefixIcon -->
         <div
           class="t-notice-bar__prefix-icon"
         >
@@ -966,7 +917,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             />
           </svg>
         </div>
-        <!-- content -->
         <div
           class="t-notice-bar__content-wrap"
         >
@@ -975,11 +925,10 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             style=""
           >
             错误状态公告栏错误状态公告栏
-            <!--v-if-->
+            <!---->
           </div>
         </div>
-        <!-- suffixIcon -->
-        <!--v-if-->
+        <!---->
       </div>
       
       
@@ -1010,9 +959,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
       <div
         class="t-notice-bar t-notice-bar--info notice-bar-demo-block"
       >
-        <!-- prefixIcon -->
-        <!--v-if-->
-        <!-- content -->
+        <!---->
         <div
           class="t-notice-bar__content-wrap"
         >
@@ -1021,16 +968,14 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             style=""
           >
             提示文字描述提示文字描述提示文字描述提示文字描述文
-            <!--v-if-->
+            <!---->
           </div>
         </div>
-        <!-- suffixIcon -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-notice-bar t-notice-bar--info notice-bar-demo-block"
       >
-        <!-- prefixIcon -->
         <div
           class="t-notice-bar__prefix-icon"
         >
@@ -1047,7 +992,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             />
           </svg>
         </div>
-        <!-- content -->
         <div
           class="t-notice-bar__content-wrap"
         >
@@ -1056,16 +1000,14 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             style=""
           >
             提示文字描述提示文字描述提示文字描述提示文字描述文
-            <!--v-if-->
+            <!---->
           </div>
         </div>
-        <!-- suffixIcon -->
-        <!--v-if-->
+        <!---->
       </div>
       <div
         class="t-notice-bar t-notice-bar--info"
       >
-        <!-- prefixIcon -->
         <div
           class="t-notice-bar__prefix-icon"
         >
@@ -1084,7 +1026,6 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
           </svg>
           
         </div>
-        <!-- content -->
         <div
           class="t-notice-bar__content-wrap"
         >
@@ -1165,8 +1106,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
             </div>
           </div>
         </div>
-        <!-- suffixIcon -->
-        <!--v-if-->
+        <!---->
       </div>
       
       
@@ -1183,9 +1123,7 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
   <div
     class="t-notice-bar t-notice-bar--info notice-bar-demo-block"
   >
-    <!-- prefixIcon -->
-    <!--v-if-->
-    <!-- content -->
+    <!---->
     <div
       class="t-notice-bar__content-wrap"
     >
@@ -1194,16 +1132,14 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
         style=""
       >
         提示文字描述提示文字描述提示文字描述提示文字描述文
-        <!--v-if-->
+        <!---->
       </div>
     </div>
-    <!-- suffixIcon -->
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-notice-bar t-notice-bar--info notice-bar-demo-block"
   >
-    <!-- prefixIcon -->
     <div
       class="t-notice-bar__prefix-icon"
     >
@@ -1220,7 +1156,6 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
         />
       </svg>
     </div>
-    <!-- content -->
     <div
       class="t-notice-bar__content-wrap"
     >
@@ -1229,16 +1164,14 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
         style=""
       >
         提示文字描述提示文字描述提示文字描述提示文字描述文
-        <!--v-if-->
+        <!---->
       </div>
     </div>
-    <!-- suffixIcon -->
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-notice-bar t-notice-bar--info"
   >
-    <!-- prefixIcon -->
     <div
       class="t-notice-bar__prefix-icon"
     >
@@ -1257,7 +1190,6 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
       </svg>
       
     </div>
-    <!-- content -->
     <div
       class="t-notice-bar__content-wrap"
     >
@@ -1338,8 +1270,7 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
         </div>
       </div>
     </div>
-    <!-- suffixIcon -->
-    <!--v-if-->
+    <!---->
   </div>
   
 </div>
@@ -1349,7 +1280,6 @@ exports[`NoticeBar > NoticeBar suffixIconVue demo works fine 1`] = `
 <div
   class="t-notice-bar t-notice-bar--info"
 >
-  <!-- prefixIcon -->
   <div
     class="t-notice-bar__prefix-icon"
   >
@@ -1366,7 +1296,6 @@ exports[`NoticeBar > NoticeBar suffixIconVue demo works fine 1`] = `
       />
     </svg>
   </div>
-  <!-- content -->
   <div
     class="t-notice-bar__content-wrap"
   >
@@ -1375,10 +1304,9 @@ exports[`NoticeBar > NoticeBar suffixIconVue demo works fine 1`] = `
       style=""
     >
       这是一条普通的通知信息
-      <!--v-if-->
+      <!---->
     </div>
   </div>
-  <!-- suffixIcon -->
   <div
     class="t-notice-bar__suffix-icon"
   >
@@ -1408,7 +1336,6 @@ exports[`NoticeBar > NoticeBar themeVue demo works fine 1`] = `
   <div
     class="t-notice-bar t-notice-bar--info notice-bar-demo-block"
   >
-    <!-- prefixIcon -->
     <div
       class="t-notice-bar__prefix-icon"
     >
@@ -1425,7 +1352,6 @@ exports[`NoticeBar > NoticeBar themeVue demo works fine 1`] = `
         />
       </svg>
     </div>
-    <!-- content -->
     <div
       class="t-notice-bar__content-wrap"
     >
@@ -1434,16 +1360,14 @@ exports[`NoticeBar > NoticeBar themeVue demo works fine 1`] = `
         style=""
       >
         默认状态公告栏默认状态公告栏
-        <!--v-if-->
+        <!---->
       </div>
     </div>
-    <!-- suffixIcon -->
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-notice-bar t-notice-bar--success notice-bar-demo-block"
   >
-    <!-- prefixIcon -->
     <div
       class="t-notice-bar__prefix-icon"
     >
@@ -1460,7 +1384,6 @@ exports[`NoticeBar > NoticeBar themeVue demo works fine 1`] = `
         />
       </svg>
     </div>
-    <!-- content -->
     <div
       class="t-notice-bar__content-wrap"
     >
@@ -1469,16 +1392,14 @@ exports[`NoticeBar > NoticeBar themeVue demo works fine 1`] = `
         style=""
       >
         成功状态公告栏成功状态公告栏
-        <!--v-if-->
+        <!---->
       </div>
     </div>
-    <!-- suffixIcon -->
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-notice-bar t-notice-bar--warning notice-bar-demo-block"
   >
-    <!-- prefixIcon -->
     <div
       class="t-notice-bar__prefix-icon"
     >
@@ -1495,7 +1416,6 @@ exports[`NoticeBar > NoticeBar themeVue demo works fine 1`] = `
         />
       </svg>
     </div>
-    <!-- content -->
     <div
       class="t-notice-bar__content-wrap"
     >
@@ -1504,16 +1424,14 @@ exports[`NoticeBar > NoticeBar themeVue demo works fine 1`] = `
         style=""
       >
         警示状态公告栏警示状态公告栏
-        <!--v-if-->
+        <!---->
       </div>
     </div>
-    <!-- suffixIcon -->
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-notice-bar t-notice-bar--error"
   >
-    <!-- prefixIcon -->
     <div
       class="t-notice-bar__prefix-icon"
     >
@@ -1530,7 +1448,6 @@ exports[`NoticeBar > NoticeBar themeVue demo works fine 1`] = `
         />
       </svg>
     </div>
-    <!-- content -->
     <div
       class="t-notice-bar__content-wrap"
     >
@@ -1539,11 +1456,10 @@ exports[`NoticeBar > NoticeBar themeVue demo works fine 1`] = `
         style=""
       >
         错误状态公告栏错误状态公告栏
-        <!--v-if-->
+        <!---->
       </div>
     </div>
-    <!-- suffixIcon -->
-    <!--v-if-->
+    <!---->
   </div>
   
 </div>

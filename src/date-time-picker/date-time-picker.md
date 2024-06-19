@@ -31,7 +31,7 @@ confirm | `(value: DateValue)` | 确认按钮点击时触发
 pick | `(value: DateValue)` | 选中值发生变化时触发
 
 
-### CSS 变量
+### CSS Variables
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --

@@ -59,6 +59,7 @@ export { default as TPopover } from './popover';
 export { default as Guide } from './guide';
 export * from './row';
 export * from './col';
+export * from './tree-select';
 
 // 全局配置
 export * from './config-provider';

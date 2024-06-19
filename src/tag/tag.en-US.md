@@ -53,7 +53,7 @@ change | `(checked: boolean)` | \-
 click | `(context: { e: MouseEvent })` | \-
 close | `(context: { e: MouseEvent })` | \-
 
-### CSS 变量
+### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 

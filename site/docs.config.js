@@ -296,6 +296,14 @@ export const docs = [
         component: () => import('@/cascader/cascader.md'),
         componentEn: () => import('@/cascader/cascader.en-US.md'),
       },
+      {
+        title: 'TreeSelect 树形选择器',
+        titleEn: 'TreeSelect',
+        name: 'tree-select',
+        path: '/mobile-vue/components/tree-select',
+        component: () => import('@/tree-select/tree-select.md'),
+        componentEn: () => import('@/tree-select/tree-select.en-US.md'),
+      },
     ],
   },
   {

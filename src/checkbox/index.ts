@@ -1,5 +1,5 @@
-import _CheckBox from './checkbox.vue';
-import _CheckBoxGroup from './checkbox-group.vue';
+import _CheckBox from './checkbox';
+import _CheckBoxGroup from './checkbox-group';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';

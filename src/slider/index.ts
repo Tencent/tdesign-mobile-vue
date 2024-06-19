@@ -1,4 +1,4 @@
-import Slider from './slider.vue';
+import Slider from './slider';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';

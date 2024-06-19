@@ -2,8 +2,8 @@ import { defineComponent, computed } from 'vue';
 import { ChevronLeftIcon as TChevronLeftIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import props from './props';
-import { usePrefixClass } from '@/hooks/useClass';
-import { useTNodeJSX } from '@/hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
+import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
 const name = `${prefix}-navbar`;

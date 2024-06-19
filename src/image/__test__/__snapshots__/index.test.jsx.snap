@@ -1,12 +1,12 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Image > props > : lazy 1`] = `
 <div
   class="t-image t-image--square"
 >
-  <!--v-if-->
+  <!---->
   <picture>
-    <!--v-if-->
+    <!---->
     <img
       alt=""
       class="t-image__img"

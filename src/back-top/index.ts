@@ -1,4 +1,4 @@
-import BackTop from './back-top.vue';
+import BackTop from './back-top';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';

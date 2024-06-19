@@ -30,7 +30,7 @@ duration-end | \- | 计时结束后触发
 link-click | `(context: { e: MouseEvent })` | 当link链接存在时，点击链接文本时触发
 
 
-### CSS 变量
+### CSS Variables
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --

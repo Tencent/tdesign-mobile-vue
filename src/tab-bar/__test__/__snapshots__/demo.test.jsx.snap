@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
 <div
@@ -54,13 +54,13 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         
         首页 
         
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     aria-label="软件，有新的消息"
@@ -109,13 +109,13 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         
         软件 
         
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     aria-label="聊天，New"
@@ -164,13 +164,13 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         
         聊天 
         
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     aria-label="我的，有很多消息"
@@ -219,13 +219,13 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         
         我的 
         
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   
   
@@ -266,13 +266,13 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         
         首页 
         
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--normal"
@@ -301,13 +301,13 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         
         应用 
         
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--normal"
@@ -336,13 +336,13 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         
         聊天 
         
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--normal"
@@ -371,13 +371,13 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         
         我的 
         
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   
   
@@ -421,11 +421,11 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
@@ -456,11 +456,11 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
@@ -491,11 +491,11 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
@@ -526,11 +526,11 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   
   
@@ -592,17 +592,17 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-tab-bar-item__text"
             >
-              <!--v-if-->
+              <!---->
               
               首页
               
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
@@ -613,17 +613,17 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-tab-bar-item__text"
             >
-              <!--v-if-->
+              <!---->
               
               应用
               
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
@@ -634,17 +634,17 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-tab-bar-item__text"
             >
-              <!--v-if-->
+              <!---->
               
               聊天
               
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
@@ -655,17 +655,17 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-tab-bar-item__text"
             >
-              <!--v-if-->
+              <!---->
               
               我的
               
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         
         
@@ -725,13 +725,13 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               
               首页 
               
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--normal"
@@ -760,13 +760,13 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               
               应用 
               
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--normal"
@@ -795,13 +795,13 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               
               聊天 
               
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--normal"
@@ -830,13 +830,13 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               
               我的 
               
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         
         
@@ -896,11 +896,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--normal"
@@ -929,11 +929,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--normal"
@@ -962,11 +962,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--normal"
@@ -995,11 +995,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         
         
@@ -1041,17 +1041,17 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-tab-bar-item__text"
             >
-              <!--v-if-->
+              <!---->
               
               首页
               
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
@@ -1062,17 +1062,17 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-tab-bar-item__text"
             >
-              <!--v-if-->
+              <!---->
               
               应用
               
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
@@ -1083,7 +1083,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="button"
           >
-            <!--v-if-->
+            <!---->
             <div
               class="t-tab-bar-item__text"
             >
@@ -1104,7 +1104,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         
         
@@ -1188,13 +1188,13 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               
               首页 
               
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           aria-label="软件，有新的消息"
@@ -1243,13 +1243,13 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               
               软件 
               
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           aria-label="聊天，New"
@@ -1298,13 +1298,13 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               
               聊天 
               
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           aria-label="我的，有很多消息"
@@ -1353,13 +1353,13 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               
               我的 
               
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         
         
@@ -1419,11 +1419,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--round"
@@ -1452,11 +1452,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--round"
@@ -1485,11 +1485,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--round"
@@ -1518,11 +1518,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         
         
@@ -1589,11 +1589,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
@@ -1624,11 +1624,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
@@ -1659,11 +1659,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
@@ -1694,11 +1694,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
             >
-              <!--v-if-->
+              <!---->
               <!---->
             </div>
           </div>
-          <!--v-if-->
+          <!---->
         </div>
         
         
@@ -1743,11 +1743,11 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--normal"
@@ -1776,11 +1776,11 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--normal"
@@ -1809,11 +1809,11 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--normal"
@@ -1842,11 +1842,11 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   
   
@@ -1887,11 +1887,11 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--round"
@@ -1920,11 +1920,11 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--round"
@@ -1953,11 +1953,11 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--round"
@@ -1986,11 +1986,11 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
       >
-        <!--v-if-->
+        <!---->
         <!---->
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   
   
@@ -2013,17 +2013,17 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!--v-if-->
+      <!---->
       <div
         class="t-tab-bar-item__text"
       >
-        <!--v-if-->
+        <!---->
         
         首页
         
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
@@ -2034,17 +2034,17 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!--v-if-->
+      <!---->
       <div
         class="t-tab-bar-item__text"
       >
-        <!--v-if-->
+        <!---->
         
         应用
         
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
@@ -2055,7 +2055,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="button"
     >
-      <!--v-if-->
+      <!---->
       <div
         class="t-tab-bar-item__text"
       >
@@ -2076,7 +2076,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
         
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   
   
@@ -2099,17 +2099,17 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!--v-if-->
+      <!---->
       <div
         class="t-tab-bar-item__text"
       >
-        <!--v-if-->
+        <!---->
         
         首页
         
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
@@ -2120,17 +2120,17 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!--v-if-->
+      <!---->
       <div
         class="t-tab-bar-item__text"
       >
-        <!--v-if-->
+        <!---->
         
         应用
         
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
@@ -2141,17 +2141,17 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!--v-if-->
+      <!---->
       <div
         class="t-tab-bar-item__text"
       >
-        <!--v-if-->
+        <!---->
         
         聊天
         
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
@@ -2162,17 +2162,17 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!--v-if-->
+      <!---->
       <div
         class="t-tab-bar-item__text"
       >
-        <!--v-if-->
+        <!---->
         
         我的
         
       </div>
     </div>
-    <!--v-if-->
+    <!---->
   </div>
   
   
