@@ -1,4 +1,4 @@
-import { inject, computed, defineComponent, getCurrentInstance, Ref, toRefs } from 'vue';
+import { inject, computed, defineComponent, Ref, toRefs } from 'vue';
 import { CheckIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
 
 import { NOOP, useVModel } from '../shared';

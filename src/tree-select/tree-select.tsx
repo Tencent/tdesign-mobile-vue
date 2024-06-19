@@ -5,8 +5,7 @@ import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
 import config from '../config';
 import { convertUnit, useDefault } from '../shared';
 import props from './props';
-import { TdTreeSelectProps, TreeSelectValue } from './type';
-import { TreeOptionData } from '../_common/js/common';
+import { TdTreeSelectProps, TreeSelectValue, _TreeOptionData } from './type';
 import { usePrefixClass } from '@/hooks/useClass';
 
 const { prefix } = config;
@@ -32,21 +31,22 @@ export default defineComponent({
       'change',
     );
     const leafLevel = ref(0);
-    const treeOptions = ref<TreeOptionData[][]>([]);
+    const treeOptions = ref<_TreeOptionData[][]>([]);
     const rootStyle = computed(() => [`height: ${convertUnit(height.value)}`, customStyle.value].join(';'));
 
     const buildTreeOptions = () => {
       const { options, multiple, keys } = props;
 
       let level = -1;
-      const tmpTreeOptions: TreeOptionData[][] = [];
-      let node: TreeOptionData = { children: options };
+      const tmpTreeOptions: _TreeOptionData[][] = [];
+      let node: _TreeOptionData = { children: options };
       if (options.length === 0 || (Array.isArray(value) && value.length === 0)) return;
       while (node && node.children) {
         level += 1;
-        const list = (node.children as TreeOptionData[]).map((item: TreeOptionData) => ({
+        const list = (node.children as _TreeOptionData[]).map((item: _TreeOptionData) => ({
           label: item[keys?.label || 'label'],
           value: item[keys?.value || 'value'],
+          disabled: item[keys?.disabled || 'disabled'],
           children: item.children,
         }));
         const thisValue = innerValue.value?.[level];
@@ -81,7 +81,8 @@ export default defineComponent({
       setInnerValue(innerValue.value, level);
     };
 
-    const handleTreeClick = (itemValue: TreeSelectValue, level: number) => {
+    const handleTreeClick = (itemValue: TreeSelectValue, level: number, isDisabled: boolean) => {
+      if (isDisabled) return;
       innerValue.value[level] = itemValue;
       setInnerValue(innerValue.value, level);
     };
@@ -94,7 +95,7 @@ export default defineComponent({
       { immediate: true, deep: true },
     );
 
-    const renderSideBar = (treeOption: TreeOptionData[]) => {
+    const renderSideBar = (treeOption: _TreeOptionData[]) => {
       return (
         <TSideBar
           v-model={innerValue.value[0]}
@@ -102,28 +103,29 @@ export default defineComponent({
           onChange={() => onRootChange(0)}
         >
           {treeOption.map((item, index) => (
-            <TSideBarItem key={index} label={item.label} value={item.value}></TSideBarItem>
+            <TSideBarItem key={index} label={item.label} value={item.value} disabled={item.disabled}></TSideBarItem>
           ))}
         </TSideBar>
       );
     };
 
-    const renderMiddleLevel = (treeOption: TreeOptionData[], level: number) => {
+    const renderMiddleLevel = (treeOption: _TreeOptionData[], level: number) => {
       return treeOption.map((item) => (
         <div
           key={item.value}
           class={{
             [`${treeSelectClass.value}__item`]: true,
-            [`${name}__item--active`]: item.value === innerValue.value[level],
+            [`${treeSelectClass.value}__item--active`]: item.value === innerValue.value[level],
+            [`${treeSelectClass.value}__item--disabled`]: item.disabled,
           }}
-          onClick={() => handleTreeClick(item.value, level)}
+          onClick={() => handleTreeClick(item.value, level, item.disabled)}
         >
           {item.label}
         </div>
       ));
     };
 
-    const renderLeafLevel = (treeOption: TreeOptionData[], level: number) => {
+    const renderLeafLevel = (treeOption: _TreeOptionData[], level: number) => {
       if (multiple.value) {
         return (
           <TCheckboxGroup
@@ -140,6 +142,7 @@ export default defineComponent({
                 icon="line"
                 borderless
                 placement="right"
+                disabled={item.disabled}
               >
                 {item.label}
               </TCheckbox>
@@ -162,6 +165,7 @@ export default defineComponent({
               maxLabelRow={1}
               borderless
               placement="right"
+              disabled={item.disabled}
             >
               {item.label}
             </TRadio>

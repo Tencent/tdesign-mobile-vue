@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive, Ref, ref } from 'vue';
+import { Ref, ref } from 'vue';
 import { TdTreeSelectProps, TreeSelectValue } from '../type';
 
 const areaList = {
@@ -104,6 +104,7 @@ const generateTree = () => {
             countyList.push({
               label: counties[county],
               value: county,
+              disabled: ['110102', '440104'].includes(county),
             });
           }
         });
@@ -111,6 +112,7 @@ const generateTree = () => {
           label: cities[city],
           value: city,
           children: countyList,
+          disabled: ['110100', '440200'].includes(city),
         });
       }
     });

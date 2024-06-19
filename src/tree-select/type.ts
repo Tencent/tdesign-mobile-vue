@@ -4,9 +4,19 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TreeOptionData, TreeKeysType } from '../common';
+import { TreeOptionData, TreeKeysType, PlainObject } from '../common';
 
-export interface TdTreeSelectProps<DataOption extends TreeOptionData = TreeOptionData> {
+export type _TreeOptionData<T = string | number> = {
+  children?: Array<TreeOptionData<T>> | boolean;
+  /** option label content */
+  label?: any;
+  /** option search text */
+  text?: string;
+  /** option value */
+  value?: T;
+} & PlainObject;
+
+export interface TdTreeSelectProps<DataOption extends _TreeOptionData = _TreeOptionData> {
   /**
    * 自定义组件样式
    * @default ''
