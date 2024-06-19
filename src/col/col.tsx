@@ -1,16 +1,20 @@
 import { computed, defineComponent, CSSProperties, inject } from 'vue';
 import { convertUnit } from '../shared';
-import ColProps from './props';
+import props from './props';
 import config from '../config';
 import { rowInjectionKey } from '../row/constants';
+import { useTNodeJSX } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
 const name = `${prefix}-col`;
 
 export default defineComponent({
   name,
-  props: ColProps,
-  setup(props, { slots }) {
+  props,
+  setup(props) {
+    const renderTNodeJSX = useTNodeJSX();
+    const componentName = usePrefixClass('col');
     const { gutter } = inject(rowInjectionKey);
 
     // 设置col gutter style
@@ -27,12 +31,12 @@ export default defineComponent({
 
     // 设置col class
     const colClass = computed(() => {
-      let colClass = `${prefix}-col`;
+      let colClass = componentName.value;
       if (props.offset) {
-        colClass += ` ${prefix}-col--offset-${props.offset}`;
+        colClass += ` ${componentName.value}--offset-${props.offset}`;
       }
       if (props.span) {
-        colClass += ` ${prefix}-col--${props.span}`;
+        colClass += ` ${componentName.value}--${props.span}`;
       }
       return colClass;
     });
@@ -40,7 +44,7 @@ export default defineComponent({
     return () => {
       return (
         <div class={colClass.value} style={style.value}>
-          {slots.default?.()}
+          {renderTNodeJSX('default')}
         </div>
       );
     };

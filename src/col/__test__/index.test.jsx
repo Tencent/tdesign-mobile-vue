@@ -14,10 +14,10 @@ describe('row', () => {
     it(':gutter', async () => {
       const wrapper = mount(Row, {
         props: {
-          gutter: '100',
+          gutter: 100,
         },
       });
-      expect(wrapper.attributes.style).toBe('margin-right: -50px; margin-left: -50px;');
+      expect(wrapper.attributes().style).toBe('margin-right: -50px; margin-left: -50px;');
       expect(wrapper.classes()).toContain(`${rowName}`);
     });
   });
@@ -26,23 +26,28 @@ describe('row', () => {
 describe('col', () => {
   describe('props', () => {
     it(':offset', async () => {
-      const wrapper = mount(Col, {
-        props: {
-          offset: '2',
-        },
+      const wrapper = mount(() => {
+        return (
+          <Row gutter="100">
+            <Col offset="2" />
+          </Row>
+        );
       });
-      expect(wrapper.classes()).toContain(`${colName}--offset-2`);
+      const col = wrapper.findComponent(Col);
+      expect(col.classes()).toContain(`${colName}--offset-2`);
     });
 
     it(':span', async () => {
-      const wrapper = mount(Col, {
-        props: {
-          span: '2',
-          content: TEXT,
-        },
+      const wrapper = mount(() => {
+        return (
+          <Row gutter="100">
+            <Col span="2">{TEXT}</Col>
+          </Row>
+        );
       });
-      expect(wrapper.classes()).toContain(`${colName}--2`);
-      expect(wrapper.text()).toBe(TEXT);
+      const col = wrapper.findComponent(Col);
+      expect(col.classes()).toContain(`${colName}--2`);
+      expect(col.text()).toBe(TEXT);
     });
   });
 });

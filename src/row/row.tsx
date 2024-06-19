@@ -1,16 +1,21 @@
 import { computed, defineComponent, CSSProperties, provide } from 'vue';
 import { convertUnit } from '../shared';
-import RowProps from './props';
+import props from './props';
 import config from '../config';
 import { rowInjectionKey } from './constants';
+import { useTNodeJSX } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
 const name = `${prefix}-row`;
 
 export default defineComponent({
   name,
-  props: RowProps,
-  setup(props, { slots }) {
+  props,
+  setup(props) {
+    const renderTNodeJSX = useTNodeJSX();
+    const componentName = usePrefixClass('row');
+
     // row gutter style
     const style = computed(() => {
       const styles: CSSProperties = {};
@@ -30,8 +35,8 @@ export default defineComponent({
 
     return () => {
       return (
-        <div class={`${prefix}-row`} style={style.value}>
-          {slots.default?.()}
+        <div class={componentName.value} style={style.value}>
+          {renderTNodeJSX('default')}
         </div>
       );
     };
