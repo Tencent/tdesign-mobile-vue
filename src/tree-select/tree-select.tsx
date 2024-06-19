@@ -6,7 +6,7 @@ import config from '../config';
 import { convertUnit, useDefault } from '../shared';
 import props from './props';
 import { TdTreeSelectProps, TreeSelectValue, _TreeOptionData } from './type';
-import { usePrefixClass } from '@/hooks/useClass';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
 const name = `${prefix}-tree-select`;

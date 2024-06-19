@@ -4,7 +4,7 @@
 
 <script lang="ts" setup>
 import { Ref, ref } from 'vue';
-import { TdTreeSelectProps, TreeSelectValue } from '../type';
+import { TdTreeSelectProps, TreeSelectValue } from 'tdesign-mobile-vue';
 
 const chineseNumber = '一二三四五六七八九十'.split('');
 

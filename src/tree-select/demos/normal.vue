@@ -4,7 +4,7 @@
 
 <script lang="ts" setup>
 import { Ref, ref } from 'vue';
-import { TdTreeSelectProps, TreeSelectValue } from '../type';
+import { TdTreeSelectProps, TreeSelectValue } from 'tdesign-mobile-vue';
 
 const areaList = {
   provinces: {
