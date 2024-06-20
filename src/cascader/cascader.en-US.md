@@ -18,7 +18,7 @@ visible | Boolean | false | \- | N
 checkStrictly | Boolean | false | 父子节点选中状态不再关联，可各自选中或取消 | N
 placeholder | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 onChange | Function |  | Typescript：`(value: string \| number, selectedOptions: string[]) => void`<br/> | N
-onClose | Function |  | Typescript：`(trigger: TriggerSource) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/> | N
+onClose | Function |  | Typescript：`(trigger: CascaderTriggerSource) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts)。<br/>`type CascaderTriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/> | N
 onPick | Function |  | Typescript：`(context: { level: number; value: string | number; index: number }) => void`<br/> | N
 
 ### Cascader Events
@@ -26,7 +26,7 @@ onPick | Function |  | Typescript：`(context: { level: number; value: string | 
 name | params | description
 -- | -- | --
 change | `(value: string \| number, selectedOptions: string[])` | \-
-close | `(trigger: TriggerSource)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/>
+close | `(trigger: CascaderTriggerSource)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts)。<br/>`type CascaderTriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/>
 pick | `(context: { level: number, value: string \| number, index: number })` | \-
 
 

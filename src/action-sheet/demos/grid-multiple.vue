@@ -16,7 +16,7 @@
 <script lang="ts" setup>
 import { ref, h } from 'vue';
 import { ShareIcon, StarIcon, DownloadIcon, Edit1Icon, ImageIcon } from 'tdesign-icons-vue-next';
-import { ActionSheetItem } from '../type';
+import { ActionSheetItem } from 'tdesign-mobile-vue';
 
 const items = ref([
   {

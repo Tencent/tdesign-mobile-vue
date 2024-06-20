@@ -25,7 +25,7 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue';
-import { PickerValue } from '../type';
+import { PickerValue } from 'tdesign-mobile-vue';
 
 const cityOptions = [
   [

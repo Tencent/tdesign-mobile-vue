@@ -24,7 +24,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { ActionSheetItem } from '../type';
+import { ActionSheetItem } from 'tdesign-mobile-vue';
 
 const items = ref([{ label: '选项1' }, { label: '选项2' }, { label: '选项3' }, { label: '选项4' }]);
 const centerVisible = ref(false);

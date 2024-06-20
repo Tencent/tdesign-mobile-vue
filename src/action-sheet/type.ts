@@ -62,7 +62,7 @@ export interface TdActionSheetProps {
   /**
    * 关闭时触发
    */
-  onClose?: (trigger: TriggerSource) => void;
+  onClose?: (trigger: ActionSheetTriggerSource) => void;
   /**
    * 选择菜单项时触发
    */
@@ -77,4 +77,4 @@ export interface ActionSheetItem {
   badge?: TdBadgeProps;
 }
 
-export type TriggerSource = 'overlay' | 'command' | 'select';
+export type ActionSheetTriggerSource = 'overlay' | 'command' | 'select';

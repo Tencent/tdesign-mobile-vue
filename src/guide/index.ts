@@ -1,11 +1,11 @@
-import Guide from './guide.vue';
+import _Guide from './guide.vue';
 import { withInstall, WithInstallType } from '../shared';
-import { TdGuideProps, GuideStep } from './type';
+import { TdGuideProps } from './type';
 
 import './style';
 
 export * from './type';
 export type GuideProps = TdGuideProps;
 
-const _Guide: WithInstallType<typeof Guide> = withInstall(Guide);
-export default _Guide;
+export const Guide: WithInstallType<typeof _Guide> = withInstall(_Guide);
+export default Guide;

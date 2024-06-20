@@ -11,7 +11,7 @@
 <script lang="ts" setup>
 import { ref, h } from 'vue';
 import { AppIcon } from 'tdesign-icons-vue-next';
-import { TriggerSource, DrawerItem } from '../type';
+import { TriggerSource, DrawerItem } from 'tdesign-mobile-vue';
 
 interface DrawerCloseContext {
   trigger: TriggerSource;

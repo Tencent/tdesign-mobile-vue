@@ -1,4 +1,4 @@
-import PullDownRefresh from './pull-down-refresh';
+import _PullDownRefresh from './pull-down-refresh';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';
@@ -6,5 +6,6 @@ import { TdPullDownRefreshProps } from './type';
 
 export * from './type';
 export type PullDownRefreshProps = TdPullDownRefreshProps;
-const _PullDownRefresh: WithInstallType<typeof PullDownRefresh> = withInstall(PullDownRefresh);
-export default _PullDownRefresh;
+
+export const PullDownRefresh: WithInstallType<typeof _PullDownRefresh> = withInstall(_PullDownRefresh);
+export default PullDownRefresh;

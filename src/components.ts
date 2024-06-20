@@ -1,65 +1,79 @@
-export { default as Button } from './button';
-export { default as Divider } from './divider';
-export { default as Calendar } from './calendar';
-export { default as Cell, CellGroup } from './cell';
-export { default as Checkbox, CheckboxGroup } from './checkbox';
-export { default as Input } from './input';
-export { default as Textarea } from './textarea';
-export { default as Overlay } from './overlay';
-export { default as Progress } from './progress';
-export { default as Radio, RadioGroup } from './radio';
-export { default as Rate } from './rate';
-export { default as Switch } from './switch';
-export { default as Stepper } from './stepper';
-export { default as Slider } from './slider';
-export { default as Dialog } from './dialog';
-export { default as Popup } from './popup';
-export { default as ActionSheet } from './action-sheet';
-export { default as Badge } from './badge';
-export { default as Fab } from './fab';
-export { default as ImageViewer } from './image-viewer';
-export { default as Drawer } from './drawer';
-export { default as Navbar } from './navbar';
-export { default as Message } from './message';
-export { default as DateTimePicker } from './date-time-picker';
-export { default as Toast } from './toast';
-export { default as Search } from './search';
-export { Steps, StepItem } from './steps';
-export { Indexes, IndexesAnchor } from './indexes';
-export { Picker, Cascade } from './picker';
-export { Tag, CheckTag } from './tag';
-export { TabBar, TabBarItem } from './tab-bar';
-export { DropdownMenu, DropdownItem } from './dropdown-menu';
-export { Collapse, CollapsePanel } from './collapse';
-export { Tabs, TabPanel } from './tabs';
-export { Swiper, SwiperItem } from './swiper';
-export { CountDown } from './count-down';
-export { default as Avatar, AvatarGroup } from './avatar';
-export { default as Image } from './image';
-export { default as SwipeCell } from './swipe-cell';
-export { default as Skeleton } from './skeleton';
-export { Grid, GridItem } from './grid';
-export { default as Sticky } from './sticky';
-export { default as List } from './list';
-export { default as Loading } from './loading';
-export { default as BackTop } from './back-top';
-export { default as PullDownRefresh } from './pull-down-refresh';
-export { default as Upload } from './upload';
-export { default as NoticeBar } from './notice-bar';
-export { default as Result } from './result';
-export { default as Cascader } from './cascader';
-export { default as Footer } from './footer';
-export { default as Empty } from './empty';
-export { default as Link } from './link';
-export { Form, FormItem } from './form';
-export { default as Icon } from './icon';
-export { default as Table } from './table';
-export { SideBar, SideBarItem } from './side-bar';
-export { default as TPopover } from './popover';
-export { default as Guide } from './guide';
+// 基础组件
+export * from './button';
+export * from './divider';
+export * from './fab';
+export * from './icon';
 export * from './row';
 export * from './col';
+export * from './link';
+
+// 导航
+export * from './back-top';
+export * from './drawer';
+export * from './indexes';
+export * from './navbar';
+export * from './side-bar';
+export * from './steps';
+export * from './tab-bar';
+export * from './tabs';
+
+// 输入
+export * from './calendar';
+export * from './cascader';
+export * from './checkbox';
+export * from './date-time-picker';
+export * from './form';
+export * from './input';
+export * from './picker';
+export * from './radio';
+export * from './rate';
+export * from './search';
+export * from './slider';
+export * from './stepper';
+export * from './switch';
+export * from './textarea';
 export * from './tree-select';
+export * from './upload';
+
+// 数据展示
+export * from './avatar';
+export * from './badge';
+export * from './cell';
+export * from './collapse';
+export * from './count-down';
+export * from './empty';
+export * from './footer';
+export * from './grid';
+export * from './image';
+export * from './image-viewer';
+export * from './list';
+export * from './progress';
+export * from './result';
+export * from './skeleton';
+export * from './sticky';
+export * from './swiper';
+export * from './table';
+export * from './tag';
+
+// 反馈
+export * from './action-sheet';
+export * from './dialog';
+export * from './dropdown-menu';
+export * from './guide';
+export * from './loading';
+export * from './message';
+export * from './notice-bar';
+export * from './overlay';
+export * from './popover';
+export * from './popup';
+export * from './pull-down-refresh';
+export * from './swipe-cell';
+export * from './toast';
 
 // 全局配置
 export * from './config-provider';
+
+// 兼容原使用方式（2.x 移除）
+export { default as ActionSheet } from './action-sheet';
+export { default as Message } from './message';
+export { default as Toast } from './toast';
