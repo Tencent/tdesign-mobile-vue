@@ -68,5 +68,5 @@ type ActionSheetApi = {
   close: () => void;
 };
 
-const _ActionSheet: WithInstallType<typeof ActionSheetVue> & ActionSheetApi = ActionSheet as any;
+export const _ActionSheet: WithInstallType<typeof ActionSheetVue> & ActionSheetApi = ActionSheet as any;
 export default _ActionSheet;

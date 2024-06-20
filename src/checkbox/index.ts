@@ -10,6 +10,6 @@ export * from './type';
 export type CheckboxProps = TdCheckboxProps;
 export type CheckboxGroupProps = TdCheckboxGroupProps;
 
-const CheckBox: WithInstallType<typeof _CheckBox> = withInstall(_CheckBox);
+export const CheckBox: WithInstallType<typeof _CheckBox> = withInstall(_CheckBox);
 export const CheckboxGroup: WithInstallType<typeof _CheckBoxGroup> = withInstall(_CheckBoxGroup);
 export default CheckBox;

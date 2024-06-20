@@ -27,8 +27,7 @@
 <script lang="ts" setup>
 import { ref, h } from 'vue';
 import { AppIcon } from 'tdesign-icons-vue-next';
-import { ActionSheet } from 'tdesign-mobile-vue';
-import { ActionSheetItem } from '../type';
+import { ActionSheet, ActionSheetItem } from 'tdesign-mobile-vue';
 
 const apIcon = () => h(AppIcon, { size: '24px' });
 const visible = ref(false);

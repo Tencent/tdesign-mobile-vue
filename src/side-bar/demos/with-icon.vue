@@ -26,7 +26,7 @@
 <script lang="ts" setup>
 import { reactive, ref, h, onMounted } from 'vue';
 import { AppIcon } from 'tdesign-icons-vue-next';
-import { TdSideBarProps, TdSideBarItemProps } from '../type';
+import { TdSideBarProps, TdSideBarItemProps } from 'tdesign-mobile-vue';
 
 const image = 'https://tdesign.gtimg.com/mobile/demos/example2.png';
 const items = new Array(12).fill({ label: '标题文字', image }, 0, 12);

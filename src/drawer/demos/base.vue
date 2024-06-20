@@ -4,7 +4,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { DrawerItem } from '../type';
+import { DrawerItem } from 'tdesign-mobile-vue';
 
 const baseSidebar = ref([
   {

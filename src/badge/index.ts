@@ -1,4 +1,4 @@
-import Badge from './badge';
+import _Badge from './badge';
 import { withInstall, WithInstallType } from '../shared';
 import { TdBadgeProps } from './type';
 
@@ -7,5 +7,5 @@ import './style';
 export * from './type';
 export type BadgeProps = TdBadgeProps;
 
-const _Badge: WithInstallType<typeof Badge> = withInstall(Badge);
-export default _Badge;
+export const Badge: WithInstallType<typeof _Badge> = withInstall(_Badge);
+export default Badge;
