@@ -9,8 +9,6 @@ import {
   ref,
   toRefs,
   watch,
-  getCurrentInstance,
-  h,
 } from 'vue';
 import isArray from 'lodash/isArray';
 import isNumber from 'lodash/isNumber';
@@ -22,7 +20,6 @@ import lodashSet from 'lodash/set';
 import isNil from 'lodash/isNil';
 import lodashTemplate from 'lodash/template';
 import { ChevronRightIcon } from 'tdesign-icons-vue-next';
-import { renderTNode, TNode } from '../shared';
 import { validate } from './form-model';
 
 import {
@@ -40,25 +37,24 @@ import {
   ErrorListType,
   FormInjectionKey,
   FormItemContext,
-  FormItemInjectionKey,
   SuccessListType,
   ValidateStatus,
 } from './const';
 import config from '../config';
 import { useTNodeJSX } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-form-item`;
-const classPrefix = `${prefix}-form__item`;
 
 export type FormItemValidateResult<T extends Data = Data> = { [key in keyof T]: boolean | AllValidateResult[] };
 
 export default defineComponent({
-  name,
-  components: { TNode },
+  name: `${prefix}-form-item`,
   props,
   setup(props, { slots }) {
     const renderTNodeJSX = useTNodeJSX();
+    const formClass = usePrefixClass('form');
+    const formItemClass = usePrefixClass('form__item');
     const { name } = toRefs(props);
 
     const form = inject(FormInjectionKey, undefined);
@@ -74,11 +70,11 @@ export default defineComponent({
       return null;
     });
 
-    const formItemClass = computed(() => [
-      `${prefix}-form__item`,
-      `${prefix}-form__item--bordered`,
-      `${prefix}-form--${labelAlign.value}`,
-      `${prefix}-form-item__${props.name}`,
+    const formItemClasses = computed(() => [
+      formItemClass.value,
+      `${formItemClass.value}--bordered`,
+      `${formClass.value}--${labelAlign.value}`,
+      `${formClass.value}-item__${props.name}`,
     ]);
 
     const needRequiredMark = computed(() => {
@@ -89,19 +85,19 @@ export default defineComponent({
 
     const hasLabel = computed(() => slots.label || props.label);
     const hasColon = computed(() => !!(form?.colon && hasLabel.value));
-    const FROM_LABEL = `${prefix}-form__label`;
+    const labelClass = `${formClass.value}__label`;
     const labelAlign = computed(() => (isNil(props.labelAlign) ? form?.labelAlign : props.labelAlign));
     const labelWidth = computed(() => (isNil(props.labelWidth) ? form?.labelWidth : props.labelWidth));
     const contentAlign = computed(() => (isNil(props.contentAlign) ? form?.contentAlign : props.contentAlign));
 
     const labelClasses = computed(() => [
-      `${prefix}-form__label`,
+      labelClass,
       {
-        [`${FROM_LABEL}--required`]: needRequiredMark.value,
-        [`${FROM_LABEL}--colon`]: hasColon.value,
-        [`${FROM_LABEL}--top`]: hasLabel.value && (labelAlign.value === 'top' || !labelWidth.value),
-        [`${FROM_LABEL}--left`]: labelAlign.value === 'left' && labelWidth.value,
-        [`${FROM_LABEL}--right`]: labelAlign.value === 'right' && labelWidth.value,
+        [`${labelClass}--required`]: needRequiredMark.value,
+        [`${labelClass}--colon`]: hasColon.value,
+        [`${labelClass}--top`]: hasLabel.value && (labelAlign.value === 'top' || !labelWidth.value),
+        [`${labelClass}--left`]: labelAlign.value === 'left' && labelWidth.value,
+        [`${labelClass}--right`]: labelAlign.value === 'right' && labelWidth.value,
       },
     ]);
 
@@ -123,13 +119,13 @@ export default defineComponent({
       if (!showErrorMessage.value) return '';
       if (!errorList.value.length) return '';
       const type = errorList.value[0].type || 'error';
-      return type === 'error' ? `${classPrefix}--error` : `${classPrefix}--warning`;
+      return type === 'error' ? `${formItemClass.value}--error` : `${formItemClass.value}--warning`;
     });
 
-    const contentClasses = computed(() => [`${prefix}-form__controls`, errorClasses.value]);
+    const contentClasses = computed(() => [`${formClass.value}__controls`, errorClasses.value]);
     const contentSlotClasses = computed(() => [
-      `${prefix}-form__controls-content`,
-      `${prefix}-form__controls--${contentAlign.value}`,
+      `${formClass.value}__controls-content`,
+      `${formClass.value}__controls--${contentAlign.value}`,
     ]);
 
     const contentStyle = computed(() => {
@@ -321,7 +317,7 @@ export default defineComponent({
         if (!props.arrow) {
           return null;
         }
-        return h(ChevronRightIcon, { size: '24px', color: 'rgba(0, 0, 0, .4)' });
+        return <ChevronRightIcon size="24px" style={{ color: 'rgba(0, 0, 0, .4)' }} />;
       };
       const renderLabelContent = () => {
         if (Number(labelWidth.value) === 0) {
@@ -334,22 +330,26 @@ export default defineComponent({
         if (!helpNode) {
           return null;
         }
-        return <div class={[`${classPrefix}-help`, `${prefix}-form__controls--${contentAlign.value}`]}>{helpNode}</div>;
+        return (
+          <div class={[`${formItemClass.value}-help`, `${formClass.value}__controls--${contentAlign.value}`]}>
+            {helpNode}
+          </div>
+        );
       };
       const renderExtraNode = () => {
         if (!extraNode.value) {
           return null;
         }
         return (
-          <div class={[`${classPrefix}-extra`, `${prefix}-form__controls--${contentAlign.value}`]}>
+          <div class={[`${formItemClass.value}-extra`, `${formClass.value}__controls--${contentAlign.value}`]}>
             {extraNode.value}
           </div>
         );
       };
 
       return (
-        <div class={[...formItemClass.value, renderHelpNode() ? `${prefix}-form__item-with-help` : '']}>
-          <div class={[`${classPrefix}-wrap`, `${classPrefix}--${labelAlign.value}`]}>
+        <div class={[...formItemClasses.value, renderHelpNode() ? `${formClass.value}__item-with-help` : '']}>
+          <div class={[`${formItemClass.value}-wrap`, `${formItemClass.value}--${labelAlign.value}`]}>
             <div class={labelClasses.value} style={labelStyle.value}>
               <label for={props.for}>{renderLabelContent()}</label>
             </div>

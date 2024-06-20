@@ -4,20 +4,20 @@
 
 ### Form Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 colon | Boolean | false | 是否在表单标签字段右侧显示冒号 | N
+contentAlign | String | left | 表单内容对齐方式：左对齐、右对齐。可选项：left/right | N
 data | Object | {} | 表单数据。TS 类型：`FormData` | N
 disabled | Boolean | undefined | 是否禁用整个表单 | N
 errorMessage | Object | - | 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`。TS 类型：`FormErrorMessage` | N
 formControlledComponents | Array | - | 【开发中】允许表单统一控制禁用状态的自定义组件名称列表。默认会有组件库的全部输入类组件：TInput、TSwitch、TRadio、TRadioGroup、TUpload、TSlider。对于自定义组件，组件内部需要包含可以控制表单禁用状态的变量 `formDisabled`。示例：`['CustomUpload', 'CustomInput']`。TS 类型：`Array<string>` | N
 labelAlign | String | right | 表单字段标签对齐方式：左对齐、右对齐、顶部对齐。可选项：left/right/top | N
 labelWidth | String / Number | '81px' | 可以整体设置label标签宽度，默认为81px | N
-contentAlign | String | left | 表单内容对齐方式：左对齐、右对齐。可选项：left/right | N
 requiredMark | Boolean | undefined | 是否显示必填符号（*），默认显示 | N
 resetType | String | empty | 重置表单的方式，值为 empty 表示重置表单为空，值为 initial 表示重置表单数据为初始值。可选项：empty/initial | N
 rules | Object | - | 表单字段校验规则。TS 类型：`FormRules<FormData>` `type FormRules<T extends Data> = { [field in keyof T]?: Array<FormRule> }`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/form/type.ts) | N
-scrollToFirstError | String | - | 【开发中】表单校验不通过时，是否自动滚动到第一个校验不通过的字段，平滑滚动或是瞬间直达。值为空则表示不滚动。可选项：smooth/auto | N
+scrollToFirstError | String | - | 表单校验不通过时，是否自动滚动到第一个校验不通过的字段，平滑滚动或是瞬间直达。值为空则表示不滚动。可选项：''/smooth/auto | N
 showErrorMessage | Boolean | true | 校验不通过时，是否显示错误提示信息，统一控制全部表单项。如果希望控制单个表单项，请给 FormItem 设置该属性 | N
 submitWithWarningMessage | Boolean | false | 【讨论中】当校验结果只有告警信息时，是否触发 `submit` 提交事件 | N
 onReset | Function |  | TS 类型：`(context: { e?: FormResetEvent }) => void`<br/>表单重置时触发 | N
@@ -43,23 +43,25 @@ submit | `(params?: { showErrorMessage?: boolean })` | \- | 必需。提交表�
 validate | `(params?: FormValidateParams)` | `Promise<FormValidateResult<FormData>>` | 必需。校验函数，包含错误文本提示等功能。泛型 `FormData` 表示表单数据 TS 类型。<br/>【关于参数】`params.fields` 表示校验字段，如果设置了 `fields`，本次校验将仅对这些字段进行校验。`params.trigger` 表示本次触发校验的范围，'params.trigger = blur' 表示只触发校验规则设定为 trigger='blur' 的字段，'params.trigger = change' 表示只触发校验规则设定为 trigger='change' 的字段，默认触发全范围校验。`params.showErrorMessage` 表示校验结束后是否显示错误文本提示，默认显示。<br />【关于返回值】返回值为 true 表示校验通过；如果校验不通过，返回值为校验结果列表。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/form/type.ts)。<br/>`interface FormValidateParams { fields?: Array<string>; showErrorMessage?: boolean; trigger?: ValidateTriggerType }`<br/><br/>`type ValidateTriggerType = 'blur' \| 'change' \| 'all'`<br/>
 validateOnly | `(params?: Pick<FormValidateParams, 'fields' \| 'trigger'>)` | `Promise<FormValidateResult<FormData>>` | 必需。纯净的校验函数，仅返回校验结果，不对组件进行任何操作。泛型 `FormData` 表示表单数据 TS 类型。参数和返回值含义同 `validate` 方法
 
+
 ### FormItem Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
+contentAlign | String | left | 表单内容对齐方式：左对齐、右对齐。可选项：left/right | N
 for | String | - | label 原生属性 | N
 help | String / Slot / Function | - | 表单项说明内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 label | String / Slot / Function | '' | 字段标签名称。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 labelAlign | String | - | 表单字段标签对齐方式：左对齐、右对齐、顶部对齐。默认使用 Form 的对齐方式，优先级高于 Form.labelAlign。可选项：left/right/top | N
 labelWidth | String / Number | - | 可以整体设置标签宽度，优先级高于 Form.labelWidth | N
-contentAlign | String | left | 表单内容对齐方式：左对齐、右对齐。可选项：left/right | N
 name | String / Number | - | 表单字段名称。TS 类型：`string \| number` | N
 requiredMark | Boolean | undefined | 是否显示必填符号（*），优先级高于 Form.requiredMark | N
 rules | Array | - | 表单字段校验规则。TS 类型：`Array<FormRule>` | N
 showErrorMessage | Boolean | undefined | 校验不通过时，是否显示错误提示信息，优先级高于 `Form.showErrorMessage` | N
+
 ### FormRule
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 boolean | Boolean | - | 内置校验方法，校验值类型是否为布尔类型，示例：`{ boolean: true, message: '数据类型必须是布尔类型' }` | N
 date | Boolean / Object | - | 内置校验方法，校验值是否为日期格式，[参数文档](https://github.com/validatorjs/validator.js)，示例：`{ date: { delimiters: '-' }, message: '日期分隔线必须是短横线（-）' }`。TS 类型：`boolean \| IsDateOptions` `interface IsDateOptions { format: string; strictMode: boolean; delimiters: string[] }`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/form/type.ts) | N
@@ -82,7 +84,7 @@ whitespace | Boolean | - | 内置校验方法，校验值是否为空格。示�
 
 ### FormErrorMessage
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 boolean | String | - | 布尔类型校验不通过时的表单项显示文案，全局配置默认是：`'${name}数据类型必须是布尔类型'` | N
 date | String | - | 日期校验规则不通过时的表单项显示文案，全局配置默认是：`'请输入正确的${name}'` | N
