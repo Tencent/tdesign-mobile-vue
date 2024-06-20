@@ -74,7 +74,7 @@ export default defineComponent({
       formItemClass.value,
       `${formItemClass.value}--bordered`,
       `${formClass.value}--${labelAlign.value}`,
-      `${formItemClass.value}__${props.name}`,
+      `${formClass.value}-item__${props.name}`,
     ]);
 
     const needRequiredMark = computed(() => {

@@ -86,7 +86,6 @@ export default defineComponent({
     );
 
     const formClass = usePrefixClass('form');
-    const formItemClass = usePrefixClass('form__item');
 
     const needValidate = (name: string | number, fields: string[] | undefined) => {
       if (!fields || !isArray(fields)) return true;
@@ -119,7 +118,7 @@ export default defineComponent({
 
       const [firstKey] = Object.keys(result);
       if (props.scrollToFirstError) {
-        const tmpClassName = `${formItemClass.value}__${firstKey}`;
+        const tmpClassName = `${formClass.value}-item__${firstKey}`;
         scrollTo(tmpClassName);
       }
       const resArr = result[firstKey] as ValidateResultList;
