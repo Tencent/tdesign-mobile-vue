@@ -1,6 +1,6 @@
 import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import Popup from '../popup.vue';
+import Popup from '../popup';
 import { ref } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 

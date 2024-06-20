@@ -1,4 +1,4 @@
-import Popup from './popup.vue';
+import Popup from './popup';
 import { withInstall, WithInstallType } from '../shared';
 import { TdPopupProps } from './type';
 
