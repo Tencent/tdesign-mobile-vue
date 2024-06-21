@@ -182,13 +182,9 @@ export default defineComponent({
         let suffixIcon = readerTNodeJSX('suffixIcon');
         if (props.type === 'password') {
           if (renderType.value === 'password') {
-            suffixIcon = (
-              <TBrowseOffIcon class={`${inputClass.value}__wrap--clearable-icon`} onClick={handlePwdIconClick} />
-            );
+            suffixIcon = <TBrowseOffIcon onClick={handlePwdIconClick} />;
           } else if (renderType.value === 'text') {
-            suffixIcon = (
-              <TBrowseIcon class={`${inputClass.value}__wrap--clearable-icon`} onClick={handlePwdIconClick} />
-            );
+            suffixIcon = <TBrowseIcon onClick={handlePwdIconClick} />;
           }
         }
 
