@@ -14,10 +14,9 @@ import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
-const name = `${prefix}-input`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-input`,
   props: {
     ...InputProps,
     labelAlign: {
