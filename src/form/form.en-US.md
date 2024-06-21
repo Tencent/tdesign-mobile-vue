@@ -11,9 +11,9 @@ contentAlign | String | left | options: left/right | N
 data | Object | {} | Typescript：`FormData` | N
 disabled | Boolean | undefined | \- | N
 errorMessage | Object | - | Typescript：`FormErrorMessage` | N
-formControlledComponents | Array | - | Typescript：`Array<string>` | N
 labelAlign | String | right | options: left/right/top | N
 labelWidth | String / Number | '81px' | \- | N
+preventSubmitDefault | Boolean | true | \- | N
 requiredMark | Boolean | undefined | \- | N
 resetType | String | empty | options: empty/initial | N
 rules | Object | - | Typescript：`FormRules<FormData>` `type FormRules<T extends Data> = { [field in keyof T]?: Array<FormRule> }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/form/type.ts) | N
@@ -48,6 +48,7 @@ validateOnly | `(params?: Pick<FormValidateParams, 'fields' \| 'trigger'>)` | `P
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+arrow | Boolean | false | \- | N
 contentAlign | String | left | options: left/right | N
 for | String | - | \- | N
 help | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N

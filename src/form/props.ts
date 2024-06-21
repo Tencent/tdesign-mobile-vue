@@ -10,6 +10,15 @@ import { PropType } from 'vue';
 export default {
   /** 是否在表单标签字段右侧显示冒号 */
   colon: Boolean,
+  /** 表单内容对齐方式：左对齐、右对齐 */
+  contentAlign: {
+    type: String as PropType<TdFormProps['contentAlign']>,
+    default: 'left' as TdFormProps['contentAlign'],
+    validator(val: TdFormProps['contentAlign']): boolean {
+      if (!val) return true;
+      return ['left', 'right'].includes(val);
+    },
+  },
   /** 表单数据 */
   data: {
     type: Object as PropType<TdFormProps['data']>,
@@ -24,10 +33,6 @@ export default {
   errorMessage: {
     type: Object as PropType<TdFormProps['errorMessage']>,
   },
-  /** 允许表单统一控制禁用状态的自定义组件名称列表。默认会有组件库的全部输入类组件：TInput、TInputNumber、TCascader、TSelect、TOption、TSwitch、TCheckbox、TCheckboxGroup、TRadio、TRadioGroup、TTreeSelect、TDatePicker、TTimePicker、TUpload、TTransfer、TSlider。对于自定义组件，组件内部需要包含可以控制表单禁用状态的变量 `formDisabled`。示例：`['CustomUpload', 'CustomInput']` */
-  formControlledComponents: {
-    type: Array as PropType<TdFormProps['formControlledComponents']>,
-  },
   /** 表单字段标签对齐方式：左对齐、右对齐、顶部对齐 */
   labelAlign: {
     type: String as PropType<TdFormProps['labelAlign']>,
@@ -41,24 +46,6 @@ export default {
   labelWidth: {
     type: [String, Number] as PropType<TdFormProps['labelWidth']>,
     default: '81px',
-  },
-  /** 表单字段标签对齐方式：左对齐、右对齐 */
-  contentAlign: {
-    type: String as PropType<TdFormProps['contentAlign']>,
-    default: 'left' as TdFormProps['contentAlign'],
-    validator(val: TdFormProps['contentAlign']): boolean {
-      if (!val) return true;
-      return ['left', 'right'].includes(val);
-    },
-  },
-  /** 表单布局，有两种方式：纵向布局 和 行内布局 */
-  layout: {
-    type: String as PropType<TdFormProps['layout']>,
-    default: 'vertical' as TdFormProps['layout'],
-    validator(val: TdFormProps['layout']): boolean {
-      if (!val) return true;
-      return ['vertical', 'inline'].includes(val);
-    },
   },
   /** 是否阻止表单提交默认事件（表单提交默认事件会刷新页面），设置为 `true` 可以避免刷新 */
   preventSubmitDefault: {
@@ -95,11 +82,6 @@ export default {
   showErrorMessage: {
     type: Boolean,
     default: true,
-  },
-  /** 校验状态图标，值为 `true` 显示默认图标，默认图标有 成功、失败、警告 等，不同的状态图标不同。`statusIcon` 值为 `false`，不显示图标。`statusIcon` 值类型为渲染函数，则可以自定义右侧状态图标 */
-  statusIcon: {
-    type: [Boolean, Function] as PropType<TdFormProps['statusIcon']>,
-    default: undefined,
   },
   /** 【讨论中】当校验结果只有告警信息时，是否触发 `submit` 提交事件 */
   submitWithWarningMessage: Boolean,
