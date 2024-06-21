@@ -126,6 +126,20 @@ describe('Input.vue', async () => {
       expect(input.element.getAttribute('type')).toBe('number');
     });
 
+    it(': type=password', async () => {
+      const wrapper = mount(<Input label="标题" type="password" />);
+      wrapper.find('.t-icon-browse-off').trigger('click');
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-browse').exists()).toBeTruthy();
+      const attrDom = wrapper.find('input');
+      expect(attrDom.attributes('type')).toBe('text');
+      wrapper.find('.t-icon-browse').trigger('click');
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
+      const attrDom1 = wrapper.find('input');
+      expect(attrDom1.attributes('type')).toBe('password');
+    });
+
     it(': onBlur', async () => {
       const onBlur = vi.fn();
       const wrapper = mount(<Input label="标题" onBlur={onBlur} />);

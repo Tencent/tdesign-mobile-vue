@@ -1,5 +1,9 @@
 import { PropType, ref, computed, defineComponent, toRefs, nextTick, watch } from 'vue';
-import { CloseCircleFilledIcon as TCloseCircleFilledIcon } from 'tdesign-icons-vue-next';
+import {
+  BrowseIcon as TBrowseIcon,
+  BrowseOffIcon as TBrowseOffIcon,
+  CloseCircleFilledIcon as TCloseCircleFilledIcon,
+} from 'tdesign-icons-vue-next';
 import { useFocus } from '@vueuse/core';
 import config from '../config';
 import InputProps from './props';
@@ -41,7 +45,7 @@ export default defineComponent({
     const [innerValue] = useDefault<string, TdInputProps>(props, context.emit, 'value', 'change');
 
     const status = props.status || 'default';
-
+    const renderType = ref(props.type);
     const { focused } = useFocus(inputRef, { initialValue: props.autofocus });
 
     const inputClasses = computed(() => [
@@ -124,6 +128,10 @@ export default defineComponent({
       inputValueChangeHandle(e);
     };
 
+    const handlePwdIconClick = () => {
+      renderType.value = renderType.value === 'password' ? 'text' : 'password';
+    };
+
     watch(autofocus, (autofocus, prevAutofocus) => {
       if (autofocus === true) {
         nextTick(() => {
@@ -131,6 +139,14 @@ export default defineComponent({
         });
       }
     });
+
+    watch(
+      () => props.type,
+      (v) => {
+        renderType.value = v;
+      },
+      { immediate: true },
+    );
 
     return () => {
       const readerPrefix = () => {
@@ -163,7 +179,19 @@ export default defineComponent({
       };
 
       const readerSuffixIcon = () => {
-        const suffixIcon = readerTNodeJSX('suffixIcon');
+        let suffixIcon = readerTNodeJSX('suffixIcon');
+        if (props.type === 'password') {
+          if (renderType.value === 'password') {
+            suffixIcon = (
+              <TBrowseOffIcon class={`${inputClass.value}__wrap--clearable-icon`} onClick={handlePwdIconClick} />
+            );
+          } else if (renderType.value === 'text') {
+            suffixIcon = (
+              <TBrowseIcon class={`${inputClass.value}__wrap--clearable-icon`} onClick={handlePwdIconClick} />
+            );
+          }
+        }
+
         if (!suffixIcon) {
           return null;
         }
@@ -188,7 +216,7 @@ export default defineComponent({
                 value={innerValue.value}
                 name={props.name}
                 class={inputClasses.value}
-                type={props.type}
+                type={renderType.value}
                 disabled={isDisabled.value}
                 autocomplete={props.autocomplete ? 'On' : 'Off'}
                 placeholder={props.placeholder}
