@@ -138,10 +138,8 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 <div
                   class="t-input__wrap--suffix-icon"
                 >
-                  
                   <svg
                     class="t-icon t-icon-browse-off"
-                    data-v-799be585=""
                     fill="none"
                     height="1em"
                     viewBox="0 0 26 24"
@@ -152,7 +150,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                  
                 </div>
               </div>
               <!---->
@@ -1825,10 +1822,8 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       <div
                         class="t-input__wrap--suffix-icon"
                       >
-                        
                         <svg
                           class="t-icon t-icon-browse-off"
-                          data-v-799be585=""
                           fill="none"
                           height="1em"
                           viewBox="0 0 26 24"
@@ -1839,7 +1834,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                             fill="currentColor"
                           />
                         </svg>
-                        
                       </div>
                     </div>
                     <!---->
@@ -3379,10 +3373,8 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 <div
                   class="t-input__wrap--suffix-icon"
                 >
-                  
                   <svg
                     class="t-icon t-icon-browse-off"
-                    data-v-713b33d2=""
                     fill="none"
                     height="1em"
                     viewBox="0 0 26 24"
@@ -3393,7 +3385,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                  
                 </div>
               </div>
               <!---->
