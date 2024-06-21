@@ -15,6 +15,11 @@ export interface TdFormProps<FormData extends Data = Data> {
    */
   colon?: boolean;
   /**
+   * 表单内容对齐方式：左对齐、右对齐
+   * @default left
+   */
+  contentAlign?: 'left' | 'right';
+  /**
    * 表单数据
    * @default {}
    */
@@ -28,10 +33,6 @@ export interface TdFormProps<FormData extends Data = Data> {
    */
   errorMessage?: FormErrorMessage;
   /**
-   * 允许表单统一控制禁用状态的自定义组件名称列表。默认会有组件库的全部输入类组件：TInput、TInputNumber、TCascader、TSelect、TOption、TSwitch、TCheckbox、TCheckboxGroup、TRadio、TRadioGroup、TTreeSelect、TDatePicker、TTimePicker、TUpload、TTransfer、TSlider。对于自定义组件，组件内部需要包含可以控制表单禁用状态的变量 `formDisabled`。示例：`['CustomUpload', 'CustomInput']`
-   */
-  formControlledComponents?: Array<string>;
-  /**
    * 表单字段标签对齐方式：左对齐、右对齐、顶部对齐
    * @default right
    */
@@ -41,15 +42,6 @@ export interface TdFormProps<FormData extends Data = Data> {
    * @default '81px'
    */
   labelWidth?: string | number;
-  /**
-   * 表单内容对齐方式：左对齐、右对齐对齐。默认使用 Form 的对齐方式，优先级高于 Form.contentAlign
-   */
-  contentAlign?: 'left' | 'right';
-  /**
-   * 表单布局，有两种方式：纵向布局 和 行内布局
-   * @default vertical
-   */
-  layout?: 'vertical' | 'inline';
   /**
    * 是否阻止表单提交默认事件（表单提交默认事件会刷新页面），设置为 `true` 可以避免刷新
    * @default true
@@ -78,10 +70,6 @@ export interface TdFormProps<FormData extends Data = Data> {
    */
   showErrorMessage?: boolean;
   /**
-   * 校验状态图标，值为 `true` 显示默认图标，默认图标有 成功、失败、警告 等，不同的状态图标不同。`statusIcon` 值为 `false`，不显示图标。`statusIcon` 值类型为渲染函数，则可以自定义右侧状态图标
-   */
-  statusIcon?: boolean | TNode<TdFormItemProps>;
-  /**
    * 【讨论中】当校验结果只有告警信息时，是否触发 `submit` 提交事件
    * @default false
    */
@@ -101,7 +89,7 @@ export interface TdFormProps<FormData extends Data = Data> {
 }
 
 /** 组件实例方法 */
-export interface FormInstanceFunctions {
+export interface FormInstanceFunctions<FormData extends Data = Data> {
   /**
    * 清空校验结果。可使用 fields 指定清除部分字段的校验结果，fields 值为空则表示清除所有字段校验结果。清除邮箱校验结果示例：`clearValidate(['email'])`
    */
@@ -130,6 +118,16 @@ export interface FormInstanceFunctions {
 
 export interface TdFormItemProps {
   /**
+   * 是否显示右侧箭头
+   * @default false
+   */
+  arrow?: boolean;
+  /**
+   * 表单内容对齐方式：左对齐、右对齐
+   * @default left
+   */
+  contentAlign?: 'left' | 'right';
+  /**
    * label 原生属性
    * @default ''
    */
@@ -152,10 +150,6 @@ export interface TdFormItemProps {
    */
   labelWidth?: string | number;
   /**
-   * 表单内容对齐方式：左对齐、右对齐对齐。默认使用 Form 的对齐方式，优先级高于 Form.contentAlign
-   */
-  contentAlign?: 'left' | 'right';
-  /**
    * 表单字段名称
    */
   name?: string | number;
@@ -171,29 +165,6 @@ export interface TdFormItemProps {
    * 校验不通过时，是否显示错误提示信息，优先级高于 `Form.showErrorMessage`
    */
   showErrorMessage?: boolean;
-  /**
-   * 校验状态，可在需要完全自主控制校验状态时使用
-   * @default ''
-   */
-  status?: 'error' | 'warning' | 'success' | 'validating';
-  /**
-   * 校验状态图标，值为 `true` 显示默认图标，默认图标有 成功、失败、警告 等，不同的状态图标不同。`statusIcon` 值为 `false`，不显示图标。`statusIcon` 值类型为渲染函数，则可以自定义右侧状态图标。优先级高级 Form 的 statusIcon
-   */
-  statusIcon?: boolean | TNode;
-  /**
-   * 是否显示校验成功的边框，默认不显示
-   * @default false
-   */
-  successBorder?: boolean;
-  /**
-   * 自定义提示内容，样式跟随 `status` 变动，可在需要完全自主控制校验规则时使用
-   */
-  tips?: string | TNode;
-  /**
-   * 是否显示右侧箭头
-   * @default false
-   */
-  arrow?: boolean;
 }
 
 export interface FormRule {

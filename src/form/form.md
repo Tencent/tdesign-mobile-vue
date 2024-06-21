@@ -11,9 +11,9 @@ contentAlign | String | left | 表单内容对齐方式：左对齐、右对齐�
 data | Object | {} | 表单数据。TS 类型：`FormData` | N
 disabled | Boolean | undefined | 是否禁用整个表单 | N
 errorMessage | Object | - | 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`。TS 类型：`FormErrorMessage` | N
-formControlledComponents | Array | - | 【开发中】允许表单统一控制禁用状态的自定义组件名称列表。默认会有组件库的全部输入类组件：TInput、TSwitch、TRadio、TRadioGroup、TUpload、TSlider。对于自定义组件，组件内部需要包含可以控制表单禁用状态的变量 `formDisabled`。示例：`['CustomUpload', 'CustomInput']`。TS 类型：`Array<string>` | N
 labelAlign | String | right | 表单字段标签对齐方式：左对齐、右对齐、顶部对齐。可选项：left/right/top | N
 labelWidth | String / Number | '81px' | 可以整体设置label标签宽度，默认为81px | N
+preventSubmitDefault | Boolean | true | 是否阻止表单提交默认事件（表单提交默认事件会刷新页面），设置为 `true` 可以避免刷新 | N
 requiredMark | Boolean | undefined | 是否显示必填符号（*），默认显示 | N
 resetType | String | empty | 重置表单的方式，值为 empty 表示重置表单为空，值为 initial 表示重置表单数据为初始值。可选项：empty/initial | N
 rules | Object | - | 表单字段校验规则。TS 类型：`FormRules<FormData>` `type FormRules<T extends Data> = { [field in keyof T]?: Array<FormRule> }`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/form/type.ts) | N
@@ -48,6 +48,7 @@ validateOnly | `(params?: Pick<FormValidateParams, 'fields' \| 'trigger'>)` | `P
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
+arrow | Boolean | false | 是否显示右侧箭头 | N
 contentAlign | String | left | 表单内容对齐方式：左对齐、右对齐。可选项：left/right | N
 for | String | - | label 原生属性 | N
 help | String / Slot / Function | - | 表单项说明内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
