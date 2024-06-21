@@ -5,6 +5,27 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.3.0 `2024-06-21` 
+### 🚀 Features
+- `TreeSelect`: 新增 `TreeSelect` 组件 @Lyan-u ([#1347](https://github.com/Tencent/tdesign-mobile-vue/pull/1347))
+- `Layout`: 新增 `Layout` 组件 @aaronmhl ([#1393](https://github.com/Tencent/tdesign-mobile-vue/pull/1393))
+- `Loading`:  新增 `attach` 和 `fullscreen` 属性，并支持函数式调用 @dexterBo ([#1444](https://github.com/Tencent/tdesign-mobile-vue/pull/1444))
+- `ImageViewer`: 优化 `align` 配置长图滚动范围设置 @aaronmhl ([#1442](https://github.com/Tencent/tdesign-mobile-vue/pull/1442))
+- `SideBar`: `label` 标签对齐方式从 "居中对齐" 变更为 “左对齐” @anlyyao ([#1347](https://github.com/Tencent/tdesign-mobile-vue/pull/1347))
+- `SideBar`:  修复禁用态仍能点选的问题 @anlyyao ([#1347](https://github.com/Tencent/tdesign-mobile-vue/pull/1347))
+- `Form`: 支持`scrollToFirstError`，自动滚动到第一个校验不通过的字段位置 @liweijie0812 ([#1460](https://github.com/Tencent/tdesign-mobile-vue/pull/1460))
+- `Form`: 新增`preventSubmitDefault` 属性，表示是否阻止表单提交默认事件 @liweijie0812 ([#1465](https://github.com/Tencent/tdesign-mobile-vue/pull/1465))
+- `FormItem`:  新增`arrow` 属性，表示是否显示右侧箭头 @liweijie0812 ([#1465](https://github.com/Tencent/tdesign-mobile-vue/pull/1465))
+- `ActionSheet`: `sfc` 改 `tsx` @jiasy1616 ([#1445](https://github.com/Tencent/tdesign-mobile-vue/pull/1445))
+- `Message`: `sfc` 改 `tsx` @anlyyao ([#1448](https://github.com/Tencent/tdesign-mobile-vue/pull/1448))
+- `ConfigProvider`: `sfc` 改 `tsx` @anlyyao ([#1459](https://github.com/Tencent/tdesign-mobile-vue/pull/1459))
+- `List`: `sfc` 改 `tsx` @Florian-lan ([#1437](https://github.com/Tencent/tdesign-mobile-vue/pull/1437))
+### 🐞 Bug Fixes
+- `Input`: 修复`type='password'`场景下查看密码无效 @liweijie0812 ([#1464](https://github.com/Tencent/tdesign-mobile-vue/pull/1464))
+### 🚧 Others
+-  other: 支持通过 `import` 方式引入组件类型，e.g., `import { ActionSheetProps } from 'tdesign-mobile-vue';` @anlyyao ([#1461](https://github.com/Tencent/tdesign-mobile-vue/pull/1461))
+
+
 ## 🌈 1.2.4 `2024-06-07` 
 ### 🚀 Features
 - `Rate`: `sfc` 改 `tsx` @1379255913 ([#1417](https://github.com/Tencent/tdesign-mobile-vue/pull/1417))
