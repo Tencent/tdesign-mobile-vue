@@ -239,7 +239,7 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
         class="t-button__content"
       >
         
-        带微标列表型
+        带徽标列表型
         
       </span>
       <!---->
@@ -373,7 +373,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
             class="t-button__content"
           >
             
-            带微标列表型
+            带徽标列表型
             
           </span>
           <!---->

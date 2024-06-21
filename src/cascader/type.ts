@@ -63,11 +63,11 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
   /**
    * 关闭时触发
    */
-  onClose?: (trigger: TriggerSource) => void;
+  onClose?: (trigger: CascaderTriggerSource) => void;
   /**
    * 选择后触发
    */
   onPick?: (context: { level: number; value: string | number; index: number }) => void;
 }
 
-export type TriggerSource = 'overlay' | 'close-btn' | 'finish';
+export type CascaderTriggerSource = 'overlay' | 'close-btn' | 'finish';

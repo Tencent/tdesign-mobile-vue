@@ -1162,7 +1162,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <div
               class="t-input__wrap--suffix-icon"
             >
-              
               <svg
                 class="t-icon t-icon-browse-off"
                 fill="none"
@@ -1175,7 +1174,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              
             </div>
           </div>
           <!---->
@@ -2122,7 +2120,6 @@ exports[`Input > Input specialVue demo works fine 1`] = `
         <div
           class="t-input__wrap--suffix-icon"
         >
-          
           <svg
             class="t-icon t-icon-browse-off"
             fill="none"
@@ -2135,7 +2132,6 @@ exports[`Input > Input specialVue demo works fine 1`] = `
               fill="currentColor"
             />
           </svg>
-          
         </div>
       </div>
       <!---->

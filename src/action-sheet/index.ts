@@ -1,5 +1,5 @@
 import { createApp, DefineComponent, ref, h, VNode, App, nextTick } from 'vue';
-import ActionSheetVue from './action-sheet.vue';
+import ActionSheetVue from './action-sheet';
 import { WithInstallType, isBrowser } from '../shared';
 
 import './style';
@@ -68,5 +68,5 @@ type ActionSheetApi = {
   close: () => void;
 };
 
-const _ActionSheet: WithInstallType<typeof ActionSheetVue> & ActionSheetApi = ActionSheet as any;
+export const _ActionSheet: WithInstallType<typeof ActionSheetVue> & ActionSheetApi = ActionSheet as any;
 export default _ActionSheet;

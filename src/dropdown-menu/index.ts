@@ -1,5 +1,5 @@
-import LocalDropdownMenu from './dropdown-menu';
-import LocalDropdownItem from './dropdown-item';
+import _DropdownMenu from './dropdown-menu';
+import _DropdownItem from './dropdown-item';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';
@@ -10,5 +10,6 @@ export * from './type';
 export type DropdownMenuProps = TdDropdownMenuProps;
 export type DropdownItemProps = TdDropdownItemProps;
 
-export const DropdownMenu: WithInstallType<typeof LocalDropdownMenu> = withInstall(LocalDropdownMenu);
-export const DropdownItem: WithInstallType<typeof LocalDropdownItem> = withInstall(LocalDropdownItem);
+export const DropdownMenu: WithInstallType<typeof _DropdownMenu> = withInstall(_DropdownMenu);
+export const DropdownItem: WithInstallType<typeof _DropdownItem> = withInstall(_DropdownItem);
+export default DropdownMenu;

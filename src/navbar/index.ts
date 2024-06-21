@@ -1,7 +1,12 @@
-import Navbar from './navbar';
+import _Navbar from './navbar';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';
 
-const _Navbar: WithInstallType<typeof Navbar> = withInstall(Navbar);
-export default _Navbar;
+import { TdNavbarProps } from './type';
+
+export * from './type';
+export type NavbarProps = TdNavbarProps;
+
+export const Navbar: WithInstallType<typeof _Navbar> = withInstall(_Navbar);
+export default Navbar;

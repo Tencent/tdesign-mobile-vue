@@ -1,7 +1,7 @@
 import { ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import List from '../list.vue';
+import List from '../list';
 import TLoading from '../../loading/loading';
 import TCell from '../../cell/index';
 

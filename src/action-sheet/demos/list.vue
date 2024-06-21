@@ -4,7 +4,7 @@
     <t-button block variant="outline" theme="primary" @click="showOverlayCallAPI">函数调用</t-button>
     <t-button block variant="outline" theme="primary" @click="descVisible = true">带描述列表型</t-button>
     <t-button block variant="outline" theme="primary" @click="iconVisible = true">带图标列表型</t-button>
-    <t-button block variant="outline" theme="primary" @click="badgeVisible = true">带微标列表型</t-button>
+    <t-button block variant="outline" theme="primary" @click="badgeVisible = true">带徽标列表型</t-button>
   </div>
   <t-action-sheet v-model="visible" :items="baseData.items" @selected="handleSelected" @cancel="handleCancel" />
   <t-action-sheet
@@ -27,8 +27,7 @@
 <script lang="ts" setup>
 import { ref, h } from 'vue';
 import { AppIcon } from 'tdesign-icons-vue-next';
-import { ActionSheet } from 'tdesign-mobile-vue';
-import { ActionSheetItem } from '../type';
+import { ActionSheet, ActionSheetItem } from 'tdesign-mobile-vue';
 
 const apIcon = () => h(AppIcon, { size: '24px' });
 const visible = ref(false);

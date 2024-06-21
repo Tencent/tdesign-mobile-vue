@@ -138,10 +138,8 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 <div
                   class="t-input__wrap--suffix-icon"
                 >
-                  
                   <svg
                     class="t-icon t-icon-browse-off"
-                    data-v-799be585=""
                     fill="none"
                     height="1em"
                     viewBox="0 0 26 24"
@@ -152,7 +150,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                  
                 </div>
               </div>
               <!---->
@@ -718,10 +715,9 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
     </div>
     <svg
       class="t-icon t-icon-chevron-right"
-      color="rgba(0, 0, 0, .4)"
       fill="none"
       height="1em"
-      style="font-size: 24px;"
+      style="font-size: 24px; color: rgba(0, 0, 0, 0.4);"
       viewBox="0 0 24 24"
       width="1em"
     >
@@ -971,10 +967,9 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
     </div>
     <svg
       class="t-icon t-icon-chevron-right"
-      color="rgba(0, 0, 0, .4)"
       fill="none"
       height="1em"
-      style="font-size: 24px;"
+      style="font-size: 24px; color: rgba(0, 0, 0, 0.4);"
       viewBox="0 0 24 24"
       width="1em"
     >
@@ -1827,10 +1822,8 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       <div
                         class="t-input__wrap--suffix-icon"
                       >
-                        
                         <svg
                           class="t-icon t-icon-browse-off"
-                          data-v-799be585=""
                           fill="none"
                           height="1em"
                           viewBox="0 0 26 24"
@@ -1841,7 +1834,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                             fill="currentColor"
                           />
                         </svg>
-                        
                       </div>
                     </div>
                     <!---->
@@ -2407,10 +2399,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
           </div>
           <svg
             class="t-icon t-icon-chevron-right"
-            color="rgba(0, 0, 0, .4)"
             fill="none"
             height="1em"
-            style="font-size: 24px;"
+            style="font-size: 24px; color: rgba(0, 0, 0, 0.4);"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -2660,10 +2651,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
           </div>
           <svg
             class="t-icon t-icon-chevron-right"
-            color="rgba(0, 0, 0, .4)"
             fill="none"
             height="1em"
-            style="font-size: 24px;"
+            style="font-size: 24px; color: rgba(0, 0, 0, 0.4);"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -3383,10 +3373,8 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 <div
                   class="t-input__wrap--suffix-icon"
                 >
-                  
                   <svg
                     class="t-icon t-icon-browse-off"
-                    data-v-713b33d2=""
                     fill="none"
                     height="1em"
                     viewBox="0 0 26 24"
@@ -3397,7 +3385,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                  
                 </div>
               </div>
               <!---->
@@ -3959,10 +3946,9 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
     </div>
     <svg
       class="t-icon t-icon-chevron-right"
-      color="rgba(0, 0, 0, .4)"
       fill="none"
       height="1em"
-      style="font-size: 24px;"
+      style="font-size: 24px; color: rgba(0, 0, 0, 0.4);"
       viewBox="0 0 24 24"
       width="1em"
     >
@@ -4210,10 +4196,9 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
     </div>
     <svg
       class="t-icon t-icon-chevron-right"
-      color="rgba(0, 0, 0, .4)"
       fill="none"
       height="1em"
-      style="font-size: 24px;"
+      style="font-size: 24px; color: rgba(0, 0, 0, 0.4);"
       viewBox="0 0 24 24"
       width="1em"
     >

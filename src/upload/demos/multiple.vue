@@ -21,7 +21,13 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue';
-import { UploadChangeContext, UploadFile, UploadRemoveContext, SuccessContext, ProgressContext } from '../type';
+import {
+  UploadChangeContext,
+  UploadFile,
+  UploadRemoveContext,
+  SuccessContext,
+  ProgressContext,
+} from 'tdesign-mobile-vue';
 
 const onFail = ({ file, e }: { file: UploadFile; e: ProgressEvent }): any => {
   console.log('---onFail', file, e);

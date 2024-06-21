@@ -1,5 +1,5 @@
 import { withInstall, WithInstallType } from '../shared';
-import Progress from './progress';
+import _Progress from './progress';
 
 import './style';
 
@@ -8,5 +8,5 @@ import { TdProgressProps } from './type';
 export * from './type';
 export type ProgressProps = TdProgressProps;
 
-const _Progress: WithInstallType<typeof Progress> = withInstall(Progress);
-export default _Progress;
+export const Progress: WithInstallType<typeof _Progress> = withInstall(_Progress);
+export default Progress;

@@ -1,7 +1,7 @@
 {
   "name": "tdesign-mobile-vue",
   "purename": "tdesign",
-  "version": "1.2.4",
+  "version": "1.3.0",
   "description": "tdesign-mobile-vue",
   "author": "TDesign Group",
   "homepage": "https://tdesign.tencent.com/mobile-vue/",
@@ -129,7 +129,7 @@
     "@vue/shared": "3.3.8",
     "@vue/test-utils": "2.4.1",
     "autoprefixer": "^10.2.4",
-    "axios": "^0.21.0",
+    "axios": "^1.7.2",
     "c8": "^7.11.3",
     "commitizen": "^4.2.3",
     "concurrently": "^6.5.1",

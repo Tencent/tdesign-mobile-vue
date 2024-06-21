@@ -6,5 +6,5 @@ import './style';
 
 export type OverlayProps = TdOverlayProps;
 
-const Overlay: WithInstallType<typeof _Overlay> = withInstall(_Overlay);
+export const Overlay: WithInstallType<typeof _Overlay> = withInstall(_Overlay);
 export default Overlay;

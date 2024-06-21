@@ -8,6 +8,11 @@ import { TdLoadingProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 挂载元素，默认挂载到组件本身所在的位置。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body */
+  attach: {
+    type: [String, Function] as PropType<TdLoadingProps['attach']>,
+    default: '',
+  },
   /** 子元素 */
   content: {
     type: [String, Function] as PropType<TdLoadingProps['content']>,
@@ -26,6 +31,8 @@ export default {
     type: Number,
     default: 800,
   },
+  /** 是否显示为全屏加载 */
+  fullscreen: Boolean,
   /** 加载指示符，值为 true 显示默认指示符，值为 false 则不显示，也可以自定义指示符 */
   indicator: {
     type: [Boolean, Function] as PropType<TdLoadingProps['indicator']>,
