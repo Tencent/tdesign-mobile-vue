@@ -7,7 +7,7 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 customValue | Array | - | Typescript：`Array<SwitchValue>` | N
-disabled | Boolean | - | \- | N
+disabled | Boolean | undefined | \- | N
 icon | Array | [] | Typescript：`TNode[]`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 label | Array | [] | Typescript：`string[]` | N
 loading | Boolean | false | \- | N
