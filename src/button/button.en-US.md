@@ -8,7 +8,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 block | Boolean | false | make button to be a block-level element | N
 content | String / Slot / Function | - | button's children elements。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-disabled | Boolean | false | disable the button, make it can not be clicked | N
+disabled | Boolean | undefined | disable the button, make it can not be clicked | N
 ghost | Boolean | false | make background-color to be transparent | N
 icon | Slot / Function | - | use it to set left icon in button。Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 loading | Boolean | false | set button to be loading state | N
@@ -18,7 +18,7 @@ size | String | medium | a button has four size。options: extra-small/small/med
 suffix | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 theme | String | default | button theme。options: default/primary/danger/light | N
 type | String | button | type of button element in html。options: submit/reset/button | N
-variant | String | base | button variant。options: base/outline/text | N
+variant | String | base | button variant。options: base/outline/dashed/text | N
 onClick | Function |  | Typescript：`(e: MouseEvent) => void`<br/>trigger on click | N
 
 ### Button Events
