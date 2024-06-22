@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Checkbox Props
 
 name | type | default | description | required
@@ -19,7 +20,7 @@ label | String / Slot / Function | - | Typescript：`string \| TNode`。[see mor
 maxContentRow | Number | 5 | \- | N
 maxLabelRow | Number | 3 | \- | N
 name | String | - | \- | N
-placement | String | left | options：left/right | N
+placement | String | left | options: left/right | N
 readonly | Boolean | false | \- | N
 value | String / Number / Boolean | - | value of checkbox。Typescript：`string \| number \| boolean` | N
 onChange | Function |  | Typescript：`(checked: boolean, context: { e: Event }) => void`<br/> | N
@@ -30,11 +31,12 @@ name | params | description
 -- | -- | --
 change | `(checked: boolean, context: { e: Event })` | \-
 
+
 ### CheckboxGroup Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-disabled | Boolean | - | \- | N
+disabled | Boolean | undefined | \- | N
 max | Number | undefined | \- | N
 name | String | - | \- | N
 options | Array | - | Typescript：`Array<CheckboxOption>` `type CheckboxOption = string \| number \| CheckboxOptionObj` `interface CheckboxOptionObj extends TdCheckboxProps { text?: string; }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/checkbox/type.ts) | N
@@ -48,8 +50,8 @@ name | params | description
 -- | -- | --
 change | `(value: T, context: CheckboxGroupChangeContext)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/checkbox/type.ts)。<br/>`interface CheckboxGroupChangeContext { e: Event; current: string \| number; option: CheckboxOption \| TdCheckboxProps; type: 'check' \| 'uncheck' }`<br/>
 
-
 ### CSS Variables
+
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
@@ -69,4 +71,4 @@ Name | Default Value | Description
 --td-checkbox-title-color | @font-gray-1 | - 
 --td-checkbox-title-disabled-color | @font-gray-4 | - 
 --td-checkbox-title-line-height | 24px | - 
---td-checkbox-vertical-padding | 16px | - 
+--td-checkbox-vertical-padding | 16px | -

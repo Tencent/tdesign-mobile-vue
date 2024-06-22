@@ -45,7 +45,7 @@ export interface TdCheckboxProps {
    */
   default?: string | TNode;
   /**
-   * 是否禁用组件。如果父组件存在 CheckboxGroup，默认值由 CheckboxGroup.disabled 控制。Checkbox.disabled 优先级高于 CheckboxGroup.disabled
+   * 是否禁用组件。如果父组件存在 CheckboxGroup，默认值由 CheckboxGroup.disabled 控制。优先级：Checkbox.disabled > CheckboxGroup.disabled > Form.disabled
    */
   disabled?: boolean;
   /**
@@ -83,7 +83,7 @@ export interface TdCheckboxProps {
    */
   placement?: 'left' | 'right';
   /**
-   * 只读状态
+   * 【暂不支持】只读状态
    * @default false
    */
   readonly?: boolean;
@@ -99,7 +99,7 @@ export interface TdCheckboxProps {
 
 export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
   /**
-   * 是否禁用组件，默认为 false。CheckboxGroup.disabled 优先级低于 Checkbox.disabled
+   * 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled
    */
   disabled?: boolean;
   /**

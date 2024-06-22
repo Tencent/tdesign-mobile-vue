@@ -13,6 +13,7 @@ import CheckboxProps from './props';
 import { TNode, useDefault } from '../shared';
 import { TdCheckboxProps } from '../checkbox/type';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
+import { useFormDisabled } from '@/form/hooks';
 
 const { prefix } = config;
 const name = `${prefix}-checkbox`;
@@ -38,6 +39,7 @@ export default defineComponent({
       'change',
     );
     const checkboxGroup: any = inject('checkboxGroup', undefined);
+    const disabled = useFormDisabled(checkboxGroup?.disabled);
     const indeterminate = computed<boolean>(() => {
       if (props.checkAll && checkboxGroup != null) return checkboxGroup.checkAllStatus.value === 'indeterminate';
       return props.indeterminate;
@@ -77,8 +79,8 @@ export default defineComponent({
     const isDisabled = computed(() => {
       if (checkboxGroup?.max.value)
         return checkboxGroup.max.value <= checkboxGroup.innerValue.value.length && !isChecked.value;
-      if (props.disabled != null) return props.disabled;
-      return !!checkboxGroup?.disabled.value;
+
+      return disabled.value;
     });
 
     const handleChange = (e: Event, source?: string) => {
