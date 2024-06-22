@@ -160,11 +160,7 @@ export default defineComponent({
         );
       };
       const readerClearable = () => {
-        if (!props.clearable || !focused.value) return null;
-
-        if (!isDisabled.value || !props.readonly) return null;
-
-        if (innerValue.value && innerValue.value.length > 0) {
+        if (props.clearable && innerValue.value && innerValue.value.length > 0) {
           return (
             <div class={`${inputClass.value}__wrap--clearable-icon`} onClick={handleClear}>
               <TCloseCircleFilledIcon />
