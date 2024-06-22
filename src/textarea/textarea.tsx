@@ -1,7 +1,7 @@
 import { computed, ref, onMounted, defineComponent, toRefs, nextTick, watch } from 'vue';
 import { getCharacterLength, useVModel } from '../shared';
 import config from '../config';
-import TextareaProps from './props';
+import props from './props';
 import { TextareaValue } from './type';
 import calcTextareaHeight from '../_common/js/utils/calcTextareaHeight';
 import { useFormDisabled } from '../form/hooks';
@@ -9,11 +9,10 @@ import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
-const name = `${prefix}-textarea`;
 
 export default defineComponent({
-  name,
-  props: TextareaProps,
+  name: `${prefix}-textarea`,
+  props,
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();
     const disabled = useFormDisabled();
