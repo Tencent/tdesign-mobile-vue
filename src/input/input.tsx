@@ -162,7 +162,7 @@ export default defineComponent({
       const readerClearable = () => {
         if (!props.clearable || !focused.value) return null;
 
-        if (!props.disabled || !props.readonly) return null;
+        if (!isDisabled.value || !props.readonly) return null;
 
         if (innerValue.value && innerValue.value.length > 0) {
           return (

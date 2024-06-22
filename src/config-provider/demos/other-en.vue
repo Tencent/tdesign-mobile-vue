@@ -2,7 +2,7 @@
   <t-config-provider :global-config="globalConfig">
     <div class="rate-demo-cell rate-demo-cell--space">
       <div class="rate-demo-cell__label">Rating</div>
-      <t-rate v-model="rateValue" show-text variant="filled" />
+      <t-rate v-model="rateValue" show-text />
     </div>
 
     <t-calendar

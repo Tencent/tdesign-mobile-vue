@@ -15,7 +15,7 @@ export default defineComponent({
   props,
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();
-    const disabled = useFormDisabled();
+    const isDisabled = useFormDisabled();
 
     const textareaClass = usePrefixClass('textarea');
 
@@ -29,7 +29,7 @@ export default defineComponent({
     const textareaInnerClasses = computed(() => [
       `${textareaClass.value}__wrapper-inner`,
       {
-        [`${textareaClass.value}--disabled`]: disabled.value,
+        [`${textareaClass.value}--disabled`]: isDisabled.value,
         [`${textareaClass.value}--readonly`]: props.readonly,
       },
     ]);
@@ -153,7 +153,7 @@ export default defineComponent({
               style={textareaStyle.value}
               name={props.name}
               maxlength={props.maxlength}
-              disabled={props.disabled}
+              disabled={isDisabled.value}
               placeholder={props.placeholder}
               readonly={props.readonly}
               onFocus={handleFocus}

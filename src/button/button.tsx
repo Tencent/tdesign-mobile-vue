@@ -65,8 +65,8 @@ export default defineComponent({
           class={buttonClasses.value}
           role="button"
           type={props.type}
-          disabled={props.disabled}
-          aria-disabled={props.disabled}
+          disabled={isDisabled.value}
+          aria-disabled={isDisabled.value}
           onClick={handleClick}
           v-hover={{ className: `${buttonClass.value}--hover` }}
         >
