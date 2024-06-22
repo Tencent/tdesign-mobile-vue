@@ -22,11 +22,11 @@ export function useFormDisabled(extend?: Ref<boolean>) {
     }
     // 组件组
     if (isBoolean(extend?.value)) {
-      return propsDisabled.value;
+      return extend.value;
     }
     // 表单
     if (isBoolean(disabled?.value)) {
-      return disabled?.value;
+      return disabled.value;
     }
     return false;
   });
