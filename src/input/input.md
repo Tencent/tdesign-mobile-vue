@@ -12,8 +12,8 @@ autocomplete | String | undefined | 是否开启自动填充功能，HTML5 原�
 autofocus | Boolean | false | 自动聚焦 | N
 borderless | Boolean | false | 是否开启无边框模式 | N
 clearable | Boolean | false | 是否可清空 | N
-disabled | Boolean | - | 是否禁用输入框 | N
-format | Function | - | 【暂不支持】指定输入框展示值的格式。TS 类型：`InputFormatType` `type InputFormatType = (value: InputValue) => string`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/input/type.ts) | N
+disabled | Boolean | undefined | 是否禁用输入框 | N
+format | Function | - | 【开发中】指定输入框展示值的格式。TS 类型：`InputFormatType` `type InputFormatType = (value: InputValue) => string`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/input/type.ts) | N
 label | String / Slot / Function | - | 左侧文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 layout | String | horizontal | 标题输入框布局方式。可选项：vertical/horizontal | N
 maxcharacter | Number | - | 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用 | N

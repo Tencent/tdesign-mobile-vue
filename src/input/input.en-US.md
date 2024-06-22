@@ -13,7 +13,7 @@ autocomplete | String | undefined | attribute of input element, [see here](https
 autofocus | Boolean | false | autofocus on first rendered | N
 borderless | Boolean | false | input without border | N
 clearable | Boolean | false | show clear icon, clicked to clear input value | N
-disabled | Boolean | - | make input to be disabled | N
+disabled | Boolean | undefined | make input to be disabled | N
 format | Function | - | input value formatter, `type=number` does not work. if you need to format number, `InputNumber` Component might be better。Typescript：`InputFormatType` `type InputFormatType = (value: InputValue) => string`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/input/type.ts) | N
 label | String / Slot / Function | - | text on the left of input。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 layout | String | horizontal | options: vertical/horizontal | N
