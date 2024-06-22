@@ -12,8 +12,11 @@ export default {
   allowUncheck: Boolean,
   /** 是否开启无边框模式；优先级低于 Radio */
   borderless: Boolean,
-  /** 是否禁用全部子单选框。默认为 false。RadioGroup.disabled 优先级低于 Radio.disabled */
-  disabled: Boolean,
+  /** 是否禁用全部子单选框。优先级：Radio.disabled > RadioGroup.disabled > Form.disabled */
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标 */
   icon: {
     type: [String, Array] as PropType<TdRadioGroupProps['icon']>,
