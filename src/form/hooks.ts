@@ -15,6 +15,19 @@ export function useFormDisabled(extend?: Ref<boolean>) {
   const ctx = getCurrentInstance();
   const propsDisabled = computed(() => ctx?.props.disabled as boolean);
   const { disabled } = inject<FormDisabledProvider>('formDisabled', Object.create(null));
-
-  return computed(() => propsDisabled.value || extend?.value || disabled?.value || false);
+  return computed(() => {
+    // 组件
+    if (isBoolean(propsDisabled.value)) {
+      return propsDisabled.value;
+    }
+    // 组件组
+    if (isBoolean(extend?.value)) {
+      return extend.value;
+    }
+    // 表单
+    if (isBoolean(disabled?.value)) {
+      return disabled.value;
+    }
+    return false;
+  });
 }
