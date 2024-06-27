@@ -13,7 +13,7 @@ import CheckboxProps from './props';
 import { TNode, useDefault } from '../shared';
 import { TdCheckboxProps } from '../checkbox/type';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
-import { useFormDisabled } from '@/form/hooks';
+import { useFormDisabled } from '../form/hooks';
 
 const { prefix } = config;
 const name = `${prefix}-checkbox`;
