@@ -2,7 +2,7 @@ import { computed, defineComponent } from 'vue';
 import { ChevronRightIcon } from 'tdesign-icons-vue-next';
 import { Hover } from '../shared';
 import config from '../config';
-import CellProps from './props';
+import props from './props';
 import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
@@ -11,10 +11,9 @@ const { prefix } = config;
 const name = `${prefix}-cell`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-cell`,
   directives: { Hover },
-  props: CellProps,
-  emits: ['click'],
+  props,
   setup(props) {
     const readerTNodeJSX = useTNodeJSX();
     const readerTNodeContent = useContent();
@@ -31,9 +30,9 @@ export default defineComponent({
 
     const hoverDisabled = computed(() => !props.hover || disabled.value);
 
-    const handleClick = (e: Event) => {
+    const handleClick = (e: MouseEvent) => {
       if (!disabled.value) {
-        props.onClick?.(e);
+        props.onClick?.({ e });
       }
     };
 

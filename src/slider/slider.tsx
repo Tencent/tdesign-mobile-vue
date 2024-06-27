@@ -1,8 +1,7 @@
-import { ref, toRefs, computed, reactive, defineComponent, getCurrentInstance, watch, onMounted } from 'vue';
+import { ref, toRefs, computed, reactive, defineComponent, watch, onMounted } from 'vue';
 import config from '../config';
 import props from './props';
 import { useVModel } from '../shared/useVModel';
-import { renderTNode } from '../shared';
 import { trimSingleValue, trimValue } from './tool';
 import type { SliderValue } from './type';
 import { useFormDisabled } from '../form/hooks';
@@ -36,7 +35,7 @@ export default defineComponent({
   props,
   setup(props) {
     const sliderClass = usePrefixClass('slider');
-    const disabled = useFormDisabled();
+    const isDisabled = useFormDisabled();
     const sliderLine = ref<HTMLElement>();
     const leftDot = ref<HTMLElement>();
     const rightDot = ref<HTMLElement>();
@@ -76,7 +75,7 @@ export default defineComponent({
       `${sliderClass.value}`,
       {
         [`${sliderClass.value}--top`]: props.label || state.scaleTextArray.length,
-        [`${sliderClass.value}--disabled`]: disabled.value,
+        [`${sliderClass.value}--disabled`]: isDisabled.value,
         [`${sliderClass.value}--range`]: props.range,
       },
     ]);
@@ -85,7 +84,7 @@ export default defineComponent({
       `${sliderClass.value}__bar`,
       `${sliderClass.value}__bar--${props.theme}`,
       {
-        [`${sliderClass.value}__bar--disabled`]: disabled.value,
+        [`${sliderClass.value}__bar--disabled`]: isDisabled.value,
         [`${sliderClass.value}__bar--marks`]: state.isScale && props.theme === 'capsule',
       },
     ]);
@@ -139,7 +138,7 @@ export default defineComponent({
     const onTouchEnd = () => {};
 
     const onSingleDotMove = (e: TouchEvent) => {
-      if (disabled.value) return;
+      if (isDisabled.value) return;
       const [{ pageX }] = e.changedTouches;
       const value = convertPosToValue(pageX - state.initialLeft);
       changeValue(calcByStep(value));
@@ -194,7 +193,7 @@ export default defineComponent({
     };
 
     const onTouchMoveLeft = (e: TouchEvent) => {
-      if (disabled.value) return;
+      if (isDisabled.value) return;
       const [{ pageX }] = e.changedTouches;
       const currentLeft = pageX - state.initialLeft;
       const newData = [...(innerValue.value as number[])];
@@ -204,7 +203,7 @@ export default defineComponent({
     };
 
     const onTouchMoveRight = (e: TouchEvent) => {
-      if (disabled.value) return;
+      if (isDisabled.value) return;
       const [{ pageX }] = e.changedTouches;
       const currentRight = -(pageX - state.initialRight);
       const newData = [...(innerValue.value as number[])];
@@ -215,7 +214,7 @@ export default defineComponent({
 
     const handleSingleClick = (e: MouseEvent) => {
       e.stopPropagation();
-      if (disabled.value) return;
+      if (isDisabled.value) return;
       if (!sliderLine.value) return;
       const currentLeft = e.clientX - state.initialLeft;
       const value = convertPosToValue(currentLeft);
@@ -224,7 +223,7 @@ export default defineComponent({
 
     const handleRangeClick = (e: MouseEvent) => {
       e.stopPropagation();
-      if (disabled.value) return;
+      if (isDisabled.value) return;
       const halfBlock = props.theme === 'capsule' ? Number(state.blockSize) / 2 : 0;
       const currentLeft = e.clientX - state.initialLeft;
       if (currentLeft < 0 || currentLeft > state.maxRange + Number(state.blockSize)) return;
@@ -307,7 +306,7 @@ export default defineComponent({
                 [`${sliderClass.value}__scale-item--active`]: !props.range && Number(innerValue.value) >= item.val,
                 [`${sliderClass.value}__scale-item--active`]:
                   props.range && state.dotTopValue[1] >= item.val && item.val >= state.dotTopValue[0],
-                [`${sliderClass.value}__scale-item--disabled`]: disabled.value,
+                [`${sliderClass.value}__scale-item--disabled`]: isDisabled.value,
                 [`${sliderClass.value}__scale-item--hidden`]:
                   ((index === 0 || index === state.scaleArray.length - 1) && props.theme === 'capsule') ||
                   innerValue.value === item.val,
@@ -330,7 +329,7 @@ export default defineComponent({
             `${sliderClass.value}__line`,
             `${sliderClass.value}__line--${props.theme}`,
             `${sliderClass.value}__line--single`,
-            { [`${sliderClass.value}__line--disabled`]: disabled.value },
+            { [`${sliderClass.value}__line--disabled`]: isDisabled.value },
           ]}
           style={`width: ${lineBarWidth.value}px`}
         >
@@ -362,7 +361,7 @@ export default defineComponent({
           class={[
             `${sliderClass.value}__line`,
             `${sliderClass.value}__line--${props.theme}`,
-            { [`${sliderClass.value}__line--disabled`]: disabled.value },
+            { [`${sliderClass.value}__line--disabled`]: isDisabled.value },
           ]}
           style={`left: ${state.lineLeft}px; right: ${state.lineRight}px`}
         >

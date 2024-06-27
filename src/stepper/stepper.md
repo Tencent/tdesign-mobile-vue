@@ -7,7 +7,7 @@
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 disableInput | Boolean | false | 禁用输入框 | N
-disabled | Boolean | false | 禁用全部操作 | N
+disabled | Boolean | undefined | 禁用全部操作 | N
 inputWidth | Number | - | 输入框宽度 | N
 integer | Boolean | true | 是否整型 | N
 max | Number | 100 | 最大值 | N

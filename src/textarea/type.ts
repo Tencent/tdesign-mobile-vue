@@ -29,7 +29,6 @@ export interface TdTextareaProps {
   bordered?: boolean;
   /**
    * 是否禁用文本框
-   * @default false
    */
   disabled?: boolean;
   /**

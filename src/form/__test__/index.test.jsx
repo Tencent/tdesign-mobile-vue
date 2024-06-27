@@ -653,7 +653,7 @@ describe('form', () => {
 
       await wrapper.setProps({ disabled: true });
       extendedDisabled.value = false;
-      expect(actualDisabled.value).toBeTruthy();
+      expect(actualDisabled.value).toBeFalsy();
     });
   });
 });

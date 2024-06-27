@@ -1,7 +1,7 @@
 import { computed, ref, onMounted, defineComponent, toRefs, nextTick, watch } from 'vue';
 import { getCharacterLength, useVModel } from '../shared';
 import config from '../config';
-import TextareaProps from './props';
+import props from './props';
 import { TextareaValue } from './type';
 import calcTextareaHeight from '../_common/js/utils/calcTextareaHeight';
 import { useFormDisabled } from '../form/hooks';
@@ -9,14 +9,13 @@ import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
-const name = `${prefix}-textarea`;
 
 export default defineComponent({
-  name,
-  props: TextareaProps,
+  name: `${prefix}-textarea`,
+  props,
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();
-    const disabled = useFormDisabled();
+    const isDisabled = useFormDisabled();
 
     const textareaClass = usePrefixClass('textarea');
 
@@ -30,7 +29,7 @@ export default defineComponent({
     const textareaInnerClasses = computed(() => [
       `${textareaClass.value}__wrapper-inner`,
       {
-        [`${textareaClass.value}--disabled`]: disabled.value,
+        [`${textareaClass.value}--disabled`]: isDisabled.value,
         [`${textareaClass.value}--readonly`]: props.readonly,
       },
     ]);
@@ -154,7 +153,7 @@ export default defineComponent({
               style={textareaStyle.value}
               name={props.name}
               maxlength={props.maxlength}
-              disabled={props.disabled}
+              disabled={isDisabled.value}
               placeholder={props.placeholder}
               readonly={props.readonly}
               onFocus={handleFocus}

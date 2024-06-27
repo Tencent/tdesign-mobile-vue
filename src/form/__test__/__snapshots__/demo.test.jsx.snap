@@ -1083,6 +1083,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           <div
             class="t-rate"
             data-v-799be585=""
+            variant="filled"
           >
             <div
               class="t-rate__wrapper"
@@ -2767,6 +2768,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 <div
                   class="t-rate"
                   data-v-799be585=""
+                  variant="filled"
                 >
                   <div
                     class="t-rate__wrapper"
@@ -4308,6 +4310,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
           <div
             class="t-rate"
             data-v-713b33d2=""
+            variant="filled"
           >
             <div
               class="t-rate__wrapper"
