@@ -1,7 +1,7 @@
 import { computed, defineComponent, ref, h } from 'vue';
 import { StarFilledIcon } from 'tdesign-icons-vue-next';
 import { onClickOutside } from '@vueuse/core';
-import rateProps from './props';
+import props from './props';
 import config from '../config';
 import { TdRateProps } from './type';
 import { useDefault } from '../shared';
@@ -10,17 +10,16 @@ import { useConfig } from '../config-provider/useConfig';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-rate`;
 
 export default defineComponent({
-  name,
-  props: rateProps,
+  name: `${prefix}-rate`,
+  props,
   setup(props, context) {
     const rateClass = usePrefixClass('rate');
     const { t, globalConfig } = useConfig('rate');
-    const disabled = useFormDisabled();
+    const isDisabled = useFormDisabled();
 
-    const rateWrapper = ref<HTMLElement | null>(null);
+    const rateWrapper = ref<HTMLElement>();
     const [actualVal] = useDefault<number, TdRateProps>(props, context.emit, 'value', 'change');
     const rateText = computed(() => {
       if (Array.isArray(props.texts) && props.texts.length > 0) {
@@ -82,7 +81,7 @@ export default defineComponent({
       return unSelect || startComponent;
     };
 
-    const rootClasses = computed(() => [`${rateClass.value}`, { [`${rateClass.value}--disabled`]: disabled.value }]);
+    const rootClasses = computed(() => [`${rateClass.value}`, { [`${rateClass.value}--disabled`]: isDisabled.value }]);
 
     const classes = (n: number) => {
       const classPrefix = `${rateClass.value}__icon`;
@@ -127,7 +126,7 @@ export default defineComponent({
     };
 
     const onClick = (event: MouseEvent) => {
-      if (disabled.value) return;
+      if (isDisabled.value) return;
       // if (Date.now() - touchStartTime.value > 200) return;
       getRect(event, 'tap');
     };
@@ -138,19 +137,19 @@ export default defineComponent({
     };
 
     const onTouchstart = (e: TouchEvent) => {
-      if (disabled.value) return;
+      if (isDisabled.value) return;
       touchStartTime.value = Date.now();
       touchEnd.value = false;
     };
 
     const onTouchmove = (e: TouchEvent) => {
-      if (disabled.value) return;
+      if (isDisabled.value) return;
       if (Date.now() - touchStartTime.value <= 200) return;
       onTouch(e, 'move');
     };
 
     const onTouchEnd = (e: TouchEvent) => {
-      if (disabled.value) return;
+      if (isDisabled.value) return;
       touchEnd.value = true;
       hideTips();
     };

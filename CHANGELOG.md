@@ -5,6 +5,11 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.3.1 `2024-06-28` 
+### 🐞 Bug Fixes
+- `Form`: 修复表单组件禁用优先级 (`组件 > 组件组 >表单`) @liweijie0812 ([#1472](https://github.com/Tencent/tdesign-mobile-vue/pull/1472))
+- `Checkbox`: 修复导出组件名称错误 @anlyyao ([#1478](https://github.com/Tencent/tdesign-mobile-vue/pull/1478))
+
 ## 🌈 1.3.0 `2024-06-21` 
 ### 🚀 Features
 - `TreeSelect`: 新增 `TreeSelect` 组件 @Lyan-u ([#1347](https://github.com/Tencent/tdesign-mobile-vue/pull/1347))

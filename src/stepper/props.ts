@@ -11,7 +11,10 @@ export default {
   /** 禁用输入框 */
   disableInput: Boolean,
   /** 禁用全部操作 */
-  disabled: Boolean,
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 输入框宽度 */
   inputWidth: {
     type: Number,

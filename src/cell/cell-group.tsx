@@ -1,16 +1,14 @@
 import { computed, defineComponent } from 'vue';
-import CellGroupProps from './cell-group-props';
+import props from './cell-group-props';
 import config from '../config';
 import { usePrefixClass } from '../hooks/useClass';
-import { useContent, useTNodeJSX } from '../hooks/tnode';
+import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
-const name = `${prefix}-cell-group`;
 
 export default defineComponent({
-  name,
-  props: CellGroupProps,
-  emits: ['click'],
+  name: `${prefix}-cell-group`,
+  props,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();
     const cellGroupClass = usePrefixClass('cell-group');

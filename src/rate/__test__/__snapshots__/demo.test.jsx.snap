@@ -338,6 +338,7 @@ exports[`Rate > Rate baseVue demo works fine 1`] = `
   <div
     class="t-rate"
     data-v-0254d0d6=""
+    variant="filled"
   >
     <div
       class="t-rate__wrapper"
@@ -459,6 +460,7 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
     <div
       class="t-rate"
       data-v-2d3c8e2e=""
+      variant="filled"
     >
       <div
         class="t-rate__wrapper"
@@ -842,6 +844,7 @@ exports[`Rate > Rate countVue demo works fine 1`] = `
   <div
     class="t-rate"
     data-v-07bbf9da=""
+    variant="filled"
   >
     <div
       class="t-rate__wrapper"
@@ -1074,6 +1077,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
         <div
           class="t-rate"
           data-v-0254d0d6=""
+          variant="filled"
         >
           <div
             class="t-rate__wrapper"
@@ -1342,6 +1346,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
         <div
           class="t-rate"
           data-v-07bbf9da=""
+          variant="filled"
         >
           <div
             class="t-rate__wrapper"
@@ -1441,6 +1446,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
         <div
           class="t-rate"
           data-v-09fb5248=""
+          variant="filled"
         >
           <div
             class="t-rate__wrapper"
@@ -1559,6 +1565,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
         <div
           class="t-rate"
           data-v-09fb5248=""
+          variant="filled"
         >
           <div
             class="t-rate__wrapper"
@@ -1677,6 +1684,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
         <div
           class="t-rate"
           data-v-09fb5248=""
+          variant="filled"
         >
           <div
             class="t-rate__wrapper"
@@ -2158,6 +2166,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
         <div
           class="t-rate"
           data-v-c926dbf4=""
+          variant="filled"
         >
           <div
             class="t-rate__wrapper"
@@ -2272,6 +2281,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
         <div
           class="t-rate"
           data-v-c926dbf4=""
+          variant="filled"
         >
           <div
             class="t-rate__wrapper"
@@ -2408,6 +2418,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
         <div
           class="t-rate"
           data-v-2d3c8e2e=""
+          variant="filled"
         >
           <div
             class="t-rate__wrapper"
@@ -2805,6 +2816,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
         <div
           class="t-rate"
           data-v-be893878=""
+          variant="filled"
         >
           <div
             class="t-rate__wrapper"
@@ -2936,6 +2948,7 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
     <div
       class="t-rate"
       data-v-09fb5248=""
+      variant="filled"
     >
       <div
         class="t-rate__wrapper"
@@ -3054,6 +3067,7 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
     <div
       class="t-rate"
       data-v-09fb5248=""
+      variant="filled"
     >
       <div
         class="t-rate__wrapper"
@@ -3172,6 +3186,7 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
     <div
       class="t-rate"
       data-v-09fb5248=""
+      variant="filled"
     >
       <div
         class="t-rate__wrapper"
@@ -3299,6 +3314,7 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
     <div
       class="t-rate"
       data-v-c926dbf4=""
+      variant="filled"
     >
       <div
         class="t-rate__wrapper"
@@ -3413,6 +3429,7 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
     <div
       class="t-rate"
       data-v-c926dbf4=""
+      variant="filled"
     >
       <div
         class="t-rate__wrapper"
@@ -3526,6 +3543,7 @@ exports[`Rate > Rate specialVue demo works fine 1`] = `
   <div
     class="t-rate"
     data-v-be893878=""
+    variant="filled"
   >
     <div
       class="t-rate__wrapper"
