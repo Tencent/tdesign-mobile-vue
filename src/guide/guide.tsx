@@ -1,91 +1,15 @@
-<template>
-  <teleport v-if="actived" to="body">
-    <div ref="overlayLayerRef" :class="`${name}__overlay`" :style="{ zIndex: zIndex - 2 }"></div>
-    <div ref="highlightLayerRef" :class="[...highlightClass, ...maskClass]" :style="{ zIndex: zIndex - 1 }">
-      <t-node v-if="showCustomHighlightContent" :content="currentCustomHighlightContent"></t-node>
-    </div>
-    <div ref="popoverWrapperRef" :class="wrapperClass" :style="{ zIndex }">
-      <component :is="stepContainer" v-bind="stepProps">
-        <template v-if="isPopover" #triggerElement>
-          <div ref="referenceLayerRef" :class="[...popoverClass]"></div>
-        </template>
-        <template #[contentSlot]>
-          <t-node v-if="isPopover && contentNode" :content="contentNode"></t-node>
-          <div v-else :class="contetnClass">
-            <div :class="`${name}__tooltip`">
-              <div :class="`${name}__title`">
-                <t-node :content="titleNode"></t-node>
-              </div>
-              <div :class="`${name}__desc`">
-                <t-node :content="bodyNode"></t-node>
-              </div>
-            </div>
-            <div :class="footerClass">
-              <t-button
-                v-if="!hideSkip && !isLast"
-                key="skip"
-                :class="`${name}__skip`"
-                theme="light"
-                :size="buttonSize"
-                variant="base"
-                :content="globalConfig.skip"
-                v-bind="getCurrentCrossProps('skipButtonProps')"
-                @click="handleSkip"
-              >
-              </t-button>
-              <t-button
-                v-if="!isLast"
-                key="next"
-                :class="`${name}__next`"
-                theme="primary"
-                :size="buttonSize"
-                variant="base"
-                v-bind="getCurrentCrossProps('nextButtonProps')"
-                @click="handleNext"
-              >
-                <template #content>
-                  <t-node
-                    :content="renderButtonContent(getCurrentCrossProps('nextButtonProps'), globalConfig.next)"
-                  ></t-node>
-                  <t-node v-if="!hideCounter" :content="counterNode"></t-node>
-                </template>
-              </t-button>
-              <t-button
-                v-if="isLast"
-                key="back"
-                :class="`${name}__back`"
-                theme="light"
-                :size="buttonSize"
-                variant="base"
-                :content="globalConfig.back"
-                v-bind="getCurrentCrossProps('backButtonProps')"
-                @click="handleBack"
-              ></t-button>
-              <t-button
-                v-if="isLast"
-                key="finish"
-                :class="`${name}__finish`"
-                theme="primary"
-                :size="buttonSize"
-                variant="base"
-                v-bind="finishButtonProps ?? {}"
-                @click="handleFinish"
-              >
-                <template #content>
-                  <t-node :content="renderButtonContent(finishButtonProps, globalConfig.finish)"></t-node>
-                  <t-node v-if="!hideCounter" :content="counterNode"></t-node>
-                </template>
-              </t-button>
-            </div>
-          </div>
-        </template>
-      </component>
-    </div>
-  </teleport>
-</template>
-
-<script lang="ts">
-import { computed, defineComponent, ref, toRefs, h, getCurrentInstance, nextTick, onMounted, watch } from 'vue';
+import {
+  computed,
+  defineComponent,
+  ref,
+  toRefs,
+  h,
+  getCurrentInstance,
+  nextTick,
+  onMounted,
+  watch,
+  Teleport,
+} from 'vue';
 import isFunction from 'lodash/isFunction';
 
 import TPopover, { PopoverProps } from '../popover';
@@ -459,48 +383,143 @@ export default defineComponent({
       initGuide();
     });
 
-    return {
-      actived,
-      name,
-      zIndex,
-      stepProps,
-      currentCustomHighlightContent,
-      showCustomHighlightContent,
-      highlightClass,
-      maskClass,
-      popoverClass,
-      tooltipClass,
-      contetnClass,
-      footerClass,
-      wrapperClass,
-      overlayLayerRef,
-      highlightLayerRef,
-      referenceLayerRef,
-      popoverWrapperRef,
-      dialogTooltipRef,
-      popoverVisible,
-      currentStepInfo,
-      isPopover,
-      stepContainer,
-      contentSlot,
-      contentNode,
-      titleNode,
-      bodyNode,
-      counterNode,
-      hideSkip,
-      hideCounter,
-      isLast,
-      isFirst,
-      finishButtonProps,
-      buttonSize,
-      globalConfig,
-      getCurrentCrossProps,
-      handleSkip,
-      handleNext,
-      handleFinish,
-      handleBack,
-      renderButtonContent,
+    return () => {
+      const renderStepContent = () => {
+        return (
+          <div class={contetnClass.value}>
+            <div class={`${name}__tooltip`}>
+              <div class={`${name}__title`}>
+                <t-node content={titleNode.value}></t-node>
+              </div>
+              <div class={`${name}__desc`}>
+                <t-node content={bodyNode.value}></t-node>
+              </div>
+            </div>
+            <div class={footerClass.value}>
+              {!hideSkip.value && !isLast.value && (
+                <TButton
+                  key="skip"
+                  class={`${name}__skip`}
+                  theme="light"
+                  size={buttonSize.value}
+                  variant="base"
+                  content={globalConfig.value.skip}
+                  {...getCurrentCrossProps('skipButtonProps')}
+                  onClick={handleSkip}
+                />
+              )}
+              {!isLast.value && (
+                <TButton
+                  key="next"
+                  class={`${name}__next`}
+                  theme="primary"
+                  size={buttonSize.value}
+                  variant="base"
+                  {...getCurrentCrossProps('nextButtonProps')}
+                  onClick={handleNext}
+                >
+                  {{
+                    content: () => (
+                      <>
+                        <t-node
+                          content={renderButtonContent(
+                            getCurrentCrossProps('nextButtonProps'),
+                            globalConfig.value.next,
+                          )}
+                        ></t-node>
+                        {!hideCounter.value && <t-node content={counterNode.value}></t-node>}
+                      </>
+                    ),
+                  }}
+                </TButton>
+              )}
+              {isLast.value && (
+                <TButton
+                  key="back"
+                  class={`${name}__back`}
+                  theme="light"
+                  size={buttonSize.value}
+                  variant="base"
+                  content={globalConfig.value.back}
+                  {...getCurrentCrossProps('backButtonProps')}
+                  onClick={handleBack}
+                ></TButton>
+              )}
+              {isLast.value && (
+                <TButton
+                  key="finish"
+                  class={`${name}__finish`}
+                  theme="primary"
+                  size={buttonSize.value}
+                  variant="base"
+                  {...(finishButtonProps.value ?? {})}
+                  onClick={handleFinish}
+                >
+                  {{
+                    content: () => (
+                      <>
+                        <t-node
+                          content={renderButtonContent(finishButtonProps.value, globalConfig.value.finish)}
+                        ></t-node>
+                        {!hideCounter.value && <t-node content={counterNode.value}></t-node>}
+                      </>
+                    ),
+                  }}
+                </TButton>
+              )}
+            </div>
+          </div>
+        );
+      };
+      const renderPopover = () => {
+        return (
+          <TPopover {...(stepProps.value as PopoverProps)}>
+            {{
+              triggerElement: () =>
+                isPopover.value && <div ref={referenceLayerRef} class={[...popoverClass.value]}></div>,
+              content: () =>
+                isPopover.value && contentNode.value ? (
+                  <t-node content={contentNode.value}></t-node>
+                ) : (
+                  renderStepContent()
+                ),
+            }}
+          </TPopover>
+        );
+      };
+      const renderPopup = () => {
+        return (
+          <TPopup {...(stepProps.value as PopupProps)}>
+            {{
+              default: () =>
+                isPopover.value && contentNode.value ? (
+                  <t-node content={contentNode.value}></t-node>
+                ) : (
+                  renderStepContent()
+                ),
+            }}
+          </TPopup>
+        );
+      };
+      return (
+        <>
+          {actived.value && (
+            <Teleport to="body">
+              <div ref={overlayLayerRef} class={`${name}__overlay`} style={{ zIndex: `${zIndex.value - 2}` }}></div>
+              <div
+                ref={highlightLayerRef}
+                class={[...highlightClass.value, ...maskClass.value]}
+                style={{ zIndex: `${zIndex.value - 1}` }}
+              >
+                {showCustomHighlightContent.value && <t-node content={currentCustomHighlightContent.value}></t-node>}
+              </div>
+              <div ref={popoverWrapperRef} class={wrapperClass.value} style={{ zIndex: zIndex.value }}>
+                {isPopover.value ? renderPopover() : renderPopup()}
+              </div>
+            </Teleport>
+          )}
+        </>
+      );
     };
   },
 });
-</script>
