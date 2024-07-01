@@ -44,7 +44,7 @@ export default defineComponent({
 
     const status = props.status || 'default';
     const renderType = ref(props.type);
-    const focused = ref(false);
+    const { focused } = useFocus(inputRef, { initialValue: props.autofocus });
 
     const inputClasses = computed(() => [
       `${inputClass.value}__control`,
@@ -63,7 +63,7 @@ export default defineComponent({
         [`${inputClass.value}--border`]: !props.borderless,
       },
     ]);
-    const showClearable = computed(() => {
+    const showClear = computed(() => {
       if (props.clearable && innerValue.value && innerValue.value.length > 0) {
         return props.clearTrigger === 'always' || (props.clearTrigger === 'focus' && focused.value);
       }
@@ -106,19 +106,20 @@ export default defineComponent({
     };
 
     const focus = () => {
-      inputRef.value?.focus();
+      focused.value = true;
     };
 
     const blur = () => {
-      inputRef.value?.blur();
+      focused.value = false;
     };
 
     extendAPI({ focus, blur });
 
-    const handleClear = (e: TouchEvent) => {
+    const handleClear = (e: MouseEvent) => {
+      e.preventDefault();
       innerValue.value = '';
       focused.value = true;
-      props.onClear?.({ e: e as unknown as MouseEvent });
+      props.onClear?.({ e });
     };
     const handleFocus = (e: FocusEvent) => {
       focused.value = true;
@@ -146,7 +147,6 @@ export default defineComponent({
           });
         }
       },
-      { immediate: true },
     );
 
     watch(
@@ -156,18 +156,6 @@ export default defineComponent({
       },
       { immediate: true },
     );
-    const readerClearable = () => {
-      if (showClearable.value) {
-        // pc端仅mousedown事件触发早于blur，移动端touch相关事件触发均早于blur
-        return (
-          <div class={`${inputClass.value}__wrap--clearable-icon`} onTouchend={handleClear}>
-            <TCloseCircleFilledIcon />
-          </div>
-        );
-      }
-
-      return null;
-    };
 
     return () => {
       const readerPrefix = () => {
@@ -181,7 +169,17 @@ export default defineComponent({
           </div>
         );
       };
+      const readerClearable = () => {
+        if (showClear.value) {
+          return (
+            <div class={`${inputClass.value}__wrap--clearable-icon`} onMousedown={handleClear}>
+              <TCloseCircleFilledIcon />
+            </div>
+          );
+        }
 
+        return null;
+      };
       const readerSuffix = () => {
         const suffix = readerTNodeJSX('suffix');
         if (!suffix) {
