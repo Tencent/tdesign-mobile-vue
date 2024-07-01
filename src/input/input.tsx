@@ -122,11 +122,9 @@ export default defineComponent({
       props.onClear?.({ e });
     };
     const handleFocus = (e: FocusEvent) => {
-      focused.value = true;
       props.onFocus?.(innerValue.value, { e });
     };
     const handleBlur = (e: FocusEvent) => {
-      focused.value = false;
       props.onBlur?.(innerValue.value, { e });
     };
 
