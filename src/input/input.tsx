@@ -64,6 +64,8 @@ export default defineComponent({
       },
     ]);
     const showClear = computed(() => {
+      if (isDisabled.value || props.readonly === true) return false;
+
       if (props.clearable && innerValue.value && innerValue.value.length > 0) {
         return props.clearTrigger === 'always' || (props.clearTrigger === 'focus' && focused.value);
       }
