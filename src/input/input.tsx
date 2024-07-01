@@ -40,12 +40,11 @@ export default defineComponent({
     const isDisabled = useFormDisabled();
 
     const inputRef = ref();
-    const { autofocus } = toRefs(props);
     const [innerValue] = useDefault<string, TdInputProps>(props, context.emit, 'value', 'change');
 
     const status = props.status || 'default';
     const renderType = ref(props.type);
-    const { focused } = useFocus(inputRef, { initialValue: props.autofocus });
+    const focused = ref(false);
 
     const inputClasses = computed(() => [
       `${inputClass.value}__control`,
@@ -64,6 +63,12 @@ export default defineComponent({
         [`${inputClass.value}--border`]: !props.borderless,
       },
     ]);
+    const showClearable = computed(() => {
+      if (props.clearable && innerValue.value && innerValue.value.length > 0) {
+        return props.clearTrigger === 'always' || (props.clearTrigger === 'focus' && focused.value);
+      }
+      return false;
+    });
 
     const setInputValue = (v: InputValue = '') => {
       const input = inputRef.value as HTMLInputElement;
@@ -101,25 +106,26 @@ export default defineComponent({
     };
 
     const focus = () => {
-      focused.value = true;
+      inputRef.value?.focus();
     };
 
     const blur = () => {
-      focused.value = false;
-      // inputRef.value?.blur();
+      inputRef.value?.blur();
     };
 
     extendAPI({ focus, blur });
 
-    const handleClear = (e: MouseEvent) => {
+    const handleClear = (e: TouchEvent) => {
       innerValue.value = '';
       focused.value = true;
-      props.onClear?.({ e });
+      props.onClear?.({ e: e as unknown as MouseEvent });
     };
     const handleFocus = (e: FocusEvent) => {
+      focused.value = true;
       props.onFocus?.(innerValue.value, { e });
     };
     const handleBlur = (e: FocusEvent) => {
+      focused.value = false;
       props.onBlur?.(innerValue.value, { e });
     };
 
@@ -131,13 +137,17 @@ export default defineComponent({
       renderType.value = renderType.value === 'password' ? 'text' : 'password';
     };
 
-    watch(autofocus, (autofocus, prevAutofocus) => {
-      if (autofocus === true) {
-        nextTick(() => {
-          focused.value = true;
-        });
-      }
-    });
+    watch(
+      () => props.autofocus,
+      (v) => {
+        if (v === true) {
+          nextTick(() => {
+            focused.value = true;
+          });
+        }
+      },
+      { immediate: true },
+    );
 
     watch(
       () => props.type,
@@ -146,6 +156,18 @@ export default defineComponent({
       },
       { immediate: true },
     );
+    const readerClearable = () => {
+      if (showClearable.value) {
+        // pc端仅mousedown事件触发早于blur，移动端touch相关事件触发均早于blur
+        return (
+          <div class={`${inputClass.value}__wrap--clearable-icon`} onTouchend={handleClear}>
+            <TCloseCircleFilledIcon />
+          </div>
+        );
+      }
+
+      return null;
+    };
 
     return () => {
       const readerPrefix = () => {
@@ -159,16 +181,7 @@ export default defineComponent({
           </div>
         );
       };
-      const readerClearable = () => {
-        if (props.clearable && innerValue.value && innerValue.value.length > 0) {
-          return (
-            <div class={`${inputClass.value}__wrap--clearable-icon`} onClick={handleClear}>
-              <TCloseCircleFilledIcon />
-            </div>
-          );
-        }
-        return null;
-      };
+
       const readerSuffix = () => {
         const suffix = readerTNodeJSX('suffix');
         if (!suffix) {
