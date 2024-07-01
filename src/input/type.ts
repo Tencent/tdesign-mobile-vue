@@ -32,6 +32,11 @@ export interface TdInputProps {
    */
   borderless?: boolean;
   /**
+   * 清空图标触发方式，仅在输入框有值时有效
+   * @default always
+   */
+  clearTrigger?: 'always' | 'focus';
+  /**
    * 是否可清空
    * @default false
    */

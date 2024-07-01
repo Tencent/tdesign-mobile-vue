@@ -76,7 +76,7 @@ describe('Input.vue', async () => {
       const wrapper = mount(<Input label="标题" v-model={value.value} clearable onClear={handleClear} />);
       const closeIcon = wrapper.findComponent(CloseCircleFilledIcon);
       expect(closeIcon.exists()).toBeTruthy();
-      await closeIcon.trigger('click');
+      await closeIcon.trigger('mousedown');
       expect(value.value).toBe('');
       expect(handleClear).toBeCalled();
     });

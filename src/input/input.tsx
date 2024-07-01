@@ -40,7 +40,6 @@ export default defineComponent({
     const isDisabled = useFormDisabled();
 
     const inputRef = ref();
-    const { autofocus } = toRefs(props);
     const [innerValue] = useDefault<string, TdInputProps>(props, context.emit, 'value', 'change');
 
     const status = props.status || 'default';
@@ -64,6 +63,14 @@ export default defineComponent({
         [`${inputClass.value}--border`]: !props.borderless,
       },
     ]);
+    const showClear = computed(() => {
+      if (isDisabled.value || props.readonly === true) return false;
+
+      if (props.clearable && innerValue.value && innerValue.value.length > 0) {
+        return props.clearTrigger === 'always' || (props.clearTrigger === 'focus' && focused.value);
+      }
+      return false;
+    });
 
     const setInputValue = (v: InputValue = '') => {
       const input = inputRef.value as HTMLInputElement;
@@ -106,12 +113,12 @@ export default defineComponent({
 
     const blur = () => {
       focused.value = false;
-      // inputRef.value?.blur();
     };
 
     extendAPI({ focus, blur });
 
     const handleClear = (e: MouseEvent) => {
+      e.preventDefault();
       innerValue.value = '';
       focused.value = true;
       props.onClear?.({ e });
@@ -131,13 +138,16 @@ export default defineComponent({
       renderType.value = renderType.value === 'password' ? 'text' : 'password';
     };
 
-    watch(autofocus, (autofocus, prevAutofocus) => {
-      if (autofocus === true) {
-        nextTick(() => {
-          focused.value = true;
-        });
-      }
-    });
+    watch(
+      () => props.autofocus,
+      (v) => {
+        if (v === true) {
+          nextTick(() => {
+            focused.value = true;
+          });
+        }
+      },
+    );
 
     watch(
       () => props.type,
@@ -160,13 +170,14 @@ export default defineComponent({
         );
       };
       const readerClearable = () => {
-        if (props.clearable && innerValue.value && innerValue.value.length > 0) {
+        if (showClear.value) {
           return (
-            <div class={`${inputClass.value}__wrap--clearable-icon`} onClick={handleClear}>
+            <div class={`${inputClass.value}__wrap--clearable-icon`} onMousedown={handleClear}>
               <TCloseCircleFilledIcon />
             </div>
           );
         }
+
         return null;
       };
       const readerSuffix = () => {
