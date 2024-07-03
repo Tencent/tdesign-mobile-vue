@@ -1,22 +1,11 @@
-import {
-  computed,
-  defineComponent,
-  ref,
-  toRefs,
-  h,
-  getCurrentInstance,
-  nextTick,
-  onMounted,
-  watch,
-  Teleport,
-} from 'vue';
+import { computed, defineComponent, ref, toRefs, h, nextTick, onMounted, watch, Teleport } from 'vue';
 import isFunction from 'lodash/isFunction';
 
 import TPopover, { PopoverProps } from '../popover';
 import TPopup, { PopupProps } from '../popup';
 import TButton, { ButtonProps } from '../button';
 import config from '../config';
-import { useVModel, TNode } from '../shared';
+import { useVModel } from '../shared';
 import { addClass, getWindowScroll, removeClass } from '../shared/dom';
 import setStyle from '../_common/js/utils/set-style';
 import guideProps from './props';
@@ -32,7 +21,6 @@ const LOCK_CLASS = `${name}--lock`;
 export default defineComponent({
   name,
   components: {
-    TNode,
     TPopover,
     TButton,
     TPopup,
@@ -58,8 +46,6 @@ export default defineComponent({
     const currentHighlightLayerElm = ref<HTMLElement>();
     // dialog wrapper ref
     const popoverWrapperRef = ref<HTMLElement>();
-    // dialog ref
-    const dialogTooltipRef = ref<HTMLElement>();
     // 是否开始展示
     const actived = ref(false);
     // 步骤总数
@@ -69,8 +55,6 @@ export default defineComponent({
     // 当前是否为 popover
     const isPopover = computed(() => getCurrentCrossProps('mode') === 'popover');
     const popoverVisible = ref(false);
-    const stepContainer = computed(() => (isPopover.value ? TPopover : TPopup));
-    const contentSlot = computed(() => (isPopover.value ? 'content' : 'default'));
     const isPopoverCenter = computed(() => isPopover.value && currentStepInfo.value.placement === 'center');
     const stepProps = computed(() => {
       if (isPopover.value) {
@@ -149,54 +133,10 @@ export default defineComponent({
     ]);
     const popoverClass = computed(() => [`${name}__reference`]);
     const contetnClass = computed(() => [`${name}__content--${isPopover.value ? 'popover' : 'dialog'}`]);
-    const tooltipClass = computed(() => [`${name}__tooltip--${isPopover.value ? 'popover' : 'dialog'}`]);
     const footerClass = computed(() => [
       `${name}__footer`,
       `${name}__footer--${isPopover.value ? 'popover' : 'dialog'}`,
     ]);
-
-    const contentNode = computed(() => {
-      const { content } = currentStepInfo.value;
-      let renderContent;
-      if (isFunction(content)) {
-        renderContent = content(hWithParams(contentProps.value));
-      } else if (context.slots.content) {
-        renderContent = context.slots.content(hWithParams(contentProps.value));
-      } else if (content) {
-        renderContent = h(content, contentProps.value);
-      }
-      return renderContent;
-    });
-
-    const titleNode = computed(() => {
-      const { title } = currentStepInfo.value;
-      let renderTitle: any = null;
-      if (isFunction(title)) {
-        renderTitle = title(hWithParams());
-      } else if (context.slots.title) {
-        renderTitle = context.slots.title(hWithParams());
-      } else if (typeof title === 'string') {
-        renderTitle = title;
-      } else if (title) {
-        renderTitle = h(title);
-      }
-      return renderTitle;
-    });
-
-    const bodyNode = computed(() => {
-      const { body } = currentStepInfo.value;
-      let renderBody: any = null;
-      if (isFunction(body)) {
-        renderBody = body(hWithParams());
-      } else if (context.slots.body) {
-        renderBody = context.slots.body(hWithParams());
-      } else if (typeof body === 'string') {
-        renderBody = body;
-      } else if (body) {
-        renderBody = h(body);
-      }
-      return renderBody;
-    });
 
     const counterNode = computed(() => {
       const params = {
@@ -216,7 +156,6 @@ export default defineComponent({
     });
 
     const isLast = computed(() => innerCurrent.value === stepsTotal.value - 1);
-    const isFirst = computed(() => innerCurrent.value === 0);
     const buttonSize = computed(() => (isPopover.value ? 'extra-small' : 'medium') as SizeEnum);
 
     // 设置高亮层的位置
@@ -385,15 +324,39 @@ export default defineComponent({
 
     return () => {
       const renderStepContent = () => {
+        const renderTitleNode = () => {
+          const { title } = currentStepInfo.value;
+          let renderTitle: any = null;
+          if (isFunction(title)) {
+            renderTitle = title(hWithParams());
+          } else if (context.slots.title) {
+            renderTitle = context.slots.title(hWithParams());
+          } else if (typeof title === 'string') {
+            renderTitle = title;
+          } else if (title) {
+            renderTitle = h(title);
+          }
+          return renderTitle;
+        };
+        const renderBodyNode = () => {
+          const { body } = currentStepInfo.value;
+          let renderBody: any = null;
+          if (isFunction(body)) {
+            renderBody = body(hWithParams());
+          } else if (context.slots.body) {
+            renderBody = context.slots.body(hWithParams());
+          } else if (typeof body === 'string') {
+            renderBody = body;
+          } else if (body) {
+            renderBody = h(body);
+          }
+          return renderBody;
+        };
         return (
           <div class={contetnClass.value}>
             <div class={`${name}__tooltip`}>
-              <div class={`${name}__title`}>
-                <t-node content={titleNode.value}></t-node>
-              </div>
-              <div class={`${name}__desc`}>
-                <t-node content={bodyNode.value}></t-node>
-              </div>
+              <div class={`${name}__title`}>{renderTitleNode()}</div>
+              <div class={`${name}__desc`}>{renderBodyNode()}</div>
             </div>
             <div class={footerClass.value}>
               {!hideSkip.value && !isLast.value && (
@@ -421,12 +384,7 @@ export default defineComponent({
                   {{
                     content: () => (
                       <>
-                        <t-node
-                          content={renderButtonContent(
-                            getCurrentCrossProps('nextButtonProps'),
-                            globalConfig.value.next,
-                          )}
-                        ></t-node>
+                        {renderButtonContent(getCurrentCrossProps('nextButtonProps'), globalConfig.value.next)}
                         {!hideCounter.value && <t-node content={counterNode.value}></t-node>}
                       </>
                     ),
@@ -458,9 +416,7 @@ export default defineComponent({
                   {{
                     content: () => (
                       <>
-                        <t-node
-                          content={renderButtonContent(finishButtonProps.value, globalConfig.value.finish)}
-                        ></t-node>
+                        {renderButtonContent(finishButtonProps.value, globalConfig.value.finish)}
                         {!hideCounter.value && <t-node content={counterNode.value}></t-node>}
                       </>
                     ),
@@ -471,18 +427,25 @@ export default defineComponent({
           </div>
         );
       };
+      const renderContentNode = () => {
+        const { content } = currentStepInfo.value;
+        let renderContent;
+        if (isFunction(content)) {
+          renderContent = content(hWithParams(contentProps.value));
+        } else if (context.slots.content) {
+          renderContent = context.slots.content(hWithParams(contentProps.value));
+        } else if (content) {
+          renderContent = h(content, contentProps.value);
+        }
+        return renderContent;
+      };
       const renderPopover = () => {
         return (
           <TPopover {...(stepProps.value as PopoverProps)}>
             {{
               triggerElement: () =>
                 isPopover.value && <div ref={referenceLayerRef} class={[...popoverClass.value]}></div>,
-              content: () =>
-                isPopover.value && contentNode.value ? (
-                  <t-node content={contentNode.value}></t-node>
-                ) : (
-                  renderStepContent()
-                ),
+              content: () => (isPopover.value && renderContentNode() ? renderContentNode() : renderStepContent()),
             }}
           </TPopover>
         );
@@ -491,12 +454,7 @@ export default defineComponent({
         return (
           <TPopup {...(stepProps.value as PopupProps)}>
             {{
-              default: () =>
-                isPopover.value && contentNode.value ? (
-                  <t-node content={contentNode.value}></t-node>
-                ) : (
-                  renderStepContent()
-                ),
+              default: () => (isPopover.value && renderContentNode() ? renderContentNode() : renderStepContent()),
             }}
           </TPopup>
         );
