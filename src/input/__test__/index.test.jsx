@@ -140,31 +140,41 @@ describe('Input.vue', async () => {
       expect(attrDom1.attributes('type')).toBe('password');
     });
 
-    it(': onBlur', async () => {
-      const onBlur = vi.fn();
-      const wrapper = mount(<Input label="标题" onBlur={onBlur} />);
-      await nextTick();
-      const input = wrapper.find('.t-input__wrap input');
-      await input.trigger('blur');
-      expect(onBlur).toBeCalled();
+    it(': autofocus', async () => {
+      const value = ref('123');
+      const wrapper = mount(<Input label="标题" v-model={value.value} clearable clearTrigger="focus" autofocus/>);
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
+      wrapper.vm.blur();
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
+      wrapper.vm.focus();
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
+
     });
 
-    it(': onFocus', async () => {
-      const onFocus = vi.fn();
-      const wrapper = mount(<Input label="标题" onFocus={onFocus} />);
-      const input = wrapper.find('.t-input__wrap input');
-      await input.trigger('focus');
-      expect(onFocus).toBeCalled();
+    it(': clearTrigger=always', async () => {
+      const value = ref('123');
+      const handleClear = vi.fn();
+      const wrapper = mount(<Input label="标题" v-model={value.value} clearable clearTrigger="always" onClear={handleClear} />);
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
+      await wrapper.find('.t-icon-close-circle-filled').trigger('mousedown');
+      expect(value.value).toBe('');
+      expect(handleClear).toBeCalled();
     });
 
-    it(': onChange', async () => {
-      const value = ref('');
-      const onChange = vi.fn();
-      const wrapper = mount(<Input label="标题" v-model={value.value} onChange={onChange} />);
-      const el = wrapper.find('.t-input__wrap input').element;
-      await simulateEvent(el, '文本', 'input');
-      expect(onChange).toBeCalledTimes(1);
-      expect(onChange).toHaveBeenCalledWith('文本');
+    it(': clearTrigger=focus', async () => {
+      const value = ref('123');
+      const handleClear = vi.fn();
+      const wrapper = mount(<Input label="标题" v-model={value.value} clearable clearTrigger="focus" onClear={handleClear} />);
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
+      wrapper.vm.focus();
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
+      
+      await wrapper.find('.t-icon-close-circle-filled').trigger('mousedown');
+      expect(value.value).toBe('');
+      expect(handleClear).toBeCalled();
     });
   });
   describe('event', async () => {
@@ -199,6 +209,33 @@ describe('Input.vue', async () => {
       const $input = wrapper.find('input');
       await $input.trigger('compositionend');
       expect(onCompositionend).toBeCalled();
+    });
+
+    it(': onBlur', async () => {
+      const onBlur = vi.fn();
+      const wrapper = mount(<Input label="标题" onBlur={onBlur} />);
+      await nextTick();
+      const input = wrapper.find('.t-input__wrap input');
+      await input.trigger('blur');
+      expect(onBlur).toBeCalled();
+    });
+
+    it(': onFocus', async () => {
+      const onFocus = vi.fn();
+      const wrapper = mount(<Input label="标题" onFocus={onFocus} />);
+      const input = wrapper.find('.t-input__wrap input');
+      await input.trigger('focus');
+      expect(onFocus).toBeCalled();
+    });
+
+    it(': onChange', async () => {
+      const value = ref('');
+      const onChange = vi.fn();
+      const wrapper = mount(<Input label="标题" v-model={value.value} onChange={onChange} />);
+      const el = wrapper.find('.t-input__wrap input').element;
+      await simulateEvent(el, '文本', 'input');
+      expect(onChange).toBeCalledTimes(1);
+      expect(onChange).toHaveBeenCalledWith('文本');
     });
   });
 
