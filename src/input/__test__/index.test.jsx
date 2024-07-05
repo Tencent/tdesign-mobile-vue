@@ -163,6 +163,28 @@ describe('Input.vue', async () => {
       expect(handleClear).toBeCalled();
     });
 
+    it(': clearTrigger=always and disabled', async () => {
+      const value = ref('123');
+      const handleClear = vi.fn();
+      const wrapper = mount(<Input label="标题" v-model={value.value} disabled clearable clearTrigger="always" onClear={handleClear} />);
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
+      await wrapper.setProps({
+        disabled: false,
+      });
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
+    });
+
+    it(': clearTrigger=always and readonly', async () => {
+      const value = ref('123');
+      const handleClear = vi.fn();
+      const wrapper = mount(<Input label="标题" v-model={value.value} readonly clearable clearTrigger="always" onClear={handleClear} />);
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
+      await wrapper.setProps({
+        readonly: false,
+      });
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
+    });
+
     it(': clearTrigger=focus', async () => {
       const value = ref('123');
       const handleClear = vi.fn();
@@ -176,6 +198,40 @@ describe('Input.vue', async () => {
       expect(value.value).toBe('');
       expect(handleClear).toBeCalled();
     });
+
+    it(': clearTrigger=focus and disabled', async () => {
+      const value = ref('123');
+      const handleClear = vi.fn();
+      const wrapper = mount(<Input label="标题" v-model={value.value} disabled clearable clearTrigger="focus" onClear={handleClear} />);
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
+      wrapper.vm.focus();
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
+      await wrapper.setProps({
+        disabled: false,
+      });
+      wrapper.vm.focus();
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
+    });
+
+    it(': clearTrigger=focus and readonly', async () => {
+      const value = ref('123');
+      const handleClear = vi.fn();
+      const wrapper = mount(<Input label="标题" v-model={value.value} readonly clearable clearTrigger="focus" onClear={handleClear} />);
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
+      wrapper.vm.focus();
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
+      await wrapper.setProps({
+        readonly: false,
+      });
+      wrapper.vm.focus();
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
+    });
+
+
   });
   describe('event', async () => {
     it(': focus && blur', async () => {
