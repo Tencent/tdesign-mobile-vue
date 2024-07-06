@@ -43,7 +43,7 @@ export default defineComponent({
 
     const status = props.status || 'default';
     const renderType = ref(props.type);
-    const focused = ref(props.autofocus);
+    const focused = ref(false);
 
     const inputClasses = computed(() => [
       `${inputClass.value}__control`,
@@ -148,7 +148,7 @@ export default defineComponent({
       (v) => {
         if (v === true) {
           nextTick(() => {
-            inputRef.value?.focus();
+            focus();
           });
         }
       },

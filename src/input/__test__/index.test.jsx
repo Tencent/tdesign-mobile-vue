@@ -143,6 +143,7 @@ describe('Input.vue', async () => {
     it(': autofocus', async () => {
       const value = ref('123');
       const wrapper = mount(<Input label="标题" v-model={value.value} clearable clearTrigger="focus" autofocus/>);
+      await wrapper.vm.$nextTick();
       expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
       wrapper.vm.blur();
       await wrapper.vm.$nextTick();
