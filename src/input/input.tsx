@@ -140,6 +140,8 @@ export default defineComponent({
     };
 
     const handlePwdIconClick = () => {
+      if (isDisabled.value) return;
+
       renderType.value = renderType.value === 'password' ? 'text' : 'password';
     };
 

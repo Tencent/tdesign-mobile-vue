@@ -128,9 +128,30 @@ describe('Input.vue', async () => {
 
     it(': type=password', async () => {
       const wrapper = mount(<Input label="标题" type="password" />);
+      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
       wrapper.find('.t-icon-browse-off').trigger('click');
       await wrapper.vm.$nextTick();
       expect(wrapper.find('.t-icon-browse').exists()).toBeTruthy();
+      const attrDom = wrapper.find('input');
+      expect(attrDom.attributes('type')).toBe('text');
+      wrapper.find('.t-icon-browse').trigger('click');
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
+      const attrDom1 = wrapper.find('input');
+      expect(attrDom1.attributes('type')).toBe('password');
+    });
+
+    it(': type=password and disabled', async () => {
+      const wrapper = mount(<Input label="标题" type="password" disabled/>);
+      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
+      wrapper.find('.t-icon-browse-off').trigger('click');
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
+      await wrapper.setProps({
+        disabled: false,
+      });
+      wrapper.find('.t-icon-browse-off').trigger('click');
+      await wrapper.vm.$nextTick();
       const attrDom = wrapper.find('input');
       expect(attrDom.attributes('type')).toBe('text');
       wrapper.find('.t-icon-browse').trigger('click');
