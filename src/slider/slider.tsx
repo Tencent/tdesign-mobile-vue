@@ -1,4 +1,5 @@
 import { ref, toRefs, computed, reactive, defineComponent, watch, onMounted } from 'vue';
+import isFunction from 'lodash/isFunction';
 import config from '../config';
 import props from './props';
 import { useVModel } from '../shared/useVModel';
@@ -157,6 +158,7 @@ export default defineComponent({
 
     const getValue = (label: any, value: any) => {
       const REGEXP = /[$][{value}]{7}/;
+      if (isFunction(label)) return label(value);
       if (label && label === 'true') return value;
       if (REGEXP.test(label)) return label.replace(REGEXP, value);
     };
