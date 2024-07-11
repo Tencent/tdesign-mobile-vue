@@ -34,7 +34,7 @@ value | String / Number | - | 输入框的值。支持语法糖 `v-model` 或 `v
 defaultValue | String / Number | - | 输入框的值。非受控属性。TS 类型：`InputValue` `type InputValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/input/type.ts) | N
 onBlur | Function |  | TS 类型：`(value: InputValue, context: { e: FocusEvent }) => void`<br/>失去焦点时触发 | N
 onChange | Function |  | TS 类型：`(value: InputValue, context?: { e?: InputEvent \| MouseEvent \| CompositionEvent; trigger: 'input' \| 'initial' \| 'clear' }) => void`<br/>输入框值发生变化时触发。`trigger=initial` 表示传入的数据不符合预期，组件自动处理后触发 change 告知父组件。如：初始值长度超过 `maxlength` 限制 | N
-onClear | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>清空按钮点击时触发 | N
+onClear | Function |  | TS 类型：`(context: { e: TouchEvent }) => void`<br/>清空按钮点击时触发 | N
 onFocus | Function |  | TS 类型：`(value: InputValue, context: { e: FocusEvent }) => void`<br/>获得焦点时触发 | N
 onValidate | Function |  | TS 类型：`(context: { error?: 'exceed-maximum' \| 'below-minimum' }) => void`<br/>【暂不支持】字数超出限制时触发 | N
 
@@ -44,7 +44,7 @@ onValidate | Function |  | TS 类型：`(context: { error?: 'exceed-maximum' \| 
 -- | -- | --
 blur | `(value: InputValue, context: { e: FocusEvent })` | 失去焦点时触发
 change | `(value: InputValue, context?: { e?: InputEvent \| MouseEvent \| CompositionEvent; trigger: 'input' \| 'initial' \| 'clear' })` | 输入框值发生变化时触发。`trigger=initial` 表示传入的数据不符合预期，组件自动处理后触发 change 告知父组件。如：初始值长度超过 `maxlength` 限制
-clear | `(context: { e: MouseEvent })` | 清空按钮点击时触发
+clear | `(context: { e: TouchEvent })` | 清空按钮点击时触发
 focus | `(value: InputValue, context: { e: FocusEvent })` | 获得焦点时触发
 validate | `(context: { error?: 'exceed-maximum' \| 'below-minimum' })` | 【暂不支持】字数超出限制时触发
 

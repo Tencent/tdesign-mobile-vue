@@ -135,7 +135,7 @@ export interface TdInputProps {
   /**
    * 清空按钮点击时触发
    */
-  onClear?: (context: { e: MouseEvent }) => void;
+  onClear?: (context: { e: TouchEvent }) => void;
   /**
    * 获得焦点时触发
    */

@@ -76,7 +76,7 @@ describe('Input.vue', async () => {
       const wrapper = mount(<Input label="标题" v-model={value.value} clearable onClear={handleClear} />);
       const closeIcon = wrapper.findComponent(CloseCircleFilledIcon);
       expect(closeIcon.exists()).toBeTruthy();
-      await closeIcon.trigger('mousedown');
+      await closeIcon.trigger('touchend');
       expect(value.value).toBe('');
       expect(handleClear).toBeCalled();
     });
@@ -180,7 +180,7 @@ describe('Input.vue', async () => {
       const handleClear = vi.fn();
       const wrapper = mount(<Input label="标题" v-model={value.value} clearable clearTrigger="always" onClear={handleClear} />);
       expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
-      await wrapper.find('.t-icon-close-circle-filled').trigger('mousedown');
+      await wrapper.find('.t-icon-close-circle-filled').trigger('touchend');
       expect(value.value).toBe('');
       expect(handleClear).toBeCalled();
     });
@@ -216,7 +216,7 @@ describe('Input.vue', async () => {
       await wrapper.vm.$nextTick();
       expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
       
-      await wrapper.find('.t-icon-close-circle-filled').trigger('mousedown');
+      await wrapper.find('.t-icon-close-circle-filled').trigger('touchend');
       expect(value.value).toBe('');
       expect(handleClear).toBeCalled();
     });

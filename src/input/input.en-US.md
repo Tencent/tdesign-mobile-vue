@@ -35,7 +35,7 @@ value | String / Number | - | input value。`v-model` and `v-model:value` is sup
 defaultValue | String / Number | - | input value。uncontrolled property。Typescript：`InputValue` `type InputValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/input/type.ts) | N
 onBlur | Function |  | Typescript：`(value: InputValue, context: { e: FocusEvent }) => void`<br/> | N
 onChange | Function |  | Typescript：`(value: InputValue, context?: { e?: InputEvent \| MouseEvent \| CompositionEvent; trigger: 'input' \| 'initial' \| 'clear' }) => void`<br/>trigger on input value changed | N
-onClear | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
+onClear | Function |  | Typescript：`(context: { e: TouchEvent }) => void`<br/> | N
 onFocus | Function |  | Typescript：`(value: InputValue, context: { e: FocusEvent }) => void`<br/> | N
 onValidate | Function |  | Typescript：`(context: { error?: 'exceed-maximum' \| 'below-minimum' }) => void`<br/>trigger on text length being over max length or max character | N
 
@@ -45,7 +45,7 @@ name | params | description
 -- | -- | --
 blur | `(value: InputValue, context: { e: FocusEvent })` | \-
 change | `(value: InputValue, context?: { e?: InputEvent \| MouseEvent \| CompositionEvent; trigger: 'input' \| 'initial' \| 'clear' })` | trigger on input value changed
-clear | `(context: { e: MouseEvent })` | \-
+clear | `(context: { e: TouchEvent })` | \-
 focus | `(value: InputValue, context: { e: FocusEvent })` | \-
 validate | `(context: { error?: 'exceed-maximum' \| 'below-minimum' })` | trigger on text length being over max length or max character
 

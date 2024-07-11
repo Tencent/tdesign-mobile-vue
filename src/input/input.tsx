@@ -118,7 +118,7 @@ export default defineComponent({
 
     extendAPI({ focus, blur });
 
-    const handleClear = (e: MouseEvent) => {
+    const handleClear = (e: TouchEvent) => {
       e.preventDefault();
       innerValue.value = '';
       focus();
@@ -180,7 +180,7 @@ export default defineComponent({
       const renderClearable = () => {
         if (showClear.value) {
           return (
-            <div class={`${inputClass.value}__wrap--clearable-icon`} onMousedown={handleClear}>
+            <div class={`${inputClass.value}__wrap--clearable-icon`} onTouchend={handleClear}>
               <TCloseCircleFilledIcon />
             </div>
           );
