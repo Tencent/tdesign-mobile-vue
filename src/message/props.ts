@@ -36,7 +36,7 @@ export default {
     type: [Boolean, Function] as PropType<TdMessageProps['icon']>,
     default: true,
   },
-  /** 链接名称。值为字符串表示链接名称，值为 Object 类型，表示透传至 Link */
+  /** 链接名称。值为字符串表示链接名称，值为 `Object` 类型，表示透传至 `Link` */
   link: {
     type: [String, Object, Function] as PropType<TdMessageProps['link']>,
   },
@@ -77,6 +77,6 @@ export default {
   onCloseBtnClick: Function as PropType<TdMessageProps['onCloseBtnClick']>,
   /** 计时结束后触发 */
   onDurationEnd: Function as PropType<TdMessageProps['onDurationEnd']>,
-  /** 当link链接存在时，点击链接文本时触发 */
+  /** 当`link`链接存在时，点击链接文本时触发 */
   onLinkClick: Function as PropType<TdMessageProps['onLinkClick']>,
 };
