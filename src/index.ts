@@ -14,4 +14,5 @@ const version = typeof __VERSION__ === 'undefined' ? '' : __VERSION__;
 export { install, version };
 export * from './plugins';
 export * from './components';
+export * from './common';
 export default { install, version };

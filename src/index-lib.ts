@@ -1,3 +1,6 @@
+import './style';
+import tdesign from './index';
+
 const ENV = process.env.NODE_ENV;
 if (
   ENV !== 'test' &&
@@ -11,3 +14,4 @@ if (
 }
 
 export * from './index';
+export default tdesign;
