@@ -56,25 +56,33 @@ export * from './table';
 export * from './tag';
 
 // 反馈
-export * from './action-sheet';
-export * from './dialog';
+// Plugin has already been applied to target app. (2.x 打开)
+// export * from './action-sheet';
+// Plugin has already been applied to target app. (2.x 打开)
+// export * from './dialog';
 export * from './dropdown-menu';
 export * from './guide';
 export * from './loading';
-export * from './message';
+// Plugin has already been applied to target app. (2.x 打开)
+// export * from './message';
 export * from './notice-bar';
 export * from './overlay';
 export * from './popover';
 export * from './popup';
 export * from './pull-down-refresh';
 export * from './swipe-cell';
-export * from './toast';
+// Plugin has already been applied to target app. (2.x 打开)
+// export * from './toast';
 
 // 全局配置
 export * from './config-provider';
 
 // 兼容原使用方式（2.x 移除）
 export { default as Dialog } from './dialog';
+export * from './dialog/type';
 export { default as ActionSheet } from './action-sheet';
+export * from './action-sheet/type';
 export { default as Message } from './message';
+export * from './message/type';
 export { default as Toast } from './toast';
+export * from './toast/type';
