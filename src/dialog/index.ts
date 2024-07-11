@@ -8,7 +8,7 @@ import './style';
 
 export type DialogType = 'alert' | 'confirm' | 'show';
 
-export const DialogPropsDefault = {
+const DialogPropsDefault = {
   title: '',
   content: '',
   confirmBtn: '',
