@@ -11,6 +11,7 @@ test-report.html
 es/
 esm/
 lib/
+cjs/
 dist/
 typings/
 site/public/
