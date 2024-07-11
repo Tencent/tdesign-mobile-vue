@@ -30,7 +30,7 @@ export default {
   operation: {
     type: [String, Function] as PropType<TdNoticeBarProps['operation']>,
   },
-  /** 前缀图标 */
+  /** 用于自定义公告栏前面的图标，优先级大于 theme 设定的图标。值为 false 则不显示图标，值为 true 显示 theme 设定图标 */
   prefixIcon: {
     type: [Boolean, Function] as PropType<TdNoticeBarProps['prefixIcon']>,
     default: true,
