@@ -22,6 +22,7 @@ exports[`SwipeCell > SwipeCell doubleVue demo works fine 1`] = `
       class="t-swipe-cell"
     >
       <div
+        class="t-swipe-cell__wrapper"
         style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
       >
         <div
@@ -125,6 +126,7 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
       data-v-7d57325a=""
     >
       <div
+        class="t-swipe-cell__wrapper"
         style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
       >
         <div
@@ -240,6 +242,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -359,6 +362,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -468,6 +472,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -613,6 +618,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -692,6 +698,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -775,6 +782,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -871,6 +879,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -1009,6 +1018,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -1088,6 +1098,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -1171,6 +1182,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -1267,6 +1279,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -1383,6 +1396,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -1470,6 +1484,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -1569,6 +1584,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -1688,6 +1704,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -1797,6 +1814,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -1932,6 +1950,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         data-v-7d57325a=""
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -2044,6 +2063,7 @@ exports[`SwipeCell > SwipeCell rightVue demo works fine 1`] = `
       class="t-swipe-cell"
     >
       <div
+        class="t-swipe-cell__wrapper"
         style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
       >
         <div
