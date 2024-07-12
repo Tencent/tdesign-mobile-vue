@@ -1,5 +1,7 @@
-import { defineComponent, h, toRefs, computed, inject, getCurrentInstance } from 'vue';
+import { defineComponent, h, computed, inject } from 'vue';
 import {
+  CheckIcon,
+  MinusIcon,
   CheckCircleFilledIcon,
   CircleIcon,
   MinusCircleFilledIcon,
@@ -10,9 +12,8 @@ import config from '../config';
 import CheckboxProps from './props';
 import { TNode, useDefault } from '../shared';
 import { TdCheckboxProps } from '../checkbox/type';
-import MinusLineFilledIcon from './assets/minus-line-filled-icon.svg';
-import CheckLineFilledIcon from './assets/check-line-filled-icon.svg';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
+import { useFormDisabled } from '../form/hooks';
 
 const { prefix } = config;
 const name = `${prefix}-checkbox`;
@@ -38,6 +39,7 @@ export default defineComponent({
       'change',
     );
     const checkboxGroup: any = inject('checkboxGroup', undefined);
+    const disabled = useFormDisabled(checkboxGroup?.disabled);
     const indeterminate = computed<boolean>(() => {
       if (props.checkAll && checkboxGroup != null) return checkboxGroup.checkAllStatus.value === 'indeterminate';
       return props.indeterminate;
@@ -59,8 +61,7 @@ export default defineComponent({
         return indeterminate.value ? h(MinusCircleFilledIcon) : h(CheckCircleFilledIcon);
       if (props.icon === 'rectangle')
         return indeterminate.value ? h(MinusRectangleFilledIcon) : h(CheckRectangleFilledIcon);
-      if (props.icon === 'line')
-        return indeterminate.value ? h('img', { src: MinusLineFilledIcon }) : h('img', { src: CheckLineFilledIcon });
+      if (props.icon === 'line') return indeterminate.value ? h(MinusIcon) : h(CheckIcon);
       return null;
     });
 
@@ -78,8 +79,8 @@ export default defineComponent({
     const isDisabled = computed(() => {
       if (checkboxGroup?.max.value)
         return checkboxGroup.max.value <= checkboxGroup.innerValue.value.length && !isChecked.value;
-      if (props.disabled != null) return props.disabled;
-      return !!checkboxGroup?.disabled.value;
+
+      return disabled.value;
     });
 
     const handleChange = (e: Event, source?: string) => {

@@ -38,7 +38,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-import { TdGuideProps } from '../type';
+import { TdGuideProps } from 'tdesign-mobile-vue';
 
 const visible = ref(false);
 const current = ref(-1);

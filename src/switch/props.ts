@@ -12,8 +12,11 @@ export default {
   customValue: {
     type: Array as PropType<TdSwitchProps['customValue']>,
   },
-  /** 是否禁用组件 */
-  disabled: Boolean,
+  /** 是否禁用组件。优先级：Switch.disabled > Form.disabled */
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 开关的图标；[打开时的图标，关闭时的图标] */
   icon: {
     type: Array as PropType<TdSwitchProps['icon']>,

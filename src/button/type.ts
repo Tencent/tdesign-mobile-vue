@@ -18,8 +18,7 @@ export interface TdButtonProps {
    */
   content?: string | TNode;
   /**
-   * 禁用状态
-   * @default false
+   * 禁用状态。优先级：Button.disabled > Form.disabled
    */
   disabled?: boolean;
   /**
@@ -37,7 +36,7 @@ export interface TdButtonProps {
    */
   loading?: boolean;
   /**
-   * 透传加载组件全部属性
+   * 透传 Loading 组件全部属性
    */
   loadingProps?: LoadingProps;
   /**
@@ -68,7 +67,7 @@ export interface TdButtonProps {
    * 按钮形式，基础、线框、文字
    * @default base
    */
-  variant?: 'base' | 'outline' | 'text';
+  variant?: 'base' | 'outline' | 'dashed' | 'text';
   /**
    * 点击时触发
    */

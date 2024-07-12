@@ -6,6 +6,7 @@
 es
 esm
 lib
+cjs
 dist
 typings
 

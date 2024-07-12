@@ -7,6 +7,7 @@
     show-error-message
     label-align="left"
     :disabled="disabled"
+    scroll-to-first-error="auto"
     @reset="onReset"
     @submit="onSubmit"
   >

@@ -2,16 +2,16 @@ import { computed, defineComponent } from 'vue';
 import TLoading from '../loading';
 import { useToggle, useDefault } from '../shared';
 import config from '../config';
-import SwitchProps from './props';
+import props from './props';
 import { SwitchValue, TdSwitchProps } from './type';
 import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-switch`;
+
 export default defineComponent({
-  name,
-  props: SwitchProps,
+  name: `${prefix}-switch`,
+  props,
   setup(props, context) {
     const switchClass = usePrefixClass('switch');
 

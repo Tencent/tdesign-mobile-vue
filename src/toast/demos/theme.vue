@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { h, ref } from 'vue';
+import { h } from 'vue';
 import { Toast } from 'tdesign-mobile-vue';
 import { ErrorCircleIcon } from 'tdesign-icons-vue-next';
 

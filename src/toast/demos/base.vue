@@ -9,7 +9,6 @@
 </template>
 
 <script setup lang="ts">
-import { h, ref } from 'vue';
 import { Toast } from 'tdesign-mobile-vue';
 
 const showText = () => {

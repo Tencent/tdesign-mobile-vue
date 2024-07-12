@@ -1,5 +1,5 @@
-import LocalTag from './tag';
-import LocalCheckTag from './check-tag';
+import _Tag from './tag';
+import _CheckTag from './check-tag';
 import { withInstall, WithInstallType } from '../shared';
 import { TdCheckTagProps, TdTagProps } from './type';
 
@@ -9,5 +9,6 @@ export * from './type';
 export type CheckTagProps = TdCheckTagProps;
 export type TagProps = TdTagProps;
 
-export const Tag: WithInstallType<typeof LocalTag> = withInstall(LocalTag);
-export const CheckTag: WithInstallType<typeof LocalCheckTag> = withInstall(LocalCheckTag);
+export const Tag: WithInstallType<typeof _Tag> = withInstall(_Tag);
+export const CheckTag: WithInstallType<typeof _CheckTag> = withInstall(_CheckTag);
+export default Tag;

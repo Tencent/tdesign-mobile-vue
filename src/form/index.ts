@@ -11,3 +11,4 @@ export type FormItemProps = TdFormItemProps;
 
 export const Form: WithInstallType<typeof _Form> = withInstall(_Form);
 export const FormItem: WithInstallType<typeof _FormItem> = withInstall(_FormItem);
+export default Form;

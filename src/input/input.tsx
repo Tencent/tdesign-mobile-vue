@@ -1,6 +1,9 @@
-import { PropType, ref, computed, defineComponent, toRefs, nextTick, watch } from 'vue';
-import { CloseCircleFilledIcon as TCloseCircleFilledIcon } from 'tdesign-icons-vue-next';
-import { useFocus } from '@vueuse/core';
+import { PropType, ref, computed, defineComponent, nextTick, watch } from 'vue';
+import {
+  BrowseIcon as TBrowseIcon,
+  BrowseOffIcon as TBrowseOffIcon,
+  CloseCircleFilledIcon as TCloseCircleFilledIcon,
+} from 'tdesign-icons-vue-next';
 import config from '../config';
 import InputProps from './props';
 import { InputValue, TdInputProps } from './type';
@@ -10,10 +13,9 @@ import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
-const name = `${prefix}-input`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-input`,
   props: {
     ...InputProps,
     labelAlign: {
@@ -32,17 +34,16 @@ export default defineComponent({
     },
   },
   setup(props, context) {
-    const readerTNodeJSX = useTNodeJSX();
+    const renderTNodeJSX = useTNodeJSX();
     const inputClass = usePrefixClass('input');
     const isDisabled = useFormDisabled();
 
     const inputRef = ref();
-    const { autofocus } = toRefs(props);
     const [innerValue] = useDefault<string, TdInputProps>(props, context.emit, 'value', 'change');
 
     const status = props.status || 'default';
-
-    const { focused } = useFocus(inputRef, { initialValue: props.autofocus });
+    const renderType = ref(props.type);
+    const focused = ref(false);
 
     const inputClasses = computed(() => [
       `${inputClass.value}__control`,
@@ -61,6 +62,14 @@ export default defineComponent({
         [`${inputClass.value}--border`]: !props.borderless,
       },
     ]);
+    const showClear = computed(() => {
+      if (isDisabled.value || props.readonly === true) return false;
+
+      if (props.clearable && innerValue.value && innerValue.value.length > 0) {
+        return props.clearTrigger === 'always' || (props.clearTrigger === 'focus' && focused.value);
+      }
+      return false;
+    });
 
     const setInputValue = (v: InputValue = '') => {
       const input = inputRef.value as HTMLInputElement;
@@ -99,24 +108,30 @@ export default defineComponent({
 
     const focus = () => {
       focused.value = true;
+      inputRef.value?.focus();
     };
 
     const blur = () => {
       focused.value = false;
-      // inputRef.value?.blur();
+      inputRef.value?.blur();
     };
 
     extendAPI({ focus, blur });
 
-    const handleClear = (e: MouseEvent) => {
+    const handleClear = (e: TouchEvent) => {
+      e.preventDefault();
       innerValue.value = '';
-      focused.value = true;
+      focus();
       props.onClear?.({ e });
     };
+
     const handleFocus = (e: FocusEvent) => {
+      focused.value = true;
       props.onFocus?.(innerValue.value, { e });
     };
+
     const handleBlur = (e: FocusEvent) => {
+      focused.value = false;
       props.onBlur?.(innerValue.value, { e });
     };
 
@@ -124,18 +139,36 @@ export default defineComponent({
       inputValueChangeHandle(e);
     };
 
-    watch(autofocus, (autofocus, prevAutofocus) => {
-      if (autofocus === true) {
-        nextTick(() => {
-          focused.value = true;
-        });
-      }
-    });
+    const handlePwdIconClick = () => {
+      if (isDisabled.value) return;
+
+      renderType.value = renderType.value === 'password' ? 'text' : 'password';
+    };
+
+    watch(
+      () => props.autofocus,
+      (v) => {
+        if (v === true) {
+          nextTick(() => {
+            focus();
+          });
+        }
+      },
+      { immediate: true },
+    );
+
+    watch(
+      () => props.type,
+      (v) => {
+        renderType.value = v;
+      },
+      { immediate: true },
+    );
 
     return () => {
-      const readerPrefix = () => {
-        const prefixIcon = readerTNodeJSX('prefixIcon');
-        const label = readerTNodeJSX('label');
+      const renderPrefix = () => {
+        const prefixIcon = renderTNodeJSX('prefixIcon');
+        const label = renderTNodeJSX('label');
 
         return (
           <div class={`${inputClass.value}__wrap--prefix`}>
@@ -144,34 +177,43 @@ export default defineComponent({
           </div>
         );
       };
-      const readerClearable = () => {
-        if (props.clearable && innerValue.value && innerValue.value.length > 0) {
+      const renderClearable = () => {
+        if (showClear.value) {
           return (
-            <div class={`${inputClass.value}__wrap--clearable-icon`} onClick={handleClear}>
+            <div class={`${inputClass.value}__wrap--clearable-icon`} onTouchend={handleClear}>
               <TCloseCircleFilledIcon />
             </div>
           );
         }
+
         return null;
       };
-      const readerSuffix = () => {
-        const suffix = readerTNodeJSX('suffix');
+      const renderSuffix = () => {
+        const suffix = renderTNodeJSX('suffix');
         if (!suffix) {
           return null;
         }
         return <div class={`${inputClass.value}__wrap--suffix`}>{suffix}</div>;
       };
 
-      const readerSuffixIcon = () => {
-        const suffixIcon = readerTNodeJSX('suffixIcon');
+      const renderSuffixIcon = () => {
+        let suffixIcon = renderTNodeJSX('suffixIcon');
+        if (props.type === 'password') {
+          if (renderType.value === 'password') {
+            suffixIcon = <TBrowseOffIcon onClick={handlePwdIconClick} />;
+          } else if (renderType.value === 'text') {
+            suffixIcon = <TBrowseIcon onClick={handlePwdIconClick} />;
+          }
+        }
+
         if (!suffixIcon) {
           return null;
         }
         return <div class={`${inputClass.value}__wrap--suffix-icon`}>{suffixIcon}</div>;
       };
 
-      const readerTips = () => {
-        const tips = readerTNodeJSX('tips');
+      const renderTips = () => {
+        const tips = renderTNodeJSX('tips');
         if (!tips) {
           return null;
         }
@@ -180,7 +222,7 @@ export default defineComponent({
 
       return (
         <div class={rootClasses.value}>
-          {readerPrefix()}
+          {renderPrefix()}
           <div class={`${inputClass.value}__wrap`}>
             <div class={`${inputClass.value}__content ${inputClass.value}--${status || 'default'}`}>
               <input
@@ -188,7 +230,7 @@ export default defineComponent({
                 value={innerValue.value}
                 name={props.name}
                 class={inputClasses.value}
-                type={props.type}
+                type={renderType.value}
                 disabled={isDisabled.value}
                 autocomplete={props.autocomplete ? 'On' : 'Off'}
                 placeholder={props.placeholder}
@@ -202,11 +244,11 @@ export default defineComponent({
                 onInput={handleInput}
                 onCompositionend={handleCompositionend}
               />
-              {readerClearable()}
-              {readerSuffix()}
-              {readerSuffixIcon()}
+              {renderClearable()}
+              {renderSuffix()}
+              {renderSuffixIcon()}
             </div>
-            {readerTips()}
+            {renderTips()}
           </div>
         </div>
       );

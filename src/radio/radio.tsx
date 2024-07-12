@@ -1,4 +1,4 @@
-import { inject, computed, defineComponent, getCurrentInstance, Ref, toRefs } from 'vue';
+import { inject, computed, defineComponent, Ref, toRefs } from 'vue';
 import { CheckIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
 
 import { NOOP, useVModel } from '../shared';
@@ -34,12 +34,8 @@ export default defineComponent({
 
     // extend radioGroup disabled props
     const groupDisabled = computed(() => rootGroupProps?.disabled);
-    const formDisabled = useFormDisabled(groupDisabled);
+    const isDisabled = useFormDisabled(groupDisabled);
 
-    const isDisabled = computed(() => {
-      if (formDisabled.value == null && 'disabled' in rootGroupProps) return rootGroupProps.disabled;
-      return formDisabled.value;
-    });
     const radioChecked = computed(() => innerChecked.value || props.value === rootGroupValue?.value);
     const finalBorderless = computed(() => {
       if (props.borderless == null && 'borderless' in rootGroupProps) return rootGroupProps.borderless;

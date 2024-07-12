@@ -38,7 +38,7 @@
 <script lang="ts" setup>
 import { ref, h } from 'vue';
 import { ShareIcon, StarIcon, DownloadIcon, Edit1Icon } from 'tdesign-icons-vue-next';
-import { ActionSheetItem } from '../type';
+import { ActionSheetItem } from 'tdesign-mobile-vue';
 // const apIcon = () => h(AppIcon, { size: '24px' });
 const items = ref([
   {

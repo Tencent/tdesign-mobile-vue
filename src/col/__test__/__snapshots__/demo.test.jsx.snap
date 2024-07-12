@@ -1,0 +1,320 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Col > Col baseVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="t-row"
+    data-v-560c89d0=""
+  >
+    
+    <div
+      class="t-col t-col--8 dark"
+      data-v-560c89d0=""
+    >
+      
+      col-8
+      
+    </div>
+    <div
+      class="t-col t-col--8 light"
+      data-v-560c89d0=""
+    >
+      
+      col-8
+      
+    </div>
+    <div
+      class="t-col t-col--8 dark"
+      data-v-560c89d0=""
+    >
+      
+      col-8
+      
+    </div>
+    
+  </div>
+  <div
+    class="t-row"
+    data-v-560c89d0=""
+  >
+    
+    <div
+      class="t-col t-col--4 dark"
+      data-v-560c89d0=""
+    >
+      
+      col-4
+      
+    </div>
+    <div
+      class="t-col t-col--offset-4 t-col--16 light"
+      data-v-560c89d0=""
+    >
+      
+      col-16 col-offset-4
+      
+    </div>
+    
+  </div>
+  <div
+    class="t-row"
+    data-v-560c89d0=""
+  >
+    
+    <div
+      class="t-col t-col--offset-12 t-col--12 dark"
+      data-v-560c89d0=""
+    >
+      
+      col-12 col-offset-12
+      
+    </div>
+    
+  </div>
+  
+</div>
+`;
+
+exports[`Col > Col mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+  data-v-6ebf24a9=""
+>
+  <h1
+    class="title"
+    data-v-6ebf24a9=""
+  >
+    Layout 布局
+  </h1>
+  <p
+    class="summary"
+    data-v-6ebf24a9=""
+  >
+    以规则的网格阵列来指导和规范页面中的版面布局以及信息分布，提高界面内布局的一致性，节约成本。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-6ebf24a9=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        01 组件类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        基础用法
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="t-row"
+        data-v-560c89d0=""
+      >
+        
+        <div
+          class="t-col t-col--8 dark"
+          data-v-560c89d0=""
+        >
+          
+          col-8
+          
+        </div>
+        <div
+          class="t-col t-col--8 light"
+          data-v-560c89d0=""
+        >
+          
+          col-8
+          
+        </div>
+        <div
+          class="t-col t-col--8 dark"
+          data-v-560c89d0=""
+        >
+          
+          col-8
+          
+        </div>
+        
+      </div>
+      <div
+        class="t-row"
+        data-v-560c89d0=""
+      >
+        
+        <div
+          class="t-col t-col--4 dark"
+          data-v-560c89d0=""
+        >
+          
+          col-4
+          
+        </div>
+        <div
+          class="t-col t-col--offset-4 t-col--16 light"
+          data-v-560c89d0=""
+        >
+          
+          col-16 col-offset-4
+          
+        </div>
+        
+      </div>
+      <div
+        class="t-row"
+        data-v-560c89d0=""
+      >
+        
+        <div
+          class="t-col t-col--offset-12 t-col--12 dark"
+          data-v-560c89d0=""
+        >
+          
+          col-12 col-offset-12
+          
+        </div>
+        
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-6ebf24a9=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        在列元素之间增加间距
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-row"
+        data-v-6ebf24a9=""
+        data-v-7362cfcc=""
+        style="margin-right: -8px; margin-left: -8px;"
+      >
+        
+        <div
+          class="t-col t-col--8"
+          data-v-7362cfcc=""
+          style="padding-right: 8px; padding-left: 8px;"
+        >
+          
+          <div
+            class="dark"
+            data-v-7362cfcc=""
+          >
+            col-8
+          </div>
+          
+        </div>
+        <div
+          class="t-col t-col--8"
+          data-v-7362cfcc=""
+          style="padding-right: 8px; padding-left: 8px;"
+        >
+          
+          <div
+            class="dark"
+            data-v-7362cfcc=""
+          >
+            col-8
+          </div>
+          
+        </div>
+        <div
+          class="t-col t-col--8"
+          data-v-7362cfcc=""
+          style="padding-right: 8px; padding-left: 8px;"
+        >
+          
+          <div
+            class="dark"
+            data-v-7362cfcc=""
+          >
+            col-8
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Col > Col offsetVue demo works fine 1`] = `
+<div
+  class="t-row"
+  data-v-7362cfcc=""
+  style="margin-right: -8px; margin-left: -8px;"
+>
+  
+  <div
+    class="t-col t-col--8"
+    data-v-7362cfcc=""
+    style="padding-right: 8px; padding-left: 8px;"
+  >
+    
+    <div
+      class="dark"
+      data-v-7362cfcc=""
+    >
+      col-8
+    </div>
+    
+  </div>
+  <div
+    class="t-col t-col--8"
+    data-v-7362cfcc=""
+    style="padding-right: 8px; padding-left: 8px;"
+  >
+    
+    <div
+      class="dark"
+      data-v-7362cfcc=""
+    >
+      col-8
+    </div>
+    
+  </div>
+  <div
+    class="t-col t-col--8"
+    data-v-7362cfcc=""
+    style="padding-right: 8px; padding-left: 8px;"
+  >
+    
+    <div
+      class="dark"
+      data-v-7362cfcc=""
+    >
+      col-8
+    </div>
+    
+  </div>
+  
+</div>
+`;

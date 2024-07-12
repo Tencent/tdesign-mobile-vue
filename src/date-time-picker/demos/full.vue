@@ -14,7 +14,7 @@
 </template>
 <script lang="ts" setup>
 import { reactive } from 'vue';
-import { DateValue } from '../type';
+import { DateValue } from 'tdesign-mobile-vue';
 
 const show = reactive({
   ymdhms: false,
