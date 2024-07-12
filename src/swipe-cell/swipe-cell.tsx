@@ -14,7 +14,7 @@ import isBoolean from 'lodash/isBoolean';
 import { useSwipe } from './useSwipe';
 import props from './props';
 import config from '../config';
-import { SwipeActionItem } from './type';
+import { SwipeActionItem, SwipeSource } from './type';
 import { useClickAway } from '../shared';
 import { preventDefault } from '../shared/dom';
 import { useSureConfirm } from './useSureConfirm';
@@ -301,7 +301,7 @@ export default defineComponent({
       initData.pos = 0;
       props.onChange?.(undefined);
     };
-    const handleClickBtn = ({ action, source }: { action: SwipeActionItem; source: String }) => {
+    const handleClickBtn = ({ action, source }: { action: SwipeActionItem; source: SwipeSource }) => {
       const clickFn = () => {
         if (autoBack) {
           close();
@@ -310,7 +310,7 @@ export default defineComponent({
           action.onClick();
           return;
         }
-        props.onClick?.({ action, source });
+        props.onClick?.(action, source);
       };
       if (action?.sure) {
         showSure(action.sure, clickFn);
