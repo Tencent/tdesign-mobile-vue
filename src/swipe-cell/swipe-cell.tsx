@@ -9,14 +9,13 @@ import {
   StyleValue,
   onUnmounted,
 } from 'vue';
-import isFunction from 'lodash/isFunction';
 import isArray from 'lodash/isArray';
 import isBoolean from 'lodash/isBoolean';
 import { useSwipe } from './useSwipe';
 import props from './props';
 import config from '../config';
 import { SwipeActionItem } from './type';
-import { useClickAway, useExpose } from '../shared';
+import { useClickAway } from '../shared';
 import { preventDefault } from '../shared/dom';
 import { useSureConfirm } from './useSureConfirm';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
@@ -38,7 +37,6 @@ export interface SwipeInitData {
 export default defineComponent({
   name,
   props,
-  emits: ['click', 'change'],
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();
     const renderTNodeContent = useContent();
@@ -49,7 +47,7 @@ export default defineComponent({
     const leftRef = ref<HTMLElement>();
     const rightRef = ref<HTMLElement>();
     const swipeCellRef = ref<HTMLElement>();
-    const swipeCellStyle = computed(() => {
+    const wrapperStyle = computed(() => {
       const transform = `translate3d(${initData.pos}px, 0, 0)`;
       let transition = 'margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1)';
       transition += ',margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1)';
@@ -330,14 +328,9 @@ export default defineComponent({
 
     context.expose({
       showSure,
-      initData,
-      showSureRight: showSureRight.value,
-      swipeCell: swipeCellRef,
     });
-
-    return () => {
-      const TNodeContent = renderTNodeContent('default', 'content');
-      const readerLeft = () => {
+    const renderLeft = () => {
+      const leftContent = () => {
         if (Array.isArray(props.left)) {
           return props.left.map((btn) => {
             const btnClass = [`${swipeCellClass.value}__content`, btn.className || ''];
@@ -358,7 +351,25 @@ export default defineComponent({
         }
         return renderTNodeJSX('left');
       };
-      const readerRight = () => {
+
+      return (
+        <div
+          ref={leftRef}
+          class={`${swipeCellClass.value}__left`}
+          style={{
+            width: initData?.leftWidth ? `${initData.leftWidth}px` : 'auto',
+          }}
+        >
+          {leftContent()}
+          <div style={sureLeftBgStyle.value}></div>
+          <div ref={sureLeftRef} style={sureLeftStyle.value} onClick={(e: MouseEvent) => handleSureClick}>
+            {sureLeftContent.value}
+          </div>
+        </div>
+      );
+    };
+    const renderRight = () => {
+      const rightContent = () => {
         if (Array.isArray(props.right)) {
           return props.right.map((btn) => {
             const btnClass = [`${swipeCellClass.value}__content`, btn.className || ''];
@@ -366,11 +377,7 @@ export default defineComponent({
             const { icon: btnIcon } = btn;
             const { text: btnText } = btn;
             return (
-              <div
-                class={btnClass}
-                style={style}
-                onClick={(e: MouseEvent) => handleClickBtn({ action: btn, source: 'right' })}
-              >
+              <div class={btnClass} style={style} onClick={() => handleClickBtn({ action: btn, source: 'right' })}>
                 {btnIcon && <btnIcon class={`${swipeCellClass.value}__icon`}></btnIcon>}
                 {btnText && <span class={`${swipeCellClass.value}__text`}>{btnText}</span>}
               </div>
@@ -379,36 +386,30 @@ export default defineComponent({
         }
         return renderTNodeJSX('right');
       };
+
+      return (
+        <div
+          ref={rightRef}
+          class={`${swipeCellClass.value}__right`}
+          style={{
+            width: initData.rightWidth ? `${initData.rightWidth}px` : 'auto',
+          }}
+        >
+          {rightContent()}
+          <div style={sureRightBgStyle.value}></div>
+          <div ref={sureRightRef} style={sureRightStyle.value} onClick={(e: MouseEvent) => handleSureClick}>
+            {sureRightContent.value}
+          </div>
+        </div>
+      );
+    };
+    return () => {
       return (
         <div ref={swipeCellRef} class={swipeCellClass.value} onClick={handleCellClick}>
-          <div style={swipeCellStyle.value}>
-            <div
-              ref={leftRef}
-              class={`${swipeCellClass.value}__left`}
-              style={{
-                width: initData?.leftWidth ? `${initData.leftWidth}px` : 'auto',
-              }}
-            >
-              {readerLeft()}
-              <div style={sureLeftBgStyle.value}></div>
-              <div ref={sureLeftRef} style={sureLeftStyle.value} onClick={(e: MouseEvent) => handleSureClick}>
-                {sureLeftContent.value}
-              </div>
-            </div>
-            {TNodeContent}
-            <div
-              ref={rightRef}
-              class={`${swipeCellClass.value}__right`}
-              style={{
-                width: initData.rightWidth ? `${initData.rightWidth}px` : 'auto',
-              }}
-            >
-              {readerRight()}
-              <div style={sureRightBgStyle.value}></div>
-              <div ref={sureRightRef} style={sureRightStyle.value} onClick={(e: MouseEvent) => handleSureClick}>
-                {sureRightContent.value}
-              </div>
-            </div>
+          <div class={`${swipeCellClass.value}__wrapper`} style={wrapperStyle.value}>
+            {renderLeft()}
+            {renderTNodeContent('default', 'content')}
+            {renderRight()}
           </div>
         </div>
       );
