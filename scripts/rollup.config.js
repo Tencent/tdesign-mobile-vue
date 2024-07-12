@@ -28,7 +28,14 @@ const banner = `/**
 `;
 
 const input = 'src/index.ts';
-const inputList = ['src/**/*.ts', 'src/**/*.vue', '!src/**/demos', '!src/**/*.d.ts', '!src/**/__tests__'];
+const inputList = [
+  'src/**/*.ts',
+  'src/**/*.vue',
+  'src/**/*.tsx',
+  '!src/**/demos',
+  '!src/**/*.d.ts',
+  '!src/**/__tests__',
+];
 
 const getPlugins = ({
   env,
@@ -132,6 +139,7 @@ const cssConfig = {
     assetFileNames: '[name].css',
   },
 };
+
 /** @type {import('rollup').RollupOptions} */
 const esConfig = {
   input: inputList.concat('!src/index-lib.ts'),
