@@ -28,7 +28,14 @@ const banner = `/**
 `;
 
 const input = 'src/index.ts';
-const inputList = ['src/**/*.ts', 'src/**/*.vue', '!src/**/demos', '!src/**/*.d.ts', '!src/**/__tests__'];
+const inputList = [
+  'src/**/*.ts',
+  'src/**/*.vue',
+  'src/**/*.tsx',
+  '!src/**/demos',
+  '!src/**/*.d.ts',
+  '!src/**/__tests__',
+];
 
 const getPlugins = ({
   env,
@@ -132,6 +139,7 @@ const cssConfig = {
     assetFileNames: '[name].css',
   },
 };
+
 /** @type {import('rollup').RollupOptions} */
 const esConfig = {
   input: inputList.concat('!src/index-lib.ts'),
@@ -165,13 +173,27 @@ const esmConfig = {
 };
 
 /** @type {import('rollup').RollupOptions} */
-const cjsConfig = {
+const libConfig = {
   input: inputList,
   external: externalDeps.concat(externalPeerDeps),
   plugins: [multiInput()].concat(getPlugins()),
   output: {
     banner,
     dir: 'lib/',
+    format: 'esm',
+    sourcemap: true,
+    chunkFileNames: '_chunks/dep-[hash].js',
+  },
+};
+
+/** @type {import('rollup').RollupOptions} */
+const cjsConfig = {
+  input: inputList,
+  external: externalDeps.concat(externalPeerDeps),
+  plugins: [multiInput()].concat(getPlugins()),
+  output: {
+    banner,
+    dir: 'cjs/',
     format: 'cjs',
     sourcemap: true,
     exports: 'named',
@@ -227,4 +249,4 @@ const resetCss = {
   plugins: [postcss({ extract: true })],
 };
 
-export default [cssConfig, esConfig, esmConfig, cjsConfig, umdConfig, umdMinConfig, resetCss];
+export default [cssConfig, esConfig, esmConfig, libConfig, cjsConfig, umdConfig, umdMinConfig, resetCss];

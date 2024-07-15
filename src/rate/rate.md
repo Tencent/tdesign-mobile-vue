@@ -1,14 +1,15 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Rate Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 allowHalf | Boolean | false | 是否允许半选 | N
-color | String / Array | '#ED7B2F' | 评分图标的颜色，样式中默认为 #ED7B2F。一个值表示设置选中高亮的五角星颜色，示例：[选中颜色]。数组则表示分别设置 选中高亮的五角星颜色 和 未选中暗灰的五角星颜色，[选中颜色，未选中颜色]。示例：['#ED7B2F', '#E3E6EB']。。TS 类型：`string \| Array<string>` | N
+color | String / Array | '#ED7B2F' | 评分图标的颜色，样式中默认为 #ED7B2F。一个值表示设置选中高亮的五角星颜色，示例：[选中颜色]。数组则表示分别设置 选中高亮的五角星颜色 和 未选中暗灰的五角星颜色，[选中颜色，未选中颜色]。示例：['#ED7B2F', '#E3E6EB']。TS 类型：`string \| Array<string>` | N
 count | Number | 5 | 评分的数量 | N
-disabled | Boolean | - | 是否禁用评分 | N
+disabled | Boolean | undefined | 是否禁用评分 | N
 gap | Number | 8 | 评分图标的间距 | N
 icon | Array / Slot / Function | - | 自定义评分图标，[选中图标，未选中图标]。TS 类型：`Array<TNode \| Function>`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 showText | Boolean | false | 是否显示对应的辅助文字 | N
@@ -24,8 +25,8 @@ onChange | Function |  | TS 类型：`(value: number) => void`<br/>评分数改�
 -- | -- | --
 change | `(value: number)` | 评分数改变时触发
 
-
 ### CSS Variables
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
@@ -37,4 +38,4 @@ change | `(value: number)` | 评分数改变时触发
 --td-rate-text-active-font-weight | 600 | - 
 --td-rate-text-color | @font-gray-4 | - 
 --td-rate-text-font-size | @font-size-m | - 
---td-rate-unselected-color | @bg-color-secondarycomponent | - 
+--td-rate-unselected-color | @bg-color-secondarycomponent | -

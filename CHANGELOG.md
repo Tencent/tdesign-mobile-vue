@@ -5,6 +5,21 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.3.2 `2024-07-11` 
+### 🚀 Features
+- `Icon`: 新增 `list-numbered`、`lock-off-filled`、`lock-on-filled` 等 3 个图标 @liweijie0812 ([#1488](https://github.com/Tencent/tdesign-mobile-vue/pull/1488))
+- `Input`: 新增 `clearTrigger` 支持调整清空图标触发方式 @liweijie0812 ([#1481](https://github.com/Tencent/tdesign-mobile-vue/pull/1481))
+### 🐞 Bug Fixes
+- `Icon`: 修复图标 `chart-column` 的命名错误问题 @liweijie0812 ([#1488](https://github.com/Tencent/tdesign-mobile-vue/pull/1488))
+- `Slider`: 修复 `label` 属性的 `Function` 类型无效 @anlyyao ([#1490](https://github.com/Tencent/tdesign-mobile-vue/pull/1490))
+- `Input`: 修复禁用状态还可以查看密码 @liweijie0812 ([#1481](https://github.com/Tencent/tdesign-mobile-vue/pull/1481))
+- `ImageViewer`: 修复页码对齐问题 @anlyyao ([#1494](https://github.com/Tencent/tdesign-mobile-vue/pull/1494))
+
+## 🌈 1.3.1 `2024-06-28` 
+### 🐞 Bug Fixes
+- `Form`: 修复表单组件禁用优先级 (`组件 > 组件组 >表单`) @liweijie0812 ([#1472](https://github.com/Tencent/tdesign-mobile-vue/pull/1472))
+- `Checkbox`: 修复导出组件名称错误 @anlyyao ([#1478](https://github.com/Tencent/tdesign-mobile-vue/pull/1478))
+
 ## 🌈 1.3.0 `2024-06-21` 
 ### 🚀 Features
 - `TreeSelect`: 新增 `TreeSelect` 组件 @Lyan-u ([#1347](https://github.com/Tencent/tdesign-mobile-vue/pull/1347))

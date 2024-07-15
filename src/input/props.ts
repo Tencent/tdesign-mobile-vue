@@ -28,11 +28,23 @@ export default {
   autofocus: Boolean,
   /** 是否开启无边框模式 */
   borderless: Boolean,
+  /** 清空图标触发方式，仅在输入框有值时有效 */
+  clearTrigger: {
+    type: String as PropType<TdInputProps['clearTrigger']>,
+    default: 'always' as TdInputProps['clearTrigger'],
+    validator(val: TdInputProps['clearTrigger']): boolean {
+      if (!val) return true;
+      return ['always', 'focus'].includes(val);
+    },
+  },
   /** 是否可清空 */
   clearable: Boolean,
   /** 是否禁用输入框 */
-  disabled: Boolean,
-  /** 【暂不支持】指定输入框展示值的格式 */
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
+  /** 【开发中】指定输入框展示值的格式 */
   format: {
     type: Function as PropType<TdInputProps['format']>,
   },
@@ -72,7 +84,10 @@ export default {
     type: Function as PropType<TdInputProps['prefixIcon']>,
   },
   /** 只读状态 */
-  readonly: Boolean,
+  readonly: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 是否开启拼写检查，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/spellcheck) */
   spellCheck: Boolean,
   /** 输入框状态。默认情况会由组件内部根据实际情况呈现，如果文本过长引起的状态变化 */

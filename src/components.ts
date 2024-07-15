@@ -72,8 +72,3 @@ export * from './toast';
 
 // 全局配置
 export * from './config-provider';
-
-// 兼容原使用方式（2.x 移除）
-export { default as ActionSheet } from './action-sheet';
-export { default as Message } from './message';
-export { default as Toast } from './toast';

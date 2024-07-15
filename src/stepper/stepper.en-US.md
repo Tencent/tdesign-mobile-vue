@@ -7,7 +7,7 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 disableInput | Boolean | false | \- | N
-disabled | Boolean | false | \- | N
+disabled | Boolean | undefined | \- | N
 inputWidth | Number | - | \- | N
 integer | Boolean | true | \- | N
 max | Number | 100 | \- | N

@@ -31,14 +31,14 @@ export interface TdMessageProps {
    */
   icon?: boolean | TNode;
   /**
-   * 链接名称。值为字符串表示链接名称，值为 Object 类型，表示透传至 Link
+   * 链接名称。值为字符串表示链接名称，值为 `Object` 类型，表示透传至 `Link`
    */
   link?: string | object | TNode;
   /**
    * 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放
    * @default false
    */
-  marquee?: boolean | DrawMarquee;
+  marquee?: boolean | MessageMarquee;
   /**
    * 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10rpx', '8rpx']
    */
@@ -76,14 +76,14 @@ export interface TdMessageProps {
    */
   onDurationEnd?: () => void;
   /**
-   * 当link链接存在时，点击链接文本时触发
+   * 当`link`链接存在时，点击链接文本时触发
    */
   onLinkClick?: (context: { e: MouseEvent }) => void;
 }
 
 export type MessageAlignType = 'left' | 'center';
 
-export interface DrawMarquee {
+export interface MessageMarquee {
   speed?: number;
   loop?: number;
   delay?: number;

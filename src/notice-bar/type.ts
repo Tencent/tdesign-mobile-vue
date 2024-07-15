@@ -20,15 +20,16 @@ export interface TdNoticeBarProps {
    * 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放
    * @default false
    */
-  marquee?: boolean | DrawMarquee;
+  marquee?: boolean | NoticeBarMarquee;
   /**
    * 右侧额外信息
    */
   operation?: string | TNode;
   /**
-   * 前缀图标
+   * 用于自定义公告栏前面的图标，优先级大于 theme 设定的图标。值为 false 则不显示图标，值为 true 显示 theme 设定图标
+   * @default true
    */
-  prefixIcon?: TNode | Boolean;
+  prefixIcon?: Boolean | TNode;
   /**
    * 后缀图标
    */
@@ -59,7 +60,7 @@ export interface TdNoticeBarProps {
   onClick?: (trigger: NoticeBarTrigger) => void;
 }
 
-export interface DrawMarquee {
+export interface NoticeBarMarquee {
   speed?: number;
   loop?: number;
   delay?: number;

@@ -76,7 +76,7 @@ describe('Input.vue', async () => {
       const wrapper = mount(<Input label="标题" v-model={value.value} clearable onClear={handleClear} />);
       const closeIcon = wrapper.findComponent(CloseCircleFilledIcon);
       expect(closeIcon.exists()).toBeTruthy();
-      await closeIcon.trigger('click');
+      await closeIcon.trigger('touchend');
       expect(value.value).toBe('');
       expect(handleClear).toBeCalled();
     });
@@ -128,6 +128,7 @@ describe('Input.vue', async () => {
 
     it(': type=password', async () => {
       const wrapper = mount(<Input label="标题" type="password" />);
+      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
       wrapper.find('.t-icon-browse-off').trigger('click');
       await wrapper.vm.$nextTick();
       expect(wrapper.find('.t-icon-browse').exists()).toBeTruthy();
@@ -140,32 +141,119 @@ describe('Input.vue', async () => {
       expect(attrDom1.attributes('type')).toBe('password');
     });
 
-    it(': onBlur', async () => {
-      const onBlur = vi.fn();
-      const wrapper = mount(<Input label="标题" onBlur={onBlur} />);
-      await nextTick();
-      const input = wrapper.find('.t-input__wrap input');
-      await input.trigger('blur');
-      expect(onBlur).toBeCalled();
+    it(': type=password and disabled', async () => {
+      const wrapper = mount(<Input label="标题" type="password" disabled/>);
+      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
+      wrapper.find('.t-icon-browse-off').trigger('click');
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
+      await wrapper.setProps({
+        disabled: false,
+      });
+      wrapper.find('.t-icon-browse-off').trigger('click');
+      await wrapper.vm.$nextTick();
+      const attrDom = wrapper.find('input');
+      expect(attrDom.attributes('type')).toBe('text');
+      wrapper.find('.t-icon-browse').trigger('click');
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
+      const attrDom1 = wrapper.find('input');
+      expect(attrDom1.attributes('type')).toBe('password');
     });
 
-    it(': onFocus', async () => {
-      const onFocus = vi.fn();
-      const wrapper = mount(<Input label="标题" onFocus={onFocus} />);
-      const input = wrapper.find('.t-input__wrap input');
-      await input.trigger('focus');
-      expect(onFocus).toBeCalled();
+    it(': autofocus', async () => {
+      const value = ref('123');
+      const wrapper = mount(<Input label="标题" v-model={value.value} clearable clearTrigger="focus" autofocus/>);
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
+      wrapper.vm.blur();
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
+      wrapper.vm.focus();
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
+
     });
 
-    it(': onChange', async () => {
-      const value = ref('');
-      const onChange = vi.fn();
-      const wrapper = mount(<Input label="标题" v-model={value.value} onChange={onChange} />);
-      const el = wrapper.find('.t-input__wrap input').element;
-      await simulateEvent(el, '文本', 'input');
-      expect(onChange).toBeCalledTimes(1);
-      expect(onChange).toHaveBeenCalledWith('文本');
+    it(': clearTrigger=always', async () => {
+      const value = ref('123');
+      const handleClear = vi.fn();
+      const wrapper = mount(<Input label="标题" v-model={value.value} clearable clearTrigger="always" onClear={handleClear} />);
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
+      await wrapper.find('.t-icon-close-circle-filled').trigger('touchend');
+      expect(value.value).toBe('');
+      expect(handleClear).toBeCalled();
     });
+
+    it(': clearTrigger=always and disabled', async () => {
+      const value = ref('123');
+      const handleClear = vi.fn();
+      const wrapper = mount(<Input label="标题" v-model={value.value} disabled clearable clearTrigger="always" onClear={handleClear} />);
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
+      await wrapper.setProps({
+        disabled: false,
+      });
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
+    });
+
+    it(': clearTrigger=always and readonly', async () => {
+      const value = ref('123');
+      const handleClear = vi.fn();
+      const wrapper = mount(<Input label="标题" v-model={value.value} readonly clearable clearTrigger="always" onClear={handleClear} />);
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
+      await wrapper.setProps({
+        readonly: false,
+      });
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
+    });
+
+    it(': clearTrigger=focus', async () => {
+      const value = ref('123');
+      const handleClear = vi.fn();
+      const wrapper = mount(<Input label="标题" v-model={value.value} clearable clearTrigger="focus" onClear={handleClear} />);
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
+      wrapper.vm.focus();
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
+      
+      await wrapper.find('.t-icon-close-circle-filled').trigger('touchend');
+      expect(value.value).toBe('');
+      expect(handleClear).toBeCalled();
+    });
+
+    it(': clearTrigger=focus and disabled', async () => {
+      const value = ref('123');
+      const handleClear = vi.fn();
+      const wrapper = mount(<Input label="标题" v-model={value.value} disabled clearable clearTrigger="focus" onClear={handleClear} />);
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
+      wrapper.vm.focus();
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
+      await wrapper.setProps({
+        disabled: false,
+      });
+      wrapper.vm.focus();
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
+    });
+
+    it(': clearTrigger=focus and readonly', async () => {
+      const value = ref('123');
+      const handleClear = vi.fn();
+      const wrapper = mount(<Input label="标题" v-model={value.value} readonly clearable clearTrigger="focus" onClear={handleClear} />);
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
+      wrapper.vm.focus();
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
+      await wrapper.setProps({
+        readonly: false,
+      });
+      wrapper.vm.focus();
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
+    });
+
+
   });
   describe('event', async () => {
     it(': focus && blur', async () => {
@@ -199,6 +287,33 @@ describe('Input.vue', async () => {
       const $input = wrapper.find('input');
       await $input.trigger('compositionend');
       expect(onCompositionend).toBeCalled();
+    });
+
+    it(': onBlur', async () => {
+      const onBlur = vi.fn();
+      const wrapper = mount(<Input label="标题" onBlur={onBlur} />);
+      await nextTick();
+      const input = wrapper.find('.t-input__wrap input');
+      await input.trigger('blur');
+      expect(onBlur).toBeCalled();
+    });
+
+    it(': onFocus', async () => {
+      const onFocus = vi.fn();
+      const wrapper = mount(<Input label="标题" onFocus={onFocus} />);
+      const input = wrapper.find('.t-input__wrap input');
+      await input.trigger('focus');
+      expect(onFocus).toBeCalled();
+    });
+
+    it(': onChange', async () => {
+      const value = ref('');
+      const onChange = vi.fn();
+      const wrapper = mount(<Input label="标题" v-model={value.value} onChange={onChange} />);
+      const el = wrapper.find('.t-input__wrap input').element;
+      await simulateEvent(el, '文本', 'input');
+      expect(onChange).toBeCalledTimes(1);
+      expect(onChange).toHaveBeenCalledWith('文本');
     });
   });
 

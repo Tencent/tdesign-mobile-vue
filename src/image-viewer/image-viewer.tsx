@@ -1,22 +1,11 @@
-import {
-  computed,
-  defineComponent,
-  reactive,
-  getCurrentInstance,
-  h,
-  Transition,
-  ref,
-  Ref,
-  watch,
-  nextTick,
-  onUnmounted,
-} from 'vue';
+import { computed, defineComponent, reactive, h, Transition, ref, watch, nextTick, onUnmounted } from 'vue';
 import { CloseIcon, DeleteIcon } from 'tdesign-icons-vue-next';
 
 import config from '../config';
 import props from './props';
 import { useDefault, isBrowser, useGesture, DragState, PinchState } from '../shared';
 import { useTNodeJSX } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 
 // inner components
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
@@ -25,12 +14,11 @@ import { TdImageViewerProps } from './type';
 import { ImageInfo } from './image-viewer-interface';
 
 const { prefix } = config;
-const name = `${prefix}-image-viewer`;
 
 const TAP_TIME = 300;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-image-viewer`,
   components: {
     Transition,
     TSwiper,
@@ -40,6 +28,8 @@ export default defineComponent({
   props,
   emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'update:index', 'delete'],
   setup(props, { emit }) {
+    const imageViewerClass = usePrefixClass('image-viewer');
+
     const state = reactive({
       dblTapZooming: false, // double tap zooming
       zooming: false, // pinch zooming
@@ -393,11 +383,11 @@ export default defineComponent({
       <transition name="fade">
         {visible.value && (
           <div ref={rootRef} class={`${prefix}-image-viewer`}>
-            <div class={`${name}__mask`} onClick={(e) => handleClose(e, 'overlay')} />
+            <div class={`${imageViewerClass.value}__mask`} onClick={(e) => handleClose(e, 'overlay')} />
             <TSwiper
               ref={swiperRootRef}
               autoplay={false}
-              class={`${name}__content`}
+              class={`${imageViewerClass.value}__content`}
               height="100vh"
               defaultCurrent={currentIndex.value}
               disabled={disabled.value}
@@ -407,14 +397,14 @@ export default defineComponent({
                 <TSwiperItem
                   ref={(item: any) => (swiperItemRefs.value[index] = item)}
                   key={index}
-                  class={`${name}__swiper-item`}
+                  class={`${imageViewerClass.value}__swiper-item`}
                   style={`touch-action: none; align-items:${info.image.align};`}
                 >
                   {info.preload ? (
                     <img
                       src={info.image.url}
                       style={`
-                      transform: ${index === state.touchIndex ? imageTransform.value : 'matrix(1, 0, 0, 1, 0, 0)'}; 
+                      transform: ${index === state.touchIndex ? imageTransform.value : 'matrix(1, 0, 0, 1, 0, 0)'};
                       ${imageTransitionDuration.value};`}
                       onLoad={(event: Event) => onImgLoad(event, index)}
                       onTransitionstart={(event: TransitionEvent) => {
@@ -434,22 +424,20 @@ export default defineComponent({
                 </TSwiperItem>
               ))}
             </TSwiper>
-            <div class={`${name}__nav`}>
-              {closeNode.value && (
-                <div class={`${name}__nav-close`} onClick={(e) => handleClose(e, 'close-btn')}>
-                  {closeNode.value}
-                </div>
-              )}
+            <div class={`${imageViewerClass.value}__nav`}>
+              <div class={`${imageViewerClass.value}__nav-close`} onClick={(e) => handleClose(e, 'close-btn')}>
+                {closeNode.value}
+              </div>
+
               {props.showIndex && (
-                <div class={`${name}__nav-index`}>
+                <div class={`${imageViewerClass.value}__nav-index`}>
                   {`${Math.min((currentIndex.value ?? 0) + 1, props.images?.length)}/${props.images?.length}`}
                 </div>
               )}
-              {deleteNode.value && (
-                <div class={`${name}__nav-delete`} onClick={handleDelete}>
-                  {deleteNode.value}
-                </div>
-              )}
+
+              <div class={`${imageViewerClass.value}__nav-delete`} onClick={handleDelete}>
+                {deleteNode.value}
+              </div>
             </div>
           </div>
         )}

@@ -5,14 +5,13 @@ import isString from 'lodash/isString';
 
 import Link from '../link';
 import props from './props';
-import { DrawMarquee, TdMessageProps } from './type';
+import { MessageMarquee, TdMessageProps } from './type';
 import config from '../config';
 import { useVModel } from '../shared';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
 
 const { prefix } = config;
-const name = `${prefix}-message`;
 const iconDefault = {
   info: h(InfoCircleFilledIcon),
   success: h(CheckCircleFilledIcon),
@@ -22,10 +21,8 @@ const iconDefault = {
 const closeBtnDefault = h(CloseIcon);
 
 export default defineComponent({
-  name,
+  name: `${prefix}-message`,
   props,
-  emits: ['durationEnd', 'closeBtnClick', 'update:value'],
-
   setup(props, context) {
     const componentName = usePrefixClass('message');
     const renderTNodeJSX = useTNodeJSX();
@@ -107,7 +104,7 @@ export default defineComponent({
     const textDOM = ref();
 
     const handleScrolling = () => {
-      if (!props?.marquee || (isObject(props?.marquee) && (props?.marquee as DrawMarquee))?.loop === 0) {
+      if (!props?.marquee || (isObject(props?.marquee) && (props?.marquee as MessageMarquee))?.loop === 0) {
         return;
       }
 
@@ -117,23 +114,23 @@ export default defineComponent({
         marquee: true,
         // 负数统一当作循环播放
         loop: Math.max(
-          props.marquee === true || (props.marquee as DrawMarquee)?.loop == null
+          props.marquee === true || (props.marquee as MessageMarquee)?.loop == null
             ? loop
-            : (props.marquee as DrawMarquee)?.loop,
+            : (props.marquee as MessageMarquee)?.loop,
           -1,
         ),
         // 速度必须为正数
         speed: Math.max(
-          props.marquee === true || (props.marquee as DrawMarquee)?.speed == null
+          props.marquee === true || (props.marquee as MessageMarquee)?.speed == null
             ? speed
-            : (props.marquee as DrawMarquee)?.speed,
+            : (props.marquee as MessageMarquee)?.speed,
           1,
         ),
         // 延迟不可为负数
         delay: Math.max(
-          props.marquee === true || (props.marquee as DrawMarquee)?.delay == null
+          props.marquee === true || (props.marquee as MessageMarquee)?.delay == null
             ? delay
-            : (props.marquee as DrawMarquee)?.delay,
+            : (props.marquee as MessageMarquee)?.delay,
           0,
         ),
       };
@@ -179,8 +176,8 @@ export default defineComponent({
       props.onLinkClick?.({ e });
     };
 
-    const onCloseBtnClick = () => {
-      props.onCloseBtnClick?.();
+    const onCloseBtnClick = (e: MouseEvent) => {
+      props.onCloseBtnClick?.({ e });
       setVisible(false);
     };
 

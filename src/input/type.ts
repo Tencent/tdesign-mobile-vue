@@ -32,6 +32,11 @@ export interface TdInputProps {
    */
   borderless?: boolean;
   /**
+   * 清空图标触发方式，仅在输入框有值时有效
+   * @default always
+   */
+  clearTrigger?: 'always' | 'focus';
+  /**
    * 是否可清空
    * @default false
    */
@@ -41,7 +46,7 @@ export interface TdInputProps {
    */
   disabled?: boolean;
   /**
-   * 【暂不支持】指定输入框展示值的格式
+   * 【开发中】指定输入框展示值的格式
    */
   format?: InputFormatType;
   /**
@@ -76,7 +81,6 @@ export interface TdInputProps {
   prefixIcon?: TNode;
   /**
    * 只读状态
-   * @default false
    */
   readonly?: boolean;
   /**
@@ -131,7 +135,7 @@ export interface TdInputProps {
   /**
    * 清空按钮点击时触发
    */
-  onClear?: (context: { e: MouseEvent }) => void;
+  onClear?: (context: { e: TouchEvent }) => void;
   /**
    * 获得焦点时触发
    */
