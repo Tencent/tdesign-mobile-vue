@@ -138,23 +138,6 @@ export default defineComponent({
       `${name}__footer--${isPopover.value ? 'popover' : 'dialog'}`,
     ]);
 
-    const counterNode = computed(() => {
-      const params = {
-        total: stepsTotal.value,
-        current: innerCurrent.value,
-      };
-      let renderCounter: any = null;
-      const { counter } = props;
-      if (isFunction(counter)) {
-        renderCounter = counter(h, params);
-      } else if (context.slots.counter) {
-        renderCounter = context.slots.counter(hWithParams(params));
-      } else if (counter) {
-        renderCounter = h(counter, params);
-      }
-      return renderCounter || ` (${innerCurrent.value + 1}/${stepsTotal.value})`;
-    });
-
     const isLast = computed(() => innerCurrent.value === stepsTotal.value - 1);
     const buttonSize = computed(() => (isPopover.value ? 'extra-small' : 'medium') as SizeEnum);
 
@@ -352,6 +335,22 @@ export default defineComponent({
           }
           return renderBody;
         };
+        const renderCounterNode = () => {
+          const params = {
+            total: stepsTotal.value,
+            current: innerCurrent.value,
+          };
+          let renderCounter: any = null;
+          const { counter } = props;
+          if (isFunction(counter)) {
+            renderCounter = counter(h, params);
+          } else if (context.slots.counter) {
+            renderCounter = context.slots.counter(hWithParams(params));
+          } else if (counter) {
+            renderCounter = h(counter, params);
+          }
+          return renderCounter || ` (${innerCurrent.value + 1}/${stepsTotal.value})`;
+        };
         return (
           <div class={contetnClass.value}>
             <div class={`${name}__tooltip`}>
@@ -385,7 +384,7 @@ export default defineComponent({
                     content: () => (
                       <>
                         {renderButtonContent(getCurrentCrossProps('nextButtonProps'), globalConfig.value.next)}
-                        {!hideCounter.value && <t-node content={counterNode.value}></t-node>}
+                        {!hideCounter.value && renderCounterNode()}
                       </>
                     ),
                   }}
@@ -417,7 +416,7 @@ export default defineComponent({
                     content: () => (
                       <>
                         {renderButtonContent(finishButtonProps.value, globalConfig.value.finish)}
-                        {!hideCounter.value && <t-node content={counterNode.value}></t-node>}
+                        {!hideCounter.value && renderCounterNode()}
                       </>
                     ),
                   }}
@@ -459,6 +458,27 @@ export default defineComponent({
           </TPopup>
         );
       };
+      const renderCurrentCustomHighlightContentNode = () => {
+        const { highlightContent } = currentStepInfo.value;
+
+        let node: any = highlightContent;
+        if (isFunction(highlightContent)) {
+          // 支持函数
+          node = highlightContent(hWithParams());
+        } else if (context.slots.highlightContent) {
+          // 支持插槽
+          node = context.slots.highlightContent(hWithParams());
+        } else if (context.slots['highlight-content']) {
+          // 支持插槽
+          node = context.slots['highlight-content'](hWithParams());
+        }
+        // 给自定义元素添加类名
+        if (node) {
+          if (!node.props) node.props = {};
+          node.props.class = node.props.class || '';
+        }
+        return node;
+      };
       return (
         <>
           {actived.value && (
@@ -469,7 +489,7 @@ export default defineComponent({
                 class={[...highlightClass.value, ...maskClass.value]}
                 style={{ zIndex: `${zIndex.value - 1}` }}
               >
-                {showCustomHighlightContent.value && <t-node content={currentCustomHighlightContent.value}></t-node>}
+                {showCustomHighlightContent.value && renderCurrentCustomHighlightContentNode()}
               </div>
               <div ref={popoverWrapperRef} class={wrapperClass.value} style={{ zIndex: zIndex.value }}>
                 {isPopover.value ? renderPopover() : renderPopup()}
