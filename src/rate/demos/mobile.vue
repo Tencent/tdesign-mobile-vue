@@ -30,6 +30,9 @@
     <tdesign-demo-block title="04 特殊样式" summary="竖向带描述评分">
       <SpecialDemo />
     </tdesign-demo-block>
+    <tdesign-demo-block title="05 评分弹框位置">
+      <PlacementDemo />
+    </tdesign-demo-block>
   </div>
 </template>
 
@@ -42,4 +45,5 @@ import ActionDemo from './action.vue';
 import SizeDemo from './size.vue';
 import ColorDemo from './color.vue';
 import SpecialDemo from './special.vue';
+import PlacementDemo from './placement.vue';
 </script>
