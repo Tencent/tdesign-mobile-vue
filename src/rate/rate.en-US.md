@@ -10,8 +10,9 @@ allowHalf | Boolean | false | \- | N
 color | String / Array | '#ED7B2F' | Typescript：`string \| Array<string>` | N
 count | Number | 5 | \- | N
 disabled | Boolean | undefined | \- | N
-gap | Number | 8 | \- | N
+gap | String / Number | 8 | \- | N
 icon | Array / Slot / Function | - | Typescript：`Array<TNode \| Function>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+placement | String | top | options: top / bottom / '' | N
 showText | Boolean | false | \- | N
 size | String | 24px | \- | N
 texts | Array | [] | Typescript：`Array<string>` | N

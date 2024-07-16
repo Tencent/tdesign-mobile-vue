@@ -30,11 +30,16 @@ export interface TdRateProps {
    * 评分图标的间距
    * @default 8
    */
-  gap?: number;
+  gap?: string | number;
   /**
    * 自定义评分图标，[选中图标，未选中图标]
    */
   icon?: Array<TNode | Function>;
+  /**
+   * 选择评分弹框的位置，值为空字符表示不显示评分弹窗
+   * @default top
+   */
+  placement?: 'top' | 'bottom' | '';
   /**
    * 是否显示对应的辅助文字
    * @default false
