@@ -16,8 +16,11 @@ export default {
   default: {
     type: [String, Function] as PropType<TdLinkProps['default']>,
   },
-  /** 禁用链接 */
-  disabled: Boolean,
+  /** 禁用链接。优先级：Link.disabled > Form.disabled */
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 是否开启点击反馈 */
   hover: Boolean,
   /** 跳转链接 */

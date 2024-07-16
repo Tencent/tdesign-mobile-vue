@@ -1,18 +1,19 @@
 import { defineComponent, computed } from 'vue';
 import config from '../config';
-import LinkProps from './props';
+import props from './props';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
+import { useFormDisabled } from '../form/hooks';
 
 const { prefix } = config;
-const name = `${prefix}-link`;
 export default defineComponent({
-  name,
-  props: LinkProps,
+  name: `${prefix}-link`,
+  props,
   setup(props) {
     const linkClass = usePrefixClass('link');
     const renderTNodeJSX = useTNodeJSX();
     const renderTNodeContent = useContent();
+    const isDisabled = useFormDisabled();
 
     const linkClasses = computed(() => [
       linkClass.value,
@@ -49,9 +50,9 @@ export default defineComponent({
       return (
         <a
           class={linkClasses.value}
-          aria-disabled={props.disabled}
+          aria-disabled={isDisabled.value}
           target={props.target}
-          href={props.disabled || !props.href ? undefined : props.href}
+          href={isDisabled.value || !props.href ? undefined : props.href}
           onClick={handleClick}
         >
           {renderPrefixIcon()}
