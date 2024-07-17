@@ -1,10 +1,10 @@
 <template>
   <div class="rate-demo-cell rate-demo-cell--space">
-    <div class="rate-demo-cell__label">在上方显示</div>
+    <div class="rate-demo-cell__label">顶部显示</div>
     <t-rate />
   </div>
   <div class="rate-demo-cell rate-demo-cell--space">
-    <div class="rate-demo-cell__label">在下方显示</div>
+    <div class="rate-demo-cell__label">底部显示</div>
     <t-rate placement="bottom" />
   </div>
   <div class="rate-demo-cell rate-demo-cell--space">

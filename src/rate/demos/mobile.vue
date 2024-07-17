@@ -15,7 +15,7 @@
     <tdesign-demo-block summary="带描述评分">
       <ShowTextDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="自定义评分弹框">
+    <tdesign-demo-block summary="评分弹框位置">
       <PlacementDemo />
     </tdesign-demo-block>
 

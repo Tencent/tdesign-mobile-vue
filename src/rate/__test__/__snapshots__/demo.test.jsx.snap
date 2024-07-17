@@ -1804,7 +1804,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
       <p
         class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        自定义评分弹框
+        评分弹框位置
       </p>
     </div>
     <div
@@ -1820,7 +1820,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
           class="rate-demo-cell__label"
           data-v-ac8c61a0=""
         >
-          在上方显示
+          顶部显示
         </div>
         <div
           class="t-rate"
@@ -1934,7 +1934,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
           class="rate-demo-cell__label"
           data-v-ac8c61a0=""
         >
-          在下方显示
+          底部显示
         </div>
         <div
           class="t-rate"
