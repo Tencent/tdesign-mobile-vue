@@ -8,7 +8,7 @@
 -- | -- | -- | -- | --
 content | String / Slot / Function | - | 链接内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 default | String / Slot / Function | - | 链接内容，同 content。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-disabled | Boolean | - | 禁用链接 | N
+disabled | Boolean | undefined | 禁用链接。优先级：Link.disabled > Form.disabled | N
 hover | Boolean | - | 是否开启点击反馈 | N
 href | String | - | 跳转链接 | N
 prefixIcon | Slot / Function | - | 前置图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
