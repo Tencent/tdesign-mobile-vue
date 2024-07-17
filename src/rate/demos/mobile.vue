@@ -15,6 +15,9 @@
     <tdesign-demo-block summary="带描述评分">
       <ShowTextDemo />
     </tdesign-demo-block>
+    <tdesign-demo-block summary="自定义评分弹框">
+      <PlacementDemo />
+    </tdesign-demo-block>
 
     <tdesign-demo-block title="02 组件状态">
       <ActionDemo />
@@ -30,9 +33,7 @@
     <tdesign-demo-block title="04 特殊样式" summary="竖向带描述评分">
       <SpecialDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block title="05 评分弹框位置">
-      <PlacementDemo />
-    </tdesign-demo-block>
+   
   </div>
 </template>
 
