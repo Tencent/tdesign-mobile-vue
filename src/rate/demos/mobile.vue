@@ -33,7 +33,6 @@
     <tdesign-demo-block title="04 特殊样式" summary="竖向带描述评分">
       <SpecialDemo />
     </tdesign-demo-block>
-   
   </div>
 </template>
 
