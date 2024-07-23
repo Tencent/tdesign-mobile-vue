@@ -21,7 +21,7 @@ export default defineComponent({
     };
 
     return () => {
-      const icon = renderTNodeJSX('icon');
+      const icon = () => renderTNodeJSX('icon');
       return (
         <div class={fabClass.value} style={props.style} onClick={handleClick}>
           <TButton

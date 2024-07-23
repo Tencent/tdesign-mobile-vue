@@ -23,7 +23,7 @@ import Toast from '../../toast/index';
 import SwipeCell from '..';
 
 const opened = ref([false, true]);
-const cellRef = ref<InstanceType<typeof SwipeCell>>();
+const cellRef = ref();
 
 const handleChange = (d: string) => {
   if (d) {
@@ -44,7 +44,7 @@ const handleEdit = () => {};
 const dir = ref('right');
 
 const handleDelete = (val: string) => {
-  cellRef.value?.showSure('sure-delete');
+  cellRef.value?.showSure(val, handleSureConfirm);
 };
 </script>
 

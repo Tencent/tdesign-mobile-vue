@@ -1,98 +1,11 @@
-<template>
-  <teleport v-if="actived" to="body">
-    <div ref="overlayLayerRef" :class="`${name}__overlay`" :style="{ zIndex: zIndex - 2 }"></div>
-    <div ref="highlightLayerRef" :class="[...highlightClass, ...maskClass]" :style="{ zIndex: zIndex - 1 }">
-      <t-node v-if="showCustomHighlightContent" :content="currentCustomHighlightContent"></t-node>
-    </div>
-    <div ref="popoverWrapperRef" :class="wrapperClass" :style="{ zIndex }">
-      <component :is="stepContainer" v-bind="stepProps">
-        <template v-if="isPopover" #triggerElement>
-          <div ref="referenceLayerRef" :class="[...popoverClass]"></div>
-        </template>
-        <template #[contentSlot]>
-          <t-node v-if="isPopover && contentNode" :content="contentNode"></t-node>
-          <div v-else :class="contetnClass">
-            <div :class="`${name}__tooltip`">
-              <div :class="`${name}__title`">
-                <t-node :content="titleNode"></t-node>
-              </div>
-              <div :class="`${name}__desc`">
-                <t-node :content="bodyNode"></t-node>
-              </div>
-            </div>
-            <div :class="footerClass">
-              <t-button
-                v-if="!hideSkip && !isLast"
-                key="skip"
-                :class="`${name}__skip`"
-                theme="light"
-                :size="buttonSize"
-                variant="base"
-                :content="globalConfig.skip"
-                v-bind="getCurrentCrossProps('skipButtonProps')"
-                @click="handleSkip"
-              >
-              </t-button>
-              <t-button
-                v-if="!isLast"
-                key="next"
-                :class="`${name}__next`"
-                theme="primary"
-                :size="buttonSize"
-                variant="base"
-                v-bind="getCurrentCrossProps('nextButtonProps')"
-                @click="handleNext"
-              >
-                <template #content>
-                  <t-node
-                    :content="renderButtonContent(getCurrentCrossProps('nextButtonProps'), globalConfig.next)"
-                  ></t-node>
-                  <t-node v-if="!hideCounter" :content="counterNode"></t-node>
-                </template>
-              </t-button>
-              <t-button
-                v-if="isLast"
-                key="back"
-                :class="`${name}__back`"
-                theme="light"
-                :size="buttonSize"
-                variant="base"
-                :content="globalConfig.back"
-                v-bind="getCurrentCrossProps('backButtonProps')"
-                @click="handleBack"
-              ></t-button>
-              <t-button
-                v-if="isLast"
-                key="finish"
-                :class="`${name}__finish`"
-                theme="primary"
-                :size="buttonSize"
-                variant="base"
-                v-bind="finishButtonProps ?? {}"
-                @click="handleFinish"
-              >
-                <template #content>
-                  <t-node :content="renderButtonContent(finishButtonProps, globalConfig.finish)"></t-node>
-                  <t-node v-if="!hideCounter" :content="counterNode"></t-node>
-                </template>
-              </t-button>
-            </div>
-          </div>
-        </template>
-      </component>
-    </div>
-  </teleport>
-</template>
-
-<script lang="ts">
-import { computed, defineComponent, ref, toRefs, h, getCurrentInstance, nextTick, onMounted, watch } from 'vue';
+import { computed, defineComponent, ref, toRefs, h, nextTick, onMounted, watch, Teleport } from 'vue';
 import isFunction from 'lodash/isFunction';
 
 import TPopover, { PopoverProps } from '../popover';
 import TPopup, { PopupProps } from '../popup';
 import TButton, { ButtonProps } from '../button';
 import config from '../config';
-import { useVModel, TNode } from '../shared';
+import { useVModel } from '../shared';
 import { addClass, getWindowScroll, removeClass } from '../shared/dom';
 import setStyle from '../_common/js/utils/set-style';
 import guideProps from './props';
@@ -108,7 +21,6 @@ const LOCK_CLASS = `${name}--lock`;
 export default defineComponent({
   name,
   components: {
-    TNode,
     TPopover,
     TButton,
     TPopup,
@@ -134,8 +46,6 @@ export default defineComponent({
     const currentHighlightLayerElm = ref<HTMLElement>();
     // dialog wrapper ref
     const popoverWrapperRef = ref<HTMLElement>();
-    // dialog ref
-    const dialogTooltipRef = ref<HTMLElement>();
     // 是否开始展示
     const actived = ref(false);
     // 步骤总数
@@ -145,8 +55,6 @@ export default defineComponent({
     // 当前是否为 popover
     const isPopover = computed(() => getCurrentCrossProps('mode') === 'popover');
     const popoverVisible = ref(false);
-    const stepContainer = computed(() => (isPopover.value ? TPopover : TPopup));
-    const contentSlot = computed(() => (isPopover.value ? 'content' : 'default'));
     const isPopoverCenter = computed(() => isPopover.value && currentStepInfo.value.placement === 'center');
     const stepProps = computed(() => {
       if (isPopover.value) {
@@ -225,74 +133,12 @@ export default defineComponent({
     ]);
     const popoverClass = computed(() => [`${name}__reference`]);
     const contetnClass = computed(() => [`${name}__content--${isPopover.value ? 'popover' : 'dialog'}`]);
-    const tooltipClass = computed(() => [`${name}__tooltip--${isPopover.value ? 'popover' : 'dialog'}`]);
     const footerClass = computed(() => [
       `${name}__footer`,
       `${name}__footer--${isPopover.value ? 'popover' : 'dialog'}`,
     ]);
 
-    const contentNode = computed(() => {
-      const { content } = currentStepInfo.value;
-      let renderContent;
-      if (isFunction(content)) {
-        renderContent = content(hWithParams(contentProps.value));
-      } else if (context.slots.content) {
-        renderContent = context.slots.content(hWithParams(contentProps.value));
-      } else if (content) {
-        renderContent = h(content, contentProps.value);
-      }
-      return renderContent;
-    });
-
-    const titleNode = computed(() => {
-      const { title } = currentStepInfo.value;
-      let renderTitle: any = null;
-      if (isFunction(title)) {
-        renderTitle = title(hWithParams());
-      } else if (context.slots.title) {
-        renderTitle = context.slots.title(hWithParams());
-      } else if (typeof title === 'string') {
-        renderTitle = title;
-      } else if (title) {
-        renderTitle = h(title);
-      }
-      return renderTitle;
-    });
-
-    const bodyNode = computed(() => {
-      const { body } = currentStepInfo.value;
-      let renderBody: any = null;
-      if (isFunction(body)) {
-        renderBody = body(hWithParams());
-      } else if (context.slots.body) {
-        renderBody = context.slots.body(hWithParams());
-      } else if (typeof body === 'string') {
-        renderBody = body;
-      } else if (body) {
-        renderBody = h(body);
-      }
-      return renderBody;
-    });
-
-    const counterNode = computed(() => {
-      const params = {
-        total: stepsTotal.value,
-        current: innerCurrent.value,
-      };
-      let renderCounter: any = null;
-      const { counter } = props;
-      if (isFunction(counter)) {
-        renderCounter = counter(h, params);
-      } else if (context.slots.counter) {
-        renderCounter = context.slots.counter(hWithParams(params));
-      } else if (counter) {
-        renderCounter = h(counter, params);
-      }
-      return renderCounter || ` (${innerCurrent.value + 1}/${stepsTotal.value})`;
-    });
-
     const isLast = computed(() => innerCurrent.value === stepsTotal.value - 1);
-    const isFirst = computed(() => innerCurrent.value === 0);
     const buttonSize = computed(() => (isPopover.value ? 'extra-small' : 'medium') as SizeEnum);
 
     // 设置高亮层的位置
@@ -459,48 +305,199 @@ export default defineComponent({
       initGuide();
     });
 
-    return {
-      actived,
-      name,
-      zIndex,
-      stepProps,
-      currentCustomHighlightContent,
-      showCustomHighlightContent,
-      highlightClass,
-      maskClass,
-      popoverClass,
-      tooltipClass,
-      contetnClass,
-      footerClass,
-      wrapperClass,
-      overlayLayerRef,
-      highlightLayerRef,
-      referenceLayerRef,
-      popoverWrapperRef,
-      dialogTooltipRef,
-      popoverVisible,
-      currentStepInfo,
-      isPopover,
-      stepContainer,
-      contentSlot,
-      contentNode,
-      titleNode,
-      bodyNode,
-      counterNode,
-      hideSkip,
-      hideCounter,
-      isLast,
-      isFirst,
-      finishButtonProps,
-      buttonSize,
-      globalConfig,
-      getCurrentCrossProps,
-      handleSkip,
-      handleNext,
-      handleFinish,
-      handleBack,
-      renderButtonContent,
+    return () => {
+      const renderStepContent = () => {
+        const renderTitleNode = () => {
+          const { title } = currentStepInfo.value;
+          let renderTitle: any = null;
+          if (isFunction(title)) {
+            renderTitle = title(hWithParams());
+          } else if (context.slots.title) {
+            renderTitle = context.slots.title(hWithParams());
+          } else if (typeof title === 'string') {
+            renderTitle = title;
+          } else if (title) {
+            renderTitle = h(title);
+          }
+          return renderTitle;
+        };
+        const renderBodyNode = () => {
+          const { body } = currentStepInfo.value;
+          let renderBody: any = null;
+          if (isFunction(body)) {
+            renderBody = body(hWithParams());
+          } else if (context.slots.body) {
+            renderBody = context.slots.body(hWithParams());
+          } else if (typeof body === 'string') {
+            renderBody = body;
+          } else if (body) {
+            renderBody = h(body);
+          }
+          return renderBody;
+        };
+        const renderCounterNode = () => {
+          const params = {
+            total: stepsTotal.value,
+            current: innerCurrent.value,
+          };
+          let renderCounter: any = null;
+          const { counter } = props;
+          if (isFunction(counter)) {
+            renderCounter = counter(h, params);
+          } else if (context.slots.counter) {
+            renderCounter = context.slots.counter(hWithParams(params));
+          } else if (counter) {
+            renderCounter = h(counter, params);
+          }
+          return renderCounter || ` (${innerCurrent.value + 1}/${stepsTotal.value})`;
+        };
+        return (
+          <div class={contetnClass.value}>
+            <div class={`${name}__tooltip`}>
+              <div class={`${name}__title`}>{renderTitleNode()}</div>
+              <div class={`${name}__desc`}>{renderBodyNode()}</div>
+            </div>
+            <div class={footerClass.value}>
+              {!hideSkip.value && !isLast.value && (
+                <TButton
+                  key="skip"
+                  class={`${name}__skip`}
+                  theme="light"
+                  size={buttonSize.value}
+                  variant="base"
+                  content={globalConfig.value.skip}
+                  {...getCurrentCrossProps('skipButtonProps')}
+                  onClick={handleSkip}
+                />
+              )}
+              {!isLast.value && (
+                <TButton
+                  key="next"
+                  class={`${name}__next`}
+                  theme="primary"
+                  size={buttonSize.value}
+                  variant="base"
+                  {...getCurrentCrossProps('nextButtonProps')}
+                  onClick={handleNext}
+                >
+                  {{
+                    content: () => (
+                      <>
+                        {renderButtonContent(getCurrentCrossProps('nextButtonProps'), globalConfig.value.next)}
+                        {!hideCounter.value && renderCounterNode()}
+                      </>
+                    ),
+                  }}
+                </TButton>
+              )}
+              {isLast.value && (
+                <TButton
+                  key="back"
+                  class={`${name}__back`}
+                  theme="light"
+                  size={buttonSize.value}
+                  variant="base"
+                  content={globalConfig.value.back}
+                  {...getCurrentCrossProps('backButtonProps')}
+                  onClick={handleBack}
+                ></TButton>
+              )}
+              {isLast.value && (
+                <TButton
+                  key="finish"
+                  class={`${name}__finish`}
+                  theme="primary"
+                  size={buttonSize.value}
+                  variant="base"
+                  {...(finishButtonProps.value ?? {})}
+                  onClick={handleFinish}
+                >
+                  {{
+                    content: () => (
+                      <>
+                        {renderButtonContent(finishButtonProps.value, globalConfig.value.finish)}
+                        {!hideCounter.value && renderCounterNode()}
+                      </>
+                    ),
+                  }}
+                </TButton>
+              )}
+            </div>
+          </div>
+        );
+      };
+      const renderContentNode = () => {
+        const { content } = currentStepInfo.value;
+        let renderContent;
+        if (isFunction(content)) {
+          renderContent = content(hWithParams(contentProps.value));
+        } else if (context.slots.content) {
+          renderContent = context.slots.content(hWithParams(contentProps.value));
+        } else if (content) {
+          renderContent = h(content, contentProps.value);
+        }
+        return renderContent;
+      };
+      const renderPopover = () => {
+        return (
+          <TPopover {...(stepProps.value as PopoverProps)}>
+            {{
+              triggerElement: () =>
+                isPopover.value && <div ref={referenceLayerRef} class={[...popoverClass.value]}></div>,
+              content: () => (isPopover.value && renderContentNode() ? renderContentNode() : renderStepContent()),
+            }}
+          </TPopover>
+        );
+      };
+      const renderPopup = () => {
+        return (
+          <TPopup {...(stepProps.value as PopupProps)}>
+            {{
+              default: () => (isPopover.value && renderContentNode() ? renderContentNode() : renderStepContent()),
+            }}
+          </TPopup>
+        );
+      };
+      const renderCurrentCustomHighlightContentNode = () => {
+        const { highlightContent } = currentStepInfo.value;
+
+        let node: any = highlightContent;
+        if (isFunction(highlightContent)) {
+          // 支持函数
+          node = highlightContent(hWithParams());
+        } else if (context.slots.highlightContent) {
+          // 支持插槽
+          node = context.slots.highlightContent(hWithParams());
+        } else if (context.slots['highlight-content']) {
+          // 支持插槽
+          node = context.slots['highlight-content'](hWithParams());
+        }
+        // 给自定义元素添加类名
+        if (node) {
+          if (!node.props) node.props = {};
+          node.props.class = node.props.class || '';
+        }
+        return node;
+      };
+      return (
+        <>
+          {actived.value && (
+            <Teleport to="body">
+              <div ref={overlayLayerRef} class={`${name}__overlay`} style={{ zIndex: `${zIndex.value - 2}` }}></div>
+              <div
+                ref={highlightLayerRef}
+                class={[...highlightClass.value, ...maskClass.value]}
+                style={{ zIndex: `${zIndex.value - 1}` }}
+              >
+                {showCustomHighlightContent.value && renderCurrentCustomHighlightContentNode()}
+              </div>
+              <div ref={popoverWrapperRef} class={wrapperClass.value} style={{ zIndex: zIndex.value }}>
+                {isPopover.value ? renderPopover() : renderPopup()}
+              </div>
+            </Teleport>
+          )}
+        </>
+      );
     };
   },
 });
-</script>

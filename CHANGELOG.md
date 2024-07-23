@@ -5,6 +5,15 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.3.3 `2024-07-23` 
+### 🚀 Features
+- `Rate`: 新增 `placement` 属性， 支持配置评分弹框的位置 @liweijie0812 ([#1501](https://github.com/Tencent/tdesign-mobile-vue/pull/1501))
+- `Guide`: `sfc` 改 `tsx` @zuiaiwanqian ([#1471](https://github.com/Tencent/tdesign-mobile-vue/pull/1471))
+- `SwipeCell`: `sfc` 改 `tsx` @liweijie0812 ([#1499](https://github.com/Tencent/tdesign-mobile-vue/pull/1499))
+### 🐞 Bug Fixes
+- `Link`:  修复禁用优先级问题 @liweijie0812 ([#1502](https://github.com/Tencent/tdesign-mobile-vue/pull/1502))
+- `Popup`: 处理窗体类组件隐藏时 `t-popup-overflow-hidden` 等类名未移除的问题 @QuentinHsu ([#1504](https://github.com/Tencent/tdesign-mobile-vue/pull/1504))
+
 ## 🌈 1.3.2 `2024-07-11` 
 ### 🚀 Features
 - `Icon`: 新增 `list-numbered`、`lock-off-filled`、`lock-on-filled` 等 3 个图标 @liweijie0812 ([#1488](https://github.com/Tencent/tdesign-mobile-vue/pull/1488))
