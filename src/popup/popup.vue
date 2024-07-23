@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { computed, watch, defineComponent, h, getCurrentInstance, ref, nextTick } from 'vue';
+import { computed, watch, defineComponent, h, getCurrentInstance, ref, nextTick, onUnmounted } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
 import popupProps from './props';
@@ -150,7 +150,9 @@ export default defineComponent({
         value ? lock() : unlock();
       },
     );
-
+    onUnmounted(() => {
+      unlock();
+    });
     return {
       name,
       to,
