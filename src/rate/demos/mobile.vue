@@ -15,6 +15,9 @@
     <tdesign-demo-block summary="带描述评分">
       <ShowTextDemo />
     </tdesign-demo-block>
+    <tdesign-demo-block summary="评分弹框位置">
+      <PlacementDemo />
+    </tdesign-demo-block>
 
     <tdesign-demo-block title="02 组件状态">
       <ActionDemo />
@@ -42,4 +45,5 @@ import ActionDemo from './action.vue';
 import SizeDemo from './size.vue';
 import ColorDemo from './color.vue';
 import SpecialDemo from './special.vue';
+import PlacementDemo from './placement.vue';
 </script>

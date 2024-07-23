@@ -27,12 +27,21 @@ export default {
   },
   /** 评分图标的间距 */
   gap: {
-    type: Number,
+    type: [String, Number] as PropType<TdRateProps['gap']>,
     default: 8,
   },
   /** 自定义评分图标，[选中图标，未选中图标] */
   icon: {
     type: [Array, Function] as PropType<TdRateProps['icon']>,
+  },
+  /** 选择评分弹框的位置，值为空字符表示不显示评分弹框 */
+  placement: {
+    type: String as PropType<TdRateProps['placement']>,
+    default: 'top' as TdRateProps['placement'],
+    validator(val: TdRateProps['placement']): boolean {
+      if (!val) return true;
+      return ['top', 'bottom', ''].includes(val);
+    },
   },
   /** 是否显示对应的辅助文字 */
   showText: Boolean,

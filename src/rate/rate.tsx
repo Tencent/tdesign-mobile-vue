@@ -250,9 +250,16 @@ export default defineComponent({
       };
 
       const renderRateTips = () => {
-        if (!tipsVisible.value) return null;
+        if (!tipsVisible.value || props.placement === '') return null;
         return (
-          <div ref={ratePopoverRef} class={`${rateClass.value}__tips`} style={{ left: `${tipsLeft.value}px` }}>
+          <div
+            ref={ratePopoverRef}
+            class={{
+              [`${rateClass.value}__tips`]: true,
+              [`${rateClass.value}__tips--${props.placement}`]: props.placement,
+            }}
+            style={{ left: `${tipsLeft.value}px` }}
+          >
             {actionType.value === 'tap' ? (
               <div style="display: flex">
                 {props.allowHalf && (
