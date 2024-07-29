@@ -48,9 +48,22 @@ export default defineComponent({
       'index-change',
     );
 
-    // 预加载前后几张图片，以保持预览流畅也节省资源
-    // 需要预加载的图片索引，第一张、第二张、最后一张，保持当前图片和当前图左右两边的图片预加载
-    const preloadImageIndex = [0, 1, props.images.length - 1];
+    // 当前图片和当前图左右两边的图片预加载，以保持预览流畅也节省资源
+    const preloadImageIndex = computed(() => {
+      const lastIndex = props.images.length - 1;
+      // 当 currentIndex 为 0/undefined 时，预加载第一张、第二张、最后一张图片
+      if ([undefined, 0].includes(currentIndex.value)) {
+        return [0, 1, lastIndex];
+      }
+      // 当 currentIndex 为最后一张时，预加载最后一张、倒数第二张、第一张图片
+      if (currentIndex.value === lastIndex) {
+        return [lastIndex, lastIndex - 1, 0];
+      }
+      // 其他情况下，预加载当前图片、当前图片的前一张、当前图片的后一张
+      const prev = currentIndex.value - 1 >= 0 ? currentIndex.value - 1 : lastIndex;
+      const next = currentIndex.value + 1 <= lastIndex ? currentIndex.value + 1 : 0;
+      return [currentIndex.value, prev, next];
+    });
     // 图片列表信息，包含是否需要预加载标志
     const imageInfoList = computed(() => {
       return props.images.map((image, index) => {
@@ -65,7 +78,7 @@ export default defineComponent({
         }
         return {
           image: imageInfo,
-          preload: preloadImageIndex.includes(index),
+          preload: preloadImageIndex.value.includes(index),
         };
       });
     });
