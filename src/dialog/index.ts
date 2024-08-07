@@ -56,7 +56,7 @@ function create(options: Partial<TdDialogProps> | string): DialogInstance {
     },
     onClose: (context: DialogCloseContext) => {
       callFn('onClose', context);
-      root.remove();
+      params.visible = false;
     },
     onClosed: () => {
       callFn('onClosed');
