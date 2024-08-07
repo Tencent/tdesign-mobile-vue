@@ -84,7 +84,7 @@ export default defineComponent({
       const note = readerTNodeContent('default', 'note');
       return (
         <div
-          v-hover={{ className: `${cellClass.value}--hover`, disabledName: hoverDisabled.value }}
+          v-hover={{ className: `${cellClass.value}--hover`, disabledHover: hoverDisabled.value }}
           class={cellClasses.value}
           onClick={handleClick}
         >
