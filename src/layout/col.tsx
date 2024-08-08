@@ -1,8 +1,8 @@
 import { computed, defineComponent, CSSProperties, inject } from 'vue';
 import { convertUnit } from '../shared';
-import props from './props';
+import props from './col-props';
 import config from '../config';
-import { rowInjectionKey } from '../row/constants';
+import { rowInjectionKey } from './constants';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 

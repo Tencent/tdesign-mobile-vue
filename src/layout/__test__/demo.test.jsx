@@ -3,9 +3,9 @@
  */
 
 import { mount } from '@vue/test-utils';
-import baseVue from '@/col/demos/base.vue';
-import mobileVue from '@/col/demos/mobile.vue';
-import offsetVue from '@/col/demos/offset.vue';
+import baseVue from '@/layout/demos/base.vue';
+import mobileVue from '@/layout/demos/mobile.vue';
+import offsetVue from '@/layout/demos/offset.vue';
 
 const mapper = {
   baseVue,
