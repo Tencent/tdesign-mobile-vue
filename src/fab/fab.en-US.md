@@ -10,6 +10,7 @@ buttonProps | Object | - | Typescript：`ButtonProps`，[Button API Documents](.
 icon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 style | String | right: 16px; bottom: 32px; | \- | N
 text | String | - | \- | N
+draggable | Boolean | false | set draggable | N
 onClick | Function |  | Typescript：`(context: {e: MouseEvent}) => void`<br/> | N
 
 ### Fab Events

@@ -10,6 +10,7 @@ buttonProps | Object | - | 透传至 Button 组件。TS 类型：`ButtonProps`�
 icon | Slot / Function | - | 图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 style | String | right: 16px; bottom: 32px; | 悬浮按钮的样式，常用于调整位置 | N
 text | String | - | 文本内容 | N
+draggable | Boolean | false | 是否可拖动 | N
 onClick | Function |  | TS 类型：`(context: {e: MouseEvent}) => void`<br/>悬浮按钮点击事件 | N
 
 ### Fab Events
