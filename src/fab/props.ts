@@ -28,4 +28,9 @@ export default {
   },
   /** 悬浮按钮点击事件 */
   onClick: Function as PropType<TdFabProps['onClick']>,
+  /** 是否可拖拽 */
+  draggable: {
+    type: Boolean,
+    default: false,
+  }
 };
