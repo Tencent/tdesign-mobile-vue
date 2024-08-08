@@ -8,6 +8,8 @@ import { TdFabProps } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-fab`;
+const getNumber = (num: string) => num.replace(/[^\d]/g, '');
+
 export default defineComponent({
   name,
   props: FabProps,
@@ -16,12 +18,17 @@ export default defineComponent({
 
     const fabClass = usePrefixClass('fab');
     const fabRef = ref();
+    const fabButtonRef = ref();
 
     const handleClick = (e: MouseEvent) => {
       props.onClick?.({ e });
     };
 
     const mounted = ref(false);
+    const fabButtonSize = ref({
+      width: 48,
+      height: 48,
+    });
     const btnSwitchPos = ref({
       x: 16,
       y: 32,
@@ -54,13 +61,42 @@ export default defineComponent({
       }
       const offsetX = e.touches[0].pageX - switchPos.value.startX;
       const offsetY = e.touches[0].pageY - switchPos.value.startY;
-      const x = Math.floor(switchPos.value.x - offsetX);
-      const y = Math.floor(switchPos.value.y - offsetY);
+      let x = Math.floor(switchPos.value.x - offsetX);
+      let y = Math.floor(switchPos.value.y - offsetY);
+      [x, y] = getSwitchButtonSafeAreaXY(x, y);
       btnSwitchPos.value.x = x;
       btnSwitchPos.value.y = y;
       switchPos.value.endX = x;
       switchPos.value.endY = y;
       switchPos.value.hasMoved = true;
+    };
+
+    const getSwitchButtonSafeAreaXY = (x: number, y: number) => {
+      const bottomThreshold = 0;
+      const top = 0;
+      const windowTop = 0;
+      const windowBottom = 0;
+      const windowWidth = Math.min(window.innerWidth, document.documentElement.clientWidth, screen.width);
+      const windowHeight = Math.min(window.innerHeight, document.documentElement.clientHeight, screen.height);
+      const docWidth = windowWidth;
+      const docHeight = windowHeight - top;
+
+      // check edge
+      if (x + fabButtonSize.value.width > docWidth) {
+        x = docWidth - fabButtonSize.value.width;
+      }
+      if (y + fabButtonSize.value.height - windowTop > docHeight) {
+        y = docHeight - fabButtonSize.value.height + windowTop;
+      }
+
+      if (x < 0) {
+        x = 0;
+      }
+      if (y < bottomThreshold + windowBottom) {
+        y = bottomThreshold + windowBottom;
+      }
+      // safe area for iOS Home indicator
+      return [x, y];
     };
 
     const onTouchEnd = (e: TouchEvent) => {
@@ -74,6 +110,7 @@ export default defineComponent({
     };
 
     const setSwitchPosition = (switchX: number, switchY: number) => {
+      [switchX, switchY] = getSwitchButtonSafeAreaXY(switchX, switchY);
       switchPos.value.x = switchX;
       switchPos.value.y = switchY;
       btnSwitchPos.value.x = switchX;
@@ -88,12 +125,15 @@ export default defineComponent({
     onMounted(() => {
       mounted.value = true;
       resetDraggableParams();
+
+      const info = window.getComputedStyle(fabButtonRef.value.$el);
+      fabButtonSize.value.height = +getNumber(info.height);
+      fabButtonSize.value.width = +getNumber(info.width);
     });
 
     const getFabOriginStyle = () => {
       const info = window.getComputedStyle(fabRef.value);
       const { right, bottom } = info || {};
-      const getNumber = (num: string) => num.replace(/[^\d]/g, '');
 
       return {
         right: +(getNumber(right) || 0),
@@ -137,6 +177,7 @@ export default defineComponent({
             class={`${fabClass.value}__button`}
             {...(props.buttonProps as TdFabProps['buttonProps'])}
             icon={icon}
+            ref={fabButtonRef}
           >
             {props.text}
           </TButton>
