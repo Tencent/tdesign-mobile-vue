@@ -84,10 +84,10 @@ export const docs = [
       {
         title: 'Layout 布局',
         titleEn: 'Layout',
-        name: 'col',
-        path: '/mobile-vue/components/col',
-        component: () => import('@/col/col.md'),
-        componentEn: () => import('@/col/col.en-US.md'),
+        name: 'layout',
+        path: '/mobile-vue/components/layout',
+        component: () => import('@/layout/layout.md'),
+        componentEn: () => import('@/layout/layout.en-US.md'),
       },
       {
         title: 'Link 链接',

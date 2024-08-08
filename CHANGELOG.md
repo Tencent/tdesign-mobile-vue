@@ -5,6 +5,15 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.3.4 `2024-08-08` 
+### 🚀 Features
+- `ImageViewer`: 优化预加载逻辑 @QuentinHsu ([#1516](https://github.com/Tencent/tdesign-mobile-vue/pull/1516))
+- `Fab`: 新增 `draggable` 属性，支持拖拽 @novlan1 ([#1527](https://github.com/Tencent/tdesign-mobile-vue/pull/1527))
+### 🐞 Bug Fixes
+- `Cell`: 修复禁用 `Hover` 不生效 @liweijie0812 ([#1519](https://github.com/Tencent/tdesign-mobile-vue/pull/1519))
+- `Dialog`: 修复函数式调用 `Dialog` 时关闭按钮不生效 @QuentinHsu ([#1513](https://github.com/Tencent/tdesign-mobile-vue/pull/1513))
+- `NoticeBar`: 修复滚动内容宽度获取错误 @anlyyao ([#1860](https://github.com/Tencent/tdesign-common/pull/1860))
+
 ## 🌈 1.3.3 `2024-07-23` 
 ### 🚀 Features
 - `Rate`: 新增 `placement` 属性， 支持配置评分弹框的位置 @liweijie0812 ([#1501](https://github.com/Tencent/tdesign-mobile-vue/pull/1501))
