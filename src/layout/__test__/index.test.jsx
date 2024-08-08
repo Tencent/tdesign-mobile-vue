@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
-import Row from '../../row';
+import Row from '../row';
 import Col from '../col';
 
 const prefix = 't';

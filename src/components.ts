@@ -3,8 +3,7 @@ export * from './button';
 export * from './divider';
 export * from './fab';
 export * from './icon';
-export * from './row';
-export * from './col';
+export * from './layout';
 export * from './link';
 
 // 导航
