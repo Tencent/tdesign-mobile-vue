@@ -7,7 +7,7 @@
         <t-icon name="notification" size="24" aria-label="通知" />
       </t-badge>
       <t-badge dot :offset="[1, 1]" class="badge-item">
-        <t-button>按钮</t-button>
+        <t-button>按钮123</t-button>
       </t-badge>
     </div>
 
