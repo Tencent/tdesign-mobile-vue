@@ -77,7 +77,7 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
             class="t-button__content"
           >
             
-            按钮
+            按钮123
             
           </span>
           <!---->
@@ -353,7 +353,7 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                   class="t-button__content"
                 >
                   
-                  按钮
+                  按钮123
                   
                 </span>
                 <!---->
