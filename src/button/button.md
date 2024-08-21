@@ -18,7 +18,7 @@ size | String | medium | 组件尺寸。可选项：extra-small/small/medium/lar
 suffix | Slot / Function | - | 右侧内容，可用于定义右侧图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 theme | String | default | 组件风格，依次为品牌色、危险色。可选项：default/primary/danger/light | N
 type | String | button | 按钮类型。可选项：submit/reset/button | N
-variant | String | base | 按钮形式，基础、线框、文字。可选项：base/outline/dashed/text | N
+variant | String | base | 按钮形式，基础、线框、虚线、文字。可选项：base/outline/dashed/text | N
 onClick | Function |  | TS 类型：`(e: MouseEvent) => void`<br/>点击时触发 | N
 
 ### Button Events
