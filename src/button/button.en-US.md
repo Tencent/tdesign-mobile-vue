@@ -18,7 +18,7 @@ size | String | medium | a button has four size。options: extra-small/small/med
 suffix | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 theme | String | default | button theme。options: default/primary/danger/light | N
 type | String | button | type of button element in html。options: submit/reset/button | N
-variant | String | base | button variant。options: base/outline/dashed/text | N
+variant | String | base | variant of button。options: base/outline/dashed/text | N
 onClick | Function |  | Typescript：`(e: MouseEvent) => void`<br/>trigger on click | N
 
 ### Button Events

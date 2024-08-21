@@ -71,7 +71,7 @@ export default {
       return ['submit', 'reset', 'button'].includes(val);
     },
   },
-  /** 按钮形式，基础、线框、文字 */
+  /** 按钮形式，基础、线框、虚线、文字 */
   variant: {
     type: String as PropType<TdButtonProps['variant']>,
     default: 'base' as TdButtonProps['variant'],

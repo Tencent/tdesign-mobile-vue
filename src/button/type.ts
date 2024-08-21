@@ -64,7 +64,7 @@ export interface TdButtonProps {
    */
   type?: 'submit' | 'reset' | 'button';
   /**
-   * 按钮形式，基础、线框、文字
+   * 按钮形式，基础、线框、虚线、文字
    * @default base
    */
   variant?: 'base' | 'outline' | 'dashed' | 'text';
