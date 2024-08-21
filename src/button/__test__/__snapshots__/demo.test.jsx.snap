@@ -84,6 +84,23 @@ exports[`Button > Button baseVue demo works fine 1`] = `
     </button>
     <button
       aria-disabled="false"
+      class="t-button t-button--size-large t-button--dashed t-button--primary t-button--rectangle"
+      data-v-61a49c84=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        虚框按钮
+        
+      </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
       class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle"
       data-v-61a49c84=""
       role="button"
@@ -450,6 +467,23 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
           >
             
             描边按钮
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--dashed t-button--primary t-button--rectangle"
+          data-v-61a49c84=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            虚框按钮
             
           </span>
           <!---->
@@ -891,6 +925,24 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         </button>
         <button
           aria-disabled="true"
+          class="t-button t-button--size-large t-button--dashed t-button--primary t-button--rectangle t-button--disabled"
+          data-v-096a7265=""
+          disabled=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            虚框按钮
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="true"
           class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-button--disabled"
           data-v-096a7265=""
           disabled=""
@@ -1164,232 +1216,304 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       class="tdesign-mobile-demo-block__slot"
     >
       
-      
       <div
-        class="row"
+        class="section-theme"
         data-v-42dcdba6=""
+        data-v-7c375b15=""
       >
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
+        <div
+          class="row"
           data-v-42dcdba6=""
-          role="button"
-          type="button"
         >
-          <!---->
-          <span
-            class="t-button__content"
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
+            data-v-42dcdba6=""
+            role="button"
+            type="button"
           >
-            
-            填充按钮
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle"
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              填充按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle"
+            data-v-42dcdba6=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              描边按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--dashed t-button--default t-button--rectangle"
+            data-v-42dcdba6=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              虚框按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle"
+            data-v-42dcdba6=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              文字按钮
+              
+            </span>
+            <!---->
+          </button>
+        </div>
+        <div
+          class="row"
           data-v-42dcdba6=""
-          role="button"
-          type="button"
         >
-          <!---->
-          <span
-            class="t-button__content"
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
+            data-v-42dcdba6=""
+            role="button"
+            type="button"
           >
-            
-            描边按钮
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle"
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              填充按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
+            data-v-42dcdba6=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              描边按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--dashed t-button--primary t-button--rectangle"
+            data-v-42dcdba6=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              虚框按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle"
+            data-v-42dcdba6=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              文字按钮
+              
+            </span>
+            <!---->
+          </button>
+        </div>
+        <div
+          class="row"
           data-v-42dcdba6=""
-          role="button"
-          type="button"
         >
-          <!---->
-          <span
-            class="t-button__content"
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle"
+            data-v-42dcdba6=""
+            role="button"
+            type="button"
           >
-            
-            文字按钮
-            
-          </span>
-          <!---->
-        </button>
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              填充按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--outline t-button--danger t-button--rectangle"
+            data-v-42dcdba6=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              描边按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--dashed t-button--danger t-button--rectangle"
+            data-v-42dcdba6=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              虚框按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--text t-button--danger t-button--rectangle"
+            data-v-42dcdba6=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              文字按钮
+              
+            </span>
+            <!---->
+          </button>
+        </div>
+        <div
+          class="row"
+          data-v-42dcdba6=""
+        >
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
+            data-v-42dcdba6=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              填充按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--outline t-button--light t-button--rectangle"
+            data-v-42dcdba6=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              描边按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--dashed t-button--light t-button--rectangle"
+            data-v-42dcdba6=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              虚框按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--text t-button--light t-button--rectangle"
+            data-v-42dcdba6=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              文字按钮
+              
+            </span>
+            <!---->
+          </button>
+        </div>
       </div>
-      <div
-        class="row"
-        data-v-42dcdba6=""
-      >
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            填充按钮
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            描边按钮
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            文字按钮
-            
-          </span>
-          <!---->
-        </button>
-      </div>
-      <div
-        class="row"
-        data-v-42dcdba6=""
-      >
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            填充按钮
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--danger t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            描边按钮
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--text t-button--danger t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            文字按钮
-            
-          </span>
-          <!---->
-        </button>
-      </div>
-      <div
-        class="row"
-        data-v-42dcdba6=""
-      >
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            填充按钮
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--light t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            描边按钮
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--text t-button--light t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            文字按钮
-            
-          </span>
-          <!---->
-        </button>
-      </div>
-      
       
     </div>
   </div>
@@ -1681,6 +1805,24 @@ exports[`Button > Button statusVue demo works fine 1`] = `
     </button>
     <button
       aria-disabled="true"
+      class="t-button t-button--size-large t-button--dashed t-button--primary t-button--rectangle t-button--disabled"
+      data-v-096a7265=""
+      disabled=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        虚框按钮
+        
+      </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="true"
       class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-button--disabled"
       data-v-096a7265=""
       disabled=""
@@ -1704,9 +1846,9 @@ exports[`Button > Button statusVue demo works fine 1`] = `
 
 exports[`Button > Button themeVue demo works fine 1`] = `
 <div
-  data-v-app=""
+  class="section-theme"
+  data-v-42dcdba6=""
 >
-  
   <div
     class="row"
     data-v-42dcdba6=""
@@ -1741,6 +1883,23 @@ exports[`Button > Button themeVue demo works fine 1`] = `
       >
         
         描边按钮
+        
+      </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-large t-button--dashed t-button--default t-button--rectangle"
+      data-v-42dcdba6=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        虚框按钮
         
       </span>
       <!---->
@@ -1803,6 +1962,23 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     </button>
     <button
       aria-disabled="false"
+      class="t-button t-button--size-large t-button--dashed t-button--primary t-button--rectangle"
+      data-v-42dcdba6=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        虚框按钮
+        
+      </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
       class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle"
       data-v-42dcdba6=""
       role="button"
@@ -1853,6 +2029,23 @@ exports[`Button > Button themeVue demo works fine 1`] = `
       >
         
         描边按钮
+        
+      </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-large t-button--dashed t-button--danger t-button--rectangle"
+      data-v-42dcdba6=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        虚框按钮
         
       </span>
       <!---->
@@ -1915,6 +2108,23 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     </button>
     <button
       aria-disabled="false"
+      class="t-button t-button--size-large t-button--dashed t-button--light t-button--rectangle"
+      data-v-42dcdba6=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        虚框按钮
+        
+      </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
       class="t-button t-button--size-large t-button--text t-button--light t-button--rectangle"
       data-v-42dcdba6=""
       role="button"
@@ -1931,6 +2141,5 @@ exports[`Button > Button themeVue demo works fine 1`] = `
       <!---->
     </button>
   </div>
-  
 </div>
 `;
