@@ -67,20 +67,68 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           token: ${{ secrets.PERSONAL_TOKEN }}
+          
       - name: gh checkout pr
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: gh pr checkout ${{ github.event.issue.number }} --recurse-submodules
-      - run: |
+
+      - name: merge develop
+        run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-      - run: git submodule update --remote --merge
-      - name: Commit Common
+          git merge develop --no-commit || true
+
+      - name: check conflicts
         run: |
-          git add .
-          git commit -m "chore: update common"
-          git push
+          git status
+          conflict_count=$(git status | grep -c 'both modified:') || true
+          working_tree_clean=$(git status | grep -c 'nothing to commit, working tree clean') || true
+          common_conflict=$(git status | grep 'both modified:' | grep -c '_common') || true
+          conflicts_sum=$((common_conflict))
+          echo "conflict_count: $conflict_count"
+          echo "working_tree_clean: $working_tree_clean"
+          echo "common_conflict: $common_conflict"
+          echo "conflicts_sum: $conflicts_sum"
+
+          if [ "$working_tree_clean" -eq "1" ]; then
+              echo "nothing to commit, working tree clean"
+              exit 0
+          fi
+
+          if [ "$conflict_count" -gt "0" ]&&[ "$conflicts_sum" -eq "0" ]; then
+              echo "Unknown conflict "
+              git status
+              exit 1
+          fi
+
+          if [ "$common_conflict" -eq "1" ];then
+              git checkout --theirs src/_common
+              git add src/_common
+              echo "resolve conflict _common"
+          fi
+
+          git status
+          git commit -am "chore: merge develop"
+      - name: udpate common
+        run: |
+          git submodule update --remote --merge
+      - name: Commit common
+        run: |
+          git status
+          working_tree_clean=$(git status | grep -c 'nothing to commit, working tree clean') || true
+          if [ "$working_tree_clean" -eq "0" ]; then
+            git add .
+            git commit -m "chore: update common"
+          fi
+          git status
+
+      - name: git push
+        run: |
+          git status
+          git push || true
 
   update-snapshot:
     needs: check
@@ -161,10 +209,8 @@ jobs:
             git add .
             git commit -m "chore: update snapshot"
           fi
+          git status
       - name: git push
         run: |
           git status
-          branch_ahead=$(git status | grep -c 'use "git push" to publish your local commits') || true
-          if [ "$branch_ahead" -eq "1" ]; then
-            git push
-          fi
+          git push || true
