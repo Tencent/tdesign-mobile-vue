@@ -1,4 +1,6 @@
 import { defineComponent, computed } from 'vue';
+import isNumber from 'lodash/isNumber';
+import isString from 'lodash/isString';
 import config from '../config';
 import BadgeProps from './props';
 import { usePrefixClass } from '../hooks/useClass';
@@ -71,11 +73,11 @@ export default defineComponent({
     return () => {
       const readerCount = () => {
         if (props.dot) return null;
-        if (typeof props.count === 'number') {
+        if (isString(props.count) || isNumber(props.count)) {
           if (props.count === 0) {
             return props.showZero ? props.count : null;
           }
-          return props.count >= +props.maxCount ? props.maxCount : props.count;
+          return Number(props.count) > Number(props.maxCount) ? `${props.maxCount}+` : props.count;
         }
         return renderTNodeJSX('count');
       };

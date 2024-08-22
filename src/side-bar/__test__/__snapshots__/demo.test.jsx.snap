@@ -30,7 +30,6 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
           </span>
         </div>
         <!---->
-        <!---->
       </div>
     </div>
     <div
@@ -65,10 +64,7 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
           class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
         >
           <!---->
-          
-          <!---->
         </div>
-        <!---->
       </div>
     </div>
     <div
@@ -89,7 +85,6 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
             选项三
           </span>
         </div>
-        <!---->
         <!---->
       </div>
     </div>
@@ -114,11 +109,8 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         >
-          <!---->
           6
-          <!---->
         </div>
-        <!---->
       </div>
     </div>
     <div
@@ -139,7 +131,6 @@ exports[`SideBar > SideBar baseVue demo works fine 1`] = `
             选项五
           </span>
         </div>
-        <!---->
         <!---->
       </div>
     </div>
@@ -3107,7 +3098,6 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
           </span>
         </div>
         <!---->
-        <!---->
       </div>
     </div>
     <div
@@ -3142,10 +3132,7 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
           class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
         >
           <!---->
-          
-          <!---->
         </div>
-        <!---->
       </div>
     </div>
     <div
@@ -3166,7 +3153,6 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
             选项三
           </span>
         </div>
-        <!---->
         <!---->
       </div>
     </div>
@@ -3191,11 +3177,8 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         >
-          <!---->
           6
-          <!---->
         </div>
-        <!---->
       </div>
     </div>
     <div
@@ -3216,7 +3199,6 @@ exports[`SideBar > SideBar customVue demo works fine 1`] = `
             选项五
           </span>
         </div>
-        <!---->
         <!---->
       </div>
     </div>
@@ -6333,7 +6315,6 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           </span>
         </div>
         <!---->
-        <!---->
       </div>
     </div>
     <div
@@ -6368,10 +6349,7 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
         >
           <!---->
-          
-          <!---->
         </div>
-        <!---->
       </div>
     </div>
     <div
@@ -6392,7 +6370,6 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             选项三
           </span>
         </div>
-        <!---->
         <!---->
       </div>
     </div>
@@ -6417,11 +6394,8 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         >
-          <!---->
           6
-          <!---->
         </div>
-        <!---->
       </div>
     </div>
     <div
@@ -6442,7 +6416,6 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
             选项五
           </span>
         </div>
-        <!---->
         <!---->
       </div>
     </div>
@@ -9265,7 +9238,6 @@ exports[`SideBar > SideBar withIconVue demo works fine 1`] = `
           </span>
         </div>
         <!---->
-        <!---->
       </div>
     </div>
     <div
@@ -9316,10 +9288,7 @@ exports[`SideBar > SideBar withIconVue demo works fine 1`] = `
           class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
         >
           <!---->
-          
-          <!---->
         </div>
-        <!---->
       </div>
     </div>
     <div
@@ -9356,7 +9325,6 @@ exports[`SideBar > SideBar withIconVue demo works fine 1`] = `
             选项三
           </span>
         </div>
-        <!---->
         <!---->
       </div>
     </div>
@@ -9397,11 +9365,8 @@ exports[`SideBar > SideBar withIconVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         >
-          <!---->
           6
-          <!---->
         </div>
-        <!---->
       </div>
     </div>
     <div
@@ -9438,7 +9403,6 @@ exports[`SideBar > SideBar withIconVue demo works fine 1`] = `
             选项五
           </span>
         </div>
-        <!---->
         <!---->
       </div>
     </div>
