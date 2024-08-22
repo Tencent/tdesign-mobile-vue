@@ -68,22 +68,14 @@ export default defineComponent({
       };
     });
 
-    const badgeValue = computed(() => {
-      if (props.dot) {
-        return '';
-      }
-      const count = Number(props.count);
-      if (isNaN(count) || isNaN(props.maxCount)) {
-        return props.count;
-      }
-      return count > props.maxCount ? `${props.maxCount}+` : count;
-    });
-
     return () => {
       const readerCount = () => {
-        const countType = typeof props.count;
-        if (countType === 'string' || countType === 'number') {
-          return null;
+        if (props.dot) return null;
+        if (typeof props.count === 'number') {
+          if (props.count === 0) {
+            return props.showZero ? props.count : null;
+          }
+          return props.count >= +props.maxCount ? props.maxCount : props.count;
         }
         return renderTNodeJSX('count');
       };
@@ -94,26 +86,6 @@ export default defineComponent({
         }
         return content;
       };
-      const readerRibbonBefore = () => {
-        if (props.shape !== 'ribbon') {
-          return null;
-        }
-        return (
-          <div
-            class={`${badgeClass.value}__ribbon--before`}
-            style={props.color ? `border-color: ${props.color}` : ''}
-          />
-        );
-      };
-
-      const readerRibbonAfter = () => {
-        if (props.shape !== 'ribbon') {
-          return null;
-        }
-        return (
-          <div class={`${badgeClass.value}__ribbon--after`} style={props.color ? `border-color: ${props.color}` : ''} />
-        );
-      };
 
       const readerBadge = () => {
         if (!isShowBadge.value) {
@@ -121,9 +93,7 @@ export default defineComponent({
         }
         return (
           <div class={badgeInnerClasses.value} style={badgeStyles.value}>
-            {readerRibbonBefore()}
-            {badgeValue.value}
-            {readerRibbonAfter()}
+            {readerCount()}
           </div>
         );
       };
@@ -131,7 +101,6 @@ export default defineComponent({
         <div class={badgeClasses.value}>
           <div class={`${badgeClass.value}__content`}>{readerContent()}</div>
           {readerBadge()}
-          {readerCount()}
         </div>
       );
     };
