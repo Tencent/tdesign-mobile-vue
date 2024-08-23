@@ -71,7 +71,6 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
             
           </div>
           <!---->
-          <!---->
         </div>
       </div>
     </div>
@@ -137,7 +136,6 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!---->
           <!---->
         </div>
       </div>
@@ -205,7 +203,6 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
             
           </div>
           <!---->
-          <!---->
         </div>
       </div>
     </div>
@@ -271,7 +268,6 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!---->
           <!---->
         </div>
       </div>
@@ -339,7 +335,6 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
             
           </div>
           <!---->
-          <!---->
         </div>
       </div>
     </div>
@@ -381,7 +376,6 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!---->
           <!---->
         </div>
       </div>
@@ -462,10 +456,7 @@ exports[`Avatar > Avatar badgeAvatarVue demo works fine 1`] = `
           style="right: 4px; top: 4px;"
         >
           <!---->
-          
-          <!---->
         </div>
-        <!---->
       </div>
     </div>
   </div>
@@ -497,11 +488,8 @@ exports[`Avatar > Avatar badgeAvatarVue demo works fine 1`] = `
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
           style="right: 6px; top: 6px;"
         >
-          <!---->
           8
-          <!---->
         </div>
-        <!---->
       </div>
     </div>
   </div>
@@ -544,11 +532,8 @@ exports[`Avatar > Avatar badgeAvatarVue demo works fine 1`] = `
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
           style="right: 6px; top: 6px;"
         >
-          <!---->
           12
-          <!---->
         </div>
-        <!---->
       </div>
     </div>
   </div>
@@ -585,7 +570,6 @@ exports[`Avatar > Avatar characterAvatarVue demo works fine 1`] = `
           
         </div>
         <!---->
-        <!---->
       </div>
     </div>
   </div>
@@ -613,7 +597,6 @@ exports[`Avatar > Avatar characterAvatarVue demo works fine 1`] = `
           </div>
           
         </div>
-        <!---->
         <!---->
       </div>
     </div>
@@ -693,7 +676,6 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
             
           </div>
           <!---->
-          <!---->
         </div>
       </div>
     </div>
@@ -760,7 +742,6 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!---->
           <!---->
         </div>
       </div>
@@ -829,7 +810,6 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
             
           </div>
           <!---->
-          <!---->
         </div>
       </div>
     </div>
@@ -896,7 +876,6 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!---->
           <!---->
         </div>
       </div>
@@ -965,7 +944,6 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
             
           </div>
           <!---->
-          <!---->
         </div>
       </div>
     </div>
@@ -993,7 +971,6 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!---->
           <!---->
         </div>
       </div>
@@ -1043,7 +1020,6 @@ exports[`Avatar > Avatar iconAvatarVue demo works fine 1`] = `
           
         </div>
         <!---->
-        <!---->
       </div>
     </div>
   </div>
@@ -1082,7 +1058,6 @@ exports[`Avatar > Avatar iconAvatarVue demo works fine 1`] = `
           </div>
           
         </div>
-        <!---->
         <!---->
       </div>
     </div>
@@ -1157,7 +1132,6 @@ exports[`Avatar > Avatar imageAvatarVue demo works fine 1`] = `
           
         </div>
         <!---->
-        <!---->
       </div>
     </div>
   </div>
@@ -1223,7 +1197,6 @@ exports[`Avatar > Avatar imageAvatarVue demo works fine 1`] = `
           </div>
           
         </div>
-        <!---->
         <!---->
       </div>
     </div>
@@ -1337,7 +1310,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 
               </div>
               <!---->
-              <!---->
             </div>
           </div>
         </div>
@@ -1404,7 +1376,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 
               </div>
               <!---->
-              <!---->
             </div>
           </div>
         </div>
@@ -1460,7 +1431,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 
               </div>
               <!---->
-              <!---->
             </div>
           </div>
         </div>
@@ -1488,7 +1458,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 </div>
                 
               </div>
-              <!---->
               <!---->
             </div>
           </div>
@@ -1555,7 +1524,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 
               </div>
               <!---->
-              <!---->
             </div>
           </div>
         </div>
@@ -1594,7 +1562,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 </div>
                 
               </div>
-              <!---->
               <!---->
             </div>
           </div>
@@ -1697,7 +1664,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   
                 </div>
                 <!---->
-                <!---->
               </div>
             </div>
           </div>
@@ -1764,7 +1730,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!---->
                 <!---->
               </div>
             </div>
@@ -1833,7 +1798,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   
                 </div>
                 <!---->
-                <!---->
               </div>
             </div>
           </div>
@@ -1900,7 +1864,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!---->
                 <!---->
               </div>
             </div>
@@ -1969,7 +1932,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   
                 </div>
                 <!---->
-                <!---->
               </div>
             </div>
           </div>
@@ -1997,7 +1959,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!---->
                 <!---->
               </div>
             </div>
@@ -2097,7 +2058,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   
                 </div>
                 <!---->
-                <!---->
               </div>
             </div>
           </div>
@@ -2163,7 +2123,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!---->
                 <!---->
               </div>
             </div>
@@ -2231,7 +2190,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   
                 </div>
                 <!---->
-                <!---->
               </div>
             </div>
           </div>
@@ -2297,7 +2255,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!---->
                 <!---->
               </div>
             </div>
@@ -2365,7 +2322,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   
                 </div>
                 <!---->
-                <!---->
               </div>
             </div>
           </div>
@@ -2407,7 +2363,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!---->
                 <!---->
               </div>
             </div>
@@ -2507,10 +2462,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 style="right: 4px; top: 4px;"
               >
                 <!---->
-                
-                <!---->
               </div>
-              <!---->
             </div>
           </div>
         </div>
@@ -2542,11 +2494,8 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
                 style="right: 6px; top: 6px;"
               >
-                <!---->
                 8
-                <!---->
               </div>
-              <!---->
             </div>
           </div>
         </div>
@@ -2589,11 +2538,8 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
                 style="right: 6px; top: 6px;"
               >
-                <!---->
                 12
-                <!---->
               </div>
-              <!---->
             </div>
           </div>
         </div>
@@ -2695,11 +2641,8 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 <div
                   class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
                 >
-                  <!---->
                   10
-                  <!---->
                 </div>
-                <!---->
               </div>
             </div>
           </div>
@@ -2727,7 +2670,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!---->
                 <!---->
               </div>
             </div>
@@ -2767,7 +2709,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!---->
                 <!---->
               </div>
             </div>
@@ -2841,11 +2782,8 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 <div
                   class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
                 >
-                  <!---->
                   10
-                  <!---->
                 </div>
-                <!---->
               </div>
             </div>
           </div>
@@ -2873,7 +2811,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!---->
                 <!---->
               </div>
             </div>
@@ -2913,7 +2850,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!---->
                 <!---->
               </div>
             </div>
@@ -2988,10 +2924,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
                 >
                   <!---->
-                  
-                  <!---->
                 </div>
-                <!---->
               </div>
             </div>
           </div>
@@ -3019,7 +2952,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!---->
                 <!---->
               </div>
             </div>
@@ -3059,7 +2991,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!---->
                 <!---->
               </div>
             </div>
@@ -3144,11 +3075,8 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
           <div
             class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
           >
-            <!---->
             10
-            <!---->
           </div>
-          <!---->
         </div>
       </div>
     </div>
@@ -3176,7 +3104,6 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!---->
           <!---->
         </div>
       </div>
@@ -3216,7 +3143,6 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!---->
           <!---->
         </div>
       </div>
@@ -3290,11 +3216,8 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
           <div
             class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
           >
-            <!---->
             10
-            <!---->
           </div>
-          <!---->
         </div>
       </div>
     </div>
@@ -3322,7 +3245,6 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!---->
           <!---->
         </div>
       </div>
@@ -3362,7 +3284,6 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!---->
           <!---->
         </div>
       </div>
@@ -3437,10 +3358,7 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
             class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
           >
             <!---->
-            
-            <!---->
           </div>
-          <!---->
         </div>
       </div>
     </div>
@@ -3468,7 +3386,6 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!---->
           <!---->
         </div>
       </div>
@@ -3508,7 +3425,6 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!---->
           <!---->
         </div>
       </div>
