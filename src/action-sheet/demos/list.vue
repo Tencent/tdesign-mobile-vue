@@ -83,7 +83,7 @@ const badgeData = {
     },
   ],
 };
-const handleSelected = (selected: ActionSheetItem, selectedIndex: number) => {
+const handleSelected = (selected: ActionSheetItem | string, selectedIndex: number) => {
   console.log(selected, selectedIndex);
   ActionSheet.close();
 };
