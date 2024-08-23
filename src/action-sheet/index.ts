@@ -19,7 +19,7 @@ function create(props: Partial<TdActionSheetProps>): DefineComponent<TdActionShe
 
   const visible = ref(false);
   const propsObject = {
-    visible,
+    visible: visible.value,
     ...props,
   };
 
@@ -46,7 +46,7 @@ function create(props: Partial<TdActionSheetProps>): DefineComponent<TdActionShe
 }
 
 function ActionSheet(props: Partial<TdActionSheetProps>) {
-  create(props);
+  return create(props);
 }
 
 ActionSheet.close = (trigger: any) => {
@@ -56,7 +56,7 @@ ActionSheet.close = (trigger: any) => {
 };
 
 ActionSheet.show = (props: Partial<TdActionSheetProps>) => {
-  create(props);
+  return create(props);
 };
 
 ActionSheet.install = (app: App, name = '') => {
@@ -66,6 +66,8 @@ ActionSheet.install = (app: App, name = '') => {
 type ActionSheetApi = {
   /** 关闭ActionSheet */
   close: () => void;
+  /** 打开ActionSheet */
+  show: (props: Partial<TdActionSheetProps>) => DefineComponent<TdActionSheetProps>;
 };
 
 export const _ActionSheet: WithInstallType<typeof ActionSheetVue> & ActionSheetApi = ActionSheet as any;
