@@ -25,7 +25,7 @@ export interface TdTabBarProps {
   safeAreaInsetBottom?: boolean;
   /**
    * 标签栏的形状
-   * @default 'normal'
+   * @default normal
    */
   shape?: 'normal' | 'round';
   /**
@@ -35,7 +35,7 @@ export interface TdTabBarProps {
   split?: boolean;
   /**
    * 选项风格
-   * @default 'normal'
+   * @default normal
    */
   theme?: 'normal' | 'tag';
   /**
