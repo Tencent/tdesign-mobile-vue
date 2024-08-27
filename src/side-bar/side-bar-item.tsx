@@ -13,7 +13,7 @@ export default defineComponent({
   name: `${prefix}-side-bar-item`,
   props,
   setup(props) {
-    const sideBarItemClass = usePrefixClass('side-bar');
+    const sideBarItemClass = usePrefixClass('side-bar-item');
     const renderTNodeJSX = useTNodeJSX();
     const internalInstance = getCurrentInstance();
     const proxy = internalInstance.proxy as ComponentPublicInstance<TdSideBarItemProps>;
