@@ -15,6 +15,7 @@ import { useExpose } from '../shared';
 import { findRelativeRect, findRelativeContainer } from './dom-utils';
 import { useContent } from '../hooks/tnode';
 import DropdownMenuProps from './props';
+import { TdDropdownItemProps } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-dropdown-menu`;
@@ -65,11 +66,13 @@ export default defineComponent({
           state.itemsLabel.push(computedLabel);
 
           return {
+            labelProps: label, // 优先级： label属性 > 选中项
             label: computedLabel,
             disabled: disabled !== undefined && disabled !== false,
           };
         }
         return {
+          labelProps: label,
           label: label || target.label,
           disabled: disabled !== undefined && disabled !== false,
         };
@@ -177,12 +180,14 @@ export default defineComponent({
 
       return (
         <div ref={refBar} class={classes.value}>
-          {(menuTitles.value || []).map((item: { label: any }, idx: number) => (
-            <div class={styleBarItem.value(item, idx)} onClick={() => expandMenu(item, idx)}>
-              <div class={`${name}__title`}>{item.label}</div>
-              {renderDownIcon(item, idx)}
-            </div>
-          ))}
+          {(menuTitles.value || []).map(
+            (item: { label: any; labelProps: TdDropdownItemProps['label'] }, idx: number) => (
+              <div class={styleBarItem.value(item, idx)} onClick={() => expandMenu(item, idx)}>
+                <div class={`${name}__title`}>{item.labelProps || item.label}</div>
+                {renderDownIcon(item, idx)}
+              </div>
+            ),
+          )}
           {defaultSlot}
         </div>
       );

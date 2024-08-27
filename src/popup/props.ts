@@ -32,13 +32,13 @@ export default {
   /** 浮层出现位置 */
   placement: {
     type: String as PropType<TdPopupProps['placement']>,
-    // default: 'top' as TdPopupProps['placement'],
+    default: 'top' as TdPopupProps['placement'],
     validator(val: TdPopupProps['placement']): boolean {
       if (!val) return true;
       return ['top', 'left', 'right', 'bottom', 'center'].includes(val);
     },
   },
-  /** 防止滚动穿透 */
+  /** 是否阻止背景滚动 */
   preventScrollThrough: {
     type: Boolean,
     default: true,
