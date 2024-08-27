@@ -4,6 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { OverlayProps } from '../overlay';
 import { TNode, AttachNode } from '../common';
 
 export interface TdPopupProps {
@@ -30,14 +31,14 @@ export interface TdPopupProps {
    * 遮罩层的属性，透传至 overlay
    * @default {}
    */
-  overlayProps?: object;
+  overlayProps?: OverlayProps;
   /**
    * 浮层出现位置
    * @default top
    */
-  placement?: 'top' | 'left' | 'right' | 'bottom' | 'center' | '';
+  placement?: 'top' | 'left' | 'right' | 'bottom' | 'center';
   /**
-   * 防止滚动穿透
+   * 是否阻止背景滚动
    * @default true
    */
   preventScrollThrough?: boolean;
