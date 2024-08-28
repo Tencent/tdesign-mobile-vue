@@ -102,7 +102,7 @@ export default defineComponent({
       }
 
       return (
-        <div ref={bodyRef} v-show={isActive.value} class={`${componentName.value}__content`}>
+        <div ref={bodyRef} class={`${componentName.value}__content`}>
           {panelContent}
         </div>
       );
