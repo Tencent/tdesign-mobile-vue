@@ -16,7 +16,7 @@ export default {
   default: {
     type: [String, Function] as PropType<TdCollapsePanelProps['default']>,
   },
-  /** 【暂不支持】当前面板处理折叠状态时，是否销毁面板内容 */
+  /** 当前面板处理折叠状态时，是否销毁面板内容 */
   destroyOnCollapse: Boolean,
   /** 禁止当前面板展开，优先级大于 Collapse 的同名属性 */
   disabled: {
@@ -34,7 +34,7 @@ export default {
   },
   /** 面板头左侧图标 */
   headerLeftIcon: {
-    type: [String, Function] as PropType<TdCollapsePanelProps['headerLeftIcon']>,
+    type: Function as PropType<TdCollapsePanelProps['headerLeftIcon']>,
   },
   /** 面板头的右侧区域，一般用于呈现面板操作 */
   headerRightContent: {

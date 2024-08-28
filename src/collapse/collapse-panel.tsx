@@ -95,8 +95,20 @@ export default defineComponent({
       return <div class={`${componentName.value}__header-icon`}>{tNodeRender('expandIcon', renderDefaultIcon())}</div>;
     };
 
-    return () => {
+    const renderPanelContent = () => {
       const panelContent = renderContent('default', 'content');
+      if (props.destroyOnCollapse && !isActive.value) {
+        return null;
+      }
+
+      return (
+        <div ref={bodyRef} v-show={isActive.value} class={`${componentName.value}__content`}>
+          {panelContent}
+        </div>
+      );
+    };
+
+    return () => {
       const headerContent = renderTNodeJSX('header');
       const noteContent = renderTNodeJSX('headerRightContent');
       const leftIcon = renderTNodeJSX('headerLeftIcon');
@@ -118,9 +130,7 @@ export default defineComponent({
               }}
             ></TCell>
           </div>
-          <div ref={bodyRef} class={`${componentName.value}__content`}>
-            {panelContent}
-          </div>
+          {renderPanelContent()}
         </div>
       );
     };
