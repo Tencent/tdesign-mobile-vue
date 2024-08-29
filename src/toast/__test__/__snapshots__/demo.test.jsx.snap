@@ -3,6 +3,7 @@
 exports[`Toast > Toast baseVue demo works fine 1`] = `
 <div
   class="toast-demo"
+  id="toast-demo"
 >
   <button
     aria-disabled="false"
@@ -186,6 +187,7 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
       
       <div
         class="toast-demo"
+        id="toast-demo"
       >
         <button
           aria-disabled="false"

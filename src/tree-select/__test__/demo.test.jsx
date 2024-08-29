@@ -3,21 +3,21 @@
  */
 
 import { mount } from '@vue/test-utils';
-import alignVue from '@/image-viewer/demos/align.vue';
-import baseVue from '@/image-viewer/demos/base.vue';
-import mobileVue from '@/image-viewer/demos/mobile.vue';
-import operationVue from '@/image-viewer/demos/operation.vue';
+import baseVue from '@/tree-select/demos/base.vue';
+import mobileVue from '@/tree-select/demos/mobile.vue';
+import multipleVue from '@/tree-select/demos/multiple.vue';
+import normalVue from '@/tree-select/demos/normal.vue';
 
 const mapper = {
-  alignVue,
   baseVue,
   mobileVue,
-  operationVue,
+  multipleVue,
+  normalVue,
 };
 
-describe('ImageViewer', () => {
+describe('TreeSelect', () => {
   Object.keys(mapper).forEach((demoName) => {
-    it(`ImageViewer ${demoName} demo works fine`, () => {
+    it(`TreeSelect ${demoName} demo works fine`, () => {
       const wrapper = mount(mapper[demoName]);
       expect(wrapper.element).toMatchSnapshot();
     });

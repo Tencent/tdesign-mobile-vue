@@ -1,5 +1,35 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Loading > Loading attachVue demo works fine 1`] = `
+<div
+  class="loading-demo"
+  data-v-4de40010=""
+>
+  <div
+    class="loading-attach-demo__title"
+    data-v-4de40010=""
+    id="alice"
+  >
+    Hello, I'm Alice. I'm going to be a front-end developer.
+  </div>
+  <!---->
+  <div
+    class="t-switch t-switch--small"
+    data-v-4de40010=""
+  >
+    <div
+      class="t-switch__dot t-switch__dot--small"
+    >
+      <div
+        class="t-switch__label t-switch__label--small"
+      >
+        关
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Loading > Loading baseVue demo works fine 1`] = `
 <div
   data-v-app=""
@@ -154,6 +184,34 @@ exports[`Loading > Loading delayVue demo works fine 1`] = `
     <!---->
   </div>
   
+</div>
+`;
+
+exports[`Loading > Loading fullscreenVue demo works fine 1`] = `
+<div
+  class="loading-demo"
+  data-v-d41a5df4=""
+>
+  <!---->
+  <div
+    data-v-d41a5df4=""
+  >
+     全局加载开关（开启加载1秒后自动归位）： 
+    <div
+      class="t-switch t-switch--small"
+      data-v-d41a5df4=""
+    >
+      <div
+        class="t-switch__dot t-switch__dot--small t-switch__dot--plain"
+      >
+        <div
+          class="t-switch__label t-switch__label--small"
+        >
+          <!---->
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
@@ -955,6 +1013,60 @@ exports[`Loading > Loading pureTextVue demo works fine 1`] = `
     加载中...
   </span>
   <!---->
+</div>
+`;
+
+exports[`Loading > Loading serviceVue demo works fine 1`] = `
+<div
+  class="loading-demo"
+  data-v-2b16437a=""
+>
+  <div
+    class="loading-service-demo"
+    data-v-2b16437a=""
+    id="loading-service-demo"
+  >
+    Loading 挂载容器
+  </div>
+  <div
+    class="space"
+    data-v-2b16437a=""
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-small t-button--base t-button--default t-button--rectangle t-loading__btn"
+      data-v-2b16437a=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+         函数方式加载（局部） 
+        
+      </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-small t-button--base t-button--default t-button--rectangle"
+      data-v-2b16437a=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        函数方式加载（全屏）
+        
+      </span>
+      <!---->
+    </button>
+  </div>
 </div>
 `;
 

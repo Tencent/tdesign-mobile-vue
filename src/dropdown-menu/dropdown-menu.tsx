@@ -23,7 +23,11 @@ const name = `${prefix}-dropdown-menu`;
 export default defineComponent({
   name,
   components: { CaretDownSmallIcon, CaretUpSmallIcon },
-  props: DropdownMenuProps,
+  props: {
+    onMenuOpened: Function,
+    onMenuClosed: Function,
+    ...DropdownMenuProps,
+  },
   emits: ['menuOpened', 'menuClosed'],
   setup(props, { slots }) {
     const renderContent = useContent();

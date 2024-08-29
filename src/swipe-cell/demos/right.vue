@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import Toast from '../../toast/index';
+import { Toast } from 'tdesign-mobile-vue';
 
 const handleClick = () => {
   Toast('click');

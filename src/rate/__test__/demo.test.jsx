@@ -9,6 +9,7 @@ import colorVue from '@/rate/demos/color.vue';
 import countVue from '@/rate/demos/count.vue';
 import customVue from '@/rate/demos/custom.vue';
 import mobileVue from '@/rate/demos/mobile.vue';
+import placementVue from '@/rate/demos/placement.vue';
 import showTextVue from '@/rate/demos/show-text.vue';
 import sizeVue from '@/rate/demos/size.vue';
 import specialVue from '@/rate/demos/special.vue';
@@ -20,6 +21,7 @@ const mapper = {
   countVue,
   customVue,
   mobileVue,
+  placementVue,
   showTextVue,
   sizeVue,
   specialVue,
