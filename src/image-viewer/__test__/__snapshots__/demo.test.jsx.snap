@@ -1,5 +1,31 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`ImageViewer > ImageViewer alignVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+       基础图片预览 + 对齐方式 
+      
+    </span>
+    <!---->
+  </button>
+  <!---->
+  
+</div>
+`;
+
 exports[`ImageViewer > ImageViewer baseVue demo works fine 1`] = `
 <div
   data-v-app=""

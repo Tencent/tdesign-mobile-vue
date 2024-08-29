@@ -6,6 +6,7 @@ import { mount } from '@vue/test-utils';
 import baseVue from '@/swiper/demos/base.vue';
 import cardVue from '@/swiper/demos/card.vue';
 import controlVue from '@/swiper/demos/control.vue';
+import currentVue from '@/swiper/demos/current.vue';
 import customVue from '@/swiper/demos/custom.vue';
 import fractionVue from '@/swiper/demos/fraction.vue';
 import mobileVue from '@/swiper/demos/mobile.vue';
@@ -16,6 +17,7 @@ const mapper = {
   baseVue,
   cardVue,
   controlVue,
+  currentVue,
   customVue,
   fractionVue,
   mobileVue,
