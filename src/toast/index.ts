@@ -1,21 +1,29 @@
 import { createApp, App, DefineComponent } from 'vue';
+import isObject from 'lodash/isObject';
 import vueToast from './toast';
-import { TdToastProps } from './type';
+import { ToastOptions } from './type';
 import { WithInstallType, isBrowser } from '../shared';
+import { getAttach } from '../shared/dom';
 
 import './style';
 
 export * from './type';
-export type ToastProps = TdToastProps;
+export type ToastProps = ToastOptions;
 
 let instance: any = null;
 let app: App<Element>;
 
 /** 展示提示 */
-function Toast(props: string | Partial<TdToastProps>): DefineComponent<TdToastProps> {
+function Toast(props: string | Partial<ToastOptions>): DefineComponent<ToastOptions> {
   if (!isBrowser) return;
   const root = document.createElement('div');
-  document.body.appendChild(root);
+
+  const container = getAttach(isObject(props) ? props.attach : 'body');
+  if (container) {
+    container.appendChild(root);
+  } else {
+    console.error('attach is not exist');
+  }
 
   const propsObject = {
     duration: 2000,
@@ -59,12 +67,12 @@ Toast.clear = () => {
   }
 };
 
-(['loading', 'success', 'error'] as TdToastProps['theme'][]).forEach((type): void => {
+(['loading', 'success', 'error'] as ToastOptions['theme'][]).forEach((type): void => {
   if (!type) {
     return;
   }
-  Toast[type] = (options: TdToastProps | string) => {
-    let props = { message: '', theme: type } as unknown as TdToastProps;
+  Toast[type] = (options: ToastOptions | string) => {
+    let props = { message: '', theme: type } as unknown as ToastOptions;
 
     if (typeof options === 'string') {
       props.message = options;
@@ -76,7 +84,7 @@ Toast.clear = () => {
   };
 });
 
-function parseOptions(message?: Partial<TdToastProps> | string) {
+function parseOptions(message?: Partial<ToastOptions> | string) {
   if (typeof message === 'string') {
     return { message };
   }
@@ -91,13 +99,13 @@ Toast.install = (app: App) => {
 
 type ToastApi = {
   /** 展示提示 */
-  (options?: Partial<TdToastProps> | string): void;
+  (options?: Partial<ToastOptions> | string): void;
   /** 展示加载提示 */
-  loading: (options?: Partial<TdToastProps> | string) => void;
+  loading: (options?: Partial<ToastOptions> | string) => void;
   /** 展示成功提示 */
-  success: (options?: Partial<TdToastProps> | string) => void;
+  success: (options?: Partial<ToastOptions> | string) => void;
   /** 展示失败提示 */
-  error: (options?: Partial<TdToastProps> | string) => void;
+  error: (options?: Partial<ToastOptions> | string) => void;
   /** 关闭提示 */
   clear: () => void;
 };

@@ -8,11 +8,6 @@ import { TdToastProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 类名 */
-  className: {
-    type: String,
-    default: '',
-  },
   /** 图标排列方式 */
   direction: {
     type: String as PropType<TdToastProps['direction']>,

@@ -1,13 +1,13 @@
 import { LoadingIcon, CheckCircleIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
-import { computed, defineComponent, h, onUnmounted } from 'vue';
+import { computed, defineComponent, h, ref } from 'vue';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import TOverlay from '../overlay';
 import ToastProps from './props';
 import config from '../config';
+import { useLockScroll } from '../hooks/useLockScroll';
 
 const { prefix } = config;
 const name = `${prefix}-toast`;
-const bodyLockClass = `${name}-overflow-hidden`;
 
 export default defineComponent({
   name,
@@ -23,12 +23,13 @@ export default defineComponent({
 
     const renderContent = useContent();
 
+    const toastRef = ref<HTMLElement>();
+
     const customOverlayProps = computed(() => {
       const toastOverlayProps = {
         preventScrollThrough: props.preventScrollThrough,
         visible: props.showOverlay,
       };
-      props.preventScrollThrough ? lock() : unlock();
       return {
         ...props.overlayProps,
         ...toastOverlayProps,
@@ -49,9 +50,12 @@ export default defineComponent({
     const topOptions = {
       top: '25%',
       bottom: '75%',
+      middle: '50%',
     };
 
-    const computedStyle = computed(() => ({ top: topOptions[props.placement] ?? '45%' }));
+    const computedStyle = computed(() => ({
+      top: topOptions[props.placement],
+    }));
 
     const iconClasses = computed(() => [
       {
@@ -90,21 +94,11 @@ export default defineComponent({
       return '';
     });
 
-    const lock = () => {
-      document.body.classList.add(bodyLockClass);
-    };
-
-    const unlock = () => {
-      document.body.classList.remove(bodyLockClass);
-    };
-
-    onUnmounted(() => {
-      unlock();
-    });
+    useLockScroll(toastRef, () => props.preventScrollThrough, name);
 
     return () => {
       return (
-        <div class={props.className}>
+        <div>
           <TOverlay {...customOverlayProps.value} />
 
           <div class={classes.value} style={computedStyle.value}>
