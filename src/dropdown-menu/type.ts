@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { KeysType } from '../common';
+import { TNode, KeysType } from '../common';
 
 export interface TdDropdownMenuProps {
   /**
@@ -36,10 +36,14 @@ export interface TdDropdownMenuProps {
 
 export interface TdDropdownItemProps {
   /**
-   * 是否禁用
+   * 是否禁用操作项
    * @default false
    */
   disabled?: boolean;
+  /**
+   * 底部
+   */
+  footer?: TNode;
   /**
    * 用来定义 value / label 在 `options` 中对应的字段别名
    */

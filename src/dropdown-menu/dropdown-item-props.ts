@@ -8,8 +8,12 @@ import { TdDropdownItemProps } from '../dropdown-menu/type';
 import { PropType } from 'vue';
 
 export default {
-  /** 是否禁用 */
+  /** 是否禁用操作项 */
   disabled: Boolean,
+  /** 底部 */
+  footer: {
+    type: Function as PropType<TdDropdownItemProps['footer']>,
+  },
   /** 用来定义 value / label 在 `options` 中对应的字段别名 */
   keys: {
     type: Object as PropType<TdDropdownItemProps['keys']>,
