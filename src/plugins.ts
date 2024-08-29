@@ -8,4 +8,4 @@ export { LoadingPlugin } from './loading';
 export { default as Dialog } from './dialog';
 export { default as ActionSheet } from './action-sheet';
 export { default as Message } from './message';
-export { default as Toast } from './toast';
+export { default as Toast } from './toast/plugin';
