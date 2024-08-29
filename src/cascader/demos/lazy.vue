@@ -12,7 +12,7 @@
 
 <script lang="ts" setup>
 import { ref, computed } from 'vue';
-import Toast from '../../toast/index';
+import { Toast } from 'tdesign-mobile-vue';
 
 const data = ref([
   {

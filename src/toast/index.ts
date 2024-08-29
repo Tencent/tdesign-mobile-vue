@@ -1,3 +1,4 @@
+// import { withInstall, WithInstallType } from '../shared';
 import _Toast from './toast';
 
 import './style';
