@@ -1,7 +1,6 @@
 import { computed, defineComponent, toRefs, ref, watch } from 'vue';
 import isString from 'lodash/isString';
 import isBoolean from 'lodash/isBoolean';
-import isArray from 'lodash/isArray';
 import isFunction from 'lodash/isFunction';
 import config from '../config';
 import PickerProps from './props';
@@ -10,19 +9,14 @@ import { useVModel } from '../shared';
 import { useTNodeJSX } from '../hooks/tnode';
 import PickerItem from './picker-item';
 import { useConfig } from '../config-provider/useConfig';
+import { getPickerColumns } from './utils';
 
 const { prefix } = config;
 const name = `${prefix}-picker`;
 
-const isMultipleArray = (arr: PickerColumn | PickerColumn[]) => {
-  return arr.some((item) => {
-    return isArray(item);
-  });
-};
-
 const getIndexFromColumns = (column: PickerColumn, value: PickerValue) => {
   if (!value) return 0;
-  return column?.findIndex((item: PickerColumnItem) => item.value === value);
+  return column?.findIndex((item: PickerColumnItem) => item?.value === value);
 };
 
 export default defineComponent({
@@ -50,9 +44,9 @@ export default defineComponent({
     const realColumns = computed(() => {
       if (isFunction(props.columns)) {
         const _columns = props.columns(curValueArray.value);
-        return isMultipleArray(_columns) ? _columns : [_columns];
+        return getPickerColumns(_columns);
       }
-      return isMultipleArray(props.columns) ? props.columns : [props.columns];
+      return getPickerColumns(props.columns);
     });
 
     const curIndexArray = realColumns.value.map((item: PickerColumn, index: number) => {

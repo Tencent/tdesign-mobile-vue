@@ -1,10 +1,20 @@
 import { nextTick, ref } from 'vue';
+import isFunction from 'lodash/isFunction';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Picker from '../picker';
 import PickerItem from '../picker-item';
+import { getPickerColumns } from '../utils';
 
 import { DEFAULT_ITEM_HEIGHT, ANIMATION_TIME_LIMIT } from '../picker.class';
+
+const getRealColumns = (columns) => {
+  if (isFunction(columns)) {
+    const _columns = columns();
+    return getPickerColumns(_columns);
+  }
+  return getPickerColumns(columns);
+};
 
 const seasonOptions = [
   { label: '春', value: 'spring' },
@@ -111,11 +121,18 @@ describe('picker', () => {
           return expect(itemContainers).toHaveLength(0);
         }
 
-        expect(itemContainers).toHaveLength(seasonOptions.length);
-        itemContainers.forEach((container, index) => expect(container.text()).toBe(seasonOptions[index].label));
+        const _columns = getRealColumns(columns);
+
+        expect(itemContainers).toHaveLength(_columns[0].length);
+
+        itemContainers.forEach((container, index) => {
+          if (_columns[index]?.label) {
+            expect(container.text()).toBe(_columns[index]?.label);
+          }
+        });
       };
 
-      testColumns([undefined], false);
+      testColumns([undefined], true);
       testColumns(undefined, false);
       testColumns([seasonOptions]);
       testColumns(() => [seasonOptions]);
