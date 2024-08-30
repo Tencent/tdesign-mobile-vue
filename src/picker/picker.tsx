@@ -14,7 +14,7 @@ import { useConfig } from '../config-provider/useConfig';
 const { prefix } = config;
 const name = `${prefix}-picker`;
 
-const isMutipleArray = (arr: PickerColumn | PickerColumn[]) => {
+const isMultipleArray = (arr: PickerColumn | PickerColumn[]) => {
   return arr.some((item) => {
     return isArray(item);
   });
@@ -50,9 +50,9 @@ export default defineComponent({
     const realColumns = computed(() => {
       if (isFunction(props.columns)) {
         const _columns = props.columns(curValueArray.value);
-        return isMutipleArray(_columns) ? _columns : [_columns];
+        return isMultipleArray(_columns) ? _columns : [_columns];
       }
-      return isMutipleArray(props.columns) ? props.columns : [props.columns];
+      return isMultipleArray(props.columns) ? props.columns : [props.columns];
     });
 
     const curIndexArray = realColumns.value.map((item: PickerColumn, index: number) => {
