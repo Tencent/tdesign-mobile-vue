@@ -50,8 +50,6 @@ export default {
   defaultValue: {
     type: Array as PropType<TdPickerProps['defaultValue']>,
   },
-  /** 是否显示 */
-  visible: Boolean,
   /** 点击取消按钮时触发 */
   onCancel: Function as PropType<TdPickerProps['onCancel']>,
   /** 选中变化时候触发 */
