@@ -5,6 +5,21 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.4.0 `2024-08-30` 
+### 🚀 Features
+- `CollapsePanel`: 支持`destroyOnCollapse` 配置折叠状态时，是否销毁面板内容 @liweijie0812 ([#1550](https://github.com/Tencent/tdesign-mobile-vue/pull/1550))
+- `Icon`:  图标库版本升级为 `0.2.6` ，`lock-on` 图标存在更新 @liweijie0812 ([#1552](https://github.com/Tencent/tdesign-mobile-vue/pull/1552))
+- `Toast`:  `ToastPlugin` 支持 `attach`、`className` 和 `style` 属性 @anlyyao ([#1555](https://github.com/Tencent/tdesign-mobile-vue/pull/1555))
+- `Picker`: `columns` 属性扩展 `PickerColumn` 类型，支持一维数组 @anlyyao ([#1556](https://github.com/Tencent/tdesign-mobile-vue/pull/1556))
+### 🐞 Bug Fixes
+- `Badge`: 修复 `count` 插槽位置错误，移除 `t-badge__ribbon--before` 元素与 `t-badge__ribbon--after` 节点，角标改用伪元素实现 @anlyyao ([#1539](https://github.com/Tencent/tdesign-mobile-vue/pull/1539))
+- `DropdownMenuItem`: 修复 `label` 优先级错误，属性值优先级高于选中子项 @anlyyao ([#1547](https://github.com/Tencent/tdesign-mobile-vue/pull/1547))
+- `DropdownMenu`: 修复 `menuOpened` 和 `menuClosed` 事件无效 @anlyyao ([#1555](https://github.com/Tencent/tdesign-mobile-vue/pull/1555))
+- `Button`: 修复 `dashed` 类型按钮样式错误 @tobytovi ([#1534](https://github.com/Tencent/tdesign-mobile-vue/pull/1534))
+- `Loading`: 修复按需加载时组件动画缺失 @anlyyao ([#1907](https://github.com/Tencent/tdesign-common/pull/1907))
+### 🚧 Others
+- `SideBarItem`: 完善 badgeProps TS 类型 @liweijie0812 ([#1546](https://github.com/Tencent/tdesign-mobile-vue/pull/1546))
+
 ## 🌈 1.3.4 `2024-08-08` 
 ### 🚀 Features
 - `ImageViewer`: 优化预加载逻辑 @QuentinHsu ([#1516](https://github.com/Tencent/tdesign-mobile-vue/pull/1516))

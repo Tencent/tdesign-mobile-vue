@@ -1,19 +1,19 @@
 import { defineComponent, getCurrentInstance, ComponentPublicInstance, computed, inject, onUnmounted } from 'vue';
-import TBadge from '../badge';
-import SideBarItemProps from './side-bar-item-props';
+import props from './side-bar-item-props';
 import { TdSideBarItemProps } from './type';
+import TBadge from '../badge';
 import { useTNodeJSX } from '../hooks/tnode';
 
 import config from '../config';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-side-bar-item`;
 
 export default defineComponent({
-  name,
-  components: { TBadge },
-  props: SideBarItemProps,
+  name: `${prefix}-side-bar-item`,
+  props,
   setup(props) {
+    const sideBarItemClass = usePrefixClass('side-bar-item');
     const renderTNodeJSX = useTNodeJSX();
     const internalInstance = getCurrentInstance();
     const proxy = internalInstance.proxy as ComponentPublicInstance<TdSideBarItemProps>;
@@ -23,9 +23,9 @@ export default defineComponent({
     const isActive = computed(() => proxy.value === sideBarProvide.currentValue.value);
 
     const rootClassName = computed(() => [
-      name,
-      { [`${name}--active`]: isActive.value },
-      { [`${name}--disabled`]: props.disabled },
+      sideBarItemClass.value,
+      { [`${sideBarItemClass.value}--active`]: isActive.value },
+      { [`${sideBarItemClass.value}--disabled`]: props.disabled },
     ]);
 
     const onClick = (e: MouseEvent) => {
@@ -38,25 +38,28 @@ export default defineComponent({
     });
 
     return () => {
-      const { badgeProps, label } = props;
       const renderIconNode = () => {
         const iconNode = renderTNodeJSX('icon');
         if (!iconNode) {
           return null;
         }
-        return <div class={`${name}__icon`}>{iconNode}</div>;
+        return <div class={`${sideBarItemClass.value}__icon`}>{iconNode}</div>;
       };
       return (
         <div class={rootClassName.value} onClick={onClick}>
           {isActive.value && (
             <div>
-              <div class={`${name}__line`}></div>
-              <div class={`${name}__prefix`}></div>
-              <div class={`${name}__suffix`}></div>
+              <div class={`${sideBarItemClass.value}__line`}></div>
+              <div class={`${sideBarItemClass.value}__prefix`}></div>
+              <div class={`${sideBarItemClass.value}__suffix`}></div>
             </div>
           )}
           {renderIconNode()}
-          {badgeProps ? <t-badge {...badgeProps} content={label}></t-badge> : <div>{label}</div>}
+          {props.badgeProps ? (
+            <TBadge {...(props.badgeProps as TdSideBarItemProps['badgeProps'])} content={props.label} />
+          ) : (
+            <div>{props.label}</div>
+          )}
         </div>
       );
     };

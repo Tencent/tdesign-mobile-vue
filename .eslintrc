@@ -14,11 +14,12 @@
   "plugins": ["vue", "@typescript-eslint"],
   "parser": "vue-eslint-parser",
   "parserOptions": {
-    "project": ["./tsconfig.json"],
     "parser": "@typescript-eslint/parser",
-    "extraFileExtensions": [".vue"],
+    "sourceType": "module",
     "allowImportExportEverywhere": true,
-    "sourceType": "module"
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "settings": {
     "import/extensions": [".js", ".jsx", ".ts", ".tsx"]
@@ -37,6 +38,7 @@
     "no-unused-expressions": "off",
     "no-return-assign": "off",
     "no-use-before-define": "off",
+    "no-bitwise": "off",
     "func-names": "off",
     "guard-for-in": "off",
     "consistent-return": "off",

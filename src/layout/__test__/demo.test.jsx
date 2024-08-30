@@ -13,9 +13,9 @@ const mapper = {
   offsetVue,
 };
 
-describe('Col', () => {
+describe('Layout', () => {
   Object.keys(mapper).forEach((demoName) => {
-    it(`Col ${demoName} demo works fine`, () => {
+    it(`Layout ${demoName} demo works fine`, () => {
       const wrapper = mount(mapper[demoName]);
       expect(wrapper.element).toMatchSnapshot();
     });

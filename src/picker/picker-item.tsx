@@ -1,4 +1,4 @@
-import { ref, computed, onMounted, toRefs, defineComponent, PropType, watch } from 'vue';
+import { ref, computed, onMounted, defineComponent, PropType, watch } from 'vue';
 import config from '../config';
 import Picker from './picker.class';
 import { PickerColumnItem, PickerValue } from './type';
@@ -31,7 +31,7 @@ export default defineComponent({
     const getIndexByValue = (val: number | string | undefined) => {
       let defaultIndex = 0;
       if (val !== undefined) {
-        defaultIndex = props.options?.findIndex((item: any) => item.value === val);
+        defaultIndex = props.options?.findIndex((item: any) => item?.value === val);
       }
       return defaultIndex < 0 ? 0 : defaultIndex;
     };
@@ -94,7 +94,7 @@ export default defineComponent({
         <ul ref={root} class={className.value}>
           {(props.options || []).map((option, index) => (
             <li key={index} class={itemClassName.value}>
-              {props.renderLabel ? props.renderLabel(option) : option.label}
+              {props.renderLabel ? props.renderLabel(option) : option?.label}
             </li>
           ))}
         </ul>

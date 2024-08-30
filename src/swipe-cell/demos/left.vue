@@ -29,8 +29,7 @@
 
 <script setup lang="ts">
 import { reactive } from 'vue';
-import { SwipeActionItem } from 'tdesign-mobile-vue';
-import Toast from '../../toast/index';
+import { SwipeActionItem, Toast } from 'tdesign-mobile-vue';
 
 interface InitData {
   btns: {}[];

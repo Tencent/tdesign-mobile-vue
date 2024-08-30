@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 import type { ComputedRef, Ref, MaybeRef } from 'vue';
 import { computed, reactive, ref } from 'vue';
 import { useEventListener } from '@vueuse/core';

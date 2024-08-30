@@ -1,12 +1,13 @@
 import { describe, it, expect, vi } from 'vitest';
+import { LoadingIcon } from 'tdesign-icons-vue-next';
+import { mount } from '@vue/test-utils';
 import Toast from '../toast';
 import Overlay from '../../overlay';
-import { mount } from '@vue/test-utils';
-import { LoadingIcon } from 'tdesign-icons-vue-next';
 
 import config from '../../config';
+
 const { prefix } = config;
-const bodyLockClass = `${prefix}-toast-overflow-hidden`;
+const bodyLockClass = `${prefix}-toast--lock`;
 
 describe('Toast', () => {
   describe('props', () => {

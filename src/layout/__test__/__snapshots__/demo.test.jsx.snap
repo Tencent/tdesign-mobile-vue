@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Col > Col baseVue demo works fine 1`] = `
+exports[`Layout > Layout baseVue demo works fine 1`] = `
 <div
   data-v-app=""
 >
@@ -78,7 +78,7 @@ exports[`Col > Col baseVue demo works fine 1`] = `
 </div>
 `;
 
-exports[`Col > Col mobileVue demo works fine 1`] = `
+exports[`Layout > Layout mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
   data-v-05f1f61d=""
@@ -266,7 +266,7 @@ exports[`Col > Col mobileVue demo works fine 1`] = `
 </div>
 `;
 
-exports[`Col > Col offsetVue demo works fine 1`] = `
+exports[`Layout > Layout offsetVue demo works fine 1`] = `
 <div
   class="t-row"
   data-v-5d81698e=""

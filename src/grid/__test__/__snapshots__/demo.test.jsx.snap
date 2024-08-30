@@ -69,10 +69,7 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
           class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
         >
           <!---->
-          
-          <!---->
         </div>
-        <!---->
       </div>
     </div>
     <div
@@ -152,11 +149,8 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         >
-          <!---->
           8
-          <!---->
         </div>
-        <!---->
       </div>
     </div>
     <div
@@ -236,11 +230,8 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         >
-          <!---->
           13
-          <!---->
         </div>
-        <!---->
       </div>
     </div>
     <div
@@ -320,11 +311,8 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         >
-          <!---->
           NEW
-          <!---->
         </div>
-        <!---->
       </div>
     </div>
     <div
@@ -4618,10 +4606,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
                 class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
               >
                 <!---->
-                
-                <!---->
               </div>
-              <!---->
             </div>
           </div>
           <div
@@ -4701,11 +4686,8 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
               >
-                <!---->
                 8
-                <!---->
               </div>
-              <!---->
             </div>
           </div>
           <div
@@ -4785,11 +4767,8 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
               >
-                <!---->
                 13
-                <!---->
               </div>
-              <!---->
             </div>
           </div>
           <div
@@ -4869,11 +4848,8 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
               >
-                <!---->
                 NEW
-                <!---->
               </div>
-              <!---->
             </div>
           </div>
           <div

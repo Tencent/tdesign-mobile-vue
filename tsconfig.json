@@ -20,6 +20,7 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "skipLibCheck": true,
+    "allowJs": true,
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
@@ -29,15 +30,7 @@
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "rules": { "trailing-comma": false },
-  "include": [
-    "./**/*.ts",
-    "./**/*.tsx",
-    "./**/*.vue",
-    "src/**/*.js",
-    "babel.config.js",
-    "src/style/index.js",
-    "scripts/rollup.config.js"
-  ],
+  "include": ["./**/*.ts", "./**/*.tsx", "./**/*.vue"],
   "exclude": ["node_modules", "src/_common", "dist", "es", "esm", "lib", "cjs", "site"],
   "compileOnSave": false
 }

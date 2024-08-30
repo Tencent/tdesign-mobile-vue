@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### DropdownMenu Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 closeOnClickOverlay | Boolean | true | 是否在点击遮罩层后关闭菜单 | N
 direction | String | down | 菜单展开方向。可选项：down/up | N
@@ -11,11 +12,13 @@ duration | String / Number | 200 | 动画时长 | N
 showOverlay | Boolean | true | 是否显示遮罩层 | N
 zIndex | Number | 11600 | 菜单栏 z-index 层级 | N
 
+
 ### DropdownItem Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-disabled | Boolean | false | 是否禁用 | N
+disabled | Boolean | false | 是否禁用操作项 | N
+footer | Slot / Function | - | 底部。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 keys | Object | - | 用来定义 value / label 在 `options` 中对应的字段别名。TS 类型：`KeysType`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 label | String | - | 标题 | N
 multiple | Boolean | false | 是否多选 | N
@@ -35,8 +38,8 @@ change | `(value: DropdownValue)` | 值改变时触发
 confirm | `(value: DropdownValue)` | 点击确认时触发
 reset | `(value: DropdownValue)` | 点击重置时触发
 
-
 ### CSS Variables
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
@@ -47,4 +50,4 @@ reset | `(value: DropdownValue)` | 点击重置时触发
 --td-dropdown-menu-colorm | @font-gray-1 | - 
 --td-dropdown-menu-disabled-colorm | @font-gray-4 | - 
 --td-dropdown-menu-font-sizem | 14px | - 
---td-dropdown-menu-icon-sizem | 24px | - 
+--td-dropdown-menu-icon-sizem | 24px | -

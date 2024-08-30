@@ -19,8 +19,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import Toast from '../../toast/index';
-import SwipeCell from '..';
+import { Toast } from 'tdesign-mobile-vue';
 
 const opened = ref([false, true]);
 const cellRef = ref();

@@ -3,6 +3,7 @@
 exports[`Toast > Toast baseVue demo works fine 1`] = `
 <div
   class="toast-demo"
+  id="toast-demo"
 >
   <button
     aria-disabled="false"
@@ -186,6 +187,7 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
       
       <div
         class="toast-demo"
+        id="toast-demo"
       >
         <button
           aria-disabled="false"
@@ -280,7 +282,7 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        01 组件状态
+        02 组件状态
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"

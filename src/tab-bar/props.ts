@@ -58,7 +58,6 @@ export default {
   /** 当前选中标签的索引，非受控属性 */
   defaultValue: {
     type: [String, Number, Array] as PropType<TdTabBarProps['defaultValue']>,
-    default: undefined,
   },
   /** 选中标签切换时触发 */
   onChange: Function as PropType<TdTabBarProps['onChange']>,

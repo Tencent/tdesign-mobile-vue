@@ -4,16 +4,17 @@ import props from './props';
 import { TdSideBarProps } from './type';
 import { useDefault } from '../shared';
 import { useTNodeJSX } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-side-bar`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-side-bar`,
   props,
   emits: ['update:value', 'update:modelValue', 'change'],
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();
+    const sideBarClass = usePrefixClass('side-bar');
     const [currentValue, setCurrentValue] = useDefault<TdSideBarProps['value'], TdSideBarProps>(
       props,
       context.emit,
@@ -46,9 +47,9 @@ export default defineComponent({
     });
 
     return () => (
-      <div class={`${name}`}>
+      <div class={`${sideBarClass.value}`}>
         {renderTNodeJSX('default')}
-        <div class={`${name}__padding`}></div>
+        <div class={`${sideBarClass.value}__padding`}></div>
       </div>
     );
   },
