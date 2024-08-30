@@ -1,7 +1,7 @@
 import { computed, defineComponent, toRefs, ref, watch } from 'vue';
 import isString from 'lodash/isString';
 import isBoolean from 'lodash/isBoolean';
-
+import isFunction from 'lodash/isFunction';
 import config from '../config';
 import PickerProps from './props';
 import { PickerValue, PickerColumn, PickerColumnItem } from './type';
@@ -9,12 +9,14 @@ import { useVModel } from '../shared';
 import { useTNodeJSX } from '../hooks/tnode';
 import PickerItem from './picker-item';
 import { useConfig } from '../config-provider/useConfig';
+import { getPickerColumns } from './utils';
 
 const { prefix } = config;
 const name = `${prefix}-picker`;
+
 const getIndexFromColumns = (column: PickerColumn, value: PickerValue) => {
   if (!value) return 0;
-  return column?.findIndex((item: PickerColumnItem) => item.value === value);
+  return column?.findIndex((item: PickerColumnItem) => item?.value === value);
 };
 
 export default defineComponent({
@@ -28,20 +30,25 @@ export default defineComponent({
 
     const { value, modelValue } = toRefs(props);
     const [pickerValue = ref([]), setPickerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+
     const getDefaultText = (prop: string | boolean, defaultText: string): string => {
       if (isString(prop)) return prop;
       if (isBoolean(prop) && prop) return defaultText;
       return '';
     };
+
     const confirmButtonText = computed(() => getDefaultText(props.confirmBtn, globalConfig.value.confirm));
     const cancelButtonText = computed(() => getDefaultText(props.cancelBtn, globalConfig.value.cancel));
     const curValueArray = ref(pickerValue.value?.map((item: PickerValue) => item) || []);
+
     const realColumns = computed(() => {
-      if (typeof props.columns === 'function') {
-        return props.columns(curValueArray.value);
+      if (isFunction(props.columns)) {
+        const _columns = props.columns(curValueArray.value);
+        return getPickerColumns(_columns);
       }
-      return props.columns;
+      return getPickerColumns(props.columns);
     });
+
     const curIndexArray = realColumns.value.map((item: PickerColumn, index: number) => {
       return getIndexFromColumns(item, pickerValue.value?.[index]);
     });

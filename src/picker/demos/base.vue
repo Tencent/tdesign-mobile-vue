@@ -27,8 +27,8 @@
 import { reactive } from 'vue';
 import { PickerValue } from 'tdesign-mobile-vue';
 
-const cityOptions = [
-  [
+const cityOptions = () => {
+  return [
     {
       label: '北京市',
       value: '北京市',
@@ -57,8 +57,9 @@ const cityOptions = [
       label: '长沙市',
       value: '长沙市',
     },
-  ],
-];
+  ];
+};
+
 const currentYear = Number(new Date().getFullYear());
 const yearOptions = Array.from(new Array(10), (_, index) => {
   return {

@@ -16,7 +16,7 @@ export interface TdPickerProps {
    * 配置每一列的选项
    * @default []
    */
-  columns: Array<PickerColumn> | ((item: Array<PickerValue>) => Array<PickerColumn>);
+  columns: PickerColumn | Array<PickerColumn> | ((item: Array<PickerValue>) => Array<PickerColumn>);
   /**
    * 确定按钮文字
    * @default true
@@ -47,11 +47,6 @@ export interface TdPickerProps {
    * 选中值
    */
   modelValue?: Array<PickerValue>;
-  /**
-   * 是否显示
-   * @default false
-   */
-  visible?: boolean;
   /**
    * 点击取消按钮时触发
    * @default ''
