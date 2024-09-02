@@ -5,6 +5,10 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.4.1 `2024-09-02` 
+### 🚧 Others
+- chore: 修复 `1.4.0` es module 入口文件错误 @liweijie0812 ([#1566](https://github.com/Tencent/tdesign-mobile-vue/pull/1566))
+
 ## 🌈 1.4.0 `2024-08-30` 
 ### 🚀 Features
 - `CollapsePanel`: 支持`destroyOnCollapse` 配置折叠状态时，是否销毁面板内容 @liweijie0812 ([#1550](https://github.com/Tencent/tdesign-mobile-vue/pull/1550))
