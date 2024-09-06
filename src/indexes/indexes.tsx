@@ -97,7 +97,9 @@ export default defineComponent({
             wrapper.classList.add(`${wrapperClass}--sticky`);
             wrapper.classList.add(`${wrapperClass}--active`);
             header.classList.add(`${headerClass}--active`);
-            wrapper.style = `transform: translate3d(0, ${betwixt ? offset : 0}px, 0); top: ${stickyTop}px;`;
+            wrapper.style = `transform: translate3d(0, ${
+              betwixt ? offset - groupTop[index].height : 0
+            }px, 0); top: ${stickyTop}px;`;
           } else {
             wrapper.classList.remove(`${wrapperClass}--sticky`);
             wrapper.classList.remove(`${wrapperClass}--active`);
