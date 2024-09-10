@@ -1,9 +1,7 @@
 import { computed, defineComponent, Fragment, provide, RendererNode } from 'vue';
-
 import AvatarGroupProps from './avatar-group-props';
 import config from '../config';
-import TAvatar from './avatar';
-
+import TAvatar, { isValidSize } from './avatar';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
@@ -20,11 +18,17 @@ export default defineComponent({
     provide('avatarGroup', { ...props });
 
     const direction = props.cascading ? props.cascading.split('-')[0] : 'right';
+    const isCustomSize = computed(() => !isValidSize(props.size));
 
     const avatarGroupClasses = computed(() => [
       `${avatarGroupClass.value}`,
-      `${avatarGroupClass.value}-offset-${direction}-${props.size.indexOf('px') > -1 ? 'medium' : props.size}`,
+      `${avatarGroupClass.value}-offset-${direction}`,
+      `${avatarGroupClass.value}-offset-${direction}-${isCustomSize.value ? 'medium' : props.size}`,
     ]);
+
+    const onCollapsedItemClick = (e: MouseEvent) => {
+      props.onCollapsedItemClick?.({ e });
+    };
 
     const readerAvatar = () => {
       const children: Array<RendererNode> = renderTNodeJSX('default');
@@ -47,19 +51,15 @@ export default defineComponent({
         avatarList = allChildren;
       }
 
-      if (props.cascading === 'left-up') {
-        const defaultZIndex = 100;
-        for (let index = 0; index < avatarList.length; index++) {
-          avatarList[index].props.style = `z-index: ${defaultZIndex - index * 10}`;
-        }
-      }
-
       if (isShowCollapse) {
         const collapseAvatar = renderTNodeJSX('collapseAvatar');
         avatarList.push(
-          <TAvatar size={avatarList[0].size || props.size}>
-            {collapseAvatar || `+${allChildren.length - props.max}`}
-          </TAvatar>,
+          <div class={`${avatarGroupClass.value}__collapse--default`} onClick={onCollapsedItemClick}>
+            <TAvatar size={avatarList[0].size || props.size}>
+              {collapseAvatar || `+${allChildren.length - props.max}`}
+            </TAvatar>
+            ,
+          </div>,
         );
       }
 

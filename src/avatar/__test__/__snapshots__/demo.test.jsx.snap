@@ -5,7 +5,7 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
   class="avatar-group-demo"
 >
   <div
-    class="t-avatar-group t-avatar-group-offset-right-medium"
+    class="t-avatar-group t-avatar-group-offset-right t-avatar-group-offset-right-medium"
   >
     
     <div
@@ -339,22 +339,25 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="t-avatar__wrapper"
+      class="t-avatar-group__collapse--default"
     >
       <div
-        class="t-avatar__badge"
+        class="t-avatar__wrapper"
       >
         <div
-          class="t-badge"
+          class="t-avatar__badge"
         >
           <div
-            class="t-badge__content"
+            class="t-badge"
           >
-            
             <div
-              class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+              class="t-badge__content"
             >
-              <span>
+              
+              <div
+                class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+              >
+                
                 
                 
                 <svg
@@ -372,13 +375,15 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
                 </svg>
                 
                 
-              </span>
+                
+              </div>
+              
             </div>
-            
+            <!---->
           </div>
-          <!---->
         </div>
       </div>
+      ,
     </div>
     
   </div>
@@ -476,11 +481,11 @@ exports[`Avatar > Avatar badgeAvatarVue demo works fine 1`] = `
           <div
             class="t-avatar t-avatar--medium t-avatar--circle"
           >
-            <span>
-              
-              A
-              
-            </span>
+            
+            
+            A
+            
+            
           </div>
           
         </div>
@@ -561,11 +566,11 @@ exports[`Avatar > Avatar characterAvatarVue demo works fine 1`] = `
           <div
             class="t-avatar t-avatar--medium t-avatar--circle"
           >
-            <span>
-              
-              A
-              
-            </span>
+            
+            
+            A
+            
+            
           </div>
           
         </div>
@@ -589,11 +594,11 @@ exports[`Avatar > Avatar characterAvatarVue demo works fine 1`] = `
           <div
             class="t-avatar t-avatar--medium t-avatar--round"
           >
-            <span>
-              
-              A
-              
-            </span>
+            
+            
+            A
+            
+            
           </div>
           
         </div>
@@ -609,12 +614,11 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
   class="avatar-group-demo"
 >
   <div
-    class="t-avatar-group t-avatar-group-offset-left-medium"
+    class="t-avatar-group t-avatar-group-offset-left t-avatar-group-offset-left-medium"
   >
     
     <div
       class="t-avatar__wrapper"
-      style="z-index: 100;"
     >
       <div
         class="t-avatar__badge"
@@ -681,7 +685,6 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
     </div>
     <div
       class="t-avatar__wrapper"
-      style="z-index: 90;"
     >
       <div
         class="t-avatar__badge"
@@ -748,7 +751,6 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
     </div>
     <div
       class="t-avatar__wrapper"
-      style="z-index: 80;"
     >
       <div
         class="t-avatar__badge"
@@ -815,7 +817,6 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
     </div>
     <div
       class="t-avatar__wrapper"
-      style="z-index: 70;"
     >
       <div
         class="t-avatar__badge"
@@ -882,7 +883,6 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
     </div>
     <div
       class="t-avatar__wrapper"
-      style="z-index: 60;"
     >
       <div
         class="t-avatar__badge"
@@ -948,32 +948,37 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="t-avatar__wrapper"
+      class="t-avatar-group__collapse--default"
     >
       <div
-        class="t-avatar__badge"
+        class="t-avatar__wrapper"
       >
         <div
-          class="t-badge"
+          class="t-avatar__badge"
         >
           <div
-            class="t-badge__content"
+            class="t-badge"
           >
-            
             <div
-              class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+              class="t-badge__content"
             >
-              <span>
+              
+              <div
+                class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+              >
+                
                 
                 +5
                 
-              </span>
+                
+              </div>
+              
             </div>
-            
+            <!---->
           </div>
-          <!---->
         </div>
       </div>
+      ,
     </div>
     
   </div>
@@ -1422,11 +1427,11 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 <div
                   class="t-avatar t-avatar--medium t-avatar--circle"
                 >
-                  <span>
-                    
-                    A
-                    
-                  </span>
+                  
+                  
+                  A
+                  
+                  
                 </div>
                 
               </div>
@@ -1450,11 +1455,11 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 <div
                   class="t-avatar t-avatar--medium t-avatar--round"
                 >
-                  <span>
-                    
-                    A
-                    
-                  </span>
+                  
+                  
+                  A
+                  
+                  
                 </div>
                 
               </div>
@@ -1571,809 +1576,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
-    data-v-c7b11864=""
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <h2
-        class="tdesign-mobile-demo-block__title"
-      >
-        02 组件样式
-      </h2>
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        纯展示
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="avatar-group-demo"
-        data-v-c7b11864=""
-      >
-        <div
-          class="t-avatar-group t-avatar-group-offset-left-medium"
-        >
-          
-          <div
-            class="t-avatar__wrapper"
-            style="z-index: 100;"
-          >
-            <div
-              class="t-avatar__badge"
-            >
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__content"
-                >
-                  
-                  <div
-                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
-                  >
-                    <div
-                      class="t-image t-image--square"
-                    >
-                      <div
-                        class="t-image__mask"
-                      >
-                        <div
-                          class="t-loading"
-                          style="font-size: 20px;"
-                        >
-                          <div
-                            class="t-loading__dots"
-                            style="animation-duration: 800ms; width: 20px; height: 20px;"
-                          >
-                            
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                            />
-                            
-                          </div>
-                          <!---->
-                          <!---->
-                        </div>
-                      </div>
-                      <picture>
-                        <!---->
-                        <img
-                          alt=""
-                          class="t-image__img"
-                          src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
-                          style="object-fit: fill; object-position: center;"
-                        />
-                      </picture>
-                    </div>
-                  </div>
-                  
-                </div>
-                <!---->
-              </div>
-            </div>
-          </div>
-          <div
-            class="t-avatar__wrapper"
-            style="z-index: 90;"
-          >
-            <div
-              class="t-avatar__badge"
-            >
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__content"
-                >
-                  
-                  <div
-                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
-                  >
-                    <div
-                      class="t-image t-image--square"
-                    >
-                      <div
-                        class="t-image__mask"
-                      >
-                        <div
-                          class="t-loading"
-                          style="font-size: 20px;"
-                        >
-                          <div
-                            class="t-loading__dots"
-                            style="animation-duration: 800ms; width: 20px; height: 20px;"
-                          >
-                            
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                            />
-                            
-                          </div>
-                          <!---->
-                          <!---->
-                        </div>
-                      </div>
-                      <picture>
-                        <!---->
-                        <img
-                          alt=""
-                          class="t-image__img"
-                          src="https://tdesign.gtimg.com/mobile/demos/avatar2.png"
-                          style="object-fit: fill; object-position: center;"
-                        />
-                      </picture>
-                    </div>
-                  </div>
-                  
-                </div>
-                <!---->
-              </div>
-            </div>
-          </div>
-          <div
-            class="t-avatar__wrapper"
-            style="z-index: 80;"
-          >
-            <div
-              class="t-avatar__badge"
-            >
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__content"
-                >
-                  
-                  <div
-                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
-                  >
-                    <div
-                      class="t-image t-image--square"
-                    >
-                      <div
-                        class="t-image__mask"
-                      >
-                        <div
-                          class="t-loading"
-                          style="font-size: 20px;"
-                        >
-                          <div
-                            class="t-loading__dots"
-                            style="animation-duration: 800ms; width: 20px; height: 20px;"
-                          >
-                            
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                            />
-                            
-                          </div>
-                          <!---->
-                          <!---->
-                        </div>
-                      </div>
-                      <picture>
-                        <!---->
-                        <img
-                          alt=""
-                          class="t-image__img"
-                          src="https://tdesign.gtimg.com/mobile/demos/avatar3.png"
-                          style="object-fit: fill; object-position: center;"
-                        />
-                      </picture>
-                    </div>
-                  </div>
-                  
-                </div>
-                <!---->
-              </div>
-            </div>
-          </div>
-          <div
-            class="t-avatar__wrapper"
-            style="z-index: 70;"
-          >
-            <div
-              class="t-avatar__badge"
-            >
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__content"
-                >
-                  
-                  <div
-                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
-                  >
-                    <div
-                      class="t-image t-image--square"
-                    >
-                      <div
-                        class="t-image__mask"
-                      >
-                        <div
-                          class="t-loading"
-                          style="font-size: 20px;"
-                        >
-                          <div
-                            class="t-loading__dots"
-                            style="animation-duration: 800ms; width: 20px; height: 20px;"
-                          >
-                            
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                            />
-                            
-                          </div>
-                          <!---->
-                          <!---->
-                        </div>
-                      </div>
-                      <picture>
-                        <!---->
-                        <img
-                          alt=""
-                          class="t-image__img"
-                          src="https://tdesign.gtimg.com/mobile/demos/avatar4.png"
-                          style="object-fit: fill; object-position: center;"
-                        />
-                      </picture>
-                    </div>
-                  </div>
-                  
-                </div>
-                <!---->
-              </div>
-            </div>
-          </div>
-          <div
-            class="t-avatar__wrapper"
-            style="z-index: 60;"
-          >
-            <div
-              class="t-avatar__badge"
-            >
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__content"
-                >
-                  
-                  <div
-                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
-                  >
-                    <div
-                      class="t-image t-image--square"
-                    >
-                      <div
-                        class="t-image__mask"
-                      >
-                        <div
-                          class="t-loading"
-                          style="font-size: 20px;"
-                        >
-                          <div
-                            class="t-loading__dots"
-                            style="animation-duration: 800ms; width: 20px; height: 20px;"
-                          >
-                            
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                            />
-                            
-                          </div>
-                          <!---->
-                          <!---->
-                        </div>
-                      </div>
-                      <picture>
-                        <!---->
-                        <img
-                          alt=""
-                          class="t-image__img"
-                          src="https://tdesign.gtimg.com/mobile/demos/avatar5.png"
-                          style="object-fit: fill; object-position: center;"
-                        />
-                      </picture>
-                    </div>
-                  </div>
-                  
-                </div>
-                <!---->
-              </div>
-            </div>
-          </div>
-          <div
-            class="t-avatar__wrapper"
-          >
-            <div
-              class="t-avatar__badge"
-            >
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__content"
-                >
-                  
-                  <div
-                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
-                  >
-                    <span>
-                      
-                      +5
-                      
-                    </span>
-                  </div>
-                  
-                </div>
-                <!---->
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-c7b11864=""
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        带操作
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="avatar-group-demo"
-        data-v-c7b11864=""
-      >
-        <div
-          class="t-avatar-group t-avatar-group-offset-right-medium"
-        >
-          
-          <div
-            class="t-avatar__wrapper"
-          >
-            <div
-              class="t-avatar__badge"
-            >
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__content"
-                >
-                  
-                  <div
-                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
-                  >
-                    <div
-                      class="t-image t-image--square"
-                    >
-                      <div
-                        class="t-image__mask"
-                      >
-                        <div
-                          class="t-loading"
-                          style="font-size: 20px;"
-                        >
-                          <div
-                            class="t-loading__dots"
-                            style="animation-duration: 800ms; width: 20px; height: 20px;"
-                          >
-                            
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                            />
-                            
-                          </div>
-                          <!---->
-                          <!---->
-                        </div>
-                      </div>
-                      <picture>
-                        <!---->
-                        <img
-                          alt=""
-                          class="t-image__img"
-                          src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
-                          style="object-fit: fill; object-position: center;"
-                        />
-                      </picture>
-                    </div>
-                  </div>
-                  
-                </div>
-                <!---->
-              </div>
-            </div>
-          </div>
-          <div
-            class="t-avatar__wrapper"
-          >
-            <div
-              class="t-avatar__badge"
-            >
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__content"
-                >
-                  
-                  <div
-                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
-                  >
-                    <div
-                      class="t-image t-image--square"
-                    >
-                      <div
-                        class="t-image__mask"
-                      >
-                        <div
-                          class="t-loading"
-                          style="font-size: 20px;"
-                        >
-                          <div
-                            class="t-loading__dots"
-                            style="animation-duration: 800ms; width: 20px; height: 20px;"
-                          >
-                            
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                            />
-                            
-                          </div>
-                          <!---->
-                          <!---->
-                        </div>
-                      </div>
-                      <picture>
-                        <!---->
-                        <img
-                          alt=""
-                          class="t-image__img"
-                          src="https://tdesign.gtimg.com/mobile/demos/avatar2.png"
-                          style="object-fit: fill; object-position: center;"
-                        />
-                      </picture>
-                    </div>
-                  </div>
-                  
-                </div>
-                <!---->
-              </div>
-            </div>
-          </div>
-          <div
-            class="t-avatar__wrapper"
-          >
-            <div
-              class="t-avatar__badge"
-            >
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__content"
-                >
-                  
-                  <div
-                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
-                  >
-                    <div
-                      class="t-image t-image--square"
-                    >
-                      <div
-                        class="t-image__mask"
-                      >
-                        <div
-                          class="t-loading"
-                          style="font-size: 20px;"
-                        >
-                          <div
-                            class="t-loading__dots"
-                            style="animation-duration: 800ms; width: 20px; height: 20px;"
-                          >
-                            
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                            />
-                            
-                          </div>
-                          <!---->
-                          <!---->
-                        </div>
-                      </div>
-                      <picture>
-                        <!---->
-                        <img
-                          alt=""
-                          class="t-image__img"
-                          src="https://tdesign.gtimg.com/mobile/demos/avatar3.png"
-                          style="object-fit: fill; object-position: center;"
-                        />
-                      </picture>
-                    </div>
-                  </div>
-                  
-                </div>
-                <!---->
-              </div>
-            </div>
-          </div>
-          <div
-            class="t-avatar__wrapper"
-          >
-            <div
-              class="t-avatar__badge"
-            >
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__content"
-                >
-                  
-                  <div
-                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
-                  >
-                    <div
-                      class="t-image t-image--square"
-                    >
-                      <div
-                        class="t-image__mask"
-                      >
-                        <div
-                          class="t-loading"
-                          style="font-size: 20px;"
-                        >
-                          <div
-                            class="t-loading__dots"
-                            style="animation-duration: 800ms; width: 20px; height: 20px;"
-                          >
-                            
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                            />
-                            
-                          </div>
-                          <!---->
-                          <!---->
-                        </div>
-                      </div>
-                      <picture>
-                        <!---->
-                        <img
-                          alt=""
-                          class="t-image__img"
-                          src="https://tdesign.gtimg.com/mobile/demos/avatar4.png"
-                          style="object-fit: fill; object-position: center;"
-                        />
-                      </picture>
-                    </div>
-                  </div>
-                  
-                </div>
-                <!---->
-              </div>
-            </div>
-          </div>
-          <div
-            class="t-avatar__wrapper"
-          >
-            <div
-              class="t-avatar__badge"
-            >
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__content"
-                >
-                  
-                  <div
-                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
-                  >
-                    <div
-                      class="t-image t-image--square"
-                    >
-                      <div
-                        class="t-image__mask"
-                      >
-                        <div
-                          class="t-loading"
-                          style="font-size: 20px;"
-                        >
-                          <div
-                            class="t-loading__dots"
-                            style="animation-duration: 800ms; width: 20px; height: 20px;"
-                          >
-                            
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                            />
-                            <div
-                              class="t-loading__dot"
-                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                            />
-                            
-                          </div>
-                          <!---->
-                          <!---->
-                        </div>
-                      </div>
-                      <picture>
-                        <!---->
-                        <img
-                          alt=""
-                          class="t-image__img"
-                          src="https://tdesign.gtimg.com/mobile/demos/avatar5.png"
-                          style="object-fit: fill; object-position: center;"
-                        />
-                      </picture>
-                    </div>
-                  </div>
-                  
-                </div>
-                <!---->
-              </div>
-            </div>
-          </div>
-          <div
-            class="t-avatar__wrapper"
-          >
-            <div
-              class="t-avatar__badge"
-            >
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__content"
-                >
-                  
-                  <div
-                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
-                  >
-                    <span>
-                      
-                      
-                      <svg
-                        class="t-icon t-icon-user-add"
-                        fill="none"
-                        height="1em"
-                        style="font-size: 24px;"
-                        viewBox="0 0 24 24"
-                        width="1em"
-                      >
-                        <path
-                          d="M11.5 4a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM6 7.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0zM19 13v4h4v2h-4v4h-2v-4h-4v-2h4v-4h2zM8 16a4 4 0 00-4 4h8.05v2H2v-2a6 6 0 016-6h4v2H8z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      
-                      
-                    </span>
-                  </div>
-                  
-                </div>
-                <!---->
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-c7b11864=""
   >
@@ -2482,11 +1684,11 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 <div
                   class="t-avatar t-avatar--medium t-avatar--circle"
                 >
-                  <span>
-                    
-                    A
-                    
-                  </span>
+                  
+                  
+                  A
+                  
+                  
                 </div>
                 
               </div>
@@ -2557,12 +1759,820 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
+        02 特殊类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        纯展示的头像组
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="avatar-group-demo"
+        data-v-c7b11864=""
+      >
+        <div
+          class="t-avatar-group t-avatar-group-offset-left t-avatar-group-offset-left-medium"
+        >
+          
+          <div
+            class="t-avatar__wrapper"
+          >
+            <div
+              class="t-avatar__badge"
+            >
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  
+                  <div
+                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+                  >
+                    <div
+                      class="t-image t-image--square"
+                    >
+                      <div
+                        class="t-image__mask"
+                      >
+                        <div
+                          class="t-loading"
+                          style="font-size: 20px;"
+                        >
+                          <div
+                            class="t-loading__dots"
+                            style="animation-duration: 800ms; width: 20px; height: 20px;"
+                          >
+                            
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                            />
+                            
+                          </div>
+                          <!---->
+                          <!---->
+                        </div>
+                      </div>
+                      <picture>
+                        <!---->
+                        <img
+                          alt=""
+                          class="t-image__img"
+                          src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+                          style="object-fit: fill; object-position: center;"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  
+                </div>
+                <!---->
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-avatar__wrapper"
+          >
+            <div
+              class="t-avatar__badge"
+            >
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  
+                  <div
+                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+                  >
+                    <div
+                      class="t-image t-image--square"
+                    >
+                      <div
+                        class="t-image__mask"
+                      >
+                        <div
+                          class="t-loading"
+                          style="font-size: 20px;"
+                        >
+                          <div
+                            class="t-loading__dots"
+                            style="animation-duration: 800ms; width: 20px; height: 20px;"
+                          >
+                            
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                            />
+                            
+                          </div>
+                          <!---->
+                          <!---->
+                        </div>
+                      </div>
+                      <picture>
+                        <!---->
+                        <img
+                          alt=""
+                          class="t-image__img"
+                          src="https://tdesign.gtimg.com/mobile/demos/avatar2.png"
+                          style="object-fit: fill; object-position: center;"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  
+                </div>
+                <!---->
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-avatar__wrapper"
+          >
+            <div
+              class="t-avatar__badge"
+            >
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  
+                  <div
+                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+                  >
+                    <div
+                      class="t-image t-image--square"
+                    >
+                      <div
+                        class="t-image__mask"
+                      >
+                        <div
+                          class="t-loading"
+                          style="font-size: 20px;"
+                        >
+                          <div
+                            class="t-loading__dots"
+                            style="animation-duration: 800ms; width: 20px; height: 20px;"
+                          >
+                            
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                            />
+                            
+                          </div>
+                          <!---->
+                          <!---->
+                        </div>
+                      </div>
+                      <picture>
+                        <!---->
+                        <img
+                          alt=""
+                          class="t-image__img"
+                          src="https://tdesign.gtimg.com/mobile/demos/avatar3.png"
+                          style="object-fit: fill; object-position: center;"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  
+                </div>
+                <!---->
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-avatar__wrapper"
+          >
+            <div
+              class="t-avatar__badge"
+            >
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  
+                  <div
+                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+                  >
+                    <div
+                      class="t-image t-image--square"
+                    >
+                      <div
+                        class="t-image__mask"
+                      >
+                        <div
+                          class="t-loading"
+                          style="font-size: 20px;"
+                        >
+                          <div
+                            class="t-loading__dots"
+                            style="animation-duration: 800ms; width: 20px; height: 20px;"
+                          >
+                            
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                            />
+                            
+                          </div>
+                          <!---->
+                          <!---->
+                        </div>
+                      </div>
+                      <picture>
+                        <!---->
+                        <img
+                          alt=""
+                          class="t-image__img"
+                          src="https://tdesign.gtimg.com/mobile/demos/avatar4.png"
+                          style="object-fit: fill; object-position: center;"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  
+                </div>
+                <!---->
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-avatar__wrapper"
+          >
+            <div
+              class="t-avatar__badge"
+            >
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  
+                  <div
+                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+                  >
+                    <div
+                      class="t-image t-image--square"
+                    >
+                      <div
+                        class="t-image__mask"
+                      >
+                        <div
+                          class="t-loading"
+                          style="font-size: 20px;"
+                        >
+                          <div
+                            class="t-loading__dots"
+                            style="animation-duration: 800ms; width: 20px; height: 20px;"
+                          >
+                            
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                            />
+                            
+                          </div>
+                          <!---->
+                          <!---->
+                        </div>
+                      </div>
+                      <picture>
+                        <!---->
+                        <img
+                          alt=""
+                          class="t-image__img"
+                          src="https://tdesign.gtimg.com/mobile/demos/avatar5.png"
+                          style="object-fit: fill; object-position: center;"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  
+                </div>
+                <!---->
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-avatar-group__collapse--default"
+          >
+            <div
+              class="t-avatar__wrapper"
+            >
+              <div
+                class="t-avatar__badge"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    <div
+                      class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+                    >
+                      
+                      
+                      +5
+                      
+                      
+                    </div>
+                    
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+            ,
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-c7b11864=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        带操作的头像组
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="avatar-group-demo"
+        data-v-c7b11864=""
+      >
+        <div
+          class="t-avatar-group t-avatar-group-offset-right t-avatar-group-offset-right-medium"
+        >
+          
+          <div
+            class="t-avatar__wrapper"
+          >
+            <div
+              class="t-avatar__badge"
+            >
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  
+                  <div
+                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+                  >
+                    <div
+                      class="t-image t-image--square"
+                    >
+                      <div
+                        class="t-image__mask"
+                      >
+                        <div
+                          class="t-loading"
+                          style="font-size: 20px;"
+                        >
+                          <div
+                            class="t-loading__dots"
+                            style="animation-duration: 800ms; width: 20px; height: 20px;"
+                          >
+                            
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                            />
+                            
+                          </div>
+                          <!---->
+                          <!---->
+                        </div>
+                      </div>
+                      <picture>
+                        <!---->
+                        <img
+                          alt=""
+                          class="t-image__img"
+                          src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+                          style="object-fit: fill; object-position: center;"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  
+                </div>
+                <!---->
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-avatar__wrapper"
+          >
+            <div
+              class="t-avatar__badge"
+            >
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  
+                  <div
+                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+                  >
+                    <div
+                      class="t-image t-image--square"
+                    >
+                      <div
+                        class="t-image__mask"
+                      >
+                        <div
+                          class="t-loading"
+                          style="font-size: 20px;"
+                        >
+                          <div
+                            class="t-loading__dots"
+                            style="animation-duration: 800ms; width: 20px; height: 20px;"
+                          >
+                            
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                            />
+                            
+                          </div>
+                          <!---->
+                          <!---->
+                        </div>
+                      </div>
+                      <picture>
+                        <!---->
+                        <img
+                          alt=""
+                          class="t-image__img"
+                          src="https://tdesign.gtimg.com/mobile/demos/avatar2.png"
+                          style="object-fit: fill; object-position: center;"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  
+                </div>
+                <!---->
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-avatar__wrapper"
+          >
+            <div
+              class="t-avatar__badge"
+            >
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  
+                  <div
+                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+                  >
+                    <div
+                      class="t-image t-image--square"
+                    >
+                      <div
+                        class="t-image__mask"
+                      >
+                        <div
+                          class="t-loading"
+                          style="font-size: 20px;"
+                        >
+                          <div
+                            class="t-loading__dots"
+                            style="animation-duration: 800ms; width: 20px; height: 20px;"
+                          >
+                            
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                            />
+                            
+                          </div>
+                          <!---->
+                          <!---->
+                        </div>
+                      </div>
+                      <picture>
+                        <!---->
+                        <img
+                          alt=""
+                          class="t-image__img"
+                          src="https://tdesign.gtimg.com/mobile/demos/avatar3.png"
+                          style="object-fit: fill; object-position: center;"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  
+                </div>
+                <!---->
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-avatar__wrapper"
+          >
+            <div
+              class="t-avatar__badge"
+            >
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  
+                  <div
+                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+                  >
+                    <div
+                      class="t-image t-image--square"
+                    >
+                      <div
+                        class="t-image__mask"
+                      >
+                        <div
+                          class="t-loading"
+                          style="font-size: 20px;"
+                        >
+                          <div
+                            class="t-loading__dots"
+                            style="animation-duration: 800ms; width: 20px; height: 20px;"
+                          >
+                            
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                            />
+                            
+                          </div>
+                          <!---->
+                          <!---->
+                        </div>
+                      </div>
+                      <picture>
+                        <!---->
+                        <img
+                          alt=""
+                          class="t-image__img"
+                          src="https://tdesign.gtimg.com/mobile/demos/avatar4.png"
+                          style="object-fit: fill; object-position: center;"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  
+                </div>
+                <!---->
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-avatar__wrapper"
+          >
+            <div
+              class="t-avatar__badge"
+            >
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  
+                  <div
+                    class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+                  >
+                    <div
+                      class="t-image t-image--square"
+                    >
+                      <div
+                        class="t-image__mask"
+                      >
+                        <div
+                          class="t-loading"
+                          style="font-size: 20px;"
+                        >
+                          <div
+                            class="t-loading__dots"
+                            style="animation-duration: 800ms; width: 20px; height: 20px;"
+                          >
+                            
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                            />
+                            
+                          </div>
+                          <!---->
+                          <!---->
+                        </div>
+                      </div>
+                      <picture>
+                        <!---->
+                        <img
+                          alt=""
+                          class="t-image__img"
+                          src="https://tdesign.gtimg.com/mobile/demos/avatar5.png"
+                          style="object-fit: fill; object-position: center;"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  
+                </div>
+                <!---->
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-avatar-group__collapse--default"
+          >
+            <div
+              class="t-avatar__wrapper"
+            >
+              <div
+                class="t-avatar__badge"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    <div
+                      class="t-avatar t-avatar--medium t-avatar--circle t-avatar--border t-avatar--border-medium"
+                    >
+                      
+                      
+                      
+                      <svg
+                        class="t-icon t-icon-user-add"
+                        fill="none"
+                        height="1em"
+                        style="font-size: 24px;"
+                        viewBox="0 0 24 24"
+                        width="1em"
+                      >
+                        <path
+                          d="M11.5 4a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM6 7.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0zM19 13v4h4v2h-4v4h-2v-4h-4v-2h4v-4h2zM8 16a4 4 0 00-4 4h8.05v2H2v-2a6 6 0 016-6h4v2H8z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      
+                      
+                      
+                    </div>
+                    
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+            ,
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-c7b11864=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
         03 组件尺寸
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"
       >
-         large/medium/small 尺寸
+        组件尺寸
       </p>
     </div>
     <div
@@ -2638,11 +2648,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <div
-                  class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                >
-                  10
-                </div>
+                <!---->
               </div>
             </div>
           </div>
@@ -2662,11 +2668,11 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   <div
                     class="t-avatar t-avatar--large t-avatar--circle"
                   >
-                    <span>
-                      
-                      A
-                      
-                    </span>
+                    
+                    
+                    A
+                    
+                    
                   </div>
                   
                 </div>
@@ -2779,11 +2785,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <div
-                  class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                >
-                  10
-                </div>
+                <!---->
               </div>
             </div>
           </div>
@@ -2803,11 +2805,11 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   <div
                     class="t-avatar t-avatar--medium t-avatar--circle"
                   >
-                    <span>
-                      
-                      A
-                      
-                    </span>
+                    
+                    
+                    A
+                    
+                    
                   </div>
                   
                 </div>
@@ -2920,11 +2922,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <div
-                  class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-                >
-                  <!---->
-                </div>
+                <!---->
               </div>
             </div>
           </div>
@@ -2944,11 +2942,11 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                   <div
                     class="t-avatar t-avatar--small t-avatar--circle"
                   >
-                    <span>
-                      
-                      A
-                      
-                    </span>
+                    
+                    
+                    A
+                    
+                    
                   </div>
                   
                 </div>
@@ -3072,11 +3070,7 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
             </div>
             
           </div>
-          <div
-            class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-          >
-            10
-          </div>
+          <!---->
         </div>
       </div>
     </div>
@@ -3096,11 +3090,11 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
             <div
               class="t-avatar t-avatar--large t-avatar--circle"
             >
-              <span>
-                
-                A
-                
-              </span>
+              
+              
+              A
+              
+              
             </div>
             
           </div>
@@ -3213,11 +3207,7 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
             </div>
             
           </div>
-          <div
-            class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-          >
-            10
-          </div>
+          <!---->
         </div>
       </div>
     </div>
@@ -3237,11 +3227,11 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
             <div
               class="t-avatar t-avatar--medium t-avatar--circle"
             >
-              <span>
-                
-                A
-                
-              </span>
+              
+              
+              A
+              
+              
             </div>
             
           </div>
@@ -3354,11 +3344,7 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
             </div>
             
           </div>
-          <div
-            class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-          >
-            <!---->
-          </div>
+          <!---->
         </div>
       </div>
     </div>
@@ -3378,11 +3364,11 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
             <div
               class="t-avatar t-avatar--small t-avatar--circle"
             >
-              <span>
-                
-                A
-                
-              </span>
+              
+              
+              A
+              
+              
             </div>
             
           </div>
