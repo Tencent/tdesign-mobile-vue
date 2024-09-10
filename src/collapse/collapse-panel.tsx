@@ -65,7 +65,7 @@ export default defineComponent({
         }
         if (isToggle) {
           isToggle = false;
-          wrapperHeight.value = `auto`;
+          wrapperHeight.value = 'auto';
           return;
         }
         setContentWrapperHeight();
