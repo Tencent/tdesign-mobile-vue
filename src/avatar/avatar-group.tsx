@@ -1,9 +1,10 @@
 import { computed, defineComponent, Fragment, provide, RendererNode } from 'vue';
 import AvatarGroupProps from './avatar-group-props';
 import config from '../config';
-import TAvatar, { isValidSize } from './avatar';
+import TAvatar from './avatar';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
+import { isValidSize } from '../_common/js/avatar/utils';
 
 const { prefix } = config;
 const name = `${prefix}-avatar-group`;

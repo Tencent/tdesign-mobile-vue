@@ -6,13 +6,10 @@ import AvatarProps from './props';
 import { TdAvatarGroupProps, TdAvatarProps } from './type';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
+import { isValidSize } from '../_common/js/avatar/utils';
 
 const { prefix } = config;
 const name = `${prefix}-avatar`;
-
-export const isValidSize = (value: string): boolean => {
-  return ['small', 'medium', 'large'].includes(value);
-};
 
 export default defineComponent({
   name,
