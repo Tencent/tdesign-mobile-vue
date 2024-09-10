@@ -25,15 +25,14 @@ export default defineComponent({
     const avatarGroupProps = inject<TdAvatarGroupProps>('avatarGroup', {});
     const hasAvatarGroupProps = Object.keys(avatarGroupProps).length > 0;
 
-    const sizeValue = ref(props.size || avatarGroupProps?.size);
+    const shapeValue = computed(() => props.shape || avatarGroupProps?.shape || 'circle');
+    const sizeValue = computed(() => props.size || avatarGroupProps?.size);
     const isCustomSize = computed(() => !isValidSize(sizeValue.value));
 
     const avatarClasses = computed(() => [
       `${avatarClass.value}`,
       `${avatarClass.value}--${isCustomSize.value ? 'medium' : sizeValue.value}`,
-      {
-        [`${avatarClass.value}--${props.shape}`]: props.shape,
-      },
+      `${avatarClass.value}--${shapeValue.value}`,
       hasAvatarGroupProps
         ? `${avatarClass.value}--border ${avatarClass.value}--border-${isCustomSize.value ? 'medium' : sizeValue.value}`
         : '',

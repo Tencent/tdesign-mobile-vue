@@ -55,10 +55,9 @@ export default defineComponent({
         const collapseAvatar = renderTNodeJSX('collapseAvatar');
         avatarList.push(
           <div class={`${avatarGroupClass.value}__collapse--default`} onClick={onCollapsedItemClick}>
-            <TAvatar size={avatarList[0].size || props.size}>
+            <TAvatar size={avatarList[0].size || props.size} shape={props.shape}>
               {collapseAvatar || `+${allChildren.length - props.max}`}
             </TAvatar>
-            ,
           </div>,
         );
       }
