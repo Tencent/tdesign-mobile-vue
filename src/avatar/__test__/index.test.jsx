@@ -22,9 +22,8 @@ describe('avatar', () => {
 
     it(': text', async () => {
       const wrapper = mount(() => <Avatar>A</Avatar>);
-      const span = wrapper.find('.t-avatar > span');
-      expect(span.exists()).toBeTruthy();
-      expect(span.text()).toBe('A');
+      const characterAvatar = wrapper.find('.t-avatar');
+      expect(characterAvatar.text()).toBe('A');
     });
 
     it(': shape', async () => {
@@ -131,6 +130,6 @@ describe('avatar-group', async () => {
     ));
     const avatarList = wrapper.findAllComponents(Avatar);
     expect(avatarList.length).toBe(3);
-    expect(avatarList[avatarList.length-1].text()).toBe('+3');
+    expect(avatarList[avatarList.length - 1].text()).toBe('+3');
   });
 });

@@ -11,16 +11,17 @@
     <tdesign-demo-block summary="图标头像">
       <iconAvatar />
     </tdesign-demo-block>
-    <tdesign-demo-block title="02 组件样式" summary="纯展示">
-      <exhibition />
-    </tdesign-demo-block>
-    <tdesign-demo-block summary="带操作">
-      <action />
-    </tdesign-demo-block>
     <tdesign-demo-block summary="徽标头像">
       <badgeAvatar />
     </tdesign-demo-block>
-    <tdesign-demo-block title="03 组件尺寸" summary=" large/medium/small 尺寸">
+    <tdesign-demo-block title="02 特殊类型" summary="纯展示的头像组">
+      <exhibition />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="带操作的头像组">
+      <action />
+    </tdesign-demo-block>
+
+    <tdesign-demo-block title="03 组件尺寸" summary="组件尺寸">
       <size />
     </tdesign-demo-block>
   </div>
