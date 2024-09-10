@@ -61,15 +61,16 @@ export default defineComponent({
           wrapperHeight.value = `${headHeight}px`;
           return;
         }
-        const { height: bodyHeight } = bodyRef.value.getBoundingClientRect();
-        const height = headHeight + bodyHeight;
-        wrapperHeight.value = `${height}px`;
+        setContentWrapperHeight();
       });
     };
 
     watch(
       isActive,
       () => {
+        if (wrapperHeight.value === 'auto') {
+          setContentWrapperHeight();
+        }
         nextTick(() => updatePanelState());
       },
       {
@@ -108,13 +109,31 @@ export default defineComponent({
       );
     };
 
+    const setContentWrapperHeight = () => {
+      const { height: headHeight } = headRef.value.getBoundingClientRect();
+      const { height: bodyHeight } = bodyRef.value.getBoundingClientRect();
+      const height = headHeight + bodyHeight;
+      wrapperHeight.value = `${height}px`;
+    };
+
+    const onTransitionEnd = () => {
+      if (isActive.value) {
+        wrapperHeight.value = 'auto';
+      }
+    };
+
     return () => {
       const headerContent = renderTNodeJSX('header');
       const noteContent = renderTNodeJSX('headerRightContent');
       const leftIcon = renderTNodeJSX('headerLeftIcon');
 
       return (
-        <div ref={wrapRef} class={rootClass.value} style={{ height: wrapperHeight.value }}>
+        <div
+          ref={wrapRef}
+          class={rootClass.value}
+          style={{ height: wrapperHeight.value }}
+          onTransitionend={onTransitionEnd}
+        >
           <div ref={headRef} class={`${componentName.value}__title`} onClick={handleClick}>
             <TCell
               class={[
