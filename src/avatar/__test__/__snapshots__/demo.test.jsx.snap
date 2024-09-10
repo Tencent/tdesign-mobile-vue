@@ -383,7 +383,6 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      ,
     </div>
     
   </div>
@@ -978,7 +977,6 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      ,
     </div>
     
   </div>
@@ -2140,7 +2138,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 </div>
               </div>
             </div>
-            ,
           </div>
           
         </div>
@@ -2549,7 +2546,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 </div>
               </div>
             </div>
-            ,
           </div>
           
         </div>
