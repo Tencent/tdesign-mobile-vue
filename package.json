@@ -141,7 +141,7 @@
     "debug": "^4.3.1",
     "dom-parser": "^0.1.6",
     "esbuild": "^0.14.3",
-    "eslint": "^8.4.0",
+    "eslint": "^9.10.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.3",
