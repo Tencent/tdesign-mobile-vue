@@ -1,6 +1,4 @@
-import { computed, toRefs, defineComponent, getCurrentInstance } from 'vue';
-
-import { space } from 'postcss/lib/list';
+import { computed, defineComponent } from 'vue';
 import TLoading from '../loading';
 import { Hover } from '../shared';
 import ButtonProps from './props';
@@ -11,10 +9,9 @@ import { usePrefixClass } from '../hooks/useClass';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
-const name = `${prefix}-button`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-button`,
   directives: { Hover },
   props: ButtonProps,
   setup(props) {
@@ -22,6 +19,8 @@ export default defineComponent({
     const renderTNodeJSX = useTNodeJSX();
     const renderTNodeContent = useContent();
     const isDisabled = useFormDisabled();
+
+    const hoverDisabled = computed(() => isDisabled.value || props.loading);
 
     const buttonClasses = computed(() => [
       `${buttonClass.value}`,
@@ -68,7 +67,7 @@ export default defineComponent({
           disabled={isDisabled.value}
           aria-disabled={isDisabled.value}
           onClick={handleClick}
-          v-hover={{ className: `${buttonClass.value}--hover` }}
+          v-hover={{ className: `${buttonClass.value}--hover`, disabledHover: hoverDisabled.value }}
         >
           {readerIcon()}
           {readerContent()}

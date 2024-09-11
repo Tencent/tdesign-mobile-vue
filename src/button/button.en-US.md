@@ -39,9 +39,6 @@ Name | Default Value | Description
 --td-button-danger-bg-color | @error-color | - 
 --td-button-danger-border-color | @error-color | - 
 --td-button-danger-color | @font-white-1 | - 
---td-button-danger-dashed-border-color | @button-danger-dashed-color | - 
---td-button-danger-dashed-color | @error-color | - 
---td-button-danger-dashed-disabled-color | @button-danger-disabled-color | - 
 --td-button-danger-disabled-bg | @error-color-3 | - 
 --td-button-danger-disabled-border-color | @error-color-3 | - 
 --td-button-danger-disabled-color | @font-white-1 | - 
@@ -57,14 +54,14 @@ Name | Default Value | Description
 --td-button-default-active-border-color | @bg-color-component-active | - 
 --td-button-default-bg-color | @bg-color-component | - 
 --td-button-default-border-color | @bg-color-component | - 
---td-button-default-color | @font-gray-1 | - 
+--td-button-default-color | @text-color-primary | - 
 --td-button-default-disabled-bg | @bg-color-component-disabled | - 
 --td-button-default-disabled-border-color | @bg-color-component-disabled | - 
---td-button-default-disabled-color | @font-gray-4 | - 
+--td-button-default-disabled-color | @text-color-disabled | - 
 --td-button-default-outline-active-bg-color | @bg-color-container-active | - 
 --td-button-default-outline-active-border-color | @component-border | - 
 --td-button-default-outline-border-color | @component-border | - 
---td-button-default-outline-color | @font-gray-1 | - 
+--td-button-default-outline-color | @text-color-primary | - 
 --td-button-default-outline-disabled-color | @component-border | - 
 --td-button-default-text-active-bg-color | @bg-color-container-active | - 
 --td-button-extra-small-font-size | @font-size-base | - 
@@ -113,9 +110,6 @@ Name | Default Value | Description
 --td-button-primary-bg-color | @brand-color | - 
 --td-button-primary-border-color | @brand-color | - 
 --td-button-primary-color | @font-white-1 | - 
---td-button-primary-dashed-border-color | @button-primary-dashed-color | - 
---td-button-primary-dashed-color | @brand-color | - 
---td-button-primary-dashed-disabled-color | @brand-color-disabled | - 
 --td-button-primary-disabled-bg | @brand-color-disabled | - 
 --td-button-primary-disabled-border-color | @brand-color-disabled | - 
 --td-button-primary-disabled-color | @font-white-1 | - 
@@ -130,4 +124,4 @@ Name | Default Value | Description
 --td-button-small-font-size | @font-size-base | - 
 --td-button-small-height | 32px | - 
 --td-button-small-icon-font-size | 18px | - 
---td-button-small-padding-horizontal | 12px | -
+--td-button-small-padding-horizontal | 12px | - 
