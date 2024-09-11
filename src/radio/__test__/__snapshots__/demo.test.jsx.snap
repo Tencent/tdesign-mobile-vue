@@ -309,7 +309,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
           value="0"
         />
         <div
-          class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
+          class="t-radio__icon t-radio__icon--left"
         >
           <!---->
           <!---->
@@ -419,6 +419,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
   <view
     class="demo-desc"
     data-v-5173b2c6=""
+    style="margin: 24px 16px 16px;"
   >
     横向卡片单选框
   </view>
@@ -453,7 +454,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
           value="0"
         />
         <div
-          class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
+          class="t-radio__icon t-radio__icon--left"
         >
           <!---->
           <!---->
@@ -1557,7 +1558,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               value="0"
             />
             <div
-              class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
+              class="t-radio__icon t-radio__icon--left"
             >
               <!---->
               <!---->
@@ -1667,6 +1668,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
       <view
         class="demo-desc"
         data-v-5173b2c6=""
+        style="margin: 24px 16px 16px;"
       >
         横向卡片单选框
       </view>
@@ -1701,7 +1703,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               value="0"
             />
             <div
-              class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
+              class="t-radio__icon t-radio__icon--left"
             >
               <!---->
               <!---->

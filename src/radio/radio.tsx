@@ -1,10 +1,9 @@
-import { inject, computed, defineComponent, Ref, toRefs } from 'vue';
+import { inject, computed, defineComponent, Ref } from 'vue';
 import { CheckIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
-
-import { NOOP, useVModel } from '../shared';
+import { useDefault } from '../shared';
 import config from '../config';
 import props from './props';
-import { RadioValue, TdRadioGroupProps } from './type';
+import { TdRadioGroupProps, TdRadioProps } from './type';
 import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
@@ -14,29 +13,24 @@ const { prefix } = config;
 export default defineComponent({
   name: `${prefix}-radio`,
   props,
-  setup(props) {
+  emits: ['update:checked', 'update:modelValue', 'change'],
+  setup(props, context) {
     const renderTNodeContent = useContent();
     const renderTNodeJSX = useTNodeJSX();
     const radioClass = usePrefixClass('radio');
 
-    const { checked, modelValue, block } = toRefs(props);
-    const [innerChecked, setInnerChecked] = useVModel(
-      checked,
-      modelValue,
-      props.defaultChecked,
-      props.onChange,
-      'checked',
-    );
+    const [innerChecked, setInnerChecked] = useDefault<boolean, TdRadioProps>(props, context.emit, 'checked', 'change');
 
     const rootGroupProps = inject('rootGroupProps', {}) as TdRadioGroupProps;
     const rootGroupValue = inject('rootGroupValue', {}) as Ref;
-    const rootGroupChange = inject('rootGroupChange', NOOP) as (val: RadioValue, e: Event) => void;
+    const rootGroupChange = inject('rootGroupChange', undefined);
 
     // extend radioGroup disabled props
     const groupDisabled = computed(() => rootGroupProps?.disabled);
     const isDisabled = useFormDisabled(groupDisabled);
 
-    const radioChecked = computed(() => innerChecked.value || props.value === rootGroupValue?.value);
+    const radioChecked = computed(() => innerChecked.value || (props.value && props.value === rootGroupValue?.value));
+
     const finalBorderless = computed(() => {
       if (props.borderless == null && 'borderless' in rootGroupProps) return rootGroupProps.borderless;
       return props.borderless;
@@ -46,10 +40,7 @@ export default defineComponent({
       return props.placement || 'left';
     });
 
-    const finalAllowUncheck = computed(() => {
-      if (props.allowUncheck == null && 'allowUncheck' in rootGroupProps) return rootGroupProps.allowUncheck;
-      return props.allowUncheck;
-    });
+    const finalAllowUncheck = computed(() => Boolean(props.allowUncheck || rootGroupProps?.allowUncheck));
 
     // input props attribute
     const inputProps = computed(() => ({
@@ -71,7 +62,7 @@ export default defineComponent({
       `${radioClass.value}`,
       `${radioClass.value}--${finalPlacement.value}`,
       {
-        [`${radioClass.value}--block`]: block.value,
+        [`${radioClass.value}--block`]: props.block,
       },
     ]);
 
@@ -104,10 +95,11 @@ export default defineComponent({
         return;
       }
       if (rootGroupChange) {
-        rootGroupChange(finalAllowUncheck.value && radioChecked.value ? '' : props.value, e);
+        const value = finalAllowUncheck.value && radioChecked.value ? undefined : props.value;
+        rootGroupChange(value, e);
       } else {
-        if (!finalAllowUncheck.value && radioChecked.value) return;
-        setInnerChecked(!radioChecked.value, { e });
+        const value = finalAllowUncheck.value ? !radioChecked.value : true;
+        setInnerChecked(value, { e });
       }
     };
 
