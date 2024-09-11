@@ -6,7 +6,7 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-indexList | Array | - | Typescript：`(string \| number)[]` | N
+indexList | Array | - | Typescript：`Array<string \| number>` | N
 sticky | Boolean | true | Typescript：`Boolean` | N
 stickyOffset | Number | 0 | \- | N
 onChange | Function |  | Typescript：`(index: string \| number) => void`<br/> | N
