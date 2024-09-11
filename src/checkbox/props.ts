@@ -76,7 +76,7 @@ export default {
       return ['left', 'right'].includes(val);
     },
   },
-  /** 【暂不支持】只读状态 */
+  /** 只读状态 */
   readonly: Boolean,
   /** 多选框的值 */
   value: {
