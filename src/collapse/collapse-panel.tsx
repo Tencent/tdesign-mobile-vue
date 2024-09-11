@@ -51,6 +51,7 @@ export default defineComponent({
     const wrapRef = ref();
     const headRef = ref();
     const wrapperHeight = ref('');
+    let isToggle = true;
     const updatePanelState = () => {
       nextTick(() => {
         if (!wrapRef.value) {
@@ -58,7 +59,13 @@ export default defineComponent({
         }
         const { height: headHeight } = headRef.value.getBoundingClientRect();
         if (!isActive.value) {
+          isToggle = false;
           wrapperHeight.value = `${headHeight}px`;
+          return;
+        }
+        if (isToggle) {
+          isToggle = false;
+          wrapperHeight.value = 'auto';
           return;
         }
         setContentWrapperHeight();

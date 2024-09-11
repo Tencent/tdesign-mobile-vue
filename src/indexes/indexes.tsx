@@ -7,8 +7,8 @@ import {
   onBeforeUnmount,
   provide,
   computed,
-  ComponentInternalInstance,
   watch,
+  ComponentPublicInstance,
 } from 'vue';
 import throttle from 'lodash/throttle';
 import { preventDefault } from '../shared/dom';
@@ -16,21 +16,18 @@ import config from '../config';
 import IndexesProps from './props';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
-
-interface Child extends ComponentInternalInstance {
-  [key: string]: any;
-}
+import { TdIndexesAnchorProps } from './type';
 
 interface State {
   showSidebarTip: boolean;
   activeSidebar: string | number;
-  children: Child[];
+  children: ComponentPublicInstance<TdIndexesAnchorProps>[];
 }
 
 interface GroupTop {
   height: number;
   top: number;
-  anchor: string;
+  anchor: string | number;
   totalHeight: number;
 }
 
@@ -100,7 +97,9 @@ export default defineComponent({
             wrapper.classList.add(`${wrapperClass}--sticky`);
             wrapper.classList.add(`${wrapperClass}--active`);
             header.classList.add(`${headerClass}--active`);
-            wrapper.style = `transform: translate3d(0, ${betwixt ? offset : 0}px, 0); top: ${stickyTop}px;`;
+            wrapper.style = `transform: translate3d(0, ${
+              betwixt ? offset - groupTop[index].height : 0
+            }px, 0); top: ${stickyTop}px;`;
           } else {
             wrapper.classList.remove(`${wrapperClass}--sticky`);
             wrapper.classList.remove(`${wrapperClass}--active`);
@@ -146,14 +145,12 @@ export default defineComponent({
     const getAnchorsRect = () => {
       return Promise.all(
         state.children.map((child) => {
-          const { $el } = child;
-          const { dataset } = $el;
-          const { index } = dataset;
+          const { $el, index } = child;
           const rect = $el.getBoundingClientRect();
           groupTop.push({
             height: rect.height,
             top: rect.top - parentRect.value.top,
-            anchor: /^\d+$/.test(index) ? Number(index) : index,
+            anchor: index,
             totalHeight: 0,
           });
           return child;
@@ -168,7 +165,7 @@ export default defineComponent({
       const target = document.elementFromPoint(clientX, clientY);
       if (target && target.className === `${indexesClass.value}__sidebar-item` && target instanceof HTMLElement) {
         const { index } = target.dataset;
-        const curIndex = /^\d+$/.test(index ?? '') ? Number(index) : index;
+        const curIndex = indexList.value.find((idx) => String(idx) === index);
         if (curIndex !== undefined && state.activeSidebar !== curIndex) {
           setActiveSidebarAndTip(curIndex);
           scrollToByIndex(curIndex);
@@ -176,7 +173,7 @@ export default defineComponent({
       }
     };
 
-    const relation = (child: ComponentInternalInstance) => {
+    const relation = (child: ComponentPublicInstance) => {
       child && state.children.push(child);
     };
 
