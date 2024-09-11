@@ -6,7 +6,7 @@
     </view>
   </t-radio-group>
 
-  <view class="demo-desc" style="margin: 48rpx 32rpx 32rpx">横向卡片单选框</view>
+  <view class="demo-desc" style="margin: 24px 16px 16px">横向卡片单选框</view>
 
   <t-radio-group class="horizontal-box" :value="radio1" @change="onChange1">
     <view v-for="(item, index) in 3" :key="index" :class="`card ${radio1 == index ? 'card--active' : ''}`">
@@ -32,6 +32,12 @@ const onChange1 = (value: any, context: { e: Event }) => {
 };
 </script>
 <style scoped lang="less">
+.demo-desc {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 16px;
+}
+
 .card {
   display: block;
   position: relative;
