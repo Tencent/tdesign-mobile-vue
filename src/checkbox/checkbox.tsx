@@ -84,7 +84,7 @@ export default defineComponent({
     });
 
     const handleChange = (e: Event, source?: string) => {
-      if (isDisabled.value) return;
+      if (isDisabled.value || props.readonly) return;
       if (source === 'text' && props.contentDisabled) return;
 
       const value = !isChecked.value;
