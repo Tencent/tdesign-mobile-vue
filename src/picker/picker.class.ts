@@ -73,6 +73,10 @@ class Picker {
 
   onChange: (index: number) => void;
 
+  itemGroupHeight: number;
+
+  indicatorOffset: number;
+
   constructor(options: PickerOptions) {
     if (!options.el) throw new Error('options el needed!');
     this.holder = options.el;
@@ -105,9 +109,11 @@ class Picker {
    */
   initScrollParams(): void {
     this.list = this.holder as HTMLUListElement;
+    this.itemGroupHeight = this.holder.parentElement?.offsetHeight || DEFAULT_HOLDER_HEIGHT;
     this.elementItems = [...this.holder.querySelectorAll('li')];
     this.itemHeight = this.holder.querySelector('li')?.offsetHeight || DEFAULT_ITEM_HEIGHT;
     this.height = this.holder.offsetHeight || DEFAULT_HOLDER_HEIGHT;
+    this.indicatorOffset = this.itemGroupHeight / 2 - this.itemHeight / 2;
     let curIndex = this.options.defaultIndex || 0;
     this.itemClassName = `${prefix}-picker-item__item`;
     this.itemSelectedClassName = `${prefix}-picker-item__item--active`;
@@ -126,13 +132,14 @@ class Picker {
         return curIndex;
       },
     });
-    const startOffsetY = (-this.curIndex + 2) * this.itemHeight;
+
+    const startOffsetY = this.indicatorOffset - this.curIndex * this.itemHeight;
     const itemLen = this.elementItems.length;
     this.setOffsetY(startOffsetY);
     this.offsetYOfStart = startOffsetY;
-    this.offsetYOfEnd = -this.itemHeight * (itemLen - 3);
-    this.offsetYOfStartBound = this.itemHeight * 2 + OFFSET_OF_BOUND;
-    this.offsetYOfEndBound = -(this.itemHeight * (itemLen - 3) + OFFSET_OF_BOUND);
+    this.offsetYOfEnd = this.indicatorOffset - (itemLen - 1) * this.itemHeight;
+    this.offsetYOfStartBound = this.indicatorOffset + OFFSET_OF_BOUND;
+    this.offsetYOfEndBound = this.indicatorOffset - (itemLen - 1) * this.itemHeight - OFFSET_OF_BOUND;
   }
 
   bindEvent(): void {
@@ -158,7 +165,7 @@ class Picker {
     const endY = event.changedTouches[0].pageY;
     const dragRange = endY - this.startY;
     this.updateInertiaParams(event, false);
-    const moveOffsetY = (-this.curIndex + 2) * this.itemHeight + dragRange;
+    const moveOffsetY = this.indicatorOffset - this.curIndex * this.itemHeight + dragRange;
     this.setOffsetY(moveOffsetY);
   }
 
@@ -262,7 +269,7 @@ class Picker {
     };
     this.curIndex = index;
     this.setSelectedClassName();
-    const moveOffsetY = (-index + 2) * this.itemHeight;
+    const moveOffsetY = this.indicatorOffset - index * this.itemHeight;
     if (this.list) {
       this.list.style.transform = `translate(0,${moveOffsetY}px) translateZ(0)`;
       this.list.style.transitionDuration = `${realOptions.duration}ms`;
@@ -346,11 +353,11 @@ class Picker {
       if (this.list) {
         this.list.style.transition = `${ANIMATION_DURATION}ms ease-out`;
       }
-      curIndex = 2 - Math.round(this.offsetY / this.itemHeight);
+      curIndex = -Math.round((this.offsetY - this.indicatorOffset) / this.itemHeight);
       if (curIndex < 0) curIndex = 0;
       if (curIndex > this.elementItems.length - 1) curIndex = this.elementItems.length - 1;
     }
-    const offsetY = (-curIndex + 2) * this.itemHeight;
+    const offsetY = this.indicatorOffset - curIndex * this.itemHeight;
     this.setOffsetY(offsetY);
     if (curIndex !== this.curIndex) {
       // 防止事件重复触发
