@@ -5,6 +5,18 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.4.2 `2024-09-13` 
+### 🚀 Features
+- `AvatarGroup`: 新增  `shape` 属性，新增 `onCollapsedItemClick` 事件 @anlyyao ([#1571](https://github.com/Tencent/tdesign-mobile-vue/pull/1571))
+- `Checkbox`: 支持 `readonly` 只读 @liweijie0812 ([#1578](https://github.com/Tencent/tdesign-mobile-vue/pull/1578))
+### 🐞 Bug Fixes
+- `CollapsePanel`: 修复面板展开态时内容动态变更，高度无法自适应的问题 @huxinhai ([#1570](https://github.com/Tencent/tdesign-mobile-vue/pull/1570))
+- `AvatarGroup`: 修复 `size` 属性无效的问题，优化 `zIndex` 处理 @anlyyao ([#1571](https://github.com/Tencent/tdesign-mobile-vue/pull/1571))
+- `indexes`: 修复索引为数字字符串时侧边栏不能正常激活，并优化索引吸顶时锚点切换效果  @Lyan-u ([#1577](https://github.com/Tencent/tdesign-mobile-vue/pull/1577))
+- `Radio`: 修复 `allowUncheck` 属性无效 @anlyyao ([#1582](https://github.com/Tencent/tdesign-mobile-vue/pull/1582))
+- `Button`: 修复禁用时仍有 `hover` 态以及 `dashed` 按钮 `hover` 样式错误等问题 @anlyyao ([#1583](https://github.com/Tencent/tdesign-mobile-vue/pull/1583))
+- `Picker`: 修复自定义高度时滚动参数异常 @jby0107 ([#1576](https://github.com/Tencent/tdesign-mobile-vue/pull/1576))
+
 ## 🌈 1.4.1 `2024-09-02` 
 ### 🚧 Others
 - chore: 修复 `1.4.0` es module 入口文件错误 @liweijie0812 ([#1566](https://github.com/Tencent/tdesign-mobile-vue/pull/1566))
