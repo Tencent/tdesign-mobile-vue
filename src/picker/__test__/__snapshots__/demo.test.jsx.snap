@@ -1371,6 +1371,47 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       </teleport-stub>
       
       
+      <div
+        class="t-cell t-cell--middle"
+      >
+        <div
+          class="t-cell__left"
+        >
+          <!---->
+          <!---->
+        </div>
+        <div
+          class="t-cell__title"
+        >
+          自定义高度选择器
+          <!---->
+          <!---->
+        </div>
+        <!---->
+        <div
+          class="t-cell__right"
+        >
+          <div
+            class="t-cell__right-icon"
+          >
+            <svg
+              class="t-icon t-icon-chevron-right"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!--v-if-->
+      
+      
     </div>
   </div>
 </div>

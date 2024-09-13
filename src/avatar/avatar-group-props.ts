@@ -25,9 +25,19 @@ export default {
   max: {
     type: Number,
   },
+  /** 形状。优先级低于 Avatar.shape */
+  shape: {
+    type: String as PropType<TdAvatarGroupProps['shape']>,
+    validator(val: TdAvatarGroupProps['shape']): boolean {
+      if (!val) return true;
+      return ['circle', 'round'].includes(val);
+    },
+  },
   /** 尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size */
   size: {
     type: String,
-    default: 'medium',
+    default: '',
   },
+  /** 点击头像折叠元素触发 */
+  onCollapsedItemClick: Function as PropType<TdAvatarGroupProps['onCollapsedItemClick']>,
 };

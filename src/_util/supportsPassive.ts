@@ -1,9 +1,9 @@
 import { ref } from 'vue';
-import { canUseDom } from './canUseDom';
+import { isBrowser } from '../shared';
 
 export const supportsPassive = ref(false);
 
-if (canUseDom) {
+if (!isBrowser) {
   try {
     const opts = {};
     Object.defineProperty(opts, 'passive', {

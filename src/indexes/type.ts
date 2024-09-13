@@ -8,7 +8,7 @@ export interface TdIndexesProps {
   /**
    * 索引字符列表。不传默认 `A-Z`
    */
-  indexList?: string[] | number[];
+  indexList?: Array<string | number>;
   /**
    * 索引是否吸顶，默认为true
    * @default true

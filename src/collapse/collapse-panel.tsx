@@ -51,6 +51,7 @@ export default defineComponent({
     const wrapRef = ref();
     const headRef = ref();
     const wrapperHeight = ref('');
+    let isToggle = true;
     const updatePanelState = () => {
       nextTick(() => {
         if (!wrapRef.value) {
@@ -58,18 +59,25 @@ export default defineComponent({
         }
         const { height: headHeight } = headRef.value.getBoundingClientRect();
         if (!isActive.value) {
+          isToggle = false;
           wrapperHeight.value = `${headHeight}px`;
           return;
         }
-        const { height: bodyHeight } = bodyRef.value.getBoundingClientRect();
-        const height = headHeight + bodyHeight;
-        wrapperHeight.value = `${height}px`;
+        if (isToggle) {
+          isToggle = false;
+          wrapperHeight.value = 'auto';
+          return;
+        }
+        setContentWrapperHeight();
       });
     };
 
     watch(
       isActive,
       () => {
+        if (wrapperHeight.value === 'auto') {
+          setContentWrapperHeight();
+        }
         nextTick(() => updatePanelState());
       },
       {
@@ -108,13 +116,31 @@ export default defineComponent({
       );
     };
 
+    const setContentWrapperHeight = () => {
+      const { height: headHeight } = headRef.value.getBoundingClientRect();
+      const { height: bodyHeight } = bodyRef.value.getBoundingClientRect();
+      const height = headHeight + bodyHeight;
+      wrapperHeight.value = `${height}px`;
+    };
+
+    const onTransitionEnd = () => {
+      if (isActive.value) {
+        wrapperHeight.value = 'auto';
+      }
+    };
+
     return () => {
       const headerContent = renderTNodeJSX('header');
       const noteContent = renderTNodeJSX('headerRightContent');
       const leftIcon = renderTNodeJSX('headerLeftIcon');
 
       return (
-        <div ref={wrapRef} class={rootClass.value} style={{ height: wrapperHeight.value }}>
+        <div
+          ref={wrapRef}
+          class={rootClass.value}
+          style={{ height: wrapperHeight.value }}
+          onTransitionend={onTransitionEnd}
+        >
           <div ref={headRef} class={`${componentName.value}__title`} onClick={handleClick}>
             <TCell
               class={[
