@@ -9,6 +9,7 @@
     <tdesign-demo-block title="02 组件样式">
       <!-- <CasCadeDemo /> -->
       <titleDemo />
+      <CustomHeightDemo />
     </tdesign-demo-block>
   </div>
 </template>
@@ -17,4 +18,5 @@ import BaseDemo from './base.vue';
 // import CasCadeDemo from './cascade.vue';
 import titleDemo from './title.vue';
 import AreaDemo from './area.vue';
+import CustomHeightDemo from './customHeight.vue';
 </script>
