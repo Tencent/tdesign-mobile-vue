@@ -24,7 +24,10 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
-      "tdesign-mobile-vue": ["src"]
+      "tdesign-mobile-vue": ["src"],
+      "tdesign-mobile-vue/es/locale/*": [
+        "src/locale/*"
+      ],
     },
     "types": ["vitest/globals"],
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]

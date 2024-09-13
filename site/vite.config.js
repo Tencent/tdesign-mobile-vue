@@ -23,6 +23,7 @@ export default ({ mode }) => {
         '@': resolvePath('../src'),
         '@docs': resolvePath('./docs'),
         '@common': resolvePath('../src/_common'),
+        'tdesign-mobile-vue/es': resolvePath('../src'),
         'tdesign-mobile-vue': resolvePath('../src'),
       },
     },
