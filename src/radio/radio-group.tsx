@@ -35,11 +35,11 @@ export default defineComponent({
         return opt;
       });
     });
-    const handleRadioChange = (val: RadioValue, e: Event) => {
+    const handleRadioChange = (val: RadioValue, context: { e: Event; name?: string }) => {
       if (props.allowUncheck && val === groupValue.value) {
-        setGroupValue('', { e });
+        setGroupValue('', context);
       } else {
-        setGroupValue(val, { e });
+        setGroupValue(val, context);
       }
     };
 

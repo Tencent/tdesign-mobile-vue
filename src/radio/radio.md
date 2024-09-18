@@ -21,7 +21,8 @@ maxContentRow | Number | 5 | 内容最大行数限制 | N
 maxLabelRow | Number | 3 | 主文案最大行数限制 | N
 name | String | - | HTML 元素原生属性 | N
 placement | String | left | 复选框和内容相对位置。可选项：left/right | N
-value | String / Number / Boolean | undefined | 单选按钮的值。TS 类型：`string \| number \| boolean` | N
+readonly | Boolean | false | 只读状态 | N
+value | String / Number / Boolean | undefined | 单选按钮的值。TS 类型：`T` | N
 onChange | Function |  | TS 类型：`(checked: boolean, context: { e: Event }) => void`<br/>选中状态变化时触发 | N
 
 ### Radio Events
@@ -45,13 +46,13 @@ options | Array | - | 单选组件按钮形式。RadioOption 数据类型为 str
 placement | String | left | 复选框和内容相对位置。可选项：left/right | N
 value | String / Number / Boolean | - | 选中的值。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`T` `type RadioValue = string \| number \| boolean`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/radio/type.ts) | N
 defaultValue | String / Number / Boolean | - | 选中的值。非受控属性。TS 类型：`T` `type RadioValue = string \| number \| boolean`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/radio/type.ts) | N
-onChange | Function |  | TS 类型：`(value: T, context: { e: Event }) => void`<br/>选中值发生变化时触发 | N
+onChange | Function |  | TS 类型：`(value: T, context: { e: Event; name?:string }) => void`<br/>选中值发生变化时触发, `context.name` 指 RadioGroup 的 name 属性 | N
 
 ### RadioGroup Events
 
 名称 | 参数 | 描述
 -- | -- | --
-change | `(value: T, context: { e: Event })` | 选中值发生变化时触发
+change | `(value: T, context: { e: Event; name?:string })` | 选中值发生变化时触发, `context.name` 指 RadioGroup 的 name 属性
 
 ### CSS Variables
 

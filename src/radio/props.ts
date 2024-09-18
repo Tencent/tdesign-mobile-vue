@@ -79,6 +79,8 @@ export default {
       return ['left', 'right'].includes(val);
     },
   },
+  /** 只读状态 */
+  readonly: Boolean,
   /** 单选按钮的值 */
   value: {
     type: [String, Number, Boolean] as PropType<TdRadioProps['value']>,

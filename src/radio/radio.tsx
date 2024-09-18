@@ -1,4 +1,4 @@
-import { inject, computed, defineComponent, Ref } from 'vue';
+import { inject, computed, defineComponent, Ref, readonly } from 'vue';
 import { CheckIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { useDefault } from '../shared';
 import config from '../config';
@@ -47,6 +47,7 @@ export default defineComponent({
       name: rootGroupProps.name || props.name,
       checked: radioChecked.value,
       disabled: isDisabled.value,
+      readonly: props.readonly,
       value: props.value,
     }));
 
@@ -91,12 +92,12 @@ export default defineComponent({
     };
 
     const radioOrgChange = (e: Event) => {
-      if (isDisabled.value) {
+      if (isDisabled.value || props.readonly) {
         return;
       }
       if (rootGroupChange) {
         const value = finalAllowUncheck.value && radioChecked.value ? undefined : props.value;
-        rootGroupChange(value, e);
+        rootGroupChange(value, { e, name: props.name });
       } else {
         const value = finalAllowUncheck.value ? !radioChecked.value : true;
         setInnerChecked(value, { e });

@@ -6,7 +6,7 @@
 
 import { TNode, KeysType } from '../common';
 
-export interface TdRadioProps {
+export interface TdRadioProps<T = RadioValue> {
   /**
    * 是否允许取消选中
    * @default false
@@ -82,9 +82,14 @@ export interface TdRadioProps {
    */
   placement?: 'left' | 'right';
   /**
+   * 只读状态
+   * @default false
+   */
+  readonly?: boolean;
+  /**
    * 单选按钮的值
    */
-  value?: string | number | boolean;
+  value?: T;
   /**
    * 选中状态变化时触发
    */
@@ -142,9 +147,9 @@ export interface TdRadioGroupProps<T = RadioValue> {
    */
   modelValue?: T;
   /**
-   * 选中值发生变化时触发
+   * 选中值发生变化时触发, `context.name` 指 RadioGroup 的 name 属性
    */
-  onChange?: (value: T, context: { e: Event }) => void;
+  onChange?: (value: T, context: { e: Event; name?: string }) => void;
 }
 
 export type RadioOption = string | number | RadioOptionObj;
