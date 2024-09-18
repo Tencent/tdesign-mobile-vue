@@ -1,4 +1,4 @@
-import { inject, computed, defineComponent, Ref, readonly } from 'vue';
+import { inject, computed, defineComponent, Ref } from 'vue';
 import { CheckIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { useDefault } from '../shared';
 import config from '../config';
