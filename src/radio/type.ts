@@ -83,7 +83,6 @@ export interface TdRadioProps<T = RadioValue> {
   placement?: 'left' | 'right';
   /**
    * 只读状态
-   * @default false
    */
   readonly?: boolean;
   /**
