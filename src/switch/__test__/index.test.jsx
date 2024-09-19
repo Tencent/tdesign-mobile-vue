@@ -1,7 +1,7 @@
+import { ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Switch from '../switch';
-import { ref } from 'vue';
 
 describe('switch', () => {
   describe('props', () => {
@@ -21,7 +21,7 @@ describe('switch', () => {
       expect(value.value).toBe(0);
     });
 
-    it(':label', async () => {
+    it(':label=Array<string>', async () => {
       const wrapper = mount(Switch, {
         props: {
           label: ['open', 'close'],
@@ -32,6 +32,32 @@ describe('switch', () => {
 
       await wrapper.trigger('click');
       expect($label.text()).toBe('open');
+    });
+
+    it(':label=Array<TNode>', async () => {
+      const TNodeOpen = () => <span id="switch_open">open</span>;
+      const TNodeClose = () => <span id="switch_close">close</span>;
+      const label = [TNodeOpen, TNodeClose];
+      const wrapper = mount({
+        render() {
+          return <Switch disabled label={label} />;
+        },
+      });
+      const contentEle = wrapper.find('.t-switch__label');
+      const text = contentEle.find('#switch_close').element.innerHTML;
+      expect(text === 'close').toBe(true);
+    });
+
+    it(':label={TNode<value>}', () => {
+      const label = (val) => (val ? <span id="switch_open">open</span> : <span id="switch_close">close</span>);
+      const wrapper = mount({
+        render() {
+          return <Switch disabled label={label} />;
+        },
+      });
+      const contentEle = wrapper.find('.t-switch__label');
+      const text = contentEle.find('#switch_open').element.innerHTML;
+      expect(text === 'open').toBe(true);
     });
 
     it(':disabled', async () => {
@@ -62,6 +88,7 @@ describe('switch', () => {
       expect(wrapper.classes()).toContain('t-switch--small');
     });
   });
+
   describe('event', () => {
     it(': onChange', async () => {
       const onChange = vi.fn();
