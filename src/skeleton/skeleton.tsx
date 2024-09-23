@@ -10,7 +10,7 @@ import { SkeletonRowCol, SkeletonRowColObj, TdSkeletonProps } from './type';
 import { ClassName, Styles } from '../common';
 
 const { prefix } = config;
-const name = `${prefix}-skeleton`;
+
 const ThemeMap: Record<TdSkeletonProps['theme'], SkeletonRowCol> = {
   avatar: [{ type: 'circle', size: '48px' }],
   image: [{ type: 'rect', size: '72px' }],
@@ -51,18 +51,18 @@ const getColItemStyle = (obj: SkeletonRowColObj): Styles => {
 };
 
 export default defineComponent({
-  name,
+  name: `${prefix}-skeleton`,
   props: SkeletonProps,
   setup(props, { slots }) {
     const isShow = ref(false);
     const renderContent = useContent();
 
-    const componentName = usePrefixClass('skeleton');
+    const skeletonClass = usePrefixClass('skeleton');
 
     const getColItemClass = (obj: SkeletonRowColObj): ClassName => [
-      `${componentName.value}__col`,
-      `${componentName.value}--type-${obj.type || 'text'}`,
-      { [`${componentName.value}--animation-${props.animation}`]: props.animation },
+      `${skeletonClass.value}__col`,
+      `${skeletonClass.value}--type-${obj.type || 'text'}`,
+      { [`${skeletonClass.value}--animation-${props.animation}`]: props.animation },
     ];
 
     const renderCols = (_cols: Number | SkeletonRowColObj | Array<SkeletonRowColObj>) => {
@@ -85,7 +85,7 @@ export default defineComponent({
     const renderRowCol = (_rowCol?: SkeletonRowCol) => {
       const rowCol: SkeletonRowCol = _rowCol || props.rowCol;
 
-      return rowCol.map((item) => <div class={`${name}__row`}>{renderCols(item)}</div>);
+      return rowCol.map((item) => <div class={`${skeletonClass.value}__row`}>{renderCols(item)}</div>);
     };
 
     watch(
@@ -132,7 +132,7 @@ export default defineComponent({
         );
       }
 
-      return <div class={componentName.value}>{children}</div>;
+      return <div class={skeletonClass.value}>{children}</div>;
     };
   },
 });

@@ -9,10 +9,9 @@ import { TdTreeSelectProps, TreeSelectValue, _TreeOptionData } from './type';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-tree-select`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-tree-select`,
   components: {
     TSideBar,
     TSideBarItem,

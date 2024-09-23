@@ -1,31 +1,36 @@
 <template>
   <t-popup v-model="open" placement="bottom" @visible-change="onVisibleChange">
-    <div :class="`${name}`">
-      <div :class="`${name}__title`">
+    <div :class="`${cascaderClass}`">
+      <div :class="`${cascaderClass}__title`">
         <t-node v-if="!(typeof titleTNode === 'string')" :content="titleTNode" />
         <template v-else>{{ title }}</template>
       </div>
-      <div :class="`${name}__close-btn`" @click="onCloseBtn">
+      <div :class="`${cascaderClass}__close-btn`" @click="onCloseBtn">
         <t-node v-if="closeBtnTNode" :content="closeBtnTNode" />
       </div>
-      <div :class="`${name}__content`">
+      <div :class="`${cascaderClass}__content`">
         <div v-if="steps && steps.length">
-          <div v-if="theme === 'step'" :class="`${name}__steps`">
-            <div v-for="(item, index) in steps" :key="index" :class="`${name}__step`" @click="onStepClick(index)">
+          <div v-if="theme === 'step'" :class="`${cascaderClass}__steps`">
+            <div
+              v-for="(item, index) in steps"
+              :key="index"
+              :class="`${cascaderClass}__step`"
+              @click="onStepClick(index)"
+            >
               <div
                 :class="[
-                  `${name}__step-dot`,
+                  `${cascaderClass}__step-dot`,
                   {
-                    't-cascader__step-dot--active': item !== placeholder,
-                    't-cascader__step-dot--last': index === steps.length - 1,
+                    [`${cascaderClass}__step-dot--active`]: item !== placeholder,
+                    [`${cascaderClass}__step-dot--last`]: index === steps.length - 1,
                   },
                 ]"
               ></div>
               <div
                 :class="[
-                  `${name}__step-label`,
+                  `${cascaderClass}__step-label`,
                   {
-                    't-cascader__step-label--active': index === stepIndex,
+                    [`${cascaderClass}__step-label--active`]: index === stepIndex,
                   },
                 ]"
               >
@@ -35,7 +40,7 @@
                 />
                 <template v-else>{{ item }}</template>
               </div>
-              <chevron-right-icon :class="`${name}__step-arrow`" size="22" />
+              <chevron-right-icon :class="`${cascaderClass}__step-arrow`" size="22" />
             </div>
           </div>
           <div v-if="open && theme === 'tab'">
@@ -44,14 +49,14 @@
             </t-tabs>
           </div>
         </div>
-        <div v-if="subTitles && subTitles[stepIndex]" :class="`${name}__options-title`">
+        <div v-if="subTitles && subTitles[stepIndex]" :class="`${cascaderClass}__options-title`">
           {{ subTitles[stepIndex] }}
         </div>
         <div
-          :class="`${name}__options-container`"
+          :class="`${cascaderClass}__options-container`"
           :style="`width: ${items.length + 1}00vw; transform: translateX(-${stepIndex}00vw);`"
         >
-          <div v-for="(options, index) in items" :key="index" :class="`${name}__options`">
+          <div v-for="(options, index) in items" :key="index" :class="`${cascaderClass}__options`">
             <transition appear name="slide">
               <div :class="`cascader-radio-group-${index}`">
                 <t-radio-group
@@ -94,10 +99,9 @@ import config from '../config';
 import TdCascaderProps from './props';
 import { useVModel, renderTNode, TNode } from '../shared';
 import { TreeOptionData } from '../common';
-import { useConfig } from '../config-provider/useConfig';
+import { usePrefixClass, useConfig } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-cascader`;
 
 interface ChildrenInfoType {
   value: RadioValue;
@@ -116,7 +120,7 @@ interface KeysType {
 }
 
 export default defineComponent({
-  name,
+  name: `${prefix}-cascader`,
   components: {
     ChevronRightIcon,
     TNode,
@@ -129,6 +133,7 @@ export default defineComponent({
   emits: ['change', 'close', 'pick', 'update:modelValue', 'update:value', 'update:visible'],
   setup(props, context) {
     const { globalConfig } = useConfig('cascader');
+    const cascaderClass = usePrefixClass('cascader');
 
     const { visible, value, modelValue, subTitles, options, keys, checkStrictly } = toRefs(props);
     const open = ref(visible.value || false);
@@ -326,6 +331,7 @@ export default defineComponent({
     };
 
     return {
+      cascaderClass,
       open,
       placeholder,
       onVisibleChange,

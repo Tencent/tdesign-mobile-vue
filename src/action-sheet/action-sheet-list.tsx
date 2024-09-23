@@ -1,15 +1,11 @@
 import { computed, defineComponent, PropType, toRefs } from 'vue';
 import TButton from '../button';
 import TBadge from '../badge';
-import config from '../config';
 import { ActionSheetItem } from './type';
 import { useTNodeDefault } from '../hooks/tnode';
-
-const { prefix } = config;
-const name = `${prefix}-action-sheet`;
+import { usePrefixClass } from '../hooks/useClass';
 
 export default defineComponent({
-  name,
   components: { TButton, TBadge },
   props: {
     items: {
@@ -23,6 +19,8 @@ export default defineComponent({
   },
   emits: ['selected'],
   setup(props, { emit }) {
+    const actionSheetClass = usePrefixClass('action-sheet');
+
     const renderTNodeJSX = useTNodeDefault();
 
     const { align, items } = toRefs(props);
@@ -30,8 +28,8 @@ export default defineComponent({
       emit('selected', index);
     };
     const itemClasses = computed(() => ({
-      [`${name}__list-item`]: true,
-      [`${name}__list-item--left`]: align.value === 'left',
+      [`${actionSheetClass.value}__list-item`]: true,
+      [`${actionSheetClass.value}__list-item--left`]: align.value === 'left',
     }));
 
     return () => {
@@ -49,24 +47,24 @@ export default defineComponent({
                     size={item.badge.size}
                     offset={item.badge.offset || [-16, 20]}
                   >
-                    <span class={`${name}__list-item-text`}> {item.label}</span>
+                    <span class={`${actionSheetClass.value}__list-item-text`}> {item.label}</span>
                   </t-badge>
                 );
               }
               return renderTNodeJSX('badge', {
-                defaultNode: <span class={`${name}__list-item-text`}>{item.label}</span>,
+                defaultNode: <span class={`${actionSheetClass.value}__list-item-text`}>{item.label}</span>,
               });
             };
             return content();
           }
-          return <span class={`${name}__list-item-text`}>{item.label}</span>;
+          return <span class={`${actionSheetClass.value}__list-item-text`}>{item.label}</span>;
         };
         const buttonList = items.value.map((item, index) => (
           <t-button
             key={index}
             variant={'text'}
             block
-            class={[itemClasses.value, { [`${name}__list-item--disabled`]: item.disabled }]}
+            class={[itemClasses.value, { [`${actionSheetClass.value}__list-item--disabled`]: item.disabled }]}
             disabled={item.disabled}
             icon={item.icon}
             style={{ color: item.color }}
@@ -78,7 +76,7 @@ export default defineComponent({
         return buttonList;
       };
 
-      return <div class={`${name}__list`}>{renderButtonNode()}</div>;
+      return <div class={`${actionSheetClass.value}__list`}>{renderButtonNode()}</div>;
     };
   },
 });

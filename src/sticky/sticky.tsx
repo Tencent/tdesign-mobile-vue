@@ -5,10 +5,10 @@ import config from '../config';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
-const name = `${config.prefix}-sticky`;
+const { prefix } = config;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-sticky`,
   props: StickyProps,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();

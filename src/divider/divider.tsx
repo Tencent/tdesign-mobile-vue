@@ -5,9 +5,9 @@ import { useContent } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-divider`;
+
 export default defineComponent({
-  name,
+  name: `${prefix}-divider`,
   props: DividerProps,
   setup(props) {
     const renderTNodeContent = useContent();

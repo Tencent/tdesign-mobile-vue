@@ -13,10 +13,9 @@ import { useConfig } from '../config-provider/useConfig';
 import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
-const name = `${prefix}-base-table`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-base-table`,
   props: baseTableProps,
   emits: ['cell-click', 'row-click', 'scroll'],
   setup(props, context) {

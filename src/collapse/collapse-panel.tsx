@@ -9,27 +9,26 @@ import { usePrefixClass } from '../hooks/useClass';
 import { CollapseProvide } from './collapse';
 
 const { prefix } = config;
-const name = `${prefix}-collapse-panel`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-collapse-panel`,
   components: { TCell },
   props,
   setup(props, { slots }) {
     const renderTNodeJSX = useTNodeJSX();
     const renderContent = useContent();
 
-    const componentName = usePrefixClass('collapse-panel');
+    const collapsePanelClass = usePrefixClass('collapse-panel');
 
     const parent = inject<CollapseProvide>('collapse');
     const renderParentTNode: Function = inject('renderParentTNode');
 
     const disabled = computed(() => parent?.disabled.value || props.disabled);
     const rootClass = computed(() => ({
-      [`${componentName.value}`]: true,
-      [`${componentName.value}--${props.placement}`]: true,
-      [`${componentName.value}--active`]: isActive.value,
-      [`${componentName.value}--disabled`]: disabled.value,
+      [`${collapsePanelClass.value}`]: true,
+      [`${collapsePanelClass.value}--${props.placement}`]: true,
+      [`${collapsePanelClass.value}--active`]: isActive.value,
+      [`${collapsePanelClass.value}--disabled`]: disabled.value,
     }));
     const isActive = computed(() => findIndex(props.value, parent?.activeValue.value) > -1);
     const updatePanelValue = (args?: any) => {
@@ -100,7 +99,9 @@ export default defineComponent({
     const panelExpandIcon = computed(() => slots.expandIcon || props.expandIcon);
     const renderRightIcon = () => {
       const tNodeRender = panelExpandIcon.value === undefined ? renderParentTNode : renderTNodeJSX;
-      return <div class={`${componentName.value}__header-icon`}>{tNodeRender('expandIcon', renderDefaultIcon())}</div>;
+      return (
+        <div class={`${collapsePanelClass.value}__header-icon`}>{tNodeRender('expandIcon', renderDefaultIcon())}</div>
+      );
     };
 
     const renderPanelContent = () => {
@@ -110,7 +111,7 @@ export default defineComponent({
       }
 
       return (
-        <div ref={bodyRef} class={`${componentName.value}__content`}>
+        <div ref={bodyRef} class={`${collapsePanelClass.value}__content`}>
           {panelContent}
         </div>
       );
@@ -141,12 +142,12 @@ export default defineComponent({
           style={{ height: wrapperHeight.value }}
           onTransitionend={onTransitionEnd}
         >
-          <div ref={headRef} class={`${componentName.value}__title`} onClick={handleClick}>
+          <div ref={headRef} class={`${collapsePanelClass.value}__title`} onClick={handleClick}>
             <TCell
               class={[
-                `${componentName.value}__header`,
-                `${componentName.value}__header--${props.placement}`,
-                { [`${componentName.value}__header--expanded`]: isActive.value },
+                `${collapsePanelClass.value}__header`,
+                `${collapsePanelClass.value}__header--${props.placement}`,
+                { [`${collapsePanelClass.value}__header--expanded`]: isActive.value },
               ]}
               v-slots={{
                 leftIcon: () => leftIcon,

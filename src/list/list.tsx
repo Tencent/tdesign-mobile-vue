@@ -5,19 +5,19 @@ import TLoading from '../loading';
 import config from '../config';
 import props from './props';
 import { useScrollParent } from '../shared';
-import { useConfig } from '../config-provider/useConfig';
+import { usePrefixClass, useConfig } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-list`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-list`,
   components: {
     TLoading,
   },
   props,
   emits: ['load-more', 'scroll'],
   setup(props, { slots }) {
+    const listClass = usePrefixClass('list');
     const { globalConfig } = useConfig('list');
     const renderTNodeJSX = useTNodeJSX();
 
@@ -51,15 +51,15 @@ export default defineComponent({
       const headerContent = renderTNodeJSX('header');
       const footerContent = renderTNodeJSX('footer');
       return (
-        <div ref={root} class={name} onScroll={handleScroll}>
+        <div ref={root} class={listClass.value} onScroll={handleScroll}>
           {headerContent}
           {slots.default && slots.default()}
-          <div class={`${name}__loading--wrapper`} onClick={onLoadMore}>
+          <div class={`${listClass.value}__loading--wrapper`} onClick={onLoadMore}>
             {typeof props.asyncLoading === 'string' && ['loading', 'load-more'].includes(props.asyncLoading) && (
               <TLoading
                 indicator={props.asyncLoading === 'loading'}
                 text={typeof props.asyncLoading === 'string' ? LOADING_TEXT_MAP[props.asyncLoading] : ''}
-                class={`${name}__loading`}
+                class={`${listClass.value}__loading`}
               />
             )}
           </div>

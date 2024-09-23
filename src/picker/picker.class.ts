@@ -1,7 +1,7 @@
-import config from '../config';
 import { preventDefault } from '../shared/dom';
+import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
+const classPrefix = usePrefixClass();
 
 export interface PickerOptions {
   defaultIndex?: number;
@@ -115,8 +115,8 @@ class Picker {
     this.height = this.holder.offsetHeight || DEFAULT_HOLDER_HEIGHT;
     this.indicatorOffset = this.itemGroupHeight / 2 - this.itemHeight / 2;
     let curIndex = this.options.defaultIndex || 0;
-    this.itemClassName = `${prefix}-picker-item__item`;
-    this.itemSelectedClassName = `${prefix}-picker-item__item--active`;
+    this.itemClassName = `${classPrefix.value}-picker-item__item`;
+    this.itemSelectedClassName = `${classPrefix.value}-picker-item__item--active`;
     this.startY = 0;
     this.isPicking = false;
     this.lastMoveTime = 0;

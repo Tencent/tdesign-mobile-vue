@@ -3,15 +3,17 @@ import TabBarProps from './props';
 import config from '../config';
 import { useDefault, useChildSlots } from '../shared';
 import { useTNodeJSX } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-tab-bar`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-tab-bar`,
   props: TabBarProps,
   emits: ['update:value', 'update:modelValue', 'change'],
   setup(props, context) {
+    const tabBarClass = usePrefixClass('tab-bar');
+
     const renderTNodeJSX = useTNodeJSX();
     const [activeValue] = useDefault(props, context.emit, 'value', 'change');
     const defaultIndex: Ref<number> = ref(-1);
@@ -29,14 +31,14 @@ export default defineComponent({
       activeValue.value = currentValue;
     };
 
-    const tabBarClass = computed(() => [
-      `${name}`,
+    const rootClass = computed(() => [
+      `${tabBarClass.value}`,
       {
-        [`${name}--bordered`]: props.bordered,
-        [`${name}--fixed`]: props.fixed,
-        [`${name}--safe`]: props.safeAreaInsetBottom,
+        [`${tabBarClass.value}--bordered`]: props.bordered,
+        [`${tabBarClass.value}--fixed`]: props.fixed,
+        [`${tabBarClass.value}--safe`]: props.safeAreaInsetBottom,
       },
-      `${name}--${props.shape}`,
+      `${tabBarClass.value}--${props.shape}`,
     ]);
 
     provide('tab-bar', {
@@ -48,7 +50,7 @@ export default defineComponent({
     });
 
     return () => (
-      <div class={tabBarClass.value} role="tablist">
+      <div class={rootClass.value} role="tablist">
         {renderTNodeJSX('default')}
       </div>
     );

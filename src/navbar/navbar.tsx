@@ -6,10 +6,9 @@ import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
-const name = `${prefix}-navbar`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-navbar`,
   components: { TChevronLeftIcon },
   props,
   emits: ['left-click', 'right-click'],

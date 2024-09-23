@@ -15,15 +15,14 @@ export interface CollapseProvide {
 }
 
 const { prefix } = config;
-const name = `${prefix}-collapse`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-collapse`,
   props,
   setup(props, { slots }) {
     const renderTNodeJSX = useTNodeJSX();
 
-    const componentName = usePrefixClass('collapse');
+    const collapseClass = usePrefixClass('collapse');
 
     const { value, modelValue } = toRefs(props);
     const [activeValue, setActiveValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
@@ -47,7 +46,7 @@ export default defineComponent({
 
     const disabled = computed(() => props.disabled);
     const expandIcon = computed(() => props.expandIcon);
-    const rootClass = computed(() => [componentName.value, `${componentName.value}--${props.theme}`]);
+    const rootClass = computed(() => [collapseClass.value, `${collapseClass.value}--${props.theme}`]);
 
     provide<CollapseProvide>('collapse', {
       activeValue,

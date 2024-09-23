@@ -24,7 +24,7 @@ export default defineComponent({
   name: `${prefix}-message`,
   props,
   setup(props, context) {
-    const componentName = usePrefixClass('message');
+    const messageClass = usePrefixClass('message');
     const renderTNodeJSX = useTNodeJSX();
     const renderContent = useContent();
 
@@ -46,14 +46,14 @@ export default defineComponent({
     const [currentVisible, setVisible] = useVModel(visible, modelValue, props.defaultVisible);
 
     const rootClasses = computed(() => ({
-      [`${componentName.value}`]: true,
-      [`${componentName.value}--${props.theme}`]: true,
-      [`${componentName.value}-align--${props.align}`]: !!props.align,
+      [`${messageClass.value}`]: true,
+      [`${messageClass.value}--${props.theme}`]: true,
+      [`${messageClass.value}-align--${props.align}`]: !!props.align,
     }));
 
     const textWrapClasses = computed(() => ({
-      [`${componentName.value}__text-wrap`]: true,
-      [`${componentName.value}__text-nowrap`]: props.marquee,
+      [`${messageClass.value}__text-wrap`]: true,
+      [`${messageClass.value}__text-nowrap`]: props.marquee,
     }));
 
     const changeNumToStr = (arr: TdMessageProps['offset'] = []) => {
@@ -217,11 +217,11 @@ export default defineComponent({
         <Transition name="message">
           {currentVisible.value && (
             <div ref="root" class={rootClasses.value} style={rootStyles.value}>
-              {prefixIconContent && <div class={`${componentName.value}__icon--left`}>{prefixIconContent}</div>}
+              {prefixIconContent && <div class={`${messageClass.value}__icon--left`}>{prefixIconContent}</div>}
               <div ref={textWrapDOM} class={textWrapClasses.value}>
                 <div
                   ref={textDOM}
-                  class={`${componentName.value}__text`}
+                  class={`${messageClass.value}__text`}
                   style={state.scroll.marquee ? animateStyle.value : ''}
                   onTransitionend={handleTransitionend}
                 >
@@ -229,13 +229,13 @@ export default defineComponent({
                 </div>
               </div>
               {linkContent.value && (
-                <div class={`${componentName.value}__link`} onClick={onLinkClick}>
+                <div class={`${messageClass.value}__link`} onClick={onLinkClick}>
                   {linkContent.value}
                 </div>
               )}
               {closeBtnContent && (
                 <div
-                  class={[`${componentName.value}__close-wrap`, `${componentName.value}__icon--right`]}
+                  class={[`${messageClass.value}__close-wrap`, `${messageClass.value}__icon--right`]}
                   onClick={onCloseBtnClick}
                 >
                   {closeBtnContent}
