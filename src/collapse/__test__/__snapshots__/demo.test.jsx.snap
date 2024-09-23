@@ -66,15 +66,24 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="t-collapse-panel__content"
+      class="t-collapse-panel--content"
+      style="grid-template-rows: 1fr;"
     >
-      
       <div
-        class="content"
+        class="t-collapse-panel__body"
       >
-         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+        <div
+          class="t-collapse-panel__content"
+        >
+          
+          <div
+            class="content"
+          >
+             此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+          </div>
+          
+        </div>
       </div>
-      
     </div>
   </div>
   <div
@@ -137,15 +146,24 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="t-collapse-panel__content"
+      class="t-collapse-panel--content"
+      style="grid-template-rows: 0fr;"
     >
-      
       <div
-        class="content"
+        class="t-collapse-panel__body"
       >
-         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+        <div
+          class="t-collapse-panel__content"
+        >
+          
+          <div
+            class="content"
+          >
+             此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+          </div>
+          
+        </div>
       </div>
-      
     </div>
   </div>
   <div
@@ -208,15 +226,24 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="t-collapse-panel__content"
+      class="t-collapse-panel--content"
+      style="grid-template-rows: 0fr;"
     >
-      
       <div
-        class="content"
+        class="t-collapse-panel__body"
       >
-         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+        <div
+          class="t-collapse-panel__content"
+        >
+          
+          <div
+            class="content"
+          >
+             此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+          </div>
+          
+        </div>
       </div>
-      
     </div>
   </div>
   <div
@@ -279,15 +306,24 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="t-collapse-panel__content"
+      class="t-collapse-panel--content"
+      style="grid-template-rows: 0fr;"
     >
-      
       <div
-        class="content"
+        class="t-collapse-panel__body"
       >
-         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+        <div
+          class="t-collapse-panel__content"
+        >
+          
+          <div
+            class="content"
+          >
+             此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+          </div>
+          
+        </div>
       </div>
-      
     </div>
   </div>
   
@@ -360,15 +396,24 @@ exports[`Collapse > Collapse actionVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="t-collapse-panel__content"
+      class="t-collapse-panel--content"
+      style="grid-template-rows: 1fr;"
     >
-      
       <div
-        class="content"
+        class="t-collapse-panel__body"
       >
-         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+        <div
+          class="t-collapse-panel__content"
+        >
+          
+          <div
+            class="content"
+          >
+             此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+          </div>
+          
+        </div>
       </div>
-      
     </div>
   </div>
   
@@ -434,15 +479,24 @@ exports[`Collapse > Collapse baseVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="t-collapse-panel__content"
+      class="t-collapse-panel--content"
+      style="grid-template-rows: 0fr;"
     >
-      
       <div
-        class="content"
+        class="t-collapse-panel__body"
       >
-         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+        <div
+          class="t-collapse-panel__content"
+        >
+          
+          <div
+            class="content"
+          >
+             此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+          </div>
+          
+        </div>
       </div>
-      
     </div>
   </div>
   
@@ -509,15 +563,24 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="t-collapse-panel__content"
+      class="t-collapse-panel--content"
+      style="grid-template-rows: 1fr;"
     >
-      
       <div
-        class="content"
+        class="t-collapse-panel__body"
       >
-         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+        <div
+          class="t-collapse-panel__content"
+        >
+          
+          <div
+            class="content"
+          >
+             此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+          </div>
+          
+        </div>
       </div>
-      
     </div>
   </div>
   <div
@@ -574,15 +637,24 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="t-collapse-panel__content"
+      class="t-collapse-panel--content"
+      style="grid-template-rows: 0fr;"
     >
-      
       <div
-        class="content"
+        class="t-collapse-panel__body"
       >
-         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+        <div
+          class="t-collapse-panel__content"
+        >
+          
+          <div
+            class="content"
+          >
+             此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+          </div>
+          
+        </div>
       </div>
-      
     </div>
   </div>
   <div
@@ -639,15 +711,24 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="t-collapse-panel__content"
+      class="t-collapse-panel--content"
+      style="grid-template-rows: 0fr;"
     >
-      
       <div
-        class="content"
+        class="t-collapse-panel__body"
       >
-         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+        <div
+          class="t-collapse-panel__content"
+        >
+          
+          <div
+            class="content"
+          >
+             此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+          </div>
+          
+        </div>
       </div>
-      
     </div>
   </div>
   <div
@@ -704,15 +785,24 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="t-collapse-panel__content"
+      class="t-collapse-panel--content"
+      style="grid-template-rows: 0fr;"
     >
-      
       <div
-        class="content"
+        class="t-collapse-panel__body"
       >
-         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+        <div
+          class="t-collapse-panel__content"
+        >
+          
+          <div
+            class="content"
+          >
+             此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+          </div>
+          
+        </div>
       </div>
-      
     </div>
   </div>
   
@@ -813,15 +903,24 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             </div>
           </div>
           <div
-            class="t-collapse-panel__content"
+            class="t-collapse-panel--content"
+            style="grid-template-rows: 0fr;"
           >
-            
             <div
-              class="content"
+              class="t-collapse-panel__body"
             >
-               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+              <div
+                class="t-collapse-panel__content"
+              >
+                
+                <div
+                  class="content"
+                >
+                   此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+                </div>
+                
+              </div>
             </div>
-            
           </div>
         </div>
         
@@ -904,11 +1003,20 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             </div>
           </div>
           <div
-            class="t-collapse-panel__content"
+            class="t-collapse-panel--content"
+            style="grid-template-rows: 0fr;"
           >
-            
-             此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容 
-            
+            <div
+              class="t-collapse-panel__body"
+            >
+              <div
+                class="t-collapse-panel__content"
+              >
+                
+                 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容 
+                
+              </div>
+            </div>
           </div>
         </div>
         
@@ -997,15 +1105,24 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             </div>
           </div>
           <div
-            class="t-collapse-panel__content"
+            class="t-collapse-panel--content"
+            style="grid-template-rows: 1fr;"
           >
-            
             <div
-              class="content"
+              class="t-collapse-panel__body"
             >
-               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+              <div
+                class="t-collapse-panel__content"
+              >
+                
+                <div
+                  class="content"
+                >
+                   此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+                </div>
+                
+              </div>
             </div>
-            
           </div>
         </div>
         
@@ -1095,15 +1212,24 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             </div>
           </div>
           <div
-            class="t-collapse-panel__content"
+            class="t-collapse-panel--content"
+            style="grid-template-rows: 1fr;"
           >
-            
             <div
-              class="content"
+              class="t-collapse-panel__body"
             >
-               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+              <div
+                class="t-collapse-panel__content"
+              >
+                
+                <div
+                  class="content"
+                >
+                   此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+                </div>
+                
+              </div>
             </div>
-            
           </div>
         </div>
         <div
@@ -1166,15 +1292,24 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             </div>
           </div>
           <div
-            class="t-collapse-panel__content"
+            class="t-collapse-panel--content"
+            style="grid-template-rows: 0fr;"
           >
-            
             <div
-              class="content"
+              class="t-collapse-panel__body"
             >
-               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+              <div
+                class="t-collapse-panel__content"
+              >
+                
+                <div
+                  class="content"
+                >
+                   此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+                </div>
+                
+              </div>
             </div>
-            
           </div>
         </div>
         <div
@@ -1237,15 +1372,24 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             </div>
           </div>
           <div
-            class="t-collapse-panel__content"
+            class="t-collapse-panel--content"
+            style="grid-template-rows: 0fr;"
           >
-            
             <div
-              class="content"
+              class="t-collapse-panel__body"
             >
-               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+              <div
+                class="t-collapse-panel__content"
+              >
+                
+                <div
+                  class="content"
+                >
+                   此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+                </div>
+                
+              </div>
             </div>
-            
           </div>
         </div>
         <div
@@ -1308,15 +1452,24 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             </div>
           </div>
           <div
-            class="t-collapse-panel__content"
+            class="t-collapse-panel--content"
+            style="grid-template-rows: 0fr;"
           >
-            
             <div
-              class="content"
+              class="t-collapse-panel__body"
             >
-               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+              <div
+                class="t-collapse-panel__content"
+              >
+                
+                <div
+                  class="content"
+                >
+                   此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+                </div>
+                
+              </div>
             </div>
-            
           </div>
         </div>
         
@@ -1405,15 +1558,24 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             </div>
           </div>
           <div
-            class="t-collapse-panel__content"
+            class="t-collapse-panel--content"
+            style="grid-template-rows: 1fr;"
           >
-            
             <div
-              class="content"
+              class="t-collapse-panel__body"
             >
-               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+              <div
+                class="t-collapse-panel__content"
+              >
+                
+                <div
+                  class="content"
+                >
+                   此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+                </div>
+                
+              </div>
             </div>
-            
           </div>
         </div>
         <div
@@ -1470,15 +1632,24 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             </div>
           </div>
           <div
-            class="t-collapse-panel__content"
+            class="t-collapse-panel--content"
+            style="grid-template-rows: 0fr;"
           >
-            
             <div
-              class="content"
+              class="t-collapse-panel__body"
             >
-               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+              <div
+                class="t-collapse-panel__content"
+              >
+                
+                <div
+                  class="content"
+                >
+                   此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+                </div>
+                
+              </div>
             </div>
-            
           </div>
         </div>
         <div
@@ -1535,15 +1706,24 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             </div>
           </div>
           <div
-            class="t-collapse-panel__content"
+            class="t-collapse-panel--content"
+            style="grid-template-rows: 0fr;"
           >
-            
             <div
-              class="content"
+              class="t-collapse-panel__body"
             >
-               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+              <div
+                class="t-collapse-panel__content"
+              >
+                
+                <div
+                  class="content"
+                >
+                   此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+                </div>
+                
+              </div>
             </div>
-            
           </div>
         </div>
         <div
@@ -1600,15 +1780,24 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             </div>
           </div>
           <div
-            class="t-collapse-panel__content"
+            class="t-collapse-panel--content"
+            style="grid-template-rows: 0fr;"
           >
-            
             <div
-              class="content"
+              class="t-collapse-panel__body"
             >
-               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+              <div
+                class="t-collapse-panel__content"
+              >
+                
+                <div
+                  class="content"
+                >
+                   此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+                </div>
+                
+              </div>
             </div>
-            
           </div>
         </div>
         
@@ -1679,11 +1868,20 @@ exports[`Collapse > Collapse placementVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="t-collapse-panel__content"
+      class="t-collapse-panel--content"
+      style="grid-template-rows: 0fr;"
     >
-      
-       此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容 
-      
+      <div
+        class="t-collapse-panel__body"
+      >
+        <div
+          class="t-collapse-panel__content"
+        >
+          
+           此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容 
+          
+        </div>
+      </div>
     </div>
   </div>
   
