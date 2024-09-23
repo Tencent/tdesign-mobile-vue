@@ -7,11 +7,11 @@ import TButton from '../button';
 import { TdFabProps } from './type';
 
 const { prefix } = config;
-const name = `${prefix}-fab`;
+
 const getNumber = (num: string) => num.replace(/[^\d]/g, '');
 
 export default defineComponent({
-  name,
+  name: `${prefix}-fab`,
   props: FabProps,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();

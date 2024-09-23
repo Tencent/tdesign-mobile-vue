@@ -8,18 +8,19 @@ import config from '../config';
 import TLoading from '../loading';
 import { useContent } from '../hooks/tnode';
 import { useTouch, isReachTop, easeDistance } from './useTouch';
-import { useConfig } from '../config-provider/useConfig';
+import { usePrefixClass, useConfig } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-pull-down-refresh`;
+
 const statusName = ['pulling', 'loosing', 'loading', 'success', 'initial'];
 
 export default defineComponent({
-  name,
+  name: `${prefix}-pull-down-refresh`,
   components: { TLoading },
   props: PullDownRefreshProps,
   emits: ['refresh', 'timeout', 'scrolltolower', 'update:value', 'update:modelValue'],
   setup(props) {
+    const pullDownRefreshClass = usePrefixClass('pull-down-refresh');
     const { globalConfig } = useConfig('pullDownRefresh');
     const renderContent = useContent();
 
@@ -201,16 +202,16 @@ export default defineComponent({
       if (status.value === 'loading') {
         return <t-loading size="24px" text={loadingText.value} {...(props.loadingProps as object)}></t-loading>;
       }
-      return <div class={`${name}__text`}>{loadingText.value}</div>;
+      return <div class={`${pullDownRefreshClass.value}__text`}>{loadingText.value}</div>;
     };
     return () => {
       const content = renderContent('default', 'content');
-      let className = `${name}__track`;
+      let className = `${pullDownRefreshClass.value}__track`;
       if (status.value !== 'pulling') {
-        className = `${className} ${name}__track--loosing`;
+        className = `${className} ${pullDownRefreshClass.value}__track--loosing`;
       }
       return (
-        <div class={name}>
+        <div class={pullDownRefreshClass.value}>
           <div
             class={className}
             style={trackStyle.value}
@@ -220,8 +221,8 @@ export default defineComponent({
             onTouchcancel={onTouchEnd}
             onTransitionend={onTransitionEnd}
           >
-            <div ref={maxBar} class={`${name}__tips`} style={maxBarStyles.value}>
-              <div ref={loadingBar} class={`${name}__loading`} style={loadingBarStyles.value}>
+            <div ref={maxBar} class={`${pullDownRefreshClass.value}__tips`} style={maxBarStyles.value}>
+              <div ref={loadingBar} class={`${pullDownRefreshClass.value}__loading`} style={loadingBarStyles.value}>
                 {renderLoading()}
               </div>
             </div>

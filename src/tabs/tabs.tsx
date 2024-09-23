@@ -30,10 +30,9 @@ import { TdTabPanelProps } from './type';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-tabs`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-tabs`,
   props,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();

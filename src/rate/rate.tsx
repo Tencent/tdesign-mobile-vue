@@ -6,8 +6,7 @@ import config from '../config';
 import { TdRateProps } from './type';
 import { useDefault } from '../shared';
 import { useFormDisabled } from '../form/hooks';
-import { useConfig } from '../config-provider/useConfig';
-import { usePrefixClass } from '../hooks/useClass';
+import { usePrefixClass, useConfig } from '../hooks/useClass';
 
 const { prefix } = config;
 

@@ -7,16 +7,17 @@ import { usePrefixClass } from '../hooks/useClass';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
-const name = `${prefix}-badge`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-badge`,
   props: BadgeProps,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();
     const renderTNodeContent = useContent();
 
     const badgeClass = usePrefixClass('badge');
+    const classPrefix = usePrefixClass();
+
     // 徽标外层样式类
     const badgeClasses = computed(() => ({
       [`${badgeClass.value}`]: true,
@@ -30,7 +31,7 @@ export default defineComponent({
       [`${badgeClass.value}--${props.size}`]: true,
       [`${badgeClass.value}--${props.shape}`]: true,
       [`${badgeClass.value}--count`]: !props.dot && props.count,
-      [`${prefix}-has-count`]: true,
+      [`${classPrefix.value}-has-count`]: true,
     }));
 
     // 是否展示角标

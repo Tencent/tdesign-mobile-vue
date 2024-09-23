@@ -7,14 +7,13 @@ import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-row`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-row`,
   props,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();
-    const componentName = usePrefixClass('row');
+    const rowClass = usePrefixClass('row');
 
     // row gutter style
     const style = computed(() => {
@@ -35,7 +34,7 @@ export default defineComponent({
 
     return () => {
       return (
-        <div class={componentName.value} style={style.value}>
+        <div class={rowClass.value} style={style.value}>
           {renderTNodeJSX('default')}
         </div>
       );

@@ -6,10 +6,9 @@ import TagProps from './props';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-tag`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-tag`,
   components: {
     CloseIcon,
   },

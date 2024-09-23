@@ -14,12 +14,12 @@ import { TNode, useDefault } from '../shared';
 import { TdCheckboxProps } from '../checkbox/type';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
 import { useFormDisabled } from '../form/hooks';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-checkbox`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-checkbox`,
   components: { TNode },
   props: {
     ...CheckboxProps,
@@ -30,6 +30,7 @@ export default defineComponent({
   },
   emits: ['update:checked', 'update:modelValue', 'change'],
   setup(props, context) {
+    const checkboxClass = usePrefixClass('checkbox');
     const renderTNodeJSX = useTNodeJSX();
     const renderContent = useContent();
     const [innerChecked, setInnerChecked] = useDefault<boolean, TdCheckboxProps>(
@@ -50,7 +51,7 @@ export default defineComponent({
     const checkIcons = computed(() => {
       if (isIconArray && props.icon.length > 1) {
         return props.icon.map((icon) =>
-          typeof icon === 'string' ? h('img', { class: `${name}__icon-image`, src: icon }) : icon,
+          typeof icon === 'string' ? h('img', { class: `${checkboxClass.value}__icon-image`, src: icon }) : icon,
         );
       }
       return defaultCheckIcons;
@@ -98,19 +99,24 @@ export default defineComponent({
       const { placement, block, icon, maxLabelRow, maxContentRow, borderless } = props;
       const renderIconArray = () => {
         if (isIconArray) {
-          return <t-node content={checkIcons.value[isChecked.value ? 0 : 1]} class={`${name}__icon-wrapper`} />;
+          return (
+            <t-node
+              content={checkIcons.value[isChecked.value ? 0 : 1]}
+              class={`${checkboxClass.value}__icon-wrapper`}
+            />
+          );
         }
         if (isChecked.value) {
-          return <t-node content={checkedIcon.value} class={`${name}__icon-wrapper`} />;
+          return <t-node content={checkedIcon.value} class={`${checkboxClass.value}__icon-wrapper`} />;
         }
         return (
           <>
             {(icon === 'circle' || icon === true || icon === 'rectangle') && (
               <div
                 class={{
-                  [`${name}__icon-circle`]: icon === true,
-                  [`${name}__icon-${icon}`]: typeof icon === 'string',
-                  [`${name}__icon-${icon}--disabled`]: isDisabled.value,
+                  [`${checkboxClass.value}__icon-circle`]: icon === true,
+                  [`${checkboxClass.value}__icon-${icon}`]: typeof icon === 'string',
+                  [`${checkboxClass.value}__icon-${icon}--disabled`]: isDisabled.value,
                 }}
               ></div>
             )}
@@ -126,10 +132,10 @@ export default defineComponent({
         return (
           <div
             class={{
-              [`${name}__icon`]: true,
-              [`${name}__icon--${placement}`]: true,
-              [`${name}__icon--checked`]: isChecked.value,
-              [`${name}__icon--disabled`]: isDisabled.value,
+              [`${checkboxClass.value}__icon`]: true,
+              [`${checkboxClass.value}__icon--${placement}`]: true,
+              [`${checkboxClass.value}__icon--checked`]: isChecked.value,
+              [`${checkboxClass.value}__icon--disabled`]: isDisabled.value,
             }}
           >
             {renderIconArray()}
@@ -142,7 +148,7 @@ export default defineComponent({
         const checkboxContent = renderTNodeJSX('content');
         return (
           <div
-            class={`${name}__content`}
+            class={`${checkboxClass.value}__content`}
             onClick={(event) => {
               event.stopPropagation();
               handleChange(event, 'text');
@@ -150,9 +156,9 @@ export default defineComponent({
           >
             <div
               class={{
-                [`${name}__title`]: true,
-                [`${name}__title--checked`]: isChecked.value,
-                [`${name}__title--disabled`]: isDisabled.value,
+                [`${checkboxClass.value}__title`]: true,
+                [`${checkboxClass.value}__title--checked`]: isChecked.value,
+                [`${checkboxClass.value}__title--disabled`]: isDisabled.value,
               }}
               style={{ '-webkit-line-clamp': maxLabelRow }}
             >
@@ -160,8 +166,8 @@ export default defineComponent({
             </div>
             <div
               class={{
-                [`${name}__description`]: true,
-                [`${name}__description--disabled`]: isDisabled.value,
+                [`${checkboxClass.value}__description`]: true,
+                [`${checkboxClass.value}__description--disabled`]: isDisabled.value,
               }}
               style={{ '-webkit-line-clamp': maxContentRow }}
             >
@@ -173,16 +179,16 @@ export default defineComponent({
       return (
         <div
           class={{
-            [`${name}`]: true,
-            [`${name}--${placement}`]: true,
-            [`${name}--checked`]: isChecked.value,
-            [`${name}--block`]: block,
+            [`${checkboxClass.value}`]: true,
+            [`${checkboxClass.value}--${placement}`]: true,
+            [`${checkboxClass.value}--checked`]: isChecked.value,
+            [`${checkboxClass.value}--block`]: block,
           }}
           onClick={handleChange}
         >
           {renderIconNode()}
           {renderCheckBoxContent()}
-          {!borderless && <div class={`${name}__border ${name}__border--${placement}`} />}
+          {!borderless && <div class={`${checkboxClass.value}__border ${checkboxClass.value}__border--${placement}`} />}
         </div>
       );
     };

@@ -10,10 +10,9 @@ import { usePrefixClass } from '../hooks/useClass';
 import props from './props';
 
 const { prefix } = config;
-const name = `${prefix}-image`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-image`,
   components: { CloseIcon, Loading },
   props,
   setup(props, context) {
@@ -91,7 +90,7 @@ export default defineComponent({
           if (props.lazy && realSrc.value === '') {
             return;
           }
-          return <div class={`${name}__mask`}>{statusContent()}</div>;
+          return <div class={`${imageClass.value}__mask`}>{statusContent()}</div>;
         }
       };
       return node();
@@ -106,7 +105,7 @@ export default defineComponent({
               Object.entries(props.srcset).map((item, index) => <source key={index} type={item[0]} srcset={item[1]} />)}
             <img
               ref={imageDOM}
-              class={`${name}__img`}
+              class={`${imageClass.value}__img`}
               style={imageStyles.value}
               src={realSrc.value}
               alt={props.alt}

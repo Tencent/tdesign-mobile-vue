@@ -2,7 +2,6 @@ import { defineComponent, computed, ref, reactive, watch, provide } from 'vue';
 import { onClickOutside } from '@vueuse/core';
 import { CaretDownSmallIcon, CaretUpSmallIcon } from 'tdesign-icons-vue-next';
 import camelCase from 'lodash/camelCase';
-
 import config from '../config';
 import {
   context as menuContext,
@@ -16,12 +15,12 @@ import { findRelativeRect, findRelativeContainer } from './dom-utils';
 import { useContent } from '../hooks/tnode';
 import DropdownMenuProps from './props';
 import { TdDropdownItemProps } from './type';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-dropdown-menu`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-dropdown-menu`,
   components: { CaretDownSmallIcon, CaretUpSmallIcon },
   props: {
     onMenuOpened: Function,
@@ -30,6 +29,8 @@ export default defineComponent({
   },
   emits: ['menuOpened', 'menuClosed'],
   setup(props, { slots }) {
+    const dropdownMenuClass = usePrefixClass('dropdown-menu');
+
     const renderContent = useContent();
 
     // 菜单状态
@@ -87,20 +88,20 @@ export default defineComponent({
     provide('dropdownMenuProps', props);
     provide('dropdownMenuState', state);
     // 根结点样式
-    const classes = computed(() => [`${name}`]);
+    const classes = computed(() => [`${dropdownMenuClass.value}`]);
     // 标题栏结点引用
     const refBar = ref();
     const styleBarItem = computed(() => (item: any, idx: number) => [
-      `${name}__item`,
+      `${dropdownMenuClass.value}__item`,
       {
-        [`${name}__item--disabled`]: item.disabled,
-        [`${name}__item--active`]: idx === state.activeId,
+        [`${dropdownMenuClass.value}__item--disabled`]: item.disabled,
+        [`${dropdownMenuClass.value}__item--active`]: idx === state.activeId,
       },
     ]);
     const styleIcon = computed(() => (item: any, idx: number) => [
-      `${name}__icon`,
+      `${dropdownMenuClass.value}__icon`,
       {
-        [`${name}__icon--active`]: idx === state.activeId,
+        [`${dropdownMenuClass.value}__icon--active`]: idx === state.activeId,
       },
     ]);
 
@@ -187,7 +188,7 @@ export default defineComponent({
           {(menuTitles.value || []).map(
             (item: { label: any; labelProps: TdDropdownItemProps['label'] }, idx: number) => (
               <div class={styleBarItem.value(item, idx)} onClick={() => expandMenu(item, idx)}>
-                <div class={`${name}__title`}>{item.labelProps || item.label}</div>
+                <div class={`${dropdownMenuClass.value}__title`}>{item.labelProps || item.label}</div>
                 {renderDownIcon(item, idx)}
               </div>
             ),

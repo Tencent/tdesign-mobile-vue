@@ -1,6 +1,5 @@
 import { computed, defineComponent, ref, toRefs, h, nextTick, onMounted, watch, Teleport } from 'vue';
 import isFunction from 'lodash/isFunction';
-
 import TPopover, { PopoverProps } from '../popover';
 import TPopup, { PopupProps } from '../popup';
 import TButton, { ButtonProps } from '../button';
@@ -12,14 +11,13 @@ import guideProps from './props';
 import { GuideStep, TdGuideProps } from './type';
 import { isFixed, getRelativePosition, getTargetElm, scrollToParentVisibleArea, scrollToElm } from './utils';
 import { GuideCrossProps } from './interface';
-import { useConfig } from '../config-provider/useConfig';
 import { SizeEnum } from '../common';
+import { usePrefixClass, useConfig } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-guide`;
-const LOCK_CLASS = `${name}--lock`;
+
 export default defineComponent({
-  name,
+  name: `${prefix}-guide`,
   components: {
     TPopover,
     TButton,
@@ -35,7 +33,12 @@ export default defineComponent({
       props.onChange,
       'current',
     );
+
     const { globalConfig } = useConfig('guide');
+    const guideClass = usePrefixClass('guide');
+
+    const LOCK_CLASS = `${guideClass.value}--lock`;
+
     // 覆盖层，用于覆盖所有元素
     const overlayLayerRef = ref<HTMLElement>();
     // 高亮层，用于高亮元素
@@ -71,7 +74,7 @@ export default defineComponent({
         zIndex: zIndex.value,
         placement: 'center',
         // destroyOnClose: true,
-        class: `${name}__dialog`,
+        class: `${guideClass.value}__dialog`,
         overlayProps: {
           zIndex: zIndex.value - 1,
         },
@@ -119,23 +122,23 @@ export default defineComponent({
     const showOverlay = computed(() => getCurrentCrossProps('showOverlay'));
 
     const highlightClass = computed(() => [
-      `${name}__highlight`,
-      `${name}__highlight--${isPopover.value ? 'popover' : 'dialog'}`,
-      `${name}--${currentElmIsFixed.value && isPopover.value ? 'fixed' : 'absolute'}`,
+      `${guideClass.value}__highlight`,
+      `${guideClass.value}__highlight--${isPopover.value ? 'popover' : 'dialog'}`,
+      `${guideClass.value}--${currentElmIsFixed.value && isPopover.value ? 'fixed' : 'absolute'}`,
     ]);
-    const maskClass = computed(() => [`${name}__highlight--${showOverlay.value ? 'mask' : 'nomask'}`]);
+    const maskClass = computed(() => [`${guideClass.value}__highlight--${showOverlay.value ? 'mask' : 'nomask'}`]);
     const wrapperClass = computed(() => [
-      `${name}__wrapper`,
-      `${name}--${currentElmIsFixed.value ? 'fixed' : 'absolute'}`,
+      `${guideClass.value}__wrapper`,
+      `${guideClass.value}--${currentElmIsFixed.value ? 'fixed' : 'absolute'}`,
       {
-        [`${name}__wrapper--content`]: !!currentStepInfo.value.content,
+        [`${guideClass.value}__wrapper--content`]: !!currentStepInfo.value.content,
       },
     ]);
-    const popoverClass = computed(() => [`${name}__reference`]);
-    const contetnClass = computed(() => [`${name}__content--${isPopover.value ? 'popover' : 'dialog'}`]);
+    const popoverClass = computed(() => [`${guideClass.value}__reference`]);
+    const contetnClass = computed(() => [`${guideClass.value}__content--${isPopover.value ? 'popover' : 'dialog'}`]);
     const footerClass = computed(() => [
-      `${name}__footer`,
-      `${name}__footer--${isPopover.value ? 'popover' : 'dialog'}`,
+      `${guideClass.value}__footer`,
+      `${guideClass.value}__footer--${isPopover.value ? 'popover' : 'dialog'}`,
     ]);
 
     const isLast = computed(() => innerCurrent.value === stepsTotal.value - 1);
@@ -353,15 +356,15 @@ export default defineComponent({
         };
         return (
           <div class={contetnClass.value}>
-            <div class={`${name}__tooltip`}>
-              <div class={`${name}__title`}>{renderTitleNode()}</div>
-              <div class={`${name}__desc`}>{renderBodyNode()}</div>
+            <div class={`${guideClass.value}__tooltip`}>
+              <div class={`${guideClass.value}__title`}>{renderTitleNode()}</div>
+              <div class={`${guideClass.value}__desc`}>{renderBodyNode()}</div>
             </div>
             <div class={footerClass.value}>
               {!hideSkip.value && !isLast.value && (
                 <TButton
                   key="skip"
-                  class={`${name}__skip`}
+                  class={`${guideClass.value}__skip`}
                   theme="light"
                   size={buttonSize.value}
                   variant="base"
@@ -373,7 +376,7 @@ export default defineComponent({
               {!isLast.value && (
                 <TButton
                   key="next"
-                  class={`${name}__next`}
+                  class={`${guideClass.value}__next`}
                   theme="primary"
                   size={buttonSize.value}
                   variant="base"
@@ -393,7 +396,7 @@ export default defineComponent({
               {isLast.value && (
                 <TButton
                   key="back"
-                  class={`${name}__back`}
+                  class={`${guideClass.value}__back`}
                   theme="light"
                   size={buttonSize.value}
                   variant="base"
@@ -405,7 +408,7 @@ export default defineComponent({
               {isLast.value && (
                 <TButton
                   key="finish"
-                  class={`${name}__finish`}
+                  class={`${guideClass.value}__finish`}
                   theme="primary"
                   size={buttonSize.value}
                   variant="base"
@@ -483,7 +486,11 @@ export default defineComponent({
         <>
           {actived.value && (
             <Teleport to="body">
-              <div ref={overlayLayerRef} class={`${name}__overlay`} style={{ zIndex: `${zIndex.value - 2}` }}></div>
+              <div
+                ref={overlayLayerRef}
+                class={`${guideClass.value}__overlay`}
+                style={{ zIndex: `${zIndex.value - 2}` }}
+              ></div>
               <div
                 ref={highlightLayerRef}
                 class={[...highlightClass.value, ...maskClass.value]}

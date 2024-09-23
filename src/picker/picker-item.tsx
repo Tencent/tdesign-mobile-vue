@@ -2,11 +2,12 @@ import { ref, computed, onMounted, defineComponent, PropType, watch } from 'vue'
 import config from '../config';
 import Picker from './picker.class';
 import { PickerColumnItem, PickerValue } from './type';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-picker-item`;
+
 export default defineComponent({
-  name,
+  name: `${prefix}-picker-item`,
   props: {
     options: {
       type: Array as PropType<PickerColumnItem[]>,
@@ -26,6 +27,8 @@ export default defineComponent({
   },
   emits: ['pick'],
   setup(props, context) {
+    const pickerItemClass = usePrefixClass('picker-item');
+
     let picker: Picker | null = null;
     const root = ref();
     const getIndexByValue = (val: number | string | undefined) => {
@@ -36,8 +39,8 @@ export default defineComponent({
       return defaultIndex < 0 ? 0 : defaultIndex;
     };
 
-    const className = computed(() => `${name}`);
-    const itemClassName = computed(() => [`${name}__item`]);
+    const className = computed(() => `${pickerItemClass.value}`);
+    const itemClassName = computed(() => [`${pickerItemClass.value}__item`]);
     const setIndex = (index: number) => {
       if (picker) {
         picker.updateItems();

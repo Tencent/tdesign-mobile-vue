@@ -7,10 +7,9 @@ import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
-const name = `${prefix}-empty`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-empty`,
   props: EmptyProps,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();

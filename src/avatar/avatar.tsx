@@ -1,4 +1,4 @@
-import { computed, defineComponent, inject, ref } from 'vue';
+import { computed, defineComponent, inject } from 'vue';
 import TBadge from '../badge';
 import TImage from '../image';
 import config from '../config';
@@ -9,10 +9,9 @@ import { usePrefixClass } from '../hooks/useClass';
 import { isValidSize } from '../_common/js/avatar/utils';
 
 const { prefix } = config;
-const name = `${prefix}-avatar`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-avatar`,
   props: AvatarProps,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();

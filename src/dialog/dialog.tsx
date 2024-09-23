@@ -8,16 +8,18 @@ import TPopup from '../popup';
 import config from '../config';
 import props from './props';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-dialog`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-dialog`,
   components: { TPopup, TButton, CloseIcon },
   props,
   emits: ['update:visible', 'confirm', 'overlay-click', 'cancel', 'close', 'closed'],
   setup(props, context) {
+    const dialogClass = usePrefixClass('dialog');
+
     const renderTNodeJSX = useTNodeJSX();
     const renderContent = useContent();
     const isTextStyleBtn = computed(() =>
@@ -25,18 +27,18 @@ export default defineComponent({
     );
 
     const footerClass = computed(() => [
-      `${name}__footer`,
+      `${dialogClass.value}__footer`,
       {
-        [`${name}__footer--column`]: props.buttonLayout === 'vertical',
-        [`${name}__footer--full`]: isTextStyleBtn.value && get(props.actions, 'length', 0) === 0,
+        [`${dialogClass.value}__footer--column`]: props.buttonLayout === 'vertical',
+        [`${dialogClass.value}__footer--full`]: isTextStyleBtn.value && get(props.actions, 'length', 0) === 0,
       },
     ]);
 
     const buttonClass = computed(() => [
-      `${name}__button`,
+      `${dialogClass.value}__button`,
       {
-        [`${name}__button--${props.buttonLayout}`]: !isTextStyleBtn.value,
-        [`${name}__button--text`]: isTextStyleBtn.value,
+        [`${dialogClass.value}__button--${props.buttonLayout}`]: !isTextStyleBtn.value,
+        [`${dialogClass.value}__button--text`]: isTextStyleBtn.value,
       },
     ]);
 
@@ -95,7 +97,7 @@ export default defineComponent({
           return null;
         }
 
-        return <div class={`${name}__header`}>{titleNode}</div>;
+        return <div class={`${dialogClass.value}__header`}>{titleNode}</div>;
       };
       const renderContentNode = () => {
         const contentNode = renderContent('default', 'content');
@@ -103,8 +105,8 @@ export default defineComponent({
           return null;
         }
         return (
-          <div class={`${name}__body`}>
-            <div class={`${name}__body-text`}>{contentNode}</div>
+          <div class={`${dialogClass.value}__body`}>
+            <div class={`${dialogClass.value}__body-text`}>{contentNode}</div>
           </div>
         );
       };
@@ -144,14 +146,14 @@ export default defineComponent({
           onClose={handleOverlayClick}
           onClosed={handleClosed}
         >
-          <div class={`${name} ${context.attrs.class || ''}`} style={rootStyles.value}>
+          <div class={`${dialogClass.value} ${context.attrs.class || ''}`} style={rootStyles.value}>
             {renderTNodeJSX('top')}
             {closeBtn && (
-              <div class={`${name}__close-btn`}>
+              <div class={`${dialogClass.value}__close-btn`}>
                 <close-icon onClick={handleClose} />
               </div>
             )}
-            <div class={`${name}__content`}>
+            <div class={`${dialogClass.value}__content`}>
               {renderTitleNode()}
               {renderContentNode()}
             </div>

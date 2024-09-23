@@ -1,16 +1,14 @@
 import { computed, inject, defineComponent, getCurrentInstance, h, onUnmounted, ComponentInternalInstance } from 'vue';
 import { CloseIcon, CheckIcon } from 'tdesign-icons-vue-next';
-
 import props from './step-item-props';
 import config from '../config';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
-const name = `${prefix}-step-item`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-step-item`,
   props,
   setup(props, context) {
     const stepItemClass = usePrefixClass('step-item');

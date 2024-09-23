@@ -5,19 +5,19 @@ import { TdBadgeProps } from '../badge/type';
 import config from '../config';
 import { initName } from './useTabBar';
 import TabBarItemProps from './tab-bar-item-props';
-import { useConfig } from '../config-provider/useConfig';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
+import { usePrefixClass, useConfig } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-tab-bar-item`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-tab-bar-item`,
   components: { TBadge, TViewListIcon },
   props: TabBarItemProps,
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();
     const renderContent = useContent();
+    const tabBarItemClass = usePrefixClass('tab-bar-item');
 
     const { t, globalConfig } = useConfig('tabBar');
     const { split, shape, theme, defaultIndex, activeValue, itemCount, updateChild } = inject<any>('tab-bar');
@@ -120,7 +120,7 @@ export default defineComponent({
       const badge = () => {
         return (
           iconContent() && (
-            <div class={`${name}__icon`} style={{ height: `${iconOnly.value ? 24 : 20}px` }}>
+            <div class={`${tabBarItemClass.value}__icon`} style={{ height: `${iconOnly.value ? 24 : 20}px` }}>
               {badgeProps.value?.dot || badgeProps.value?.count ? (
                 <t-badge
                   count={badgeProps.value?.count || 0}
@@ -144,11 +144,11 @@ export default defineComponent({
           <div
             ref={textNode}
             class={{
-              [`${name}__text`]: true,
-              [`${name}__text--small`]: !!iconContent(),
+              [`${tabBarItemClass.value}__text`]: true,
+              [`${tabBarItemClass.value}__text--small`]: !!iconContent(),
             }}
           >
-            {hasChildren.value && <t-view-list-icon size="16" class={`${name}__icon-menu`} />}
+            {hasChildren.value && <t-view-list-icon size="16" class={`${tabBarItemClass.value}__icon-menu`} />}
             {renderContent('default', 'content')}
           </div>
         );
@@ -157,16 +157,16 @@ export default defineComponent({
       const menu = () => {
         if (hasChildren.value && isSpread.value) {
           return (
-            <div role="menu" class={`${name}__spread`}>
+            <div role="menu" class={`${tabBarItemClass.value}__spread`}>
               {props.subTabBar.map((child, index) => (
                 <div
                   key={index}
                   role="tab"
-                  class={`${name}__spread-item`}
+                  class={`${tabBarItemClass.value}__spread-item`}
                   onClick={() => selectChild(child.value || index)}
                 >
-                  {index !== 0 && <div class={`${name}__spread-item-split`} />}
-                  <div class={`${name}__spread-item-text`}>{child.label}</div>
+                  {index !== 0 && <div class={`${tabBarItemClass.value}__spread-item-split`} />}
+                  <div class={`${tabBarItemClass.value}__spread-item-text`}>{child.label}</div>
                 </div>
               ))}
             </div>
@@ -176,19 +176,19 @@ export default defineComponent({
       return (
         <div
           class={{
-            [`${name}`]: true,
-            [`${name}--split`]: split.value,
-            [`${name}--text-only`]: !iconContent(),
-            [`${name}--crowded`]: crowded.value,
-            [`${name}--${shape.value}`]: true,
+            [`${tabBarItemClass.value}`]: true,
+            [`${tabBarItemClass.value}--split`]: split.value,
+            [`${tabBarItemClass.value}--text-only`]: !iconContent(),
+            [`${tabBarItemClass.value}--crowded`]: crowded.value,
+            [`${tabBarItemClass.value}--${shape.value}`]: true,
             [`${context.attrs.class || ''}`]: true,
           }}
         >
           <div
             class={{
-              [`${name}__content`]: true,
-              [`${name}__content--checked`]: isChecked.value,
-              [`${name}__content--${theme.value}`]: true,
+              [`${tabBarItemClass.value}__content`]: true,
+              [`${tabBarItemClass.value}__content--checked`]: isChecked.value,
+              [`${tabBarItemClass.value}__content--${theme.value}`]: true,
             }}
             aria-selected={(!hasChildren.value || !isSpread.value) && isChecked.value}
             aria-expanded={hasChildren.value && isSpread.value}

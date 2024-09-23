@@ -8,7 +8,6 @@ import { usePrefixClass } from '../hooks/useClass';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
-const name = `${prefix}-cell`;
 
 export default defineComponent({
   name: `${prefix}-cell`,
