@@ -13,8 +13,12 @@ exports[`Switch > Switch baseVue demo works fine 1`] = `
   <div
     class="t-cell__title"
   >
-    基础开关
-    <!---->
+    <div
+      class="t-cell__title-text"
+    >
+      基础开关
+      <!---->
+    </div>
     <!---->
   </div>
   <!---->
@@ -57,8 +61,12 @@ exports[`Switch > Switch colorVue demo works fine 1`] = `
   <div
     class="t-cell__title"
   >
-    自定义颜色开关
-    <!---->
+    <div
+      class="t-cell__title-text"
+    >
+      自定义颜色开关
+      <!---->
+    </div>
     <!---->
   </div>
   <!---->
@@ -105,8 +113,12 @@ exports[`Switch > Switch labelVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      带文字开关
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        带文字开关
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -150,8 +162,12 @@ exports[`Switch > Switch labelVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      带图标开关
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        带图标开关
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -242,8 +258,12 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          基础开关
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            基础开关
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -304,8 +324,12 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          带文字开关
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            带文字开关
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -349,8 +373,12 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          带图标开关
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            带图标开关
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -423,8 +451,12 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          自定义颜色开关
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            自定义颜色开关
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -489,8 +521,12 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          加载状态
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            加载状态
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -556,8 +592,12 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          加载状态
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            加载状态
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -628,8 +668,12 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          禁用状态
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            禁用状态
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -669,8 +713,12 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          禁用状态
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            禁用状态
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -737,8 +785,12 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          大尺寸 32
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            大尺寸 32
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -780,8 +832,12 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          中尺寸 28
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            中尺寸 28
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -823,8 +879,12 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          小尺寸 24
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            小尺寸 24
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -878,8 +938,12 @@ exports[`Switch > Switch sizeVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      大尺寸 32
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        大尺寸 32
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -921,8 +985,12 @@ exports[`Switch > Switch sizeVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      中尺寸 28
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        中尺寸 28
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -964,8 +1032,12 @@ exports[`Switch > Switch sizeVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      小尺寸 24
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        小尺寸 24
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -1015,8 +1087,12 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      加载状态
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        加载状态
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -1082,8 +1158,12 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      加载状态
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        加载状态
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -1154,8 +1234,12 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      禁用状态
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        禁用状态
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -1195,8 +1279,12 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      禁用状态
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        禁用状态
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->

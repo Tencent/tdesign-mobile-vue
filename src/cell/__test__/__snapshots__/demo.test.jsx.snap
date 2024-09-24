@@ -34,8 +34,12 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        单行标题
-        <!---->
+        <div
+          class="t-cell__title-text"
+        >
+          单行标题
+          <!---->
+        </div>
         <!---->
       </div>
       <!---->
@@ -87,8 +91,12 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        单行标题
-        <!---->
+        <div
+          class="t-cell__title-text"
+        >
+          单行标题
+          <!---->
+        </div>
         <!---->
       </div>
       <!---->
@@ -140,8 +148,12 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        单行标题
-        <!---->
+        <div
+          class="t-cell__title-text"
+        >
+          单行标题
+          <!---->
+        </div>
         <!---->
       </div>
       <!---->
@@ -230,8 +242,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              单行标题
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                单行标题
+                <!---->
+              </div>
               <!---->
             </div>
             <!---->
@@ -268,12 +284,16 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              单行标题
-              <span
-                class="t-cell--required"
+              <div
+                class="t-cell__title-text"
               >
-                 *
-              </span>
+                单行标题
+                <span
+                  class="t-cell--required"
+                >
+                   *
+                </span>
+              </div>
               <!---->
             </div>
             <!---->
@@ -310,8 +330,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              单行标题
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                单行标题
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -367,8 +391,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              单行标题
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                单行标题
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -404,8 +432,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              单行标题
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                单行标题
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -461,8 +493,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              单行标题
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                单行标题
+                <!---->
+              </div>
               <!---->
             </div>
             <!---->
@@ -531,8 +567,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              单行标题
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                单行标题
+                <!---->
+              </div>
               <div
                 class="t-cell__description"
               >
@@ -573,12 +613,16 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              单行标题
-              <span
-                class="t-cell--required"
+              <div
+                class="t-cell__title-text"
               >
-                 *
-              </span>
+                单行标题
+                <span
+                  class="t-cell--required"
+                >
+                   *
+                </span>
+              </div>
               <div
                 class="t-cell__description"
               >
@@ -619,8 +663,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              单行标题
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                单行标题
+                <!---->
+              </div>
               <div
                 class="t-cell__description"
               >
@@ -680,8 +728,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              单行标题
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                单行标题
+                <!---->
+              </div>
               <div
                 class="t-cell__description"
               >
@@ -721,8 +773,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              单行标题
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                单行标题
+                <!---->
+              </div>
               <div
                 class="t-cell__description"
               >
@@ -784,8 +840,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              单行标题
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                单行标题
+                <!---->
+              </div>
               <div
                 class="t-cell__description"
               >
@@ -826,8 +886,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              单行标题
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                单行标题
+                <!---->
+              </div>
               <div
                 class="t-cell__description"
               >
@@ -849,8 +913,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              多行高度不定，长文本自动换行，该选项的描述是一段很长的内容
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                多行高度不定，长文本自动换行，该选项的描述是一段很长的内容
+                <!---->
+              </div>
               <div
                 class="t-cell__description"
               >
@@ -943,8 +1011,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              多行带头像
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                多行带头像
+                <!---->
+              </div>
               <div
                 class="t-cell__description"
               >
@@ -988,8 +1060,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              多行带图片
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                多行带图片
+                <!---->
+              </div>
               <div
                 class="t-cell__description"
               >
@@ -1062,8 +1138,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              单行标题
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                单行标题
+                <!---->
+              </div>
               <!---->
             </div>
             <!---->
@@ -1115,8 +1195,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              单行标题
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                单行标题
+                <!---->
+              </div>
               <!---->
             </div>
             <!---->
@@ -1168,8 +1252,12 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              单行标题
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                单行标题
+                <!---->
+              </div>
               <!---->
             </div>
             <!---->
@@ -1222,8 +1310,12 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        单行标题
-        <!---->
+        <div
+          class="t-cell__title-text"
+        >
+          单行标题
+          <!---->
+        </div>
         <div
           class="t-cell__description"
         >
@@ -1264,12 +1356,16 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        单行标题
-        <span
-          class="t-cell--required"
+        <div
+          class="t-cell__title-text"
         >
-           *
-        </span>
+          单行标题
+          <span
+            class="t-cell--required"
+          >
+             *
+          </span>
+        </div>
         <div
           class="t-cell__description"
         >
@@ -1310,8 +1406,12 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        单行标题
-        <!---->
+        <div
+          class="t-cell__title-text"
+        >
+          单行标题
+          <!---->
+        </div>
         <div
           class="t-cell__description"
         >
@@ -1371,8 +1471,12 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        单行标题
-        <!---->
+        <div
+          class="t-cell__title-text"
+        >
+          单行标题
+          <!---->
+        </div>
         <div
           class="t-cell__description"
         >
@@ -1412,8 +1516,12 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        单行标题
-        <!---->
+        <div
+          class="t-cell__title-text"
+        >
+          单行标题
+          <!---->
+        </div>
         <div
           class="t-cell__description"
         >
@@ -1475,8 +1583,12 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        单行标题
-        <!---->
+        <div
+          class="t-cell__title-text"
+        >
+          单行标题
+          <!---->
+        </div>
         <div
           class="t-cell__description"
         >
@@ -1517,8 +1629,12 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        单行标题
-        <!---->
+        <div
+          class="t-cell__title-text"
+        >
+          单行标题
+          <!---->
+        </div>
         <div
           class="t-cell__description"
         >
@@ -1540,8 +1656,12 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        多行高度不定，长文本自动换行，该选项的描述是一段很长的内容
-        <!---->
+        <div
+          class="t-cell__title-text"
+        >
+          多行高度不定，长文本自动换行，该选项的描述是一段很长的内容
+          <!---->
+        </div>
         <div
           class="t-cell__description"
         >
@@ -1634,8 +1754,12 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        多行带头像
-        <!---->
+        <div
+          class="t-cell__title-text"
+        >
+          多行带头像
+          <!---->
+        </div>
         <div
           class="t-cell__description"
         >
@@ -1679,8 +1803,12 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        多行带图片
-        <!---->
+        <div
+          class="t-cell__title-text"
+        >
+          多行带图片
+          <!---->
+        </div>
         <div
           class="t-cell__description"
         >
@@ -1714,8 +1842,12 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        单行标题
-        <!---->
+        <div
+          class="t-cell__title-text"
+        >
+          单行标题
+          <!---->
+        </div>
         <!---->
       </div>
       <!---->
@@ -1752,12 +1884,16 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        单行标题
-        <span
-          class="t-cell--required"
+        <div
+          class="t-cell__title-text"
         >
-           *
-        </span>
+          单行标题
+          <span
+            class="t-cell--required"
+          >
+             *
+          </span>
+        </div>
         <!---->
       </div>
       <!---->
@@ -1794,8 +1930,12 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        单行标题
-        <!---->
+        <div
+          class="t-cell__title-text"
+        >
+          单行标题
+          <!---->
+        </div>
         <!---->
       </div>
       <div
@@ -1851,8 +1991,12 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        单行标题
-        <!---->
+        <div
+          class="t-cell__title-text"
+        >
+          单行标题
+          <!---->
+        </div>
         <!---->
       </div>
       <div
@@ -1888,8 +2032,12 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        单行标题
-        <!---->
+        <div
+          class="t-cell__title-text"
+        >
+          单行标题
+          <!---->
+        </div>
         <!---->
       </div>
       <div
@@ -1945,8 +2093,12 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
       <div
         class="t-cell__title"
       >
-        单行标题
-        <!---->
+        <div
+          class="t-cell__title-text"
+        >
+          单行标题
+          <!---->
+        </div>
         <!---->
       </div>
       <!---->
