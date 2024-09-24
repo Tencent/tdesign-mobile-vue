@@ -4,7 +4,7 @@ import config from '../config';
 import TButton from '../button';
 import TPopup from '../popup';
 import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
-import { useVModel, uniqueFactory } from '../shared';
+import { useVModel, uniqueFactory, getWindowSize } from '../shared';
 import DropdownItemProps from './dropdown-item-props';
 import { DropdownMenuState, DropdownMenuControl } from './context';
 import { TdDropdownMenuProps, DropdownValue } from './type';
@@ -90,11 +90,13 @@ export default defineComponent({
     const setExpand = (val: boolean) => {
       // 菜单定位
       const { bottom, top } = menuState.barRect;
+      const winHeight = getWindowSize().height;
+
       menuProps.direction === 'up'
         ? (state.expandStyle = {
             transform: menuProps.direction === 'up' ? 'rotateX(180deg) rotateY(180deg)' : '',
             zIndex: menuProps.zIndex,
-            bottom: `calc(100vh - ${top}px)`,
+            bottom: `${winHeight - top}px`,
           })
         : (state.expandStyle = {
             zIndex: menuProps.zIndex,
