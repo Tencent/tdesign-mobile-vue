@@ -23,7 +23,7 @@ describe('Cell.vue', async () => {
 
   it('required render', async () => {
     const wrapper = mount(() => <Cell title="单行标题" required></Cell>);
-    const required = wrapper.find('.t-cell__title > .t-cell--required');
+    const required = wrapper.find('.t-cell__title > .t-cell__title-text > .t-cell--required');
     expect(required.exists()).toBeTruthy();
     expect(required.text()).toContain('*');
   });
