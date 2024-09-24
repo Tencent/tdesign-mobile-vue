@@ -2580,8 +2580,12 @@ exports[`Calendar > Calendar baseVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      单个选择日期
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        单个选择日期
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -5192,8 +5196,12 @@ exports[`Calendar > Calendar customButtonVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      自定义按钮
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        自定义按钮
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -5709,8 +5717,12 @@ exports[`Calendar > Calendar customRangeVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      自定义日期区间
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        自定义日期区间
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -6803,8 +6815,12 @@ exports[`Calendar > Calendar customTextVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      自定义文案
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        自定义文案
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -9446,8 +9462,12 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              单个选择日期
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                单个选择日期
+                <!---->
+              </div>
               <!---->
             </div>
             <!---->
@@ -12052,8 +12072,12 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              多个选择日期
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                多个选择日期
+                <!---->
+              </div>
               <!---->
             </div>
             <!---->
@@ -14658,8 +14682,12 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              区间选择日期
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                区间选择日期
+                <!---->
+              </div>
               <!---->
             </div>
             <!---->
@@ -15770,8 +15798,12 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          自定义文案
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            自定义文案
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -18376,8 +18408,12 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          自定义按钮
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            自定义按钮
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -18886,8 +18922,12 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          自定义日期区间
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            自定义日期区间
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -24038,8 +24078,12 @@ exports[`Calendar > Calendar multipleVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      多个选择日期
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        多个选择日期
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -26647,8 +26691,12 @@ exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      区间选择日期
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        区间选择日期
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->

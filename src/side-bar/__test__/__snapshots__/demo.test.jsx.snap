@@ -6503,8 +6503,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字0
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字0
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -6572,8 +6576,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字0
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字0
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -6641,8 +6649,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字0
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字0
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -6710,8 +6722,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字0
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字0
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -6779,8 +6795,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字0
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字0
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -6848,8 +6868,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字0
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字0
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -6917,8 +6941,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字0
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字0
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -6986,8 +7014,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字0
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字0
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -7055,8 +7087,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字0
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字0
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -7124,8 +7160,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字0
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字0
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -7193,8 +7233,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字0
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字0
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -7262,8 +7306,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字0
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字0
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -7344,8 +7392,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字1
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字1
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -7413,8 +7465,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字1
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字1
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -7482,8 +7538,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字1
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字1
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -7551,8 +7611,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字1
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字1
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -7620,8 +7684,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字1
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字1
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -7689,8 +7757,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字1
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字1
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -7758,8 +7830,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字1
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字1
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -7827,8 +7903,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字1
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字1
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -7896,8 +7976,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字1
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字1
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -7978,8 +8062,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字2
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字2
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -8047,8 +8135,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字2
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字2
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -8116,8 +8208,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字2
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字2
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -8185,8 +8281,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字2
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字2
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -8254,8 +8354,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字2
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字2
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -8323,8 +8427,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字2
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字2
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -8392,8 +8500,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字2
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字2
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -8461,8 +8573,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字2
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字2
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -8530,8 +8646,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字2
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字2
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -8612,8 +8732,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字3
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字3
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -8681,8 +8805,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字3
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字3
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -8750,8 +8878,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字3
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字3
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -8819,8 +8951,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字3
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字3
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -8888,8 +9024,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字3
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字3
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -8957,8 +9097,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字3
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字3
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -9039,8 +9183,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字4
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字4
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -9108,8 +9256,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字4
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字4
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -9177,8 +9329,12 @@ exports[`SideBar > SideBar switchVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            标题文字4
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              标题文字4
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->

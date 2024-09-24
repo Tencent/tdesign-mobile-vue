@@ -58,8 +58,12 @@ exports[`SwipeCell > SwipeCell doubleVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            左右滑操作
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              左右滑操作
+              <!---->
+            </div>
             <!---->
           </div>
           <div
@@ -170,8 +174,12 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            带二次确认的操作
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              带二次确认的操作
+              <!---->
+            </div>
             <!---->
           </div>
           <div
@@ -272,8 +280,12 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              图标加文字横排
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                图标加文字横排
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -392,8 +404,12 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              纯图标
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                纯图标
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -502,8 +518,12 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              图标加文字竖排
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                图标加文字竖排
+                <!---->
+              </div>
               <div
                 class="t-cell__description"
               >
@@ -648,8 +668,12 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左滑单操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                左滑单操作
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -728,8 +752,12 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左滑单操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                左滑单操作
+                <!---->
+              </div>
               <div
                 class="t-cell__description"
               >
@@ -812,8 +840,12 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左滑双操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                左滑双操作
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -909,8 +941,12 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左滑三操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                左滑三操作
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -1048,8 +1084,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左滑单操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                左滑单操作
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -1128,8 +1168,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左滑单操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                左滑单操作
+                <!---->
+              </div>
               <div
                 class="t-cell__description"
               >
@@ -1212,8 +1256,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左滑双操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                左滑双操作
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -1309,8 +1357,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左滑三操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                左滑三操作
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -1432,8 +1484,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              右滑单操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                右滑单操作
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -1520,8 +1576,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左右滑操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                左右滑操作
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -1614,8 +1674,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              图标加文字横排
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                图标加文字横排
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -1734,8 +1798,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              纯图标
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                纯图标
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -1844,8 +1912,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              图标加文字竖排
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                图标加文字竖排
+                <!---->
+              </div>
               <div
                 class="t-cell__description"
               >
@@ -1994,8 +2066,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              带二次确认的操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                带二次确认的操作
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -2099,8 +2175,12 @@ exports[`SwipeCell > SwipeCell rightVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            右滑单操作
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              右滑单操作
+              <!---->
+            </div>
             <!---->
           </div>
           <div

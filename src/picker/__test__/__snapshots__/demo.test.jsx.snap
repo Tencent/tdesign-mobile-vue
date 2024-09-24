@@ -17,8 +17,12 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      选择地区
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        选择地区
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -166,8 +170,12 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      选择地区
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        选择地区
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -205,8 +213,12 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      选择时间
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        选择时间
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -517,8 +529,12 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          英雄
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            英雄
+            <!---->
+          </div>
           <!---->
         </div>
         <div
@@ -713,8 +729,12 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          选择地区
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            选择地区
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -752,8 +772,12 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          选择时间
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            选择时间
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -1050,8 +1074,12 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          选择地区
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            选择地区
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -1213,8 +1241,12 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          带标题选择器
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            带标题选择器
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -1252,8 +1284,12 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          无标题选择器
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            无标题选择器
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -1383,8 +1419,12 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          自定义高度选择器
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            自定义高度选择器
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -1435,8 +1475,12 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      带标题选择器
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        带标题选择器
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -1474,8 +1518,12 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      无标题选择器
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        无标题选择器
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->

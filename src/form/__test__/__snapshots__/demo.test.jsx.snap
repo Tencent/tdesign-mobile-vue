@@ -1646,8 +1646,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            禁用态
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              禁用态
+              <!---->
+            </div>
             <!---->
           </div>
           <div
