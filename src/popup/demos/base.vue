@@ -3,7 +3,7 @@
     <t-button v-for="p in placement" :key="p" block variant="outline" theme="primary" size="large" @click="onClick(p)">
       {{ p.text }}
     </t-button>
-    <t-popup v-model="visible" :placement="currentPlacement" style="padding: 100px" />
+    <t-popup v-model="visible" :placement="currentPlacement" destroy-on-close style="padding: 100px" />
   </div>
 </template>
 
