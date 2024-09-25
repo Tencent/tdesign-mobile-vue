@@ -4,6 +4,7 @@ import {
   BrowseOffIcon as TBrowseOffIcon,
   CloseCircleFilledIcon as TCloseCircleFilledIcon,
 } from 'tdesign-icons-vue-next';
+import isFunction from 'lodash/isFunction';
 import config from '../config';
 import InputProps from './props';
 import { InputValue, TdInputProps } from './type';
@@ -132,6 +133,17 @@ export default defineComponent({
 
     const handleBlur = (e: FocusEvent) => {
       focused.value = false;
+
+      // 失焦时处理 format
+      if (isFunction(props.format)) {
+        innerValue.value = props.format(innerValue.value);
+        nextTick(() => {
+          setInputValue(innerValue.value);
+          props.onBlur?.(innerValue.value, { e });
+        });
+        return;
+      }
+
       props.onBlur?.(innerValue.value, { e });
     };
 
