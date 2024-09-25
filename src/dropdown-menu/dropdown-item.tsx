@@ -77,14 +77,10 @@ export default defineComponent({
       return {
         zIndex: menuProps.zIndex && menuProps.zIndex + 1,
         position: 'absolute',
+        overflow: 'hidden',
       };
     });
-    const styleContent = computed(() => {
-      return [`${dropdownItemClass.value}__content`, `t-popup__content`];
-    });
-    const contentStyle = computed(() => {
-      return menuProps.direction === 'up' ? { transform: 'rotateX(180deg) rotateY(180deg)' } : {};
-    });
+
     const popupId = getUniqueID();
     // 设置展开/收起状态
     const setExpand = (val: boolean) => {
@@ -94,7 +90,6 @@ export default defineComponent({
 
       menuProps.direction === 'up'
         ? (state.expandStyle = {
-            transform: menuProps.direction === 'up' ? 'rotateX(180deg) rotateY(180deg)' : '',
             zIndex: menuProps.zIndex,
             bottom: `${winHeight - top}px`,
           })
@@ -293,15 +288,15 @@ export default defineComponent({
           <div id={popupId} class={classes.value} style={{ ...expandStyle.value }}>
             <t-popup
               visible={isShowItems.value}
+              placement={menuProps.direction === 'up' ? 'bottom' : 'top'}
               duration={duration.value}
               showOverlay={showOverlay.value}
               style={popupStyle.value}
               overlayProps={{ style: 'position: absolute' }}
-              class={`${dropdownItemClass.value}__popup-host`}
               attach={`#${popupId}`}
               onVisibleChange={onVisibleChange}
             >
-              <div ref={popupContent} class={styleContent.value} style={contentStyle.value}>
+              <div ref={popupContent} class={`${dropdownItemClass.value}__content`}>
                 <div class={`${dropdownItemClass.value}__body`}>{content || defaultSlot()}</div>
                 {footer || footerSlot()}
               </div>
