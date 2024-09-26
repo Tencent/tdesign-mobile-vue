@@ -1,5 +1,6 @@
 import { ref, toRefs, computed, reactive, defineComponent, watch, onMounted } from 'vue';
 import isFunction from 'lodash/isFunction';
+import { useIntersectionObserver } from '@vueuse/core';
 import config from '../config';
 import props from './props';
 import { useVModel } from '../shared/useVModel';
@@ -252,6 +253,17 @@ export default defineComponent({
     };
 
     onMounted(() => {
+      init();
+    });
+
+    const { stop } = useIntersectionObserver(rootRef, ([{ isIntersecting }], observerElement) => {
+      if (isIntersecting) {
+        stop();
+        init();
+      }
+    });
+
+    const init = () => {
       getInitialStyle();
 
       if (props.range) {
@@ -265,7 +277,7 @@ export default defineComponent({
       if (props.marks) {
         handleMask(props.marks);
       }
-    });
+    };
 
     const readerMinText = () => {
       if (!props.showExtremeValue) {
