@@ -6,9 +6,9 @@ import { useTNodeJSX } from '../hooks/tnode';
 import config from '../config';
 
 const { prefix } = config;
-const name = `${prefix}-swiper-item`;
+
 export default defineComponent({
-  name,
+  name: `${prefix}-swiper-item`,
   setup() {
     const { addChild, removeChild, isVertical, root, items, setContainerHeight } = inject('parent') as any;
     const swiperItemClass = usePrefixClass('swiper-item');

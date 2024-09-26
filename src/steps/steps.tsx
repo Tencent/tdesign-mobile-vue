@@ -7,9 +7,9 @@ import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-steps`;
+
 export default defineComponent({
-  name,
+  name: `${prefix}-steps`,
   props,
   emits: ['update:current', 'update:modelValue', 'change'],
   setup(props, context) {

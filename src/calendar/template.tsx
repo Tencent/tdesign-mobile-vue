@@ -5,7 +5,7 @@ import config from '../config';
 import Props from './template-props';
 import { useTNodeJSX } from '../hooks/tnode';
 import { TdCalendarProps, TDate, TDateType } from './type';
-import { useConfig } from '../config-provider/useConfig';
+import { usePrefixClass, useConfig } from '../hooks/useClass';
 
 const { prefix } = config;
 const name = `${prefix}-calendar`;
@@ -20,6 +20,7 @@ export default defineComponent({
   setup(_props, context) {
     const renderTNodeJSX = useTNodeJSX();
     const { t, globalConfig } = useConfig('calendar');
+    const calendarClass = usePrefixClass('calendar');
 
     const props = inject('templateProps') as TdCalendarProps;
     // 获取时间年月日起
@@ -213,9 +214,9 @@ export default defineComponent({
       templateRef,
     });
     const getDateItemClass = (dateItem: TDate) => {
-      let className = `${name}__dates-item`;
+      let className = `${calendarClass.value}__dates-item`;
       if (dateItem.type) {
-        className = `${className} ${name}__dates-item--${dateItem.type}`;
+        className = `${className} ${calendarClass.value}__dates-item--${dateItem.type}`;
       }
       if (dateItem.className) {
         className = `${className} ${dateItem.className}`;
@@ -228,19 +229,21 @@ export default defineComponent({
         if (cell) {
           return cell;
         }
-        let className = `${name}__dates-item-suffix`;
+        let className = `${calendarClass.value}__dates-item-suffix`;
         if (dateItem.type) {
-          className = `${className} ${name}__dates-item-suffix--${dateItem.type}`;
+          className = `${className} ${calendarClass.value}__dates-item-suffix--${dateItem.type}`;
         }
         return (
           <>
-            {dateItem.prefix && <div class={`${name}__dates-item-prefix`}>{dateItem.prefix}</div>}
+            {dateItem.prefix && <div class={`${calendarClass.value}__dates-item-prefix`}>{dateItem.prefix}</div>}
             {dateItem.day}
             {dateItem.suffix && <div class={className}>{dateItem.suffix}</div>}
           </>
         );
       };
-      const className = usePopup.value ? `${name} ${name}--popup` : `${name}`;
+      const className = usePopup.value
+        ? `${calendarClass.value} ${calendarClass.value}--popup`
+        : `${calendarClass.value}`;
 
       const renderConfirmBtn = () => {
         if (confirmBtn.value && typeof confirmBtn.value !== 'object') {
@@ -256,22 +259,24 @@ export default defineComponent({
 
       return (
         <div ref={templateRef} class={className}>
-          <div class={`${name}__title`}>{_props.title || globalConfig.value.title}</div>
-          {usePopup.value && <CloseIcon class={`${name}__close-btn`} size="24" onClick={handleClose}></CloseIcon>}
-          <div class={`${name}__days`}>
+          <div class={`${calendarClass.value}__title`}>{_props.title || globalConfig.value.title}</div>
+          {usePopup.value && (
+            <CloseIcon class={`${calendarClass.value}__close-btn`} size="24" onClick={handleClose}></CloseIcon>
+          )}
+          <div class={`${calendarClass.value}__days`}>
             {(days.value || []).map((item, index) => (
-              <div key={index} class={`${name}__days-item`}>
+              <div key={index} class={`${calendarClass.value}__days-item`}>
                 {item}
               </div>
             ))}
           </div>
-          <div class={`${name}__months`} style="overflow: auto">
+          <div class={`${calendarClass.value}__months`} style="overflow: auto">
             {months.value.map((item, index) => (
               <>
-                <div class={`${name}__month`} key={index}>
+                <div class={`${calendarClass.value}__month`} key={index}>
                   {t(globalConfig.value.monthTitle, { year: item.year, month: globalConfig.value.months[item.month] })}
                 </div>
-                <div class={`${name}__dates`} key={index}>
+                <div class={`${calendarClass.value}__dates`} key={index}>
                   {new Array((item.weekdayOfFirstDay - firstDayOfWeek.value + 7) % 7)
                     .fill(0)
                     .map((emptyItem, index) => (
@@ -292,7 +297,7 @@ export default defineComponent({
               </>
             ))}
           </div>
-          {usePopup.value && <div class="t-calendar__footer">{renderConfirmBtn()}</div>}
+          {usePopup.value && <div class={`${calendarClass.value}__footer`}>{renderConfirmBtn()}</div>}
         </div>
       );
     };

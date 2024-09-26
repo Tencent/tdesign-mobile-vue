@@ -10,14 +10,13 @@ import { PRO_THEME, CIRCLE_SIZE_PX, STATUS_ICON, PLUMP_SEPARATE } from './consta
 import config from '../config';
 
 const { prefix } = config;
-const name = `${prefix}-progress`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-progress`,
   props,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();
-    const componentName = usePrefixClass('progress');
+    const progressClass = usePrefixClass('progress');
 
     const computedStatus = computed(() => {
       if (props.percentage >= 100) {
@@ -115,24 +114,24 @@ export default defineComponent({
         const components = getIconMap();
         const component = components[status];
         if (component) {
-          labelContent = <component class={[`${componentName.value}__icon`]}></component>;
+          labelContent = <component class={[`${progressClass.value}__icon`]}></component>;
         }
       }
       return labelContent;
     };
     return () => {
       const labelContent = props.label && (
-        <div class={`${componentName.value}__info`}>{renderTNodeJSX('label', getLabelContent())}</div>
+        <div class={`${progressClass.value}__info`}>{renderTNodeJSX('label', getLabelContent())}</div>
       );
 
       const separateClasses =
-        props.percentage > PLUMP_SEPARATE ? `${componentName.value}--over-ten` : `${componentName.value}--under-ten`;
+        props.percentage > PLUMP_SEPARATE ? `${progressClass.value}--over-ten` : `${progressClass.value}--under-ten`;
       return (
-        <div class={componentName.value}>
+        <div class={progressClass.value}>
           {props.theme === PRO_THEME.LINE && (
-            <div class={`${componentName.value}--thin ${componentName.value}--status-${computedStatus.value}`}>
-              <div class={`${componentName.value}__bar`} style={trackBgStyle.value}>
-                <div class={`${componentName.value}__inner`} style={barStyle.value}></div>
+            <div class={`${progressClass.value}--thin ${progressClass.value}--status-${computedStatus.value}`}>
+              <div class={`${progressClass.value}__bar`} style={trackBgStyle.value}>
+                <div class={`${progressClass.value}__inner`} style={barStyle.value}></div>
               </div>
               {labelContent}
             </div>
@@ -141,12 +140,12 @@ export default defineComponent({
           {props.theme === PRO_THEME.PLUMP && (
             <div
               class={[
-                `${componentName.value}__bar ${componentName.value}--plump ${separateClasses}`,
-                { [`${componentName.value}--status-${computedStatus.value}`]: computedStatus.value },
+                `${progressClass.value}__bar ${progressClass.value}--plump ${separateClasses}`,
+                { [`${progressClass.value}--status-${computedStatus.value}`]: computedStatus.value },
               ]}
               style={trackBgStyle.value}
             >
-              <div class={`${componentName.value}__inner`} style={barStyle.value}>
+              <div class={`${progressClass.value}__inner`} style={barStyle.value}>
                 {props.percentage > PLUMP_SEPARATE && labelContent}
               </div>
               {props.percentage <= PLUMP_SEPARATE && labelContent}
@@ -155,7 +154,7 @@ export default defineComponent({
 
           {props.theme === PRO_THEME.CIRCLE && (
             <div
-              class={`${componentName.value}--circle ${componentName.value}--status-${computedStatus.value}`}
+              class={`${progressClass.value}--circle ${progressClass.value}--status-${computedStatus.value}`}
               style={circleStyle.value}
             >
               {labelContent}
@@ -166,7 +165,7 @@ export default defineComponent({
                   r={radius.value}
                   stroke-width={circleStrokeWidth.value}
                   fill="none"
-                  class={[`${componentName.value}__circle-outer`]}
+                  class={[`${progressClass.value}__circle-outer`]}
                   style={circleOuterStyle.value}
                 />
                 {props.percentage > 0 && (
@@ -177,7 +176,7 @@ export default defineComponent({
                     stroke-width={circleStrokeWidth.value}
                     fill="none"
                     stroke-linecap="round"
-                    class={[`${componentName.value}__circle-inner`]}
+                    class={[`${progressClass.value}__circle-inner`]}
                     transform={`matrix(0,-1,1,0,0,${diameter.value})`}
                     stroke-dasharray={strokeDashArr.value}
                     style={circlePathStyle.value}

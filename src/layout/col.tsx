@@ -7,14 +7,13 @@ import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-col`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-col`,
   props,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();
-    const componentName = usePrefixClass('col');
+    const colClass = usePrefixClass('col');
     const { gutter } = inject(rowInjectionKey);
 
     // 设置col gutter style
@@ -30,20 +29,20 @@ export default defineComponent({
     });
 
     // 设置col class
-    const colClass = computed(() => {
-      let colClass = componentName.value;
+    const rootClass = computed(() => {
+      let rootClass = colClass.value;
       if (props.offset) {
-        colClass += ` ${componentName.value}--offset-${props.offset}`;
+        rootClass += ` ${colClass.value}--offset-${props.offset}`;
       }
       if (props.span) {
-        colClass += ` ${componentName.value}--${props.span}`;
+        rootClass += ` ${colClass.value}--${props.span}`;
       }
-      return colClass;
+      return rootClass;
     });
 
     return () => {
       return (
-        <div class={colClass.value} style={style.value}>
+        <div class={rootClass.value} style={style.value}>
           {renderTNodeJSX('default')}
         </div>
       );

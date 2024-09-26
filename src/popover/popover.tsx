@@ -5,15 +5,17 @@ import { TdPopoverProps } from './type';
 import config from '../config';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
 import { useDefault, useClickAway } from '../shared';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-popover`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-popover`,
   props: PopoverProps,
   emits: ['visible-change', 'update:visible', 'update:modelValue'],
   setup(props, context) {
+    const popoverClass = usePrefixClass('popover');
+
     const renderTNodeJSX = useTNodeJSX();
     const renderContent = useContent();
 
@@ -27,7 +29,7 @@ export default defineComponent({
     const referenceRef = ref<HTMLElement>();
     const popoverRef = ref<HTMLElement>();
 
-    const contentClasses = computed(() => [`${name}__content`, `${name}--${props.theme}`]);
+    const contentClasses = computed(() => [`${popoverClass.value}__content`, `${popoverClass.value}--${props.theme}`]);
 
     /** popperjs instance */
     let popper: ReturnType<typeof createPopper>;
@@ -157,13 +159,13 @@ export default defineComponent({
     );
 
     const renderArrow = () => {
-      return props.showArrow && <div class={`${name}__arrow`} data-popper-arrow />;
+      return props.showArrow && <div class={`${popoverClass.value}__arrow`} data-popper-arrow />;
     };
 
     const renderContentNode = () => {
       return (
         currentVisible.value && (
-          <div ref={popoverRef} data-popper-placement class={`${name}`}>
+          <div ref={popoverRef} data-popper-placement class={`${popoverClass.value}`}>
             <div class={contentClasses.value}>
               {renderTNodeJSX('content')}
               {renderArrow()}
@@ -178,10 +180,15 @@ export default defineComponent({
 
       return (
         <>
-          <div ref={referenceRef} class={`${name}__wrapper`} onClick={onClickReference}>
+          <div ref={referenceRef} class={`${popoverClass.value}__wrapper`} onClick={onClickReference}>
             {triggerElementContent}
           </div>
-          <Transition name={`${name}--animation`} appear onEnter={updatePopper} onAfterLeave={destroyPopper}>
+          <Transition
+            name={`${popoverClass.value}--animation`}
+            appear
+            onEnter={updatePopper}
+            onAfterLeave={destroyPopper}
+          >
             {renderContentNode()}
           </Transition>
         </>

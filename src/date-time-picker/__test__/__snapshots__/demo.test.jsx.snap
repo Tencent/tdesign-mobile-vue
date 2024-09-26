@@ -17,8 +17,12 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      选择日期(年月日)
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        选择日期(年月日)
+        <!---->
+      </div>
       <!---->
     </div>
     <div
@@ -455,8 +459,12 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      选择日期
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        选择日期
+        <!---->
+      </div>
       <!---->
     </div>
     <div
@@ -823,8 +831,12 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      选择日期(年月日时分)
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        选择日期(年月日时分)
+        <!---->
+      </div>
       <!---->
     </div>
     <div
@@ -2050,8 +2062,12 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          选择日期(年月日)
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            选择日期(年月日)
+            <!---->
+          </div>
           <!---->
         </div>
         <div
@@ -2481,8 +2497,12 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          选择日期(年月)
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            选择日期(年月)
+            <!---->
+          </div>
           <!---->
         </div>
         <div
@@ -2751,8 +2771,12 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          选择日期(时分)
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            选择日期(时分)
+            <!---->
+          </div>
           <!---->
         </div>
         <div
@@ -3300,8 +3324,12 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          选择日期
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            选择日期
+            <!---->
+          </div>
           <!---->
         </div>
         <div
@@ -3671,8 +3699,12 @@ exports[`DateTimePicker > DateTimePicker timeVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      选择日期(时分)
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        选择日期(时分)
+        <!---->
+      </div>
       <!---->
     </div>
     <div
@@ -4203,8 +4235,12 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      选择日期(年月)
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        选择日期(年月)
+        <!---->
+      </div>
       <!---->
     </div>
     <div

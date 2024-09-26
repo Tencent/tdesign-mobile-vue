@@ -5,12 +5,12 @@ import TOverlay from '../overlay';
 import ToastProps from './props';
 import config from '../config';
 import { useLockScroll } from '../hooks/useLockScroll';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-toast`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-toast`,
   props: ToastProps,
   setup(props) {
     const toastTypeIcon = {
@@ -18,6 +18,8 @@ export default defineComponent({
       success: CheckCircleIcon,
       error: CloseCircleIcon,
     };
+
+    const toastClass = usePrefixClass('toast');
 
     const renderTNodeJSX = useTNodeJSX();
 
@@ -37,13 +39,13 @@ export default defineComponent({
     });
 
     const classes = computed(() => [
-      `${name}`,
-      `${name}__content`,
-      `${name}__icon`,
+      `${toastClass.value}`,
+      `${toastClass.value}__content`,
+      `${toastClass.value}__icon`,
       {
-        [`${name}--${props.direction}`]: props.direction,
-        [`${name}__content--${props.direction}`]: props.direction,
-        [`${name}--loading`]: props.theme === 'loading',
+        [`${toastClass.value}--${props.direction}`]: props.direction,
+        [`${toastClass.value}__content--${props.direction}`]: props.direction,
+        [`${toastClass.value}--loading`]: props.theme === 'loading',
       },
     ]);
 
@@ -59,7 +61,7 @@ export default defineComponent({
 
     const iconClasses = computed(() => [
       {
-        [`${name}__icon--${props.direction}`]: props.direction,
+        [`${toastClass.value}__icon--${props.direction}`]: props.direction,
       },
     ]);
 
@@ -80,8 +82,8 @@ export default defineComponent({
 
     const textClasses = computed(() => [
       {
-        [`${name}__text`]: !iconContent.value,
-        [`${name}__text--${props.direction}`]: props.direction,
+        [`${toastClass.value}__text`]: !iconContent.value,
+        [`${toastClass.value}__text--${props.direction}`]: props.direction,
       },
     ]);
 
@@ -94,7 +96,7 @@ export default defineComponent({
       return '';
     });
 
-    useLockScroll(toastRef, () => props.preventScrollThrough, name);
+    useLockScroll(toastRef, () => props.preventScrollThrough, toastClass.value);
 
     return () => {
       return (

@@ -2,8 +2,14 @@
   <teleport v-if="!destroyOnClose || wrapperVisible" :to="to" :disabled="!to">
     <t-overlay v-bind="overlayProps" :visible="innerVisible && showOverlay" @click="handleOverlayClick" />
     <transition :name="contentTransitionName" @after-enter="afterEnter" @after-leave="afterLeave">
-      <div v-show="innerVisible" :class="[name, $attrs.class, contentClasses]" :style="rootStyles" v-bind="$attrs">
-        <div v-if="closeBtnNode" :class="`${name}__close`" @click="handleCloseClick">
+      <div
+        v-show="innerVisible"
+        ref="popupRef"
+        :class="[popupClass, $attrs.class, contentClasses]"
+        :style="rootStyles"
+        v-bind="$attrs"
+      >
+        <div v-if="closeBtnNode" :class="`${popupClass}__close`" @click="handleCloseClick">
           <t-node :content="closeBtnNode" />
         </div>
         <slot />
@@ -22,20 +28,22 @@ import config from '../config';
 import { TdPopupProps } from './type';
 import { useDefault, TNode, renderTNode, isBrowser } from '../shared';
 import { getAttach } from '../shared/dom';
+import { usePrefixClass } from '../hooks/useClass';
+import { useLockScroll } from '../hooks/useLockScroll';
 
 const { prefix } = config;
 
-const name = `${prefix}-popup`;
-const bodyLockClass = `${name}-overflow-hidden`;
-let lockTimes = 0;
-
 export default defineComponent({
-  name,
+  name: `${prefix}-popup`,
   components: { TNode, TOverlay },
   inheritAttrs: false,
   props: popupProps,
   emits: ['open', 'close', 'opened', 'closed', 'visible-change', 'update:visible', 'update:modelValue'],
   setup(props, context) {
+    const popupClass = usePrefixClass('popup');
+
+    const popupRef = ref<HTMLElement>();
+
     const currentInstance = getCurrentInstance();
     const [currentVisible, setVisible] = useDefault<TdPopupProps['visible'], TdPopupProps>(
       props,
@@ -48,9 +56,8 @@ export default defineComponent({
 
     // 因为开启 destroyOnClose，会影响 transition 的动画，因此需要前后设置 visible
     watch(currentVisible, (v) => {
-      wrapperVisible.value = v;
-
       if (v) {
+        wrapperVisible.value = v;
         if (props.destroyOnClose) {
           nextTick(() => {
             innerVisible.value = v;
@@ -73,7 +80,7 @@ export default defineComponent({
     });
 
     const contentClasses = computed(() => ({
-      [`${name}--${props.placement}`]: true,
+      [`${popupClass.value}--${props.placement}`]: true,
     }));
 
     const contentTransitionName = computed(() => {
@@ -124,38 +131,11 @@ export default defineComponent({
       },
     );
 
-    const lock = () => {
-      if (!lockTimes && isBrowser) {
-        document.body.classList.add(bodyLockClass);
-      }
+    useLockScroll(popupRef, () => wrapperVisible.value && props.preventScrollThrough, popupClass.value);
 
-      lockTimes++;
-    };
-
-    const unlock = () => {
-      if (lockTimes) {
-        lockTimes--;
-
-        if (!lockTimes && isBrowser) {
-          document.body.classList.remove(bodyLockClass);
-        }
-      }
-    };
-
-    const shouldLock = computed(() => wrapperVisible.value && props.preventScrollThrough);
-
-    watch(
-      () => shouldLock.value,
-      (value) => {
-        value ? lock() : unlock();
-      },
-    );
-    onUnmounted(() => {
-      unlock();
-    });
     return {
-      name,
       to,
+      popupClass,
       wrapperVisible,
       innerVisible,
       currentVisible,

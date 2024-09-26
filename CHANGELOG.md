@@ -5,6 +5,18 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.4.3 `2024-09-26` 
+### 🚀 Features
+- `Radio`: 新增 `readonly`属性 ，配置只读  @liweijie0812 ([#1593](https://github.com/Tencent/tdesign-mobile-vue/pull/1593))
+- `RadioGroup`: `change`事件回调添加`name`属性 @liweijie0812 ([#1593](https://github.com/Tencent/tdesign-mobile-vue/pull/1593))
+- `ConfigProvider`: 支持全局配置修改全部组件的 `classPrefix`  @anlyyao ([#1596](https://github.com/Tencent/tdesign-mobile-vue/pull/1596))
+- `Input`: 支持 `format` 属性 @anlyyao ([#1602](https://github.com/Tencent/tdesign-mobile-vue/pull/1602))
+### 🐞 Bug Fixes
+- `Cell`: 修复部分 css vars 无效的问题 @anlyyao ([#1599](https://github.com/Tencent/tdesign-mobile-vue/pull/1599))
+- `Popup`: 修复 `destroyOnClose` 为 `true` 时动画无效的问题 @anlyyao ([#1600](https://github.com/Tencent/tdesign-mobile-vue/pull/1600))
+- `DropdownMenu`: 修复部分机型中向上展开样式错误 @anlyyao ([#1603](https://github.com/Tencent/tdesign-mobile-vue/pull/1603))
+- `Slider`: 修复在 `hidden` 元素中组件显示异常 @anlyyao ([#1604](https://github.com/Tencent/tdesign-mobile-vue/pull/1604))
+
 ## 🌈 1.4.2 `2024-09-13` 
 ### 🚀 Features
 - `AvatarGroup`: 新增  `shape` 属性，新增 `onCollapsedItemClick` 事件 @anlyyao ([#1571](https://github.com/Tencent/tdesign-mobile-vue/pull/1571))

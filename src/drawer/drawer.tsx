@@ -7,10 +7,9 @@ import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-drawer`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-drawer`,
   components: { TPopup },
   props,
   emits: ['update:visible', 'itemClick', 'overlayClick'],

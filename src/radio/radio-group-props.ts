@@ -57,6 +57,6 @@ export default {
   defaultValue: {
     type: [String, Number, Boolean] as PropType<TdRadioGroupProps['defaultValue']>,
   },
-  /** 选中值发生变化时触发 */
+  /** 选中值发生变化时触发, `context.name` 指 RadioGroup 的 name 属性 */
   onChange: Function as PropType<TdRadioGroupProps['onChange']>,
 };

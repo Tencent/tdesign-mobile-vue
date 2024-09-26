@@ -5,9 +5,9 @@ import config from '../config';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-footer`;
+
 export default defineComponent({
-  name,
+  name: `${prefix}-footer`,
   props: FooterProps,
   setup(props) {
     const footerClass = usePrefixClass('footer');

@@ -634,8 +634,12 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            单行标题
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              单行标题
+              <!---->
+            </div>
             <!---->
           </div>
           <div
@@ -1044,8 +1048,12 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      单行标题
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        单行标题
+        <!---->
+      </div>
       <!---->
     </div>
     <div

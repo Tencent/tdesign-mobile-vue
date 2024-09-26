@@ -8,7 +8,6 @@ import { usePrefixClass } from '../hooks/useClass';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
-const name = `${prefix}-cell`;
 
 export default defineComponent({
   name: `${prefix}-cell`,
@@ -62,8 +61,10 @@ export default defineComponent({
       const description = readerTNodeJSX('description');
       return (
         <div class={`${cellClass.value}__title`}>
-          {title}
-          {props.required && <span class={`${cellClass.value}--required`}>&nbsp;*</span>}
+          <div class={`${cellClass.value}__title-text`}>
+            {title}
+            {props.required && <span class={`${cellClass.value}--required`}>&nbsp;*</span>}
+          </div>
           {description && <div class={`${cellClass.value}__description`}>{description}</div>}
         </div>
       );

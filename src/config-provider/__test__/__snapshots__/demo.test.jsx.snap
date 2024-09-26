@@ -3145,8 +3145,12 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          Single select date
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            Single select date
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->
@@ -3184,8 +3188,12 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          Select time
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            Select time
+            <!---->
+          </div>
           <!---->
         </div>
         <div
@@ -6296,8 +6304,12 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      Single select date
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        Single select date
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -6335,8 +6347,12 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      Select time
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        Select time
+        <!---->
+      </div>
       <!---->
     </div>
     <div

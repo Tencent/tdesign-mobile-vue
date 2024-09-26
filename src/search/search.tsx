@@ -11,10 +11,9 @@ import { TdSearchProps } from './type';
 import { ENTER_REG } from '../_common/js/common';
 
 const { prefix } = config;
-const name = `${prefix}-search`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-search`,
   props: searchProps,
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();

@@ -5,10 +5,9 @@ import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
-const name = `${prefix}-indexes-anchor`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-indexes-anchor`,
   props: indexesAnchorProps,
   setup(props) {
     const readerTNodeJSX = useTNodeJSX();

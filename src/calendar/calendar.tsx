@@ -4,12 +4,12 @@ import config from '../config';
 import calendarProps from './props';
 import { useTNodeJSX } from '../hooks/tnode';
 import calendarTemplate from './template';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-calendar`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-calendar`,
   components: {
     TPopup,
     calendarTemplate,
@@ -17,6 +17,8 @@ export default defineComponent({
   props: calendarProps,
   emits: ['update:visible'],
   setup(props, context) {
+    const calendarClass = usePrefixClass('calendar');
+
     const calendarTemplateRef = ref();
     const renderTNodeJSX = useTNodeJSX();
 
@@ -24,8 +26,8 @@ export default defineComponent({
     const selectedValueIntoView = () => {
       const type = props.type === 'range' ? 'start' : 'selected';
       const { templateRef } = calendarTemplateRef.value;
-      const scrollContainer = templateRef.querySelector(`.${name}__months`);
-      const selectedDate = templateRef.querySelector(`.${name}__dates-item--${type}`)?.parentNode
+      const scrollContainer = templateRef.querySelector(`.${calendarClass.value}__months`);
+      const selectedDate = templateRef.querySelector(`.${calendarClass.value}__dates-item--${type}`)?.parentNode
         ?.previousElementSibling;
       if (selectedDate) {
         scrollContainer.scrollTop = selectedDate.offsetTop - scrollContainer.offsetTop;

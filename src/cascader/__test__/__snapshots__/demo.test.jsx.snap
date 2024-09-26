@@ -17,8 +17,12 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      地址
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        地址
+        <!---->
+      </div>
       <!---->
     </div>
     <div
@@ -239,8 +243,12 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      地址
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        地址
+        <!---->
+      </div>
       <!---->
     </div>
     <div
@@ -456,8 +464,12 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      地址
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        地址
+        <!---->
+      </div>
       <!---->
     </div>
     <div
@@ -677,8 +689,12 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      地址
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        地址
+        <!---->
+      </div>
       <!---->
     </div>
     <div
@@ -899,8 +915,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          地址
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            地址
+            <!---->
+          </div>
           <!---->
         </div>
         <div
@@ -1133,8 +1153,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          地址
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            地址
+            <!---->
+          </div>
           <!---->
         </div>
         <div
@@ -1340,8 +1364,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          地址
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            地址
+            <!---->
+          </div>
           <!---->
         </div>
         <div
@@ -1574,8 +1602,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          地址
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            地址
+            <!---->
+          </div>
           <!---->
         </div>
         <div
@@ -1808,8 +1840,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          地址
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            地址
+            <!---->
+          </div>
           <!---->
         </div>
         <div
@@ -2046,8 +2082,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          地址
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            地址
+            <!---->
+          </div>
           <!---->
         </div>
         <div
@@ -2251,8 +2291,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         <div
           class="t-cell__title"
         >
-          地址
-          <!---->
+          <div
+            class="t-cell__title-text"
+          >
+            地址
+            <!---->
+          </div>
           <!---->
         </div>
         <div
@@ -2471,8 +2515,12 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      地址
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        地址
+        <!---->
+      </div>
       <!---->
     </div>
     <div
@@ -2661,8 +2709,12 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      地址
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        地址
+        <!---->
+      </div>
       <!---->
     </div>
     <div
@@ -2886,8 +2938,12 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
     <div
       class="t-cell__title"
     >
-      地址
-      <!---->
+      <div
+        class="t-cell__title-text"
+      >
+        地址
+        <!---->
+      </div>
       <!---->
     </div>
     <div

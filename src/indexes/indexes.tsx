@@ -32,10 +32,9 @@ interface GroupTop {
 }
 
 const { prefix } = config;
-const name = `${prefix}-indexes`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-indexes`,
   props: IndexesProps,
   emits: ['select', 'change'],
   setup(props) {

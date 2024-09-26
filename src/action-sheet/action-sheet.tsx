@@ -7,13 +7,12 @@ import TButton from '../button';
 import config from '../config';
 import { TdActionSheetProps, ActionSheetItem } from './type';
 import props from './props';
-import { useConfig } from '../config-provider/useConfig';
+import { usePrefixClass, useConfig } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-action-sheet`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-action-sheet`,
   components: {
     TPopup,
     TButton,
@@ -23,6 +22,7 @@ export default defineComponent({
   props,
   emits: ['selected', 'update:modelValue', 'cancel', 'close', 'update:visible'],
   setup(props, context) {
+    const actionSheetClass = usePrefixClass('action-sheet');
     const { globalConfig } = useConfig('actionSheet');
 
     const actionItems = computed(() => {
@@ -42,12 +42,12 @@ export default defineComponent({
       'visible-change',
     );
     const rootClasses = computed(() => ({
-      [`${name}__content`]: true,
+      [`${actionSheetClass.value}__content`]: true,
     }));
     const descriptionClasses = computed(() => ({
-      [`${name}__description`]: true,
-      [`${name}__description--left`]: props.align === 'left',
-      [`${name}__description--grid`]: props.theme === 'grid',
+      [`${actionSheetClass.value}__description`]: true,
+      [`${actionSheetClass.value}__description--left`]: props.align === 'left',
+      [`${actionSheetClass.value}__description--grid`]: props.theme === 'grid',
     }));
     watch(
       () => currentVisible.value,
@@ -100,9 +100,9 @@ export default defineComponent({
         const cancel = () => {
           if (props.showCancel) {
             return (
-              <div class={`${name}__footer`}>
-                <div class={`${name}__gap-${props.theme}`}></div>
-                <t-button class={`${name}__cancel`} variant="text" block onClick={handleCancel}>
+              <div class={`${actionSheetClass.value}__footer`}>
+                <div class={`${actionSheetClass.value}__gap-${props.theme}`}></div>
+                <t-button class={`${actionSheetClass.value}__cancel`} variant="text" block onClick={handleCancel}>
                   {props.cancelText || globalConfig.value.cancel}
                 </t-button>
               </div>
@@ -123,7 +123,7 @@ export default defineComponent({
           visible={currentVisible.value}
           placement="bottom"
           destroy-on-close={true}
-          class={name}
+          class={actionSheetClass.value}
           onClose={handleClose}
         >
           {root()}

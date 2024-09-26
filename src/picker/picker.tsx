@@ -8,11 +8,10 @@ import { PickerValue, PickerColumn, PickerColumnItem } from './type';
 import { useVModel } from '../shared';
 import { useTNodeJSX } from '../hooks/tnode';
 import PickerItem from './picker-item';
-import { useConfig } from '../config-provider/useConfig';
 import { getPickerColumns } from './utils';
+import { usePrefixClass, useConfig } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-picker`;
 
 const getIndexFromColumns = (column: PickerColumn, value: PickerValue) => {
   if (!value) return 0;
@@ -20,11 +19,12 @@ const getIndexFromColumns = (column: PickerColumn, value: PickerValue) => {
 };
 
 export default defineComponent({
-  name,
+  name: `${prefix}-picker`,
   components: { PickerItem },
   props: PickerProps,
   emits: ['change', 'cancel', 'pick', 'update:modelValue', 'update:value'],
   setup(props) {
+    const pickerClass = usePrefixClass('picker');
     const { globalConfig } = useConfig('picker');
     const renderTNodeJSX = useTNodeJSX();
 
@@ -97,24 +97,24 @@ export default defineComponent({
     return () => {
       const header = renderTNodeJSX('header');
       return (
-        <div class={`${name}`}>
-          <div class={`${name}__toolbar`}>
+        <div class={`${pickerClass.value}`}>
+          <div class={`${pickerClass.value}__toolbar`}>
             {cancelButtonText.value && (
-              <div class={`${name}__cancel`} onClick={handleCancel}>
+              <div class={`${pickerClass.value}__cancel`} onClick={handleCancel}>
                 {cancelButtonText.value}
               </div>
             )}
-            <div class={`${name}__title`}>{props.title}</div>
+            <div class={`${pickerClass.value}__title`}>{props.title}</div>
             {confirmButtonText.value && (
-              <div class={`${name}__confirm`} onClick={handleConfirm}>
+              <div class={`${pickerClass.value}__confirm`} onClick={handleConfirm}>
                 {confirmButtonText.value}
               </div>
             )}
           </div>
           {header}
-          <div class={`${name}__main`}>
+          <div class={`${pickerClass.value}__main`}>
             {realColumns.value.map((item, index) => (
-              <div key={index} class={`${name}-item__group`}>
+              <div key={index} class={`${pickerClass.value}-item__group`}>
                 <picker-item
                   ref={(item: any) => setPickerItemRef(item, index)}
                   options={item}
@@ -124,9 +124,9 @@ export default defineComponent({
                 />
               </div>
             ))}
-            <div class={`${name}__mask ${name}__mask--top`} />
-            <div class={`${name}__mask ${name}__mask--bottom`} />
-            <div class={`${name}__indicator`} />
+            <div class={`${pickerClass.value}__mask ${pickerClass.value}__mask--top`} />
+            <div class={`${pickerClass.value}__mask ${pickerClass.value}__mask--bottom`} />
+            <div class={`${pickerClass.value}__indicator`} />
           </div>
         </div>
       );

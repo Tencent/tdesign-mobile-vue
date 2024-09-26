@@ -1,6 +1,5 @@
 import { defineComponent, ref, computed, toRefs } from 'vue';
 import { AddIcon, LoadingIcon, CloseIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
-
 import TImage from '../image';
 import TImageViewer from '../image-viewer';
 import { UploadFile } from './type';
@@ -8,13 +7,12 @@ import UploadProps from './props';
 import config from '../config';
 import useUpload from './hooks/useUpload';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
-import { useConfig } from '../config-provider/useConfig';
+import { usePrefixClass, useConfig } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-upload`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-upload`,
   components: {
     AddIcon,
     LoadingIcon,
@@ -37,7 +35,8 @@ export default defineComponent({
     'validate',
     'click-upload',
   ],
-  setup(props, context) {
+  setup(props) {
+    const uploadClass = usePrefixClass('upload');
     const { globalConfig } = useConfig('upload');
 
     const {
@@ -93,11 +92,11 @@ export default defineComponent({
     const renderStatus = (file: UploadFile) => {
       if (file.status === 'fail' || file.status === 'progress') {
         return (
-          <div class={`${name}__progress-mask`}>
+          <div class={`${uploadClass.value}__progress-mask`}>
             {file.status === 'progress' ? (
               <>
-                <loading-icon class={`${name}__progress-loading`} size="24" />
-                <div class={`${name}__progress-text`}>
+                <loading-icon class={`${uploadClass.value}__progress-loading`} size="24" />
+                <div class={`${uploadClass.value}__progress-text`}>
                   {file.percent ? `${file.percent}%` : globalConfig.value.progress.uploadingText}
                 </div>
               </>
@@ -105,7 +104,7 @@ export default defineComponent({
               <close-circle-icon size="24" />
             )}
             {file.status === 'fail' && (
-              <div class={`${name}__progress-text`}>{globalConfig.value.progress.failText}</div>
+              <div class={`${uploadClass.value}__progress-text`}>{globalConfig.value.progress.failText}</div>
             )}
           </div>
         );
@@ -120,8 +119,8 @@ export default defineComponent({
           return <div onClick={triggerUpload}>{defaultContent}</div>;
         }
         return (
-          <div class={`${name}__item ${name}__item--add`} onClick={triggerUpload}>
-            <div class={`${name}__add-icon`}>{addContent || <add-icon size="28" />}</div>
+          <div class={`${uploadClass.value}__item ${uploadClass.value}__item--add`} onClick={triggerUpload}>
+            <div class={`${uploadClass.value}__add-icon`}>{addContent || <add-icon size="28" />}</div>
           </div>
         );
       }
@@ -129,7 +128,7 @@ export default defineComponent({
 
     return {
       ...toRefs(props),
-      name,
+      uploadClass,
       globalConfig,
       initialIndex,
       showViewer,
@@ -155,14 +154,15 @@ export default defineComponent({
       content,
     };
   },
+
   render() {
     return (
-      <div class={`${name}`}>
+      <div class={`${this.uploadClass}`}>
         {this.displayFiles.map((file, index) => (
-          <div key={index} class={`${name}__item`}>
+          <div key={index} class={`${this.uploadClass}__item`}>
             {file.url && (
               <t-image
-                class={`${name}__image`}
+                class={`${this.uploadClass}__image`}
                 shape="round"
                 {...(this.$props.imageProps as object)}
                 src={file.url}
@@ -171,7 +171,7 @@ export default defineComponent({
             )}
             {this.renderStatus(file)}
             <close-icon
-              class={`${name}__delete-btn`}
+              class={`${this.uploadClass}__delete-btn`}
               onClick={({ e }: any) => this.onInnerRemove({ e, file, index })}
             />
           </div>

@@ -11,6 +11,7 @@ import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
+
 const iconDefault = {
   info: <InfoCircleFilledIcon />,
   success: <CheckCircleFilledIcon />,

@@ -1,4 +1,7 @@
-import { computed, defineComponent } from 'vue';
+import { computed, defineComponent, h } from 'vue';
+import isArray from 'lodash/isArray';
+import isFunction from 'lodash/isFunction';
+import isString from 'lodash/isString';
 import TLoading from '../loading';
 import { useToggle, useDefault } from '../shared';
 import config from '../config';
@@ -57,20 +60,37 @@ export default defineComponent({
 
       innerValue.value = state.value;
     }
+
+    const renderContent = () => {
+      if (props.loading) {
+        return <TLoading inherit-color size="16.25px" />;
+      }
+
+      if (isArray(props.label) && props.label.length === 2) {
+        const label = checked.value ? props.label[0] : props.label[1];
+        if (isString(label)) {
+          return label;
+        }
+        if (isFunction(label)) {
+          return label(h);
+        }
+      }
+
+      if (isFunction(props.label)) {
+        return props.label(h, { value: innerValue.value });
+      }
+      if (context.slots.label) {
+        return context.slots.label({ value: innerValue.value });
+      }
+
+      return iconContent.value;
+    };
+
     return () => {
-      const readerContent = () => {
-        if (props.loading) {
-          return <TLoading inherit-color size="16.25px" />;
-        }
-        if (props.label.length === 2) {
-          return checked.value ? props.label[0] : props.label[1];
-        }
-        return iconContent.value;
-      };
       return (
         <div class={switchClasses.value} onClick={handleToggle}>
           <div class={dotClasses.value}>
-            <div class={labelClasses.value}>{readerContent()}</div>
+            <div class={labelClasses.value}>{renderContent()}</div>
           </div>
         </div>
       );

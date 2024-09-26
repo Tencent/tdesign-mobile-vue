@@ -7,10 +7,9 @@ import { usePrefixClass } from '../hooks/useClass';
 import { isValidSize } from '../_common/js/avatar/utils';
 
 const { prefix } = config;
-const name = `${prefix}-avatar-group`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-avatar-group`,
   props: AvatarGroupProps,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();

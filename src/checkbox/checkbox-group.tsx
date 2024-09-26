@@ -1,4 +1,4 @@
-import { provide, ref, computed, defineComponent, watch, toRefs, VNode, reactive, onMounted } from 'vue';
+import { provide, computed, defineComponent, toRefs } from 'vue';
 import config from '../config';
 import props from './checkbox-group-props';
 import Checkbox from './checkbox';
@@ -6,22 +6,23 @@ import { CheckboxGroupValue, TdCheckboxGroupProps, TdCheckboxProps } from './typ
 import { useDefault } from '../shared';
 import { getOptions, setCheckAllStatus } from './hooks';
 import { useTNodeJSX } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-checkbox-group`;
 
 export interface Child {
   value: string | number;
 }
 
 export default defineComponent({
-  name,
+  name: `${prefix}-checkbox-group`,
   components: {
     Checkbox,
   },
   props,
   emits: ['update:value', 'update:modelValue', 'change'],
   setup(props: any, context) {
+    const checkboxGroupClass = usePrefixClass('checkbox-group');
     const renderTNodeJSX = useTNodeJSX();
     const { isArray } = Array;
     const [innerValue, setInnerValue] = useDefault<CheckboxGroupValue, TdCheckboxGroupProps>(
@@ -128,7 +129,7 @@ export default defineComponent({
         );
       };
       return (
-        <div class={`${prefix}-checkbox-group`}>
+        <div class={`${checkboxGroupClass.value}`}>
           {!(props.options && props.options.length) ? renderTNodeJSX('default') : checkboxNode()}
         </div>
       );

@@ -6,10 +6,9 @@ import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-count-down`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-count-down`,
   props: CountDownProps,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();

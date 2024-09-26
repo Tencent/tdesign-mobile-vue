@@ -22,7 +22,6 @@ import { useContent, useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-swipe-cell`;
 
 export interface SwipeInitData {
   moving: boolean;
@@ -35,7 +34,7 @@ export interface SwipeInitData {
 }
 
 export default defineComponent({
-  name,
+  name: `${prefix}-swipe-cell`,
   props,
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();

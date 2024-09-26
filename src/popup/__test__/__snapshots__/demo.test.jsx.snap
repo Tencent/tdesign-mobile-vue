@@ -92,26 +92,7 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
     <!---->
   </button>
   
-  <teleport-stub
-    data-v-70969ba8=""
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
-    <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
-    >
-      <!---->
-    </div>
-    <div
-      class="t-popup t-popup--top"
-      style="padding: 100px; display: none;"
-    >
-      <!--v-if-->
-      
-      
-    </div>
-  </teleport-stub>
+  <!--v-if-->
 </div>
 `;
 
@@ -296,26 +277,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           <!---->
         </button>
         
-        <teleport-stub
-          data-v-70969ba8=""
-          disabled="false"
-          to="[object HTMLBodyElement]"
-        >
-          <div
-            class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
-          >
-            <!---->
-          </div>
-          <div
-            class="t-popup t-popup--top"
-            style="padding: 100px; display: none;"
-          >
-            <!--v-if-->
-            
-            
-          </div>
-        </teleport-stub>
+        <!--v-if-->
       </div>
       
     </div>

@@ -2,7 +2,6 @@ import { onMounted, computed, ref, provide, watch, onUnmounted, toRefs, defineCo
 import isObject from 'lodash/isObject';
 import isNumber from 'lodash/isNumber';
 import { useSwipe } from '../swipe-cell/useSwipe';
-
 import config from '../config';
 import props from './props';
 import { SwiperChangeSource, SwiperNavigation } from './type';
@@ -12,14 +11,15 @@ import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-swiper`;
-const navName = `${prefix}-swiper-nav`;
+
 export default defineComponent({
-  name,
+  name: `${prefix}-swiper`,
   props,
   emits: ['change', 'update:current', 'update:modelValue', 'transitionenter', 'transitionleave'],
   setup(props, context) {
     const swiperClass = usePrefixClass('swiper');
+    const swiperNavClass = usePrefixClass('swiper-nav');
+
     const readerTNodeJSX = useTNodeJSX();
     const setOffset = (offset: number, direction = 'X'): void => {
       translateContainer.value = `translate${direction}(${offset}px)`;
@@ -253,9 +253,9 @@ export default defineComponent({
           const controlsNav = () => {
             if (!isVertical.value && !!navigation.value?.showControls) {
               return (
-                <span class={`${navName}__btn`}>
-                  <span class={`${navName}__btn--prev`} onClick={() => goPrev('nav')} />
-                  <span class={`${navName}__btn--next`} onClick={() => goNext('nav')} />
+                <span class={`${swiperNavClass.value}__btn`}>
+                  <span class={`${swiperNavClass.value}__btn--prev`} onClick={() => goPrev('nav')} />
+                  <span class={`${swiperNavClass.value}__btn--next`} onClick={() => goNext('nav')} />
                 </span>
               );
             }
@@ -271,9 +271,11 @@ export default defineComponent({
                         <span
                           key={`page${index}`}
                           class={[
-                            `${navName}__${navigation.value?.type}-item`,
-                            index === currentIndex.value ? `${navName}__${navigation.value?.type}-item--active` : '',
-                            `${navName}__${navigation.value?.type}-item--${props.direction}`,
+                            `${swiperNavClass.value}__${navigation.value?.type}-item`,
+                            index === currentIndex.value
+                              ? `${swiperNavClass.value}__${navigation.value?.type}-item--active`
+                              : '',
+                            `${swiperNavClass.value}__${navigation.value?.type}-item--${props.direction}`,
                           ]}
                         />
                       ))}
@@ -290,12 +292,12 @@ export default defineComponent({
               return (
                 <span
                   class={[
-                    `${navName}--${props.direction}`,
-                    `${navName}__${navigation.value?.type || ''}`,
-                    `${navName}--${navigation.value?.paginationPosition || 'bottom'}`,
+                    `${swiperNavClass.value}--${props.direction}`,
+                    `${swiperNavClass.value}__${navigation.value?.type || ''}`,
+                    `${swiperNavClass.value}--${navigation.value?.paginationPosition || 'bottom'}`,
                     `${
                       isBottomPagination.value && navigation.value?.placement
-                        ? `${navName}--${navigation.value?.placement}`
+                        ? `${swiperNavClass.value}--${navigation.value?.placement}`
                         : ''
                     }`,
                   ]}
