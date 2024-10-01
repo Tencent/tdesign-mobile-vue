@@ -158,7 +158,7 @@
     "prismjs": "^1.23.0",
     "qrcode.vue": "^3.2.2",
     "regenerator-runtime": "^0.13.9",
-    "rimraf": "^5.0.7",
+    "rimraf": "^6.0.1",
     "rollup": "^2.47.0",
     "rollup-plugin-analyzer": "^3.3.0",
     "rollup-plugin-copy": "^3.5.0",
