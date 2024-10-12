@@ -395,7 +395,7 @@ export default defineComponent({
     return () => (
       <transition name="fade">
         {visible.value && (
-          <div ref={rootRef} class={`${prefix}-image-viewer`}>
+          <div ref={rootRef} class={`${imageViewerClass.value}`}>
             <div class={`${imageViewerClass.value}__mask`} onClick={(e) => handleClose(e, 'overlay')} />
             <TSwiper
               ref={swiperRootRef}
@@ -419,6 +419,7 @@ export default defineComponent({
                       style={`
                       transform: ${index === state.touchIndex ? imageTransform.value : 'matrix(1, 0, 0, 1, 0, 0)'};
                       ${imageTransitionDuration.value};`}
+                      class={`${imageViewerClass.value}__img`}
                       onLoad={(event: Event) => onImgLoad(event, index)}
                       onTransitionstart={(event: TransitionEvent) => {
                         if (event.target === event.currentTarget) {
