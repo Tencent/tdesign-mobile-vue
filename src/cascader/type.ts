@@ -8,6 +8,11 @@ import { TNode, TreeOptionData, KeysType } from '../common';
 
 export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOptionData> {
   /**
+   * 父子节点选中状态不再关联，可各自选中或取消
+   * @default false
+   */
+  checkStrictly?: boolean;
+  /**
    * 关闭按钮
    * @default true
    */
@@ -15,12 +20,17 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
   /**
    * 用来定义 value / label 在 `options` 中对应的字段别名
    */
-  keys?: KeysType;
+  keys?: CascaderKeysType;
   /**
    * 可选项数据源
    * @default []
    */
   options?: Array<CascaderOption>;
+  /**
+   * 未选中时的提示文案
+   * @default '选择选项'
+   */
+  placeholder?: string | TNode;
   /**
    * 每级展示的次标题
    * @default []
@@ -53,13 +63,9 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   visible?: boolean;
   /**
-   * 未选中时的提示文案
-   */
-  placeholder?: string | TNode;
-  /**
    * 值发生变更时触发
    */
-  onChange?: (value: string | number, selectedOptions: string[]) => void;
+  onChange?: (value: string | number, selectedOptions: CascaderOption[]) => void;
   /**
    * 关闭时触发
    */
@@ -69,5 +75,7 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   onPick?: (context: { level: number; value: string | number; index: number }) => void;
 }
+
+export type CascaderKeysType = KeysType;
 
 export type CascaderTriggerSource = 'overlay' | 'close-btn' | 'finish';

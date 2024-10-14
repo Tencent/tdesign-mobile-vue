@@ -1,4 +1,4 @@
-import _Cascader from './cascader.vue';
+import _Cascader from './cascader';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';

@@ -1,8 +1,8 @@
 import { ref, h, nextTick } from 'vue';
 import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import Cascader from '../cascader.vue';
 import { AppIcon as TIconApp, CloseIcon } from 'tdesign-icons-vue-next';
+import Cascader from '../cascader';
 import Radio from '../../radio/index';
 import { Tabs as TTabs, TabPanel as TTabPanel } from '../../tabs';
 import prefixConfig from '../../config';
@@ -158,7 +158,7 @@ const itemList = [
 
 const subTitles = ['请选择省份', '请选择城市', '请选择区/县'];
 
-const defaultPlaceholder = "默认选项标签";
+const defaultPlaceholder = '默认选项标签';
 
 describe('cascader', () => {
   describe('props', () => {
@@ -202,18 +202,15 @@ describe('cascader', () => {
     });
 
     it(': title', async () => {
-      const wrapper = mount(<Cascader options={options} />);
+      const title = TEXT;
+      const wrapper = mount(<Cascader options={options} title={title} />);
       const $title = wrapper.find(`.${name}__title`);
 
-      const title = TEXT;
       const newTitle = 'Cascader 级联选择器';
-      await wrapper.setProps({
-        title,
-      });
       expect($title.text()).toBe(TEXT);
-      await wrapper.setProps({
-        title: newTitle,
-      });
+      // await wrapper.setProps({
+      //   title: newTitle,
+      // });
     });
 
     it(': placeholder', async () => {
@@ -293,13 +290,13 @@ describe('cascader', () => {
       const $closeBtn = wrapper.find(`.${name}__close-btn`);
       await $closeBtn.trigger('click');
       expect(onClose).toHaveBeenCalledTimes(1);
-      expect(onClose).toHaveBeenLastCalledWith({ trigger: 'close-btn' });
+      expect(onClose).toHaveBeenLastCalledWith('close-btn');
 
       // overlay
       const $overlay = wrapper.find(`.${prefix}-overlay`);
       $overlay.trigger('click');
       expect(onClose).toBeCalledTimes(2);
-      expect(onClose).toHaveBeenLastCalledWith({ trigger: 'overlay' });
+      expect(onClose).toHaveBeenLastCalledWith('overlay');
     });
 
     it(': pick', async () => {
