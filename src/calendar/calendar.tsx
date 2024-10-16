@@ -61,21 +61,17 @@ export default defineComponent({
 
     return () => {
       const title = renderTNodeJSX('title');
-      const confirmBtn = renderTNodeJSX('confirmBtn');
-      let newConfirmBtn = confirmBtn;
-      if (typeof confirmBtn === 'undefined') {
-        newConfirmBtn = null;
-      }
+      const confirmBtn = renderTNodeJSX('confirmBtn') === undefined ? null : renderTNodeJSX('confirmBtn');
       return (
         <div>
           {!props.usePopup ? (
-            <calendarTemplate ref={calendarTemplateRef} title={title} confirmBtn={newConfirmBtn}></calendarTemplate>
+            <calendarTemplate ref={calendarTemplateRef} title={title} confirmBtn={confirmBtn}></calendarTemplate>
           ) : (
             <t-popup visible={props.visible} placement="bottom" onVisibleChange={onPopupVisibleChange}>
               <calendarTemplate
                 ref={calendarTemplateRef}
                 title={title}
-                confirmBtn={newConfirmBtn}
+                confirmBtn={confirmBtn}
                 onVisibleChange={onVisibleChange}
               ></calendarTemplate>
             </t-popup>
