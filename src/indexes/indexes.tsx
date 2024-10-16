@@ -9,6 +9,7 @@ import {
   computed,
   watch,
   ComponentPublicInstance,
+  nextTick,
 } from 'vue';
 import throttle from 'lodash/throttle';
 import { preventDefault } from '../shared/dom';
@@ -191,16 +192,22 @@ export default defineComponent({
       },
     );
 
-    onMounted(() => {
-      parentRect.value = indexesRoot.value?.getBoundingClientRect() || { top: 0 };
-      getAnchorsRect().then(() => {
-        groupTop.forEach((item, index) => {
-          const next = groupTop[index + 1];
-          item.totalHeight = (next?.top || Infinity) - item.top;
+    const init = () => {
+      nextTick(() => {
+        parentRect.value = indexesRoot.value?.getBoundingClientRect() || { top: 0 };
+        getAnchorsRect().then(() => {
+          groupTop.forEach((item, index) => {
+            const next = groupTop[index + 1];
+            item.totalHeight = (next?.top || Infinity) - item.top;
+          });
+          setAnchorOnScroll(0);
         });
-        setAnchorOnScroll(0);
       });
-    });
+    };
+
+    onMounted(init);
+
+    watch(() => props.indexList, init);
 
     onBeforeUnmount(() => {
       timeOut && clearTimeout(timeOut);

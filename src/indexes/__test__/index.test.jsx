@@ -157,8 +157,9 @@ describe('Indexes', () => {
       });
       await wrapper.find(`.${indexesClass}__sidebar-item`).trigger('click');
       expect(selectFn).toBeCalledWith(list[0].index);
+      expect(changeFn).toBeCalledWith(list[0].index);
 
-      const items = wrapper.findAll(`.${indexesClass}__sidebar-item`);
+      const items = await wrapper.findAll(`.${indexesClass}__sidebar-item`);
       await items[1].trigger('click');
       expect(selectFn).toBeCalledWith(list[1].index);
       expect(changeFn).toBeCalledWith(list[1].index);
