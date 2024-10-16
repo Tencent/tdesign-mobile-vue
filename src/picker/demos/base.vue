@@ -9,13 +9,16 @@
       @confirm="onConfirm"
       @cancel="cityState.show = false"
       @pick="onPick"
-    />
+    >
+      <template #option="item">{{ item.label }}</template></t-picker
+    >
   </t-popup>
 
   <t-popup v-model="seasonState.show" placement="bottom">
     <t-picker
       v-model="seasonState.season"
       :columns="seasonColumns"
+      :option="option"
       @confirm="onConfirm"
       @cancel="onCancel"
       @pick="onPick"
@@ -26,6 +29,11 @@
 <script lang="ts" setup>
 import { reactive } from 'vue';
 import { PickerValue } from 'tdesign-mobile-vue';
+import type { PickerColumnItem } from 'tdesign-mobile-vue';
+
+const option = (item: PickerColumnItem, index: number) => {
+  return item.label;
+};
 
 const cityOptions = () => {
   return [

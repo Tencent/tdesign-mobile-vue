@@ -23,7 +23,7 @@ export default defineComponent({
   components: { PickerItem },
   props: PickerProps,
   emits: ['change', 'cancel', 'pick', 'update:modelValue', 'update:value'],
-  setup(props) {
+  setup(props, { slots }) {
     const pickerClass = usePrefixClass('picker');
     const { globalConfig } = useConfig('picker');
     const renderTNodeJSX = useTNodeJSX();
@@ -116,6 +116,7 @@ export default defineComponent({
             {realColumns.value.map((item, index) => (
               <div key={index} class={`${pickerClass.value}-item__group`}>
                 <picker-item
+                  v-slots={{ option: slots.option || props.option }}
                   ref={(item: any) => setPickerItemRef(item, index)}
                   options={item}
                   value={pickerValue.value?.[index]}
