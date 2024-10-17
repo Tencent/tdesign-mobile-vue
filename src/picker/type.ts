@@ -27,6 +27,10 @@ export interface TdPickerProps {
    */
   header?: TNode;
   /**
+   * 自定义选项内容。参数为 `option: PickerColumnItem, index: number`
+   */
+  option?: TNode;
+  /**
    * 自定义label
    */
   renderLabel?: (item: PickerColumnItem) => string;

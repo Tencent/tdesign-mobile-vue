@@ -28,6 +28,10 @@ export default {
   header: {
     type: Function as PropType<TdPickerProps['header']>,
   },
+  /** 自定义选项内容。参数为 `option: PickerColumnItem, index: number` */
+  option: {
+    type: Function as PropType<TdPickerProps['option']>,
+  },
   /** 自定义label */
   renderLabel: {
     type: Function as PropType<TdPickerProps['renderLabel']>,
