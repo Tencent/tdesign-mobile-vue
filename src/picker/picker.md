@@ -11,6 +11,7 @@ cancelBtn | String / Boolean | true | 取消按钮文字。TS 类型：`boolean 
 columns | Array / Function | [] | 必需。配置每一列的选项。TS 类型：`PickerColumn \| Array<PickerColumn> \| ((item: Array<PickerValue>)  => Array<PickerColumn>)` `type PickerColumn = PickerColumnItem[]` `interface PickerColumnItem { label: string,value: string}`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/picker/type.ts) | Y
 confirmBtn | String / Boolean | true | 确定按钮文字。TS 类型：`boolean \| string` | N
 header | Slot / Function | - | 自定义头部内容。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+option | Slot / Function | - | 自定义选项内容。参数为 `option: PickerColumnItem, index: number`。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 renderLabel | Function | - | 自定义label。TS 类型：`(item: PickerColumnItem) => string` | N
 title | String | '' | 标题 | N
 value | Array | - | 选中值。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`Array<PickerValue>` `type PickerValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/picker/type.ts) | N

@@ -5,6 +5,20 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.5.0 `2024-10-18` 
+### 🚀 Features
+- `Cascader`: `sfc` 改 `tsx` @anlyyao ([#1620](https://github.com/Tencent/tdesign-mobile-vue/pull/1620))
+- `Picker`: 新增 `option` 属性，支持自定义选项内容 @anlyyao ([#1623](https://github.com/Tencent/tdesign-mobile-vue/pull/1623))
+### 🐞 Bug Fixes
+- `ImageViewer`: 补充图片默认样式 @anlyyao ([#1617](https://github.com/Tencent/tdesign-mobile-vue/pull/1617))
+- `Textarea`: 修复指示器不更新问题 @anlyyao ([#1615](https://github.com/Tencent/tdesign-mobile-vue/pull/1615))
+- `Cascader`: 修复 `value` 及 `options` 动态变更时页面未响应，`close` 事件返回值类型错误等问题 @anlyyao ([#1620](https://github.com/Tencent/tdesign-mobile-vue/pull/1620))
+- `Calendar`: 修复 `confirmBtn` 值为 `null` 时仍显示确认按钮的问题 @GaoJiuJiu ([#1621](https://github.com/Tencent/tdesign-mobile-vue/pull/1621))
+- `Indexes`: 修复索引及列表内容为异步数据时，索引链接失效的问题 @anlyyao ([#1622](https://github.com/Tencent/tdesign-mobile-vue/pull/1622))
+- `fix`:  修复使用 `import "tdesign-mobile-vue/esm/style/index.js"; ` 引入组件库全局样式资源时，资源路径不存在的问题 @anlyyao ([#1624](https://github.com/Tencent/tdesign-mobile-vue/pull/1624))
+### 🚧 Others
+- `other`: 单独导出涉及 Plugin 相关组件的样式，支持修改类名前缀的部分场景使用 @anlyyao ([#1616](https://github.com/Tencent/tdesign-mobile-vue/pull/1616))
+
 ## 🌈 1.4.3 `2024-09-26` 
 ### 🚀 Features
 - `Radio`: 新增 `readonly`属性 ，配置只读  @liweijie0812 ([#1593](https://github.com/Tencent/tdesign-mobile-vue/pull/1593))

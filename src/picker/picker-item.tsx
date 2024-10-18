@@ -97,7 +97,11 @@ export default defineComponent({
         <ul ref={root} class={className.value}>
           {(props.options || []).map((option, index) => (
             <li key={index} class={itemClassName.value}>
-              {props.renderLabel ? props.renderLabel(option) : option?.label}
+              {context.slots.option ? (
+                context.slots.option(option, index)
+              ) : (
+                <>{props.renderLabel ? props.renderLabel(option) : option?.label}</>
+              )}
             </li>
           ))}
         </ul>

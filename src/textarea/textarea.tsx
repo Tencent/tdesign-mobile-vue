@@ -36,7 +36,6 @@ export default defineComponent({
 
     const textareaRef = ref<HTMLTextAreaElement>();
     const textareaStyle = ref();
-    const textareaLength = ref(0);
     const { value, modelValue } = toRefs(props);
     const [innerValue, setInnerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
@@ -80,19 +79,25 @@ export default defineComponent({
         props.maxcharacter > 0 &&
         !Number.isNaN(props.maxcharacter)
       ) {
-        const { length = 0, characters = '' } = getCharacterLength(textarea.value, props.maxcharacter) as {
+        const { characters = '' } = getCharacterLength(textarea.value, props.maxcharacter) as {
           length: number;
           characters: string;
         };
         setInnerValue(characters);
-        textareaLength.value = length;
       } else {
         setInnerValue(textarea.value);
-        textareaLength.value = textarea.value.length;
       }
       nextTick(() => setInputValue(innerValue.value));
       adjustTextareaHeight();
     };
+
+    const textareaLength = computed(() => {
+      const _value = innerValue.value ? String(innerValue.value) : '';
+      if (props.maxcharacter) {
+        return getCharacterLength(_value);
+      }
+      return _value.length;
+    });
 
     const handleCompositionend = (e: InputEvent | CompositionEvent) => {
       textareaValueChangeHandle();

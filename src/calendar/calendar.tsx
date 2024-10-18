@@ -61,7 +61,7 @@ export default defineComponent({
 
     return () => {
       const title = renderTNodeJSX('title');
-      const confirmBtn = renderTNodeJSX('confirmBtn');
+      const confirmBtn = renderTNodeJSX('confirmBtn') === undefined ? null : renderTNodeJSX('confirmBtn');
       return (
         <div>
           {!props.usePopup ? (
