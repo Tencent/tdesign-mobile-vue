@@ -1,4 +1,4 @@
-import { ref, computed, nextTick, watch, onMounted, inject, defineComponent, getCurrentInstance } from 'vue';
+import { computed, onMounted, inject, defineComponent, getCurrentInstance } from 'vue';
 import { ChevronDownIcon, ChevronUpIcon } from 'tdesign-icons-vue-next';
 import TCell from '../cell';
 import props from './collapse-panel-props';
@@ -9,26 +9,27 @@ import { usePrefixClass } from '../hooks/useClass';
 import { CollapseProvide } from './collapse';
 
 const { prefix } = config;
+const name = `${prefix}-collapse-panel`;
 
 export default defineComponent({
-  name: `${prefix}-collapse-panel`,
+  name,
   components: { TCell },
   props,
   setup(props, { slots }) {
     const renderTNodeJSX = useTNodeJSX();
     const renderContent = useContent();
 
-    const collapsePanelClass = usePrefixClass('collapse-panel');
+    const componentName = usePrefixClass('collapse-panel');
 
     const parent = inject<CollapseProvide>('collapse');
     const renderParentTNode: Function = inject('renderParentTNode');
 
     const disabled = computed(() => parent?.disabled.value || props.disabled);
     const rootClass = computed(() => ({
-      [`${collapsePanelClass.value}`]: true,
-      [`${collapsePanelClass.value}--${props.placement}`]: true,
-      [`${collapsePanelClass.value}--active`]: isActive.value,
-      [`${collapsePanelClass.value}--disabled`]: disabled.value,
+      [`${componentName.value}`]: true,
+      [`${componentName.value}--${props.placement}`]: true,
+      [`${componentName.value}--active`]: isActive.value,
+      [`${componentName.value}--disabled`]: disabled.value,
     }));
     const isActive = computed(() => findIndex(props.value, parent?.activeValue.value) > -1);
     const updatePanelValue = (args?: any) => {
@@ -45,45 +46,6 @@ export default defineComponent({
       updatePanelValue({ e });
     };
 
-    // 设置折叠/展开高度过渡
-    const bodyRef = ref();
-    const wrapRef = ref();
-    const headRef = ref();
-    const wrapperHeight = ref('');
-    let isToggle = true;
-    const updatePanelState = () => {
-      nextTick(() => {
-        if (!wrapRef.value) {
-          return;
-        }
-        const { height: headHeight } = headRef.value.getBoundingClientRect();
-        if (!isActive.value) {
-          isToggle = false;
-          wrapperHeight.value = `${headHeight}px`;
-          return;
-        }
-        if (isToggle) {
-          isToggle = false;
-          wrapperHeight.value = 'auto';
-          return;
-        }
-        setContentWrapperHeight();
-      });
-    };
-
-    watch(
-      isActive,
-      () => {
-        if (wrapperHeight.value === 'auto') {
-          setContentWrapperHeight();
-        }
-        nextTick(() => updatePanelState());
-      },
-      {
-        immediate: true,
-      },
-    );
-
     onMounted(() => {
       if (parent?.defaultExpandAll) {
         updatePanelValue();
@@ -99,9 +61,7 @@ export default defineComponent({
     const panelExpandIcon = computed(() => slots.expandIcon || props.expandIcon);
     const renderRightIcon = () => {
       const tNodeRender = panelExpandIcon.value === undefined ? renderParentTNode : renderTNodeJSX;
-      return (
-        <div class={`${collapsePanelClass.value}__header-icon`}>{tNodeRender('expandIcon', renderDefaultIcon())}</div>
-      );
+      return <div class={`${componentName.value}__header-icon`}>{tNodeRender('expandIcon', renderDefaultIcon())}</div>;
     };
 
     const renderPanelContent = () => {
@@ -110,24 +70,7 @@ export default defineComponent({
         return null;
       }
 
-      return (
-        <div ref={bodyRef} class={`${collapsePanelClass.value}__content`}>
-          {panelContent}
-        </div>
-      );
-    };
-
-    const setContentWrapperHeight = () => {
-      const { height: headHeight } = headRef.value.getBoundingClientRect();
-      const { height: bodyHeight } = bodyRef.value.getBoundingClientRect();
-      const height = headHeight + bodyHeight;
-      wrapperHeight.value = `${height}px`;
-    };
-
-    const onTransitionEnd = () => {
-      if (isActive.value) {
-        wrapperHeight.value = 'auto';
-      }
+      return <div class={`${componentName.value}__content`}>{panelContent}</div>;
     };
 
     return () => {
@@ -136,18 +79,13 @@ export default defineComponent({
       const leftIcon = renderTNodeJSX('headerLeftIcon');
 
       return (
-        <div
-          ref={wrapRef}
-          class={rootClass.value}
-          style={{ height: wrapperHeight.value }}
-          onTransitionend={onTransitionEnd}
-        >
-          <div ref={headRef} class={`${collapsePanelClass.value}__title`} onClick={handleClick}>
+        <div class={rootClass.value}>
+          <div class={`${componentName.value}__title`} onClick={handleClick}>
             <TCell
               class={[
-                `${collapsePanelClass.value}__header`,
-                `${collapsePanelClass.value}__header--${props.placement}`,
-                { [`${collapsePanelClass.value}__header--expanded`]: isActive.value },
+                `${componentName.value}__header`,
+                `${componentName.value}__header--${props.placement}`,
+                { [`${componentName.value}__header--expanded`]: isActive.value },
               ]}
               v-slots={{
                 leftIcon: () => leftIcon,
@@ -157,7 +95,9 @@ export default defineComponent({
               }}
             ></TCell>
           </div>
-          {renderPanelContent()}
+          <div class={`${componentName.value}__body`} style={{ gridTemplateRows: isActive.value ? '1fr' : '0fr' }}>
+            <div class={`${componentName.value}__inner`}>{renderPanelContent()}</div>
+          </div>
         </div>
       );
     };
