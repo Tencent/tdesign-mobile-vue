@@ -45,12 +45,12 @@ export function useLockScroll(rootRef: Ref<HTMLElement | undefined>, shouldLock:
   };
 
   const unlock = () => {
-    const sum = totalLockCount.values().reduce((acc, val) => acc + val, 0);
+    const sum = Array.from(totalLockCount.values()).reduce((acc, val) => acc + val, 0);
     if (sum) {
       document.removeEventListener('touchstart', touch.start);
       document.removeEventListener('touchmove', onTouchMove);
 
-      totalLockCount.set(BODY_LOCK_CLASS, Math.max(totalLockCount.get(BODY_LOCK_CLASS) - 1, 0));
+      totalLockCount.set(BODY_LOCK_CLASS, Math.max((totalLockCount.get(BODY_LOCK_CLASS) ?? 0) - 1, 0));
 
       if (!totalLockCount.get(BODY_LOCK_CLASS)) {
         document.body.classList.remove(BODY_LOCK_CLASS);
