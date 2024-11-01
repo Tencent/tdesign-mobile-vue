@@ -9,27 +9,26 @@ import { usePrefixClass } from '../hooks/useClass';
 import { CollapseProvide } from './collapse';
 
 const { prefix } = config;
-const name = `${prefix}-collapse-panel`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-collapse-panel`,
   components: { TCell },
   props,
   setup(props, { slots }) {
     const renderTNodeJSX = useTNodeJSX();
     const renderContent = useContent();
 
-    const componentName = usePrefixClass('collapse-panel');
+    const collapsePanelClass = usePrefixClass('collapse-panel');
 
     const parent = inject<CollapseProvide>('collapse');
     const renderParentTNode: Function = inject('renderParentTNode');
 
     const disabled = computed(() => parent?.disabled.value || props.disabled);
     const rootClass = computed(() => ({
-      [`${componentName.value}`]: true,
-      [`${componentName.value}--${props.placement}`]: true,
-      [`${componentName.value}--active`]: isActive.value,
-      [`${componentName.value}--disabled`]: disabled.value,
+      [`${collapsePanelClass.value}`]: true,
+      [`${collapsePanelClass.value}--${props.placement}`]: true,
+      [`${collapsePanelClass.value}--active`]: isActive.value,
+      [`${collapsePanelClass.value}--disabled`]: disabled.value,
     }));
     const isActive = computed(() => findIndex(props.value, parent?.activeValue.value) > -1);
     const updatePanelValue = (args?: any) => {
@@ -61,7 +60,9 @@ export default defineComponent({
     const panelExpandIcon = computed(() => slots.expandIcon || props.expandIcon);
     const renderRightIcon = () => {
       const tNodeRender = panelExpandIcon.value === undefined ? renderParentTNode : renderTNodeJSX;
-      return <div class={`${componentName.value}__header-icon`}>{tNodeRender('expandIcon', renderDefaultIcon())}</div>;
+      return (
+        <div class={`${collapsePanelClass.value}__header-icon`}>{tNodeRender('expandIcon', renderDefaultIcon())}</div>
+      );
     };
 
     const renderPanelContent = () => {
@@ -70,7 +71,7 @@ export default defineComponent({
         return null;
       }
 
-      return <div class={`${componentName.value}__content`}>{panelContent}</div>;
+      return <div class={`${collapsePanelClass.value}__content`}>{panelContent}</div>;
     };
 
     return () => {
@@ -80,12 +81,12 @@ export default defineComponent({
 
       return (
         <div class={rootClass.value}>
-          <div class={`${componentName.value}__title`} onClick={handleClick}>
+          <div class={`${collapsePanelClass.value}__title`} onClick={handleClick}>
             <TCell
               class={[
-                `${componentName.value}__header`,
-                `${componentName.value}__header--${props.placement}`,
-                { [`${componentName.value}__header--expanded`]: isActive.value },
+                `${collapsePanelClass.value}__header`,
+                `${collapsePanelClass.value}__header--${props.placement}`,
+                { [`${collapsePanelClass.value}__header--expanded`]: isActive.value },
               ]}
               v-slots={{
                 leftIcon: () => leftIcon,
@@ -95,8 +96,8 @@ export default defineComponent({
               }}
             ></TCell>
           </div>
-          <div class={`${componentName.value}__body`} style={{ gridTemplateRows: isActive.value ? '1fr' : '0fr' }}>
-            <div class={`${componentName.value}__inner`}>{renderPanelContent()}</div>
+          <div class={`${collapsePanelClass.value}__body`} style={{ gridTemplateRows: isActive.value ? '1fr' : '0fr' }}>
+            <div class={`${collapsePanelClass.value}__inner`}>{renderPanelContent()}</div>
           </div>
         </div>
       );
