@@ -128,7 +128,6 @@
     "@vue/babel-plugin-jsx": "1.1.1",
     "@vue/eslint-config-typescript": "^9.1.0",
     "@vue/runtime-core": "^3.2.41",
-    "@vue/server-renderer": "3.3.8",
     "@vue/shared": "3.3.8",
     "@vue/test-utils": "2.4.1",
     "autoprefixer": "^10.2.4",
