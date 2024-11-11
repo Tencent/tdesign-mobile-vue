@@ -58,11 +58,11 @@ export interface TdImageViewerProps {
   /**
    * 关闭时触发
    */
-  onClose?: (context: { trigger: 'overlay' | 'close-btn'; visible: Boolean; index: Number }) => void;
+  onClose?: (context: { trigger: 'overlay' | 'close-btn'; visible: boolean; index: number }) => void;
   /**
    * 点击删除操作按钮时触发
    */
-  onDelete?: (index: Number) => void;
+  onDelete?: (index: number) => void;
   /**
    * 预览图片切换时触发，`context.prev` 切换到上一张图片，`context.next` 切换到下一张图片
    */
