@@ -9,8 +9,7 @@ import { usePrefixClass } from '../hooks/useClass';
 
 // inner components
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
-import { TdImageViewerProps } from './type';
-import { ImageInfo } from './image-viewer-interface';
+import { TdImageViewerProps, ImageInfo } from './type';
 
 const { prefix } = config;
 
@@ -127,8 +126,10 @@ export default defineComponent({
     };
 
     const onSwiperChange = (index: number, context: any) => {
+      let trigger = 'current';
       if (currentIndex.value !== index) {
-        setIndex(index, { context });
+        trigger = currentIndex.value > index ? 'next' : 'prev';
+        setIndex(index, { trigger });
         setScale(1);
         setImagePreload(index);
       }

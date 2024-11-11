@@ -21,7 +21,7 @@ export interface TdImageViewerProps {
    * 图片数组
    * @default []
    */
-  images?: Array<string | { url: string; align: 'start' | 'center' | 'end' }>;
+  images?: Array<string | ImageInfo>;
   /**
    * 当前预览图片所在的下标
    */
@@ -67,4 +67,9 @@ export interface TdImageViewerProps {
    * 预览图片切换时触发，`context.prev` 切换到上一张图片，`context.next` 切换到下一张图片
    */
   onIndexChange?: (index: number, context: { trigger: 'prev' | 'next' }) => void;
+}
+
+export interface ImageInfo {
+  url: string;
+  align: 'start' | 'center' | 'end';
 }
