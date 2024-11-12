@@ -8,7 +8,7 @@ import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 // inner components
-import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
+import { SwiperChangeSource, Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
 import { TdImageViewerProps, ImageInfo } from './type';
 
 const { prefix } = config;
@@ -125,10 +125,9 @@ export default defineComponent({
       imageInfoList.value[nextIndex].preload = true;
     };
 
-    const onSwiperChange = (index: number, context: any) => {
-      let trigger = 'current';
+    const onSwiperChange = (index: number, context: { source: SwiperChangeSource }) => {
       if (currentIndex.value !== index) {
-        trigger = currentIndex.value > index ? 'next' : 'prev';
+        const trigger = currentIndex.value < index ? 'next' : 'prev';
         setIndex(index, { trigger });
         setScale(1);
         setImagePreload(index);
