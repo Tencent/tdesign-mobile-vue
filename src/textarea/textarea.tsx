@@ -109,7 +109,7 @@ export default defineComponent({
       props.onFocus?.(innerValue.value, { e });
     };
     const handleBlur = (e: FocusEvent) => {
-      formItem.handleBlur();
+      formItem?.handleBlur();
       props.onBlur?.(innerValue.value, { e });
     };
 

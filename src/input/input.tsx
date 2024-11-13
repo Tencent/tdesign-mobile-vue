@@ -141,13 +141,13 @@ export default defineComponent({
         nextTick(() => {
           setInputValue(innerValue.value);
           props.onBlur?.(innerValue.value, { e });
-          formItem.handleBlur();
+          formItem?.handleBlur();
         });
         return;
       }
 
       props.onBlur?.(innerValue.value, { e });
-      formItem.handleBlur();
+      formItem?.handleBlur();
     };
 
     const handleCompositionend = (e: CompositionEvent) => {
