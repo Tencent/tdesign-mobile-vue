@@ -1,9 +1,10 @@
-import { computed, ref, onMounted, defineComponent, toRefs, nextTick, watch } from 'vue';
+import { computed, ref, onMounted, defineComponent, toRefs, nextTick, watch, inject } from 'vue';
 import { getCharacterLength, useVModel } from '../shared';
 import config from '../config';
 import props from './props';
 import { TextareaValue } from './type';
 import calcTextareaHeight from '../_common/js/utils/calcTextareaHeight';
+import { FormItemInjectionKey } from '../form/const';
 import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
@@ -16,6 +17,7 @@ export default defineComponent({
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();
     const isDisabled = useFormDisabled();
+    const formItem = inject(FormItemInjectionKey, undefined);
 
     const textareaClass = usePrefixClass('textarea');
 
@@ -107,6 +109,7 @@ export default defineComponent({
       props.onFocus?.(innerValue.value, { e });
     };
     const handleBlur = (e: FocusEvent) => {
+      formItem.handleBlur();
       props.onBlur?.(innerValue.value, { e });
     };
 
