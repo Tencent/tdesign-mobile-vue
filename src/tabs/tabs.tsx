@@ -119,6 +119,19 @@ export default defineComponent({
 
         lineStyle.value = style;
       }
+      if (navScroll.value) {
+        const tab = navScroll.value.querySelector<HTMLElement>(`.${activeClass}`);
+        if (!tab) return;
+        const tabLeft = tab?.offsetLeft;
+        const tabWidth = tab?.offsetWidth;
+        const navScrollScrollLeft = navScroll.value.scrollLeft;
+        const navScrollWidth = navScroll.value.offsetWidth;
+        if (tabLeft + tabWidth - navScrollScrollLeft > navScrollWidth) {
+          navScroll.value.scrollTo({ left: tabLeft + tabWidth - navScrollWidth, behavior: 'smooth' });
+        } else if (tabLeft < navScrollScrollLeft) {
+          navScroll.value.scrollTo({ left: tabLeft, behavior: 'smooth' });
+        }
+      }
     };
 
     onMounted(() => {
