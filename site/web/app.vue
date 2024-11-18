@@ -18,7 +18,7 @@ import { defineComponent } from 'vue';
 import packageJson from '../../package.json';
 
 const registryUrl =
-  'https://service-edbzjd6y-1257786608.hk.apigw.tencentcs.com/release/npm/versions//tdesign-mobile-vue';
+  'https://service-edbzjd6y-1257786608.hk.apigw.tencentcs.com/release/npm/versions/tdesign-mobile-vue';
 const currentVersion = packageJson.version.replace(/\./g, '_');
 
 const { docs, enDocs } = JSON.parse(JSON.stringify(siteConfig).replace(/component:.+/g, ''));
