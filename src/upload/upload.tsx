@@ -64,7 +64,7 @@ export default defineComponent({
 
     const handlePreview = (e: MouseEvent, file: UploadFile, index: number) => {
       initialIndex.value = index;
-      showViewer.value = true;
+      showViewer.value = props.preview;
       props.onPreview?.({
         e,
         file,
