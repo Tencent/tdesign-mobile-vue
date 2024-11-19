@@ -10,7 +10,7 @@ config.global.components = {
 };
 
 config.global.stubs = {
-  teleport: true,
+  teleport: false,
 };
 
 config.global.createSSRApp = (comp) => {

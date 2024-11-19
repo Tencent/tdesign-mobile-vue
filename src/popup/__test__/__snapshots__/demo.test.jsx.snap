@@ -92,7 +92,7 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
     <!---->
   </button>
   
-  <!--v-if-->
+  <!---->
 </div>
 `;
 
@@ -116,33 +116,30 @@ exports[`Popup > Popup customCloseVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
+  <!--teleport start-->
+  <div
+    class="t-overlay"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
   >
-    <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+    <!---->
+  </div>
+  <div
+    class="t-popup t-popup--center"
+    style="width: 240px; height: 240px; display: none;"
+  >
+    <!---->
+    
+    <svg
+      class="t-icon t-icon-close-circle close-btn"
+      color="#fff"
     >
-      <!---->
-    </div>
-    <div
-      class="t-popup t-popup--center"
-      style="width: 240px; height: 240px; display: none;"
-    >
-      <!--v-if-->
-      
-      <svg
-        class="t-icon t-icon-close-circle close-btn"
-        color="#fff"
-      >
-        <use
-          href="#t-icon-close-circle"
-        />
-      </svg>
-      
-    </div>
-  </teleport-stub>
+      <use
+        href="#t-icon-close-circle"
+      />
+    </svg>
+    
+  </div>
+  <!--teleport end-->
 </div>
 `;
 
@@ -277,7 +274,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           <!---->
         </button>
         
-        <!--v-if-->
+        <!---->
       </div>
       
     </div>
@@ -326,51 +323,47 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           </span>
           <!---->
         </button>
-        <teleport-stub
-          data-v-099d70a8=""
-          disabled="false"
-          to="[object HTMLBodyElement]"
+        <!--teleport start-->
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
+          <!---->
+        </div>
+        <div
+          class="t-popup t-popup--bottom"
+          style="height: 258px; display: none;"
+        >
+          <!---->
+          
           <div
-            class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
+            class="header"
+            data-v-099d70a8=""
           >
-            <!---->
-          </div>
-          <div
-            class="t-popup t-popup--bottom"
-            style="height: 258px; display: none;"
-          >
-            <!--v-if-->
-            
             <div
-              class="header"
+              aria-role="button"
+              class="btn btn--cancel"
               data-v-099d70a8=""
             >
-              <div
-                aria-role="button"
-                class="btn btn--cancel"
-                data-v-099d70a8=""
-              >
-                取消
-              </div>
-              <div
-                class="title"
-                data-v-099d70a8=""
-              >
-                标题文字
-              </div>
-              <div
-                aria-role="button"
-                class="btn btn--confirm"
-                data-v-099d70a8=""
-              >
-                确定
-              </div>
+              取消
             </div>
-            
+            <div
+              class="title"
+              data-v-099d70a8=""
+            >
+              标题文字
+            </div>
+            <div
+              aria-role="button"
+              class="btn btn--confirm"
+              data-v-099d70a8=""
+            >
+              确定
+            </div>
           </div>
-        </teleport-stub>
+          
+        </div>
+        <!--teleport end-->
       </div>
       <div
         class="popup-demo"
@@ -392,33 +385,30 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           </span>
           <!---->
         </button>
-        <teleport-stub
-          disabled="false"
-          to="[object HTMLBodyElement]"
+        <!--teleport start-->
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          <div
-            class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
+          <!---->
+        </div>
+        <div
+          class="t-popup t-popup--center"
+          style="width: 240px; height: 240px; display: none;"
+        >
+          <!---->
+          
+          <svg
+            class="t-icon t-icon-close-circle close-btn"
+            color="#fff"
           >
-            <!---->
-          </div>
-          <div
-            class="t-popup t-popup--center"
-            style="width: 240px; height: 240px; display: none;"
-          >
-            <!--v-if-->
-            
-            <svg
-              class="t-icon t-icon-close-circle close-btn"
-              color="#fff"
-            >
-              <use
-                href="#t-icon-close-circle"
-              />
-            </svg>
-            
-          </div>
-        </teleport-stub>
+            <use
+              href="#t-icon-close-circle"
+            />
+          </svg>
+          
+        </div>
+        <!--teleport end-->
       </div>
       
     </div>
@@ -448,50 +438,46 @@ exports[`Popup > Popup withTitleVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <teleport-stub
-    data-v-099d70a8=""
-    disabled="false"
-    to="[object HTMLBodyElement]"
+  <!--teleport start-->
+  <div
+    class="t-overlay"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
   >
+    <!---->
+  </div>
+  <div
+    class="t-popup t-popup--bottom"
+    style="height: 258px; display: none;"
+  >
+    <!---->
+    
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="header"
+      data-v-099d70a8=""
     >
-      <!---->
-    </div>
-    <div
-      class="t-popup t-popup--bottom"
-      style="height: 258px; display: none;"
-    >
-      <!--v-if-->
-      
       <div
-        class="header"
+        aria-role="button"
+        class="btn btn--cancel"
         data-v-099d70a8=""
       >
-        <div
-          aria-role="button"
-          class="btn btn--cancel"
-          data-v-099d70a8=""
-        >
-          取消
-        </div>
-        <div
-          class="title"
-          data-v-099d70a8=""
-        >
-          标题文字
-        </div>
-        <div
-          aria-role="button"
-          class="btn btn--confirm"
-          data-v-099d70a8=""
-        >
-          确定
-        </div>
+        取消
       </div>
-      
+      <div
+        class="title"
+        data-v-099d70a8=""
+      >
+        标题文字
+      </div>
+      <div
+        aria-role="button"
+        class="btn btn--confirm"
+        data-v-099d70a8=""
+      >
+        确定
+      </div>
     </div>
-  </teleport-stub>
+    
+  </div>
+  <!--teleport end-->
 </div>
 `;

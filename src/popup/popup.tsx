@@ -1,35 +1,15 @@
-<template>
-  <teleport v-if="!destroyOnClose || wrapperVisible" :to="to" :disabled="!to">
-    <t-overlay v-bind="overlayProps" :visible="innerVisible && showOverlay" @click="handleOverlayClick" />
-    <transition :name="contentTransitionName" @after-enter="afterEnter" @after-leave="afterLeave">
-      <div
-        v-show="innerVisible"
-        ref="popupRef"
-        :class="[popupClass, $attrs.class, contentClasses]"
-        :style="rootStyles"
-        v-bind="$attrs"
-      >
-        <div v-if="closeBtnNode" :class="`${popupClass}__close`" @click="handleCloseClick">
-          <t-node :content="closeBtnNode" />
-        </div>
-        <slot />
-      </div>
-    </transition>
-  </teleport>
-</template>
-
-<script lang="ts">
-import { computed, watch, defineComponent, h, getCurrentInstance, ref, nextTick, onUnmounted } from 'vue';
+import { computed, watch, defineComponent, h, ref, nextTick, Teleport, Transition } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
 import popupProps from './props';
 import TOverlay from '../overlay';
 import config from '../config';
 import { TdPopupProps } from './type';
-import { useDefault, TNode, renderTNode, isBrowser } from '../shared';
-import { getAttach } from '../shared/dom';
+import { useDefault, TNode, isBrowser } from '../shared';
 import { usePrefixClass } from '../hooks/useClass';
 import { useLockScroll } from '../hooks/useLockScroll';
+import { useContent, useTNodeJSX } from '../hooks/tnode';
+import useTeleport from '../hooks/useTeleport';
 
 const { prefix } = config;
 
@@ -44,13 +24,17 @@ export default defineComponent({
 
     const popupRef = ref<HTMLElement>();
 
-    const currentInstance = getCurrentInstance();
+    const renderTNodeContent = useContent();
+
+    const renderTNodeJSX = useTNodeJSX();
+
     const [currentVisible, setVisible] = useDefault<TdPopupProps['visible'], TdPopupProps>(
       props,
       context.emit,
       'visible',
       'visible-change',
     );
+
     const wrapperVisible = ref(currentVisible.value);
     const innerVisible = ref(currentVisible.value);
 
@@ -91,11 +75,7 @@ export default defineComponent({
       return `slide-${placement}`;
     });
 
-    const closeBtnNode = computed(() =>
-      renderTNode(currentInstance, 'closeBtn', {
-        defaultNode: h(CloseIcon, { size: '24px' }),
-      }),
-    );
+    const closeBtnNode = computed(() => renderTNodeJSX('closeBtn', h(CloseIcon, { size: '24px' })));
 
     const handleCloseClick = (e: MouseEvent) => {
       props.onClose?.({ e });
@@ -115,11 +95,10 @@ export default defineComponent({
       wrapperVisible.value = false;
       props.onClosed?.();
     };
+
     const afterEnter = () => props.onOpened?.();
-    const to = computed(() => {
-      if (!isBrowser || !props.attach) return undefined;
-      return getAttach(props.attach ?? 'body');
-    });
+
+    const teleportElement = useTeleport(() => props.attach);
 
     watch(
       () => currentVisible.value,
@@ -133,21 +112,45 @@ export default defineComponent({
 
     useLockScroll(popupRef, () => wrapperVisible.value && props.preventScrollThrough, popupClass.value);
 
-    return {
-      to,
-      popupClass,
-      wrapperVisible,
-      innerVisible,
-      currentVisible,
-      rootStyles,
-      contentClasses,
-      contentTransitionName,
-      closeBtnNode,
-      afterEnter,
-      afterLeave,
-      handleOverlayClick,
-      handleCloseClick,
+    return () => {
+      const renderOverlayContent = (
+        <TOverlay
+          {...props.overlayProps}
+          visible={innerVisible.value && props.showOverlay}
+          onClick={handleOverlayClick}
+        />
+      );
+
+      const renderCloseBtn = closeBtnNode.value && (
+        <div class={`${popupClass.value}__close`} onClick={handleCloseClick}>
+          {closeBtnNode.value}
+        </div>
+      );
+
+      const renderContent = (
+        <Transition name={contentTransitionName.value} onAfterEnter={afterEnter} onAfterLeave={afterLeave}>
+          <div
+            v-show={innerVisible.value}
+            ref={popupRef}
+            {...context.attrs}
+            class={[popupClass.value, context.attrs.class, contentClasses.value]}
+            style={rootStyles.value}
+          >
+            {renderCloseBtn}
+
+            {renderTNodeContent('default', 'content')}
+          </div>
+        </Transition>
+      );
+
+      const renderPopupContent = (
+        <Teleport to={teleportElement.value} disabled={!teleportElement.value}>
+          {renderOverlayContent}
+          {renderContent}
+        </Teleport>
+      );
+
+      return (!props.destroyOnClose || wrapperVisible.value) && renderPopupContent;
     };
   },
 });
-</script>
