@@ -183,6 +183,7 @@ export default defineComponent({
           type="file"
           multiple={this.$props.multiple}
           hidden
+          capture={this.$props.capture as unknown as boolean}
           accept={this.$props.accept}
           onChange={this.onNormalFileChange}
         />
