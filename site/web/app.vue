@@ -17,7 +17,8 @@ import { sortDocs } from './utils';
 import { defineComponent } from 'vue';
 import packageJson from '../../package.json';
 
-const registryUrl = 'https://mirrors.tencent.com/npm/tdesign-mobile-vue';
+const registryUrl =
+  'https://service-edbzjd6y-1257786608.hk.apigw.tencentcs.com/release/npm/versions/tdesign-mobile-vue';
 const currentVersion = packageJson.version.replace(/\./g, '_');
 
 const { docs, enDocs } = JSON.parse(JSON.stringify(siteConfig).replace(/component:.+/g, ''));
@@ -33,8 +34,8 @@ function watchHtmlMode(callback = () => {}) {
 
   const observerCallback = (mutationsList) => {
     for (const mutation of mutationsList) {
-      if (mutation.attributeName === "theme-mode") {
-        const themeMode = mutation.target.getAttribute("theme-mode") || 'light';
+      if (mutation.attributeName === 'theme-mode') {
+        const themeMode = mutation.target.getAttribute('theme-mode') || 'light';
         if (themeMode) callback(themeMode);
       }
     }
@@ -46,7 +47,7 @@ function watchHtmlMode(callback = () => {}) {
   return observer;
 }
 
-function changeIframeMode(mode){
+function changeIframeMode(mode) {
   const iframe = document.querySelector('iframe');
   if (iframe?.contentWindow) {
     iframe.contentWindow.document.documentElement.setAttribute('theme-mode', mode);
@@ -88,7 +89,7 @@ export default defineComponent({
     };
 
     this.initHistoryVersions();
-    watchHtmlMode(changeIframeMode)
+    watchHtmlMode(changeIframeMode);
   },
 
   watch: {
