@@ -5,6 +5,21 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.6.0 `2024-11-19` 
+### 🚀 Features
+- `Popup`: `sfc` to `tsx` @betavs ([#1401](https://github.com/Tencent/tdesign-mobile-vue/pull/1401))
+- `Upload`: 新增 `capture` 与 `preview` 属性 @anlyyao ([#1644](https://github.com/Tencent/tdesign-mobile-vue/pull/1644))  ([#1645](https://github.com/Tencent/tdesign-mobile-vue/pull/1645))
+- `Icon`: 更新图标版本到 `0.3.0`。新增 907 个新图标；命名优化`blockchain` 重命名改为`transform-1`,`gesture-pray-1`重命名为`gesture-open`,`gesture-ranslation-1`重命名为`wave-bye`, `gesture-up-1`重命名为`gesture-typing`,`gesture-up-2`重命名为`gesture-right-slip`,`logo-wechat`重命名为`logo-wechat-stroke-filled`，移除`tree-list`、`logo-adobe-photoshop-1` 等错误图标 @liweijie0812 ([#1639](https://github.com/Tencent/tdesign-mobile-vue/pull/1639))
+### 🐞 Bug Fixes
+- `Tabs`: 修复无法自动滚动到激活选项的问题 @Lyan-u ([#1627](https://github.com/Tencent/tdesign-mobile-vue/pull/1627))
+- `ImageViewer`: 修复`onIndexChange` 返回值错误 @liweijie0812 ([#1637](https://github.com/Tencent/tdesign-mobile-vue/pull/1637))
+- `CountDown`: 修复标签页置于后台，倒计时停止问题 @hkaikai ([#1631](https://github.com/Tencent/tdesign-mobile-vue/pull/1631))
+- `Form`: 修复失焦时不触发表单校验的问题 @liweijie0812 ([#1640](https://github.com/Tencent/tdesign-mobile-vue/pull/1640))
+
+### 📈 Performance
+- `CollapsePanel`: 优化面板折叠动画 @huxinhai ([#1591](https://github.com/Tencent/tdesign-mobile-vue/pull/1591))
+- `useLockScroll`: 修复多组件同时使用 `preventScrollThrough` 导致页面无法滚动的问题 @hkaikai ([#1628](https://github.com/Tencent/tdesign-mobile-vue/pull/1628))
+
 ## 🌈 1.5.0 `2024-10-18` 
 ### 🚀 Features
 - `Cascader`: `sfc` 改 `tsx` @anlyyao ([#1620](https://github.com/Tencent/tdesign-mobile-vue/pull/1620))
