@@ -8,10 +8,8 @@ import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 // inner components
-import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
-import TImage from '../image';
-import { TdImageViewerProps } from './type';
-import { ImageInfo } from './image-viewer-interface';
+import { SwiperChangeSource, Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
+import { TdImageViewerProps, ImageInfo } from './type';
 
 const { prefix } = config;
 
@@ -19,12 +17,6 @@ const TAP_TIME = 300;
 
 export default defineComponent({
   name: `${prefix}-image-viewer`,
-  components: {
-    Transition,
-    TSwiper,
-    TSwiperItem,
-    TImage,
-  },
   props,
   emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'update:index', 'delete'],
   setup(props, { emit }) {
@@ -85,7 +77,7 @@ export default defineComponent({
 
     const disabled = ref(false);
     const rootRef = ref();
-    const imagesSize = reactive({});
+    const imagesSize: Record<number, { height: number }> = reactive({});
     const swiperRootRef = ref();
     const swiperItemRefs = ref<any[]>([]);
     const gestureRef = ref();
@@ -133,9 +125,10 @@ export default defineComponent({
       imageInfoList.value[nextIndex].preload = true;
     };
 
-    const onSwiperChange = (index: number, context: any) => {
+    const onSwiperChange = (index: number, context: { source: SwiperChangeSource }) => {
       if (currentIndex.value !== index) {
-        setIndex(index, { context });
+        const trigger = currentIndex.value < index ? 'next' : 'prev';
+        setIndex(index, { trigger });
         setScale(1);
         setImagePreload(index);
       }
@@ -393,7 +386,7 @@ export default defineComponent({
     });
 
     return () => (
-      <transition name="fade">
+      <Transition name="fade">
         {visible.value && (
           <div ref={rootRef} class={`${imageViewerClass.value}`}>
             <div class={`${imageViewerClass.value}__mask`} onClick={(e) => handleClose(e, 'overlay')} />
@@ -455,7 +448,7 @@ export default defineComponent({
             </div>
           </div>
         )}
-      </transition>
+      </Transition>
     );
   },
 });

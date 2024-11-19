@@ -3,7 +3,7 @@ import { useTouch } from '../_util/useTouch';
 import getScrollParent from '../_util/getScrollParent';
 import { supportsPassive } from '../_util/supportsPassive';
 
-let totalLockCount = 0;
+const totalLockCount = new Map<String, number>();
 let mounted: boolean = null;
 
 // 移植自vant：https://github.com/youzan/vant/blob/HEAD/src/composables/use-lock-scroll.ts
@@ -37,21 +37,22 @@ export function useLockScroll(rootRef: Ref<HTMLElement | undefined>, shouldLock:
     document.addEventListener('touchstart', touch.start);
     document.addEventListener('touchmove', onTouchMove, supportsPassive.value ? { passive: false } : false);
 
-    if (!totalLockCount) {
+    if (!totalLockCount.get(BODY_LOCK_CLASS)) {
       document.body.classList.add(BODY_LOCK_CLASS);
     }
 
-    totalLockCount += 1;
+    totalLockCount.set(BODY_LOCK_CLASS, (totalLockCount.get(BODY_LOCK_CLASS) ?? 0) + 1);
   };
 
   const unlock = () => {
-    if (totalLockCount) {
+    const sum = Array.from(totalLockCount.values()).reduce((acc, val) => acc + val, 0);
+    if (sum) {
       document.removeEventListener('touchstart', touch.start);
       document.removeEventListener('touchmove', onTouchMove);
 
-      totalLockCount -= 1;
+      totalLockCount.set(BODY_LOCK_CLASS, Math.max((totalLockCount.get(BODY_LOCK_CLASS) ?? 0) - 1, 0));
 
-      if (!totalLockCount) {
+      if (!totalLockCount.get(BODY_LOCK_CLASS)) {
         document.body.classList.remove(BODY_LOCK_CLASS);
       }
     }

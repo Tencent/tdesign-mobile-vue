@@ -1,4 +1,4 @@
-import { PropType, ref, computed, defineComponent, nextTick, watch } from 'vue';
+import { PropType, ref, computed, defineComponent, nextTick, watch, inject } from 'vue';
 import {
   BrowseIcon as TBrowseIcon,
   BrowseOffIcon as TBrowseOffIcon,
@@ -9,6 +9,7 @@ import config from '../config';
 import InputProps from './props';
 import { InputValue, TdInputProps } from './type';
 import { getCharacterLength, useDefault, extendAPI } from '../shared';
+import { FormItemInjectionKey } from '../form/const';
 import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
@@ -45,6 +46,7 @@ export default defineComponent({
     const status = props.status || 'default';
     const renderType = ref(props.type);
     const focused = ref(false);
+    const formItem = inject(FormItemInjectionKey, undefined);
 
     const inputClasses = computed(() => [
       `${inputClass.value}__control`,
@@ -133,18 +135,19 @@ export default defineComponent({
 
     const handleBlur = (e: FocusEvent) => {
       focused.value = false;
-
       // 失焦时处理 format
       if (isFunction(props.format)) {
         innerValue.value = props.format(innerValue.value);
         nextTick(() => {
           setInputValue(innerValue.value);
           props.onBlur?.(innerValue.value, { e });
+          formItem?.handleBlur();
         });
         return;
       }
 
       props.onBlur?.(innerValue.value, { e });
+      formItem?.handleBlur();
     };
 
     const handleCompositionend = (e: CompositionEvent) => {
