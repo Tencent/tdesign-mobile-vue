@@ -114,6 +114,16 @@ describe('Image', () => {
       expect(onError).toBeCalledTimes(0);
     });
 
+    it(': fallback', async () => {
+      const onError = vi.fn();
+      const wrapper = mount(() => <Image src={FAIL_IMAGE} fallback={IMAGE} onError={onError} />);
+      await nextTick();
+      const $image = wrapper.find(`.${name}__img`);
+      // 手动触发 图片加载失败的回调函数
+      await $image.trigger('error');
+      expect($image.attributes('src')).toBe(IMAGE);
+    });
+
     it(': onError', async () => {
       const onError = vi.fn();
       const slots = {
