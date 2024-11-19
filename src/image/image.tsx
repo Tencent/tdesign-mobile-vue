@@ -2,7 +2,7 @@ import { ref, computed, defineComponent, watchEffect } from 'vue';
 import { useIntersectionObserver } from '@vueuse/core';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
-import Loading from '../loading';
+import TLoading from '../loading';
 import config from '../config';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
@@ -13,7 +13,6 @@ const { prefix } = config;
 
 export default defineComponent({
   name: `${prefix}-image`,
-  components: { CloseIcon, Loading },
   props,
   setup(props, context) {
     const imageClass = usePrefixClass('image');
@@ -21,7 +20,7 @@ export default defineComponent({
 
     // 默认loading和error状态展示，slot支持Node和Function
     const closeIcon = <CloseIcon size="22px" />;
-    const LoadingIcon = <Loading theme="dots" inheritColor={true} />;
+    const LoadingIcon = <TLoading theme="dots" inheritColor={true} />;
 
     // 记录图片的loading、error状态
     const isLoading = ref(true);
@@ -109,6 +108,7 @@ export default defineComponent({
               style={imageStyles.value}
               src={realSrc.value}
               alt={props.alt}
+              referrerpolicy={props.referrerpolicy}
               onLoad={handleImgLoadCompleted}
               onError={handleImgLoadError}
             />

@@ -37,6 +37,23 @@ export default {
     type: String,
     default: 'center',
   },
+  /** `<img>` 标签的原生属性，[MDN 定义](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy) */
+  referrerpolicy: {
+    type: String as PropType<TdImageProps['referrerpolicy']>,
+    validator(val: TdImageProps['referrerpolicy']): boolean {
+      if (!val) return true;
+      return [
+        'no-referrer',
+        'no-referrer-when-downgrade',
+        'origin',
+        'origin-when-cross-origin',
+        'same-origin',
+        'strict-origin',
+        'strict-origin-when-cross-origin',
+        'unsafe-url',
+      ].includes(val);
+    },
+  },
   /** 图片圆角类型 */
   shape: {
     type: String as PropType<TdImageProps['shape']>,
@@ -51,7 +68,7 @@ export default {
     type: String,
     default: '',
   },
-  /** 图片地址，支持特殊格式的图片，如 `.avif` 和 `.webp` */
+  /** 图片链接集合，用于支持特殊格式的图片，如 `.avif` 和 `.webp`。会优先加载 `srcset` 中的图片格式，浏览器不支持的情况下，加载 `src` 设置的图片地址 */
   srcset: {
     type: Object as PropType<TdImageProps['srcset']>,
   },

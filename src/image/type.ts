@@ -36,6 +36,18 @@ export interface TdImageProps {
    */
   position?: string;
   /**
+   * `<img>` 标签的原生属性，[MDN 定义](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
+   */
+  referrerpolicy?:
+    | 'no-referrer'
+    | 'no-referrer-when-downgrade'
+    | 'origin'
+    | 'origin-when-cross-origin'
+    | 'same-origin'
+    | 'strict-origin'
+    | 'strict-origin-when-cross-origin'
+    | 'unsafe-url';
+  /**
    * 图片圆角类型
    * @default square
    */
@@ -46,7 +58,7 @@ export interface TdImageProps {
    */
   src?: string;
   /**
-   * 图片地址，支持特殊格式的图片，如 `.avif` 和 `.webp`
+   * 图片链接集合，用于支持特殊格式的图片，如 `.avif` 和 `.webp`。会优先加载 `srcset` 中的图片格式，浏览器不支持的情况下，加载 `src` 设置的图片地址
    */
   srcset?: ImageSrcset;
   /**
