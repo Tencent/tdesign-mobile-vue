@@ -5,6 +5,7 @@ import {
   nextTick,
   onBeforeUnmount,
   onMounted,
+  provide,
   reactive,
   ref,
   toRefs,
@@ -37,6 +38,7 @@ import {
   ErrorListType,
   FormInjectionKey,
   FormItemContext,
+  FormItemInjectionKey,
   SuccessListType,
   ValidateStatus,
 } from './const';
@@ -311,6 +313,14 @@ export default defineComponent({
         validateHandler('change');
       },
     );
+
+    const handleBlur = async () => {
+      await validateHandler('blur');
+    };
+
+    provide(FormItemInjectionKey, {
+      handleBlur,
+    });
 
     return () => {
       const renderRightIconContent = () => {
