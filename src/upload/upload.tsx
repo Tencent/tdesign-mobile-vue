@@ -64,7 +64,7 @@ export default defineComponent({
 
     const handlePreview = (e: MouseEvent, file: UploadFile, index: number) => {
       initialIndex.value = index;
-      showViewer.value = true;
+      showViewer.value = props.preview;
       props.onPreview?.({
         e,
         file,
@@ -183,6 +183,7 @@ export default defineComponent({
           type="file"
           multiple={this.$props.multiple}
           hidden
+          capture={this.$props.capture as unknown as boolean}
           accept={this.$props.accept}
           onChange={this.onNormalFileChange}
         />

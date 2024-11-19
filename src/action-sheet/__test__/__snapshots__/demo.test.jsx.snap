@@ -44,8 +44,8 @@ exports[`ActionSheet > ActionSheet alignVue demo works fine 1`] = `
       <!---->
     </button>
   </div>
-  <!--v-if-->
-  <!--v-if-->
+  <!---->
+  <!---->
   
 </div>
 `;
@@ -77,7 +77,7 @@ exports[`ActionSheet > ActionSheet gridMultipleVue demo works fine 1`] = `
       <!---->
     </button>
   </div>
-  <!--v-if-->
+  <!---->
   
 </div>
 `;
@@ -143,9 +143,9 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
       <!---->
     </button>
   </div>
-  <!--v-if-->
-  <!--v-if-->
-  <!--v-if-->
+  <!---->
+  <!---->
+  <!---->
   
 </div>
 `;
@@ -245,10 +245,10 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
       <!---->
     </button>
   </div>
-  <!--v-if-->
-  <!--v-if-->
-  <!--v-if-->
-  <!--v-if-->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
   
 </div>
 `;
@@ -379,10 +379,10 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
           <!---->
         </button>
       </div>
-      <!--v-if-->
-      <!--v-if-->
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
+      <!---->
+      <!---->
       
       
     </div>
@@ -461,9 +461,9 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
           <!---->
         </button>
       </div>
-      <!--v-if-->
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
+      <!---->
       
       
       <div
@@ -488,7 +488,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
           <!---->
         </button>
       </div>
-      <!--v-if-->
+      <!---->
       
       
     </div>
@@ -537,7 +537,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
           <!---->
         </button>
       </div>
-      <!--v-if-->
+      <!---->
       
       
     </div>
@@ -603,8 +603,8 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
           <!---->
         </button>
       </div>
-      <!--v-if-->
-      <!--v-if-->
+      <!---->
+      <!---->
       
       
     </div>
@@ -639,7 +639,7 @@ exports[`ActionSheet > ActionSheet statusVue demo works fine 1`] = `
       <!---->
     </button>
   </div>
-  <!--v-if-->
+  <!---->
   
 </div>
 `;

@@ -7,6 +7,6 @@ const transitionStub = () => ({
 });
 
 config.global.stubs = {
-  teleport: true,
+  teleport: false,
   transition: transitionStub,
 };
