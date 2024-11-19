@@ -66,6 +66,10 @@ export default defineComponent({
       props.onError?.({ e });
       isLoading.value = false;
       isError.value = true;
+      if (props.fallback) {
+        realSrc.value = props.fallback;
+        isError.value = false;
+      }
     };
 
     const maskContent = computed(() => {

@@ -17,6 +17,11 @@ export default {
   error: {
     type: [String, Function] as PropType<TdImageProps['error']>,
   },
+  /** 图片加载失败时，显示当前链接设置的图片地址。如果要使用组件图标或完全自定义加载失败时显示的内容，请更为使用 `error` */
+  fallback: {
+    type: String,
+    default: '',
+  },
   /** 图片填充模式 */
   fit: {
     type: String as PropType<TdImageProps['fit']>,

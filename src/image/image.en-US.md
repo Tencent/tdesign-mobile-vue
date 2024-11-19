@@ -8,6 +8,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 alt | String | - | \- | N
 error | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+fallback | String | - | display `fallback` image on `src` loading failed. you can also use `error` to define more complex error content | N
 fit | String | fill | options: contain/cover/fill/none/scale-down | N
 lazy | Boolean | false | \- | N
 loading | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N

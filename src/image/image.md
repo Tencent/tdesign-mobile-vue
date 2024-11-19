@@ -8,6 +8,7 @@
 -- | -- | -- | -- | --
 alt | String | - | 图片描述 | N
 error | String / Slot / Function | - | 自定义图片加载失败状态下的显示内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+fallback | String | - | 图片加载失败时，显示当前链接设置的图片地址。如果要使用组件图标或完全自定义加载失败时显示的内容，请更为使用 `error` | N
 fit | String | fill | 图片填充模式。可选项：contain/cover/fill/none/scale-down | N
 lazy | Boolean | false | 是否开启图片懒加载 | N
 loading | String / Slot / Function | - | 自定义加载中状态的图片内容，如：“加载中”。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
