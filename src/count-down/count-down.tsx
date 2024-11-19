@@ -1,4 +1,4 @@
-import { computed, defineComponent } from 'vue';
+import { computed, defineComponent, onBeforeUnmount, onMounted, ref } from 'vue';
 import config from '../config';
 import CountDownProps from './props';
 import { useCountDown } from '../shared/useCountDown';
@@ -18,8 +18,17 @@ export default defineComponent({
       `${countDownClass.value}--${props.theme}`,
       `${countDownClass.value}--${props.size}`,
     ]);
-
-    const { showTimes } = useCountDown(props);
+    const visibility = ref(true);
+    const visibilitychangeListener = () => {
+      visibility.value = !document.hidden;
+    };
+    onMounted(() => {
+      document.addEventListener('visibilitychange', visibilitychangeListener, false);
+    });
+    onBeforeUnmount(() => {
+      document.removeEventListener('visibilitychange', visibilitychangeListener, false);
+    });
+    const { showTimes } = useCountDown(props, visibility);
     return () => {
       const renderContent = () => {
         const content = renderTNodeJSX('content');
