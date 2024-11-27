@@ -148,16 +148,19 @@ export default defineComponent({
         </Transition>
       );
 
+      const inner = (
+        <>
+          {renderOverlayContent}
+          {renderContent}
+        </>
+      );
+
       const renderPopupContent = mounted.value ? (
         <Teleport to={teleportElement.value} disabled={!teleportElement.value}>
-          {renderOverlayContent}
-          {renderContent}
+          {inner}
         </Teleport>
       ) : (
-        <div>
-          {renderOverlayContent}
-          {renderContent}
-        </div>
+        inner
       );
 
       return (!props.destroyOnClose || wrapperVisible.value) && renderPopupContent;
