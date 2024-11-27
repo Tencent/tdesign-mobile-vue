@@ -140,6 +140,7 @@ export default defineComponent({
               onBlur={handleBlur}
               onInput={handleInput}
               confirm-type="search"
+              enterkeyhint="search"
               onCompositionend={handleCompositionend}
             />
             {readerClear()}
