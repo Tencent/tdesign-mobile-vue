@@ -89,9 +89,11 @@ export default defineComponent({
       // 如果按的是 enter 键, 13是 enter
       if (ENTER_REG.test(e.code) || ENTER_REG.test(e.key)) {
         preventDefault(e, false);
+        inputRef.value?.blur();
         props.onSubmit?.({ value: searchValue.value, e });
       }
     };
+
     return () => {
       const readerLeftIcon = () => {
         const leftIcon = renderTNodeJSX('leftIcon');
@@ -122,6 +124,11 @@ export default defineComponent({
         return null;
       };
 
+      const extraProps = {
+        enterkeyhint: 'search',
+        confirmType: 'search',
+      };
+
       return (
         <div class={`${searchClass.value}`}>
           <div class={boxClasses.value}>
@@ -139,9 +146,8 @@ export default defineComponent({
               onFocus={handleFocus}
               onBlur={handleBlur}
               onInput={handleInput}
-              confirm-type="search"
-              enterkeyhint="search"
               onCompositionend={handleCompositionend}
+              {...extraProps}
             />
             {readerClear()}
           </div>
