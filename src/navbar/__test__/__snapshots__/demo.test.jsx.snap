@@ -752,6 +752,8 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
                 </svg>
                 <input
                   class="t-input__keyword"
+                  confirm-type="search"
+                  enterkeyhint="search"
                   placeholder="搜索预设文案"
                   type="search"
                 />
@@ -1310,6 +1312,8 @@ exports[`Navbar > Navbar searchVue demo works fine 1`] = `
           </svg>
           <input
             class="t-input__keyword"
+            confirm-type="search"
+            enterkeyhint="search"
             placeholder="搜索预设文案"
             type="search"
           />
