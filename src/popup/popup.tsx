@@ -154,10 +154,10 @@ export default defineComponent({
           {renderContent}
         </Teleport>
       ) : (
-        <Fragment>
+        <div>
           {renderOverlayContent}
           {renderContent}
-        </Fragment>
+        </div>
       );
 
       return (!props.destroyOnClose || wrapperVisible.value) && renderPopupContent;
