@@ -17,6 +17,7 @@ const showOverlay = () => {
     onDestroy: () => {
       console.log('onDestroy');
     },
+    duration: 0,
   });
 };
 const hideToast = () => {
