@@ -80,7 +80,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
   <h1
     class="title"
   >
-    Search 搜索框123
+    Search 搜索框
   </h1>
   <p
     class="summary"
