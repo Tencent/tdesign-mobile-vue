@@ -69,7 +69,7 @@ describe('calendar', () => {
       const onConfirm = vi.fn((e) => {
         time.value = dayFormat(e, character);
       });
-      const wrapper = await mount(
+      const wrapper = mount(
         <Calendar
           visible={true}
           value={value}
@@ -168,7 +168,7 @@ describe('calendar', () => {
       const onSelect = vi.fn((e) => {
         selectTime.value = dayFormat(e, character);
       });
-      const wrapper = await mount(
+      const wrapper = mount(
         <Calendar
           visible={true}
           value={value}
