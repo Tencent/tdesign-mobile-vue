@@ -26,6 +26,7 @@ exports[`Search > Search actionVue demo works fine 1`] = `
       <input
         autofocus=""
         class="t-input__keyword t-search--center"
+        confirm-type="search"
         placeholder="搜索预设文案"
         type="search"
       />
@@ -61,6 +62,7 @@ exports[`Search > Search baseVue demo works fine 1`] = `
       </svg>
       <input
         class="t-input__keyword"
+        confirm-type="search"
         placeholder="请输入关键字"
         type="search"
       />
@@ -130,6 +132,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
             </svg>
             <input
               class="t-input__keyword"
+              confirm-type="search"
               placeholder="请输入关键字"
               type="search"
             />
@@ -183,6 +186,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
             <input
               autofocus=""
               class="t-input__keyword t-search--center"
+              confirm-type="search"
               placeholder="搜索预设文案"
               type="search"
             />
@@ -239,6 +243,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
             </svg>
             <input
               class="t-input__keyword"
+              confirm-type="search"
               placeholder="请输入关键字"
               type="search"
             />
@@ -295,6 +300,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
             </svg>
             <input
               class="t-input__keyword"
+              confirm-type="search"
               placeholder="搜索预设文案"
               type="search"
             />
@@ -334,6 +340,7 @@ exports[`Search > Search otherVue demo works fine 1`] = `
       </svg>
       <input
         class="t-input__keyword"
+        confirm-type="search"
         placeholder="搜索预设文案"
         type="search"
       />
@@ -369,6 +376,7 @@ exports[`Search > Search shapeVue demo works fine 1`] = `
       </svg>
       <input
         class="t-input__keyword"
+        confirm-type="search"
         placeholder="请输入关键字"
         type="search"
       />

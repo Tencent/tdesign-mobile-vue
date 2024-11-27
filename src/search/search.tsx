@@ -139,6 +139,7 @@ export default defineComponent({
               onFocus={handleFocus}
               onBlur={handleBlur}
               onInput={handleInput}
+              confirm-type="search"
               onCompositionend={handleCompositionend}
             />
             {readerClear()}
