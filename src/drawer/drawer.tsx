@@ -10,7 +10,6 @@ const { prefix } = config;
 
 export default defineComponent({
   name: `${prefix}-drawer`,
-  components: { TPopup },
   props,
   emits: ['update:visible', 'itemClick', 'overlayClick'],
   setup(props, context) {
@@ -25,6 +24,7 @@ export default defineComponent({
 
     watch(visible, () => {
       open.value = visible.value;
+      open.value ? props.onBeforeOpen?.() : props.onBeforeClose?.();
     });
 
     const onItemClick = (index: number, item: DrawerItem, context: { e: MouseEvent }) => {
@@ -58,7 +58,7 @@ export default defineComponent({
         return <div class={`${drawerClass.value}__footer`}>{footerNode}</div>;
       };
       return (
-        <t-popup
+        <TPopup
           v-model={open.value}
           placement={placement}
           attach={attach}
@@ -88,7 +88,7 @@ export default defineComponent({
 
             {renderFooterNode()}
           </div>
-        </t-popup>
+        </TPopup>
       );
     };
   },

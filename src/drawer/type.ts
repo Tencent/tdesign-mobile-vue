@@ -13,6 +13,7 @@ export interface TdDrawerProps {
   attach?: AttachNode;
   /**
    * 点击蒙层时是否触发抽屉关闭事件
+   * @default true
    */
   closeOnOverlayClick?: boolean;
   /**
@@ -52,9 +53,17 @@ export interface TdDrawerProps {
    */
   zIndex?: number;
   /**
-   * 关闭时触发
+   * 抽屉执行关闭动画效果前触发
    */
-  onClose?: (trigger: TriggerSource) => void;
+  onBeforeClose?: () => void;
+  /**
+   * 抽屉执行打开动画效果前触发
+   */
+  onBeforeOpen?: () => void;
+  /**
+   * 关闭时触发。
+   */
+  onClose?: (trigger: DrawerTriggerSource) => void;
   /**
    * 点击抽屉里的列表项
    */
@@ -101,6 +110,6 @@ export interface DrawerItem {
   icon?: TNode;
 }
 
-export type TriggerSource = 'overlay';
+export type DrawerTriggerSource = 'overlay';
 
 export type DrawerMethod = (options?: DrawerOptions) => void;

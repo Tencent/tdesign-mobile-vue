@@ -1,21 +1,24 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Drawer Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
 attach | String / Function | - | Typescript：`AttachNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-closeOnOverlayClick | Boolean | undefined | \- | N
+closeOnOverlayClick | Boolean | true | \- | N
 destroyOnClose | Boolean | false | \- | N
 footer | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-items | Array | - | Typescript：`DrawerItem[] ` `interface DrawerItem { title: string; icon: TNode; }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/drawer/type.ts) | N
-placement | String | right | options：left/right | N
+items | Array | - | Typescript：`DrawerItem[] ` `interface DrawerItem { title: string; icon?: TNode; }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/drawer/type.ts) | N
+placement | String | right | options: left/right | N
 showOverlay | Boolean | true | \- | N
 title | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 visible | Boolean | false | \- | N
 zIndex | Number | - | \- | N
-onClose | Function |  | Typescript：`(trigger: TriggerSource) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/drawer/type.ts)。<br/>`type TriggerSource = 'overlay'`<br/> | N
+onBeforeClose | Function |  | Typescript：`() => void`<br/> | N
+onBeforeOpen | Function |  | Typescript：`() => void`<br/> | N
+onClose | Function |  | Typescript：`(trigger: DrawerTriggerSource) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/drawer/type.ts)。<br/>`type DrawerTriggerSource = 'overlay'`<br/> | N
 onItemClick | Function |  | Typescript：`( index: number, item: DrawerItem, context: { e: MouseEvent }) => void`<br/> | N
 onOverlayClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 
@@ -23,7 +26,9 @@ onOverlayClick | Function |  | Typescript：`(context: { e: MouseEvent }) => voi
 
 name | params | description
 -- | -- | --
-close | `(trigger: TriggerSource)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/drawer/type.ts)。<br/>`type TriggerSource = 'overlay'`<br/>
+before-close | \- | \-
+before-open | \- | \-
+close | `(trigger: DrawerTriggerSource)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/drawer/type.ts)。<br/>`type DrawerTriggerSource = 'overlay'`<br/>
 item-click | `( index: number, item: DrawerItem, context: { e: MouseEvent })` | \-
 overlay-click | `(context: { e: MouseEvent })` | \-
 
@@ -52,8 +57,8 @@ name | params | default | description
 -- | -- | -- | --
 options | \- | - | Typescript：`DrawerOptions`
 
-
 ### CSS Variables
+
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
@@ -69,4 +74,4 @@ Name | Default Value | Description
 --td-drawer-title-color | @font-gray-1 | - 
 --td-drawer-title-font-size | 18px | - 
 --td-drawer-title-padding | 24px 16px 8px | - 
---td-drawer-width | 280px | - 
+--td-drawer-width | 280px | -
