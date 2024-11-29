@@ -28,7 +28,7 @@ export default defineComponent({
     const root = ref();
     const items = ref<any>([]);
     const { current: value, modelValue } = toRefs(props);
-    const [currentIndex, setCurrent] = useVModel(value, modelValue, props.defaultCurrent, props.onChange, 'current');
+    const [currentIndex, setCurrent] = useVModel(value, modelValue, props.defaultCurrent);
     const swiperContainer = ref<HTMLElement | null>(null);
     const previous = ref(currentIndex.value ?? 0);
 
