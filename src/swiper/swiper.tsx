@@ -136,7 +136,7 @@ export default defineComponent({
       }
 
       swiperSource.value = source;
-      previousIndex.value = index;
+      previousIndex.value = val;
       setCurrent(val);
       context.emit('update:value', val);
       context.emit('change', val, { source });
@@ -233,6 +233,7 @@ export default defineComponent({
       (value, oldValue) => {
         // v-model动态更新时不触发move逻辑
         if (value === previousIndex.value) return;
+        console.log(value, previousIndex.value);
         stopAutoplay();
         const max = items.value.length;
         const diff = (value + max - previousIndex.value) % max;

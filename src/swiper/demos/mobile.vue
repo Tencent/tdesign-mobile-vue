@@ -26,13 +26,13 @@
   </div>
 </template>
 <script lang="ts" setup>
-import baseDemo from './base.vue';
-import custom from './custom.vue';
-import fraction from './fraction.vue';
-import control from './control.vue';
-import card from './card.vue';
-import vertical from './vertical.vue';
-import outside from './outside.vue';
+// import baseDemo from './base.vue';
+// import custom from './custom.vue';
+// import fraction from './fraction.vue';
+// import control from './control.vue';
+// import card from './card.vue';
+// import vertical from './vertical.vue';
+// import outside from './outside.vue';
 import current from './current.vue';
 </script>
 
