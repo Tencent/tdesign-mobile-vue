@@ -15,7 +15,7 @@ const { prefix } = config;
 export default defineComponent({
   name: `${prefix}-swiper`,
   props,
-  emits: ['change', 'update:current', 'update:modelValue', 'transitionenter', 'transitionleave'],
+  emits: ['change', 'update:value', 'update:modelValue', 'transitionenter', 'transitionleave'],
   setup(props, context) {
     const swiperClass = usePrefixClass('swiper');
     const swiperNavClass = usePrefixClass('swiper-nav');
@@ -30,6 +30,7 @@ export default defineComponent({
     const { current: value, modelValue } = toRefs(props);
     const [currentIndex, setCurrent] = useVModel(value, modelValue, props.defaultCurrent);
     const swiperContainer = ref<HTMLElement | null>(null);
+    const previousIndex = ref(currentIndex.value || 0);
 
     const animating = ref(false);
     const disabled = ref(false);
@@ -40,6 +41,7 @@ export default defineComponent({
     const containerHeight = ref('auto');
 
     const navigation = computed((): SwiperNavigation => props.navigation);
+    const swiperSource = ref<SwiperChangeSource>('autoplay');
 
     const isBottomPagination = computed(() => {
       let isShowSwiperNav = false;
@@ -78,12 +80,18 @@ export default defineComponent({
     };
 
     const move = (step: number, source: SwiperChangeSource, isReset = false) => {
-      animating.value = true;
-      processIndex(isReset ? step : (currentIndex.value as number) + step, source);
+      moveByIndex(isReset ? step : (currentIndex.value as number) + step, source, step, isReset);
+    };
 
+    const moveByIndex = (index: number, source: SwiperChangeSource, step = 1, isReset = false) => {
+      animating.value = true;
+      processIndex(index, source);
+      playMoveTransition(step, isReset);
+    };
+
+    const playMoveTransition = (step: number, isReset = false) => {
       const moveDirection = !isVertical.value ? 'X' : 'Y';
       const distance = root.value?.[isVertical.value ? 'offsetHeight' : 'offsetWidth'] ?? 0;
-
       translateContainer.value = `translate${moveDirection}(${isReset ? 0 : -1 * distance * step}px)`;
     };
 
@@ -91,7 +99,6 @@ export default defineComponent({
       disabled.value = false;
       animating.value = false;
       translateContainer.value = 'translateX(0)';
-
       updateItemPosition();
     };
 
@@ -127,8 +134,11 @@ export default defineComponent({
       if (index >= max) {
         val = props.loop ? 0 : max - 1;
       }
+
+      swiperSource.value = source;
+      previousIndex.value = index;
       setCurrent(val);
-      context.emit('update:current', val);
+      context.emit('update:value', val);
       context.emit('change', val, { source });
     };
 
@@ -217,13 +227,18 @@ export default defineComponent({
     };
 
     watch(currentIndex, updateContainerHeight);
+
     watch(
       () => props.current,
-      () => {
+      (value, oldValue) => {
         // v-model动态更新时不触发move逻辑
-        if (props.current === currentIndex.value) return;
+        if (value === previousIndex.value) return;
         stopAutoplay();
-        move(props.current - currentIndex.value, 'autoplay');
+        const max = items.value.length;
+        const diff = (value + max - previousIndex.value) % max;
+        // 检测step的方向
+        const step = diff <= items.value.length / 2 ? 1 : -1;
+        moveByIndex(value, swiperSource.value, step);
         startAutoplay();
       },
     );
