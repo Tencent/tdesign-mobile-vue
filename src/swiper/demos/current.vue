@@ -12,8 +12,8 @@
       </t-swiper-item>
     </t-swiper>
     <div class="tdesign-demo-block-row">
-      <t-button size="small" theme="primary" @click="current = current + 2 > 5 ? 0 : current + 1">
-        跳转到第 {{ current + 2 >= 6 ? 1 : current + 2 }} 项
+      <t-button size="small" theme="primary" @click="current = (current + 1) % 5">
+        跳转到第 {{ 1 + ((current + 1) % 5) }} 项
       </t-button>
     </div>
   </div>
@@ -33,6 +33,7 @@ const current = ref(0);
 
 const handleChange = (index: number, context: any) => {
   console.log('基础示例,页数变化到》》》', index, context);
+  current.value = index;
 };
 
 const handleClick = (value: number) => {
