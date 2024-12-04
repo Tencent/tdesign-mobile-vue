@@ -61,7 +61,7 @@ function create(options: Partial<TdDialogProps> | string): DialogInstance {
     onClosed: () => {
       callFn('onClosed');
       // 卸载创建的app
-      // 修复调用destory未清除滚动锁定问题
+      // 修复调用destroy未清除滚动锁定问题
       nextTick(() => {
         params.destroyOnClose && app.unmount();
       });
