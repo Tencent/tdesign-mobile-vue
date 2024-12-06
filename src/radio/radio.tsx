@@ -37,7 +37,7 @@ export default defineComponent({
     });
     const finalPlacement = computed(() => {
       if (props.placement == null && 'placement' in rootGroupProps) return rootGroupProps.placement;
-      return props.placement;
+      return props.placement || 'left';
     });
 
     const finalAllowUncheck = computed(() => Boolean(props.allowUncheck || rootGroupProps?.allowUncheck));
