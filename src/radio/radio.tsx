@@ -42,12 +42,14 @@ export default defineComponent({
 
     const finalAllowUncheck = computed(() => Boolean(props.allowUncheck || rootGroupProps?.allowUncheck));
 
+    const finalReadonly = computed(() => Boolean(props.readonly || rootGroupProps?.readonly));
+
     // input props attribute
     const inputProps = computed(() => ({
       name: rootGroupProps.name || props.name,
       checked: radioChecked.value,
       disabled: isDisabled.value,
-      readonly: props.readonly,
+      readonly: finalReadonly.value,
       value: props.value,
     }));
 
@@ -92,7 +94,7 @@ export default defineComponent({
     };
 
     const radioOrgChange = (e: Event) => {
-      if (isDisabled.value || props.readonly) {
+      if (isDisabled.value || finalReadonly.value) {
         return;
       }
       if (rootGroupChange) {
