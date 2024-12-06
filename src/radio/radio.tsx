@@ -1,4 +1,4 @@
-import { inject, computed, defineComponent, Ref, getCurrentInstance } from 'vue';
+import { inject, computed, defineComponent, Ref } from 'vue';
 import { CheckIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { useDefault } from '../shared';
 import config from '../config';
@@ -18,7 +18,6 @@ export default defineComponent({
     const renderTNodeContent = useContent();
     const renderTNodeJSX = useTNodeJSX();
     const radioClass = usePrefixClass('radio');
-    const { vnode } = getCurrentInstance();
 
     const [innerChecked, setInnerChecked] = useDefault<boolean, TdRadioProps>(props, context.emit, 'checked', 'change');
 
@@ -37,12 +36,8 @@ export default defineComponent({
       return props.borderless;
     });
     const finalPlacement = computed(() => {
-      const vProps = vnode.props || {};
-      if (Reflect.has(vProps, 'placement')) return props.placement;
-
-      if ('placement' in rootGroupProps) return rootGroupProps.placement;
-
-      return props.placement || 'left';
+      if (props.placement == null && 'placement' in rootGroupProps) return rootGroupProps.placement;
+      return props.placement;
     });
 
     const finalAllowUncheck = computed(() => Boolean(props.allowUncheck || rootGroupProps?.allowUncheck));
