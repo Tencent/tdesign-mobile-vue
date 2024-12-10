@@ -11,7 +11,6 @@ const sleep = (duration) =>
     }, duration),
   );
 
-
 describe('Loading.vue', () => {
   describe('props', () => {
     it(':delay', () => {

@@ -142,7 +142,7 @@ describe('Input.vue', async () => {
     });
 
     it(': type=password and disabled', async () => {
-      const wrapper = mount(<Input label="标题" type="password" disabled/>);
+      const wrapper = mount(<Input label="标题" type="password" disabled />);
       expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
       wrapper.find('.t-icon-browse-off').trigger('click');
       await wrapper.vm.$nextTick();
@@ -163,7 +163,7 @@ describe('Input.vue', async () => {
 
     it(': autofocus', async () => {
       const value = ref('123');
-      const wrapper = mount(<Input label="标题" v-model={value.value} clearable clearTrigger="focus" autofocus/>);
+      const wrapper = mount(<Input label="标题" v-model={value.value} clearable clearTrigger="focus" autofocus />);
       await wrapper.vm.$nextTick();
       expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
       wrapper.vm.blur();
@@ -172,13 +172,14 @@ describe('Input.vue', async () => {
       wrapper.vm.focus();
       await wrapper.vm.$nextTick();
       expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
-
     });
 
     it(': clearTrigger=always', async () => {
       const value = ref('123');
       const handleClear = vi.fn();
-      const wrapper = mount(<Input label="标题" v-model={value.value} clearable clearTrigger="always" onClear={handleClear} />);
+      const wrapper = mount(
+        <Input label="标题" v-model={value.value} clearable clearTrigger="always" onClear={handleClear} />,
+      );
       expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
       await wrapper.find('.t-icon-close-circle-filled').trigger('touchend');
       expect(value.value).toBe('');
@@ -188,7 +189,9 @@ describe('Input.vue', async () => {
     it(': clearTrigger=always and disabled', async () => {
       const value = ref('123');
       const handleClear = vi.fn();
-      const wrapper = mount(<Input label="标题" v-model={value.value} disabled clearable clearTrigger="always" onClear={handleClear} />);
+      const wrapper = mount(
+        <Input label="标题" v-model={value.value} disabled clearable clearTrigger="always" onClear={handleClear} />,
+      );
       expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
       await wrapper.setProps({
         disabled: false,
@@ -199,7 +202,9 @@ describe('Input.vue', async () => {
     it(': clearTrigger=always and readonly', async () => {
       const value = ref('123');
       const handleClear = vi.fn();
-      const wrapper = mount(<Input label="标题" v-model={value.value} readonly clearable clearTrigger="always" onClear={handleClear} />);
+      const wrapper = mount(
+        <Input label="标题" v-model={value.value} readonly clearable clearTrigger="always" onClear={handleClear} />,
+      );
       expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
       await wrapper.setProps({
         readonly: false,
@@ -210,12 +215,14 @@ describe('Input.vue', async () => {
     it(': clearTrigger=focus', async () => {
       const value = ref('123');
       const handleClear = vi.fn();
-      const wrapper = mount(<Input label="标题" v-model={value.value} clearable clearTrigger="focus" onClear={handleClear} />);
+      const wrapper = mount(
+        <Input label="标题" v-model={value.value} clearable clearTrigger="focus" onClear={handleClear} />,
+      );
       expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
       wrapper.vm.focus();
       await wrapper.vm.$nextTick();
       expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
-      
+
       await wrapper.find('.t-icon-close-circle-filled').trigger('touchend');
       expect(value.value).toBe('');
       expect(handleClear).toBeCalled();
@@ -224,7 +231,9 @@ describe('Input.vue', async () => {
     it(': clearTrigger=focus and disabled', async () => {
       const value = ref('123');
       const handleClear = vi.fn();
-      const wrapper = mount(<Input label="标题" v-model={value.value} disabled clearable clearTrigger="focus" onClear={handleClear} />);
+      const wrapper = mount(
+        <Input label="标题" v-model={value.value} disabled clearable clearTrigger="focus" onClear={handleClear} />,
+      );
       expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
       wrapper.vm.focus();
       await wrapper.vm.$nextTick();
@@ -240,7 +249,9 @@ describe('Input.vue', async () => {
     it(': clearTrigger=focus and readonly', async () => {
       const value = ref('123');
       const handleClear = vi.fn();
-      const wrapper = mount(<Input label="标题" v-model={value.value} readonly clearable clearTrigger="focus" onClear={handleClear} />);
+      const wrapper = mount(
+        <Input label="标题" v-model={value.value} readonly clearable clearTrigger="focus" onClear={handleClear} />,
+      );
       expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
       wrapper.vm.focus();
       await wrapper.vm.$nextTick();
@@ -252,8 +263,6 @@ describe('Input.vue', async () => {
       await wrapper.vm.$nextTick();
       expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
     });
-
-
   });
   describe('event', async () => {
     it(': focus && blur', async () => {

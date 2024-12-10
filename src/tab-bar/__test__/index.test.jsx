@@ -90,15 +90,17 @@ describe('TabBar', () => {
     it('item without value', async () => {
       const wrapper = mount({
         render() {
-          return <TabBar value={0}>
-            <TabBarItem></TabBarItem>
-          </TabBar>
-        }
-      })
+          return (
+            <TabBar value={0}>
+              <TabBarItem></TabBarItem>
+            </TabBar>
+          );
+        },
+      });
 
       const item = wrapper.findComponent('.t-tab-bar-item');
       // expect(item.vm.isChecked).toBeTruthy();
-    })
+    });
   });
 
   describe('events', () => {

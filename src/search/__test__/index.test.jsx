@@ -145,8 +145,8 @@ describe('search', () => {
       const action = '插槽';
 
       const wrapper = mount(Search, {
-        props:{
-          value: 'test'
+        props: {
+          value: 'test',
         },
         slots: {
           action,
@@ -154,7 +154,7 @@ describe('search', () => {
       });
       // TODO: 插槽实现的 dom 结构不正确，后期另提 pr 修复
       const $search = wrapper.find(`.${name}`);
-      
+
       expect($search.text()).toEqual(action);
     });
 

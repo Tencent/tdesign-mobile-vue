@@ -78,16 +78,16 @@ describe('slider', () => {
         },
       });
       const original = window.HTMLElement.prototype.getBoundingClientRect;
-      
-      await wrapper.setProps({ value: [0, 80]})
 
-      expect(wrapper.find('.t-slider__line--default').attributes('style').includes(`right: 68px`)).toBeTruthy()
-      expect(wrapper.find('.t-slider__dot--left').text()).toBe('0')
-      expect(wrapper.find('.t-slider__dot--right').text()).toBe('80')
+      await wrapper.setProps({ value: [0, 80] });
+
+      expect(wrapper.find('.t-slider__line--default').attributes('style').includes(`right: 68px`)).toBeTruthy();
+      expect(wrapper.find('.t-slider__dot--left').text()).toBe('0');
+      expect(wrapper.find('.t-slider__dot--right').text()).toBe('80');
 
       // restore
       window.HTMLElement.prototype.getBoundingClientRect = original;
-    })
+    });
 
     it(':value out of limit', async () => {
       const onChange = vi.fn();
@@ -95,32 +95,32 @@ describe('slider', () => {
       const right = 359;
       const { round } = Math;
       const original = window.HTMLElement.prototype.getBoundingClientRect;
-      const calcValue = (posX) => round((posX - left) / (right - left) * 100);
+      const calcValue = (posX) => round(((posX - left) / (right - left)) * 100);
       window.HTMLElement.prototype.getBoundingClientRect = () => ({ left, right });
 
       const wrapper = mount(Slider, {
         props: {
           value: [-1, 101],
           onChange,
-          range: true
+          range: true,
         },
       });
 
-      const $line = wrapper.find('.t-slider__line')
-      await $line.trigger('click', { clientX: 200 })
-      expect(onChange).toHaveBeenCalledWith([0, calcValue(200)])
+      const $line = wrapper.find('.t-slider__line');
+      await $line.trigger('click', { clientX: 200 });
+      expect(onChange).toHaveBeenCalledWith([0, calcValue(200)]);
 
-      await wrapper.setProps({ value: [-1, 101]})
+      await wrapper.setProps({ value: [-1, 101] });
       // // restore
       window.HTMLElement.prototype.getBoundingClientRect = original;
       // mock dot bounding client rect
       const $leftDot = wrapper.find('.t-slider__dot--left');
       const $rightDot = wrapper.find('.t-slider__dot--right');
-      vi.spyOn($leftDot.wrapperElement, 'getBoundingClientRect').mockReturnValue({ left: 16 })
-      vi.spyOn($rightDot.wrapperElement, 'getBoundingClientRect').mockReturnValue({ left: 359 })
-      await $line.trigger('click', { clientX: 50 })
-      expect(onChange).toHaveBeenLastCalledWith([calcValue(50), 100])
-    })
+      vi.spyOn($leftDot.wrapperElement, 'getBoundingClientRect').mockReturnValue({ left: 16 });
+      vi.spyOn($rightDot.wrapperElement, 'getBoundingClientRect').mockReturnValue({ left: 359 });
+      await $line.trigger('click', { clientX: 50 });
+      expect(onChange).toHaveBeenLastCalledWith([calcValue(50), 100]);
+    });
 
     it(':capsule theme', async () => {
       const onChange = vi.fn();
@@ -134,19 +134,19 @@ describe('slider', () => {
         props: {
           value: 0,
           onChange,
-          theme: 'capsule'
+          theme: 'capsule',
         },
       });
-      
-      const $line = wrapper.find('.t-slider__line')
-      
-      await $line.trigger('click', { clientX })
 
-      expect(onChange).toHaveBeenCalledWith(61)
-      
+      const $line = wrapper.find('.t-slider__line');
+
+      await $line.trigger('click', { clientX });
+
+      expect(onChange).toHaveBeenCalledWith(61);
+
       // // restore
       window.HTMLElement.prototype.getBoundingClientRect = original;
-    })
+    });
   });
 
   describe('event', () => {
@@ -175,7 +175,7 @@ describe('slider', () => {
       const clientX = 200;
       const { round } = Math;
       const original = window.HTMLElement.prototype.getBoundingClientRect;
-      const calcValue = (posX) => round((posX - left) / (right - left) * 100);
+      const calcValue = (posX) => round(((posX - left) / (right - left)) * 100);
       window.HTMLElement.prototype.getBoundingClientRect = () => ({ left, right });
 
       const wrapper = mount(Slider, {
@@ -184,21 +184,21 @@ describe('slider', () => {
           onChange,
         },
       });
-      
-      const $line = wrapper.find('.t-slider__line')
-      const $dot = wrapper.find('.t-slider__dot')
 
-      await $line.trigger('click', { clientX })
+      const $line = wrapper.find('.t-slider__line');
+      const $dot = wrapper.find('.t-slider__dot');
 
-      expect(onChange).toHaveBeenCalledWith(calcValue(clientX))
-      
-      await move($dot,100);
+      await $line.trigger('click', { clientX });
 
-      expect(onChange).toHaveBeenCalledWith(calcValue(100))
+      expect(onChange).toHaveBeenCalledWith(calcValue(clientX));
+
+      await move($dot, 100);
+
+      expect(onChange).toHaveBeenCalledWith(calcValue(100));
 
       // restore
       window.HTMLElement.prototype.getBoundingClientRect = original;
-    })
+    });
 
     it('@touch', async () => {
       const onChange = vi.fn();
@@ -213,22 +213,22 @@ describe('slider', () => {
         props: {
           value: [0, 100],
           onChange,
-          range: true
+          range: true,
         },
       });
-      
-      const $leftDot = wrapper.find('.t-slider__dot--left')
-      const $rightDot = wrapper.find('.t-slider__dot--right')
-      
-      await move($leftDot, 100);
-      const leftValue = round((100 - left) / (right - left) * 100);
-      expect(onChange).toHaveBeenCalledWith([leftValue, 100])
 
-      await move($rightDot, 300)
-      const rightValue = round((300 - left) / (right - left) * 100);
-      expect(onChange).toHaveBeenCalledWith([0, rightValue])
+      const $leftDot = wrapper.find('.t-slider__dot--left');
+      const $rightDot = wrapper.find('.t-slider__dot--right');
+
+      await move($leftDot, 100);
+      const leftValue = round(((100 - left) / (right - left)) * 100);
+      expect(onChange).toHaveBeenCalledWith([leftValue, 100]);
+
+      await move($rightDot, 300);
+      const rightValue = round(((300 - left) / (right - left)) * 100);
+      expect(onChange).toHaveBeenCalledWith([0, rightValue]);
       // restore
       window.HTMLElement.prototype.getBoundingClientRect = original;
-    })
+    });
   });
 });

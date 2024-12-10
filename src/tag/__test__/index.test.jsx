@@ -23,9 +23,9 @@ describe('Tag.vue', async () => {
   it('theme render', async () => {
     themeList.forEach((t) => {
       const wrapper = mount(() => <Tag theme={t}>{TEXT}</Tag>);
-      if(!t) {
+      if (!t) {
         expect(wrapper.classes()).toContain(`t-tag`);
-      }else {
+      } else {
         expect(wrapper.classes()).toContain(`t-tag--${t}`);
       }
     });
@@ -34,9 +34,9 @@ describe('Tag.vue', async () => {
   it('variant render', async () => {
     variantList.forEach((v) => {
       const wrapper = mount(() => <Tag variant={v}>{TEXT}</Tag>);
-      if(!v) {
+      if (!v) {
         expect(wrapper.classes()).toContain(`t-tag--${'default'}`);
-      }else {
+      } else {
         expect(wrapper.classes()).toContain(`t-tag--${v}`);
       }
     });
@@ -45,7 +45,7 @@ describe('Tag.vue', async () => {
   it('size render', async () => {
     sizeList.forEach((s) => {
       const wrapper = mount(() => <Tag size={s}>{TEXT}</Tag>);
-      if(!s) {
+      if (!s) {
         expect(wrapper.classes()).toContain(`t-tag--${'default'}`);
       } else {
         expect(wrapper.classes()).toContain(`t-tag--${s}`);
@@ -56,9 +56,9 @@ describe('Tag.vue', async () => {
   it('shape render', async () => {
     shapeList.forEach((s) => {
       const wrapper = mount(() => <Tag shape={s}>{TEXT}</Tag>);
-      if(!s) {
+      if (!s) {
         expect(wrapper.classes()).toContain(`t-tag--${'default'}`);
-      }else {
+      } else {
         expect(wrapper.classes()).toContain(`t-tag--${s}`);
       }
     });
@@ -87,14 +87,18 @@ describe('Tag.vue', async () => {
 
   it('close render', async () => {
     const onClose = vi.fn();
-    const wrapper = mount(() => <Tag closable onClose={onClose}>{TEXT}</Tag>);
+    const wrapper = mount(() => (
+      <Tag closable onClose={onClose}>
+        {TEXT}
+      </Tag>
+    ));
     const com = wrapper.findComponent(Tag);
     expect(wrapper.classes()).toContain('t-tag--closable');
     const closeBtn = com.find('.t-tag__icon-close');
     expect(closeBtn.exists()).toBeTruthy();
 
     await closeBtn.trigger('click');
-    expect(onClose).toBeCalledWith({ e: expect.any(MouseEvent)});
+    expect(onClose).toBeCalledWith({ e: expect.any(MouseEvent) });
   });
 });
 
@@ -146,9 +150,9 @@ describe('CheckTag render', async () => {
   it('variant render', async () => {
     variantList.forEach((v) => {
       const wrapper = mount(() => <TCheckTag variant={v}>{TEXT}</TCheckTag>);
-      if(!v) {
+      if (!v) {
         expect(wrapper.classes()).toContain(`t-tag--${'default'}`);
-      }else {
+      } else {
         expect(wrapper.classes()).toContain(`t-tag--${v}`);
       }
     });
@@ -182,13 +186,17 @@ describe('CheckTag render', async () => {
   });
   it('close render', async () => {
     const onClose = vi.fn();
-    const wrapper = mount(() => <TCheckTag closable onClose={onClose}>{TEXT}</TCheckTag>);
+    const wrapper = mount(() => (
+      <TCheckTag closable onClose={onClose}>
+        {TEXT}
+      </TCheckTag>
+    ));
     const com = wrapper.findComponent(TCheckTag);
     expect(wrapper.classes()).toContain('t-tag--closable');
     const closeBtn = com.find('.t-tag__icon-close');
     expect(closeBtn.exists()).toBeTruthy();
 
     await closeBtn.trigger('click');
-    expect(onClose).toBeCalledWith({ e: expect.any(MouseEvent)});
+    expect(onClose).toBeCalledWith({ e: expect.any(MouseEvent) });
   });
 });

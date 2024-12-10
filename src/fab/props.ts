@@ -32,5 +32,5 @@ export default {
   draggable: {
     type: Boolean,
     default: false,
-  }
+  },
 };

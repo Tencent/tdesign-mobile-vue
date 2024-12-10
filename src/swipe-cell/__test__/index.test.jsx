@@ -23,51 +23,53 @@ describe('swipe-cell', () => {
     });
 
     // it(': disabled', async () => {
-      // const swipeAction = [{ text: '编辑', className: 't-button--primary',style: 'width: 60px' }];
+    // const swipeAction = [{ text: '编辑', className: 't-button--primary',style: 'width: 60px' }];
 
-      // const content = 'content is a string';
-      // const wrapper = mount(SwipeCell, {
-      //   props: {
-      //     content,
-      //     right: swipeAction,
-      //   },
-      // });
-      // wrapper.vm.$nextTick();
-      // const $target = wrapper.find('.t-swipe-cell__wrapper');
-      // // disabled = true, 滑动操作无效
-      // await wrapper.setProps({ disabled: true });
-      // let touchend = await move($target);
-      // //wrapper.find('.t-swipe-cell__wrapper').element.style.transform
-      // touchend();
-      // expect(wrapper.vm.initData.moving).toBe(false);
+    // const content = 'content is a string';
+    // const wrapper = mount(SwipeCell, {
+    //   props: {
+    //     content,
+    //     right: swipeAction,
+    //   },
+    // });
+    // wrapper.vm.$nextTick();
+    // const $target = wrapper.find('.t-swipe-cell__wrapper');
+    // // disabled = true, 滑动操作无效
+    // await wrapper.setProps({ disabled: true });
+    // let touchend = await move($target);
+    // //wrapper.find('.t-swipe-cell__wrapper').element.style.transform
+    // touchend();
+    // expect(wrapper.vm.initData.moving).toBe(false);
 
-      // disabled = false, 开启滑动操作
-      // await wrapper.setProps({ disabled: false });
-      // console.log(wrapper.find('.t-swipe-cell__wrapper').element.style.transform);
-      // touchend = await move($target);
-      // await move($target,-120);
-      // wrapper.vm.$nextTick();
-      // expect(wrapper.vm.initData.moving).toBe(true);
-      // 
-     
-      // console.log(wrapper.find('.t-swipe-cell__wrapper').element.style.transform);
-      // expect(wrapper.vm.initData.moving).toBe(false);
+    // disabled = false, 开启滑动操作
+    // await wrapper.setProps({ disabled: false });
+    // console.log(wrapper.find('.t-swipe-cell__wrapper').element.style.transform);
+    // touchend = await move($target);
+    // await move($target,-120);
+    // wrapper.vm.$nextTick();
+    // expect(wrapper.vm.initData.moving).toBe(true);
+    //
 
-      // wrapper.unmount();
-      // touchend = await move($target);
-      // expect(wrapper.vm.initData.moving).toBe(false);
-      // touchend();
-      // expect(wrapper.vm.initData.moving).toBe(false);
+    // console.log(wrapper.find('.t-swipe-cell__wrapper').element.style.transform);
+    // expect(wrapper.vm.initData.moving).toBe(false);
+
+    // wrapper.unmount();
+    // touchend = await move($target);
+    // expect(wrapper.vm.initData.moving).toBe(false);
+    // touchend();
+    // expect(wrapper.vm.initData.moving).toBe(false);
     // });
     it(': left', async () => {
       const onClick = vi.fn();
       const onChange = vi.fn();
-      const swipeAction = [{ 
-        icon: <TIconApp />,
-        text: '编辑', 
-        className: 't-button--primary', 
-        sure: 'sure-confirm' 
-      }];
+      const swipeAction = [
+        {
+          icon: <TIconApp />,
+          text: '编辑',
+          className: 't-button--primary',
+          sure: 'sure-confirm',
+        },
+      ];
 
       const content = 'content is a string';
       const wrapper = mount(SwipeCell, {
@@ -78,7 +80,11 @@ describe('swipe-cell', () => {
           onChange,
         },
         slots: {
-          'sure-confirm': () => <div class="t-button--primary_sure"><TIconApp /></div>
+          'sure-confirm': () => (
+            <div class="t-button--primary_sure">
+              <TIconApp />
+            </div>
+          ),
         },
       });
 
@@ -95,14 +101,13 @@ describe('swipe-cell', () => {
       const $sure = wrapper.find('.t-button--primary_sure');
       expect($sure.exists()).toBeTruthy();
       // expect(wrapper.vm.showSureLeft).toBe(true);
-      
+
       // const $target = wrapper.find('.t-swipe-cell__content');
       // let touchend = await move($target);
       // expect(wrapper.vm.initData.moving).toBe(true);
       // await touchend();
       // expect(wrapper.vm.initData.moving).toBe(false);
       // expect(wrapper.vm.showSureLeft).toBe(false);
-
     });
     // it(': opened', async () => {
     //   const onClick = vi.fn();
@@ -150,7 +155,15 @@ describe('swipe-cell', () => {
       const onChange = vi.fn();
       const swipeAction = [
         { text: '默认', className: 't-button--primary' },
-        { text: '删除', className: 't-button--danger', sure: <div class="t-button--danger_sure"><TIconApp /></div> },
+        {
+          text: '删除',
+          className: 't-button--danger',
+          sure: (
+            <div class="t-button--danger_sure">
+              <TIconApp />
+            </div>
+          ),
+        },
       ];
 
       const content = 'content is a string';
@@ -173,7 +186,6 @@ describe('swipe-cell', () => {
       expect(onClick).toBeCalledTimes(1);
       // expect(onChange).toBeCalledTimes(2);
       // expect(onChange).toHaveBeenCalledWith(undefined);
-
 
       await $buttons.at(1).trigger('click');
       expect(onClick).toBeCalledTimes(1);
@@ -256,7 +268,11 @@ describe('swipe-cell', () => {
     });
     it(': left', async () => {
       const onClick = vi.fn();
-      const left = () => <div class="delete-btn" onClick={onClick} >删除</div>;
+      const left = () => (
+        <div class="delete-btn" onClick={onClick}>
+          删除
+        </div>
+      );
       const content = 'content is a string';
       const wrapper = mount(SwipeCell, {
         slots: {
@@ -275,7 +291,11 @@ describe('swipe-cell', () => {
     });
     it(': right', async () => {
       const onClick = vi.fn();
-      const right = () => <div class="delete-btn" onClick={onClick} >删除</div>;
+      const right = () => (
+        <div class="delete-btn" onClick={onClick}>
+          删除
+        </div>
+      );
       const content = 'content is a string';
       const wrapper = mount(SwipeCell, {
         slots: {
