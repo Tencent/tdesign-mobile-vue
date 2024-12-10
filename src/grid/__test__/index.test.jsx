@@ -181,8 +181,8 @@ describe('grid-item', () => {
           </Grid>
         );
       });
-      if (l) { 
-        expect(wrapper.find('.t-grid-item').classes()).toContain(`t-grid-item--${l}`); 
+      if (l) {
+        expect(wrapper.find('.t-grid-item').classes()).toContain(`t-grid-item--${l}`);
       }
     });
   });

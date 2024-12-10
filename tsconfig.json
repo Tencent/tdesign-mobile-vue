@@ -10,6 +10,7 @@
     "strictNullChecks": false,
     "removeComments": true,
     "suppressImplicitAnyIndexErrors": true,
+    "ignoreDeprecations": "5.0",
     "resolveJsonModule": true,
     "importHelpers": true,
     "isolatedModules": false,
@@ -25,9 +26,7 @@
     "paths": {
       "@/*": ["src/*"],
       "tdesign-mobile-vue": ["src"],
-      "tdesign-mobile-vue/es/locale/*": [
-        "src/locale/*"
-      ],
+      "tdesign-mobile-vue/es/locale/*": ["src/locale/*"]
     },
     "types": ["vitest/globals"],
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
