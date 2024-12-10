@@ -1,4 +1,4 @@
-import { defineComponent, ref, computed, toRefs } from 'vue';
+import { defineComponent, ref, computed } from 'vue';
 import { AddIcon, LoadingIcon, CloseIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
 import TImage from '../image';
 import TImageViewer from '../image-viewer';
@@ -14,7 +14,6 @@ const { prefix } = config;
 export default defineComponent({
   name: `${prefix}-upload`,
   components: {
-    AddIcon,
     TImage,
   },
   props: UploadProps,
@@ -147,7 +146,7 @@ export default defineComponent({
           ))}
           {content()}
           <input
-            ref="inputRef"
+            ref={inputRef}
             value={props.files}
             type="file"
             multiple={props.multiple}
