@@ -30,6 +30,7 @@ export default defineComponent({
     const { current: value, modelValue } = toRefs(props);
     const [currentIndex, setCurrent] = useVModel(value, modelValue, props.defaultCurrent);
     const swiperContainer = ref<HTMLElement | null>(null);
+    const previous = ref(currentIndex.value ?? 0);
 
     const animating = ref(false);
     const disabled = ref(false);
@@ -77,9 +78,10 @@ export default defineComponent({
       props.onClick?.(currentIndex.value ?? 0);
     };
 
-    const move = (step: number, source: SwiperChangeSource, isReset = false) => {
+    const move = (step: number, source: SwiperChangeSource, isReset = false, targetValue?: number) => {
       animating.value = true;
-      processIndex(isReset ? step : (currentIndex.value as number) + step, source);
+      const innerTargetValue = targetValue ?? (isReset ? step : currentIndex.value + step);
+      processIndex(innerTargetValue, source);
 
       const moveDirection = !isVertical.value ? 'X' : 'Y';
       const distance = root.value?.[isVertical.value ? 'offsetHeight' : 'offsetWidth'] ?? 0;
@@ -117,6 +119,11 @@ export default defineComponent({
       move(1, source);
     };
 
+    const innerSetCurrent = (val: number) => {
+      setCurrent(val);
+      previous.value = val;
+    };
+
     const processIndex = (index: number, source: SwiperChangeSource) => {
       const max = items.value.length;
       let val = index;
@@ -127,7 +134,7 @@ export default defineComponent({
       if (index >= max) {
         val = props.loop ? 0 : max - 1;
       }
-      setCurrent(val);
+      innerSetCurrent(val);
       context.emit('update:current', val);
       context.emit('change', val, { source });
     };
@@ -219,11 +226,11 @@ export default defineComponent({
     watch(currentIndex, updateContainerHeight);
     watch(
       () => props.current,
-      () => {
+      (val, oldVal) => {
         // v-model动态更新时不触发move逻辑
-        if (props.current === currentIndex.value) return;
+        if (val === previous.value) return;
         stopAutoplay();
-        move(props.current - currentIndex.value, 'autoplay');
+        move(val - oldVal, 'autoplay', false, val);
         startAutoplay();
       },
     );
