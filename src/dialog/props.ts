@@ -78,7 +78,7 @@ export default {
   onCancel: Function as PropType<TdDialogProps['onCancel']>,
   /** 关闭事件，点击 取消按钮 或 点击蒙层 时触发 */
   onClose: Function as PropType<TdDialogProps['onClose']>,
-  /** 组件关闭且动画结束后执行 */
+  /** 对话框消失动画效果结束后触发 */
   onClosed: Function as PropType<TdDialogProps['onClosed']>,
   /** 如果“确认”按钮存在，则点击“确认”按钮时触发 */
   onConfirm: Function as PropType<TdDialogProps['onConfirm']>,

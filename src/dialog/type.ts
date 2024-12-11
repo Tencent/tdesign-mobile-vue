@@ -5,6 +5,7 @@
  * */
 
 import { ButtonProps } from '../button';
+import { OverlayProps } from '../overlay';
 import { TNode, Styles } from '../common';
 
 export interface TdDialogProps {
@@ -21,6 +22,11 @@ export interface TdDialogProps {
    * 取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件
    */
   cancelBtn?: string | ButtonProps | TNode | null;
+  /**
+   * 多按钮排列方式。可选项：true/false
+   * @default false
+   */
+  closeBtn?: boolean;
   /**
    * 点击蒙层时是否触发关闭事件
    */
@@ -42,7 +48,7 @@ export interface TdDialogProps {
    * 透传至 Overlay 组件
    * @default {}
    */
-  overlayProps?: object;
+  overlayProps?: OverlayProps;
   /**
    * 防止滚动穿透
    * @default true
@@ -78,7 +84,7 @@ export interface TdDialogProps {
    */
   onClose?: (context: DialogCloseContext) => void;
   /**
-   * 组件关闭且动画结束后执行
+   * 对话框消失动画效果结束后触发
    */
   onClosed?: () => void;
   /**
