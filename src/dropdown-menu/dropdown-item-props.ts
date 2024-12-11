@@ -35,6 +35,15 @@ export default {
     type: [String, Number] as PropType<TdDropdownItemProps['optionsColumns']>,
     default: 1,
   },
+  /** 复选框和内容相对位置，仅单选菜单栏有效 */
+  placement: {
+    type: String as PropType<TdDropdownItemProps['placement']>,
+    default: 'left' as TdDropdownItemProps['placement'],
+    validator(val: TdDropdownItemProps['placement']): boolean {
+      if (!val) return true;
+      return ['left', 'right'].includes(val);
+    },
+  },
   /** 选中值 */
   value: {
     type: [String, Number, Array] as PropType<TdDropdownItemProps['value']>,
