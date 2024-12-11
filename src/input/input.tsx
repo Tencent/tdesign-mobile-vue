@@ -254,6 +254,7 @@ export default defineComponent({
                 pattern={props.pattern}
                 inputmode={props.inputmode}
                 spellcheck={props.spellCheck}
+                enterkeyhint={props.enterkeyhint}
                 onFocus={handleFocus}
                 onBlur={handleBlur}
                 onInput={handleInput}
