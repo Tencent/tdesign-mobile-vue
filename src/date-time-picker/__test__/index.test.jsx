@@ -114,7 +114,7 @@ describe('DateTimePicker', () => {
           defaultValue: defaultDateTime,
           title: 'mode 测试',
           mode: ['date', 'second'],
-          onPick
+          onPick,
         },
       });
       // mode = ['date', 'second'], 渲染年月日时分秒，6列
@@ -136,11 +136,11 @@ describe('DateTimePicker', () => {
           value: '10:00:00',
           mode: [null, 'second'],
           format: 'HH:mm:ss',
-          start: '2023-06-13'
+          start: '2023-06-13',
         },
       });
-      expect(wrapper.vm.value).toStrictEqual('10:00:00')
-    })
+      expect(wrapper.vm.value).toStrictEqual('10:00:00');
+    });
 
     it(': start && end ', async () => {
       const start = '2020-6-30 10:00:00';
@@ -153,7 +153,7 @@ describe('DateTimePicker', () => {
           value: start,
           start,
           end,
-          mode: 'second'
+          mode: 'second',
         },
       });
       const $pickerItems = wrapper.findAllComponents(PickerItem);
@@ -164,12 +164,12 @@ describe('DateTimePicker', () => {
       expect(res[precisionRankRecord[0]].length).toEqual(endYear - startYear + 1);
 
       // 设置到最后一天
-      await wrapper.setProps({ value: end })
+      await wrapper.setProps({ value: end });
 
       $pickerItems.forEach((item, index) => {
         const { length } = item.findAll(`.${prefix}-picker-item__item`);
-        const counter = [6, 10, 10, 11, 11, 11]
-        expect(length).toBe(counter[index])
+        const counter = [6, 10, 10, 11, 11, 11];
+        expect(length).toBe(counter[index]);
       });
     });
 
