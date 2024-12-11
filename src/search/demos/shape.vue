@@ -1,6 +1,6 @@
 <template>
   <div class="example-search">
-    <t-search v-model="value" :clearable="true" shape="round" placeholder="请输入关键字" @change="onChange"></t-search>
+    <!-- <t-search v-model="value" :clearable="true" shape="round" placeholder="请输入关键字" @change="onChange"></t-search> -->
   </div>
 </template>
 

@@ -1,8 +1,20 @@
 <template>
   <div class="example-search">
     <t-search
-      v-model="value"
-      placeholder="请输入关键字"
+      v-model="value1"
+      placeholder="搜索预设文案"
+      @change="onChange"
+      @blur="onBlur"
+      @clear="onClear"
+      @focus="onFocus"
+      @submit="onSubmit"
+      @action-click="onActionClick"
+    ></t-search>
+  </div>
+  <div class="example-search">
+    <t-search
+      v-model="value2"
+      placeholder="输入tdesign，有预览效果"
       @change="onChange"
       @blur="onBlur"
       @clear="onClear"
@@ -16,6 +28,9 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
+const value1 = ref('');
+const value2 = ref('');
+
 const onChange = (val: string) => {
   console.log('change: ', val);
 };
@@ -28,14 +43,12 @@ const onClear = () => {
 const onFocus = () => {
   console.log('focus');
 };
-
 const onSubmit = () => {
   console.log('submit');
 };
 const onActionClick = () => {
   console.log('action-click');
 };
-const value = ref('');
 </script>
 <style lang="less">
 .example-search {

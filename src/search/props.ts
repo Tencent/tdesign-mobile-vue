@@ -33,13 +33,29 @@ export default {
     type: [String, Function] as PropType<TdSearchProps['leftIcon']>,
     default: 'search',
   },
+  /** 用户最多可以输入的文本长度，一个中文等于一个计数长度。默认为 -1，不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用 */
+  maxLength: {
+    type: [String, Number] as PropType<TdSearchProps['maxLength']>,
+  },
+  /** 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用 */
+  maxcharacter: {
+    type: Number,
+  },
   /** 占位符 */
   placeholder: {
     type: String,
     default: '',
   },
   /** 只读状态 */
-  readonly: Boolean,
+  readonly: {
+    type: Boolean,
+    default: undefined,
+  },
+  /** 预览结果列表 */
+  resultList: {
+    type: Array as PropType<TdSearchProps['resultList']>,
+    default: (): TdSearchProps['resultList'] => [],
+  },
   /** 搜索框形状 */
   shape: {
     type: String as PropType<TdSearchProps['shape']>,

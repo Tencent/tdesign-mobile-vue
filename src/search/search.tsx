@@ -9,6 +9,7 @@ import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 import { TdSearchProps } from './type';
 import { ENTER_REG } from '../_common/js/common';
+import { getCharacterLength } from '../shared';
 
 const { prefix } = config;
 
@@ -49,7 +50,17 @@ export default defineComponent({
 
     const inputValueChangeHandle = (e: Event) => {
       const { value } = e.target as HTMLInputElement;
-      searchValue.value = value;
+      const { maxcharacter } = props;
+      if (maxcharacter && maxcharacter > 0 && !Number.isNaN(maxcharacter)) {
+        const { length = 0, characters = '' } = getCharacterLength(value, maxcharacter) as {
+          length: number;
+          characters: string;
+        };
+        searchValue.value = characters;
+      } else {
+        searchValue.value = value;
+      }
+
       nextTick(() => setInputValue(searchValue.value));
     };
 
@@ -128,6 +139,7 @@ export default defineComponent({
             {readerLeftIcon()}
             <input
               ref={inputRef}
+              maxlength={props.maxLength || -1}
               value={searchValue.value}
               type="search"
               class={inputClasses.value}
