@@ -1,9 +1,9 @@
 <template>
   <div class="example-search">
-    <t-search v-model="value1" :max-length="10" placeholder="搜索预设文案"></t-search>
+    <t-search v-model="value1" :maxcharacter="10" placeholder="最大输入10个字符"></t-search>
   </div>
   <div class="example-search">
-    <t-search v-model="value2" :max-length="10" placeholder="输入tdesign，有预览效果"></t-search>
+    <t-search v-model="value2" :maxcharacter="10" placeholder="最大输入10个字符，汉字算两个"></t-search>
   </div>
 </template>
 

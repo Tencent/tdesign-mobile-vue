@@ -1,5 +1,5 @@
 import { SearchIcon as TSearchIcon, CloseCircleFilledIcon as TIconClear } from 'tdesign-icons-vue-next';
-import { ref, computed, defineComponent, nextTick } from 'vue';
+import { ref, computed, defineComponent, nextTick, h, Fragment } from 'vue';
 import { useFocus } from '@vueuse/core';
 import config from '../config';
 import { preventDefault } from '../shared/dom';
@@ -10,6 +10,7 @@ import { useTNodeJSX } from '../hooks/tnode';
 import { TdSearchProps } from './type';
 import { ENTER_REG } from '../_common/js/common';
 import { getCharacterLength } from '../shared';
+import TCell from '../cell/cell';
 
 const { prefix } = config;
 
@@ -20,6 +21,8 @@ export default defineComponent({
     const renderTNodeJSX = useTNodeJSX();
     const searchClass = usePrefixClass('search');
 
+    const isShowResultList = ref(false);
+    const isShowAction = ref(false);
     const inputRef = ref<HTMLInputElement>();
     const { focused } = useFocus(inputRef, { initialValue: props.focus });
     const [searchValue] = useDefault<TdSearchProps['value'], TdSearchProps>(props, context.emit, 'value', 'change');
@@ -52,25 +55,23 @@ export default defineComponent({
       const { value } = e.target as HTMLInputElement;
       const { maxcharacter } = props;
       if (maxcharacter && maxcharacter > 0 && !Number.isNaN(maxcharacter)) {
-        const { length = 0, characters = '' } = getCharacterLength(value, maxcharacter) as {
-          length: number;
+        const { characters = '' } = getCharacterLength(value, maxcharacter) as {
           characters: string;
         };
         searchValue.value = characters;
       } else {
         searchValue.value = value;
       }
-
       nextTick(() => setInputValue(searchValue.value));
     };
 
     const handleInput = (e: Event) => {
+      isShowResultList.value = true;
       if (e instanceof InputEvent) {
         // 中文输入的时候inputType是insertCompositionText所以中文输入的时候禁止触发。
         const checkInputType = e.inputType && e.inputType === 'insertCompositionText';
         if (e.isComposing || checkInputType) return;
       }
-
       inputValueChangeHandle(e);
     };
 
@@ -81,10 +82,12 @@ export default defineComponent({
     };
 
     const handleFocus = (e: FocusEvent) => {
+      isShowAction.value = true;
       props.onFocus?.({ value: searchValue.value, e });
     };
 
     const handleBlur = (e: FocusEvent) => {
+      isShowAction.value = false;
       props.onBlur?.({ value: searchValue.value, e });
     };
 
@@ -123,40 +126,79 @@ export default defineComponent({
       };
       const readerAction = () => {
         const action = renderTNodeJSX('action');
-        if (action && searchValue.value) {
+        if (action && isShowAction.value) {
           return (
-            <div class={`${searchClass.value}__search-action`} onClick={handleAction}>
+            <button class={`${searchClass.value}__search-action ${prefix}-class-action`} onClick={handleAction}>
               {action}
-            </div>
+            </button>
           );
         }
         return null;
       };
 
+      const onSelectResultItem = (params: { item: string }) => {
+        isShowResultList.value = false;
+        searchValue.value = params.item;
+      };
+
+      const highlightSearchValue = (item: string, searchValue: string) => {
+        const parts = item.split(new RegExp(`(${searchValue})`, 'gi'));
+        return parts.map((part, index) =>
+          part.toLowerCase() === searchValue.toLowerCase() ? (
+            <span key={index} class={`${searchClass.value}__result-item--highLight`}>
+              {part}
+            </span>
+          ) : (
+            part
+          ),
+        );
+      };
+
+      const listNodes = (params: { item: string; index: number }) => {
+        return h(
+          TCell,
+          {
+            key: params.index,
+            class: `${searchClass.value}__result-item`,
+            onClick: () => onSelectResultItem({ item: params.item }),
+          },
+          {
+            title: () => highlightSearchValue(params.item, searchValue.value),
+          },
+        );
+      };
+
       return (
-        <div class={`${searchClass.value}`}>
-          <div class={boxClasses.value}>
-            {readerLeftIcon()}
-            <input
-              ref={inputRef}
-              maxlength={props.maxLength || -1}
-              value={searchValue.value}
-              type="search"
-              class={inputClasses.value}
-              autofocus={props.focus}
-              placeholder={props.placeholder}
-              readonly={props.readonly}
-              disabled={props.disabled}
-              onKeypress={handleSearch}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
-              onInput={handleInput}
-              onCompositionend={handleCompositionend}
-            />
-            {readerClear()}
+        <Fragment>
+          <div class={`${searchClass.value}`}>
+            <div class={boxClasses.value}>
+              {readerLeftIcon()}
+              <input
+                ref={inputRef}
+                maxlength={props.maxLength || -1}
+                value={searchValue.value}
+                type="search"
+                class={inputClasses.value}
+                autofocus={props.focus}
+                placeholder={props.placeholder}
+                readonly={props.readonly}
+                disabled={props.disabled}
+                onKeypress={handleSearch}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+                onInput={handleInput}
+                onCompositionend={handleCompositionend}
+              />
+              {readerClear()}
+            </div>
+            {readerAction()}
           </div>
-          {readerAction()}
-        </div>
+          {isShowResultList.value && (
+            <div class={`${searchClass.value}__result-list`}>
+              {props.resultList.map((item, index) => listNodes({ item, index }))}
+            </div>
+          )}
+        </Fragment>
       );
     };
   },
