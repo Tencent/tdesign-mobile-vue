@@ -169,7 +169,7 @@ export default defineComponent({
       };
 
       return (
-        <div>
+        <>
           <div class={`${searchClass.value}`}>
             <div class={boxClasses.value}>
               {readerLeftIcon()}
@@ -198,7 +198,7 @@ export default defineComponent({
               {props.resultList.map((item, index) => listNodes({ item, index }))}
             </div>
           )}
-        </div>
+        </>
       );
     };
   },
