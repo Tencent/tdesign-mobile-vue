@@ -187,7 +187,7 @@ exports[`Search > Search maxLengthVue demo works fine 1`] = `
           <input
             class="t-input__keyword"
             maxlength="-1"
-            placeholder="最大输入10个字符，汉字算两个"
+            placeholder="最大输入10个字符(汉字算两个)"
             type="search"
           />
           <!---->
@@ -393,7 +393,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
               <input
                 class="t-input__keyword"
                 maxlength="-1"
-                placeholder="最大输入10个字符，汉字算两个"
+                placeholder="最大输入10个字符(汉字算两个)"
                 type="search"
               />
               <!---->
