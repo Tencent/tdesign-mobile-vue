@@ -193,7 +193,9 @@ export default defineComponent({
           >
             <table ref={tableElmRef} class={tableElmClasses.value} style={tableElementStyles.value}>
               <colgroup>
-                {props.columns?.map((col_item) => <col key={col_item.colKey} style={colStyle(col_item)} />)}
+                {props.columns?.map((col_item) => (
+                  <col key={col_item.colKey} style={colStyle(col_item)} />
+                ))}
               </colgroup>
               {props.showHeader && (
                 <thead ref={theadRef} class={theadClasses.value}>
