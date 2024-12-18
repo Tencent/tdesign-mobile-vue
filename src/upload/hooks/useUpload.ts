@@ -378,7 +378,7 @@ export default function useUpload(props: TdUploadProps) {
     uploading,
     inputRef,
     disabled,
-    // xhrReq,
+    xhrReq,
     uploadFilePercent,
     uploadFiles,
     onFileChange,
