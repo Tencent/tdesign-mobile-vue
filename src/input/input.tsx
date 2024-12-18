@@ -5,16 +5,15 @@ import {
   CloseCircleFilledIcon as TCloseCircleFilledIcon,
 } from 'tdesign-icons-vue-next';
 import isFunction from 'lodash/isFunction';
-import isObject from 'lodash/isObject';
 import config from '../config';
 import InputProps from './props';
 import { InputValue, TdInputProps } from './type';
 import { useDefault, extendAPI } from '../shared';
-import { getCharacterLength, limitUnicodeMaxLength } from '../_common/js/utils/helper';
 import { FormItemInjectionKey } from '../form/const';
 import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
+import useLengthLimit from '../hooks/useLengthLimit';
 
 const { prefix } = config;
 
@@ -76,6 +75,15 @@ export default defineComponent({
       return false;
     });
 
+    const limitParams = computed(() => ({
+      value: [undefined, null].includes(innerValue.value) ? undefined : String(innerValue.value),
+      maxlength: Number(props.maxlength),
+      maxcharacter: props.maxcharacter,
+      allowInputOverMax: props.allowInputOverMax,
+    }));
+
+    const { getValueByLimitNumber } = useLengthLimit(limitParams);
+
     const setInputValue = (v: InputValue = '') => {
       const input = inputRef.value as HTMLInputElement;
       const sV = String(v);
@@ -94,22 +102,6 @@ export default defineComponent({
         if (e.isComposing || checkInputType) return;
       }
       inputValueChangeHandle(e);
-    };
-
-    // 文本超出数量限制时，是否允许继续输入
-    const getValueByLimitNumber = (inputValue: string) => {
-      const { allowInputOverMax, maxlength, maxcharacter } = props;
-      if (!(maxlength || maxcharacter) || allowInputOverMax || !inputValue) return inputValue;
-      if (maxlength) {
-        // input value could be unicode 😊
-        return limitUnicodeMaxLength(inputValue, Number(maxlength));
-      }
-      if (maxcharacter) {
-        const r = getCharacterLength(inputValue, maxcharacter);
-        if (isObject(r)) {
-          return r.characters;
-        }
-      }
     };
 
     const inputValueChangeHandle = (e: Event) => {
@@ -248,6 +240,7 @@ export default defineComponent({
       // 不传给 input 原生元素 maxlength，浏览器默认行为会按照 unicode 进行限制，与 maxLength API 违背
       const inputAttrs = {
         ref: inputRef,
+        class: inputClasses.value,
         value: innerValue.value,
         name: props.name,
         type: renderType.value,
@@ -271,7 +264,7 @@ export default defineComponent({
           {renderPrefix()}
           <div class={`${inputClass.value}__wrap`}>
             <div class={`${inputClass.value}__content ${inputClass.value}--${status || 'default'}`}>
-              <input class={inputClasses.value} {...inputAttrs} />
+              <input {...inputAttrs} />
               {renderClearable()}
               {renderSuffix()}
               {renderSuffixIcon()}
