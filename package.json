@@ -75,7 +75,9 @@
     "typings",
     "LICENSE",
     "README.md",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    "helper",
+    "global.d.ts"
   ],
   "sideEffects": [
     "dist/*",
