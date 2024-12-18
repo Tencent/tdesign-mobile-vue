@@ -945,34 +945,6 @@
     "type": "event",
     "description": "关闭按钮时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-events)"
   },
-  "t-comment/actions": {
-    "type": "Array",
-    "description": "操作\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment?tab=api#comment-props)"
-  },
-  "t-comment/author": {
-    "type": "String|TNode",
-    "description": "作者\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment?tab=api#comment-props)"
-  },
-  "t-comment/avatar": {
-    "type": "String|Object|TNode",
-    "description": "头像\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment?tab=api#comment-props)"
-  },
-  "t-comment/content": {
-    "type": "String|TNode",
-    "description": "内容\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment?tab=api#comment-props)"
-  },
-  "t-comment/datetime": {
-    "type": "String|TNode",
-    "description": "时间\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment?tab=api#comment-props)"
-  },
-  "t-comment/quote": {
-    "type": "String|TNode",
-    "description": "引用\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment?tab=api#comment-props)"
-  },
-  "t-comment/reply": {
-    "type": "String|TNode",
-    "description": "回复\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment?tab=api#comment-props)"
-  },
   "t-count-down/auto-start": {
     "type": "Boolean",
     "description": "是否自动开始倒计时\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/count-down?tab=api#countdown-props)"
