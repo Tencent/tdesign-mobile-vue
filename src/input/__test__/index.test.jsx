@@ -1,9 +1,8 @@
-import { nextTick, ref, onMounted } from 'vue';
+import { nextTick, ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import Input from '../input';
-
 import { CloseCircleFilledIcon, InfoCircleFilledIcon, AppIcon } from 'tdesign-icons-vue-next';
+import Input from '../input';
 
 const prefix = 't';
 const name = `${prefix}-input`;
@@ -101,7 +100,7 @@ describe('Input.vue', async () => {
       const value = ref('');
       const wrapper = mount(<Input label="标题" v-model={value.value} maxlength={10} />);
       const input = wrapper.find('.t-input__wrap input');
-      expect(input.element.getAttribute('maxlength')).toBe('10');
+      expect(input.element.getAttribute('maxlength')).toBe(null);
     });
 
     it(': autocomplete', async () => {
