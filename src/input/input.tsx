@@ -5,10 +5,12 @@ import {
   CloseCircleFilledIcon as TCloseCircleFilledIcon,
 } from 'tdesign-icons-vue-next';
 import isFunction from 'lodash/isFunction';
+import isObject from 'lodash/isObject';
 import config from '../config';
 import InputProps from './props';
 import { InputValue, TdInputProps } from './type';
-import { getCharacterLength, useDefault, extendAPI } from '../shared';
+import { useDefault, extendAPI } from '../shared';
+import { getCharacterLength, limitUnicodeMaxLength } from '../_common/js/utils/helper';
 import { FormItemInjectionKey } from '../form/const';
 import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
@@ -94,18 +96,25 @@ export default defineComponent({
       inputValueChangeHandle(e);
     };
 
+    // 文本超出数量限制时，是否允许继续输入
+    const getValueByLimitNumber = (inputValue: string) => {
+      const { allowInputOverMax, maxlength, maxcharacter } = props;
+      if (!(maxlength || maxcharacter) || allowInputOverMax || !inputValue) return inputValue;
+      if (maxlength) {
+        // input value could be unicode 😊
+        return limitUnicodeMaxLength(inputValue, Number(maxlength));
+      }
+      if (maxcharacter) {
+        const r = getCharacterLength(inputValue, maxcharacter);
+        if (isObject(r)) {
+          return r.characters;
+        }
+      }
+    };
+
     const inputValueChangeHandle = (e: Event) => {
       const { value } = e.target as HTMLInputElement;
-      const { allowInputOverMax, maxcharacter } = props;
-      if (!allowInputOverMax && maxcharacter && maxcharacter > 0 && !Number.isNaN(maxcharacter)) {
-        const { length = 0, characters = '' } = getCharacterLength(value, maxcharacter) as {
-          length: number;
-          characters: string;
-        };
-        innerValue.value = characters;
-      } else {
-        innerValue.value = value;
-      }
+      innerValue.value = getValueByLimitNumber(value);
       nextTick(() => setInputValue(innerValue.value));
     };
 
@@ -235,31 +244,34 @@ export default defineComponent({
         return <div class={`${inputClass.value}__tips ${inputClass.value}--${props.align}`}>{tips}</div>;
       };
 
+      // 参考： https://github.com/Tencent/tdesign-vue-next/issues/4413
+      // 不传给 input 原生元素 maxlength，浏览器默认行为会按照 unicode 进行限制，与 maxLength API 违背
+      const inputAttrs = {
+        ref: inputRef,
+        value: innerValue.value,
+        name: props.name,
+        type: renderType.value,
+        disabled: isDisabled.value,
+        autocomplete: props.autocomplete ? 'On' : 'Off',
+        placeholder: props.placeholder,
+        readonly: props.readonly,
+        // maxlength: props.maxlength,
+        pattern: props.pattern,
+        inputmode: props.inputmode,
+        spellcheck: props.spellCheck,
+        enterkeyhint: props.enterkeyhint,
+        onFocus: handleFocus,
+        onBlur: handleBlur,
+        onInput: handleInput,
+        onCompositionend: handleCompositionend,
+      };
+
       return (
         <div class={rootClasses.value}>
           {renderPrefix()}
           <div class={`${inputClass.value}__wrap`}>
             <div class={`${inputClass.value}__content ${inputClass.value}--${status || 'default'}`}>
-              <input
-                ref={inputRef}
-                value={innerValue.value}
-                name={props.name}
-                class={inputClasses.value}
-                type={renderType.value}
-                disabled={isDisabled.value}
-                autocomplete={props.autocomplete ? 'On' : 'Off'}
-                placeholder={props.placeholder}
-                readonly={props.readonly}
-                maxlength={props.maxlength || -1}
-                pattern={props.pattern}
-                inputmode={props.inputmode}
-                spellcheck={props.spellCheck}
-                enterkeyhint={props.enterkeyhint}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-                onInput={handleInput}
-                onCompositionend={handleCompositionend}
-              />
+              <input class={inputClasses.value} {...inputAttrs} />
               {renderClearable()}
               {renderSuffix()}
               {renderSuffixIcon()}
