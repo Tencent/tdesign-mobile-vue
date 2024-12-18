@@ -312,13 +312,6 @@
     ],
     "description": "CountDown\n\n倒计时\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/count-down)"
   },
-  "t-date-range-picker": {
-    "attributes": [
-      "presets-placement",
-      "time-picker-props"
-    ],
-    "description": "DateRangePicker\n\n日期范围选择器\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/date-range-picker)"
-  },
   "t-date-time-picker": {
     "attributes": [
       "auto-close",
@@ -752,15 +745,6 @@
     ],
     "description": "Overlay\n\n遮罩层\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/overlay)"
   },
-  "t-pagination": {
-    "attributes": [
-      "show-first-and-last-page-btn",
-      "show-page-number",
-      "show-page-size",
-      "show-previous-and-next-btn"
-    ],
-    "description": "Pagination\n\n分页\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/pagination)"
-  },
   "t-picker": {
     "attributes": [
       "cancel-btn",
@@ -787,9 +771,7 @@
   },
   "t-popconfirm": {
     "attributes": [
-      "default",
-      "destroy-on-close",
-      "trigger-element"
+      "default"
     ],
     "description": "Popconfirm\n\n气泡确认框\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/popconfirm)"
   },
@@ -1004,14 +986,6 @@
     ],
     "description": "Search\n\n搜索\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/search)"
   },
-  "t-segmented-control": {
-    "attributes": [
-      "items",
-      "value",
-      "change"
-    ],
-    "description": "SegmentedControl\n\n分段器\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/segmented-control)"
-  },
   "t-select": {
     "attributes": [
       "select-input-props",
@@ -1131,13 +1105,6 @@
       "scroll"
     ],
     "description": "Sticky\n\n吸顶容器\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/sticky)"
-  },
-  "t-sticky-tool": {
-    "attributes": [
-      "shape",
-      "type"
-    ],
-    "description": "StickyTool\n\n侧边固钉\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/sticky-tool)"
   },
   "t-swipe-cell": {
     "attributes": [
@@ -1288,33 +1255,6 @@
     ],
     "description": "Textarea\n\n文本输入框\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/textarea)"
   },
-  "t-time-range-picker": {
-    "attributes": [
-      "focus"
-    ],
-    "description": "TimeRangePicker\n\n时间范围选择器\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/time-range-picker)"
-  },
-  "t-timeline": {
-    "attributes": [
-      "label-align",
-      "layout",
-      "mode",
-      "reverse",
-      "theme"
-    ],
-    "description": "Timeline\n\n时间轴\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/timeline)"
-  },
-  "t-timeline-item": {
-    "attributes": [
-      "content",
-      "dot",
-      "dot-color",
-      "label",
-      "label-align",
-      "click"
-    ],
-    "description": "TimelineItem\n\n时间轴\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/timeline-item)"
-  },
   "t-toast": {
     "attributes": [
       "direction",
@@ -1330,10 +1270,6 @@
       "destroy"
     ],
     "description": "Toast\n\n轻提示\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/toast)"
-  },
-  "t-tooltip": {
-    "attributes": [],
-    "description": "Tooltip\n\n文字提示\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tooltip)"
   },
   "t-tree-select": {
     "attributes": [
@@ -1383,26 +1319,5 @@
       "validate"
     ],
     "description": "Upload\n\n上传\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/upload)"
-  },
-  "t-watermark": {
-    "attributes": [
-      "alpha",
-      "content",
-      "default",
-      "height",
-      "is-repeat",
-      "line-space",
-      "movable",
-      "move-interval",
-      "offset",
-      "removable",
-      "rotate",
-      "watermark-content",
-      "width",
-      "x",
-      "y",
-      "z-index"
-    ],
-    "description": "Watermark\n\n水印\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/watermark)"
   }
 }
