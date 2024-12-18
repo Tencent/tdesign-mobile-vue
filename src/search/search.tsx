@@ -125,7 +125,6 @@ export default defineComponent({
       };
 
       const extraProps = {
-        'confirm-type': 'search',
         enterkeyhint: 'search',
       };
 
