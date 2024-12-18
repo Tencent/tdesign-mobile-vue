@@ -53,14 +53,6 @@ export interface TdDrawerProps {
    */
   zIndex?: number;
   /**
-   * 抽屉执行关闭动画效果前触发
-   */
-  onBeforeClose?: () => void;
-  /**
-   * 抽屉执行打开动画效果前触发
-   */
-  onBeforeOpen?: () => void;
-  /**
    * 关闭时触发。
    */
   onClose?: (trigger: DrawerTriggerSource) => void;

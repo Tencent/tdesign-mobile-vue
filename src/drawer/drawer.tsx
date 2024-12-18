@@ -24,7 +24,6 @@ export default defineComponent({
 
     watch(visible, () => {
       open.value = visible.value;
-      open.value ? props.onBeforeOpen?.() : props.onBeforeClose?.();
     });
 
     const onItemClick = (index: number, item: DrawerItem, context: { e: MouseEvent }) => {

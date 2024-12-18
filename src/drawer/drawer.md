@@ -16,8 +16,6 @@ showOverlay | Boolean | true | 是否显示遮罩层 | N
 title | String / Slot / Function | - | 抽屉的标题。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 visible | Boolean | false | 组件是否可见 | N
 zIndex | Number | - | 抽屉层级，样式默认为 1500 | N
-onBeforeClose | Function |  | TS 类型：`() => void`<br/>抽屉执行关闭动画效果前触发 | N
-onBeforeOpen | Function |  | TS 类型：`() => void`<br/>抽屉执行打开动画效果前触发 | N
 onClose | Function |  | TS 类型：`(trigger: DrawerTriggerSource) => void`<br/>关闭时触发。。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/drawer/type.ts)。<br/>`type DrawerTriggerSource = 'overlay'`<br/> | N
 onItemClick | Function |  | TS 类型：`( index: number, item: DrawerItem, context: { e: MouseEvent }) => void`<br/>点击抽屉里的列表项 | N
 onOverlayClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>如果蒙层存在，点击蒙层时触发 | N
@@ -26,8 +24,6 @@ onOverlayClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void
 
 名称 | 参数 | 描述
 -- | -- | --
-before-close | \- | 抽屉执行关闭动画效果前触发
-before-open | \- | 抽屉执行打开动画效果前触发
 close | `(trigger: DrawerTriggerSource)` | 关闭时触发。。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/drawer/type.ts)。<br/>`type DrawerTriggerSource = 'overlay'`<br/>
 item-click | `( index: number, item: DrawerItem, context: { e: MouseEvent })` | 点击抽屉里的列表项
 overlay-click | `(context: { e: MouseEvent })` | 如果蒙层存在，点击蒙层时触发

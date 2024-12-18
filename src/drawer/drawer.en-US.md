@@ -16,8 +16,6 @@ showOverlay | Boolean | true | \- | N
 title | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 visible | Boolean | false | \- | N
 zIndex | Number | - | \- | N
-onBeforeClose | Function |  | Typescript：`() => void`<br/> | N
-onBeforeOpen | Function |  | Typescript：`() => void`<br/> | N
 onClose | Function |  | Typescript：`(trigger: DrawerTriggerSource) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/drawer/type.ts)。<br/>`type DrawerTriggerSource = 'overlay'`<br/> | N
 onItemClick | Function |  | Typescript：`( index: number, item: DrawerItem, context: { e: MouseEvent }) => void`<br/> | N
 onOverlayClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
@@ -26,8 +24,6 @@ onOverlayClick | Function |  | Typescript：`(context: { e: MouseEvent }) => voi
 
 name | params | description
 -- | -- | --
-before-close | \- | \-
-before-open | \- | \-
 close | `(trigger: DrawerTriggerSource)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/drawer/type.ts)。<br/>`type DrawerTriggerSource = 'overlay'`<br/>
 item-click | `( index: number, item: DrawerItem, context: { e: MouseEvent })` | \-
 overlay-click | `(context: { e: MouseEvent })` | \-

@@ -51,10 +51,6 @@ export default {
   zIndex: {
     type: Number,
   },
-  /** 抽屉执行关闭动画效果前触发 */
-  onBeforeClose: Function as PropType<TdDrawerProps['onBeforeClose']>,
-  /** 抽屉执行打开动画效果前触发 */
-  onBeforeOpen: Function as PropType<TdDrawerProps['onBeforeOpen']>,
   /** 关闭时触发。 */
   onClose: Function as PropType<TdDrawerProps['onClose']>,
   /** 点击抽屉里的列表项 */
