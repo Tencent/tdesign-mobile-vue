@@ -69,6 +69,11 @@ export interface TdDropdownItemProps {
    */
   optionsColumns?: string | number;
   /**
+   * 复选框和内容相对位置，仅单选菜单栏有效
+   * @default left
+   */
+  placement?: 'left' | 'right';
+  /**
    * 选中值
    */
   value?: DropdownValue;
