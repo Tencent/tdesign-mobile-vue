@@ -15,7 +15,7 @@ export default {
   /** 点击蒙层时是否触发抽屉关闭事件 */
   closeOnOverlayClick: {
     type: Boolean,
-    default: undefined,
+    default: true,
   },
   /** 抽屉关闭时是否销毁节点 */
   destroyOnClose: Boolean,
@@ -51,7 +51,7 @@ export default {
   zIndex: {
     type: Number,
   },
-  /** 关闭时触发 */
+  /** 关闭时触发。 */
   onClose: Function as PropType<TdDrawerProps['onClose']>,
   /** 点击抽屉里的列表项 */
   onItemClick: Function as PropType<TdDrawerProps['onItemClick']>,

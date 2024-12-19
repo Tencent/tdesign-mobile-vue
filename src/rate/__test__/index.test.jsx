@@ -135,7 +135,7 @@ describe('Rate', () => {
     expect(onChange).toHaveBeenCalledTimes(1);
   });
 
-  it(': placement',async () => {
+  it(': placement', async () => {
     const wrapper = mount(() => <Rate />);
     const icons = wrapper.findAll(`.${name}__icon`);
     await icons[0].trigger('click');
@@ -145,7 +145,7 @@ describe('Rate', () => {
     expect(placement.exists()).toBeTruthy();
   });
 
-  it(': placement=top',async () => {
+  it(': placement=top', async () => {
     const wrapper = mount(() => <Rate placement="top" />);
     const icons = wrapper.findAll(`.${name}__icon`);
     await icons[0].trigger('click');
@@ -155,7 +155,7 @@ describe('Rate', () => {
     expect(placement.exists()).toBeTruthy();
   });
 
-  it(': placement=bottom',async () => {
+  it(': placement=bottom', async () => {
     const wrapper = mount(() => <Rate placement="bottom" />);
     const icons = wrapper.findAll(`.${name}__icon`);
     await icons[0].trigger('click');
@@ -165,7 +165,7 @@ describe('Rate', () => {
     expect(placement.exists()).toBeTruthy();
   });
 
-  it(': placement=""',async () => {
+  it(': placement=""', async () => {
     const wrapper = mount(() => <Rate placement="" />);
     const icons = wrapper.findAll(`.${name}__icon`);
     await icons[0].trigger('click');

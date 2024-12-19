@@ -94,7 +94,7 @@ export default defineComponent({
     };
 
     const loadingClasses = computed(() => [`${classPrefix}-table__loading--full`]);
-    const onInnerVirtualScroll = (e: WheelEvent) => {
+    const onInnerVirtualScroll = (e: Event) => {
       props.onScroll?.({ params: e });
     };
 
@@ -189,13 +189,11 @@ export default defineComponent({
             ref={tableContentRef}
             class={tableBaseClass.content}
             style={tableContentStyles.value}
-            onWheel={onInnerVirtualScroll}
+            onScroll={onInnerVirtualScroll}
           >
             <table ref={tableElmRef} class={tableElmClasses.value} style={tableElementStyles.value}>
               <colgroup>
-                {props.columns?.map((col_item) => (
-                  <col key={col_item.colKey} style={colStyle(col_item)} />
-                ))}
+                {props.columns?.map((col_item) => <col key={col_item.colKey} style={colStyle(col_item)} />)}
               </colgroup>
               {props.showHeader && (
                 <thead ref={theadRef} class={theadClasses.value}>

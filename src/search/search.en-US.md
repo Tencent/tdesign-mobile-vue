@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Search Props
 
 name | type | default | description | required
@@ -13,8 +12,11 @@ clearable | Boolean | true | \- | N
 disabled | Boolean | - | \- | N
 focus | Boolean | false | \- | N
 leftIcon | String / Slot / Function | 'search' | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+maxcharacter | Number | - | The maximum number of characters that the user can enter. One Chinese character represents two characters in length. Use either `maxcharacter` or `maxlength` | N
+maxlength | String / Number | - | The maximum length of text that the user can enter. One Chinese character is equal to one count length. By default, it is empty, and the input length is not limited. Use either `maxcharacter` or `maxlength` | N
 placeholder | String | '' | \- | N
-readonly | Boolean | false | \- | N
+readonly | Boolean | undefined | \- | N
+resultList | Array | [] | Typescript：`Array<string>` | N
 shape | String | 'square' | options: square/round | N
 value | String | - | `v-model` and `v-model:value` is supported | N
 defaultValue | String | - | uncontrolled property | N

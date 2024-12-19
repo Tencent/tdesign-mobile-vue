@@ -61,7 +61,7 @@ export default defineComponent({
     // 通过 slots.default 子成员，计算标题栏选项
     const menuTitles = computed(() =>
       menuItems.value.map((item: any, index: number) => {
-        const { keys, label, value, modelValue, defaultValue, disabled, options } = item.props;
+        const { keys, label, value, modelValue, defaultValue, disabled, options } = item.props as TdDropdownItemProps;
         const currentValue = value || modelValue || defaultValue;
         const target = options?.find((item: any) => item[keys?.value ?? 'value'] === currentValue);
         if (state.itemsLabel.length < index + 1) {
@@ -152,7 +152,8 @@ export default defineComponent({
       expandMenu,
       collapseMenu,
       emitEvents(emit: string, trigger?: TriggerSource) {
-        props[`on${camelCase(emit)}`]?.(trigger);
+        const eventHandler = props[`on${camelCase(emit)}` as keyof typeof props] as Function;
+        eventHandler?.(trigger);
       },
     };
     // 提供子组件访问

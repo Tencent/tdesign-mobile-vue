@@ -21,12 +21,3 @@ export function useTestUtils() {
 
   return { makeScroll, sleep };
 }
-
-/**
- * 测试相关的vitest方法
- */
-export function useVitest(vi: typeof import('vitest')['vitest']) {
-  const getBoundingClientRect = (dom: Element) => vi.spyOn(dom, 'getBoundingClientRect');
-
-  return { getBoundingClientRect };
-}

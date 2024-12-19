@@ -54,7 +54,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 <input
                   autocomplete="Off"
                   class="t-input__control t-input--default"
-                  maxlength="-1"
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
@@ -127,7 +126,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 <input
                   autocomplete="Off"
                   class="t-input__control t-input--default"
-                  maxlength="-1"
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
@@ -346,7 +344,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 <input
                   autocomplete="Off"
                   class="t-input__control t-input--right t-input--default"
-                  maxlength="-1"
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
@@ -873,7 +870,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 <input
                   autocomplete="Off"
                   class="t-input__control t-input--right t-input--default"
-                  maxlength="-1"
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
@@ -1389,13 +1385,13 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             >
               <textarea
                 class="t-textarea__wrapper-inner"
-                maxlength="50"
                 name=""
                 placeholder="请输入个人简介"
               />
               <div
                 class="t-textarea__indicator"
               >
+                 
                 0/50
               </div>
             </div>
@@ -1633,6 +1629,8 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       </span>
       <!---->
     </button>
+    <!-- 下方示例代码，有效，勿删 -->
+    <!-- &lt;t-button theme="default" variant="base" @click="validateOnly"&gt;仅校验&lt;/t-button&gt; -->
   </div>
   
 </form>
@@ -1830,7 +1828,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       <input
                         autocomplete="Off"
                         class="t-input__control t-input--default"
-                        maxlength="-1"
                         name=""
                         placeholder="请输入内容"
                         spellcheck="false"
@@ -1903,7 +1900,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       <input
                         autocomplete="Off"
                         class="t-input__control t-input--default"
-                        maxlength="-1"
                         name=""
                         placeholder="请输入内容"
                         spellcheck="false"
@@ -2122,7 +2118,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       <input
                         autocomplete="Off"
                         class="t-input__control t-input--right t-input--default"
-                        maxlength="-1"
                         name=""
                         placeholder="请输入内容"
                         spellcheck="false"
@@ -2649,7 +2644,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       <input
                         autocomplete="Off"
                         class="t-input__control t-input--right t-input--default"
-                        maxlength="-1"
                         name=""
                         placeholder="请输入内容"
                         spellcheck="false"
@@ -3165,13 +3159,13 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   >
                     <textarea
                       class="t-textarea__wrapper-inner"
-                      maxlength="50"
                       name=""
                       placeholder="请输入个人简介"
                     />
                     <div
                       class="t-textarea__indicator"
                     >
+                       
                       0/50
                     </div>
                   </div>
@@ -3409,6 +3403,8 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
+          <!-- 下方示例代码，有效，勿删 -->
+          <!-- &lt;t-button theme="default" variant="base" @click="validateOnly"&gt;仅校验&lt;/t-button&gt; -->
         </div>
         
       </form>
@@ -3471,7 +3467,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 <input
                   autocomplete="Off"
                   class="t-input__control t-input--default"
-                  maxlength="-1"
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
@@ -3542,7 +3537,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 <input
                   autocomplete="Off"
                   class="t-input__control t-input--default"
-                  maxlength="-1"
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
@@ -3757,7 +3751,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 <input
                   autocomplete="Off"
                   class="t-input__control t-input--default"
-                  maxlength="-1"
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
@@ -4282,7 +4275,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 <input
                   autocomplete="Off"
                   class="t-input__control t-input--default"
-                  maxlength="-1"
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
@@ -4792,13 +4784,13 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             >
               <textarea
                 class="t-textarea__wrapper-inner"
-                maxlength="50"
                 name=""
                 placeholder="请输入个人简介"
               />
               <div
                 class="t-textarea__indicator"
               >
+                 
                 0/50
               </div>
             </div>

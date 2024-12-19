@@ -246,7 +246,6 @@ describe('Upload', () => {
         props,
       });
 
-      const target = wrapper.findComponent(Upload);
       triggerUploadFile(wrapper, [
         new File([new ArrayBuffer(1023)], 'foo.png', {
           type: 'image/png',
@@ -254,7 +253,7 @@ describe('Upload', () => {
       ]);
       expect(wrapper.vm.uploadFiles.length).toBe(1);
 
-      target.vm.uploadFiles = [];
+      wrapper.vm.uploadFiles = [];
       triggerUploadFile(wrapper, [
         new File([new ArrayBuffer(1025)], 'foo.png', {
           type: 'image/png',

@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Search Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -13,8 +12,11 @@ clearable | Boolean | true | 是否可清空 | N
 disabled | Boolean | - | 禁用状态 | N
 focus | Boolean | false | 是否聚焦 | N
 leftIcon | String / Slot / Function | 'search' | 左侧图标。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+maxcharacter | Number | - | 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用 | N
+maxlength | String / Number | - | 用户最多可以输入的文本长度，一个中文等于一个计数长度。默认为空，不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用 | N
 placeholder | String | '' | 占位符 | N
-readonly | Boolean | false | 只读状态 | N
+readonly | Boolean | undefined | 只读状态 | N
+resultList | Array | [] | 预览结果列表。TS 类型：`Array<string>` | N
 shape | String | 'square' | 搜索框形状。可选项：square/round | N
 value | String | - | 值，搜索关键词。支持语法糖 `v-model` 或 `v-model:value` | N
 defaultValue | String | - | 值，搜索关键词。非受控属性 | N

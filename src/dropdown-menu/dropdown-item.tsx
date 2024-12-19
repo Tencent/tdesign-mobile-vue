@@ -5,7 +5,7 @@ import TButton from '../button';
 import TPopup from '../popup';
 import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
 import { useVModel, uniqueFactory, getWindowSize } from '../shared';
-import DropdownItemProps from './dropdown-item-props';
+import props from './dropdown-item-props';
 import { DropdownMenuState, DropdownMenuControl } from './context';
 import { TdDropdownMenuProps, DropdownValue } from './type';
 import { KeysType } from '../common';
@@ -18,8 +18,8 @@ const getUniqueID = uniqueFactory('dropdown-popup');
 
 export default defineComponent({
   name: `${prefix}-dropdown-item`,
-  components: { TRadio, TButton, TPopup, TCheckbox, TRadioGroup, TCheckboxGroup },
-  props: DropdownItemProps,
+  components: { TPopup },
+  props,
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
   setup(props) {
     const dropdownItemClass = usePrefixClass('dropdown-item');
@@ -211,14 +211,14 @@ export default defineComponent({
         if (!multiple.value) {
           // 单选列表
           return (
-            <t-radio-group
+            <TRadioGroup
               value={radioSelect.value}
               onChange={handleRadioChange}
-              placement="right"
+              placement={props.placement}
               class={`${dropdownItemClass.value}__radio-group`}
             >
               {(options.value || []).map((option) => (
-                <t-radio
+                <TRadio
                   key={option.value}
                   value={option.value}
                   label={option.label}
@@ -228,19 +228,19 @@ export default defineComponent({
                   icon="line"
                 />
               ))}
-            </t-radio-group>
+            </TRadioGroup>
           );
         }
         // 多选列表
         return (
-          <t-checkbox-group
+          <TCheckboxGroup
             value={checkSelect.value}
             onChange={handleCheckboxChange}
             class={`${dropdownItemClass.value}__checkbox-group`}
             style={`grid-template-columns: repeat(${props.optionsColumns}, 1fr)`}
           >
             {(options.value || []).map((option) => (
-              <t-checkbox
+              <TCheckbox
                 key={option.value}
                 class={`${dropdownItemClass.value}__checkbox-item t-checkbox--tag`}
                 icon={false}
@@ -250,7 +250,7 @@ export default defineComponent({
                 disabled={option.disabled}
               />
             ))}
-          </t-checkbox-group>
+          </TCheckboxGroup>
         );
       };
 
@@ -258,22 +258,22 @@ export default defineComponent({
         if (multiple.value) {
           return (
             <div class={`${dropdownItemClass.value}__footer`}>
-              <t-button
+              <TButton
                 theme="light"
                 class={`${dropdownItemClass.value}__footer-btn ${dropdownItemClass.value}__reset-btn`}
                 disabled={isBtnDisabled.value}
                 onClick={resetSelect}
               >
                 {globalConfig.value.reset}
-              </t-button>
-              <t-button
+              </TButton>
+              <TButton
                 theme="primary"
                 class={`${dropdownItemClass.value}__footer-btn ${dropdownItemClass.value}__confirm-btn`}
                 disabled={isBtnDisabled.value}
                 onClick={confirmSelect}
               >
                 {globalConfig.value.confirm}
-              </t-button>
+              </TButton>
             </div>
           );
         }

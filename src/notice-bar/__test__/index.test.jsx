@@ -39,7 +39,6 @@ describe('NoticeBar', async () => {
       await nextTick();
       // expect(wrapper3.vm.scroll.marquee).toBe(false);
 
-
       params.loop = 3;
       const wrapper4 = mount(<NoticeBar visible marquee={params} />);
       await nextTick();
@@ -97,7 +96,7 @@ describe('NoticeBar', async () => {
 
     it('direction', async () => {
       const content = ['君不见', '高堂明镜悲白发', '朝如青丝暮成雪', '人生得意须尽欢', '莫使金樽空对月'];
-      const wrapper = mount(<NoticeBar visible marquee direction='vertical' content={content} />);
+      const wrapper = mount(<NoticeBar visible marquee direction="vertical" content={content} />);
       await nextTick();
       expect(wrapper.find('.t-notice-bar__content--vertical').exists()).toBe(true);
     });
@@ -156,7 +155,15 @@ describe('NoticeBar', async () => {
         triggerName = name;
       });
       const wrapper = mount(
-        <NoticeBar visible prefix-icon="pre" content="test" extra="extra" suffix-icon="suffix" operation="operation" onClick={fn} />,
+        <NoticeBar
+          visible
+          prefix-icon="pre"
+          content="test"
+          extra="extra"
+          suffix-icon="suffix"
+          operation="operation"
+          onClick={fn}
+        />,
       );
       await wrapper.find('.t-notice-bar__prefix-icon').trigger('click');
       expect(triggerName).toBe('prefix-icon');

@@ -51,6 +51,7 @@ export interface FormItemContext {
     trigger: ValidateTriggerType,
     showErrorMessage?: boolean,
   ) => Promise<FormItemValidateResult<T>>;
+  validateOnly: <T = Data>(trigger: ValidateTriggerType) => Promise<FormItemValidateResult<T>>;
   setValidateMessage: (validateMessage: FormItemValidateMessage[]) => void;
 }
 
