@@ -25,7 +25,7 @@ exports[`Search > Search actionVue demo works fine 1`] = `
           />
         </svg>
         <input
-          class="t-input__keyword t-search--center"
+          class="t-input__keyword"
           enterkeyhint="search"
           placeholder="搜索预设文案"
           type="search"
@@ -151,7 +151,7 @@ exports[`Search > Search maxLengthVue demo works fine 1`] = `
           <input
             class="t-input__keyword"
             enterkeyhint="search"
-            placeholder="最大输入10个汉字"
+            placeholder="最多输入10个汉字"
             type="search"
           />
           <!---->
@@ -187,7 +187,7 @@ exports[`Search > Search maxLengthVue demo works fine 1`] = `
           <input
             class="t-input__keyword"
             enterkeyhint="search"
-            placeholder="最大输入10个字符(汉字算两个)"
+            placeholder="最多输入10个字符（汉字算两个）"
             type="search"
           />
           <!---->
@@ -357,7 +357,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
               <input
                 class="t-input__keyword"
                 enterkeyhint="search"
-                placeholder="最大输入10个汉字"
+                placeholder="最多输入10个汉字"
                 type="search"
               />
               <!---->
@@ -393,7 +393,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
               <input
                 class="t-input__keyword"
                 enterkeyhint="search"
-                placeholder="最大输入10个字符(汉字算两个)"
+                placeholder="最多输入10个字符（汉字算两个）"
                 type="search"
               />
               <!---->
@@ -448,7 +448,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 />
               </svg>
               <input
-                class="t-input__keyword t-search--center"
+                class="t-input__keyword"
                 enterkeyhint="search"
                 placeholder="搜索预设文案"
                 type="search"

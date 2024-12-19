@@ -3,7 +3,6 @@
     <t-search
       :value="searchValue"
       placeholder="搜索预设文案"
-      center
       action="取消"
       @action-click="onActionClick"
       @blur="onBlur"

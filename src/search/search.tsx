@@ -1,5 +1,5 @@
 import { SearchIcon as TSearchIcon, CloseCircleFilledIcon as TIconClear } from 'tdesign-icons-vue-next';
-import { ref, computed, defineComponent, nextTick, h, Fragment } from 'vue';
+import { ref, computed, defineComponent, nextTick, h } from 'vue';
 import { useFocus } from '@vueuse/core';
 import config from '../config';
 import { preventDefault } from '../shared/dom';
@@ -7,11 +7,10 @@ import searchProps from './props';
 import { useDefault } from '../shared/useDefault';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
+import useLengthLimit from '../hooks/useLengthLimit';
 import { TdSearchProps } from './type';
 import { ENTER_REG } from '../_common/js/common';
-import { getCharacterLength } from '../shared';
 import TCell from '../cell/cell';
-import useLengthLimit from '@/hooks/useLengthLimit';
 
 const { prefix } = config;
 
