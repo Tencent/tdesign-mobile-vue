@@ -103,9 +103,11 @@ export default defineComponent({
       // 如果按的是 enter 键, 13是 enter
       if (ENTER_REG.test(e.code) || ENTER_REG.test(e.key)) {
         preventDefault(e, false);
+        inputRef.value?.blur();
         props.onSubmit?.({ value: searchValue.value, e });
       }
     };
+
     return () => {
       const readerLeftIcon = () => {
         const leftIcon = renderTNodeJSX('leftIcon');
@@ -167,7 +169,11 @@ export default defineComponent({
           },
         );
       };
-
+        
+      const extraProps = {
+        enterkeyhint: 'search',
+      };
+        
       return (
         <div>
           <div class={`${searchClass.value}`}>
@@ -188,6 +194,7 @@ export default defineComponent({
                 onBlur={handleBlur}
                 onInput={handleInput}
                 onCompositionend={handleCompositionend}
+                {...extraProps}
               />
               {readerClear()}
             </div>

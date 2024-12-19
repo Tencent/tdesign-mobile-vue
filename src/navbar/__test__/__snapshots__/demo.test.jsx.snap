@@ -758,8 +758,13 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
                     placeholder="搜索预设文案"
                     type="search"
                   />
-                  <!---->
-                </div>
+                </svg>
+                <input
+                  class="t-input__keyword"
+                  enterkeyhint="search"
+                  placeholder="搜索预设文案"
+                  type="search"
+                />
                 <!---->
               </div>
               <!---->
@@ -1321,8 +1326,13 @@ exports[`Navbar > Navbar searchVue demo works fine 1`] = `
               placeholder="搜索预设文案"
               type="search"
             />
-            <!---->
-          </div>
+          </svg>
+          <input
+            class="t-input__keyword"
+            enterkeyhint="search"
+            placeholder="搜索预设文案"
+            type="search"
+          />
           <!---->
         </div>
         <!---->
