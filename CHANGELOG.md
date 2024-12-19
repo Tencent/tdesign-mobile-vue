@@ -11,10 +11,10 @@ spline: explain
 - `Image`: 新增 `fallback` 属性，图片加载失败时，显示当前链接设置的图片地址；新增 `img` 原生标签属性 `referrerpolicy` @liweijie0812 ([#1647](https://github.com/Tencent/tdesign-mobile-vue/pull/1647))
 - `Input`: 新增 `enterkeyhint` API， 用于控制回车键样式，此 API 仅在部分浏览器支持 @liweijie0812 ([#1651](https://github.com/Tencent/tdesign-mobile-vue/pull/1651))
 - `Search`: 新增 `maxcharacter` 、`maxlength` 和 `resultList` 属性，`action` 触发方式调整为聚焦后触发 @RSS1102 ([#1681](https://github.com/Tencent/tdesign-mobile-vue/pull/1681))
-### 🐞 Bug Fixes
-- `Dialog`: 修复 `cancelBtn` 和 `confirmBtn` 插槽不生效 @liweijie0812 ([#1668](https://github.com/Tencent/tdesign-mobile-vue/pull/1668))
 - `RadioGroup`: 新增 `readonly` 属性 @liweijie0812 ([#1674](https://github.com/Tencent/tdesign-mobile-vue/pull/1674))
 - `DropdownItem`: 新增 `placement` 属性 @liweijie0812 ([#1675](https://github.com/Tencent/tdesign-mobile-vue/pull/1675))
+### 🐞 Bug Fixes
+- `Dialog`: 修复 `cancelBtn` 和 `confirmBtn` 插槽不生效 @liweijie0812 ([#1668](https://github.com/Tencent/tdesign-mobile-vue/pull/1668))
 - `ConfigProvider`: 修复全局配置丢失响应式问题 @Rococoscarlet ([#1670](https://github.com/Tencent/tdesign-mobile-vue/pull/1670))
 - `Swiper`: 修复 `current` 受控时表现 @novlan1 ([#1661](https://github.com/Tencent/tdesign-mobile-vue/pull/1661))
 - `Input`: 修复 `maxlength` 对 `Unicode` 字符计算不准确问题 @anlyyao ([#1683](https://github.com/Tencent/tdesign-mobile-vue/pull/1683))
