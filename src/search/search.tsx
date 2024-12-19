@@ -11,6 +11,7 @@ import { TdSearchProps } from './type';
 import { ENTER_REG } from '../_common/js/common';
 import { getCharacterLength } from '../shared';
 import TCell from '../cell/cell';
+import useLengthLimit from '@/hooks/useLengthLimit';
 
 const { prefix } = config;
 
@@ -40,6 +41,15 @@ export default defineComponent({
       { [`${searchClass.value}--center`]: props.center },
     ]);
 
+    const limitParams = computed(() => ({
+      value: [undefined, null].includes(searchValue.value) ? undefined : String(searchValue.value),
+      maxlength: Number(props.maxlength),
+      maxcharacter: props.maxcharacter,
+      allowInputOverMax: false,
+    }));
+
+    const { getValueByLimitNumber } = useLengthLimit(limitParams);
+
     const setInputValue = (v: TdSearchProps['value']) => {
       const input = inputRef.value;
       const sV = String(v);
@@ -53,15 +63,7 @@ export default defineComponent({
 
     const inputValueChangeHandle = (e: Event) => {
       const { value } = e.target as HTMLInputElement;
-      const { maxcharacter } = props;
-      if (maxcharacter && maxcharacter > 0 && !Number.isNaN(maxcharacter)) {
-        const { characters = '' } = getCharacterLength(value, maxcharacter) as {
-          characters: string;
-        };
-        searchValue.value = characters;
-      } else {
-        searchValue.value = value;
-      }
+      searchValue.value = getValueByLimitNumber(value);
       nextTick(() => setInputValue(searchValue.value));
     };
 
@@ -130,9 +132,9 @@ export default defineComponent({
         const action = renderTNodeJSX('action');
         if (action && isShowAction.value) {
           return (
-            <button class={`${searchClass.value}__search-action ${prefix}-class-action`} onClick={handleAction}>
+            <div class={`${searchClass.value}__search-action ${prefix}-class-action`} onClick={handleAction}>
               {action}
-            </button>
+            </div>
           );
         }
         return null;
@@ -169,11 +171,11 @@ export default defineComponent({
           },
         );
       };
-        
+
       const extraProps = {
         enterkeyhint: 'search',
       };
-        
+
       return (
         <div>
           <div class={`${searchClass.value}`}>
@@ -181,7 +183,6 @@ export default defineComponent({
               {readerLeftIcon()}
               <input
                 ref={inputRef}
-                maxlength={props.maxLength || -1}
                 value={searchValue.value}
                 type="search"
                 class={inputClasses.value}

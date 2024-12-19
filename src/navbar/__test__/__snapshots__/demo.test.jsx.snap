@@ -754,17 +754,12 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
                   </svg>
                   <input
                     class="t-input__keyword"
-                    maxlength="-1"
+                    enterkeyhint="search"
                     placeholder="搜索预设文案"
                     type="search"
                   />
-                </svg>
-                <input
-                  class="t-input__keyword"
-                  enterkeyhint="search"
-                  placeholder="搜索预设文案"
-                  type="search"
-                />
+                  <!---->
+                </div>
                 <!---->
               </div>
               <!---->
@@ -1322,17 +1317,12 @@ exports[`Navbar > Navbar searchVue demo works fine 1`] = `
             </svg>
             <input
               class="t-input__keyword"
-              maxlength="-1"
+              enterkeyhint="search"
               placeholder="搜索预设文案"
               type="search"
             />
-          </svg>
-          <input
-            class="t-input__keyword"
-            enterkeyhint="search"
-            placeholder="搜索预设文案"
-            type="search"
-          />
+            <!---->
+          </div>
           <!---->
         </div>
         <!---->

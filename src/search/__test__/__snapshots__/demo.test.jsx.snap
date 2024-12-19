@@ -26,18 +26,12 @@ exports[`Search > Search actionVue demo works fine 1`] = `
         </svg>
         <input
           class="t-input__keyword t-search--center"
-          maxlength="-1"
+          enterkeyhint="search"
           placeholder="搜索预设文案"
           type="search"
         />
-      </svg>
-      <input
-        autofocus=""
-        class="t-input__keyword t-search--center"
-        enterkeyhint="search"
-        placeholder="搜索预设文案"
-        type="search"
-      />
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -57,17 +51,68 @@ exports[`Search > Search baseVue demo works fine 1`] = `
       <div
         class="t-search"
       >
-        <path
-          d="M15.1 5.9a6.5 6.5 0 10-9.2 9.2 6.5 6.5 0 009.2-9.2zM4.49 4.5a8.5 8.5 0 0112.69 11.27l5.34 5.35-1.41 1.41-5.35-5.34A8.5 8.5 0 014.5 4.49z"
-          fill="currentColor"
-        />
-      </svg>
-      <input
-        class="t-input__keyword"
-        enterkeyhint="search"
-        placeholder="请输入关键字"
-        type="search"
-      />
+        <div
+          class="t-search__input-box t-search__input-box--square"
+        >
+          <svg
+            class="t-icon t-icon-search"
+            fill="none"
+            height="1em"
+            style="font-size: 24px;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M15.1 5.9a6.5 6.5 0 10-9.2 9.2 6.5 6.5 0 009.2-9.2zM4.49 4.5a8.5 8.5 0 0112.69 11.27l5.34 5.35-1.41 1.41-5.35-5.34A8.5 8.5 0 014.5 4.49z"
+              fill="currentColor"
+            />
+          </svg>
+          <input
+            class="t-input__keyword"
+            enterkeyhint="search"
+            placeholder="搜索预设文案"
+            type="search"
+          />
+          <!---->
+        </div>
+        <!---->
+      </div>
+      <!---->
+    </div>
+  </div>
+  <div
+    class="example-search"
+  >
+    <div>
+      <div
+        class="t-search"
+      >
+        <div
+          class="t-search__input-box t-search__input-box--square"
+        >
+          <svg
+            class="t-icon t-icon-search"
+            fill="none"
+            height="1em"
+            style="font-size: 24px;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M15.1 5.9a6.5 6.5 0 10-9.2 9.2 6.5 6.5 0 009.2-9.2zM4.49 4.5a8.5 8.5 0 0112.69 11.27l5.34 5.35-1.41 1.41-5.35-5.34A8.5 8.5 0 014.5 4.49z"
+              fill="currentColor"
+            />
+          </svg>
+          <input
+            class="t-input__keyword"
+            enterkeyhint="search"
+            placeholder="输入tdesign，有预览效果"
+            type="search"
+          />
+          <!---->
+        </div>
+        <!---->
+      </div>
       <!---->
     </div>
   </div>
@@ -105,7 +150,7 @@ exports[`Search > Search maxLengthVue demo works fine 1`] = `
           </svg>
           <input
             class="t-input__keyword"
-            maxlength="10"
+            enterkeyhint="search"
             placeholder="最大输入10个汉字"
             type="search"
           />
@@ -141,7 +186,7 @@ exports[`Search > Search maxLengthVue demo works fine 1`] = `
           </svg>
           <input
             class="t-input__keyword"
-            maxlength="-1"
+            enterkeyhint="search"
             placeholder="最大输入10个字符(汉字算两个)"
             type="search"
           />
@@ -217,17 +262,12 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
               </svg>
               <input
                 class="t-input__keyword"
-                maxlength="-1"
+                enterkeyhint="search"
                 placeholder="搜索预设文案"
                 type="search"
               />
-            </svg>
-            <input
-              class="t-input__keyword"
-              enterkeyhint="search"
-              placeholder="请输入关键字"
-              type="search"
-            />
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -258,7 +298,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
               </svg>
               <input
                 class="t-input__keyword"
-                maxlength="-1"
+                enterkeyhint="search"
                 placeholder="输入tdesign，有预览效果"
                 type="search"
               />
@@ -316,18 +356,105 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
               </svg>
               <input
                 class="t-input__keyword"
-                maxlength="10"
+                enterkeyhint="search"
                 placeholder="最大输入10个汉字"
                 type="search"
               />
-            </svg>
-            <input
-              autofocus=""
-              class="t-input__keyword t-search--center"
-              enterkeyhint="search"
-              placeholder="搜索预设文案"
-              type="search"
-            />
+              <!---->
+            </div>
+            <!---->
+          </div>
+          <!---->
+        </div>
+      </div>
+      <div
+        class="example-search"
+      >
+        <div>
+          <div
+            class="t-search"
+          >
+            <div
+              class="t-search__input-box t-search__input-box--square"
+            >
+              <svg
+                class="t-icon t-icon-search"
+                fill="none"
+                height="1em"
+                style="font-size: 24px;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M15.1 5.9a6.5 6.5 0 10-9.2 9.2 6.5 6.5 0 009.2-9.2zM4.49 4.5a8.5 8.5 0 0112.69 11.27l5.34 5.35-1.41 1.41-5.35-5.34A8.5 8.5 0 014.5 4.49z"
+                  fill="currentColor"
+                />
+              </svg>
+              <input
+                class="t-input__keyword"
+                enterkeyhint="search"
+                placeholder="最大输入10个字符(汉字算两个)"
+                type="search"
+              />
+              <!---->
+            </div>
+            <!---->
+          </div>
+          <!---->
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        获取焦点后显示取消按钮
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="example-search"
+      >
+        <div>
+          <div
+            class="t-search"
+          >
+            <div
+              class="t-search__input-box t-search__input-box--square"
+            >
+              <svg
+                class="t-icon t-icon-search"
+                fill="none"
+                height="1em"
+                style="font-size: 24px;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M15.1 5.9a6.5 6.5 0 10-9.2 9.2 6.5 6.5 0 009.2-9.2zM4.49 4.5a8.5 8.5 0 0112.69 11.27l5.34 5.35-1.41 1.41-5.35-5.34A8.5 8.5 0 014.5 4.49z"
+                  fill="currentColor"
+                />
+              </svg>
+              <input
+                class="t-input__keyword t-search--center"
+                enterkeyhint="search"
+                placeholder="搜索预设文案"
+                type="search"
+              />
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -383,17 +510,48 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
               </svg>
               <input
                 class="t-input__keyword"
-                maxlength="-1"
+                enterkeyhint="search"
                 placeholder="搜索预设文案"
                 type="search"
               />
-            </svg>
-            <input
-              class="t-input__keyword"
-              enterkeyhint="search"
-              placeholder="请输入关键字"
-              type="search"
-            />
+              <!---->
+            </div>
+            <!---->
+          </div>
+          <!---->
+        </div>
+      </div>
+      <div
+        class="example-search"
+      >
+        <div>
+          <div
+            class="t-search"
+          >
+            <div
+              class="t-search__input-box t-search__input-box--round"
+            >
+              <svg
+                class="t-icon t-icon-search"
+                fill="none"
+                height="1em"
+                style="font-size: 24px;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M15.1 5.9a6.5 6.5 0 10-9.2 9.2 6.5 6.5 0 009.2-9.2zM4.49 4.5a8.5 8.5 0 0112.69 11.27l5.34 5.35-1.41 1.41-5.35-5.34A8.5 8.5 0 014.5 4.49z"
+                  fill="currentColor"
+                />
+              </svg>
+              <input
+                class="t-input__keyword"
+                enterkeyhint="search"
+                placeholder="搜索预设文案"
+                type="search"
+              />
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -404,18 +562,14 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
-      <h2
-        class="tdesign-mobile-demo-block__title"
-      >
-        03 组件状态
-      </h2>
+      <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         默认状态其他对齐方式
       </p>
@@ -449,17 +603,12 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
               </svg>
               <input
                 class="t-input__keyword t-search--center"
-                maxlength="-1"
+                enterkeyhint="search"
                 placeholder="搜索预设文案"
                 type="search"
               />
-            </svg>
-            <input
-              class="t-input__keyword"
-              enterkeyhint="search"
-              placeholder="搜索预设文案"
-              type="search"
-            />
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
@@ -497,17 +646,12 @@ exports[`Search > Search otherVue demo works fine 1`] = `
         </svg>
         <input
           class="t-input__keyword t-search--center"
-          maxlength="-1"
+          enterkeyhint="search"
           placeholder="搜索预设文案"
           type="search"
         />
-      </svg>
-      <input
-        class="t-input__keyword"
-        enterkeyhint="search"
-        placeholder="搜索预设文案"
-        type="search"
-      />
+        <!---->
+      </div>
       <!---->
     </div>
     <!---->
@@ -527,17 +671,68 @@ exports[`Search > Search shapeVue demo works fine 1`] = `
       <div
         class="t-search"
       >
-        <path
-          d="M15.1 5.9a6.5 6.5 0 10-9.2 9.2 6.5 6.5 0 009.2-9.2zM4.49 4.5a8.5 8.5 0 0112.69 11.27l5.34 5.35-1.41 1.41-5.35-5.34A8.5 8.5 0 014.5 4.49z"
-          fill="currentColor"
-        />
-      </svg>
-      <input
-        class="t-input__keyword"
-        enterkeyhint="search"
-        placeholder="请输入关键字"
-        type="search"
-      />
+        <div
+          class="t-search__input-box t-search__input-box--square"
+        >
+          <svg
+            class="t-icon t-icon-search"
+            fill="none"
+            height="1em"
+            style="font-size: 24px;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M15.1 5.9a6.5 6.5 0 10-9.2 9.2 6.5 6.5 0 009.2-9.2zM4.49 4.5a8.5 8.5 0 0112.69 11.27l5.34 5.35-1.41 1.41-5.35-5.34A8.5 8.5 0 014.5 4.49z"
+              fill="currentColor"
+            />
+          </svg>
+          <input
+            class="t-input__keyword"
+            enterkeyhint="search"
+            placeholder="搜索预设文案"
+            type="search"
+          />
+          <!---->
+        </div>
+        <!---->
+      </div>
+      <!---->
+    </div>
+  </div>
+  <div
+    class="example-search"
+  >
+    <div>
+      <div
+        class="t-search"
+      >
+        <div
+          class="t-search__input-box t-search__input-box--round"
+        >
+          <svg
+            class="t-icon t-icon-search"
+            fill="none"
+            height="1em"
+            style="font-size: 24px;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M15.1 5.9a6.5 6.5 0 10-9.2 9.2 6.5 6.5 0 009.2-9.2zM4.49 4.5a8.5 8.5 0 0112.69 11.27l5.34 5.35-1.41 1.41-5.35-5.34A8.5 8.5 0 014.5 4.49z"
+              fill="currentColor"
+            />
+          </svg>
+          <input
+            class="t-input__keyword"
+            enterkeyhint="search"
+            placeholder="搜索预设文案"
+            type="search"
+          />
+          <!---->
+        </div>
+        <!---->
+      </div>
       <!---->
     </div>
   </div>

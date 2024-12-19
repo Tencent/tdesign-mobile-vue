@@ -41,13 +41,13 @@ export interface TdSearchProps {
    */
   leftIcon?: string | TNode;
   /**
-   * 用户最多可以输入的文本长度，一个中文等于一个计数长度。默认为 -1，不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用
-   */
-  maxLength?: string | number;
-  /**
    * 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用
    */
   maxcharacter?: number;
+  /**
+   * 用户最多可以输入的文本长度，一个中文等于一个计数长度。默认为空，不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用
+   */
+  maxlength?: string | number;
   /**
    * 占位符
    * @default ''

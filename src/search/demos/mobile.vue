@@ -14,7 +14,7 @@
     <tdesign-demo-block title="02 组件样式" summary="搜索框形状">
       <shapeDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block title="03 组件状态" summary="默认状态其他对齐方式">
+    <tdesign-demo-block summary="默认状态其他对齐方式">
       <otherDemo />
     </tdesign-demo-block>
   </div>
