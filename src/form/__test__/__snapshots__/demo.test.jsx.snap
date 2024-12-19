@@ -356,7 +356,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               <!---->
             </div>
           </div>
-          <!--teleport start-->
+          
           <div
             class="t-overlay"
             style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -801,7 +801,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!--teleport end-->
+          
           
         </div>
         <!---->
@@ -882,7 +882,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               <!---->
             </div>
           </div>
-          <!--teleport start-->
+          
           <div
             class="t-overlay"
             style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1041,7 +1041,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!--teleport end-->
+          
           
         </div>
         <!---->
@@ -2130,7 +2130,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     <!---->
                   </div>
                 </div>
-                <!--teleport start-->
+                
                 <div
                   class="t-overlay"
                   style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -2575,7 +2575,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!--teleport end-->
+                
                 
               </div>
               <!---->
@@ -2656,7 +2656,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     <!---->
                   </div>
                 </div>
-                <!--teleport start-->
+                
                 <div
                   class="t-overlay"
                   style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -2815,7 +2815,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!--teleport end-->
+                
                 
               </div>
               <!---->
@@ -3763,7 +3763,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               <!---->
             </div>
           </div>
-          <!--teleport start-->
+          
           <div
             class="t-overlay"
             style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -4208,7 +4208,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!--teleport end-->
+          
           
         </div>
         <!---->
@@ -4287,7 +4287,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               <!---->
             </div>
           </div>
-          <!--teleport start-->
+          
           <div
             class="t-overlay"
             style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -4446,7 +4446,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!--teleport end-->
+          
           
         </div>
         <!---->
