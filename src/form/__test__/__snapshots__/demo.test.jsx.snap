@@ -1629,6 +1629,8 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       </span>
       <!---->
     </button>
+    <!-- 下方示例代码，有效，勿删 -->
+    <!-- &lt;t-button theme="default" variant="base" @click="validateOnly"&gt;仅校验&lt;/t-button&gt; -->
   </div>
   
 </form>
@@ -3401,6 +3403,8 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             </span>
             <!---->
           </button>
+          <!-- 下方示例代码，有效，勿删 -->
+          <!-- &lt;t-button theme="default" variant="base" @click="validateOnly"&gt;仅校验&lt;/t-button&gt; -->
         </div>
         
       </form>
