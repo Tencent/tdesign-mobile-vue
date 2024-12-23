@@ -33,6 +33,6 @@
   },
   "rules": { "trailing-comma": false },
   "include": ["./**/*.ts", "./**/*.tsx", "./**/*.vue"],
-  "exclude": ["node_modules", "src/_common", "dist", "es", "esm", "lib", "cjs", "site", "global.d.ts"],
+  "exclude": ["node_modules", "src/_common", "dist", "es", "esm", "lib", "cjs", "site"],
   "compileOnSave": false
 }
