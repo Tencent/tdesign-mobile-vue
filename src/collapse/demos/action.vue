@@ -10,9 +10,10 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { CollapseValue } from 'tdesign-mobile-vue';
 
-const values = ref([0]);
-const handleChange = (val: number[]) => {
+const values = ref<CollapseValue>([0]);
+const handleChange = (val: CollapseValue) => {
   values.value = val;
 };
 </script>
