@@ -39,6 +39,11 @@ export default {
   },
   /** 是否可清空 */
   clearable: Boolean,
+  /** 输入框聚焦光标颜色 */
+  cursorColor: {
+    type: String,
+    default: '',
+  },
   /** 是否禁用输入框 */
   disabled: {
     type: Boolean,

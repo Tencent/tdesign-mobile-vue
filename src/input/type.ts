@@ -42,6 +42,11 @@ export interface TdInputProps {
    */
   clearable?: boolean;
   /**
+   * 输入框聚焦光标颜色
+   * @default ''
+   */
+  cursorColor?: string;
+  /**
    * 是否禁用输入框
    */
   disabled?: boolean;
