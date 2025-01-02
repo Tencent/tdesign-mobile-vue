@@ -102,6 +102,7 @@ export default defineComponent({
         if (props.disabled) {
           return;
         }
+        props.onDragStart?.();
         setPanelWidth();
         swipeDir = 0;
         initData.moved = false;
@@ -145,6 +146,7 @@ export default defineComponent({
         if (props.disabled) {
           return;
         }
+        props.onDragEnd?.();
         initData.moving = false;
         setTimeout(() => {
           closedSure.value = false;
