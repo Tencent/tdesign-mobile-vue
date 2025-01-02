@@ -39,6 +39,11 @@ export default {
   },
   /** 是否可清空 */
   clearable: Boolean,
+  /** 光标颜色，默认颜色值 #0052d9 */
+  cursorColor: {
+    type: String,
+    default: '#0052d9',
+  },
   /** 是否禁用输入框 */
   disabled: {
     type: Boolean,
