@@ -1,11 +1,11 @@
 /* eslint-disable no-undef */
 
-import type { ComputedRef, Ref, MaybeRef } from 'vue';
-import { computed, reactive, ref } from 'vue';
 import { useEventListener } from '@vueuse/core';
 import isObject from 'lodash/isObject';
-import { preventDefault } from '../shared/dom';
+import type { ComputedRef, MaybeRef, Ref } from 'vue';
+import { computed, reactive, ref } from 'vue';
 import { isBrowser } from '../shared';
+import { preventDefault } from '../shared/dom';
 
 const noop = () => {};
 
@@ -41,9 +41,6 @@ export interface UseSwipeOptions {
    * Callback on swipe ends
    */
   onSwipeEnd?: (e: TouchEvent, direction: UseSwipeDirection) => void;
-
-  onDragStart?: (e: TouchEvent) => void;
-  onDragEnd?: (e: TouchEvent) => void;
 }
 
 export interface UseSwipeReturn {

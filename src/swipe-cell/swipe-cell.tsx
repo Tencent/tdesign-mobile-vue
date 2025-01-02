@@ -1,25 +1,25 @@
-import {
-  ref,
-  watch,
-  reactive,
-  computed,
-  onMounted,
-  defineComponent,
-  getCurrentInstance,
-  StyleValue,
-  onUnmounted,
-} from 'vue';
 import isArray from 'lodash/isArray';
 import isBoolean from 'lodash/isBoolean';
-import { useSwipe } from './useSwipe';
-import props from './props';
+import {
+  computed,
+  defineComponent,
+  getCurrentInstance,
+  onMounted,
+  onUnmounted,
+  reactive,
+  ref,
+  StyleValue,
+  watch,
+} from 'vue';
 import config from '../config';
-import { SwipeActionItem, SwipeSource } from './type';
-import { useClickAway } from '../shared';
-import { preventDefault } from '../shared/dom';
-import { useSureConfirm } from './useSureConfirm';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
+import { useClickAway } from '../shared';
+import { preventDefault } from '../shared/dom';
+import props from './props';
+import { SwipeActionItem, SwipeSource } from './type';
+import { useSureConfirm } from './useSureConfirm';
+import { useSwipe } from './useSwipe';
 
 const { prefix } = config;
 
@@ -98,8 +98,6 @@ export default defineComponent({
     let swipeDir: -1 | 0 | 1 = 0;
     const { lengthX, lengthY, stop } = useSwipe(swipeCellRef, {
       threshold: 0,
-      onDragStart: (e: TouchEvent) => {},
-      onDragEnd: (e: TouchEvent) => {},
       onSwipeStart: (e: TouchEvent) => {
         if (props.disabled) {
           return;
