@@ -33,13 +33,21 @@ export interface TdSwipeCellProps {
    */
   right?: Array<SwipeActionItem> | TNode;
   /**
-   * 菜单展开或者收回后将菜单的状态传递给父组件，值为数组时表示分别控制左右滑动的展开和收起状态。
+   * 菜单展开或者收回后将菜单的状态传递给父组件，值为数组时表示分别控制左右滑动的展开和收起状态
    */
   onChange?: (value: string) => void;
   /**
    * 操作项点击时触发（插槽写法组件不触发，业务侧自定义内容和事件）
    */
   onClick?: (action: SwipeActionItem, source: SwipeSource) => void;
+  /**
+   * 滑动结束事件
+   */
+  onDragEnd?: () => void;
+  /**
+   * 滑动开始事件
+   */
+  onDragStart?: () => void;
 }
 
 /** 组件实例方法 */

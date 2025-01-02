@@ -98,6 +98,8 @@ export default defineComponent({
     let swipeDir: -1 | 0 | 1 = 0;
     const { lengthX, lengthY, stop } = useSwipe(swipeCellRef, {
       threshold: 0,
+      onDragStart: (e: TouchEvent) => {},
+      onDragEnd: (e: TouchEvent) => {},
       onSwipeStart: (e: TouchEvent) => {
         if (props.disabled) {
           return;

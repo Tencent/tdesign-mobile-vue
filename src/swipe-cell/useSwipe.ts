@@ -41,6 +41,9 @@ export interface UseSwipeOptions {
    * Callback on swipe ends
    */
   onSwipeEnd?: (e: TouchEvent, direction: UseSwipeDirection) => void;
+
+  onDragStart?: (e: TouchEvent) => void;
+  onDragEnd?: (e: TouchEvent) => void;
 }
 
 export interface UseSwipeReturn {
