@@ -30,6 +30,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -64,6 +65,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -98,6 +100,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -138,6 +141,7 @@ exports[`Input > Input bannerVue demo works fine 1`] = `
         name=""
         placeholder="请输入文字"
         spellcheck="false"
+        style="--td-input-cursor-color: #0052d9;"
         type="text"
       />
       <!---->
@@ -179,6 +183,7 @@ exports[`Input > Input baseVue demo works fine 1`] = `
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -213,6 +218,7 @@ exports[`Input > Input baseVue demo works fine 1`] = `
           name=""
           placeholder="请输入文字(选填)"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -247,6 +253,7 @@ exports[`Input > Input baseVue demo works fine 1`] = `
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -297,6 +304,7 @@ exports[`Input > Input borderedVue demo works fine 1`] = `
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -358,6 +366,7 @@ exports[`Input > Input customVue demo works fine 1`] = `
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -396,6 +405,7 @@ exports[`Input > Input labelVue demo works fine 1`] = `
         name=""
         placeholder="请输入文字"
         spellcheck="false"
+        style="--td-input-cursor-color: #0052d9;"
         type="text"
       />
       <!---->
@@ -433,6 +443,7 @@ exports[`Input > Input layoutVue demo works fine 1`] = `
         name=""
         placeholder="请输入文字"
         spellcheck="false"
+        style="--td-input-cursor-color: #0052d9;"
         type="text"
       />
       <!---->
@@ -491,6 +502,7 @@ exports[`Input > Input maxLengthVue demo works fine 1`] = `
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -529,6 +541,7 @@ exports[`Input > Input maxLengthVue demo works fine 1`] = `
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -607,6 +620,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -641,6 +655,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="请输入文字(选填)"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -675,6 +690,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -731,6 +747,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -769,6 +786,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -829,6 +847,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -880,6 +899,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="请输入手机号码"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="tel"
             />
             <!---->
@@ -935,6 +955,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1025,6 +1046,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1076,6 +1098,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1131,6 +1154,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               class="t-input__control t-input--default"
               name=""
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="password"
             />
             <!---->
@@ -1180,6 +1204,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="输入验证码"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1272,6 +1297,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="输入手机号码"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1324,6 +1350,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="0.00"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="number"
             />
             <!---->
@@ -1362,6 +1389,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="填写个数"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="number"
             />
             <!---->
@@ -1426,6 +1454,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1464,6 +1493,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               disabled=""
               name=""
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1519,6 +1549,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1578,6 +1609,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1612,6 +1644,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1646,6 +1679,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1701,6 +1735,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1773,6 +1808,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1838,6 +1874,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 name=""
                 placeholder="请输入文字"
                 spellcheck="false"
+                style="--td-input-cursor-color: #0052d9;"
                 type="text"
               />
               <!---->
@@ -1916,6 +1953,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 name=""
                 placeholder="请输入文字"
                 spellcheck="false"
+                style="--td-input-cursor-color: #0052d9;"
                 type="text"
               />
               <!---->
@@ -1979,6 +2017,7 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -2030,6 +2069,7 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -2072,6 +2112,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
           class="t-input__control t-input--default"
           name=""
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="password"
         />
         <!---->
@@ -2121,6 +2162,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
           name=""
           placeholder="输入验证码"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -2213,6 +2255,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
           name=""
           placeholder="输入手机号码"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -2265,6 +2308,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
           name=""
           placeholder="0.00"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="number"
         />
         <!---->
@@ -2303,6 +2347,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
           name=""
           placeholder="填写个数"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="number"
         />
         <!---->
@@ -2350,6 +2395,7 @@ exports[`Input > Input statusVue demo works fine 1`] = `
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -2388,6 +2434,7 @@ exports[`Input > Input statusVue demo works fine 1`] = `
           disabled=""
           name=""
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -2431,6 +2478,7 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -2482,6 +2530,7 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
           name=""
           placeholder="请输入手机号码"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="tel"
         />
         <!---->
@@ -2537,6 +2586,7 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
