@@ -35,8 +35,6 @@ export default {
   /** 菜单项 */
   items: {
     type: Array as PropType<TdActionSheetProps['items']>,
-    default: [],
-    required: true,
   },
   /** 是否显示取消按钮 */
   showCancel: {
