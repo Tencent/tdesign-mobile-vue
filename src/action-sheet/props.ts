@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdActionSheetProps } from './type';
 import { PropType } from 'vue';
+import { TdActionSheetProps } from './type';
 
 export default {
   /** 水平对齐方式 */
@@ -38,10 +38,20 @@ export default {
     default: [],
     required: true,
   },
+  /** popupProps透传 */
+  popupProps: {
+    type: Object,
+    value: {},
+  },
   /** 是否显示取消按钮 */
   showCancel: {
     type: Boolean,
     default: true,
+  },
+  /** 是否显示遮罩层 */
+  showOverlay: {
+    type: Boolean,
+    value: true,
   },
   /** 展示类型，列表和表格形式展示 */
   theme: {

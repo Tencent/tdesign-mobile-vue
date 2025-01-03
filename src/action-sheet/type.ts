@@ -3,8 +3,8 @@
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
-import { TNode } from '../common';
 import { TdBadgeProps } from '../badge/type';
+import { TNode } from '../common';
 export interface TdActionSheetProps {
   /**
    * 水平对齐方式
@@ -30,11 +30,24 @@ export interface TdActionSheetProps {
    * 菜单项
    */
   items?: Array<string | ActionSheetItem>;
+  /** popupProps透传 */
+  popupProps: {
+    type: Object;
+    value: {};
+  };
   /**
    * 是否显示取消按钮
    * @default true
    */
   showCancel?: boolean;
+  /**
+   * 是否显示遮罩层
+   * @default true
+   */
+  showOverlay?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
   /**
    * 展示类型，列表和表格形式展示
    * @default list
