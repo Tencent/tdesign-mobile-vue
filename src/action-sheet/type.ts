@@ -5,6 +5,7 @@
  * */
 import { TdBadgeProps } from '../badge/type';
 import { TNode } from '../common';
+import { TdPopupProps } from '../popup/type';
 export interface TdActionSheetProps {
   /**
    * 水平对齐方式
@@ -30,11 +31,8 @@ export interface TdActionSheetProps {
    * 菜单项
    */
   items?: Array<string | ActionSheetItem>;
-  /** popupProps透传 */
-  popupProps: {
-    type: Object;
-    value: {};
-  };
+  /** 弹出层的属性，透传至 popup */
+  popupProps: TdPopupProps;
   /**
    * 是否显示取消按钮
    * @default true
@@ -44,10 +42,7 @@ export interface TdActionSheetProps {
    * 是否显示遮罩层
    * @default true
    */
-  showOverlay?: {
-    type: BooleanConstructor;
-    value?: boolean;
-  };
+  showOverlay?: boolean;
   /**
    * 展示类型，列表和表格形式展示
    * @default list

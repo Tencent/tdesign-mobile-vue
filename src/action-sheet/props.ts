@@ -38,10 +38,10 @@ export default {
     default: [],
     required: true,
   },
-  /** popupProps透传 */
+  /** 弹出层的属性，透传至 popup */
   popupProps: {
-    type: Object,
-    value: {},
+    type: Object as PropType<TdActionSheetProps['popupProps']>,
+    default: () => ({}),
   },
   /** 是否显示取消按钮 */
   showCancel: {
@@ -51,7 +51,7 @@ export default {
   /** 是否显示遮罩层 */
   showOverlay: {
     type: Boolean,
-    value: true,
+    default: true,
   },
   /** 展示类型，列表和表格形式展示 */
   theme: {
