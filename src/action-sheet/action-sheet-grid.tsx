@@ -86,7 +86,7 @@ export default defineComponent({
       const grid = () => {
         if (actionItems.value.length === 1) {
           const items = actionItems.value[0].map((item, index) => (
-            <t-grid-item
+            <TGridItem
               key={index}
               text={item.label}
               image={item.icon}
