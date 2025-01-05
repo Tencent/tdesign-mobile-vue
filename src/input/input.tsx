@@ -13,7 +13,7 @@ import { FormItemInjectionKey } from '../form/const';
 import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
-import useLengthLimit from '../hooks/useLengthLimit';
+import useLengthLimit from './useLengthLimit';
 
 const { prefix } = config;
 
@@ -80,6 +80,8 @@ export default defineComponent({
       maxlength: Number(props.maxlength),
       maxcharacter: props.maxcharacter,
       allowInputOverMax: props.allowInputOverMax,
+      status: props.status,
+      onValidate: props.onValidate,
     }));
 
     const { getValueByLimitNumber } = useLengthLimit(limitParams);

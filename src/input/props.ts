@@ -4,6 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { NOOP } from '@/shared';
 import { TdInputProps } from './type';
 import { PropType } from 'vue';
 
@@ -154,6 +155,9 @@ export default {
   onClear: Function as PropType<TdInputProps['onClear']>,
   /** 获得焦点时触发 */
   onFocus: Function as PropType<TdInputProps['onFocus']>,
-  /** 【暂不支持】字数超出限制时触发 */
-  onValidate: Function as PropType<TdInputProps['onValidate']>,
+  /** 字数超出限制时触发 */
+  onValidate: {
+    type: Function as PropType<TdInputProps['onValidate']>,
+    default: NOOP,
+  },
 };
