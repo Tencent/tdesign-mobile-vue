@@ -35,8 +35,6 @@ export default {
   /** 菜单项 */
   items: {
     type: Array as PropType<TdActionSheetProps['items']>,
-    default: [],
-    required: true,
   },
   /** 弹出层的属性，透传至 popup */
   popupProps: {

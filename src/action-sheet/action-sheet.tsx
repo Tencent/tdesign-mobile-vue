@@ -1,11 +1,11 @@
 import { computed, defineComponent, watch } from 'vue';
+import TActionSheetGrid from './action-sheet-grid';
+import TActionSheetList from './action-sheet-list';
 import TButton from '../button';
 import config from '../config';
 import { useConfig, usePrefixClass } from '../hooks/useClass';
 import TPopup from '../popup';
 import { useDefault } from '../shared';
-import ActionSheetGrid from './action-sheet-grid';
-import ActionSheetList from './action-sheet-list';
 import props from './props';
 import { ActionSheetItem, TdActionSheetProps } from './type';
 
@@ -13,12 +13,6 @@ const { prefix } = config;
 
 export default defineComponent({
   name: `${prefix}-action-sheet`,
-  components: {
-    TPopup,
-    TButton,
-    ActionSheetList,
-    ActionSheetGrid,
-  },
   props,
   emits: ['selected', 'update:modelValue', 'cancel', 'close', 'update:visible'],
   setup(props, context) {
@@ -26,7 +20,7 @@ export default defineComponent({
     const { globalConfig } = useConfig('actionSheet');
 
     const actionItems = computed(() => {
-      return props.items.map((item: String | ActionSheetItem) => {
+      return props.items.map((item: string | ActionSheetItem) => {
         if (typeof item === 'string') {
           return {
             label: item,
@@ -89,12 +83,12 @@ export default defineComponent({
         };
         const list = () => {
           if (props.theme === 'list') {
-            return <action-sheet-list align={props.align} items={actionItems.value} onSelected={handleSelected} />;
+            return <TActionSheetList align={props.align} items={actionItems.value} onSelected={handleSelected} />;
           }
         };
         const grid = () => {
           if (props.theme === 'grid') {
-            return <action-sheet-grid items={actionItems.value} count={props.count} onSelected={handleSelected} />;
+            return <TActionSheetGrid items={actionItems.value} count={props.count} onSelected={handleSelected} />;
           }
         };
         const cancel = () => {
@@ -102,9 +96,9 @@ export default defineComponent({
             return (
               <div class={`${actionSheetClass.value}__footer`}>
                 <div class={`${actionSheetClass.value}__gap-${props.theme}`}></div>
-                <t-button class={`${actionSheetClass.value}__cancel`} variant="text" block onClick={handleCancel}>
+                <TButton class={`${actionSheetClass.value}__cancel`} variant="text" block onClick={handleCancel}>
                   {props.cancelText || globalConfig.value.cancel}
-                </t-button>
+                </TButton>
               </div>
             );
           }
@@ -119,7 +113,7 @@ export default defineComponent({
         );
       };
       return (
-        <t-popup
+        <TPopup
           {...props.popupProps}
           visible={currentVisible.value}
           placement="bottom"
@@ -129,7 +123,7 @@ export default defineComponent({
           showOverlay={props.showOverlay}
         >
           {root()}
-        </t-popup>
+        </TPopup>
       );
     };
   },
