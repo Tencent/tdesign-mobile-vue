@@ -29,7 +29,11 @@ export default defineComponent({
     const groupDisabled = computed(() => rootGroupProps?.disabled);
     const isDisabled = useFormDisabled(groupDisabled);
 
-    const radioChecked = computed(() => innerChecked.value || (props.value && props.value === rootGroupValue?.value));
+    const radioChecked = computed(() =>
+      innerChecked.value || (props.value !== null && props.value !== undefined)
+        ? props.value === rootGroupValue?.value
+        : false,
+    );
 
     const finalBorderless = computed(() => {
       if (props.borderless == null && 'borderless' in rootGroupProps) return rootGroupProps.borderless;
