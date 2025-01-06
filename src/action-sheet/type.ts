@@ -5,6 +5,7 @@
  * */
 
 import { BadgeProps } from '../badge';
+import { PopupProps } from '../popup';
 import { TNode } from '../common';
 
 export interface TdActionSheetProps {
@@ -32,8 +33,11 @@ export interface TdActionSheetProps {
    * 菜单项
    */
   items?: Array<string | ActionSheetItem>;
-  /** 弹出层的属性，透传至 popup */
-  popupProps: TdPopupProps;
+  /**
+   * popupProps透传
+   * @default {}
+   */
+  popupProps?: PopupProps;
   /**
    * 是否显示取消按钮
    * @default true

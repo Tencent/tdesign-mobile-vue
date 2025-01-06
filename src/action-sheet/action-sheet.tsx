@@ -2,9 +2,9 @@ import { computed, defineComponent, watch } from 'vue';
 import TActionSheetGrid from './action-sheet-grid';
 import TActionSheetList from './action-sheet-list';
 import TButton from '../button';
+import TPopup from '../popup';
 import config from '../config';
 import { useConfig, usePrefixClass } from '../hooks/useClass';
-import TPopup from '../popup';
 import { useDefault } from '../shared';
 import props from './props';
 import { ActionSheetItem, TdActionSheetProps } from './type';
@@ -114,7 +114,7 @@ export default defineComponent({
       };
       return (
         <TPopup
-          {...props.popupProps}
+          {...(props.popupProps as TdActionSheetProps['popupProps'])}
           visible={currentVisible.value}
           placement="bottom"
           destroy-on-close={true}
