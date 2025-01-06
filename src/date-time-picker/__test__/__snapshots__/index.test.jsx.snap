@@ -33,16 +33,9 @@ exports[`DateTimePicker > props > : onPick 1`] = `
     >
       <ul
         class="t-picker-item"
-        style="transform: translate3d(0, -360px, 0); transition: 150ms ease-out;"
+        style="transform: translate3d(0, -320px, 0); transition: 150ms ease-out;"
       >
         
-        <li
-          class="t-picker-item__item"
-        >
-          
-          2014 年
-          
-        </li>
         <li
           class="t-picker-item__item"
         >
@@ -181,6 +174,13 @@ exports[`DateTimePicker > props > : onPick 1`] = `
         >
           
           2034 年
+          
+        </li>
+        <li
+          class="t-picker-item__item"
+        >
+          
+          2035 年
           
         </li>
         
