@@ -5,7 +5,6 @@ import { ActionSheetItem } from './type';
 import { usePrefixClass } from '../hooks/useClass';
 
 export default defineComponent({
-  components: { TGrid, TGridItem, TSwiper, TSwiperItem },
   props: {
     items: {
       type: Array<ActionSheetItem>,
@@ -51,7 +50,7 @@ export default defineComponent({
       const swiper = () => {
         const swiperItems = actionItems.value.map((items, i) => {
           const gridItems = items.map((item, index) => (
-            <t-grid-item
+            <TGridItem
               key={index}
               text={item.label}
               image={item.icon}
@@ -63,14 +62,14 @@ export default defineComponent({
             />
           ));
           return (
-            <t-swiper-item key={i}>
-              <t-grid column={gridColumn.value}>{gridItems}</t-grid>
-            </t-swiper-item>
+            <TSwiperItem key={i}>
+              <TGrid column={gridColumn.value}>{gridItems}</TGrid>
+            </TSwiperItem>
           );
         });
         if (actionItems.value.length > 1) {
           return (
-            <t-swiper
+            <TSwiper
               autoplay={false}
               pagination-position="bottom"
               navigation={{ type: 'dots', showControls: false }}
@@ -79,7 +78,7 @@ export default defineComponent({
               height={192}
             >
               {swiperItems}
-            </t-swiper>
+            </TSwiper>
           );
         }
         return null;
@@ -87,7 +86,7 @@ export default defineComponent({
       const grid = () => {
         if (actionItems.value.length === 1) {
           const items = actionItems.value[0].map((item, index) => (
-            <t-grid-item
+            <TGridItem
               key={index}
               text={item.label}
               image={item.icon}
@@ -96,7 +95,7 @@ export default defineComponent({
             />
           ));
 
-          return <t-grid column={gridColumn.value}>{items}</t-grid>;
+          return <TGrid column={gridColumn.value}>{items}</TGrid>;
         }
         return null;
       };
