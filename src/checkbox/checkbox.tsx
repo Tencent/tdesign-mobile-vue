@@ -78,9 +78,9 @@ export default defineComponent({
     });
 
     const isDisabled = computed(() => {
-      if (checkboxGroup?.max.value)
-        return checkboxGroup.max.value <= checkboxGroup.innerValue.value.length && !isChecked.value;
-
+      if (!props.checkAll && !isChecked.value && checkboxGroup?.maxExceeded.value) {
+        return true;
+      }
       return disabled.value;
     });
 
