@@ -309,7 +309,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
           value="0"
         />
         <div
-          class="t-radio__icon t-radio__icon--left"
+          class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
         >
           <!---->
           <!---->
@@ -454,7 +454,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
           value="0"
         />
         <div
-          class="t-radio__icon t-radio__icon--left"
+          class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
         >
           <!---->
           <!---->
@@ -1558,7 +1558,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               value="0"
             />
             <div
-              class="t-radio__icon t-radio__icon--left"
+              class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
             >
               <!---->
               <!---->
@@ -1703,7 +1703,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               value="0"
             />
             <div
-              class="t-radio__icon t-radio__icon--left"
+              class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
             >
               <!---->
               <!---->
