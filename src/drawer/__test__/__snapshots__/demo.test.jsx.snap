@@ -294,7 +294,7 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
+                d="M17.5 3.5a3 3 0 100 6 3 3 0 000-6zm-5 3a5 5 0 1110 0 5 5 0 01-10 0zM2 2h9v9H2V2zm2 2v5h5V4H4zm-2 9h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm7 2h-5v5h5v-5z"
                 fill="currentColor"
               />
             </svg>
@@ -319,7 +319,7 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
+                d="M17.5 3.5a3 3 0 100 6 3 3 0 000-6zm-5 3a5 5 0 1110 0 5 5 0 01-10 0zM2 2h9v9H2V2zm2 2v5h5V4H4zm-2 9h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm7 2h-5v5h5v-5z"
                 fill="currentColor"
               />
             </svg>
@@ -344,7 +344,7 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
+                d="M17.5 3.5a3 3 0 100 6 3 3 0 000-6zm-5 3a5 5 0 1110 0 5 5 0 01-10 0zM2 2h9v9H2V2zm2 2v5h5V4H4zm-2 9h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm7 2h-5v5h5v-5z"
                 fill="currentColor"
               />
             </svg>
@@ -369,7 +369,7 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
+                d="M17.5 3.5a3 3 0 100 6 3 3 0 000-6zm-5 3a5 5 0 1110 0 5 5 0 01-10 0zM2 2h9v9H2V2zm2 2v5h5V4H4zm-2 9h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm7 2h-5v5h5v-5z"
                 fill="currentColor"
               />
             </svg>
@@ -394,7 +394,7 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
+                d="M17.5 3.5a3 3 0 100 6 3 3 0 000-6zm-5 3a5 5 0 1110 0 5 5 0 01-10 0zM2 2h9v9H2V2zm2 2v5h5V4H4zm-2 9h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm7 2h-5v5h5v-5z"
                 fill="currentColor"
               />
             </svg>
@@ -419,7 +419,7 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
+                d="M17.5 3.5a3 3 0 100 6 3 3 0 000-6zm-5 3a5 5 0 1110 0 5 5 0 01-10 0zM2 2h9v9H2V2zm2 2v5h5V4H4zm-2 9h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm7 2h-5v5h5v-5z"
                 fill="currentColor"
               />
             </svg>
@@ -662,7 +662,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                   width="1em"
                 >
                   <path
-                    d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
+                    d="M17.5 3.5a3 3 0 100 6 3 3 0 000-6zm-5 3a5 5 0 1110 0 5 5 0 01-10 0zM2 2h9v9H2V2zm2 2v5h5V4H4zm-2 9h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm7 2h-5v5h5v-5z"
                     fill="currentColor"
                   />
                 </svg>
@@ -687,7 +687,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                   width="1em"
                 >
                   <path
-                    d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
+                    d="M17.5 3.5a3 3 0 100 6 3 3 0 000-6zm-5 3a5 5 0 1110 0 5 5 0 01-10 0zM2 2h9v9H2V2zm2 2v5h5V4H4zm-2 9h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm7 2h-5v5h5v-5z"
                     fill="currentColor"
                   />
                 </svg>
@@ -712,7 +712,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                   width="1em"
                 >
                   <path
-                    d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
+                    d="M17.5 3.5a3 3 0 100 6 3 3 0 000-6zm-5 3a5 5 0 1110 0 5 5 0 01-10 0zM2 2h9v9H2V2zm2 2v5h5V4H4zm-2 9h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm7 2h-5v5h5v-5z"
                     fill="currentColor"
                   />
                 </svg>
@@ -737,7 +737,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                   width="1em"
                 >
                   <path
-                    d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
+                    d="M17.5 3.5a3 3 0 100 6 3 3 0 000-6zm-5 3a5 5 0 1110 0 5 5 0 01-10 0zM2 2h9v9H2V2zm2 2v5h5V4H4zm-2 9h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm7 2h-5v5h5v-5z"
                     fill="currentColor"
                   />
                 </svg>
@@ -762,7 +762,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                   width="1em"
                 >
                   <path
-                    d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
+                    d="M17.5 3.5a3 3 0 100 6 3 3 0 000-6zm-5 3a5 5 0 1110 0 5 5 0 01-10 0zM2 2h9v9H2V2zm2 2v5h5V4H4zm-2 9h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm7 2h-5v5h5v-5z"
                     fill="currentColor"
                   />
                 </svg>
@@ -787,7 +787,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                   width="1em"
                 >
                   <path
-                    d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
+                    d="M17.5 3.5a3 3 0 100 6 3 3 0 000-6zm-5 3a5 5 0 1110 0 5 5 0 01-10 0zM2 2h9v9H2V2zm2 2v5h5V4H4zm-2 9h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm7 2h-5v5h5v-5z"
                     fill="currentColor"
                   />
                 </svg>
