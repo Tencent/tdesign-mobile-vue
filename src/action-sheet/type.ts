@@ -5,6 +5,7 @@
  * */
 
 import { BadgeProps } from '../badge';
+import { PopupProps } from '../popup';
 import { TNode } from '../common';
 
 export interface TdActionSheetProps {
@@ -33,10 +34,20 @@ export interface TdActionSheetProps {
    */
   items?: Array<string | ActionSheetItem>;
   /**
+   * 透传 Popup 组件全部属性
+   * @default {}
+   */
+  popupProps?: PopupProps;
+  /**
    * 是否显示取消按钮
    * @default true
    */
   showCancel?: boolean;
+  /**
+   * 是否显示遮罩层
+   * @default true
+   */
+  showOverlay?: boolean;
   /**
    * 展示类型，列表和表格形式展示
    * @default list

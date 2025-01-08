@@ -1,13 +1,13 @@
-import { watch, defineComponent, computed } from 'vue';
-import { useDefault } from '../shared';
-import TActionSheetList from './action-sheet-list';
+import { computed, defineComponent, watch } from 'vue';
 import TActionSheetGrid from './action-sheet-grid';
-import TPopup from '../popup';
+import TActionSheetList from './action-sheet-list';
 import TButton from '../button';
+import TPopup from '../popup';
 import config from '../config';
-import { TdActionSheetProps, ActionSheetItem } from './type';
+import { useConfig, usePrefixClass } from '../hooks/useClass';
+import { useDefault } from '../shared';
 import props from './props';
-import { usePrefixClass, useConfig } from '../hooks/useClass';
+import { ActionSheetItem, TdActionSheetProps } from './type';
 
 const { prefix } = config;
 
@@ -114,11 +114,13 @@ export default defineComponent({
       };
       return (
         <TPopup
+          {...(props.popupProps as TdActionSheetProps['popupProps'])}
           visible={currentVisible.value}
           placement="bottom"
           destroy-on-close={true}
           class={actionSheetClass.value}
           onClose={handleClose}
+          showOverlay={props.showOverlay}
         >
           {root()}
         </TPopup>
