@@ -6,7 +6,6 @@ import { useTNodeDefault } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 export default defineComponent({
-  components: { TButton, TBadge },
   props: {
     items: {
       type: Array as PropType<ActionSheetItem[]>,
@@ -39,7 +38,7 @@ export default defineComponent({
             const content = () => {
               if (item.badge.dot || item.badge.count) {
                 return (
-                  <t-badge
+                  <TBadge
                     count={item.badge.count}
                     max-count={item.badge.maxCount || 99}
                     dot={item.badge.dot}
@@ -48,7 +47,7 @@ export default defineComponent({
                     offset={item.badge.offset || [-16, 20]}
                   >
                     <span class={`${actionSheetClass.value}__list-item-text`}> {item.label}</span>
-                  </t-badge>
+                  </TBadge>
                 );
               }
               return renderTNodeJSX('badge', {
@@ -60,7 +59,7 @@ export default defineComponent({
           return <span class={`${actionSheetClass.value}__list-item-text`}>{item.label}</span>;
         };
         const buttonList = items.value.map((item, index) => (
-          <t-button
+          <TButton
             key={index}
             variant={'text'}
             block
@@ -71,7 +70,7 @@ export default defineComponent({
             onClick={() => handleSelected(index)}
           >
             {renderBadgeNode(item)}
-          </t-button>
+          </TButton>
         ));
         return buttonList;
       };

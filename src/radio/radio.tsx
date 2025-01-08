@@ -29,7 +29,7 @@ export default defineComponent({
     const groupDisabled = computed(() => rootGroupProps?.disabled);
     const isDisabled = useFormDisabled(groupDisabled);
 
-    const radioChecked = computed(() => innerChecked.value || (props.value && props.value === rootGroupValue?.value));
+    const radioChecked = computed(() => (rootGroupValue ? props.value === rootGroupValue?.value : innerChecked.value));
 
     const finalBorderless = computed(() => {
       if (props.borderless == null && 'borderless' in rootGroupProps) return rootGroupProps.borderless;
@@ -42,12 +42,14 @@ export default defineComponent({
 
     const finalAllowUncheck = computed(() => Boolean(props.allowUncheck || rootGroupProps?.allowUncheck));
 
+    const finalReadonly = computed(() => Boolean(props.readonly || rootGroupProps?.readonly));
+
     // input props attribute
     const inputProps = computed(() => ({
       name: rootGroupProps.name || props.name,
       checked: radioChecked.value,
       disabled: isDisabled.value,
-      readonly: props.readonly,
+      readonly: finalReadonly.value,
       value: props.value,
     }));
 
@@ -92,7 +94,7 @@ export default defineComponent({
     };
 
     const radioOrgChange = (e: Event) => {
-      if (isDisabled.value || props.readonly) {
+      if (isDisabled.value || finalReadonly.value) {
         return;
       }
       if (rootGroupChange) {

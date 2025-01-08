@@ -75,8 +75,9 @@ export default defineComponent({
 
     const crowded = ref(false);
     watch(itemCount, () => {
+      crowded.value = itemCount.value > 3;
+
       if (isChecked.value) {
-        crowded.value = itemCount.value > 3;
         isSpread.value = true;
       }
     });

@@ -69,17 +69,19 @@ export default defineComponent({
       let children: RendererNode[] = renderTNodeJSX('default');
       const res: RendererNode[] = [];
       const label: RendererNode[] = [];
-      children?.forEach((child) => {
-        if (child.type === Fragment) {
-          res.push(...child.children);
-        } else {
-          res.push(child);
-        }
-        if (child.children?.label) {
-          label.push(child.children.label()[0] || null);
-        }
-      });
-
+      const handler = (children: RendererNode[]) => {
+        children?.forEach((child) => {
+          if (child.type === Fragment) {
+            handler(child.children);
+          } else {
+            res.push(child);
+          }
+          if (child.children?.label) {
+            label.push(child.children.label()[0] || null);
+          }
+        });
+      };
+      handler(children);
       children = res.filter((child: RendererNode) => child.type.name === `${prefix}-tab-panel`);
       return children.map((item: RendererNode, index: number) => ({
         ...item.props,

@@ -10,6 +10,7 @@
     "strictNullChecks": false,
     "removeComments": true,
     "suppressImplicitAnyIndexErrors": true,
+    "ignoreDeprecations": "5.0",
     "resolveJsonModule": true,
     "importHelpers": true,
     "isolatedModules": false,
@@ -25,15 +26,13 @@
     "paths": {
       "@/*": ["src/*"],
       "tdesign-mobile-vue": ["src"],
-      "tdesign-mobile-vue/es/locale/*": [
-        "src/locale/*"
-      ],
+      "tdesign-mobile-vue/es/locale/*": ["src/locale/*"]
     },
     "types": ["vitest/globals"],
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "rules": { "trailing-comma": false },
   "include": ["./**/*.ts", "./**/*.tsx", "./**/*.vue"],
-  "exclude": ["node_modules", "src/_common", "dist", "es", "esm", "lib", "cjs", "site"],
+  "exclude": ["node_modules", "src/_common", "dist", "es", "esm", "lib", "cjs", "site", "global.d.ts"],
   "compileOnSave": false
 }

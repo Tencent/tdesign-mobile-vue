@@ -101,6 +101,8 @@
     <div class="button-group">
       <t-button theme="primary" type="submit" size="large">提交</t-button>
       <t-button theme="default" variant="base" type="reset" size="large">重置</t-button>
+      <!-- 下方示例代码，有效，勿删 -->
+      <!-- <t-button theme="default" variant="base" @click="validateOnly">仅校验</t-button> -->
     </div>
   </t-form>
 </template>
@@ -296,6 +298,11 @@ const rules = {
   place: [{ validator: (val: any) => val !== '', message: '不能为空' }],
   description: [{ validator: (val: any) => val > 3, message: '分数过低会影响整体评价' }],
   resume: [{ validator: (val: any) => val !== '', message: '不能为空' }],
+};
+
+const validateOnly = async () => {
+  const result = await form.value.validateOnly();
+  console.log('validateOnly', result);
 };
 
 onMounted(() => {

@@ -39,12 +39,25 @@ export default {
   },
   /** 是否可清空 */
   clearable: Boolean,
+  /** 光标颜色，默认颜色值 #0052d9 */
+  cursorColor: {
+    type: String,
+    default: '#0052d9',
+  },
   /** 是否禁用输入框 */
   disabled: {
     type: Boolean,
     default: undefined,
   },
-  /** 【开发中】指定输入框展示值的格式 */
+  /** 用于控制回车键样式，此 API 仅在部分浏览器支持，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint) */
+  enterkeyhint: {
+    type: String as PropType<TdInputProps['enterkeyhint']>,
+    validator(val: TdInputProps['enterkeyhint']): boolean {
+      if (!val) return true;
+      return ['enter', 'done', 'go', 'next', 'previous', 'search', 'send'].includes(val);
+    },
+  },
+  /** 指定输入框展示值的格式 */
   format: {
     type: Function as PropType<TdInputProps['format']>,
   },

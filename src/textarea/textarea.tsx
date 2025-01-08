@@ -1,5 +1,6 @@
 import { computed, ref, onMounted, defineComponent, toRefs, nextTick, watch, inject } from 'vue';
-import { getCharacterLength, useVModel } from '../shared';
+import { useVModel } from '../shared';
+import useLengthLimit from '../hooks/useLengthLimit';
 import config from '../config';
 import props from './props';
 import { TextareaValue } from './type';
@@ -41,6 +42,15 @@ export default defineComponent({
     const { value, modelValue } = toRefs(props);
     const [innerValue, setInnerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
+    const limitParams = computed(() => ({
+      value: [undefined, null].includes(innerValue.value) ? undefined : String(innerValue.value),
+      maxlength: Number(props.maxlength),
+      maxcharacter: props.maxcharacter,
+      allowInputOverMax: props.allowInputOverMax,
+    }));
+
+    const { limitNumber, getValueByLimitNumber } = useLengthLimit(limitParams);
+
     const setInputValue = (v: TextareaValue = '') => {
       const input = textareaRef.value;
       const sV = String(v);
@@ -75,31 +85,11 @@ export default defineComponent({
     const textareaValueChangeHandle = () => {
       const textarea = textareaRef.value;
 
-      if (
-        !props.allowInputOverMax &&
-        props.maxcharacter &&
-        props.maxcharacter > 0 &&
-        !Number.isNaN(props.maxcharacter)
-      ) {
-        const { characters = '' } = getCharacterLength(textarea.value, props.maxcharacter) as {
-          length: number;
-          characters: string;
-        };
-        setInnerValue(characters);
-      } else {
-        setInnerValue(textarea.value);
-      }
+      setInnerValue(getValueByLimitNumber(textarea.value));
+
       nextTick(() => setInputValue(innerValue.value));
       adjustTextareaHeight();
     };
-
-    const textareaLength = computed(() => {
-      const _value = innerValue.value ? String(innerValue.value) : '';
-      if (props.maxcharacter) {
-        return getCharacterLength(_value);
-      }
-      return _value.length;
-    });
 
     const handleCompositionend = (e: InputEvent | CompositionEvent) => {
       textareaValueChangeHandle();
@@ -143,32 +133,30 @@ export default defineComponent({
         if (!isShowIndicator) {
           return null;
         }
-        return (
-          <div class={`${textareaClass.value}__indicator`}>
-            {`${textareaLength.value}/${props.maxcharacter || props.maxlength}`}
-          </div>
-        );
+        return <div class={`${textareaClass.value}__indicator`}> {limitNumber.value}</div>;
+      };
+
+      const textareaAttrs = {
+        ref: textareaRef,
+        class: textareaInnerClasses.value,
+        style: textareaStyle.value,
+        value: innerValue.value,
+        name: props.name,
+        // maxlength: props.maxlength,
+        disabled: isDisabled.value,
+        placeholder: props.placeholder,
+        readonly: props.readonly,
+        onFocus: handleFocus,
+        onBlur: handleBlur,
+        onInput: handleInput,
+        onCompositionend: handleCompositionend,
       };
 
       return (
         <div class={textareaClasses.value}>
           {renaderLabel()}
           <div class={`${textareaClass.value}__wrapper`}>
-            <textarea
-              ref={textareaRef}
-              value={innerValue.value}
-              class={textareaInnerClasses.value}
-              style={textareaStyle.value}
-              name={props.name}
-              maxlength={props.maxlength}
-              disabled={isDisabled.value}
-              placeholder={props.placeholder}
-              readonly={props.readonly}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
-              onInput={handleInput}
-              onCompositionend={handleCompositionend}
-            />
+            <textarea {...textareaAttrs} />
             {readerIndicator()}
           </div>
         </div>

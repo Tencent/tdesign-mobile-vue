@@ -35,11 +35,19 @@ export default {
   /** 菜单项 */
   items: {
     type: Array as PropType<TdActionSheetProps['items']>,
-    default: [],
-    required: true,
+  },
+  /** 透传 Popup 组件全部属性 */
+  popupProps: {
+    type: Object as PropType<TdActionSheetProps['popupProps']>,
+    default: () => ({}),
   },
   /** 是否显示取消按钮 */
   showCancel: {
+    type: Boolean,
+    default: true,
+  },
+  /** 是否显示遮罩层 */
+  showOverlay: {
     type: Boolean,
     default: true,
   },

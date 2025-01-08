@@ -29,7 +29,6 @@ options.push({
 
 describe('dropdown-menu', () => {
   describe('props', () => {
-
     it(': button', async () => {
       // 底部 button 仅在 multiple/optionsLayout === 'tree'时，有效
       const value1 = ref(['option_1']);
@@ -143,7 +142,6 @@ describe('dropdown-menu', () => {
       const value1 = ref('option_2');
       const value2 = ref('option_2');
 
-
       const options2 = emptyArr.map((_, i) => ({
         name: `选项${chineseMap[i]}`,
         val: `option_${i}`,
@@ -236,11 +234,7 @@ describe('dropdown-menu', () => {
         item.trigger('click', { item, index });
       });
       await sleep(200);
-      expect(
-        wrapper
-          .find(`.${prefix}-dropdown-item__content`)
-          .attributes('class')
-      ).toBeTruthy();
+      expect(wrapper.find(`.${prefix}-dropdown-item__content`).attributes('class')).toBeTruthy();
     });
 
     it(': onChange', async () => {

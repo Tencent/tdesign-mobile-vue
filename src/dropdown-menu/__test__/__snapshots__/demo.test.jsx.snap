@@ -22,7 +22,7 @@ exports[`DropdownMenu > DropdownMenu customizedVue demo works fine 1`] = `
       width="1em"
     >
       <path
-        d="M12 16.5l7-7H5l7 7z"
+        d="M12 15l5.5-5.5h-11L12 15z"
         fill="currentColor"
       />
     </svg>
@@ -55,7 +55,7 @@ exports[`DropdownMenu > DropdownMenu directionVue demo works fine 1`] = `
       width="1em"
     >
       <path
-        d="M12 7.5l7 7H5l7-7z"
+        d="M12 9l5.5 5.5h-11L12 9z"
         fill="currentColor"
       />
     </svg>
@@ -76,7 +76,7 @@ exports[`DropdownMenu > DropdownMenu directionVue demo works fine 1`] = `
       width="1em"
     >
       <path
-        d="M12 7.5l7 7H5l7-7z"
+        d="M12 9l5.5 5.5h-11L12 9z"
         fill="currentColor"
       />
     </svg>
@@ -110,7 +110,7 @@ exports[`DropdownMenu > DropdownMenu disabledVue demo works fine 1`] = `
       width="1em"
     >
       <path
-        d="M12 16.5l7-7H5l7 7z"
+        d="M12 15l5.5-5.5h-11L12 15z"
         fill="currentColor"
       />
     </svg>
@@ -131,7 +131,7 @@ exports[`DropdownMenu > DropdownMenu disabledVue demo works fine 1`] = `
       width="1em"
     >
       <path
-        d="M12 16.5l7-7H5l7 7z"
+        d="M12 15l5.5-5.5h-11L12 15z"
         fill="currentColor"
       />
     </svg>
@@ -204,7 +204,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M12 16.5l7-7H5l7 7z"
+              d="M12 15l5.5-5.5h-11L12 15z"
               fill="currentColor"
             />
           </svg>
@@ -225,7 +225,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M12 16.5l7-7H5l7 7z"
+              d="M12 15l5.5-5.5h-11L12 15z"
               fill="currentColor"
             />
           </svg>
@@ -278,7 +278,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M12 16.5l7-7H5l7 7z"
+              d="M12 15l5.5-5.5h-11L12 15z"
               fill="currentColor"
             />
           </svg>
@@ -299,7 +299,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M12 16.5l7-7H5l7 7z"
+              d="M12 15l5.5-5.5h-11L12 15z"
               fill="currentColor"
             />
           </svg>
@@ -320,7 +320,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M12 16.5l7-7H5l7 7z"
+              d="M12 15l5.5-5.5h-11L12 15z"
               fill="currentColor"
             />
           </svg>
@@ -374,7 +374,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M12 7.5l7 7H5l7-7z"
+              d="M12 9l5.5 5.5h-11L12 9z"
               fill="currentColor"
             />
           </svg>
@@ -395,7 +395,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M12 7.5l7 7H5l7-7z"
+              d="M12 9l5.5 5.5h-11L12 9z"
               fill="currentColor"
             />
           </svg>
@@ -452,7 +452,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M12 16.5l7-7H5l7 7z"
+              d="M12 15l5.5-5.5h-11L12 15z"
               fill="currentColor"
             />
           </svg>
@@ -473,7 +473,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M12 16.5l7-7H5l7 7z"
+              d="M12 15l5.5-5.5h-11L12 15z"
               fill="currentColor"
             />
           </svg>
@@ -527,7 +527,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M12 16.5l7-7H5l7 7z"
+              d="M12 15l5.5-5.5h-11L12 15z"
               fill="currentColor"
             />
           </svg>
@@ -568,7 +568,7 @@ exports[`DropdownMenu > DropdownMenu multipleVue demo works fine 1`] = `
       width="1em"
     >
       <path
-        d="M12 16.5l7-7H5l7 7z"
+        d="M12 15l5.5-5.5h-11L12 15z"
         fill="currentColor"
       />
     </svg>
@@ -589,7 +589,7 @@ exports[`DropdownMenu > DropdownMenu multipleVue demo works fine 1`] = `
       width="1em"
     >
       <path
-        d="M12 16.5l7-7H5l7 7z"
+        d="M12 15l5.5-5.5h-11L12 15z"
         fill="currentColor"
       />
     </svg>
@@ -610,7 +610,7 @@ exports[`DropdownMenu > DropdownMenu multipleVue demo works fine 1`] = `
       width="1em"
     >
       <path
-        d="M12 16.5l7-7H5l7 7z"
+        d="M12 15l5.5-5.5h-11L12 15z"
         fill="currentColor"
       />
     </svg>
@@ -645,7 +645,7 @@ exports[`DropdownMenu > DropdownMenu singleVue demo works fine 1`] = `
       width="1em"
     >
       <path
-        d="M12 16.5l7-7H5l7 7z"
+        d="M12 15l5.5-5.5h-11L12 15z"
         fill="currentColor"
       />
     </svg>
@@ -666,7 +666,7 @@ exports[`DropdownMenu > DropdownMenu singleVue demo works fine 1`] = `
       width="1em"
     >
       <path
-        d="M12 16.5l7-7H5l7 7z"
+        d="M12 15l5.5-5.5h-11L12 15z"
         fill="currentColor"
       />
     </svg>

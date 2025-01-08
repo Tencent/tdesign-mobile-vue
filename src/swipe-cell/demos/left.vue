@@ -21,7 +21,7 @@
     </t-swipe-cell>
   </tdesign-demo-block>
   <tdesign-demo-block style="margin-top: 10px">
-    <t-swipe-cell :right="initData.btns" opened @click="(value:any) => handleClickBtns(value)">
+    <t-swipe-cell :right="initData.btns" opened @click="(value: any) => handleClickBtns(value)">
       <t-cell title="左滑三操作" note="辅助信息"></t-cell>
     </t-swipe-cell>
   </tdesign-demo-block>
