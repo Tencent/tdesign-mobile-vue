@@ -21,6 +21,7 @@ const iconDefault = {
 export default defineComponent({
   name: `${prefix}-notice-bar`,
   props,
+  emits: ['change'],
   setup(props) {
     const noticeBarClass = usePrefixClass('notice-bar');
     const renderTNodeJSX = useTNodeJSX();
@@ -176,6 +177,8 @@ export default defineComponent({
                     direction="vertical"
                     duration={2000}
                     height={22}
+                    interval={props?.interval}
+                    onChange={props?.onChange}
                     class={`${noticeBarClass.value}__content--vertical`}
                   >
                     {props.content.map((item, index) => (
