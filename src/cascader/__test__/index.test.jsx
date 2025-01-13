@@ -7,6 +7,9 @@ import Radio from '../../radio/index';
 import { Tabs as TTabs, TabPanel as TTabPanel } from '../../tabs';
 import prefixConfig from '../../config';
 
+// scrollTo isn't implemented in JSDOM，see: https://github.com/vuejs/vue-test-utils/issues/319
+Element.prototype.scrollTo = () => {};
+
 const { prefix } = prefixConfig;
 
 config.global.stubs = {

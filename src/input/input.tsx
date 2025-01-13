@@ -253,6 +253,7 @@ export default defineComponent({
         inputmode: props.inputmode,
         spellcheck: props.spellCheck,
         enterkeyhint: props.enterkeyhint,
+        style: { '--td-input-cursor-color': props.cursorColor },
         onFocus: handleFocus,
         onBlur: handleBlur,
         onInput: handleInput,

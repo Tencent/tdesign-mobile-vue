@@ -3,8 +3,11 @@
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
+
+import { BadgeProps } from '../badge';
+import { PopupProps } from '../popup';
 import { TNode } from '../common';
-import { TdBadgeProps } from '../badge/type';
+
 export interface TdActionSheetProps {
   /**
    * 水平对齐方式
@@ -31,10 +34,20 @@ export interface TdActionSheetProps {
    */
   items?: Array<string | ActionSheetItem>;
   /**
+   * 透传 Popup 组件全部属性
+   * @default {}
+   */
+  popupProps?: PopupProps;
+  /**
    * 是否显示取消按钮
    * @default true
    */
   showCancel?: boolean;
+  /**
+   * 是否显示遮罩层
+   * @default true
+   */
+  showOverlay?: boolean;
   /**
    * 展示类型，列表和表格形式展示
    * @default list
@@ -74,7 +87,7 @@ export interface ActionSheetItem {
   color?: string;
   disabled?: boolean;
   icon?: TNode;
-  badge?: TdBadgeProps;
+  badge?: BadgeProps;
 }
 
 export type ActionSheetTriggerSource = 'overlay' | 'command' | 'select';

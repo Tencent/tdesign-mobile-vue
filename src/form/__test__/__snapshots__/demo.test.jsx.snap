@@ -57,6 +57,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
+                  style="--td-input-cursor-color: #0052d9;"
                   type="text"
                 />
                 <!---->
@@ -129,6 +130,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
+                  style="--td-input-cursor-color: #0052d9;"
                   type="password"
                 />
                 <!---->
@@ -347,6 +349,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
+                  style="--td-input-cursor-color: #0052d9;"
                   type="text"
                 />
                 <!---->
@@ -873,6 +876,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
+                  style="--td-input-cursor-color: #0052d9;"
                   type="text"
                 />
                 <!---->
@@ -1831,6 +1835,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         name=""
                         placeholder="请输入内容"
                         spellcheck="false"
+                        style="--td-input-cursor-color: #0052d9;"
                         type="text"
                       />
                       <!---->
@@ -1903,6 +1908,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         name=""
                         placeholder="请输入内容"
                         spellcheck="false"
+                        style="--td-input-cursor-color: #0052d9;"
                         type="password"
                       />
                       <!---->
@@ -2121,6 +2127,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         name=""
                         placeholder="请输入内容"
                         spellcheck="false"
+                        style="--td-input-cursor-color: #0052d9;"
                         type="text"
                       />
                       <!---->
@@ -2647,6 +2654,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         name=""
                         placeholder="请输入内容"
                         spellcheck="false"
+                        style="--td-input-cursor-color: #0052d9;"
                         type="text"
                       />
                       <!---->
@@ -3470,6 +3478,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
+                  style="--td-input-cursor-color: #0052d9;"
                   type="text"
                 />
                 <!---->
@@ -3540,6 +3549,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
+                  style="--td-input-cursor-color: #0052d9;"
                   type="password"
                 />
                 <!---->
@@ -3754,6 +3764,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
+                  style="--td-input-cursor-color: #0052d9;"
                   type="text"
                 />
                 <!---->
@@ -4278,6 +4289,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
+                  style="--td-input-cursor-color: #0052d9;"
                   type="text"
                 />
                 <!---->
