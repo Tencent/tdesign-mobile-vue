@@ -96,13 +96,14 @@ export default defineComponent({
     };
     // 首次touchmove的方向，用于分开左右和上下滑动，左右滑动时禁止上下滑动，上下滑动时禁止左右滑动
     let swipeDir: -1 | 0 | 1 = 0;
+
     const { lengthX, lengthY, stop } = useSwipe(swipeCellRef, {
       threshold: 0,
       onSwipeStart: (e: TouchEvent) => {
         if (props.disabled) {
           return;
         }
-        props.onDragStart?.();
+
         setPanelWidth();
         swipeDir = 0;
         initData.moved = false;
@@ -115,6 +116,7 @@ export default defineComponent({
         if (!swipeDir && absLenX < distance / 2 && absLenY < distance / 2) {
           return;
         }
+
         if (!swipeDir && absLenX < absLenY) {
           swipeDir = -1;
         } else if (!swipeDir && absLenX >= absLenY) {
@@ -129,7 +131,7 @@ export default defineComponent({
         if (props.disabled || (!initData.moved && Math.abs(lengthX.value) < distance)) {
           return;
         }
-
+        props.onDragStart?.();
         if (showSureRight.value) {
           closedSure.value = lengthX.value > 0 && initData.pos === 0;
           showSureRight.value = false;
