@@ -173,6 +173,7 @@ export default defineComponent({
                 <div>
                   <TSwiper
                     autoplay
+                    touchStopAutoplay={false}
                     loop
                     direction="vertical"
                     duration={2000}

@@ -142,7 +142,7 @@ export default defineComponent({
     const { lengthX, lengthY } = useSwipe(swiperContainer, {
       onSwipeStart() {
         if (disabled.value || isSwiperDisabled.value || !items.value.length) return;
-        stopAutoplay();
+        props?.touchStopAutoplay && stopAutoplay();
       },
       onSwipe(e: TouchEvent) {
         if (disabled.value || isSwiperDisabled.value || !items.value.length) return;
