@@ -9,9 +9,11 @@ name | type | default | description | required
 animation | Object | - | Typescript：`TabAnimation` `type TabAnimation = { duration: number } & Record<string, any>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tabs/type.ts) | N
 bottomLineMode | String | fixed | options: fixed/auto/full | N
 list | Array | - | Typescript：`Array<TdTabPanelProps>` | N
+middle | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 showBottomLine | Boolean | true | \- | N
 size | String | medium | options: medium/large | N
 spaceEvenly | Boolean | true | \- | N
+split | Boolean | true | \- | N
 sticky | Boolean | false | \- | N
 stickyProps | Object | - | Typescript：`StickyProps`，[Sticky API Documents](./sticky?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tabs/type.ts) | N
 swipeable | Boolean | true | \- | N
@@ -38,6 +40,7 @@ name | type | default | description | required
 badgeProps | Object | - | \- | N
 destroyOnHide | Boolean | true | \- | N
 disabled | Boolean | false | \- | N
+icon | Slot / Function | - | 图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 lazy | Boolean | false | Enable tab lazy loading | N
 panel | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
