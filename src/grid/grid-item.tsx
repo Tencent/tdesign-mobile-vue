@@ -2,6 +2,7 @@ import { defineComponent, computed, inject } from 'vue';
 import isObject from 'lodash/isObject';
 import isString from 'lodash/isString';
 import isFunction from 'lodash/isFunction';
+import { Hover } from '../shared';
 import config from '../config';
 import props from './grid-item-props';
 import { useTNodeJSX } from '../hooks/tnode';
@@ -13,13 +14,14 @@ const { prefix } = config;
 
 export default defineComponent({
   name: `${prefix}-grid-item`,
+  directives: { Hover },
   components: { TImage, TBadge },
   props,
   setup(props, context) {
     const gridItemClass = usePrefixClass('grid-item');
 
     const renderTNodeJSX = useTNodeJSX();
-    const { column, border, align, gutter } = inject<any>('grid');
+    const { column, border, align, gutter, hover } = inject<any>('grid');
 
     const rootStyle = computed(() => {
       const percent = column.value > 0 ? `${100 / +column.value}%` : 0;
@@ -55,11 +57,22 @@ export default defineComponent({
     ]);
 
     return () => {
-      const renderImage = () =>
-        realImage.value ? <t-image shape="round" {...realImage.value} /> : renderTNodeJSX('image');
+      const renderImage = () => {
+        if (realImage.value) {
+          return <t-image shape="round" {...realImage.value} />;
+        }
+        if (props.icon) {
+          return renderTNodeJSX('icon');
+        }
+        return renderTNodeJSX('image');
+      };
 
       return (
-        <div class={gridItemClasses.value} style={rootStyle.value}>
+        <div
+          class={gridItemClasses.value}
+          style={rootStyle.value}
+          v-hover={{ className: `${gridItemClass.value}--hover`, disabledHover: !hover.value }}
+        >
           <div class={`${gridItemClass.value}__image ${gridItemClass.value}__image--${size.value}`}>
             {props.badge ? <t-badge {...(props.badge as Object)}>{renderImage()}</t-badge> : renderImage()}
           </div>

@@ -28,6 +28,11 @@ export interface TdGridProps {
    */
   gutter?: number;
   /**
+   * 是否开启点击反馈
+   * @default false
+   */
+  hover?: boolean;
+  /**
    * 宫格的风格
    * @default default
    */
@@ -44,6 +49,10 @@ export interface TdGridItemProps {
    * 文本以外的更多描述，辅助信息。可以通过 Props 传入文本，也可以自定义标题节点
    */
   description?: string | TNode;
+  /**
+   * 图标名称。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon`
+   */
+  icon?: string | object;
   /**
    * 图片，可以是图片地址，也可以自定义图片节点，如果传入对象则透传至 image 组件
    */
