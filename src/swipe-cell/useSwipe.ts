@@ -1,11 +1,11 @@
 /* eslint-disable no-undef */
 
-import type { ComputedRef, Ref, MaybeRef } from 'vue';
-import { computed, reactive, ref } from 'vue';
 import { useEventListener } from '@vueuse/core';
 import isObject from 'lodash/isObject';
-import { preventDefault } from '../shared/dom';
+import type { ComputedRef, MaybeRef, Ref } from 'vue';
+import { computed, reactive, ref } from 'vue';
 import { isBrowser } from '../shared';
+import { preventDefault } from '../shared/dom';
 
 const noop = () => {};
 
