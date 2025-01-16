@@ -69,6 +69,8 @@ describe('Tabs', () => {
       const navWrap = wrapper.find(`.${name}__wrapper`);
       const $tabNavItems = navWrap.findAllComponents(TTabNav);
 
+      const $tabs = wrapper.findComponent(Tabs);
+
       theme = 'line';
       await wrapper.setProps({
         theme,
