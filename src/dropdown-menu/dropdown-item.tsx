@@ -18,7 +18,6 @@ const getUniqueID = uniqueFactory('dropdown-popup');
 
 export default defineComponent({
   name: `${prefix}-dropdown-item`,
-  components: { TPopup },
   props,
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
   setup(props) {
@@ -286,13 +285,12 @@ export default defineComponent({
       return (
         wrapperVisible.value && (
           <div id={popupId} class={classes.value} style={{ ...expandStyle.value }}>
-            <t-popup
+            <TPopup
               visible={isShowItems.value}
               placement={menuProps.direction === 'up' ? 'bottom' : 'top'}
-              duration={duration.value}
               showOverlay={showOverlay.value}
               style={popupStyle.value}
-              overlayProps={{ style: 'position: absolute' }}
+              overlayProps={{ style: 'position: absolute', duration: duration.value }}
               attach={`#${popupId}`}
               onVisibleChange={onVisibleChange}
             >
@@ -300,7 +298,7 @@ export default defineComponent({
                 <div class={`${dropdownItemClass.value}__body`}>{content || defaultSlot()}</div>
                 {footer || footerSlot()}
               </div>
-            </t-popup>
+            </TPopup>
           </div>
         )
       );
