@@ -17,7 +17,7 @@ spline: explain
 - `Search`: 新增  `clearTrigger` 属性 @novlan1 ([#1726](https://github.com/Tencent/tdesign-mobile-vue/pull/1726))
 ### 🐞 Bug Fixes
 - `Tabs`: 当子项类型为 `fragment` 时，标签无法正确渲染 @betavs ([#1690](https://github.com/Tencent/tdesign-mobile-vue/pull/1690))
-- `radio`: 当`value=0` 时无法被选中的问题 @RSS1102 ([#1709](https://github.com/Tencent/tdesign-mobile-vue/pull/1709))
+- `Radio`: 当`value=0` 时无法被选中的问题 @RSS1102 ([#1709](https://github.com/Tencent/tdesign-mobile-vue/pull/1709))
 - `Checkbox`: 修复 `CheckGroup` 使用 `options` 属性时 `disabled` 无效的问题 @anlyyao ([#1713](https://github.com/Tencent/tdesign-mobile-vue/pull/1713))
 - `TabBar`: 修复子项数量大于 3 时子项宽度未保持一致 @anlyyao ([#1714](https://github.com/Tencent/tdesign-mobile-vue/pull/1714))
 - `Dialog`: 修复圆角样式错误，并新增 `--td-dialog-border-radius` @anlyyao ([#1733](https://github.com/Tencent/tdesign-mobile-vue/pull/1733))
