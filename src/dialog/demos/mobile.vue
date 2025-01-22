@@ -14,10 +14,10 @@
     <tdesign-demo-block summary="带图片的对话框" :padding="true">
       <imgVue />
     </tdesign-demo-block>
-    <tdesign-demo-block title="02 组件状态" summary="其它形态对话框" :padding="true">
+    <tdesign-demo-block title="02 组件类型" :padding="true">
       <multiState />
     </tdesign-demo-block>
-    <tdesign-demo-block title="03 组件用法" summary="命令行调用" :padding="true">
+    <tdesign-demo-block title="03 组件用法" summary="命令调用" :padding="true">
       <pluginDemo />
     </tdesign-demo-block>
   </div>
