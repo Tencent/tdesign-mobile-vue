@@ -99,6 +99,7 @@ export default defineComponent({
       innerValue,
       checkAllStatus,
       checkedSet,
+      maxExceeded,
       onCheckedChange,
     });
     return () => {
@@ -106,24 +107,7 @@ export default defineComponent({
         return (
           <span>
             {optionList.value.map((item, idx) => (
-              <checkbox
-                key={idx}
-                name={item.name || ''}
-                label={item.label || item.text || ''}
-                value={item.value}
-                check-all={item.checkAll}
-                block={item.block || true}
-                checked={item.checked || false}
-                content={item.content || ''}
-                content-disabled={item.contentDisabled || false}
-                icon={item.icon || 'circle'}
-                indeterminate={item.indeterminate || false}
-                disabled={item.disabled}
-                max-content-row={item.maxContentRow || 5}
-                max-label-row={item.maxLabelRow || 3}
-                readonly={item.readonly || false}
-                placement={item.placement || 'left'}
-              />
+              <Checkbox {...item} key={`${item.value || ''}${idx}`} label={item.label || item.text || ''} />
             ))}
           </span>
         );

@@ -22,6 +22,10 @@ export interface TdTabsProps {
    */
   list?: Array<TdTabPanelProps>;
   /**
+   * 中间内容，介于头部和内容之间
+   */
+  middle?: TNode;
+  /**
    * 是否展示底部激活线条
    * @default true
    */
@@ -36,6 +40,11 @@ export interface TdTabsProps {
    * @default true
    */
   spaceEvenly?: boolean;
+  /**
+   * 是否展示分割线
+   * @default true
+   */
+  split?: boolean;
   /**
    * 是否开启粘性布局
    * @default false
@@ -96,6 +105,10 @@ export interface TdTabPanelProps {
    * @default false
    */
   disabled?: boolean;
+  /**
+   * 图标
+   */
+  icon?: TNode;
   /**
    * 选项卡名称，可自定义选项卡导航内容
    */

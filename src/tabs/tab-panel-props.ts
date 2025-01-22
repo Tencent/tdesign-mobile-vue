@@ -19,6 +19,10 @@ export default {
   },
   /** 是否禁用当前选项卡 */
   disabled: Boolean,
+  /** 图标 */
+  icon: {
+    type: Function as PropType<TdTabPanelProps['icon']>,
+  },
   /** 选项卡名称，可自定义选项卡导航内容 */
   label: {
     type: [String, Function] as PropType<TdTabPanelProps['label']>,

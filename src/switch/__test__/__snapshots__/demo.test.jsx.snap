@@ -2,7 +2,7 @@
 
 exports[`Switch > Switch baseVue demo works fine 1`] = `
 <div
-  class="t-cell t-cell--middle"
+  class="t-cell"
 >
   <div
     class="t-cell__left"
@@ -23,7 +23,7 @@ exports[`Switch > Switch baseVue demo works fine 1`] = `
   </div>
   <!---->
   <div
-    class="t-cell__right"
+    class="t-cell__right t-cell__right--middle"
   >
     <div
       class="t-cell__right-icon"
@@ -50,7 +50,7 @@ exports[`Switch > Switch baseVue demo works fine 1`] = `
 
 exports[`Switch > Switch colorVue demo works fine 1`] = `
 <div
-  class="t-cell t-cell--middle"
+  class="t-cell"
 >
   <div
     class="t-cell__left"
@@ -71,7 +71,7 @@ exports[`Switch > Switch colorVue demo works fine 1`] = `
   </div>
   <!---->
   <div
-    class="t-cell__right"
+    class="t-cell__right t-cell__right--middle"
   >
     <div
       class="t-cell__right-icon"
@@ -102,7 +102,7 @@ exports[`Switch > Switch labelVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -123,7 +123,7 @@ exports[`Switch > Switch labelVue demo works fine 1`] = `
     </div>
     <!---->
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -151,7 +151,7 @@ exports[`Switch > Switch labelVue demo works fine 1`] = `
     style="height: 16px;"
   />
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -172,7 +172,7 @@ exports[`Switch > Switch labelVue demo works fine 1`] = `
     </div>
     <!---->
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -247,7 +247,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -268,7 +268,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -313,7 +313,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -334,7 +334,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -362,7 +362,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         style="height: 16px;"
       />
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -383,7 +383,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -440,7 +440,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -461,7 +461,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -510,7 +510,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -531,7 +531,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -581,7 +581,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -602,7 +602,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -657,7 +657,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         禁用状态
       </div>
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -678,7 +678,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -702,7 +702,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -723,7 +723,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -773,7 +773,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
         data-v-8f16ed1c=""
       >
         <div
@@ -795,7 +795,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -820,7 +820,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
         data-v-8f16ed1c=""
       >
         <div
@@ -842,7 +842,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -867,7 +867,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
         data-v-8f16ed1c=""
       >
         <div
@@ -889,7 +889,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -926,7 +926,7 @@ exports[`Switch > Switch sizeVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
     data-v-8f16ed1c=""
   >
     <div
@@ -948,7 +948,7 @@ exports[`Switch > Switch sizeVue demo works fine 1`] = `
     </div>
     <!---->
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -973,7 +973,7 @@ exports[`Switch > Switch sizeVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
     data-v-8f16ed1c=""
   >
     <div
@@ -995,7 +995,7 @@ exports[`Switch > Switch sizeVue demo works fine 1`] = `
     </div>
     <!---->
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -1020,7 +1020,7 @@ exports[`Switch > Switch sizeVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
     data-v-8f16ed1c=""
   >
     <div
@@ -1042,7 +1042,7 @@ exports[`Switch > Switch sizeVue demo works fine 1`] = `
     </div>
     <!---->
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -1076,7 +1076,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -1097,7 +1097,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
     </div>
     <!---->
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -1147,7 +1147,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -1168,7 +1168,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
     </div>
     <!---->
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -1223,7 +1223,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
     禁用状态
   </div>
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -1244,7 +1244,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
     </div>
     <!---->
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -1268,7 +1268,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -1289,7 +1289,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
     </div>
     <!---->
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"

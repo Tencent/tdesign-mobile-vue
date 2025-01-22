@@ -7,6 +7,9 @@ import { sleep } from '../../shared/util';
 import Sticky from '../../sticky/index';
 import { trigger } from '../../image-viewer/__test__/touch';
 
+// scrollTo isn't implemented in JSDOM，see: https://github.com/vuejs/vue-test-utils/issues/319
+Element.prototype.scrollTo = () => {};
+
 const prefix = 't';
 const name = `${prefix}-tabs`;
 const list = [
@@ -60,11 +63,13 @@ describe('Tabs', () => {
       let theme = '';
       const wrapper = mount(Tabs, {
         props: {
-          theme: theme,
+          theme,
         },
       });
       const navWrap = wrapper.find(`.${name}__wrapper`);
       const $tabNavItems = navWrap.findAllComponents(TTabNav);
+
+      const $tabs = wrapper.findComponent(Tabs);
 
       theme = 'line';
       await wrapper.setProps({
@@ -160,7 +165,7 @@ describe('Tabs', () => {
       };
       const wrapper = mount(Tabs, {
         props: {
-          size: size,
+          size,
         },
       });
       const $tabs = wrapper.findComponent(Tabs);

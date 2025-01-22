@@ -135,7 +135,7 @@ export default defineComponent({
       },
     ]);
     const popoverClass = computed(() => [`${guideClass.value}__reference`]);
-    const contetnClass = computed(() => [`${guideClass.value}__content--${isPopover.value ? 'popover' : 'dialog'}`]);
+    const contentClass = computed(() => [`${guideClass.value}__content--${isPopover.value ? 'popover' : 'dialog'}`]);
     const footerClass = computed(() => [
       `${guideClass.value}__footer`,
       `${guideClass.value}__footer--${isPopover.value ? 'popover' : 'dialog'}`,
@@ -355,7 +355,7 @@ export default defineComponent({
           return renderCounter || ` (${innerCurrent.value + 1}/${stepsTotal.value})`;
         };
         return (
-          <div class={contetnClass.value}>
+          <div class={contentClass.value}>
             <div class={`${guideClass.value}__tooltip`}>
               <div class={`${guideClass.value}__title`}>{renderTitleNode()}</div>
               <div class={`${guideClass.value}__desc`}>{renderBodyNode()}</div>

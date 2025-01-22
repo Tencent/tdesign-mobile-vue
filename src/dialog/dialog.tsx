@@ -154,6 +154,7 @@ export default defineComponent({
       };
       return (
         <TPopup
+          class={`${dialogClass.value}__wrapper`}
           visible={props.visible}
           placement="center"
           show-overlay={props.showOverlay}

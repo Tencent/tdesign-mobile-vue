@@ -19,6 +19,15 @@ export default {
   },
   /** 是否居中 */
   center: Boolean,
+  /** 清空图标触发方式，仅在输入框有值时有效 */
+  clearTrigger: {
+    type: String as PropType<TdSearchProps['clearTrigger']>,
+    default: 'always' as TdSearchProps['clearTrigger'],
+    validator(val: TdSearchProps['clearTrigger']): boolean {
+      if (!val) return true;
+      return ['always', 'focus'].includes(val);
+    },
+  },
   /** 是否可清空 */
   clearable: {
     type: Boolean,

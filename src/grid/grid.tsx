@@ -11,7 +11,7 @@ export default defineComponent({
   props,
   setup(props, { slots }) {
     const gridClass = usePrefixClass('grid');
-    const { column, gutter, border, align } = toRefs(props);
+    const { column, gutter, border, align, hover } = toRefs(props);
     const rootStyle = computed(() => {
       if (column.value === 0) return [];
       const ans = [
@@ -28,6 +28,7 @@ export default defineComponent({
       border,
       align,
       gutter,
+      hover,
     });
 
     const classes = computed(() => [

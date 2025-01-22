@@ -106,7 +106,6 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 <path
                   d="M12 2.25a9.75 9.75 0 000 19.5v-2.44A7.31 7.31 0 1119.31 12h2.44A9.75 9.75 0 0012 2.25z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               <div
@@ -190,7 +189,6 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 <path
                   d="M12 2.25a9.75 9.75 0 000 19.5v-2.44A7.31 7.31 0 1119.31 12h2.44A9.75 9.75 0 0012 2.25z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               <div
@@ -3130,7 +3128,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
         <!--teleport end-->
       </div>
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
         data-v-0f72cd9e=""
       >
         <div
@@ -3152,7 +3150,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -3173,7 +3171,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
         data-v-0f72cd9e=""
       >
         <div
@@ -6400,7 +6398,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
     <!--teleport end-->
   </div>
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
     data-v-0f72cd9e=""
   >
     <div
@@ -6422,7 +6420,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
     </div>
     <!---->
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -6443,7 +6441,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
     data-v-0f72cd9e=""
   >
     <div
@@ -7137,7 +7135,6 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
             <path
               d="M12 2.25a9.75 9.75 0 000 19.5v-2.44A7.31 7.31 0 1119.31 12h2.44A9.75 9.75 0 0012 2.25z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           <div
@@ -7221,7 +7218,6 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
             <path
               d="M12 2.25a9.75 9.75 0 000 19.5v-2.44A7.31 7.31 0 1119.31 12h2.44A9.75 9.75 0 0012 2.25z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           <div

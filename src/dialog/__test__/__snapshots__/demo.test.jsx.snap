@@ -29,7 +29,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-popup t-popup--center"
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
     style="display: none;"
   >
     <!---->
@@ -122,7 +122,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-popup t-popup--center"
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
     style="display: none;"
   >
     <!---->
@@ -184,6 +184,91 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
     
   </div>
   <!--teleport end-->
+  <div
+    class="btn-gap"
+  />
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      确认类-纯标题
+      
+    </span>
+    <!---->
+  </button>
+  <!--teleport start-->
+  <div
+    class="t-overlay"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
+  >
+    <!---->
+  </div>
+  <div
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
+    style="display: none;"
+  >
+    <!---->
+    
+    <div
+      class="t-dialog "
+    >
+      <!---->
+      <!---->
+      <div
+        class="t-dialog__content"
+      >
+        <div
+          class="t-dialog__header"
+        >
+          对话框标题
+        </div>
+        <!---->
+      </div>
+      <!---->
+      <div
+        class="t-dialog__footer"
+      >
+        <!---->
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            取消
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            确定
+          </span>
+          <!---->
+        </button>
+      </div>
+    </div>
+    
+  </div>
+  <!--teleport end-->
   
 </div>
 `;
@@ -217,7 +302,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-popup t-popup--center"
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
     style="display: none;"
   >
     <!---->
@@ -297,7 +382,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-popup t-popup--center"
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
     style="display: none;"
   >
     <!---->
@@ -373,7 +458,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-popup t-popup--center"
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
     style="display: none;"
   >
     <!---->
@@ -398,7 +483,11 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
             class="t-dialog__body-text"
           >
             
-            这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.
+            <div
+              class="content-container"
+            >
+              这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案
+            </div>
             
           </div>
         </div>
@@ -449,7 +538,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       class="t-button__content"
     >
       
-      图片置顶
+      图片置顶-带标题描述
       
     </span>
     <!---->
@@ -462,7 +551,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-popup t-popup--center"
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
     style="display: none;"
   >
     <!---->
@@ -589,7 +678,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       class="t-button__content"
     >
       
-      图片居中
+      图片置顶-无标题
       
     </span>
     <!---->
@@ -602,7 +691,403 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-popup t-popup--center"
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
+    style="display: none;"
+  >
+    <!---->
+    
+    <div
+      class="t-dialog "
+    >
+      
+      <div
+        class="t-image t-image--square"
+        data-v-ddf95d52=""
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!---->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/dialog1.png"
+            style="object-fit: contain; object-position: center;"
+          />
+        </picture>
+      </div>
+      
+      <!---->
+      <div
+        class="t-dialog__content"
+      >
+        <!---->
+        <div
+          class="t-dialog__body"
+        >
+          <div
+            class="t-dialog__body-text"
+          >
+            告知当前状态、信息和解决方法
+          </div>
+        </div>
+      </div>
+      <!---->
+      <div
+        class="t-dialog__footer"
+      >
+        <!---->
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            取消
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            确认
+          </span>
+          <!---->
+        </button>
+      </div>
+    </div>
+    
+  </div>
+  <!--teleport end-->
+  <div
+    class="btn-gap"
+    data-v-ddf95d52=""
+  />
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+    data-v-ddf95d52=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      图片置顶-纯标题
+      
+    </span>
+    <!---->
+  </button>
+  <!--teleport start-->
+  <div
+    class="t-overlay"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
+  >
+    <!---->
+  </div>
+  <div
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
+    style="display: none;"
+  >
+    <!---->
+    
+    <div
+      class="t-dialog "
+    >
+      
+      <div
+        class="t-image t-image--square"
+        data-v-ddf95d52=""
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!---->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/dialog1.png"
+            style="object-fit: contain; object-position: center;"
+          />
+        </picture>
+      </div>
+      
+      <!---->
+      <div
+        class="t-dialog__content"
+      >
+        <div
+          class="t-dialog__header"
+        >
+          对话框标题
+        </div>
+        <!---->
+      </div>
+      <!---->
+      <div
+        class="t-dialog__footer"
+      >
+        <!---->
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            取消
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            确认
+          </span>
+          <!---->
+        </button>
+      </div>
+    </div>
+    
+  </div>
+  <!--teleport end-->
+  <div
+    class="btn-gap"
+    data-v-ddf95d52=""
+  />
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+    data-v-ddf95d52=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      图片置顶-纯图片
+      
+    </span>
+    <!---->
+  </button>
+  <!--teleport start-->
+  <div
+    class="t-overlay"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
+  >
+    <!---->
+  </div>
+  <div
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
+    style="display: none;"
+  >
+    <!---->
+    
+    <div
+      class="t-dialog "
+    >
+      
+      <div
+        class="t-image t-image--square"
+        data-v-ddf95d52=""
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!---->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/dialog1.png"
+            style="object-fit: contain; object-position: center;"
+          />
+        </picture>
+      </div>
+      
+      <!---->
+      <div
+        class="t-dialog__content"
+      >
+        <!---->
+        <!---->
+      </div>
+      <!---->
+      <div
+        class="t-dialog__footer"
+      >
+        <!---->
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            取消
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            确认
+          </span>
+          <!---->
+        </button>
+      </div>
+    </div>
+    
+  </div>
+  <!--teleport end-->
+  <div
+    class="btn-gap"
+    data-v-ddf95d52=""
+  />
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+    data-v-ddf95d52=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      图片居中-带标题描述
+      
+    </span>
+    <!---->
+  </button>
+  <!--teleport start-->
+  <div
+    class="t-overlay"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
+  >
+    <!---->
+  </div>
+  <div
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
     style="display: none;"
   >
     <!---->
@@ -629,6 +1114,138 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
             告知当前状态、信息和解决方法
           </div>
         </div>
+      </div>
+      
+      <div
+        class="t-image t-image--square image"
+        data-v-ddf95d52=""
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!---->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/dialog1.png"
+            style="object-fit: contain; object-position: center;"
+          />
+        </picture>
+      </div>
+      
+      <div
+        class="t-dialog__footer"
+      >
+        <!---->
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            取消
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            确认
+          </span>
+          <!---->
+        </button>
+      </div>
+    </div>
+    
+  </div>
+  <!--teleport end-->
+  <div
+    class="btn-gap"
+    data-v-ddf95d52=""
+  />
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+    data-v-ddf95d52=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      图片居中-纯标题
+      
+    </span>
+    <!---->
+  </button>
+  <!--teleport start-->
+  <div
+    class="t-overlay"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
+  >
+    <!---->
+  </div>
+  <div
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
+    style="display: none;"
+  >
+    <!---->
+    
+    <div
+      class="t-dialog "
+    >
+      <!---->
+      <!---->
+      <div
+        class="t-dialog__content"
+      >
+        <div
+          class="t-dialog__header"
+        >
+          对话框标题
+        </div>
+        <!---->
       </div>
       
       <div
@@ -747,7 +1364,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-popup t-popup--center"
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
     style="display: none;"
   >
     <!---->
@@ -798,6 +1415,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
                     name=""
                     placeholder="请输入文字"
                     spellcheck="false"
+                    style="--td-input-cursor-color: #0052d9;"
                     type="text"
                   />
                   <!---->
@@ -878,7 +1496,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-popup t-popup--center"
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
     style="display: none;"
   >
     <!---->
@@ -934,6 +1552,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
                     name=""
                     placeholder="请输入文字"
                     spellcheck="false"
+                    style="--td-input-cursor-color: #0052d9;"
                     type="text"
                   />
                   <!---->
@@ -1049,7 +1668,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-popup t-popup--center"
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
         style="display: none;"
       >
         <!---->
@@ -1129,7 +1748,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-popup t-popup--center"
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
         style="display: none;"
       >
         <!---->
@@ -1205,7 +1824,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-popup t-popup--center"
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
         style="display: none;"
       >
         <!---->
@@ -1230,7 +1849,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 class="t-dialog__body-text"
               >
                 
-                这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.
+                <div
+                  class="content-container"
+                >
+                  这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案
+                </div>
                 
               </div>
             </div>
@@ -1306,7 +1929,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-popup t-popup--center"
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
         style="display: none;"
       >
         <!---->
@@ -1399,7 +2022,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-popup t-popup--center"
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
         style="display: none;"
       >
         <!---->
@@ -1461,6 +2084,91 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         
       </div>
       <!--teleport end-->
+      <div
+        class="btn-gap"
+      />
+      <button
+        aria-disabled="false"
+        class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+        role="button"
+        type="button"
+      >
+        <!---->
+        <span
+          class="t-button__content"
+        >
+          
+          确认类-纯标题
+          
+        </span>
+        <!---->
+      </button>
+      <!--teleport start-->
+      <div
+        class="t-overlay"
+        style="z-index: 1000; transition-duration: 300ms; display: none;"
+      >
+        <!---->
+      </div>
+      <div
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
+        style="display: none;"
+      >
+        <!---->
+        
+        <div
+          class="t-dialog "
+        >
+          <!---->
+          <!---->
+          <div
+            class="t-dialog__content"
+          >
+            <div
+              class="t-dialog__header"
+            >
+              对话框标题
+            </div>
+            <!---->
+          </div>
+          <!---->
+          <div
+            class="t-dialog__footer"
+          >
+            <!---->
+            <button
+              aria-disabled="false"
+              class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+              role="button"
+              type="button"
+            >
+              <!---->
+              <span
+                class="t-button__content"
+              >
+                取消
+              </span>
+              <!---->
+            </button>
+            <button
+              aria-disabled="false"
+              class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+              role="button"
+              type="button"
+            >
+              <!---->
+              <span
+                class="t-button__content"
+              >
+                确定
+              </span>
+              <!---->
+            </button>
+          </div>
+        </div>
+        
+      </div>
+      <!--teleport end-->
       
       
     </div>
@@ -1508,7 +2216,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-popup t-popup--center"
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
         style="display: none;"
       >
         <!---->
@@ -1559,6 +2267,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                         name=""
                         placeholder="请输入文字"
                         spellcheck="false"
+                        style="--td-input-cursor-color: #0052d9;"
                         type="text"
                       />
                       <!---->
@@ -1639,7 +2348,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-popup t-popup--center"
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
         style="display: none;"
       >
         <!---->
@@ -1695,6 +2404,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                         name=""
                         placeholder="请输入文字"
                         spellcheck="false"
+                        style="--td-input-cursor-color: #0052d9;"
                         type="text"
                       />
                       <!---->
@@ -1780,7 +2490,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-button__content"
         >
           
-          图片置顶
+          图片置顶-带标题描述
           
         </span>
         <!---->
@@ -1793,7 +2503,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-popup t-popup--center"
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
         style="display: none;"
       >
         <!---->
@@ -1920,7 +2630,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-button__content"
         >
           
-          图片居中
+          图片置顶-无标题
           
         </span>
         <!---->
@@ -1933,7 +2643,403 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-popup t-popup--center"
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
+        style="display: none;"
+      >
+        <!---->
+        
+        <div
+          class="t-dialog "
+        >
+          
+          <div
+            class="t-image t-image--square"
+            data-v-ddf95d52=""
+          >
+            <div
+              class="t-image__mask"
+            >
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
+              >
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                  
+                </div>
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <picture>
+              <!---->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/dialog1.png"
+                style="object-fit: contain; object-position: center;"
+              />
+            </picture>
+          </div>
+          
+          <!---->
+          <div
+            class="t-dialog__content"
+          >
+            <!---->
+            <div
+              class="t-dialog__body"
+            >
+              <div
+                class="t-dialog__body-text"
+              >
+                告知当前状态、信息和解决方法
+              </div>
+            </div>
+          </div>
+          <!---->
+          <div
+            class="t-dialog__footer"
+          >
+            <!---->
+            <button
+              aria-disabled="false"
+              class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+              role="button"
+              type="button"
+            >
+              <!---->
+              <span
+                class="t-button__content"
+              >
+                取消
+              </span>
+              <!---->
+            </button>
+            <button
+              aria-disabled="false"
+              class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+              role="button"
+              type="button"
+            >
+              <!---->
+              <span
+                class="t-button__content"
+              >
+                确认
+              </span>
+              <!---->
+            </button>
+          </div>
+        </div>
+        
+      </div>
+      <!--teleport end-->
+      <div
+        class="btn-gap"
+        data-v-ddf95d52=""
+      />
+      <button
+        aria-disabled="false"
+        class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+        data-v-ddf95d52=""
+        role="button"
+        type="button"
+      >
+        <!---->
+        <span
+          class="t-button__content"
+        >
+          
+          图片置顶-纯标题
+          
+        </span>
+        <!---->
+      </button>
+      <!--teleport start-->
+      <div
+        class="t-overlay"
+        style="z-index: 1000; transition-duration: 300ms; display: none;"
+      >
+        <!---->
+      </div>
+      <div
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
+        style="display: none;"
+      >
+        <!---->
+        
+        <div
+          class="t-dialog "
+        >
+          
+          <div
+            class="t-image t-image--square"
+            data-v-ddf95d52=""
+          >
+            <div
+              class="t-image__mask"
+            >
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
+              >
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                  
+                </div>
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <picture>
+              <!---->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/dialog1.png"
+                style="object-fit: contain; object-position: center;"
+              />
+            </picture>
+          </div>
+          
+          <!---->
+          <div
+            class="t-dialog__content"
+          >
+            <div
+              class="t-dialog__header"
+            >
+              对话框标题
+            </div>
+            <!---->
+          </div>
+          <!---->
+          <div
+            class="t-dialog__footer"
+          >
+            <!---->
+            <button
+              aria-disabled="false"
+              class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+              role="button"
+              type="button"
+            >
+              <!---->
+              <span
+                class="t-button__content"
+              >
+                取消
+              </span>
+              <!---->
+            </button>
+            <button
+              aria-disabled="false"
+              class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+              role="button"
+              type="button"
+            >
+              <!---->
+              <span
+                class="t-button__content"
+              >
+                确认
+              </span>
+              <!---->
+            </button>
+          </div>
+        </div>
+        
+      </div>
+      <!--teleport end-->
+      <div
+        class="btn-gap"
+        data-v-ddf95d52=""
+      />
+      <button
+        aria-disabled="false"
+        class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+        data-v-ddf95d52=""
+        role="button"
+        type="button"
+      >
+        <!---->
+        <span
+          class="t-button__content"
+        >
+          
+          图片置顶-纯图片
+          
+        </span>
+        <!---->
+      </button>
+      <!--teleport start-->
+      <div
+        class="t-overlay"
+        style="z-index: 1000; transition-duration: 300ms; display: none;"
+      >
+        <!---->
+      </div>
+      <div
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
+        style="display: none;"
+      >
+        <!---->
+        
+        <div
+          class="t-dialog "
+        >
+          
+          <div
+            class="t-image t-image--square"
+            data-v-ddf95d52=""
+          >
+            <div
+              class="t-image__mask"
+            >
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
+              >
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                  
+                </div>
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <picture>
+              <!---->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/dialog1.png"
+                style="object-fit: contain; object-position: center;"
+              />
+            </picture>
+          </div>
+          
+          <!---->
+          <div
+            class="t-dialog__content"
+          >
+            <!---->
+            <!---->
+          </div>
+          <!---->
+          <div
+            class="t-dialog__footer"
+          >
+            <!---->
+            <button
+              aria-disabled="false"
+              class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+              role="button"
+              type="button"
+            >
+              <!---->
+              <span
+                class="t-button__content"
+              >
+                取消
+              </span>
+              <!---->
+            </button>
+            <button
+              aria-disabled="false"
+              class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+              role="button"
+              type="button"
+            >
+              <!---->
+              <span
+                class="t-button__content"
+              >
+                确认
+              </span>
+              <!---->
+            </button>
+          </div>
+        </div>
+        
+      </div>
+      <!--teleport end-->
+      <div
+        class="btn-gap"
+        data-v-ddf95d52=""
+      />
+      <button
+        aria-disabled="false"
+        class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+        data-v-ddf95d52=""
+        role="button"
+        type="button"
+      >
+        <!---->
+        <span
+          class="t-button__content"
+        >
+          
+          图片居中-带标题描述
+          
+        </span>
+        <!---->
+      </button>
+      <!--teleport start-->
+      <div
+        class="t-overlay"
+        style="z-index: 1000; transition-duration: 300ms; display: none;"
+      >
+        <!---->
+      </div>
+      <div
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
         style="display: none;"
       >
         <!---->
@@ -2044,6 +3150,138 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         
       </div>
       <!--teleport end-->
+      <div
+        class="btn-gap"
+        data-v-ddf95d52=""
+      />
+      <button
+        aria-disabled="false"
+        class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+        data-v-ddf95d52=""
+        role="button"
+        type="button"
+      >
+        <!---->
+        <span
+          class="t-button__content"
+        >
+          
+          图片居中-纯标题
+          
+        </span>
+        <!---->
+      </button>
+      <!--teleport start-->
+      <div
+        class="t-overlay"
+        style="z-index: 1000; transition-duration: 300ms; display: none;"
+      >
+        <!---->
+      </div>
+      <div
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
+        style="display: none;"
+      >
+        <!---->
+        
+        <div
+          class="t-dialog "
+        >
+          <!---->
+          <!---->
+          <div
+            class="t-dialog__content"
+          >
+            <div
+              class="t-dialog__header"
+            >
+              对话框标题
+            </div>
+            <!---->
+          </div>
+          
+          <div
+            class="t-image t-image--square image"
+            data-v-ddf95d52=""
+          >
+            <div
+              class="t-image__mask"
+            >
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
+              >
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                  
+                </div>
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <picture>
+              <!---->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/dialog1.png"
+                style="object-fit: contain; object-position: center;"
+              />
+            </picture>
+          </div>
+          
+          <div
+            class="t-dialog__footer"
+          >
+            <!---->
+            <button
+              aria-disabled="false"
+              class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+              role="button"
+              type="button"
+            >
+              <!---->
+              <span
+                class="t-button__content"
+              >
+                取消
+              </span>
+              <!---->
+            </button>
+            <button
+              aria-disabled="false"
+              class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
+              role="button"
+              type="button"
+            >
+              <!---->
+              <span
+                class="t-button__content"
+              >
+                确认
+              </span>
+              <!---->
+            </button>
+          </div>
+        </div>
+        
+      </div>
+      <!--teleport end-->
       
       
     </div>
@@ -2057,19 +3295,20 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        02 组件状态
+        02 组件类型
       </h2>
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        其它形态对话框
-      </p>
+      <!--v-if-->
     </div>
     <div
       class="tdesign-mobile-demo-block__slot with-padding"
     >
       
       
+      <div
+        class="demo-desc"
+      >
+        文字按钮
+      </div>
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -2094,7 +3333,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-popup t-popup--center"
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
         style="display: none;"
       >
         <!---->
@@ -2163,6 +3402,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <div
         class="btn-gap"
       />
+      <div
+        class="demo-desc"
+      >
+        水平基础按钮
+      </div>
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -2187,7 +3431,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-popup t-popup--center"
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
         style="display: none;"
       >
         <!---->
@@ -2256,6 +3500,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <div
         class="btn-gap"
       />
+      <div
+        class="demo-desc"
+      >
+        垂直基础按钮
+      </div>
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -2280,7 +3529,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-popup t-popup--center"
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
         style="display: none;"
       >
         <!---->
@@ -2349,6 +3598,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <div
         class="btn-gap"
       />
+      <div
+        class="demo-desc"
+      >
+        多按钮
+      </div>
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -2360,7 +3614,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-button__content"
         >
           
-           垂直多按钮 
+           多按钮 
           
         </span>
         <!---->
@@ -2373,7 +3627,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-popup t-popup--center"
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
         style="display: none;"
       >
         <!---->
@@ -2459,6 +3713,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <div
         class="btn-gap"
       />
+      <div
+        class="demo-desc"
+      >
+        带关闭按钮的对话框
+      </div>
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -2470,7 +3729,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-button__content"
         >
           
-           带关闭按钮 
+           带关闭按钮的对话框 
           
         </span>
         <!---->
@@ -2483,7 +3742,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-popup t-popup--center"
+        class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
         style="display: none;"
       >
         <!---->
@@ -2582,7 +3841,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <p
         class="tdesign-mobile-demo-block__summary"
       >
-        命令行调用
+        命令调用
       </p>
     </div>
     <div
@@ -2614,6 +3873,11 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   data-v-app=""
 >
   
+  <div
+    class="demo-desc"
+  >
+    文字按钮
+  </div>
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -2638,7 +3902,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-popup t-popup--center"
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
     style="display: none;"
   >
     <!---->
@@ -2707,6 +3971,11 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   <div
     class="btn-gap"
   />
+  <div
+    class="demo-desc"
+  >
+    水平基础按钮
+  </div>
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -2731,7 +4000,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-popup t-popup--center"
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
     style="display: none;"
   >
     <!---->
@@ -2800,6 +4069,11 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   <div
     class="btn-gap"
   />
+  <div
+    class="demo-desc"
+  >
+    垂直基础按钮
+  </div>
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -2824,7 +4098,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-popup t-popup--center"
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
     style="display: none;"
   >
     <!---->
@@ -2893,6 +4167,11 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   <div
     class="btn-gap"
   />
+  <div
+    class="demo-desc"
+  >
+    多按钮
+  </div>
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -2904,7 +4183,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       class="t-button__content"
     >
       
-       垂直多按钮 
+       多按钮 
       
     </span>
     <!---->
@@ -2917,7 +4196,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-popup t-popup--center"
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
     style="display: none;"
   >
     <!---->
@@ -3003,6 +4282,11 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   <div
     class="btn-gap"
   />
+  <div
+    class="demo-desc"
+  >
+    带关闭按钮的对话框
+  </div>
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -3014,7 +4298,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       class="t-button__content"
     >
       
-       带关闭按钮 
+       带关闭按钮的对话框 
       
     </span>
     <!---->
@@ -3027,7 +4311,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-popup t-popup--center"
+    class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
     style="display: none;"
   >
     <!---->
