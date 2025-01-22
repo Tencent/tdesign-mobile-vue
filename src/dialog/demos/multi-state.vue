@@ -1,4 +1,5 @@
 <template>
+  <div class="demo-desc">文字按钮</div>
   <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog4 = true"> 文字按钮 </t-button>
   <t-dialog
     v-model:visible="isShowDialog4"
@@ -12,6 +13,7 @@
   </t-dialog>
   <div class="btn-gap"></div>
 
+  <div class="demo-desc">水平基础按钮</div>
   <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog5 = true"> 水平基础按钮 </t-button>
   <t-dialog
     v-model:visible="isShowDialog5"
@@ -24,6 +26,8 @@
   >
   </t-dialog>
   <div class="btn-gap"></div>
+
+  <div class="demo-desc">垂直基础按钮</div>
   <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog6 = true"> 垂直基础按钮 </t-button>
   <t-dialog
     v-model:visible="isShowDialog6"
@@ -38,7 +42,9 @@
   </t-dialog>
 
   <div class="btn-gap"></div>
-  <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog7 = true"> 垂直多按钮 </t-button>
+
+  <div class="demo-desc">多按钮</div>
+  <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog7 = true"> 多按钮 </t-button>
   <t-dialog
     v-model:visible="isShowDialog7"
     title="对话框标题"
@@ -53,7 +59,11 @@
   </t-dialog>
 
   <div class="btn-gap"></div>
-  <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog8 = true"> 带关闭按钮 </t-button>
+
+  <div class="demo-desc">带关闭按钮的对话框</div>
+  <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog8 = true">
+    带关闭按钮的对话框
+  </t-button>
   <t-dialog
     v-model:visible="isShowDialog8"
     title="对话框标题"
@@ -106,3 +116,11 @@ const onClose = () => {
   console.log('dialog: close');
 };
 </script>
+
+<style lang="less">
+.demo-desc {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 16px;
+}
+</style>

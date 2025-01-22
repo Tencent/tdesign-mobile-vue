@@ -14,7 +14,7 @@
     <t-grid-item text="最多五个字" :image="imgUrl" />
   </t-grid>
 
-  <t-grid :column="3" class="grid-demo">
+  <t-grid :column="3" class="grid-demo" hover>
     <t-grid-item text="标题文字" :image="imgUrl" />
     <t-grid-item text="标题文字" :image="imgUrl" />
     <t-grid-item text="最多六个文字" :image="imgUrl" />

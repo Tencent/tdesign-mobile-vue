@@ -30,7 +30,9 @@
     @confirm="onConfirm"
     @overlay-click="onClickOverlay"
   >
-    {{ content }}
+    <div class="content-container">
+      {{ content }}
+    </div>
   </t-dialog>
 </template>
 
@@ -41,7 +43,7 @@ const isShowDialog1 = ref(false);
 const isShowDialog2 = ref(false);
 const isShowDialog3 = ref(false);
 const content =
-  '这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.';
+  '这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案';
 
 const onConfirm = (e: string) => {
   console.log('dialog:confirm', e);
@@ -51,3 +53,20 @@ const onClickOverlay = () => {
   console.log('dialog:clickOverlay');
 };
 </script>
+
+<style lang="less">
+.content-container {
+  height: 264px;
+  overflow-y: auto;
+  font-size: 16px;
+  color: var(--td-font-gray-2);
+  line-height: 24px;
+  white-space: pre-line;
+
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}
+</style>

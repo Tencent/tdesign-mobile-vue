@@ -6,7 +6,7 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -578,7 +578,7 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -1045,7 +1045,7 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -2689,7 +2689,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -3254,7 +3254,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -3591,7 +3591,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -4309,7 +4309,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -4779,7 +4779,7 @@ exports[`DateTimePicker > DateTimePicker timeVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -5480,7 +5480,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
