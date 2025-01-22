@@ -16,6 +16,10 @@ export default {
   description: {
     type: [String, Function] as PropType<TdGridItemProps['description']>,
   },
+  /** 图标名称。 */
+  icon: {
+    type: Function as PropType<TdGridItemProps['icon']>,
+  },
   /** 图片，可以是图片地址，也可以自定义图片节点，如果传入对象则透传至 image 组件 */
   image: {
     type: [String, Object, Function] as PropType<TdGridItemProps['image']>,
