@@ -5,7 +5,7 @@ import popupProps from './props';
 import TOverlay from '../overlay';
 import config from '../config';
 import { TdPopupProps } from './type';
-import { useDefault, TNode, isBrowser } from '../shared';
+import { useDefault, TNode } from '../shared';
 import { usePrefixClass } from '../hooks/useClass';
 import { useLockScroll } from '../hooks/useLockScroll';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
