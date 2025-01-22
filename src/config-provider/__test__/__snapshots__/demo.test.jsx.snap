@@ -3128,7 +3128,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
         <!--teleport end-->
       </div>
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
         data-v-0f72cd9e=""
       >
         <div
@@ -3150,7 +3150,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -3171,7 +3171,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
         data-v-0f72cd9e=""
       >
         <div
@@ -6398,7 +6398,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
     <!--teleport end-->
   </div>
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
     data-v-0f72cd9e=""
   >
     <div
@@ -6420,7 +6420,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
     </div>
     <!---->
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -6441,7 +6441,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
     data-v-0f72cd9e=""
   >
     <div
