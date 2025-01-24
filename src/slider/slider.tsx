@@ -61,7 +61,7 @@ export default defineComponent({
     watch(
       () => innerValue.value,
       (val) => {
-        if (props.range) {
+        if (props.range && Array.isArray(val)) {
           const left = (state.maxRange * (val[0] - props.min)) / scope.value;
           const right = (state.maxRange * (props.max - val[1])) / scope.value;
           // 因为要计算点相对于线的绝对定位，所以要取整条线的长度而非可滑动的范围
@@ -71,6 +71,14 @@ export default defineComponent({
         }
       },
     );
+
+    watch(
+      () => props.marks,
+      (val) => {
+        handleMask(val);
+      },
+    );
+
     const rootRef = ref<HTMLDivElement>();
 
     const classes = computed(() => [
@@ -279,7 +287,7 @@ export default defineComponent({
       }
     };
 
-    const readerMinText = () => {
+    const renderMinText = () => {
       if (!props.showExtremeValue) {
         return null;
       }
@@ -294,7 +302,7 @@ export default defineComponent({
       }
       return <text class={textClass}>{props.label ? getValue(props.label, props.min) : props.min}</text>;
     };
-    const readerMaxText = () => {
+    const renderMaxText = () => {
       if (!props.showExtremeValue) {
         return null;
       }
@@ -305,7 +313,7 @@ export default defineComponent({
       return <text class={textClass}>{props.label ? getValue(props.label, props.max) : props.max}</text>;
     };
 
-    const readerScale = () => {
+    const renderScale = () => {
       if (!state.isScale) {
         return null;
       }
@@ -336,7 +344,7 @@ export default defineComponent({
         );
       });
     };
-    const readerLineSingle = () => {
+    const renderLineSingle = () => {
       return (
         <div
           class={[
@@ -369,7 +377,7 @@ export default defineComponent({
         </div>
       );
     };
-    const readerLineRange = () => {
+    const renderLineRange = () => {
       return (
         <div
           class={[
@@ -424,16 +432,16 @@ export default defineComponent({
     return () => {
       return (
         <div ref={rootRef} class={classes.value}>
-          {readerMinText()}
+          {renderMinText()}
           <div
             ref={sliderLine}
             class={sliderLineClasses.value}
             onClick={props.range ? handleRangeClick : handleSingleClick}
           >
-            {readerScale()}
-            {props.range ? readerLineRange() : readerLineSingle()}
+            {renderScale()}
+            {props.range ? renderLineRange() : renderLineSingle()}
           </div>
-          {readerMaxText()}
+          {renderMaxText()}
         </div>
       );
     };
