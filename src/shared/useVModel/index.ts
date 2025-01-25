@@ -1,5 +1,5 @@
 import { ref, Ref, getCurrentInstance, ComponentInternalInstance } from 'vue';
-import { kebabCase } from 'lodash';
+import { kebabCase } from 'lodash-es';
 
 export type ChangeHandler<T> = (value: T, ...args: any[]) => void;
 
