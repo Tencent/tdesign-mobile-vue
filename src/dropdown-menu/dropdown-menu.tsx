@@ -1,7 +1,7 @@
 import { defineComponent, computed, ref, reactive, watch, provide } from 'vue';
 import { onClickOutside } from '@vueuse/core';
 import { CaretDownSmallIcon, CaretUpSmallIcon } from 'tdesign-icons-vue-next';
-import camelCase from 'lodash/camelCase';
+import { camelCase } from 'lodash-es';
 import config from '../config';
 import {
   context as menuContext,

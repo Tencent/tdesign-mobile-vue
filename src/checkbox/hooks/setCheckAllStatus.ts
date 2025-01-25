@@ -1,6 +1,6 @@
 // 计算全选按钮的状态
 import { computed, ref, ComputedRef, Ref } from 'vue';
-import intersection from 'lodash/intersection';
+import { intersection } from 'lodash-es';
 
 export const setCheckAllStatus = (optionList: Ref<any[]>, innerValue: Ref, checkedSet: ComputedRef) => {
   const { isArray } = Array;

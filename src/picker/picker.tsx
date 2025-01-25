@@ -1,7 +1,5 @@
 import { computed, defineComponent, toRefs, ref, watch } from 'vue';
-import isString from 'lodash/isString';
-import isBoolean from 'lodash/isBoolean';
-import isFunction from 'lodash/isFunction';
+import { isBoolean, isFunction, isString } from 'lodash-es';
 import config from '../config';
 import PickerProps from './props';
 import { PickerValue, PickerColumn, PickerColumnItem } from './type';

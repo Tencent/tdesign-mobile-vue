@@ -1,8 +1,5 @@
 import { defineComponent, provide, reactive, ref, toRefs } from 'vue';
-import isEmpty from 'lodash/isEmpty';
-import isArray from 'lodash/isArray';
-import isBoolean from 'lodash/isBoolean';
-import isFunction from 'lodash/isFunction';
+import { isArray, isBoolean, isEmpty, isFunction } from 'lodash-es';
 import {
   Data,
   FormResetParams,
