@@ -50,9 +50,10 @@ export const stackblitzRc = `
 export const viteConfigContent = `
   import { defineConfig } from 'vite';
   import vue from '@vitejs/plugin-vue';
+  import vueJsx from '@vitejs/plugin-vue-jsx';
 
   export default defineConfig({
-    plugins: [vue()],
+    plugins: [vue(), vueJsx()],
   });
 `;
 
@@ -75,7 +76,8 @@ export const packageJSONContent = JSON.stringify(
       vite: orgPkg.devDependencies.vite,
       '@vue/compiler-sfc': orgPkg.devDependencies['@vue/compiler-sfc'],
       '@vitejs/plugin-vue': orgPkg.devDependencies['@vitejs/plugin-vue'],
-      'less': orgPkg.devDependencies['less']
+      '@vitejs/plugin-vue-jsx': orgPkg.devDependencies['@vitejs/plugin-vue-jsx'],
+      less: orgPkg.devDependencies['less'],
     },
   },
   null,
