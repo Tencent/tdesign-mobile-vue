@@ -13,7 +13,7 @@ import { FormItemInjectionKey } from '../form/const';
 import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
-import useLengthLimit from './useLengthLimit';
+import useLengthLimit from '@/hooks/useLengthLimit';
 
 const { prefix } = config;
 
