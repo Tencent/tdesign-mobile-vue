@@ -25,6 +25,10 @@ export default {
   list: {
     type: Array as PropType<TdTabsProps['list']>,
   },
+  /** 中间内容，介于头部和内容之间 */
+  middle: {
+    type: Function as PropType<TdTabsProps['middle']>,
+  },
   /** 是否展示底部激活线条 */
   showBottomLine: {
     type: Boolean,
@@ -41,6 +45,11 @@ export default {
   },
   /** 选项卡头部空间是否均分 */
   spaceEvenly: {
+    type: Boolean,
+    default: true,
+  },
+  /** 是否展示分割线 */
+  split: {
     type: Boolean,
     default: true,
   },

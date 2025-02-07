@@ -28,6 +28,8 @@ export default {
   gutter: {
     type: Number,
   },
+  /** 是否开启点击反馈 */
+  hover: Boolean,
   /** 宫格的风格 */
   theme: {
     type: String as PropType<TdGridProps['theme']>,

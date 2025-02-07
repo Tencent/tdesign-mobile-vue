@@ -8,7 +8,7 @@ import { TdCellProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 内容的对齐方式，默认居中对齐 */
+  /** 右侧内容的对齐方式，默认居中对齐 */
   align: {
     type: String as PropType<TdCellProps['align']>,
     default: 'middle' as TdCellProps['align'],

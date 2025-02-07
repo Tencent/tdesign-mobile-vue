@@ -13,7 +13,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
       class="t-collapse-panel__title"
     >
       <div
-        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
+        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
       >
         <div
           class="t-cell__left"
@@ -42,7 +42,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
           
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -97,7 +97,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
       class="t-collapse-panel__title"
     >
       <div
-        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
       >
         <div
           class="t-cell__left"
@@ -126,7 +126,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
           
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -181,7 +181,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
       class="t-collapse-panel__title"
     >
       <div
-        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
       >
         <div
           class="t-cell__left"
@@ -210,7 +210,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
           
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -265,7 +265,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
       class="t-collapse-panel__title"
     >
       <div
-        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
       >
         <div
           class="t-cell__left"
@@ -294,7 +294,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
           
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -359,7 +359,7 @@ exports[`Collapse > Collapse actionVue demo works fine 1`] = `
       class="t-collapse-panel__title"
     >
       <div
-        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
+        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
       >
         <div
           class="t-cell__left"
@@ -388,7 +388,7 @@ exports[`Collapse > Collapse actionVue demo works fine 1`] = `
           
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -452,7 +452,7 @@ exports[`Collapse > Collapse baseVue demo works fine 1`] = `
       class="t-collapse-panel__title"
     >
       <div
-        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
       >
         <div
           class="t-cell__left"
@@ -475,7 +475,7 @@ exports[`Collapse > Collapse baseVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -540,7 +540,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
       class="t-collapse-panel__title"
     >
       <div
-        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
+        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
       >
         <div
           class="t-cell__left"
@@ -563,7 +563,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -618,7 +618,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
       class="t-collapse-panel__title"
     >
       <div
-        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
       >
         <div
           class="t-cell__left"
@@ -641,7 +641,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -696,7 +696,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
       class="t-collapse-panel__title"
     >
       <div
-        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
       >
         <div
           class="t-cell__left"
@@ -719,7 +719,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -774,7 +774,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
       class="t-collapse-panel__title"
     >
       <div
-        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
       >
         <div
           class="t-cell__left"
@@ -797,7 +797,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -896,7 +896,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             class="t-collapse-panel__title"
           >
             <div
-              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
             >
               <div
                 class="t-cell__left"
@@ -919,7 +919,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               </div>
               <!---->
               <div
-                class="t-cell__right"
+                class="t-cell__right t-cell__right--middle"
               >
                 <div
                   class="t-cell__right-icon"
@@ -1000,7 +1000,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             class="t-collapse-panel__title"
           >
             <div
-              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--top"
+              class="t-cell t-collapse-panel__header t-collapse-panel__header--top"
             >
               <div
                 class="t-cell__left"
@@ -1023,7 +1023,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               </div>
               <!---->
               <div
-                class="t-cell__right"
+                class="t-cell__right t-cell__right--middle"
               >
                 <div
                   class="t-cell__right-icon"
@@ -1100,7 +1100,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             class="t-collapse-panel__title"
           >
             <div
-              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
+              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
             >
               <div
                 class="t-cell__left"
@@ -1129,7 +1129,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                 
               </div>
               <div
-                class="t-cell__right"
+                class="t-cell__right t-cell__right--middle"
               >
                 <div
                   class="t-cell__right-icon"
@@ -1211,7 +1211,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             class="t-collapse-panel__title"
           >
             <div
-              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
+              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
             >
               <div
                 class="t-cell__left"
@@ -1240,7 +1240,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                 
               </div>
               <div
-                class="t-cell__right"
+                class="t-cell__right t-cell__right--middle"
               >
                 <div
                   class="t-cell__right-icon"
@@ -1295,7 +1295,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             class="t-collapse-panel__title"
           >
             <div
-              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
             >
               <div
                 class="t-cell__left"
@@ -1324,7 +1324,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                 
               </div>
               <div
-                class="t-cell__right"
+                class="t-cell__right t-cell__right--middle"
               >
                 <div
                   class="t-cell__right-icon"
@@ -1379,7 +1379,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             class="t-collapse-panel__title"
           >
             <div
-              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
             >
               <div
                 class="t-cell__left"
@@ -1408,7 +1408,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                 
               </div>
               <div
-                class="t-cell__right"
+                class="t-cell__right t-cell__right--middle"
               >
                 <div
                   class="t-cell__right-icon"
@@ -1463,7 +1463,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             class="t-collapse-panel__title"
           >
             <div
-              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
             >
               <div
                 class="t-cell__left"
@@ -1492,7 +1492,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                 
               </div>
               <div
-                class="t-cell__right"
+                class="t-cell__right t-cell__right--middle"
               >
                 <div
                   class="t-cell__right-icon"
@@ -1579,7 +1579,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             class="t-collapse-panel__title"
           >
             <div
-              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
+              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
             >
               <div
                 class="t-cell__left"
@@ -1602,7 +1602,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               </div>
               <!---->
               <div
-                class="t-cell__right"
+                class="t-cell__right t-cell__right--middle"
               >
                 <div
                   class="t-cell__right-icon"
@@ -1657,7 +1657,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             class="t-collapse-panel__title"
           >
             <div
-              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
             >
               <div
                 class="t-cell__left"
@@ -1680,7 +1680,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               </div>
               <!---->
               <div
-                class="t-cell__right"
+                class="t-cell__right t-cell__right--middle"
               >
                 <div
                   class="t-cell__right-icon"
@@ -1735,7 +1735,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             class="t-collapse-panel__title"
           >
             <div
-              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
             >
               <div
                 class="t-cell__left"
@@ -1758,7 +1758,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               </div>
               <!---->
               <div
-                class="t-cell__right"
+                class="t-cell__right t-cell__right--middle"
               >
                 <div
                   class="t-cell__right-icon"
@@ -1813,7 +1813,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
             class="t-collapse-panel__title"
           >
             <div
-              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
             >
               <div
                 class="t-cell__left"
@@ -1836,7 +1836,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
               </div>
               <!---->
               <div
-                class="t-cell__right"
+                class="t-cell__right t-cell__right--middle"
               >
                 <div
                   class="t-cell__right-icon"
@@ -1905,7 +1905,7 @@ exports[`Collapse > Collapse placementVue demo works fine 1`] = `
       class="t-collapse-panel__title"
     >
       <div
-        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--top"
+        class="t-cell t-collapse-panel__header t-collapse-panel__header--top"
       >
         <div
           class="t-cell__left"
@@ -1928,7 +1928,7 @@ exports[`Collapse > Collapse placementVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"

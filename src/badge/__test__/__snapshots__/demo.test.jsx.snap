@@ -623,7 +623,7 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
           角标
         </div>
         <div
-          class="t-cell t-cell--middle"
+          class="t-cell"
         >
           <div
             class="t-cell__left"
@@ -1037,7 +1037,7 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
     角标
   </div>
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"

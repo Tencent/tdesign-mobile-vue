@@ -118,7 +118,11 @@ export default defineComponent({
         return renderTNodeJSX('leftIcon');
       };
       const readerClear = () => {
-        if (props.clearable && searchValue.value) {
+        if (
+          props.clearable &&
+          searchValue.value &&
+          (props.clearTrigger === 'always' || (props.clearTrigger === 'focus' && focused.value))
+        ) {
           return (
             <div class={`${searchClass.value}__clear`} onClick={handleClear}>
               <TIconClear size="24" />

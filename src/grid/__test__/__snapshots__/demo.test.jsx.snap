@@ -2578,26 +2578,19 @@ exports[`Grid > Grid iconVue demo works fine 1`] = `
     <div
       class="t-grid-item__image t-grid-item__image--middle"
     >
-      
-      <div
-        class="icon-wrapper"
-        data-v-1b745b58=""
+      <svg
+        class="t-icon t-icon-star"
+        fill="none"
+        height="1em"
+        style="font-size: 24px;"
+        viewBox="0 0 24 24"
+        width="1em"
       >
-        <svg
-          class="t-icon t-icon-star"
-          data-v-1b745b58=""
-          fill="none"
-          height="1em"
-          viewBox="0 0 24 24"
-          width="1em"
-        >
-          <path
-            d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63zm0 6.1l-1.47 4.22-4.48.1 3.57 2.7-1.3 4.29L12 15.48l3.68 2.56-1.3-4.3 3.57-2.7-4.48-.09L12 6.72z"
-            fill="currentColor"
-          />
-        </svg>
-      </div>
-      
+        <path
+          d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63zm0 6.1l-1.47 4.22-4.48.1 3.57 2.7-1.3 4.29L12 15.48l3.68 2.56-1.3-4.3 3.57-2.7-4.48-.09L12 6.72z"
+          fill="currentColor"
+        />
+      </svg>
     </div>
     <div
       class="t-grid-item__content t-grid-item__content--vertical"
@@ -2622,26 +2615,19 @@ exports[`Grid > Grid iconVue demo works fine 1`] = `
     <div
       class="t-grid-item__image t-grid-item__image--middle"
     >
-      
-      <div
-        class="icon-wrapper"
-        data-v-1b745b58=""
+      <svg
+        class="t-icon t-icon-download"
+        fill="none"
+        height="1em"
+        style="font-size: 24px;"
+        viewBox="0 0 24 24"
+        width="1em"
       >
-        <svg
-          class="t-icon t-icon-download"
-          data-v-1b745b58=""
-          fill="none"
-          height="1em"
-          viewBox="0 0 24 24"
-          width="1em"
-        >
-          <path
-            d="M13 3v9.59l3.5-3.5 1.41 1.41L12 16.41 6.09 10.5 7.5 9.09l3.5 3.5V3h2zM4.5 14v5h15v-5h2v7h-19v-7h2z"
-            fill="currentColor"
-          />
-        </svg>
-      </div>
-      
+        <path
+          d="M13 3v9.59l3.5-3.5 1.41 1.41L12 16.41 6.09 10.5 7.5 9.09l3.5 3.5V3h2zM4.5 14v5h15v-5h2v7h-19v-7h2z"
+          fill="currentColor"
+        />
+      </svg>
     </div>
     <div
       class="t-grid-item__content t-grid-item__content--vertical"
@@ -2666,26 +2652,19 @@ exports[`Grid > Grid iconVue demo works fine 1`] = `
     <div
       class="t-grid-item__image t-grid-item__image--middle"
     >
-      
-      <div
-        class="icon-wrapper"
-        data-v-1b745b58=""
+      <svg
+        class="t-icon t-icon-edit-1"
+        fill="none"
+        height="1em"
+        style="font-size: 24px;"
+        viewBox="0 0 24 24"
+        width="1em"
       >
-        <svg
-          class="t-icon t-icon-edit-1"
-          data-v-1b745b58=""
-          fill="none"
-          height="1em"
-          viewBox="0 0 24 24"
-          width="1em"
-        >
-          <path
-            d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
-            fill="currentColor"
-          />
-        </svg>
-      </div>
-      
+        <path
+          d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
+          fill="currentColor"
+        />
+      </svg>
     </div>
     <div
       class="t-grid-item__content t-grid-item__content--vertical"
@@ -5650,26 +5629,19 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
           <div
             class="t-grid-item__image t-grid-item__image--middle"
           >
-            
-            <div
-              class="icon-wrapper"
-              data-v-1b745b58=""
+            <svg
+              class="t-icon t-icon-star"
+              fill="none"
+              height="1em"
+              style="font-size: 24px;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <svg
-                class="t-icon t-icon-star"
-                data-v-1b745b58=""
-                fill="none"
-                height="1em"
-                viewBox="0 0 24 24"
-                width="1em"
-              >
-                <path
-                  d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63zm0 6.1l-1.47 4.22-4.48.1 3.57 2.7-1.3 4.29L12 15.48l3.68 2.56-1.3-4.3 3.57-2.7-4.48-.09L12 6.72z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-            
+              <path
+                d="M12 .63l2.9 8.35 8.84.18-7.04 5.34 2.56 8.46L12 17.91l-7.26 5.05L7.3 14.5.26 9.16l8.84-.18L12 .63zm0 6.1l-1.47 4.22-4.48.1 3.57 2.7-1.3 4.29L12 15.48l3.68 2.56-1.3-4.3 3.57-2.7-4.48-.09L12 6.72z"
+                fill="currentColor"
+              />
+            </svg>
           </div>
           <div
             class="t-grid-item__content t-grid-item__content--vertical"
@@ -5694,26 +5666,19 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
           <div
             class="t-grid-item__image t-grid-item__image--middle"
           >
-            
-            <div
-              class="icon-wrapper"
-              data-v-1b745b58=""
+            <svg
+              class="t-icon t-icon-download"
+              fill="none"
+              height="1em"
+              style="font-size: 24px;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <svg
-                class="t-icon t-icon-download"
-                data-v-1b745b58=""
-                fill="none"
-                height="1em"
-                viewBox="0 0 24 24"
-                width="1em"
-              >
-                <path
-                  d="M13 3v9.59l3.5-3.5 1.41 1.41L12 16.41 6.09 10.5 7.5 9.09l3.5 3.5V3h2zM4.5 14v5h15v-5h2v7h-19v-7h2z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-            
+              <path
+                d="M13 3v9.59l3.5-3.5 1.41 1.41L12 16.41 6.09 10.5 7.5 9.09l3.5 3.5V3h2zM4.5 14v5h15v-5h2v7h-19v-7h2z"
+                fill="currentColor"
+              />
+            </svg>
           </div>
           <div
             class="t-grid-item__content t-grid-item__content--vertical"
@@ -5738,26 +5703,19 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
           <div
             class="t-grid-item__image t-grid-item__image--middle"
           >
-            
-            <div
-              class="icon-wrapper"
-              data-v-1b745b58=""
+            <svg
+              class="t-icon t-icon-edit-1"
+              fill="none"
+              height="1em"
+              style="font-size: 24px;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <svg
-                class="t-icon t-icon-edit-1"
-                data-v-1b745b58=""
-                fill="none"
-                height="1em"
-                viewBox="0 0 24 24"
-                width="1em"
-              >
-                <path
-                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-            
+              <path
+                d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
+                fill="currentColor"
+              />
+            </svg>
           </div>
           <div
             class="t-grid-item__content t-grid-item__content--vertical"

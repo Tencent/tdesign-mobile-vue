@@ -37,7 +37,7 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
           <div
             class="t-checkbox__description"
           >
-            
+            <!---->
           </div>
         </div>
         <div
@@ -74,7 +74,7 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
           <div
             class="t-checkbox__description"
           >
-            
+            <!---->
           </div>
         </div>
         <div
@@ -111,7 +111,7 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
           <div
             class="t-checkbox__description"
           >
-            
+            <!---->
           </div>
         </div>
         <div
@@ -197,7 +197,7 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
         <div
           class="t-checkbox__description"
         >
-          
+          <!---->
         </div>
       </div>
       <div
@@ -234,7 +234,7 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
         <div
           class="t-checkbox__description"
         >
-          
+          <!---->
         </div>
       </div>
       <div
@@ -265,7 +265,7 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
         <div
           class="t-checkbox__description"
         >
-          
+          <!---->
         </div>
       </div>
       <div
@@ -616,7 +616,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 <div
                   class="t-checkbox__description"
                 >
-                  
+                  <!---->
                 </div>
               </div>
               <div
@@ -653,7 +653,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 <div
                   class="t-checkbox__description"
                 >
-                  
+                  <!---->
                 </div>
               </div>
               <div
@@ -684,7 +684,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 <div
                   class="t-checkbox__description"
                 >
-                  
+                  <!---->
                 </div>
               </div>
               <div
@@ -917,7 +917,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   <div
                     class="t-checkbox__description"
                   >
-                    
+                    <!---->
                   </div>
                 </div>
                 <div
@@ -954,7 +954,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   <div
                     class="t-checkbox__description"
                   >
-                    
+                    <!---->
                   </div>
                 </div>
                 <div
@@ -991,7 +991,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   <div
                     class="t-checkbox__description"
                   >
-                    
+                    <!---->
                   </div>
                 </div>
                 <div
