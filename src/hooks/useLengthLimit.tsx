@@ -10,7 +10,6 @@ export interface UseLengthLimitParams {
   maxlength: number;
   maxcharacter: number;
   allowInputOverMax: boolean;
-  status?: TdInputProps['status'];
   onValidate?: TdInputProps['onValidate'];
 }
 
