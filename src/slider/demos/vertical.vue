@@ -38,11 +38,11 @@ const onChange = (e: number) => {
   console.log(`change to ${e}`);
 };
 
-const onDragend = (value, e) => {
+const onDragend = (value: number, e: TouchEvent) => {
   console.log('onDragend: ', value, e);
 };
 
-const onDragstart = (e) => {
+const onDragstart = (e: TouchEvent) => {
   console.log('onDragstart: ', e);
 };
 
