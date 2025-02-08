@@ -356,7 +356,7 @@ export default defineComponent({
 
         const { year, month } = getCurrentYearAndMonth(newValue);
 
-        props.onPanelChange?.(year, month + 1);
+        props.onPanelChange?.({ year, month: month + 1 });
 
         calcCurrentMonth(newValue);
       };
