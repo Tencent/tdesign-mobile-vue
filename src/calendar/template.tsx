@@ -362,7 +362,7 @@ export default defineComponent({
       };
 
       const onScroll = (e: Event) => {
-        props.onScroll?.(e);
+        props.onScroll?.({ e });
       };
 
       return (

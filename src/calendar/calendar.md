@@ -23,7 +23,7 @@ onChange | Function |  | TS 类型：`(value: Date) => void`<br/>不显示 confi
 onClose | Function |  | TS 类型：`(trigger: CalendarTrigger) => void`<br/>关闭按钮时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts)。<br/>`type CalendarTrigger = 'close-btn' \| 'confirm-btn' \| 'overlay'`<br/> | N
 onConfirm | Function |  | TS 类型：`(value: Date) => void`<br/>点击确认按钮时触发 | N
 onPanelChange | Function |  | TS 类型：`(year: number, month: number) => void`<br/>切换月或年时触发（switch-mode 不为 none 时有效） | N
-onScroll | Function |  | TS 类型：`(e: Event) => void`<br/>滚动时触发 | N
+onScroll | Function |  | TS 类型：`(context: {e: Event}) => void`<br/>滚动时触发 | N
 onSelect | Function |  | TS 类型：`(value: Date) => void`<br/>点击日期时触发 | N
 
 ### Calendar Events
@@ -34,7 +34,7 @@ change | `(value: Date)` | 不显示 confirm-btn 时，完成选择时触发（�
 close | `(trigger: CalendarTrigger)` | 关闭按钮时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts)。<br/>`type CalendarTrigger = 'close-btn' \| 'confirm-btn' \| 'overlay'`<br/>
 confirm | `(value: Date)` | 点击确认按钮时触发
 panel-change | `(year: number, month: number)` | 切换月或年时触发（switch-mode 不为 none 时有效）
-scroll | `(e: Event)` | 滚动时触发
+scroll | `(context: {e: Event})` | 滚动时触发
 select | `(value: Date)` | 点击日期时触发
 
 ### CSS Variables
