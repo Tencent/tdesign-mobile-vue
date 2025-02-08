@@ -17,13 +17,18 @@ step | Number | 1 | \- | N
 theme | String | default | options: default/capsule | N
 value | Number / Array | 0 | `v-model` and `v-model:value` is supported。Typescript：`SliderValue` `type SliderValue = number \| Array<number>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/slider/type.ts) | N
 defaultValue | Number / Array | 0 | uncontrolled property。Typescript：`SliderValue` `type SliderValue = number \| Array<number>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/slider/type.ts) | N
+vertical | Boolean | false | \- | N
 onChange | Function |  | Typescript：`(value: SliderValue) => void`<br/> | N
+onDragend | Function |  | Typescript：`(value: SliderValue, e: TouchEvent) => void`<br/> | N
+onDragstart | Function |  | Typescript：`(e: TouchEvent) => void`<br/> | N
 
 ### Slider Events
 
 name | params | description
 -- | -- | --
 change | `(value: SliderValue)` | \-
+dragend | `(value: SliderValue, e: TouchEvent)` | \-
+dragstart | `(e: TouchEvent)` | \-
 
 ### CSS Variables
 
@@ -33,8 +38,8 @@ Name | Default Value | Description
 --td-slider-active-color | @brand-color | - 
 --td-slider-bar-height | 4px | - 
 --td-slider-capsule-bar-color | @bg-color-component | - 
---td-slider-capsule-bar-heihgt | 24px | - 
---td-slider-capsule-line-heihgt | 18px | - 
+--td-slider-capsule-bar-height | 24px | - 
+--td-slider-capsule-line-height | 18px | - 
 --td-slider-default-color | @bg-color-component-disabled | - 
 --td-slider-default-color | @bg-color-secondarycomponent | - 
 --td-slider-disabled-color | @brand-color-disabled | - 
