@@ -58,17 +58,14 @@ export default defineComponent({
     const [innerValue, setInnerValue] = useVModel(value, modelValue, defaultValue, props.onChange);
     const scope = computed(() => Number(props.max) - Number(props.min));
 
-    const getPagePosition = (touch: { pageX: number; pageY: number }) => {
-      const { pageX, pageY } = touch;
-      return props.vertical ? pageY : pageX;
-    };
-
     const getDelta = (e: MouseEvent | Touch) => {
       const line = sliderLine.value?.getBoundingClientRect() as DOMRect;
-      if (props.vertical) {
-        return e.clientY - line.top;
+      const halfBlock = Number(state.blockSize) / 2;
+      const result = props.vertical ? e.clientY - line.top : e.clientX - line.left;
+      if (props.theme === 'capsule') {
+        return result + halfBlock;
       }
-      return e.clientX - line.left;
+      return result;
     };
 
     watch(
