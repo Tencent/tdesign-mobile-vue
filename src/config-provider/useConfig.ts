@@ -1,7 +1,5 @@
 import { computed, h, inject, getCurrentInstance, ref, provide } from 'vue';
-import isFunction from 'lodash/isFunction';
-import cloneDeep from 'lodash/cloneDeep';
-import isString from 'lodash/isString';
+import { cloneDeep, isFunction, isString } from 'lodash-es';
 
 import { defaultGlobalConfig, configProviderInjectKey, mergeWith } from './context';
 import { GlobalConfigProvider } from './type';

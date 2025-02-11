@@ -1,12 +1,12 @@
 import { computed, defineComponent, ref, toRefs, h, nextTick, onMounted, watch, Teleport } from 'vue';
-import isFunction from 'lodash/isFunction';
+import { isFunction } from 'lodash-es';
 import TPopover, { PopoverProps } from '../popover';
 import TPopup, { PopupProps } from '../popup';
 import TButton, { ButtonProps } from '../button';
 import config from '../config';
 import { useVModel } from '../shared';
 import { addClass, getWindowScroll, removeClass } from '../shared/dom';
-import setStyle from '../_common/js/utils/set-style';
+import setStyle from '../_common/js/utils/setStyle';
 import guideProps from './props';
 import { GuideStep, TdGuideProps } from './type';
 import { isFixed, getRelativePosition, getTargetElm, scrollToParentVisibleArea, scrollToElm } from './utils';

@@ -1,12 +1,9 @@
-import isBoolean from 'lodash/isBoolean';
-import isObject from 'lodash/isObject';
-// https://github.com/validatorjs/validator.js
+import { isBoolean, isEmpty, isNumber, isObject } from 'lodash-es';
 
+// https://github.com/validatorjs/validator.js
 import isDate from 'validator/lib/isDate';
 import isEmail from 'validator/lib/isEmail';
-import isEmpty from 'lodash/isEmpty';
 import isURL from 'validator/lib/isURL';
-import isNumber from 'lodash/isNumber';
 
 import {
   CustomValidator,

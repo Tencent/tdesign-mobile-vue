@@ -3,7 +3,7 @@ import dayjs, { Dayjs, UnitType } from 'dayjs';
 import weekday from 'dayjs/plugin/weekday';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import objectSupport from 'dayjs/plugin/objectSupport';
-import isArray from 'lodash/isArray';
+import { isArray } from 'lodash-es';
 
 import config from '../config';
 import DateTimePickerProps from './props';

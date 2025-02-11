@@ -1,4 +1,4 @@
-import isNumber from 'lodash/isNumber';
+import { isNumber } from 'lodash-es';
 import config from '../config';
 
 const { prefix } = config;

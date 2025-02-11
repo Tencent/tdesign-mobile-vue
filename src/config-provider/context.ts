@@ -1,7 +1,5 @@
 import { InjectionKey, ComputedRef } from 'vue';
-import _mergeWith from 'lodash/mergeWith';
-import merge from 'lodash/merge';
-import isArray from 'lodash/isArray';
+import { merge, mergeWith as _mergeWith, isArray } from 'lodash-es';
 import defaultConfig from '../_common/js/global-config/mobile/default-config';
 import defaultZhLocale from '../_common/js/global-config/mobile/locale/zh_CN';
 import { GlobalConfigProvider } from './type';

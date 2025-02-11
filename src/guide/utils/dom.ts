@@ -1,5 +1,4 @@
-import isString from 'lodash/isString';
-import isFunction from 'lodash/isFunction';
+import { isFunction, isString } from 'lodash-es';
 import { AttachNode } from '../../common';
 import { elementInViewport, getWindowScroll, getWindowSize } from '../../shared/dom';
 /**
