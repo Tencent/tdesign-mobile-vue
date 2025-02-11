@@ -1,6 +1,6 @@
 import { defineComponent, onUnmounted, ref, toRefs, computed, watch, onMounted } from 'vue';
 import { useElementSize } from '@vueuse/core';
-import debounce from 'lodash/debounce';
+import { debounce } from 'lodash-es';
 import PullDownRefreshProps from './props';
 import { useVModel, convertUnit, reconvertUnit } from '../shared';
 import { preventDefault } from '../shared/dom';

@@ -9,8 +9,7 @@ import {
   StyleValue,
   onUnmounted,
 } from 'vue';
-import isArray from 'lodash/isArray';
-import isBoolean from 'lodash/isBoolean';
+import { isArray, isBoolean } from 'lodash-es';
 import { useSwipe } from './useSwipe';
 import props from './props';
 import config from '../config';

@@ -1,7 +1,6 @@
 import { defineComponent, computed, CSSProperties, VNode } from 'vue';
 import { CheckCircleFilledIcon, ErrorCircleFilledIcon, CheckIcon, CloseIcon, ErrorIcon } from 'tdesign-icons-vue-next';
-import isObject from 'lodash/isObject';
-import isString from 'lodash/isString';
+import { isString, isObject } from 'lodash-es';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 import { getBackgroundColor } from './utils';

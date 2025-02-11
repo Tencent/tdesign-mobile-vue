@@ -11,7 +11,7 @@ import {
   ComponentPublicInstance,
   nextTick,
 } from 'vue';
-import throttle from 'lodash/throttle';
+import { throttle } from 'lodash-es';
 import { preventDefault } from '../shared/dom';
 import config from '../config';
 import IndexesProps from './props';

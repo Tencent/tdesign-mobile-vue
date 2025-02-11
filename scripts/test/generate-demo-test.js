@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const camelCase = require('lodash/camelCase');
-const upperFirst = require('lodash/upperFirst');
+const { camelCase, upperFirst } = require('lodash-es');
 
 function resolveCwd(...args) {
   args.unshift(process.cwd());
@@ -24,12 +23,12 @@ const CONFIG = {
   'tdesign-mobile-react': {
     sourcePath: path.resolve(__dirname, resolveCwd('src')),
     targetPath: path.resolve(__dirname, resolveCwd('src')),
-    defaultTemplate: 'import { mount } from \'@vue/test-utils\';',
+    defaultTemplate: "import { mount } from '@vue/test-utils';",
   },
   'tdesign-mobile-vue': {
     sourcePath: path.resolve(__dirname, resolveCwd('src')),
     targetPath: path.resolve(__dirname, resolveCwd(`src`)),
-    defaultTemplate: 'import { mount } from \'@vue/test-utils\';',
+    defaultTemplate: "import { mount } from '@vue/test-utils';",
   },
 };
 
@@ -45,10 +44,10 @@ ${defaultTemplate}
 
 function filterFileFunction(files) {
   // 过滤非 vue jsx 文件
-  const fileType = ['vue', 'jsx']
-  return files.filter(item => {
-    return fileType.includes(item.substr(item.lastIndexOf('.') + 1, item.length))
-  })
+  const fileType = ['vue', 'jsx'];
+  return files.filter((item) => {
+    return fileType.includes(item.substr(item.lastIndexOf('.') + 1, item.length));
+  });
 }
 
 function getKeyFunction(component) {
@@ -78,8 +77,8 @@ function outputOneComponentTestFile(component, demoFiles) {
     demos.push(`  ${name},`);
   });
   if (fixedDateComponentList.includes(component)) {
-    imports.unshift('import MockDate from \'mockdate\';\n');
-    imports.push('\nMockDate.set(\'2020-12-28\');');
+    imports.unshift("import MockDate from 'mockdate';\n");
+    imports.push("\nMockDate.set('2020-12-28');");
   }
 
   demos.push('};');

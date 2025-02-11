@@ -1,7 +1,5 @@
 import { computed, defineComponent, h } from 'vue';
-import isArray from 'lodash/isArray';
-import isFunction from 'lodash/isFunction';
-import isString from 'lodash/isString';
+import { isArray, isFunction, isString } from 'lodash-es';
 import TLoading from '../loading';
 import { useToggle, useDefault } from '../shared';
 import config from '../config';
