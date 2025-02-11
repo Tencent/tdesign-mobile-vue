@@ -1,6 +1,5 @@
 import { onMounted, computed, ref, provide, watch, onUnmounted, toRefs, defineComponent } from 'vue';
-import isObject from 'lodash/isObject';
-import isNumber from 'lodash/isNumber';
+import { isNumber, isObject } from 'lodash-es';
 import { useSwipe } from '../swipe-cell/useSwipe';
 import config from '../config';
 import props from './props';

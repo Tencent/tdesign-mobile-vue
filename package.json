@@ -91,7 +91,6 @@
     "@use-gesture/vanilla": "^10.3.0",
     "@vueuse/core": "10.7.0",
     "dayjs": "^1.10.7",
-    "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "tdesign-icons-vue-next": "^0.3.4",
     "validator": "^13.5.1"
@@ -118,7 +117,6 @@
     "@rollup/plugin-url": "^6.0.0",
     "@soerenmartius/vue3-clipboard": "^0.1.1",
     "@types/jest": "^28.1.6",
-    "@types/lodash": "^4.14.178",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "18.8.0",
     "@types/prismjs": "^1.16.2",
@@ -136,6 +134,7 @@
     "@vue/test-utils": "2.4.1",
     "autoprefixer": "^10.2.4",
     "axios": "^1.7.2",
+    "camelcase": "~6.3.0",
     "commitizen": "^4.2.3",
     "concurrently": "^6.5.1",
     "cross-env": "^7.0.3",

@@ -1,7 +1,6 @@
 import { h, ref, computed, watch, defineComponent, toRefs, reactive, nextTick, onMounted, Transition } from 'vue';
 import { CheckCircleFilledIcon, CloseIcon, InfoCircleFilledIcon } from 'tdesign-icons-vue-next';
-import isObject from 'lodash/isObject';
-import isString from 'lodash/isString';
+import { isString, isObject } from 'lodash-es';
 
 import Link from '../link';
 import props from './props';
