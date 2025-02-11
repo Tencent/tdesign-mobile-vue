@@ -145,7 +145,7 @@ export default defineComponent({
       moveToActiveTab();
     });
 
-    watch(value, () => {
+    watch(currentValue, () => {
       nextTick(() => {
         moveToActiveTab();
       });
