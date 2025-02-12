@@ -84,8 +84,10 @@ export default defineComponent({
       return disabled.value;
     });
 
+    const finalReadonly = computed(() => Boolean(props.readonly || checkboxGroup?.readonly.value));
+
     const handleChange = (e: Event, source?: string) => {
-      if (isDisabled.value || props.readonly) return;
+      if (isDisabled.value || finalReadonly.value) return;
       if (source === 'text' && props.contentDisabled) return;
 
       const value = !isChecked.value;
