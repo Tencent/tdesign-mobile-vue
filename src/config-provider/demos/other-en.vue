@@ -31,7 +31,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import merge from 'lodash/merge';
+import { merge } from 'lodash-es';
 import enConfig from 'tdesign-mobile-vue/es/locale/en_US';
 
 // 全局特性配置，可以引入英文默认配置 enConfig，还可以在默认配置的基础上进行自定义配置

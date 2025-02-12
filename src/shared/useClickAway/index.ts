@@ -1,5 +1,5 @@
 import { MaybeElementRef, UnRefElementReturn, unrefElement, useEventListener } from '@vueuse/core';
-import isArray from 'lodash/isArray';
+import { isArray } from 'lodash-es';
 import { isBrowser } from '../util';
 
 export interface UseClickAwayOptions {

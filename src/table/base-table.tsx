@@ -1,7 +1,5 @@
 import { defineComponent, computed, h, ref } from 'vue';
-import get from 'lodash/get';
-import isFunction from 'lodash/isFunction';
-import isString from 'lodash/isString';
+import { get, isFunction, isString } from 'lodash-es';
 import baseTableProps from './base-table-props';
 import config from '../config';
 import useClassName from './hooks/useClassName';

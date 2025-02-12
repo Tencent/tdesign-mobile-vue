@@ -1,7 +1,6 @@
 import { reactive, ref, toRefs, computed, onMounted, nextTick, defineComponent, watch } from 'vue';
 import { InfoCircleFilledIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
-import isArray from 'lodash/isArray';
-import isObject from 'lodash/isObject';
+import { isArray, isObject } from 'lodash-es';
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
 import props from './props';
 import { NoticeBarTrigger, NoticeBarMarquee } from './type';

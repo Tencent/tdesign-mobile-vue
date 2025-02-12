@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import { TNode, KeysType } from '../common';
 
 export interface TdCheckboxProps {
   /**
@@ -49,7 +49,7 @@ export interface TdCheckboxProps {
    */
   disabled?: boolean;
   /**
-   * 自定义选中图标和非选中图标。使用 Array 时表示：[选中态图标，非选中态图标]。使用 String 时，值为 circle 表示填充圆形图标、值为 line 表示描边型图标、值为 rectangle 表示填充矩形图标。
+   * 自定义选中图标和非选中图标。使用 Array 时表示：[选中态图标，非选中态图标]。使用 String 时，值为 circle 表示填充圆形图标、值为 line 表示描边型图标、值为 rectangle 表示填充矩形图标
    * @default 'circle'
    */
   icon?: 'circle' | 'line' | 'rectangle' | boolean | Array<TNode | String>;
@@ -84,7 +84,6 @@ export interface TdCheckboxProps {
   placement?: 'left' | 'right';
   /**
    * 只读状态
-   * @default false
    */
   readonly?: boolean;
   /**
@@ -103,6 +102,10 @@ export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
    */
   disabled?: boolean;
   /**
+   * 用来定义 value / label / disabled 在 `options` 中对应的字段别名
+   */
+  keys?: KeysType;
+  /**
    * 支持最多选中的数量
    */
   max?: number;
@@ -115,6 +118,10 @@ export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
    * 以配置形式设置子元素。示例1：`['北京', '上海']` ，示例2: `[{ label: '全选', checkAll: true }, { label: '上海', value: 'shanghai' }]`。checkAll 值为 true 表示当前选项为「全选选项」
    */
   options?: Array<CheckboxOption>;
+  /**
+   * 只读状态
+   */
+  readonly?: boolean;
   /**
    * 选中值
    * @default []

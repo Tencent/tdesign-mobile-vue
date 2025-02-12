@@ -1,5 +1,5 @@
 import { h, ComponentInternalInstance, Slots, VNode, setBlockTracking } from 'vue';
-import camelCase from 'lodash/camelCase';
+import { camelCase } from 'lodash-es';
 
 interface JSXRenderContext {
   defaultNode?: VNode;

@@ -1,7 +1,5 @@
 import { h, defineComponent, watch, ref } from 'vue';
-import isNumber from 'lodash/isNumber';
-import isArray from 'lodash/isArray';
-import isFunction from 'lodash/isFunction';
+import { isArray, isFunction, isNumber } from 'lodash-es';
 import { useContent } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import config from '../config';

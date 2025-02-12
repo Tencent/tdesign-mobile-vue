@@ -1,7 +1,5 @@
 import { defineComponent, computed, inject } from 'vue';
-import isObject from 'lodash/isObject';
-import isString from 'lodash/isString';
-import isFunction from 'lodash/isFunction';
+import { isFunction, isString, isObject } from 'lodash-es';
 import { Hover } from '../shared';
 import config from '../config';
 import props from './grid-item-props';
