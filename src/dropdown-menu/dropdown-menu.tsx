@@ -1,7 +1,7 @@
 import { defineComponent, computed, ref, reactive, watch, provide } from 'vue';
 import { onClickOutside } from '@vueuse/core';
 import { CaretDownSmallIcon, CaretUpSmallIcon } from 'tdesign-icons-vue-next';
-import { camelCase } from 'lodash-es';
+import { camelCase, get as lodashGet } from 'lodash-es';
 import config from '../config';
 import {
   context as menuContext,
@@ -63,9 +63,9 @@ export default defineComponent({
       menuItems.value.map((item: any, index: number) => {
         const { keys, label, value, modelValue, defaultValue, disabled, options } = item.props as TdDropdownItemProps;
         const currentValue = value || modelValue || defaultValue;
-        const target = options?.find((item: any) => item[keys?.value ?? 'value'] === currentValue);
+        const target = options?.find((item: any) => lodashGet(item, keys?.value ?? 'value') === currentValue);
         if (state.itemsLabel.length < index + 1) {
-          const targetLabel = (target && target[keys?.label ?? 'label']) || '';
+          const targetLabel = (target && lodashGet(target, keys?.label ?? 'label')) || '';
           const computedLabel = label || targetLabel;
 
           state.itemsLabel.push(computedLabel);

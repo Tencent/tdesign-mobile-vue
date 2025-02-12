@@ -1,5 +1,6 @@
 import { CloseIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import { defineComponent, toRefs, computed, ref, toRaw, reactive, watch, onMounted, Transition } from 'vue';
+import { get as lodashGet } from 'lodash-es';
 import TPopup from '../popup';
 import { Tabs } from '../tabs';
 import { RadioValue, RadioGroup as TRadioGroup } from '../radio';
@@ -29,6 +30,7 @@ interface KeysType {
   value?: string;
   label?: string;
   children?: string;
+  disabled?: string;
 }
 
 export default defineComponent({
@@ -75,10 +77,10 @@ export default defineComponent({
         for (let i = 0, size = selectedIndexes.length; i < size; i += 1) {
           const index = selectedIndexes[i];
           const next = items[i]?.[index];
-          selectedValue.push(next[keys?.value ?? 'value']);
-          steps.push(next[keys?.label ?? 'label']);
-          if (next[keys?.children ?? 'children']) {
-            items.push(next[keys?.children ?? 'children']);
+          selectedValue.push(lodashGet(next, keys?.value ?? 'value'));
+          steps.push(lodashGet(next, keys?.label ?? 'label'));
+          if (lodashGet(next, keys?.children ?? 'children')) {
+            items.push(lodashGet(next, keys?.children ?? 'children'));
           }
         }
       }
@@ -92,11 +94,11 @@ export default defineComponent({
     const getIndexesByValue = (options: any, value: any) => {
       const keys = props.keys as KeysType;
       for (let i = 0; i < options.length; i++) {
-        if (options[i][keys?.value ?? 'value'] === value) {
+        if (lodashGet(options, options[i][keys?.value ?? 'value']) === value) {
           return [i];
         }
-        if (options[i][keys?.children ?? 'children']) {
-          const res: any = getIndexesByValue(options[i][keys?.children ?? 'children'], value);
+        if (lodashGet(options, options[i][keys?.children ?? 'children'])) {
+          const res: any = getIndexesByValue(lodashGet(options, options[i][keys?.children ?? 'children']), value);
           if (res) {
             return [i, ...res];
           }
@@ -110,19 +112,19 @@ export default defineComponent({
       selectedIndexes.length = level + 1;
       selectedValue[level] = String(value);
       selectedValue.length = level + 1;
-      steps[level] = item[keys?.label ?? 'label'] as string;
-      if (item[keys?.children ?? 'children']?.length) {
-        items[level + 1] = item[keys?.children ?? 'children'];
+      steps[level] = lodashGet(item, keys?.label ?? 'label');
+      if (lodashGet(item, keys?.children ?? 'children')?.length) {
+        items[level + 1] = lodashGet(item, keys?.children ?? 'children');
         items.length = level + 2;
         stepIndex.value += 1;
         steps[level + 1] = placeholder.value;
         steps.length = level + 2;
-      } else if (item[keys?.children ?? 'children']?.length === 0) {
+      } else if (lodashGet(item, keys?.children ?? 'children')?.length === 0) {
         childrenInfo.value = value;
         childrenInfo.level = level;
       } else {
         setCascaderValue(
-          item[keys?.value ?? 'value'],
+          lodashGet(item, keys?.value ?? 'value'),
           items.map((item, index) => toRaw(item?.[selectedIndexes[index]])),
         );
         close('finish');
@@ -138,9 +140,9 @@ export default defineComponent({
       steps[level + 1] = placeholder.value;
       steps.length = level + 1;
 
-      if (item[keys?.children ?? 'children']?.length) {
-        items[level + 1] = item[keys?.children ?? 'children'];
-      } else if (item[keys?.children ?? 'children']?.length === 0) {
+      if (lodashGet(item, keys?.children ?? 'children')?.length) {
+        items[level + 1] = lodashGet(item, keys?.children ?? 'children');
+      } else if (lodashGet(item, keys?.children ?? 'children')?.length === 0) {
         childrenInfo.value = value;
         childrenInfo.level = level;
       }
@@ -148,12 +150,17 @@ export default defineComponent({
 
     const handleSelect = (value: RadioValue, level: number) => {
       const keys = props.keys as KeysType;
-      const index = items[level].findIndex((item: any) => item[keys?.value ?? 'value'] === value);
+      const index = items[level].findIndex((item: any) => lodashGet(item, keys?.value ?? 'value') === value);
       const item = items[level][index];
-      if (item.disabled) {
+      if (lodashGet(item, keys?.disabled ?? 'disabled')) {
         return;
       }
-      props.onPick?.({ level, value: item[keys?.value ?? 'value'], index });
+      props.onPick?.({
+        value: lodashGet(item, keys?.value ?? 'value'),
+        label: lodashGet(item, keys?.label ?? 'label'),
+        level,
+        index,
+      });
 
       if (props.checkStrictly && selectedValue.includes(String(value))) {
         cancelSelect(value, level, index, item);
