@@ -300,71 +300,70 @@ export default defineComponent({
       }
       return className;
     };
-    return () => {
-      const renderCell = (dateItem: TDate) => {
-        const cell = renderTNodeJSX('cell', { params: { item: dateItem } });
-        if (cell) {
-          return cell;
-        }
-        let className = `${calendarClass.value}__dates-item-suffix`;
-        if (dateItem.type) {
-          className = `${className} ${calendarClass.value}__dates-item-suffix--${dateItem.type}`;
-        }
-        return (
-          <>
-            {dateItem.prefix && <div class={`${calendarClass.value}__dates-item-prefix`}>{dateItem.prefix}</div>}
-            {dateItem.day}
-            {dateItem.suffix && <div class={className}>{dateItem.suffix}</div>}
-          </>
-        );
-      };
-      const className = usePopup.value
-        ? `${calendarClass.value} ${calendarClass.value}--popup`
-        : `${calendarClass.value}`;
-
-      const renderConfirmBtn = () => {
-        if (confirmBtn.value && typeof confirmBtn.value !== 'object') {
-          return confirmBtn.value;
-        }
-        if (confirmBtn.value && Array.isArray(confirmBtn.value)) {
-          return confirmBtn.value;
-        }
-        if (confirmBtn.value && typeof confirmBtn.value === 'object') {
-          return <t-button block theme="primary" {...confirmBtn.value} onClick={handleConfirm} />;
-        }
-      };
-
-      if (props.switchMode !== 'none') {
-        calcCurrentMonth();
+    const renderCell = (dateItem: TDate) => {
+      const cell = renderTNodeJSX('cell', { params: { item: dateItem } });
+      if (cell) {
+        return cell;
       }
+      let className = `${calendarClass.value}__dates-item-suffix`;
+      if (dateItem.type) {
+        className = `${className} ${calendarClass.value}__dates-item-suffix--${dateItem.type}`;
+      }
+      return (
+        <>
+          {dateItem.prefix && <div class={`${calendarClass.value}__dates-item-prefix`}>{dateItem.prefix}</div>}
+          {dateItem.day}
+          {dateItem.suffix && <div class={className}>{dateItem.suffix}</div>}
+        </>
+      );
+    };
+    const className = usePopup.value
+      ? `${calendarClass.value} ${calendarClass.value}--popup`
+      : `${calendarClass.value}`;
 
-      const handleSwitchModeChange = (
-        type: 'pre-year' | 'pre-month' | 'next-month' | 'next-year',
-        disabled?: boolean,
-      ) => {
-        if (disabled) return;
-        const date = getCurrentDate();
+    const renderConfirmBtn = () => {
+      if (confirmBtn.value && typeof confirmBtn.value !== 'object') {
+        return confirmBtn.value;
+      }
+      if (confirmBtn.value && Array.isArray(confirmBtn.value)) {
+        return confirmBtn.value;
+      }
+      if (confirmBtn.value && typeof confirmBtn.value === 'object') {
+        return <t-button block theme="primary" {...confirmBtn.value} onClick={handleConfirm} />;
+      }
+    };
 
-        const funcMap = {
-          'pre-year': () => getPrevYear(date),
-          'pre-month': () => getPrevMonth(date),
-          'next-month': () => getNextMonth(date),
-          'next-year': () => getNextYear(date),
-        };
-        const newValue = funcMap[type]();
-        if (!newValue) return;
+    if (props.switchMode !== 'none') {
+      calcCurrentMonth();
+    }
 
-        const { year, month } = getCurrentYearAndMonth(newValue);
+    const handleSwitchModeChange = (
+      type: 'pre-year' | 'pre-month' | 'next-month' | 'next-year',
+      disabled?: boolean,
+    ) => {
+      if (disabled) return;
+      const date = getCurrentDate();
 
-        props.onPanelChange?.({ year, month: month + 1 });
-
-        calcCurrentMonth(newValue);
+      const funcMap = {
+        'pre-year': () => getPrevYear(date),
+        'pre-month': () => getPrevMonth(date),
+        'next-month': () => getNextMonth(date),
+        'next-year': () => getNextYear(date),
       };
+      const newValue = funcMap[type]();
+      if (!newValue) return;
 
-      const onScroll = (e: Event) => {
-        props.onScroll?.({ e });
-      };
+      const { year, month } = getCurrentYearAndMonth(newValue);
 
+      props.onPanelChange?.({ year, month: month + 1 });
+
+      calcCurrentMonth(newValue);
+    };
+
+    const onScroll = (e: Event) => {
+      props.onScroll?.({ e });
+    };
+    return () => {
       return (
         <div ref={templateRef} class={className}>
           <div class={`${calendarClass.value}__title`}>{_props.title || globalConfig.value.title}</div>

@@ -1,13 +1,15 @@
 <template>
   <picker
     v-bind="pickerProps"
-    :columns="(selected) => generateCascadePickerColumns(selected, columns, finalDepth, finalSubOptionsRecord)"
+    :columns="(selected) => generateCascadePickerColumns(selected, columns, finalDepth, finalSubOptionsRecord, keys)"
   />
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, ref } from 'vue';
+import { get as lodashGet } from 'lodash-es';
 import config from '../config';
+import { KeysType } from '../common';
 import PickerProps from './props';
 import { PickerColumn, PickerValue } from './type';
 import Picker from './picker';
@@ -27,12 +29,13 @@ export default defineComponent({
       options: any,
       depth: number,
       subOptionsRecord: Record<string, any>,
+      keys?: KeysType,
     ) => {
       const columns: PickerColumn[] = [];
       columns.push(
         options.map((option: any) => ({
-          label: option.label,
-          value: option.value,
+          label: lodashGet(option, keys?.label ?? 'label'),
+          value: lodashGet(option, keys?.value ?? 'value'),
         })),
       );
       for (let i = 0; i < depth - 1; i++) {
@@ -43,12 +46,13 @@ export default defineComponent({
         } else {
           columns.push(
             subOptions.map((option: any) => ({
-              label: option.label,
-              value: option.value,
+              label: lodashGet(option, keys?.label ?? 'label'),
+              value: lodashGet(option, keys?.value ?? 'value'),
             })),
           );
         }
       }
+      console.log('---00---', columns);
       return columns;
     };
     const initDepthAndRecord = (options: any) => {
@@ -72,8 +76,11 @@ export default defineComponent({
       });
       finalDepth.value = depth;
       finalSubOptionsRecord.value = subOptionsRecord;
+
+      console.log('---999---', finalDepth.value, finalSubOptionsRecord.value);
     };
     initDepthAndRecord(props.columns);
+
     return {
       name,
       finalDepth,
