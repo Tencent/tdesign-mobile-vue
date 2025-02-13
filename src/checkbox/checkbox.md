@@ -7,6 +7,7 @@
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 block | Boolean | true | 是否为块级元素 | N
+borderless | Boolean | false | 是否开启无边框模式 | N
 checkAll | Boolean | false | 用于标识是否为「全选选项」。单独使用无效，需在 CheckboxGroup 中使用 | N
 checked | Boolean | false | 是否选中。支持语法糖 `v-model` 或 `v-model:checked` | N
 defaultChecked | Boolean | false | 是否选中。非受控属性 | N
@@ -36,6 +37,7 @@ change | `(checked: boolean, context: { e: Event })` | 值变化时触发
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
+borderless | Boolean | false | 是否开启无边框模式 | N
 disabled | Boolean | undefined | 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled | N
 keys | Object | - | 用来定义 value / label / disabled 在 `options` 中对应的字段别名。TS 类型：`KeysType`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 max | Number | undefined | 支持最多选中的数量 | N

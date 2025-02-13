@@ -7,6 +7,7 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 block | Boolean | true | \- | N
+borderless | Boolean | false | \- | N
 checkAll | Boolean | false | \- | N
 checked | Boolean | false | `v-model` and `v-model:checked` is supported | N
 defaultChecked | Boolean | false | uncontrolled property | N
@@ -36,6 +37,7 @@ change | `(checked: boolean, context: { e: Event })` | \-
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+borderless | Boolean | false | \- | N
 disabled | Boolean | undefined | \- | N
 keys | Object | - | Typescript：`KeysType`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 max | Number | undefined | \- | N
