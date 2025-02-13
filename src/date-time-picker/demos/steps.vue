@@ -10,6 +10,8 @@
     :steps="steps"
     :use-popup="true"
     :visible="visible"
+    :filter="filter"
+    auto-close
     @change="onChange"
     @pick="onPick"
     @confirm="onConfirm"
@@ -36,17 +38,23 @@ const onPick = (value: string) => {
 
 const onCancel = () => {
   console.log('cancel');
-  visible.value = false;
 };
 
 const onConfirm = (value: string) => {
   console.log('confirm: ', value);
   pickerValue.value = value;
   pickerValueText.value = value;
+};
+
+const onclose = (triggerSource: string) => {
+  console.log('close: ', triggerSource);
   visible.value = false;
 };
 
-const onclose = (triggerSource) => {
-  console.log('close: ', triggerSource);
+const filter = (type: string, arr: string[]) => {
+  if (type === 'date') {
+    return arr.slice(1);
+  }
+  return arr;
 };
 </script>

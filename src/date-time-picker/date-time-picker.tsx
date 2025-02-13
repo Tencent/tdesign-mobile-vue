@@ -117,7 +117,12 @@ export default defineComponent({
             value: type === 'month' ? `${+value - 1}` : value,
           });
         }
-        ret.push(arr);
+
+        if (typeof props.filter === 'function') {
+          ret.push(props.filter(type, arr));
+        } else {
+          ret.push(arr);
+        }
       };
 
       if (meaningColumn.value.includes('year')) {
