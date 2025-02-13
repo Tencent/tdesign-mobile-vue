@@ -1,7 +1,9 @@
-import { ref, computed, onMounted, defineComponent, PropType, watch } from 'vue';
+import { ref, computed, onMounted, defineComponent, PropType, watch, inject } from 'vue';
+import { get as lodashGet } from 'lodash-es';
 import config from '../config';
 import Picker from './picker.class';
-import { PickerColumnItem, PickerValue } from './type';
+import { KeysType } from '../common';
+import { PickerColumnItem, PickerValue, TdPickerProps } from './type';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
@@ -29,12 +31,16 @@ export default defineComponent({
   setup(props, context) {
     const pickerItemClass = usePrefixClass('picker-item');
 
+    const pickerProps: TdPickerProps = inject('picker', undefined);
+
+    const keys = computed(() => pickerProps && (pickerProps.keys?.value as KeysType));
+
     let picker: Picker | null = null;
     const root = ref();
     const getIndexByValue = (val: number | string | undefined) => {
       let defaultIndex = 0;
       if (val !== undefined) {
-        defaultIndex = props.options?.findIndex((item: any) => item?.value === val);
+        defaultIndex = props.options?.findIndex((item: any) => lodashGet(item, keys.value?.value ?? 'value') === val);
       }
       return defaultIndex < 0 ? 0 : defaultIndex;
     };
@@ -77,7 +83,7 @@ export default defineComponent({
           defaultIndex: getIndexByValue(props.value) || 0,
           onChange: (index: number) => {
             const curItem = props.options[index];
-            const changeValue = { value: curItem.value, index };
+            const changeValue = { value: lodashGet(curItem, keys.value?.value ?? 'value'), index };
             props.onPick?.(changeValue);
           },
         });
@@ -100,7 +106,7 @@ export default defineComponent({
               {context.slots.option ? (
                 context.slots.option(option, index)
               ) : (
-                <>{props.renderLabel ? props.renderLabel(option) : option?.label}</>
+                <>{props.renderLabel ? props.renderLabel(option) : lodashGet(option, keys.value?.label ?? 'label')}</>
               )}
             </li>
           ))}
