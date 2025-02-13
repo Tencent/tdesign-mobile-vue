@@ -60,7 +60,7 @@ export default defineComponent({
 
     // 通过 slots.default 子成员，计算标题栏选项
     const menuTitles = computed(() =>
-      menuItems.value.map((item: any, index: number) => {
+      menuItems.value?.map((item: any, index: number) => {
         const { keys, label, value, modelValue, defaultValue, disabled, options } = item.props as TdDropdownItemProps;
         const currentValue = value || modelValue || defaultValue;
         const target = options?.find((item: any) => lodashGet(item, keys?.value ?? 'value') === currentValue);
@@ -78,7 +78,7 @@ export default defineComponent({
         }
         return {
           labelProps: label,
-          label: label || target.label,
+          label: label || lodashGet(target, keys?.label ?? 'label'),
           disabled: disabled !== undefined && disabled !== false,
         };
       }),
@@ -144,6 +144,7 @@ export default defineComponent({
 
     // dropdown-menu外面点击触发dropdown下拉框收起
     onClickOutside(refBar, () => {
+      if (state.activeId === null) return;
       collapseMenu();
       props.onMenuClosed?.({ trigger: 'outside' });
     });
