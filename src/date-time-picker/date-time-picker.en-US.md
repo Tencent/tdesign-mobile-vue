@@ -26,7 +26,7 @@ defaultValue | String / Number | - | uncontrolled property。Typescript：`DateV
 visible | Boolean | false | \- | N
 onCancel | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onChange | Function |  | Typescript：`(value: DateValue) => void`<br/> | N
-onClose | Function |  | Typescript：`(trigger: TriggerSource) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'cancel-btn' \| 'confirm-btn'`<br/> | N
+onClose | Function |  | Typescript：`(trigger: TriggerSource) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts)。<br/>`import { TriggerSource } from '@Picker'`<br/> | N
 onConfirm | Function |  | Typescript：`(value: DateValue) => void`<br/> | N
 onPick | Function |  | Typescript：`(value: DateValue) => void`<br/> | N
 
@@ -36,7 +36,7 @@ name | params | description
 -- | -- | --
 cancel | `(context: { e: MouseEvent })` | \-
 change | `(value: DateValue)` | \-
-close | `(trigger: TriggerSource)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'cancel-btn' \| 'confirm-btn'`<br/>
+close | `(trigger: TriggerSource)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts)。<br/>`import { TriggerSource } from '@Picker'`<br/>
 confirm | `(value: DateValue)` | \-
 pick | `(value: DateValue)` | \-
 

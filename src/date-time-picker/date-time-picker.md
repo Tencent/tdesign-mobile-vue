@@ -26,7 +26,7 @@ defaultValue | String / Number | - | 选中值。非受控属性。TS 类型：`
 visible | Boolean | false | 是否显示 | N
 onCancel | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>取消按钮点击时触发 | N
 onChange | Function |  | TS 类型：`(value: DateValue) => void`<br/>value改变时触发 | N
-onClose | Function |  | TS 类型：`(trigger: TriggerSource) => void`<br/>关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'cancel-btn' \| 'confirm-btn'`<br/> | N
+onClose | Function |  | TS 类型：`(trigger: TriggerSource) => void`<br/>关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts)。<br/>`import { TriggerSource } from '@Picker'`<br/> | N
 onConfirm | Function |  | TS 类型：`(value: DateValue) => void`<br/>确认按钮点击时触发 | N
 onPick | Function |  | TS 类型：`(value: DateValue) => void`<br/>选中值发生变化时触发 | N
 
@@ -36,7 +36,7 @@ onPick | Function |  | TS 类型：`(value: DateValue) => void`<br/>选中值发
 -- | -- | --
 cancel | `(context: { e: MouseEvent })` | 取消按钮点击时触发
 change | `(value: DateValue)` | value改变时触发
-close | `(trigger: TriggerSource)` | 关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'cancel-btn' \| 'confirm-btn'`<br/>
+close | `(trigger: TriggerSource)` | 关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts)。<br/>`import { TriggerSource } from '@Picker'`<br/>
 confirm | `(value: DateValue)` | 确认按钮点击时触发
 pick | `(value: DateValue)` | 选中值发生变化时触发
 

@@ -12,7 +12,8 @@ import { useVModel } from '../shared';
 import { Picker as TPicker } from '../picker';
 import { PickerColumn, PickerColumnItem, PickerValue, PickerContext } from '../picker/type';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
-import type { TimeModeValues, TriggerSource } from './type';
+import type { TimeModeValues } from './type';
+import type { TriggerSource } from '../picker/type';
 
 dayjs.extend(weekday);
 dayjs.extend(customParseFormat);
