@@ -8,7 +8,7 @@ import { TdCheckboxGroupProps } from '../checkbox/type';
 import { PropType } from 'vue';
 
 export default {
-  /** 是否开启无边框模式 */
+  /** 是否开启无边框模式。优先级低于 Checkbox.borderless */
   borderless: Boolean,
   /** 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled */
   disabled: {

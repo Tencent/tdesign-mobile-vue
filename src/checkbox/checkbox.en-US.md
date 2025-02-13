@@ -7,7 +7,7 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 block | Boolean | true | \- | N
-borderless | Boolean | false | \- | N
+borderless | Boolean | undefined | \- | N
 checkAll | Boolean | false | \- | N
 checked | Boolean | false | `v-model` and `v-model:checked` is supported | N
 defaultChecked | Boolean | false | uncontrolled property | N

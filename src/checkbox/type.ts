@@ -14,7 +14,6 @@ export interface TdCheckboxProps {
   block?: boolean;
   /**
    * 是否开启无边框模式
-   * @default false
    */
   borderless?: boolean;
   /**
@@ -103,7 +102,7 @@ export interface TdCheckboxProps {
 
 export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
   /**
-   * 是否开启无边框模式
+   * 是否开启无边框模式。优先级低于 Checkbox.borderless
    * @default false
    */
   borderless?: boolean;

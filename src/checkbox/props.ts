@@ -14,7 +14,10 @@ export default {
     default: true,
   },
   /** 是否开启无边框模式 */
-  borderless: Boolean,
+  borderless: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 用于标识是否为「全选选项」。单独使用无效，需在 CheckboxGroup 中使用 */
   checkAll: Boolean,
   /** 是否选中 */
