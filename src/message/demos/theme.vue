@@ -19,6 +19,7 @@ const showMessage = (theme: string, content = '这是一条普通通知信息', 
       icon: true,
       zIndex: 20000,
       context: document.querySelector('.button-demo'),
+      single: false,
     });
   }
 };

@@ -1,4 +1,4 @@
-import { createApp, defineComponent, ref, h, VNode, App, nextTick } from 'vue';
+import { createApp, defineComponent, ref, Ref, h, VNode, App, nextTick } from 'vue';
 import Message from './message';
 import { WithInstallType, isBrowser } from '../shared';
 import { TdMessageProps, MessageThemeList } from './type';
@@ -9,7 +9,13 @@ interface MessageActionOptionsType extends TdMessageProps {
   context?: Element;
 }
 
-const instanceMap: Map<Element, Record<string, Element>> = new Map();
+const instanceMap: Map<
+  Element,
+  {
+    context: Element;
+    visible: Ref<boolean>;
+  }
+> = new Map();
 
 function destroy(context: Element, root: Element) {
   if (context.contains(root)) {
@@ -57,6 +63,7 @@ function create(props: MessageActionOptionsType): void {
 
   instanceMap.set(root, {
     context,
+    visible,
   });
 
   nextTick(() => {
@@ -97,8 +104,9 @@ const defaultProps: MessageActionOptionsType = {
 Message.closeAll = () => {
   if (instanceMap instanceof Map) {
     for (const [key, value] of instanceMap) {
-      const { context } = value;
+      const { context, visible } = value;
       destroy(context as Element, key);
+      visible.value = false;
     }
   }
 };
