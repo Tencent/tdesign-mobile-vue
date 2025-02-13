@@ -8,6 +8,11 @@ import { TdPickerProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 自动关闭；在确认、取消、点击遮罩层自动关闭，不需要手动设置 visible */
+  autoClose: {
+    type: Boolean,
+    default: true,
+  },
   /** 取消按钮文字 */
   cancelBtn: {
     type: [String, Boolean] as PropType<TdPickerProps['cancelBtn']>,
@@ -23,6 +28,10 @@ export default {
   confirmBtn: {
     type: [String, Boolean] as PropType<TdPickerProps['confirmBtn']>,
     default: true,
+  },
+  /** 底部内容 */
+  footer: {
+    type: Function as PropType<TdPickerProps['footer']>,
   },
   /** 自定义头部内容 */
   header: {
@@ -41,6 +50,8 @@ export default {
     type: String,
     default: '',
   },
+  /** 是否使用弹出层包裹 */
+  usePopup: Boolean,
   /** 选中值 */
   value: {
     type: Array as PropType<TdPickerProps['value']>,
@@ -54,10 +65,14 @@ export default {
   defaultValue: {
     type: Array as PropType<TdPickerProps['defaultValue']>,
   },
+  /** 是否显示 */
+  visible: Boolean,
   /** 点击取消按钮时触发 */
   onCancel: Function as PropType<TdPickerProps['onCancel']>,
   /** 选中变化时候触发 */
   onChange: Function as PropType<TdPickerProps['onChange']>,
+  /** 关闭时触发 */
+  onClose: Function as PropType<TdPickerProps['onClose']>,
   /** 点击确认按钮时触发 */
   onConfirm: Function as PropType<TdPickerProps['onConfirm']>,
   /** 任何一列选中都会触发，不同的列参数不同。`context.column` 表示第几列变化，`context.index` 表示变化那一列的选中项下标 */

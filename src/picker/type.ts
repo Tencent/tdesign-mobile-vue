@@ -8,6 +8,11 @@ import { TNode } from '../common';
 
 export interface TdPickerProps {
   /**
+   * 自动关闭；在确认、取消、点击遮罩层自动关闭，不需要手动设置 visible
+   * @default true
+   */
+  autoClose?: boolean;
+  /**
    * 取消按钮文字
    * @default true
    */
@@ -22,6 +27,10 @@ export interface TdPickerProps {
    * @default true
    */
   confirmBtn?: boolean | string;
+  /**
+   * 底部内容
+   */
+  footer?: TNode;
   /**
    * 自定义头部内容
    */
@@ -40,6 +49,11 @@ export interface TdPickerProps {
    */
   title?: string;
   /**
+   * 是否使用弹出层包裹
+   * @default false
+   */
+  usePopup?: boolean;
+  /**
    * 选中值
    */
   value?: Array<PickerValue>;
@@ -52,6 +66,11 @@ export interface TdPickerProps {
    */
   modelValue?: Array<PickerValue>;
   /**
+   * 是否显示
+   * @default false
+   */
+  visible?: boolean;
+  /**
    * 点击取消按钮时触发
    * @default ''
    */
@@ -61,6 +80,10 @@ export interface TdPickerProps {
    * @default ''
    */
   onChange?: (value: Array<PickerValue>, context: { columns: Array<PickerContext>; e: MouseEvent }) => void;
+  /**
+   * 关闭时触发
+   */
+  onClose?: (trigger: TriggerSource) => void;
   /**
    * 点击确认按钮时触发
    * @default ''
@@ -86,3 +109,5 @@ export interface PickerContext {
   column: number;
   index: number;
 }
+
+export type TriggerSource = 'overlay' | 'cancel-btn' | 'confirm-btn';

@@ -1,6 +1,7 @@
 import { isArray } from 'lodash-es';
+import type { TimeModeValues } from './type';
 
-export const getMeaningColumn = (mode: string | string[]) => {
+export const getMeaningColumn = (mode: string | string[]): Array<TimeModeValues> => {
   const arr = ['year', 'month', 'date', 'hour', 'minute', 'second'];
 
   if (isArray(mode)) {
@@ -18,10 +19,10 @@ export const getMeaningColumn = (mode: string | string[]) => {
         ans.push(...arr.slice(3, cutIndex + 1));
       }
     }
-    return ans;
+    return ans as TimeModeValues[];
   }
 
   const cutIndex = arr.indexOf(mode);
 
-  return arr.slice(0, cutIndex + 1);
+  return arr.slice(0, cutIndex + 1) as TimeModeValues[];
 };
