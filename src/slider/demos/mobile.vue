@@ -20,6 +20,9 @@
     <tdesign-demo-block title="03 特殊样式" summary="胶囊型滑块">
       <capsuleDemo />
     </tdesign-demo-block>
+    <tdesign-demo-block title="04 垂直状态">
+      <verticalDemo />
+    </tdesign-demo-block>
   </div>
 </template>
 
@@ -30,6 +33,7 @@ import labelDemo from './label.vue';
 import stepDemo from './step.vue';
 import disableDemo from './disabled.vue';
 import capsuleDemo from './capsule.vue';
+import verticalDemo from './vertical.vue';
 </script>
 
 <style scoped>
