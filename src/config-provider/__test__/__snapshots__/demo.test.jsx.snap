@@ -598,6 +598,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 fill="currentColor"
               />
             </svg>
+            <!---->
             <div
               class="t-calendar__days"
             >
@@ -3868,6 +3869,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
             fill="currentColor"
           />
         </svg>
+        <!---->
         <div
           class="t-calendar__days"
         >

@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import { TNode, KeysType } from '../common';
 
 export interface TdPickerProps {
   /**
@@ -26,6 +26,10 @@ export interface TdPickerProps {
    * 自定义头部内容
    */
   header?: TNode;
+  /**
+   * 用来定义 value / label / disabled 在 `columns ` 中对应的字段别名
+   */
+  keys?: KeysType;
   /**
    * 自定义选项内容。参数为 `option: PickerColumnItem, index: number`
    */

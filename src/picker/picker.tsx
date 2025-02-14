@@ -1,9 +1,8 @@
-import { computed, defineComponent, toRefs, ref, watch } from 'vue';
-import isString from 'lodash/isString';
-import isBoolean from 'lodash/isBoolean';
-import isFunction from 'lodash/isFunction';
+import { computed, defineComponent, toRefs, ref, watch, provide } from 'vue';
+import { isBoolean, isFunction, isString, get as lodashGet } from 'lodash-es';
 import config from '../config';
 import PickerProps from './props';
+import { KeysType } from '../common';
 import { PickerValue, PickerColumn, PickerColumnItem } from './type';
 import { useVModel } from '../shared';
 import { useTNodeJSX } from '../hooks/tnode';
@@ -13,9 +12,9 @@ import { usePrefixClass, useConfig } from '../hooks/useClass';
 
 const { prefix } = config;
 
-const getIndexFromColumns = (column: PickerColumn, value: PickerValue) => {
+const getIndexFromColumns = (column: PickerColumn, value: PickerValue, keys?: KeysType) => {
   if (!value) return 0;
-  return column?.findIndex((item: PickerColumnItem) => item?.value === value);
+  return column?.findIndex((item: PickerColumnItem) => lodashGet(item, keys?.value ?? 'value') === value);
 };
 
 export default defineComponent({
@@ -30,6 +29,8 @@ export default defineComponent({
 
     const { value, modelValue } = toRefs(props);
     const [pickerValue = ref([]), setPickerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+
+    const keys = computed((): KeysType => props.keys);
 
     const getDefaultText = (prop: string | boolean, defaultText: string): string => {
       if (isString(prop)) return prop;
@@ -50,7 +51,7 @@ export default defineComponent({
     });
 
     const curIndexArray = realColumns.value.map((item: PickerColumn, index: number) => {
-      return getIndexFromColumns(item, pickerValue.value?.[index]);
+      return getIndexFromColumns(item, pickerValue.value?.[index], keys.value);
     });
     const pickerItemInstanceArray = ref<any[]>([]);
     // 获取pickerItem实例，用于更新每个item的value和index
@@ -62,8 +63,8 @@ export default defineComponent({
       const target = realColumns.value.map((item, index) => {
         return item[curIndexArray[index]];
       });
-      const label = target.map((item: PickerColumnItem) => item.label);
-      const value = target.map((item: PickerColumnItem) => item.value);
+      const label = target.map((item: PickerColumnItem) => lodashGet(item, keys.value?.label ?? 'label'));
+      const value = target.map((item: PickerColumnItem) => lodashGet(item, keys.value?.value ?? 'value'));
       setPickerValue(value);
       props.onConfirm?.(value, { index: curIndexArray, label, e });
     };
@@ -77,7 +78,7 @@ export default defineComponent({
       const { index } = context;
 
       curIndexArray[column] = index;
-      curValueArray.value[column] = realColumns.value?.[column][index]?.value;
+      curValueArray.value[column] = lodashGet(realColumns.value?.[column][index], keys.value?.value ?? 'value');
 
       props.onPick?.(curValueArray.value, { index, column });
     };
@@ -93,6 +94,8 @@ export default defineComponent({
         pickerItemInstanceArray.value[idx]?.setIndex(curIndexArray[idx]);
       });
     });
+
+    provide('picker', { ...toRefs(props) });
 
     return () => {
       const header = renderTNodeJSX('header');

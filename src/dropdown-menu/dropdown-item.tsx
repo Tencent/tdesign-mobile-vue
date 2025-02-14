@@ -1,4 +1,5 @@
 import { ref, watch, toRefs, inject, computed, reactive, onBeforeMount, defineComponent, nextTick } from 'vue';
+import { get as lodashGet } from 'lodash-es';
 import TRadio, { RadioGroup as TRadioGroup } from '../radio';
 import config from '../config';
 import TButton from '../button';
@@ -55,10 +56,12 @@ export default defineComponent({
       multiple: computed(() => props.multiple),
       options: computed(() => {
         if (props.keys) {
+          const keys = props.keys as KeysType;
+
           return props.options?.map((item) => ({
-            value: item[(props.keys as KeysType)?.value ?? 'value'],
-            label: item[(props.keys as KeysType)?.label ?? 'label'],
-            disabled: item.disabled,
+            value: lodashGet(item, keys?.value ?? 'value'),
+            label: lodashGet(item, keys?.label ?? 'label'),
+            disabled: lodashGet(item, keys?.disabled ?? 'disabled'),
           }));
         }
         return props.options;

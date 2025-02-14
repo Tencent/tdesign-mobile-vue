@@ -1,5 +1,5 @@
 import { createApp, App, DefineComponent } from 'vue';
-import isObject from 'lodash/isObject';
+import { isObject } from 'lodash-es';
 import vueToast from './toast';
 import { ToastOptions } from './type';
 import { WithInstallType, isBrowser } from '../shared';

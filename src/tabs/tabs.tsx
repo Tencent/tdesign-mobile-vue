@@ -15,7 +15,7 @@ import {
   h,
   RendererNode,
 } from 'vue';
-import isFunction from 'lodash/isFunction';
+import { isFunction } from 'lodash-es';
 import config from '../config';
 import props from './props';
 import TTabNavItem from './tab-nav-item';
@@ -145,7 +145,7 @@ export default defineComponent({
       moveToActiveTab();
     });
 
-    watch(value, () => {
+    watch(currentValue, () => {
       nextTick(() => {
         moveToActiveTab();
       });

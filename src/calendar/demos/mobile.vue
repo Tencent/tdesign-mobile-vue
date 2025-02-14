@@ -15,6 +15,7 @@
       <customTextDemo />
       <customButtonVue />
       <customRangeVue />
+      <SwitchModeDemo />
     </tdesign-demo-block>
 
     <tdesign-demo-block summary="不使用 Popup">
@@ -30,4 +31,5 @@ import rangeDemo from './range.vue';
 import customButtonVue from './custom-button.vue';
 import customRangeVue from './custom-range.vue';
 import withoutPopup from './without-popup.vue';
+import SwitchModeDemo from './switch-mode.vue';
 </script>
