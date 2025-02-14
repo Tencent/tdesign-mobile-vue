@@ -42,11 +42,11 @@ export interface TdFabProps {
   /**
    * 结束拖拽时触发
    */
-  onDragEnd?: (e: TouchEvent) => void;
+  onDragEnd?: (context: { e: TouchEvent }) => void;
   /**
    * 开始拖拽时触发
    */
-  onDragStart?: (e: TouchEvent) => void;
+  onDragStart?: (context: { e: TouchEvent }) => void;
 }
 
 export type FabDirectionEnum = 'all' | 'vertical' | 'horizontal';

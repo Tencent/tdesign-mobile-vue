@@ -45,7 +45,7 @@ export default defineComponent({
     });
 
     const onTouchStart = (e: TouchEvent) => {
-      props.onDragStart?.(e);
+      props.onDragStart?.({ e });
 
       switchPos.value.startX = e.touches[0].pageX;
       switchPos.value.startY = e.touches[0].pageY;
@@ -100,7 +100,7 @@ export default defineComponent({
       if (!switchPos.value.hasMoved) {
         return;
       }
-      props.onDragEnd?.(e);
+      props.onDragEnd?.({ e });
       switchPos.value.startX = 0;
       switchPos.value.startY = 0;
       switchPos.value.hasMoved = false;

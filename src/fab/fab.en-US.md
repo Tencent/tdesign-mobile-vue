@@ -13,16 +13,16 @@ style | String | right: 16px; bottom: 32px; | \- | N
 text | String | - | \- | N
 yBounds | Array | - | Typescript：`Array<string \| number>` | N
 onClick | Function |  | Typescript：`(context: {e: MouseEvent}) => void`<br/> | N
-onDragEnd | Function |  | Typescript：`(e: TouchEvent) => void`<br/> | N
-onDragStart | Function |  | Typescript：`(e: TouchEvent) => void`<br/> | N
+onDragEnd | Function |  | Typescript：`(context: { e: TouchEvent }) => void`<br/> | N
+onDragStart | Function |  | Typescript：`(context: { e: TouchEvent }) => void`<br/> | N
 
 ### Fab Events
 
 name | params | description
 -- | -- | --
 click | `(context: {e: MouseEvent})` | \-
-drag-end | `(e: TouchEvent)` | \-
-drag-start | `(e: TouchEvent)` | \-
+drag-end | `(context: { e: TouchEvent })` | \-
+drag-start | `(context: { e: TouchEvent })` | \-
 
 ### CSS Variables
 
