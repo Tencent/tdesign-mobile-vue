@@ -63,7 +63,7 @@ export default defineComponent({
       const halfBlock = Number(state.blockSize) / 2;
       const result = props.vertical ? e.clientY - line.top : e.clientX - line.left;
       if (props.theme === 'capsule') {
-        return result + halfBlock;
+        return result - halfBlock;
       }
       return result;
     };
