@@ -169,6 +169,7 @@ export default defineComponent({
 
     const onSingleDotMove = (e: TouchEvent) => {
       if (isDisabled.value) return;
+      e.preventDefault();
       const [touch] = e.changedTouches;
       const currentLeft = getDelta(touch);
       const value = convertPosToValue(currentLeft);
@@ -226,6 +227,7 @@ export default defineComponent({
 
     const onTouchMoveLeft = (e: TouchEvent) => {
       if (isDisabled.value) return;
+      e.preventDefault();
       const [touch] = e.changedTouches;
 
       const currentLeft = getDelta(touch);
@@ -238,6 +240,7 @@ export default defineComponent({
 
     const onTouchMoveRight = (e: TouchEvent) => {
       if (isDisabled.value) return;
+      e.preventDefault();
       const [touch] = e.changedTouches;
       const currentRight = getDelta(touch);
 
