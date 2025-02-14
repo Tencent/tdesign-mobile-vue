@@ -1,7 +1,7 @@
 <template>
   <picker
     v-bind="pickerProps"
-    :columns="(selected) => generateCascadePickerColumns(selected, columns, finalDepth, finalSubOptionsRecord, keys)"
+    :columns="(selected) => generateCascadePickerColumns(selected, columns, finalDepth, finalSubOptionsRecord)"
   />
 </template>
 
@@ -22,6 +22,7 @@ export default defineComponent({
   props: PickerProps,
   setup(props: any, context) {
     const pickerProps = computed(() => ({ ...props }));
+    const keys = computed((): KeysType => props.keys);
     const finalDepth = ref(1);
     const finalSubOptionsRecord = ref({});
     const generateCascadePickerColumns = (
@@ -29,13 +30,12 @@ export default defineComponent({
       options: any,
       depth: number,
       subOptionsRecord: Record<string, any>,
-      keys?: KeysType,
     ) => {
       const columns: PickerColumn[] = [];
       columns.push(
         options.map((option: any) => ({
-          label: lodashGet(option, keys?.label ?? 'label'),
-          value: lodashGet(option, keys?.value ?? 'value'),
+          label: option.label,
+          value: option.value,
         })),
       );
       for (let i = 0; i < depth - 1; i++) {
@@ -46,13 +46,12 @@ export default defineComponent({
         } else {
           columns.push(
             subOptions.map((option: any) => ({
-              label: lodashGet(option, keys?.label ?? 'label'),
-              value: lodashGet(option, keys?.value ?? 'value'),
+              label: option.label,
+              value: option.value,
             })),
           );
         }
       }
-      console.log('---00---', columns);
       return columns;
     };
     const initDepthAndRecord = (options: any) => {
@@ -62,7 +61,7 @@ export default defineComponent({
         if (!option.children) {
           return;
         }
-        subOptionsRecord[option.value] = option.children;
+        subOptionsRecord[lodashGet(option, keys.value?.value ?? 'value')] = option.children;
         const nextDepth = currentDepth + 1;
         if (nextDepth > depth) {
           depth = nextDepth;
@@ -76,8 +75,6 @@ export default defineComponent({
       });
       finalDepth.value = depth;
       finalSubOptionsRecord.value = subOptionsRecord;
-
-      console.log('---999---', finalDepth.value, finalSubOptionsRecord.value);
     };
     initDepthAndRecord(props.columns);
 
