@@ -77,11 +77,11 @@ export interface TdSliderProps {
   /**
    * 结束拖动时触发
    */
-  onDragend?: (value: SliderValue, e: TouchEvent) => void;
+  onDragend?: (value: SliderValue, context: { e: TouchEvent }) => void;
   /**
    * 开始拖动时触发
    */
-  onDragstart?: (e: TouchEvent) => void;
+  onDragstart?: (context: { e: TouchEvent }) => void;
 }
 
 export interface SliderMarks {

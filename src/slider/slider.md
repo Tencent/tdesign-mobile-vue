@@ -19,16 +19,16 @@ value | Number / Array | 0 | 滑块值。支持语法糖 `v-model` 或 `v-model:
 defaultValue | Number / Array | 0 | 滑块值。非受控属性。TS 类型：`SliderValue` `type SliderValue = number \| Array<number>`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/slider/type.ts) | N
 vertical | Boolean | false | 是否是垂直的滑块（渲染垂直滑块时，默认高度为200px，可通过修改`--td-slider-bar-height`来自定义高度） | N
 onChange | Function |  | TS 类型：`(value: SliderValue) => void`<br/>滑块值变化时触发 | N
-onDragend | Function |  | TS 类型：`(value: SliderValue, e: TouchEvent) => void`<br/>结束拖动时触发 | N
-onDragstart | Function |  | TS 类型：`(e: TouchEvent) => void`<br/>开始拖动时触发 | N
+onDragend | Function |  | TS 类型：`(value: SliderValue, context: {e: TouchEvent}) => void`<br/>结束拖动时触发 | N
+onDragstart | Function |  | TS 类型：`(context: {e: TouchEvent}) => void`<br/>开始拖动时触发 | N
 
 ### Slider Events
 
 名称 | 参数 | 描述
 -- | -- | --
 change | `(value: SliderValue)` | 滑块值变化时触发
-dragend | `(value: SliderValue, e: TouchEvent)` | 结束拖动时触发
-dragstart | `(e: TouchEvent)` | 开始拖动时触发
+dragend | `(value: SliderValue, context: {e: TouchEvent})` | 结束拖动时触发
+dragstart | `(context: {e: TouchEvent})` | 开始拖动时触发
 
 ### CSS Variables
 

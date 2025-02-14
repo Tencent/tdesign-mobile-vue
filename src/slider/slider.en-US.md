@@ -19,16 +19,16 @@ value | Number / Array | 0 | `v-model` and `v-model:value` is supported。Typesc
 defaultValue | Number / Array | 0 | uncontrolled property。Typescript：`SliderValue` `type SliderValue = number \| Array<number>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/slider/type.ts) | N
 vertical | Boolean | false | \- | N
 onChange | Function |  | Typescript：`(value: SliderValue) => void`<br/> | N
-onDragend | Function |  | Typescript：`(value: SliderValue, e: TouchEvent) => void`<br/> | N
-onDragstart | Function |  | Typescript：`(e: TouchEvent) => void`<br/> | N
+onDragend | Function |  | Typescript：`(value: SliderValue, context: {e: TouchEvent}) => void`<br/> | N
+onDragstart | Function |  | Typescript：`(context: {e: TouchEvent}) => void`<br/> | N
 
 ### Slider Events
 
 name | params | description
 -- | -- | --
 change | `(value: SliderValue)` | \-
-dragend | `(value: SliderValue, e: TouchEvent)` | \-
-dragstart | `(e: TouchEvent)` | \-
+dragend | `(value: SliderValue, context: {e: TouchEvent})` | \-
+dragstart | `(context: {e: TouchEvent})` | \-
 
 ### CSS Variables
 

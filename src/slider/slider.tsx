@@ -152,11 +152,11 @@ export default defineComponent({
     };
 
     const onTouchEnd = (e: TouchEvent) => {
-      props.onDragend?.(innerValue.value, e);
+      props.onDragend?.(innerValue.value, { e });
     };
 
     const onTouchStart = (e: TouchEvent) => {
-      props.onDragstart?.(e);
+      props.onDragstart?.({ e });
     };
 
     const onSingleDotMove = (e: TouchEvent) => {
