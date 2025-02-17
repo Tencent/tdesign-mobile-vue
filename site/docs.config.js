@@ -201,6 +201,14 @@ export const docs = [
         componentEn: () => import('@/checkbox/checkbox.en-US.md'),
       },
       {
+        title: 'ColorPicker 颜色选择器',
+        titleEn: 'ColorPicker',
+        name: 'color-picker',
+        path: '/mobile-vue/components/color-picker',
+        component: () => import('@/color-picker/color-picker.md'),
+        componentEn: () => import('@/color-picker/color-picker.en-US.md'),
+      },
+      {
         title: 'Input 输入框',
         titleEn: 'Input',
         name: 'input',
