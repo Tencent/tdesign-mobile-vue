@@ -1,11 +1,11 @@
-import { computed, watch, defineComponent, h, Fragment, ref, nextTick, Teleport, Transition, onMounted } from 'vue';
+import { computed, watch, defineComponent, h, ref, nextTick, Teleport, Transition, onMounted } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
 import popupProps from './props';
 import TOverlay from '../overlay';
 import config from '../config';
 import { TdPopupProps } from './type';
-import { useDefault, TNode } from '../shared';
+import { useDefault, TNode, isBrowser } from '../shared';
 import { usePrefixClass } from '../hooks/useClass';
 import { useLockScroll } from '../hooks/useLockScroll';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
@@ -154,14 +154,15 @@ export default defineComponent({
           {renderContent}
         </>
       );
-
-      const renderPopupContent = mounted.value ? (
-        <Teleport to={teleportElement.value} disabled={!teleportElement.value}>
-          {inner}
-        </Teleport>
-      ) : (
-        inner
-      );
+      console.log('mounted.value ', mounted.value);
+      const renderPopupContent =
+        mounted.value || isBrowser ? (
+          <Teleport to={teleportElement.value} disabled={!teleportElement.value}>
+            {inner}
+          </Teleport>
+        ) : (
+          inner
+        );
 
       return (!props.destroyOnClose || wrapperVisible.value) && renderPopupContent;
     };

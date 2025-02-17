@@ -63,15 +63,13 @@ describe('calendar', () => {
 
     it(': type', async () => {
       // type = 'range'
+      const onSelect = vi.fn();
       const time = ref('');
       const character = '-';
       const onConfirm = vi.fn((e) => {
+        console.log('confirm', e);
         time.value = dayFormat(e, character);
       });
-      const onSelect = vi.fn((e) => {
-        time.value = dayFormat(e, character);
-      });
-
       const wrapper = mount(
         <Calendar
           visible={true}
@@ -92,6 +90,11 @@ describe('calendar', () => {
       await $dates[selectFirstIndex].trigger('click');
       await $dates[selectLastIndex].trigger('click');
       expect(onSelect).toHaveBeenCalledTimes(2);
+
+      // confirm
+      const $button = wrapper.findComponent(Button);
+      await $button.trigger('click');
+      console.log('time', time.value);
 
       // TODO：区间选择器时，返回的应该是数组，但测试环境下只有单条 Date 对象数据
       expect(time.value).toEqual([year, month + 1, selectLastIndex + 1].join(character));
@@ -188,6 +191,7 @@ describe('calendar', () => {
       const $button = wrapper.findComponent(Button);
       await $button.trigger('click');
       expect(onConfirm).toHaveBeenCalledTimes(1);
+      expect(selectTime).toEqual(time);
     });
   });
 });
