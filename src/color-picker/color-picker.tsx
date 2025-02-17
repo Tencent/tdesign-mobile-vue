@@ -1,4 +1,4 @@
-import { defineComponent, ref, watch, computed, onMounted, nextTick } from 'vue';
+import { defineComponent, ref, watch, computed, onMounted, nextTick, toRefs } from 'vue';
 import props from './props';
 import config from '../config';
 import { Popup as TPopup } from '../popup';
@@ -9,6 +9,7 @@ import { getFormatList, genSwatchList, getCoordinate } from './helper';
 import { Color, getColorObject } from '../_common/js/color-picker';
 import { DEFAULT_COLOR } from '../_common/js/color-picker/constants';
 import { ALPHA_MAX, HUE_MAX } from './constants';
+import { useVModel } from '../shared';
 
 const { prefix } = config;
 
@@ -24,7 +25,14 @@ export default defineComponent({
     const panelRect = ref<HTMLElement>();
     const hueSliderRect = ref<HTMLElement>();
     const alphaSliderRect = ref<HTMLElement>();
-    const innerValue = ref(props.value);
+    const { value, modelValue } = toRefs(props);
+
+    const [innerValue = ref(DEFAULT_COLOR), setPickerValue] = useVModel(
+      value,
+      modelValue,
+      props.defaultValue,
+      props.onChange,
+    );
 
     const saturationThumbStyle = ref({
       left: '0',
@@ -61,7 +69,7 @@ export default defineComponent({
         innerVisible.value = false;
       }
 
-      props.onClose(trigger);
+      props.onClose?.(trigger);
     };
 
     const onVisibleChange = (visible: boolean, trigger: ColorPickerTrigger) => {
@@ -129,7 +137,7 @@ export default defineComponent({
     };
 
     const emitColorChange = (trigger: ColorPickerChangeTrigger) => {
-      props.onChange?.(formatValue(), {
+      setPickerValue?.(formatValue(), {
         trigger,
         color: getColorObject(color),
       });

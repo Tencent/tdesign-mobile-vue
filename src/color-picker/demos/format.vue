@@ -16,7 +16,7 @@
       {{ item }}
     </div>
   </div>
-  <t-color-picker type="multiple" :format="curFormat" />
+  <t-color-picker type="multiple" enable-alpha :format="curFormat" />
 </template>
 
 <script lang="ts" setup>
