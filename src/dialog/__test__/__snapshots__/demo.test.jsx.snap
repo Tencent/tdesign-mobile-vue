@@ -21,6 +21,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -95,6 +96,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   <div
     class="btn-gap"
   />
@@ -114,6 +116,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -183,6 +186,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
     </div>
     
   </div>
+  
   <!--teleport end-->
   <div
     class="btn-gap"
@@ -204,6 +208,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
     <!---->
   </button>
   <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -268,6 +273,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
     </div>
     
   </div>
+  
   <!--teleport end-->
   
 </div>
@@ -294,6 +300,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -355,6 +362,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   <div
     class="btn-gap"
   />
@@ -374,6 +382,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -431,6 +440,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   <div
     class="btn-gap"
   />
@@ -450,6 +460,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -517,6 +528,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   
 </div>
 `;
@@ -543,6 +555,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -662,6 +675,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   <div
     class="btn-gap"
     data-v-ddf95d52=""
@@ -683,6 +697,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -797,6 +812,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     </div>
     
   </div>
+  
   <!--teleport end-->
   <div
     class="btn-gap"
@@ -820,6 +836,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     <!---->
   </button>
   <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -929,6 +946,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     </div>
     
   </div>
+  
   <!--teleport end-->
   <div
     class="btn-gap"
@@ -952,6 +970,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     <!---->
   </button>
   <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1057,6 +1076,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     </div>
     
   </div>
+  
   <!--teleport end-->
   <div
     class="btn-gap"
@@ -1080,6 +1100,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     <!---->
   </button>
   <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1197,6 +1218,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     </div>
     
   </div>
+  
   <!--teleport end-->
   <div
     class="btn-gap"
@@ -1220,6 +1242,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     <!---->
   </button>
   <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1329,6 +1352,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     </div>
     
   </div>
+  
   <!--teleport end-->
   
 </div>
@@ -1356,6 +1380,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -1467,6 +1492,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   <div
     class="btn-gap"
     data-v-4a76bf3d=""
@@ -1488,6 +1514,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -1604,6 +1631,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   
 </div>
 `;
@@ -1660,6 +1688,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -1721,6 +1750,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       <div
         class="btn-gap"
       />
@@ -1740,6 +1770,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -1797,6 +1828,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       <div
         class="btn-gap"
       />
@@ -1816,6 +1848,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -1883,6 +1916,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       
       
     </div>
@@ -1921,6 +1955,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -1995,6 +2030,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       <div
         class="btn-gap"
       />
@@ -2014,6 +2050,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -2083,6 +2120,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         
       </div>
+      
       <!--teleport end-->
       <div
         class="btn-gap"
@@ -2104,6 +2142,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </button>
       <!--teleport start-->
+      
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -2168,6 +2207,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         
       </div>
+      
       <!--teleport end-->
       
       
@@ -2208,6 +2248,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -2319,6 +2360,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       <div
         class="btn-gap"
         data-v-4a76bf3d=""
@@ -2340,6 +2382,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -2456,6 +2499,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       
       
     </div>
@@ -2495,6 +2539,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -2614,6 +2659,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       <div
         class="btn-gap"
         data-v-ddf95d52=""
@@ -2635,6 +2681,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -2749,6 +2796,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         
       </div>
+      
       <!--teleport end-->
       <div
         class="btn-gap"
@@ -2772,6 +2820,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </button>
       <!--teleport start-->
+      
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -2881,6 +2930,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         
       </div>
+      
       <!--teleport end-->
       <div
         class="btn-gap"
@@ -2904,6 +2954,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </button>
       <!--teleport start-->
+      
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -3009,6 +3060,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         
       </div>
+      
       <!--teleport end-->
       <div
         class="btn-gap"
@@ -3032,6 +3084,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </button>
       <!--teleport start-->
+      
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -3149,6 +3202,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         
       </div>
+      
       <!--teleport end-->
       <div
         class="btn-gap"
@@ -3172,6 +3226,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         <!---->
       </button>
       <!--teleport start-->
+      
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -3281,6 +3336,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </div>
         
       </div>
+      
       <!--teleport end-->
       
       
@@ -3325,6 +3381,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -3399,6 +3456,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       <div
         class="btn-gap"
       />
@@ -3423,6 +3481,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -3497,6 +3556,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       <div
         class="btn-gap"
       />
@@ -3521,6 +3581,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -3595,6 +3656,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       <div
         class="btn-gap"
       />
@@ -3619,6 +3681,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -3710,6 +3773,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       <div
         class="btn-gap"
       />
@@ -3734,6 +3798,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         </span>
         <!---->
       </button>
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -3823,6 +3888,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       
       
     </div>
@@ -3894,6 +3960,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -3968,6 +4035,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   <div
     class="btn-gap"
   />
@@ -3992,6 +4060,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -4066,6 +4135,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   <div
     class="btn-gap"
   />
@@ -4090,6 +4160,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -4164,6 +4235,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   <div
     class="btn-gap"
   />
@@ -4188,6 +4260,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -4279,6 +4352,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   <div
     class="btn-gap"
   />
@@ -4303,6 +4377,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -4392,6 +4467,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   
 </div>
 `;

@@ -154,7 +154,7 @@ export default defineComponent({
           {renderContent}
         </>
       );
-      console.log('mounted.value ', mounted.value);
+
       const renderPopupContent =
         mounted.value || isBrowser ? (
           <Teleport to={teleportElement.value} disabled={!teleportElement.value}>

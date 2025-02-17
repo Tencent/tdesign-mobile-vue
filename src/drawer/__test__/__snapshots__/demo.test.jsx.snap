@@ -5,6 +5,7 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
   data-v-app=""
 >
   
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -94,6 +95,7 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -119,6 +121,7 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
   data-v-app=""
 >
   
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -233,6 +236,7 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -258,6 +262,7 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
   data-v-app=""
 >
   
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -437,6 +442,7 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -498,6 +504,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
     >
       
       
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -587,6 +594,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -626,6 +634,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
     >
       
       
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -805,6 +814,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -849,6 +859,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
     >
       
       
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -942,6 +953,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -981,6 +993,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
     >
       
       
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -1095,6 +1108,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -1184,6 +1198,7 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
   data-v-app=""
 >
   
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -1277,6 +1292,7 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
