@@ -39,10 +39,6 @@ export default defineComponent({
     const innerVisible = ref(currentVisible.value);
     const mounted = ref(false);
 
-    onMounted(() => {
-      mounted.value = true;
-    });
-
     // 因为开启 destroyOnClose，会影响 transition 的动画，因此需要前后设置 visible
     watch(currentVisible, (v) => {
       if (v) {
@@ -112,6 +108,7 @@ export default defineComponent({
           props.onOpen?.();
           setVisible(true);
         }
+        mounted.value = val;
       },
     );
 
@@ -155,14 +152,13 @@ export default defineComponent({
         </>
       );
 
-      const renderPopupContent =
-        mounted.value || isBrowser ? (
-          <Teleport to={teleportElement.value} disabled={!teleportElement.value}>
-            {inner}
-          </Teleport>
-        ) : (
-          inner
-        );
+      const renderPopupContent = mounted.value ? (
+        <Teleport to={teleportElement.value} disabled={!teleportElement.value}>
+          {inner}
+        </Teleport>
+      ) : (
+        inner
+      );
 
       return (!props.destroyOnClose || wrapperVisible.value) && renderPopupContent;
     };
