@@ -22,7 +22,7 @@ export default {
     type: [String, Array] as PropType<TdRadioGroupProps['icon']>,
     default: 'circle',
   },
-  /** 用来定义 value / label 在 `options` 中对应的字段别名 */
+  /** 用来定义 value / label / disabled 在 `options` 中对应的字段别名 */
   keys: {
     type: Object as PropType<TdRadioGroupProps['keys']>,
   },
@@ -35,7 +35,7 @@ export default {
   options: {
     type: Array as PropType<TdRadioGroupProps['options']>,
   },
-  /** 复选框和内容相对位置 */
+  /** 复选框和内容相对位置。优先级低于 Radio.placement */
   placement: {
     type: String as PropType<TdRadioGroupProps['placement']>,
     default: 'left' as TdRadioGroupProps['placement'],
@@ -43,6 +43,11 @@ export default {
       if (!val) return true;
       return ['left', 'right'].includes(val);
     },
+  },
+  /** 只读状态 */
+  readonly: {
+    type: Boolean,
+    default: undefined,
   },
   /** 选中的值 */
   value: {

@@ -1,6 +1,5 @@
 import { defineComponent, computed } from 'vue';
-import isNumber from 'lodash/isNumber';
-import isString from 'lodash/isString';
+import { isNumber, isString } from 'lodash-es';
 import config from '../config';
 import BadgeProps from './props';
 import { usePrefixClass } from '../hooks/useClass';

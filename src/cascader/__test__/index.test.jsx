@@ -7,6 +7,9 @@ import Radio from '../../radio/index';
 import { Tabs as TTabs, TabPanel as TTabPanel } from '../../tabs';
 import prefixConfig from '../../config';
 
+// scrollTo isn't implemented in JSDOM，see: https://github.com/vuejs/vue-test-utils/issues/319
+Element.prototype.scrollTo = () => {};
+
 const { prefix } = prefixConfig;
 
 config.global.stubs = {
@@ -314,7 +317,7 @@ describe('cascader', () => {
       await $radios[clickIndex].find(`.t-radio`).trigger('click');
       expect(onPick).toHaveBeenCalledTimes(1);
       // expect(wrapper.findAll('.t-radio-group')[0].findAll(`.t-radio__icon--checked`)).toHaveLength(1);
-      expect(onPick).toHaveBeenCalledWith({ level: 0, index: 0, value: '110000' });
+      expect(onPick).toHaveBeenCalledWith({ level: 0, index: 0, value: '110000', label: '北京市' });
       const $step = wrapper.findAll(`.${name}__step`);
       // expect($step).toHaveLength(2);
 

@@ -29,7 +29,6 @@ export const getOptions = (props: any, slots: Slots) => {
           r = { label: String(item), value: item };
         } else {
           r = { ...item };
-          r.disabled = r.disabled === undefined ? props.disabled : r.disabled;
         }
         return r;
       });

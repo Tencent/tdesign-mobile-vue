@@ -21,13 +21,7 @@ const { prefix } = config;
 export default defineComponent({
   name: `${prefix}-checkbox`,
   components: { TNode },
-  props: {
-    ...CheckboxProps,
-    borderless: {
-      type: Boolean,
-      value: false,
-    },
-  },
+  props: CheckboxProps,
   emits: ['update:checked', 'update:modelValue', 'change'],
   setup(props, context) {
     const checkboxClass = usePrefixClass('checkbox');
@@ -78,14 +72,16 @@ export default defineComponent({
     });
 
     const isDisabled = computed(() => {
-      if (checkboxGroup?.max.value)
-        return checkboxGroup.max.value <= checkboxGroup.innerValue.value.length && !isChecked.value;
-
+      if (!props.checkAll && !isChecked.value && checkboxGroup?.maxExceeded.value) {
+        return true;
+      }
       return disabled.value;
     });
 
+    const finalReadonly = computed(() => Boolean(props.readonly || checkboxGroup?.readonly.value));
+
     const handleChange = (e: Event, source?: string) => {
-      if (isDisabled.value || props.readonly) return;
+      if (isDisabled.value || finalReadonly.value) return;
       if (source === 'text' && props.contentDisabled) return;
 
       const value = !isChecked.value;
@@ -96,7 +92,9 @@ export default defineComponent({
       }
     };
     return () => {
-      const { placement, block, icon, maxLabelRow, maxContentRow, borderless } = props;
+      const { placement, block, icon, maxLabelRow, maxContentRow } = props;
+      const borderless = props.borderless || checkboxGroup?.borderless.value;
+
       const renderIconArray = () => {
         if (isIconArray) {
           return (

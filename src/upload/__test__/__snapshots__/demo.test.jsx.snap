@@ -648,7 +648,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 <path
                   d="M12 2.25a9.75 9.75 0 000 19.5v-2.44A7.31 7.31 0 1119.31 12h2.44A9.75 9.75 0 0012 2.25z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               <div
@@ -732,7 +731,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 <path
                   d="M12 2.25a9.75 9.75 0 000 19.5v-2.44A7.31 7.31 0 1119.31 12h2.44A9.75 9.75 0 0012 2.25z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               <div
@@ -1430,7 +1428,6 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             <path
               d="M12 2.25a9.75 9.75 0 000 19.5v-2.44A7.31 7.31 0 1119.31 12h2.44A9.75 9.75 0 0012 2.25z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           <div
@@ -1514,7 +1511,6 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             <path
               d="M12 2.25a9.75 9.75 0 000 19.5v-2.44A7.31 7.31 0 1119.31 12h2.44A9.75 9.75 0 0012 2.25z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           <div

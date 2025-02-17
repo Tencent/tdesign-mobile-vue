@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import camelCase from 'lodash/camelCase';
+import camelCase from 'camelcase';
 
 import testCoverage from '../test-coverage';
 

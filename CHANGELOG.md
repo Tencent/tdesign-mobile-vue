@@ -5,6 +5,45 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.8.0 `2025-01-22` 
+### 🚀 Features
+- `Input`: 新增 `cursorColor` 属性 @SkylerXie ([#1703](https://github.com/Tencent/tdesign-mobile-vue/pull/1703))
+- `Icon`:  更新图标库版本至 `0.3.4`，新增 `logo-alipay`、`logo-behance-filled` 等图标，修改 `logo-wecom` 图标，移除不合理的 `logo-wecom-filled` 图标 @anlyyao ([#1715](https://github.com/Tencent/tdesign-mobile-vue/pull/1715))
+- `ActionSheet`: 新增 `showOverlay` 和 `popupProps` 属性 @hensonjunyuan ([#1704](https://github.com/Tencent/tdesign-mobile-vue/pull/1704))
+- `Tabs`: 新增 `split` 和 `middle` 属性，并支持自动定位到激活项位置 @Faxxicy ([#1663](https://github.com/Tencent/tdesign-mobile-vue/pull/1663))  @novlan1 ([#1727](https://github.com/Tencent/tdesign-mobile-vue/pull/1727))
+- `TabPanel`: 新增 `icon` 属性 @novlan1 ([#1727](https://github.com/Tencent/tdesign-mobile-vue/pull/1727))
+- `Grid`: 新增 `hover` 属性 @novlan1 ([#1725](https://github.com/Tencent/tdesign-mobile-vue/pull/1725))
+- `GridItem`:  新增 `icon` 属性 @novlan1 ([#1725](https://github.com/Tencent/tdesign-mobile-vue/pull/1725))
+- `Search`: 新增  `clearTrigger` 属性 @novlan1 ([#1726](https://github.com/Tencent/tdesign-mobile-vue/pull/1726))
+### 🐞 Bug Fixes
+- `Tabs`: 当子项类型为 `fragment` 时，标签无法正确渲染 @betavs ([#1690](https://github.com/Tencent/tdesign-mobile-vue/pull/1690))
+- `Radio`: 当`value=0` 时无法被选中的问题 @RSS1102 ([#1709](https://github.com/Tencent/tdesign-mobile-vue/pull/1709))
+- `Checkbox`: 修复 `CheckGroup` 使用 `options` 属性时 `disabled` 无效的问题 @anlyyao ([#1713](https://github.com/Tencent/tdesign-mobile-vue/pull/1713))
+- `TabBar`: 修复子项数量大于 3 时子项宽度未保持一致 @anlyyao ([#1714](https://github.com/Tencent/tdesign-mobile-vue/pull/1714))
+- `Dialog`: 修复圆角样式错误，并新增 `--td-dialog-border-radius` @anlyyao ([#1733](https://github.com/Tencent/tdesign-mobile-vue/pull/1733))
+- `Popup`: 修复圆角错误，并新增 `--td-popup-close-btn-color` @anlyyao ([#1734](https://github.com/Tencent/tdesign-mobile-vue/pull/1734))
+- `Cell`: 修复部分样式错误，并更新 `align` 属性描述 @liweijie0812 ([#1731](https://github.com/Tencent/tdesign-mobile-vue/pull/1731))
+
+## 🌈 1.7.0 `2024-12-19` 
+### 🚀 Features
+- `IDE`: 增加 `Volar`、`WebStorm` 提示文件 @liweijie0812 ([#1682](https://github.com/Tencent/tdesign-mobile-vue/pull/1682))
+- `Image`: 新增 `fallback` 属性，图片加载失败时，显示当前链接设置的图片地址；新增 `img` 原生标签属性 `referrerpolicy` @liweijie0812 ([#1647](https://github.com/Tencent/tdesign-mobile-vue/pull/1647))
+- `Input`: 新增 `enterkeyhint` API， 用于控制回车键样式，此 API 仅在部分浏览器支持 @liweijie0812 ([#1651](https://github.com/Tencent/tdesign-mobile-vue/pull/1651))
+- `Search`: 新增 `maxcharacter` 、`maxlength` 和 `resultList` 属性，`action` 触发方式调整为聚焦后触发 @RSS1102 ([#1681](https://github.com/Tencent/tdesign-mobile-vue/pull/1681))
+- `RadioGroup`: 新增 `readonly` 属性 @liweijie0812 ([#1674](https://github.com/Tencent/tdesign-mobile-vue/pull/1674))
+- `DropdownItem`: 新增 `placement` 属性 @liweijie0812 ([#1675](https://github.com/Tencent/tdesign-mobile-vue/pull/1675))
+### 🐞 Bug Fixes
+- `Dialog`: 修复 `cancelBtn` 和 `confirmBtn` 插槽不生效 @liweijie0812 ([#1668](https://github.com/Tencent/tdesign-mobile-vue/pull/1668))
+- `ConfigProvider`: 修复全局配置丢失响应式问题 @Rococoscarlet ([#1670](https://github.com/Tencent/tdesign-mobile-vue/pull/1670))
+- `Swiper`: 修复 `current` 受控时表现 @novlan1 ([#1661](https://github.com/Tencent/tdesign-mobile-vue/pull/1661))
+- `Input`: 修复 `maxlength` 对 `Unicode` 字符计算不准确问题 @anlyyao ([#1683](https://github.com/Tencent/tdesign-mobile-vue/pull/1683))
+- `Textarea`: 修复 `maxlength` 对 `Unicode` 字符计算不准确问题 @anlyyao ([#1684](https://github.com/Tencent/tdesign-mobile-vue/pull/1684))
+- `Search`: 设置 `enterkeyhint` 值为 `search` ，点击搜索时，收起键盘 @novlan1 ([#1655](https://github.com/Tencent/tdesign-mobile-vue/pull/1655))
+- `Form`: 补齐 `FormInstanceFunctions`  缺失的 `validateOnly` 事件 @anlyyao ([#1688](https://github.com/Tencent/tdesign-mobile-vue/pull/1688))
+- `Table`: 修复 `onScroll` 事件无效 @anlyyao ([#1687](https://github.com/Tencent/tdesign-mobile-vue/pull/1687))
+### 🚧 Others
+- `Drawer`: TS 类型 `TriggerSource` 更名为 `DrawerTriggerSource` @liweijie0812 ([#1660](https://github.com/Tencent/tdesign-mobile-vue/pull/1660))
+
 ## 🌈 1.6.0 `2024-11-19` 
 ### 🚀 Features
 - `Popup`: `sfc` to `tsx` @betavs ([#1401](https://github.com/Tencent/tdesign-mobile-vue/pull/1401))

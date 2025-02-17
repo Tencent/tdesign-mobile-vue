@@ -1,7 +1,5 @@
 import { defineComponent, computed, h, ref } from 'vue';
-import get from 'lodash/get';
-import isFunction from 'lodash/isFunction';
-import isString from 'lodash/isString';
+import { get, isFunction, isString } from 'lodash-es';
 import baseTableProps from './base-table-props';
 import config from '../config';
 import useClassName from './hooks/useClassName';
@@ -94,7 +92,7 @@ export default defineComponent({
     };
 
     const loadingClasses = computed(() => [`${classPrefix}-table__loading--full`]);
-    const onInnerVirtualScroll = (e: WheelEvent) => {
+    const onInnerVirtualScroll = (e: Event) => {
       props.onScroll?.({ params: e });
     };
 
@@ -189,13 +187,11 @@ export default defineComponent({
             ref={tableContentRef}
             class={tableBaseClass.content}
             style={tableContentStyles.value}
-            onWheel={onInnerVirtualScroll}
+            onScroll={onInnerVirtualScroll}
           >
             <table ref={tableElmRef} class={tableElmClasses.value} style={tableElementStyles.value}>
               <colgroup>
-                {props.columns?.map((col_item) => (
-                  <col key={col_item.colKey} style={colStyle(col_item)} />
-                ))}
+                {props.columns?.map((col_item) => <col key={col_item.colKey} style={colStyle(col_item)} />)}
               </colgroup>
               {props.showHeader && (
                 <thead ref={theadRef} class={theadClasses.value}>

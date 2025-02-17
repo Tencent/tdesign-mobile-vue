@@ -1,5 +1,5 @@
 import { computed, ref, watchEffect, WritableComputedRef } from 'vue';
-import camelCase from 'lodash/camelCase';
+import { camelCase } from 'lodash-es';
 
 function getDefaultName(key: string): string {
   const str = camelCase(key);

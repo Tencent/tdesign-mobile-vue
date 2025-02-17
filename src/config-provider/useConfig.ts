@@ -1,7 +1,5 @@
 import { computed, h, inject, getCurrentInstance, ref, provide } from 'vue';
-import isFunction from 'lodash/isFunction';
-import cloneDeep from 'lodash/cloneDeep';
-import isString from 'lodash/isString';
+import { cloneDeep, isFunction, isString } from 'lodash-es';
 
 import { defaultGlobalConfig, configProviderInjectKey, mergeWith } from './context';
 import { GlobalConfigProvider } from './type';
@@ -69,7 +67,7 @@ export function useConfig<T extends keyof GlobalConfigProvider>(
  */
 export const provideConfig = (props: ConfigProviderProps) => {
   const defaultData = cloneDeep(defaultGlobalConfig);
-  const mergedGlobalConfig = computed(() => mergeWith(defaultData, props.globalConfig));
+  const mergedGlobalConfig = computed(() => ({ ...mergeWith(defaultData, props.globalConfig) }));
 
   provide(configProviderInjectKey, mergedGlobalConfig);
 

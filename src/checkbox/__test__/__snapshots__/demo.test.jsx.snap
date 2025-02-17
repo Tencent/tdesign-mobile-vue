@@ -37,7 +37,7 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
           <div
             class="t-checkbox__description"
           >
-            
+            <!---->
           </div>
         </div>
         <div
@@ -74,7 +74,7 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
           <div
             class="t-checkbox__description"
           >
-            
+            <!---->
           </div>
         </div>
         <div
@@ -111,7 +111,7 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
           <div
             class="t-checkbox__description"
           >
-            
+            <!---->
           </div>
         </div>
         <div
@@ -197,7 +197,7 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
         <div
           class="t-checkbox__description"
         >
-          
+          <!---->
         </div>
       </div>
       <div
@@ -234,7 +234,7 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
         <div
           class="t-checkbox__description"
         >
-          
+          <!---->
         </div>
       </div>
       <div
@@ -265,7 +265,7 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
         <div
           class="t-checkbox__description"
         >
-          
+          <!---->
         </div>
       </div>
       <div
@@ -428,7 +428,6 @@ exports[`Checkbox > Checkbox cardVue demo works fine 1`] = `
 
 exports[`Checkbox > Checkbox horizontalVue demo works fine 1`] = `
 <div
-  borderless=""
   class="t-checkbox-group box"
   data-v-5c47b466=""
 >
@@ -467,9 +466,7 @@ exports[`Checkbox > Checkbox horizontalVue demo works fine 1`] = `
         <!---->
       </div>
     </div>
-    <div
-      class="t-checkbox__border t-checkbox__border--left"
-    />
+    <!---->
   </div>
   <div
     class="t-checkbox t-checkbox--left t-checkbox--checked"
@@ -505,9 +502,7 @@ exports[`Checkbox > Checkbox horizontalVue demo works fine 1`] = `
         <!---->
       </div>
     </div>
-    <div
-      class="t-checkbox__border t-checkbox__border--left"
-    />
+    <!---->
   </div>
   <div
     class="t-checkbox t-checkbox--left"
@@ -537,9 +532,7 @@ exports[`Checkbox > Checkbox horizontalVue demo works fine 1`] = `
         <!---->
       </div>
     </div>
-    <div
-      class="t-checkbox__border t-checkbox__border--left"
-    />
+    <!---->
   </div>
   
 </div>
@@ -616,7 +609,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 <div
                   class="t-checkbox__description"
                 >
-                  
+                  <!---->
                 </div>
               </div>
               <div
@@ -653,7 +646,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 <div
                   class="t-checkbox__description"
                 >
-                  
+                  <!---->
                 </div>
               </div>
               <div
@@ -684,7 +677,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 <div
                   class="t-checkbox__description"
                 >
-                  
+                  <!---->
                 </div>
               </div>
               <div
@@ -746,7 +739,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
       >
         
         <div
-          borderless=""
           class="t-checkbox-group box"
           data-v-5c47b466=""
         >
@@ -785,9 +777,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 <!---->
               </div>
             </div>
-            <div
-              class="t-checkbox__border t-checkbox__border--left"
-            />
+            <!---->
           </div>
           <div
             class="t-checkbox t-checkbox--left t-checkbox--checked"
@@ -823,9 +813,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 <!---->
               </div>
             </div>
-            <div
-              class="t-checkbox__border t-checkbox__border--left"
-            />
+            <!---->
           </div>
           <div
             class="t-checkbox t-checkbox--left"
@@ -855,9 +843,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 <!---->
               </div>
             </div>
-            <div
-              class="t-checkbox__border t-checkbox__border--left"
-            />
+            <!---->
           </div>
           
         </div>
@@ -917,7 +903,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   <div
                     class="t-checkbox__description"
                   >
-                    
+                    <!---->
                   </div>
                 </div>
                 <div
@@ -954,7 +940,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   <div
                     class="t-checkbox__description"
                   >
-                    
+                    <!---->
                   </div>
                 </div>
                 <div
@@ -991,7 +977,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   <div
                     class="t-checkbox__description"
                   >
-                    
+                    <!---->
                   </div>
                 </div>
                 <div

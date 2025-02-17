@@ -3,7 +3,7 @@
 import type { ComputedRef, Ref, MaybeRef } from 'vue';
 import { computed, reactive, ref } from 'vue';
 import { useEventListener } from '@vueuse/core';
-import isObject from 'lodash/isObject';
+import { isObject } from 'lodash-es';
 import { preventDefault } from '../shared/dom';
 import { isBrowser } from '../shared';
 

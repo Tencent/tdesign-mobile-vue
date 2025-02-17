@@ -6,7 +6,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -31,7 +31,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
       请选择地址
     </div>
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -221,7 +221,7 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
     data-v-e4157e3c=""
   >
     <div
@@ -247,7 +247,7 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
       请选择地址
     </div>
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -432,7 +432,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -457,7 +457,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
       请选择地址
     </div>
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -647,7 +647,7 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -672,7 +672,7 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
       请选择地址
     </div>
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -863,7 +863,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -888,7 +888,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           请选择地址
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -1091,7 +1091,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -1116,7 +1116,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           请选择地址
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -1294,7 +1294,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -1319,7 +1319,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           请选择地址
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -1522,7 +1522,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -1547,7 +1547,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           请选择地址
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -1750,7 +1750,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -1775,7 +1775,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           请选择地址
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -1982,7 +1982,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -2007,7 +2007,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           请选择地址
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -2180,7 +2180,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
         data-v-e4157e3c=""
       >
         <div
@@ -2206,7 +2206,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           请选择地址
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -2394,7 +2394,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -2419,7 +2419,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
       请选择地址
     </div>
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -2580,7 +2580,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -2605,7 +2605,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
       请选择地址
     </div>
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -2799,7 +2799,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -2824,7 +2824,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
       请选择地址
     </div>
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"

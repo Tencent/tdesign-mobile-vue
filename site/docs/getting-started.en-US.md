@@ -139,6 +139,11 @@ module.exports = {
 > You can click on this [link](https://github.com/antfu/unplugin-vue-components/blob/main/src/core/resolvers/tdesign.ts#L4) for the configuration supported by `TDesignResolver`.
 
 
+## Editor Prompts
+
+After installing and registering TDesign, it can be used with plugins in editors such as VSCode to achieve the effect of prompting component names and APIs during development.
+
+Plugin `Volar` is recommended, after installing `Volar`, please add `node_modules/tdesign-mobile-vue/global.d.ts` to the `includes` property in the project's `tsconfig.json file`.
 
 ## Browser Support
 

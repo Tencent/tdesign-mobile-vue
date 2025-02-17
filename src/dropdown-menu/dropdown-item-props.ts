@@ -14,7 +14,7 @@ export default {
   footer: {
     type: Function as PropType<TdDropdownItemProps['footer']>,
   },
-  /** 用来定义 value / label 在 `options` 中对应的字段别名 */
+  /** 用来定义 value / label / disabled 在 `options` 中对应的字段别名 */
   keys: {
     type: Object as PropType<TdDropdownItemProps['keys']>,
   },
@@ -34,6 +34,15 @@ export default {
   optionsColumns: {
     type: [String, Number] as PropType<TdDropdownItemProps['optionsColumns']>,
     default: 1,
+  },
+  /** 复选框和内容相对位置，仅单选菜单栏有效 */
+  placement: {
+    type: String as PropType<TdDropdownItemProps['placement']>,
+    default: 'left' as TdDropdownItemProps['placement'],
+    validator(val: TdDropdownItemProps['placement']): boolean {
+      if (!val) return true;
+      return ['left', 'right'].includes(val);
+    },
   },
   /** 选中值 */
   value: {

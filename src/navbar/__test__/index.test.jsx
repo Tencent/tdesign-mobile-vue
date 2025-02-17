@@ -9,10 +9,10 @@ describe('navbar', () => {
   describe('props', () => {
     it('fixed', async () => {
       const navbar = mount(<NavBar title="标题" />);
-      expect(navbar.element.style.position).toBe('fixed')
+      expect(navbar.element.style.position).toBe('fixed');
 
       await navbar.setProps({ fixed: false });
-      expect(navbar.element.style.position).toBe('relative')
+      expect(navbar.element.style.position).toBe('relative');
     });
 
     it('leftArrow', () => {
@@ -54,7 +54,7 @@ describe('navbar', () => {
       const wrapper = mount(<NavBar title="标题" onLeftClick={fn} />, {
         // 插槽名称必须要和组件内部保持一致'left'
         slots: {
-          'left': iconFunc,
+          left: iconFunc,
         },
       });
       expect(wrapper.element).toMatchSnapshot();
@@ -69,7 +69,7 @@ describe('navbar', () => {
       const wrapper = mount(<NavBar title="标题" onRightClick={fn} />, {
         // 插槽名称必须要和组件内部保持一致'right'
         slots: {
-          'right': iconFunc,
+          right: iconFunc,
         },
       });
       expect(wrapper.element).toMatchSnapshot();
@@ -107,10 +107,10 @@ describe('navbar', () => {
 
   describe('slots', () => {
     it('left', () => {
-      const slot = <div className='left-content'>左侧内容</div>;
+      const slot = <div className="left-content">左侧内容</div>;
       const navbar = mount(<NavBar title="标题" />, {
         slots: {
-          'left': slot,
+          left: slot,
         },
       });
       expect(navbar.find('.t-navbar__left').find('.left-content').exists()).toBeTruthy();
@@ -119,17 +119,17 @@ describe('navbar', () => {
     it('capsule', () => {
       const navbar = mount(<NavBar title="标题" />, {
         slots: {
-          'capsule': iconFunc,
+          capsule: iconFunc,
         },
       });
       expect(navbar.find('.t-navbar__capsule').exists()).toBeTruthy();
     });
 
     it('right', () => {
-      const slot = <div className='right-content'>右侧内容</div>;
+      const slot = <div className="right-content">右侧内容</div>;
       const navbar = mount(<NavBar title="标题" />, {
         slots: {
-          'right': slot,
+          right: slot,
         },
       });
       expect(navbar.find('.t-navbar__right').find('.right-content').exists()).toBeTruthy();

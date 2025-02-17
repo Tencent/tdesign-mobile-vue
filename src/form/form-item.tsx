@@ -11,15 +11,17 @@ import {
   toRefs,
   watch,
 } from 'vue';
-import isArray from 'lodash/isArray';
-import isNumber from 'lodash/isNumber';
-import isString from 'lodash/isString';
-import isBoolean from 'lodash/isBoolean';
-import cloneDeep from 'lodash/cloneDeep';
-import lodashGet from 'lodash/get';
-import lodashSet from 'lodash/set';
-import isNil from 'lodash/isNil';
-import lodashTemplate from 'lodash/template';
+import {
+  cloneDeep,
+  get as lodashGet,
+  set as lodashSet,
+  isBoolean,
+  isArray,
+  isNil,
+  isNumber,
+  isString,
+  template as lodashTemplate,
+} from 'lodash-es';
 import { ChevronRightIcon } from 'tdesign-icons-vue-next';
 import { validate } from './form-model';
 
@@ -269,6 +271,14 @@ export default defineComponent({
       } as FormItemValidateResult<T>;
     };
 
+    const validateOnly = async <T extends Data>(trigger: ValidateTriggerType): Promise<FormItemValidateResult<T>> => {
+      const { errorList: innerErrorList, resultList } = await analysisValidateResult(trigger);
+
+      return {
+        [props.name]: innerErrorList.length === 0 ? true : resultList,
+      } as FormItemValidateResult<T>;
+    };
+
     const setValidateMessage = (validateMessage: FormItemValidateMessage[]) => {
       if (!validateMessage && !isArray(validateMessage)) return;
       if (validateMessage.length === 0) {
@@ -287,6 +297,7 @@ export default defineComponent({
       resetHandler,
       resetField,
       validate: validateHandler,
+      validateOnly,
       setValidateMessage,
     });
 

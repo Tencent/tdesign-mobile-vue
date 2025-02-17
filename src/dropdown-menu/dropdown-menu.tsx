@@ -1,7 +1,7 @@
 import { defineComponent, computed, ref, reactive, watch, provide } from 'vue';
 import { onClickOutside } from '@vueuse/core';
 import { CaretDownSmallIcon, CaretUpSmallIcon } from 'tdesign-icons-vue-next';
-import camelCase from 'lodash/camelCase';
+import { camelCase, get as lodashGet } from 'lodash-es';
 import config from '../config';
 import {
   context as menuContext,
@@ -60,12 +60,12 @@ export default defineComponent({
 
     // 通过 slots.default 子成员，计算标题栏选项
     const menuTitles = computed(() =>
-      menuItems.value.map((item: any, index: number) => {
-        const { keys, label, value, modelValue, defaultValue, disabled, options } = item.props;
+      menuItems.value?.map((item: any, index: number) => {
+        const { keys, label, value, modelValue, defaultValue, disabled, options } = item.props as TdDropdownItemProps;
         const currentValue = value || modelValue || defaultValue;
-        const target = options?.find((item: any) => item[keys?.value ?? 'value'] === currentValue);
+        const target = options?.find((item: any) => lodashGet(item, keys?.value ?? 'value') === currentValue);
         if (state.itemsLabel.length < index + 1) {
-          const targetLabel = (target && target[keys?.label ?? 'label']) || '';
+          const targetLabel = (target && lodashGet(target, keys?.label ?? 'label')) || '';
           const computedLabel = label || targetLabel;
 
           state.itemsLabel.push(computedLabel);
@@ -78,7 +78,7 @@ export default defineComponent({
         }
         return {
           labelProps: label,
-          label: label || target.label,
+          label: label || lodashGet(target, keys?.label ?? 'label'),
           disabled: disabled !== undefined && disabled !== false,
         };
       }),
@@ -144,6 +144,7 @@ export default defineComponent({
 
     // dropdown-menu外面点击触发dropdown下拉框收起
     onClickOutside(refBar, () => {
+      if (state.activeId === null) return;
       collapseMenu();
       props.onMenuClosed?.({ trigger: 'outside' });
     });
@@ -152,7 +153,8 @@ export default defineComponent({
       expandMenu,
       collapseMenu,
       emitEvents(emit: string, trigger?: TriggerSource) {
-        props[`on${camelCase(emit)}`]?.(trigger);
+        const eventHandler = props[`on${camelCase(emit)}` as keyof typeof props] as Function;
+        eventHandler?.(trigger);
       },
     };
     // 提供子组件访问

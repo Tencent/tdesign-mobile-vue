@@ -6,7 +6,7 @@
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-attach | String / Function | 'body' | 制定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body。TS 类型：`AttachNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+attach | String / Function | 'body' | 指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body。TS 类型：`AttachNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 closeBtn | Boolean / Slot / Function | - | 是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以自定义关闭按钮。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 closeOnOverlayClick | Boolean | true | 点击遮罩层是否关闭 | N
 destroyOnClose | Boolean | false | 是否在关闭浮层时销毁浮层 | N
@@ -40,4 +40,5 @@ visible-change | `(visible: boolean, trigger: PopupSource) ` | 当浮层隐藏�
 名称 | 默认值 | 描述 
 -- | -- | --
 --td-popup-bg-color | @bg-color-container | - 
---td-popup-border-radius | @radius-default | -
+--td-popup-border-radius | @radius-extra-large | - 
+--td-popup-close-btn-color | @text-color-primary | - 

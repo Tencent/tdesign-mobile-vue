@@ -1,8 +1,5 @@
 import { defineComponent, provide, reactive, ref, toRefs } from 'vue';
-import isEmpty from 'lodash/isEmpty';
-import isArray from 'lodash/isArray';
-import isBoolean from 'lodash/isBoolean';
-import isFunction from 'lodash/isFunction';
+import { isArray, isBoolean, isEmpty, isFunction } from 'lodash-es';
 import {
   Data,
   FormResetParams,
@@ -134,6 +131,16 @@ export default defineComponent({
         dom && dom.scrollIntoView({ behavior });
       }
     };
+
+    const validateOnly = async (params?: Omit<FormValidateParams, 'showErrorMessage'>) => {
+      const { fields, trigger = 'all' } = params || {};
+      const list = children.value
+        .filter((child) => isFunction(child.validateOnly) && needValidate(String(child.name), fields))
+        .map((child) => child.validateOnly(trigger));
+      const arr = await Promise.all(list);
+      return formatValidateResult(arr);
+    };
+
     const submitParams = ref<Pick<FormValidateParams, 'showErrorMessage'>>();
     const onSubmit = (e?: FormSubmitEvent) => {
       if (props.preventSubmitDefault && e) {
@@ -191,7 +198,7 @@ export default defineComponent({
       Promise.all(list);
     };
 
-    expose({ validate, submit, reset, clearValidate, setValidateMessage });
+    expose({ validate, submit, reset, clearValidate, setValidateMessage, validateOnly });
 
     return () => {
       return (

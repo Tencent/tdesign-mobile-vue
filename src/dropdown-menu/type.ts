@@ -45,7 +45,7 @@ export interface TdDropdownItemProps {
    */
   footer?: TNode;
   /**
-   * 用来定义 value / label 在 `options` 中对应的字段别名
+   * 用来定义 value / label / disabled 在 `options` 中对应的字段别名
    */
   keys?: KeysType;
   /**
@@ -68,6 +68,11 @@ export interface TdDropdownItemProps {
    * @default 1
    */
   optionsColumns?: string | number;
+  /**
+   * 复选框和内容相对位置，仅单选菜单栏有效
+   * @default left
+   */
+  placement?: 'left' | 'right';
   /**
    * 选中值
    */

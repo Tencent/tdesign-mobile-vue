@@ -7,6 +7,9 @@ import { sleep } from '../../shared/util';
 import Sticky from '../../sticky/index';
 import { trigger } from '../../image-viewer/__test__/touch';
 
+// scrollTo isn't implemented in JSDOM，see: https://github.com/vuejs/vue-test-utils/issues/319
+Element.prototype.scrollTo = () => {};
+
 const prefix = 't';
 const name = `${prefix}-tabs`;
 const list = [
@@ -26,15 +29,15 @@ const tabPanelList = [
     value: '1',
     label: '标签页一',
     panel: '标签一内容区',
-    destroyOnHide: false
+    destroyOnHide: false,
   },
   {
     value: '2',
     label: '标签页二',
     panel: '标签二内容区',
-    destroyOnHide: true
+    destroyOnHide: true,
   },
-]
+];
 
 describe('Tabs', () => {
   describe('props', () => {
@@ -51,45 +54,46 @@ describe('Tabs', () => {
         spaceEvenly: false,
       });
 
-      $tabNavItems.forEach(item => {
+      $tabNavItems.forEach((item) => {
         expect(item.attributes('class').includes(`${prefix}-tabs-item-evenly`)).toBeTruthy();
       });
-
     });
 
     it(': theme', async () => {
-      let theme = ''
+      let theme = '';
       const wrapper = mount(Tabs, {
         props: {
-          theme: theme
-        }
+          theme,
+        },
       });
       const navWrap = wrapper.find(`.${name}__wrapper`);
       const $tabNavItems = navWrap.findAllComponents(TTabNav);
+
+      const $tabs = wrapper.findComponent(Tabs);
 
       theme = 'line';
       await wrapper.setProps({
         theme,
       });
-      $tabNavItems.forEach(item => {
+      $tabNavItems.forEach((item) => {
         expect($tabs.attributes('class').includes(`${prefix}-tabs-item-${theme}`)).toBeTruthy();
-      })
+      });
 
       theme = 'tag';
       await wrapper.setProps({
         theme,
       });
-      $tabNavItems.forEach(item => {
+      $tabNavItems.forEach((item) => {
         expect($tabs.attributes('class').includes(`${prefix}-tabs-item-${theme}`)).toBeTruthy();
-      })
+      });
 
       theme = 'card';
       await wrapper.setProps({
         theme,
       });
-      $tabNavItems.forEach(item => {
+      $tabNavItems.forEach((item) => {
         expect($tabs.attributes('class').includes(`${prefix}-tabs-item-${theme}`)).toBeTruthy();
-      })
+      });
     });
 
     it(': animation', async () => {
@@ -124,7 +128,8 @@ describe('Tabs', () => {
           $navLine
             .attributes('style')
             .includes(
-              `transform: translateX(${navWidth * index + navWidth / 2 - linWidth / 2}px); transition-duration: ${animation.value
+              `transform: translateX(${navWidth * index + navWidth / 2 - linWidth / 2}px); transition-duration: ${
+                animation.value
               }ms;`,
             ),
         );
@@ -152,7 +157,7 @@ describe('Tabs', () => {
     });
 
     it(': size', async () => {
-      let size = ''
+      let size = '';
       const SIZE_CLASSNAMES = {
         small: `${prefix}-size-s`,
         medium: `${prefix}-size-m`,
@@ -160,8 +165,8 @@ describe('Tabs', () => {
       };
       const wrapper = mount(Tabs, {
         props: {
-          size: size
-        }
+          size,
+        },
       });
       const $tabs = wrapper.findComponent(Tabs);
 
@@ -181,18 +186,14 @@ describe('Tabs', () => {
     });
 
     it(': showBottomLine', async () => {
-      const currentValue = ref('1')
-      const showBottomLine = ref(true)
+      const currentValue = ref('1');
+      const showBottomLine = ref(true);
       const animation = ref({ duration: 500 });
 
       const wrapper = mount({
         setup() {
           return () => (
-            <Tabs
-              value={currentValue.value}
-              animation={animation.value}
-              showBottomLine={showBottomLine.value}
-            >
+            <Tabs value={currentValue.value} animation={animation.value} showBottomLine={showBottomLine.value}>
               {/* <TabPanel value="1" label="标签页一" panel="标签一内容区" />
               <TabPanel value="2" label="标签页二" panel="标签二内容区" /> */}
               {tabPanelList.map((item) => {
@@ -204,10 +205,10 @@ describe('Tabs', () => {
       });
 
       // 触发moveToActiveTab()
-      currentValue.value = '2'
+      currentValue.value = '2';
 
       // 等待组件异步更新样式
-      await sleep(0)
+      await sleep(0);
 
       const navWrap = wrapper.find(`.${name}__wrapper`);
       const navLine = navWrap.find(`.${name}__track`);
@@ -217,7 +218,8 @@ describe('Tabs', () => {
         navLine
           .attributes('style')
           .includes(
-            `transform: translateX(${Number(tab.element.offsetLeft) + Number(tab.element.offsetWidth) / 2 - (navLine.element.offsetWidth) / 2
+            `transform: translateX(${
+              Number(tab.element.offsetLeft) + Number(tab.element.offsetWidth) / 2 - navLine.element.offsetWidth / 2
             }px); ${animation.value ? `transition-duration: ${animation.value.duration}ms` : ''}`,
           ),
       ).toBeTruthy();
@@ -317,7 +319,7 @@ describe('Tabs', () => {
 
     it(': click', async () => {
       const currentValue = ref('1');
-      const currentLabel = ref('')
+      const currentLabel = ref('');
       const onClick = vi.fn((value, label) => {
         currentValue.value = value;
         currentLabel.value = label;
@@ -346,8 +348,8 @@ describe('Tabs', () => {
     });
 
     it(': scroll', async () => {
-      const sticky = true
-      const stickyProps = ref({ zIndex: 99 })
+      const sticky = true;
+      const stickyProps = ref({ zIndex: 99 });
       const onScroll = vi.fn();
       const wrapper = mount({
         setup() {
@@ -359,9 +361,9 @@ describe('Tabs', () => {
           );
         },
       });
-      const $sticky = wrapper.findComponent(Sticky)
-      await $sticky.trigger('scroll')
-      expect(onScroll).toBeCalled()
+      const $sticky = wrapper.findComponent(Sticky);
+      await $sticky.trigger('scroll');
+      expect(onScroll).toBeCalled();
     });
   });
 });

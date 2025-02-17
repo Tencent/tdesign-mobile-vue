@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
+import { nextTick } from 'vue';
 import TTable from '../base-table';
 import config from '../../config';
-import { nextTick } from 'vue';
 
 const { prefix } = config;
 const name = `${prefix}-table`;
@@ -229,7 +229,7 @@ describe('event', () => {
         return <TTable rowKey="index" data={data} onScroll={fn} columns={columns}></TTable>;
       },
     });
-    wrapper.find('.t-table__content').trigger('wheel');
+    wrapper.find('.t-table__content').trigger('scroll');
     await wrapper.vm.$nextTick();
     expect(fn).toHaveBeenCalled();
   });

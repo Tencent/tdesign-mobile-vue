@@ -183,7 +183,34 @@ describe('dialog', () => {
       expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'overlay' });
     });
   });
-
+  describe('slots', () => {
+    it(':confirmBtn', async () => {
+      const visible = true;
+      const confirmBtn = 'confirm';
+      const wrapper = mount(Dialog, {
+        props: {
+          visible,
+        },
+        slots: {
+          confirmBtn: `<button class="slot-confirm-btn">${confirmBtn}</button>`,
+        },
+      });
+      expect(wrapper.find('.slot-confirm-btn').text()).toBe(confirmBtn);
+    });
+    it(':cancelBtn', async () => {
+      const visible = true;
+      const cancelBtn = 'cancel';
+      const wrapper = mount(Dialog, {
+        props: {
+          visible,
+        },
+        slots: {
+          cancelBtn: `<button class="slot-cancel-btn">${cancelBtn}</button>`,
+        },
+      });
+      expect(wrapper.find('.slot-cancel-btn').text()).toBe(cancelBtn);
+    });
+  });
   describe('event', () => {
     it(':cancel && confirm && close', async () => {
       const visible = true;

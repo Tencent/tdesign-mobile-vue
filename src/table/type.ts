@@ -33,7 +33,7 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    */
   empty?: string | TNode;
   /**
-   * 固定行（冻结行），示例：[M, N]，表示冻结表头 M 行和表尾 N 行。M 和 N 值为 0 时，表示不冻结行
+   * 【开发中】固定行（冻结行），示例：[M, N]，表示冻结表头 M 行和表尾 N 行。M 和 N 值为 0 时，表示不冻结行
    */
   fixedRows?: Array<number>;
   /**
@@ -93,7 +93,7 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
   /**
    * 表格内容滚动时触发
    */
-  onScroll?: (params: { e: WheelEvent }) => void;
+  onScroll?: (params: { e: Event }) => void;
 }
 
 /** 组件实例方法 */
