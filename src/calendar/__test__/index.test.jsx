@@ -67,7 +67,6 @@ describe('calendar', () => {
       const time = ref('');
       const character = '-';
       const onConfirm = vi.fn((e) => {
-        console.log('confirm', e);
         time.value = dayFormat(e, character);
       });
       const wrapper = mount(
@@ -94,7 +93,6 @@ describe('calendar', () => {
       // confirm
       const $button = wrapper.findComponent(Button);
       await $button.trigger('click');
-      console.log('time', time.value);
 
       // TODO：区间选择器时，返回的应该是数组，但测试环境下只有单条 Date 对象数据
       expect(time.value).toEqual([year, month + 1, selectLastIndex + 1].join(character));
