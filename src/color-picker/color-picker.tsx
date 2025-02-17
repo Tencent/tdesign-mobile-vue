@@ -1,18 +1,13 @@
-import { defineComponent, ref, watch, computed, onMounted } from 'vue';
+import { defineComponent, ref, watch, computed, onMounted, nextTick } from 'vue';
 import props from './props';
 import config from '../config';
 import { Popup as TPopup } from '../popup';
-import { useTNodeJSX, useContent } from '../hooks/tnode';
+import { useTNodeJSX } from '../hooks/tnode';
 import type { ColorPickerTrigger, ColorPickerChangeTrigger } from './type';
 import { usePrefixClass } from '../hooks/useClass';
 import { getFormatList, genSwatchList, getCoordinate } from './helper';
 import { Color, getColorObject } from '../_common/js/color-picker';
-import {
-  SATURATION_PANEL_DEFAULT_HEIGHT,
-  SATURATION_PANEL_DEFAULT_WIDTH,
-  SLIDER_DEFAULT_WIDTH,
-  DEFAULT_COLOR,
-} from '../_common/js/color-picker/constants';
+import { DEFAULT_COLOR } from '../_common/js/color-picker/constants';
 import { ALPHA_MAX, HUE_MAX } from './constants';
 
 const { prefix } = config;
@@ -46,10 +41,6 @@ export default defineComponent({
     const sliderInfo = ref({
       value: 0,
     });
-    const saturationInfo = ref({
-      saturation: 0,
-      value: 0,
-    });
     const color = new Color(props.defaultValue || props.value || DEFAULT_COLOR);
     const formatList = ref(getFormatList(props.format, color));
     const innerSwatchList = computed(() => genSwatchList(props.swatchColors));
@@ -58,6 +49,9 @@ export default defineComponent({
       () => props.visible,
       (value) => {
         innerVisible.value = value;
+        nextTick(() => {
+          init();
+        });
       },
     );
 
@@ -124,10 +118,6 @@ export default defineComponent({
           alphaSliderStyle.value = alpha;
         }
 
-        saturationInfo.value = {
-          saturation: color.saturation,
-          value: color.value,
-        };
         saturationThumbStyle.value = getSaturationThumbStyle({
           saturation: color.saturation,
           value: color.value,
@@ -336,12 +326,6 @@ export default defineComponent({
                     </div>
                   )}
                 </div>
-
-                {/* {showPreview && (
-                  <div class={`${colorPickerClass.value}__sliders-preview ${colorPickerClass.value}--bg-alpha`}>
-                    <div class={`${colorPickerClass.value}__sliders-preview-inner`}></div>
-                  </div>
-                )} */}
               </div>
             )}
 

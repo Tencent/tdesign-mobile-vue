@@ -4,8 +4,6 @@ import type { TdColorPickerProps as ColorPickerProps } from './type';
 
 export const getCoordinate = (e: TouchEvent, rect: DOMRect, isFixed?: boolean) => {
   const { pageX, pageY, clientY } = e?.changedTouches?.[0] || {};
-  const offsetY = isFixed ? rect.top : (e.target as HTMLElement).offsetTop;
-  const offsetX = isFixed ? rect.left : (e.target as HTMLElement).offsetLeft;
   return {
     x: Math.min(Math.max(0, pageX - rect.left), rect.width),
     y: Math.min(Math.max(0, (isFixed ? clientY : pageY) - rect.top), rect.height),
