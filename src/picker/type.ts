@@ -82,6 +82,7 @@ export type PickerColumn = PickerColumnItem[];
 export interface PickerColumnItem {
   label: string;
   value: string;
+  disabled?: boolean;
 }
 
 export type PickerValue = string | number;
