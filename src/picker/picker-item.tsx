@@ -46,7 +46,7 @@ export default defineComponent({
     };
 
     const className = computed(() => `${pickerItemClass.value}`);
-    const itemClassName = computed(() => [`${pickerItemClass.value}__item`]);
+
     const setIndex = (index: number) => {
       if (picker) {
         picker.updateItems();
@@ -81,6 +81,8 @@ export default defineComponent({
         picker = new Picker({
           el: root.value,
           defaultIndex: getIndexByValue(props.value) || 0,
+          keys: keys.value,
+          PickerColumns: props.options,
           onChange: (index: number) => {
             const curItem = props.options[index];
             const changeValue = { value: lodashGet(curItem, keys.value?.value ?? 'value'), index };
@@ -102,7 +104,15 @@ export default defineComponent({
       return (
         <ul ref={root} class={className.value}>
           {(props.options || []).map((option, index) => (
-            <li key={index} class={itemClassName.value}>
+            <li
+              key={index}
+              class={[
+                `${pickerItemClass.value}__item`,
+                {
+                  [`${pickerItemClass.value}__item--disabled`]: lodashGet(option, keys.value?.disabled ?? 'disabled'),
+                },
+              ]}
+            >
               {context.slots.option ? (
                 context.slots.option(option, index)
               ) : (
