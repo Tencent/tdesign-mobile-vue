@@ -3,7 +3,7 @@
     <t-search
       :value="searchValue"
       placeholder="搜索预设文案"
-      action="取消"
+      :action="actionText"
       @action-click="onActionClick"
       @blur="onBlur"
       @change="onChange"
@@ -19,6 +19,7 @@
 import { ref } from 'vue';
 
 const searchValue = ref('');
+const actionText = ref('');
 
 const onChange = (value: string, context: { e?: InputEvent | MouseEvent }) => {
   console.log('change: ', value, context);
@@ -33,10 +34,12 @@ const onClear = (context: { e: MouseEvent }) => {
   console.log('clear: ', context);
 };
 const onFocus = (context: { value: string; e: FocusEvent }) => {
+  actionText.value = '取消';
   console.log('focus: ', context);
 };
 
 const onActionClick = (context: { e: MouseEvent }) => {
+  actionText.value = '';
   console.log('action: ', context);
 };
 
