@@ -1,4 +1,4 @@
-import { ref, computed, onMounted, defineComponent, PropType, watch, inject } from 'vue';
+import { ref, computed, onMounted, defineComponent, PropType, watch, inject, nextTick } from 'vue';
 import { get as lodashGet } from 'lodash-es';
 import config from '../config';
 import Picker from './picker.class';
@@ -47,21 +47,22 @@ export default defineComponent({
 
     const className = computed(() => `${pickerItemClass.value}`);
 
-    const setIndex = (index: number) => {
+    const updatePickerWithNextTick = (index: number) => {
       if (picker) {
         picker.updateItems();
-        picker.updateIndex(index, {
-          isChange: false,
+        nextTick(() => {
+          picker.updateIndex(index, { isChange: false });
         });
       }
     };
+
+    const setIndex = (index: number) => {
+      updatePickerWithNextTick(index);
+    };
+
     const setValue = (value: number | string | undefined) => {
-      if (picker) {
-        picker.updateItems();
-        picker.updateIndex(getIndexByValue(value), {
-          isChange: false,
-        });
-      }
+      const index = getIndexByValue(value);
+      updatePickerWithNextTick(index);
     };
     const setOptions = () => {
       picker?.update();
@@ -82,7 +83,7 @@ export default defineComponent({
           el: root.value,
           defaultIndex: getIndexByValue(props.value) || 0,
           keys: keys.value,
-          PickerColumns: props.options,
+          defaultPickerColumns: props.options,
           onChange: (index: number) => {
             const curItem = props.options[index];
             const changeValue = { value: lodashGet(curItem, keys.value?.value ?? 'value'), index };
@@ -95,6 +96,7 @@ export default defineComponent({
     watch(
       () => props.options,
       () => {
+        picker?.updateOptions(props.options);
         picker?.updateItems();
       },
       { flush: 'post', deep: true },

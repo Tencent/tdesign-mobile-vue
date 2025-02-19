@@ -5,6 +5,11 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.8.2 `2025-02-19` 
+### 🐞 Bug Fixes
+- `Tabbar`: 修复控制台告警，优化子节点数量更新逻辑 @anlyyao ([#1767](https://github.com/Tencent/tdesign-mobile-vue/pull/1767))
+- `Picker`: 修复 `columns` 为异步数据时，子项无法选中的问题 @anlyyao ([#1769](https://github.com/Tencent/tdesign-mobile-vue/pull/1769))
+
 ## 🌈 1.8.1 `2025-02-18` 
 ### 🚀 Features
 - `Calendar`: 新增 `switchMode` 属性 @novlan1 ([#1744](https://github.com/Tencent/tdesign-mobile-vue/pull/1744))
