@@ -1,10 +1,15 @@
 import { preventDefault } from '../shared/dom';
 import { usePrefixClass } from '../hooks/useClass';
+import { PickerColumn } from './type';
+import { KeysType } from '../common';
+import { findIndexOfEnabledOption } from './utils';
 
 const classPrefix = usePrefixClass();
 
 export interface PickerOptions {
   defaultIndex?: number;
+  keys?: KeysType;
+  defaultPickerColumns?: PickerColumn;
   el: HTMLElement | HTMLDivElement | HTMLUListElement;
   onChange: (index: number) => void;
 }
@@ -77,9 +82,12 @@ class Picker {
 
   indicatorOffset: number;
 
+  pickerColumns: PickerColumn;
+
   constructor(options: PickerOptions) {
     if (!options.el) throw new Error('options el needed!');
     this.holder = options.el;
+    this.pickerColumns = options.defaultPickerColumns;
     this.options = options;
     this.onChange = options.onChange;
     this.init();
@@ -114,7 +122,7 @@ class Picker {
     this.itemHeight = this.holder.querySelector('li')?.offsetHeight || DEFAULT_ITEM_HEIGHT;
     this.height = this.holder.offsetHeight || DEFAULT_HOLDER_HEIGHT;
     this.indicatorOffset = this.itemGroupHeight / 2 - this.itemHeight / 2;
-    let curIndex = this.options.defaultIndex || 0;
+    let curIndex = findIndexOfEnabledOption(this.pickerColumns, this.options.defaultIndex || 0, this.options.keys);
     this.itemClassName = `${classPrefix.value}-picker-item__item`;
     this.itemSelectedClassName = `${classPrefix.value}-picker-item__item--active`;
     this.startY = 0;
@@ -279,6 +287,13 @@ class Picker {
   }
 
   /**
+   * @description 更新数据源
+   */
+  updateOptions(options: PickerColumn = []): void {
+    this.pickerColumns = options;
+  }
+
+  /**
    * @description 获取当前索引
    */
   getCurIndex(): number {
@@ -357,6 +372,9 @@ class Picker {
       if (curIndex < 0) curIndex = 0;
       if (curIndex > this.elementItems.length - 1) curIndex = this.elementItems.length - 1;
     }
+
+    curIndex = findIndexOfEnabledOption(this.pickerColumns, curIndex, this.options.keys);
+
     const offsetY = this.indicatorOffset - curIndex * this.itemHeight;
     this.setOffsetY(offsetY);
     if (curIndex !== this.curIndex) {

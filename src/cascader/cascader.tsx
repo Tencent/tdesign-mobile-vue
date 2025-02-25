@@ -94,11 +94,11 @@ export default defineComponent({
     const getIndexesByValue = (options: any, value: any) => {
       const keys = props.keys as KeysType;
       for (let i = 0; i < options.length; i++) {
-        if (lodashGet(options, options[i][keys?.value ?? 'value']) === value) {
+        if (lodashGet(options[i], keys?.value ?? 'value') === value) {
           return [i];
         }
-        if (lodashGet(options, options[i][keys?.children ?? 'children'])) {
-          const res: any = getIndexesByValue(lodashGet(options, options[i][keys?.children ?? 'children']), value);
+        if (lodashGet(options[i], keys?.children ?? 'children')) {
+          const res: any = getIndexesByValue(lodashGet(options[i], keys?.children ?? 'children'), value);
           if (res) {
             return [i, ...res];
           }

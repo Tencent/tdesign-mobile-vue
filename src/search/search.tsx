@@ -22,7 +22,6 @@ export default defineComponent({
     const searchClass = usePrefixClass('search');
 
     const isShowResultList = ref(false);
-    const isShowAction = ref(false);
     const inputRef = ref<HTMLInputElement>();
     const { focused } = useFocus(inputRef, { initialValue: props.focus });
     const [searchValue] = useDefault<TdSearchProps['value'], TdSearchProps>(props, context.emit, 'value', 'change');
@@ -83,12 +82,10 @@ export default defineComponent({
     };
 
     const handleFocus = (e: FocusEvent) => {
-      isShowAction.value = true;
       props.onFocus?.({ value: searchValue.value, e });
     };
 
     const handleBlur = (e: FocusEvent) => {
-      isShowAction.value = false;
       props.onBlur?.({ value: searchValue.value, e });
     };
 
@@ -133,7 +130,7 @@ export default defineComponent({
       };
       const readerAction = () => {
         const action = renderTNodeJSX('action');
-        if (action && isShowAction.value) {
+        if (action) {
           return (
             <div class={`${searchClass.value}__search-action ${prefix}-class-action`} onClick={handleAction}>
               {action}

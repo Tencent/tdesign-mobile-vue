@@ -301,7 +301,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
               
             </li>
             <li
-              class="t-picker-item__item"
+              class="t-picker-item__item t-picker-item__item--disabled"
             >
               
               上海市
@@ -955,7 +955,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
                   
                 </li>
                 <li
-                  class="t-picker-item__item"
+                  class="t-picker-item__item t-picker-item__item--disabled"
                 >
                   
                   上海市
