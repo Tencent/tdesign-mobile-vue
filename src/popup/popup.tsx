@@ -1,4 +1,4 @@
-import { computed, watch, defineComponent, h, ref, nextTick, Teleport, Transition } from 'vue';
+import { computed, watch, defineComponent, h, ref, nextTick, Teleport, Transition, onMounted } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
 import popupProps from './props';
@@ -37,6 +37,7 @@ export default defineComponent({
 
     const wrapperVisible = ref(currentVisible.value);
     const innerVisible = ref(currentVisible.value);
+    const mounted = ref(false);
 
     // 因为开启 destroyOnClose，会影响 transition 的动画，因此需要前后设置 visible
     watch(currentVisible, (v) => {
@@ -107,6 +108,7 @@ export default defineComponent({
           props.onOpen?.();
           setVisible(true);
         }
+        mounted.value = val;
       },
     );
 
@@ -143,11 +145,19 @@ export default defineComponent({
         </Transition>
       );
 
-      const renderPopupContent = (
-        <Teleport to={teleportElement.value} disabled={!teleportElement.value}>
+      const inner = (
+        <>
           {renderOverlayContent}
           {renderContent}
+        </>
+      );
+
+      const renderPopupContent = mounted.value ? (
+        <Teleport to={teleportElement.value} disabled={!teleportElement.value}>
+          {inner}
         </Teleport>
+      ) : (
+        inner
       );
 
       return (!props.destroyOnClose || wrapperVisible.value) && renderPopupContent;
