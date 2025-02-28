@@ -92,6 +92,11 @@ export default {
     type: Boolean as PropType<TdSwiperProps['disabled']>,
     default: false,
   },
+  /** 点击轮播项时停止自动播放 */
+  touchStopAutoplay: {
+    type: Boolean as PropType<TdSwiperProps['touchStopAutoplay']>,
+    default: true,
+  },
   /** 轮播切换时触发 */
   onChange: Function as PropType<TdSwiperProps['onChange']>,
   /** 点击轮播项时触发 */
