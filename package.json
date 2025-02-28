@@ -6,11 +6,11 @@
   "author": "TDesign Group",
   "homepage": "https://tdesign.tencent.com/mobile-vue/",
   "bugs": {
-    "url": "https://github.com/tencent/tdesign-mobile-vue/issues"
+    "url": "https://github.com/Tencent/tdesign-mobile-vue/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tencent/tdesign-mobile-vue"
+    "url": "https://github.com/Tencent/tdesign-mobile-vue"
   },
   "scripts": {
     "init": "git submodule init && git submodule update",
