@@ -128,7 +128,12 @@ export default defineComponent({
       );
 
       const renderContent = (
-        <Transition name={contentTransitionName.value} onAfterEnter={afterEnter} onAfterLeave={afterLeave}>
+        <Transition
+          name={contentTransitionName.value}
+          duration={props.duration}
+          onAfterEnter={afterEnter}
+          onAfterLeave={afterLeave}
+        >
           <div
             v-show={innerVisible.value}
             ref={popupRef}
