@@ -1,4 +1,4 @@
-import { computed, ref, watchEffect, WritableComputedRef } from 'vue';
+import { computed, ref, watch, WritableComputedRef } from 'vue';
 import { camelCase } from 'lodash-es';
 
 function getDefaultName(key: string): string {
@@ -24,32 +24,31 @@ function getEventPropsName(eventName: string): string {
 export function useDefault<V, T>(props: T, emit: (...args: any[]) => void, key: string, eventName: string) {
   const modelValue = 'modelValue';
   const defaultName = getDefaultName(String(key));
-
-  const isUsedModelValue = props[modelValue] !== undefined;
-  const isUsedKey = props[key] !== undefined;
-
   const innerValue = ref<V>();
 
-  if (isUsedKey) {
-    innerValue.value = props[key];
-  } else if (isUsedModelValue) {
-    innerValue.value = props[modelValue];
-  } else {
-    innerValue.value = props[defaultName];
-  }
-  watchEffect(() => {
-    if (isUsedModelValue) {
-      innerValue.value = props[modelValue];
-    }
-    if (isUsedKey) {
-      innerValue.value = props[key];
-    }
-  });
+  let isUsedModelValue = props[modelValue] !== undefined;
+  let isUsedKey = props[key] !== undefined;
+
+  watch(
+    [() => props[modelValue], () => props[key]],
+    (newValue, oldValue) => {
+      if (newValue[0] !== oldValue[0]) {
+        isUsedModelValue = true;
+        innerValue.value = props[modelValue];
+      } else if (newValue[1] !== oldValue[1]) {
+        isUsedKey = true;
+        innerValue.value = props[key];
+      } else {
+        innerValue.value = props[defaultName];
+      }
+    },
+    { immediate: true },
+  );
 
   function emitEvents<T extends Array<any>>(value: V, ...arg: T) {
     const updateKeys = [`update:${key}`];
     if (isUsedModelValue) {
-      updateKeys.push(`update:modelValue`);
+      updateKeys.push(`update:${modelValue}`);
     }
     // Props Event exists in Vue3. `props.onChange()` is equal `context.emit('change')`
     updateKeys.forEach((updateKey) => {
