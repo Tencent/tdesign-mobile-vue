@@ -5,9 +5,9 @@ on:
   pull_request:
     branches: [develop]
 
-jobs:
-  if: ${{ github.repository == 'Tencent/tdesign-mobile-vue' && !startsWith(github.head_ref, 'release/') }}
+jobs: 
   build:
+    if: ${{ github.repository == 'Tencent/tdesign-mobile-vue' && !startsWith(github.head_ref, 'release/') }}
     runs-on: ubuntu-latest
 
     steps:
