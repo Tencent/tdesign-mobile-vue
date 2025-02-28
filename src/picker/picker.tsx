@@ -7,6 +7,7 @@ import { PickerValue, PickerColumn, PickerColumnItem } from './type';
 import { useVModel } from '../shared';
 import { useTNodeJSX } from '../hooks/tnode';
 import PickerItem from './picker-item';
+import { Popup as TPopup } from '../popup';
 import { getPickerColumns } from './utils';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 
@@ -19,7 +20,7 @@ const getIndexFromColumns = (column: PickerColumn, value: PickerValue, keys?: Ke
 
 export default defineComponent({
   name: `${prefix}-picker`,
-  components: { PickerItem },
+  components: { PickerItem, TPopup },
   props: PickerProps,
   emits: ['change', 'cancel', 'pick', 'update:modelValue', 'update:value'],
   setup(props, { slots }) {
@@ -29,6 +30,13 @@ export default defineComponent({
 
     const { value, modelValue } = toRefs(props);
     const [pickerValue = ref([]), setPickerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+    const innerVisible = ref(props.visible);
+    watch(
+      () => props.visible,
+      (value) => {
+        innerVisible.value = value;
+      },
+    );
 
     const keys = computed((): KeysType => props.keys);
 
@@ -67,13 +75,25 @@ export default defineComponent({
       const value = target.map((item: PickerColumnItem) => lodashGet(item, keys.value?.value ?? 'value'));
       setPickerValue(value);
       props.onConfirm?.(value, { index: curIndexArray, label, e });
+
+      if (props.autoClose) {
+        innerVisible.value = false;
+        props.onClose?.('confirm-btn');
+      }
     };
+
     const handleCancel = (e: MouseEvent) => {
       pickerItemInstanceArray.value.forEach((item: any, index: number) => {
         item?.setIndex(curIndexArray[index]);
       });
       props.onCancel?.({ e });
+
+      if (props.autoClose) {
+        innerVisible.value = false;
+        props.onClose?.('cancel-btn');
+      }
     };
+
     const handlePick = (context: any, column: number) => {
       const { index } = context;
 
@@ -81,6 +101,11 @@ export default defineComponent({
       curValueArray.value[column] = lodashGet(realColumns.value?.[column][index], keys.value?.value ?? 'value');
 
       props.onPick?.(curValueArray.value, { index, column });
+    };
+
+    const onClose = () => {
+      innerVisible.value = false;
+      props.onClose?.('overlay');
     };
 
     watch(pickerValue, () => {
@@ -101,7 +126,9 @@ export default defineComponent({
 
     return () => {
       const header = renderTNodeJSX('header');
-      return (
+      const footer = renderTNodeJSX('footer');
+
+      const inner = (
         <div class={`${pickerClass.value}`}>
           <div class={`${pickerClass.value}__toolbar`}>
             {cancelButtonText.value && (
@@ -134,8 +161,18 @@ export default defineComponent({
             <div class={`${pickerClass.value}__mask ${pickerClass.value}__mask--bottom`} />
             <div class={`${pickerClass.value}__indicator`} />
           </div>
+          {footer}
         </div>
       );
+
+      if (props.usePopup) {
+        return (
+          <t-popup visible={innerVisible.value} placement="bottom" onClose={onClose}>
+            {inner}
+          </t-popup>
+        );
+      }
+      return inner;
     };
   },
 });

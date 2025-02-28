@@ -10,6 +10,9 @@
     <tdesign-demo-block title="02 自定义" summary="自定义选择范围">
       <customRangeVue />
     </tdesign-demo-block>
+    <tdesign-demo-block summary="自定义步数">
+      <stepsVue />
+    </tdesign-demo-block>
   </div>
 </template>
 <script lang="ts" setup>
@@ -17,4 +20,5 @@ import baseVue from './base.vue';
 import yearMonthVue from './year-month.vue';
 import timeVue from './time.vue';
 import customRangeVue from './custom-range.vue';
+import stepsVue from './steps.vue';
 </script>

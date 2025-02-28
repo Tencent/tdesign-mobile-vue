@@ -145,6 +145,7 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
           class="t-picker__indicator"
         />
       </div>
+      <!---->
     </div>
     
   </div>
@@ -356,6 +357,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
           class="t-picker__indicator"
         />
       </div>
+      <!---->
     </div>
     
   </div>
@@ -532,6 +534,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
           class="t-picker__indicator"
         />
       </div>
+      <!---->
     </div>
     
   </div>
@@ -716,6 +719,7 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
           class="t-picker__indicator"
         />
       </div>
+      <!---->
     </div>
     
   </div>
@@ -1010,6 +1014,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               class="t-picker__indicator"
             />
           </div>
+          <!---->
         </div>
         
       </div>
@@ -1186,6 +1191,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               class="t-picker__indicator"
             />
           </div>
+          <!---->
         </div>
         
       </div>
@@ -1332,6 +1338,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               class="t-picker__indicator"
             />
           </div>
+          <!---->
         </div>
         
       </div>
@@ -1536,6 +1543,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               class="t-picker__indicator"
             />
           </div>
+          <!---->
         </div>
         
       </div>
@@ -1774,6 +1782,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
           class="t-picker__indicator"
         />
       </div>
+      <!---->
     </div>
     
   </div>
