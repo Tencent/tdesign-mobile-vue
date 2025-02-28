@@ -208,9 +208,11 @@ const libConfig = {
 };
 
 /** @type {import('rollup').RollupOptions} */
+const cjsExternalException = ['lodash-es'];
+const cjsExternal = externalDeps.concat(externalPeerDeps).filter((value) => !cjsExternalException.includes(value));
 const cjsConfig = {
   input: inputList,
-  external: externalDeps.concat(externalPeerDeps),
+  external: cjsExternal,
   plugins: [multiInput()].concat(getPlugins()),
   output: {
     banner,
