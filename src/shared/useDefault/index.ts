@@ -31,13 +31,13 @@ export function useDefault<V, T>(props: T, emit: (...args: any[]) => void, key: 
 
   watch(
     [() => props[modelValue], () => props[key]],
-    (newValue, oldValue) => {
-      if (newValue[0] !== oldValue[0]) {
+    ([newModelValue, newKeyValue], [oldModelValue, oldKeyValue]) => {
+      if (newModelValue !== oldModelValue) {
         isUsedModelValue = true;
-        innerValue.value = props[modelValue];
-      } else if (newValue[1] !== oldValue[1]) {
+        innerValue.value = newModelValue;
+      } else if (newKeyValue !== oldKeyValue) {
         isUsedKey = true;
-        innerValue.value = props[key];
+        innerValue.value = newKeyValue;
       } else {
         innerValue.value = props[defaultName];
       }
