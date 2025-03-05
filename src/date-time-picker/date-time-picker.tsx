@@ -12,6 +12,8 @@ import useVModel from '../hooks/useVModel';
 import { Picker as TPicker } from '../picker';
 import { PickerColumn, PickerColumnItem, PickerValue, PickerContext } from '../picker/type';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
+import type { TimeModeValues } from './type';
+import type { TriggerSource } from '../picker/type';
 
 dayjs.extend(weekday);
 dayjs.extend(customParseFormat);
@@ -41,12 +43,14 @@ export default defineComponent({
 
     const confirmButtonText = computed(() => props.confirmBtn || globalConfig.value.confirm);
     const cancelButtonText = computed(() => props.cancelBtn || globalConfig.value.cancel);
+
     const normalize = (val: string | number, defaultDay: Dayjs) =>
       val && dayjs(val).isValid() ? dayjs(val) : defaultDay;
     const start = computed(() => normalize(props.start, dayjs().subtract(10, 'year')));
     const end = computed(() => normalize(props.end, dayjs().add(10, 'year')));
 
     const meaningColumn = computed(() => getMeaningColumn(props.mode));
+
     const isTimeMode = computed(
       () => isArray(props.mode) && props.mode[0] == null && ['hour', 'minute', 'second'].includes(props.mode[1]),
     );
@@ -104,16 +108,22 @@ export default defineComponent({
         second: globalConfig.value.secondLabel,
       };
 
-      const generateColumn = (start: number, end: number, type: string) => {
+      const generateColumn = (start: number, end: number, type: TimeModeValues) => {
         const arr: PickerColumnItem[] = [];
-        for (let i = start; i <= end; i++) {
+        const step = props.steps?.[type] ?? 1;
+        for (let i = start; i <= end; i += step) {
           const value = i.toString();
           arr.push({
             label: props.renderLabel ? props.renderLabel(type, i) : `${value} ${typeUnit[type]}`,
             value: type === 'month' ? `${+value - 1}` : value,
           });
         }
-        ret.push(arr);
+
+        if (typeof props.filter === 'function') {
+          ret.push(props.filter(type, arr));
+        } else {
+          ret.push(arr);
+        }
       };
 
       if (meaningColumn.value.includes('year')) {
@@ -153,11 +163,14 @@ export default defineComponent({
     });
 
     const onConfirm = (value: string[]) => {
-      const dayObject = value.reduce((map, cur, index) => {
-        const type = meaningColumn.value[index];
-        map[type] = cur;
-        return map;
-      }, {});
+      const dayObject = value.reduce(
+        (map: Record<TimeModeValues, string>, cur, index) => {
+          const type = meaningColumn.value[index];
+          map[type] = cur;
+          return map;
+        },
+        {} as Record<TimeModeValues, string>,
+      );
       const cur = dayjs(dayObject);
       props.onConfirm?.(dayjs(cur || curDate.value).format(props.format));
       setDateTimePickerValue(dayjs(cur || curDate.value).format(props.format));
@@ -165,6 +178,10 @@ export default defineComponent({
 
     const onCancel = (context: { e: MouseEvent }) => {
       props.onCancel?.({ e: context.e });
+    };
+
+    const onClose = (triggerSource: TriggerSource) => {
+      props.onClose?.(triggerSource);
     };
 
     const onPick = (value: Array<PickerValue>, context: PickerContext) => {
@@ -189,9 +206,14 @@ export default defineComponent({
           confirm-btn={confirmButtonText.value}
           cancel-btn={cancelButtonText.value}
           columns={columns.value}
+          header={props.header}
+          footer={props.footer}
+          usePopup={props.usePopup}
+          visible={props.visible}
           onConfirm={onConfirm}
           onCancel={onCancel}
           onPick={onPick}
+          onClose={onClose}
         />
       );
     };
