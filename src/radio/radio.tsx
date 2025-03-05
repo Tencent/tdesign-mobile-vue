@@ -1,9 +1,9 @@
-import { inject, computed, defineComponent, Ref } from 'vue';
+import { inject, computed, defineComponent, Ref, toRefs } from 'vue';
 import { CheckIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
-import { useDefault } from '../shared';
 import config from '../config';
 import props from './props';
 import { TdRadioGroupProps, TdRadioProps } from './type';
+import useVModel from '../hooks/useVModel';
 import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
@@ -19,8 +19,14 @@ export default defineComponent({
     const renderTNodeJSX = useTNodeJSX();
     const radioClass = usePrefixClass('radio');
 
-    const [innerChecked, setInnerChecked] = useDefault<boolean, TdRadioProps>(props, context.emit, 'checked', 'change');
-
+    const { checked, modelValue } = toRefs(props);
+    const [innerChecked, setInnerChecked] = useVModel(
+      checked,
+      modelValue,
+      props.defaultChecked,
+      props.onChange,
+      'checked',
+    );
     const rootGroupProps = inject('rootGroupProps', {}) as TdRadioGroupProps;
     const rootGroupValue = inject('rootGroupValue', {}) as Ref;
     const rootGroupChange = inject('rootGroupChange', undefined);

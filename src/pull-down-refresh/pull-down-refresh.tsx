@@ -2,10 +2,11 @@ import { defineComponent, onUnmounted, ref, toRefs, computed, watch, onMounted }
 import { useElementSize } from '@vueuse/core';
 import { debounce } from 'lodash-es';
 import PullDownRefreshProps from './props';
-import { useVModel, convertUnit, reconvertUnit } from '../shared';
+import { convertUnit, reconvertUnit } from '../shared';
 import { preventDefault } from '../shared/dom';
 import config from '../config';
 import TLoading from '../loading';
+import useVModel from '../hooks/useVModel';
 import { useContent } from '../hooks/tnode';
 import { useTouch, isReachTop, easeDistance } from './useTouch';
 import { usePrefixClass, useConfig } from '../hooks/useClass';

@@ -1,9 +1,11 @@
-import { computed, defineComponent, reactive, h, Transition, ref, watch, nextTick, onUnmounted } from 'vue';
+import { computed, defineComponent, reactive, h, Transition, ref, toRefs, watch, nextTick, onUnmounted } from 'vue';
 import { CloseIcon, DeleteIcon } from 'tdesign-icons-vue-next';
 
 import config from '../config';
 import props from './props';
-import { useDefault, isBrowser, useGesture, DragState, PinchState } from '../shared';
+import useDefaultValue from '../hooks/useDefaultValue';
+import { isBrowser, useGesture, DragState, PinchState } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
@@ -32,12 +34,14 @@ export default defineComponent({
       draggedY: 0,
       extraDraggedX: 0,
     });
-    const [visible, setVisible] = useDefault(props, emit, 'visible', 'change');
-    const [currentIndex, setIndex] = useDefault<TdImageViewerProps['index'], TdImageViewerProps>(
-      props,
-      emit,
+
+    const { index, visible, modelValue } = toRefs(props);
+    const [visibleValue, setVisibleValue] = useVModel(visible, modelValue, props.defaultVisible, () => {}, 'visible');
+    const [currentIndex, setCurrentIndex] = useDefaultValue(
+      index,
+      props.defaultIndex ?? 0,
+      props.onIndexChange,
       'index',
-      'index-change',
     );
 
     // 当前图片和当前图左右两边的图片预加载，以保持预览流畅也节省资源
@@ -109,7 +113,7 @@ export default defineComponent({
 
     const handleClose = (e: Event, trigger: string) => {
       beforeClose();
-      setVisible(false);
+      setVisibleValue(false);
       emit('close', { trigger, e });
     };
 
@@ -128,7 +132,7 @@ export default defineComponent({
     const onSwiperChange = (index: number, context: { source: SwiperChangeSource }) => {
       if (currentIndex.value !== index) {
         const trigger = currentIndex.value < index ? 'next' : 'prev';
-        setIndex(index, { trigger });
+        setCurrentIndex(index, { trigger });
         setScale(1);
         setImagePreload(index);
       }
@@ -330,18 +334,18 @@ export default defineComponent({
 
     const gestureOptions = reactive({
       destroyInvisible: true,
-      visible: !!visible.value,
+      visible: !!visibleValue.value,
     });
 
     gestureRef.value = useGesture(gestureOptions);
 
     watch(
-      () => visible.value,
+      () => visibleValue.value,
       (newVal) => (gestureOptions.visible = !!newVal),
     );
 
     watch(
-      () => [visible.value, swiperItemRefs.value],
+      () => [visibleValue.value, swiperItemRefs.value],
       ([newVisible, newRefs]) => {
         if (!newVisible) return;
         nextTick(() => {
@@ -387,7 +391,7 @@ export default defineComponent({
 
     return () => (
       <Transition name="fade">
-        {visible.value && (
+        {visibleValue.value && (
           <div ref={rootRef} class={`${imageViewerClass.value}`}>
             <div class={`${imageViewerClass.value}__mask`} onClick={(e) => handleClose(e, 'overlay')} />
             <TSwiper

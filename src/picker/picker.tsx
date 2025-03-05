@@ -4,7 +4,7 @@ import config from '../config';
 import PickerProps from './props';
 import { KeysType } from '../common';
 import { PickerValue, PickerColumn, PickerColumnItem } from './type';
-import { useVModel } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import PickerItem from './picker-item';
 import { getPickerColumns } from './utils';
