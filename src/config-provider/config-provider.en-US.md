@@ -136,3 +136,12 @@ empty | String | - | \- | N
 name | type | default | description | required
 -- | -- | -- | -- | --
 progress | Object | - | Typescript：`UploadConfigProgress` | N
+
+### UploadConfigProgress
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+failText | String | - | \- | N
+successText | String | - | \- | N
+uploadingText | String | - | \- | N
+waitingText | String | - | \- | N

@@ -310,4 +310,27 @@ export interface UploadConfig {
   progress?: UploadConfigProgress;
 }
 
+export interface UploadConfigProgress {
+  /**
+   * 语言配置，“上传失败”文本描述
+   * @default ''
+   */
+  failText?: string;
+  /**
+   * 语言配置，“上传成功”文本描述
+   * @default ''
+   */
+  successText?: string;
+  /**
+   * 语言配置，“上传中”文本描述
+   * @default ''
+   */
+  uploadingText?: string;
+  /**
+   * 语言配置，“待上传”文本描述
+   * @default ''
+   */
+  waitingText?: string;
+}
+
 export type AnimationType = 'ripple' | 'expand' | 'fade';

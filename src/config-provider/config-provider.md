@@ -136,3 +136,12 @@ empty | String | - | 语言配置，“暂无数据” 描述文本 | N
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 progress | Object | - | 语言配置，上传进度相关。示例：{ uploadText: '上传中', waitingText: '待上传', 'failText': '上传失败', successText: '上传成功' }。TS 类型：`UploadConfigProgress` | N
+
+### UploadConfigProgress
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+failText | String | - | 语言配置，“上传失败”文本描述 | N
+successText | String | - | 语言配置，“上传成功”文本描述 | N
+uploadingText | String | - | 语言配置，“上传中”文本描述 | N
+waitingText | String | - | 语言配置，“待上传”文本描述 | N
