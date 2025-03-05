@@ -1,16 +1,16 @@
 {
   "name": "tdesign-mobile-vue",
   "purename": "tdesign",
-  "version": "1.8.2",
+  "version": "1.8.3-beta",
   "description": "tdesign-mobile-vue",
   "author": "TDesign Group",
   "homepage": "https://tdesign.tencent.com/mobile-vue/",
   "bugs": {
-    "url": "https://github.com/tencent/tdesign-mobile-vue/issues"
+    "url": "https://github.com/Tencent/tdesign-mobile-vue/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tencent/tdesign-mobile-vue"
+    "url": "git+https://github.com/Tencent/tdesign-mobile-vue.git"
   },
   "scripts": {
     "init": "git submodule init && git submodule update",
@@ -154,6 +154,8 @@
     "jsdom": "^20.0.0",
     "less": "^4.1.2",
     "lint-staged": "^10.5.4",
+    "lodash.camelcase": "^4.3.0",
+    "lodash.upperfirst": "^4.3.1",
     "mockdate": "^3.0.5",
     "postcss": "^8.2.1",
     "prettier": "^3.4.2",

@@ -11,7 +11,7 @@
       @change="onChange"
       @blur="onBlur"
     />
-    <t-stepper default-value="999" theme="filled" max="999" />
+    <t-stepper default-value="999" theme="filled" :max="999" />
   </div>
 </template>
 

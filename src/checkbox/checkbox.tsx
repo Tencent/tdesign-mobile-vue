@@ -1,4 +1,4 @@
-import { defineComponent, h, computed, inject } from 'vue';
+import { defineComponent, h, computed, inject, toRefs } from 'vue';
 import {
   CheckIcon,
   MinusIcon,
@@ -10,7 +10,8 @@ import {
 } from 'tdesign-icons-vue-next';
 import config from '../config';
 import CheckboxProps from './props';
-import { TNode, useDefault } from '../shared';
+import { TNode } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { TdCheckboxProps } from '../checkbox/type';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
 import { useFormDisabled } from '../form/hooks';
@@ -27,12 +28,16 @@ export default defineComponent({
     const checkboxClass = usePrefixClass('checkbox');
     const renderTNodeJSX = useTNodeJSX();
     const renderContent = useContent();
-    const [innerChecked, setInnerChecked] = useDefault<boolean, TdCheckboxProps>(
-      props,
-      context.emit,
+
+    const { checked, modelValue } = toRefs(props);
+    const [innerChecked, setInnerChecked] = useVModel(
+      checked,
+      modelValue,
+      props.defaultChecked,
+      props.onChange,
       'checked',
-      'change',
     );
+
     const checkboxGroup: any = inject('checkboxGroup', undefined);
     const disabled = useFormDisabled(checkboxGroup?.disabled);
     const indeterminate = computed<boolean>(() => {

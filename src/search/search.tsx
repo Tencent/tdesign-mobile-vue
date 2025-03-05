@@ -1,10 +1,10 @@
 import { SearchIcon as TSearchIcon, CloseCircleFilledIcon as TIconClear } from 'tdesign-icons-vue-next';
-import { ref, computed, defineComponent, nextTick, h } from 'vue';
+import { ref, toRefs, computed, defineComponent, nextTick, h } from 'vue';
 import { useFocus } from '@vueuse/core';
 import config from '../config';
 import { preventDefault } from '../shared/dom';
 import searchProps from './props';
-import { useDefault } from '../shared/useDefault';
+import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 import useLengthLimit from '../hooks/useLengthLimit';
@@ -24,7 +24,9 @@ export default defineComponent({
     const isShowResultList = ref(false);
     const inputRef = ref<HTMLInputElement>();
     const { focused } = useFocus(inputRef, { initialValue: props.focus });
-    const [searchValue] = useDefault<TdSearchProps['value'], TdSearchProps>(props, context.emit, 'value', 'change');
+
+    const { value, modelValue } = toRefs(props);
+    const [searchValue, setSearchValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
     const boxClasses = computed(() => [
       `${searchClass.value}__input-box`,
@@ -61,7 +63,7 @@ export default defineComponent({
 
     const inputValueChangeHandle = (e: Event) => {
       const { value } = e.target as HTMLInputElement;
-      searchValue.value = getValueByLimitNumber(value);
+      setSearchValue(getValueByLimitNumber(value));
       nextTick(() => setInputValue(searchValue.value));
     };
 
@@ -76,7 +78,7 @@ export default defineComponent({
     };
 
     const handleClear = (e: MouseEvent) => {
-      searchValue.value = '';
+      setSearchValue('');
       focused.value = true;
       props.onClear?.({ e });
     };
@@ -142,7 +144,7 @@ export default defineComponent({
 
       const onSelectResultItem = (params: { item: string }) => {
         isShowResultList.value = false;
-        searchValue.value = params.item;
+        setSearchValue(params.item);
       };
 
       const highlightSearchValue = (item: string, searchValue: string) => {

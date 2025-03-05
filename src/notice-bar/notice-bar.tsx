@@ -5,7 +5,7 @@ import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
 import props from './props';
 import { NoticeBarTrigger, NoticeBarMarquee } from './type';
 import config from '../config';
-import { useVModel } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 

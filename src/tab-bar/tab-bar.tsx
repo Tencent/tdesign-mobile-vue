@@ -1,7 +1,8 @@
 import { defineComponent, ref, provide, Ref, computed, toRefs, VNode } from 'vue';
 import TabBarProps from './props';
 import config from '../config';
-import { useDefault, useChildSlots } from '../shared';
+import { useChildSlots } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
@@ -15,12 +16,15 @@ export default defineComponent({
     const tabBarClass = usePrefixClass('tab-bar');
 
     const renderTNodeJSX = useTNodeJSX();
-    const [activeValue] = useDefault(props, context.emit, 'value', 'change');
+
+    const { value, modelValue } = toRefs(props);
+    const [activeValue, setActiveValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+
     const defaultIndex: Ref<number> = ref(-1);
     const itemCount = ref(0);
 
     const updateChild = (currentValue: number | string) => {
-      activeValue.value = currentValue;
+      setActiveValue(currentValue);
     };
 
     const rootClass = computed(() => [

@@ -4,7 +4,7 @@ import { useSwipe } from '../swipe-cell/useSwipe';
 import config from '../config';
 import props from './props';
 import { SwiperChangeSource, SwiperNavigation } from './type';
-import { useVModel } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { preventDefault } from '../shared/dom';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
@@ -78,8 +78,13 @@ export default defineComponent({
     };
 
     const move = (step: number, source: SwiperChangeSource, isReset = false, targetValue?: number) => {
+      const nextIndex = currentIndex.value + step;
+      if (!props.loop && !(isReset || typeof targetValue === 'number')) {
+        if (nextIndex < 0 || nextIndex >= items.value.length) return;
+      }
+
       animating.value = true;
-      const innerTargetValue = targetValue ?? (isReset ? step : currentIndex.value + step);
+      const innerTargetValue = targetValue ?? (isReset ? step : nextIndex);
       processIndex(innerTargetValue, source);
 
       const moveDirection = !isVertical.value ? 'X' : 'Y';
@@ -160,9 +165,14 @@ export default defineComponent({
 
       animating.value = false;
 
+      const curIndex = currentIndex.value;
+      const maxIndex = items.value.length - 1;
       if (!isVertical.value) {
+        // 非loop状态阻止首个向右滑动，最后个向左滑动的行为
+        if (!props.loop && ((curIndex <= 0 && distanceX < 0) || (curIndex >= maxIndex && distanceX > 0))) return;
         setOffset(-distanceX);
       } else {
+        if (!props.loop && ((curIndex <= 0 && distanceY < 0) || (curIndex >= maxIndex && distanceY > 0))) return;
         setOffset(-distanceY, 'Y');
       }
     };

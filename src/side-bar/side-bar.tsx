@@ -1,8 +1,8 @@
-import { defineComponent, ref, Ref, ComponentInternalInstance, provide } from 'vue';
+import { defineComponent, ref, Ref, toRefs, ComponentInternalInstance, provide } from 'vue';
 import config from '../config';
 import props from './props';
 import { TdSideBarProps } from './type';
-import { useDefault } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
@@ -15,12 +15,8 @@ export default defineComponent({
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();
     const sideBarClass = usePrefixClass('side-bar');
-    const [currentValue, setCurrentValue] = useDefault<TdSideBarProps['value'], TdSideBarProps>(
-      props,
-      context.emit,
-      'value',
-      'change',
-    );
+    const { value, modelValue } = toRefs(props);
+    const [currentValue, setCurrentValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
     const children: Ref<ComponentInternalInstance[]> = ref([]);
 

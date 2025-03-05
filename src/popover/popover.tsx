@@ -1,10 +1,11 @@
-import { defineComponent, computed, ref, watch, onUnmounted, Transition } from 'vue';
+import { defineComponent, computed, ref, toRefs, watch, onUnmounted, Transition } from 'vue';
 import { createPopper, Placement } from '@popperjs/core';
 import PopoverProps from './props';
 import { TdPopoverProps } from './type';
 import config from '../config';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
-import { useDefault, useClickAway } from '../shared';
+import { useClickAway } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
@@ -19,11 +20,13 @@ export default defineComponent({
     const renderTNodeJSX = useTNodeJSX();
     const renderContent = useContent();
 
-    const [currentVisible, setVisible] = useDefault<TdPopoverProps['visible'], TdPopoverProps>(
-      props,
-      context.emit,
+    const { visible, modelValue } = toRefs(props);
+    const [currentVisible, setCurrentVisible] = useVModel(
+      visible,
+      modelValue,
+      props.defaultVisible,
+      props.onVisibleChange,
       'visible',
-      'visible-change',
     );
 
     const referenceRef = ref<HTMLElement>();
@@ -121,7 +124,7 @@ export default defineComponent({
 
     const onClickAway = () => {
       if (currentVisible.value && props.closeOnClickOutside) {
-        setVisible(false);
+        setCurrentVisible(false);
       }
     };
 
@@ -136,19 +139,12 @@ export default defineComponent({
     );
 
     const onClickReference = () => {
-      setVisible(!currentVisible.value);
+      setCurrentVisible(!currentVisible.value);
     };
 
     onUnmounted(() => {
       closeOnClickOutside.value?.();
     });
-
-    watch(
-      () => currentVisible.value,
-      (val) => {
-        setVisible(val);
-      },
-    );
 
     watch(
       () => props.placement,
