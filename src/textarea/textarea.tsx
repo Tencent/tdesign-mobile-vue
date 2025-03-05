@@ -1,5 +1,4 @@
 import { computed, ref, onMounted, defineComponent, toRefs, nextTick, watch, inject } from 'vue';
-import { useVModel } from '../shared';
 import useLengthLimit from '../hooks/useLengthLimit';
 import config from '../config';
 import props from './props';
@@ -9,6 +8,7 @@ import { FormItemInjectionKey } from '../form/const';
 import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
+import useVModel from '../hooks/useVModel';
 
 const { prefix } = config;
 

@@ -11,7 +11,6 @@ export * from './useToggle';
 export * from './useCountDown';
 export * from './useDefault';
 export * from './useChildSlots';
-export * from './useVModel';
 export * from './useTouch';
 export * from './useScrollParent';
 export * from './useExpose';

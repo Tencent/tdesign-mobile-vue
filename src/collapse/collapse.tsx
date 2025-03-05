@@ -3,7 +3,7 @@ import props from './props';
 import config from '../config';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
-import { useVModel } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { CollapseValue, TdCollapseProps } from './type';
 
 export interface CollapseProvide {

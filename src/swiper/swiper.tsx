@@ -4,7 +4,7 @@ import { useSwipe } from '../swipe-cell/useSwipe';
 import config from '../config';
 import props from './props';
 import { SwiperChangeSource, SwiperNavigation } from './type';
-import { useVModel } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { preventDefault } from '../shared/dom';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
