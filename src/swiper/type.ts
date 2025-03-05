@@ -85,6 +85,10 @@ export interface TdSwiperProps {
   onClick?: (index: number) => void;
   /** 是否禁用 */
   disabled?: Boolean;
+  /**
+   * 点击轮播项时停止自动播放
+   */
+  touchStopAutoplay?: Boolean;
 }
 
 export interface SwiperNavigation {
