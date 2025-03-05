@@ -39,6 +39,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 confirm | String | - | confirm text | N
 monthTitle | String | - | \- | N
+months | Array | - | Typescript：`string[]` | N
 title | String | - | \- | N
 weekdays | Array | - | Typescript：`string[]` | N
 
