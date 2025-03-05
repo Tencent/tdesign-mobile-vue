@@ -1,13 +1,27 @@
-import { GlobalIconConfig } from 'tdesign-icons-vue-next';
-import { ButtonProps } from '../button';
+/* eslint-disable */
 
-import { TNode } from '../common';
+/**
+ * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
+ * */
+
+import { ImageProps } from '../image';
+
+export interface TdConfigProviderProps {
+  /**
+   * 全局配置
+   */
+  globalConfig?: GlobalConfigProvider;
+}
 
 export interface GlobalConfigProvider {
   /**
    * 动作面板全局配置
    */
   actionSheet?: ActionSheetConfig;
+  /**
+   * 动画效果控制，`ripple` 指波纹动画， `expand` 指展开动画，`fade` 指渐变动画。默认为 `{ include: ['ripple','expand','fade'], exclude: [] }`
+   */
+  animation?: Partial<Record<'include' | 'exclude', Array<AnimationType>>>;
   /**
    * 日历组件全局配置
    */
@@ -17,18 +31,18 @@ export interface GlobalConfigProvider {
    */
   cascader?: CascaderConfig;
   /**
-   * CSS 类名前缀 【开发中】
+   * CSS 类名前缀
    * @default t
    */
   classPrefix?: string;
   /**
-   * 下拉菜单全局配置
-   */
-  dropdownMenu?: DropdownMenuConfig;
-  /**
    * 时间选择器全局配置
    */
   dateTimePicker?: DateTimePickerConfig;
+  /**
+   * 下拉菜单全局配置
+   */
+  dropdownMenu?: DropdownMenuConfig;
   /**
    * 列表组件全局配置
    */
@@ -46,7 +60,7 @@ export interface GlobalConfigProvider {
    */
   rate?: RateConfig;
   /**
-   * 侧边导航栏全局配置
+   * 标签栏全局配置
    */
   tabBar?: TabBarConfig;
   /**
@@ -57,117 +71,232 @@ export interface GlobalConfigProvider {
    * 上传组件全局配置
    */
   upload?: UploadConfig;
-  /**
-   * 引导组件全局配置
-   * */
-  guide?: GuideConfig;
 }
 
 export interface ActionSheetConfig {
   /**
-   * 取消 描述文本
+   * 语言配置，“取消” 按钮描述文本
    * @default ''
    */
   cancel?: string;
 }
 
 export interface CalendarConfig {
+  /**
+   * 语言配置，“确定” 按钮描述文本
+   * @default ''
+   */
   confirm?: string;
-  title?: string;
-  weekdays?: string[];
+  /**
+   * 语言配置，日期月面板标题描述文本。示例：“{year} / {month}”
+   * @default ''
+   */
   monthTitle?: string;
-  months?: string[];
-}
-export interface CascaderConfig {
+  /**
+   * 语言配置，组件标题“请选择日期”描述文本
+   * @default ''
+   */
   title?: string;
-  placeholder?: string;
+  /**
+   * 星期文本描述，默认值：['日', '一', '二', '三', '四', '五', '六']
+   */
+  weekdays?: string[];
 }
 
-export interface DropdownMenuConfig {
-  reset?: string;
-  confirm?: string;
+export interface CascaderConfig {
+  /**
+   * 语言配置，未选中时的提示文案“选择选项”描述文本
+   * @default ''
+   */
+  placeholder?: string;
+  /**
+   * 语言配置，组件标题“选择地址”描述文本
+   * @default ''
+   */
+  title?: string;
 }
 
 export interface DateTimePickerConfig {
   /**
-   * 语言配置，标题 “选择时间” 描述文本
+   * 语言配置，“取消”按钮描述文本
+   * @default ''
+   */
+  cancel?: string;
+  /**
+   * 语言配置，“确定”按钮描述文本
+   * @default ''
+   */
+  confirm?: string;
+  /**
+   * 语言配置，“日” 描述文本
+   * @default ''
+   */
+  dateLabel?: string;
+  /**
+   * 日期格式化规则
+   * @default YYYY-MM-DD
+   */
+  format?: string;
+  /**
+   * 语言配置，“时” 描述文本
+   * @default ''
+   */
+  hourLabel?: string;
+  /**
+   * 语言配置，“分” 描述文本
+   * @default ''
+   */
+  minuteLabel?: string;
+  /**
+   * 语言配置，“月” 描述文本
+   * @default ''
+   */
+  monthLabel?: string;
+  /**
+   * 语言配置，“秒” 描述文本
+   * @default ''
+   */
+  secondLabel?: string;
+  /**
+   * 语言配置，组件标题“选择时间”描述文本
    * @default ''
    */
   title?: string;
   /**
-   * 取消 描述文本
+   * 语言配置，“年” 描述文本
    * @default ''
    */
-  cancel?: string;
+  yearLabel?: string;
+}
+
+export interface DropdownMenuConfig {
   /**
-   * 语言配置，“确定” 描述文本
+   * 语言配置，“确定” 按钮描述文本
    * @default ''
    */
   confirm?: string;
   /**
-   * 日期格式化规则
-   * @default 'YYYY-MM-DD';
+   * 语言配置，“重置” 按钮描述文本
+   * @default ''
    */
-  format?: string;
-  yearLabel?: string;
-  monthLabel?: string;
-  dateLabel?: string;
-  hourLabel?: string;
-  minuteLabel?: string;
-  secondLabel?: string;
+  reset?: string;
 }
+
+export interface ImageConfig {
+  /**
+   * 图片加载失败显示的文本，中文默认为“图片无法显示”
+   * @default ''
+   */
+  errorText?: string;
+  /**
+   * 图片加载中显示的文本，中文默认为“图片加载中”
+   * @default ''
+   */
+  loadingText?: string;
+  /**
+   * 统一替换图片 `src` 地址，参数为组件的全部属性，返回值为新的图片地址
+   */
+  replaceImageSrc?: (params: ImageProps) => string;
+}
+
+export interface InputConfig {
+  /**
+   * 语言配置，“请输入”占位符描述文本
+   * @default ''
+   */
+  placeholder?: string;
+}
+
+export interface ListConfig {
+  /**
+   * 语言配置，“加载中”描述文本
+   * @default ''
+   */
+  loading?: string;
+  /**
+   * 语言配置，'点击加载更多' 描述文本
+   * @default ''
+   */
+  loadingMoreText?: string;
+  /**
+   * 语言配置，“释放即可刷新”描述文本
+   * @default ''
+   */
+  loosing?: string;
+  /**
+   * 语言配置，“下拉即可刷新”描述文本
+   * @default ''
+   */
+  pulling?: string;
+  /**
+   * 语言配置，“刷新成功”描述文本
+   * @default ''
+   */
+  success?: string;
+}
+
 export interface PickerConfig {
   /**
-   * 取消 描述文本
+   * 语言配置，“取消” 按钮描述文本
    * @default ''
    */
   cancel?: string;
   /**
-   * 语言配置，“确定” 描述文本
+   * 语言配置，“确认” 按钮描述文本
    * @default ''
    */
   confirm?: string;
 }
+
 export interface PullDownRefreshConfig {
   /**
-   * ['下拉刷新', '松手刷新', '正在刷新', '刷新完成']。提示语
-   * @default ''
+   * 提示文本描述，默认值：['下拉刷新', '松手刷新', '正在刷新', '刷新完成']
    */
   loadingTexts?: string[];
 }
 
 export interface RateConfig {
   /**
-   * 语言配置，“分” 描述文本
-   */
-  valueText?: string;
-  /**
-   * 语言配置，“未评分” 描述文本
+   * 语言配置，“未评分”描述文本
+   * @default ''
    */
   noValueText?: string;
+  /**
+   * 语言配置，评分值描述文本。示例：“{value} 分”
+   * @default ''
+   */
+  valueText?: string;
 }
+
 export interface TabBarConfig {
-  newsAriaLabel?: string;
-  moreNewsAriaLabel?: string;
-  haveNewsAriaLabel?: string;
+  /**
+   * 语言配置，“有n+条新的消息”描述文本。示例：“有 {value}+ 条消息”
+   * @default ''
+   */
   haveMoreNewsAriaLabel?: string;
+  /**
+   * 语言配置，“有n条新的消息”描述文本。示例：“有 {value} 条消息”
+   * @default ''
+   */
+  haveNewsAriaLabel?: string;
+  /**
+   * 语言配置，“有很多消息”描述文本
+   * @default ''
+   */
+  moreNewsAriaLabel?: string;
+  /**
+   * 语言配置，“有新的消息”描述文本
+   * @default ''
+   */
+  newsAriaLabel?: string;
 }
 
 export interface TableConfig {
   /**
    * 语言配置，“暂无数据” 描述文本
+   * @default ''
    */
-  empty?: string | TNode;
-}
-
-export type IconConfig = GlobalIconConfig;
-
-export interface ListConfig {
-  loading?: string;
-  loadingMoreText?: string;
-  pulling?: string;
-  loosing?: string;
-  success?: string;
+  empty?: string;
 }
 
 export interface UploadConfig {
@@ -177,36 +306,4 @@ export interface UploadConfig {
   progress?: UploadConfigProgress;
 }
 
-export interface UploadConfigProgress {
-  /**
-   * 语言配置，“上传失败”文本描述
-   * @default ''
-   */
-  failText?: string;
-  /**
-   * 语言配置，“上传成功”文本描述
-   * @default ''
-   */
-  successText?: string;
-  /**
-   * 语言配置，“上传中”文本描述
-   * @default ''
-   */
-  uploadingText?: string;
-  /**
-   * 语言配置，“待上传”文本描述
-   * @default ''
-   */
-  waitingText?: string;
-}
-
-export interface GuideConfig {
-  /** 语言配置， “下一步” 描述文本 */
-  next?: string;
-  /** 语言配置， “跳过” 描述文本 */
-  skip?: string;
-  /** 语言配置， “完成” 描述文本 */
-  finish?: string;
-  /** 语言配置， “返回” 描述文本 */
-  back?: string;
-}
+export type AnimationType = 'ripple' | 'expand' | 'fade';
