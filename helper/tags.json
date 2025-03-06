@@ -292,14 +292,12 @@
   },
   "t-color-picker": {
     "attributes": [
-      "auto-close",
       "clearable",
       "enable-alpha",
       "fixed",
       "format",
       "swatch-colors",
       "type",
-      "use-popup",
       "value",
       "change",
       "close",
