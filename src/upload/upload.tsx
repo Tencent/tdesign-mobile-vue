@@ -115,6 +115,11 @@ export default defineComponent({
         );
       }
     };
+    const removeAllFiles = () => {
+      displayFiles.value.forEach((file, index) => {
+        onInnerRemove({ e: new MouseEvent('click'), file, index });
+      });
+    };
     expose({
       upload: inputRef.value,
       uploading,
@@ -122,6 +127,7 @@ export default defineComponent({
       uploadFiles,
       cancelUpload,
       uploadFilePercent,
+      removeAllFiles, // 新增的方法
     });
     return () => {
       return (
