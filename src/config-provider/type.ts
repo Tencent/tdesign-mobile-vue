@@ -5,6 +5,7 @@
  * */
 
 import { ImageProps } from '../image';
+import { TNode } from '../common';
 
 export interface TdConfigProviderProps {
   /**
@@ -325,9 +326,8 @@ export interface TabBarConfig {
 export interface TableConfig {
   /**
    * 语言配置，“暂无数据” 描述文本
-   * @default ''
    */
-  empty?: string;
+  empty?: string | TNode;
 }
 
 export interface UploadConfig {

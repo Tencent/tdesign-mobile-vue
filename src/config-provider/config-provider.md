@@ -139,7 +139,7 @@ newsAriaLabel | String | - | 语言配置，“有新的消息”描述文本 | 
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-empty | String | - | 语言配置，“暂无数据” 描述文本 | N
+empty | String / Slot / Function | - | 语言配置，“暂无数据” 描述文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 
 ### UploadConfig
 
