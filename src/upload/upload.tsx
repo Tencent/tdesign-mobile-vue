@@ -43,6 +43,7 @@ export default defineComponent({
       uploadFiles,
       onNormalFileChange,
       onInnerRemove,
+      onInnerRemoveAll,
       cancelUpload,
     } = useUpload(props);
 
@@ -116,9 +117,7 @@ export default defineComponent({
       }
     };
     const removeAllFiles = () => {
-      displayFiles.value.forEach((file, index) => {
-        onInnerRemove({ e: new MouseEvent('click'), file, index });
-      });
+      onInnerRemoveAll();
     };
     expose({
       upload: inputRef.value,

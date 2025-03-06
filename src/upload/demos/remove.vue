@@ -4,15 +4,16 @@
     <t-upload
       ref="uploadRef"
       v-model="files"
-      :multiple="false"
-      :max="1"
+      :multiple="true"
+      :max="6"
       accept="image/*"
       action="https://apifoxmock.com/m1/5139971-4803795-cac090a1/test"
+      :format-response="formatResponseUpload"
       @success="onSuccessUpload"
       @fail="onFailUpload"
-      :formatResponse="formatResponseUpload"
     >
     </t-upload>
+    <t-button @click="clear">清空全部</t-button>
   </div>
 </template>
 
@@ -30,7 +31,7 @@ const formatResponseUpload = (response: any, context: any) => {
   // Define your response formatting logic here
   console.log(response);
 
-  response.error = response.msg || '上传失败22222';
+  // response.error = response.msg || '上传失败22222';
 
   console.log('formatResponse', response);
   return response;
@@ -38,18 +39,22 @@ const formatResponseUpload = (response: any, context: any) => {
 const onFailUpload = (context: any) => {
   console.error('Upload failed', context);
   // Message.warning(context.response.error);
-  Toast({
-    style: { color: 'red' },
-    // theme: "error",
-    direction: 'row',
-    message: context.response.error,
-    onDestroy: () => {
-      console.log('需要清除图片内容');
-      uploadRef.value.removeAllFiles();
-    },
-  });
+  // Toast({
+  //   style: { color: 'red' },
+  //   // theme: "error",
+  //   direction: 'row',
+  //   message: context.response.error,
+  //   onDestroy: () => {
+  //     console.log('需要清除图片内容');
+  //     uploadRef.value.removeAllFiles();
+  //   },
+  // });
 
   // response error 有问题 不显示错误信息
+};
+
+const clear = () => {
+  uploadRef.value.removeAllFiles();
 };
 </script>
 
