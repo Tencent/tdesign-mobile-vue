@@ -6,3 +6,4 @@ export * from './useLengthLimit';
 export * from './useLockScroll';
 export * from './useTeleport';
 export * from './useToggle';
+export * from './useChildSlots';

@@ -8,7 +8,6 @@ export { default as TNode } from './render-tnode';
 
 /* Vue3 use */
 export * from './useCountDown';
-export * from './useChildSlots';
 export * from './useTouch';
 export * from './useScrollParent';
 export * from './useExpose';
