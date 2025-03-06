@@ -7,7 +7,6 @@ export * from './dom';
 export { default as TNode } from './render-tnode';
 
 /* Vue3 use */
-export * from './useToggle';
 export * from './useCountDown';
 export * from './useChildSlots';
 export * from './useTouch';
