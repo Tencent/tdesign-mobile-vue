@@ -44,6 +44,10 @@ export interface GlobalConfigProvider {
    */
   dropdownMenu?: DropdownMenuConfig;
   /**
+   * 引导全局配置
+   */
+  guide?: GuideConfig;
+  /**
    * 列表组件全局配置
    */
   list?: ListConfig;
@@ -184,6 +188,29 @@ export interface DropdownMenuConfig {
    * @default ''
    */
   reset?: string;
+}
+
+export interface GuideConfig {
+  /**
+   * 语言配置， “返回” 描述文本
+   * @default ''
+   */
+  back?: string;
+  /**
+   * 语言配置， “完成” 描述文本
+   * @default ''
+   */
+  finish?: string;
+  /**
+   * 语言配置， “下一步” 描述文本
+   * @default ''
+   */
+  next?: string;
+  /**
+   * 语言配置， “跳过” 描述文本
+   * @default ''
+   */
+  skip?: string;
 }
 
 export interface ImageConfig {

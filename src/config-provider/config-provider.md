@@ -19,6 +19,7 @@ cascader | Object | - | 级联选择器全局配置。TS 类型：`CascaderConfi
 classPrefix | String | t | CSS 类名前缀 | N
 dateTimePicker | Object | - | 时间选择器全局配置。TS 类型：`DateTimePickerConfig` | N
 dropdownMenu | Object | - | 下拉菜单全局配置。TS 类型：`DropdownMenuConfig` | N
+guide | Object | - | 引导全局配置。TS 类型：`GuideConfig` | N
 list | Object | - | 列表组件全局配置。TS 类型：`ListConfig` | N
 picker | Object | - | 选择器全局配置。TS 类型：`PickerConfig` | N
 pullDownRefresh | Object | - | 下拉刷新全局配置。TS 类型：`PullDownRefreshConfig` | N
@@ -71,6 +72,15 @@ yearLabel | String | - | 语言配置，“年” 描述文本 | N
 -- | -- | -- | -- | --
 confirm | String | - | 语言配置，“确定” 按钮描述文本 | N
 reset | String | - | 语言配置，“重置” 按钮描述文本 | N
+
+### GuideConfig
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+back | String | - | 语言配置， “返回” 描述文本 | N
+finish | String | - | 语言配置， “完成” 描述文本 | N
+next | String | - | 语言配置， “下一步” 描述文本 | N
+skip | String | - | 语言配置， “跳过” 描述文本 | N
 
 ### ImageConfig
 
