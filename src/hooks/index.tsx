@@ -7,3 +7,4 @@ export * from './useLockScroll';
 export * from './useTeleport';
 export * from './useToggle';
 export * from './useChildSlots';
+export * from './useExpose';

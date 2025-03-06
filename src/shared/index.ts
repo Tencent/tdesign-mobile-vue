@@ -10,7 +10,6 @@ export { default as TNode } from './render-tnode';
 export * from './useCountDown';
 export * from './useTouch';
 export * from './useScrollParent';
-export * from './useExpose';
 export * from './useTest';
 export * from './useClickAway';
 export * from './useGesture';
