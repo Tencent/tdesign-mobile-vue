@@ -937,10 +937,6 @@
     "type": "String|Number",
     "description": "当前面板唯一标识，如果值为空则取当前面下标兜底作为唯一标识\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/collapse?tab=api#collapsepanel-props)"
   },
-  "t-color-picker/auto-close": {
-    "type": "Boolean",
-    "description": "自动关闭。在点击遮罩层时自动关闭，不需要手动设置 visible\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
-  },
   "t-color-picker/clearable": {
     "type": "Boolean",
     "description": "是否可清空\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
@@ -980,10 +976,6 @@
       "multiple"
     ],
     "description": "颜色选择器类型。（base 表示仅展示系统预设内容; multiple 表示展示色板和系统预设内容\n\ndefault: base\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
-  },
-  "t-color-picker/use-popup": {
-    "type": "Boolean",
-    "description": "是否使用弹出层包裹颜色选择器\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
   },
   "t-color-picker/value": {
     "type": "String",
