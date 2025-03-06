@@ -8,3 +8,4 @@ export * from './useTeleport';
 export * from './useToggle';
 export * from './useChildSlots';
 export * from './useExpose';
+export * from './useGesture';
