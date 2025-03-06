@@ -24,7 +24,7 @@ export default defineComponent({
     const renderTNodeJSX = useTNodeJSX();
     const { classPrefix, tableLayoutClasses, tableHeaderClasses, tableBaseClass, tdAlignClasses, tdEllipsisClass } =
       useClassName();
-    const { globalConfig } = useConfig('table');
+    const { globalConfig, t } = useConfig('table');
     const defaultLoadingContent = h(TLoading, { ...(props.loadingProps as TdLoadingProps) });
     // 表格基础样式类
     const { tableClasses, tableContentStyles, tableElementStyles } = useStyle(props);
@@ -140,7 +140,7 @@ export default defineComponent({
     };
 
     const renderTableBody = () => {
-      const renderContentEmpty = renderTNodeJSX('empty') || globalConfig.value.empty;
+      const renderContentEmpty = renderTNodeJSX('empty') || t(globalConfig.value.empty);
       if (!props.data?.length && renderContentEmpty) {
         return (
           <tr class={tableBaseClass.emptyRow}>
