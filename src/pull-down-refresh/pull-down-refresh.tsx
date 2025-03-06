@@ -124,12 +124,15 @@ export default defineComponent({
 
       actualLoadingBarHeight.value = diffY.value;
       const nextDistance = easeDistance(diffY.value, loadingBarHeight.value);
-      // 下拉时，防止下拉整个页面
+      // 确保只在下拉时更新滑动距离
       if (diffY.value > 0) {
+        actualLoadingBarHeight.value = diffY.value;
+        const nextDistance = easeDistance(diffY.value, loadingBarHeight.value);
+        // 下拉时，防止下拉整个页面
         preventDefault(e, false);
-      }
-      if (nextDistance >= 0 && nextDistance < maxBarHeight.value) {
-        distance.value = nextDistance;
+        if (nextDistance >= 0 && nextDistance < maxBarHeight.value) {
+          distance.value = nextDistance;
+        }
       }
     };
 
