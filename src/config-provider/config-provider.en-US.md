@@ -13,7 +13,6 @@ globalConfig | Object | - | global config。Typescript：`GlobalConfigProvider` 
 name | type | default | description | required
 -- | -- | -- | -- | --
 actionSheet | Object | - | ActionSheet global configs。Typescript：`ActionSheetConfig` | N
-animation | Object | - | Typescript：`Partial<Record<'include'\|'exclude', Array<AnimationType>>>` `type AnimationType = 'ripple' \| 'expand' \| 'fade'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/config-provider/type.ts) | N
 calendar | Object | - | Calendar global configs。Typescript：`CalendarConfig` | N
 cascader | Object | - | Cascader global configs。Typescript：`CascaderConfig` | N
 classPrefix | String | t | \- | N

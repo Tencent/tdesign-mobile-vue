@@ -20,10 +20,6 @@ export interface GlobalConfigProvider {
    */
   actionSheet?: ActionSheetConfig;
   /**
-   * 动画效果控制，`ripple` 指波纹动画， `expand` 指展开动画，`fade` 指渐变动画。默认为 `{ include: ['ripple','expand','fade'], exclude: [] }`
-   */
-  animation?: Partial<Record<'include' | 'exclude', Array<AnimationType>>>;
-  /**
    * 日历组件全局配置
    */
   calendar?: CalendarConfig;
@@ -359,5 +355,3 @@ export interface UploadConfigProgress {
    */
   waitingText?: string;
 }
-
-export type AnimationType = 'ripple' | 'expand' | 'fade';

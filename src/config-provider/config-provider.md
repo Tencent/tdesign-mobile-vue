@@ -13,7 +13,6 @@ globalConfig | Object | - | 全局配置。TS 类型：`GlobalConfigProvider` | 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 actionSheet | Object | - | 动作面板全局配置。TS 类型：`ActionSheetConfig` | N
-animation | Object | - | 动画效果控制，`ripple` 指波纹动画， `expand` 指展开动画，`fade` 指渐变动画。默认为 `{ include: ['ripple','expand','fade'], exclude: [] }`。TS 类型：`Partial<Record<'include'\|'exclude', Array<AnimationType>>>` `type AnimationType = 'ripple' \| 'expand' \| 'fade'`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/config-provider/type.ts) | N
 calendar | Object | - | 日历组件全局配置。TS 类型：`CalendarConfig` | N
 cascader | Object | - | 级联选择器全局配置。TS 类型：`CascaderConfig` | N
 classPrefix | String | t | CSS 类名前缀 | N
