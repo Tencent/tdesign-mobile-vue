@@ -129,7 +129,7 @@ type MessageApi = {
 export const MessagePlugin: WithInstallType<typeof Message> & MessageApi = Message as any;
 export default MessagePlugin;
 
-declare module '@vue/runtime-core' {
+declare module 'vue' {
   // Bind to `this` keyword
   export interface ComponentCustomProperties {
     $message: MessageApi;
