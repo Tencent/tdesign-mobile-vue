@@ -1,6 +1,13 @@
-export function sortDocs(docs: any[]) {
-  let innerDocs = [];
-  docs.forEach((item) => {
+interface DocType {
+  title: string;
+  titleEn?: string;
+  type: string;
+  children: DocType[];
+}
+
+export function sortDocs(docs: DocType[]): DocType[] {
+  let innerDocs: DocType[] = [];
+  docs.forEach((item: DocType) => {
     let { children } = item;
     if (item.type === 'component') {
       children = item.children.sort((a: any, b: any) => {
@@ -20,13 +27,16 @@ export function sortDocs(docs: any[]) {
 }
 
 // 过滤小版本号
-export function filterVersions(versions = [], deep = 1) {
-  const versionMap = Object.create(null);
+export function filterVersions(versions = []) {
+  const versionMap = new Map();
 
-  versions.forEach((v) => {
+  versions.forEach((v: string) => {
+    if (v.includes('-')) return false;
     const nums = v.split('.');
-    versionMap[nums[deep]] = v;
+    versionMap.set(`${nums[0]}.${nums[1]}`, v);
   });
 
-  return Object.values(versionMap);
+  return [...versionMap.values()].sort(
+    (a, b) => Number(a.split('.').slice(0, 2).join('.')) - Number(b.split('.').slice(0, 2).join('.')),
+  );
 }
