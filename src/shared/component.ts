@@ -1,8 +1,8 @@
-import { App, Plugin, getCurrentInstance } from 'vue';
+import { App, Component, Plugin, getCurrentInstance } from 'vue';
 
 export type WithInstallType<T> = T & Plugin;
 export const withInstall = <T>(comp: T, alias?: string): T & Plugin => {
-  const c = comp as any;
+  const c = comp as T & Component & Plugin;
 
   c.install = (app: App, name?: string) => {
     const defaultName = c.name;
