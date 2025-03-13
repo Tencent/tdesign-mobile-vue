@@ -520,5 +520,6 @@ exports[`DateTimePicker > props > : onPick 1`] = `
       class="t-picker__indicator"
     />
   </div>
+  <!---->
 </div>
 `;
