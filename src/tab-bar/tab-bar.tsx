@@ -1,7 +1,7 @@
 import { defineComponent, ref, provide, Ref, computed, toRefs, VNode } from 'vue';
 import TabBarProps from './props';
 import config from '../config';
-import { useChildSlots } from '../shared';
+import useChildSlots from '../hooks/useChildSlots';
 import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
