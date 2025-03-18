@@ -103,7 +103,7 @@ export default defineComponent({
 
     const onTouchMove = (e: TouchEvent) => {
       e.stopPropagation();
-      if (!isReachTop(e) || loading.value) return;
+      if (!isReachTop(e) || loading.value || document.documentElement.scrollTop > 0) return;
       touch.move(e);
 
       const { diffY, diffX } = touch;
