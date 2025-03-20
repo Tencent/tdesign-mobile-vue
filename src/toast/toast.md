@@ -14,7 +14,7 @@ overlayProps | Object | {} | 遮罩层属性，透传至 Overlay。TS 类型：`
 placement | String | middle | 弹窗展示位置。可选项： top/middle/bottom | N
 preventScrollThrough | Boolean | false | 防止滚动穿透，即不允许点击和滚动 | N
 showOverlay | Boolean | false | 是否显示遮罩层 | N
-theme | String | - | 提示类型。可选项：loading/success/error | N
+theme | String | - | 提示类型。可选项：loading/success/warning/error | N
 onClose | Function |  | TS 类型：`() => void`<br/>轻提示隐藏的时候触发 | N
 onDestroy | Function |  | TS 类型：`() => void`<br/>轻提示销毁的时候触发 | N
 

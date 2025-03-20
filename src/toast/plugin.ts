@@ -64,7 +64,7 @@ Toast.clear = () => {
   }
 };
 
-(['loading', 'success', 'error'] as ToastOptions['theme'][]).forEach((type): void => {
+(['loading', 'success', 'warning', 'error'] as ToastOptions['theme'][]).forEach((type): void => {
   if (!type) {
     return;
   }
@@ -101,6 +101,8 @@ type ToastApi = {
   loading: (options?: Partial<ToastOptions> | string) => void;
   /** 展示成功提示 */
   success: (options?: Partial<ToastOptions> | string) => void;
+  /** 展示警告提示 */
+  warning: (options?: Partial<ToastOptions> | string) => void;
   /** 展示失败提示 */
   error: (options?: Partial<ToastOptions> | string) => void;
   /** 关闭提示 */

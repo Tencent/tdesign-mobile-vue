@@ -53,7 +53,7 @@ export default {
     type: String as PropType<TdToastProps['theme']>,
     validator(val: TdToastProps['theme']): boolean {
       if (!val) return true;
-      return ['loading', 'success', 'error'].includes(val);
+      return ['loading', 'success', 'warning', 'error'].includes(val);
     },
   },
   /** 轻提示隐藏的时候触发 */
