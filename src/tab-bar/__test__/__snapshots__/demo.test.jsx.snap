@@ -1083,7 +1083,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M2 4h20v2H2V4zm0 7h20v2H2v-2zm1 7H2v2h20v-2H3z"
+                  d="M2 4H3H21H22V6H21H3H2V4ZM2 11H3H21H22V13H21H3H2V11ZM3 18H2V20H3H21H22V18H21H3Z"
                   fill="currentColor"
                 />
               </svg>
@@ -2043,7 +2043,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M2 4h20v2H2V4zm0 7h20v2H2v-2zm1 7H2v2h20v-2H3z"
+            d="M2 4H3H21H22V6H21H3H2V4ZM2 11H3H21H22V13H21H3H2V11ZM3 18H2V20H3H21H22V18H21H3Z"
             fill="currentColor"
           />
         </svg>
