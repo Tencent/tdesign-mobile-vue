@@ -5,6 +5,18 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.8.3 `2025-03-23` 
+### 🚀 Features
+- `Icon`: 更新图标版本至 `0.3.5`([#1808](https://github.com/Tencent/tdesign-mobile-vue/pull/1808))
+- `Toast`: 新增 `warning` 主题 @betavs ([#1806](https://github.com/Tencent/tdesign-mobile-vue/pull/1806))
+### 🐞 Bug Fixes
+- `Input`:  修复 `v-model` 初始值为 `undefined` 时无法响应式更新 @anlyyao ([#1782](https://github.com/Tencent/tdesign-mobile-vue/pull/1782))
+- `Swiper`: 修复 `loop` 属性为 `false` 时，首个及最后一个滑动项闪烁的问题 @mikasayw ([#1781](https://github.com/Tencent/tdesign-mobile-vue/pull/1781))
+- `Message`: 修复函数式调用时 `onCloseBtnClick` 属性无效 @anlyyao ([#1790](https://github.com/Tencent/tdesign-mobile-vue/pull/1790))
+- `pullDownRefresh`: 修复非顶部下拉出现刷新事件触发的问题 @RSS1102 ([#1805](https://github.com/Tencent/tdesign-mobile-vue/pull/1805))
+### 🚧 Others
+- fix: 修复 cjs bundle 的依赖报错问题 @anlyyao ([#1777](https://github.com/Tencent/tdesign-mobile-vue/pull/1777))
+
 ## 🌈 1.8.2 `2025-02-19` 
 ### 🐞 Bug Fixes
 - `Tabbar`: 修复控制台告警，优化子节点数量更新逻辑 @anlyyao ([#1767](https://github.com/Tencent/tdesign-mobile-vue/pull/1767))
