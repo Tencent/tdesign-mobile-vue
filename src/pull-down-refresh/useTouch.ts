@@ -2,7 +2,7 @@ import { ref } from 'vue';
 
 const isElement = (node: Element) => {
   const ELEMENT_NODE_TYPE = 1;
-  return node.tagName !== 'HTML' && node.tagName !== 'BODY' && node.nodeType === ELEMENT_NODE_TYPE;
+  return node.nodeType === ELEMENT_NODE_TYPE;
 };
 
 export function useTouch() {
@@ -43,16 +43,22 @@ export const easeDistance = (distance: number, pullDistance: number) => {
   }
   return Math.round(distance);
 };
+
 // 获取最新的可滚动父元素
-export const getScrollParent = (node: Element) => {
+export function getScrollParent(node: Element): Element | null {
   let res = node;
   while (res && isElement(res)) {
-    if (/auto|scroll/i.test(window.getComputedStyle(res).overflowY)) {
+    const style = window.getComputedStyle(res);
+    const isScrollableY = /auto|scroll/i.test(style.overflowY);
+    const canScrollY = ['hidden', 'visible'].includes(style.overflowY) && res.scrollHeight > res.clientHeight;
+    if (isScrollableY || canScrollY) {
       return res;
     }
     res = res.parentNode as Element;
   }
-};
+  return null;
+}
+
 // 确保可滚动的父元素此时处于未滚动状态
 export const isReachTop = (e: TouchEvent) => {
   const scrollParent = getScrollParent(e.target as Element);

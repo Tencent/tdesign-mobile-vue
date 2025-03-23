@@ -1,4 +1,4 @@
-import { LoadingIcon, CheckCircleIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
+import { LoadingIcon, CheckCircleIcon, ErrorCircleIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
 import { computed, defineComponent, h, ref } from 'vue';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import TOverlay from '../overlay';
@@ -16,6 +16,7 @@ export default defineComponent({
     const toastTypeIcon = {
       loading: LoadingIcon,
       success: CheckCircleIcon,
+      warning: ErrorCircleIcon,
       error: CloseCircleIcon,
     };
 

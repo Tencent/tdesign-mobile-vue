@@ -7,9 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { h } from 'vue';
 import { Toast } from 'tdesign-mobile-vue';
-import { ErrorCircleIcon } from 'tdesign-icons-vue-next';
 
 const showSuccessToast = () => {
   Toast({
@@ -22,7 +20,7 @@ const showSuccessToast = () => {
 };
 const showWarningToast = () => {
   Toast({
-    icon: () => h(ErrorCircleIcon),
+    theme: 'warning',
     direction: 'column',
     message: '轻提示文字内容',
   });

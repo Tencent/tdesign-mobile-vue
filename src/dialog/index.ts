@@ -143,7 +143,7 @@ type DialogApi = {
 export const DialogPlugin: WithInstallType<typeof Dialog> & DialogApi = Dialog as any;
 export default DialogPlugin;
 
-declare module '@vue/runtime-core' {
+declare module 'vue' {
   // Bind to `this` keyword
   export interface ComponentCustomProperties {
     $dialog: DialogApi;

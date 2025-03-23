@@ -1,4 +1,5 @@
 import { createApp, defineComponent, ref, h, VNode, App, nextTick } from 'vue';
+import { context } from '../dropdown-menu/context';
 import Message from './message';
 import { WithInstallType, isBrowser } from '../shared';
 import { TdMessageProps, MessageThemeList } from './type';
@@ -44,7 +45,8 @@ function create(props: MessageActionOptionsType): void {
           otherOptions.onDurationEnd?.();
           visible.value = false;
         },
-        onCloseBtnClick: () => {
+        onCloseBtnClick: (context: { e: MouseEvent }) => {
+          otherOptions.onCloseBtnClick?.(context);
           visible.value = false;
         },
         onAfterLeave: () => {
@@ -127,7 +129,7 @@ type MessageApi = {
 export const MessagePlugin: WithInstallType<typeof Message> & MessageApi = Message as any;
 export default MessagePlugin;
 
-declare module '@vue/runtime-core' {
+declare module 'vue' {
   // Bind to `this` keyword
   export interface ComponentCustomProperties {
     $message: MessageApi;

@@ -13,7 +13,7 @@
 
 <script>
 import siteConfig from '../docs.config';
-import { sortDocs } from './utils';
+import { sortDocs, filterVersions } from './utils';
 import { defineComponent } from 'vue';
 import packageJson from '../../package.json';
 
@@ -106,12 +106,16 @@ export default defineComponent({
         .then((res) => res.json())
         .then((res) => {
           const options = [];
-          Object.keys(res.versions).forEach((v) => {
-            const nums = v.split('.');
-            if (nums[0] === '0' && nums[1] < 7) return false;
+          const versions = filterVersions(Object.keys(res.versions));
 
+          versions.forEach((v) => {
             options.unshift({ label: v, value: v.replace(/\./g, '_') });
           });
+
+          if (this.version !== options[0].value) {
+            this.version = options[0].value;
+          }
+
           this.$refs.tdSelect.options = options;
         });
     },
