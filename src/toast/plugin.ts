@@ -112,7 +112,7 @@ type ToastApi = {
 export const ToastPlugin: WithInstallType<typeof vueToast> & ToastApi = Toast as any;
 export default ToastPlugin;
 
-declare module '@vue/runtime-core' {
+declare module 'vue' {
   // Bind to `this` keyword
   export interface ComponentCustomProperties {
     $toast: ToastApi;
