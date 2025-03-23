@@ -13,7 +13,7 @@ spline: explain
 - `Input`:  修复 `v-model` 初始值为 `undefined` 时无法响应式更新 @anlyyao ([#1782](https://github.com/Tencent/tdesign-mobile-vue/pull/1782))
 - `Swiper`: 修复 `loop` 属性为 `false` 时，首个及最后一个滑动项闪烁的问题 @mikasayw ([#1781](https://github.com/Tencent/tdesign-mobile-vue/pull/1781))
 - `Message`: 修复函数式调用时 `onCloseBtnClick` 属性无效 @anlyyao ([#1790](https://github.com/Tencent/tdesign-mobile-vue/pull/1790))
-- `pullDownRefresh`: 修复非顶部下拉出现刷新事件触发的问题 @RSS1102 ([#1805](https://github.com/Tencent/tdesign-mobile-vue/pull/1805))
+- `PullDownRefresh`: 修复非顶部下拉出现刷新事件触发的问题 @RSS1102 ([#1805](https://github.com/Tencent/tdesign-mobile-vue/pull/1805))
 ### 🚧 Others
 - fix: 修复 cjs bundle 的依赖报错问题 @anlyyao ([#1777](https://github.com/Tencent/tdesign-mobile-vue/pull/1777))
 
