@@ -12,10 +12,10 @@
 </template>
 
 <script>
-import siteConfig from '../docs.config';
-import { sortDocs, filterVersions } from './utils';
 import { defineComponent } from 'vue';
 import packageJson from '../../package.json';
+import siteConfig from '../docs.config';
+import { filterVersions, sortDocs } from './utils';
 
 const registryUrl =
   'https://service-edbzjd6y-1257786608.hk.apigw.tencentcs.com/release/npm/versions/tdesign-mobile-vue';
@@ -27,32 +27,6 @@ const docsMap = {
   zh: sortDocs(docs),
   en: sortDocs(enDocs),
 };
-
-function watchHtmlMode(callback = () => {}) {
-  const targetNode = document.documentElement;
-  const config = { attributes: true };
-
-  const observerCallback = (mutationsList) => {
-    for (const mutation of mutationsList) {
-      if (mutation.attributeName === 'theme-mode') {
-        const themeMode = mutation.target.getAttribute('theme-mode') || 'light';
-        if (themeMode) callback(themeMode);
-      }
-    }
-  };
-
-  const observer = new MutationObserver(observerCallback);
-  observer.observe(targetNode, config);
-
-  return observer;
-}
-
-function changeIframeMode(mode) {
-  const iframe = document.querySelector('iframe');
-  if (iframe?.contentWindow) {
-    iframe.contentWindow.document.documentElement.setAttribute('theme-mode', mode);
-  }
-}
 
 export default defineComponent({
   data() {
@@ -87,9 +61,8 @@ export default defineComponent({
       const historyUrl = `https://${version}-tdesign-mobile-vue.surge.sh`;
       window.open(historyUrl, '_blank');
     };
-
     this.initHistoryVersions();
-    watchHtmlMode(changeIframeMode);
+    this.initThemeGenerator();
   },
 
   watch: {
@@ -118,6 +91,11 @@ export default defineComponent({
 
           this.$refs.tdSelect.options = options;
         });
+    },
+    initThemeGenerator() {
+      const generator = document.createElement('td-theme-generator');
+      generator.setAttribute('device', 'mobile');
+      document.body.appendChild(generator);
     },
     contentLoaded(callback) {
       requestAnimationFrame(() => {
