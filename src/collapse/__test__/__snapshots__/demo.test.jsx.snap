@@ -59,7 +59,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M17.5 15.91l-5.5-5.5-5.5 5.5-1.41-1.41L12 7.59l6.91 6.91-1.41 1.41z"
+                  d="M17.5001 15.9142L12.0002 10.4142L6.50015 15.9142L5.08594 14.5L12.0002 7.58582L18.9144 14.5L17.5001 15.9142Z"
                   fill="currentColor"
                 />
               </svg>
@@ -143,7 +143,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
+                  d="M17.5001 8.08582L12.0002 13.5858L6.50015 8.08582L5.08594 9.50003L12.0002 16.4142L18.9144 9.50003L17.5001 8.08582Z"
                   fill="currentColor"
                 />
               </svg>
@@ -227,7 +227,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
+                  d="M17.5001 8.08582L12.0002 13.5858L6.50015 8.08582L5.08594 9.50003L12.0002 16.4142L18.9144 9.50003L17.5001 8.08582Z"
                   fill="currentColor"
                 />
               </svg>
@@ -311,7 +311,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
+                  d="M17.5001 8.08582L12.0002 13.5858L6.50015 8.08582L5.08594 9.50003L12.0002 16.4142L18.9144 9.50003L17.5001 8.08582Z"
                   fill="currentColor"
                 />
               </svg>
@@ -405,7 +405,7 @@ exports[`Collapse > Collapse actionVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M17.5 15.91l-5.5-5.5-5.5 5.5-1.41-1.41L12 7.59l6.91 6.91-1.41 1.41z"
+                  d="M17.5001 15.9142L12.0002 10.4142L6.50015 15.9142L5.08594 14.5L12.0002 7.58582L18.9144 14.5L17.5001 15.9142Z"
                   fill="currentColor"
                 />
               </svg>
@@ -492,7 +492,7 @@ exports[`Collapse > Collapse baseVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
+                  d="M17.5001 8.08582L12.0002 13.5858L6.50015 8.08582L5.08594 9.50003L12.0002 16.4142L18.9144 9.50003L17.5001 8.08582Z"
                   fill="currentColor"
                 />
               </svg>
@@ -580,7 +580,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M17.5 15.91l-5.5-5.5-5.5 5.5-1.41-1.41L12 7.59l6.91 6.91-1.41 1.41z"
+                  d="M17.5001 15.9142L12.0002 10.4142L6.50015 15.9142L5.08594 14.5L12.0002 7.58582L18.9144 14.5L17.5001 15.9142Z"
                   fill="currentColor"
                 />
               </svg>
@@ -658,7 +658,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
+                  d="M17.5001 8.08582L12.0002 13.5858L6.50015 8.08582L5.08594 9.50003L12.0002 16.4142L18.9144 9.50003L17.5001 8.08582Z"
                   fill="currentColor"
                 />
               </svg>
@@ -736,7 +736,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
+                  d="M17.5001 8.08582L12.0002 13.5858L6.50015 8.08582L5.08594 9.50003L12.0002 16.4142L18.9144 9.50003L17.5001 8.08582Z"
                   fill="currentColor"
                 />
               </svg>
@@ -814,7 +814,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
+                  d="M17.5001 8.08582L12.0002 13.5858L6.50015 8.08582L5.08594 9.50003L12.0002 16.4142L18.9144 9.50003L17.5001 8.08582Z"
                   fill="currentColor"
                 />
               </svg>
@@ -936,7 +936,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                       width="1em"
                     >
                       <path
-                        d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
+                        d="M17.5001 8.08582L12.0002 13.5858L6.50015 8.08582L5.08594 9.50003L12.0002 16.4142L18.9144 9.50003L17.5001 8.08582Z"
                         fill="currentColor"
                       />
                     </svg>
@@ -1040,7 +1040,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                       width="1em"
                     >
                       <path
-                        d="M17.5 15.91l-5.5-5.5-5.5 5.5-1.41-1.41L12 7.59l6.91 6.91-1.41 1.41z"
+                        d="M17.5001 15.9142L12.0002 10.4142L6.50015 15.9142L5.08594 14.5L12.0002 7.58582L18.9144 14.5L17.5001 15.9142Z"
                         fill="currentColor"
                       />
                     </svg>
@@ -1146,7 +1146,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                       width="1em"
                     >
                       <path
-                        d="M17.5 15.91l-5.5-5.5-5.5 5.5-1.41-1.41L12 7.59l6.91 6.91-1.41 1.41z"
+                        d="M17.5001 15.9142L12.0002 10.4142L6.50015 15.9142L5.08594 14.5L12.0002 7.58582L18.9144 14.5L17.5001 15.9142Z"
                         fill="currentColor"
                       />
                     </svg>
@@ -1257,7 +1257,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                       width="1em"
                     >
                       <path
-                        d="M17.5 15.91l-5.5-5.5-5.5 5.5-1.41-1.41L12 7.59l6.91 6.91-1.41 1.41z"
+                        d="M17.5001 15.9142L12.0002 10.4142L6.50015 15.9142L5.08594 14.5L12.0002 7.58582L18.9144 14.5L17.5001 15.9142Z"
                         fill="currentColor"
                       />
                     </svg>
@@ -1341,7 +1341,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                       width="1em"
                     >
                       <path
-                        d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
+                        d="M17.5001 8.08582L12.0002 13.5858L6.50015 8.08582L5.08594 9.50003L12.0002 16.4142L18.9144 9.50003L17.5001 8.08582Z"
                         fill="currentColor"
                       />
                     </svg>
@@ -1425,7 +1425,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                       width="1em"
                     >
                       <path
-                        d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
+                        d="M17.5001 8.08582L12.0002 13.5858L6.50015 8.08582L5.08594 9.50003L12.0002 16.4142L18.9144 9.50003L17.5001 8.08582Z"
                         fill="currentColor"
                       />
                     </svg>
@@ -1509,7 +1509,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                       width="1em"
                     >
                       <path
-                        d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
+                        d="M17.5001 8.08582L12.0002 13.5858L6.50015 8.08582L5.08594 9.50003L12.0002 16.4142L18.9144 9.50003L17.5001 8.08582Z"
                         fill="currentColor"
                       />
                     </svg>
@@ -1619,7 +1619,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                       width="1em"
                     >
                       <path
-                        d="M17.5 15.91l-5.5-5.5-5.5 5.5-1.41-1.41L12 7.59l6.91 6.91-1.41 1.41z"
+                        d="M17.5001 15.9142L12.0002 10.4142L6.50015 15.9142L5.08594 14.5L12.0002 7.58582L18.9144 14.5L17.5001 15.9142Z"
                         fill="currentColor"
                       />
                     </svg>
@@ -1697,7 +1697,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                       width="1em"
                     >
                       <path
-                        d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
+                        d="M17.5001 8.08582L12.0002 13.5858L6.50015 8.08582L5.08594 9.50003L12.0002 16.4142L18.9144 9.50003L17.5001 8.08582Z"
                         fill="currentColor"
                       />
                     </svg>
@@ -1775,7 +1775,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                       width="1em"
                     >
                       <path
-                        d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
+                        d="M17.5001 8.08582L12.0002 13.5858L6.50015 8.08582L5.08594 9.50003L12.0002 16.4142L18.9144 9.50003L17.5001 8.08582Z"
                         fill="currentColor"
                       />
                     </svg>
@@ -1853,7 +1853,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
                       width="1em"
                     >
                       <path
-                        d="M17.5 8.09l-5.5 5.5-5.5-5.5L5.09 9.5 12 16.41l6.91-6.91-1.41-1.41z"
+                        d="M17.5001 8.08582L12.0002 13.5858L6.50015 8.08582L5.08594 9.50003L12.0002 16.4142L18.9144 9.50003L17.5001 8.08582Z"
                         fill="currentColor"
                       />
                     </svg>
@@ -1945,7 +1945,7 @@ exports[`Collapse > Collapse placementVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M17.5 15.91l-5.5-5.5-5.5 5.5-1.41-1.41L12 7.59l6.91 6.91-1.41 1.41z"
+                  d="M17.5001 15.9142L12.0002 10.4142L6.50015 15.9142L5.08594 14.5L12.0002 7.58582L18.9144 14.5L17.5001 15.9142Z"
                   fill="currentColor"
                 />
               </svg>

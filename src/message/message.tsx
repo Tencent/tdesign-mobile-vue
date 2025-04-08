@@ -6,7 +6,7 @@ import Link from '../link';
 import props from './props';
 import { MessageMarquee, TdMessageProps } from './type';
 import config from '../config';
-import { useVModel } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
 

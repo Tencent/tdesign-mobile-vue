@@ -31,6 +31,7 @@ export default {
     type: [String, Function] as PropType<TdStepItemProps['title']>,
     default: '',
   },
+  /** 标题右侧数据 仅支持 layout = 'vertical' 时 */
   titleRight: {
     type: [String, Function] as PropType<TdStepItemProps['titleRight']>,
     default: '',

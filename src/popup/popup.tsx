@@ -1,11 +1,12 @@
-import { computed, watch, defineComponent, h, ref, nextTick, Teleport, Transition } from 'vue';
+import { computed, watch, defineComponent, h, ref, toRefs, nextTick, Teleport, Transition } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
 import popupProps from './props';
 import TOverlay from '../overlay';
 import config from '../config';
 import { TdPopupProps } from './type';
-import { useDefault, TNode } from '../shared';
+import { TNode } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 import { useLockScroll } from '../hooks/useLockScroll';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
@@ -28,11 +29,13 @@ export default defineComponent({
 
     const renderTNodeJSX = useTNodeJSX();
 
-    const [currentVisible, setVisible] = useDefault<TdPopupProps['visible'], TdPopupProps>(
-      props,
-      context.emit,
+    const { visible, modelValue } = toRefs(props);
+    const [currentVisible, setCurrentVisible] = useVModel(
+      visible,
+      modelValue,
+      props.defaultVisible,
+      props.onVisibleChange,
       'visible',
-      'visible-change',
     );
 
     const wrapperVisible = ref(currentVisible.value);
@@ -79,7 +82,7 @@ export default defineComponent({
 
     const handleCloseClick = (e: MouseEvent) => {
       props.onClose?.({ e });
-      setVisible(false, { trigger: 'close-btn' });
+      setCurrentVisible(false, { trigger: 'close-btn' });
     };
 
     const handleOverlayClick = (args: { e: MouseEvent }) => {
@@ -88,7 +91,7 @@ export default defineComponent({
         return;
       }
       props.onClose?.({ e });
-      setVisible(false, { trigger: 'overlay' });
+      setCurrentVisible(false, { trigger: 'overlay' });
     };
 
     const afterLeave = () => {
@@ -105,7 +108,6 @@ export default defineComponent({
       (val) => {
         if (val) {
           props.onOpen?.();
-          setVisible(true);
         }
       },
     );

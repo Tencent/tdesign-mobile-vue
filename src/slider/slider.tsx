@@ -3,7 +3,7 @@ import { isFunction } from 'lodash-es';
 import { useIntersectionObserver } from '@vueuse/core';
 import config from '../config';
 import props from './props';
-import { useVModel } from '../shared/useVModel';
+import useVModel from '../hooks/useVModel';
 import { trimSingleValue, trimValue } from './tool';
 import type { SliderValue } from './type';
 import { useFormDisabled } from '../form/hooks';

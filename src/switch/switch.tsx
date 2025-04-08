@@ -1,11 +1,12 @@
-import { computed, defineComponent, h } from 'vue';
+import { computed, defineComponent, h, toRefs } from 'vue';
 import { isArray, isFunction, isString } from 'lodash-es';
 import TLoading from '../loading';
-import { useToggle, useDefault } from '../shared';
+import { useToggle } from '../shared';
 import config from '../config';
 import props from './props';
 import { SwitchValue, TdSwitchProps } from './type';
 import { useFormDisabled } from '../form/hooks';
+import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
@@ -18,7 +19,9 @@ export default defineComponent({
 
     const disabled = useFormDisabled();
     const switchValues = props.customValue || [true, false];
-    const [innerValue] = useDefault<SwitchValue, TdSwitchProps>(props, context.emit, 'value', 'change');
+
+    const { value, modelValue } = toRefs(props);
+    const [innerValue, setInnerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
     const { state, toggle } = useToggle<SwitchValue>(switchValues, innerValue.value);
     const checked = computed(() => innerValue.value === switchValues[0]);
     const switchClasses = computed(() => [
@@ -56,7 +59,7 @@ export default defineComponent({
         toggle();
       }
 
-      innerValue.value = state.value;
+      setInnerValue(state.value);
     }
 
     const renderContent = () => {

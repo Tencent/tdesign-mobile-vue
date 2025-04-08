@@ -21,7 +21,7 @@ import pkg from '../package.json';
 
 const name = 'tdesign';
 const esExternalDeps = Object.keys(pkg.dependencies || {});
-const externalDeps = esExternalDeps.concat([/lodash/, /@babel\/runtime/]);
+const externalDeps = esExternalDeps.concat([/@babel\/runtime/]);
 const externalPeerDeps = Object.keys(pkg.peerDependencies || {});
 const banner = `/**
  * ${name} v${pkg.version}
@@ -207,10 +207,13 @@ const libConfig = {
   },
 };
 
+const cjsExternalException = ['lodash-es'];
+const cjsExternal = externalDeps.concat(externalPeerDeps).filter((value) => !cjsExternalException.includes(value));
+
 /** @type {import('rollup').RollupOptions} */
 const cjsConfig = {
   input: inputList,
-  external: externalDeps.concat(externalPeerDeps),
+  external: cjsExternal,
   plugins: [multiInput()].concat(getPlugins()),
   output: {
     banner,

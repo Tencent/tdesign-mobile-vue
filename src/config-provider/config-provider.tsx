@@ -1,24 +1,15 @@
-import { defineComponent, PropType } from 'vue';
+import { defineComponent } from 'vue';
 import config from '../config';
-import { GlobalConfigProvider } from './type';
+import props from './props';
 import { provideConfig } from './useConfig';
 import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
 const name = `${prefix}-config-provider`;
 
-export const configProviderProps = {
-  globalConfig: Object as PropType<GlobalConfigProvider>,
-};
-
-export type ConfigProviderProps = {
-  globalConfig: GlobalConfigProvider;
-};
-
 export default defineComponent({
   name,
-  props: configProviderProps,
-
+  props,
   setup(props) {
     provideConfig(props);
 

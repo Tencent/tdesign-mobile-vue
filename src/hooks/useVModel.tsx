@@ -3,7 +3,7 @@ import { kebabCase } from 'lodash-es';
 
 export type ChangeHandler<T> = (value: T, ...args: any[]) => void;
 
-export function useVModel<T>(
+export default function useVModel<T>(
   value: Ref<T>,
   modelValue: Ref<T>,
   defaultValue: T,
