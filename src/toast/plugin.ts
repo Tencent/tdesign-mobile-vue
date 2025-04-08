@@ -64,7 +64,7 @@ Toast.clear = () => {
   }
 };
 
-(['loading', 'success', 'error'] as ToastOptions['theme'][]).forEach((type): void => {
+(['loading', 'success', 'warning', 'error'] as ToastOptions['theme'][]).forEach((type): void => {
   if (!type) {
     return;
   }
@@ -101,6 +101,8 @@ type ToastApi = {
   loading: (options?: Partial<ToastOptions> | string) => void;
   /** 展示成功提示 */
   success: (options?: Partial<ToastOptions> | string) => void;
+  /** 展示警告提示 */
+  warning: (options?: Partial<ToastOptions> | string) => void;
   /** 展示失败提示 */
   error: (options?: Partial<ToastOptions> | string) => void;
   /** 关闭提示 */
@@ -110,7 +112,7 @@ type ToastApi = {
 export const ToastPlugin: WithInstallType<typeof vueToast> & ToastApi = Toast as any;
 export default ToastPlugin;
 
-declare module '@vue/runtime-core' {
+declare module 'vue' {
   // Bind to `this` keyword
   export interface ComponentCustomProperties {
     $toast: ToastApi;

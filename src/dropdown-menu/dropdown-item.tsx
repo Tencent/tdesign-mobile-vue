@@ -5,11 +5,12 @@ import config from '../config';
 import TButton from '../button';
 import TPopup from '../popup';
 import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
-import { useVModel, uniqueFactory, getWindowSize } from '../shared';
+import { uniqueFactory, getWindowSize } from '../shared';
 import props from './dropdown-item-props';
 import { DropdownMenuState, DropdownMenuControl } from './context';
 import { TdDropdownMenuProps, DropdownValue } from './type';
 import { KeysType } from '../common';
+import useVModel from '../hooks/useVModel';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 

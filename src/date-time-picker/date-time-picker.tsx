@@ -8,7 +8,7 @@ import { isArray } from 'lodash-es';
 import config from '../config';
 import DateTimePickerProps from './props';
 import { getMeaningColumn } from './shared';
-import { useVModel } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { Picker as TPicker } from '../picker';
 import { PickerColumn, PickerColumnItem, PickerValue, PickerContext } from '../picker/type';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
