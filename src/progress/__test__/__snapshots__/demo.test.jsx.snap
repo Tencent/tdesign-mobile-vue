@@ -35,6 +35,12 @@ exports[`Progress > Progress baseVue demo works fine 1`] = `
     </div>
   </div>
   <div
+    class="summary"
+    data-v-0843df2e=""
+  >
+    百分比内显
+  </div>
+  <div
     class="example-progress__item"
     data-v-0843df2e=""
   >
@@ -60,6 +66,12 @@ exports[`Progress > Progress baseVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+  </div>
+  <div
+    class="summary"
+    data-v-0843df2e=""
+  >
+    环形进度条
   </div>
   <div
     class="example-progress__item"
@@ -103,6 +115,55 @@ exports[`Progress > Progress baseVue demo works fine 1`] = `
             stroke-linecap="round"
             stroke-width="6"
             transform="matrix(0,-1,1,0,0,112)"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div
+    class="summary"
+    data-v-0843df2e=""
+  >
+    微型环形进度条
+  </div>
+  <div
+    class="example-progress__item"
+    data-v-0843df2e=""
+  >
+    <div
+      class="t-progress"
+      data-v-0843df2e=""
+    >
+      <!---->
+      <!---->
+      <div
+        class="t-progress--circle t-progress--status-default"
+        style="width: 24px; height: 24px;"
+      >
+        <!---->
+        <svg
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <circle
+            class="t-progress__circle-outer"
+            cx="12"
+            cy="12"
+            fill="none"
+            r="11"
+            stroke-width="2"
+          />
+          <circle
+            class="t-progress__circle-inner"
+            cx="12"
+            cy="12"
+            fill="none"
+            r="11"
+            stroke-dasharray="20.73451151369263  48.3805268652828"
+            stroke-linecap="round"
+            stroke-width="2"
+            transform="matrix(0,-1,1,0,0,24)"
           />
         </svg>
       </div>
@@ -607,7 +668,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       </p>
     </div>
     <div
-      class="tdesign-mobile-demo-block__slot with-padding"
+      class="tdesign-mobile-demo-block__slot"
     >
       
       <div
@@ -645,6 +706,12 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
           </div>
         </div>
         <div
+          class="summary"
+          data-v-0843df2e=""
+        >
+          百分比内显
+        </div>
+        <div
           class="example-progress__item"
           data-v-0843df2e=""
         >
@@ -670,6 +737,12 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
+        </div>
+        <div
+          class="summary"
+          data-v-0843df2e=""
+        >
+          环形进度条
         </div>
         <div
           class="example-progress__item"
@@ -718,6 +791,55 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             </div>
           </div>
         </div>
+        <div
+          class="summary"
+          data-v-0843df2e=""
+        >
+          微型环形进度条
+        </div>
+        <div
+          class="example-progress__item"
+          data-v-0843df2e=""
+        >
+          <div
+            class="t-progress"
+            data-v-0843df2e=""
+          >
+            <!---->
+            <!---->
+            <div
+              class="t-progress--circle t-progress--status-default"
+              style="width: 24px; height: 24px;"
+            >
+              <!---->
+              <svg
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+              >
+                <circle
+                  class="t-progress__circle-outer"
+                  cx="12"
+                  cy="12"
+                  fill="none"
+                  r="11"
+                  stroke-width="2"
+                />
+                <circle
+                  class="t-progress__circle-inner"
+                  cx="12"
+                  cy="12"
+                  fill="none"
+                  r="11"
+                  stroke-dasharray="20.73451151369263  48.3805268652828"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                  transform="matrix(0,-1,1,0,0,24)"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
       
     </div>
@@ -737,7 +859,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       </p>
     </div>
     <div
-      class="tdesign-mobile-demo-block__slot with-padding"
+      class="tdesign-mobile-demo-block__slot"
     >
       
       <div
@@ -831,7 +953,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       </p>
     </div>
     <div
-      class="tdesign-mobile-demo-block__slot with-padding"
+      class="tdesign-mobile-demo-block__slot"
     >
       
       <div
@@ -928,7 +1050,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       </p>
     </div>
     <div
-      class="tdesign-mobile-demo-block__slot with-padding"
+      class="tdesign-mobile-demo-block__slot"
     >
       
       <div
@@ -1104,7 +1226,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       </p>
     </div>
     <div
-      class="tdesign-mobile-demo-block__slot with-padding"
+      class="tdesign-mobile-demo-block__slot"
     >
       
       <div
@@ -1239,7 +1361,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       </p>
     </div>
     <div
-      class="tdesign-mobile-demo-block__slot with-padding"
+      class="tdesign-mobile-demo-block__slot"
     >
       
       <div
