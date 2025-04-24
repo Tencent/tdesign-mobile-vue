@@ -19,7 +19,12 @@
 </template>
 <style lang="less" scoped>
 .example-progress {
-  &__item:not(:last-child) {
+  &__item {
+    padding: 0 16px;
+    margin-bottom: 16px;
+  }
+
+  .summary {
     margin-bottom: 16px;
   }
 }

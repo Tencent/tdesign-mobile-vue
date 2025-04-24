@@ -5,19 +5,19 @@
     <tdesign-demo-block title="01 类型" summary="基础进度条">
       <BaseDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="过渡样式" padding>
+    <tdesign-demo-block summary="过渡样式" :padding="true">
       <TransitionDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="自定义颜色/圆角">
+    <tdesign-demo-block summary="自定义颜色/圆角" :padding="true">
       <CustomDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block title="02 组件状态" summary="线性进度条">
+    <tdesign-demo-block title="02 组件状态" summary="线性进度条" :padding="true">
       <LineDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="百分比内显进度条">
+    <tdesign-demo-block summary="百分比内显进度条" :padding="true">
       <PlumpDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="环形进度条">
+    <tdesign-demo-block summary="环形进度条" :padding="true">
       <CircleDemo />
     </tdesign-demo-block>
   </div>

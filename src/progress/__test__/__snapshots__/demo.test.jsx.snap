@@ -859,7 +859,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       </p>
     </div>
     <div
-      class="tdesign-mobile-demo-block__slot"
+      class="tdesign-mobile-demo-block__slot with-padding"
     >
       
       <div
@@ -953,7 +953,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       </p>
     </div>
     <div
-      class="tdesign-mobile-demo-block__slot"
+      class="tdesign-mobile-demo-block__slot with-padding"
     >
       
       <div
@@ -1050,7 +1050,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       </p>
     </div>
     <div
-      class="tdesign-mobile-demo-block__slot"
+      class="tdesign-mobile-demo-block__slot with-padding"
     >
       
       <div
@@ -1226,7 +1226,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       </p>
     </div>
     <div
-      class="tdesign-mobile-demo-block__slot"
+      class="tdesign-mobile-demo-block__slot with-padding"
     >
       
       <div
@@ -1361,7 +1361,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       </p>
     </div>
     <div
-      class="tdesign-mobile-demo-block__slot"
+      class="tdesign-mobile-demo-block__slot with-padding"
     >
       
       <div
