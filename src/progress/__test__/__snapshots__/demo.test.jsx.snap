@@ -3,15 +3,15 @@
 exports[`Progress > Progress baseVue demo works fine 1`] = `
 <div
   class="example-progress"
-  data-v-0843df2e=""
+  data-v-6bf735e8=""
 >
   <div
     class="example-progress__item"
-    data-v-0843df2e=""
+    data-v-6bf735e8=""
   >
     <div
       class="t-progress"
-      data-v-0843df2e=""
+      data-v-6bf735e8=""
     >
       <div
         class="t-progress--thin t-progress--status-default"
@@ -36,17 +36,17 @@ exports[`Progress > Progress baseVue demo works fine 1`] = `
   </div>
   <div
     class="summary"
-    data-v-0843df2e=""
+    data-v-6bf735e8=""
   >
     百分比内显
   </div>
   <div
     class="example-progress__item"
-    data-v-0843df2e=""
+    data-v-6bf735e8=""
   >
     <div
       class="t-progress"
-      data-v-0843df2e=""
+      data-v-6bf735e8=""
     >
       <!---->
       <div
@@ -69,17 +69,17 @@ exports[`Progress > Progress baseVue demo works fine 1`] = `
   </div>
   <div
     class="summary"
-    data-v-0843df2e=""
+    data-v-6bf735e8=""
   >
     环形进度条
   </div>
   <div
     class="example-progress__item"
-    data-v-0843df2e=""
+    data-v-6bf735e8=""
   >
     <div
       class="t-progress"
-      data-v-0843df2e=""
+      data-v-6bf735e8=""
     >
       <!---->
       <!---->
@@ -122,17 +122,17 @@ exports[`Progress > Progress baseVue demo works fine 1`] = `
   </div>
   <div
     class="summary"
-    data-v-0843df2e=""
+    data-v-6bf735e8=""
   >
     微型环形进度条
   </div>
   <div
     class="example-progress__item"
-    data-v-0843df2e=""
+    data-v-6bf735e8=""
   >
     <div
       class="t-progress"
-      data-v-0843df2e=""
+      data-v-6bf735e8=""
     >
       <!---->
       <!---->
@@ -175,15 +175,15 @@ exports[`Progress > Progress baseVue demo works fine 1`] = `
 exports[`Progress > Progress circleVue demo works fine 1`] = `
 <div
   class="example-progress"
-  data-v-abd06230=""
+  data-v-bde2731b=""
 >
   <div
     class="example-progress__item"
-    data-v-abd06230=""
+    data-v-bde2731b=""
   >
     <div
       class="t-progress"
-      data-v-abd06230=""
+      data-v-bde2731b=""
     >
       <!---->
       <!---->
@@ -226,11 +226,11 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
   </div>
   <div
     class="example-progress__item"
-    data-v-abd06230=""
+    data-v-bde2731b=""
   >
     <div
       class="t-progress"
-      data-v-abd06230=""
+      data-v-bde2731b=""
     >
       <!---->
       <!---->
@@ -284,11 +284,11 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
   </div>
   <div
     class="example-progress__item"
-    data-v-abd06230=""
+    data-v-bde2731b=""
   >
     <div
       class="t-progress"
-      data-v-abd06230=""
+      data-v-bde2731b=""
     >
       <!---->
       <!---->
@@ -342,11 +342,11 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
   </div>
   <div
     class="example-progress__item"
-    data-v-abd06230=""
+    data-v-bde2731b=""
   >
     <div
       class="t-progress"
-      data-v-abd06230=""
+      data-v-bde2731b=""
     >
       <!---->
       <!---->
@@ -404,15 +404,15 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
 exports[`Progress > Progress customVue demo works fine 1`] = `
 <div
   class="example-progress"
-  data-v-e3f135ee=""
+  data-v-22bbf0e5=""
 >
   <div
     class="example-progress__item"
-    data-v-e3f135ee=""
+    data-v-22bbf0e5=""
   >
     <div
       class="t-progress"
-      data-v-e3f135ee=""
+      data-v-22bbf0e5=""
     >
       <div
         class="t-progress--thin t-progress--status-default"
@@ -432,7 +432,7 @@ exports[`Progress > Progress customVue demo works fine 1`] = `
           
           <span
             class="label--color"
-            data-v-e3f135ee=""
+            data-v-22bbf0e5=""
           >
             88%
           </span>
@@ -445,11 +445,11 @@ exports[`Progress > Progress customVue demo works fine 1`] = `
   </div>
   <div
     class="example-progress__item"
-    data-v-e3f135ee=""
+    data-v-22bbf0e5=""
   >
     <div
       class="t-progress radius--round"
-      data-v-e3f135ee=""
+      data-v-22bbf0e5=""
     >
       <div
         class="t-progress--thin t-progress--status-default"
@@ -478,15 +478,15 @@ exports[`Progress > Progress customVue demo works fine 1`] = `
 exports[`Progress > Progress lineVue demo works fine 1`] = `
 <div
   class="example-progress"
-  data-v-ad591fe8=""
+  data-v-fdfcc2a1=""
 >
   <div
     class="example-progress__item"
-    data-v-ad591fe8=""
+    data-v-fdfcc2a1=""
   >
     <div
       class="t-progress"
-      data-v-ad591fe8=""
+      data-v-fdfcc2a1=""
     >
       <div
         class="t-progress--thin t-progress--status-default"
@@ -511,11 +511,11 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
   </div>
   <div
     class="example-progress__item"
-    data-v-ad591fe8=""
+    data-v-fdfcc2a1=""
   >
     <div
       class="t-progress"
-      data-v-ad591fe8=""
+      data-v-fdfcc2a1=""
     >
       <div
         class="t-progress--thin t-progress--status-warning"
@@ -551,11 +551,11 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
   </div>
   <div
     class="example-progress__item"
-    data-v-ad591fe8=""
+    data-v-fdfcc2a1=""
   >
     <div
       class="t-progress"
-      data-v-ad591fe8=""
+      data-v-fdfcc2a1=""
     >
       <div
         class="t-progress--thin t-progress--status-error"
@@ -591,11 +591,11 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
   </div>
   <div
     class="example-progress__item"
-    data-v-ad591fe8=""
+    data-v-fdfcc2a1=""
   >
     <div
       class="t-progress"
-      data-v-ad591fe8=""
+      data-v-fdfcc2a1=""
     >
       <div
         class="t-progress--thin t-progress--status-success"
@@ -635,23 +635,23 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
 exports[`Progress > Progress mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-6de369ba=""
+  data-v-973a32c7=""
 >
   <h1
     class="title"
-    data-v-6de369ba=""
+    data-v-973a32c7=""
   >
     Progress 进度条
   </h1>
   <p
     class="summary"
-    data-v-6de369ba=""
+    data-v-973a32c7=""
   >
     用于展示任务当前的进度
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-6de369ba=""
+    data-v-973a32c7=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -673,16 +673,16 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       
       <div
         class="example-progress"
-        data-v-0843df2e=""
-        data-v-6de369ba=""
+        data-v-6bf735e8=""
+        data-v-973a32c7=""
       >
         <div
           class="example-progress__item"
-          data-v-0843df2e=""
+          data-v-6bf735e8=""
         >
           <div
             class="t-progress"
-            data-v-0843df2e=""
+            data-v-6bf735e8=""
           >
             <div
               class="t-progress--thin t-progress--status-default"
@@ -707,17 +707,17 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         </div>
         <div
           class="summary"
-          data-v-0843df2e=""
+          data-v-6bf735e8=""
         >
           百分比内显
         </div>
         <div
           class="example-progress__item"
-          data-v-0843df2e=""
+          data-v-6bf735e8=""
         >
           <div
             class="t-progress"
-            data-v-0843df2e=""
+            data-v-6bf735e8=""
           >
             <!---->
             <div
@@ -740,17 +740,17 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         </div>
         <div
           class="summary"
-          data-v-0843df2e=""
+          data-v-6bf735e8=""
         >
           环形进度条
         </div>
         <div
           class="example-progress__item"
-          data-v-0843df2e=""
+          data-v-6bf735e8=""
         >
           <div
             class="t-progress"
-            data-v-0843df2e=""
+            data-v-6bf735e8=""
           >
             <!---->
             <!---->
@@ -793,17 +793,17 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         </div>
         <div
           class="summary"
-          data-v-0843df2e=""
+          data-v-6bf735e8=""
         >
           微型环形进度条
         </div>
         <div
           class="example-progress__item"
-          data-v-0843df2e=""
+          data-v-6bf735e8=""
         >
           <div
             class="t-progress"
-            data-v-0843df2e=""
+            data-v-6bf735e8=""
           >
             <!---->
             <!---->
@@ -846,7 +846,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-6de369ba=""
+    data-v-973a32c7=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -864,12 +864,12 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       
       <div
         class="example-progress"
-        data-v-1cf0f4ed=""
-        data-v-6de369ba=""
+        data-v-07c66edf=""
+        data-v-973a32c7=""
       >
         <div
           class="t-progress"
-          data-v-1cf0f4ed=""
+          data-v-07c66edf=""
         >
           <div
             class="t-progress--thin t-progress--status-default"
@@ -893,12 +893,12 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         </div>
         <div
           class="button-group"
-          data-v-1cf0f4ed=""
+          data-v-07c66edf=""
         >
           <button
             aria-disabled="false"
             class="t-button t-button--size-small t-button--outline t-button--primary t-button--rectangle"
-            data-v-1cf0f4ed=""
+            data-v-07c66edf=""
             role="button"
             type="button"
           >
@@ -914,12 +914,12 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
           </button>
           <div
             class="space"
-            data-v-1cf0f4ed=""
+            data-v-07c66edf=""
           />
           <button
             aria-disabled="false"
             class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
-            data-v-1cf0f4ed=""
+            data-v-07c66edf=""
             role="button"
             type="button"
           >
@@ -940,7 +940,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-6de369ba=""
+    data-v-973a32c7=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -958,16 +958,16 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       
       <div
         class="example-progress"
-        data-v-6de369ba=""
-        data-v-e3f135ee=""
+        data-v-22bbf0e5=""
+        data-v-973a32c7=""
       >
         <div
           class="example-progress__item"
-          data-v-e3f135ee=""
+          data-v-22bbf0e5=""
         >
           <div
             class="t-progress"
-            data-v-e3f135ee=""
+            data-v-22bbf0e5=""
           >
             <div
               class="t-progress--thin t-progress--status-default"
@@ -987,7 +987,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                 
                 <span
                   class="label--color"
-                  data-v-e3f135ee=""
+                  data-v-22bbf0e5=""
                 >
                   88%
                 </span>
@@ -1000,11 +1000,11 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         </div>
         <div
           class="example-progress__item"
-          data-v-e3f135ee=""
+          data-v-22bbf0e5=""
         >
           <div
             class="t-progress radius--round"
-            data-v-e3f135ee=""
+            data-v-22bbf0e5=""
           >
             <div
               class="t-progress--thin t-progress--status-default"
@@ -1033,7 +1033,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-6de369ba=""
+    data-v-973a32c7=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1055,16 +1055,16 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       
       <div
         class="example-progress"
-        data-v-6de369ba=""
-        data-v-ad591fe8=""
+        data-v-973a32c7=""
+        data-v-fdfcc2a1=""
       >
         <div
           class="example-progress__item"
-          data-v-ad591fe8=""
+          data-v-fdfcc2a1=""
         >
           <div
             class="t-progress"
-            data-v-ad591fe8=""
+            data-v-fdfcc2a1=""
           >
             <div
               class="t-progress--thin t-progress--status-default"
@@ -1089,11 +1089,11 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         </div>
         <div
           class="example-progress__item"
-          data-v-ad591fe8=""
+          data-v-fdfcc2a1=""
         >
           <div
             class="t-progress"
-            data-v-ad591fe8=""
+            data-v-fdfcc2a1=""
           >
             <div
               class="t-progress--thin t-progress--status-warning"
@@ -1129,11 +1129,11 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         </div>
         <div
           class="example-progress__item"
-          data-v-ad591fe8=""
+          data-v-fdfcc2a1=""
         >
           <div
             class="t-progress"
-            data-v-ad591fe8=""
+            data-v-fdfcc2a1=""
           >
             <div
               class="t-progress--thin t-progress--status-error"
@@ -1169,11 +1169,11 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         </div>
         <div
           class="example-progress__item"
-          data-v-ad591fe8=""
+          data-v-fdfcc2a1=""
         >
           <div
             class="t-progress"
-            data-v-ad591fe8=""
+            data-v-fdfcc2a1=""
           >
             <div
               class="t-progress--thin t-progress--status-success"
@@ -1213,7 +1213,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-6de369ba=""
+    data-v-973a32c7=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1231,16 +1231,16 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       
       <div
         class="example-progress"
-        data-v-6de369ba=""
-        data-v-e578db18=""
+        data-v-119b6ec1=""
+        data-v-973a32c7=""
       >
         <div
           class="example-progress__item"
-          data-v-e578db18=""
+          data-v-119b6ec1=""
         >
           <div
             class="t-progress"
-            data-v-e578db18=""
+            data-v-119b6ec1=""
           >
             <!---->
             <div
@@ -1263,11 +1263,11 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         </div>
         <div
           class="example-progress__item"
-          data-v-e578db18=""
+          data-v-119b6ec1=""
         >
           <div
             class="t-progress"
-            data-v-e578db18=""
+            data-v-119b6ec1=""
           >
             <!---->
             <div
@@ -1290,11 +1290,11 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         </div>
         <div
           class="example-progress__item"
-          data-v-e578db18=""
+          data-v-119b6ec1=""
         >
           <div
             class="t-progress"
-            data-v-e578db18=""
+            data-v-119b6ec1=""
           >
             <!---->
             <div
@@ -1317,11 +1317,11 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         </div>
         <div
           class="example-progress__item"
-          data-v-e578db18=""
+          data-v-119b6ec1=""
         >
           <div
             class="t-progress"
-            data-v-e578db18=""
+            data-v-119b6ec1=""
           >
             <!---->
             <div
@@ -1348,7 +1348,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-6de369ba=""
+    data-v-973a32c7=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1366,16 +1366,16 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       
       <div
         class="example-progress"
-        data-v-6de369ba=""
-        data-v-abd06230=""
+        data-v-973a32c7=""
+        data-v-bde2731b=""
       >
         <div
           class="example-progress__item"
-          data-v-abd06230=""
+          data-v-bde2731b=""
         >
           <div
             class="t-progress"
-            data-v-abd06230=""
+            data-v-bde2731b=""
           >
             <!---->
             <!---->
@@ -1418,11 +1418,11 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         </div>
         <div
           class="example-progress__item"
-          data-v-abd06230=""
+          data-v-bde2731b=""
         >
           <div
             class="t-progress"
-            data-v-abd06230=""
+            data-v-bde2731b=""
           >
             <!---->
             <!---->
@@ -1476,11 +1476,11 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         </div>
         <div
           class="example-progress__item"
-          data-v-abd06230=""
+          data-v-bde2731b=""
         >
           <div
             class="t-progress"
-            data-v-abd06230=""
+            data-v-bde2731b=""
           >
             <!---->
             <!---->
@@ -1534,11 +1534,11 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         </div>
         <div
           class="example-progress__item"
-          data-v-abd06230=""
+          data-v-bde2731b=""
         >
           <div
             class="t-progress"
-            data-v-abd06230=""
+            data-v-bde2731b=""
           >
             <!---->
             <!---->
@@ -1600,15 +1600,15 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
 exports[`Progress > Progress plumpVue demo works fine 1`] = `
 <div
   class="example-progress"
-  data-v-e578db18=""
+  data-v-119b6ec1=""
 >
   <div
     class="example-progress__item"
-    data-v-e578db18=""
+    data-v-119b6ec1=""
   >
     <div
       class="t-progress"
-      data-v-e578db18=""
+      data-v-119b6ec1=""
     >
       <!---->
       <div
@@ -1631,11 +1631,11 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
   </div>
   <div
     class="example-progress__item"
-    data-v-e578db18=""
+    data-v-119b6ec1=""
   >
     <div
       class="t-progress"
-      data-v-e578db18=""
+      data-v-119b6ec1=""
     >
       <!---->
       <div
@@ -1658,11 +1658,11 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
   </div>
   <div
     class="example-progress__item"
-    data-v-e578db18=""
+    data-v-119b6ec1=""
   >
     <div
       class="t-progress"
-      data-v-e578db18=""
+      data-v-119b6ec1=""
     >
       <!---->
       <div
@@ -1685,11 +1685,11 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
   </div>
   <div
     class="example-progress__item"
-    data-v-e578db18=""
+    data-v-119b6ec1=""
   >
     <div
       class="t-progress"
-      data-v-e578db18=""
+      data-v-119b6ec1=""
     >
       <!---->
       <div
@@ -1716,11 +1716,11 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
 exports[`Progress > Progress transitionVue demo works fine 1`] = `
 <div
   class="example-progress"
-  data-v-1cf0f4ed=""
+  data-v-07c66edf=""
 >
   <div
     class="t-progress"
-    data-v-1cf0f4ed=""
+    data-v-07c66edf=""
   >
     <div
       class="t-progress--thin t-progress--status-default"
@@ -1744,12 +1744,12 @@ exports[`Progress > Progress transitionVue demo works fine 1`] = `
   </div>
   <div
     class="button-group"
-    data-v-1cf0f4ed=""
+    data-v-07c66edf=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-small t-button--outline t-button--primary t-button--rectangle"
-      data-v-1cf0f4ed=""
+      data-v-07c66edf=""
       role="button"
       type="button"
     >
@@ -1765,12 +1765,12 @@ exports[`Progress > Progress transitionVue demo works fine 1`] = `
     </button>
     <div
       class="space"
-      data-v-1cf0f4ed=""
+      data-v-07c66edf=""
     />
     <button
       aria-disabled="false"
       class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
-      data-v-1cf0f4ed=""
+      data-v-07c66edf=""
       role="button"
       type="button"
     >

@@ -222,7 +222,7 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
   
   <div
     class="t-cell"
-    data-v-e4157e3c=""
+    data-v-089206a7=""
   >
     <div
       class="t-cell__left"
@@ -294,7 +294,7 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
         
         <span
           class="confirm-btn"
-          data-v-e4157e3c=""
+          data-v-089206a7=""
         >
           确定
         </span>
@@ -2181,7 +2181,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       <div
         class="t-cell"
-        data-v-e4157e3c=""
+        data-v-089206a7=""
       >
         <div
           class="t-cell__left"
@@ -2253,7 +2253,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
             
             <span
               class="confirm-btn"
-              data-v-e4157e3c=""
+              data-v-089206a7=""
             >
               确定
             </span>
