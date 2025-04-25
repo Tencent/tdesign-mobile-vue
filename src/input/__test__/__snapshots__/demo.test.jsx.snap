@@ -117,7 +117,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
 exports[`Input > Input bannerVue demo works fine 1`] = `
 <div
   class="t-input t-input--layout-horizontal t-input--border input-demo"
-  data-v-378bb8e9=""
+  data-v-6c136f2f=""
 >
   <div
     class="t-input__wrap--prefix"
@@ -270,17 +270,17 @@ exports[`Input > Input baseVue demo works fine 1`] = `
 exports[`Input > Input borderedVue demo works fine 1`] = `
 <div
   class="input-demo"
-  data-v-0b3942c8=""
+  data-v-f23aff25=""
 >
   <div
     class="input-demo__summary"
-    data-v-0b3942c8=""
+    data-v-f23aff25=""
   >
     标签文字
   </div>
   <div
     class="t-input t-input--layout-horizontal custom-input"
-    data-v-0b3942c8=""
+    data-v-f23aff25=""
   >
     <div
       class="t-input__wrap--prefix"
@@ -315,7 +315,7 @@ exports[`Input > Input borderedVue demo works fine 1`] = `
           
           <svg
             class="t-icon t-icon-error-circle-filled"
-            data-v-0b3942c8=""
+            data-v-f23aff25=""
             fill="none"
             height="1em"
             viewBox="0 0 24 24"
@@ -338,11 +338,11 @@ exports[`Input > Input borderedVue demo works fine 1`] = `
 exports[`Input > Input customVue demo works fine 1`] = `
 <div
   class="input-demo"
-  data-v-16c31aae=""
+  data-v-c3916633=""
 >
   <div
     class="t-input t-input--layout-horizontal t-input--border"
-    data-v-16c31aae=""
+    data-v-c3916633=""
   >
     <div
       class="t-input__wrap--prefix"
@@ -1784,7 +1784,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
       
       <div
         class="t-input t-input--layout-horizontal t-input--border input-demo"
-        data-v-378bb8e9=""
+        data-v-6c136f2f=""
       >
         <div
           class="t-input__wrap--prefix"
@@ -1840,17 +1840,17 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
       
       <div
         class="input-demo"
-        data-v-0b3942c8=""
+        data-v-f23aff25=""
       >
         <div
           class="input-demo__summary"
-          data-v-0b3942c8=""
+          data-v-f23aff25=""
         >
           标签文字
         </div>
         <div
           class="t-input t-input--layout-horizontal custom-input"
-          data-v-0b3942c8=""
+          data-v-f23aff25=""
         >
           <div
             class="t-input__wrap--prefix"
@@ -1885,7 +1885,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 
                 <svg
                   class="t-icon t-icon-error-circle-filled"
-                  data-v-0b3942c8=""
+                  data-v-f23aff25=""
                   fill="none"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -1925,11 +1925,11 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
       
       <div
         class="input-demo"
-        data-v-16c31aae=""
+        data-v-c3916633=""
       >
         <div
           class="t-input t-input--layout-horizontal t-input--border"
-          data-v-16c31aae=""
+          data-v-c3916633=""
         >
           <div
             class="t-input__wrap--prefix"

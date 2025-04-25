@@ -186,23 +186,23 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
 exports[`Cell > Cell mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-f4324ab6=""
+  data-v-45d5c39d=""
 >
   <h1
     class="title"
-    data-v-f4324ab6=""
+    data-v-45d5c39d=""
   >
     Cell 单元格
   </h1>
   <p
     class="summary"
-    data-v-f4324ab6=""
+    data-v-45d5c39d=""
   >
     一行内容/功能的垂直排列方式。一行项目左侧为主要内容展示区域，右侧可增加更多操作内容
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-f4324ab6=""
+    data-v-45d5c39d=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -223,7 +223,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
     >
       
       <div
-        data-v-f4324ab6=""
+        data-v-45d5c39d=""
       >
         <!---->
         <div
@@ -531,7 +531,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-f4324ab6=""
+    data-v-45d5c39d=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -548,7 +548,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
     >
       
       <div
-        data-v-f4324ab6=""
+        data-v-45d5c39d=""
       >
         <!---->
         <div
@@ -1083,7 +1083,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-f4324ab6=""
+    data-v-45d5c39d=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1104,7 +1104,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
     >
       
       <div
-        data-v-f4324ab6=""
+        data-v-45d5c39d=""
       >
         <!---->
         <div

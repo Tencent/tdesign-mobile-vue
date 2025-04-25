@@ -3,37 +3,37 @@
 exports[`Image > Image baseVue demo works fine 1`] = `
 <div
   class="image-example"
-  data-v-37d8259d=""
+  data-v-5ce5face=""
 >
   <div
     class="image-example-title"
-    data-v-37d8259d=""
+    data-v-5ce5face=""
   >
     不同填充模式的图片
   </div>
   <div
     class="image-example-desc"
-    data-v-37d8259d=""
+    data-v-5ce5face=""
   >
     提供 fill、contain、cover、none、scale-down 5 种填充类型。
   </div>
   <div
     class="image-group"
-    data-v-37d8259d=""
+    data-v-5ce5face=""
   >
     <div
       class="image-demo"
-      data-v-37d8259d=""
+      data-v-5ce5face=""
     >
       <p
         class="image-demo-tip"
-        data-v-37d8259d=""
+        data-v-5ce5face=""
       >
         fill
       </p>
       <div
         class="t-image t-image--square image-container"
-        data-v-37d8259d=""
+        data-v-5ce5face=""
         style="width: 72px; height: 72px;"
       >
         <div
@@ -79,17 +79,17 @@ exports[`Image > Image baseVue demo works fine 1`] = `
     </div>
     <div
       class="image-demo"
-      data-v-37d8259d=""
+      data-v-5ce5face=""
     >
       <p
         class="image-demo-tip"
-        data-v-37d8259d=""
+        data-v-5ce5face=""
       >
         contain
       </p>
       <div
         class="t-image t-image--square image-container"
-        data-v-37d8259d=""
+        data-v-5ce5face=""
         style="width: 72px; height: 72px;"
       >
         <div
@@ -135,17 +135,17 @@ exports[`Image > Image baseVue demo works fine 1`] = `
     </div>
     <div
       class="image-demo"
-      data-v-37d8259d=""
+      data-v-5ce5face=""
     >
       <p
         class="image-demo-tip"
-        data-v-37d8259d=""
+        data-v-5ce5face=""
       >
         cover
       </p>
       <div
         class="t-image t-image--square image-container"
-        data-v-37d8259d=""
+        data-v-5ce5face=""
         style="width: 72px; height: 72px;"
       >
         <div
@@ -191,17 +191,17 @@ exports[`Image > Image baseVue demo works fine 1`] = `
     </div>
     <div
       class="image-demo"
-      data-v-37d8259d=""
+      data-v-5ce5face=""
     >
       <p
         class="image-demo-tip"
-        data-v-37d8259d=""
+        data-v-5ce5face=""
       >
         none
       </p>
       <div
         class="t-image t-image--square image-container"
-        data-v-37d8259d=""
+        data-v-5ce5face=""
         style="width: 72px; height: 72px;"
       >
         <div
@@ -247,17 +247,17 @@ exports[`Image > Image baseVue demo works fine 1`] = `
     </div>
     <div
       class="image-demo"
-      data-v-37d8259d=""
+      data-v-5ce5face=""
     >
       <p
         class="image-demo-tip"
-        data-v-37d8259d=""
+        data-v-5ce5face=""
       >
         scale-down
       </p>
       <div
         class="t-image t-image--square image-container"
-        data-v-37d8259d=""
+        data-v-5ce5face=""
         style="width: 72px; height: 72px;"
       >
         <div
@@ -308,23 +308,23 @@ exports[`Image > Image baseVue demo works fine 1`] = `
 exports[`Image > Image mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-d8a5fc24=""
+  data-v-786eab7a=""
 >
   <h1
     class="title"
-    data-v-d8a5fc24=""
+    data-v-786eab7a=""
   >
     Image 图片
   </h1>
   <p
     class="summary"
-    data-v-d8a5fc24=""
+    data-v-786eab7a=""
   >
     用于展示图片素材。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-d8a5fc24=""
+    data-v-786eab7a=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -342,38 +342,38 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
       
       <div
         class="image-example"
-        data-v-37d8259d=""
-        data-v-d8a5fc24=""
+        data-v-5ce5face=""
+        data-v-786eab7a=""
       >
         <div
           class="image-example-title"
-          data-v-37d8259d=""
+          data-v-5ce5face=""
         >
           不同填充模式的图片
         </div>
         <div
           class="image-example-desc"
-          data-v-37d8259d=""
+          data-v-5ce5face=""
         >
           提供 fill、contain、cover、none、scale-down 5 种填充类型。
         </div>
         <div
           class="image-group"
-          data-v-37d8259d=""
+          data-v-5ce5face=""
         >
           <div
             class="image-demo"
-            data-v-37d8259d=""
+            data-v-5ce5face=""
           >
             <p
               class="image-demo-tip"
-              data-v-37d8259d=""
+              data-v-5ce5face=""
             >
               fill
             </p>
             <div
               class="t-image t-image--square image-container"
-              data-v-37d8259d=""
+              data-v-5ce5face=""
               style="width: 72px; height: 72px;"
             >
               <div
@@ -419,17 +419,17 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
           </div>
           <div
             class="image-demo"
-            data-v-37d8259d=""
+            data-v-5ce5face=""
           >
             <p
               class="image-demo-tip"
-              data-v-37d8259d=""
+              data-v-5ce5face=""
             >
               contain
             </p>
             <div
               class="t-image t-image--square image-container"
-              data-v-37d8259d=""
+              data-v-5ce5face=""
               style="width: 72px; height: 72px;"
             >
               <div
@@ -475,17 +475,17 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
           </div>
           <div
             class="image-demo"
-            data-v-37d8259d=""
+            data-v-5ce5face=""
           >
             <p
               class="image-demo-tip"
-              data-v-37d8259d=""
+              data-v-5ce5face=""
             >
               cover
             </p>
             <div
               class="t-image t-image--square image-container"
-              data-v-37d8259d=""
+              data-v-5ce5face=""
               style="width: 72px; height: 72px;"
             >
               <div
@@ -531,17 +531,17 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
           </div>
           <div
             class="image-demo"
-            data-v-37d8259d=""
+            data-v-5ce5face=""
           >
             <p
               class="image-demo-tip"
-              data-v-37d8259d=""
+              data-v-5ce5face=""
             >
               none
             </p>
             <div
               class="t-image t-image--square image-container"
-              data-v-37d8259d=""
+              data-v-5ce5face=""
               style="width: 72px; height: 72px;"
             >
               <div
@@ -587,17 +587,17 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
           </div>
           <div
             class="image-demo"
-            data-v-37d8259d=""
+            data-v-5ce5face=""
           >
             <p
               class="image-demo-tip"
-              data-v-37d8259d=""
+              data-v-5ce5face=""
             >
               scale-down
             </p>
             <div
               class="t-image t-image--square image-container"
-              data-v-37d8259d=""
+              data-v-5ce5face=""
               style="width: 72px; height: 72px;"
             >
               <div
@@ -645,38 +645,38 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
       </div>
       <div
         class="image-example"
-        data-v-2d6651f5=""
-        data-v-d8a5fc24=""
+        data-v-326dc1df=""
+        data-v-786eab7a=""
       >
         <div
           class="image-example-title"
-          data-v-2d6651f5=""
+          data-v-326dc1df=""
         >
           不同填充位置的图片
         </div>
         <div
           class="image-example-desc"
-          data-v-2d6651f5=""
+          data-v-326dc1df=""
         >
           当图片过大时，提供显示图片的局部左侧对齐、或右侧对齐的不同位置。
         </div>
         <div
           class="image-group"
-          data-v-2d6651f5=""
+          data-v-326dc1df=""
         >
           <div
             class="image-demo"
-            data-v-2d6651f5=""
+            data-v-326dc1df=""
           >
             <p
               class="image-demo-tip"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
             >
               cover center
             </p>
             <div
               class="t-image t-image--square image-container"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
               style="width: 72px; height: 72px;"
             >
               <div
@@ -722,17 +722,17 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
           </div>
           <div
             class="image-demo"
-            data-v-2d6651f5=""
+            data-v-326dc1df=""
           >
             <p
               class="image-demo-tip"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
             >
               cover left
             </p>
             <div
               class="t-image t-image--square image-container"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
               style="width: 72px; height: 72px;"
             >
               <div
@@ -778,17 +778,17 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
           </div>
           <div
             class="image-demo"
-            data-v-2d6651f5=""
+            data-v-326dc1df=""
           >
             <p
               class="image-demo-tip"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
             >
               cover right
             </p>
             <div
               class="t-image t-image--square image-container"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
               style="width: 72px; height: 72px;"
             >
               <div
@@ -834,17 +834,17 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
           </div>
           <div
             class="image-demo"
-            data-v-2d6651f5=""
+            data-v-326dc1df=""
           >
             <p
               class="image-demo-tip"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
             >
               cover top
             </p>
             <div
               class="t-image t-image--square"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
               style="width: 240px; height: 80px;"
             >
               <div
@@ -890,17 +890,17 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
           </div>
           <div
             class="image-demo"
-            data-v-2d6651f5=""
+            data-v-326dc1df=""
           >
             <p
               class="image-demo-tip"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
             >
               cover bottom
             </p>
             <div
               class="t-image t-image--square"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
               style="width: 240px; height: 80px;"
             >
               <div
@@ -946,17 +946,17 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
           </div>
           <div
             class="image-demo"
-            data-v-2d6651f5=""
+            data-v-326dc1df=""
           >
             <p
               class="image-demo-tip"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
             >
               contain top
             </p>
             <div
               class="t-image t-image--square image-container"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
               style="width: 72px; height: 80px;"
             >
               <div
@@ -1002,17 +1002,17 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
           </div>
           <div
             class="image-demo"
-            data-v-2d6651f5=""
+            data-v-326dc1df=""
           >
             <p
               class="image-demo-tip"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
             >
               contain bottom
             </p>
             <div
               class="t-image t-image--square image-container"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
               style="width: 72px; height: 80px;"
             >
               <div
@@ -1058,17 +1058,17 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
           </div>
           <div
             class="image-demo"
-            data-v-2d6651f5=""
+            data-v-326dc1df=""
           >
             <p
               class="image-demo-tip"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
             >
               contain center
             </p>
             <div
               class="t-image t-image--square image-container"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
               style="width: 72px; height: 80px;"
             >
               <div
@@ -1114,17 +1114,17 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
           </div>
           <div
             class="image-demo"
-            data-v-2d6651f5=""
+            data-v-326dc1df=""
           >
             <p
               class="image-demo-tip"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
             >
               contain left
             </p>
             <div
               class="t-image t-image--square image-container"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
               style="width: 180px; height: 80px;"
             >
               <div
@@ -1170,17 +1170,17 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
           </div>
           <div
             class="image-demo"
-            data-v-2d6651f5=""
+            data-v-326dc1df=""
           >
             <p
               class="image-demo-tip"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
             >
               contain right
             </p>
             <div
               class="t-image t-image--square image-container"
-              data-v-2d6651f5=""
+              data-v-326dc1df=""
               style="width: 180px; height: 80px;"
             >
               <div
@@ -1228,38 +1228,38 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
       </div>
       <div
         class="image-example"
-        data-v-5f48b8f6=""
-        data-v-d8a5fc24=""
+        data-v-3132a520=""
+        data-v-786eab7a=""
       >
         <div
           class="image-example-title"
-          data-v-5f48b8f6=""
+          data-v-3132a520=""
         >
           不同形状的图片
         </div>
         <div
           class="image-example-desc"
-          data-v-5f48b8f6=""
+          data-v-3132a520=""
         >
            提供方形、圆角方形、圆角 3 种形状。 当图片长宽不相等时，无法使用 circle 展示一个正圆。 
         </div>
         <div
           class="image-group"
-          data-v-5f48b8f6=""
+          data-v-3132a520=""
         >
           <div
             class="image-demo"
-            data-v-5f48b8f6=""
+            data-v-3132a520=""
           >
             <p
               class="image-demo-tip"
-              data-v-5f48b8f6=""
+              data-v-3132a520=""
             >
               方形
             </p>
             <div
               class="t-image t-image--square image-container"
-              data-v-5f48b8f6=""
+              data-v-3132a520=""
             >
               <div
                 class="t-image__mask"
@@ -1304,17 +1304,17 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
           </div>
           <div
             class="image-demo"
-            data-v-5f48b8f6=""
+            data-v-3132a520=""
           >
             <p
               class="image-demo-tip"
-              data-v-5f48b8f6=""
+              data-v-3132a520=""
             >
               圆角方形
             </p>
             <div
               class="t-image t-image--round image-container"
-              data-v-5f48b8f6=""
+              data-v-3132a520=""
             >
               <div
                 class="t-image__mask"
@@ -1359,17 +1359,17 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
           </div>
           <div
             class="image-demo"
-            data-v-5f48b8f6=""
+            data-v-3132a520=""
           >
             <p
               class="image-demo-tip"
-              data-v-5f48b8f6=""
+              data-v-3132a520=""
             >
               圆形
             </p>
             <div
               class="t-image t-image--circle image-container"
-              data-v-5f48b8f6=""
+              data-v-3132a520=""
             >
               <div
                 class="t-image__mask"
@@ -1419,7 +1419,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-d8a5fc24=""
+    data-v-786eab7a=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1438,21 +1438,21 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
       
       <div
         class="row"
-        data-v-20e0193e=""
+        data-v-9e0dbbd1=""
       >
         <div
           class="col"
-          data-v-20e0193e=""
+          data-v-9e0dbbd1=""
         >
           <p
             class="tips"
-            data-v-20e0193e=""
+            data-v-9e0dbbd1=""
           >
             加载默认提示
           </p>
           <div
             class="t-image t-image--round image-container"
-            data-v-20e0193e=""
+            data-v-9e0dbbd1=""
           >
             <div
               class="t-image__mask"
@@ -1497,17 +1497,17 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
         </div>
         <div
           class="col"
-          data-v-20e0193e=""
+          data-v-9e0dbbd1=""
         >
           <p
             class="tips"
-            data-v-20e0193e=""
+            data-v-9e0dbbd1=""
           >
             加载自定义提示
           </p>
           <div
             class="t-image t-image--round image-container"
-            data-v-20e0193e=""
+            data-v-9e0dbbd1=""
           >
             <div
               class="t-image__mask"
@@ -1515,7 +1515,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
               
               <div
                 class="t-loading"
-                data-v-20e0193e=""
+                data-v-9e0dbbd1=""
                 style="font-size: 20px;"
               >
                 <svg
@@ -1557,21 +1557,21 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
       </div>
       <div
         class="row"
-        data-v-20e0193e=""
+        data-v-9e0dbbd1=""
       >
         <div
           class="col"
-          data-v-20e0193e=""
+          data-v-9e0dbbd1=""
         >
           <p
             class="tips"
-            data-v-20e0193e=""
+            data-v-9e0dbbd1=""
           >
             失败默认提示
           </p>
           <div
             class="t-image t-image--round image-container"
-            data-v-20e0193e=""
+            data-v-9e0dbbd1=""
           >
             <div
               class="t-image__mask"
@@ -1616,17 +1616,17 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
         </div>
         <div
           class="col"
-          data-v-20e0193e=""
+          data-v-9e0dbbd1=""
         >
           <p
             class="tips"
-            data-v-20e0193e=""
+            data-v-9e0dbbd1=""
           >
             失败自定义提示
           </p>
           <div
             class="t-image t-image--round image-container"
-            data-v-20e0193e=""
+            data-v-9e0dbbd1=""
           >
             <div
               class="t-image__mask"
@@ -1680,37 +1680,37 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
 exports[`Image > Image positionVue demo works fine 1`] = `
 <div
   class="image-example"
-  data-v-2d6651f5=""
+  data-v-326dc1df=""
 >
   <div
     class="image-example-title"
-    data-v-2d6651f5=""
+    data-v-326dc1df=""
   >
     不同填充位置的图片
   </div>
   <div
     class="image-example-desc"
-    data-v-2d6651f5=""
+    data-v-326dc1df=""
   >
     当图片过大时，提供显示图片的局部左侧对齐、或右侧对齐的不同位置。
   </div>
   <div
     class="image-group"
-    data-v-2d6651f5=""
+    data-v-326dc1df=""
   >
     <div
       class="image-demo"
-      data-v-2d6651f5=""
+      data-v-326dc1df=""
     >
       <p
         class="image-demo-tip"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
       >
         cover center
       </p>
       <div
         class="t-image t-image--square image-container"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
         style="width: 72px; height: 72px;"
       >
         <div
@@ -1756,17 +1756,17 @@ exports[`Image > Image positionVue demo works fine 1`] = `
     </div>
     <div
       class="image-demo"
-      data-v-2d6651f5=""
+      data-v-326dc1df=""
     >
       <p
         class="image-demo-tip"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
       >
         cover left
       </p>
       <div
         class="t-image t-image--square image-container"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
         style="width: 72px; height: 72px;"
       >
         <div
@@ -1812,17 +1812,17 @@ exports[`Image > Image positionVue demo works fine 1`] = `
     </div>
     <div
       class="image-demo"
-      data-v-2d6651f5=""
+      data-v-326dc1df=""
     >
       <p
         class="image-demo-tip"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
       >
         cover right
       </p>
       <div
         class="t-image t-image--square image-container"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
         style="width: 72px; height: 72px;"
       >
         <div
@@ -1868,17 +1868,17 @@ exports[`Image > Image positionVue demo works fine 1`] = `
     </div>
     <div
       class="image-demo"
-      data-v-2d6651f5=""
+      data-v-326dc1df=""
     >
       <p
         class="image-demo-tip"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
       >
         cover top
       </p>
       <div
         class="t-image t-image--square"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
         style="width: 240px; height: 80px;"
       >
         <div
@@ -1924,17 +1924,17 @@ exports[`Image > Image positionVue demo works fine 1`] = `
     </div>
     <div
       class="image-demo"
-      data-v-2d6651f5=""
+      data-v-326dc1df=""
     >
       <p
         class="image-demo-tip"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
       >
         cover bottom
       </p>
       <div
         class="t-image t-image--square"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
         style="width: 240px; height: 80px;"
       >
         <div
@@ -1980,17 +1980,17 @@ exports[`Image > Image positionVue demo works fine 1`] = `
     </div>
     <div
       class="image-demo"
-      data-v-2d6651f5=""
+      data-v-326dc1df=""
     >
       <p
         class="image-demo-tip"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
       >
         contain top
       </p>
       <div
         class="t-image t-image--square image-container"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
         style="width: 72px; height: 80px;"
       >
         <div
@@ -2036,17 +2036,17 @@ exports[`Image > Image positionVue demo works fine 1`] = `
     </div>
     <div
       class="image-demo"
-      data-v-2d6651f5=""
+      data-v-326dc1df=""
     >
       <p
         class="image-demo-tip"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
       >
         contain bottom
       </p>
       <div
         class="t-image t-image--square image-container"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
         style="width: 72px; height: 80px;"
       >
         <div
@@ -2092,17 +2092,17 @@ exports[`Image > Image positionVue demo works fine 1`] = `
     </div>
     <div
       class="image-demo"
-      data-v-2d6651f5=""
+      data-v-326dc1df=""
     >
       <p
         class="image-demo-tip"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
       >
         contain center
       </p>
       <div
         class="t-image t-image--square image-container"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
         style="width: 72px; height: 80px;"
       >
         <div
@@ -2148,17 +2148,17 @@ exports[`Image > Image positionVue demo works fine 1`] = `
     </div>
     <div
       class="image-demo"
-      data-v-2d6651f5=""
+      data-v-326dc1df=""
     >
       <p
         class="image-demo-tip"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
       >
         contain left
       </p>
       <div
         class="t-image t-image--square image-container"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
         style="width: 180px; height: 80px;"
       >
         <div
@@ -2204,17 +2204,17 @@ exports[`Image > Image positionVue demo works fine 1`] = `
     </div>
     <div
       class="image-demo"
-      data-v-2d6651f5=""
+      data-v-326dc1df=""
     >
       <p
         class="image-demo-tip"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
       >
         contain right
       </p>
       <div
         class="t-image t-image--square image-container"
-        data-v-2d6651f5=""
+        data-v-326dc1df=""
         style="width: 180px; height: 80px;"
       >
         <div
@@ -2265,37 +2265,37 @@ exports[`Image > Image positionVue demo works fine 1`] = `
 exports[`Image > Image shapeVue demo works fine 1`] = `
 <div
   class="image-example"
-  data-v-5f48b8f6=""
+  data-v-3132a520=""
 >
   <div
     class="image-example-title"
-    data-v-5f48b8f6=""
+    data-v-3132a520=""
   >
     不同形状的图片
   </div>
   <div
     class="image-example-desc"
-    data-v-5f48b8f6=""
+    data-v-3132a520=""
   >
      提供方形、圆角方形、圆角 3 种形状。 当图片长宽不相等时，无法使用 circle 展示一个正圆。 
   </div>
   <div
     class="image-group"
-    data-v-5f48b8f6=""
+    data-v-3132a520=""
   >
     <div
       class="image-demo"
-      data-v-5f48b8f6=""
+      data-v-3132a520=""
     >
       <p
         class="image-demo-tip"
-        data-v-5f48b8f6=""
+        data-v-3132a520=""
       >
         方形
       </p>
       <div
         class="t-image t-image--square image-container"
-        data-v-5f48b8f6=""
+        data-v-3132a520=""
       >
         <div
           class="t-image__mask"
@@ -2340,17 +2340,17 @@ exports[`Image > Image shapeVue demo works fine 1`] = `
     </div>
     <div
       class="image-demo"
-      data-v-5f48b8f6=""
+      data-v-3132a520=""
     >
       <p
         class="image-demo-tip"
-        data-v-5f48b8f6=""
+        data-v-3132a520=""
       >
         圆角方形
       </p>
       <div
         class="t-image t-image--round image-container"
-        data-v-5f48b8f6=""
+        data-v-3132a520=""
       >
         <div
           class="t-image__mask"
@@ -2395,17 +2395,17 @@ exports[`Image > Image shapeVue demo works fine 1`] = `
     </div>
     <div
       class="image-demo"
-      data-v-5f48b8f6=""
+      data-v-3132a520=""
     >
       <p
         class="image-demo-tip"
-        data-v-5f48b8f6=""
+        data-v-3132a520=""
       >
         圆形
       </p>
       <div
         class="t-image t-image--circle image-container"
-        data-v-5f48b8f6=""
+        data-v-3132a520=""
       >
         <div
           class="t-image__mask"
@@ -2459,21 +2459,21 @@ exports[`Image > Image statusVue demo works fine 1`] = `
   
   <div
     class="row"
-    data-v-20e0193e=""
+    data-v-9e0dbbd1=""
   >
     <div
       class="col"
-      data-v-20e0193e=""
+      data-v-9e0dbbd1=""
     >
       <p
         class="tips"
-        data-v-20e0193e=""
+        data-v-9e0dbbd1=""
       >
         加载默认提示
       </p>
       <div
         class="t-image t-image--round image-container"
-        data-v-20e0193e=""
+        data-v-9e0dbbd1=""
       >
         <div
           class="t-image__mask"
@@ -2518,17 +2518,17 @@ exports[`Image > Image statusVue demo works fine 1`] = `
     </div>
     <div
       class="col"
-      data-v-20e0193e=""
+      data-v-9e0dbbd1=""
     >
       <p
         class="tips"
-        data-v-20e0193e=""
+        data-v-9e0dbbd1=""
       >
         加载自定义提示
       </p>
       <div
         class="t-image t-image--round image-container"
-        data-v-20e0193e=""
+        data-v-9e0dbbd1=""
       >
         <div
           class="t-image__mask"
@@ -2536,7 +2536,7 @@ exports[`Image > Image statusVue demo works fine 1`] = `
           
           <div
             class="t-loading"
-            data-v-20e0193e=""
+            data-v-9e0dbbd1=""
             style="font-size: 20px;"
           >
             <svg
@@ -2578,21 +2578,21 @@ exports[`Image > Image statusVue demo works fine 1`] = `
   </div>
   <div
     class="row"
-    data-v-20e0193e=""
+    data-v-9e0dbbd1=""
   >
     <div
       class="col"
-      data-v-20e0193e=""
+      data-v-9e0dbbd1=""
     >
       <p
         class="tips"
-        data-v-20e0193e=""
+        data-v-9e0dbbd1=""
       >
         失败默认提示
       </p>
       <div
         class="t-image t-image--round image-container"
-        data-v-20e0193e=""
+        data-v-9e0dbbd1=""
       >
         <div
           class="t-image__mask"
@@ -2637,17 +2637,17 @@ exports[`Image > Image statusVue demo works fine 1`] = `
     </div>
     <div
       class="col"
-      data-v-20e0193e=""
+      data-v-9e0dbbd1=""
     >
       <p
         class="tips"
-        data-v-20e0193e=""
+        data-v-9e0dbbd1=""
       >
         失败自定义提示
       </p>
       <div
         class="t-image t-image--round image-container"
-        data-v-20e0193e=""
+        data-v-9e0dbbd1=""
       >
         <div
           class="t-image__mask"
