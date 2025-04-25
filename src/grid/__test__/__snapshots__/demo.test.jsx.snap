@@ -341,13 +341,13 @@ exports[`Grid > Grid baseVue demo works fine 1`] = `
   
   <div
     class="t-grid grid-demo"
-    data-v-3e578ca0=""
+    data-v-4922780e=""
     style="grid-template-columns: repeat(5, 1fr);"
   >
     
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-3e578ca0=""
+      data-v-4922780e=""
       style="text-align: center; flex-basis: 20%;"
     >
       <div
@@ -414,7 +414,7 @@ exports[`Grid > Grid baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-3e578ca0=""
+      data-v-4922780e=""
       style="text-align: center; flex-basis: 20%;"
     >
       <div
@@ -481,7 +481,7 @@ exports[`Grid > Grid baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-3e578ca0=""
+      data-v-4922780e=""
       style="text-align: center; flex-basis: 20%;"
     >
       <div
@@ -548,7 +548,7 @@ exports[`Grid > Grid baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-3e578ca0=""
+      data-v-4922780e=""
       style="text-align: center; flex-basis: 20%;"
     >
       <div
@@ -615,7 +615,7 @@ exports[`Grid > Grid baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-3e578ca0=""
+      data-v-4922780e=""
       style="text-align: center; flex-basis: 20%;"
     >
       <div
@@ -684,13 +684,13 @@ exports[`Grid > Grid baseVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid grid-demo"
-    data-v-3e578ca0=""
+    data-v-4922780e=""
     style="grid-template-columns: repeat(4, 1fr);"
   >
     
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-3e578ca0=""
+      data-v-4922780e=""
       style="text-align: center; flex-basis: 25%;"
     >
       <div
@@ -757,7 +757,7 @@ exports[`Grid > Grid baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-3e578ca0=""
+      data-v-4922780e=""
       style="text-align: center; flex-basis: 25%;"
     >
       <div
@@ -824,7 +824,7 @@ exports[`Grid > Grid baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-3e578ca0=""
+      data-v-4922780e=""
       style="text-align: center; flex-basis: 25%;"
     >
       <div
@@ -891,7 +891,7 @@ exports[`Grid > Grid baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-3e578ca0=""
+      data-v-4922780e=""
       style="text-align: center; flex-basis: 25%;"
     >
       <div
@@ -960,13 +960,13 @@ exports[`Grid > Grid baseVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid grid-demo"
-    data-v-3e578ca0=""
+    data-v-4922780e=""
     style="grid-template-columns: repeat(3, 1fr);"
   >
     
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-3e578ca0=""
+      data-v-4922780e=""
       style="text-align: center; flex-basis: 33.333333333333336%;"
     >
       <div
@@ -1033,7 +1033,7 @@ exports[`Grid > Grid baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-3e578ca0=""
+      data-v-4922780e=""
       style="text-align: center; flex-basis: 33.333333333333336%;"
     >
       <div
@@ -1100,7 +1100,7 @@ exports[`Grid > Grid baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-3e578ca0=""
+      data-v-4922780e=""
       style="text-align: center; flex-basis: 33.333333333333336%;"
     >
       <div
@@ -1178,13 +1178,13 @@ exports[`Grid > Grid borderedVue demo works fine 1`] = `
   
   <div
     class="t-grid t-grid--bordered grid-demo"
-    data-v-fb92dfac=""
+    data-v-9f3166f0=""
     style="grid-template-columns: repeat(3, 1fr);"
   >
     
     <div
       class="t-grid-item t-grid-item--vertical t-grid-item--bordered"
-      data-v-fb92dfac=""
+      data-v-9f3166f0=""
       style="text-align: center; flex-basis: 33.333333333333336%;"
     >
       <div
@@ -1251,7 +1251,7 @@ exports[`Grid > Grid borderedVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical t-grid-item--bordered"
-      data-v-fb92dfac=""
+      data-v-9f3166f0=""
       style="text-align: center; flex-basis: 33.333333333333336%;"
     >
       <div
@@ -1318,7 +1318,7 @@ exports[`Grid > Grid borderedVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical t-grid-item--bordered"
-      data-v-fb92dfac=""
+      data-v-9f3166f0=""
       style="text-align: center; flex-basis: 33.333333333333336%;"
     >
       <div
@@ -1385,7 +1385,7 @@ exports[`Grid > Grid borderedVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical t-grid-item--bordered"
-      data-v-fb92dfac=""
+      data-v-9f3166f0=""
       style="text-align: center; flex-basis: 33.333333333333336%;"
     >
       <div
@@ -1452,7 +1452,7 @@ exports[`Grid > Grid borderedVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical t-grid-item--bordered"
-      data-v-fb92dfac=""
+      data-v-9f3166f0=""
       style="text-align: center; flex-basis: 33.333333333333336%;"
     >
       <div
@@ -1519,7 +1519,7 @@ exports[`Grid > Grid borderedVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical t-grid-item--bordered"
-      data-v-fb92dfac=""
+      data-v-9f3166f0=""
       style="text-align: center; flex-basis: 33.333333333333336%;"
     >
       <div
@@ -1588,13 +1588,13 @@ exports[`Grid > Grid borderedVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid t-grid--bordered grid-demo"
-    data-v-fb92dfac=""
+    data-v-9f3166f0=""
     style="grid-template-columns: repeat(2, 1fr);"
   >
     
     <div
       class="t-grid-item t-grid-item--horizontal t-grid-item--bordered"
-      data-v-fb92dfac=""
+      data-v-9f3166f0=""
       style="text-align: center; flex-basis: 50%;"
     >
       <div
@@ -1661,7 +1661,7 @@ exports[`Grid > Grid borderedVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--horizontal t-grid-item--bordered"
-      data-v-fb92dfac=""
+      data-v-9f3166f0=""
       style="text-align: center; flex-basis: 50%;"
     >
       <div
@@ -1739,13 +1739,13 @@ exports[`Grid > Grid cardVue demo works fine 1`] = `
   
   <div
     class="t-grid t-grid--card grid-demo"
-    data-v-46f2766f=""
+    data-v-2ea8f064=""
     style="grid-template-columns: repeat(4, 1fr);"
   >
     
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-46f2766f=""
+      data-v-2ea8f064=""
       style="text-align: center; flex-basis: 25%;"
     >
       <div
@@ -1812,7 +1812,7 @@ exports[`Grid > Grid cardVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-46f2766f=""
+      data-v-2ea8f064=""
       style="text-align: center; flex-basis: 25%;"
     >
       <div
@@ -1879,7 +1879,7 @@ exports[`Grid > Grid cardVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-46f2766f=""
+      data-v-2ea8f064=""
       style="text-align: center; flex-basis: 25%;"
     >
       <div
@@ -1946,7 +1946,7 @@ exports[`Grid > Grid cardVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-46f2766f=""
+      data-v-2ea8f064=""
       style="text-align: center; flex-basis: 25%;"
     >
       <div
@@ -2015,13 +2015,13 @@ exports[`Grid > Grid cardVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid t-grid--card grid-demo"
-    data-v-46f2766f=""
+    data-v-2ea8f064=""
     style="grid-template-columns: repeat(2, 1fr);"
   >
     
     <div
       class="t-grid-item t-grid-item--horizontal"
-      data-v-46f2766f=""
+      data-v-2ea8f064=""
       style="text-align: center; flex-basis: 50%;"
     >
       <div
@@ -2088,7 +2088,7 @@ exports[`Grid > Grid cardVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--horizontal"
-      data-v-46f2766f=""
+      data-v-2ea8f064=""
       style="text-align: center; flex-basis: 50%;"
     >
       <div
@@ -2166,13 +2166,13 @@ exports[`Grid > Grid descVue demo works fine 1`] = `
   
   <div
     class="t-grid grid-demo"
-    data-v-f7d95d20=""
+    data-v-0dfa696f=""
     style="grid-template-columns: repeat(3, 1fr);"
   >
     
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-f7d95d20=""
+      data-v-0dfa696f=""
       style="text-align: center; flex-basis: 33.333333333333336%;"
     >
       <div
@@ -2239,7 +2239,7 @@ exports[`Grid > Grid descVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-f7d95d20=""
+      data-v-0dfa696f=""
       style="text-align: center; flex-basis: 33.333333333333336%;"
     >
       <div
@@ -2306,7 +2306,7 @@ exports[`Grid > Grid descVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--vertical"
-      data-v-f7d95d20=""
+      data-v-0dfa696f=""
       style="text-align: center; flex-basis: 33.333333333333336%;"
     >
       <div
@@ -2375,13 +2375,13 @@ exports[`Grid > Grid descVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid grid-demo"
-    data-v-f7d95d20=""
+    data-v-0dfa696f=""
     style="grid-template-columns: repeat(2, 1fr);"
   >
     
     <div
       class="t-grid-item t-grid-item--horizontal"
-      data-v-f7d95d20=""
+      data-v-0dfa696f=""
       style="text-align: center; flex-basis: 50%;"
     >
       <div
@@ -2448,7 +2448,7 @@ exports[`Grid > Grid descVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item t-grid-item--horizontal"
-      data-v-f7d95d20=""
+      data-v-0dfa696f=""
       style="text-align: center; flex-basis: 50%;"
     >
       <div
@@ -2522,13 +2522,13 @@ exports[`Grid > Grid descVue demo works fine 1`] = `
 exports[`Grid > Grid iconVue demo works fine 1`] = `
 <div
   class="t-grid grid-demo"
-  data-v-1b745b58=""
+  data-v-0db0af22=""
   style="grid-template-columns: repeat(4, 1fr);"
 >
   
   <div
     class="t-grid-item t-grid-item--vertical"
-    data-v-1b745b58=""
+    data-v-0db0af22=""
     style="text-align: center; flex-basis: 25%;"
   >
     <div
@@ -2537,11 +2537,11 @@ exports[`Grid > Grid iconVue demo works fine 1`] = `
       
       <div
         class="icon-wrapper"
-        data-v-1b745b58=""
+        data-v-0db0af22=""
       >
         <svg
           class="t-icon t-icon-share"
-          data-v-1b745b58=""
+          data-v-0db0af22=""
           fill="none"
           height="1em"
           viewBox="0 0 24 24"
@@ -2572,7 +2572,7 @@ exports[`Grid > Grid iconVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid-item t-grid-item--vertical"
-    data-v-1b745b58=""
+    data-v-0db0af22=""
     style="text-align: center; flex-basis: 25%;"
   >
     <div
@@ -2609,7 +2609,7 @@ exports[`Grid > Grid iconVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid-item t-grid-item--vertical"
-    data-v-1b745b58=""
+    data-v-0db0af22=""
     style="text-align: center; flex-basis: 25%;"
   >
     <div
@@ -2646,7 +2646,7 @@ exports[`Grid > Grid iconVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid-item t-grid-item--vertical"
-    data-v-1b745b58=""
+    data-v-0db0af22=""
     style="text-align: center; flex-basis: 25%;"
   >
     <div
@@ -2723,13 +2723,13 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
       
       <div
         class="t-grid grid-demo"
-        data-v-3e578ca0=""
+        data-v-4922780e=""
         style="grid-template-columns: repeat(5, 1fr);"
       >
         
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-3e578ca0=""
+          data-v-4922780e=""
           style="text-align: center; flex-basis: 20%;"
         >
           <div
@@ -2796,7 +2796,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-3e578ca0=""
+          data-v-4922780e=""
           style="text-align: center; flex-basis: 20%;"
         >
           <div
@@ -2863,7 +2863,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-3e578ca0=""
+          data-v-4922780e=""
           style="text-align: center; flex-basis: 20%;"
         >
           <div
@@ -2930,7 +2930,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-3e578ca0=""
+          data-v-4922780e=""
           style="text-align: center; flex-basis: 20%;"
         >
           <div
@@ -2997,7 +2997,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-3e578ca0=""
+          data-v-4922780e=""
           style="text-align: center; flex-basis: 20%;"
         >
           <div
@@ -3066,13 +3066,13 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-grid grid-demo"
-        data-v-3e578ca0=""
+        data-v-4922780e=""
         style="grid-template-columns: repeat(4, 1fr);"
       >
         
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-3e578ca0=""
+          data-v-4922780e=""
           style="text-align: center; flex-basis: 25%;"
         >
           <div
@@ -3139,7 +3139,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-3e578ca0=""
+          data-v-4922780e=""
           style="text-align: center; flex-basis: 25%;"
         >
           <div
@@ -3206,7 +3206,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-3e578ca0=""
+          data-v-4922780e=""
           style="text-align: center; flex-basis: 25%;"
         >
           <div
@@ -3273,7 +3273,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-3e578ca0=""
+          data-v-4922780e=""
           style="text-align: center; flex-basis: 25%;"
         >
           <div
@@ -3342,13 +3342,13 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-grid grid-demo"
-        data-v-3e578ca0=""
+        data-v-4922780e=""
         style="grid-template-columns: repeat(3, 1fr);"
       >
         
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-3e578ca0=""
+          data-v-4922780e=""
           style="text-align: center; flex-basis: 33.333333333333336%;"
         >
           <div
@@ -3415,7 +3415,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-3e578ca0=""
+          data-v-4922780e=""
           style="text-align: center; flex-basis: 33.333333333333336%;"
         >
           <div
@@ -3482,7 +3482,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-3e578ca0=""
+          data-v-4922780e=""
           style="text-align: center; flex-basis: 33.333333333333336%;"
         >
           <div
@@ -3573,13 +3573,13 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
       
       <div
         class="t-grid grid-demo"
-        data-v-f7d95d20=""
+        data-v-0dfa696f=""
         style="grid-template-columns: repeat(3, 1fr);"
       >
         
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-f7d95d20=""
+          data-v-0dfa696f=""
           style="text-align: center; flex-basis: 33.333333333333336%;"
         >
           <div
@@ -3646,7 +3646,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-f7d95d20=""
+          data-v-0dfa696f=""
           style="text-align: center; flex-basis: 33.333333333333336%;"
         >
           <div
@@ -3713,7 +3713,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-f7d95d20=""
+          data-v-0dfa696f=""
           style="text-align: center; flex-basis: 33.333333333333336%;"
         >
           <div
@@ -3782,13 +3782,13 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-grid grid-demo"
-        data-v-f7d95d20=""
+        data-v-0dfa696f=""
         style="grid-template-columns: repeat(2, 1fr);"
       >
         
         <div
           class="t-grid-item t-grid-item--horizontal"
-          data-v-f7d95d20=""
+          data-v-0dfa696f=""
           style="text-align: center; flex-basis: 50%;"
         >
           <div
@@ -3855,7 +3855,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--horizontal"
-          data-v-f7d95d20=""
+          data-v-0dfa696f=""
           style="text-align: center; flex-basis: 50%;"
         >
           <div
@@ -3946,13 +3946,13 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
       
       <div
         class="t-grid t-grid--bordered grid-demo"
-        data-v-fb92dfac=""
+        data-v-9f3166f0=""
         style="grid-template-columns: repeat(3, 1fr);"
       >
         
         <div
           class="t-grid-item t-grid-item--vertical t-grid-item--bordered"
-          data-v-fb92dfac=""
+          data-v-9f3166f0=""
           style="text-align: center; flex-basis: 33.333333333333336%;"
         >
           <div
@@ -4019,7 +4019,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical t-grid-item--bordered"
-          data-v-fb92dfac=""
+          data-v-9f3166f0=""
           style="text-align: center; flex-basis: 33.333333333333336%;"
         >
           <div
@@ -4086,7 +4086,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical t-grid-item--bordered"
-          data-v-fb92dfac=""
+          data-v-9f3166f0=""
           style="text-align: center; flex-basis: 33.333333333333336%;"
         >
           <div
@@ -4153,7 +4153,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical t-grid-item--bordered"
-          data-v-fb92dfac=""
+          data-v-9f3166f0=""
           style="text-align: center; flex-basis: 33.333333333333336%;"
         >
           <div
@@ -4220,7 +4220,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical t-grid-item--bordered"
-          data-v-fb92dfac=""
+          data-v-9f3166f0=""
           style="text-align: center; flex-basis: 33.333333333333336%;"
         >
           <div
@@ -4287,7 +4287,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical t-grid-item--bordered"
-          data-v-fb92dfac=""
+          data-v-9f3166f0=""
           style="text-align: center; flex-basis: 33.333333333333336%;"
         >
           <div
@@ -4356,13 +4356,13 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-grid t-grid--bordered grid-demo"
-        data-v-fb92dfac=""
+        data-v-9f3166f0=""
         style="grid-template-columns: repeat(2, 1fr);"
       >
         
         <div
           class="t-grid-item t-grid-item--horizontal t-grid-item--bordered"
-          data-v-fb92dfac=""
+          data-v-9f3166f0=""
           style="text-align: center; flex-basis: 50%;"
         >
           <div
@@ -4429,7 +4429,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--horizontal t-grid-item--bordered"
-          data-v-fb92dfac=""
+          data-v-9f3166f0=""
           style="text-align: center; flex-basis: 50%;"
         >
           <div
@@ -4870,13 +4870,13 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
       
       <div
         class="t-grid t-grid--auto-size grid-demo"
-        data-v-7052a5ec=""
+        data-v-9ca1501d=""
       >
         
         
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-7052a5ec=""
+          data-v-9ca1501d=""
           style="text-align: center;"
         >
           <div
@@ -4943,7 +4943,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-7052a5ec=""
+          data-v-9ca1501d=""
           style="text-align: center;"
         >
           <div
@@ -5010,7 +5010,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-7052a5ec=""
+          data-v-9ca1501d=""
           style="text-align: center;"
         >
           <div
@@ -5077,7 +5077,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-7052a5ec=""
+          data-v-9ca1501d=""
           style="text-align: center;"
         >
           <div
@@ -5144,7 +5144,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-7052a5ec=""
+          data-v-9ca1501d=""
           style="text-align: center;"
         >
           <div
@@ -5211,7 +5211,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-7052a5ec=""
+          data-v-9ca1501d=""
           style="text-align: center;"
         >
           <div
@@ -5278,7 +5278,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-7052a5ec=""
+          data-v-9ca1501d=""
           style="text-align: center;"
         >
           <div
@@ -5345,7 +5345,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-7052a5ec=""
+          data-v-9ca1501d=""
           style="text-align: center;"
         >
           <div
@@ -5412,7 +5412,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-7052a5ec=""
+          data-v-9ca1501d=""
           style="text-align: center;"
         >
           <div
@@ -5479,7 +5479,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-7052a5ec=""
+          data-v-9ca1501d=""
           style="text-align: center;"
         >
           <div
@@ -5573,13 +5573,13 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
       
       <div
         class="t-grid grid-demo"
-        data-v-1b745b58=""
+        data-v-0db0af22=""
         style="grid-template-columns: repeat(4, 1fr);"
       >
         
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-1b745b58=""
+          data-v-0db0af22=""
           style="text-align: center; flex-basis: 25%;"
         >
           <div
@@ -5588,11 +5588,11 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
             
             <div
               class="icon-wrapper"
-              data-v-1b745b58=""
+              data-v-0db0af22=""
             >
               <svg
                 class="t-icon t-icon-share"
-                data-v-1b745b58=""
+                data-v-0db0af22=""
                 fill="none"
                 height="1em"
                 viewBox="0 0 24 24"
@@ -5623,7 +5623,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-1b745b58=""
+          data-v-0db0af22=""
           style="text-align: center; flex-basis: 25%;"
         >
           <div
@@ -5660,7 +5660,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-1b745b58=""
+          data-v-0db0af22=""
           style="text-align: center; flex-basis: 25%;"
         >
           <div
@@ -5697,7 +5697,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-1b745b58=""
+          data-v-0db0af22=""
           style="text-align: center; flex-basis: 25%;"
         >
           <div
@@ -5757,13 +5757,13 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
       
       <div
         class="t-grid t-grid--card grid-demo"
-        data-v-46f2766f=""
+        data-v-2ea8f064=""
         style="grid-template-columns: repeat(4, 1fr);"
       >
         
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-46f2766f=""
+          data-v-2ea8f064=""
           style="text-align: center; flex-basis: 25%;"
         >
           <div
@@ -5830,7 +5830,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-46f2766f=""
+          data-v-2ea8f064=""
           style="text-align: center; flex-basis: 25%;"
         >
           <div
@@ -5897,7 +5897,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-46f2766f=""
+          data-v-2ea8f064=""
           style="text-align: center; flex-basis: 25%;"
         >
           <div
@@ -5964,7 +5964,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-46f2766f=""
+          data-v-2ea8f064=""
           style="text-align: center; flex-basis: 25%;"
         >
           <div
@@ -6033,13 +6033,13 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-grid t-grid--card grid-demo"
-        data-v-46f2766f=""
+        data-v-2ea8f064=""
         style="grid-template-columns: repeat(2, 1fr);"
       >
         
         <div
           class="t-grid-item t-grid-item--horizontal"
-          data-v-46f2766f=""
+          data-v-2ea8f064=""
           style="text-align: center; flex-basis: 50%;"
         >
           <div
@@ -6106,7 +6106,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--horizontal"
-          data-v-46f2766f=""
+          data-v-2ea8f064=""
           style="text-align: center; flex-basis: 50%;"
         >
           <div
@@ -6183,13 +6183,13 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
 exports[`Grid > Grid scrollVue demo works fine 1`] = `
 <div
   class="t-grid t-grid--auto-size grid-demo"
-  data-v-7052a5ec=""
+  data-v-9ca1501d=""
 >
   
   
   <div
     class="t-grid-item t-grid-item--vertical"
-    data-v-7052a5ec=""
+    data-v-9ca1501d=""
     style="text-align: center;"
   >
     <div
@@ -6256,7 +6256,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid-item t-grid-item--vertical"
-    data-v-7052a5ec=""
+    data-v-9ca1501d=""
     style="text-align: center;"
   >
     <div
@@ -6323,7 +6323,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid-item t-grid-item--vertical"
-    data-v-7052a5ec=""
+    data-v-9ca1501d=""
     style="text-align: center;"
   >
     <div
@@ -6390,7 +6390,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid-item t-grid-item--vertical"
-    data-v-7052a5ec=""
+    data-v-9ca1501d=""
     style="text-align: center;"
   >
     <div
@@ -6457,7 +6457,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid-item t-grid-item--vertical"
-    data-v-7052a5ec=""
+    data-v-9ca1501d=""
     style="text-align: center;"
   >
     <div
@@ -6524,7 +6524,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid-item t-grid-item--vertical"
-    data-v-7052a5ec=""
+    data-v-9ca1501d=""
     style="text-align: center;"
   >
     <div
@@ -6591,7 +6591,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid-item t-grid-item--vertical"
-    data-v-7052a5ec=""
+    data-v-9ca1501d=""
     style="text-align: center;"
   >
     <div
@@ -6658,7 +6658,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid-item t-grid-item--vertical"
-    data-v-7052a5ec=""
+    data-v-9ca1501d=""
     style="text-align: center;"
   >
     <div
@@ -6725,7 +6725,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid-item t-grid-item--vertical"
-    data-v-7052a5ec=""
+    data-v-9ca1501d=""
     style="text-align: center;"
   >
     <div
@@ -6792,7 +6792,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid-item t-grid-item--vertical"
-    data-v-7052a5ec=""
+    data-v-9ca1501d=""
     style="text-align: center;"
   >
     <div
