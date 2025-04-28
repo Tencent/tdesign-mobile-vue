@@ -21,6 +21,7 @@ export default defineComponent({
       navbarClass.value,
       {
         [`${navbarClass.value}--fixed`]: props.fixed,
+        [`${prefix}-safe-area-top `]: props.safeAreaInsetTop,
       },
       props.visible
         ? `${navbarClass.value}--visible${animationSuffix.value}`
