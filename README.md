@@ -52,6 +52,10 @@ app.use(TDesign);
 
 # 贡献成员
 
+<a href="https://openomy.app/github/tencent/tdesign-mobile-vue" target="_blank" style="display: block; width: 100%;" align="center">
+  <img src="https://openomy.app/svg?repo=tencent/tdesign-mobile-vue&chart=bubble&latestMonth=3" target="_blank" alt="Contribution Leaderboard" style="display: block; width: 100%;" />
+ </a>
+
 <a href="https://github.com/tencent/tdesign-mobile-vue/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=tencent/tdesign-mobile-vue" />
 </a>
