@@ -3222,12 +3222,12 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
             <div
               class="t-picker__cancel"
             >
-              Cancel
+              取消
             </div>
             <div
               class="t-picker__title"
             >
-              title test
+              选择时间
             </div>
             <div
               class="t-picker__confirm"
@@ -3697,6 +3697,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               class="t-picker__indicator"
             />
           </div>
+          <!---->
         </div>
         
       </div>
@@ -6493,12 +6494,12 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
         <div
           class="t-picker__cancel"
         >
-          Cancel
+          取消
         </div>
         <div
           class="t-picker__title"
         >
-          title test
+          选择时间
         </div>
         <div
           class="t-picker__confirm"
@@ -6968,6 +6969,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
           class="t-picker__indicator"
         />
       </div>
+      <!---->
     </div>
     
   </div>
