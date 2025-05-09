@@ -37,6 +37,7 @@ export default defineComponent({
     const {
       disabled,
       displayFiles,
+      uploadErrorsDisplay,
       uploading,
       inputRef,
       uploadFilePercent,
@@ -94,8 +95,27 @@ export default defineComponent({
               <CloseCircleIcon size="24" />
             )}
             {file.status === 'fail' && (
-              <div class={`${uploadClass.value}__progress-text`}>{globalConfig.value.progress.failText}</div>
+              <div class={`${uploadClass.value}__progress-text`}>
+                {file.response?.error && !uploadErrorsDisplay.value.length && file.response?.error.length <= 6
+                  ? file.response.error
+                  : globalConfig.value.progress.failText}
+              </div>
             )}
+          </div>
+        );
+      }
+    };
+
+    // 渲染组件底部自定义错误信息面板
+    const renderErrorsDisplay = () => {
+      if (uploadErrorsDisplay.value.length) {
+        return (
+          <div class={`${uploadClass.value}__error`}>
+            {uploadErrorsDisplay.value.map((error, index) => (
+              <div class={`${uploadClass.value}__error-text`} key={index}>
+                {error}
+              </div>
+            ))}
           </div>
         );
       }
@@ -161,6 +181,7 @@ export default defineComponent({
             index={initialIndex.value}
             onClose={handleImageClose}
           />
+          {renderErrorsDisplay()}
         </div>
       );
     };
