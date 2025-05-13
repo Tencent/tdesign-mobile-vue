@@ -5,6 +5,13 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.8.5 `2025-05-13` 
+### 🚀 Features
+- `Navbar`: 新增 `safeAreaInsetTop`，是否开启顶部安全区适配 @anlyyao ([#1834](https://github.com/Tencent/tdesign-mobile-vue/pull/1834))
+- `PullDownRefresh`: 新增 `disabled` 属性 @anlyyao ([#1844](https://github.com/Tencent/tdesign-mobile-vue/pull/1844))
+### 🐞 Bug Fixes
+- `Message`: 修复项目引入 `amfe-flexible` 包后，组件样式不兼容 @anlyyao ([#1845](https://github.com/Tencent/tdesign-mobile-vue/pull/1845))
+
 ## 🌈 1.8.4 `2025-04-25` 
 ### 🚀 Features
 - `Icon`: 新增 `logo-miniprogram`、`logo-cnb`、`seal`、`quote` 图标 @taowensheng1997 @uyarn ([#1827](https://github.com/Tencent/tdesign-mobile-vue/pull/1827))

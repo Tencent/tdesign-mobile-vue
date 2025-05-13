@@ -2,7 +2,7 @@
 
 exports[`navbar > events > left-click 1`] = `
 <div
-  class="t-navbar t-navbar--fixed t-navbar--visible-animation"
+  class="t-navbar t-navbar--fixed t-safe-area-top t-navbar--visible-animation"
   style="position: fixed;"
 >
   <div
@@ -47,7 +47,7 @@ exports[`navbar > events > left-click 1`] = `
 
 exports[`navbar > events > right-click 1`] = `
 <div
-  class="t-navbar t-navbar--fixed t-navbar--visible-animation"
+  class="t-navbar t-navbar--fixed t-safe-area-top t-navbar--visible-animation"
   style="position: fixed;"
 >
   <div
