@@ -131,7 +131,7 @@
     "@vue/eslint-config-typescript": "^9.1.0",
     "@vue/runtime-core": "^3.2.41",
     "@vue/shared": "3.3.8",
-    "@vue/test-utils": "2.4.1",
+    "@vue/test-utils": "2.4.6",
     "autoprefixer": "^10.2.4",
     "axios": "^1.7.2",
     "camelcase": "~6.3.0",
