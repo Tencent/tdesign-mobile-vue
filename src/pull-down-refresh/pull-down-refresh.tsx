@@ -92,7 +92,7 @@ export default defineComponent({
 
     const onTouchStart = (e: TouchEvent) => {
       e.stopPropagation();
-      if (!isReachTop(e) || loading.value) return;
+      if (!isReachTop(e) || loading.value || props.disabled) return;
 
       clearTimeout(timer);
       timer = null;
@@ -103,7 +103,7 @@ export default defineComponent({
 
     const onTouchMove = (e: TouchEvent) => {
       e.stopPropagation();
-      if (!isReachTop(e) || loading.value) return;
+      if (!isReachTop(e) || loading.value || props.disabled) return;
       touch.move(e);
 
       const { diffY, diffX } = touch;
@@ -135,7 +135,7 @@ export default defineComponent({
 
     const onTouchEnd = (e: TouchEvent) => {
       e.stopPropagation();
-      if (!isReachTop(e) || loading.value) return;
+      if (!isReachTop(e) || loading.value || props.disabled) return;
 
       if (status.value === 'loosing') {
         distance.value = loadingBarHeight.value;
