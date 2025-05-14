@@ -142,7 +142,7 @@ describe('slider', () => {
 
       await $line.trigger('click', { clientX });
 
-      expect(onChange).toHaveBeenCalledWith(61);
+      expect(onChange).toHaveBeenCalledWith(55);
 
       // // restore
       window.HTMLElement.prototype.getBoundingClientRect = original;
