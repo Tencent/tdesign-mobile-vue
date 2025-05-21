@@ -6,6 +6,7 @@
       <baseVue />
       <yearMonthVue />
       <timeVue />
+      <stepsVue />
     </tdesign-demo-block>
     <tdesign-demo-block title="02 自定义" summary="自定义选择范围">
       <customRangeVue />
@@ -16,5 +17,6 @@
 import baseVue from './base.vue';
 import yearMonthVue from './year-month.vue';
 import timeVue from './time.vue';
+import stepsVue from './steps.vue';
 import customRangeVue from './custom-range.vue';
 </script>

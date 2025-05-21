@@ -13,6 +13,7 @@ mode | String / Array | 'date' | year = 年；month = 年月；date = 年月日�
 renderLabel | Function | - | 自定义label。TS 类型：`(type: string, value: number) => string` | N
 showWeek | Boolean | false | 【开发中】是否在日期旁边显示周几（如周一，周二，周日等） | N
 start | String / Number | - | 选择器的最小可选时间，默认为当前时间-10年 | N
+steps | Object | {} | `1.8.6`。时间间隔步数，示例：`{ minute: 5 }`。TS 类型：`{ [key in TimeModeValues]?: number }` | N
 title | String | '选择时间' | 标题 | N
 value | String / Number | - | 选中值。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`DateValue` `type DateValue = string | number`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts) | N
 defaultValue | String / Number | - | 选中值。非受控属性。TS 类型：`DateValue` `type DateValue = string | number`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts) | N

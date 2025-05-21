@@ -14,6 +14,7 @@ mode | String / Array | 'date' | Typescript：`DateTimePickerMode` `type DateTim
 renderLabel | Function | - | Typescript：`(type: string, value: number) => string` | N
 showWeek | Boolean | false | \- | N
 start | String / Number | - | \- | N
+steps | Object | {} | `1.8.6`。Typescript：`{ [key in TimeModeValues]?: number }` | N
 title | String | - | title of picker | N
 value | String / Number | - | `v-model` and `v-model:value` is supported。Typescript：`DateValue` `type DateValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts) | N
 defaultValue | String / Number | - | uncontrolled property。Typescript：`DateValue` `type DateValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts) | N
