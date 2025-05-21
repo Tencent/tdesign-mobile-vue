@@ -42,6 +42,11 @@ export default {
   start: {
     type: [String, Number] as PropType<TdDateTimePickerProps['start']>,
   },
+  /** 时间间隔步数，示例：`{ minute: 5 }` */
+  steps: {
+    type: Object as PropType<TdDateTimePickerProps['steps']>,
+    default: () => ({}),
+  },
   /** 标题 */
   title: {
     type: String,
