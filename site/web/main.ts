@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 
+// @ts-ignore
 import TDesign from '@/index';
 import 'tdesign-mobile-vue/style/index.js';
 
