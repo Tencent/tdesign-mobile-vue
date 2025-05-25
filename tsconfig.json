@@ -9,6 +9,7 @@
     "noImplicitThis": true,
     "strictNullChecks": false,
     "removeComments": true,
+    "suppressImplicitAnyIndexErrors": true,
     "ignoreDeprecations": "5.0",
     "resolveJsonModule": true,
     "importHelpers": true,
