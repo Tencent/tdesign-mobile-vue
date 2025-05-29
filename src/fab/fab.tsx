@@ -9,8 +9,6 @@ import { reconvertUnit } from '../shared';
 
 const { prefix } = config;
 
-const getNumber = (num: string) => num.replace(/[^\d]/g, '');
-
 export default defineComponent({
   name: `${prefix}-fab`,
   props: FabProps,
@@ -20,6 +18,7 @@ export default defineComponent({
     const fabClass = usePrefixClass('fab');
     const fabRef = ref();
     const fabButtonRef = ref();
+    const customNodeRef = ref();
 
     const handleClick = (e: MouseEvent) => {
       props.onClick?.({ e });
@@ -120,18 +119,22 @@ export default defineComponent({
       }
     };
 
-    const fabStyle = computed(() => ({
-      right: `${btnSwitchPos.value.x}px`,
-      bottom: `${btnSwitchPos.value.y}px`,
-    }));
+    const fabStyle = computed(() => {
+      const { x, y } = btnSwitchPos.value;
+
+      return `right: ${x}px;bottom: ${y}px;`;
+    });
 
     onMounted(() => {
       mounted.value = true;
       resetDraggableParams();
 
-      const info = window.getComputedStyle(fabButtonRef.value.$el);
-      fabButtonSize.value.height = +getNumber(info.height);
-      fabButtonSize.value.width = +getNumber(info.width);
+      if (fabButtonRef.value || customNodeRef.value) {
+        const info = window.getComputedStyle(fabButtonRef.value?.$el || customNodeRef.value);
+
+        fabButtonSize.value.height = +reconvertUnit(info.height);
+        fabButtonSize.value.width = +reconvertUnit(info.width);
+      }
     });
 
     const getFabOriginStyle = () => {
@@ -139,8 +142,8 @@ export default defineComponent({
       const { right, bottom } = info || {};
 
       return {
-        right: +(getNumber(right) || 0),
-        bottom: +(getNumber(bottom) || 0),
+        right: +(reconvertUnit(right) || 0),
+        bottom: +(reconvertUnit(bottom) || 0),
       };
     };
 
@@ -163,27 +166,32 @@ export default defineComponent({
 
     return () => {
       const icon = () => renderTNodeJSX('icon');
+      const defaultContent = (
+        <TButton
+          size="large"
+          theme="primary"
+          shape={props.text ? 'round' : 'circle'}
+          class={`${fabClass.value}__button`}
+          {...(props.buttonProps as TdFabProps['buttonProps'])}
+          icon={icon}
+          ref={fabButtonRef}
+        >
+          {props.text}
+        </TButton>
+      );
+
+      const customNode = renderTNodeJSX('default');
       return (
         <div
           class={fabClass.value}
-          style={mounted.value && props.draggable ? { ...fabStyle.value } : props.style}
+          style={mounted.value && props.draggable ? fabStyle.value : props.style}
           onClick={handleClick}
           onTouchstart={onTouchStart}
           onTouchmove={onTouchMove}
           onTouchend={onTouchEnd}
           ref={fabRef}
         >
-          <TButton
-            size="large"
-            theme="primary"
-            shape={props.text ? 'round' : 'circle'}
-            class={`${fabClass.value}__button`}
-            {...(props.buttonProps as TdFabProps['buttonProps'])}
-            icon={icon}
-            ref={fabButtonRef}
-          >
-            {props.text}
-          </TButton>
+          {customNode ? <div ref={customNodeRef}>{customNode}</div> : defaultContent}
         </div>
       );
     };
