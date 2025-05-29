@@ -68,4 +68,4 @@ TDesign 欢迎任何愿意参与贡献的参与者。如果需要本地运行代
 
 # 开源协议
 
-TDesign 遵循 [MIT 协议](https://github.com/Tencent/tdesign-vue/blob/main/LICENSE)。
+TDesign 遵循 [MIT 协议](https://github.com/Tencent/tdesign-mobile-vue/blob/main/LICENSE)。
