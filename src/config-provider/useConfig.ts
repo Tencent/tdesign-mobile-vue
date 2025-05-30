@@ -22,7 +22,7 @@ export function useConfig<T extends keyof GlobalConfigProvider>(
   componentLocale?: GlobalConfigProvider[T],
 ) {
   const injectGlobalConfig = getCurrentInstance() ? inject(configProviderInjectKey, null) : globalConfigCopy;
-  const mergedGlobalConfig = computed(() => injectGlobalConfig?.value || (defaultGlobalConfig as GlobalConfigProvider));
+  const mergedGlobalConfig = computed(() => injectGlobalConfig?.value || defaultGlobalConfig);
   // eslint-disable-next-line
   const globalConfig = computed(() => Object.assign({}, mergedGlobalConfig.value[componentName], componentLocale));
 
