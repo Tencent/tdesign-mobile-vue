@@ -77,23 +77,23 @@ exports[`Result > Result customVue demo works fine 1`] = `
 exports[`Result > Result mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-772b64ec=""
+  data-v-f5693a74=""
 >
   <h1
     class="title"
-    data-v-772b64ec=""
+    data-v-f5693a74=""
   >
     Result 结果
   </h1>
   <p
     class="summary"
-    data-v-772b64ec=""
+    data-v-f5693a74=""
   >
     结果反馈
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-772b64ec=""
+    data-v-f5693a74=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -114,7 +114,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-772b64ec=""
+    data-v-f5693a74=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -265,7 +265,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-772b64ec=""
+    data-v-f5693a74=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -283,7 +283,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
       
       <div
         class="t-result t-result--theme-default"
-        data-v-772b64ec=""
+        data-v-f5693a74=""
       >
         <div
           class="t-result__thumb"
@@ -358,7 +358,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-772b64ec=""
+    data-v-f5693a74=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -376,12 +376,12 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
       
       <div
         class="padding"
-        data-v-772b64ec=""
+        data-v-f5693a74=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-772b64ec=""
+          data-v-f5693a74=""
           role="button"
           type="button"
         >

@@ -3,17 +3,17 @@
 exports[`Upload > Upload baseVue demo works fine 1`] = `
 <div
   class="upload-demo"
-  data-v-4dac5dd5=""
+  data-v-43787b67=""
 >
   <div
     class="upload-title"
-    data-v-4dac5dd5=""
+    data-v-43787b67=""
   >
     单选上传
   </div>
   <div
     class="t-upload"
-    data-v-4dac5dd5=""
+    data-v-43787b67=""
   >
     
     
@@ -50,21 +50,21 @@ exports[`Upload > Upload baseVue demo works fine 1`] = `
 exports[`Upload > Upload customVue demo works fine 1`] = `
 <div
   class="upload-demo"
-  data-v-b50ff116=""
+  data-v-89f78ba6=""
 >
   <div
     class="upload-title"
-    data-v-b50ff116=""
+    data-v-89f78ba6=""
   >
     请上传身份证人像面
   </div>
   <div
     class="upload-content"
-    data-v-b50ff116=""
+    data-v-89f78ba6=""
   >
     <div
       class="t-upload front"
-      data-v-b50ff116=""
+      data-v-89f78ba6=""
     >
       
       
@@ -77,11 +77,11 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
           
           <div
             class="add-content"
-            data-v-b50ff116=""
+            data-v-89f78ba6=""
           >
             <div
               class="t-image t-image--square"
-              data-v-b50ff116=""
+              data-v-89f78ba6=""
               style="width: 32px; height: 32px;"
             >
               <div
@@ -138,17 +138,17 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
   </div>
   <div
     class="upload-title"
-    data-v-b50ff116=""
+    data-v-89f78ba6=""
   >
     请上传身份证国徽面
   </div>
   <div
     class="upload-content"
-    data-v-b50ff116=""
+    data-v-89f78ba6=""
   >
     <div
       class="t-upload reverse"
-      data-v-b50ff116=""
+      data-v-89f78ba6=""
     >
       
       
@@ -161,11 +161,11 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
           
           <div
             class="add-content"
-            data-v-b50ff116=""
+            data-v-89f78ba6=""
           >
             <div
               class="t-image t-image--square"
-              data-v-b50ff116=""
+              data-v-89f78ba6=""
               style="width: 32px; height: 32px;"
             >
               <div
@@ -260,17 +260,17 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
       
       <div
         class="upload-demo"
-        data-v-4dac5dd5=""
+        data-v-43787b67=""
       >
         <div
           class="upload-title"
-          data-v-4dac5dd5=""
+          data-v-43787b67=""
         >
           单选上传
         </div>
         <div
           class="t-upload"
-          data-v-4dac5dd5=""
+          data-v-43787b67=""
         >
           
           
@@ -324,17 +324,17 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
       
       <div
         class="upload-demo"
-        data-v-5eaaef94=""
+        data-v-79f9c52d=""
       >
         <div
           class="upload-title"
-          data-v-5eaaef94=""
+          data-v-79f9c52d=""
         >
           多选上传
         </div>
         <div
           class="t-upload"
-          data-v-5eaaef94=""
+          data-v-79f9c52d=""
           grid-config="[object Object]"
         >
           
@@ -575,17 +575,17 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
       
       <div
         class="upload-demo"
-        data-v-12872376=""
+        data-v-6b9ad65a=""
       >
         <div
           class="upload-title"
-          data-v-12872376=""
+          data-v-6b9ad65a=""
         >
           上传图片
         </div>
         <div
           class="t-upload"
-          data-v-12872376=""
+          data-v-6b9ad65a=""
         >
           
           <div
@@ -786,23 +786,23 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
       </div>
       <div
         class="upload-demo__title"
-        data-v-12872376=""
+        data-v-6b9ad65a=""
       >
         上传失败
       </div>
       <div
         class="upload-demo"
-        data-v-12872376=""
+        data-v-6b9ad65a=""
       >
         <div
           class="upload-title"
-          data-v-12872376=""
+          data-v-6b9ad65a=""
         >
           上传图片
         </div>
         <div
           class="t-upload"
-          data-v-12872376=""
+          data-v-6b9ad65a=""
         >
           
           <div
@@ -942,21 +942,21 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
       
       <div
         class="upload-demo"
-        data-v-b50ff116=""
+        data-v-89f78ba6=""
       >
         <div
           class="upload-title"
-          data-v-b50ff116=""
+          data-v-89f78ba6=""
         >
           请上传身份证人像面
         </div>
         <div
           class="upload-content"
-          data-v-b50ff116=""
+          data-v-89f78ba6=""
         >
           <div
             class="t-upload front"
-            data-v-b50ff116=""
+            data-v-89f78ba6=""
           >
             
             
@@ -969,11 +969,11 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 
                 <div
                   class="add-content"
-                  data-v-b50ff116=""
+                  data-v-89f78ba6=""
                 >
                   <div
                     class="t-image t-image--square"
-                    data-v-b50ff116=""
+                    data-v-89f78ba6=""
                     style="width: 32px; height: 32px;"
                   >
                     <div
@@ -1030,17 +1030,17 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
         </div>
         <div
           class="upload-title"
-          data-v-b50ff116=""
+          data-v-89f78ba6=""
         >
           请上传身份证国徽面
         </div>
         <div
           class="upload-content"
-          data-v-b50ff116=""
+          data-v-89f78ba6=""
         >
           <div
             class="t-upload reverse"
-            data-v-b50ff116=""
+            data-v-89f78ba6=""
           >
             
             
@@ -1053,11 +1053,11 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 
                 <div
                   class="add-content"
-                  data-v-b50ff116=""
+                  data-v-89f78ba6=""
                 >
                   <div
                     class="t-image t-image--square"
-                    data-v-b50ff116=""
+                    data-v-89f78ba6=""
                     style="width: 32px; height: 32px;"
                   >
                     <div
@@ -1122,17 +1122,17 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
 exports[`Upload > Upload multipleVue demo works fine 1`] = `
 <div
   class="upload-demo"
-  data-v-5eaaef94=""
+  data-v-79f9c52d=""
 >
   <div
     class="upload-title"
-    data-v-5eaaef94=""
+    data-v-79f9c52d=""
   >
     多选上传
   </div>
   <div
     class="t-upload"
-    data-v-5eaaef94=""
+    data-v-79f9c52d=""
     grid-config="[object Object]"
   >
     
@@ -1355,17 +1355,17 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
   
   <div
     class="upload-demo"
-    data-v-12872376=""
+    data-v-6b9ad65a=""
   >
     <div
       class="upload-title"
-      data-v-12872376=""
+      data-v-6b9ad65a=""
     >
       上传图片
     </div>
     <div
       class="t-upload"
-      data-v-12872376=""
+      data-v-6b9ad65a=""
     >
       
       <div
@@ -1566,23 +1566,23 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
   </div>
   <div
     class="upload-demo__title"
-    data-v-12872376=""
+    data-v-6b9ad65a=""
   >
     上传失败
   </div>
   <div
     class="upload-demo"
-    data-v-12872376=""
+    data-v-6b9ad65a=""
   >
     <div
       class="upload-title"
-      data-v-12872376=""
+      data-v-6b9ad65a=""
     >
       上传图片
     </div>
     <div
       class="t-upload"
-      data-v-12872376=""
+      data-v-6b9ad65a=""
     >
       
       <div

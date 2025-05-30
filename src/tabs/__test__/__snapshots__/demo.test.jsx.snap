@@ -3,11 +3,11 @@
 exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
 <div
   class="demo-tab-bar"
-  data-v-c93875e8=""
+  data-v-e36c6484=""
 >
   <div
     class="t-tabs t-size-m"
-    data-v-c93875e8=""
+    data-v-e36c6484=""
   >
     <div
       class="t-sticky"
@@ -130,7 +130,7 @@ exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
       
       <div
         class="t-tab-panel t-tabs__panel"
-        data-v-c93875e8=""
+        data-v-e36c6484=""
       >
         <!---->
       </div>
@@ -145,11 +145,11 @@ exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
 exports[`Tabs > Tabs contentVue demo works fine 1`] = `
 <div
   class="demo-tab-bar"
-  data-v-7ef59abc=""
+  data-v-758cf770=""
 >
   <div
     class="t-tabs t-size-m"
-    data-v-7ef59abc=""
+    data-v-758cf770=""
   >
     <div
       class="t-sticky"
@@ -263,11 +263,11 @@ exports[`Tabs > Tabs contentVue demo works fine 1`] = `
       
       <div
         class="t-tab-panel t-tabs__panel"
-        data-v-7ef59abc=""
+        data-v-758cf770=""
       >
         
         <p
-          data-v-7ef59abc=""
+          data-v-758cf770=""
         >
           内容区1
         </p>
@@ -285,11 +285,11 @@ exports[`Tabs > Tabs contentVue demo works fine 1`] = `
 exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
 <div
   class="demo-tab-bar"
-  data-v-7ca59de4=""
+  data-v-402afdd7=""
 >
   <div
     class="t-tabs t-size-m"
-    data-v-7ca59de4=""
+    data-v-402afdd7=""
   >
     <div
       class="t-sticky"
@@ -326,7 +326,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                       <div>
                         <!---->
                         <div
-                          data-v-7ca59de4=""
+                          data-v-402afdd7=""
                         >
                           选项
                         </div>
@@ -381,7 +381,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
       
       <div
         class="t-tab-panel t-tabs__panel"
-        data-v-7ca59de4=""
+        data-v-402afdd7=""
       >
         <!---->
       </div>
@@ -391,7 +391,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
   </div>
   <div
     class="t-tabs t-size-m"
-    data-v-7ca59de4=""
+    data-v-402afdd7=""
   >
     <div
       class="t-sticky"
@@ -504,7 +504,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
       
       <div
         class="t-tab-panel t-tabs__panel"
-        data-v-7ca59de4=""
+        data-v-402afdd7=""
       >
         <!---->
       </div>
@@ -515,7 +515,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
   </div>
   <div
     class="t-tabs t-size-m"
-    data-v-7ca59de4=""
+    data-v-402afdd7=""
   >
     <div
       class="t-sticky"
@@ -654,7 +654,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
       
       <div
         class="t-tab-panel t-tabs__panel"
-        data-v-7ca59de4=""
+        data-v-402afdd7=""
       >
         <!---->
       </div>
@@ -667,7 +667,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
   </div>
   <div
     class="t-tabs t-size-m"
-    data-v-7ca59de4=""
+    data-v-402afdd7=""
   >
     <div
       class="t-sticky"
@@ -831,7 +831,7 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
       
       <div
         class="t-tab-panel t-tabs__panel"
-        data-v-7ca59de4=""
+        data-v-402afdd7=""
       >
         <!---->
       </div>
@@ -849,11 +849,11 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
 exports[`Tabs > Tabs iconVue demo works fine 1`] = `
 <div
   class="demo-tab-bar"
-  data-v-fb5b87c0=""
+  data-v-1949cad6=""
 >
   <div
     class="t-tabs t-size-m"
-    data-v-fb5b87c0=""
+    data-v-1949cad6=""
   >
     <div
       class="t-sticky"
@@ -965,14 +965,14 @@ exports[`Tabs > Tabs iconVue demo works fine 1`] = `
                         <!---->
                         <div
                           class="label-content"
-                          data-v-fb5b87c0=""
+                          data-v-1949cad6=""
                         >
                           <i
                             class="t-icon t-icon-app t-size-l"
-                            data-v-fb5b87c0=""
+                            data-v-1949cad6=""
                           />
                           <span
-                            data-v-fb5b87c0=""
+                            data-v-1949cad6=""
                           >
                             选项
                           </span>
@@ -1003,7 +1003,7 @@ exports[`Tabs > Tabs iconVue demo works fine 1`] = `
       
       <div
         class="t-tab-panel t-tabs__panel"
-        data-v-fb5b87c0=""
+        data-v-1949cad6=""
       >
         <!---->
       </div>
@@ -1018,11 +1018,11 @@ exports[`Tabs > Tabs iconVue demo works fine 1`] = `
 exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
 <div
   class="demo-tab-bar"
-  data-v-8c899344=""
+  data-v-d8cde839=""
 >
   <div
     class="t-tabs t-size-m"
-    data-v-8c899344=""
+    data-v-d8cde839=""
   >
     <div
       class="t-sticky"
@@ -1325,11 +1325,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
       
       <div
         class="demo-tab-bar"
-        data-v-7ca59de4=""
+        data-v-402afdd7=""
       >
         <div
           class="t-tabs t-size-m"
-          data-v-7ca59de4=""
+          data-v-402afdd7=""
         >
           <div
             class="t-sticky"
@@ -1366,7 +1366,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                             <div>
                               <!---->
                               <div
-                                data-v-7ca59de4=""
+                                data-v-402afdd7=""
                               >
                                 选项
                               </div>
@@ -1421,7 +1421,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-7ca59de4=""
+              data-v-402afdd7=""
             >
               <!---->
             </div>
@@ -1431,7 +1431,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-tabs t-size-m"
-          data-v-7ca59de4=""
+          data-v-402afdd7=""
         >
           <div
             class="t-sticky"
@@ -1544,7 +1544,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-7ca59de4=""
+              data-v-402afdd7=""
             >
               <!---->
             </div>
@@ -1555,7 +1555,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-tabs t-size-m"
-          data-v-7ca59de4=""
+          data-v-402afdd7=""
         >
           <div
             class="t-sticky"
@@ -1694,7 +1694,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-7ca59de4=""
+              data-v-402afdd7=""
             >
               <!---->
             </div>
@@ -1707,7 +1707,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-tabs t-size-m"
-          data-v-7ca59de4=""
+          data-v-402afdd7=""
         >
           <div
             class="t-sticky"
@@ -1871,7 +1871,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-7ca59de4=""
+              data-v-402afdd7=""
             >
               <!---->
             </div>
@@ -1906,11 +1906,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
       
       <div
         class="demo-tab-bar"
-        data-v-8c899344=""
+        data-v-d8cde839=""
       >
         <div
           class="t-tabs t-size-m"
-          data-v-8c899344=""
+          data-v-d8cde839=""
         >
           <div
             class="t-sticky"
@@ -2196,11 +2196,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
       
       <div
         class="demo-tab-bar"
-        data-v-fb5b87c0=""
+        data-v-1949cad6=""
       >
         <div
           class="t-tabs t-size-m"
-          data-v-fb5b87c0=""
+          data-v-1949cad6=""
         >
           <div
             class="t-sticky"
@@ -2312,14 +2312,14 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                               <!---->
                               <div
                                 class="label-content"
-                                data-v-fb5b87c0=""
+                                data-v-1949cad6=""
                               >
                                 <i
                                   class="t-icon t-icon-app t-size-l"
-                                  data-v-fb5b87c0=""
+                                  data-v-1949cad6=""
                                 />
                                 <span
-                                  data-v-fb5b87c0=""
+                                  data-v-1949cad6=""
                                 >
                                   选项
                                 </span>
@@ -2350,7 +2350,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-fb5b87c0=""
+              data-v-1949cad6=""
             >
               <!---->
             </div>
@@ -2382,11 +2382,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
       
       <div
         class="demo-tab-bar"
-        data-v-c93875e8=""
+        data-v-e36c6484=""
       >
         <div
           class="t-tabs t-size-m"
-          data-v-c93875e8=""
+          data-v-e36c6484=""
         >
           <div
             class="t-sticky"
@@ -2509,7 +2509,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-c93875e8=""
+              data-v-e36c6484=""
             >
               <!---->
             </div>
@@ -2541,11 +2541,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
       
       <div
         class="demo-tab-bar"
-        data-v-7ef59abc=""
+        data-v-758cf770=""
       >
         <div
           class="t-tabs t-size-m"
-          data-v-7ef59abc=""
+          data-v-758cf770=""
         >
           <div
             class="t-sticky"
@@ -2659,11 +2659,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-7ef59abc=""
+              data-v-758cf770=""
             >
               
               <p
-                data-v-7ef59abc=""
+                data-v-758cf770=""
               >
                 内容区1
               </p>
@@ -2702,11 +2702,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
       
       <div
         class="demo-tab-bar"
-        data-v-bbdf794e=""
+        data-v-e8c6848d=""
       >
         <div
           class="t-tabs t-size-m"
-          data-v-bbdf794e=""
+          data-v-e8c6848d=""
         >
           <div
             class="t-sticky"
@@ -2819,7 +2819,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-bbdf794e=""
+              data-v-e8c6848d=""
             >
               <!---->
             </div>
@@ -2855,11 +2855,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
       
       <div
         class="demo-tab-bar"
-        data-v-3e6c48b0=""
+        data-v-3137fd97=""
       >
         <div
           class="t-tabs t-size-m"
-          data-v-3e6c48b0=""
+          data-v-3137fd97=""
         >
           <div
             class="t-sticky"
@@ -2998,7 +2998,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-3e6c48b0=""
+              data-v-3137fd97=""
             >
               <!---->
             </div>
@@ -3011,7 +3011,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-tabs t-size-l"
-          data-v-3e6c48b0=""
+          data-v-3137fd97=""
         >
           <div
             class="t-sticky"
@@ -3150,7 +3150,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-3e6c48b0=""
+              data-v-3137fd97=""
             >
               <!---->
             </div>
@@ -3184,11 +3184,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
       
       <div
         class="demo-tab-bar"
-        data-v-1e7f1c32=""
+        data-v-1068beac=""
       >
         <div
           class="t-tabs t-size-m"
-          data-v-1e7f1c32=""
+          data-v-1068beac=""
         >
           <div
             class="t-sticky"
@@ -3325,7 +3325,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-1e7f1c32=""
+              data-v-1068beac=""
             >
               <!---->
             </div>
@@ -3338,7 +3338,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-tabs t-size-m"
-          data-v-1e7f1c32=""
+          data-v-1068beac=""
         >
           <div
             class="t-sticky"
@@ -3477,7 +3477,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-1e7f1c32=""
+              data-v-1068beac=""
             >
               <!---->
             </div>
@@ -3498,11 +3498,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
 exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
 <div
   class="demo-tab-bar"
-  data-v-3e6c48b0=""
+  data-v-3137fd97=""
 >
   <div
     class="t-tabs t-size-m"
-    data-v-3e6c48b0=""
+    data-v-3137fd97=""
   >
     <div
       class="t-sticky"
@@ -3641,7 +3641,7 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
       
       <div
         class="t-tab-panel t-tabs__panel"
-        data-v-3e6c48b0=""
+        data-v-3137fd97=""
       >
         <!---->
       </div>
@@ -3654,7 +3654,7 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
   </div>
   <div
     class="t-tabs t-size-l"
-    data-v-3e6c48b0=""
+    data-v-3137fd97=""
   >
     <div
       class="t-sticky"
@@ -3793,7 +3793,7 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
       
       <div
         class="t-tab-panel t-tabs__panel"
-        data-v-3e6c48b0=""
+        data-v-3137fd97=""
       >
         <!---->
       </div>
@@ -3810,11 +3810,11 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
 exports[`Tabs > Tabs statusVue demo works fine 1`] = `
 <div
   class="demo-tab-bar"
-  data-v-bbdf794e=""
+  data-v-e8c6848d=""
 >
   <div
     class="t-tabs t-size-m"
-    data-v-bbdf794e=""
+    data-v-e8c6848d=""
   >
     <div
       class="t-sticky"
@@ -3927,7 +3927,7 @@ exports[`Tabs > Tabs statusVue demo works fine 1`] = `
       
       <div
         class="t-tab-panel t-tabs__panel"
-        data-v-bbdf794e=""
+        data-v-e8c6848d=""
       >
         <!---->
       </div>
@@ -3942,11 +3942,11 @@ exports[`Tabs > Tabs statusVue demo works fine 1`] = `
 exports[`Tabs > Tabs themeVue demo works fine 1`] = `
 <div
   class="demo-tab-bar"
-  data-v-1e7f1c32=""
+  data-v-1068beac=""
 >
   <div
     class="t-tabs t-size-m"
-    data-v-1e7f1c32=""
+    data-v-1068beac=""
   >
     <div
       class="t-sticky"
@@ -4083,7 +4083,7 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
       
       <div
         class="t-tab-panel t-tabs__panel"
-        data-v-1e7f1c32=""
+        data-v-1068beac=""
       >
         <!---->
       </div>
@@ -4096,7 +4096,7 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
   </div>
   <div
     class="t-tabs t-size-m"
-    data-v-1e7f1c32=""
+    data-v-1068beac=""
   >
     <div
       class="t-sticky"
@@ -4235,7 +4235,7 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
       
       <div
         class="t-tab-panel t-tabs__panel"
-        data-v-1e7f1c32=""
+        data-v-1068beac=""
       >
         <!---->
       </div>

@@ -338,23 +338,23 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
 exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-4272c432=""
+  data-v-14adf8a3=""
 >
   <h1
     class="title"
-    data-v-4272c432=""
+    data-v-14adf8a3=""
   >
     CountDown 倒计时
   </h1>
   <p
     class="summary"
-    data-v-4272c432=""
+    data-v-14adf8a3=""
   >
     用于实时展示倒计时数值。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-4272c432=""
+    data-v-14adf8a3=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -703,7 +703,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-4272c432=""
+    data-v-14adf8a3=""
   >
     <div
       class="tdesign-mobile-demo-block__header"

@@ -93,16 +93,15 @@ export const packageJSONContent = JSON.stringify(
       serve: 'vite preview',
     },
     dependencies: {
+      less: orgPkg.devDependencies['less'],
       vue: orgPkg.devDependencies.vue,
       'tdesign-mobile-vue': orgPkg.version,
       'tdesign-icons-vue-next': orgPkg.dependencies['tdesign-icons-vue-next'],
     },
     devDependencies: {
       vite: orgPkg.devDependencies.vite,
-      '@vue/compiler-sfc': orgPkg.devDependencies['@vue/compiler-sfc'],
       '@vitejs/plugin-vue': orgPkg.devDependencies['@vitejs/plugin-vue'],
       '@vitejs/plugin-vue-jsx': orgPkg.devDependencies['@vitejs/plugin-vue-jsx'],
-      less: orgPkg.devDependencies['less'],
     },
   },
   null,

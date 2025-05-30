@@ -28,6 +28,11 @@ export interface TdPopupProps {
    */
   destroyOnClose?: boolean;
   /**
+   * 动画过渡时间
+   * @default 240
+   */
+  duration?: number;
+  /**
    * 遮罩层的属性，透传至 overlay
    * @default {}
    */
