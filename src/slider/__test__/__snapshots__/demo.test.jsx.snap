@@ -1147,7 +1147,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-98828574=""
+    data-v-556740d4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1166,11 +1166,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
       
       <div
         class="wrapper"
-        data-v-e87311cc=""
+        data-v-4aa87073=""
       >
         <div
           class="t-slider t-slider--top t-slider--vertical"
-          data-v-e87311cc=""
+          data-v-4aa87073=""
         >
           <!---->
           <div
@@ -1200,11 +1200,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
       </div>
       <div
         class="wrapper"
-        data-v-e87311cc=""
+        data-v-4aa87073=""
       >
         <div
           class="t-slider t-slider--range t-slider--vertical"
-          data-v-e87311cc=""
+          data-v-4aa87073=""
         >
           <!---->
           <div
@@ -1238,11 +1238,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
       </div>
       <div
         class="wrapper"
-        data-v-e87311cc=""
+        data-v-4aa87073=""
       >
         <div
           class="t-slider t-slider--top t-slider--vertical"
-          data-v-e87311cc=""
+          data-v-4aa87073=""
         >
           <!---->
           <div
@@ -1272,11 +1272,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
       </div>
       <div
         class="wrapper"
-        data-v-e87311cc=""
+        data-v-4aa87073=""
       >
         <div
           class="t-slider t-slider--range t-slider--vertical"
-          data-v-e87311cc=""
+          data-v-4aa87073=""
         >
           <!---->
           <div
