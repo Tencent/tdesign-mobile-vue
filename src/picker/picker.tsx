@@ -4,7 +4,7 @@ import config from '../config';
 import PickerProps from './props';
 import { KeysType } from '../common';
 import { PickerValue, PickerColumn, PickerColumnItem } from './type';
-import { useVModel } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import PickerItem from './picker-item';
 import { getPickerColumns } from './utils';
@@ -89,7 +89,9 @@ export default defineComponent({
 
     watch([realColumns, curValueArray], () => {
       realColumns.value.forEach((col: PickerColumn, idx: number) => {
-        const index = col.findIndex((item: PickerColumnItem) => item.value === curValueArray.value[idx]);
+        const index = col.findIndex(
+          (item: PickerColumnItem) => lodashGet(item, keys.value?.value ?? 'value') === curValueArray.value[idx],
+        );
         curIndexArray[idx] = index > -1 ? index : 0;
         pickerItemInstanceArray.value[idx]?.setIndex(curIndexArray[idx]);
       });

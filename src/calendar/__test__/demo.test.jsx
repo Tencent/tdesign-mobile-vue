@@ -12,6 +12,7 @@ import customTextVue from '@/calendar/demos/custom-text.vue';
 import mobileVue from '@/calendar/demos/mobile.vue';
 import multipleVue from '@/calendar/demos/multiple.vue';
 import rangeVue from '@/calendar/demos/range.vue';
+import switchModeVue from '@/calendar/demos/switch-mode.vue';
 import withoutPopupVue from '@/calendar/demos/without-popup.vue';
 
 MockDate.set('2020-12-28');
@@ -24,6 +25,7 @@ const mapper = {
   mobileVue,
   multipleVue,
   rangeVue,
+  switchModeVue,
   withoutPopupVue,
 };
 

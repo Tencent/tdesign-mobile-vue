@@ -19,7 +19,7 @@ import { isFunction } from 'lodash-es';
 import config from '../config';
 import props from './props';
 import TTabNavItem from './tab-nav-item';
-import { useVModel } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { preventDefault } from '../shared/dom';
 import CLASSNAMES from '../shared/constants';
 import TSticky from '../sticky';

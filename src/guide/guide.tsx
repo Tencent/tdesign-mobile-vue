@@ -4,7 +4,7 @@ import TPopover, { PopoverProps } from '../popover';
 import TPopup, { PopupProps } from '../popup';
 import TButton, { ButtonProps } from '../button';
 import config from '../config';
-import { useVModel } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { addClass, getWindowScroll, removeClass } from '../shared/dom';
 import setStyle from '../_common/js/utils/setStyle';
 import guideProps from './props';

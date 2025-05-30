@@ -1,10 +1,10 @@
-import { computed, defineComponent, ref, h } from 'vue';
+import { computed, defineComponent, ref, toRefs, h } from 'vue';
 import { StarFilledIcon } from 'tdesign-icons-vue-next';
 import { onClickOutside } from '@vueuse/core';
 import props from './props';
 import config from '../config';
 import { TdRateProps } from './type';
-import { useDefault } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 
@@ -19,7 +19,9 @@ export default defineComponent({
     const isDisabled = useFormDisabled();
 
     const rateWrapper = ref<HTMLElement>();
-    const [actualVal] = useDefault<number, TdRateProps>(props, context.emit, 'value', 'change');
+    const { value, modelValue } = toRefs(props);
+    const [actualVal, setActualVal] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+
     const rateText = computed(() => {
       if (Array.isArray(props.texts) && props.texts.length > 0) {
         return props.texts[actualVal.value - 1];
@@ -180,7 +182,7 @@ export default defineComponent({
         actionType.value = eventType;
 
         if (value !== currentValue) {
-          actualVal.value = value;
+          setActualVal(value);
         }
 
         if (touchEnd.value) {
@@ -190,7 +192,7 @@ export default defineComponent({
     };
 
     const onSelect = (value: number) => {
-      actualVal.value = value;
+      setActualVal(value);
       hideTips();
     };
 

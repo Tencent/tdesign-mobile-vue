@@ -5,6 +5,58 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.8.5 `2025-05-13` 
+### 🚀 Features
+- `Navbar`: 新增 `safeAreaInsetTop`，是否开启顶部安全区适配 @anlyyao ([#1834](https://github.com/Tencent/tdesign-mobile-vue/pull/1834))
+- `PullDownRefresh`: 新增 `disabled` 属性 @anlyyao ([#1844](https://github.com/Tencent/tdesign-mobile-vue/pull/1844))
+### 🐞 Bug Fixes
+- `Message`: 修复项目引入 `amfe-flexible` 包后，组件样式不兼容 @anlyyao ([#1845](https://github.com/Tencent/tdesign-mobile-vue/pull/1845))
+
+## 🌈 1.8.4 `2025-04-25` 
+### 🚀 Features
+- `Icon`: 新增 `logo-miniprogram`、`logo-cnb`、`seal`、`quote` 图标 @taowensheng1997 @uyarn ([#1827](https://github.com/Tencent/tdesign-mobile-vue/pull/1827))
+- `Progress`: 新增 `size` 属性，仅在环形进度条有效 @liweijie0812 ([#1824](https://github.com/Tencent/tdesign-mobile-vue/pull/1824))
+### 🐞 Bug Fixes
+- `Icon`: 优化多个文件相关图标的绘制效果，修复 `gesture-right-slip` 的绘制问题@uyarn([#1827](https://github.com/Tencent/tdesign-mobile-vue/pull/1827))
+- `Slider`: `marks` 属性不支持 `()=>TNode` 渲染的问题  @betavs ([#1811](https://github.com/Tencent/tdesign-mobile-vue/pull/1811))
+### 🚧 Others
+- `site`: 站点接入主题生成器 @RylanBot ([#1815](https://github.com/Tencent/tdesign-mobile-vue/pull/1815))
+
+## 🌈 1.8.3 `2025-03-23` 
+### 🚀 Features
+- `Icon`: 更新图标版本至 `0.3.5`([#1808](https://github.com/Tencent/tdesign-mobile-vue/pull/1808))
+- `Toast`: 新增 `warning` 主题 @betavs ([#1806](https://github.com/Tencent/tdesign-mobile-vue/pull/1806))
+### 🐞 Bug Fixes
+- `Input`:  修复 `v-model` 初始值为 `undefined` 时无法响应式更新 @anlyyao ([#1782](https://github.com/Tencent/tdesign-mobile-vue/pull/1782))
+- `Swiper`: 修复 `loop` 属性为 `false` 时，首个及最后一个滑动项闪烁的问题 @mikasayw ([#1781](https://github.com/Tencent/tdesign-mobile-vue/pull/1781))
+- `Message`: 修复函数式调用时 `onCloseBtnClick` 属性无效 @anlyyao ([#1790](https://github.com/Tencent/tdesign-mobile-vue/pull/1790))
+- `PullDownRefresh`: 修复非顶部下拉出现刷新事件触发的问题 @RSS1102 ([#1805](https://github.com/Tencent/tdesign-mobile-vue/pull/1805))
+### 🚧 Others
+- fix: 修复 cjs bundle 的依赖报错问题 @anlyyao ([#1777](https://github.com/Tencent/tdesign-mobile-vue/pull/1777))
+
+## 🌈 1.8.2 `2025-02-19` 
+### 🐞 Bug Fixes
+- `Tabbar`: 修复控制台告警，优化子节点数量更新逻辑 @anlyyao ([#1767](https://github.com/Tencent/tdesign-mobile-vue/pull/1767))
+- `Picker`: 修复 `columns` 为异步数据时，子项无法选中的问题 @anlyyao ([#1769](https://github.com/Tencent/tdesign-mobile-vue/pull/1769))
+
+## 🌈 1.8.1 `2025-02-18` 
+### 🚀 Features
+- `Calendar`: 新增 `switchMode` 属性 @novlan1 ([#1744](https://github.com/Tencent/tdesign-mobile-vue/pull/1744))
+- `CheckboxGroup`: 增加 `keys` 和 `readonly` 属性 @anlyyao ([#1749](https://github.com/Tencent/tdesign-mobile-vue/pull/1749))
+- `Cascader`: 增强 `keys` 属性能力，类型更新为 `TreeKeysType`；`pick` 事件返回值增加 `label` @anlyyao ([#1749](https://github.com/Tencent/tdesign-mobile-vue/pull/1749))
+- `Radio`: 增强 `keys` 属性能力 @anlyyao ([#1749](https://github.com/Tencent/tdesign-mobile-vue/pull/1749))
+- `DropdownItem`: 增强 `keys` 属性能力 @anlyyao ([#1749](https://github.com/Tencent/tdesign-mobile-vue/pull/1749))
+- `Picker`:  新增 `keys` 属性 @anlyyao ([#1757](https://github.com/Tencent/tdesign-mobile-vue/pull/1757))
+- `CheckboxGroup`: 新增 `borderless` 属性 @novlan1 ([#1752](https://github.com/Tencent/tdesign-mobile-vue/pull/1752))
+- `Fab`: 增强 `draggable` 属性能力，并新增 `yBounds` 属性 @novlan1 ([#1751](https://github.com/Tencent/tdesign-mobile-vue/pull/1751))
+- `Picker`: 补充禁用项逻辑 @anlyyao ([#1763](https://github.com/Tencent/tdesign-mobile-vue/pull/1763))
+### 🐞 Bug Fixes
+- `Tabs`: 修复 `vModel` 无效 @anlyyao ([#1748](https://github.com/Tencent/tdesign-mobile-vue/pull/1748))
+- `Slider`: 修复 `marks` 响应式无效 @liweijie0812 ([#1739](https://github.com/Tencent/tdesign-mobile-vue/pull/1739))
+- `DropdownMenu`: 解决收起状态下 `onMenuClosed` 仍被触发的问题 @anlyyao ([#1755](https://github.com/Tencent/tdesign-mobile-vue/pull/1755))
+- `Search`: 修复 `action-click` 事件无效 @anlyyao ([#1764](https://github.com/Tencent/tdesign-mobile-vue/pull/1764))
+
+
 ## 🌈 1.8.0 `2025-01-22` 
 ### 🚀 Features
 - `Input`: 新增 `cursorColor` 属性 @SkylerXie ([#1703](https://github.com/Tencent/tdesign-mobile-vue/pull/1703))

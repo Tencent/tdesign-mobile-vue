@@ -8,10 +8,11 @@ import { isArray } from 'lodash-es';
 import config from '../config';
 import DateTimePickerProps from './props';
 import { getMeaningColumn } from './shared';
-import { useVModel } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { Picker as TPicker } from '../picker';
 import { PickerColumn, PickerColumnItem, PickerValue, PickerContext } from '../picker/type';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
+import type { TdDateTimePickerProps, TimeModeValues } from './type';
 
 dayjs.extend(weekday);
 dayjs.extend(customParseFormat);
@@ -104,9 +105,10 @@ export default defineComponent({
         second: globalConfig.value.secondLabel,
       };
 
-      const generateColumn = (start: number, end: number, type: string) => {
+      const generateColumn = (start: number, end: number, type: TimeModeValues) => {
         const arr: PickerColumnItem[] = [];
-        for (let i = start; i <= end; i++) {
+        const step = (props.steps as TdDateTimePickerProps['steps'])[type] || 1;
+        for (let i = start; i <= end; i += step) {
           const value = i.toString();
           arr.push({
             label: props.renderLabel ? props.renderLabel(type, i) : `${value} ${typeUnit[type]}`,

@@ -45,6 +45,11 @@ export interface TdDateTimePickerProps {
    */
   start?: string | number;
   /**
+   * 时间间隔步数，示例：`{ minute: 5 }`
+   * @default {}
+   */
+  steps?: { [key in TimeModeValues]?: number };
+  /**
    * 标题
    * @default '选择时间'
    */

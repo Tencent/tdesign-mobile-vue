@@ -7,6 +7,7 @@ import router from './router';
 // import tdesign style
 import 'tdesign-mobile-vue/style/index.js';
 
+// @ts-ignore
 import TDesign from '@/index';
 import '@common/style/mobile/_reset.less';
 import '../styles/mobile/index.less';

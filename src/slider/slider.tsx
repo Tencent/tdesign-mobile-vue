@@ -3,7 +3,7 @@ import { isFunction } from 'lodash-es';
 import { useIntersectionObserver } from '@vueuse/core';
 import config from '../config';
 import props from './props';
-import { useVModel } from '../shared/useVModel';
+import useVModel from '../hooks/useVModel';
 import { trimSingleValue, trimValue } from './tool';
 import type { SliderValue } from './type';
 import { useFormDisabled } from '../form/hooks';
@@ -188,7 +188,7 @@ export default defineComponent({
 
       if (Object.prototype.toString.call(marks) === '[object Object]') {
         const scaleArray = Object.keys(marks).map((item) => Number(item));
-        const scaleTextArray = scaleArray.map((item) => marks[item]);
+        const scaleTextArray = scaleArray.map((item) => (isFunction(marks[item]) ? marks[item](item) : marks[item]));
         state.isScale = scaleArray.length > 0;
         state.scaleArray = calcPos(scaleArray);
         state.scaleTextArray = scaleTextArray;

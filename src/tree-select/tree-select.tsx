@@ -3,10 +3,11 @@ import { SideBar as TSideBar, SideBarItem as TSideBarItem } from '../side-bar';
 import TRadio, { RadioGroup as TRadioGroup } from '../radio';
 import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
 import config from '../config';
-import { convertUnit, useDefault } from '../shared';
+import { convertUnit } from '../shared';
 import props from './props';
 import { TdTreeSelectProps, TreeSelectValue, _TreeOptionData } from './type';
 import { usePrefixClass } from '../hooks/useClass';
+import useVModel from '../hooks/useVModel';
 
 const { prefix } = config;
 
@@ -22,13 +23,9 @@ export default defineComponent({
   emits: ['update:value', 'update:modelValue', 'change'],
   setup(props: TdTreeSelectProps, context) {
     const treeSelectClass = usePrefixClass('tree-select');
-    const { height, customStyle, value, options, keys, multiple } = toRefs(props);
-    const [innerValue, setInnerValue] = useDefault<TreeSelectValue, TdTreeSelectProps>(
-      props,
-      context.emit,
-      'value',
-      'change',
-    );
+    const { height, customStyle, value, modelValue, options, keys, multiple } = toRefs(props);
+    const [innerValue, setInnerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+
     const leafLevel = ref(0);
     const treeOptions = ref<_TreeOptionData[][]>([]);
     const rootStyle = computed(() => [`height: ${convertUnit(height.value)}`, customStyle.value].join(';'));
