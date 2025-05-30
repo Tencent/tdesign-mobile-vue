@@ -41,6 +41,8 @@ export default function useUpload(props: TdUploadProps) {
       isBatchUpload: isBatchUpload?.value || false,
     });
   });
+  // 组件下方自定义上传失败文本
+  const uploadErrorsDisplay = ref<string[]>([]);
 
   const uploadFilePercent = (params: { file: UploadFile; percent: number }) => {
     const { file, percent } = params;
@@ -153,6 +155,21 @@ export default function useUpload(props: TdUploadProps) {
     toUploadFiles.value = [];
   };
 
+  const handleUploadResult = (files: UploadFile[]) => {
+    // 当前设计下空间显示六个全角字符为宜
+    const hasErrorOverLimit = files.some((file) => file.response?.error?.length > 6);
+    if (hasErrorOverLimit) {
+      // 任意一个error长度超过6，所有错误独立显示
+      uploadErrorsDisplay.value = files
+        .filter((file) => file.status === 'fail')
+        .map((file) => file.response?.error)
+        .filter(Boolean) as string[];
+    } else {
+      // 清空底部错误信息（长度小于7会在renderFile显示）
+      uploadErrorsDisplay.value = [];
+    }
+  };
+
   const onFileChange = (files: File[]) => {
     if (disabled?.value) return;
     const params = { currentSelectedFiles: formatToUploadFile([...files], props.format) };
@@ -241,6 +258,8 @@ export default function useUpload(props: TdUploadProps) {
     if (!files || !files.length) return;
     uploading.value = true;
     xhrReq.value = [];
+    // 重试上传失败文件前清空自定义错误信息
+    uploadErrorsDisplay.value = [];
     upload({
       action: props.action,
       headers: props.headers,
@@ -299,7 +318,7 @@ export default function useUpload(props: TdUploadProps) {
             XMLHttpRequest: data?.XMLHttpRequest,
           });
         }
-
+        handleUploadResult(failedFiles as UploadFile[]);
         // 非自动上传，文件都在 uploadValue，不涉及 toUploadFiles
         if (autoUpload?.value) {
           toUploadFiles.value = failedFiles as UploadFile[];
@@ -373,6 +392,7 @@ export default function useUpload(props: TdUploadProps) {
     toUploadFiles,
     uploadValue,
     displayFiles,
+    uploadErrorsDisplay,
     sizeOverLimitMessage,
     uploading,
     inputRef,
