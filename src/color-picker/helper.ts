@@ -22,6 +22,7 @@ export const getFormatList = (format: ColorPickerProps['format'], color: Color) 
     RGB: Object.values(color.getRgba()),
     RGBA: Object.values(color.getRgba()),
     CMYK: [...Object.values(color.getCmyk()), 0],
+    HEX8: [color.hex8, 0],
 
     CSS: [color.css, 0],
     HEX: [color.hex, 0],

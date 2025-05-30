@@ -783,9 +783,10 @@ exports[`ColorPicker > ColorPicker mobileVue demo works fine 1`] = `
       >
         <!---->
         
-        <!---->
         <div
           class="t-color-picker__panel"
+          use-popup=""
+          visible="false"
         >
           <div
             class="t-color-picker__body t-color-picker__body--multiple"
@@ -980,7 +981,6 @@ exports[`ColorPicker > ColorPicker mobileVue demo works fine 1`] = `
             </div>
           </div>
         </div>
-        <!---->
         
       </div>
       <!--teleport end-->
@@ -1508,9 +1508,10 @@ exports[`ColorPicker > ColorPicker usePopupVue demo works fine 1`] = `
   >
     <!---->
     
-    <!---->
     <div
       class="t-color-picker__panel"
+      use-popup=""
+      visible="false"
     >
       <div
         class="t-color-picker__body t-color-picker__body--multiple"
@@ -1705,7 +1706,6 @@ exports[`ColorPicker > ColorPicker usePopupVue demo works fine 1`] = `
         </div>
       </div>
     </div>
-    <!---->
     
   </div>
   <!--teleport end-->

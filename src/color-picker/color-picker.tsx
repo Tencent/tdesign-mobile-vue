@@ -2,7 +2,7 @@ import { defineComponent, ref, watch, computed, onMounted, nextTick, toRefs } fr
 import props from './props';
 import config from '../config';
 import { Popup as TPopup } from '../popup';
-import type { ColorPickerTrigger, ColorPickerChangeTrigger } from './type';
+import type { ColorPickerChangeTrigger } from './type';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import useVModel from '../hooks/useVModel';
@@ -21,7 +21,6 @@ export default defineComponent({
   props,
   setup(props) {
     const colorPickerClass = usePrefixClass('color-picker');
-    const innerVisible = ref(props.visible);
     const panelRect = ref<HTMLElement>();
     const hueSliderRect = ref<HTMLElement>();
     const alphaSliderRect = ref<HTMLElement>();
@@ -53,30 +52,7 @@ export default defineComponent({
     const formatList = ref(getFormatList(props.format, color));
     const innerSwatchList = computed(() => genSwatchList(props.swatchColors));
 
-    watch(
-      () => props.visible,
-      (value) => {
-        innerVisible.value = value;
-        nextTick(() => {
-          init();
-        });
-      },
-    );
-
     const renderTNodeJSX = useTNodeJSX();
-    const close = (trigger: ColorPickerTrigger) => {
-      if (props.autoClose) {
-        innerVisible.value = false;
-      }
-
-      props.onClose?.(trigger);
-    };
-
-    const onVisibleChange = (visible: boolean, trigger: ColorPickerTrigger) => {
-      if (!visible) {
-        close(trigger);
-      }
-    };
 
     const getSliderThumbStyle = ({
       value,
@@ -168,17 +144,13 @@ export default defineComponent({
 
     const onChangeSaturation = ({ saturation, value }: { saturation: number; value: number }) => {
       const { saturation: sat, value: val } = color;
-      let changeTrigger: ColorPickerChangeTrigger = 'palette-saturation-brightness';
       if (value !== val && saturation !== sat) {
         color.saturation = saturation;
         color.value = value;
-        changeTrigger = 'palette-saturation-brightness';
       } else if (saturation !== sat) {
         color.saturation = saturation;
-        changeTrigger = 'palette-saturation';
       } else if (value !== val) {
         color.value = value;
-        changeTrigger = 'palette-brightness';
       } else {
         return;
       }
@@ -187,12 +159,11 @@ export default defineComponent({
         color: getColorObject(color),
       });
 
-      emitColorChange(changeTrigger);
       setCoreStyle();
     };
 
     const handleSaturationDrag = (e: TouchEvent) => {
-      const coordinate = getCoordinate(e, panelRect.value.getBoundingClientRect());
+      const coordinate = getCoordinate(e, panelRect.value.getBoundingClientRect(), props.fixed);
 
       const { saturation, value } = getSaturationAndValueByCoordinate(coordinate);
 
@@ -272,7 +243,7 @@ export default defineComponent({
     });
 
     return () => {
-      const { usePopup, type, popupProps, format, enableAlpha } = props;
+      const { type, format, enableAlpha } = props;
 
       const header = renderTNodeJSX('header');
       const footer = renderTNodeJSX('footer');
@@ -381,15 +352,6 @@ export default defineComponent({
           </div>
         </div>
       );
-      if (usePopup) {
-        return (
-          <t-popup {...popupProps} visible={innerVisible.value} placement="bottom" onVisibleChange={onVisibleChange}>
-            {header}
-            {inner}
-            {footer}
-          </t-popup>
-        );
-      }
       return inner;
     };
   },
