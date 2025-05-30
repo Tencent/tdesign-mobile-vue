@@ -22,7 +22,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const curFormat = ref('RGB');
+const curFormat = ref('CSS');
 const lineList = [
   ['CSS', 'HEX', 'RGB'],
   ['HSL', 'HSV', 'CMYK'],

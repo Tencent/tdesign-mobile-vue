@@ -2,14 +2,14 @@ import { defineComponent, ref, watch, computed, onMounted, nextTick, toRefs } fr
 import props from './props';
 import config from '../config';
 import { Popup as TPopup } from '../popup';
-import { useTNodeJSX } from '../hooks/tnode';
 import type { ColorPickerTrigger, ColorPickerChangeTrigger } from './type';
+import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
+import useVModel from '../hooks/useVModel';
 import { getFormatList, genSwatchList, getCoordinate } from './helper';
 import { Color, getColorObject } from '../_common/js/color-picker';
 import { DEFAULT_COLOR } from '../_common/js/color-picker/constants';
 import { ALPHA_MAX, HUE_MAX } from './constants';
-import { useVModel } from '../shared';
 
 const { prefix } = config;
 
@@ -19,7 +19,7 @@ export default defineComponent({
     TPopup,
   },
   props,
-  setup(props, { slots }) {
+  setup(props) {
     const colorPickerClass = usePrefixClass('color-picker');
     const innerVisible = ref(props.visible);
     const panelRect = ref<HTMLElement>();

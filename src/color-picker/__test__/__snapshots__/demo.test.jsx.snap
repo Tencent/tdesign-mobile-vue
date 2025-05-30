@@ -117,62 +117,62 @@ exports[`ColorPicker > ColorPicker formatVue demo works fine 1`] = `
   
   <div
     class="format-line"
-    data-v-e4fcdb38=""
+    data-v-eee8fcd5=""
   >
     
     <div
-      class="format-item"
-      data-v-e4fcdb38=""
-    >
-      <!--v-if-->
-       CSS
-    </div>
-    <div
-      class="format-item"
-      data-v-e4fcdb38=""
-    >
-      <!--v-if-->
-       HEX
-    </div>
-    <div
       class="format-item active"
-      data-v-e4fcdb38=""
+      data-v-eee8fcd5=""
     >
       <svg
         class="t-icon t-icon-check"
-        data-v-e4fcdb38=""
+        data-v-eee8fcd5=""
         style="position: absolute; left: 2.5px; top: 2.1px; z-index: 1; color: rgb(255, 255, 255);"
       >
         <use
           href="#t-icon-check"
         />
       </svg>
+       CSS
+    </div>
+    <div
+      class="format-item"
+      data-v-eee8fcd5=""
+    >
+      <!--v-if-->
+       HEX
+    </div>
+    <div
+      class="format-item"
+      data-v-eee8fcd5=""
+    >
+      <!--v-if-->
        RGB
     </div>
     
   </div>
   <div
     class="format-line"
-    data-v-e4fcdb38=""
+    data-v-eee8fcd5=""
   >
     
     <div
       class="format-item"
-      data-v-e4fcdb38=""
+      data-v-eee8fcd5=""
     >
       <!--v-if-->
        HSL
     </div>
     <div
       class="format-item"
-      data-v-e4fcdb38=""
+      data-v-eee8fcd5=""
     >
       <!--v-if-->
        HSV
     </div>
     <div
       class="format-item"
-      data-v-e4fcdb38=""
+      data-v-eee8fcd5=""
     >
       <!--v-if-->
        CMYK
@@ -182,7 +182,7 @@ exports[`ColorPicker > ColorPicker formatVue demo works fine 1`] = `
   
   <div
     class="t-color-picker__panel"
-    data-v-e4fcdb38=""
+    data-v-eee8fcd5=""
   >
     <div
       class="t-color-picker__body t-color-picker__body--multiple"
@@ -217,7 +217,24 @@ exports[`ColorPicker > ColorPicker formatVue demo works fine 1`] = `
               />
             </div>
           </div>
-          <!---->
+          <div
+            class="t-color-picker__slider-wrapper t-color-picker__slider-wrapper--alpha-type"
+          >
+            <div
+              class="t-color-picker__slider-padding "
+            />
+            <div
+              class="t-color-picker__slider"
+            >
+              <div
+                class="t-color-picker__rail"
+              />
+              <div
+                class="t-color-picker__thumb"
+                style="left: 0px;"
+              />
+            </div>
+          </div>
         </div>
       </div>
       <div
@@ -226,7 +243,7 @@ exports[`ColorPicker > ColorPicker formatVue demo works fine 1`] = `
         <div
           class="t-color-picker__format-item t-color-picker__format-item--first"
         >
-          RGB
+          CSS
         </div>
         <div
           class="t-color-picker__format-item t-color-picker__format-item--second"
@@ -238,20 +255,10 @@ exports[`ColorPicker > ColorPicker formatVue demo works fine 1`] = `
             <div
               class="t-color-picker__format-input t-color-picker__format-input--base"
             >
-              0
+              rgba(0, 31, 151, 1)
             </div>
             <div
-              class="t-color-picker__format-input t-color-picker__format-input--base"
-            >
-              31
-            </div>
-            <div
-              class="t-color-picker__format-input t-color-picker__format-input--base"
-            >
-              151
-            </div>
-            <div
-              class="t-color-picker__format-input t-color-picker__format-input--base"
+              class="t-color-picker__format-input t-color-picker__format-input--fixed"
             >
               100%
             </div>
@@ -813,7 +820,24 @@ exports[`ColorPicker > ColorPicker mobileVue demo works fine 1`] = `
                     />
                   </div>
                 </div>
-                <!---->
+                <div
+                  class="t-color-picker__slider-wrapper t-color-picker__slider-wrapper--alpha-type"
+                >
+                  <div
+                    class="t-color-picker__slider-padding "
+                  />
+                  <div
+                    class="t-color-picker__slider"
+                  >
+                    <div
+                      class="t-color-picker__rail"
+                    />
+                    <div
+                      class="t-color-picker__thumb"
+                      style="left: 0px;"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
             <div
@@ -989,62 +1013,62 @@ exports[`ColorPicker > ColorPicker mobileVue demo works fine 1`] = `
       
       <div
         class="format-line"
-        data-v-e4fcdb38=""
+        data-v-eee8fcd5=""
       >
         
         <div
-          class="format-item"
-          data-v-e4fcdb38=""
-        >
-          <!--v-if-->
-           CSS
-        </div>
-        <div
-          class="format-item"
-          data-v-e4fcdb38=""
-        >
-          <!--v-if-->
-           HEX
-        </div>
-        <div
           class="format-item active"
-          data-v-e4fcdb38=""
+          data-v-eee8fcd5=""
         >
           <svg
             class="t-icon t-icon-check"
-            data-v-e4fcdb38=""
+            data-v-eee8fcd5=""
             style="position: absolute; left: 2.5px; top: 2.1px; z-index: 1; color: rgb(255, 255, 255);"
           >
             <use
               href="#t-icon-check"
             />
           </svg>
+           CSS
+        </div>
+        <div
+          class="format-item"
+          data-v-eee8fcd5=""
+        >
+          <!--v-if-->
+           HEX
+        </div>
+        <div
+          class="format-item"
+          data-v-eee8fcd5=""
+        >
+          <!--v-if-->
            RGB
         </div>
         
       </div>
       <div
         class="format-line"
-        data-v-e4fcdb38=""
+        data-v-eee8fcd5=""
       >
         
         <div
           class="format-item"
-          data-v-e4fcdb38=""
+          data-v-eee8fcd5=""
         >
           <!--v-if-->
            HSL
         </div>
         <div
           class="format-item"
-          data-v-e4fcdb38=""
+          data-v-eee8fcd5=""
         >
           <!--v-if-->
            HSV
         </div>
         <div
           class="format-item"
-          data-v-e4fcdb38=""
+          data-v-eee8fcd5=""
         >
           <!--v-if-->
            CMYK
@@ -1054,7 +1078,7 @@ exports[`ColorPicker > ColorPicker mobileVue demo works fine 1`] = `
       
       <div
         class="t-color-picker__panel"
-        data-v-e4fcdb38=""
+        data-v-eee8fcd5=""
       >
         <div
           class="t-color-picker__body t-color-picker__body--multiple"
@@ -1089,7 +1113,24 @@ exports[`ColorPicker > ColorPicker mobileVue demo works fine 1`] = `
                   />
                 </div>
               </div>
-              <!---->
+              <div
+                class="t-color-picker__slider-wrapper t-color-picker__slider-wrapper--alpha-type"
+              >
+                <div
+                  class="t-color-picker__slider-padding "
+                />
+                <div
+                  class="t-color-picker__slider"
+                >
+                  <div
+                    class="t-color-picker__rail"
+                  />
+                  <div
+                    class="t-color-picker__thumb"
+                    style="left: 0px;"
+                  />
+                </div>
+              </div>
             </div>
           </div>
           <div
@@ -1098,7 +1139,7 @@ exports[`ColorPicker > ColorPicker mobileVue demo works fine 1`] = `
             <div
               class="t-color-picker__format-item t-color-picker__format-item--first"
             >
-              RGB
+              CSS
             </div>
             <div
               class="t-color-picker__format-item t-color-picker__format-item--second"
@@ -1110,20 +1151,10 @@ exports[`ColorPicker > ColorPicker mobileVue demo works fine 1`] = `
                 <div
                   class="t-color-picker__format-input t-color-picker__format-input--base"
                 >
-                  0
+                  rgba(0, 31, 151, 1)
                 </div>
                 <div
-                  class="t-color-picker__format-input t-color-picker__format-input--base"
-                >
-                  31
-                </div>
-                <div
-                  class="t-color-picker__format-input t-color-picker__format-input--base"
-                >
-                  151
-                </div>
-                <div
-                  class="t-color-picker__format-input t-color-picker__format-input--base"
+                  class="t-color-picker__format-input t-color-picker__format-input--fixed"
                 >
                   100%
                 </div>
@@ -1514,7 +1545,24 @@ exports[`ColorPicker > ColorPicker usePopupVue demo works fine 1`] = `
                 />
               </div>
             </div>
-            <!---->
+            <div
+              class="t-color-picker__slider-wrapper t-color-picker__slider-wrapper--alpha-type"
+            >
+              <div
+                class="t-color-picker__slider-padding "
+              />
+              <div
+                class="t-color-picker__slider"
+              >
+                <div
+                  class="t-color-picker__rail"
+                />
+                <div
+                  class="t-color-picker__thumb"
+                  style="left: 0px;"
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div
