@@ -97,7 +97,6 @@ export default defineComponent({
       if (isTouchable()) return;
       if (!isReachTop(e)) return;
 
-
       clearTimeout(timer);
       timer = null;
       distance.value = 0;
