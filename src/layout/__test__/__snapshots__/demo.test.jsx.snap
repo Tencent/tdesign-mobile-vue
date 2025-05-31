@@ -7,12 +7,12 @@ exports[`Layout > Layout baseVue demo works fine 1`] = `
   
   <div
     class="t-row"
-    data-v-21da598c=""
+    data-v-16a68efe=""
   >
     
     <div
       class="t-col t-col--8 dark"
-      data-v-21da598c=""
+      data-v-16a68efe=""
     >
       
       col-8
@@ -20,7 +20,7 @@ exports[`Layout > Layout baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-col t-col--8 light"
-      data-v-21da598c=""
+      data-v-16a68efe=""
     >
       
       col-8
@@ -28,7 +28,7 @@ exports[`Layout > Layout baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-col t-col--8 dark"
-      data-v-21da598c=""
+      data-v-16a68efe=""
     >
       
       col-8
@@ -38,12 +38,12 @@ exports[`Layout > Layout baseVue demo works fine 1`] = `
   </div>
   <div
     class="t-row"
-    data-v-21da598c=""
+    data-v-16a68efe=""
   >
     
     <div
       class="t-col t-col--4 dark"
-      data-v-21da598c=""
+      data-v-16a68efe=""
     >
       
       col-4
@@ -51,7 +51,7 @@ exports[`Layout > Layout baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-col t-col--offset-4 t-col--16 light"
-      data-v-21da598c=""
+      data-v-16a68efe=""
     >
       
       col-16 col-offset-4
@@ -61,12 +61,12 @@ exports[`Layout > Layout baseVue demo works fine 1`] = `
   </div>
   <div
     class="t-row"
-    data-v-21da598c=""
+    data-v-16a68efe=""
   >
     
     <div
       class="t-col t-col--offset-12 t-col--12 dark"
-      data-v-21da598c=""
+      data-v-16a68efe=""
     >
       
       col-12 col-offset-12
@@ -81,23 +81,23 @@ exports[`Layout > Layout baseVue demo works fine 1`] = `
 exports[`Layout > Layout mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-05f1f61d=""
+  data-v-d7b77a67=""
 >
   <h1
     class="title"
-    data-v-05f1f61d=""
+    data-v-d7b77a67=""
   >
     Layout 布局
   </h1>
   <p
     class="summary"
-    data-v-05f1f61d=""
+    data-v-d7b77a67=""
   >
     以规则的网格阵列来指导和规范页面中的版面布局以及信息分布，提高界面内布局的一致性，节约成本。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-05f1f61d=""
+    data-v-d7b77a67=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -120,12 +120,12 @@ exports[`Layout > Layout mobileVue demo works fine 1`] = `
       
       <div
         class="t-row"
-        data-v-21da598c=""
+        data-v-16a68efe=""
       >
         
         <div
           class="t-col t-col--8 dark"
-          data-v-21da598c=""
+          data-v-16a68efe=""
         >
           
           col-8
@@ -133,7 +133,7 @@ exports[`Layout > Layout mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-col t-col--8 light"
-          data-v-21da598c=""
+          data-v-16a68efe=""
         >
           
           col-8
@@ -141,7 +141,7 @@ exports[`Layout > Layout mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-col t-col--8 dark"
-          data-v-21da598c=""
+          data-v-16a68efe=""
         >
           
           col-8
@@ -151,12 +151,12 @@ exports[`Layout > Layout mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-row"
-        data-v-21da598c=""
+        data-v-16a68efe=""
       >
         
         <div
           class="t-col t-col--4 dark"
-          data-v-21da598c=""
+          data-v-16a68efe=""
         >
           
           col-4
@@ -164,7 +164,7 @@ exports[`Layout > Layout mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-col t-col--offset-4 t-col--16 light"
-          data-v-21da598c=""
+          data-v-16a68efe=""
         >
           
           col-16 col-offset-4
@@ -174,12 +174,12 @@ exports[`Layout > Layout mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-row"
-        data-v-21da598c=""
+        data-v-16a68efe=""
       >
         
         <div
           class="t-col t-col--offset-12 t-col--12 dark"
-          data-v-21da598c=""
+          data-v-16a68efe=""
         >
           
           col-12 col-offset-12
@@ -193,7 +193,7 @@ exports[`Layout > Layout mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-05f1f61d=""
+    data-v-d7b77a67=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -211,20 +211,20 @@ exports[`Layout > Layout mobileVue demo works fine 1`] = `
       
       <div
         class="t-row"
-        data-v-05f1f61d=""
-        data-v-5d81698e=""
+        data-v-8a1557d6=""
+        data-v-d7b77a67=""
         style="margin-right: -8px; margin-left: -8px;"
       >
         
         <div
           class="t-col t-col--8"
-          data-v-5d81698e=""
+          data-v-8a1557d6=""
           style="padding-right: 8px; padding-left: 8px;"
         >
           
           <div
             class="dark"
-            data-v-5d81698e=""
+            data-v-8a1557d6=""
           >
             col-8
           </div>
@@ -232,13 +232,13 @@ exports[`Layout > Layout mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-col t-col--8"
-          data-v-5d81698e=""
+          data-v-8a1557d6=""
           style="padding-right: 8px; padding-left: 8px;"
         >
           
           <div
             class="dark"
-            data-v-5d81698e=""
+            data-v-8a1557d6=""
           >
             col-8
           </div>
@@ -246,13 +246,13 @@ exports[`Layout > Layout mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-col t-col--8"
-          data-v-5d81698e=""
+          data-v-8a1557d6=""
           style="padding-right: 8px; padding-left: 8px;"
         >
           
           <div
             class="dark"
-            data-v-5d81698e=""
+            data-v-8a1557d6=""
           >
             col-8
           </div>
@@ -269,19 +269,19 @@ exports[`Layout > Layout mobileVue demo works fine 1`] = `
 exports[`Layout > Layout offsetVue demo works fine 1`] = `
 <div
   class="t-row"
-  data-v-5d81698e=""
+  data-v-8a1557d6=""
   style="margin-right: -8px; margin-left: -8px;"
 >
   
   <div
     class="t-col t-col--8"
-    data-v-5d81698e=""
+    data-v-8a1557d6=""
     style="padding-right: 8px; padding-left: 8px;"
   >
     
     <div
       class="dark"
-      data-v-5d81698e=""
+      data-v-8a1557d6=""
     >
       col-8
     </div>
@@ -289,13 +289,13 @@ exports[`Layout > Layout offsetVue demo works fine 1`] = `
   </div>
   <div
     class="t-col t-col--8"
-    data-v-5d81698e=""
+    data-v-8a1557d6=""
     style="padding-right: 8px; padding-left: 8px;"
   >
     
     <div
       class="dark"
-      data-v-5d81698e=""
+      data-v-8a1557d6=""
     >
       col-8
     </div>
@@ -303,13 +303,13 @@ exports[`Layout > Layout offsetVue demo works fine 1`] = `
   </div>
   <div
     class="t-col t-col--8"
-    data-v-5d81698e=""
+    data-v-8a1557d6=""
     style="padding-right: 8px; padding-left: 8px;"
   >
     
     <div
       class="dark"
-      data-v-5d81698e=""
+      data-v-8a1557d6=""
     >
       col-8
     </div>

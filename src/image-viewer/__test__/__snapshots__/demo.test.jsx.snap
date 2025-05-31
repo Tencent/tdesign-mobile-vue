@@ -55,23 +55,23 @@ exports[`ImageViewer > ImageViewer baseVue demo works fine 1`] = `
 exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-ef8302fa=""
+  data-v-c1082d12=""
 >
   <h1
     class="title"
-    data-v-ef8302fa=""
+    data-v-c1082d12=""
   >
     ImageViewer 图片预览
   </h1>
   <p
     class="summary"
-    data-v-ef8302fa=""
+    data-v-c1082d12=""
   >
     图片全屏放大预览效果，包含全屏背景色、页码位置样式、增加操作等规范
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-ef8302fa=""
+    data-v-c1082d12=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -115,7 +115,7 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-ef8302fa=""
+    data-v-c1082d12=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -159,7 +159,7 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-ef8302fa=""
+    data-v-c1082d12=""
   >
     <div
       class="tdesign-mobile-demo-block__header"

@@ -24,6 +24,11 @@ export default {
   },
   /** 是否在关闭浮层时销毁浮层 */
   destroyOnClose: Boolean,
+  /** 动画过渡时间 */
+  duration: {
+    type: Number,
+    default: 240,
+  },
   /** 遮罩层的属性，透传至 overlay */
   overlayProps: {
     type: Object as PropType<TdPopupProps['overlayProps']>,

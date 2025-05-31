@@ -5,6 +5,23 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.8.5 `2025-05-13` 
+### 🚀 Features
+- `Navbar`: 新增 `safeAreaInsetTop`，是否开启顶部安全区适配 @anlyyao ([#1834](https://github.com/Tencent/tdesign-mobile-vue/pull/1834))
+- `PullDownRefresh`: 新增 `disabled` 属性 @anlyyao ([#1844](https://github.com/Tencent/tdesign-mobile-vue/pull/1844))
+### 🐞 Bug Fixes
+- `Message`: 修复项目引入 `amfe-flexible` 包后，组件样式不兼容 @anlyyao ([#1845](https://github.com/Tencent/tdesign-mobile-vue/pull/1845))
+
+## 🌈 1.8.4 `2025-04-25` 
+### 🚀 Features
+- `Icon`: 新增 `logo-miniprogram`、`logo-cnb`、`seal`、`quote` 图标 @taowensheng1997 @uyarn ([#1827](https://github.com/Tencent/tdesign-mobile-vue/pull/1827))
+- `Progress`: 新增 `size` 属性，仅在环形进度条有效 @liweijie0812 ([#1824](https://github.com/Tencent/tdesign-mobile-vue/pull/1824))
+### 🐞 Bug Fixes
+- `Icon`: 优化多个文件相关图标的绘制效果，修复 `gesture-right-slip` 的绘制问题@uyarn([#1827](https://github.com/Tencent/tdesign-mobile-vue/pull/1827))
+- `Slider`: `marks` 属性不支持 `()=>TNode` 渲染的问题  @betavs ([#1811](https://github.com/Tencent/tdesign-mobile-vue/pull/1811))
+### 🚧 Others
+- `site`: 站点接入主题生成器 @RylanBot ([#1815](https://github.com/Tencent/tdesign-mobile-vue/pull/1815))
+
 ## 🌈 1.8.3 `2025-03-23` 
 ### 🚀 Features
 - `Icon`: 更新图标版本至 `0.3.5`([#1808](https://github.com/Tencent/tdesign-mobile-vue/pull/1808))

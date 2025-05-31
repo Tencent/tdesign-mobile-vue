@@ -7,12 +7,12 @@ exports[`BackTop > BackTop baseVue demo works fine 1`] = `
   
   <div
     class="button-group"
-    data-v-33e4f6e7=""
+    data-v-db5fce21=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-33e4f6e7=""
+      data-v-db5fce21=""
       role="button"
       type="button"
     >
@@ -27,7 +27,7 @@ exports[`BackTop > BackTop baseVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-33e4f6e7=""
+      data-v-db5fce21=""
       role="button"
       type="button"
     >
@@ -41,11 +41,11 @@ exports[`BackTop > BackTop baseVue demo works fine 1`] = `
     </button>
   </div>
   <div
-    data-v-33e4f6e7=""
+    data-v-db5fce21=""
   >
     <div
       class="t-back-top t-back-top--fixed t-back-top--round"
-      data-v-33e4f6e7=""
+      data-v-db5fce21=""
       style="display: none;"
     >
       <svg
@@ -75,23 +75,23 @@ exports[`BackTop > BackTop baseVue demo works fine 1`] = `
 exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-806aae90=""
+  data-v-9970a0e7=""
 >
   <h1
     class="title"
-    data-v-806aae90=""
+    data-v-9970a0e7=""
   >
     BackTop 回到顶部
   </h1>
   <p
     class="summary"
-    data-v-806aae90=""
+    data-v-9970a0e7=""
   >
     当页面过长往下滑动是会出现返回顶部的便捷操作，帮助用户快速回到页面顶部
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-806aae90=""
+    data-v-9970a0e7=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -110,12 +110,12 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
       
       <div
         class="button-group"
-        data-v-33e4f6e7=""
+        data-v-db5fce21=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-33e4f6e7=""
+          data-v-db5fce21=""
           role="button"
           type="button"
         >
@@ -130,7 +130,7 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-33e4f6e7=""
+          data-v-db5fce21=""
           role="button"
           type="button"
         >
@@ -144,11 +144,11 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
         </button>
       </div>
       <div
-        data-v-33e4f6e7=""
+        data-v-db5fce21=""
       >
         <div
           class="t-back-top t-back-top--fixed t-back-top--round"
-          data-v-33e4f6e7=""
+          data-v-db5fce21=""
           style="display: none;"
         >
           <svg
@@ -177,7 +177,7 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-806aae90=""
+    data-v-9970a0e7=""
   >
     <!--v-if-->
     <div
@@ -186,12 +186,12 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
       
       <div
         class="group"
-        data-v-806aae90=""
+        data-v-9970a0e7=""
       >
         
         <div
           class="t-skeleton item"
-          data-v-806aae90=""
+          data-v-9970a0e7=""
         >
           
           
@@ -224,7 +224,7 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-skeleton item"
-          data-v-806aae90=""
+          data-v-9970a0e7=""
         >
           
           
@@ -257,7 +257,7 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-skeleton item"
-          data-v-806aae90=""
+          data-v-9970a0e7=""
         >
           
           
@@ -290,7 +290,7 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-skeleton item"
-          data-v-806aae90=""
+          data-v-9970a0e7=""
         >
           
           
@@ -323,7 +323,7 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-skeleton item"
-          data-v-806aae90=""
+          data-v-9970a0e7=""
         >
           
           
@@ -356,7 +356,7 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-skeleton item"
-          data-v-806aae90=""
+          data-v-9970a0e7=""
         >
           
           
@@ -394,7 +394,7 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
   </div>
   <div
     class="blank"
-    data-v-806aae90=""
+    data-v-9970a0e7=""
   />
 </div>
 `;

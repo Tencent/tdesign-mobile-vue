@@ -91,11 +91,12 @@ export default defineComponent({
     });
 
     // 统一判断是否可以滑动
-    const isTouchable = () => loading.value;
+    const isTouchable = () => loading.value || props.disabled;
 
     const onTouchStart = (e: TouchEvent) => {
       if (isTouchable()) return;
       if (!isReachTop(e)) return;
+
 
       clearTimeout(timer);
       timer = null;
@@ -107,6 +108,7 @@ export default defineComponent({
     const onTouchMove = (e: TouchEvent) => {
       if (isTouchable()) return;
       if (!isReachTop(e)) return;
+
       touch.move(e);
 
       const { diffY, diffX } = touch;

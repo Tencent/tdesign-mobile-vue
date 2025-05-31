@@ -6,8 +6,8 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
 >
   
   <div
-    class="t-navbar t-navbar--visible-animation"
-    data-v-7388e034=""
+    class="t-navbar t-safe-area-top t-navbar--visible-animation"
+    data-v-fcc0cda1=""
     style="position: relative;"
   >
     <!---->
@@ -45,8 +45,8 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-navbar t-navbar--visible-animation"
-    data-v-7388e034=""
+    class="t-navbar t-safe-area-top t-navbar--visible-animation"
+    data-v-fcc0cda1=""
     style="position: relative;"
   >
     <!---->
@@ -71,7 +71,7 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-close"
-          data-v-7388e034=""
+          data-v-fcc0cda1=""
           style="font-size: 24px;"
         >
           <use
@@ -96,7 +96,7 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-ellipsis"
-          data-v-7388e034=""
+          data-v-fcc0cda1=""
           style="font-size: 24px;"
         >
           <use
@@ -108,8 +108,8 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-navbar t-navbar--visible-animation"
-    data-v-7388e034=""
+    class="t-navbar t-safe-area-top t-navbar--visible-animation"
+    data-v-fcc0cda1=""
     style="position: relative;"
   >
     <!---->
@@ -127,11 +127,11 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
           
           <div
             class="custom-capsule"
-            data-v-7388e034=""
+            data-v-fcc0cda1=""
           >
             <svg
               class="t-icon t-icon-chevron-left custom-capsule__icon"
-              data-v-7388e034=""
+              data-v-fcc0cda1=""
               style="font-size: 20px;"
             >
               <use
@@ -140,7 +140,7 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
             </svg>
             <div
               class="t-divider t-divider--vertical t-divider--center"
-              data-v-7388e034=""
+              data-v-fcc0cda1=""
               role="separator"
             >
               <div
@@ -151,7 +151,7 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
             </div>
             <svg
               class="t-icon t-icon-home custom-capsule__icon"
-              data-v-7388e034=""
+              data-v-fcc0cda1=""
               style="font-size: 20px;"
             >
               <use
@@ -177,7 +177,7 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-ellipsis"
-          data-v-7388e034=""
+          data-v-fcc0cda1=""
           style="font-size: 24px;"
         >
           <use
@@ -194,8 +194,8 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
 
 exports[`Navbar > Navbar customColorVue demo works fine 1`] = `
 <div
-  class="t-navbar t-navbar--visible-animation custom-navbar"
-  data-v-b4f331c8=""
+  class="t-navbar t-safe-area-top t-navbar--visible-animation custom-navbar"
+  data-v-3ef3b10f=""
   style="position: relative;"
 >
   <!---->
@@ -235,7 +235,7 @@ exports[`Navbar > Navbar customColorVue demo works fine 1`] = `
       
       <svg
         class="t-icon t-icon-ellipsis"
-        data-v-b4f331c8=""
+        data-v-3ef3b10f=""
         style="font-size: 24px;"
       >
         <use
@@ -250,8 +250,8 @@ exports[`Navbar > Navbar customColorVue demo works fine 1`] = `
 
 exports[`Navbar > Navbar imgVue demo works fine 1`] = `
 <div
-  class="t-navbar t-navbar--visible-animation"
-  data-v-0848b63e=""
+  class="t-navbar t-safe-area-top t-navbar--visible-animation"
+  data-v-ed0b13d1=""
   style="position: relative;"
 >
   <!---->
@@ -265,7 +265,7 @@ exports[`Navbar > Navbar imgVue demo works fine 1`] = `
       
       <div
         class="t-image t-image--square logo"
-        data-v-0848b63e=""
+        data-v-ed0b13d1=""
       >
         <div
           class="t-image__mask"
@@ -321,7 +321,7 @@ exports[`Navbar > Navbar imgVue demo works fine 1`] = `
       
       <svg
         class="t-icon t-icon-home"
-        data-v-0848b63e=""
+        data-v-ed0b13d1=""
         style="font-size: 24px;"
       >
         <use
@@ -330,7 +330,7 @@ exports[`Navbar > Navbar imgVue demo works fine 1`] = `
       </svg>
       <svg
         class="t-icon t-icon-ellipsis"
-        data-v-0848b63e=""
+        data-v-ed0b13d1=""
         style="font-size: 24px;"
       >
         <use
@@ -349,8 +349,8 @@ exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
 >
   
   <div
-    class="t-navbar t-navbar--visible-animation"
-    data-v-63d9f832=""
+    class="t-navbar t-safe-area-top t-navbar--visible-animation"
+    data-v-593dba5f=""
     style="position: relative;"
   >
     <!---->
@@ -390,7 +390,7 @@ exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-ellipsis"
-          data-v-63d9f832=""
+          data-v-593dba5f=""
           style="font-size: 24px;"
         >
           <use
@@ -402,8 +402,8 @@ exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-navbar t-navbar--visible-animation"
-    data-v-63d9f832=""
+    class="t-navbar t-safe-area-top t-navbar--visible-animation"
+    data-v-593dba5f=""
     style="position: relative;"
   >
     <!---->
@@ -428,7 +428,7 @@ exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
         
         <span
           class="custom-title"
-          data-v-63d9f832=""
+          data-v-593dba5f=""
         >
           标题左对齐
         </span>
@@ -446,7 +446,7 @@ exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-home"
-          data-v-63d9f832=""
+          data-v-593dba5f=""
           style="font-size: 24px;"
         >
           <use
@@ -455,7 +455,7 @@ exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
         </svg>
         <svg
           class="t-icon t-icon-ellipsis"
-          data-v-63d9f832=""
+          data-v-593dba5f=""
           style="font-size: 24px;"
         >
           <use
@@ -473,23 +473,23 @@ exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
 exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-16defdf7=""
+  data-v-0270c729=""
 >
   <h1
     class="title"
-    data-v-16defdf7=""
+    data-v-0270c729=""
   >
     NavBar 导航栏
   </h1>
   <p
     class="summary"
-    data-v-16defdf7=""
+    data-v-0270c729=""
   >
     用于不同页面之间切换或者跳转，位于内容区的上方，系统状态栏的下方。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-16defdf7=""
+    data-v-0270c729=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -511,8 +511,8 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-navbar t-navbar--visible-animation"
-        data-v-7388e034=""
+        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        data-v-fcc0cda1=""
         style="position: relative;"
       >
         <!---->
@@ -550,8 +550,8 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-navbar t-navbar--visible-animation"
-        data-v-7388e034=""
+        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        data-v-fcc0cda1=""
         style="position: relative;"
       >
         <!---->
@@ -576,7 +576,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-close"
-              data-v-7388e034=""
+              data-v-fcc0cda1=""
               style="font-size: 24px;"
             >
               <use
@@ -601,7 +601,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-ellipsis"
-              data-v-7388e034=""
+              data-v-fcc0cda1=""
               style="font-size: 24px;"
             >
               <use
@@ -613,8 +613,8 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-navbar t-navbar--visible-animation"
-        data-v-7388e034=""
+        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        data-v-fcc0cda1=""
         style="position: relative;"
       >
         <!---->
@@ -632,11 +632,11 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               
               <div
                 class="custom-capsule"
-                data-v-7388e034=""
+                data-v-fcc0cda1=""
               >
                 <svg
                   class="t-icon t-icon-chevron-left custom-capsule__icon"
-                  data-v-7388e034=""
+                  data-v-fcc0cda1=""
                   style="font-size: 20px;"
                 >
                   <use
@@ -645,7 +645,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
                 </svg>
                 <div
                   class="t-divider t-divider--vertical t-divider--center"
-                  data-v-7388e034=""
+                  data-v-fcc0cda1=""
                   role="separator"
                 >
                   <div
@@ -656,7 +656,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
                 </div>
                 <svg
                   class="t-icon t-icon-home custom-capsule__icon"
-                  data-v-7388e034=""
+                  data-v-fcc0cda1=""
                   style="font-size: 20px;"
                 >
                   <use
@@ -682,7 +682,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-ellipsis"
-              data-v-7388e034=""
+              data-v-fcc0cda1=""
               style="font-size: 24px;"
             >
               <use
@@ -699,7 +699,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-16defdf7=""
+    data-v-0270c729=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -716,9 +716,9 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-navbar t-navbar--visible-animation"
-        data-v-16defdf7=""
-        data-v-6af0dffd=""
+        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        data-v-0270c729=""
+        data-v-614a1e54=""
         style="position: relative;"
       >
         <!---->
@@ -731,7 +731,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             <!---->
             
             <div
-              data-v-6af0dffd=""
+              data-v-614a1e54=""
             >
               <div
                 class="t-search"
@@ -778,7 +778,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-home"
-              data-v-6af0dffd=""
+              data-v-614a1e54=""
               style="font-size: 24px;"
             >
               <use
@@ -787,7 +787,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             </svg>
             <svg
               class="t-icon t-icon-ellipsis"
-              data-v-6af0dffd=""
+              data-v-614a1e54=""
               style="font-size: 24px;"
             >
               <use
@@ -803,7 +803,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-16defdf7=""
+    data-v-0270c729=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -820,9 +820,9 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-navbar t-navbar--visible-animation"
-        data-v-0848b63e=""
-        data-v-16defdf7=""
+        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        data-v-0270c729=""
+        data-v-ed0b13d1=""
         style="position: relative;"
       >
         <!---->
@@ -836,7 +836,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             
             <div
               class="t-image t-image--square logo"
-              data-v-0848b63e=""
+              data-v-ed0b13d1=""
             >
               <div
                 class="t-image__mask"
@@ -892,7 +892,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-home"
-              data-v-0848b63e=""
+              data-v-ed0b13d1=""
               style="font-size: 24px;"
             >
               <use
@@ -901,7 +901,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             </svg>
             <svg
               class="t-icon t-icon-ellipsis"
-              data-v-0848b63e=""
+              data-v-ed0b13d1=""
               style="font-size: 24px;"
             >
               <use
@@ -917,7 +917,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-16defdf7=""
+    data-v-0270c729=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -939,8 +939,8 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-navbar t-navbar--visible-animation"
-        data-v-63d9f832=""
+        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        data-v-593dba5f=""
         style="position: relative;"
       >
         <!---->
@@ -980,7 +980,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-ellipsis"
-              data-v-63d9f832=""
+              data-v-593dba5f=""
               style="font-size: 24px;"
             >
               <use
@@ -992,8 +992,8 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-navbar t-navbar--visible-animation"
-        data-v-63d9f832=""
+        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        data-v-593dba5f=""
         style="position: relative;"
       >
         <!---->
@@ -1018,7 +1018,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             
             <span
               class="custom-title"
-              data-v-63d9f832=""
+              data-v-593dba5f=""
             >
               标题左对齐
             </span>
@@ -1036,7 +1036,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-home"
-              data-v-63d9f832=""
+              data-v-593dba5f=""
               style="font-size: 24px;"
             >
               <use
@@ -1045,7 +1045,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             </svg>
             <svg
               class="t-icon t-icon-ellipsis"
-              data-v-63d9f832=""
+              data-v-593dba5f=""
               style="font-size: 24px;"
             >
               <use
@@ -1062,7 +1062,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-16defdf7=""
+    data-v-0270c729=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1080,8 +1080,8 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-navbar t-navbar--visible-animation"
-        data-v-5f535116=""
+        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        data-v-f6e31b98=""
         style="position: relative;"
       >
         <!---->
@@ -1121,7 +1121,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-ellipsis"
-              data-v-5f535116=""
+              data-v-f6e31b98=""
               style="font-size: 24px;"
             >
               <use
@@ -1133,8 +1133,8 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-navbar t-navbar--visible-animation custom-navbar"
-        data-v-5f535116=""
+        class="t-navbar t-safe-area-top t-navbar--visible-animation custom-navbar"
+        data-v-f6e31b98=""
         style="position: relative;"
       >
         <!---->
@@ -1170,7 +1170,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-home"
-              data-v-5f535116=""
+              data-v-f6e31b98=""
               style="font-size: 24px;"
             >
               <use
@@ -1179,7 +1179,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             </svg>
             <svg
               class="t-icon t-icon-ellipsis"
-              data-v-5f535116=""
+              data-v-f6e31b98=""
               style="font-size: 24px;"
             >
               <use
@@ -1192,7 +1192,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
       </div>
       <div
         class="header-title"
-        data-v-5f535116=""
+        data-v-f6e31b98=""
       >
         大尺寸标题
       </div>
@@ -1202,7 +1202,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-16defdf7=""
+    data-v-0270c729=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1219,9 +1219,9 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-navbar t-navbar--visible-animation custom-navbar"
-        data-v-16defdf7=""
-        data-v-b4f331c8=""
+        class="t-navbar t-safe-area-top t-navbar--visible-animation custom-navbar"
+        data-v-0270c729=""
+        data-v-3ef3b10f=""
         style="position: relative;"
       >
         <!---->
@@ -1261,7 +1261,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-ellipsis"
-              data-v-b4f331c8=""
+              data-v-3ef3b10f=""
               style="font-size: 24px;"
             >
               <use
@@ -1280,8 +1280,8 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
 
 exports[`Navbar > Navbar searchVue demo works fine 1`] = `
 <div
-  class="t-navbar t-navbar--visible-animation"
-  data-v-6af0dffd=""
+  class="t-navbar t-safe-area-top t-navbar--visible-animation"
+  data-v-614a1e54=""
   style="position: relative;"
 >
   <!---->
@@ -1294,7 +1294,7 @@ exports[`Navbar > Navbar searchVue demo works fine 1`] = `
       <!---->
       
       <div
-        data-v-6af0dffd=""
+        data-v-614a1e54=""
       >
         <div
           class="t-search"
@@ -1341,7 +1341,7 @@ exports[`Navbar > Navbar searchVue demo works fine 1`] = `
       
       <svg
         class="t-icon t-icon-home"
-        data-v-6af0dffd=""
+        data-v-614a1e54=""
         style="font-size: 24px;"
       >
         <use
@@ -1350,7 +1350,7 @@ exports[`Navbar > Navbar searchVue demo works fine 1`] = `
       </svg>
       <svg
         class="t-icon t-icon-ellipsis"
-        data-v-6af0dffd=""
+        data-v-614a1e54=""
         style="font-size: 24px;"
       >
         <use
@@ -1369,8 +1369,8 @@ exports[`Navbar > Navbar sizeVue demo works fine 1`] = `
 >
   
   <div
-    class="t-navbar t-navbar--visible-animation"
-    data-v-5f535116=""
+    class="t-navbar t-safe-area-top t-navbar--visible-animation"
+    data-v-f6e31b98=""
     style="position: relative;"
   >
     <!---->
@@ -1410,7 +1410,7 @@ exports[`Navbar > Navbar sizeVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-ellipsis"
-          data-v-5f535116=""
+          data-v-f6e31b98=""
           style="font-size: 24px;"
         >
           <use
@@ -1422,8 +1422,8 @@ exports[`Navbar > Navbar sizeVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-navbar t-navbar--visible-animation custom-navbar"
-    data-v-5f535116=""
+    class="t-navbar t-safe-area-top t-navbar--visible-animation custom-navbar"
+    data-v-f6e31b98=""
     style="position: relative;"
   >
     <!---->
@@ -1459,7 +1459,7 @@ exports[`Navbar > Navbar sizeVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-home"
-          data-v-5f535116=""
+          data-v-f6e31b98=""
           style="font-size: 24px;"
         >
           <use
@@ -1468,7 +1468,7 @@ exports[`Navbar > Navbar sizeVue demo works fine 1`] = `
         </svg>
         <svg
           class="t-icon t-icon-ellipsis"
-          data-v-5f535116=""
+          data-v-f6e31b98=""
           style="font-size: 24px;"
         >
           <use
@@ -1481,7 +1481,7 @@ exports[`Navbar > Navbar sizeVue demo works fine 1`] = `
   </div>
   <div
     class="header-title"
-    data-v-5f535116=""
+    data-v-f6e31b98=""
   >
     大尺寸标题
   </div>
