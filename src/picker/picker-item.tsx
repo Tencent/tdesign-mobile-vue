@@ -28,7 +28,7 @@ export default defineComponent({
     },
     swipeDuration: {
       type: [String, Number],
-      default: 1000,
+      default: 300,
     },
   },
   emits: ['pick'],
