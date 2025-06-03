@@ -193,7 +193,7 @@ class Picker {
     const dragRange = endY - this.startY;
     this.updateInertiaParams(event, false);
 
-    const { min, max } = this.getRange();
+    const { min, max } = this.getRange(0, 5);
     const moveOffsetY = limitNumberInRange(this.offsetYOfStart + dragRange, min, max);
     this.setOffsetY(moveOffsetY);
   }
