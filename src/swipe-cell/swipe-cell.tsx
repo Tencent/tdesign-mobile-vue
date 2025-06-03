@@ -10,8 +10,6 @@ import {
   onUnmounted,
 } from 'vue';
 import { isArray, isBoolean } from 'lodash-es';
-import { useSwipe } from './useSwipe';
-import props from './props';
 import config from '../config';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
@@ -19,6 +17,8 @@ import { useClickAway } from '../shared';
 import { preventDefault } from '../shared/dom';
 import { SwipeActionItem, SwipeSource } from './type';
 import { useSureConfirm } from './useSureConfirm';
+import props from './props';
+import { useSwipe } from './useSwipe';
 
 const { prefix } = config;
 
