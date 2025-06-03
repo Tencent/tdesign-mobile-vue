@@ -2,9 +2,10 @@ import { toRefs, computed, defineComponent } from 'vue';
 import { AddIcon, RemoveIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import props from './props';
-import { useDefault, formatNumber } from '../shared';
+import { formatNumber } from '../shared';
 import { TdStepperProps } from './type';
 import { useFormDisabled } from '../form/hooks';
+import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
@@ -14,9 +15,10 @@ export default defineComponent({
   setup(props, context) {
     const stepperClass = usePrefixClass('stepper');
 
-    const [stepperValue] = useDefault<TdStepperProps['value'], TdStepperProps>(props, context.emit, 'value', 'change');
+    const { value, modelValue, min, max, step, integer } = toRefs(props);
+    const [stepperValue, setStepperValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+
     const disabled = useFormDisabled();
-    const { min, max, step, integer } = toRefs(props);
     const inputStyle = computed(() => (props.inputWidth ? { width: `${props.inputWidth}px` } : ''));
 
     const isDisabled = (type: 'minus' | 'plus') => {
@@ -51,7 +53,7 @@ export default defineComponent({
     };
 
     const updateValue = (value: TdStepperProps['value']) => {
-      stepperValue.value = formatNumber(`${value}`, !integer.value);
+      setStepperValue(formatNumber(`${value}`, !integer.value));
     };
 
     const plusValue = () => {
@@ -72,7 +74,7 @@ export default defineComponent({
 
     const handleInput = (e: Event) => {
       const value = formatNumber((e.target as HTMLTextAreaElement).value, !integer.value);
-      stepperValue.value = value;
+      setStepperValue(value);
     };
 
     const handleChange = () => {
@@ -107,7 +109,7 @@ export default defineComponent({
             <RemoveIcon class={`${stepperClass.value}__minus-icon`} />
           </div>
           <input
-            v-model={stepperValue.value}
+            value={stepperValue.value}
             class={[
               `${stepperClass.value}__input`,
               `${stepperClass.value}__input--${props.theme}`,

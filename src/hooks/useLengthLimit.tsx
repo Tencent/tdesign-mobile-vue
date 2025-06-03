@@ -1,6 +1,5 @@
 import { computed, ComputedRef } from 'vue';
-import isNumber from 'lodash/isNumber';
-import isObject from 'lodash/isObject';
+import { isNumber, isObject } from 'lodash-es';
 import log from '../_common/js/log';
 import { getCharacterLength, getUnicodeLength, limitUnicodeMaxLength } from '../_common/js/utils/helper';
 

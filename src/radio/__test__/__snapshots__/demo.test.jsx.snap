@@ -92,7 +92,7 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+            d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
             fill="currentColor"
           />
         </svg>
@@ -183,7 +183,7 @@ exports[`Radio > Radio cardVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+            d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
             fill="currentColor"
           />
         </svg>
@@ -280,7 +280,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
   
   <div
     class="t-radio-group"
-    data-v-5173b2c6=""
+    data-v-bb126958=""
     role="radiogroup"
   >
     <!---->
@@ -288,11 +288,11 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
     
     <view
       class="card card--active"
-      data-v-5173b2c6=""
+      data-v-bb126958=""
     >
       <svg
         class="t-icon t-icon-check card__icon"
-        data-v-5173b2c6=""
+        data-v-bb126958=""
       >
         <use
           href="#t-icon-check"
@@ -300,7 +300,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
       </svg>
       <div
         class="t-radio t-radio--left t-radio--block"
-        data-v-5173b2c6=""
+        data-v-bb126958=""
       >
         <input
           class="t-radio__original"
@@ -335,12 +335,12 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
     </view>
     <view
       class="card"
-      data-v-5173b2c6=""
+      data-v-bb126958=""
     >
       <!--v-if-->
       <div
         class="t-radio t-radio--left t-radio--block"
-        data-v-5173b2c6=""
+        data-v-bb126958=""
       >
         <input
           class="t-radio__original"
@@ -375,12 +375,12 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
     </view>
     <view
       class="card"
-      data-v-5173b2c6=""
+      data-v-bb126958=""
     >
       <!--v-if-->
       <div
         class="t-radio t-radio--left t-radio--block"
-        data-v-5173b2c6=""
+        data-v-bb126958=""
       >
         <input
           class="t-radio__original"
@@ -418,14 +418,14 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
   </div>
   <view
     class="demo-desc"
-    data-v-5173b2c6=""
+    data-v-bb126958=""
     style="margin: 24px 16px 16px;"
   >
     横向卡片单选框
   </view>
   <div
     class="t-radio-group horizontal-box"
-    data-v-5173b2c6=""
+    data-v-bb126958=""
     role="radiogroup"
   >
     <!---->
@@ -433,11 +433,11 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
     
     <view
       class="card card--active"
-      data-v-5173b2c6=""
+      data-v-bb126958=""
     >
       <svg
         class="t-icon t-icon-check card__icon"
-        data-v-5173b2c6=""
+        data-v-bb126958=""
       >
         <use
           href="#t-icon-check"
@@ -445,7 +445,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
       </svg>
       <div
         class="t-radio t-radio--left t-radio--block"
-        data-v-5173b2c6=""
+        data-v-bb126958=""
       >
         <input
           class="t-radio__original"
@@ -475,12 +475,12 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
     </view>
     <view
       class="card"
-      data-v-5173b2c6=""
+      data-v-bb126958=""
     >
       <!--v-if-->
       <div
         class="t-radio t-radio--left t-radio--block"
-        data-v-5173b2c6=""
+        data-v-bb126958=""
       >
         <input
           class="t-radio__original"
@@ -510,12 +510,12 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
     </view>
     <view
       class="card"
-      data-v-5173b2c6=""
+      data-v-bb126958=""
     >
       <!--v-if-->
       <div
         class="t-radio t-radio--left t-radio--block"
-        data-v-5173b2c6=""
+        data-v-bb126958=""
       >
         <input
           class="t-radio__original"
@@ -637,7 +637,7 @@ exports[`Radio > Radio horizontalVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+          d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
           fill="currentColor"
         />
       </svg>
@@ -667,7 +667,7 @@ exports[`Radio > Radio iconVue demo works fine 1`] = `
   
   <div
     class="t-radio t-radio--left t-radio--block block"
-    data-v-9c2f6eb6=""
+    data-v-172d1b62=""
   >
     <input
       class="t-radio__original"
@@ -685,7 +685,7 @@ exports[`Radio > Radio iconVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
+          d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
           fill="currentColor"
         />
       </svg>
@@ -708,7 +708,7 @@ exports[`Radio > Radio iconVue demo works fine 1`] = `
   </div>
   <div
     class="t-radio t-radio--left t-radio--block block"
-    data-v-9c2f6eb6=""
+    data-v-172d1b62=""
   >
     <input
       class="t-radio__original"
@@ -868,7 +868,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+                  d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
                   fill="currentColor"
                 />
               </svg>
@@ -1035,7 +1035,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+                d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
                 fill="currentColor"
               />
             </svg>
@@ -1082,7 +1082,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
       
       <div
         class="t-radio-group radio-group-demo space"
-        data-v-4455429e=""
+        data-v-af6326fa=""
         role="radiogroup"
       >
         
@@ -1107,7 +1107,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+                d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
                 fill="currentColor"
               />
             </svg>
@@ -1191,7 +1191,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
       
       <div
         class="t-radio t-radio--left t-radio--block block"
-        data-v-9c2f6eb6=""
+        data-v-172d1b62=""
       >
         <input
           class="t-radio__original"
@@ -1209,7 +1209,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
+              d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
               fill="currentColor"
             />
           </svg>
@@ -1232,7 +1232,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-radio t-radio--left t-radio--block block"
-        data-v-9c2f6eb6=""
+        data-v-172d1b62=""
       >
         <input
           class="t-radio__original"
@@ -1286,7 +1286,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
       
       <div
         class="t-radio t-radio--left t-radio--block block"
-        data-v-57f93969=""
+        data-v-7e36f9df=""
       >
         <input
           class="t-radio__original"
@@ -1304,7 +1304,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+              d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
               fill="currentColor"
             />
           </svg>
@@ -1327,7 +1327,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-radio t-radio--right t-radio--block block"
-        data-v-57f93969=""
+        data-v-7e36f9df=""
       >
         <input
           class="t-radio__original"
@@ -1345,7 +1345,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+              d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
               fill="currentColor"
             />
           </svg>
@@ -1414,7 +1414,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+                  d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
                   fill="currentColor"
                 />
               </svg>
@@ -1529,7 +1529,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
       
       <div
         class="t-radio-group"
-        data-v-5173b2c6=""
+        data-v-bb126958=""
         role="radiogroup"
       >
         <!---->
@@ -1537,11 +1537,11 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         
         <view
           class="card card--active"
-          data-v-5173b2c6=""
+          data-v-bb126958=""
         >
           <svg
             class="t-icon t-icon-check card__icon"
-            data-v-5173b2c6=""
+            data-v-bb126958=""
           >
             <use
               href="#t-icon-check"
@@ -1549,7 +1549,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           </svg>
           <div
             class="t-radio t-radio--left t-radio--block"
-            data-v-5173b2c6=""
+            data-v-bb126958=""
           >
             <input
               class="t-radio__original"
@@ -1584,12 +1584,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         </view>
         <view
           class="card"
-          data-v-5173b2c6=""
+          data-v-bb126958=""
         >
           <!--v-if-->
           <div
             class="t-radio t-radio--left t-radio--block"
-            data-v-5173b2c6=""
+            data-v-bb126958=""
           >
             <input
               class="t-radio__original"
@@ -1624,12 +1624,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         </view>
         <view
           class="card"
-          data-v-5173b2c6=""
+          data-v-bb126958=""
         >
           <!--v-if-->
           <div
             class="t-radio t-radio--left t-radio--block"
-            data-v-5173b2c6=""
+            data-v-bb126958=""
           >
             <input
               class="t-radio__original"
@@ -1667,14 +1667,14 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
       </div>
       <view
         class="demo-desc"
-        data-v-5173b2c6=""
+        data-v-bb126958=""
         style="margin: 24px 16px 16px;"
       >
         横向卡片单选框
       </view>
       <div
         class="t-radio-group horizontal-box"
-        data-v-5173b2c6=""
+        data-v-bb126958=""
         role="radiogroup"
       >
         <!---->
@@ -1682,11 +1682,11 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         
         <view
           class="card card--active"
-          data-v-5173b2c6=""
+          data-v-bb126958=""
         >
           <svg
             class="t-icon t-icon-check card__icon"
-            data-v-5173b2c6=""
+            data-v-bb126958=""
           >
             <use
               href="#t-icon-check"
@@ -1694,7 +1694,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           </svg>
           <div
             class="t-radio t-radio--left t-radio--block"
-            data-v-5173b2c6=""
+            data-v-bb126958=""
           >
             <input
               class="t-radio__original"
@@ -1724,12 +1724,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         </view>
         <view
           class="card"
-          data-v-5173b2c6=""
+          data-v-bb126958=""
         >
           <!--v-if-->
           <div
             class="t-radio t-radio--left t-radio--block"
-            data-v-5173b2c6=""
+            data-v-bb126958=""
           >
             <input
               class="t-radio__original"
@@ -1759,12 +1759,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         </view>
         <view
           class="card"
-          data-v-5173b2c6=""
+          data-v-bb126958=""
         >
           <!--v-if-->
           <div
             class="t-radio t-radio--left t-radio--block"
-            data-v-5173b2c6=""
+            data-v-bb126958=""
           >
             <input
               class="t-radio__original"
@@ -1809,7 +1809,7 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
   
   <div
     class="t-radio t-radio--left t-radio--block block"
-    data-v-57f93969=""
+    data-v-7e36f9df=""
   >
     <input
       class="t-radio__original"
@@ -1827,7 +1827,7 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+          d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
           fill="currentColor"
         />
       </svg>
@@ -1850,7 +1850,7 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
   </div>
   <div
     class="t-radio t-radio--right t-radio--block block"
-    data-v-57f93969=""
+    data-v-7e36f9df=""
   >
     <input
       class="t-radio__original"
@@ -1868,7 +1868,7 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+          d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
           fill="currentColor"
         />
       </svg>
@@ -1896,7 +1896,7 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
 exports[`Radio > Radio statusVue demo works fine 1`] = `
 <div
   class="t-radio-group radio-group-demo space"
-  data-v-4455429e=""
+  data-v-af6326fa=""
   role="radiogroup"
 >
   
@@ -1921,7 +1921,7 @@ exports[`Radio > Radio statusVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M12 23a11 11 0 100-22 11 11 0 000 22zM7.5 10.59l3 3 6-6L17.91 9l-7.41 7.41L6.09 12l1.41-1.41z"
+          d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
           fill="currentColor"
         />
       </svg>

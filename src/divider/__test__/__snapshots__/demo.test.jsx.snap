@@ -2,17 +2,17 @@
 
 exports[`Divider > Divider baseVue demo works fine 1`] = `
 <div
-  data-v-589c0842=""
+  data-v-99a2d095=""
 >
   <div
     class="divider-demo__title"
-    data-v-589c0842=""
+    data-v-99a2d095=""
   >
     水平分割线
   </div>
   <div
     class="t-divider t-divider--horizontal t-divider--center"
-    data-v-589c0842=""
+    data-v-99a2d095=""
     role="separator"
   >
     <div
@@ -23,13 +23,13 @@ exports[`Divider > Divider baseVue demo works fine 1`] = `
   </div>
   <div
     class="divider-demo__title"
-    data-v-589c0842=""
+    data-v-99a2d095=""
   >
     带文字水平分割线
   </div>
   <div
     class="t-divider t-divider--horizontal t-divider--left"
-    data-v-589c0842=""
+    data-v-99a2d095=""
     role="separator"
   >
     <div
@@ -40,7 +40,7 @@ exports[`Divider > Divider baseVue demo works fine 1`] = `
   </div>
   <div
     class="t-divider t-divider--horizontal t-divider--center"
-    data-v-589c0842=""
+    data-v-99a2d095=""
     role="separator"
   >
     <div
@@ -51,7 +51,7 @@ exports[`Divider > Divider baseVue demo works fine 1`] = `
   </div>
   <div
     class="t-divider t-divider--horizontal t-divider--right"
-    data-v-589c0842=""
+    data-v-99a2d095=""
     role="separator"
   >
     <div
@@ -62,23 +62,23 @@ exports[`Divider > Divider baseVue demo works fine 1`] = `
   </div>
   <div
     class="divider-demo__title"
-    data-v-589c0842=""
+    data-v-99a2d095=""
     style="margin-bottom: 10px;"
   >
     垂直分割线
   </div>
   <view
     class="divider-wrapper"
-    data-v-589c0842=""
+    data-v-99a2d095=""
   >
     <span
-      data-v-589c0842=""
+      data-v-99a2d095=""
     >
       文字信息
     </span>
     <div
       class="t-divider t-divider--vertical t-divider--center"
-      data-v-589c0842=""
+      data-v-99a2d095=""
       role="separator"
     >
       <div
@@ -88,13 +88,13 @@ exports[`Divider > Divider baseVue demo works fine 1`] = `
       </div>
     </div>
     <span
-      data-v-589c0842=""
+      data-v-99a2d095=""
     >
       文字信息
     </span>
     <div
       class="t-divider t-divider--vertical t-divider--center"
-      data-v-589c0842=""
+      data-v-99a2d095=""
       role="separator"
     >
       <div
@@ -104,7 +104,7 @@ exports[`Divider > Divider baseVue demo works fine 1`] = `
       </div>
     </div>
     <span
-      data-v-589c0842=""
+      data-v-99a2d095=""
     >
       文字信息
     </span>
@@ -115,23 +115,23 @@ exports[`Divider > Divider baseVue demo works fine 1`] = `
 exports[`Divider > Divider mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-bf2b60a0=""
+  data-v-57625aa4=""
 >
   <h1
     class="title"
-    data-v-bf2b60a0=""
+    data-v-57625aa4=""
   >
     Divider 分割符
   </h1>
   <p
     class="summary"
-    data-v-bf2b60a0=""
+    data-v-57625aa4=""
   >
     用于分割、组织、细化有一定逻辑的组织元素内容和页面结构。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-bf2b60a0=""
+    data-v-57625aa4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -148,18 +148,18 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
     >
       
       <div
-        data-v-589c0842=""
-        data-v-bf2b60a0=""
+        data-v-57625aa4=""
+        data-v-99a2d095=""
       >
         <div
           class="divider-demo__title"
-          data-v-589c0842=""
+          data-v-99a2d095=""
         >
           水平分割线
         </div>
         <div
           class="t-divider t-divider--horizontal t-divider--center"
-          data-v-589c0842=""
+          data-v-99a2d095=""
           role="separator"
         >
           <div
@@ -170,13 +170,13 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
         </div>
         <div
           class="divider-demo__title"
-          data-v-589c0842=""
+          data-v-99a2d095=""
         >
           带文字水平分割线
         </div>
         <div
           class="t-divider t-divider--horizontal t-divider--left"
-          data-v-589c0842=""
+          data-v-99a2d095=""
           role="separator"
         >
           <div
@@ -187,7 +187,7 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-divider t-divider--horizontal t-divider--center"
-          data-v-589c0842=""
+          data-v-99a2d095=""
           role="separator"
         >
           <div
@@ -198,7 +198,7 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-divider t-divider--horizontal t-divider--right"
-          data-v-589c0842=""
+          data-v-99a2d095=""
           role="separator"
         >
           <div
@@ -209,23 +209,23 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
         </div>
         <div
           class="divider-demo__title"
-          data-v-589c0842=""
+          data-v-99a2d095=""
           style="margin-bottom: 10px;"
         >
           垂直分割线
         </div>
         <view
           class="divider-wrapper"
-          data-v-589c0842=""
+          data-v-99a2d095=""
         >
           <span
-            data-v-589c0842=""
+            data-v-99a2d095=""
           >
             文字信息
           </span>
           <div
             class="t-divider t-divider--vertical t-divider--center"
-            data-v-589c0842=""
+            data-v-99a2d095=""
             role="separator"
           >
             <div
@@ -235,13 +235,13 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
             </div>
           </div>
           <span
-            data-v-589c0842=""
+            data-v-99a2d095=""
           >
             文字信息
           </span>
           <div
             class="t-divider t-divider--vertical t-divider--center"
-            data-v-589c0842=""
+            data-v-99a2d095=""
             role="separator"
           >
             <div
@@ -251,7 +251,7 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
             </div>
           </div>
           <span
-            data-v-589c0842=""
+            data-v-99a2d095=""
           >
             文字信息
           </span>
@@ -262,7 +262,7 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-bf2b60a0=""
+    data-v-57625aa4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -279,18 +279,18 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
     >
       
       <div
-        data-v-127b67ab=""
-        data-v-bf2b60a0=""
+        data-v-57625aa4=""
+        data-v-b8ad2a87=""
       >
         <div
           class="divider-demo__title"
-          data-v-127b67ab=""
+          data-v-b8ad2a87=""
         >
           虚线样式
         </div>
         <div
           class="t-divider t-divider--horizontal t-divider--center t-divider--dashed"
-          data-v-127b67ab=""
+          data-v-b8ad2a87=""
           role="separator"
         >
           <div
@@ -301,7 +301,7 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-divider t-divider--horizontal t-divider--left t-divider--dashed"
-          data-v-127b67ab=""
+          data-v-b8ad2a87=""
           role="separator"
         >
           <div
@@ -312,7 +312,7 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-divider t-divider--horizontal t-divider--center t-divider--dashed"
-          data-v-127b67ab=""
+          data-v-b8ad2a87=""
           role="separator"
         >
           <div
@@ -323,7 +323,7 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-divider t-divider--horizontal t-divider--right t-divider--dashed"
-          data-v-127b67ab=""
+          data-v-b8ad2a87=""
           role="separator"
         >
           <div
@@ -341,17 +341,17 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
 
 exports[`Divider > Divider themeVue demo works fine 1`] = `
 <div
-  data-v-127b67ab=""
+  data-v-b8ad2a87=""
 >
   <div
     class="divider-demo__title"
-    data-v-127b67ab=""
+    data-v-b8ad2a87=""
   >
     虚线样式
   </div>
   <div
     class="t-divider t-divider--horizontal t-divider--center t-divider--dashed"
-    data-v-127b67ab=""
+    data-v-b8ad2a87=""
     role="separator"
   >
     <div
@@ -362,7 +362,7 @@ exports[`Divider > Divider themeVue demo works fine 1`] = `
   </div>
   <div
     class="t-divider t-divider--horizontal t-divider--left t-divider--dashed"
-    data-v-127b67ab=""
+    data-v-b8ad2a87=""
     role="separator"
   >
     <div
@@ -373,7 +373,7 @@ exports[`Divider > Divider themeVue demo works fine 1`] = `
   </div>
   <div
     class="t-divider t-divider--horizontal t-divider--center t-divider--dashed"
-    data-v-127b67ab=""
+    data-v-b8ad2a87=""
     role="separator"
   >
     <div
@@ -384,7 +384,7 @@ exports[`Divider > Divider themeVue demo works fine 1`] = `
   </div>
   <div
     class="t-divider t-divider--horizontal t-divider--right t-divider--dashed"
-    data-v-127b67ab=""
+    data-v-b8ad2a87=""
     role="separator"
   >
     <div

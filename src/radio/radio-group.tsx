@@ -1,10 +1,11 @@
-import { provide, defineComponent, computed } from 'vue';
-import { useDefault } from '../shared';
+import { provide, defineComponent, computed, toRefs } from 'vue';
+import { get as lodashGet } from 'lodash-es';
 import props from '../radio/radio-group-props';
 import { RadioOption, RadioOptionObj, RadioValue, TdRadioGroupProps } from '../radio/type';
 import TRadio from './radio';
 import config from '../config';
 import { KeysType } from '../common';
+import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
@@ -17,12 +18,8 @@ export default defineComponent({
     const renderTNodeJSX = useTNodeJSX();
     const radioGroupClass = usePrefixClass('radio-group');
 
-    const [groupValue, setGroupValue] = useDefault<RadioValue, TdRadioGroupProps>(
-      props,
-      context.emit,
-      'value',
-      'change',
-    );
+    const { value, modelValue } = toRefs(props);
+    const [groupValue, setGroupValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
     const keys = computed((): KeysType => props.keys);
 
@@ -54,10 +51,10 @@ export default defineComponent({
               <TRadio
                 name={props.name}
                 icon={props.icon}
-                checked={groupValue.value === opt[keys.value?.value ?? 'value']}
-                disabled={opt?.disabled ?? props.disabled}
-                value={opt[keys.value?.value ?? 'value']}
-                label={opt[keys.value?.label ?? 'label']}
+                checked={groupValue.value === lodashGet(opt, keys.value?.value ?? 'value')}
+                disabled={lodashGet(opt, keys.value?.disabled ?? 'disabled', props.disabled)}
+                value={lodashGet(opt, keys.value?.value ?? 'value')}
+                label={lodashGet(opt, keys.value?.label ?? 'label')}
                 placement={props.placement}
               />
             ))}

@@ -1,8 +1,6 @@
 import { CloseIcon } from 'tdesign-icons-vue-next';
 import { computed, defineComponent } from 'vue';
-import get from 'lodash/get';
-import isString from 'lodash/isString';
-import isObject from 'lodash/isObject';
+import { get, isString, isObject } from 'lodash-es';
 
 import TButton, { ButtonProps } from '../button';
 import TPopup from '../popup';
@@ -154,6 +152,7 @@ export default defineComponent({
       };
       return (
         <TPopup
+          class={`${dialogClass.value}__wrapper`}
           visible={props.visible}
           placement="center"
           show-overlay={props.showOverlay}

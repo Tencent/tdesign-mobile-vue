@@ -14,14 +14,13 @@ export default defineComponent({
   directives: { Hover },
   props,
   setup(props) {
-    const readerTNodeJSX = useTNodeJSX();
-    const readerTNodeContent = useContent();
+    const renderTNodeJSX = useTNodeJSX();
+    const renderTNodeContent = useContent();
     const disabled = useFormDisabled();
     const cellClass = usePrefixClass('cell');
 
     const cellClasses = computed(() => [
       `${cellClass.value}`,
-      `${cellClass.value}--${props.align}`,
       {
         [`${cellClass.value}--borderless`]: !props.bordered,
       },
@@ -35,30 +34,30 @@ export default defineComponent({
       }
     };
 
-    const readerImage = () => {
+    const renderImage = () => {
       if (typeof props.image === 'string') {
         return <img src={props.image} class={`${cellClass.value}__left-image`} />;
       }
-      const image = readerTNodeJSX('image');
+      const image = renderTNodeJSX('image');
 
       return image;
     };
 
-    const readerLeft = () => {
-      const leftIcon = readerTNodeJSX('leftIcon');
+    const renderLeft = () => {
+      const leftIcon = renderTNodeJSX('leftIcon');
       return (
         <div class={`${cellClass.value}__left`}>
           {leftIcon && <div class={`${cellClass.value}__left-icon`}>{leftIcon}</div>}
-          {readerImage()}
+          {renderImage()}
         </div>
       );
     };
-    const readerTitle = () => {
-      const title = readerTNodeJSX('title');
+    const renderTitle = () => {
+      const title = renderTNodeJSX('title');
       if (!title) {
         return null;
       }
-      const description = readerTNodeJSX('description');
+      const description = renderTNodeJSX('description');
       return (
         <div class={`${cellClass.value}__title`}>
           <div class={`${cellClass.value}__title-text`}>
@@ -69,30 +68,30 @@ export default defineComponent({
         </div>
       );
     };
-    const readerRight = () => {
-      const rightIcon = props.arrow ? <ChevronRightIcon /> : readerTNodeJSX('rightIcon');
+    const renderRight = () => {
+      const rightIcon = props.arrow ? <ChevronRightIcon /> : renderTNodeJSX('rightIcon');
       if (!rightIcon) {
         return null;
       }
       return (
-        <div class={`${cellClass.value}__right`}>
+        <div class={[`${cellClass.value}__right`, `${cellClass.value}__right--${props.align}`]}>
           <div class={`${cellClass.value}__right-icon`}>{rightIcon}</div>
         </div>
       );
     };
 
     return () => {
-      const note = readerTNodeContent('default', 'note');
+      const note = renderTNodeContent('default', 'note');
       return (
         <div
           v-hover={{ className: `${cellClass.value}--hover`, disabledHover: hoverDisabled.value }}
           class={cellClasses.value}
           onClick={handleClick}
         >
-          {readerLeft()}
-          {readerTitle()}
+          {renderLeft()}
+          {renderTitle()}
           {note && <div class={`${cellClass.value}__note`}>{note}</div>}
-          {readerRight()}
+          {renderRight()}
         </div>
       );
     };

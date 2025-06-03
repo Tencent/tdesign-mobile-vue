@@ -49,7 +49,7 @@ export interface TdToastProps {
   /**
    * 提示类型
    */
-  theme?: 'loading' | 'success' | 'error';
+  theme?: 'loading' | 'success' | 'warning' | 'error';
   /**
    * 轻提示隐藏的时候触发
    */

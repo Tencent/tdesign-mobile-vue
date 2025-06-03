@@ -52,8 +52,8 @@ app.use(TDesign);
 
 # 贡献成员
 
-<a href="https://github.com/tencent/tdesign-mobile-vue/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=tencent/tdesign-mobile-vue" />
+<a href="https://openomy.app/github/tencent/tdesign-mobile-vue" target="_blank">
+  <img src="https://openomy.app/svg?repo=tencent/tdesign-mobile-vue&chart=bubble&latestMonth=12" alt="Contribution Leaderboard" />
 </a>
 
 # 参与贡献
@@ -68,4 +68,4 @@ TDesign 欢迎任何愿意参与贡献的参与者。如果需要本地运行代
 
 # 开源协议
 
-TDesign 遵循 [MIT 协议](https://github.com/Tencent/tdesign-vue/blob/main/LICENSE)。
+TDesign 遵循 [MIT 协议](https://github.com/Tencent/tdesign-mobile-vue/blob/main/LICENSE)。

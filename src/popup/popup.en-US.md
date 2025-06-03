@@ -10,6 +10,7 @@ attach | String / Function | 'body' | Typescript：`AttachNode`。[see more ts d
 closeBtn | Boolean / Slot / Function | - | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 closeOnOverlayClick | Boolean | true | \- | N
 destroyOnClose | Boolean | false | \- | N
+duration | Number | 240 | \- | N
 overlayProps | Object | {} | Typescript：`OverlayProps`，[Overlay API Documents](./overlay?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/popup/type.ts) | N
 placement | String | top | options: top/left/right/bottom/center | N
 preventScrollThrough | Boolean | true | \- | N
@@ -40,4 +41,5 @@ The component provides the following CSS variables, which can be used to customi
 Name | Default Value | Description 
 -- | -- | --
 --td-popup-bg-color | @bg-color-container | - 
---td-popup-border-radius | @radius-default | -
+--td-popup-border-radius | @radius-extra-large | - 
+--td-popup-close-btn-color | @text-color-primary | -

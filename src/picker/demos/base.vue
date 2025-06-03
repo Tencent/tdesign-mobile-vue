@@ -44,6 +44,7 @@ const cityOptions = () => {
     {
       label: '上海市',
       value: '上海市',
+      disabled: true,
     },
     {
       label: '广州市',

@@ -1,12 +1,12 @@
 import { defineComponent, computed, CSSProperties, VNode } from 'vue';
 import { CheckCircleFilledIcon, ErrorCircleFilledIcon, CheckIcon, CloseIcon, ErrorIcon } from 'tdesign-icons-vue-next';
-import isObject from 'lodash/isObject';
-import isString from 'lodash/isString';
+import { isString, isObject } from 'lodash-es';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 import { getBackgroundColor } from './utils';
 import props from './props';
-import { PRO_THEME, CIRCLE_SIZE_PX, STATUS_ICON, PLUMP_SEPARATE } from './constants';
+import { PRO_THEME, STATUS_ICON, PLUMP_SEPARATE } from '../_common/js/progress/const';
+import { getDiameter, getCircleStokeWidth } from '../_common/js/progress/utils';
 import config from '../config';
 
 const { prefix } = config;
@@ -61,7 +61,7 @@ export default defineComponent({
 
     // theme=circle 获取直径
     const diameter = computed(() => {
-      return CIRCLE_SIZE_PX;
+      return getDiameter(props.size);
     });
 
     const rPoints = computed(() => {
@@ -69,7 +69,7 @@ export default defineComponent({
     });
 
     const circleStrokeWidth = computed(() => {
-      return props.strokeWidth ? Number(props.strokeWidth) : 6;
+      return getCircleStokeWidth(props.strokeWidth, props.size);
     });
 
     const radius = computed(() => {

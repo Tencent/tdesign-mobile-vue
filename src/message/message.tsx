@@ -1,13 +1,12 @@
 import { h, ref, computed, watch, defineComponent, toRefs, reactive, nextTick, onMounted, Transition } from 'vue';
 import { CheckCircleFilledIcon, CloseIcon, InfoCircleFilledIcon } from 'tdesign-icons-vue-next';
-import isObject from 'lodash/isObject';
-import isString from 'lodash/isString';
+import { isString, isObject } from 'lodash-es';
 
 import Link from '../link';
 import props from './props';
 import { MessageMarquee, TdMessageProps } from './type';
 import config from '../config';
-import { useVModel } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
 

@@ -1,16 +1,17 @@
-import { PropType, ref, computed, defineComponent, nextTick, watch, inject } from 'vue';
+import { PropType, ref, toRefs, computed, defineComponent, nextTick, watch, inject } from 'vue';
 import {
   BrowseIcon as TBrowseIcon,
   BrowseOffIcon as TBrowseOffIcon,
   CloseCircleFilledIcon as TCloseCircleFilledIcon,
 } from 'tdesign-icons-vue-next';
-import isFunction from 'lodash/isFunction';
+import { isFunction } from 'lodash-es';
 import config from '../config';
 import InputProps from './props';
 import { InputValue, TdInputProps } from './type';
-import { useDefault, extendAPI } from '../shared';
+import { extendAPI } from '../shared';
 import { FormItemInjectionKey } from '../form/const';
 import { useFormDisabled } from '../form/hooks';
+import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 import useLengthLimit from '../hooks/useLengthLimit';
@@ -42,7 +43,9 @@ export default defineComponent({
     const isDisabled = useFormDisabled();
 
     const inputRef = ref();
-    const [innerValue] = useDefault<string, TdInputProps>(props, context.emit, 'value', 'change');
+
+    const { value, modelValue } = toRefs(props);
+    const [innerValue, setInnerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
     const status = props.status || 'default';
     const renderType = ref(props.type);
@@ -69,7 +72,7 @@ export default defineComponent({
     const showClear = computed(() => {
       if (isDisabled.value || props.readonly === true) return false;
 
-      if (props.clearable && innerValue.value && innerValue.value.length > 0) {
+      if (props.clearable && innerValue.value && String(innerValue.value).length > 0) {
         return props.clearTrigger === 'always' || (props.clearTrigger === 'focus' && focused.value);
       }
       return false;
@@ -106,7 +109,7 @@ export default defineComponent({
 
     const inputValueChangeHandle = (e: Event) => {
       const { value } = e.target as HTMLInputElement;
-      innerValue.value = getValueByLimitNumber(value);
+      setInnerValue(getValueByLimitNumber(value));
       nextTick(() => setInputValue(innerValue.value));
     };
 
@@ -124,7 +127,8 @@ export default defineComponent({
 
     const handleClear = (e: TouchEvent) => {
       e.preventDefault();
-      innerValue.value = '';
+      const val = props.type === 'number' ? undefined : '';
+      setInnerValue(val);
       focus();
       props.onClear?.({ e });
     };
@@ -138,7 +142,7 @@ export default defineComponent({
       focused.value = false;
       // 失焦时处理 format
       if (isFunction(props.format)) {
-        innerValue.value = props.format(innerValue.value);
+        setInnerValue(props.format(innerValue.value));
         nextTick(() => {
           setInputValue(innerValue.value);
           props.onBlur?.(innerValue.value, { e });

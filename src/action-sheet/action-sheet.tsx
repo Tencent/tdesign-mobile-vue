@@ -1,11 +1,11 @@
-import { computed, defineComponent, watch } from 'vue';
+import { computed, defineComponent, toRefs } from 'vue';
 import TActionSheetGrid from './action-sheet-grid';
 import TActionSheetList from './action-sheet-list';
 import TButton from '../button';
 import TPopup from '../popup';
 import config from '../config';
 import { useConfig, usePrefixClass } from '../hooks/useClass';
-import { useDefault } from '../shared';
+import useVModel from '../hooks/useVModel';
 import props from './props';
 import { ActionSheetItem, TdActionSheetProps } from './type';
 
@@ -29,12 +29,9 @@ export default defineComponent({
         return item;
       });
     });
-    const [currentVisible] = useDefault<TdActionSheetProps['visible'], TdActionSheetProps>(
-      props,
-      context.emit,
-      'visible',
-      'visible-change',
-    );
+    const { visible, modelValue } = toRefs(props);
+    const [currentVisible] = useVModel(visible, modelValue, props.defaultVisible, () => {}, 'visible');
+
     const rootClasses = computed(() => ({
       [`${actionSheetClass.value}__content`]: true,
     }));
@@ -43,16 +40,6 @@ export default defineComponent({
       [`${actionSheetClass.value}__description--left`]: props.align === 'left',
       [`${actionSheetClass.value}__description--grid`]: props.theme === 'grid',
     }));
-    watch(
-      () => currentVisible.value,
-      (val) => {
-        currentVisible.value = val;
-      },
-      {
-        immediate: true,
-        deep: true,
-      },
-    );
 
     const hide = (trigger: string) => {
       context.emit('update:modelValue', false);

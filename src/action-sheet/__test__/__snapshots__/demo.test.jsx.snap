@@ -7,12 +7,12 @@ exports[`ActionSheet > ActionSheet alignVue demo works fine 1`] = `
   
   <div
     class="action-sheet-demo"
-    data-v-10b85410=""
+    data-v-03ebc6bd=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-10b85410=""
+      data-v-03ebc6bd=""
       role="button"
       type="button"
     >
@@ -29,7 +29,7 @@ exports[`ActionSheet > ActionSheet alignVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-10b85410=""
+      data-v-03ebc6bd=""
       role="button"
       type="button"
     >
@@ -57,12 +57,12 @@ exports[`ActionSheet > ActionSheet gridMultipleVue demo works fine 1`] = `
   
   <div
     class="action-sheet-demo"
-    data-v-1719f7aa=""
+    data-v-5713c326=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-1719f7aa=""
+      data-v-5713c326=""
       role="button"
       type="button"
     >
@@ -89,12 +89,12 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
   
   <div
     class="action-sheet-demo"
-    data-v-06f7cca3=""
+    data-v-01563f07=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-06f7cca3=""
+      data-v-01563f07=""
       role="button"
       type="button"
     >
@@ -111,7 +111,7 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-06f7cca3=""
+      data-v-01563f07=""
       role="button"
       type="button"
     >
@@ -128,7 +128,7 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-06f7cca3=""
+      data-v-01563f07=""
       role="button"
       type="button"
     >
@@ -157,12 +157,12 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
   
   <div
     class="action-sheet-demo"
-    data-v-443785fb=""
+    data-v-32bdfecf=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-443785fb=""
+      data-v-32bdfecf=""
       role="button"
       type="button"
     >
@@ -179,7 +179,7 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-443785fb=""
+      data-v-32bdfecf=""
       role="button"
       type="button"
     >
@@ -196,7 +196,7 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-443785fb=""
+      data-v-32bdfecf=""
       role="button"
       type="button"
     >
@@ -213,7 +213,7 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-443785fb=""
+      data-v-32bdfecf=""
       role="button"
       type="button"
     >
@@ -230,7 +230,7 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-443785fb=""
+      data-v-32bdfecf=""
       role="button"
       type="button"
     >
@@ -291,12 +291,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
       
       <div
         class="action-sheet-demo"
-        data-v-443785fb=""
+        data-v-32bdfecf=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-443785fb=""
+          data-v-32bdfecf=""
           role="button"
           type="button"
         >
@@ -313,7 +313,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-443785fb=""
+          data-v-32bdfecf=""
           role="button"
           type="button"
         >
@@ -330,7 +330,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-443785fb=""
+          data-v-32bdfecf=""
           role="button"
           type="button"
         >
@@ -347,7 +347,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-443785fb=""
+          data-v-32bdfecf=""
           role="button"
           type="button"
         >
@@ -364,7 +364,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-443785fb=""
+          data-v-32bdfecf=""
           role="button"
           type="button"
         >
@@ -407,12 +407,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
       
       <div
         class="action-sheet-demo"
-        data-v-06f7cca3=""
+        data-v-01563f07=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-06f7cca3=""
+          data-v-01563f07=""
           role="button"
           type="button"
         >
@@ -429,7 +429,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-06f7cca3=""
+          data-v-01563f07=""
           role="button"
           type="button"
         >
@@ -446,7 +446,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-06f7cca3=""
+          data-v-01563f07=""
           role="button"
           type="button"
         >
@@ -468,12 +468,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
       
       <div
         class="action-sheet-demo"
-        data-v-1719f7aa=""
+        data-v-5713c326=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-1719f7aa=""
+          data-v-5713c326=""
           role="button"
           type="button"
         >
@@ -517,12 +517,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
       
       <div
         class="action-sheet-demo"
-        data-v-4c697e0f=""
+        data-v-b3029ee6=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-4c697e0f=""
+          data-v-b3029ee6=""
           role="button"
           type="button"
         >
@@ -566,12 +566,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
       
       <div
         class="action-sheet-demo"
-        data-v-10b85410=""
+        data-v-03ebc6bd=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-10b85410=""
+          data-v-03ebc6bd=""
           role="button"
           type="button"
         >
@@ -588,7 +588,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-10b85410=""
+          data-v-03ebc6bd=""
           role="button"
           type="button"
         >
@@ -619,12 +619,12 @@ exports[`ActionSheet > ActionSheet statusVue demo works fine 1`] = `
   
   <div
     class="action-sheet-demo"
-    data-v-4c697e0f=""
+    data-v-b3029ee6=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-4c697e0f=""
+      data-v-b3029ee6=""
       role="button"
       type="button"
     >

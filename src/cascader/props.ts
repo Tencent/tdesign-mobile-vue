@@ -15,7 +15,7 @@ export default {
     type: [Boolean, Function] as PropType<TdCascaderProps['closeBtn']>,
     default: true,
   },
-  /** 用来定义 value / label 在 `options` 中对应的字段别名 */
+  /** 用来定义 value / label / children / disabled 在 `options` 中对应的字段别名 */
   keys: {
     type: Object as PropType<TdCascaderProps['keys']>,
   },
