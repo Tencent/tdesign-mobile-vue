@@ -40,6 +40,11 @@ export default {
   renderLabel: {
     type: Function as PropType<TdPickerProps['renderLabel']>,
   },
+  /** 快速滑动时惯性滚动的时长，单位 ms，为 0 时表示取消惯性滚动 */
+  swipeDuration: {
+    type: [String, Number] as PropType<TdPickerProps['swipeDuration']>,
+    default: 1000,
+  },
   /** 标题 */
   title: {
     type: String,

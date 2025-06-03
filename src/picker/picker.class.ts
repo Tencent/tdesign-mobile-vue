@@ -12,6 +12,7 @@ export interface PickerOptions {
   defaultPickerColumns?: PickerColumn;
   el: HTMLElement | HTMLDivElement | HTMLUListElement;
   onChange: (index: number) => void;
+  swipeDuration?: string | number;
 }
 
 const quartEaseOut = function (t: number, b: number, c: number, d: number) {
@@ -26,7 +27,9 @@ export const DEFAULT_ITEM_HEIGHT = 40;
 const DEFAULT_HOLDER_HEIGHT = 200;
 const OFFSET_OF_BOUND = 60;
 export const ANIMATION_TIME_LIMIT = 460;
+export const ANIMATION_DISTANCE_LIMIT = 15;
 const ANIMATION_DURATION = 150;
+const DEFAULT_SWIPE_DURATION = 1000;
 
 /**
  * @name picker
@@ -82,6 +85,8 @@ class Picker {
 
   indicatorOffset: number;
 
+  swipeDuration?: number | string;
+
   pickerColumns: PickerColumn;
 
   constructor(options: PickerOptions) {
@@ -90,6 +95,8 @@ class Picker {
     this.pickerColumns = options.defaultPickerColumns;
     this.options = options;
     this.onChange = options.onChange;
+    this.swipeDuration = options.swipeDuration ?? DEFAULT_SWIPE_DURATION;
+
     this.init();
   }
 
@@ -178,11 +185,8 @@ class Picker {
     const endY = event.changedTouches[0].pageY;
     const dragRange = endY - this.startY;
     this.updateInertiaParams(event, false);
-    const moveOffsetY = limitNumberInRange(
-      this.offsetYOfStart + dragRange,
-      -(this.getCount() * this.itemHeight),
-      this.itemHeight,
-    );
+    const max = this.getCount() * this.itemHeight;
+    const moveOffsetY = limitNumberInRange(this.offsetYOfStart + dragRange, -max, max);
     this.setOffsetY(moveOffsetY);
   }
 
@@ -194,32 +198,22 @@ class Picker {
     const nowTime = event.timeStamp || Date.now();
     // move time gap
     const moveTime = nowTime - this.lastMoveTime;
+    const distance = point.pageY - this.lastMoveStart;
     // 超出一定时间不再惯性滚动
-    if (moveTime > ANIMATION_TIME_LIMIT) {
+    if (moveTime > ANIMATION_TIME_LIMIT || Math.abs(distance) < ANIMATION_DISTANCE_LIMIT) {
       this.stopInertiaMove = false;
       this.endScroll();
       return;
     }
-    // 手指滑动的速度
-    const v = (point.pageY - this.lastMoveStart) / moveTime;
-    // 加速度方向
-    const dir = v > 0 ? -1 : 1;
-    // 摩擦系数，参考iscroll的阻尼系数
-    const dampingCoefficient = 0.0008;
-    // 加速度
-    const deceleration = -1 * dir * dampingCoefficient;
-    // 滚动持续时间
-    const duration = Math.abs(v / deceleration);
-    const endY = event.changedTouches[0].pageY;
-    const dragRange = endY - this.startY;
-    // 滚动距离
-    const dist = v * duration - (duration ** 2 * deceleration) / 2 + dragRange;
+    const speed = Math.abs(distance / moveTime);
+    const dist = this.offsetY + (speed / 0.003) * (distance < 0 ? -1 : 1);
+
     if (dist === 0) {
       this.stopInertiaMove = false;
       this.endScroll();
       return;
     }
-    this.scrollDist(nowTime, this.offsetY, dist, duration);
+    this.scrollDist(nowTime, this.offsetY, dist, +this.swipeDuration);
   }
 
   /**

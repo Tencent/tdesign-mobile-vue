@@ -127,6 +127,7 @@ export default defineComponent({
                   value={pickerValue.value?.[index]}
                   render-label={props.renderLabel}
                   onPick={($event: any) => handlePick($event, index)}
+                  swipeDuration={props.swipeDuration}
                 />
               </div>
             ))}

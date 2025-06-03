@@ -26,6 +26,10 @@ export default defineComponent({
       type: Function,
       default: undefined,
     },
+    swipeDuration: {
+      type: [String, Number],
+      default: 1000,
+    },
   },
   emits: ['pick'],
   setup(props, context) {
@@ -89,6 +93,7 @@ export default defineComponent({
             const changeValue = { value: lodashGet(curItem, keys.value?.value ?? 'value'), index };
             props.onPick?.(changeValue);
           },
+          swipeDuration: props.swipeDuration,
         });
       }
     });
