@@ -571,4 +571,4 @@ spline: explain
 - `DateTimePicker`: 修复 `modelValue` 属性无效的问题 @anlyyao ([#903](https://github.com/Tencent/tdesign-mobile-vue/pull/903))
 
 ## 🌈 0.x `2021-12-27 - 2023-06-20`
-前往 [GitHub](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/CHANGELOG-0.x.md) 查看 `0.x` 更新日志
+前往 [GitHub](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/changelogs/CHANGELOG-0.x.md) 查看 `0.x` 更新日志
