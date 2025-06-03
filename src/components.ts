@@ -20,6 +20,7 @@ export * from './tabs';
 export * from './calendar';
 export * from './cascader';
 export * from './checkbox';
+export * from './color-picker';
 export * from './date-time-picker';
 export * from './form';
 export * from './input';
