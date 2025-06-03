@@ -123,7 +123,7 @@
     "@types/prismjs": "^1.16.2",
     "@types/tinycolor2": "^1.4.6",
     "@types/validator": "^13.6.3",
-    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.33.1",
     "@typescript-eslint/parser": "~5.34.0",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vitejs/plugin-vue-jsx": "^4.1.2",
