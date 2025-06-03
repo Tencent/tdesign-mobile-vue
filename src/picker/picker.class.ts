@@ -179,14 +179,22 @@ class Picker {
     return this.pickerColumns.length;
   }
 
+  getRange() {
+    const min = -this.getCount() * this.itemHeight;
+    const max = 3 * this.itemHeight;
+    return { min, max };
+  }
+
   touchMoveHandler(event: TouchEvent): void {
     preventDefault(event, false);
     if (!this.isPicking || !this.holder) return;
+
     const endY = event.changedTouches[0].pageY;
     const dragRange = endY - this.startY;
     this.updateInertiaParams(event, false);
-    const max = this.getCount() * this.itemHeight;
-    const moveOffsetY = limitNumberInRange(this.offsetYOfStart + dragRange, -max, max);
+
+    const { min, max } = this.getRange();
+    const moveOffsetY = limitNumberInRange(this.offsetYOfStart + dragRange, min, max);
     this.setOffsetY(moveOffsetY);
   }
 
@@ -200,13 +208,16 @@ class Picker {
     const moveTime = nowTime - this.lastMoveTime;
     const distance = point.pageY - this.lastMoveStart;
     // 超出一定时间不再惯性滚动
-    if (moveTime > ANIMATION_TIME_LIMIT || Math.abs(distance) < ANIMATION_DISTANCE_LIMIT) {
+    if (moveTime > ANIMATION_TIME_LIMIT || Math.abs(distance) < ANIMATION_DISTANCE_LIMIT || !this.swipeDuration) {
       this.stopInertiaMove = false;
       this.endScroll();
       return;
     }
+
     const speed = Math.abs(distance / moveTime);
-    const dist = this.offsetY + (speed / 0.003) * (distance < 0 ? -1 : 1);
+    let dist = this.offsetY + (speed / 0.003) * (distance < 0 ? -1 : 1);
+    const { min, max } = this.getRange();
+    dist = limitNumberInRange(dist, min, max);
 
     if (dist === 0) {
       this.stopInertiaMove = false;
@@ -246,7 +257,7 @@ class Picker {
       }
       if (!start) start = timestamp;
       const progress = timestamp - start;
-      const newOffsetY = quartEaseOut(progress, startOffsetY, dist, duration);
+      const newOffsetY = quartEaseOut(progress, startOffsetY, dist - startOffsetY, duration);
       this.setOffsetY(newOffsetY);
       if (progress > duration || newOffsetY > this.offsetYOfStartBound || newOffsetY < this.offsetYOfEndBound) {
         this.endScroll();
