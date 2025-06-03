@@ -179,9 +179,9 @@ class Picker {
     return this.pickerColumns.length;
   }
 
-  getRange() {
-    const min = -this.getCount() * this.itemHeight;
-    const max = 3 * this.itemHeight;
+  getRange(thresholdA = 0, thresholdB = 3) {
+    const min = -(this.getCount() - thresholdA) * this.itemHeight;
+    const max = thresholdB * this.itemHeight;
     return { min, max };
   }
 
@@ -215,8 +215,8 @@ class Picker {
     }
 
     const speed = Math.abs(distance / moveTime);
-    let dist = this.offsetY + (speed / 0.003) * (distance < 0 ? -1 : 1);
-    const { min, max } = this.getRange();
+    let dist = this.offsetY + (speed / 0.005) * (distance < 0 ? -1 : 1);
+    const { min, max } = this.getRange(3, 2);
     dist = limitNumberInRange(dist, min, max);
 
     if (dist === 0) {
