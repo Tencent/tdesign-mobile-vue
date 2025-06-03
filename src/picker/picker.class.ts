@@ -2,7 +2,7 @@ import { preventDefault } from '../shared/dom';
 import { usePrefixClass } from '../hooks/useClass';
 import { PickerColumn } from './type';
 import { KeysType } from '../common';
-import { findIndexOfEnabledOption } from './utils';
+import { findIndexOfEnabledOption, limitNumberInRange } from './utils';
 
 const classPrefix = usePrefixClass();
 
@@ -163,8 +163,13 @@ class Picker {
     if (!this.holder) return;
     if (this.list) this.list.style.transition = '';
     this.startY = event.changedTouches[0].pageY;
+    this.offsetYOfStart = this.offsetY;
     // 更新惯性参数
     this.updateInertiaParams(event, true);
+  }
+
+  getCount() {
+    return this.pickerColumns.length;
   }
 
   touchMoveHandler(event: TouchEvent): void {
@@ -173,7 +178,11 @@ class Picker {
     const endY = event.changedTouches[0].pageY;
     const dragRange = endY - this.startY;
     this.updateInertiaParams(event, false);
-    const moveOffsetY = this.indicatorOffset - this.curIndex * this.itemHeight + dragRange;
+    const moveOffsetY = limitNumberInRange(
+      this.offsetYOfStart + dragRange,
+      -(this.getCount() * this.itemHeight),
+      this.itemHeight,
+    );
     this.setOffsetY(moveOffsetY);
   }
 
