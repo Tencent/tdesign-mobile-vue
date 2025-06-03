@@ -10,15 +10,15 @@ import {
   onUnmounted,
 } from 'vue';
 import { isArray, isBoolean } from 'lodash-es';
-import config from '../config';
-import { useContent, useTNodeJSX } from '../hooks/tnode';
-import { usePrefixClass } from '../hooks/useClass';
-import { useClickAway } from '../shared';
-import { preventDefault } from '../shared/dom';
-import { SwipeActionItem, SwipeSource } from './type';
-import { useSureConfirm } from './useSureConfirm';
 import props from './props';
 import { useSwipe } from './useSwipe';
+import config from '../config';
+import { SwipeActionItem, SwipeSource } from './type';
+import { useClickAway } from '../shared';
+import { preventDefault } from '../shared/dom';
+import { useSureConfirm } from './useSureConfirm';
+import { useContent, useTNodeJSX } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
 
@@ -127,7 +127,7 @@ export default defineComponent({
         if (props.disabled || (!initData.moved && Math.abs(lengthX.value) < distance)) {
           return;
         }
-        props.onDragStart?.();
+        props.onDragstart?.();
         if (showSureRight.value) {
           closedSure.value = lengthX.value > 0 && initData.pos === 0;
           showSureRight.value = false;
@@ -144,7 +144,7 @@ export default defineComponent({
         if (props.disabled) {
           return;
         }
-        props.onDragEnd?.();
+        props.onDragend?.();
         initData.moving = false;
         setTimeout(() => {
           closedSure.value = false;
