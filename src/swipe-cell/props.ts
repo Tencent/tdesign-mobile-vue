@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { PropType } from 'vue';
 import { TdSwipeCellProps } from './type';
+import { PropType } from 'vue';
 
 export default {
   /** 操作项以外的内容 */
@@ -36,7 +36,7 @@ export default {
   /** 操作项点击时触发（插槽写法组件不触发，业务侧自定义内容和事件） */
   onClick: Function as PropType<TdSwipeCellProps['onClick']>,
   /** 滑动结束事件 */
-  onDragEnd: Function as PropType<TdSwipeCellProps['onDragEnd']>,
+  onDragend: Function as PropType<TdSwipeCellProps['onDragend']>,
   /** 滑动开始事件 */
-  onDragStart: Function as PropType<TdSwipeCellProps['onDragStart']>,
+  onDragstart: Function as PropType<TdSwipeCellProps['onDragstart']>,
 };
