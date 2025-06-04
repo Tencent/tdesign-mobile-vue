@@ -1,20 +1,16 @@
 import { provide, watch, ref, reactive, nextTick, onMounted, defineComponent, toRefs } from 'vue';
 import TPopup from '../popup';
 import config from '../config';
-import calendarProps from './props';
+import props from './props';
 import { useTNodeJSX } from '../hooks/tnode';
-import calendarTemplate from './template';
+import TCalendarTemplate from './template';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
 
 export default defineComponent({
   name: `${prefix}-calendar`,
-  components: {
-    TPopup,
-    calendarTemplate,
-  },
-  props: calendarProps,
+  props,
   emits: ['update:visible'],
   setup(props, context) {
     const calendarClass = usePrefixClass('calendar');
@@ -34,9 +30,6 @@ export default defineComponent({
       }
     };
 
-    const onVisibleChange = (v: boolean) => {
-      context.emit('update:visible', v);
-    };
     const onPopupVisibleChange = (v: boolean) => {
       if (!v) {
         props.onClose?.('overlay');
@@ -61,20 +54,15 @@ export default defineComponent({
 
     return () => {
       const title = renderTNodeJSX('title');
-      const confirmBtn = renderTNodeJSX('confirmBtn') === undefined ? null : renderTNodeJSX('confirmBtn');
+      const confirmBtn = renderTNodeJSX('confirmBtn');
       return (
         <div>
           {!props.usePopup ? (
-            <calendarTemplate ref={calendarTemplateRef} title={title} confirmBtn={confirmBtn}></calendarTemplate>
+            <TCalendarTemplate ref={calendarTemplateRef} title={title} confirmBtn={confirmBtn}></TCalendarTemplate>
           ) : (
-            <t-popup visible={props.visible} placement="bottom" onVisibleChange={onPopupVisibleChange}>
-              <calendarTemplate
-                ref={calendarTemplateRef}
-                title={title}
-                confirmBtn={confirmBtn}
-                onVisibleChange={onVisibleChange}
-              ></calendarTemplate>
-            </t-popup>
+            <TPopup visible={props.visible} placement="bottom" onVisibleChange={onPopupVisibleChange}>
+              <TCalendarTemplate ref={calendarTemplateRef} title={title} confirmBtn={confirmBtn}></TCalendarTemplate>
+            </TPopup>
           )}
         </div>
       );
