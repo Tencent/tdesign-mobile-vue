@@ -14,11 +14,6 @@ export interface TdCalendarProps {
    */
   confirmBtn?: string | ButtonProps | TNode | null;
   /**
-   * 是否显示日历；`usePopup` 为 true 时有效。非受控属性
-   * @default false
-   */
-  defaultVisible?: boolean;
-  /**
    * 第一天从星期几开始，默认 0 = 周日
    * @default 0
    */
