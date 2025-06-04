@@ -183,7 +183,6 @@ export default defineComponent({
     watch(innerValue, (val) => {
       curDate.value = calcDate(val);
     });
-    console.log('props.header', props.header);
 
     return () => {
       return (
