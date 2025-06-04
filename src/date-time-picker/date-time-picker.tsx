@@ -9,6 +9,7 @@ import config from '../config';
 import DateTimePickerProps from './props';
 import { getMeaningColumn } from './shared';
 import useVModel from '../hooks/useVModel';
+import { useTNodeJSX } from '../hooks/tnode';
 import { Picker as TPicker } from '../picker';
 import { PickerColumn, PickerColumnItem, PickerValue, PickerContext } from '../picker/type';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
@@ -31,6 +32,7 @@ export default defineComponent({
     const { globalConfig } = useConfig('dateTimePicker');
     const className = computed(() => [`${dateTimePickerClass.value}`]);
     const { value } = toRefs(props);
+    const renderTNodeJSX = useTNodeJSX();
 
     const [innerValue, setDateTimePickerValue] = useVModel(
       value,
@@ -196,8 +198,8 @@ export default defineComponent({
           onConfirm={onConfirm}
           onCancel={onCancel}
           onPick={onPick}
-          header={slots.header || props.header}
-          footer={slots.footer || props.footer}
+          header={() => renderTNodeJSX('header')}
+          footer={() => renderTNodeJSX('footer')}
         />
       );
     };
