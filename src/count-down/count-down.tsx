@@ -33,7 +33,7 @@ export default defineComponent({
       const renderContent = () => {
         const content = renderTNodeJSX('content');
 
-        if (props.content !== 'default' && content) {
+        if (content) {
           return content;
         }
 
