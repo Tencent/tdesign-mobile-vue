@@ -314,8 +314,10 @@ export default defineComponent({
             <div class={`${cascaderClass.value}__close-btn`} onClick={onCloseBtn}>
               {closeBtn}
             </div>
+            {renderTNodeJSX('header')}
             <div class={`${cascaderClass.value}__content`}>
               {readerSteps()}
+              {renderTNodeJSX('middleContent')}
               {props.subTitles && props.subTitles[stepIndex.value] && (
                 <div class={`${cascaderClass.value}__options-title`}>{props.subTitles[stepIndex.value]}</div>
               )}
