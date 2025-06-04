@@ -100,7 +100,6 @@ export default defineComponent({
     provide('picker', { ...toRefs(props) });
 
     return () => {
-      const header = renderTNodeJSX('header');
       return (
         <div class={`${pickerClass.value}`}>
           <div class={`${pickerClass.value}__toolbar`}>
@@ -116,7 +115,7 @@ export default defineComponent({
               </div>
             )}
           </div>
-          {header}
+          {renderTNodeJSX('header')}
           <div class={`${pickerClass.value}__main`}>
             {realColumns.value.map((item, index) => (
               <div key={index} class={`${pickerClass.value}-item__group`}>
@@ -135,6 +134,7 @@ export default defineComponent({
             <div class={`${pickerClass.value}__mask ${pickerClass.value}__mask--bottom`} />
             <div class={`${pickerClass.value}__indicator`} />
           </div>
+          {renderTNodeJSX('footer')}
         </div>
       );
     };

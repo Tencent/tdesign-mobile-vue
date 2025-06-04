@@ -9,8 +9,10 @@ name | type | default | description | required
 cancelBtn | String | 取消 | \- | N
 confirmBtn | String | - | \- | N
 end | String / Number | - | \- | N
+footer | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 format | String | 'YYYY-MM-DD HH:mm:ss' | \- | N
-mode | String / Array | 'date' | Typescript：`DateTimePickerMode` `type DateTimePickerMode = TimeModeValues | Array<TimeModeValues> ` `type TimeModeValues = 'year' | 'month' | 'date' | 'hour' | 'minute' | 'second'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts) | N
+header | Boolean / Slot / Function | true | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+mode | String / Array | 'date' | Typescript：`DateTimePickerMode` `type DateTimePickerMode = TimeModeValues \| Array<TimeModeValues> ` `type TimeModeValues = 'year' \| 'month' \| 'date' \| 'hour' \| 'minute' \| 'second'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts) | N
 renderLabel | Function | - | Typescript：`(type: string, value: number) => string` | N
 showWeek | Boolean | false | \- | N
 start | String / Number | - | \- | N
@@ -32,9 +34,9 @@ change | `(value: DateValue)` | \-
 confirm | `(value: DateValue)` | \-
 pick | `(value: DateValue)` | \-
 
-
 ### CSS Variables
+
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-data-time-picker-year-width | 64px | - 
+--td-data-time-picker-year-width | 64px | -
