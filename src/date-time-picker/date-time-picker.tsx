@@ -12,6 +12,7 @@ import useVModel from '../hooks/useVModel';
 import { Picker as TPicker } from '../picker';
 import { PickerColumn, PickerColumnItem, PickerValue, PickerContext } from '../picker/type';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
+
 import type { TdDateTimePickerProps, TimeModeValues } from './type';
 
 dayjs.extend(weekday);
@@ -25,11 +26,12 @@ export default defineComponent({
   components: { TPicker },
   props: DateTimePickerProps,
   emits: ['change', 'cancel', 'confirm', 'pick', 'update:modelValue', 'update:value'],
-  setup(props) {
+  setup(props, { slots }) {
     const dateTimePickerClass = usePrefixClass('date-time-picker');
     const { globalConfig } = useConfig('dateTimePicker');
     const className = computed(() => [`${dateTimePickerClass.value}`]);
     const { value } = toRefs(props);
+
     const [innerValue, setDateTimePickerValue] = useVModel(
       value,
       ref(props.modelValue),
@@ -181,6 +183,7 @@ export default defineComponent({
     watch(innerValue, (val) => {
       curDate.value = calcDate(val);
     });
+    console.log('props.header', props.header);
 
     return () => {
       return (
@@ -194,6 +197,8 @@ export default defineComponent({
           onConfirm={onConfirm}
           onCancel={onCancel}
           onPick={onPick}
+          header={slots.header || props.header}
+          footer={slots.footer || props.footer}
         />
       );
     };

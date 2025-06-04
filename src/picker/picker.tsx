@@ -135,6 +135,7 @@ export default defineComponent({
             <div class={`${pickerClass.value}__mask ${pickerClass.value}__mask--bottom`} />
             <div class={`${pickerClass.value}__indicator`} />
           </div>
+          {renderTNodeJSX('footer')}
         </div>
       );
     };

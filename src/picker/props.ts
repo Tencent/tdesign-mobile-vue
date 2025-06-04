@@ -24,6 +24,10 @@ export default {
     type: [String, Boolean] as PropType<TdPickerProps['confirmBtn']>,
     default: true,
   },
+  /** 底部内容 */
+  footer: {
+    type: Function as PropType<TdPickerProps['footer']>,
+  },
   /** 自定义头部内容 */
   header: {
     type: Function as PropType<TdPickerProps['header']>,
