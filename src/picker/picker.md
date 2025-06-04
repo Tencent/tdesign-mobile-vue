@@ -14,6 +14,7 @@ header | Slot / Function | - | 自定义头部内容。TS 类型：`TNode`。[�
 keys | Object | - | 用来定义 value / label / disabled 在 `columns ` 中对应的字段别名。TS 类型：`KeysType`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 option | Slot / Function | - | 自定义选项内容。参数为 `option: PickerColumnItem, index: number`。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 renderLabel | Function | - | 自定义label。TS 类型：`(item: PickerColumnItem) => string` | N
+swipeDuration | String / Number | 1000 | 快速滑动时惯性滚动的时长，单位 ms，为 0 时表示取消惯性滚动。TS 类型：`string \| number` | N
 title | String | '' | 标题 | N
 value | Array | - | 选中值。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`Array<PickerValue>` `type PickerValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/picker/type.ts) | N
 defaultValue | Array | - | 选中值。非受控属性。TS 类型：`Array<PickerValue>` `type PickerValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/picker/type.ts) | N
