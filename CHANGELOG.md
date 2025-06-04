@@ -8,10 +8,9 @@ spline: explain
 ## 🌈 1.9.0 `2025-06-04` 
 ### 🚀 Features
 - `ColorPicker`: 新增 `ColorPicker` 组件 @novlan1 ([#1761](https://github.com/Tencent/tdesign-mobile-vue/pull/1761))
-- `DateTimePicker`: 新增 `steps` 属性 @betavs ([#1848](https://github.com/Tencent/tdesign-mobile-vue/pull/1848))
+- `DateTimePicker`: 新增 `steps` 属性、`header` 和 `footer` 插槽 @betavs ([#1848](https://github.com/Tencent/tdesign-mobile-vue/pull/1848)) @novlan1 ([#1861](https://github.com/Tencent/tdesign-mobile-vue/pull/1861))
 - `Popup`: 支持 `duration` 动画时长 @liweijie0812 ([#1736](https://github.com/Tencent/tdesign-mobile-vue/pull/1736))
 - `Cascader`: 新增 `middleContent`，用于自定义中间区域内容 @novlan1 ([#1860](https://github.com/Tencent/tdesign-mobile-vue/pull/1860))
-- `DateTimePicker`: 新增 `header` 和 `footer`，用于自定义头部和底部内容 @novlan1 ([#1861](https://github.com/Tencent/tdesign-mobile-vue/pull/1861))
 ### 🐞 Bug Fixes
 - `ConfigProvider`: 修复全局配置类型提示错误 @anlyyao ([#1852](https://github.com/Tencent/tdesign-mobile-vue/pull/1852))
 - `DropdownMenu`:  修复自定义 `duration` 无效 @liweijie0812 ([#1736](https://github.com/Tencent/tdesign-mobile-vue/pull/1736))
