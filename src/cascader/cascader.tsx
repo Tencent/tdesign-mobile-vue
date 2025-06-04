@@ -314,11 +314,13 @@ export default defineComponent({
             <div class={`${cascaderClass.value}__close-btn`} onClick={onCloseBtn}>
               {closeBtn}
             </div>
+            {renderTNodeJSX('header')}
             <div class={`${cascaderClass.value}__content`}>
               {readerSteps()}
               {props.subTitles && props.subTitles[stepIndex.value] && (
                 <div class={`${cascaderClass.value}__options-title`}>{props.subTitles[stepIndex.value]}</div>
               )}
+              {renderTNodeJSX('middleContent')}
               <div
                 class={`${cascaderClass.value}__options-container`}
                 style={`width: ${items.length + 1}00vw; transform: translateX(-${stepIndex.value}00vw);`}
