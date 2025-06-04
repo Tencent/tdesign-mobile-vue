@@ -15,9 +15,17 @@ export default {
     type: [Boolean, Function] as PropType<TdCascaderProps['closeBtn']>,
     default: true,
   },
+  /** 头部 */
+  header: {
+    type: Function as PropType<TdCascaderProps['header']>,
+  },
   /** 用来定义 value / label / children / disabled 在 `options` 中对应的字段别名 */
   keys: {
     type: Object as PropType<TdCascaderProps['keys']>,
+  },
+  /** 中间内容 */
+  middleContent: {
+    type: Function as PropType<TdCascaderProps['middleContent']>,
   },
   /** 可选项数据源 */
   options: {

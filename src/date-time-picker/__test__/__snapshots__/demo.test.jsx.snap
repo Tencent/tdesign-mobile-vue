@@ -564,6 +564,7 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
           class="t-picker__indicator"
         />
       </div>
+      <!---->
     </div>
     
   </div>
@@ -1031,6 +1032,7 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
           class="t-picker__indicator"
         />
       </div>
+      <!---->
     </div>
     
   </div>
@@ -2644,6 +2646,7 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
           class="t-picker__indicator"
         />
       </div>
+      <!---->
     </div>
     
   </div>
@@ -3247,6 +3250,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
               class="t-picker__indicator"
             />
           </div>
+          <!---->
         </div>
         
       </div>
@@ -3584,6 +3588,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
               class="t-picker__indicator"
             />
           </div>
+          <!---->
         </div>
         
       </div>
@@ -4278,6 +4283,296 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
               class="t-picker__indicator"
             />
           </div>
+          <!---->
+        </div>
+        
+      </div>
+      <!--teleport end-->
+      
+      
+      <div
+        class="t-cell"
+      >
+        <div
+          class="t-cell__left"
+        >
+          <!---->
+          <!---->
+        </div>
+        <div
+          class="t-cell__title"
+        >
+          <div
+            class="t-cell__title-text"
+          >
+            选择日期(间隔)
+            <!---->
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-cell__note"
+        >
+          时 分
+        </div>
+        <!---->
+      </div>
+      <!--teleport start-->
+      <div
+        class="t-overlay"
+        style="z-index: 1000; transition-duration: 300ms; display: none;"
+      >
+        <!---->
+      </div>
+      <div
+        class="t-popup t-popup--bottom"
+        style="display: none;"
+      >
+        <!---->
+        
+        <div
+          class="t-picker t-date-time-picker"
+        >
+          <div
+            class="t-picker__toolbar"
+          >
+            <div
+              class="t-picker__cancel"
+            >
+              取消
+            </div>
+            <div
+              class="t-picker__title"
+            >
+              选择日期
+            </div>
+            <div
+              class="t-picker__confirm"
+            >
+              确定
+            </div>
+          </div>
+          <!---->
+          <div
+            class="t-picker__main"
+          >
+            
+            <div
+              class="t-picker-item__group"
+            >
+              <ul
+                class="t-picker-item"
+                style="transform: translate3d(0, -320px, 0);"
+              >
+                
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  0 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  1 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  3 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  4 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  5 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  6 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  7 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  8 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  9 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item t-picker-item__item--active"
+                >
+                  
+                  10 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  11 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  12 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  13 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  14 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  15 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  16 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  17 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  18 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  19 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  20 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  21 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  22 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  23 时
+                  
+                </li>
+                
+              </ul>
+            </div>
+            <div
+              class="t-picker-item__group"
+            >
+              <ul
+                class="t-picker-item"
+                style="transform: translate3d(0, 80px, 0);"
+              >
+                
+                <li
+                  class="t-picker-item__item t-picker-item__item--active"
+                >
+                  
+                  0 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  30 分
+                  
+                </li>
+                
+              </ul>
+            </div>
+            
+            <div
+              class="t-picker__mask t-picker__mask--top"
+            />
+            <div
+              class="t-picker__mask t-picker__mask--bottom"
+            />
+            <div
+              class="t-picker__indicator"
+            />
+          </div>
+          <!---->
         </div>
         
       </div>
@@ -4762,6 +5057,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
               class="t-picker__indicator"
             />
           </div>
+          <!---->
         </div>
         
       </div>
@@ -5466,6 +5762,7 @@ exports[`DateTimePicker > DateTimePicker timeVue demo works fine 1`] = `
           class="t-picker__indicator"
         />
       </div>
+      <!---->
     </div>
     
   </div>
@@ -5810,6 +6107,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
           class="t-picker__indicator"
         />
       </div>
+      <!---->
     </div>
     
   </div>

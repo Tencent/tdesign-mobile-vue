@@ -3697,6 +3697,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               class="t-picker__indicator"
             />
           </div>
+          <!---->
         </div>
         
       </div>
@@ -6968,6 +6969,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
           class="t-picker__indicator"
         />
       </div>
+      <!---->
     </div>
     
   </div>

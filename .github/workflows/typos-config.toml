@@ -5,4 +5,4 @@ actived = "actived"
 colum = "colum"
 
 [files]
-extend-exclude = ["CHANGELOG.md", "*.snap"]
+extend-exclude = ["CHANGELOG*.md", "*.snap"]
