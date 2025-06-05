@@ -17,7 +17,7 @@ type | String | 'single' | 日历的选择类型，single = 单选；multiple = 
 usePopup | Boolean | true | 是否使用弹出层包裹日历 | N
 value | Number / Array / Date | - | 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`number \| Date \| TCalendarValue[]` `type TCalendarValue = number \| Date`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts) | N
 defaultValue | Number / Array / Date | - | 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组。非受控属性。TS 类型：`number \| Date \| TCalendarValue[]` `type TCalendarValue = number \| Date`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts) | N
-visible | Boolean | false | 是否显示日历；`usePopup` 为 true 时有效。支持语法糖 `v-model:visible` | N
+visible | Boolean | false | 是否显示日历；`usePopup` 为 true 时有效 | N
 onChange | Function |  | TS 类型：`(value: Date) => void`<br/>不显示 confirm-btn 时，完成选择时触发（暂不支持 type = multiple） | N
 onClose | Function |  | TS 类型：`(trigger: CalendarTrigger) => void`<br/>关闭按钮时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts)。<br/>`type CalendarTrigger = 'close-btn' \| 'confirm-btn' \| 'overlay'`<br/> | N
 onConfirm | Function |  | TS 类型：`(value: Date) => void`<br/>点击确认按钮时触发 | N

@@ -30,6 +30,10 @@ export default defineComponent({
       }
     };
 
+    const onVisibleChange = (v: boolean) => {
+      context.emit('update:visible', v);
+    };
+
     const onPopupVisibleChange = (v: boolean) => {
       if (!v) {
         props.onClose?.('overlay');
@@ -61,7 +65,12 @@ export default defineComponent({
             <TCalendarTemplate ref={calendarTemplateRef} title={title} confirmBtn={confirmBtn}></TCalendarTemplate>
           ) : (
             <TPopup visible={props.visible} placement="bottom" onVisibleChange={onPopupVisibleChange}>
-              <TCalendarTemplate ref={calendarTemplateRef} title={title} confirmBtn={confirmBtn}></TCalendarTemplate>
+              <TCalendarTemplate
+                ref={calendarTemplateRef}
+                title={title}
+                confirmBtn={confirmBtn}
+                onVisibleChange={onVisibleChange}
+              ></TCalendarTemplate>
             </TPopup>
           )}
         </div>
