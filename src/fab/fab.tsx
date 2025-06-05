@@ -1,4 +1,4 @@
-import { defineComponent, ref, computed, CSSProperties, onMounted, watch } from 'vue';
+import { defineComponent, ref, computed, onMounted, watch } from 'vue';
 import config from '../config';
 import FabProps from './props';
 import { useTNodeJSX } from '../hooks/tnode';
@@ -166,7 +166,7 @@ export default defineComponent({
       return (
         <div
           class={fabClass.value}
-          style={mounted.value && props.draggable ? { ...fabStyle.value } : (props.style as CSSProperties)}
+          style={mounted.value && props.draggable ? { ...fabStyle.value } : props.style}
           onClick={handleClick}
           onTouchstart={onTouchStart}
           onTouchmove={onTouchMove}
