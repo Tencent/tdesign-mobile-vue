@@ -23,9 +23,9 @@ export interface TdFabProps {
   icon?: TNode;
   /**
    * 悬浮按钮的样式，常用于调整位置
-   * @default right: 16px; bottom: 32px;
+   * @default { right: '16px', bottom: '32px' }
    */
-  style?: string;
+  style?: object;
   /**
    * 文本内容
    * @default ''
