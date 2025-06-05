@@ -3,12 +3,12 @@
 exports[`Link > Link baseVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-link-demo"
-  data-v-8b54d308=""
+  data-v-6433c7b8=""
 >
   <a
     aria-disabled="false"
     class="t-link t-link--primary t-link--medium"
-    data-v-8b54d308=""
+    data-v-6433c7b8=""
     href="/mobile-vue/overview"
     target=""
   >
@@ -25,7 +25,7 @@ exports[`Link > Link baseVue demo works fine 1`] = `
   <a
     aria-disabled="false"
     class="t-link t-link--default t-link--medium t-link--hover"
-    data-v-8b54d308=""
+    data-v-6433c7b8=""
     target=""
   >
     <!---->
@@ -44,12 +44,12 @@ exports[`Link > Link baseVue demo works fine 1`] = `
 exports[`Link > Link linkSizeVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-link-demo"
-  data-v-55ae5f74=""
+  data-v-81744b9c=""
 >
   <a
     aria-disabled="false"
     class="t-link t-link--primary t-link--small"
-    data-v-55ae5f74=""
+    data-v-81744b9c=""
     target=""
   >
     <!---->
@@ -66,14 +66,14 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
       
       <svg
         class="t-icon t-icon-jump"
-        data-v-55ae5f74=""
+        data-v-81744b9c=""
         fill="none"
         height="1em"
         viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+          d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
           fill="currentColor"
         />
       </svg>
@@ -83,7 +83,7 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
   <a
     aria-disabled="false"
     class="t-link t-link--primary t-link--medium"
-    data-v-55ae5f74=""
+    data-v-81744b9c=""
     target=""
   >
     <!---->
@@ -100,14 +100,14 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
       
       <svg
         class="t-icon t-icon-jump"
-        data-v-55ae5f74=""
+        data-v-81744b9c=""
         fill="none"
         height="1em"
         viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+          d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
           fill="currentColor"
         />
       </svg>
@@ -117,7 +117,7 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
   <a
     aria-disabled="false"
     class="t-link t-link--primary t-link--large"
-    data-v-55ae5f74=""
+    data-v-81744b9c=""
     target=""
   >
     <!---->
@@ -134,14 +134,14 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
       
       <svg
         class="t-icon t-icon-jump"
-        data-v-55ae5f74=""
+        data-v-81744b9c=""
         fill="none"
         height="1em"
         viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+          d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
           fill="currentColor"
         />
       </svg>
@@ -188,12 +188,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
       
       <div
         class="tdesign-mobile-link-demo"
-        data-v-8b54d308=""
+        data-v-6433c7b8=""
       >
         <a
           aria-disabled="false"
           class="t-link t-link--primary t-link--medium"
-          data-v-8b54d308=""
+          data-v-6433c7b8=""
           href="/mobile-vue/overview"
           target=""
         >
@@ -210,7 +210,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
         <a
           aria-disabled="false"
           class="t-link t-link--default t-link--medium t-link--hover"
-          data-v-8b54d308=""
+          data-v-6433c7b8=""
           target=""
         >
           <!---->
@@ -246,12 +246,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
       
       <div
         class="tdesign-mobile-link-demo"
-        data-v-ed7bec9e=""
+        data-v-215729b2=""
       >
         <a
           aria-disabled="false"
           class="t-link t-link--primary t-link--medium t-link--underline"
-          data-v-ed7bec9e=""
+          data-v-215729b2=""
           target=""
         >
           <!---->
@@ -267,7 +267,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
         <a
           aria-disabled="false"
           class="t-link t-link--default t-link--medium t-link--underline t-link--hover"
-          data-v-ed7bec9e=""
+          data-v-215729b2=""
           target=""
         >
           <!---->
@@ -303,12 +303,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
       
       <div
         class="tdesign-mobile-link-demo"
-        data-v-c9cd3e06=""
+        data-v-00ec48a6=""
       >
         <a
           aria-disabled="false"
           class="t-link t-link--primary t-link--medium t-link--underline t-link--hover"
-          data-v-c9cd3e06=""
+          data-v-00ec48a6=""
           target=""
         >
           <span
@@ -317,14 +317,14 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-link"
-              data-v-c9cd3e06=""
+              data-v-00ec48a6=""
               fill="none"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M13.3 3.96a4.77 4.77 0 116.74 6.75l-3.03 3.03-1.41-1.42 3.03-3.03a2.77 2.77 0 10-3.92-3.92L11.68 8.4 10.26 7l3.03-3.03zM15.4 10L10 15.41 8.58 14 14 8.59 15.4 10zm-7 1.68L5.36 14.7a2.77 2.77 0 103.92 3.92l3.03-3.03L13.74 17l-3.03 3.03a4.77 4.77 0 11-6.75-6.75l3.03-3.03 1.41 1.42z"
+                d="M13.2925 3.95949C15.1558 2.09618 18.1768 2.09619 20.0401 3.95949C21.9034 5.8228 21.9034 8.84381 20.0401 10.7071L17.0094 13.7379L15.5952 12.3236L18.6259 9.29291C19.7082 8.21065 19.7082 6.45596 18.6259 5.37371C17.5436 4.29145 15.789 4.29145 14.7067 5.3737L11.676 8.40444L10.2617 6.99023L13.2925 3.95949ZM15.4125 9.99989L9.99826 15.4142L8.58405 14L13.9983 8.58568L15.4125 9.99989ZM8.40395 11.6764L5.37322 14.7072C4.29096 15.7894 4.29096 17.5441 5.37322 18.6264C6.45547 19.7086 8.21016 19.7086 9.29242 18.6264L12.3232 15.5956L13.7374 17.0099L10.7066 20.0406C8.84333 21.9039 5.82231 21.9039 3.959 20.0406C2.0957 18.1773 2.0957 15.1563 3.959 13.293L6.98974 10.2622L8.40395 11.6764Z"
                 fill="currentColor"
               />
             </svg>
@@ -342,7 +342,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
         <a
           aria-disabled="false"
           class="t-link t-link--default t-link--medium"
-          data-v-c9cd3e06=""
+          data-v-00ec48a6=""
           target=""
         >
           <span
@@ -351,14 +351,14 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-link"
-              data-v-c9cd3e06=""
+              data-v-00ec48a6=""
               fill="none"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M13.3 3.96a4.77 4.77 0 116.74 6.75l-3.03 3.03-1.41-1.42 3.03-3.03a2.77 2.77 0 10-3.92-3.92L11.68 8.4 10.26 7l3.03-3.03zM15.4 10L10 15.41 8.58 14 14 8.59 15.4 10zm-7 1.68L5.36 14.7a2.77 2.77 0 103.92 3.92l3.03-3.03L13.74 17l-3.03 3.03a4.77 4.77 0 11-6.75-6.75l3.03-3.03 1.41 1.42z"
+                d="M13.2925 3.95949C15.1558 2.09618 18.1768 2.09619 20.0401 3.95949C21.9034 5.8228 21.9034 8.84381 20.0401 10.7071L17.0094 13.7379L15.5952 12.3236L18.6259 9.29291C19.7082 8.21065 19.7082 6.45596 18.6259 5.37371C17.5436 4.29145 15.789 4.29145 14.7067 5.3737L11.676 8.40444L10.2617 6.99023L13.2925 3.95949ZM15.4125 9.99989L9.99826 15.4142L8.58405 14L13.9983 8.58568L15.4125 9.99989ZM8.40395 11.6764L5.37322 14.7072C4.29096 15.7894 4.29096 17.5441 5.37322 18.6264C6.45547 19.7086 8.21016 19.7086 9.29242 18.6264L12.3232 15.5956L13.7374 17.0099L10.7066 20.0406C8.84333 21.9039 5.82231 21.9039 3.959 20.0406C2.0957 18.1773 2.0957 15.1563 3.959 13.293L6.98974 10.2622L8.40395 11.6764Z"
                 fill="currentColor"
               />
             </svg>
@@ -396,12 +396,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
       
       <div
         class="tdesign-mobile-link-demo"
-        data-v-c6b7a388=""
+        data-v-a3d673c9=""
       >
         <a
           aria-disabled="false"
           class="t-link t-link--primary t-link--medium"
-          data-v-c6b7a388=""
+          data-v-a3d673c9=""
           target=""
         >
           <!---->
@@ -418,14 +418,14 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-jump"
-              data-v-c6b7a388=""
+              data-v-a3d673c9=""
               fill="none"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
                 fill="currentColor"
               />
             </svg>
@@ -435,7 +435,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
         <a
           aria-disabled="false"
           class="t-link t-link--default t-link--medium"
-          data-v-c6b7a388=""
+          data-v-a3d673c9=""
           target=""
         >
           <!---->
@@ -452,14 +452,14 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-jump"
-              data-v-c6b7a388=""
+              data-v-a3d673c9=""
               fill="none"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
                 fill="currentColor"
               />
             </svg>
@@ -494,12 +494,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
       
       <div
         class="tdesign-mobile-link-demo"
-        data-v-004b20ae=""
+        data-v-f45dd796=""
       >
         <a
           aria-disabled="false"
           class="t-link t-link--primary t-link--medium"
-          data-v-004b20ae=""
+          data-v-f45dd796=""
           target=""
         >
           <!---->
@@ -516,14 +516,14 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-jump"
-              data-v-004b20ae=""
+              data-v-f45dd796=""
               fill="none"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
                 fill="currentColor"
               />
             </svg>
@@ -533,7 +533,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
         <a
           aria-disabled="false"
           class="t-link t-link--default t-link--medium"
-          data-v-004b20ae=""
+          data-v-f45dd796=""
           target=""
         >
           <!---->
@@ -550,14 +550,14 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-jump"
-              data-v-004b20ae=""
+              data-v-f45dd796=""
               fill="none"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
                 fill="currentColor"
               />
             </svg>
@@ -567,7 +567,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
         <a
           aria-disabled="false"
           class="t-link t-link--danger t-link--medium"
-          data-v-004b20ae=""
+          data-v-f45dd796=""
           target=""
         >
           <!---->
@@ -584,14 +584,14 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-jump"
-              data-v-004b20ae=""
+              data-v-f45dd796=""
               fill="none"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
                 fill="currentColor"
               />
             </svg>
@@ -601,12 +601,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
       </div>
       <div
         class="tdesign-mobile-link-demo"
-        data-v-004b20ae=""
+        data-v-f45dd796=""
       >
         <a
           aria-disabled="false"
           class="t-link t-link--success t-link--medium"
-          data-v-004b20ae=""
+          data-v-f45dd796=""
           target=""
         >
           <!---->
@@ -623,14 +623,14 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-jump"
-              data-v-004b20ae=""
+              data-v-f45dd796=""
               fill="none"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
                 fill="currentColor"
               />
             </svg>
@@ -640,7 +640,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
         <a
           aria-disabled="false"
           class="t-link t-link--warning t-link--medium"
-          data-v-004b20ae=""
+          data-v-f45dd796=""
           target=""
         >
           <!---->
@@ -657,14 +657,14 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-jump"
-              data-v-004b20ae=""
+              data-v-f45dd796=""
               fill="none"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
                 fill="currentColor"
               />
             </svg>
@@ -696,12 +696,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
       
       <div
         class="tdesign-mobile-link-demo"
-        data-v-0c766346=""
+        data-v-ecea4a30=""
       >
         <a
           aria-disabled="true"
           class="t-link t-link--primary t-link--medium t-link--disabled"
-          data-v-0c766346=""
+          data-v-ecea4a30=""
           target=""
         >
           <!---->
@@ -718,14 +718,14 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-jump"
-              data-v-0c766346=""
+              data-v-ecea4a30=""
               fill="none"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
                 fill="currentColor"
               />
             </svg>
@@ -735,7 +735,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
         <a
           aria-disabled="true"
           class="t-link t-link--default t-link--medium t-link--disabled"
-          data-v-0c766346=""
+          data-v-ecea4a30=""
           target=""
         >
           <!---->
@@ -752,14 +752,14 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-jump"
-              data-v-0c766346=""
+              data-v-ecea4a30=""
               fill="none"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
                 fill="currentColor"
               />
             </svg>
@@ -769,7 +769,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
         <a
           aria-disabled="true"
           class="t-link t-link--danger t-link--medium t-link--disabled"
-          data-v-0c766346=""
+          data-v-ecea4a30=""
           target=""
         >
           <!---->
@@ -786,14 +786,14 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-jump"
-              data-v-0c766346=""
+              data-v-ecea4a30=""
               fill="none"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
                 fill="currentColor"
               />
             </svg>
@@ -803,12 +803,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
       </div>
       <div
         class="tdesign-mobile-link-demo"
-        data-v-0c766346=""
+        data-v-ecea4a30=""
       >
         <a
           aria-disabled="true"
           class="t-link t-link--success t-link--medium t-link--disabled"
-          data-v-0c766346=""
+          data-v-ecea4a30=""
           target=""
         >
           <!---->
@@ -825,14 +825,14 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-jump"
-              data-v-0c766346=""
+              data-v-ecea4a30=""
               fill="none"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
                 fill="currentColor"
               />
             </svg>
@@ -842,7 +842,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
         <a
           aria-disabled="true"
           class="t-link t-link--warning t-link--medium t-link--disabled"
-          data-v-0c766346=""
+          data-v-ecea4a30=""
           target=""
         >
           <!---->
@@ -859,14 +859,14 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-jump"
-              data-v-0c766346=""
+              data-v-ecea4a30=""
               fill="none"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
                 fill="currentColor"
               />
             </svg>
@@ -901,12 +901,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
       
       <div
         class="tdesign-mobile-link-demo"
-        data-v-55ae5f74=""
+        data-v-81744b9c=""
       >
         <a
           aria-disabled="false"
           class="t-link t-link--primary t-link--small"
-          data-v-55ae5f74=""
+          data-v-81744b9c=""
           target=""
         >
           <!---->
@@ -923,14 +923,14 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-jump"
-              data-v-55ae5f74=""
+              data-v-81744b9c=""
               fill="none"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
                 fill="currentColor"
               />
             </svg>
@@ -940,7 +940,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
         <a
           aria-disabled="false"
           class="t-link t-link--primary t-link--medium"
-          data-v-55ae5f74=""
+          data-v-81744b9c=""
           target=""
         >
           <!---->
@@ -957,14 +957,14 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-jump"
-              data-v-55ae5f74=""
+              data-v-81744b9c=""
               fill="none"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
                 fill="currentColor"
               />
             </svg>
@@ -974,7 +974,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
         <a
           aria-disabled="false"
           class="t-link t-link--primary t-link--large"
-          data-v-55ae5f74=""
+          data-v-81744b9c=""
           target=""
         >
           <!---->
@@ -991,14 +991,14 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-jump"
-              data-v-55ae5f74=""
+              data-v-81744b9c=""
               fill="none"
               height="1em"
               viewBox="0 0 24 24"
               width="1em"
             >
               <path
-                d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
                 fill="currentColor"
               />
             </svg>
@@ -1015,12 +1015,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
 exports[`Link > Link prefixVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-link-demo"
-  data-v-c9cd3e06=""
+  data-v-00ec48a6=""
 >
   <a
     aria-disabled="false"
     class="t-link t-link--primary t-link--medium t-link--underline t-link--hover"
-    data-v-c9cd3e06=""
+    data-v-00ec48a6=""
     target=""
   >
     <span
@@ -1029,14 +1029,14 @@ exports[`Link > Link prefixVue demo works fine 1`] = `
       
       <svg
         class="t-icon t-icon-link"
-        data-v-c9cd3e06=""
+        data-v-00ec48a6=""
         fill="none"
         height="1em"
         viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M13.3 3.96a4.77 4.77 0 116.74 6.75l-3.03 3.03-1.41-1.42 3.03-3.03a2.77 2.77 0 10-3.92-3.92L11.68 8.4 10.26 7l3.03-3.03zM15.4 10L10 15.41 8.58 14 14 8.59 15.4 10zm-7 1.68L5.36 14.7a2.77 2.77 0 103.92 3.92l3.03-3.03L13.74 17l-3.03 3.03a4.77 4.77 0 11-6.75-6.75l3.03-3.03 1.41 1.42z"
+          d="M13.2925 3.95949C15.1558 2.09618 18.1768 2.09619 20.0401 3.95949C21.9034 5.8228 21.9034 8.84381 20.0401 10.7071L17.0094 13.7379L15.5952 12.3236L18.6259 9.29291C19.7082 8.21065 19.7082 6.45596 18.6259 5.37371C17.5436 4.29145 15.789 4.29145 14.7067 5.3737L11.676 8.40444L10.2617 6.99023L13.2925 3.95949ZM15.4125 9.99989L9.99826 15.4142L8.58405 14L13.9983 8.58568L15.4125 9.99989ZM8.40395 11.6764L5.37322 14.7072C4.29096 15.7894 4.29096 17.5441 5.37322 18.6264C6.45547 19.7086 8.21016 19.7086 9.29242 18.6264L12.3232 15.5956L13.7374 17.0099L10.7066 20.0406C8.84333 21.9039 5.82231 21.9039 3.959 20.0406C2.0957 18.1773 2.0957 15.1563 3.959 13.293L6.98974 10.2622L8.40395 11.6764Z"
           fill="currentColor"
         />
       </svg>
@@ -1054,7 +1054,7 @@ exports[`Link > Link prefixVue demo works fine 1`] = `
   <a
     aria-disabled="false"
     class="t-link t-link--default t-link--medium"
-    data-v-c9cd3e06=""
+    data-v-00ec48a6=""
     target=""
   >
     <span
@@ -1063,14 +1063,14 @@ exports[`Link > Link prefixVue demo works fine 1`] = `
       
       <svg
         class="t-icon t-icon-link"
-        data-v-c9cd3e06=""
+        data-v-00ec48a6=""
         fill="none"
         height="1em"
         viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M13.3 3.96a4.77 4.77 0 116.74 6.75l-3.03 3.03-1.41-1.42 3.03-3.03a2.77 2.77 0 10-3.92-3.92L11.68 8.4 10.26 7l3.03-3.03zM15.4 10L10 15.41 8.58 14 14 8.59 15.4 10zm-7 1.68L5.36 14.7a2.77 2.77 0 103.92 3.92l3.03-3.03L13.74 17l-3.03 3.03a4.77 4.77 0 11-6.75-6.75l3.03-3.03 1.41 1.42z"
+          d="M13.2925 3.95949C15.1558 2.09618 18.1768 2.09619 20.0401 3.95949C21.9034 5.8228 21.9034 8.84381 20.0401 10.7071L17.0094 13.7379L15.5952 12.3236L18.6259 9.29291C19.7082 8.21065 19.7082 6.45596 18.6259 5.37371C17.5436 4.29145 15.789 4.29145 14.7067 5.3737L11.676 8.40444L10.2617 6.99023L13.2925 3.95949ZM15.4125 9.99989L9.99826 15.4142L8.58405 14L13.9983 8.58568L15.4125 9.99989ZM8.40395 11.6764L5.37322 14.7072C4.29096 15.7894 4.29096 17.5441 5.37322 18.6264C6.45547 19.7086 8.21016 19.7086 9.29242 18.6264L12.3232 15.5956L13.7374 17.0099L10.7066 20.0406C8.84333 21.9039 5.82231 21.9039 3.959 20.0406C2.0957 18.1773 2.0957 15.1563 3.959 13.293L6.98974 10.2622L8.40395 11.6764Z"
           fill="currentColor"
         />
       </svg>
@@ -1095,12 +1095,12 @@ exports[`Link > Link statusVue demo works fine 1`] = `
   
   <div
     class="tdesign-mobile-link-demo"
-    data-v-0c766346=""
+    data-v-ecea4a30=""
   >
     <a
       aria-disabled="true"
       class="t-link t-link--primary t-link--medium t-link--disabled"
-      data-v-0c766346=""
+      data-v-ecea4a30=""
       target=""
     >
       <!---->
@@ -1117,14 +1117,14 @@ exports[`Link > Link statusVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-jump"
-          data-v-0c766346=""
+          data-v-ecea4a30=""
           fill="none"
           height="1em"
           viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
             fill="currentColor"
           />
         </svg>
@@ -1134,7 +1134,7 @@ exports[`Link > Link statusVue demo works fine 1`] = `
     <a
       aria-disabled="true"
       class="t-link t-link--default t-link--medium t-link--disabled"
-      data-v-0c766346=""
+      data-v-ecea4a30=""
       target=""
     >
       <!---->
@@ -1151,14 +1151,14 @@ exports[`Link > Link statusVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-jump"
-          data-v-0c766346=""
+          data-v-ecea4a30=""
           fill="none"
           height="1em"
           viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
             fill="currentColor"
           />
         </svg>
@@ -1168,7 +1168,7 @@ exports[`Link > Link statusVue demo works fine 1`] = `
     <a
       aria-disabled="true"
       class="t-link t-link--danger t-link--medium t-link--disabled"
-      data-v-0c766346=""
+      data-v-ecea4a30=""
       target=""
     >
       <!---->
@@ -1185,14 +1185,14 @@ exports[`Link > Link statusVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-jump"
-          data-v-0c766346=""
+          data-v-ecea4a30=""
           fill="none"
           height="1em"
           viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
             fill="currentColor"
           />
         </svg>
@@ -1202,12 +1202,12 @@ exports[`Link > Link statusVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-link-demo"
-    data-v-0c766346=""
+    data-v-ecea4a30=""
   >
     <a
       aria-disabled="true"
       class="t-link t-link--success t-link--medium t-link--disabled"
-      data-v-0c766346=""
+      data-v-ecea4a30=""
       target=""
     >
       <!---->
@@ -1224,14 +1224,14 @@ exports[`Link > Link statusVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-jump"
-          data-v-0c766346=""
+          data-v-ecea4a30=""
           fill="none"
           height="1em"
           viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
             fill="currentColor"
           />
         </svg>
@@ -1241,7 +1241,7 @@ exports[`Link > Link statusVue demo works fine 1`] = `
     <a
       aria-disabled="true"
       class="t-link t-link--warning t-link--medium t-link--disabled"
-      data-v-0c766346=""
+      data-v-ecea4a30=""
       target=""
     >
       <!---->
@@ -1258,14 +1258,14 @@ exports[`Link > Link statusVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-jump"
-          data-v-0c766346=""
+          data-v-ecea4a30=""
           fill="none"
           height="1em"
           viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
             fill="currentColor"
           />
         </svg>
@@ -1280,12 +1280,12 @@ exports[`Link > Link statusVue demo works fine 1`] = `
 exports[`Link > Link suffixVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-link-demo"
-  data-v-c6b7a388=""
+  data-v-a3d673c9=""
 >
   <a
     aria-disabled="false"
     class="t-link t-link--primary t-link--medium"
-    data-v-c6b7a388=""
+    data-v-a3d673c9=""
     target=""
   >
     <!---->
@@ -1302,14 +1302,14 @@ exports[`Link > Link suffixVue demo works fine 1`] = `
       
       <svg
         class="t-icon t-icon-jump"
-        data-v-c6b7a388=""
+        data-v-a3d673c9=""
         fill="none"
         height="1em"
         viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+          d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
           fill="currentColor"
         />
       </svg>
@@ -1319,7 +1319,7 @@ exports[`Link > Link suffixVue demo works fine 1`] = `
   <a
     aria-disabled="false"
     class="t-link t-link--default t-link--medium"
-    data-v-c6b7a388=""
+    data-v-a3d673c9=""
     target=""
   >
     <!---->
@@ -1336,14 +1336,14 @@ exports[`Link > Link suffixVue demo works fine 1`] = `
       
       <svg
         class="t-icon t-icon-jump"
-        data-v-c6b7a388=""
+        data-v-a3d673c9=""
         fill="none"
         height="1em"
         viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+          d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
           fill="currentColor"
         />
       </svg>
@@ -1360,12 +1360,12 @@ exports[`Link > Link themeVue demo works fine 1`] = `
   
   <div
     class="tdesign-mobile-link-demo"
-    data-v-004b20ae=""
+    data-v-f45dd796=""
   >
     <a
       aria-disabled="false"
       class="t-link t-link--primary t-link--medium"
-      data-v-004b20ae=""
+      data-v-f45dd796=""
       target=""
     >
       <!---->
@@ -1382,14 +1382,14 @@ exports[`Link > Link themeVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-jump"
-          data-v-004b20ae=""
+          data-v-f45dd796=""
           fill="none"
           height="1em"
           viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
             fill="currentColor"
           />
         </svg>
@@ -1399,7 +1399,7 @@ exports[`Link > Link themeVue demo works fine 1`] = `
     <a
       aria-disabled="false"
       class="t-link t-link--default t-link--medium"
-      data-v-004b20ae=""
+      data-v-f45dd796=""
       target=""
     >
       <!---->
@@ -1416,14 +1416,14 @@ exports[`Link > Link themeVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-jump"
-          data-v-004b20ae=""
+          data-v-f45dd796=""
           fill="none"
           height="1em"
           viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
             fill="currentColor"
           />
         </svg>
@@ -1433,7 +1433,7 @@ exports[`Link > Link themeVue demo works fine 1`] = `
     <a
       aria-disabled="false"
       class="t-link t-link--danger t-link--medium"
-      data-v-004b20ae=""
+      data-v-f45dd796=""
       target=""
     >
       <!---->
@@ -1450,14 +1450,14 @@ exports[`Link > Link themeVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-jump"
-          data-v-004b20ae=""
+          data-v-f45dd796=""
           fill="none"
           height="1em"
           viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
             fill="currentColor"
           />
         </svg>
@@ -1467,12 +1467,12 @@ exports[`Link > Link themeVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-link-demo"
-    data-v-004b20ae=""
+    data-v-f45dd796=""
   >
     <a
       aria-disabled="false"
       class="t-link t-link--success t-link--medium"
-      data-v-004b20ae=""
+      data-v-f45dd796=""
       target=""
     >
       <!---->
@@ -1489,14 +1489,14 @@ exports[`Link > Link themeVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-jump"
-          data-v-004b20ae=""
+          data-v-f45dd796=""
           fill="none"
           height="1em"
           viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
             fill="currentColor"
           />
         </svg>
@@ -1506,7 +1506,7 @@ exports[`Link > Link themeVue demo works fine 1`] = `
     <a
       aria-disabled="false"
       class="t-link t-link--warning t-link--medium"
-      data-v-004b20ae=""
+      data-v-f45dd796=""
       target=""
     >
       <!---->
@@ -1523,14 +1523,14 @@ exports[`Link > Link themeVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-jump"
-          data-v-004b20ae=""
+          data-v-f45dd796=""
           fill="none"
           height="1em"
           viewBox="0 0 24 24"
           width="1em"
         >
           <path
-            d="M3 21V3h7.1v2H5v14h14v-5.1h2V21H3zm7.59-9l7-7H13V3h8v8h-2V6.41l-7 7L10.59 12z"
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
             fill="currentColor"
           />
         </svg>
@@ -1545,12 +1545,12 @@ exports[`Link > Link themeVue demo works fine 1`] = `
 exports[`Link > Link underlineVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-link-demo"
-  data-v-ed7bec9e=""
+  data-v-215729b2=""
 >
   <a
     aria-disabled="false"
     class="t-link t-link--primary t-link--medium t-link--underline"
-    data-v-ed7bec9e=""
+    data-v-215729b2=""
     target=""
   >
     <!---->
@@ -1566,7 +1566,7 @@ exports[`Link > Link underlineVue demo works fine 1`] = `
   <a
     aria-disabled="false"
     class="t-link t-link--default t-link--medium t-link--underline t-link--hover"
-    data-v-ed7bec9e=""
+    data-v-215729b2=""
     target=""
   >
     <!---->

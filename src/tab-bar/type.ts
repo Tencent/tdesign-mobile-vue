@@ -19,7 +19,7 @@ export interface TdTabBarProps {
    */
   fixed?: boolean;
   /**
-   * 是否为 iPhoneX 留出底部安全距离
+   * 是否开启底部安全区适配
    * @default true
    */
   safeAreaInsetBottom?: boolean;

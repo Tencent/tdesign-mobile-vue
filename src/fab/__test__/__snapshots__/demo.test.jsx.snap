@@ -20,7 +20,7 @@ exports[`Fab > Fab advanceVue demo works fine 1`] = `
       width="1em"
     >
       <path
-        d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+        d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
         fill="currentColor"
       />
     </svg>
@@ -56,7 +56,7 @@ exports[`Fab > Fab baseVue demo works fine 1`] = `
       width="1em"
     >
       <path
-        d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+        d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
         fill="currentColor"
       />
     </svg>
@@ -75,23 +75,23 @@ exports[`Fab > Fab baseVue demo works fine 1`] = `
 exports[`Fab > Fab mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-38a07a02=""
+  data-v-760ddee4=""
 >
   <h1
     class="title"
-    data-v-38a07a02=""
+    data-v-760ddee4=""
   >
     Fab 悬浮按钮
   </h1>
   <p
     class="summary"
-    data-v-38a07a02=""
+    data-v-760ddee4=""
   >
     当功能使用图标即可表示清楚时，可使用纯图标悬浮按钮，例如：添加、发布。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-38a07a02=""
+    data-v-760ddee4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -114,7 +114,7 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        data-v-38a07a02=""
+        data-v-760ddee4=""
         role="button"
         type="button"
       >
@@ -133,7 +133,7 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-38a07a02=""
+    data-v-760ddee4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -152,7 +152,7 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        data-v-38a07a02=""
+        data-v-760ddee4=""
         role="button"
         type="button"
       >
@@ -171,7 +171,7 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
   </div>
   <div
     class="t-fab"
-    data-v-38a07a02=""
+    data-v-760ddee4=""
     style="right: 16px; bottom: 32px;"
   >
     <button
@@ -189,7 +189,7 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
           fill="currentColor"
         />
       </svg>

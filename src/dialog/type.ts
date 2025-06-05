@@ -29,6 +29,7 @@ export interface TdDialogProps {
   closeBtn?: boolean;
   /**
    * 点击蒙层时是否触发关闭事件
+   * @default false
    */
   closeOnOverlayClick?: boolean;
   /**
@@ -44,6 +45,10 @@ export interface TdDialogProps {
    * @default false
    */
   destroyOnClose?: boolean;
+  /**
+   * 中间自定义内容
+   */
+  middle?: TNode;
   /**
    * 透传至 Overlay 组件
    * @default {}
@@ -63,6 +68,10 @@ export interface TdDialogProps {
    * 标题
    */
   title?: string | TNode;
+  /**
+   * 顶部自定义内容
+   */
+  top?: TNode;
   /**
    * 控制对话框是否显示
    */
@@ -128,7 +137,7 @@ export interface DialogInstance {
   update: (props: DialogOptions) => void;
 }
 
-export type DialogEventSource = 'cancel' | 'overlay';
+export type DialogEventSource = 'cancel' | 'overlay' | 'close-btn';
 
 export interface DialogCloseContext {
   trigger: DialogEventSource;

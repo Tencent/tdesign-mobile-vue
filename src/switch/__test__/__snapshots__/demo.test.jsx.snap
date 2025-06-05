@@ -196,7 +196,7 @@ exports[`Switch > Switch labelVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
+                  d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
                   fill="currentColor"
                 />
               </svg>
@@ -407,7 +407,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
+                      d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -774,7 +774,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
       
       <div
         class="t-cell"
-        data-v-8f16ed1c=""
+        data-v-7fc67afb=""
       >
         <div
           class="t-cell__left"
@@ -803,7 +803,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
             
             <div
               class="t-switch t-switch--large t-switch--checked"
-              data-v-8f16ed1c=""
+              data-v-7fc67afb=""
             >
               <div
                 class="t-switch__dot t-switch__dot--large t-switch__dot--checked t-switch__dot--plain"
@@ -821,7 +821,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-cell"
-        data-v-8f16ed1c=""
+        data-v-7fc67afb=""
       >
         <div
           class="t-cell__left"
@@ -850,7 +850,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
             
             <div
               class="t-switch t-switch--medium t-switch--checked"
-              data-v-8f16ed1c=""
+              data-v-7fc67afb=""
             >
               <div
                 class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
@@ -868,7 +868,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-cell"
-        data-v-8f16ed1c=""
+        data-v-7fc67afb=""
       >
         <div
           class="t-cell__left"
@@ -897,7 +897,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
             
             <div
               class="t-switch t-switch--small t-switch--checked"
-              data-v-8f16ed1c=""
+              data-v-7fc67afb=""
             >
               <div
                 class="t-switch__dot t-switch__dot--small t-switch__dot--checked t-switch__dot--plain"
@@ -927,7 +927,7 @@ exports[`Switch > Switch sizeVue demo works fine 1`] = `
   
   <div
     class="t-cell"
-    data-v-8f16ed1c=""
+    data-v-7fc67afb=""
   >
     <div
       class="t-cell__left"
@@ -956,7 +956,7 @@ exports[`Switch > Switch sizeVue demo works fine 1`] = `
         
         <div
           class="t-switch t-switch--large t-switch--checked"
-          data-v-8f16ed1c=""
+          data-v-7fc67afb=""
         >
           <div
             class="t-switch__dot t-switch__dot--large t-switch__dot--checked t-switch__dot--plain"
@@ -974,7 +974,7 @@ exports[`Switch > Switch sizeVue demo works fine 1`] = `
   </div>
   <div
     class="t-cell"
-    data-v-8f16ed1c=""
+    data-v-7fc67afb=""
   >
     <div
       class="t-cell__left"
@@ -1003,7 +1003,7 @@ exports[`Switch > Switch sizeVue demo works fine 1`] = `
         
         <div
           class="t-switch t-switch--medium t-switch--checked"
-          data-v-8f16ed1c=""
+          data-v-7fc67afb=""
         >
           <div
             class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
@@ -1021,7 +1021,7 @@ exports[`Switch > Switch sizeVue demo works fine 1`] = `
   </div>
   <div
     class="t-cell"
-    data-v-8f16ed1c=""
+    data-v-7fc67afb=""
   >
     <div
       class="t-cell__left"
@@ -1050,7 +1050,7 @@ exports[`Switch > Switch sizeVue demo works fine 1`] = `
         
         <div
           class="t-switch t-switch--small t-switch--checked"
-          data-v-8f16ed1c=""
+          data-v-7fc67afb=""
         >
           <div
             class="t-switch__dot t-switch__dot--small t-switch__dot--checked t-switch__dot--plain"

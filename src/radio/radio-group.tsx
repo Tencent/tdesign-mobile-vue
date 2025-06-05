@@ -1,11 +1,11 @@
-import { provide, defineComponent, computed } from 'vue';
+import { provide, defineComponent, computed, toRefs } from 'vue';
 import { get as lodashGet } from 'lodash-es';
-import { useDefault } from '../shared';
 import props from '../radio/radio-group-props';
 import { RadioOption, RadioOptionObj, RadioValue, TdRadioGroupProps } from '../radio/type';
 import TRadio from './radio';
 import config from '../config';
 import { KeysType } from '../common';
+import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
@@ -18,12 +18,8 @@ export default defineComponent({
     const renderTNodeJSX = useTNodeJSX();
     const radioGroupClass = usePrefixClass('radio-group');
 
-    const [groupValue, setGroupValue] = useDefault<RadioValue, TdRadioGroupProps>(
-      props,
-      context.emit,
-      'value',
-      'change',
-    );
+    const { value, modelValue } = toRefs(props);
+    const [groupValue, setGroupValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
     const keys = computed((): KeysType => props.keys);
 

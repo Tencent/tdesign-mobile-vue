@@ -42,6 +42,22 @@ export const docs = [
         component: () => import('@/config-provider/config-provider.md'),
         componentEn: () => import('@/config-provider/config-provider.en-US.md'),
       },
+      {
+        title: '自定义主题',
+        titleEn: 'Theme Customization',
+        name: 'custom-theme',
+        path: '/mobile-vue/custom-theme',
+        component: () => import('@/_common/docs/mobile/theme.md'),
+        componentEn: () => import('@/_common/docs/mobile/theme.en-US.md'),
+      },
+      {
+        title: '暗黑模式',
+        titleEn: 'Dark Mode',
+        name: 'dark-mode',
+        path: '/mobile-vuet/dark-mode',
+        component: () => import('@/_common/dark-mode.md'),
+        componentEn: () => import('@/_common/dark-mode.en-US.md'),
+      },
     ],
   },
   {
@@ -199,6 +215,14 @@ export const docs = [
         path: '/mobile-vue/components/checkbox',
         component: () => import('@/checkbox/checkbox.md'),
         componentEn: () => import('@/checkbox/checkbox.en-US.md'),
+      },
+      {
+        title: 'ColorPicker 颜色选择器',
+        titleEn: 'ColorPicker',
+        name: 'color-picker',
+        path: '/mobile-vue/components/color-picker',
+        component: () => import('@/color-picker/color-picker.md'),
+        componentEn: () => import('@/color-picker/color-picker.en-US.md'),
       },
       {
         title: 'Input 输入框',

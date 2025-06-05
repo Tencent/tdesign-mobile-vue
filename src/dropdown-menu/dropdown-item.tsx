@@ -5,11 +5,12 @@ import config from '../config';
 import TButton from '../button';
 import TPopup from '../popup';
 import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
-import { useVModel, uniqueFactory, getWindowSize } from '../shared';
+import { uniqueFactory, getWindowSize } from '../shared';
 import props from './dropdown-item-props';
 import { DropdownMenuState, DropdownMenuControl } from './context';
 import { TdDropdownMenuProps, DropdownValue } from './type';
 import { KeysType } from '../common';
+import useVModel from '../hooks/useVModel';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 
@@ -19,7 +20,6 @@ const getUniqueID = uniqueFactory('dropdown-popup');
 
 export default defineComponent({
   name: `${prefix}-dropdown-item`,
-  components: { TPopup },
   props,
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
   setup(props) {
@@ -289,10 +289,10 @@ export default defineComponent({
       return (
         wrapperVisible.value && (
           <div id={popupId} class={classes.value} style={{ ...expandStyle.value }}>
-            <t-popup
+            <TPopup
               visible={isShowItems.value}
               placement={menuProps.direction === 'up' ? 'bottom' : 'top'}
-              duration={duration.value}
+              duration={Number(duration.value)}
               showOverlay={showOverlay.value}
               style={popupStyle.value}
               overlayProps={{ style: 'position: absolute' }}
@@ -303,7 +303,7 @@ export default defineComponent({
                 <div class={`${dropdownItemClass.value}__body`}>{content || defaultSlot()}</div>
                 {footer || footerSlot()}
               </div>
-            </t-popup>
+            </TPopup>
           </div>
         )
       );

@@ -6,9 +6,9 @@ import { Tabs } from '../tabs';
 import { RadioValue, RadioGroup as TRadioGroup } from '../radio';
 import config from '../config';
 import props from './props';
-import { useVModel } from '../shared';
 import { TreeOptionData } from '../common';
 import { useConfig } from '../config-provider/useConfig';
+import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import { CascaderTriggerSource } from './type';
@@ -94,11 +94,11 @@ export default defineComponent({
     const getIndexesByValue = (options: any, value: any) => {
       const keys = props.keys as KeysType;
       for (let i = 0; i < options.length; i++) {
-        if (lodashGet(options, options[i][keys?.value ?? 'value']) === value) {
+        if (lodashGet(options[i], keys?.value ?? 'value') === value) {
           return [i];
         }
-        if (lodashGet(options, options[i][keys?.children ?? 'children'])) {
-          const res: any = getIndexesByValue(lodashGet(options, options[i][keys?.children ?? 'children']), value);
+        if (lodashGet(options[i], keys?.children ?? 'children')) {
+          const res: any = getIndexesByValue(lodashGet(options[i], keys?.children ?? 'children'), value);
           if (res) {
             return [i, ...res];
           }
@@ -314,8 +314,10 @@ export default defineComponent({
             <div class={`${cascaderClass.value}__close-btn`} onClick={onCloseBtn}>
               {closeBtn}
             </div>
+            {renderTNodeJSX('header')}
             <div class={`${cascaderClass.value}__content`}>
               {readerSteps()}
+              {renderTNodeJSX('middleContent')}
               {props.subTitles && props.subTitles[stepIndex.value] && (
                 <div class={`${cascaderClass.value}__options-title`}>{props.subTitles[stepIndex.value]}</div>
               )}

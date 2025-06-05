@@ -13,6 +13,10 @@ export interface TdCheckboxProps {
    */
   block?: boolean;
   /**
+   * 是否开启无边框模式
+   */
+  borderless?: boolean;
+  /**
    * 用于标识是否为「全选选项」。单独使用无效，需在 CheckboxGroup 中使用
    * @default false
    */
@@ -97,6 +101,11 @@ export interface TdCheckboxProps {
 }
 
 export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
+  /**
+   * 是否开启无边框模式。优先级低于 Checkbox.borderless
+   * @default false
+   */
+  borderless?: boolean;
   /**
    * 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled
    */

@@ -1,7 +1,7 @@
 <template>
   <div class="stepper-example">
     <t-stepper v-model="value" size="large" theme="filled" @change="handleChange" />
-    <t-stepper default-value="3" max="99" theme="filled" />
+    <t-stepper default-value="3" :max="99" theme="filled" />
     <t-stepper default-value="3" size="small" theme="filled" />
   </div>
 </template>
