@@ -1,5 +1,5 @@
 <template>
-  <t-fab :icon="iconFunc" draggable="vertical" text="按钮文字" @click="onClick" />
+  <t-fab :icon="iconFunc" text="按钮文字" @click="onClick" />
 </template>
 
 <script lang="ts" setup>
