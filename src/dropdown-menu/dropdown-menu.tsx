@@ -10,7 +10,7 @@ import {
   DropdownMenuExpandState,
   TriggerSource,
 } from './context';
-import { useExpose } from '../shared';
+import useExpose from '../hooks/useExpose';
 import { findRelativeRect, findRelativeContainer } from './dom-utils';
 import { useContent } from '../hooks/tnode';
 import DropdownMenuProps from './props';
