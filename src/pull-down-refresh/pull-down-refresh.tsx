@@ -90,9 +90,12 @@ export default defineComponent({
       }
     });
 
+    // 统一判断是否可以滑动
+    const isTouchable = () => loading.value || props.disabled;
+
     const onTouchStart = (e: TouchEvent) => {
-      e.stopPropagation();
-      if (!isReachTop(e) || loading.value || props.disabled) return;
+      if (isTouchable()) return;
+      if (!isReachTop(e)) return;
 
       clearTimeout(timer);
       timer = null;
@@ -102,8 +105,9 @@ export default defineComponent({
     };
 
     const onTouchMove = (e: TouchEvent) => {
-      e.stopPropagation();
-      if (!isReachTop(e) || loading.value || props.disabled) return;
+      if (isTouchable()) return;
+      if (!isReachTop(e)) return;
+
       touch.move(e);
 
       const { diffY, diffX } = touch;
@@ -134,8 +138,8 @@ export default defineComponent({
     };
 
     const onTouchEnd = (e: TouchEvent) => {
-      e.stopPropagation();
-      if (!isReachTop(e) || loading.value || props.disabled) return;
+      if (isTouchable()) return;
+      if (!isReachTop(e)) return;
 
       if (status.value === 'loosing') {
         distance.value = loadingBarHeight.value;
