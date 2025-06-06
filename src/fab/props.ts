@@ -23,7 +23,7 @@ export default {
   },
   /** 悬浮按钮的样式，常用于调整位置 */
   style: {
-    type: String,
+    type: [String, Object] as PropType<TdFabProps['style']>,
     default: 'right: 16px; bottom: 32px;',
   },
   /** 文本内容 */
