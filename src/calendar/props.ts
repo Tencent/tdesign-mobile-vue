@@ -70,7 +70,7 @@ export default {
   defaultValue: {
     type: [Number, Array, Date] as PropType<TdCalendarProps['defaultValue']>,
   },
-  /** 是否显示日历；`usePopup` 为 true 时有效。支持语法糖 `v-model:visible` */
+  /** 是否显示日历；`usePopup` 为 true 时有效 */
   visible: Boolean,
   /** 不显示 confirm-btn 时，完成选择时触发（暂不支持 type = multiple） */
   onChange: Function as PropType<TdCalendarProps['onChange']>,
