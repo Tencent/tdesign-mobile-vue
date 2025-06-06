@@ -1589,6 +1589,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               type="file"
             />
             <!---->
+            <!---->
           </div>
           
         </div>
@@ -3370,6 +3371,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     type="file"
                   />
                   <!---->
+                  <!---->
                 </div>
                 
               </div>
@@ -4999,6 +5001,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               multiple=""
               type="file"
             />
+            <!---->
             <!---->
           </div>
           
