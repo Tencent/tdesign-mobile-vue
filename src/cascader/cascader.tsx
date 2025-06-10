@@ -50,7 +50,7 @@ export default defineComponent({
 
     const stepIndex = ref(0);
     const selectedIndexes = reactive<number[]>([]);
-    const selectedValue = reactive<string[]>([]);
+    const selectedValue = reactive<Array<string | number>>([]);
     const items: Array<Array<TreeOptionData>> = reactive([props.options ?? []]);
     const steps = reactive([placeholder.value]);
 
@@ -110,7 +110,7 @@ export default defineComponent({
       const keys = props.keys as KeysType;
       selectedIndexes[level] = index;
       selectedIndexes.length = level + 1;
-      selectedValue[level] = String(value);
+      selectedValue[level] = typeof value === 'number' ? value : String(value);
       selectedValue.length = level + 1;
       steps[level] = lodashGet(item, keys?.label ?? 'label');
       if (lodashGet(item, keys?.children ?? 'children')?.length) {
