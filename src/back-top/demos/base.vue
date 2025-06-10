@@ -21,39 +21,32 @@
       @click="onClick('half-round', '返回顶部')"
     />
   </div>
-  <div :style="{ ...style }">
-    <t-back-top :theme="theme" :text="text" :on-to-top="handleToTop" :container="container" />
+  <div class="group">
+    <t-skeleton v-for="i in 6" :key="i" :row-col="rowCols" class="item" />
   </div>
+
+  <t-back-top :theme="theme" :text="text" :on-to-top="handleToTop" />
 </template>
 
 <script lang="ts" setup>
-import { ref, defineProps, defineEmits, h } from 'vue';
-import { CloseIcon } from 'tdesign-icons-vue-next';
+import { ref } from 'vue';
 
-const props = defineProps({
-  visible: {
-    type: Boolean,
-    default: false,
-  },
-  style: {
-    type: Object,
-    default: () => {},
-  },
-  container: {
-    type: Function,
-  },
-});
-const emit = defineEmits(['close']);
 const theme = ref('round');
 const text = ref('顶部');
 
-const icon = () => h(CloseIcon);
-
+const rowCols = [
+  {
+    width: '165.5px',
+    height: '165.5px',
+    borderRadius: '12px',
+  },
+  {
+    width: '100px',
+  },
+];
 const onClick = (tem: string, txt: string) => {
   text.value = txt;
   theme.value = tem;
-  emit('close');
-  props.container().scrollTo(0, 1200);
 };
 function handleToTop() {
   console.log('handleToTop');
@@ -66,6 +59,16 @@ function handleToTop() {
 
   .t-button {
     margin-bottom: 10px;
+  }
+}
+.group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 16px 30px 16px;
+  .item {
+    width: 47%;
+    margin-bottom: 16px;
   }
 }
 </style>
