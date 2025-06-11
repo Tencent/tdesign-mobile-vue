@@ -223,7 +223,7 @@ export default defineComponent({
     watch(
       () => props.options,
       () => {
-        items.splice(0, items.length, ...[props.options ?? []]);
+        initWithValue();
 
         if (open.value) {
           handleSelect(childrenInfo.value, childrenInfo.level);
