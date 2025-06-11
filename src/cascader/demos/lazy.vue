@@ -30,6 +30,7 @@ const note = ref('请选择地址');
 
 const onPick = (value: string) => {
   const values = JSON.parse(JSON.stringify(value));
+  console.log('onPick', values);
   const showToast = () => {
     Toast({
       theme: 'loading',
@@ -77,7 +78,7 @@ const onPick = (value: string) => {
 const onChange = (value: string, options: any) => {
   note.value = options
     ?.filter((item?: Array<{ label: string }>) => item)
-    .map((item: any) => item.label)
+    ?.map((item: any) => item.label)
     .join('/');
   visible.value = false;
 };

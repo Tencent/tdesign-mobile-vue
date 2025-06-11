@@ -148,19 +148,22 @@ export default defineComponent({
       }
     };
 
-    const handleSelect = (value: RadioValue, level: number) => {
+    const handleSelect = (value: RadioValue, level: number, emitPick = true) => {
       const keys = props.keys as KeysType;
       const index = items[level].findIndex((item: any) => lodashGet(item, keys?.value ?? 'value') === value);
       const item = items[level][index];
       if (lodashGet(item, keys?.disabled ?? 'disabled')) {
         return;
       }
-      props.onPick?.({
-        value: lodashGet(item, keys?.value ?? 'value'),
-        label: lodashGet(item, keys?.label ?? 'label'),
-        level,
-        index,
-      });
+
+      if (emitPick) {
+        props.onPick?.({
+          value: lodashGet(item, keys?.value ?? 'value'),
+          label: lodashGet(item, keys?.label ?? 'label'),
+          level,
+          index,
+        });
+      }
 
       if (props.checkStrictly && selectedValue.includes(String(value))) {
         cancelSelect(value, level, index, item);
@@ -226,7 +229,7 @@ export default defineComponent({
         initWithValue();
 
         if (open.value) {
-          handleSelect(childrenInfo.value, childrenInfo.level);
+          handleSelect(childrenInfo.value, childrenInfo.level, false);
         }
       },
       {
