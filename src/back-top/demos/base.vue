@@ -29,7 +29,13 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref, defineProps } from 'vue';
+
+const props = defineProps({
+  container: {
+    type: Function,
+  },
+});
 
 const theme = ref('round');
 const text = ref('顶部');
@@ -47,6 +53,7 @@ const rowCols = [
 const onClick = (tem: string, txt: string) => {
   text.value = txt;
   theme.value = tem;
+  props.container?.()?.scrollTo(0, 1200);
 };
 function handleToTop() {
   console.log('handleToTop');
