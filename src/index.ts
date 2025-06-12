@@ -4,7 +4,7 @@ import * as components from './components';
 
 const install = function (app: App, option?: Record<string, unknown>): void {
   Object.keys(components).forEach((key) => {
-    app.use(components[key], option);
+    app.use(components[key as keyof typeof components], option);
   });
 };
 

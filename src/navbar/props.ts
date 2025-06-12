@@ -27,13 +27,15 @@ export default {
     type: Function as PropType<TdNavbarProps['left']>,
   },
   /** 是否展示左侧箭头 */
-  leftArrow: {
-    type: Boolean,
-    default: false,
-  },
+  leftArrow: Boolean,
   /** 右侧区域 */
   right: {
     type: Function as PropType<TdNavbarProps['right']>,
+  },
+  /** 是否开启顶部安全区适配 */
+  safeAreaInsetTop: {
+    type: Boolean,
+    default: true,
   },
   /** 页面标题 */
   title: {
@@ -48,8 +50,8 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 点击左侧区域时触发 */
+  /** 点击左侧按钮时触发 */
   onLeftClick: Function as PropType<TdNavbarProps['onLeftClick']>,
-  /** 点击右侧区域时触发 */
+  /** 点击右侧图标时触发 */
   onRightClick: Function as PropType<TdNavbarProps['onRightClick']>,
 };

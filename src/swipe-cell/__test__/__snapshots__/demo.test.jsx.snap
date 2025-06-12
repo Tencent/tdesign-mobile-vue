@@ -109,7 +109,7 @@ exports[`SwipeCell > SwipeCell doubleVue demo works fine 1`] = `
 exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-  data-v-7d57325a=""
+  data-v-f06ea449=""
 >
   <div
     class="tdesign-mobile-demo-block__header"
@@ -127,7 +127,7 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
     
     <div
       class="t-swipe-cell"
-      data-v-7d57325a=""
+      data-v-f06ea449=""
     >
       <div
         class="t-swipe-cell__wrapper"
@@ -140,13 +140,13 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
           
           <div
             class="btn edit-btn"
-            data-v-7d57325a=""
+            data-v-f06ea449=""
           >
             编辑
           </div>
           <div
             class="btn delete-btn"
-            data-v-7d57325a=""
+            data-v-f06ea449=""
           >
             删除
           </div>
@@ -163,7 +163,7 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
         
         <div
           class="t-cell"
-          data-v-7d57325a=""
+          data-v-f06ea449=""
         >
           <div
             class="t-cell__left"
@@ -197,13 +197,13 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
           
           <div
             class="btn edit-btn"
-            data-v-7d57325a=""
+            data-v-f06ea449=""
           >
             编辑
           </div>
           <div
             class="btn delete-btn"
-            data-v-7d57325a=""
+            data-v-f06ea449=""
           >
             删除
           </div>
@@ -2001,7 +2001,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
   
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-7d57325a=""
+    data-v-f06ea449=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -2019,7 +2019,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
       
       <div
         class="t-swipe-cell"
-        data-v-7d57325a=""
+        data-v-f06ea449=""
       >
         <div
           class="t-swipe-cell__wrapper"
@@ -2032,13 +2032,13 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <div
               class="btn edit-btn"
-              data-v-7d57325a=""
+              data-v-f06ea449=""
             >
               编辑
             </div>
             <div
               class="btn delete-btn"
-              data-v-7d57325a=""
+              data-v-f06ea449=""
             >
               删除
             </div>
@@ -2055,7 +2055,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           
           <div
             class="t-cell"
-            data-v-7d57325a=""
+            data-v-f06ea449=""
           >
             <div
               class="t-cell__left"
@@ -2089,13 +2089,13 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <div
               class="btn edit-btn"
-              data-v-7d57325a=""
+              data-v-f06ea449=""
             >
               编辑
             </div>
             <div
               class="btn delete-btn"
-              data-v-7d57325a=""
+              data-v-f06ea449=""
             >
               删除
             </div>

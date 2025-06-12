@@ -3,7 +3,7 @@
 exports[`DropdownMenu > DropdownMenu customizedVue demo works fine 1`] = `
 <div
   class="t-dropdown-menu"
-  data-v-52bd570d=""
+  data-v-69b9f672=""
 >
   
   <div
@@ -147,23 +147,23 @@ exports[`DropdownMenu > DropdownMenu disabledVue demo works fine 1`] = `
 exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-282366a4=""
+  data-v-71cc592a=""
 >
   <h1
     class="title"
-    data-v-282366a4=""
+    data-v-71cc592a=""
   >
     DropdownMenu 下拉菜单
   </h1>
   <p
     class="summary"
-    data-v-282366a4=""
+    data-v-71cc592a=""
   >
     菜单呈现数个并列的选项类目，用于整个页面的内容筛选，由菜单面板和菜单选项组成。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-282366a4=""
+    data-v-71cc592a=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -185,7 +185,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
       
       <div
         class="t-dropdown-menu"
-        data-v-282366a4=""
+        data-v-71cc592a=""
       >
         
         <div
@@ -241,7 +241,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-282366a4=""
+    data-v-71cc592a=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -259,7 +259,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
       
       <div
         class="t-dropdown-menu"
-        data-v-282366a4=""
+        data-v-71cc592a=""
       >
         
         <div
@@ -337,7 +337,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-282366a4=""
+    data-v-71cc592a=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -355,7 +355,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
       
       <div
         class="t-dropdown-menu"
-        data-v-282366a4=""
+        data-v-71cc592a=""
       >
         
         <div
@@ -411,7 +411,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-282366a4=""
+    data-v-71cc592a=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -433,7 +433,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
       
       <div
         class="t-dropdown-menu"
-        data-v-282366a4=""
+        data-v-71cc592a=""
       >
         
         <div
@@ -489,7 +489,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-282366a4=""
+    data-v-71cc592a=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -507,8 +507,8 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
       
       <div
         class="t-dropdown-menu"
-        data-v-282366a4=""
-        data-v-52bd570d=""
+        data-v-69b9f672=""
+        data-v-71cc592a=""
       >
         
         <div
@@ -541,7 +541,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    data-v-282366a4=""
+    data-v-71cc592a=""
     style="height: 40px;"
   />
 </div>

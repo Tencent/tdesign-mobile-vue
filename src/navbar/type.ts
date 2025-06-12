@@ -35,6 +35,11 @@ export interface TdNavbarProps {
    */
   right?: TNode;
   /**
+   * 是否开启顶部安全区适配
+   * @default true
+   */
+  safeAreaInsetTop?: boolean;
+  /**
    * 页面标题
    */
   title?: string | TNode;
@@ -48,11 +53,11 @@ export interface TdNavbarProps {
    */
   visible?: boolean;
   /**
-   * 点击左侧区域时触发
+   * 点击左侧按钮时触发
    */
   onLeftClick?: () => void;
   /**
-   * 点击右侧区域时触发
+   * 点击右侧图标时触发
    */
   onRightClick?: () => void;
 }

@@ -529,7 +529,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    data-v-ddf95d52=""
+    data-v-11e94e26=""
     role="button"
     type="button"
   >
@@ -562,7 +562,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       
       <div
         class="t-image t-image--square"
-        data-v-ddf95d52=""
+        data-v-11e94e26=""
       >
         <div
           class="t-image__mask"
@@ -664,12 +664,12 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   
   <div
     class="btn-gap"
-    data-v-ddf95d52=""
+    data-v-11e94e26=""
   />
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    data-v-ddf95d52=""
+    data-v-11e94e26=""
     role="button"
     type="button"
   >
@@ -702,7 +702,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       
       <div
         class="t-image t-image--square"
-        data-v-ddf95d52=""
+        data-v-11e94e26=""
       >
         <div
           class="t-image__mask"
@@ -800,12 +800,12 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   
   <div
     class="btn-gap"
-    data-v-ddf95d52=""
+    data-v-11e94e26=""
   />
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    data-v-ddf95d52=""
+    data-v-11e94e26=""
     role="button"
     type="button"
   >
@@ -838,7 +838,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       
       <div
         class="t-image t-image--square"
-        data-v-ddf95d52=""
+        data-v-11e94e26=""
       >
         <div
           class="t-image__mask"
@@ -932,12 +932,12 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   
   <div
     class="btn-gap"
-    data-v-ddf95d52=""
+    data-v-11e94e26=""
   />
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    data-v-ddf95d52=""
+    data-v-11e94e26=""
     role="button"
     type="button"
   >
@@ -970,7 +970,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       
       <div
         class="t-image t-image--square"
-        data-v-ddf95d52=""
+        data-v-11e94e26=""
       >
         <div
           class="t-image__mask"
@@ -1060,12 +1060,12 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   
   <div
     class="btn-gap"
-    data-v-ddf95d52=""
+    data-v-11e94e26=""
   />
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    data-v-ddf95d52=""
+    data-v-11e94e26=""
     role="button"
     type="button"
   >
@@ -1118,7 +1118,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       
       <div
         class="t-image t-image--square image"
-        data-v-ddf95d52=""
+        data-v-11e94e26=""
       >
         <div
           class="t-image__mask"
@@ -1200,12 +1200,12 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   
   <div
     class="btn-gap"
-    data-v-ddf95d52=""
+    data-v-11e94e26=""
   />
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    data-v-ddf95d52=""
+    data-v-11e94e26=""
     role="button"
     type="button"
   >
@@ -1250,7 +1250,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       
       <div
         class="t-image t-image--square image"
-        data-v-ddf95d52=""
+        data-v-11e94e26=""
       >
         <div
           class="t-image__mask"
@@ -1342,7 +1342,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    data-v-4a76bf3d=""
+    data-v-5e3ce9ff=""
     role="button"
     type="button"
   >
@@ -1391,7 +1391,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
             
             <div
               class="t-input t-input--layout-horizontal t-input--border"
-              data-v-4a76bf3d=""
+              data-v-5e3ce9ff=""
             >
               <div
                 class="t-input__wrap--prefix"
@@ -1469,12 +1469,12 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
   
   <div
     class="btn-gap"
-    data-v-4a76bf3d=""
+    data-v-5e3ce9ff=""
   />
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    data-v-4a76bf3d=""
+    data-v-5e3ce9ff=""
     role="button"
     type="button"
   >
@@ -1522,13 +1522,13 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
           >
             
             <p
-              data-v-4a76bf3d=""
+              data-v-5e3ce9ff=""
             >
               告知当前状态、信息和解决方法等，描述文案尽可能控制在三行内
             </p>
             <div
               class="t-input t-input--layout-horizontal t-input--border"
-              data-v-4a76bf3d=""
+              data-v-5e3ce9ff=""
             >
               <div
                 class="t-input__wrap--prefix"
@@ -2194,7 +2194,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        data-v-4a76bf3d=""
+        data-v-5e3ce9ff=""
         role="button"
         type="button"
       >
@@ -2243,7 +2243,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 
                 <div
                   class="t-input t-input--layout-horizontal t-input--border"
-                  data-v-4a76bf3d=""
+                  data-v-5e3ce9ff=""
                 >
                   <div
                     class="t-input__wrap--prefix"
@@ -2321,12 +2321,12 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       
       <div
         class="btn-gap"
-        data-v-4a76bf3d=""
+        data-v-5e3ce9ff=""
       />
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        data-v-4a76bf3d=""
+        data-v-5e3ce9ff=""
         role="button"
         type="button"
       >
@@ -2374,13 +2374,13 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               >
                 
                 <p
-                  data-v-4a76bf3d=""
+                  data-v-5e3ce9ff=""
                 >
                   告知当前状态、信息和解决方法等，描述文案尽可能控制在三行内
                 </p>
                 <div
                   class="t-input t-input--layout-horizontal t-input--border"
-                  data-v-4a76bf3d=""
+                  data-v-5e3ce9ff=""
                 >
                   <div
                     class="t-input__wrap--prefix"
@@ -2481,7 +2481,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        data-v-ddf95d52=""
+        data-v-11e94e26=""
         role="button"
         type="button"
       >
@@ -2514,7 +2514,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-image t-image--square"
-            data-v-ddf95d52=""
+            data-v-11e94e26=""
           >
             <div
               class="t-image__mask"
@@ -2616,12 +2616,12 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       
       <div
         class="btn-gap"
-        data-v-ddf95d52=""
+        data-v-11e94e26=""
       />
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        data-v-ddf95d52=""
+        data-v-11e94e26=""
         role="button"
         type="button"
       >
@@ -2654,7 +2654,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-image t-image--square"
-            data-v-ddf95d52=""
+            data-v-11e94e26=""
           >
             <div
               class="t-image__mask"
@@ -2752,12 +2752,12 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       
       <div
         class="btn-gap"
-        data-v-ddf95d52=""
+        data-v-11e94e26=""
       />
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        data-v-ddf95d52=""
+        data-v-11e94e26=""
         role="button"
         type="button"
       >
@@ -2790,7 +2790,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-image t-image--square"
-            data-v-ddf95d52=""
+            data-v-11e94e26=""
           >
             <div
               class="t-image__mask"
@@ -2884,12 +2884,12 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       
       <div
         class="btn-gap"
-        data-v-ddf95d52=""
+        data-v-11e94e26=""
       />
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        data-v-ddf95d52=""
+        data-v-11e94e26=""
         role="button"
         type="button"
       >
@@ -2922,7 +2922,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-image t-image--square"
-            data-v-ddf95d52=""
+            data-v-11e94e26=""
           >
             <div
               class="t-image__mask"
@@ -3012,12 +3012,12 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       
       <div
         class="btn-gap"
-        data-v-ddf95d52=""
+        data-v-11e94e26=""
       />
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        data-v-ddf95d52=""
+        data-v-11e94e26=""
         role="button"
         type="button"
       >
@@ -3070,7 +3070,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-image t-image--square image"
-            data-v-ddf95d52=""
+            data-v-11e94e26=""
           >
             <div
               class="t-image__mask"
@@ -3152,12 +3152,12 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       
       <div
         class="btn-gap"
-        data-v-ddf95d52=""
+        data-v-11e94e26=""
       />
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        data-v-ddf95d52=""
+        data-v-11e94e26=""
         role="button"
         type="button"
       >
@@ -3202,7 +3202,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           
           <div
             class="t-image t-image--square image"
-            data-v-ddf95d52=""
+            data-v-11e94e26=""
           >
             <div
               class="t-image__mask"

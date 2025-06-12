@@ -24,6 +24,10 @@ export default {
     type: [String, Boolean] as PropType<TdPickerProps['confirmBtn']>,
     default: true,
   },
+  /** 底部内容 */
+  footer: {
+    type: Function as PropType<TdPickerProps['footer']>,
+  },
   /** 自定义头部内容 */
   header: {
     type: Function as PropType<TdPickerProps['header']>,
@@ -39,6 +43,11 @@ export default {
   /** 自定义label */
   renderLabel: {
     type: Function as PropType<TdPickerProps['renderLabel']>,
+  },
+  /** 快速滑动时惯性滚动的时长，单位 ms，为 0 时表示取消惯性滚动 */
+  swipeDuration: {
+    type: [String, Number] as PropType<TdPickerProps['swipeDuration']>,
+    default: 300,
   },
   /** 标题 */
   title: {

@@ -39,11 +39,11 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
       
       <div
         class="upload-demo"
-        data-v-41cb315a=""
+        data-v-52e2c190=""
       >
         <div
           class="t-upload"
-          data-v-41cb315a=""
+          data-v-52e2c190=""
         >
           
           <div
@@ -446,17 +446,17 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
       
       <div
         class="rate-demo-cell rate-demo-cell--space"
-        data-v-0f72cd9e=""
+        data-v-075292d6=""
       >
         <div
           class="rate-demo-cell__label"
-          data-v-0f72cd9e=""
+          data-v-075292d6=""
         >
           Rating
         </div>
         <div
           class="t-rate"
-          data-v-0f72cd9e=""
+          data-v-075292d6=""
         >
           <div
             class="t-rate__wrapper"
@@ -563,7 +563,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        data-v-0f72cd9e=""
+        data-v-075292d6=""
       >
         
         <div
@@ -3130,7 +3130,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-cell"
-        data-v-0f72cd9e=""
+        data-v-075292d6=""
       >
         <div
           class="t-cell__left"
@@ -3173,7 +3173,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-cell"
-        data-v-0f72cd9e=""
+        data-v-075292d6=""
       >
         <div
           class="t-cell__left"
@@ -3214,7 +3214,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
         
         <div
           class="t-picker t-date-time-picker"
-          data-v-0f72cd9e=""
+          data-v-075292d6=""
         >
           <div
             class="t-picker__toolbar"
@@ -3697,6 +3697,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               class="t-picker__indicator"
             />
           </div>
+          <!---->
         </div>
         
       </div>
@@ -3717,17 +3718,17 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
   
   <div
     class="rate-demo-cell rate-demo-cell--space"
-    data-v-0f72cd9e=""
+    data-v-075292d6=""
   >
     <div
       class="rate-demo-cell__label"
-      data-v-0f72cd9e=""
+      data-v-075292d6=""
     >
       Rating
     </div>
     <div
       class="t-rate"
-      data-v-0f72cd9e=""
+      data-v-075292d6=""
     >
       <div
         class="t-rate__wrapper"
@@ -3834,7 +3835,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    data-v-0f72cd9e=""
+    data-v-075292d6=""
   >
     
     <div
@@ -6401,7 +6402,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
   </div>
   <div
     class="t-cell"
-    data-v-0f72cd9e=""
+    data-v-075292d6=""
   >
     <div
       class="t-cell__left"
@@ -6444,7 +6445,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
   </div>
   <div
     class="t-cell"
-    data-v-0f72cd9e=""
+    data-v-075292d6=""
   >
     <div
       class="t-cell__left"
@@ -6485,7 +6486,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
     
     <div
       class="t-picker t-date-time-picker"
-      data-v-0f72cd9e=""
+      data-v-075292d6=""
     >
       <div
         class="t-picker__toolbar"
@@ -6968,6 +6969,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
           class="t-picker__indicator"
         />
       </div>
+      <!---->
     </div>
     
   </div>
@@ -7070,11 +7072,11 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
   
   <div
     class="upload-demo"
-    data-v-41cb315a=""
+    data-v-52e2c190=""
   >
     <div
       class="t-upload"
-      data-v-41cb315a=""
+      data-v-52e2c190=""
     >
       
       <div

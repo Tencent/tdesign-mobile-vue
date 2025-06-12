@@ -23,6 +23,11 @@ export default {
     type: Number,
     default: 0,
   },
+  /** 进度条尺寸，仅对环形进度条有效。可选值：default/micro。default 值为 112； micro 值为 24 */
+  size: {
+    type: [String, Number] as PropType<TdProgressProps['size']>,
+    default: 'default',
+  },
   /** 进度条状态 */
   status: {
     type: String as PropType<TdProgressProps['status']>,
@@ -31,7 +36,7 @@ export default {
       return ['success', 'error', 'warning', 'active'].includes(val);
     },
   },
-  /** 进度条线宽。 */
+  /** 进度条线宽。宽度数值不能超过 size 的一半，否则不能输出环形进度 */
   strokeWidth: {
     type: [String, Number] as PropType<TdProgressProps['strokeWidth']>,
   },

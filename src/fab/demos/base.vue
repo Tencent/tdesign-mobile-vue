@@ -1,5 +1,5 @@
 <template>
-  <t-fab :icon="iconFunc" draggable="all" :y-bounds="yBounds" @click="onClick" />
+  <t-fab :icon="iconFunc" @click="onClick" />
 </template>
 
 <script lang="ts" setup>
@@ -10,5 +10,4 @@ const iconFunc = () => h(AddIcon, { size: '24px' });
 const onClick = () => {
   console.log('click Fab');
 };
-const yBounds = [30, 20];
 </script>

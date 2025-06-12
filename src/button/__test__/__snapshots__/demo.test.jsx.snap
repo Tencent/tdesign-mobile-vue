@@ -7,12 +7,12 @@ exports[`Button > Button baseVue demo works fine 1`] = `
   
   <div
     class="row"
-    data-v-61a49c84=""
+    data-v-a8b06499=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-      data-v-61a49c84=""
+      data-v-a8b06499=""
       role="button"
       type="button"
     >
@@ -29,7 +29,7 @@ exports[`Button > Button baseVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
-      data-v-61a49c84=""
+      data-v-a8b06499=""
       role="button"
       type="button"
     >
@@ -46,7 +46,7 @@ exports[`Button > Button baseVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
-      data-v-61a49c84=""
+      data-v-a8b06499=""
       role="button"
       type="button"
     >
@@ -63,12 +63,12 @@ exports[`Button > Button baseVue demo works fine 1`] = `
   </div>
   <div
     class="row"
-    data-v-61a49c84=""
+    data-v-a8b06499=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
-      data-v-61a49c84=""
+      data-v-a8b06499=""
       role="button"
       type="button"
     >
@@ -85,7 +85,7 @@ exports[`Button > Button baseVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--dashed t-button--primary t-button--rectangle"
-      data-v-61a49c84=""
+      data-v-a8b06499=""
       role="button"
       type="button"
     >
@@ -102,7 +102,7 @@ exports[`Button > Button baseVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle"
-      data-v-61a49c84=""
+      data-v-a8b06499=""
       role="button"
       type="button"
     >
@@ -124,12 +124,12 @@ exports[`Button > Button baseVue demo works fine 1`] = `
 exports[`Button > Button blockVue demo works fine 1`] = `
 <div
   class="row"
-  data-v-75d4286a=""
+  data-v-df7bddf2=""
 >
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block"
-    data-v-75d4286a=""
+    data-v-df7bddf2=""
     role="button"
     type="button"
   >
@@ -149,12 +149,12 @@ exports[`Button > Button blockVue demo works fine 1`] = `
 exports[`Button > Button ghostVue demo works fine 1`] = `
 <div
   class="row"
-  data-v-511c0528=""
+  data-v-3efbf598=""
 >
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--ghost"
-    data-v-511c0528=""
+    data-v-3efbf598=""
     role="button"
     type="button"
   >
@@ -171,7 +171,7 @@ exports[`Button > Button ghostVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle t-button--ghost"
-    data-v-511c0528=""
+    data-v-3efbf598=""
     role="button"
     type="button"
   >
@@ -188,7 +188,7 @@ exports[`Button > Button ghostVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle t-button--ghost"
-    data-v-511c0528=""
+    data-v-3efbf598=""
     role="button"
     type="button"
   >
@@ -208,12 +208,12 @@ exports[`Button > Button ghostVue demo works fine 1`] = `
 exports[`Button > Button groupVue demo works fine 1`] = `
 <div
   class="row"
-  data-v-2d21dd48=""
+  data-v-8e466c6d=""
 >
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
-    data-v-2d21dd48=""
+    data-v-8e466c6d=""
     role="button"
     type="button"
   >
@@ -230,7 +230,7 @@ exports[`Button > Button groupVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-    data-v-2d21dd48=""
+    data-v-8e466c6d=""
     role="button"
     type="button"
   >
@@ -250,12 +250,12 @@ exports[`Button > Button groupVue demo works fine 1`] = `
 exports[`Button > Button iconVue demo works fine 1`] = `
 <div
   class="row"
-  data-v-c77683a8=""
+  data-v-c0b784f5=""
 >
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-    data-v-c77683a8=""
+    data-v-c0b784f5=""
     role="button"
     type="button"
   >
@@ -284,7 +284,7 @@ exports[`Button > Button iconVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--loading"
-    data-v-c77683a8=""
+    data-v-c0b784f5=""
     role="button"
     type="button"
   >
@@ -327,7 +327,7 @@ exports[`Button > Button iconVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--square"
-    data-v-c77683a8=""
+    data-v-c0b784f5=""
     role="button"
     type="button"
   >
@@ -357,23 +357,23 @@ exports[`Button > Button iconVue demo works fine 1`] = `
 exports[`Button > Button mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-7c375b15=""
+  data-v-e07177be=""
 >
   <h1
     class="title"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     Button 按钮
   </h1>
   <p
     class="summary"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     按钮用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -396,12 +396,12 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       <div
         class="row"
-        data-v-61a49c84=""
+        data-v-a8b06499=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-          data-v-61a49c84=""
+          data-v-a8b06499=""
           role="button"
           type="button"
         >
@@ -418,7 +418,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
-          data-v-61a49c84=""
+          data-v-a8b06499=""
           role="button"
           type="button"
         >
@@ -435,7 +435,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
-          data-v-61a49c84=""
+          data-v-a8b06499=""
           role="button"
           type="button"
         >
@@ -452,12 +452,12 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       </div>
       <div
         class="row"
-        data-v-61a49c84=""
+        data-v-a8b06499=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
-          data-v-61a49c84=""
+          data-v-a8b06499=""
           role="button"
           type="button"
         >
@@ -474,7 +474,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--dashed t-button--primary t-button--rectangle"
-          data-v-61a49c84=""
+          data-v-a8b06499=""
           role="button"
           type="button"
         >
@@ -491,7 +491,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle"
-          data-v-61a49c84=""
+          data-v-a8b06499=""
           role="button"
           type="button"
         >
@@ -512,7 +512,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -530,13 +530,13 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       <div
         class="row"
-        data-v-7c375b15=""
-        data-v-c77683a8=""
+        data-v-c0b784f5=""
+        data-v-e07177be=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-          data-v-c77683a8=""
+          data-v-c0b784f5=""
           role="button"
           type="button"
         >
@@ -565,7 +565,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--loading"
-          data-v-c77683a8=""
+          data-v-c0b784f5=""
           role="button"
           type="button"
         >
@@ -608,7 +608,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--square"
-          data-v-c77683a8=""
+          data-v-c0b784f5=""
           role="button"
           type="button"
         >
@@ -638,7 +638,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -656,13 +656,13 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       <div
         class="row"
-        data-v-511c0528=""
-        data-v-7c375b15=""
+        data-v-3efbf598=""
+        data-v-e07177be=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--ghost"
-          data-v-511c0528=""
+          data-v-3efbf598=""
           role="button"
           type="button"
         >
@@ -679,7 +679,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle t-button--ghost"
-          data-v-511c0528=""
+          data-v-3efbf598=""
           role="button"
           type="button"
         >
@@ -696,7 +696,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle t-button--ghost"
-          data-v-511c0528=""
+          data-v-3efbf598=""
           role="button"
           type="button"
         >
@@ -716,7 +716,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -734,13 +734,13 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       <div
         class="row"
-        data-v-2d21dd48=""
-        data-v-7c375b15=""
+        data-v-8e466c6d=""
+        data-v-e07177be=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
-          data-v-2d21dd48=""
+          data-v-8e466c6d=""
           role="button"
           type="button"
         >
@@ -757,7 +757,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-          data-v-2d21dd48=""
+          data-v-8e466c6d=""
           role="button"
           type="button"
         >
@@ -777,7 +777,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -795,13 +795,13 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       <div
         class="row"
-        data-v-75d4286a=""
-        data-v-7c375b15=""
+        data-v-df7bddf2=""
+        data-v-e07177be=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block"
-          data-v-75d4286a=""
+          data-v-df7bddf2=""
           role="button"
           type="button"
         >
@@ -821,7 +821,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -844,12 +844,12 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       <div
         class="row"
-        data-v-096a7265=""
+        data-v-1d4957ba=""
       >
         <button
           aria-disabled="true"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--disabled"
-          data-v-096a7265=""
+          data-v-1d4957ba=""
           disabled=""
           role="button"
           type="button"
@@ -867,7 +867,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="true"
           class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle t-button--disabled"
-          data-v-096a7265=""
+          data-v-1d4957ba=""
           disabled=""
           role="button"
           type="button"
@@ -885,7 +885,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="true"
           class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle t-button--disabled"
-          data-v-096a7265=""
+          data-v-1d4957ba=""
           disabled=""
           role="button"
           type="button"
@@ -903,12 +903,12 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       </div>
       <div
         class="row"
-        data-v-096a7265=""
+        data-v-1d4957ba=""
       >
         <button
           aria-disabled="true"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--disabled"
-          data-v-096a7265=""
+          data-v-1d4957ba=""
           disabled=""
           role="button"
           type="button"
@@ -926,7 +926,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="true"
           class="t-button t-button--size-large t-button--dashed t-button--primary t-button--rectangle t-button--disabled"
-          data-v-096a7265=""
+          data-v-1d4957ba=""
           disabled=""
           role="button"
           type="button"
@@ -944,7 +944,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="true"
           class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-button--disabled"
-          data-v-096a7265=""
+          data-v-1d4957ba=""
           disabled=""
           role="button"
           type="button"
@@ -966,7 +966,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -988,13 +988,13 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       <div
         class="row"
-        data-v-0a874498=""
-        data-v-7c375b15=""
+        data-v-78d504d8=""
+        data-v-e07177be=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-          data-v-0a874498=""
+          data-v-78d504d8=""
           role="button"
           type="button"
         >
@@ -1011,7 +1011,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
-          data-v-0a874498=""
+          data-v-78d504d8=""
           role="button"
           type="button"
         >
@@ -1028,7 +1028,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
-          data-v-0a874498=""
+          data-v-78d504d8=""
           role="button"
           type="button"
         >
@@ -1045,7 +1045,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-extra-small t-button--base t-button--primary t-button--rectangle"
-          data-v-0a874498=""
+          data-v-78d504d8=""
           role="button"
           type="button"
         >
@@ -1065,7 +1065,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1084,12 +1084,12 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       <div
         class="row"
-        data-v-3fc3ed04=""
+        data-v-3e6d1641=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-          data-v-3fc3ed04=""
+          data-v-3e6d1641=""
           role="button"
           type="button"
         >
@@ -1107,7 +1107,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
           aria-disabled="false"
           aria-label="搜索"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--square"
-          data-v-3fc3ed04=""
+          data-v-3e6d1641=""
           role="button"
           type="button"
         >
@@ -1134,7 +1134,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--round"
-          data-v-3fc3ed04=""
+          data-v-3e6d1641=""
           role="button"
           type="button"
         >
@@ -1152,7 +1152,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
           aria-disabled="false"
           aria-label="搜索"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--circle"
-          data-v-3fc3ed04=""
+          data-v-3e6d1641=""
           role="button"
           type="button"
         >
@@ -1180,7 +1180,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block rectangle-button"
-        data-v-3fc3ed04=""
+        data-v-3e6d1641=""
         role="button"
         type="button"
       >
@@ -1200,7 +1200,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1218,17 +1218,17 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       <div
         class="section-theme"
-        data-v-42dcdba6=""
-        data-v-7c375b15=""
+        data-v-0e2e31f3=""
+        data-v-e07177be=""
       >
         <div
           class="row"
-          data-v-42dcdba6=""
+          data-v-0e2e31f3=""
         >
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
-            data-v-42dcdba6=""
+            data-v-0e2e31f3=""
             role="button"
             type="button"
           >
@@ -1245,7 +1245,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle"
-            data-v-42dcdba6=""
+            data-v-0e2e31f3=""
             role="button"
             type="button"
           >
@@ -1262,7 +1262,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--dashed t-button--default t-button--rectangle"
-            data-v-42dcdba6=""
+            data-v-0e2e31f3=""
             role="button"
             type="button"
           >
@@ -1279,7 +1279,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle"
-            data-v-42dcdba6=""
+            data-v-0e2e31f3=""
             role="button"
             type="button"
           >
@@ -1296,12 +1296,12 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         </div>
         <div
           class="row"
-          data-v-42dcdba6=""
+          data-v-0e2e31f3=""
         >
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-            data-v-42dcdba6=""
+            data-v-0e2e31f3=""
             role="button"
             type="button"
           >
@@ -1318,7 +1318,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
-            data-v-42dcdba6=""
+            data-v-0e2e31f3=""
             role="button"
             type="button"
           >
@@ -1335,7 +1335,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--dashed t-button--primary t-button--rectangle"
-            data-v-42dcdba6=""
+            data-v-0e2e31f3=""
             role="button"
             type="button"
           >
@@ -1352,7 +1352,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle"
-            data-v-42dcdba6=""
+            data-v-0e2e31f3=""
             role="button"
             type="button"
           >
@@ -1369,12 +1369,12 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         </div>
         <div
           class="row"
-          data-v-42dcdba6=""
+          data-v-0e2e31f3=""
         >
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle"
-            data-v-42dcdba6=""
+            data-v-0e2e31f3=""
             role="button"
             type="button"
           >
@@ -1391,7 +1391,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--outline t-button--danger t-button--rectangle"
-            data-v-42dcdba6=""
+            data-v-0e2e31f3=""
             role="button"
             type="button"
           >
@@ -1408,7 +1408,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--dashed t-button--danger t-button--rectangle"
-            data-v-42dcdba6=""
+            data-v-0e2e31f3=""
             role="button"
             type="button"
           >
@@ -1425,7 +1425,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--text t-button--danger t-button--rectangle"
-            data-v-42dcdba6=""
+            data-v-0e2e31f3=""
             role="button"
             type="button"
           >
@@ -1442,12 +1442,12 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         </div>
         <div
           class="row"
-          data-v-42dcdba6=""
+          data-v-0e2e31f3=""
         >
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
-            data-v-42dcdba6=""
+            data-v-0e2e31f3=""
             role="button"
             type="button"
           >
@@ -1464,7 +1464,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--outline t-button--light t-button--rectangle"
-            data-v-42dcdba6=""
+            data-v-0e2e31f3=""
             role="button"
             type="button"
           >
@@ -1481,7 +1481,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--dashed t-button--light t-button--rectangle"
-            data-v-42dcdba6=""
+            data-v-0e2e31f3=""
             role="button"
             type="button"
           >
@@ -1498,7 +1498,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
           <button
             aria-disabled="false"
             class="t-button t-button--size-large t-button--text t-button--light t-button--rectangle"
-            data-v-42dcdba6=""
+            data-v-0e2e31f3=""
             role="button"
             type="button"
           >
@@ -1527,12 +1527,12 @@ exports[`Button > Button shapeVue demo works fine 1`] = `
   
   <div
     class="row"
-    data-v-3fc3ed04=""
+    data-v-3e6d1641=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-      data-v-3fc3ed04=""
+      data-v-3e6d1641=""
       role="button"
       type="button"
     >
@@ -1550,7 +1550,7 @@ exports[`Button > Button shapeVue demo works fine 1`] = `
       aria-disabled="false"
       aria-label="搜索"
       class="t-button t-button--size-large t-button--base t-button--primary t-button--square"
-      data-v-3fc3ed04=""
+      data-v-3e6d1641=""
       role="button"
       type="button"
     >
@@ -1577,7 +1577,7 @@ exports[`Button > Button shapeVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--primary t-button--round"
-      data-v-3fc3ed04=""
+      data-v-3e6d1641=""
       role="button"
       type="button"
     >
@@ -1595,7 +1595,7 @@ exports[`Button > Button shapeVue demo works fine 1`] = `
       aria-disabled="false"
       aria-label="搜索"
       class="t-button t-button--size-large t-button--base t-button--primary t-button--circle"
-      data-v-3fc3ed04=""
+      data-v-3e6d1641=""
       role="button"
       type="button"
     >
@@ -1623,7 +1623,7 @@ exports[`Button > Button shapeVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block rectangle-button"
-    data-v-3fc3ed04=""
+    data-v-3e6d1641=""
     role="button"
     type="button"
   >
@@ -1644,12 +1644,12 @@ exports[`Button > Button shapeVue demo works fine 1`] = `
 exports[`Button > Button sizeVue demo works fine 1`] = `
 <div
   class="row"
-  data-v-0a874498=""
+  data-v-78d504d8=""
 >
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-    data-v-0a874498=""
+    data-v-78d504d8=""
     role="button"
     type="button"
   >
@@ -1666,7 +1666,7 @@ exports[`Button > Button sizeVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
-    data-v-0a874498=""
+    data-v-78d504d8=""
     role="button"
     type="button"
   >
@@ -1683,7 +1683,7 @@ exports[`Button > Button sizeVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
-    data-v-0a874498=""
+    data-v-78d504d8=""
     role="button"
     type="button"
   >
@@ -1700,7 +1700,7 @@ exports[`Button > Button sizeVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-extra-small t-button--base t-button--primary t-button--rectangle"
-    data-v-0a874498=""
+    data-v-78d504d8=""
     role="button"
     type="button"
   >
@@ -1724,12 +1724,12 @@ exports[`Button > Button statusVue demo works fine 1`] = `
   
   <div
     class="row"
-    data-v-096a7265=""
+    data-v-1d4957ba=""
   >
     <button
       aria-disabled="true"
       class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--disabled"
-      data-v-096a7265=""
+      data-v-1d4957ba=""
       disabled=""
       role="button"
       type="button"
@@ -1747,7 +1747,7 @@ exports[`Button > Button statusVue demo works fine 1`] = `
     <button
       aria-disabled="true"
       class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle t-button--disabled"
-      data-v-096a7265=""
+      data-v-1d4957ba=""
       disabled=""
       role="button"
       type="button"
@@ -1765,7 +1765,7 @@ exports[`Button > Button statusVue demo works fine 1`] = `
     <button
       aria-disabled="true"
       class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle t-button--disabled"
-      data-v-096a7265=""
+      data-v-1d4957ba=""
       disabled=""
       role="button"
       type="button"
@@ -1783,12 +1783,12 @@ exports[`Button > Button statusVue demo works fine 1`] = `
   </div>
   <div
     class="row"
-    data-v-096a7265=""
+    data-v-1d4957ba=""
   >
     <button
       aria-disabled="true"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--disabled"
-      data-v-096a7265=""
+      data-v-1d4957ba=""
       disabled=""
       role="button"
       type="button"
@@ -1806,7 +1806,7 @@ exports[`Button > Button statusVue demo works fine 1`] = `
     <button
       aria-disabled="true"
       class="t-button t-button--size-large t-button--dashed t-button--primary t-button--rectangle t-button--disabled"
-      data-v-096a7265=""
+      data-v-1d4957ba=""
       disabled=""
       role="button"
       type="button"
@@ -1824,7 +1824,7 @@ exports[`Button > Button statusVue demo works fine 1`] = `
     <button
       aria-disabled="true"
       class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-button--disabled"
-      data-v-096a7265=""
+      data-v-1d4957ba=""
       disabled=""
       role="button"
       type="button"
@@ -1847,16 +1847,16 @@ exports[`Button > Button statusVue demo works fine 1`] = `
 exports[`Button > Button themeVue demo works fine 1`] = `
 <div
   class="section-theme"
-  data-v-42dcdba6=""
+  data-v-0e2e31f3=""
 >
   <div
     class="row"
-    data-v-42dcdba6=""
+    data-v-0e2e31f3=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1873,7 +1873,7 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1890,7 +1890,7 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--dashed t-button--default t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1907,7 +1907,7 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1924,12 +1924,12 @@ exports[`Button > Button themeVue demo works fine 1`] = `
   </div>
   <div
     class="row"
-    data-v-42dcdba6=""
+    data-v-0e2e31f3=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1946,7 +1946,7 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1963,7 +1963,7 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--dashed t-button--primary t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1980,7 +1980,7 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1997,12 +1997,12 @@ exports[`Button > Button themeVue demo works fine 1`] = `
   </div>
   <div
     class="row"
-    data-v-42dcdba6=""
+    data-v-0e2e31f3=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -2019,7 +2019,7 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--danger t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -2036,7 +2036,7 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--dashed t-button--danger t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -2053,7 +2053,7 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--text t-button--danger t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -2070,12 +2070,12 @@ exports[`Button > Button themeVue demo works fine 1`] = `
   </div>
   <div
     class="row"
-    data-v-42dcdba6=""
+    data-v-0e2e31f3=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -2092,7 +2092,7 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--light t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -2109,7 +2109,7 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--dashed t-button--light t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -2126,7 +2126,7 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--text t-button--light t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >

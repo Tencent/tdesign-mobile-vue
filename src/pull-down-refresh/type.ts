@@ -8,6 +8,11 @@ import { LoadingProps } from '../loading';
 
 export interface TdPullDownRefreshProps {
   /**
+   * 是否禁用下拉刷新
+   * @default false
+   */
+  disabled?: boolean;
+  /**
    * 加载中下拉高度，如果值为数字则单位是：'px'
    * @default 50
    */
