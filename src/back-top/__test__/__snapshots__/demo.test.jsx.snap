@@ -41,32 +41,233 @@ exports[`BackTop > BackTop baseVue demo works fine 1`] = `
     </button>
   </div>
   <div
+    class="group"
     data-v-db5fce21=""
   >
+    
     <div
-      class="t-back-top t-back-top--fixed t-back-top--round"
+      class="t-skeleton item"
       data-v-db5fce21=""
-      style="display: none;"
     >
-      <svg
-        class="t-icon t-icon-backtop"
-        fill="none"
-        height="1em"
-        style="font-size: 22px;"
-        viewBox="0 0 24 24"
-        width="1em"
+      
+      
+      <div
+        class="t-skeleton__row"
       >
-        <path
-          d="M4 4H20V6H4V4ZM12 7.58579L18.9142 14.5L17.5 15.9142L13 11.4142V21H11V11.4142L6.5 15.9142L5.08579 14.5L12 7.58579Z"
-          fill="currentColor"
-        />
-      </svg>
-      <span
-        class="t-back-top__text--round"
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      <div
+        class="t-skeleton__row"
       >
-        顶部
-      </span>
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 100px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      
+      
     </div>
+    <div
+      class="t-skeleton item"
+      data-v-db5fce21=""
+    >
+      
+      
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 100px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      
+      
+    </div>
+    <div
+      class="t-skeleton item"
+      data-v-db5fce21=""
+    >
+      
+      
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 100px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      
+      
+    </div>
+    <div
+      class="t-skeleton item"
+      data-v-db5fce21=""
+    >
+      
+      
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 100px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      
+      
+    </div>
+    <div
+      class="t-skeleton item"
+      data-v-db5fce21=""
+    >
+      
+      
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 100px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      
+      
+    </div>
+    <div
+      class="t-skeleton item"
+      data-v-db5fce21=""
+    >
+      
+      
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 100px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      
+      
+    </div>
+    
+  </div>
+  <div
+    class="t-back-top t-back-top--fixed t-back-top--round"
+    data-v-db5fce21=""
+    style="display: none;"
+  >
+    <svg
+      class="t-icon t-icon-backtop"
+      fill="none"
+      height="1em"
+      style="font-size: 22px;"
+      viewBox="0 0 24 24"
+      width="1em"
+    >
+      <path
+        d="M4 4H20V6H4V4ZM12 7.58579L18.9142 14.5L17.5 15.9142L13 11.4142V21H11V11.4142L6.5 15.9142L5.08579 14.5L12 7.58579Z"
+        fill="currentColor"
+      />
+    </svg>
+    <span
+      class="t-back-top__text--round"
+    >
+      顶部
+    </span>
   </div>
   
 </div>
@@ -99,7 +300,7 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        形状
+        组件类型
       </h2>
       <!--v-if-->
     </div>
@@ -144,257 +345,237 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
         </button>
       </div>
       <div
+        class="group"
         data-v-db5fce21=""
       >
+        
         <div
-          class="t-back-top t-back-top--fixed t-back-top--round"
+          class="t-skeleton item"
           data-v-db5fce21=""
-          style="display: none;"
         >
-          <svg
-            class="t-icon t-icon-backtop"
-            fill="none"
-            height="1em"
-            style="font-size: 22px;"
-            viewBox="0 0 24 24"
-            width="1em"
+          
+          
+          <div
+            class="t-skeleton__row"
           >
-            <path
-              d="M4 4H20V6H4V4ZM12 7.58579L18.9142 14.5L17.5 15.9142L13 11.4142V21H11V11.4142L6.5 15.9142L5.08579 14.5L12 7.58579Z"
-              fill="currentColor"
-            />
-          </svg>
-          <span
-            class="t-back-top__text--round"
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
           >
-            顶部
-          </span>
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 100px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          
+          
         </div>
+        <div
+          class="t-skeleton item"
+          data-v-db5fce21=""
+        >
+          
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 100px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          
+          
+        </div>
+        <div
+          class="t-skeleton item"
+          data-v-db5fce21=""
+        >
+          
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 100px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          
+          
+        </div>
+        <div
+          class="t-skeleton item"
+          data-v-db5fce21=""
+        >
+          
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 100px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          
+          
+        </div>
+        <div
+          class="t-skeleton item"
+          data-v-db5fce21=""
+        >
+          
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 100px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          
+          
+        </div>
+        <div
+          class="t-skeleton item"
+          data-v-db5fce21=""
+        >
+          
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 100px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          
+          
+        </div>
+        
       </div>
-      
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-9970a0e7=""
-  >
-    <!--v-if-->
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
       <div
-        class="group"
-        data-v-9970a0e7=""
+        class="t-back-top t-back-top--fixed t-back-top--round"
+        data-v-db5fce21=""
+        style="display: none;"
       >
-        
-        <div
-          class="t-skeleton item"
-          data-v-9970a0e7=""
+        <svg
+          class="t-icon t-icon-backtop"
+          fill="none"
+          height="1em"
+          style="font-size: 22px;"
+          viewBox="0 0 24 24"
+          width="1em"
         >
-          
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 100px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          
-          
-        </div>
-        <div
-          class="t-skeleton item"
-          data-v-9970a0e7=""
+          <path
+            d="M4 4H20V6H4V4ZM12 7.58579L18.9142 14.5L17.5 15.9142L13 11.4142V21H11V11.4142L6.5 15.9142L5.08579 14.5L12 7.58579Z"
+            fill="currentColor"
+          />
+        </svg>
+        <span
+          class="t-back-top__text--round"
         >
-          
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 100px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          
-          
-        </div>
-        <div
-          class="t-skeleton item"
-          data-v-9970a0e7=""
-        >
-          
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 100px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          
-          
-        </div>
-        <div
-          class="t-skeleton item"
-          data-v-9970a0e7=""
-        >
-          
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 100px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          
-          
-        </div>
-        <div
-          class="t-skeleton item"
-          data-v-9970a0e7=""
-        >
-          
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 100px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          
-          
-        </div>
-        <div
-          class="t-skeleton item"
-          data-v-9970a0e7=""
-        >
-          
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 100px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          
-          
-        </div>
-        
+          顶部
+        </span>
       </div>
+      
       
     </div>
   </div>
-  <div
-    class="blank"
-    data-v-9970a0e7=""
-  />
 </div>
 `;
