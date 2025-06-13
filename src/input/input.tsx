@@ -234,6 +234,10 @@ export default defineComponent({
         return <div class={`${inputClass.value}__wrap--suffix-icon`}>{suffixIcon}</div>;
       };
 
+      const renderExtra = () => {
+        return renderTNodeJSX('extra');
+      };
+
       const renderTips = () => {
         const tips = renderTNodeJSX('tips');
         if (!tips) {
@@ -278,6 +282,7 @@ export default defineComponent({
             </div>
             {renderTips()}
           </div>
+          {renderExtra()}
         </div>
       );
     };

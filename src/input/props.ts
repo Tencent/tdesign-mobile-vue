@@ -57,6 +57,10 @@ export default {
       return ['enter', 'done', 'go', 'next', 'previous', 'search', 'send'].includes(val);
     },
   },
+  /** 右侧额外内容 */
+  extra: {
+    type: Function as PropType<TdInputProps['extra']>,
+  },
   /** 指定输入框展示值的格式 */
   format: {
     type: Function as PropType<TdInputProps['format']>,
@@ -154,6 +158,6 @@ export default {
   onClear: Function as PropType<TdInputProps['onClear']>,
   /** 获得焦点时触发 */
   onFocus: Function as PropType<TdInputProps['onFocus']>,
-  /** 【暂不支持】字数超出限制时触发 */
+  /** 字数超出限制时触发 */
   onValidate: Function as PropType<TdInputProps['onValidate']>,
 };

@@ -5,7 +5,7 @@
     </template>
   </t-input>
   <t-input label="标签文字" type="tel" placeholder="请输入手机号码">
-    <template #suffix>
+    <template #extra>
       <t-button theme="primary" size="extra-small"> 操作按钮 </t-button>
     </template>
   </t-input>
