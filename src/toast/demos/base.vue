@@ -12,7 +12,10 @@
 import { Toast } from 'tdesign-mobile-vue';
 
 const showText = () => {
-  Toast('轻提示文字内容');
+  Toast({
+    duration: -1,
+    message: '轻提示文字内容',
+  });
 };
 const showMultiText = () => {
   Toast('最多一行展示十个汉字宽度限制最多不超过三行文字行文字行文字');
@@ -22,7 +25,7 @@ const showHorizontalText = () => {
     attach: '#toast-demo',
     className: 'toast-root--test',
     style: { backgroundColor: 'pink' },
-    duration: 10000,
+    duration: -1,
     theme: 'success',
     direction: 'row',
     message: '轻提示文字内容',
