@@ -2,7 +2,7 @@ import { isRef, Ref, ref } from 'vue';
 
 export type ToggleValueType = string | number | boolean | undefined;
 
-export function useToggle<T extends ToggleValueType>(values: Array<T>, defaultValue?: T | Ref<T>) {
+export default function useToggle<T extends ToggleValueType>(values: Array<T>, defaultValue?: T | Ref<T>) {
   const innerValues = values || [true, false];
   let state = ref();
   if (defaultValue === undefined) {

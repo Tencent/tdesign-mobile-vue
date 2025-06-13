@@ -5,6 +5,23 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.9.1 `2025-06-13` 
+### 🚀 Features
+- `BackTop`: 支持自动向上寻找滚动元素 @novlan1 ([#1870](https://github.com/Tencent/tdesign-mobile-vue/pull/1870))
+- `Fab`: 
+  - 扩展 `style` 属性类型，避免警告 @novlan1 ([#1865](https://github.com/Tencent/tdesign-mobile-vue/pull/1865))
+  - 支持使用默认插槽自定义悬浮按钮内容，此时 `buttonProps`、`icon` 和 `text` 属性将失效 @novlan1 ([#1851](https://github.com/Tencent/tdesign-mobile-vue/pull/1851))
+- `Input`:
+  - 新增 `extra` 插槽，用于自定义右侧额外的信息 @anlyyao ([#1877](https://github.com/Tencent/tdesign-mobile-vue/pull/1877))
+  - 新增 `validate` 事件，字数超出限制时触发 @Tomaolala ([#1747](https://github.com/Tencent/tdesign-mobile-vue/pull/1747))
+### 🐞 Bug Fixes
+- `Cascader`: 
+  - 选项源支持 `number`类型 @novlan1 ([#1871](https://github.com/Tencent/tdesign-mobile-vue/pull/1871))
+  - 修复三级懒加载问题 @novlan1 ([#1872](https://github.com/Tencent/tdesign-mobile-vue/pull/1872))
+  - 修复开启 `checkStrictly`，懒加载时选中值丢失的问题 @novlan1 ([#1873](https://github.com/Tencent/tdesign-mobile-vue/pull/1873))
+- `PullDownRefresh`: 修复 `Swiper` 内嵌 `PullDownRefresh` 无法左右滑动 @mikasayw ([#1821](https://github.com/Tencent/tdesign-mobile-vue/pull/1821))
+
+
 ## 🌈 1.9.0 `2025-06-04` 
 ### 🚀 Features
 - `ColorPicker`: 新增 `ColorPicker` 组件 @novlan1 ([#1761](https://github.com/Tencent/tdesign-mobile-vue/pull/1761))

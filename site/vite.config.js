@@ -66,7 +66,7 @@ export default ({ mode }) => {
         isCustomElement,
       }),
       createTDesignPlugin(),
-      disableTreeShakingPlugin(['style/']),
+      disableTreeShakingPlugin(['style/', 'toast/']),
     ],
   });
 };

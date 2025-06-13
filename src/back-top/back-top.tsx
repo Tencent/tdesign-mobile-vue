@@ -7,6 +7,7 @@ import props from './props';
 import config from '../config';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
+import getScrollParent from '../_util/getScrollParent';
 
 const { prefix } = config;
 
@@ -16,6 +17,7 @@ export default defineComponent({
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();
     const backTopClass = usePrefixClass('back-top');
+    const root = ref<HTMLElement>();
 
     const target = computed(() => {
       if (!isBrowser) return undefined;
@@ -42,7 +44,7 @@ export default defineComponent({
       if (typeof container === 'function') {
         return container();
       }
-      return document.documentElement;
+      return getScrollParent(root.value, document.documentElement);
     };
 
     onMounted(() => {
@@ -72,7 +74,7 @@ export default defineComponent({
     };
     return () => {
       return (
-        <div class={backTopClasses.value} v-show={visible.value} onClick={handleClick}>
+        <div class={backTopClasses.value} ref={root} v-show={visible.value} onClick={handleClick}>
           {readerIcon()}
           {props.text && <span class={`${backTopClass.value}__text--${props.theme}`}>{props.text}</span>}
         </div>
