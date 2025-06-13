@@ -47,7 +47,7 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -149,7 +149,7 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
     </div>
     
   </div>
-  <!--teleport end-->
+  
   
 </div>
 `;
@@ -245,7 +245,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -361,8 +361,8 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
     </div>
     
   </div>
-  <!--teleport end-->
-  <!--teleport start-->
+  
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -538,7 +538,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
     </div>
     
   </div>
-  <!--teleport end-->
+  
   
 </div>
 `;
@@ -604,7 +604,7 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
       
     </div>
   </div>
-  <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -723,7 +723,7 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
     </div>
     
   </div>
-  <!--teleport end-->
+  
   
 </div>
 `;
@@ -902,7 +902,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <!--teleport start-->
+      
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1018,8 +1018,8 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
         
       </div>
-      <!--teleport end-->
-      <!--teleport start-->
+      
+      
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1195,7 +1195,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
         
       </div>
-      <!--teleport end-->
+      
       
       
       <div
@@ -1240,7 +1240,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <!--teleport start-->
+      
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1342,7 +1342,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
         
       </div>
-      <!--teleport end-->
+      
       
       
     </div>
@@ -1452,7 +1452,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <!--teleport start-->
+      
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1547,7 +1547,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
         
       </div>
-      <!--teleport end-->
+      
       
       
       <div
@@ -1691,7 +1691,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1786,7 +1786,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
     </div>
     
   </div>
-  <!--teleport end-->
+  
   
 </div>
 `;
