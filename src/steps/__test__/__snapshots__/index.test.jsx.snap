@@ -35,7 +35,7 @@ exports[`steps > props > : layout 1`] = `
         class="t-step-item__title t-step-item__title--error t-step-item__title--vertical"
       >
         步骤描述1
-        
+        <!---->
       </div>
       <div
         class="t-step-item__description t-step-item__description--error t-step-item__description--vertical"
@@ -69,7 +69,7 @@ exports[`steps > props > : layout 1`] = `
         class="t-step-item__title t-step-item__title--process t-step-item__title--vertical"
       >
         步骤描述1
-        
+        <!---->
       </div>
       <div
         class="t-step-item__description t-step-item__description--process t-step-item__description--vertical"
