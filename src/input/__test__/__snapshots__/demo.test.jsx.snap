@@ -39,6 +39,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -74,6 +75,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -109,6 +111,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   
 </div>
@@ -150,6 +153,7 @@ exports[`Input > Input bannerVue demo works fine 1`] = `
     </div>
     <!---->
   </div>
+  <!---->
 </div>
 `;
 
@@ -192,6 +196,7 @@ exports[`Input > Input baseVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -227,6 +232,7 @@ exports[`Input > Input baseVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -262,6 +268,7 @@ exports[`Input > Input baseVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   
 </div>
@@ -331,6 +338,7 @@ exports[`Input > Input borderedVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
 </div>
 `;
@@ -375,6 +383,7 @@ exports[`Input > Input customVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
 </div>
 `;
@@ -414,6 +423,7 @@ exports[`Input > Input labelVue demo works fine 1`] = `
     </div>
     <!---->
   </div>
+  <!---->
 </div>
 `;
 
@@ -469,6 +479,7 @@ exports[`Input > Input layoutVue demo works fine 1`] = `
     </div>
     <!---->
   </div>
+  <!---->
 </div>
 `;
 
@@ -515,6 +526,7 @@ exports[`Input > Input maxLengthVue demo works fine 1`] = `
         最大输入10个字符
       </div>
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -554,6 +566,7 @@ exports[`Input > Input maxLengthVue demo works fine 1`] = `
         最大输入10个字符，汉字算两个
       </div>
     </div>
+    <!---->
   </div>
   
 </div>
@@ -629,6 +642,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -664,6 +678,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -699,6 +714,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       
       
@@ -760,6 +776,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             最大输入10个字符
           </div>
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -799,6 +816,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             最大输入10个字符，汉字算两个
           </div>
         </div>
+        <!---->
       </div>
       
       
@@ -873,6 +891,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -903,32 +922,29 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               type="tel"
             />
             <!---->
-            <div
-              class="t-input__wrap--suffix"
-            >
-              
-              <button
-                aria-disabled="false"
-                class="t-button t-button--size-extra-small t-button--base t-button--primary t-button--rectangle"
-                role="button"
-                type="button"
-              >
-                <!---->
-                <span
-                  class="t-button__content"
-                >
-                  
-                   操作按钮 
-                  
-                </span>
-                <!---->
-              </button>
-              
-            </div>
+            <!---->
             <!---->
           </div>
           <!---->
         </div>
+        
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-extra-small t-button--base t-button--primary t-button--rectangle"
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+             操作按钮 
+            
+          </span>
+          <!---->
+        </button>
+        
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -981,6 +997,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       
       
@@ -1055,6 +1072,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -1107,6 +1125,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       
       
@@ -1178,6 +1197,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -1271,6 +1291,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -1324,6 +1345,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -1363,6 +1385,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -1402,6 +1425,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       
       
@@ -1467,6 +1491,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             辅助说明
           </div>
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -1502,6 +1527,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       
       
@@ -1558,6 +1584,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       
     </div>
@@ -1618,6 +1645,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -1653,6 +1681,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -1688,6 +1717,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       
       
@@ -1761,6 +1791,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       
     </div>
@@ -1817,6 +1848,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       
     </div>
@@ -1901,6 +1933,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
+          <!---->
         </div>
       </div>
       
@@ -1962,6 +1995,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
+          <!---->
         </div>
       </div>
       
@@ -2026,6 +2060,7 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -2078,6 +2113,7 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   
 </div>
@@ -2136,6 +2172,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -2229,6 +2266,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -2282,6 +2320,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -2321,6 +2360,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -2360,6 +2400,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   
 </div>
@@ -2408,6 +2449,7 @@ exports[`Input > Input statusVue demo works fine 1`] = `
         辅助说明
       </div>
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -2443,6 +2485,7 @@ exports[`Input > Input statusVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   
 </div>
@@ -2504,6 +2547,7 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -2534,32 +2578,29 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
           type="tel"
         />
         <!---->
-        <div
-          class="t-input__wrap--suffix"
-        >
-          
-          <button
-            aria-disabled="false"
-            class="t-button t-button--size-extra-small t-button--base t-button--primary t-button--rectangle"
-            role="button"
-            type="button"
-          >
-            <!---->
-            <span
-              class="t-button__content"
-            >
-              
-               操作按钮 
-              
-            </span>
-            <!---->
-          </button>
-          
-        </div>
+        <!---->
         <!---->
       </div>
       <!---->
     </div>
+    
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-extra-small t-button--base t-button--primary t-button--rectangle"
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+         操作按钮 
+        
+      </span>
+      <!---->
+    </button>
+    
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -2612,6 +2653,7 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   
 </div>
