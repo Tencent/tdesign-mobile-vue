@@ -40,7 +40,7 @@ function create(options: Partial<TdDialogProps> | string): DialogInstance {
     typeof fn === 'function' && fn(context as any);
   }
 
-  const params = reactive({
+  const params = reactive<TdDialogProps>({
     ...propsObject,
     onConfirm: (context: { e: MouseEvent }) => {
       callFn('onConfirm', context);
@@ -91,7 +91,7 @@ function create(options: Partial<TdDialogProps> | string): DialogInstance {
       } else {
         for (const key in options) {
           if (propsFn.includes(key as DialogPropsFnName)) {
-            props.value[key] = options[key];
+            props.value[key as DialogPropsFnName] = options[key as DialogPropsFnName] as () => void;
           } else {
             params[key] = options[key];
           }

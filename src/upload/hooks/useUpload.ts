@@ -20,7 +20,7 @@ import { getFileList, getFileUrlByFileRaw } from '../../_common/js/upload/utils'
 // @ts-ignore
 export type ValidateParams = Parameters<TdUploadProps['onValidate']>[0];
 
-export default function useUpload(props: TdUploadProps) {
+export default function useUpload(props: TdUploadProps): UploadFile[] {
   const inputRef = ref<HTMLInputElement>();
   const { disabled, autoUpload, isBatchUpload, multiple, files, modelValue, defaultFiles } = toRefs(props);
   // @ts-ignore

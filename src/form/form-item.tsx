@@ -220,12 +220,12 @@ export default defineComponent({
         .filter((item) => item.result !== true)
         .map((item) => {
           Object.keys(item).forEach((key) => {
-            if (!item.message && errorMessages.value[key]) {
-              const compiled = lodashTemplate(errorMessages.value[key]);
+            if (!item.message && errorMessages.value[key as keyof FormErrorMessage]) {
+              const compiled = lodashTemplate(errorMessages.value[key as keyof FormErrorMessage]);
               const name = isString(props.label) ? props.label : props.name;
               item.message = compiled({
                 name,
-                validate: item[key],
+                validate: item[key as keyof AllValidateResult],
               });
             }
           });

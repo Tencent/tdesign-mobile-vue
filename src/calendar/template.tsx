@@ -200,12 +200,15 @@ export default defineComponent({
         lastDate,
       };
     };
-    type CompareDate = Date | number | { year: number; month: number; date: number };
+
+    type DateInfo = { year: number; month: number; date: number };
+    type CompareDate = Date | number | DateInfo;
+
     const isSameDate = (date1: CompareDate, date2: CompareDate) => {
       if (date1 instanceof Date) date1 = getYearMonthDay(date1);
       if (date2 instanceof Date) date2 = getYearMonthDay(date2);
-      const keys = ['year', 'month', 'date'];
-      return keys.every((key) => date1[key] === date2[key]);
+      const keys = ['year', 'month', 'date'] as const;
+      return keys.every((key) => (date1 as DateInfo)[key] === (date2 as DateInfo)[key]);
     };
 
     const months = computed(() => {

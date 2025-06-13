@@ -159,7 +159,7 @@ export default defineComponent({
     });
 
     const onConfirm = (value: string[]) => {
-      const dayObject = value.reduce((map, cur, index) => {
+      const dayObject = value.reduce((map: Partial<Record<TimeModeValues, string>>, cur, index) => {
         const type = meaningColumn.value[index];
         map[type] = cur;
         return map;
