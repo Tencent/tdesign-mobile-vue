@@ -83,6 +83,8 @@ export default defineComponent({
       maxlength: Number(props.maxlength),
       maxcharacter: props.maxcharacter,
       allowInputOverMax: props.allowInputOverMax,
+      status: props.status,
+      onValidate: props.onValidate,
     }));
 
     const { getValueByLimitNumber } = useLengthLimit(limitParams);
