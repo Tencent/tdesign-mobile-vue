@@ -289,7 +289,7 @@ spline: explain
 
 ## 🌈 1.2.1 `2024-05-11` 
 ### 🚀 Features
-- `Indexes`: `sfc` to `tsx`. @liweijie0812 ([#1327](https://github.com/Tencent/tdesign-mobile-vue/pull/1327))
+- `Indexes`: `sfc` to `tsx` @liweijie0812 ([#1327](https://github.com/Tencent/tdesign-mobile-vue/pull/1327))
 - `Cell`: `sfc` to `tsx` @liweijie0812 ([#1326](https://github.com/Tencent/tdesign-mobile-vue/pull/1326))
 - `Switch`: `sfc` 改 `tsx` @liweijie0812 ([#1322](https://github.com/Tencent/tdesign-mobile-vue/pull/1322))
 - `DropdownMenu`: `sfc` 改 `tsx` @dexterBo ([#1332](https://github.com/Tencent/tdesign-mobile-vue/pull/1332))
@@ -443,7 +443,7 @@ spline: explain
 ### 🐞 Bug Fixes
 - `Cascader`: 修复选项卡模式中选中值不更新的问题 @fennghuang ([#1091](https://github.com/Tencent/tdesign-mobile-vue/pull/1091))
 - `SideBar`: 修复按需引入时控制台告警 @anlyyao ([#1092](https://github.com/Tencent/tdesign-mobile-vue/pull/1092))
-- `Grid`: 修复 `boder `边框缺失 @anlyyao ([#1090](https://github.com/Tencent/tdesign-mobile-vue/pull/1090))
+- `Grid`: 修复 `boder` 边框缺失 @anlyyao ([#1090](https://github.com/Tencent/tdesign-mobile-vue/pull/1090))
 - `PullDownRefresh`: 修复与 `SwipeCell` 同用时左滑操作易触发下拉的问题 @fennghuang ([#1080](https://github.com/Tencent/tdesign-mobile-vue/pull/1080))
 - `Message`: 改用`min-height`自适应文本高度 @anlyyao ([#1596](https://github.com/Tencent/tdesign-common/pull/1596))
 - `Input`: 新增`CSS Variables: --td-input-label-width` @anlyyao ([#1588](https://github.com/Tencent/tdesign-common/pull/1588))
@@ -459,10 +459,10 @@ spline: explain
 - `ImageViewer`: 修复单图时预览错误 @LoopZhou ([#1063](https://github.com/Tencent/tdesign-mobile-vue/pull/1063))
 - `CellGroup`: 修复组件层 `class` 属性无效和控制台告警 @anlyyao ([#1069](https://github.com/Tencent/tdesign-mobile-vue/pull/1069))
 - `Swiper`: 修复 `click` 事件无效的问题 @anlyyao ([#1064](https://github.com/Tencent/tdesign-mobile-vue/pull/1064))
-- `Swiper`: 修复条状（dots-bar)示例中高度错误问题 @LoopZhou ([#1067](https://github.com/Tencent/tdesign-mobile-vue/pull/1067))
 - `Picker`: 修复 `v-model/modelValue` 为空时组件报错 @anlyyao ([#1071](https://github.com/Tencent/tdesign-mobile-vue/pull/1071))
 - `DateTimePicker`:  修复 `onConfirm` 为空时控制台报错 @LoopZhou ([#1061](https://github.com/Tencent/tdesign-mobile-vue/pull/1061))
- 
+### 🚧 Others
+- `Swiper`: 修复条状（dots-bar） 示例中高度错误问题 @LoopZhou ([#1067](https://github.com/Tencent/tdesign-mobile-vue/pull/1067))
 
 ## 🌈 1.0.2 `2023-08-22` 
 ### 🚀 Features
