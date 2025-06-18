@@ -481,7 +481,7 @@ spline: explain
 - `upload`:  修复`useUpload`导入异常 @linesoft2 ([#1038](https://github.com/Tencent/tdesign-mobile-vue/pull/1038)) 
 
 ## 🌈 1.0.0 `2023-08-16` 
-### ❗ Breaking Changes
+### 🚨 Breaking Changes
 - `Cell`: 调整 `CellGroup` 的 `DOM` 结构 @anlyyao ([#1010](https://github.com/Tencent/tdesign-mobile-vue/pull/1010))
 - `Rate`: 移除 variant 废弃属性 @LeeJim ([#1005](https://github.com/Tencent/tdesign-mobile-vue/pull/1005))
 - `Icon`: 新增 `960` 个图标；调整图标命名 `photo` 为 `camera`，`books` 为 `bookmark`，`stop-cirle-1` 为 `stop-circle-stroke`；移除 `money-circle` 图标，具体请查看图标页面。 @anlyyao ([#1024](https://github.com/Tencent/tdesign-mobile-vue/pull/1024))
@@ -514,7 +514,7 @@ spline: explain
 - `Swiper`: 修复 `change` 事件参数错误 @anlyyao ([#996](https://github.com/Tencent/tdesign-mobile-vue/pull/996))
 
 ## 🌈 1.0.0-rc.5 `2023-07-25` 
-### ❗ Breaking Changes
+### 🚨 Breaking Changes
 - `Textarea`: `maxLength`属性默认值变更为 `-1` @anlyyao ([#977](https://github.com/Tencent/tdesign-mobile-vue/pull/977))
 ### 🐞 Bug Fixes
 - `Popup`: 修复多个 `popup` 时 `preventScrollThrough` 属性无效 @anlyyao ([#983](https://github.com/Tencent/tdesign-mobile-vue/pull/983))
@@ -550,7 +550,7 @@ spline: explain
 
 
 ## 🌈 1.0.0-rc.2 `2023-07-11` 
-### ❗ Breaking Changes
+### 🚨 Breaking Changes
 - `NoticeBar`: `prefixIcon` 属性默认值变更为 `true` @anlyyao ([#929](https://github.com/Tencent/tdesign-mobile-vue/pull/929))
 ### 🚀 Features
 - `Cascader`: `pick` 事件新增 `level` 参数 @anlyyao ([#940](https://github.com/Tencent/tdesign-mobile-vue/pull/940))
@@ -565,7 +565,7 @@ spline: explain
 
 
 ## 🌈 1.0.0-rc.1 `2023-07-04` 
-### ❗ Breaking Changes
+### 🚨 Breaking Changes
 - `Loading`:  移除`progress` 属性 @anlyyao ([#918](https://github.com/Tencent/tdesign-mobile-vue/pull/918))
 ### 🚀 Features
 - `Popover`: 新增 `closeOnClickOutside` 属性 @anlyyao ([#916](https://github.com/Tencent/tdesign-mobile-vue/pull/916))
@@ -580,7 +580,7 @@ spline: explain
 - `Docs`:  新增支持英文站点 @anlyyao ([#914](https://github.com/Tencent/tdesign-mobile-vue/pull/914))
 
 ## 🌈 1.0.0-rc `2023-06-27` 
-### ❗ Breaking Changes
+### 🚨 Breaking Changes
 - `Divider`: 调整 DOM，移除 lineColor 废弃属性 @LeeJim ([#896](https://github.com/Tencent/tdesign-mobile-vue/pull/896))
 - `Tag`: 移除 `CheckTag` 废弃属性 closable @LeeJim ([#899](https://github.com/Tencent/tdesign-mobile-vue/pull/899))
 
