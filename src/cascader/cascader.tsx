@@ -123,6 +123,10 @@ export default defineComponent({
         childrenInfo.value = value;
         childrenInfo.level = level;
       } else {
+        items.length = level + 1;
+        steps.length = level + 1;
+        stepIndex.value = level;
+
         setCascaderValue(
           lodashGet(item, keys?.value ?? 'value'),
           items.map((item, index) => toRaw(item?.[selectedIndexes[index]])),
