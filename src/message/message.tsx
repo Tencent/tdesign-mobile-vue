@@ -6,6 +6,7 @@ import Link from '../link';
 import props from './props';
 import { MessageMarquee, TdMessageProps } from './type';
 import config from '../config';
+import { reconvertUnit } from '../shared';
 import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
@@ -18,6 +19,7 @@ const iconDefault = {
   error: h(InfoCircleFilledIcon),
 };
 const closeBtnDefault = h(CloseIcon);
+let messageIndex = -1;
 
 export default defineComponent({
   name: `${prefix}-message`,
@@ -26,6 +28,8 @@ export default defineComponent({
     const messageClass = usePrefixClass('message');
     const renderTNodeJSX = useTNodeJSX();
     const renderContent = useContent();
+    const messageRef = ref<HTMLElement>(null);
+    const rect = ref<DOMRect>();
 
     // 初始化动画相关数据
     const state = reactive({
@@ -55,14 +59,26 @@ export default defineComponent({
       [`${messageClass.value}__text-nowrap`]: props.marquee,
     }));
 
+    const getGap = () => {
+      if (props.single) {
+        return 0;
+      }
+      const gap = typeof props.gap === 'boolean' ? 12 : reconvertUnit(props.gap);
+
+      return (gap + (rect.value?.height || 0)) * messageIndex;
+    };
+
     const changeNumToStr = (arr: TdMessageProps['offset'] = []) => {
-      return arr.map(function (item) {
-        return typeof item === 'number' ? `${item}px` : item;
+      return arr.map(function (item, index) {
+        const value = reconvertUnit(item);
+        return index === 0 ? `${value + getGap()}px` : `${value}px`;
       });
     };
 
     const getMessageStylesOffset = (offset: TdMessageProps['offset']) => {
+      rect.value = messageRef.value?.getBoundingClientRect() as DOMRect;
       const arr = changeNumToStr(offset);
+
       return {
         top: arr[0],
         right: arr[1],
@@ -197,10 +213,23 @@ export default defineComponent({
       });
     });
 
+    const updateMessageIndex = (isAdd = true) => {
+      if (props.single) return;
+      if (isAdd) {
+        messageIndex += 1;
+      } else {
+        messageIndex -= 1;
+      }
+    };
+
     watch(
       () => currentVisible.value,
       (val) => {
-        if (val === false) return;
+        if (val === false) {
+          updateMessageIndex(false);
+          return;
+        }
+        updateMessageIndex(true);
         setVisible(true);
         handleDuration();
         nextTick(handleScrolling);
@@ -215,7 +244,7 @@ export default defineComponent({
       return (
         <Transition name="message">
           {currentVisible.value && (
-            <div ref="root" class={rootClasses.value} style={rootStyles.value}>
+            <div ref={messageRef} class={rootClasses.value} style={rootStyles.value}>
               {prefixIconContent && <div class={`${messageClass.value}__icon--left`}>{prefixIconContent}</div>}
               <div ref={textWrapDOM} class={textWrapClasses.value}>
                 <div
