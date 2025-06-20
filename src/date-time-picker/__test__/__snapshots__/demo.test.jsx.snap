@@ -32,7 +32,7 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
     </div>
     <!---->
   </div>
-  <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -568,7 +568,7 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
     </div>
     
   </div>
-  <!--teleport end-->
+  
   
 </div>
 `;
@@ -605,7 +605,7 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
     </div>
     <!---->
   </div>
-  <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1036,7 +1036,7 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
     </div>
     
   </div>
-  <!--teleport end-->
+  
   
 </div>
 `;
@@ -1073,7 +1073,7 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
     </div>
     <!---->
   </div>
-  <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -2650,7 +2650,7 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
     </div>
     
   </div>
-  <!--teleport end-->
+  
   
 </div>
 `;
@@ -2718,7 +2718,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         </div>
         <!---->
       </div>
-      <!--teleport start-->
+      
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -3254,7 +3254,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         </div>
         
       </div>
-      <!--teleport end-->
+      
       
       
       <div
@@ -3284,7 +3284,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         </div>
         <!---->
       </div>
-      <!--teleport start-->
+      
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -3592,7 +3592,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         </div>
         
       </div>
-      <!--teleport end-->
+      
       
       
       <div
@@ -3622,7 +3622,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         </div>
         <!---->
       </div>
-      <!--teleport start-->
+      
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -4287,7 +4287,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         </div>
         
       </div>
-      <!--teleport end-->
+      
       
       
       <div
@@ -4317,7 +4317,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         </div>
         <!---->
       </div>
-      <!--teleport start-->
+      
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -4576,7 +4576,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         </div>
         
       </div>
-      <!--teleport end-->
+      
       
       
     </div>
@@ -4630,7 +4630,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         </div>
         <!---->
       </div>
-      <!--teleport start-->
+      
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -5061,7 +5061,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         </div>
         
       </div>
-      <!--teleport end-->
+      
       
       
     </div>
@@ -5101,7 +5101,7 @@ exports[`DateTimePicker > DateTimePicker timeVue demo works fine 1`] = `
     </div>
     <!---->
   </div>
-  <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -5766,7 +5766,7 @@ exports[`DateTimePicker > DateTimePicker timeVue demo works fine 1`] = `
     </div>
     
   </div>
-  <!--teleport end-->
+  
   
 </div>
 `;
@@ -5803,7 +5803,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
     </div>
     <!---->
   </div>
-  <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -6111,7 +6111,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
     </div>
     
   </div>
-  <!--teleport end-->
+  
   
 </div>
 `;
