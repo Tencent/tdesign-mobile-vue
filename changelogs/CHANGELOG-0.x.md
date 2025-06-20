@@ -6,7 +6,7 @@ spline: explain
 ---
 
 ## 🌈 0.26.0 `2023-06-20` 
-### ❗ Breaking Changes
+### 🚨 Breaking Changes
 - `NavBar`: 调整布局方式 @LeeJim ([#871](https://github.com/Tencent/tdesign-mobile-vue/pull/871))
 
 ### 🚀 Features
@@ -56,7 +56,7 @@ spline: explain
 
 ## 🌈 0.25.0 `2023-06-13` 
 
-### ❗ BREAKING CHANGES
+### 🚨 Breaking Changes
 - `Swiper`: 调整 DOM @LeeJim ([#845](https://github.com/Tencent/tdesign-mobile-vue/pull/845))
 - `Swiper`: 属性 `paginationPosition` 移至属性 `navigation` 下 @LeeJim ([#845](https://github.com/Tencent/tdesign-mobile-vue/pull/845))
 - `Swiper`: 属性 `navigation` 内部值发生变更 @LeeJim ([#845](https://github.com/Tencent/tdesign-mobile-vue/pull/845))
@@ -110,7 +110,7 @@ spline: explain
 - `TabBar`: 补充测试用例 @LeeJim ([#860](https://github.com/Tencent/tdesign-mobile-vue/pull/860))
 
 ## 🌈 0.24.0 `2023-06-06` 
-### ❗ BREAKING CHANGES
+### 🚨 Breaking Changes
 - `Fab`: 调整DOM @anlyyao ([#773](https://github.com/Tencent/tdesign-mobile-vue/pull/773))
 
 ### 🐞 Bug Fixes
@@ -160,7 +160,7 @@ spline: explain
 - `Tag`: 补充测试用例 @Resuragam ([#752](https://github.com/Tencent/tdesign-mobile-vue/pull/752))
 
 ## 🌈 0.23.0 `2023-05-30` 
-### ❗ BREAKING CHANGES
+### 🚨 Breaking Changes
 - `ActionSheet`: 移除 `type` 属性 @brianzhang ([#637](https://github.com/Tencent/tdesign-mobile-vue/pull/637))
 - `ActionSheet`:  `close` 事件参数变更 @brianzhang ([#637](https://github.com/Tencent/tdesign-mobile-vue/pull/637))
 - `Indexes`: 调整 DOM 结构 @yaogengzhu ([#680](https://github.com/Tencent/tdesign-mobile-vue/pull/680))
@@ -190,7 +190,7 @@ spline: explain
 - `Progress`: 补充测试用例 @anlyyao ([#741](https://github.com/Tencent/tdesign-mobile-vue/pull/741))
 
 ## 🌈 0.22.0 `2023-05-23` 
-### ❗ BREAKING CHANGES
+### 🚨 Breaking Changes
 - `Rate`: 调整 DOM 结构 @fengchunqi ([#642](https://github.com/Tencent/tdesign-mobile-vue/pull/642))
 - `Rate`: 移除 `clearable`、`variant` 属性 @fengchunqi ([#642](https://github.com/Tencent/tdesign-mobile-vue/pull/642))
 - `Rate`: `size` 属性默认值变更为 `24px` @fengchunqi ([#642](https://github.com/Tencent/tdesign-mobile-vue/pull/642))
@@ -262,7 +262,7 @@ spline: explain
 
 
 ## 🌈 0.20.0 `2023-05-09` 
-### ❗ BREAKING CHANGES
+### 🚨 Breaking Changes
 - `Avatar`: 调整 DOM @ccccpj ([#631](https://github.com/Tencent/tdesign-mobile-vue/pull/631))
 - `Avatar`: `size` 属性默认值变更为 `medium` @ccccpj ([#631](https://github.com/Tencent/tdesign-mobile-vue/pull/631))
 - `TabBar`: 调整 DOM @jarmywang ([#633](https://github.com/Tencent/tdesign-mobile-vue/pull/633))
@@ -324,7 +324,7 @@ spline: explain
 
 
 ## 🌈 0.18.0 `2023-04-17` 
-### ❗ Breaking Changes
+### 🚨 Breaking Changes
 - `Cascader`: 移除cancel、click-tab 事件 @anlyyao ([#533](https://github.com/Tencent/tdesign-mobile-vue/pull/533))
 - `Badge`: 调整 DOM 结构 @jarmywang ([#576](https://github.com/Tencent/tdesign-mobile-vue/pull/576))
 - `Grid`: 调整 DOM，优化视觉 @LeeJim ([#584](https://github.com/Tencent/tdesign-mobile-vue/pull/584))
@@ -351,7 +351,7 @@ spline: explain
 - `Cell`: 修复 bordered 无效 @anlyyao ([#591](https://github.com/Tencent/tdesign-mobile-vue/pull/591))
 
 ## 🌈 0.17.0 `2023-04-07` 
-### ❗ BREAKING CHANGES
+### 🚨 Breaking Changes
 - `CheckBox`: 属性 align 更名为 placement @jarmywang ([#519](https://github.com/Tencent/tdesign-mobile-vue/pull/519))
 - `CheckBox`: 属性 icon 的枚举值变更 @jarmywang ([#519](https://github.com/Tencent/tdesign-mobile-vue/pull/519))
 - `Picker`: 属性 confirmBtn 和 cancelBtn 取消 object 类型，不再使用 button 渲染 @LeeJim ([#539](https://github.com/Tencent/tdesign-mobile-vue/pull/539))
@@ -392,7 +392,7 @@ spline: explain
 
 
 ## 🌈 0.16.0 `2023-03-27` 
-### ❗ BREAKING CHANGES
+### 🚨 Breaking Changes
 - `Loading`: 属性 size 默认值改成 20px @LeeJim ([#528](https://github.com/Tencent/tdesign-mobile-vue/pull/528))
 - `Loading`: 属性 theme 移除 bar、error 类型 @LeeJim ([#528](https://github.com/Tencent/tdesign-mobile-vue/pull/528))
 - `Cell`: 优化样式，调整 DOM @LeeJim ([#529](https://github.com/Tencent/tdesign-mobile-vue/pull/529))
@@ -405,7 +405,7 @@ spline: explain
 - `CellGroup`: 新增 theme 属性，新增支持 card 风格 @LeeJim ([#529](https://github.com/Tencent/tdesign-mobile-vue/pull/529))
 
 ## 🌈 0.15.0 `2023-03-20` 
-### ❗ BREAKING CHANGES
+### 🚨 Breaking Changes
 - `Stepper`: 属性 theme 的 gray 主题更名为 filled，并新增 outline 主题 @anlyyao ([#518](https://github.com/Tencent/tdesign-mobile-vue/pull/518))
 - `Radio`: 属性 align 更名为 placement @LeeJim ([#517](https://github.com/Tencent/tdesign-mobile-vue/pull/517))
 - `Radio`: 属性 icon 的枚举值变更、DOM 变更 @LeeJim ([#517](https://github.com/Tencent/tdesign-mobile-vue/pull/517))
@@ -438,7 +438,7 @@ spline: explain
 - `Loading`: 更新示例代码 @lockiechen ([#481](https://github.com/Tencent/tdesign-mobile-vue/pull/481))
 
 ## 🌈 0.14.0 `2022-11-07` 
-### ❗ Breaking Changes
+### 🚨 Breaking Changes
 - `NavBar`: 重构组件，支持更完整的 props 和 event @TingShine ([#391](https://github.com/Tencent/tdesign-mobile-vue/pull/391))
 ### 🐞 Bug Fixes
 - `Calendar`: 修复 confirmBtn 属性传递 `string` 类型时渲染错误 @anlyyao ([#454](https://github.com/Tencent/tdesign-mobile-vue/pull/454))
