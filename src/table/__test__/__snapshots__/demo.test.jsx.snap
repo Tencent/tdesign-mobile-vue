@@ -1911,7 +1911,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 class="t-table__body"
               >
                 
-                <tr>
+                <tr
+                  class="t-table__row--fixed-top"
+                >
                   
                   <td
                     class=""
@@ -1945,7 +1947,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class="t-table__row--fixed-top"
+                >
                   
                   <td
                     class=""
@@ -1979,7 +1983,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -2013,7 +2019,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -2047,7 +2055,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -2081,7 +2091,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -2115,7 +2127,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -2149,7 +2163,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -2183,7 +2199,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -2217,7 +2235,369 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class=""
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class=""
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class=""
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class=""
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class=""
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class=""
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class="t-table__row--without-border-bottom"
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class="t-table__row--fixed-bottom t-table__row--fixed-bottom-first"
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class="t-table__row--fixed-bottom"
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class="t-table__row--fixed-bottom"
+                >
                   
                   <td
                     class=""
@@ -3074,7 +3454,9 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
           class="t-table__body"
         >
           
-          <tr>
+          <tr
+            class="t-table__row--fixed-top"
+          >
             
             <td
               class=""
@@ -3108,7 +3490,9 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class="t-table__row--fixed-top"
+          >
             
             <td
               class=""
@@ -3142,7 +3526,9 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -3176,7 +3562,9 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -3210,7 +3598,9 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -3244,7 +3634,9 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -3278,7 +3670,9 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -3312,7 +3706,9 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -3346,7 +3742,9 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -3380,7 +3778,369 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class=""
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class=""
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class=""
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class=""
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class=""
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class=""
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class="t-table__row--without-border-bottom"
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class="t-table__row--fixed-bottom t-table__row--fixed-bottom-first"
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class="t-table__row--fixed-bottom"
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class="t-table__row--fixed-bottom"
+          >
             
             <td
               class=""
