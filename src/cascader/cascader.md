@@ -8,7 +8,9 @@
 -- | -- | -- | -- | --
 checkStrictly | Boolean | false | 父子节点选中状态不再关联，可各自选中或取消 | N
 closeBtn | Boolean / Slot / Function | true | 关闭按钮。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-keys | Object | - | 用来定义 value / label 在 `options` 中对应的字段别名。TS 类型：`CascaderKeysType` `type CascaderKeysType = KeysType`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts) | N
+header | Slot / Function | - | 头部。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+keys | Object | - | 用来定义 value / label / children / disabled 在 `options` 中对应的字段别名。TS 类型：`CascaderKeysType` `type CascaderKeysType = TreeKeysType`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts) | N
+middleContent | Slot / Function | - | 中间内容。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 options | Array | [] | 可选项数据源。TS 类型：`Array<CascaderOption>` | N
 placeholder | String / Slot / Function | '选择选项' | 未选中时的提示文案。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 subTitles | Array | [] | 每级展示的次标题。TS 类型：`Array<string>` | N
@@ -19,7 +21,7 @@ defaultValue | String / Number | - | 选项值。非受控属性 | N
 visible | Boolean | false | 是否展示 | N
 onChange | Function |  | TS 类型：`(value: string \| number, selectedOptions: CascaderOption[]) => void`<br/>值发生变更时触发 | N
 onClose | Function |  | TS 类型：`(trigger: CascaderTriggerSource) => void`<br/>关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts)。<br/>`type CascaderTriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/> | N
-onPick | Function |  | TS 类型：`(context: { level: number, value: string \| number, index: number }) => void`<br/>选择后触发 | N
+onPick | Function |  | TS 类型：`(context: { value: string \| number, label: string, index: number, level: number }) => void`<br/>选择后触发 | N
 
 ### Cascader Events
 
@@ -27,7 +29,7 @@ onPick | Function |  | TS 类型：`(context: { level: number, value: string \| 
 -- | -- | --
 change | `(value: string \| number, selectedOptions: CascaderOption[])` | 值发生变更时触发
 close | `(trigger: CascaderTriggerSource)` | 关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts)。<br/>`type CascaderTriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/>
-pick | `(context: { level: number, value: string \| number, index: number })` | 选择后触发
+pick | `(context: { value: string \| number, label: string, index: number, level: number })` | 选择后触发
 
 ### CSS Variables
 

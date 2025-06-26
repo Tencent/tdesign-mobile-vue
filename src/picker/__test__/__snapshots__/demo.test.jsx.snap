@@ -6,7 +6,7 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -27,7 +27,7 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
     </div>
     <!---->
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -40,7 +40,7 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
             fill="currentColor"
           />
         </svg>
@@ -145,6 +145,7 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
           class="t-picker__indicator"
         />
       </div>
+      <!---->
     </div>
     
   </div>
@@ -159,8 +160,8 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
-    data-v-049f57a8=""
+    class="t-cell"
+    data-v-f81bbd1f=""
   >
     <div
       class="t-cell__left"
@@ -181,7 +182,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
     </div>
     <!---->
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -194,7 +195,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
             fill="currentColor"
           />
         </svg>
@@ -202,8 +203,8 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle"
-    data-v-049f57a8=""
+    class="t-cell"
+    data-v-f81bbd1f=""
   >
     <div
       class="t-cell__left"
@@ -224,7 +225,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
     </div>
     <!---->
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -237,7 +238,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
             fill="currentColor"
           />
         </svg>
@@ -259,7 +260,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
     
     <div
       class="t-picker"
-      data-v-049f57a8=""
+      data-v-f81bbd1f=""
     >
       <div
         class="t-picker__toolbar"
@@ -301,7 +302,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
               
             </li>
             <li
-              class="t-picker-item__item"
+              class="t-picker-item__item t-picker-item__item--disabled"
             >
               
               上海市
@@ -356,6 +357,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
           class="t-picker__indicator"
         />
       </div>
+      <!---->
     </div>
     
   </div>
@@ -375,7 +377,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
     
     <div
       class="t-picker"
-      data-v-049f57a8=""
+      data-v-f81bbd1f=""
     >
       <div
         class="t-picker__toolbar"
@@ -532,6 +534,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
           class="t-picker__indicator"
         />
       </div>
+      <!---->
     </div>
     
   </div>
@@ -553,7 +556,7 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
     >
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -578,7 +581,7 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
           战士,狂铁
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -591,7 +594,7 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -716,6 +719,7 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
           class="t-picker__indicator"
         />
       </div>
+      <!---->
     </div>
     
   </div>
@@ -730,7 +734,7 @@ exports[`Picker > Picker customHeightVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -751,7 +755,7 @@ exports[`Picker > Picker customHeightVue demo works fine 1`] = `
     </div>
     <!---->
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -764,7 +768,7 @@ exports[`Picker > Picker customHeightVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
             fill="currentColor"
           />
         </svg>
@@ -813,8 +817,8 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
-        data-v-049f57a8=""
+        class="t-cell"
+        data-v-f81bbd1f=""
       >
         <div
           class="t-cell__left"
@@ -835,7 +839,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -848,7 +852,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -856,8 +860,8 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-cell t-cell--middle"
-        data-v-049f57a8=""
+        class="t-cell"
+        data-v-f81bbd1f=""
       >
         <div
           class="t-cell__left"
@@ -878,7 +882,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -891,7 +895,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -913,7 +917,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         
         <div
           class="t-picker"
-          data-v-049f57a8=""
+          data-v-f81bbd1f=""
         >
           <div
             class="t-picker__toolbar"
@@ -955,7 +959,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
                   
                 </li>
                 <li
-                  class="t-picker-item__item"
+                  class="t-picker-item__item t-picker-item__item--disabled"
                 >
                   
                   上海市
@@ -1010,6 +1014,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               class="t-picker__indicator"
             />
           </div>
+          <!---->
         </div>
         
       </div>
@@ -1029,7 +1034,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         
         <div
           class="t-picker"
-          data-v-049f57a8=""
+          data-v-f81bbd1f=""
         >
           <div
             class="t-picker__toolbar"
@@ -1186,6 +1191,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               class="t-picker__indicator"
             />
           </div>
+          <!---->
         </div>
         
       </div>
@@ -1193,7 +1199,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -1214,7 +1220,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -1227,7 +1233,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -1332,6 +1338,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               class="t-picker__indicator"
             />
           </div>
+          <!---->
         </div>
         
       </div>
@@ -1360,8 +1367,8 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       <!-- &lt;CasCadeDemo /&gt; -->
       
       <div
-        class="t-cell t-cell--middle"
-        data-v-7ee35211=""
+        class="t-cell"
+        data-v-08f016c6=""
       >
         <div
           class="t-cell__left"
@@ -1382,7 +1389,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -1395,7 +1402,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -1403,8 +1410,8 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-cell t-cell--middle"
-        data-v-7ee35211=""
+        class="t-cell"
+        data-v-08f016c6=""
       >
         <div
           class="t-cell__left"
@@ -1425,7 +1432,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -1438,7 +1445,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -1460,7 +1467,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         
         <div
           class="t-picker"
-          data-v-7ee35211=""
+          data-v-08f016c6=""
         >
           <div
             class="t-picker__toolbar"
@@ -1536,6 +1543,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               class="t-picker__indicator"
             />
           </div>
+          <!---->
         </div>
         
       </div>
@@ -1543,7 +1551,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -1564,7 +1572,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
         <!---->
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -1577,7 +1585,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -1598,8 +1606,8 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
-    data-v-7ee35211=""
+    class="t-cell"
+    data-v-08f016c6=""
   >
     <div
       class="t-cell__left"
@@ -1620,7 +1628,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
     </div>
     <!---->
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -1633,7 +1641,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
             fill="currentColor"
           />
         </svg>
@@ -1641,8 +1649,8 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle"
-    data-v-7ee35211=""
+    class="t-cell"
+    data-v-08f016c6=""
   >
     <div
       class="t-cell__left"
@@ -1663,7 +1671,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
     </div>
     <!---->
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -1676,7 +1684,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
             fill="currentColor"
           />
         </svg>
@@ -1698,7 +1706,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
     
     <div
       class="t-picker"
-      data-v-7ee35211=""
+      data-v-08f016c6=""
     >
       <div
         class="t-picker__toolbar"
@@ -1774,6 +1782,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
           class="t-picker__indicator"
         />
       </div>
+      <!---->
     </div>
     
   </div>

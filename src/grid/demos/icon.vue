@@ -7,34 +7,21 @@
         </div>
       </template>
     </t-grid-item>
-    <t-grid-item text="收藏">
-      <template #image>
-        <div class="icon-wrapper">
-          <StarIcon size="24" />
-        </div>
-      </template>
-    </t-grid-item>
-    <t-grid-item text="保存">
-      <template #image>
-        <div class="icon-wrapper">
-          <DownloadIcon size="24" />
-        </div>
-      </template>
-    </t-grid-item>
-    <t-grid-item text="编辑">
-      <template #image>
-        <div class="icon-wrapper">
-          <Edit1Icon size="24" />
-        </div>
-      </template>
-    </t-grid-item>
+    <t-grid-item text="收藏" :icon="starIcon" />
+    <t-grid-item text="保存" :icon="downloadIcon" />
+    <t-grid-item text="编辑" :icon="edit1Icon" />
   </t-grid>
 </template>
 
 <script lang="ts" setup>
+import { h } from 'vue';
 import { ShareIcon, StarIcon, DownloadIcon, Edit1Icon } from 'tdesign-icons-vue-next';
 
 const imgUrl = 'https://tdesign.gtimg.com/mobile/demos/example1.png';
+
+const starIcon = () => h(StarIcon, { size: '24px' });
+const downloadIcon = () => h(DownloadIcon, { size: '24px' });
+const edit1Icon = () => h(Edit1Icon, { size: '24px' });
 </script>
 <style scoped lang="less">
 .icon-wrapper {

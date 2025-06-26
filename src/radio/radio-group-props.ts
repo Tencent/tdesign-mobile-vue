@@ -22,7 +22,7 @@ export default {
     type: [String, Array] as PropType<TdRadioGroupProps['icon']>,
     default: 'circle',
   },
-  /** 用来定义 value / label 在 `options` 中对应的字段别名 */
+  /** 用来定义 value / label / disabled 在 `options` 中对应的字段别名 */
   keys: {
     type: Object as PropType<TdRadioGroupProps['keys']>,
   },

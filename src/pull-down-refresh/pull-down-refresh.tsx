@@ -1,11 +1,12 @@
 import { defineComponent, onUnmounted, ref, toRefs, computed, watch, onMounted } from 'vue';
 import { useElementSize } from '@vueuse/core';
-import debounce from 'lodash/debounce';
+import { debounce } from 'lodash-es';
 import PullDownRefreshProps from './props';
-import { useVModel, convertUnit, reconvertUnit } from '../shared';
+import { convertUnit, reconvertUnit } from '../shared';
 import { preventDefault } from '../shared/dom';
 import config from '../config';
 import TLoading from '../loading';
+import useVModel from '../hooks/useVModel';
 import { useContent } from '../hooks/tnode';
 import { useTouch, isReachTop, easeDistance } from './useTouch';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
@@ -89,9 +90,12 @@ export default defineComponent({
       }
     });
 
+    // 统一判断是否可以滑动
+    const isTouchable = () => loading.value || props.disabled;
+
     const onTouchStart = (e: TouchEvent) => {
-      e.stopPropagation();
-      if (!isReachTop(e) || loading.value) return;
+      if (isTouchable()) return;
+      if (!isReachTop(e)) return;
 
       clearTimeout(timer);
       timer = null;
@@ -101,8 +105,9 @@ export default defineComponent({
     };
 
     const onTouchMove = (e: TouchEvent) => {
-      e.stopPropagation();
-      if (!isReachTop(e) || loading.value) return;
+      if (isTouchable()) return;
+      if (!isReachTop(e)) return;
+
       touch.move(e);
 
       const { diffY, diffX } = touch;
@@ -133,8 +138,8 @@ export default defineComponent({
     };
 
     const onTouchEnd = (e: TouchEvent) => {
-      e.stopPropagation();
-      if (!isReachTop(e) || loading.value) return;
+      if (isTouchable()) return;
+      if (!isReachTop(e)) return;
 
       if (status.value === 'loosing') {
         distance.value = loadingBarHeight.value;

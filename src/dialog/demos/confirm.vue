@@ -26,12 +26,29 @@
     @close="onClose"
   >
   </t-dialog>
+
+  <div class="btn-gap"></div>
+
+  <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog7 = true">确认类-纯标题</t-button>
+
+  <t-dialog
+    v-model:visible="isShowDialog7"
+    close-on-overlay-click
+    title="对话框标题"
+    cancel-btn="取消"
+    :confirm-btn="{ content: '确定', variant: 'base', theme: 'light' }"
+    @confirm="onConfirm"
+    @cancel="onCancel"
+    @close="onClose"
+  >
+  </t-dialog>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
 
 const isShowDialog5 = ref(false);
 const isShowDialog6 = ref(false);
+const isShowDialog7 = ref(false);
 
 const onConfirm = () => {
   console.log('dialog:confirm');

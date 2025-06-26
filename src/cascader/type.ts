@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, TreeOptionData, KeysType } from '../common';
+import { TNode, TreeOptionData, TreeKeysType } from '../common';
 
 export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOptionData> {
   /**
@@ -18,9 +18,17 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   closeBtn?: boolean | TNode;
   /**
-   * 用来定义 value / label 在 `options` 中对应的字段别名
+   * 头部
+   */
+  header?: TNode;
+  /**
+   * 用来定义 value / label / children / disabled 在 `options` 中对应的字段别名
    */
   keys?: CascaderKeysType;
+  /**
+   * 中间内容
+   */
+  middleContent?: TNode;
   /**
    * 可选项数据源
    * @default []
@@ -73,9 +81,9 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
   /**
    * 选择后触发
    */
-  onPick?: (context: { level: number; value: string | number; index: number }) => void;
+  onPick?: (context: { value: string | number; label: string; index: number; level: number }) => void;
 }
 
-export type CascaderKeysType = KeysType;
+export type CascaderKeysType = TreeKeysType;
 
 export type CascaderTriggerSource = 'overlay' | 'close-btn' | 'finish';

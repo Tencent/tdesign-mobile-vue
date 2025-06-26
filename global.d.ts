@@ -16,13 +16,14 @@ declare module 'vue' {
     TCascader: typeof import('tdesign-mobile-vue')['Cascader'];
     TCell: typeof import('tdesign-mobile-vue')['Cell'];
     TCellGroup: typeof import('tdesign-mobile-vue')['CellGroup'];
-    TCheckTag: typeof import('tdesign-mobile-vue')['CheckTag'];
     TCheckbox: typeof import('tdesign-mobile-vue')['Checkbox'];
     TCheckboxGroup: typeof import('tdesign-mobile-vue')['CheckboxGroup'];
+    TCheckTag: typeof import('tdesign-mobile-vue')['CheckTag'];
     TCol: typeof import('tdesign-mobile-vue')['Col'];
     TCollapse: typeof import('tdesign-mobile-vue')['Collapse'];
     TCollapsePanel: typeof import('tdesign-mobile-vue')['CollapsePanel'];
     TColorPicker: typeof import('tdesign-mobile-vue')['ColorPicker'];
+    TConfigProvider: typeof import('tdesign-mobile-vue')['ConfigProvider'];
     TCountDown: typeof import('tdesign-mobile-vue')['CountDown'];
     TDateTimePicker: typeof import('tdesign-mobile-vue')['DateTimePicker'];
     TDialog: typeof import('tdesign-mobile-vue')['Dialog'];
@@ -38,8 +39,9 @@ declare module 'vue' {
     TGrid: typeof import('tdesign-mobile-vue')['Grid'];
     TGridItem: typeof import('tdesign-mobile-vue')['GridItem'];
     TGuide: typeof import('tdesign-mobile-vue')['Guide'];
-    TIconSVG: typeof import('tdesign-mobile-vue')['IconSVG'];
-    TIconfont: typeof import('tdesign-mobile-vue')['Iconfont'];
+    TIcon: typeof import('tdesign-mobile-vue')['Icon'];
+    Iconfont: typeof import('tdesign-icons-vue-next')['Iconfont'];
+    Icon: typeof import('tdesign-icons-vue-next')['Icon'];
     TImage: typeof import('tdesign-mobile-vue')['Image'];
     TImageViewer: typeof import('tdesign-mobile-vue')['ImageViewer'];
     TIndexes: typeof import('tdesign-mobile-vue')['Indexes'];
@@ -61,6 +63,7 @@ declare module 'vue' {
     TProgress: typeof import('tdesign-mobile-vue')['Progress'];
     TPullDownRefresh: typeof import('tdesign-mobile-vue')['PullDownRefresh'];
     TRadio: typeof import('tdesign-mobile-vue')['Radio'];
+    TRadioButton: typeof import('tdesign-mobile-vue')['RadioButton'];
     TRadioGroup: typeof import('tdesign-mobile-vue')['RadioGroup'];
     TRangeInput: typeof import('tdesign-mobile-vue')['RangeInput'];
     TRangeInputPopup: typeof import('tdesign-mobile-vue')['RangeInputPopup'];
@@ -85,6 +88,7 @@ declare module 'vue' {
     TSwitch: typeof import('tdesign-mobile-vue')['Switch'];
     TTabBar: typeof import('tdesign-mobile-vue')['TabBar'];
     TTabBarItem: typeof import('tdesign-mobile-vue')['TabBarItem'];
+    TTable: typeof import('tdesign-mobile-vue')['Table'];
     TTabPanel: typeof import('tdesign-mobile-vue')['TabPanel'];
     TTabs: typeof import('tdesign-mobile-vue')['Tabs'];
     TTag: typeof import('tdesign-mobile-vue')['Tag'];

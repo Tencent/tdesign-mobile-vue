@@ -8,10 +8,16 @@ import { TdCheckboxGroupProps } from '../checkbox/type';
 import { PropType } from 'vue';
 
 export default {
+  /** 是否开启无边框模式。优先级低于 Checkbox.borderless */
+  borderless: Boolean,
   /** 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled */
   disabled: {
     type: Boolean,
     default: undefined,
+  },
+  /** 用来定义 value / label / disabled 在 `options` 中对应的字段别名 */
+  keys: {
+    type: Object as PropType<TdCheckboxGroupProps['keys']>,
   },
   /** 支持最多选中的数量 */
   max: {
@@ -26,6 +32,11 @@ export default {
   /** 以配置形式设置子元素。示例1：`['北京', '上海']` ，示例2: `[{ label: '全选', checkAll: true }, { label: '上海', value: 'shanghai' }]`。checkAll 值为 true 表示当前选项为「全选选项」 */
   options: {
     type: Array as PropType<TdCheckboxGroupProps['options']>,
+  },
+  /** 只读状态 */
+  readonly: {
+    type: Boolean,
+    default: undefined,
   },
   /** 选中值 */
   value: {

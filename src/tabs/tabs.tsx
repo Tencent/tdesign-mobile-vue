@@ -15,11 +15,11 @@ import {
   h,
   RendererNode,
 } from 'vue';
-import isFunction from 'lodash/isFunction';
+import { isFunction } from 'lodash-es';
 import config from '../config';
 import props from './props';
 import TTabNavItem from './tab-nav-item';
-import { useVModel } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { preventDefault } from '../shared/dom';
 import CLASSNAMES from '../shared/constants';
 import TSticky from '../sticky';
@@ -68,16 +68,16 @@ export default defineComponent({
       }
       let children: RendererNode[] = renderTNodeJSX('default');
       const res: RendererNode[] = [];
-      const label: RendererNode[] = [];
+      const label: Record<number, RendererNode> = {};
       const handler = (children: RendererNode[]) => {
-        children?.forEach((child) => {
+        children?.forEach((child, index) => {
           if (child.type === Fragment) {
             handler(child.children);
           } else {
             res.push(child);
           }
           if (child.children?.label) {
-            label.push(child.children.label()[0] || null);
+            label[index] = child.children.label()[0] || null;
           }
         });
       };
@@ -145,11 +145,21 @@ export default defineComponent({
       moveToActiveTab();
     });
 
-    watch(value, () => {
+    watch(currentValue, () => {
       nextTick(() => {
         moveToActiveTab();
       });
     });
+
+    watch(
+      itemProps,
+      () => {
+        nextTick(() => {
+          moveToActiveTab();
+        });
+      },
+      { deep: true },
+    );
 
     const handleTabClick = (event: Event, item: TdTabPanelProps) => {
       const { value, disabled } = item;
@@ -239,7 +249,7 @@ export default defineComponent({
                     props.theme === 'tag' && item.value === currentValue.value,
                 }}
               >
-                <TTabNavItem label={item.label} />
+                <TTabNavItem label={item.label} icon={item.icon} />
               </div>
             </TBadge>
             {props.theme === 'card' && index === currentIndex.value - 1 && (
@@ -259,7 +269,13 @@ export default defineComponent({
             <div class={navClasses.value}>
               <div
                 ref={navScroll}
-                class={`${tabsClass.value}__scroll ${tabsClass.value}__scroll--top ${tabsClass.value}__scroll--${props.theme}`}
+                class={[
+                  `${tabsClass.value}__scroll`,
+                  `${tabsClass.value}__scroll--${props.theme}`,
+                  {
+                    [`${tabsClass.value}__scroll--split`]: props.split,
+                  },
+                ]}
               >
                 <div ref={navWrap} class={`${tabsClass.value}__wrapper ${tabsClass.value}__wrapper--${props.theme}`}>
                   {readerNav()}
@@ -274,6 +290,7 @@ export default defineComponent({
               </div>
             </div>
           </TSticky>
+          {renderTNodeJSX('middle')}
           <div
             class={`${tabsClass.value}__content`}
             onTouchstart={handleTouchstart}

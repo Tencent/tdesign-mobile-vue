@@ -30,11 +30,12 @@
 </template>
 <script lang="ts" setup>
 import { h } from 'vue';
-import { AppIcon, BulletpointIcon, ViewModuleIcon, ImageIcon, ChatIcon } from 'tdesign-icons-vue-next';
+import { AppIcon, BulletpointIcon, ViewModuleIcon, ImageIcon, InternetIcon, ChatIcon } from 'tdesign-icons-vue-next';
 import { docs } from '../../docs.config';
 import router from '../router';
 
 const iconDefault = {
+  'Global Config': InternetIcon,
   Base: AppIcon,
   Navigation: ViewModuleIcon,
   Form: BulletpointIcon,

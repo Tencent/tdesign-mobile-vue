@@ -3,7 +3,7 @@
 exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
 <div
   class="t-pull-down-refresh"
-  data-v-9c770ec0=""
+  data-v-54076f21=""
 >
   <div
     class="t-pull-down-refresh__track t-pull-down-refresh__track--loosing"
@@ -28,11 +28,11 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
     <!-- 包裹页面全部内容 -->
     <div
       class="tdesign-mobile-demo"
-      data-v-9c770ec0=""
+      data-v-54076f21=""
     >
       <div
         class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-        data-v-9c770ec0=""
+        data-v-54076f21=""
       >
         <!--v-if-->
         <div
@@ -41,30 +41,30 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
           
           <h1
             class="title"
-            data-v-9c770ec0=""
+            data-v-54076f21=""
           >
             PullDownRefresh 下拉刷新
           </h1>
           <p
             class="summary"
-            data-v-9c770ec0=""
+            data-v-54076f21=""
           >
             用于快速刷新页面信息，刷新可以是整页刷新也可以是页面的局部刷新。
           </p>
           <div
             class="tdesign-mobile-block"
-            data-v-9c770ec0=""
+            data-v-54076f21=""
           >
             拖拽该区域演示 顶部下拉刷新
           </div>
           <div
             class="group"
-            data-v-9c770ec0=""
+            data-v-54076f21=""
           >
             
             <div
               class="t-skeleton item"
-              data-v-9c770ec0=""
+              data-v-54076f21=""
             >
               
               
@@ -108,7 +108,7 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
             </div>
             <div
               class="t-skeleton item"
-              data-v-9c770ec0=""
+              data-v-54076f21=""
             >
               
               
@@ -152,7 +152,7 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
             </div>
             <div
               class="t-skeleton item"
-              data-v-9c770ec0=""
+              data-v-54076f21=""
             >
               
               
@@ -196,7 +196,7 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
             </div>
             <div
               class="t-skeleton item"
-              data-v-9c770ec0=""
+              data-v-54076f21=""
             >
               
               
@@ -240,7 +240,7 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
             </div>
             <div
               class="t-skeleton item"
-              data-v-9c770ec0=""
+              data-v-54076f21=""
             >
               
               
@@ -284,7 +284,7 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
             </div>
             <div
               class="t-skeleton item"
-              data-v-9c770ec0=""
+              data-v-54076f21=""
             >
               
               
@@ -386,7 +386,7 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
 <div>
   <div
     class="t-pull-down-refresh"
-    data-v-9c770ec0=""
+    data-v-54076f21=""
   >
     <div
       class="t-pull-down-refresh__track t-pull-down-refresh__track--loosing"
@@ -411,11 +411,11 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
       <!-- 包裹页面全部内容 -->
       <div
         class="tdesign-mobile-demo"
-        data-v-9c770ec0=""
+        data-v-54076f21=""
       >
         <div
           class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-          data-v-9c770ec0=""
+          data-v-54076f21=""
         >
           <!--v-if-->
           <div
@@ -424,30 +424,30 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
             
             <h1
               class="title"
-              data-v-9c770ec0=""
+              data-v-54076f21=""
             >
               PullDownRefresh 下拉刷新
             </h1>
             <p
               class="summary"
-              data-v-9c770ec0=""
+              data-v-54076f21=""
             >
               用于快速刷新页面信息，刷新可以是整页刷新也可以是页面的局部刷新。
             </p>
             <div
               class="tdesign-mobile-block"
-              data-v-9c770ec0=""
+              data-v-54076f21=""
             >
               拖拽该区域演示 顶部下拉刷新
             </div>
             <div
               class="group"
-              data-v-9c770ec0=""
+              data-v-54076f21=""
             >
               
               <div
                 class="t-skeleton item"
-                data-v-9c770ec0=""
+                data-v-54076f21=""
               >
                 
                 
@@ -491,7 +491,7 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-skeleton item"
-                data-v-9c770ec0=""
+                data-v-54076f21=""
               >
                 
                 
@@ -535,7 +535,7 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-skeleton item"
-                data-v-9c770ec0=""
+                data-v-54076f21=""
               >
                 
                 
@@ -579,7 +579,7 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-skeleton item"
-                data-v-9c770ec0=""
+                data-v-54076f21=""
               >
                 
                 
@@ -623,7 +623,7 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-skeleton item"
-                data-v-9c770ec0=""
+                data-v-54076f21=""
               >
                 
                 
@@ -667,7 +667,7 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-skeleton item"
-                data-v-9c770ec0=""
+                data-v-54076f21=""
               >
                 
                 

@@ -1,5 +1,4 @@
-import isFunction from 'lodash/isFunction';
-import isString from 'lodash/isString';
+import { isFunction, isString } from 'lodash-es';
 import { AttachNode } from '../common';
 import { isBrowser } from './util';
 

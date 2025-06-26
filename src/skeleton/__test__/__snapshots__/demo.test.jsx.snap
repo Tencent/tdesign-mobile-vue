@@ -6,21 +6,21 @@ exports[`Skeleton > Skeleton animationVue demo works fine 1`] = `
 >
   
   <div
-    data-v-5431dabc=""
+    data-v-bb2beb16=""
   >
     <div
       class="demo-section__desc"
-      data-v-5431dabc=""
+      data-v-bb2beb16=""
     >
       渐变加载效果
     </div>
     <div
       class="demo-section__content"
-      data-v-5431dabc=""
+      data-v-bb2beb16=""
     >
       <div
         class="t-skeleton"
-        data-v-5431dabc=""
+        data-v-bb2beb16=""
       >
         
         
@@ -75,21 +75,21 @@ exports[`Skeleton > Skeleton animationVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    data-v-5431dabc=""
+    data-v-bb2beb16=""
   >
     <div
       class="demo-section__desc"
-      data-v-5431dabc=""
+      data-v-bb2beb16=""
     >
       闪烁加载效果
     </div>
     <div
       class="demo-section__content"
-      data-v-5431dabc=""
+      data-v-bb2beb16=""
     >
       <div
         class="t-skeleton"
-        data-v-5431dabc=""
+        data-v-bb2beb16=""
       >
         
         
@@ -154,11 +154,11 @@ exports[`Skeleton > Skeleton cellGroupVue demo works fine 1`] = `
   
   <div
     class="group"
-    data-v-b5595f68=""
+    data-v-292616d7=""
   >
     <div
       class="t-skeleton group-avatar"
-      data-v-b5595f68=""
+      data-v-292616d7=""
     >
       
       
@@ -179,7 +179,7 @@ exports[`Skeleton > Skeleton cellGroupVue demo works fine 1`] = `
     </div>
     <div
       class="t-skeleton group-content"
-      data-v-b5595f68=""
+      data-v-292616d7=""
     >
       
       
@@ -213,11 +213,11 @@ exports[`Skeleton > Skeleton cellGroupVue demo works fine 1`] = `
   </div>
   <div
     class="group"
-    data-v-b5595f68=""
+    data-v-292616d7=""
   >
     <div
       class="t-skeleton group-avatar"
-      data-v-b5595f68=""
+      data-v-292616d7=""
     >
       
       
@@ -238,7 +238,7 @@ exports[`Skeleton > Skeleton cellGroupVue demo works fine 1`] = `
     </div>
     <div
       class="t-skeleton group-content"
-      data-v-b5595f68=""
+      data-v-292616d7=""
     >
       
       
@@ -360,11 +360,11 @@ exports[`Skeleton > Skeleton gridVue demo works fine 1`] = `
 exports[`Skeleton > Skeleton imageGroupVue demo works fine 1`] = `
 <div
   class="group"
-  data-v-ac6b2376=""
+  data-v-ad78cd75=""
 >
   <div
     class="t-skeleton"
-    data-v-ac6b2376=""
+    data-v-ad78cd75=""
   >
     
     
@@ -408,7 +408,7 @@ exports[`Skeleton > Skeleton imageGroupVue demo works fine 1`] = `
   </div>
   <div
     class="t-skeleton"
-    data-v-ac6b2376=""
+    data-v-ad78cd75=""
   >
     
     
@@ -456,23 +456,23 @@ exports[`Skeleton > Skeleton imageGroupVue demo works fine 1`] = `
 exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-9b6b90cc=""
+  data-v-2e493447=""
 >
   <h1
     class="title"
-    data-v-9b6b90cc=""
+    data-v-2e493447=""
   >
     Skeleton 骨架屏
   </h1>
   <p
     class="summary"
-    data-v-9b6b90cc=""
+    data-v-2e493447=""
   >
     当网络较慢时，在页面真实数据加载之前，给用户展示出页面的大致结构。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-9b6b90cc=""
+    data-v-2e493447=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -490,21 +490,21 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
       
       
       <div
-        data-v-7e69da81=""
+        data-v-3d9f6e27=""
       >
         <div
           class="demo-section__desc"
-          data-v-7e69da81=""
+          data-v-3d9f6e27=""
         >
           头像骨架屏
         </div>
         <div
           class="demo-section__content"
-          data-v-7e69da81=""
+          data-v-3d9f6e27=""
         >
           <div
             class="t-skeleton"
-            data-v-7e69da81=""
+            data-v-3d9f6e27=""
           >
             
             
@@ -526,21 +526,21 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        data-v-7e69da81=""
+        data-v-3d9f6e27=""
       >
         <div
           class="demo-section__desc"
-          data-v-7e69da81=""
+          data-v-3d9f6e27=""
         >
           图片骨架屏
         </div>
         <div
           class="demo-section__content"
-          data-v-7e69da81=""
+          data-v-3d9f6e27=""
         >
           <div
             class="t-skeleton"
-            data-v-7e69da81=""
+            data-v-3d9f6e27=""
           >
             
             
@@ -562,21 +562,21 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        data-v-7e69da81=""
+        data-v-3d9f6e27=""
       >
         <div
           class="demo-section__desc"
-          data-v-7e69da81=""
+          data-v-3d9f6e27=""
         >
           文本骨架屏
         </div>
         <div
           class="demo-section__content"
-          data-v-7e69da81=""
+          data-v-3d9f6e27=""
         >
           <div
             class="t-skeleton"
-            data-v-7e69da81=""
+            data-v-3d9f6e27=""
           >
             
             
@@ -615,21 +615,21 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        data-v-7e69da81=""
+        data-v-3d9f6e27=""
       >
         <div
           class="demo-section__desc"
-          data-v-7e69da81=""
+          data-v-3d9f6e27=""
         >
           段落骨架屏
         </div>
         <div
           class="demo-section__content"
-          data-v-7e69da81=""
+          data-v-3d9f6e27=""
         >
           <div
             class="t-skeleton"
-            data-v-7e69da81=""
+            data-v-3d9f6e27=""
           >
             
             
@@ -689,7 +689,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-9b6b90cc=""
+    data-v-2e493447=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -708,11 +708,11 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
       
       <div
         class="group"
-        data-v-b5595f68=""
+        data-v-292616d7=""
       >
         <div
           class="t-skeleton group-avatar"
-          data-v-b5595f68=""
+          data-v-292616d7=""
         >
           
           
@@ -733,7 +733,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-skeleton group-content"
-          data-v-b5595f68=""
+          data-v-292616d7=""
         >
           
           
@@ -767,11 +767,11 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
       </div>
       <div
         class="group"
-        data-v-b5595f68=""
+        data-v-292616d7=""
       >
         <div
           class="t-skeleton group-avatar"
-          data-v-b5595f68=""
+          data-v-292616d7=""
         >
           
           
@@ -792,7 +792,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-skeleton group-content"
-          data-v-b5595f68=""
+          data-v-292616d7=""
         >
           
           
@@ -830,7 +830,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-9b6b90cc=""
+    data-v-2e493447=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -848,7 +848,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
       
       <div
         class="t-skeleton"
-        data-v-9b6b90cc=""
+        data-v-2e493447=""
       >
         
         
@@ -932,7 +932,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-9b6b90cc=""
+    data-v-2e493447=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -950,12 +950,12 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
       
       <div
         class="group"
-        data-v-9b6b90cc=""
-        data-v-ac6b2376=""
+        data-v-2e493447=""
+        data-v-ad78cd75=""
       >
         <div
           class="t-skeleton"
-          data-v-ac6b2376=""
+          data-v-ad78cd75=""
         >
           
           
@@ -999,7 +999,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-skeleton"
-          data-v-ac6b2376=""
+          data-v-ad78cd75=""
         >
           
           
@@ -1047,7 +1047,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-9b6b90cc=""
+    data-v-2e493447=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1065,21 +1065,21 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
       
       
       <div
-        data-v-5431dabc=""
+        data-v-bb2beb16=""
       >
         <div
           class="demo-section__desc"
-          data-v-5431dabc=""
+          data-v-bb2beb16=""
         >
           渐变加载效果
         </div>
         <div
           class="demo-section__content"
-          data-v-5431dabc=""
+          data-v-bb2beb16=""
         >
           <div
             class="t-skeleton"
-            data-v-5431dabc=""
+            data-v-bb2beb16=""
           >
             
             
@@ -1134,21 +1134,21 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        data-v-5431dabc=""
+        data-v-bb2beb16=""
       >
         <div
           class="demo-section__desc"
-          data-v-5431dabc=""
+          data-v-bb2beb16=""
         >
           闪烁加载效果
         </div>
         <div
           class="demo-section__content"
-          data-v-5431dabc=""
+          data-v-bb2beb16=""
         >
           <div
             class="t-skeleton"
-            data-v-5431dabc=""
+            data-v-bb2beb16=""
           >
             
             
@@ -1215,21 +1215,21 @@ exports[`Skeleton > Skeleton themeVue demo works fine 1`] = `
 >
   
   <div
-    data-v-7e69da81=""
+    data-v-3d9f6e27=""
   >
     <div
       class="demo-section__desc"
-      data-v-7e69da81=""
+      data-v-3d9f6e27=""
     >
       头像骨架屏
     </div>
     <div
       class="demo-section__content"
-      data-v-7e69da81=""
+      data-v-3d9f6e27=""
     >
       <div
         class="t-skeleton"
-        data-v-7e69da81=""
+        data-v-3d9f6e27=""
       >
         
         
@@ -1251,21 +1251,21 @@ exports[`Skeleton > Skeleton themeVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    data-v-7e69da81=""
+    data-v-3d9f6e27=""
   >
     <div
       class="demo-section__desc"
-      data-v-7e69da81=""
+      data-v-3d9f6e27=""
     >
       图片骨架屏
     </div>
     <div
       class="demo-section__content"
-      data-v-7e69da81=""
+      data-v-3d9f6e27=""
     >
       <div
         class="t-skeleton"
-        data-v-7e69da81=""
+        data-v-3d9f6e27=""
       >
         
         
@@ -1287,21 +1287,21 @@ exports[`Skeleton > Skeleton themeVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    data-v-7e69da81=""
+    data-v-3d9f6e27=""
   >
     <div
       class="demo-section__desc"
-      data-v-7e69da81=""
+      data-v-3d9f6e27=""
     >
       文本骨架屏
     </div>
     <div
       class="demo-section__content"
-      data-v-7e69da81=""
+      data-v-3d9f6e27=""
     >
       <div
         class="t-skeleton"
-        data-v-7e69da81=""
+        data-v-3d9f6e27=""
       >
         
         
@@ -1340,21 +1340,21 @@ exports[`Skeleton > Skeleton themeVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    data-v-7e69da81=""
+    data-v-3d9f6e27=""
   >
     <div
       class="demo-section__desc"
-      data-v-7e69da81=""
+      data-v-3d9f6e27=""
     >
       段落骨架屏
     </div>
     <div
       class="demo-section__content"
-      data-v-7e69da81=""
+      data-v-3d9f6e27=""
     >
       <div
         class="t-skeleton"
-        data-v-7e69da81=""
+        data-v-3d9f6e27=""
       >
         
         

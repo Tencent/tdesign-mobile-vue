@@ -1,6 +1,13 @@
-export function sortDocs(docs: any[]) {
-  let innerDocs = [];
-  docs.forEach((item) => {
+interface DocType {
+  title: string;
+  titleEn?: string;
+  type: string;
+  children: DocType[];
+}
+
+export function sortDocs(docs: DocType[]): DocType[] {
+  let innerDocs: DocType[] = [];
+  docs.forEach((item: DocType) => {
     let { children } = item;
     if (item.type === 'component') {
       children = item.children.sort((a: any, b: any) => {
@@ -19,14 +26,38 @@ export function sortDocs(docs: any[]) {
   return innerDocs;
 }
 
-// 过滤小版本号
-export function filterVersions(versions = [], deep = 1) {
-  const versionMap = Object.create(null);
+function compareVersion(version1, version2) {
+  const v1 = version1.split('.');
+  const v2 = version2.split('.');
+  const len = Math.max(v1.length, v2.length);
 
-  versions.forEach((v) => {
-    const nums = v.split('.');
-    versionMap[nums[deep]] = v;
-  });
+  while (v1.length < len) {
+    v1.push('0');
+  }
+  while (v2.length < len) {
+    v2.push('0');
+  }
 
-  return Object.values(versionMap);
+  for (let i = 0; i < len; i++) {
+    const num1 = parseInt(v1[i], 10);
+    const num2 = parseInt(v2[i], 10);
+
+    if (num1 > num2) {
+      return 1;
+    }
+    if (num1 < num2) {
+      return -1;
+    }
+  }
+
+  return 0;
+}
+
+function filterStableVersions(versionList) {
+  return versionList.filter((version) => !version.includes('-'));
+}
+
+// 过滤小版本 + 版本号排序
+export function filterVersions(versions) {
+  return filterStableVersions(versions).sort(compareVersion);
 }

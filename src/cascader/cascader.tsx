@@ -1,13 +1,14 @@
 import { CloseIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import { defineComponent, toRefs, computed, ref, toRaw, reactive, watch, onMounted, Transition } from 'vue';
+import { get as lodashGet } from 'lodash-es';
 import TPopup from '../popup';
 import { Tabs } from '../tabs';
 import { RadioValue, RadioGroup as TRadioGroup } from '../radio';
 import config from '../config';
 import props from './props';
-import { useVModel } from '../shared';
 import { TreeOptionData } from '../common';
 import { useConfig } from '../config-provider/useConfig';
+import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import { CascaderTriggerSource } from './type';
@@ -29,6 +30,7 @@ interface KeysType {
   value?: string;
   label?: string;
   children?: string;
+  disabled?: string;
 }
 
 export default defineComponent({
@@ -48,7 +50,7 @@ export default defineComponent({
 
     const stepIndex = ref(0);
     const selectedIndexes = reactive<number[]>([]);
-    const selectedValue = reactive<string[]>([]);
+    const selectedValue = reactive<Array<string | number>>([]);
     const items: Array<Array<TreeOptionData>> = reactive([props.options ?? []]);
     const steps = reactive([placeholder.value]);
 
@@ -75,10 +77,10 @@ export default defineComponent({
         for (let i = 0, size = selectedIndexes.length; i < size; i += 1) {
           const index = selectedIndexes[i];
           const next = items[i]?.[index];
-          selectedValue.push(next[keys?.value ?? 'value']);
-          steps.push(next[keys?.label ?? 'label']);
-          if (next[keys?.children ?? 'children']) {
-            items.push(next[keys?.children ?? 'children']);
+          selectedValue.push(lodashGet(next, keys?.value ?? 'value'));
+          steps.push(lodashGet(next, keys?.label ?? 'label'));
+          if (lodashGet(next, keys?.children ?? 'children')) {
+            items.push(lodashGet(next, keys?.children ?? 'children'));
           }
         }
       }
@@ -92,11 +94,11 @@ export default defineComponent({
     const getIndexesByValue = (options: any, value: any) => {
       const keys = props.keys as KeysType;
       for (let i = 0; i < options.length; i++) {
-        if (options[i][keys?.value ?? 'value'] === value) {
+        if (lodashGet(options[i], keys?.value ?? 'value') === value) {
           return [i];
         }
-        if (options[i][keys?.children ?? 'children']) {
-          const res: any = getIndexesByValue(options[i][keys?.children ?? 'children'], value);
+        if (lodashGet(options[i], keys?.children ?? 'children')) {
+          const res: any = getIndexesByValue(lodashGet(options[i], keys?.children ?? 'children'), value);
           if (res) {
             return [i, ...res];
           }
@@ -108,21 +110,25 @@ export default defineComponent({
       const keys = props.keys as KeysType;
       selectedIndexes[level] = index;
       selectedIndexes.length = level + 1;
-      selectedValue[level] = String(value);
+      selectedValue[level] = typeof value === 'number' ? value : String(value);
       selectedValue.length = level + 1;
-      steps[level] = item[keys?.label ?? 'label'] as string;
-      if (item[keys?.children ?? 'children']?.length) {
-        items[level + 1] = item[keys?.children ?? 'children'];
+      steps[level] = lodashGet(item, keys?.label ?? 'label');
+      if (lodashGet(item, keys?.children ?? 'children')?.length) {
+        items[level + 1] = lodashGet(item, keys?.children ?? 'children');
         items.length = level + 2;
         stepIndex.value += 1;
         steps[level + 1] = placeholder.value;
         steps.length = level + 2;
-      } else if (item[keys?.children ?? 'children']?.length === 0) {
+      } else if (lodashGet(item, keys?.children ?? 'children')?.length === 0) {
         childrenInfo.value = value;
         childrenInfo.level = level;
       } else {
+        items.length = level + 1;
+        steps.length = level + 1;
+        stepIndex.value = level;
+
         setCascaderValue(
-          item[keys?.value ?? 'value'],
+          lodashGet(item, keys?.value ?? 'value'),
           items.map((item, index) => toRaw(item?.[selectedIndexes[index]])),
         );
         close('finish');
@@ -138,24 +144,32 @@ export default defineComponent({
       steps[level + 1] = placeholder.value;
       steps.length = level + 1;
 
-      if (item[keys?.children ?? 'children']?.length) {
-        items[level + 1] = item[keys?.children ?? 'children'];
-      } else if (item[keys?.children ?? 'children']?.length === 0) {
+      if (lodashGet(item, keys?.children ?? 'children')?.length) {
+        items[level + 1] = lodashGet(item, keys?.children ?? 'children');
+      } else if (lodashGet(item, keys?.children ?? 'children')?.length === 0) {
         childrenInfo.value = value;
         childrenInfo.level = level;
       }
     };
 
-    const handleSelect = (value: RadioValue, level: number) => {
+    const handleSelect = (value: RadioValue, level: number, fromHandler = true) => {
       const keys = props.keys as KeysType;
-      const index = items[level].findIndex((item: any) => item[keys?.value ?? 'value'] === value);
+      const index = items[level].findIndex((item: any) => lodashGet(item, keys?.value ?? 'value') === value);
       const item = items[level][index];
-      if (item.disabled) {
+      if (lodashGet(item, keys?.disabled ?? 'disabled')) {
         return;
       }
-      props.onPick?.({ level, value: item[keys?.value ?? 'value'], index });
 
-      if (props.checkStrictly && selectedValue.includes(String(value))) {
+      if (fromHandler) {
+        props.onPick?.({
+          value: lodashGet(item, keys?.value ?? 'value'),
+          label: lodashGet(item, keys?.label ?? 'label'),
+          level,
+          index,
+        });
+      }
+
+      if (props.checkStrictly && selectedValue.includes(String(value)) && fromHandler) {
         cancelSelect(value, level, index, item);
       } else {
         chooseSelect(value, level, index, item);
@@ -216,10 +230,10 @@ export default defineComponent({
     watch(
       () => props.options,
       () => {
-        items.splice(0, items.length, ...[props.options ?? []]);
+        initWithValue();
 
         if (open.value) {
-          handleSelect(childrenInfo.value, childrenInfo.level);
+          handleSelect(childrenInfo.value, childrenInfo.level, false);
         }
       },
       {
@@ -307,8 +321,10 @@ export default defineComponent({
             <div class={`${cascaderClass.value}__close-btn`} onClick={onCloseBtn}>
               {closeBtn}
             </div>
+            {renderTNodeJSX('header')}
             <div class={`${cascaderClass.value}__content`}>
               {readerSteps()}
+              {renderTNodeJSX('middleContent')}
               {props.subTitles && props.subTitles[stepIndex.value] && (
                 <div class={`${cascaderClass.value}__options-title`}>{props.subTitles[stepIndex.value]}</div>
               )}

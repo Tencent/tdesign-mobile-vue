@@ -22,10 +22,18 @@ export default {
   end: {
     type: [String, Number] as PropType<TdDateTimePickerProps['end']>,
   },
+  /** 底部内容 */
+  footer: {
+    type: Function as PropType<TdDateTimePickerProps['footer']>,
+  },
   /** 用于pick、change、confirm事件参数格式化[详细文档](https://day.js.org/docs/en/display/format) */
   format: {
     type: String,
     default: 'YYYY-MM-DD HH:mm:ss',
+  },
+  /** 头部内容 */
+  header: {
+    type: Function as PropType<TdDateTimePickerProps['header']>,
   },
   /** year = 年；month = 年月；date = 年月日；hour = 年月日时； minute = 年月日时分；当类型为数组时，第一个值控制年月日，第二个值控制时分秒 */
   mode: {
@@ -41,6 +49,11 @@ export default {
   /** 选择器的最小可选时间，默认为当前时间-10年 */
   start: {
     type: [String, Number] as PropType<TdDateTimePickerProps['start']>,
+  },
+  /** 时间间隔步数，示例：`{ minute: 5 }` */
+  steps: {
+    type: Object as PropType<TdDateTimePickerProps['steps']>,
+    default: () => ({}),
   },
   /** 标题 */
   title: {

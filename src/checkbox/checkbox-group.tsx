@@ -1,9 +1,11 @@
 import { provide, computed, defineComponent, toRefs } from 'vue';
+import { get as lodashGet } from 'lodash-es';
 import config from '../config';
 import props from './checkbox-group-props';
+import { KeysType } from '../common';
 import Checkbox from './checkbox';
 import { CheckboxGroupValue, TdCheckboxGroupProps, TdCheckboxProps } from './type';
-import { useDefault } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { getOptions, setCheckAllStatus } from './hooks';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
@@ -25,12 +27,12 @@ export default defineComponent({
     const checkboxGroupClass = usePrefixClass('checkbox-group');
     const renderTNodeJSX = useTNodeJSX();
     const { isArray } = Array;
-    const [innerValue, setInnerValue] = useDefault<CheckboxGroupValue, TdCheckboxGroupProps>(
-      props,
-      context.emit,
-      'value',
-      'change',
-    );
+
+    const { value, modelValue } = toRefs(props);
+    const [innerValue, setInnerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+
+    const keys = computed((): KeysType => props.keys);
+
     const optionList = getOptions(props, context.slots);
     const checkedSet = computed(() => {
       if (isArray(innerValue.value)) {
@@ -107,7 +109,13 @@ export default defineComponent({
         return (
           <span>
             {optionList.value.map((item, idx) => (
-              <Checkbox {...item} key={`${item.value || ''}${idx}`} label={item.label || item.text || ''} />
+              <Checkbox
+                {...item}
+                key={`${lodashGet(item, keys.value?.value ?? 'value', '')}${idx}`}
+                label={lodashGet(item, keys.value?.label ?? 'label', item.text || '')}
+                value={lodashGet(item, keys.value?.value ?? 'value')}
+                disabled={lodashGet(item, keys.value?.disabled ?? 'disabled')}
+              />
             ))}
           </span>
         );

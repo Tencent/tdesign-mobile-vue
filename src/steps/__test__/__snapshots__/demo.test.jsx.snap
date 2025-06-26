@@ -32,7 +32,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
+                d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
                 fill="currentColor"
               />
             </svg>
@@ -45,7 +45,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--finish t-step-item__title--horizontal"
           >
             已完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--finish t-step-item__description--horizontal"
@@ -79,7 +79,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--process t-step-item__title--horizontal"
           >
             当前步骤
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--process t-step-item__description--horizontal"
@@ -113,7 +113,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
           >
             未完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -147,7 +147,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
           >
             未完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -198,7 +198,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                 fill="currentColor"
               />
             </svg>
@@ -212,7 +212,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--finish t-step-item__title--horizontal"
           >
             已完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--finish t-step-item__description--horizontal"
@@ -246,7 +246,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                 fill="currentColor"
               />
             </svg>
@@ -260,7 +260,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--process t-step-item__title--horizontal"
           >
             当前步骤
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--process t-step-item__description--horizontal"
@@ -294,7 +294,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                 fill="currentColor"
               />
             </svg>
@@ -308,7 +308,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
           >
             未完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -342,7 +342,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                 fill="currentColor"
               />
             </svg>
@@ -356,7 +356,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
           >
             未完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -405,7 +405,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--finish t-step-item__title--horizontal"
           >
             已完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--finish t-step-item__description--horizontal"
@@ -437,7 +437,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--process t-step-item__title--horizontal"
           >
             当前步骤
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--process t-step-item__description--horizontal"
@@ -469,7 +469,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
           >
             未完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -501,7 +501,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
           >
             未完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -585,7 +585,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
+                      d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -598,7 +598,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--finish t-step-item__title--horizontal"
                 >
                   已完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--finish t-step-item__description--horizontal"
@@ -632,7 +632,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--process t-step-item__title--horizontal"
                 >
                   当前步骤
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--process t-step-item__description--horizontal"
@@ -666,7 +666,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
                 >
                   未完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -700,7 +700,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
                 >
                   未完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -751,7 +751,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -765,7 +765,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--finish t-step-item__title--horizontal"
                 >
                   已完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--finish t-step-item__description--horizontal"
@@ -799,7 +799,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -813,7 +813,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--process t-step-item__title--horizontal"
                 >
                   当前步骤
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--process t-step-item__description--horizontal"
@@ -847,7 +847,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -861,7 +861,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
                 >
                   未完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -895,7 +895,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -909,7 +909,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
                 >
                   未完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -958,7 +958,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--finish t-step-item__title--horizontal"
                 >
                   已完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--finish t-step-item__description--horizontal"
@@ -990,7 +990,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--process t-step-item__title--horizontal"
                 >
                   当前步骤
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--process t-step-item__description--horizontal"
@@ -1022,7 +1022,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
                 >
                   未完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -1054,7 +1054,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
                 >
                   未完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -1105,7 +1105,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
+                      d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -1118,7 +1118,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--finish t-step-item__title--vertical"
                 >
                   已完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--finish t-step-item__description--vertical"
@@ -1152,7 +1152,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--process t-step-item__title--vertical"
                 >
                   当前步骤
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--process t-step-item__description--vertical"
@@ -1186,7 +1186,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--vertical"
                 >
                   未完成步骤
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--vertical"
@@ -1220,7 +1220,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--vertical"
                 >
                   未完成步骤
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--vertical"
@@ -1271,7 +1271,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -1285,7 +1285,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--finish t-step-item__title--vertical"
                 >
                   已完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--finish t-step-item__description--vertical"
@@ -1319,7 +1319,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -1333,7 +1333,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--process t-step-item__title--vertical"
                 >
                   当前步骤
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--process t-step-item__description--vertical"
@@ -1367,7 +1367,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -1381,7 +1381,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--vertical"
                 >
                   未完成步骤
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--vertical"
@@ -1415,7 +1415,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -1429,7 +1429,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--vertical"
                 >
                   未完成步骤
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--vertical"
@@ -1478,7 +1478,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--finish t-step-item__title--vertical"
                 >
                   已完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--finish t-step-item__description--vertical"
@@ -1510,7 +1510,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--process t-step-item__title--vertical"
                 >
                   当前步骤
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--process t-step-item__description--vertical"
@@ -1542,7 +1542,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--vertical"
                 >
                   未完成步骤
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--vertical"
@@ -1574,7 +1574,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--vertical"
                 >
                   未完成步骤
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--vertical"
@@ -1623,7 +1623,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--finish t-step-item__title--vertical"
                 >
                   已完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--finish t-step-item__description--vertical"
@@ -1655,7 +1655,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--process t-step-item__title--vertical"
                 >
                   当前步骤
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--process t-step-item__description--vertical"
@@ -1733,7 +1733,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--vertical"
                 >
                   未完成步骤
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--vertical"
@@ -1765,7 +1765,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--vertical"
                 >
                   未完成步骤
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--vertical"
@@ -1836,7 +1836,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
+                      d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -1849,7 +1849,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--finish t-step-item__title--horizontal"
                 >
                   已完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--finish t-step-item__description--horizontal"
@@ -1881,7 +1881,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+                      d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -1894,7 +1894,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--error t-step-item__title--horizontal"
                 >
                   当前步骤
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--error t-step-item__description--horizontal"
@@ -1928,7 +1928,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
                 >
                   未完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -1962,7 +1962,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
                 >
                   未完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -2008,7 +2008,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -2022,7 +2022,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--finish t-step-item__title--horizontal"
                 >
                   已完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--finish t-step-item__description--horizontal"
@@ -2056,7 +2056,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -2070,7 +2070,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--error t-step-item__title--horizontal"
                 >
                   当前步骤
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--error t-step-item__description--horizontal"
@@ -2104,7 +2104,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -2118,7 +2118,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
                 >
                   未完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -2152,7 +2152,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -2166,7 +2166,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
                 >
                   未完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -2210,7 +2210,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--finish t-step-item__title--horizontal"
                 >
                   已完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--finish t-step-item__description--horizontal"
@@ -2242,7 +2242,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--error t-step-item__title--horizontal"
                 >
                   当前步骤
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--error t-step-item__description--horizontal"
@@ -2274,7 +2274,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
                 >
                   未完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -2306,7 +2306,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
                 >
                   未完成
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -2388,7 +2388,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                      d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -2435,7 +2435,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                      d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -2482,7 +2482,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                      d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -2529,7 +2529,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     width="1em"
                   >
                     <path
-                      d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                      d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                       fill="currentColor"
                     />
                   </svg>
@@ -2599,7 +2599,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--finish t-step-item__title--vertical"
                 >
                   步骤展示
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--finish t-step-item__description--vertical"
@@ -2631,7 +2631,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--finish t-step-item__title--vertical"
                 >
                   步骤展示
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--finish t-step-item__description--vertical"
@@ -2663,7 +2663,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--finish t-step-item__title--vertical"
                 >
                   步骤展示
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--finish t-step-item__description--vertical"
@@ -2695,7 +2695,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                   class="t-step-item__title t-step-item__title--finish t-step-item__title--vertical"
                 >
                   步骤展示
-                  
+                  <!---->
                 </div>
                 <div
                   class="t-step-item__description t-step-item__description--finish t-step-item__description--vertical"
@@ -2764,7 +2764,7 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -2811,7 +2811,7 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -2858,7 +2858,7 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -2905,7 +2905,7 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -2975,7 +2975,7 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--finish t-step-item__title--vertical"
           >
             步骤展示
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--finish t-step-item__description--vertical"
@@ -3007,7 +3007,7 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--finish t-step-item__title--vertical"
           >
             步骤展示
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--finish t-step-item__description--vertical"
@@ -3039,7 +3039,7 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--finish t-step-item__title--vertical"
           >
             步骤展示
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--finish t-step-item__description--vertical"
@@ -3071,7 +3071,7 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--finish t-step-item__title--vertical"
           >
             步骤展示
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--finish t-step-item__description--vertical"
@@ -3125,7 +3125,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
+                d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
                 fill="currentColor"
               />
             </svg>
@@ -3138,7 +3138,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--finish t-step-item__title--horizontal"
           >
             已完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--finish t-step-item__description--horizontal"
@@ -3170,7 +3170,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
                 fill="currentColor"
               />
             </svg>
@@ -3183,7 +3183,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--error t-step-item__title--horizontal"
           >
             当前步骤
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--error t-step-item__description--horizontal"
@@ -3217,7 +3217,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
           >
             未完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -3251,7 +3251,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
           >
             未完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -3297,7 +3297,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                 fill="currentColor"
               />
             </svg>
@@ -3311,7 +3311,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--finish t-step-item__title--horizontal"
           >
             已完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--finish t-step-item__description--horizontal"
@@ -3345,7 +3345,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                 fill="currentColor"
               />
             </svg>
@@ -3359,7 +3359,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--error t-step-item__title--horizontal"
           >
             当前步骤
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--error t-step-item__description--horizontal"
@@ -3393,7 +3393,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                 fill="currentColor"
               />
             </svg>
@@ -3407,7 +3407,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
           >
             未完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -3441,7 +3441,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                 fill="currentColor"
               />
             </svg>
@@ -3455,7 +3455,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
           >
             未完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -3499,7 +3499,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--finish t-step-item__title--horizontal"
           >
             已完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--finish t-step-item__description--horizontal"
@@ -3531,7 +3531,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--error t-step-item__title--horizontal"
           >
             当前步骤
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--error t-step-item__description--horizontal"
@@ -3563,7 +3563,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
           >
             未完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -3595,7 +3595,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--horizontal"
           >
             未完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--horizontal"
@@ -3649,7 +3649,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M20.99 7.38l-10.61 10.6L4 11.63l1.42-1.41 4.95 4.95 9.2-9.2 1.4 1.42z"
+                d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
                 fill="currentColor"
               />
             </svg>
@@ -3662,7 +3662,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--finish t-step-item__title--vertical"
           >
             已完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--finish t-step-item__description--vertical"
@@ -3696,7 +3696,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--process t-step-item__title--vertical"
           >
             当前步骤
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--process t-step-item__description--vertical"
@@ -3730,7 +3730,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--vertical"
           >
             未完成步骤
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--vertical"
@@ -3764,7 +3764,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--vertical"
           >
             未完成步骤
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--vertical"
@@ -3815,7 +3815,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                 fill="currentColor"
               />
             </svg>
@@ -3829,7 +3829,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--finish t-step-item__title--vertical"
           >
             已完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--finish t-step-item__description--vertical"
@@ -3863,7 +3863,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                 fill="currentColor"
               />
             </svg>
@@ -3877,7 +3877,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--process t-step-item__title--vertical"
           >
             当前步骤
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--process t-step-item__description--vertical"
@@ -3911,7 +3911,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                 fill="currentColor"
               />
             </svg>
@@ -3925,7 +3925,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--vertical"
           >
             未完成步骤
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--vertical"
@@ -3959,7 +3959,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M0 1h4.76l.55 2h18.08l-3.67 11H7.78l-.5 2H22v2H4.72l1.25-4.99L3.24 3H0V1zm7.76 11h10.52l2.33-7H5.85l1.91 7zM4 21a2 2 0 114 0 2 2 0 01-4 0zm14 0a2 2 0 114 0 2 2 0 01-4 0z"
+                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
                 fill="currentColor"
               />
             </svg>
@@ -3973,7 +3973,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--vertical"
           >
             未完成步骤
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--vertical"
@@ -4022,7 +4022,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--finish t-step-item__title--vertical"
           >
             已完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--finish t-step-item__description--vertical"
@@ -4054,7 +4054,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--process t-step-item__title--vertical"
           >
             当前步骤
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--process t-step-item__description--vertical"
@@ -4086,7 +4086,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--vertical"
           >
             未完成步骤
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--vertical"
@@ -4118,7 +4118,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--vertical"
           >
             未完成步骤
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--vertical"
@@ -4167,7 +4167,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--finish t-step-item__title--vertical"
           >
             已完成
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--finish t-step-item__description--vertical"
@@ -4199,7 +4199,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--process t-step-item__title--vertical"
           >
             当前步骤
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--process t-step-item__description--vertical"
@@ -4277,7 +4277,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--vertical"
           >
             未完成步骤
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--vertical"
@@ -4309,7 +4309,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
             class="t-step-item__title t-step-item__title--default t-step-item__title--vertical"
           >
             未完成步骤
-            
+            <!---->
           </div>
           <div
             class="t-step-item__description t-step-item__description--default t-step-item__description--vertical"

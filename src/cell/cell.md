@@ -6,7 +6,7 @@
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-align | String | middle | 内容的对齐方式，默认居中对齐。可选项：top/middle/bottom | N
+align | String | middle | 右侧内容的对齐方式，默认居中对齐。可选项：top/middle/bottom | N
 arrow | Boolean | false | 是否显示右侧箭头 | N
 bordered | Boolean | true | 是否显示下边框 | N
 description | String / Slot / Function | - | 下方内容描述。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N

@@ -1,7 +1,8 @@
-import { defineComponent, ref, provide, Ref, computed, toRefs, onMounted } from 'vue';
+import { defineComponent, ref, provide, Ref, computed, toRefs, VNode } from 'vue';
 import TabBarProps from './props';
 import config from '../config';
-import { useDefault, useChildSlots } from '../shared';
+import useChildSlots from '../hooks/useChildSlots';
+import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
@@ -15,20 +16,15 @@ export default defineComponent({
     const tabBarClass = usePrefixClass('tab-bar');
 
     const renderTNodeJSX = useTNodeJSX();
-    const [activeValue] = useDefault(props, context.emit, 'value', 'change');
+
+    const { value, modelValue } = toRefs(props);
+    const [activeValue, setActiveValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+
     const defaultIndex: Ref<number> = ref(-1);
     const itemCount = ref(0);
 
-    onMounted(() => {
-      const nodes = context.slots.default && context.slots.default();
-      if (nodes !== undefined) {
-        const childSlots = useChildSlots(`${prefix}-tab-bar-item`);
-        itemCount.value = childSlots.length;
-      }
-    });
-
     const updateChild = (currentValue: number | string) => {
-      activeValue.value = currentValue;
+      setActiveValue(currentValue);
     };
 
     const rootClass = computed(() => [
@@ -49,10 +45,26 @@ export default defineComponent({
       updateChild,
     });
 
-    return () => (
-      <div class={rootClass.value} role="tablist">
-        {renderTNodeJSX('default')}
-      </div>
-    );
+    // 在渲染函数中调用插槽函数并更新子节点数量
+    const updateItemCount = (vNodes?: VNode[]) => {
+      if (!vNodes || !Array.isArray(vNodes)) {
+        itemCount.value = 0;
+        return;
+      }
+
+      const childSlots = useChildSlots(`${prefix}-tab-bar-item`, vNodes);
+      itemCount.value = childSlots.length;
+    };
+
+    return () => {
+      const vNodes = context.slots.default ? context.slots.default() : [];
+      updateItemCount(vNodes);
+
+      return (
+        <div class={rootClass.value} role="tablist">
+          {renderTNodeJSX('default')}
+        </div>
+      );
+    };
   },
 });

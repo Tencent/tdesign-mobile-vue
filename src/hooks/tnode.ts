@@ -1,10 +1,9 @@
 import { h, getCurrentInstance, ComponentInternalInstance, VNode } from 'vue';
-import isFunction from 'lodash/isFunction';
-import camelCase from 'lodash/camelCase';
-import kebabCase from 'lodash/kebabCase';
-import { getDefaultNode, getParams, OptionsType, JSXRenderContext, getSlotFirst } from './render-tnode';
+import { camelCase, kebabCase, isFunction } from 'lodash-es';
 
-// 兼容处理插槽名称，同时支持驼峰命名和中划线命名，示例：value-display 和 valueDisplay
+import { getDefaultNode, getParams, OptionsType, JSXRenderContext, getSlotFirst } from './render-tnode';
+import { hasOwn } from '../_common/js/utils/general';
+
 function handleSlots(instance: ComponentInternalInstance, name: string, params: Record<string, any>) {
   // 2023-08 new Function 触发部分使用场景安全策略问题（Chrome插件/eletron等）
   // // 每个 slots 需要单独的 h 函数 否则直接assign会重复把不同 slots 的 params 都注入
@@ -15,10 +14,10 @@ function handleSlots(instance: ComponentInternalInstance, name: string, params: 
 
   // 检查是否存在 驼峰命名 的插槽（过滤注释节点）
   let node = instance.slots[camelCase(name)]?.(params);
-  if (node && node.filter((t) => t.type.toString() !== 'Symbol(v-cmt)').length) return node;
+  if (node && node.filter((t) => t.type.toString?.() !== 'Symbol(v-cmt)').length) return node;
   // 检查是否存在 中划线命名 的插槽
   node = instance.slots[kebabCase(name)]?.(params);
-  if (node && node.filter((t) => t.type.toString() !== 'Symbol(v-cmt)').length) return node;
+  if (node && node.filter((t) => t.type.toString?.() !== 'Symbol(v-cmt)').length) return node;
   return null;
 }
 
@@ -32,9 +31,22 @@ function isEmptyNode(node: any) {
   return !r.length;
 }
 
+// TODO 可以把这里移动到 utils 中
+/**
+ * 检查用户是否有主动传 prop
+ * @param instance 组件实例
+ * @param propName prop 名称
+ * @returns boolean
+ */
+function isPropExplicitlySet(instance: ComponentInternalInstance, propName: string) {
+  const vProps = instance?.vnode.props || {};
+  return hasOwn(vProps, camelCase(propName)) || hasOwn(vProps, kebabCase(propName));
+}
+
+/**
 /**
  * 通过 JSX 的方式渲染 TNode，props 和 插槽同时处理，也能处理默认值为 true 则渲染默认节点的情况
- * 优先级：Props 大于插槽
+ * 优先级：用户注入的 props 值 > slot > 默认 props 值
  * 如果 props 值为 true ，则使用插槽渲染。如果也没有插槽的情况下，则使用 defaultNode 渲染
  * @example const renderTNodeJSX = useTNodeJSX()
  * @return () => {}
@@ -47,35 +59,60 @@ function isEmptyNode(node: any) {
 export const useTNodeJSX = () => {
   const instance = getCurrentInstance();
   return function (name: string, options?: OptionsType) {
-    // assemble params && defaultNode
-    const params = getParams(options);
+    // 渲染节点时所需的参数
+    const renderParams = getParams(options);
+    // 默认渲染节点
+    // TODO 这里需要讨论，这里的默认节点规则是什么呢？ pp test:unit image-viewer pp test:unit Collapse
     const defaultNode = getDefaultNode(options);
-    const slotFirst = getSlotFirst(options);
+    // 是否显示设置 slot 优先
+    const isSlotFirst = getSlotFirst(options);
+    // 插槽
+    const renderSlot = instance.slots[camelCase(name)] || instance.slots[kebabCase(name)];
 
-    // 处理 props 类型的Node
-    let propsNode;
-    if (Object.keys(instance.props).includes(name)) {
-      propsNode = instance.props[name];
+    if (isSlotFirst && renderSlot) {
+      // 1. 如果显示设置了 slot 优先，并且存在 slot，那么优先使用 slot
+      return handleSlots(instance, name, renderParams);
     }
-
-    // 是否静默日志
-    // const isSilent = Boolean(isObject(options) && 'silent' in options && options.silent);
-    // // 同名插槽和属性同时存在，则提醒用户只需要选择一种方式即可
-    // if (instance.slots[name] && propsNode && propsNode !== true && !isSilent) {
-    //   log.warn('', `Both slots.${name} and props.${name} exist, props.${name} is preferred`);
-    // }
-    // propsNode 为 false 不渲染
+    // 2. 否者按照 用户主动传入的 props 值 > slot > 默认 props 值
+    // 2.1 处理主动传入的 prop
+    if (isPropExplicitlySet(instance, name)) {
+      // 2.1.1 如果有传，那么优先使用 prop 的值
+      const propsNode = instance.props[camelCase(name)] || instance.props[kebabCase(name)];
+      // 如果该属性的类型有多种且包含 Boolean 和 Slot 的情况下，处理 boolean casting true 的场景
+      // https://vuejs.org/guide/components/props.html#boolean-casting
+      const types = instance.type.props[name]?.type;
+      if (types?.length > 1) {
+        if (types.includes(Boolean) && types.includes(Function)) {
+          if (propsNode === '' && !renderSlot) return defaultNode;
+        }
+      }
+      // 2.1.2 如果 prop 的值为 false 或者 null，那么直接不渲染
+      if (propsNode === false || propsNode === null) return;
+      // 2.1.3 如果 prop 的值为 true，那么使用 slot 渲染
+      if (propsNode === true) {
+        return handleSlots(instance, name, renderParams) || defaultNode;
+      }
+      // 2.1.4 如果 prop 的值为函数，那么执行函数
+      if (isFunction(propsNode)) return propsNode(h, renderParams);
+      // 2.1.5 如果 prop 的值为 undefined、''，那么使用插槽渲染
+      const isPropsEmpty = [undefined, ''].includes(propsNode as any);
+      if (isPropsEmpty && renderSlot) {
+        return handleSlots(instance, name, renderParams);
+      }
+      // 2.1.6 如果 prop 的值为其他值，那么直接返回
+      return propsNode;
+    }
+    // 2.2 如果未主动传入 prop，那么渲染 slot，当然前提是存在 slot
+    if (renderSlot) {
+      return handleSlots(instance, name, renderParams);
+    }
+    // 2.3 如果未主动传入 prop，也没有 slot，那么就走 prop
+    const propsNode = instance.props[camelCase(name)] || instance.props[kebabCase(name)];
     if (propsNode === false || propsNode === null) return;
     if (propsNode === true) {
-      return handleSlots(instance, name, params) || defaultNode;
+      return defaultNode;
     }
-
-    // 同名 props 和 slot 优先处理 props
-    if (isFunction(propsNode)) return propsNode(h, params);
-    const isPropsEmpty = [undefined, params, ''].includes(propsNode);
-    if ((isPropsEmpty || slotFirst) && (instance.slots[camelCase(name)] || instance.slots[kebabCase(name)])) {
-      return handleSlots(instance, name, params);
-    }
+    if (isFunction(propsNode)) return propsNode(h, renderParams);
     return propsNode;
   };
 };

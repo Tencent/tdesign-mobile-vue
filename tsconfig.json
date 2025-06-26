@@ -24,15 +24,43 @@
     "allowJs": true,
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"],
-      "tdesign-mobile-vue": ["src"],
-      "tdesign-mobile-vue/es/locale/*": ["src/locale/*"]
+      "@/*": [
+        "src/*"
+      ],
+      "tdesign-mobile-vue": [
+        "src"
+      ],
+      "tdesign-mobile-vue/es/locale/*": [
+        "src/locale/*"
+      ]
     },
-    "types": ["vitest/globals"],
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    "types": [
+      "vitest/globals"
+    ],
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
   },
-  "rules": { "trailing-comma": false },
-  "include": ["./**/*.ts", "./**/*.tsx", "./**/*.vue"],
-  "exclude": ["node_modules", "src/_common", "dist", "es", "esm", "lib", "cjs", "site"],
+  "rules": {
+    "trailing-comma": false
+  },
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx",
+    "./**/*.vue"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/_common",
+    "dist",
+    "es",
+    "esm",
+    "lib",
+    "cjs",
+    "site"
+  ],
   "compileOnSave": false
 }

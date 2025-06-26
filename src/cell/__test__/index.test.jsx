@@ -58,8 +58,9 @@ describe('Cell.vue', async () => {
 
   it('align render', async () => {
     alignList.forEach((a) => {
-      const wrapper = mount(() => <Cell title="单行标题" align={a}></Cell>);
-      expect(wrapper.classes()).toContain(`t-cell--${a}`);
+      const wrapper = mount(() => <Cell title="单行标题" align={a} arrow></Cell>);
+      const rightAlign = wrapper.find(`.t-cell__right--${a}`);
+      expect(rightAlign.exists()).toBeTruthy();
     });
   });
 

@@ -77,23 +77,23 @@ exports[`Result > Result customVue demo works fine 1`] = `
 exports[`Result > Result mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-772b64ec=""
+  data-v-f5693a74=""
 >
   <h1
     class="title"
-    data-v-772b64ec=""
+    data-v-f5693a74=""
   >
     Result 结果
   </h1>
   <p
     class="summary"
-    data-v-772b64ec=""
+    data-v-f5693a74=""
   >
     结果反馈
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-772b64ec=""
+    data-v-f5693a74=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -114,7 +114,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-772b64ec=""
+    data-v-f5693a74=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -146,7 +146,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zm-12.5 4.41L6.09 12l1.41-1.41 3 3 6-6L17.91 9l-7.41 7.41z"
+                d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM10.5 16.4142L6.08578 12L7.5 10.5858L10.5 13.5858L16.5 7.58579L17.9142 9L10.5 16.4142Z"
                 fill="currentColor"
               />
             </svg>
@@ -178,7 +178,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zM7.4 15.18L10.6 12 7.4 8.82 8.82 7.4 12 10.6l3.18-3.19 1.42 1.42L13.4 12l3.19 3.18-1.42 1.42L12 13.4 8.82 16.6 7.4 15.18z"
+                d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM7.40347 15.1823L10.5858 12L7.40347 8.81768L8.81768 7.40347L12 10.5858L15.1816 7.40415L16.5959 8.81836L13.4142 12L16.5959 15.1816L15.1816 16.5959L12 13.4142L8.81768 16.5965L7.40347 15.1823Z"
                 fill="currentColor"
               />
             </svg>
@@ -210,7 +210,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zm-12 5.5V10h2v7.5h-2zm2-9h-2v-2h2v2z"
+                d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM11 17.5L11 10H13L13 17.5L11 17.5ZM13 8.5H10.9961L10.9961 6.49609H13L13 8.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -242,7 +242,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zm-12 5.5V10h2v7.5h-2zm2-9h-2v-2h2v2z"
+                d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM11 17.5L11 10H13L13 17.5L11 17.5ZM13 8.5H10.9961L10.9961 6.49609H13L13 8.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -265,7 +265,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-772b64ec=""
+    data-v-f5693a74=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -283,7 +283,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
       
       <div
         class="t-result t-result--theme-default"
-        data-v-772b64ec=""
+        data-v-f5693a74=""
       >
         <div
           class="t-result__thumb"
@@ -358,7 +358,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-772b64ec=""
+    data-v-f5693a74=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -376,12 +376,12 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
       
       <div
         class="padding"
-        data-v-772b64ec=""
+        data-v-f5693a74=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-772b64ec=""
+          data-v-f5693a74=""
           role="button"
           type="button"
         >
@@ -422,7 +422,7 @@ exports[`Result > Result themeVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zm-12.5 4.41L6.09 12l1.41-1.41 3 3 6-6L17.91 9l-7.41 7.41z"
+            d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM10.5 16.4142L6.08578 12L7.5 10.5858L10.5 13.5858L16.5 7.58579L17.9142 9L10.5 16.4142Z"
             fill="currentColor"
           />
         </svg>
@@ -454,7 +454,7 @@ exports[`Result > Result themeVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zM7.4 15.18L10.6 12 7.4 8.82 8.82 7.4 12 10.6l3.18-3.19 1.42 1.42L13.4 12l3.19 3.18-1.42 1.42L12 13.4 8.82 16.6 7.4 15.18z"
+            d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM7.40347 15.1823L10.5858 12L7.40347 8.81768L8.81768 7.40347L12 10.5858L15.1816 7.40415L16.5959 8.81836L13.4142 12L16.5959 15.1816L15.1816 16.5959L12 13.4142L8.81768 16.5965L7.40347 15.1823Z"
             fill="currentColor"
           />
         </svg>
@@ -486,7 +486,7 @@ exports[`Result > Result themeVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zm-12 5.5V10h2v7.5h-2zm2-9h-2v-2h2v2z"
+            d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM11 17.5L11 10H13L13 17.5L11 17.5ZM13 8.5H10.9961L10.9961 6.49609H13L13 8.5Z"
             fill="currentColor"
           />
         </svg>
@@ -518,7 +518,7 @@ exports[`Result > Result themeVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zm-12 5.5V10h2v7.5h-2zm2-9h-2v-2h2v2z"
+            d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM11 17.5L11 10H13L13 17.5L11 17.5ZM13 8.5H10.9961L10.9961 6.49609H13L13 8.5Z"
             fill="currentColor"
           />
         </svg>

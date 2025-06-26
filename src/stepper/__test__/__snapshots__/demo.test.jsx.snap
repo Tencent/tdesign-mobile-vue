@@ -18,7 +18,7 @@ exports[`Stepper > Stepper baseVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M4 11h16v2H4v-2z"
+          d="M4 11L20 11V13L4 13L4 11Z"
           fill="currentColor"
         />
       </svg>
@@ -40,7 +40,7 @@ exports[`Stepper > Stepper baseVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
           fill="currentColor"
         />
       </svg>
@@ -60,7 +60,7 @@ exports[`Stepper > Stepper baseVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M4 11h16v2H4v-2z"
+          d="M4 11L20 11V13L4 13L4 11Z"
           fill="currentColor"
         />
       </svg>
@@ -82,7 +82,7 @@ exports[`Stepper > Stepper baseVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
           fill="currentColor"
         />
       </svg>
@@ -109,7 +109,7 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M4 11h16v2H4v-2z"
+          d="M4 11L20 11V13L4 13L4 11Z"
           fill="currentColor"
         />
       </svg>
@@ -131,7 +131,7 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
           fill="currentColor"
         />
       </svg>
@@ -151,7 +151,7 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M4 11h16v2H4v-2z"
+          d="M4 11L20 11V13L4 13L4 11Z"
           fill="currentColor"
         />
       </svg>
@@ -173,7 +173,7 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
           fill="currentColor"
         />
       </svg>
@@ -193,7 +193,7 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M4 11h16v2H4v-2z"
+          d="M4 11L20 11V13L4 13L4 11Z"
           fill="currentColor"
         />
       </svg>
@@ -215,7 +215,7 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
           fill="currentColor"
         />
       </svg>
@@ -276,7 +276,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M4 11h16v2H4v-2z"
+                d="M4 11L20 11V13L4 13L4 11Z"
                 fill="currentColor"
               />
             </svg>
@@ -298,7 +298,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
                 fill="currentColor"
               />
             </svg>
@@ -318,7 +318,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M4 11h16v2H4v-2z"
+                d="M4 11L20 11V13L4 13L4 11Z"
                 fill="currentColor"
               />
             </svg>
@@ -340,7 +340,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
                 fill="currentColor"
               />
             </svg>
@@ -388,7 +388,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M4 11h16v2H4v-2z"
+                d="M4 11L20 11V13L4 13L4 11Z"
                 fill="currentColor"
               />
             </svg>
@@ -410,7 +410,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
                 fill="currentColor"
               />
             </svg>
@@ -430,7 +430,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M4 11h16v2H4v-2z"
+                d="M4 11L20 11V13L4 13L4 11Z"
                 fill="currentColor"
               />
             </svg>
@@ -452,7 +452,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
                 fill="currentColor"
               />
             </svg>
@@ -472,7 +472,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M4 11h16v2H4v-2z"
+                d="M4 11L20 11V13L4 13L4 11Z"
                 fill="currentColor"
               />
             </svg>
@@ -494,7 +494,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
                 fill="currentColor"
               />
             </svg>
@@ -538,7 +538,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M4 11h16v2H4v-2z"
+                d="M4 11L20 11V13L4 13L4 11Z"
                 fill="currentColor"
               />
             </svg>
@@ -561,7 +561,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
                 fill="currentColor"
               />
             </svg>
@@ -609,7 +609,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M4 11h16v2H4v-2z"
+                d="M4 11L20 11V13L4 13L4 11Z"
                 fill="currentColor"
               />
             </svg>
@@ -631,7 +631,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
                 fill="currentColor"
               />
             </svg>
@@ -651,7 +651,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M4 11h16v2H4v-2z"
+                d="M4 11L20 11V13L4 13L4 11Z"
                 fill="currentColor"
               />
             </svg>
@@ -673,7 +673,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
                 fill="currentColor"
               />
             </svg>
@@ -693,7 +693,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M4 11h16v2H4v-2z"
+                d="M4 11L20 11V13L4 13L4 11Z"
                 fill="currentColor"
               />
             </svg>
@@ -715,7 +715,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
                 fill="currentColor"
               />
             </svg>
@@ -759,7 +759,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M4 11h16v2H4v-2z"
+                d="M4 11L20 11V13L4 13L4 11Z"
                 fill="currentColor"
               />
             </svg>
@@ -781,7 +781,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
                 fill="currentColor"
               />
             </svg>
@@ -801,7 +801,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M4 11h16v2H4v-2z"
+                d="M4 11L20 11V13L4 13L4 11Z"
                 fill="currentColor"
               />
             </svg>
@@ -823,7 +823,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
                 fill="currentColor"
               />
             </svg>
@@ -843,7 +843,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M4 11h16v2H4v-2z"
+                d="M4 11L20 11V13L4 13L4 11Z"
                 fill="currentColor"
               />
             </svg>
@@ -865,7 +865,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
                 fill="currentColor"
               />
             </svg>
@@ -896,7 +896,7 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M4 11h16v2H4v-2z"
+          d="M4 11L20 11V13L4 13L4 11Z"
           fill="currentColor"
         />
       </svg>
@@ -918,7 +918,7 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
           fill="currentColor"
         />
       </svg>
@@ -938,7 +938,7 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M4 11h16v2H4v-2z"
+          d="M4 11L20 11V13L4 13L4 11Z"
           fill="currentColor"
         />
       </svg>
@@ -960,7 +960,7 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
           fill="currentColor"
         />
       </svg>
@@ -980,7 +980,7 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M4 11h16v2H4v-2z"
+          d="M4 11L20 11V13L4 13L4 11Z"
           fill="currentColor"
         />
       </svg>
@@ -1002,7 +1002,7 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
           fill="currentColor"
         />
       </svg>
@@ -1029,7 +1029,7 @@ exports[`Stepper > Stepper statusVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M4 11h16v2H4v-2z"
+          d="M4 11L20 11V13L4 13L4 11Z"
           fill="currentColor"
         />
       </svg>
@@ -1052,7 +1052,7 @@ exports[`Stepper > Stepper statusVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
           fill="currentColor"
         />
       </svg>
@@ -1079,7 +1079,7 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M4 11h16v2H4v-2z"
+          d="M4 11L20 11V13L4 13L4 11Z"
           fill="currentColor"
         />
       </svg>
@@ -1101,7 +1101,7 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
           fill="currentColor"
         />
       </svg>
@@ -1121,7 +1121,7 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M4 11h16v2H4v-2z"
+          d="M4 11L20 11V13L4 13L4 11Z"
           fill="currentColor"
         />
       </svg>
@@ -1143,7 +1143,7 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
           fill="currentColor"
         />
       </svg>
@@ -1163,7 +1163,7 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M4 11h16v2H4v-2z"
+          d="M4 11L20 11V13L4 13L4 11Z"
           fill="currentColor"
         />
       </svg>
@@ -1185,7 +1185,7 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
           fill="currentColor"
         />
       </svg>

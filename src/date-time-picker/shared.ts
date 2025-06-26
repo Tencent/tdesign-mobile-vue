@@ -1,4 +1,4 @@
-import isArray from 'lodash/isArray';
+import { isArray } from 'lodash-es';
 
 export const getMeaningColumn = (mode: string | string[]) => {
   const arr = ['year', 'month', 'date', 'hour', 'minute', 'second'];

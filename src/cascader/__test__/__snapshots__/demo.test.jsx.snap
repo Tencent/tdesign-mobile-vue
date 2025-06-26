@@ -6,7 +6,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -31,7 +31,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
       请选择地址
     </div>
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -44,7 +44,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
             fill="currentColor"
           />
         </svg>
@@ -84,11 +84,12 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
             fill="currentColor"
           />
         </svg>
       </div>
+      <!---->
       <div
         class="t-cascader__content"
       >
@@ -115,13 +116,14 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
           </div>
           
         </div>
+        <!---->
         <!---->
         <div
           class="t-cascader__options-container"
@@ -221,8 +223,8 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
-    data-v-e4157e3c=""
+    class="t-cell"
+    data-v-089206a7=""
   >
     <div
       class="t-cell__left"
@@ -247,7 +249,7 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
       请选择地址
     </div>
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -260,7 +262,7 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
             fill="currentColor"
           />
         </svg>
@@ -294,12 +296,13 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
         
         <span
           class="confirm-btn"
-          data-v-e4157e3c=""
+          data-v-089206a7=""
         >
           确定
         </span>
         
       </div>
+      <!---->
       <div
         class="t-cascader__content"
       >
@@ -326,13 +329,14 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
           </div>
           
         </div>
+        <!---->
         <!---->
         <div
           class="t-cascader__options-container"
@@ -432,7 +436,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -457,7 +461,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
       请选择地址
     </div>
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -470,7 +474,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
             fill="currentColor"
           />
         </svg>
@@ -510,11 +514,12 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
             fill="currentColor"
           />
         </svg>
       </div>
+      <!---->
       <div
         class="t-cascader__content"
       >
@@ -541,13 +546,14 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
           </div>
           
         </div>
+        <!---->
         <!---->
         <div
           class="t-cascader__options-container"
@@ -647,7 +653,7 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -672,7 +678,7 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
       请选择地址
     </div>
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -685,7 +691,7 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
             fill="currentColor"
           />
         </svg>
@@ -725,11 +731,12 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
             fill="currentColor"
           />
         </svg>
       </div>
+      <!---->
       <div
         class="t-cascader__content"
       >
@@ -756,13 +763,14 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
           </div>
           
         </div>
+        <!---->
         <!---->
         <div
           class="t-cascader__options-container"
@@ -863,7 +871,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -888,7 +896,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           请选择地址
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -901,7 +909,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -941,11 +949,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
                 fill="currentColor"
               />
             </svg>
           </div>
+          <!---->
           <div
             class="t-cascader__content"
           >
@@ -972,13 +981,14 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   width="1em"
                 >
                   <path
-                    d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                     fill="currentColor"
                   />
                 </svg>
               </div>
               
             </div>
+            <!---->
             <!---->
             <div
               class="t-cascader__options-container"
@@ -1091,7 +1101,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -1116,7 +1126,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           请选择地址
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -1129,7 +1139,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -1169,14 +1179,16 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
                 fill="currentColor"
               />
             </svg>
           </div>
+          <!---->
           <div
             class="t-cascader__content"
           >
+            <!---->
             <!---->
             <!---->
             <div
@@ -1294,7 +1306,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -1319,7 +1331,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           请选择地址
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -1332,7 +1344,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -1372,11 +1384,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
                 fill="currentColor"
               />
             </svg>
           </div>
+          <!---->
           <div
             class="t-cascader__content"
           >
@@ -1403,13 +1416,14 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   width="1em"
                 >
                   <path
-                    d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                     fill="currentColor"
                   />
                 </svg>
               </div>
               
             </div>
+            <!---->
             <!---->
             <div
               class="t-cascader__options-container"
@@ -1522,7 +1536,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -1547,7 +1561,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           请选择地址
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -1560,7 +1574,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -1600,11 +1614,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
                 fill="currentColor"
               />
             </svg>
           </div>
+          <!---->
           <div
             class="t-cascader__content"
           >
@@ -1631,13 +1646,14 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   width="1em"
                 >
                   <path
-                    d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                     fill="currentColor"
                   />
                 </svg>
               </div>
               
             </div>
+            <!---->
             <!---->
             <div
               class="t-cascader__options-container"
@@ -1750,7 +1766,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -1775,7 +1791,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           请选择地址
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -1788,7 +1804,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -1828,11 +1844,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
                 fill="currentColor"
               />
             </svg>
           </div>
+          <!---->
           <div
             class="t-cascader__content"
           >
@@ -1859,13 +1876,14 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   width="1em"
                 >
                   <path
-                    d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                     fill="currentColor"
                   />
                 </svg>
               </div>
               
             </div>
+            <!---->
             <div
               class="t-cascader__options-title"
             >
@@ -1982,7 +2000,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
+        class="t-cell"
       >
         <div
           class="t-cell__left"
@@ -2007,7 +2025,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           请选择地址
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -2020,7 +2038,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -2060,11 +2078,12 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
                 fill="currentColor"
               />
             </svg>
           </div>
+          <!---->
           <div
             class="t-cascader__content"
           >
@@ -2091,13 +2110,14 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   width="1em"
                 >
                   <path
-                    d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                     fill="currentColor"
                   />
                 </svg>
               </div>
               
             </div>
+            <!---->
             <!---->
             <div
               class="t-cascader__options-container"
@@ -2180,8 +2200,8 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle"
-        data-v-e4157e3c=""
+        class="t-cell"
+        data-v-089206a7=""
       >
         <div
           class="t-cell__left"
@@ -2206,7 +2226,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           请选择地址
         </div>
         <div
-          class="t-cell__right"
+          class="t-cell__right t-cell__right--middle"
         >
           <div
             class="t-cell__right-icon"
@@ -2219,7 +2239,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
@@ -2253,12 +2273,13 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
             
             <span
               class="confirm-btn"
-              data-v-e4157e3c=""
+              data-v-089206a7=""
             >
               确定
             </span>
             
           </div>
+          <!---->
           <div
             class="t-cascader__content"
           >
@@ -2285,13 +2306,14 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   width="1em"
                 >
                   <path
-                    d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                     fill="currentColor"
                   />
                 </svg>
               </div>
               
             </div>
+            <!---->
             <!---->
             <div
               class="t-cascader__options-container"
@@ -2394,7 +2416,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -2419,7 +2441,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
       请选择地址
     </div>
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -2432,7 +2454,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
             fill="currentColor"
           />
         </svg>
@@ -2472,14 +2494,16 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
             fill="currentColor"
           />
         </svg>
       </div>
+      <!---->
       <div
         class="t-cascader__content"
       >
+        <!---->
         <!---->
         <!---->
         <div
@@ -2580,7 +2604,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -2605,7 +2629,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
       请选择地址
     </div>
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -2618,7 +2642,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
             fill="currentColor"
           />
         </svg>
@@ -2658,11 +2682,12 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
             fill="currentColor"
           />
         </svg>
       </div>
+      <!---->
       <div
         class="t-cascader__content"
       >
@@ -2689,13 +2714,14 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
           </div>
           
         </div>
+        <!---->
         <div
           class="t-cascader__options-title"
         >
@@ -2799,7 +2825,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle"
+    class="t-cell"
   >
     <div
       class="t-cell__left"
@@ -2824,7 +2850,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
       请选择地址
     </div>
     <div
-      class="t-cell__right"
+      class="t-cell__right t-cell__right--middle"
     >
       <div
         class="t-cell__right-icon"
@@ -2837,7 +2863,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
             fill="currentColor"
           />
         </svg>
@@ -2877,11 +2903,12 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
             fill="currentColor"
           />
         </svg>
       </div>
+      <!---->
       <div
         class="t-cascader__content"
       >
@@ -2908,13 +2935,14 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M8.09 17.5l5.5-5.5-5.5-5.5L9.5 5.09 16.41 12 9.5 18.91 8.09 17.5z"
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
                 fill="currentColor"
               />
             </svg>
           </div>
           
         </div>
+        <!---->
         <!---->
         <div
           class="t-cascader__options-container"

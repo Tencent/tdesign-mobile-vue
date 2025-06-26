@@ -9,7 +9,7 @@ import { TNode } from '../common';
 
 export interface TdCalendarProps {
   /**
-   * 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。
+   * 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性
    * @default ''
    */
   confirmBtn?: string | ButtonProps | TNode | null;
@@ -30,6 +30,11 @@ export interface TdCalendarProps {
    * 最小可选的日期，不传则默认今天
    */
   minDate?: number | Date;
+  /**
+   * 切换模式。 `none` 表示水平方向平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换
+   * @default none
+   */
+  switchMode?: 'none' | 'month' | 'year-month';
   /**
    * 标题，不传默认为“请选择日期”
    */
@@ -73,6 +78,14 @@ export interface TdCalendarProps {
    * 点击确认按钮时触发
    */
   onConfirm?: (value: Date) => void;
+  /**
+   * 切换月或年时触发（switch-mode 不为 none 时有效）
+   */
+  onPanelChange?: (context: { year: number; month: number }) => void;
+  /**
+   * 滚动时触发
+   */
+  onScroll?: (context: { e: Event }) => void;
   /**
    * 点击日期时触发
    */

@@ -47,7 +47,7 @@ exports[`SwipeCell > SwipeCell doubleVue demo works fine 1`] = `
         </div>
         
         <div
-          class="t-cell t-cell--middle"
+          class="t-cell"
         >
           <div
             class="t-cell__left"
@@ -109,7 +109,7 @@ exports[`SwipeCell > SwipeCell doubleVue demo works fine 1`] = `
 exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-  data-v-7d57325a=""
+  data-v-f06ea449=""
 >
   <div
     class="tdesign-mobile-demo-block__header"
@@ -127,7 +127,7 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
     
     <div
       class="t-swipe-cell"
-      data-v-7d57325a=""
+      data-v-f06ea449=""
     >
       <div
         class="t-swipe-cell__wrapper"
@@ -140,13 +140,13 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
           
           <div
             class="btn edit-btn"
-            data-v-7d57325a=""
+            data-v-f06ea449=""
           >
             编辑
           </div>
           <div
             class="btn delete-btn"
-            data-v-7d57325a=""
+            data-v-f06ea449=""
           >
             删除
           </div>
@@ -162,8 +162,8 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
         </div>
         
         <div
-          class="t-cell t-cell--middle"
-          data-v-7d57325a=""
+          class="t-cell"
+          data-v-f06ea449=""
         >
           <div
             class="t-cell__left"
@@ -197,13 +197,13 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
           
           <div
             class="btn edit-btn"
-            data-v-7d57325a=""
+            data-v-f06ea449=""
           >
             编辑
           </div>
           <div
             class="btn delete-btn"
-            data-v-7d57325a=""
+            data-v-f06ea449=""
           >
             删除
           </div>
@@ -269,7 +269,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -314,7 +314,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
+                  d="M16.8281 1.41602L22.583 7.17092L7.75494 22.0001L2 22.0002L2 16.2453L16.8281 1.41602ZM16.8281 10.0974L19.7546 7.17092L16.8281 4.24444L13.9017 7.17092L16.8281 10.0974ZM12.4875 8.58517L4 17.0736L4 20.0001H6.92644L15.414 11.5116L12.4875 8.58517Z"
                   fill="currentColor"
                 />
               </svg>
@@ -337,7 +337,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M7.5 1h9v3H22v2h-2.03l-.5 17H4.53l-.5-17H2V4h5.5V1zm2 3h5V3h-5v1zM6.03 6l.44 15h11.06l.44-15H6.03zM13 8v11h-2V8h2z"
+                  d="M7.5 1H16.5V4H22V6H19.971L19.471 23H4.52898L4.02898 6H2V4H7.5V1ZM9.5 4H14.5V3H9.5V4ZM6.02984 6L6.47102 21H17.529L17.9702 6H6.02984ZM13 8V19H11V8H13Z"
                   fill="currentColor"
                 />
               </svg>
@@ -393,7 +393,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -437,7 +437,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
+                  d="M16.8281 1.41602L22.583 7.17092L7.75494 22.0001L2 22.0002L2 16.2453L16.8281 1.41602ZM16.8281 10.0974L19.7546 7.17092L16.8281 4.24444L13.9017 7.17092L16.8281 10.0974ZM12.4875 8.58517L4 17.0736L4 20.0001H6.92644L15.414 11.5116L12.4875 8.58517Z"
                   fill="currentColor"
                 />
               </svg>
@@ -455,7 +455,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M7.5 1h9v3H22v2h-2.03l-.5 17H4.53l-.5-17H2V4h5.5V1zm2 3h5V3h-5v1zM6.03 6l.44 15h11.06l.44-15H6.03zM13 8v11h-2V8h2z"
+                  d="M7.5 1H16.5V4H22V6H19.971L19.471 23H4.52898L4.02898 6H2V4H7.5V1ZM9.5 4H14.5V3H9.5V4ZM6.02984 6L6.47102 21H17.529L17.9702 6H6.02984ZM13 8V19H11V8H13Z"
                   fill="currentColor"
                 />
               </svg>
@@ -507,7 +507,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -556,7 +556,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
+                  d="M16.8281 1.41602L22.583 7.17092L7.75494 22.0001L2 22.0002L2 16.2453L16.8281 1.41602ZM16.8281 10.0974L19.7546 7.17092L16.8281 4.24444L13.9017 7.17092L16.8281 10.0974ZM12.4875 8.58517L4 17.0736L4 20.0001H6.92644L15.414 11.5116L12.4875 8.58517Z"
                   fill="currentColor"
                 />
               </svg>
@@ -579,7 +579,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M7.5 1h9v3H22v2h-2.03l-.5 17H4.53l-.5-17H2V4h5.5V1zm2 3h5V3h-5v1zM6.03 6l.44 15h11.06l.44-15H6.03zM13 8v11h-2V8h2z"
+                  d="M7.5 1H16.5V4H22V6H19.971L19.471 23H4.52898L4.02898 6H2V4H7.5V1ZM9.5 4H14.5V3H9.5V4ZM6.02984 6L6.47102 21H17.529L17.9702 6H6.02984ZM13 8V19H11V8H13Z"
                   fill="currentColor"
                 />
               </svg>
@@ -657,7 +657,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -741,7 +741,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -829,7 +829,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -930,7 +930,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1073,7 +1073,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1157,7 +1157,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1245,7 +1245,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1346,7 +1346,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1473,7 +1473,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1565,7 +1565,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1663,7 +1663,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1708,7 +1708,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
+                  d="M16.8281 1.41602L22.583 7.17092L7.75494 22.0001L2 22.0002L2 16.2453L16.8281 1.41602ZM16.8281 10.0974L19.7546 7.17092L16.8281 4.24444L13.9017 7.17092L16.8281 10.0974ZM12.4875 8.58517L4 17.0736L4 20.0001H6.92644L15.414 11.5116L12.4875 8.58517Z"
                   fill="currentColor"
                 />
               </svg>
@@ -1731,7 +1731,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M7.5 1h9v3H22v2h-2.03l-.5 17H4.53l-.5-17H2V4h5.5V1zm2 3h5V3h-5v1zM6.03 6l.44 15h11.06l.44-15H6.03zM13 8v11h-2V8h2z"
+                  d="M7.5 1H16.5V4H22V6H19.971L19.471 23H4.52898L4.02898 6H2V4H7.5V1ZM9.5 4H14.5V3H9.5V4ZM6.02984 6L6.47102 21H17.529L17.9702 6H6.02984ZM13 8V19H11V8H13Z"
                   fill="currentColor"
                 />
               </svg>
@@ -1787,7 +1787,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1831,7 +1831,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
+                  d="M16.8281 1.41602L22.583 7.17092L7.75494 22.0001L2 22.0002L2 16.2453L16.8281 1.41602ZM16.8281 10.0974L19.7546 7.17092L16.8281 4.24444L13.9017 7.17092L16.8281 10.0974ZM12.4875 8.58517L4 17.0736L4 20.0001H6.92644L15.414 11.5116L12.4875 8.58517Z"
                   fill="currentColor"
                 />
               </svg>
@@ -1849,7 +1849,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M7.5 1h9v3H22v2h-2.03l-.5 17H4.53l-.5-17H2V4h5.5V1zm2 3h5V3h-5v1zM6.03 6l.44 15h11.06l.44-15H6.03zM13 8v11h-2V8h2z"
+                  d="M7.5 1H16.5V4H22V6H19.971L19.471 23H4.52898L4.02898 6H2V4H7.5V1ZM9.5 4H14.5V3H9.5V4ZM6.02984 6L6.47102 21H17.529L17.9702 6H6.02984ZM13 8V19H11V8H13Z"
                   fill="currentColor"
                 />
               </svg>
@@ -1901,7 +1901,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1950,7 +1950,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
+                  d="M16.8281 1.41602L22.583 7.17092L7.75494 22.0001L2 22.0002L2 16.2453L16.8281 1.41602ZM16.8281 10.0974L19.7546 7.17092L16.8281 4.24444L13.9017 7.17092L16.8281 10.0974ZM12.4875 8.58517L4 17.0736L4 20.0001H6.92644L15.414 11.5116L12.4875 8.58517Z"
                   fill="currentColor"
                 />
               </svg>
@@ -1973,7 +1973,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M7.5 1h9v3H22v2h-2.03l-.5 17H4.53l-.5-17H2V4h5.5V1zm2 3h5V3h-5v1zM6.03 6l.44 15h11.06l.44-15H6.03zM13 8v11h-2V8h2z"
+                  d="M7.5 1H16.5V4H22V6H19.971L19.471 23H4.52898L4.02898 6H2V4H7.5V1ZM9.5 4H14.5V3H9.5V4ZM6.02984 6L6.47102 21H17.529L17.9702 6H6.02984ZM13 8V19H11V8H13Z"
                   fill="currentColor"
                 />
               </svg>
@@ -2001,7 +2001,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
   
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-7d57325a=""
+    data-v-f06ea449=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -2019,7 +2019,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
       
       <div
         class="t-swipe-cell"
-        data-v-7d57325a=""
+        data-v-f06ea449=""
       >
         <div
           class="t-swipe-cell__wrapper"
@@ -2032,13 +2032,13 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <div
               class="btn edit-btn"
-              data-v-7d57325a=""
+              data-v-f06ea449=""
             >
               编辑
             </div>
             <div
               class="btn delete-btn"
-              data-v-7d57325a=""
+              data-v-f06ea449=""
             >
               删除
             </div>
@@ -2054,8 +2054,8 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           </div>
           
           <div
-            class="t-cell t-cell--middle"
-            data-v-7d57325a=""
+            class="t-cell"
+            data-v-f06ea449=""
           >
             <div
               class="t-cell__left"
@@ -2089,13 +2089,13 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <div
               class="btn edit-btn"
-              data-v-7d57325a=""
+              data-v-f06ea449=""
             >
               编辑
             </div>
             <div
               class="btn delete-btn"
-              data-v-7d57325a=""
+              data-v-f06ea449=""
             >
               删除
             </div>
@@ -2164,7 +2164,7 @@ exports[`SwipeCell > SwipeCell rightVue demo works fine 1`] = `
         </div>
         
         <div
-          class="t-cell t-cell--middle"
+          class="t-cell"
         >
           <div
             class="t-cell__left"

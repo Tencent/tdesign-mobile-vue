@@ -1,8 +1,7 @@
 import { computed, h, ref, toRefs, ComputedRef } from 'vue';
-import isFunction from 'lodash/isFunction';
-import isString from 'lodash/isString';
+import { isFunction, isString } from 'lodash-es';
 import { SizeLimitObj, TdUploadProps, UploadChangeContext, UploadFile, UploadRemoveContext } from '../type';
-import { useVModel } from '../../shared';
+import useVModel from '../../hooks/useVModel';
 import {
   formatToUploadFile,
   getDisplayFiles,
