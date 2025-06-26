@@ -6,7 +6,7 @@ import { VNode, isVNode, VNodeNormalizedChildren, getCurrentInstance } from 'vue
  * @param childInSlots
  * @returns
  */
-export function useChildSlots(childComponentName: string, childInSlots?: VNodeNormalizedChildren) {
+export default function useChildSlots(childComponentName: string, childInSlots?: VNodeNormalizedChildren) {
   const recurChildren = (children?: VNodeNormalizedChildren) => {
     const result: VNode[] = [];
     if (Array.isArray(children)) {

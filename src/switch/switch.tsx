@@ -1,7 +1,7 @@
 import { computed, defineComponent, h, toRefs } from 'vue';
 import { isArray, isFunction, isString } from 'lodash-es';
 import TLoading from '../loading';
-import { useToggle } from '../shared';
+import useToggle from '../hooks/useToggle';
 import config from '../config';
 import props from './props';
 import { SwitchValue, TdSwitchProps } from './type';

@@ -56,7 +56,7 @@ type UseGrestureReturn = {
  * gesture.destroy();
  */
 
-export function useGesture(config: UseGestureConfig): UseGrestureReturn {
+export default function useGesture(config: UseGestureConfig): UseGrestureReturn {
   const gesture = ref(null);
 
   const destroy = () => gesture.value?.destroy?.();

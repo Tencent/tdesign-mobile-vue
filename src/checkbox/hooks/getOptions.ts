@@ -1,7 +1,7 @@
 import { VNode, Ref, ref, watch, onMounted, Slots, toRefs } from 'vue';
 
 import { CheckboxOption, CheckboxOptionObj, TdCheckboxGroupProps } from '../type';
-import { useChildSlots } from '../../shared';
+import useChildSlots from '../../hooks/useChildSlots';
 
 export const getOptionListBySlots = (nodes: VNode[]) => {
   const arr: Array<CheckboxOptionObj> = [];
