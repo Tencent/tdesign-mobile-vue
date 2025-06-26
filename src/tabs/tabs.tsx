@@ -151,6 +151,16 @@ export default defineComponent({
       });
     });
 
+    watch(
+      itemProps,
+      () => {
+        nextTick(() => {
+          moveToActiveTab();
+        });
+      },
+      { deep: true },
+    );
+
     const handleTabClick = (event: Event, item: TdTabPanelProps) => {
       const { value, disabled } = item;
       if (disabled || currentValue.value === value) {
