@@ -4,7 +4,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import camelCase from 'camelcase';
 
-import testCoverage from '../test-coverage';
+import testCoverage from '../../test-coverage';
 
 const DEFAULT_TABS = [
   { tab: 'demo', name: '示例' },
@@ -208,7 +208,7 @@ function customRender({ source, file, md }) {
 
   // 设计指南内容 不展示 design Tab 则不解析
   if (pageData.isComponent && pageData.tdDocTabs.some((item) => item.tab === 'design')) {
-    const designDocPath = path.resolve(__dirname, `../../../src/_common/docs/mobile/design/${componentName}.md`);
+    const designDocPath = path.resolve(__dirname, `../../../../src/_common/docs/mobile/design/${componentName}.md`);
 
     if (fs.existsSync(designDocPath)) {
       const designMd = fs.readFileSync(designDocPath, 'utf-8');
