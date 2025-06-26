@@ -1,6 +1,7 @@
 <template>
   <div>
     <t-table
+      :fixed-rows="[2, 3]"
       row-key="index"
       :data="data"
       :max-height="400"
@@ -19,7 +20,7 @@
 import { ref, h } from 'vue';
 
 const data: any[] = [];
-const total = 10;
+const total = 20;
 for (let i = 0; i < total; i++) {
   data.push({
     index: i + 1,
@@ -46,11 +47,11 @@ const columns = ref([
 ]);
 
 const handleRowClick = (e: any) => {
-  console.log('row-cliek=====', e);
+  console.log('row-click=====', e);
 };
 
 const handleCellClick = (e: any) => {
-  console.log('cell-cliek=====', e);
+  console.log('cell-click=====', e);
 };
 
 const handleScroll = (e: any) => {

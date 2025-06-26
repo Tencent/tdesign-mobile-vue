@@ -4,6 +4,8 @@ import baseTableProps from './base-table-props';
 import config from '../config';
 import useClassName from './hooks/useClassName';
 import useStyle, { formatCSSUnit } from './hooks/useStyle';
+import useFixed, { getRowFixedStyles } from './hooks/useFixed';
+
 import { BaseTableCellParams, BaseTableCol, TableRowData, TdBaseTableProps } from './type';
 import TLoading from '../loading';
 import { TdLoadingProps } from '../loading/type';
@@ -18,16 +20,23 @@ export default defineComponent({
   emits: ['cell-click', 'row-click', 'scroll'],
   setup(props, context) {
     const tableRef = ref();
-    const tableContentRef = ref();
     const theadRef = ref();
     const tableElmRef = ref();
     const renderTNodeJSX = useTNodeJSX();
-    const { classPrefix, tableLayoutClasses, tableHeaderClasses, tableBaseClass, tdAlignClasses, tdEllipsisClass } =
-      useClassName();
+    const {
+      classPrefix,
+      tableLayoutClasses,
+      tableHeaderClasses,
+      tableBaseClass,
+      tdAlignClasses,
+      tdEllipsisClass,
+      tableRowFixedClasses,
+    } = useClassName();
     const { globalConfig, t } = useConfig('table');
     const defaultLoadingContent = h(TLoading, { ...(props.loadingProps as TdLoadingProps) });
     // 表格基础样式类
     const { tableClasses, tableContentStyles, tableElementStyles } = useStyle(props);
+    const { rowAndColFixedPosition, tableContentRef } = useFixed(props);
 
     const defaultColWidth = props.tableLayout === 'fixed' ? '80px' : undefined;
 
@@ -151,36 +160,52 @@ export default defineComponent({
         );
       }
       if (props.data?.length) {
-        return props.data?.map((tr_item, tr_index) => (
-          <tr
-            key={tr_index}
-            onClick={($event) => {
-              handleRowClick(tr_item, tr_index, $event);
-            }}
-          >
-            {props.columns?.map((td_item, td_index) => (
-              <td
-                key={td_index}
-                class={tdClassName(td_item)}
-                onClick={($event) => {
-                  handleCellClick(tr_item, td_item, tr_index, td_index, $event);
-                }}
-              >
-                <div class={td_item.ellipsis && ellipsisClasses.value}>
-                  {renderCell(
-                    { row: tr_item, col: td_item, rowIndex: tr_index, colIndex: td_index },
-                    props.cellEmptyContent,
-                  )}
-                </div>
-              </td>
-            ))}
-          </tr>
-        ));
+        return props.data?.map((tr_item, tr_index) => {
+          console.log('1');
+          const { style, classes } = getRowFixedStyles(
+            get(tr_item, props.rowKey || 'id'),
+            tr_index,
+            props.data?.length || 0,
+            props.fixedRows,
+            rowAndColFixedPosition.value,
+            tableRowFixedClasses,
+          );
+          console.log('rowAndColFixedPosition', rowAndColFixedPosition.value);
+
+          return (
+            <tr
+              key={tr_index}
+              style={style}
+              class={classes}
+              onClick={($event) => {
+                handleRowClick(tr_item, tr_index, $event);
+              }}
+            >
+              {props.columns?.map((td_item, td_index) => (
+                <td
+                  key={td_index}
+                  class={tdClassName(td_item)}
+                  onClick={($event) => {
+                    handleCellClick(tr_item, td_item, tr_index, td_index, $event);
+                  }}
+                >
+                  <div class={td_item.ellipsis && ellipsisClasses.value}>
+                    {renderCell(
+                      { row: tr_item, col: td_item, rowIndex: tr_index, colIndex: td_index },
+                      props.cellEmptyContent,
+                    )}
+                  </div>
+                </td>
+              ))}
+            </tr>
+          );
+        });
       }
     };
 
     return () => {
       const renderLoading = renderTNodeJSX('loading', { defaultNode: defaultLoadingContent });
+
       return (
         <div ref={tableRef} class={dynamicBaseTableClasses.value} style="position: relative">
           <div
