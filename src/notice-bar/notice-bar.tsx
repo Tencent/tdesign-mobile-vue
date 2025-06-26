@@ -20,6 +20,7 @@ const iconDefault = {
 export default defineComponent({
   name: `${prefix}-notice-bar`,
   props,
+  emits: ['change'],
   setup(props) {
     const noticeBarClass = usePrefixClass('notice-bar');
     const renderTNodeJSX = useTNodeJSX();
@@ -42,9 +43,10 @@ export default defineComponent({
     const rootClasses = computed(() => [`${noticeBarClass.value}`, `${noticeBarClass.value}--${props.theme}`]);
 
     // click
-    function handleClick(trigger: NoticeBarTrigger) {
+    const handleClick = (trigger: NoticeBarTrigger) => {
       props.onClick?.(trigger);
-    }
+    };
+
     // 动画 i
     const animateStyle = computed(() => ({
       transform: state.offset ? `translateX(${state.offset}px)` : '',
@@ -57,7 +59,7 @@ export default defineComponent({
 
     const { visible, modelValue } = toRefs(props);
     const [isShow, setStatusValue] = useVModel(visible, modelValue, props.defaultVisible);
-    function handleScrolling() {
+    const handleScrolling = () => {
       if (!props?.marquee || (isObject(props?.marquee) && (props?.marquee as NoticeBarMarquee))?.loop === 0) {
         return;
       }
@@ -86,9 +88,9 @@ export default defineComponent({
           state.itemWidth = itemDOMWidth;
         }
       }, state.scroll.delay);
-    }
+    };
     // 动画结束后，初始化动画
-    function handleTransitionend() {
+    const handleTransitionend = () => {
       // 触发再次滚的
       state.scroll.loop = --state.scroll.loop;
       if (state.scroll.loop === 0) {
@@ -105,7 +107,7 @@ export default defineComponent({
         state.offset = -state.itemWidth;
         state.duration = (state.itemWidth + state.listWidth) / state.scroll.speed;
       }, 0);
-    }
+    };
     onMounted(() => {
       nextTick(() => {
         if (isShow.value) {
@@ -175,6 +177,8 @@ export default defineComponent({
                     direction="vertical"
                     duration={2000}
                     height={22}
+                    interval={props?.interval}
+                    onChange={props?.onChange}
                     class={`${noticeBarClass.value}__content--vertical`}
                   >
                     {props.content.map((item, index) => (
