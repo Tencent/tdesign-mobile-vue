@@ -16,4 +16,5 @@ export default {
   title: {
     type: [String, Function, Object] as PropType<TdCalendarProps['title']>,
   },
+  onVisibleChange: Function as PropType<(v: boolean) => void>,
 };
