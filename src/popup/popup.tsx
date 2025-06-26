@@ -109,8 +109,8 @@ export default defineComponent({
       (val) => {
         if (val) {
           props.onOpen?.();
+          mounted.value = val;
         }
-        mounted.value = val;
       },
     );
 
