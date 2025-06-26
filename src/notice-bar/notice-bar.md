@@ -16,13 +16,14 @@ suffixIcon | Slot / Function | - | 后缀图标。TS 类型：`TNode`。[通用�
 theme | String | info | 内置主题。可选项：info/success/warning/error | N
 visible | Boolean | false | 显示/隐藏。支持语法糖 `v-model` 或 `v-model:visible` | N
 defaultVisible | Boolean | false | 显示/隐藏。非受控属性 | N
+onChange | Function |  | TS 类型：`(current: number, context: { source: NoticeBarChangeSource }) => void`<br/>当 `direction="vertical"` 时轮播切换时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/notice-bar/type.ts)。<br/>`type NoticeBarChangeSource = '' \| 'autoplay' \| 'touch'`<br/> | N
 onClick | Function |  | TS 类型：`(trigger: NoticeBarTrigger) => void`<br/>点击事件。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/notice-bar/type.ts)。<br/>`type NoticeBarTrigger = 'prefix-icon' \| 'content' \| 'operation' \| 'suffix-icon';`<br/> | N
 
 ### NoticeBar Events
 
 名称 | 参数 | 描述
 -- | -- | --
-change | `(current: number, source: '' \| 'autoplay' \| 'touch')` | 当 `direction="vertical"` 时轮播切换时触发
+change | `(current: number, context: { source: NoticeBarChangeSource })` | 当 `direction="vertical"` 时轮播切换时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/notice-bar/type.ts)。<br/>`type NoticeBarChangeSource = '' \| 'autoplay' \| 'touch'`<br/>
 click | `(trigger: NoticeBarTrigger)` | 点击事件。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/notice-bar/type.ts)。<br/>`type NoticeBarTrigger = 'prefix-icon' \| 'content' \| 'operation' \| 'suffix-icon';`<br/>
 
 ### CSS Variables

@@ -20,10 +20,7 @@ export interface TdNoticeBarProps {
    * 间隔时间【仅在 direction='vertical' 有效】
    * @default 2000
    */
-  interval?: {
-    type: NumberConstructor;
-    value?: number;
-  };
+  interval?: number;
   /**
    * 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放
    * @default false
@@ -63,13 +60,13 @@ export interface TdNoticeBarProps {
    */
   modelValue?: boolean;
   /**
+   * 当 `direction="vertical"` 时轮播切换时触发
+   */
+  onChange?: (current: number, context: { source: NoticeBarChangeSource }) => void;
+  /**
    * 点击事件
    */
   onClick?: (trigger: NoticeBarTrigger) => void;
-  /**
-   * 轮播切换时触发
-   */
-  onChange?: (current: number, context: { source: NoticeBarChangeSource }) => void;
 }
 
 export interface NoticeBarMarquee {
@@ -78,6 +75,6 @@ export interface NoticeBarMarquee {
   delay?: number;
 }
 
-export type NoticeBarTrigger = 'prefix-icon' | 'content' | 'operation' | 'suffix-icon';
+export type NoticeBarChangeSource = '' | 'autoplay' | 'touch';
 
-export type NoticeBarChangeSource = 'autoplay' | 'touch' | 'nav';
+export type NoticeBarTrigger = 'prefix-icon' | 'content' | 'operation' | 'suffix-icon';

@@ -16,13 +16,14 @@ suffixIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definitio
 theme | String | info | options: info/success/warning/error | N
 visible | Boolean | false | `v-model` and `v-model:visible` is supported | N
 defaultVisible | Boolean | false | uncontrolled property | N
+onChange | Function |  | Typescript：`(current: number, context: { source: NoticeBarChangeSource }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/notice-bar/type.ts)。<br/>`type NoticeBarChangeSource = '' \| 'autoplay' \| 'touch'`<br/> | N
 onClick | Function |  | Typescript：`(trigger: NoticeBarTrigger) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/notice-bar/type.ts)。<br/>`type NoticeBarTrigger = 'prefix-icon' \| 'content' \| 'operation' \| 'suffix-icon';`<br/> | N
 
 ### NoticeBar Events
 
 name | params | description
 -- | -- | --
-change | `(current: number, source: '' \| 'autoplay' \| 'touch')` | \-
+change | `(current: number, context: { source: NoticeBarChangeSource })` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/notice-bar/type.ts)。<br/>`type NoticeBarChangeSource = '' \| 'autoplay' \| 'touch'`<br/>
 click | `(trigger: NoticeBarTrigger)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/notice-bar/type.ts)。<br/>`type NoticeBarTrigger = 'prefix-icon' \| 'content' \| 'operation' \| 'suffix-icon';`<br/>
 
 ### CSS Variables
