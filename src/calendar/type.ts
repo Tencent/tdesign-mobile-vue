@@ -62,7 +62,7 @@ export interface TdCalendarProps {
    */
   modelValue?: number | Date | TCalendarValue[];
   /**
-   * 是否显示日历；`usePopup` 为 true 时有效。支持语法糖 `v-model:visible`
+   * 是否显示日历；`usePopup` 为 true 时有效
    * @default false
    */
   visible?: boolean;

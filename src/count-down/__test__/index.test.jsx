@@ -92,7 +92,7 @@ describe('countdown.vue', async () => {
   describe('slots', async () => {
     it('content', async () => {
       const temp = <div>测试</div>;
-      const wrapper = mount(<CountDown time={1000} content="slot"></CountDown>, {
+      const wrapper = mount(<CountDown time={1000}></CountDown>, {
         slots: {
           content: temp,
         },
