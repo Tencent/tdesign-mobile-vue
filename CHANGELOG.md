@@ -5,6 +5,17 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.9.2 `2025-06-26` 
+### 🚀 Features
+- `Slider`: 新增 `vertical` 属性，支持垂直滑块 @novlan1 ([#1745](https://github.com/Tencent/tdesign-mobile-vue/pull/1745))
+- `Message`: 新增 `single` 和 `gap` 属性，支持多条信息通知 @novlan1 ([#1756](https://github.com/Tencent/tdesign-mobile-vue/pull/1756))
+- `NoticeBar`: 新增 `interval` 属性 和 `change` 事件 @zhangyingxuan ([#1718](https://github.com/Tencent/tdesign-mobile-vue/pull/1718))
+### 🐞 Bug Fixes
+- `Tabs`: 修复选项卡内容动态更新后底部激活线位置计算错误 @QuentinHsu ([#1884](https://github.com/Tencent/tdesign-mobile-vue/pull/1884))
+- `Cascader`: 当选中叶子节点时，未清理不匹配的数据和状态 @QuentinHsu ([#1883](https://github.com/Tencent/tdesign-mobile-vue/pull/1883))
+### 🚧 Others
+- `site`: 官网支持单组件 `Changelog` @RylanBot ([#1880](https://github.com/Tencent/tdesign-mobile-vue/pull/1880))
+
 ## 🌈 1.9.1 `2025-06-13` 
 ### 🚀 Features
 - `BackTop`: 支持自动向上寻找滚动元素 @novlan1 ([#1870](https://github.com/Tencent/tdesign-mobile-vue/pull/1870))
