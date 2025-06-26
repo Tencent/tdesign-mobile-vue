@@ -11,7 +11,10 @@
     "plugin:vue/vue3-recommended",
     "plugin:prettier/recommended"
   ],
-  "plugins": ["vue", "@typescript-eslint"],
+  "plugins": [
+    "vue",
+    "@typescript-eslint"
+  ],
   "parser": "vue-eslint-parser",
   "parserOptions": {
     "parser": "@typescript-eslint/parser",
@@ -22,13 +25,26 @@
     }
   },
   "settings": {
-    "import/extensions": [".js", ".jsx", ".ts", ".tsx"]
+    "import/extensions": [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx"
+    ]
   },
   "rules": {
     "camelcase": 0,
     // code style config
     "no-continue": "off",
-    "no-console": "off",
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ],
     "no-restricted-syntax": "off",
     "no-plusplus": "off",
     "no-param-reassign": "off",
@@ -46,14 +62,12 @@
     "default-param-last": "off",
     "default-case": "off",
     "prefer-spread": "off",
-
     // import config
     "import/extensions": "off",
     "import/no-unresolved": "off",
     "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": "off",
     "import/no-relative-packages": "off",
-
     // typescript config
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
@@ -65,37 +79,55 @@
     "@typescript-eslint/no-empty-function": 0,
     "@typescript-eslint/ban-ts-comment": 0,
     "vue/require-default-prop": 0,
-
     "@typescript-eslint/naming-convention": [
       "error",
       {
         "selector": "interface",
-        "format": ["PascalCase"],
+        "format": [
+          "PascalCase"
+        ],
         "custom": {
           "regex": "^I[A-Z]",
           "match": false
         }
       }
     ],
-    "no-restricted-imports": ["error", {
-      "paths": [{
-        "name": "lodash",
-        "message": "Please use lodash-es instead."
-      }]
-    }]
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "lodash",
+            "message": "Please use lodash-es instead."
+          }
+        ]
+      }
+    ]
   },
   "overrides": [
     {
-      "files": ["*.vue"],
+      "files": [
+        "*.vue"
+      ],
       "rules": {
-        "vue/component-name-in-template-casing": [2, "kebab-case"],
+        "vue/component-name-in-template-casing": [
+          2,
+          "kebab-case"
+        ],
         "vue/require-default-prop": 0,
         "vue/multi-word-component-names": 0,
         "vue/no-reserved-props": 0
       }
     },
     {
-      "files": ["**/demos/*", "script/**/*", "script/*", "*.js", "site/**/*", "site/*"],
+      "files": [
+        "**/demos/*",
+        "script/**/*",
+        "script/*",
+        "*.js",
+        "site/**/*",
+        "site/*"
+      ],
       "rules": {
         "no-var-requires": 0,
         "no-console": 0,
@@ -104,13 +136,18 @@
       }
     },
     {
-      "files": ["*.ts", "*.tsx"],
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
       "rules": {
         "@typescript-eslint/explicit-function-return-type": 0
       }
     },
     {
-      "files": ["*.test.js"],
+      "files": [
+        "*.test.js"
+      ],
       "rules": {
         "import/no-dynamic-require": "off",
         "global-require": "off"
