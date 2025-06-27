@@ -96,6 +96,14 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
   onScroll?: (params: { e: Event }) => void;
 }
 
+/** 组件实例方法 */
+export interface BaseTableInstanceFunctions<T extends TableRowData = TableRowData> {
+  /**
+   * 全部重新渲染表格
+   */
+  refreshTable: () => void;
+}
+
 export interface BaseTableCol<T extends TableRowData = TableRowData> {
   /**
    * 列横向对齐方式
