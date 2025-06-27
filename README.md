@@ -36,6 +36,8 @@ npm i tdesign-mobile-vue
 
 # 🔨 Usage
 
+We recommend using build tools like Webpack or Rollup that support tree-shaking. No extra setup is needed for on-demand component loading.
+
 ```js
 import { createApp } from 'vue';
 import TDesign from 'tdesign-mobile-vue';
@@ -43,8 +45,6 @@ import TDesign from 'tdesign-mobile-vue';
 const app = createApp(App);
 app.use(TDesign);
 ```
-
-We recommend using build tools like Webpack or Rollup that support tree-shaking. No extra setup is needed for on-demand component loading.
 
 # Browser Support
 
