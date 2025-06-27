@@ -1,8 +1,34 @@
-import { onMounted, toRefs, ref, watch, reactive } from 'vue';
-import { get, debounce } from 'lodash-es';
+import { toRefs, ref, watch, reactive } from 'vue';
+import { get } from 'lodash-es';
+import log from '../../_common/js/log';
 import { ClassName, Styles } from '../../common';
 import type { TdBaseTableProps, TableRowData, BaseTableCol, BaseTableInstanceFunctions } from '../type';
-import type { RowAndColFixedPosition, TableRowFixedClasses, FixedColumnInfo } from '../interface';
+import type { RowAndColFixedPosition, TableRowFixedClasses, FixedColumnInfo, TableColFixedClasses } from '../interface';
+
+// 固定列相关类名处理
+export function getColumnFixedStyles(
+  col: TdBaseTableProps['columns'][0],
+  index: number,
+  rowAndColFixedPosition: RowAndColFixedPosition,
+  tableColFixedClasses: TableColFixedClasses,
+): { style?: Styles; classes?: ClassName } {
+  const fixedPos = rowAndColFixedPosition?.get(col.colKey || index);
+  if (!fixedPos) return {};
+  const thClasses = {
+    [tableColFixedClasses.left]: col.fixed === 'left',
+    [tableColFixedClasses.right]: col.fixed === 'right',
+    [tableColFixedClasses.lastLeft]: col.fixed === 'left' && fixedPos.lastLeftFixedCol,
+    [tableColFixedClasses.firstRight]: col.fixed === 'right' && fixedPos.firstRightFixedCol,
+  };
+  const thStyles = {
+    left: col.fixed === 'left' ? `${fixedPos.left}px` : undefined,
+    right: col.fixed === 'right' ? `${fixedPos.right}px` : undefined,
+  };
+  return {
+    style: thStyles,
+    classes: thClasses,
+  };
+}
 
 // 固定行相关类名处理
 export function getRowFixedStyles(
@@ -136,10 +162,79 @@ export default function useFixed(props: TdBaseTableProps) {
     }
   };
 
+  const setFixedLeftPos = (
+    columns: BaseTableCol[],
+    initialColumnMap: RowAndColFixedPosition,
+    parent: FixedColumnInfo = {},
+  ) => {
+    for (let i = 0, len = columns.length; i < len; i++) {
+      const col = columns[i];
+      if (col.fixed === 'right') return;
+      const colInfo = initialColumnMap.get(col.colKey || i);
+      let lastColIndex = i - 1;
+      while (lastColIndex >= 0 && columns[lastColIndex].fixed !== 'left') {
+        lastColIndex -= 1;
+      }
+      const lastCol = columns[lastColIndex];
+      // 多级表头，使用父元素作为初始基本位置
+      const defaultWidth = i === 0 ? parent?.left || 0 : 0;
+      const lastColInfo = initialColumnMap.get(lastCol?.colKey || i - 1);
+      if (colInfo) {
+        colInfo.left = (lastColInfo?.left || defaultWidth) + (lastColInfo?.width || 0);
+      }
+    }
+  };
+
+  const setFixedRightPos = (
+    columns: BaseTableCol[],
+    initialColumnMap: RowAndColFixedPosition,
+    parent: FixedColumnInfo = {},
+  ) => {
+    for (let i = columns.length - 1; i >= 0; i--) {
+      const col = columns[i];
+      if (col.fixed === 'left') return;
+      const colInfo = initialColumnMap.get(col.colKey || i);
+      let lastColIndex = i + 1;
+      while (lastColIndex < columns.length && columns[lastColIndex].fixed !== 'right') {
+        lastColIndex += 1;
+      }
+      const lastCol = columns[lastColIndex];
+      // 多级表头，使用父元素作为初始基本位置
+      const defaultWidth = i === columns.length - 1 ? parent?.right || 0 : 0;
+      const lastColInfo = initialColumnMap.get(lastCol?.colKey || i + 1);
+      if (colInfo) {
+        colInfo.right = (lastColInfo?.right || defaultWidth) + (lastColInfo?.width || 0);
+      }
+    }
+  };
+
+  // 获取固定列位置信息。先获取节点宽度，再计算
+  const setFixedColPosition = (trList: HTMLCollection, initialColumnMap: RowAndColFixedPosition) => {
+    if (!trList) return;
+    for (let i = 0, len = trList.length; i < len; i++) {
+      const thList = trList[i].children;
+      for (let j = 0, thLen = thList.length; j < thLen; j++) {
+        const th = thList[j] as HTMLElement;
+        const colKey = th.dataset.colkey;
+        if (!colKey) {
+          log.warn('TDesign Table', `${th.innerText} missing colKey. colKey is required for fixed column feature.`);
+        }
+        const obj = initialColumnMap.get(colKey || j);
+        if (obj?.col?.fixed) {
+          initialColumnMap.set(colKey, { ...obj, width: th.getBoundingClientRect().width });
+        }
+      }
+    }
+    setFixedLeftPos(columns.value, initialColumnMap);
+    setFixedRightPos(columns.value, initialColumnMap);
+  };
+
   const updateRowAndColFixedPosition = (tableContentElm: HTMLElement, initialColumnMap: RowAndColFixedPosition) => {
     rowAndColFixedPosition.value.clear();
     if (!tableContentElm) return;
     const thead = tableContentElm.querySelector('thead');
+    // 处理固定列
+    thead && setFixedColPosition(thead.children, initialColumnMap);
     // 处理冻结行
     const tbody = tableContentElm.querySelector('tbody');
     const tfoot = tableContentElm.querySelector('tfoot');

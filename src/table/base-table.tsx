@@ -4,7 +4,8 @@ import baseTableProps from './base-table-props';
 import config from '../config';
 import useClassName from './hooks/useClassName';
 import useStyle, { formatCSSUnit } from './hooks/useStyle';
-import useFixed, { getRowFixedStyles } from './hooks/useFixed';
+import useFixed, { getRowFixedStyles, getColumnFixedStyles } from './hooks/useFixed';
+import { ClassName } from '../common';
 
 import { BaseTableCellParams, BaseTableCol, TableRowData, TdBaseTableProps } from './type';
 import TLoading from '../loading';
@@ -31,12 +32,13 @@ export default defineComponent({
       tdAlignClasses,
       tdEllipsisClass,
       tableRowFixedClasses,
+      tableColFixedClasses,
     } = useClassName();
     const { globalConfig, t } = useConfig('table');
     const defaultLoadingContent = h(TLoading, { ...(props.loadingProps as TdLoadingProps) });
     // 表格基础样式类
     const { tableClasses, tableContentStyles, tableElementStyles } = useStyle(props);
-    const { rowAndColFixedPosition, tableContentRef } = useFixed(props);
+    const { rowAndColFixedPosition, tableContentRef, isFixedColumn, isFixedHeader } = useFixed(props);
 
     const defaultColWidth = props.tableLayout === 'fixed' ? '80px' : undefined;
 
@@ -63,7 +65,13 @@ export default defineComponent({
       props.onCellClick?.({ row, col, rowIndex, colIndex, e });
     };
 
-    const dynamicBaseTableClasses = computed(() => [tableClasses.value]);
+    const dynamicBaseTableClasses = computed(() => [
+      {
+        [tableBaseClass.headerFixed]: isFixedHeader.value,
+        [tableBaseClass.columnFixed]: isFixedColumn.value,
+      },
+      tableClasses.value,
+    ]);
 
     const tableElmClasses = computed(() => [[tableLayoutClasses[props.tableLayout || 'fixed']]]);
 
@@ -105,7 +113,7 @@ export default defineComponent({
       props.onScroll?.({ params: e });
     };
 
-    const tdClassName = (td_item: BaseTableCol<TableRowData>) => {
+    const tdClassName = (td_item: BaseTableCol<TableRowData>, extra?: ClassName) => {
       let className = '';
       if (td_item.ellipsis) {
         className = tdEllipsisClass;
@@ -113,7 +121,7 @@ export default defineComponent({
       if (td_item.align && td_item.align !== 'left') {
         className = `${className} ${tdAlignClasses[`${td_item.align}`]}`;
       }
-      return className;
+      return [className, extra];
     };
 
     const colStyle = (col_item: BaseTableCol<TableRowData>) => {
@@ -127,7 +135,7 @@ export default defineComponent({
       };
     };
 
-    const thClassName = (item_th: BaseTableCol<TableRowData>) => {
+    const thClassName = (item_th: BaseTableCol<TableRowData>, extra?: ClassName) => {
       let className = '';
       if (item_th.colKey) {
         className = `${classPrefix}-table__th-${item_th.colKey}`;
@@ -138,7 +146,7 @@ export default defineComponent({
       if (item_th.align && item_th.align !== 'left') {
         className = `${className} ${tdAlignClasses[`${item_th.align}`]}`;
       }
-      return className;
+      return [className, extra];
     };
 
     const renderTitle = (item_th: BaseTableCol<TableRowData>, index: number) => {
@@ -179,22 +187,32 @@ export default defineComponent({
                 handleRowClick(tr_item, tr_index, $event);
               }}
             >
-              {props.columns?.map((td_item, td_index) => (
-                <td
-                  key={td_index}
-                  class={tdClassName(td_item)}
-                  onClick={($event) => {
-                    handleCellClick(tr_item, td_item, tr_index, td_index, $event);
-                  }}
-                >
-                  <div class={td_item.ellipsis && ellipsisClasses.value}>
-                    {renderCell(
-                      { row: tr_item, col: td_item, rowIndex: tr_index, colIndex: td_index },
-                      props.cellEmptyContent,
-                    )}
-                  </div>
-                </td>
-              ))}
+              {props.columns?.map((td_item, td_index) => {
+                const tdStyles = getColumnFixedStyles(
+                  td_item,
+                  td_index,
+                  rowAndColFixedPosition.value,
+                  tableColFixedClasses,
+                );
+
+                return (
+                  <td
+                    key={td_index}
+                    style={tdStyles.style}
+                    class={tdClassName(td_item, tdStyles.classes)}
+                    onClick={($event) => {
+                      handleCellClick(tr_item, td_item, tr_index, td_index, $event);
+                    }}
+                  >
+                    <div class={td_item.ellipsis && ellipsisClasses.value}>
+                      {renderCell(
+                        { row: tr_item, col: td_item, rowIndex: tr_index, colIndex: td_index },
+                        props.cellEmptyContent,
+                      )}
+                    </div>
+                  </td>
+                );
+              })}
             </tr>
           );
         });
@@ -221,13 +239,26 @@ export default defineComponent({
               {props.showHeader && (
                 <thead ref={theadRef} class={theadClasses.value}>
                   <tr>
-                    {props.columns?.map((item_th, index_th) => (
-                      <th key={index_th} class={thClassName(item_th)}>
-                        <div class={(item_th.ellipsisTitle || item_th.ellipsis) && ellipsisClasses.value}>
-                          {renderTitle(item_th, index_th)}
-                        </div>
-                      </th>
-                    ))}
+                    {props.columns?.map((item_th, index_th) => {
+                      const thStyles = getColumnFixedStyles(
+                        item_th,
+                        index_th,
+                        rowAndColFixedPosition.value,
+                        tableColFixedClasses,
+                      );
+                      return (
+                        <th
+                          key={index_th}
+                          class={thClassName(item_th, thStyles.classes)}
+                          style={thStyles.style}
+                          data-colKey={item_th.colKey}
+                        >
+                          <div class={(item_th.ellipsisTitle || item_th.ellipsis) && ellipsisClasses.value}>
+                            {renderTitle(item_th, index_th)}
+                          </div>
+                        </th>
+                      );
+                    })}
                   </tr>
                 </thead>
               )}
