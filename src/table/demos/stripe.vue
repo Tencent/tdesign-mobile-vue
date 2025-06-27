@@ -1,7 +1,7 @@
 <template>
   <div>
     <t-table
-      :fixed-rows="[2, 3]"
+      :fixed-rows="[1, 2]"
       row-key="index"
       :data="data"
       :max-height="400"

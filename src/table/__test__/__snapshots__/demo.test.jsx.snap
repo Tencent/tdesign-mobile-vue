@@ -1948,7 +1948,43 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   
                 </tr>
                 <tr
-                  class="t-table__row--fixed-top"
+                  class=""
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class=""
                 >
                   
                   <td
@@ -2525,42 +2561,6 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 </tr>
                 <tr
                   class="t-table__row--fixed-bottom t-table__row--fixed-bottom-first"
-                >
-                  
-                  <td
-                    class=""
-                  >
-                    <div>
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class=""
-                  >
-                    <div>
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class=""
-                  >
-                    <div>
-                      内容
-                    </div>
-                  </td>
-                  <td
-                    class="t-table-td--ellipsis"
-                  >
-                    <div
-                      class="t-table__ellipsis t-text-ellipsis"
-                    >
-                      内容
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr
-                  class="t-table__row--fixed-bottom"
                 >
                   
                   <td
@@ -3491,7 +3491,43 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             
           </tr>
           <tr
-            class="t-table__row--fixed-top"
+            class=""
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class=""
           >
             
             <td
@@ -4068,42 +4104,6 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
           </tr>
           <tr
             class="t-table__row--fixed-bottom t-table__row--fixed-bottom-first"
-          >
-            
-            <td
-              class=""
-            >
-              <div>
-                内容
-              </div>
-            </td>
-            <td
-              class=""
-            >
-              <div>
-                内容
-              </div>
-            </td>
-            <td
-              class=""
-            >
-              <div>
-                内容
-              </div>
-            </td>
-            <td
-              class="t-table-td--ellipsis"
-            >
-              <div
-                class="t-table__ellipsis t-text-ellipsis"
-              >
-                内容
-              </div>
-            </td>
-            
-          </tr>
-          <tr
-            class="t-table__row--fixed-bottom"
           >
             
             <td

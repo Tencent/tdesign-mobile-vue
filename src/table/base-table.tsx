@@ -161,7 +161,6 @@ export default defineComponent({
       }
       if (props.data?.length) {
         return props.data?.map((tr_item, tr_index) => {
-          console.log('1');
           const { style, classes } = getRowFixedStyles(
             get(tr_item, props.rowKey || 'id'),
             tr_index,
@@ -170,7 +169,6 @@ export default defineComponent({
             rowAndColFixedPosition.value,
             tableRowFixedClasses,
           );
-          console.log('rowAndColFixedPosition', rowAndColFixedPosition.value);
 
           return (
             <tr
