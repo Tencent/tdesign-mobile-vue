@@ -29,7 +29,7 @@ export default {
     type: [String, Function] as PropType<TdBaseTableProps['empty']>,
     default: '',
   },
-  /** 【开发中】固定行（冻结行），示例：[M, N]，表示冻结表头 M 行和表尾 N 行。M 和 N 值为 0 时，表示不冻结行 */
+  /** 固定行（冻结行），示例：[M, N]，表示冻结表头 M 行和表尾 N 行。M 和 N 值为 0 时，表示不冻结行 */
   fixedRows: {
     type: Array as PropType<TdBaseTableProps['fixedRows']>,
   },
