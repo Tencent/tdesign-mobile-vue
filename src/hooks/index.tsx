@@ -1,6 +1,7 @@
 export * from './icon';
 export * from './tnode';
 export * from './useClass';
+export * from './useCommonClassName';
 export * from './useDefaultValue';
 export * from './useLengthLimit';
 export * from './useLockScroll';

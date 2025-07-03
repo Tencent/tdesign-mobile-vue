@@ -21,13 +21,13 @@ import props from './props';
 import TTabNavItem from './tab-nav-item';
 import useVModel from '../hooks/useVModel';
 import { preventDefault } from '../shared/dom';
-import CLASSNAMES from '../shared/constants';
 import TSticky from '../sticky';
 import { TdStickyProps } from '../sticky/type';
 import TBadge from '../badge';
 import { useTNodeJSX } from '../hooks/tnode';
 import { TdTabPanelProps } from './type';
 import { usePrefixClass } from '../hooks/useClass';
+import { useCommonClassName } from '../hooks/useCommonClassName';
 
 const { prefix } = config;
 
@@ -37,11 +37,12 @@ export default defineComponent({
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();
     const tabsClass = usePrefixClass('tabs');
+    const { SIZE } = useCommonClassName();
 
     const stickyProps = computed(() => ({ ...(props.stickyProps as TdStickyProps), disabled: !props.sticky }));
     const activeClass = `${tabsClass.value}__item--active`;
     const disabledClass = `${tabsClass.value}__item--disabled`;
-    const tabsClasses = computed(() => [`${tabsClass.value}`, props.size && CLASSNAMES.SIZE[props.size]]);
+    const tabsClasses = computed(() => [`${tabsClass.value}`, props.size && SIZE.value[props.size]]);
     const navClasses = ref([`${tabsClass.value}__nav`]);
     const startX = ref(0);
     const startY = ref(0);
