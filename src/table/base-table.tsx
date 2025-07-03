@@ -12,6 +12,7 @@ import TLoading from '../loading';
 import { TdLoadingProps } from '../loading/type';
 import { useConfig } from '../config-provider/useConfig';
 import { useTNodeJSX } from '../hooks/tnode';
+import { formatClassNames, formatRowAttributes, formatRowClassNames } from './utils';
 
 const { prefix } = config;
 
@@ -38,7 +39,15 @@ export default defineComponent({
     const defaultLoadingContent = h(TLoading, { ...(props.loadingProps as TdLoadingProps) });
     // 表格基础样式类
     const { tableClasses, tableContentStyles, tableElementStyles } = useStyle(props);
-    const { rowAndColFixedPosition, tableContentRef, isFixedColumn, isFixedHeader } = useFixed(props);
+    const {
+      rowAndColFixedPosition,
+      tableContentRef,
+      isFixedColumn,
+      isFixedHeader,
+      showColumnShadow,
+      refreshTable,
+      updateColumnFixedShadow,
+    } = useFixed(props);
 
     const defaultColWidth = props.tableLayout === 'fixed' ? '80px' : undefined;
 
@@ -69,6 +78,8 @@ export default defineComponent({
       {
         [tableBaseClass.headerFixed]: isFixedHeader.value,
         [tableBaseClass.columnFixed]: isFixedColumn.value,
+        [tableColFixedClasses.leftShadow]: showColumnShadow.left,
+        [tableColFixedClasses.rightShadow]: showColumnShadow.right,
       },
       tableClasses.value,
     ]);
@@ -109,11 +120,14 @@ export default defineComponent({
     };
 
     const loadingClasses = computed(() => [`${classPrefix}-table__loading--full`]);
+
     const onInnerVirtualScroll = (e: Event) => {
+      const target = (e.target || e.srcElement) as HTMLElement;
+      updateColumnFixedShadow(target);
       props.onScroll?.({ params: e });
     };
 
-    const tdClassName = (td_item: BaseTableCol<TableRowData>, extra?: ClassName) => {
+    const tdClassName = (td_item: BaseTableCol<TableRowData>, extra?: Array<ClassName>) => {
       let className = '';
       if (td_item.ellipsis) {
         className = tdEllipsisClass;
@@ -121,7 +135,7 @@ export default defineComponent({
       if (td_item.align && td_item.align !== 'left') {
         className = `${className} ${tdAlignClasses[`${td_item.align}`]}`;
       }
-      return [className, extra];
+      return [className, ...extra];
     };
 
     const colStyle = (col_item: BaseTableCol<TableRowData>) => {
@@ -178,11 +192,21 @@ export default defineComponent({
             tableRowFixedClasses,
           );
 
+          const customClasses = formatRowClassNames(
+            props.rowClassName,
+            { row: tr_item, rowKey: props.rowKey, rowIndex: tr_index, type: 'body' },
+            props.rowKey || 'id',
+          );
+
+          const trAttributes =
+            formatRowAttributes(props.rowAttributes, { row: tr_item, rowIndex: tr_index, type: 'body' }) || {};
+
           return (
             <tr
+              {...trAttributes}
               key={tr_index}
               style={style}
-              class={classes}
+              class={[classes, customClasses]}
               onClick={($event) => {
                 handleRowClick(tr_item, tr_index, $event);
               }}
@@ -195,11 +219,19 @@ export default defineComponent({
                   tableColFixedClasses,
                 );
 
+                const customClasses = formatClassNames(td_item.className, {
+                  col: td_item,
+                  colIndex: td_index,
+                  row: tr_item,
+                  rowIndex: tr_index,
+                  type: 'td',
+                });
+
                 return (
                   <td
                     key={td_index}
                     style={tdStyles.style}
-                    class={tdClassName(td_item, tdStyles.classes)}
+                    class={tdClassName(td_item, [tdStyles.classes, customClasses])}
                     onClick={($event) => {
                       handleCellClick(tr_item, td_item, tr_index, td_index, $event);
                     }}
@@ -218,6 +250,10 @@ export default defineComponent({
         });
       }
     };
+
+    context.expose({
+      refreshTable,
+    });
 
     return () => {
       const renderLoading = renderTNodeJSX('loading', { defaultNode: defaultLoadingContent });

@@ -50,6 +50,14 @@ export default {
   maxHeight: {
     type: [String, Number] as PropType<TdBaseTableProps['maxHeight']>,
   },
+  /** HTML 标签 `tr` 的属性。类型为 Function 时，参数说明：`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body` 表示属性作用于 `tbody` 中的元素；`params.type=foot` 表示属性作用于 `tfoot` 中的元素。<br />示例一：{ draggable: true }，<br />示例二：[{ draggable: true }, { title: '超出省略显示' }]。<br /> 示例三：() => [{ draggable: true }] */
+  rowAttributes: {
+    type: [Object, Array, Function] as PropType<TdBaseTableProps['rowAttributes']>,
+  },
+  /** 行类名，泛型 T 指表格数据类型。`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body`  表示类名作用于 `tbody` 中的元素；`params.type= tfoot` 表示类名作用于 `tfoot` 中的元素 */
+  rowClassName: {
+    type: [String, Object, Array, Function] as PropType<TdBaseTableProps['rowClassName']>,
+  },
   /** 唯一标识一行数据的字段名，来源于 `data` 中的字段。如果是字段嵌套多层，可以设置形如 `item.a.id` 的方法 */
   rowKey: {
     type: String,

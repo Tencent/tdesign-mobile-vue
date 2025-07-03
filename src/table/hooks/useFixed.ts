@@ -243,6 +243,21 @@ export default function useFixed(props: TdBaseTableProps) {
     rowAndColFixedPosition.value = initialColumnMap;
   };
 
+  let shadowLastScrollLeft: number;
+  const updateColumnFixedShadow = (target: HTMLElement, extra?: { skipScrollLimit?: boolean }) => {
+    if (!isFixedColumn.value || !target) return;
+    const { scrollLeft } = target;
+    // 只有左右滚动，需要更新固定列阴影
+    if (shadowLastScrollLeft === scrollLeft && (!extra || !extra.skipScrollLimit)) return;
+    shadowLastScrollLeft = scrollLeft;
+    const isShowRight = target.clientWidth + scrollLeft < target.scrollWidth;
+    const isShowLeft = scrollLeft > 0;
+
+    if (showColumnShadow.left === isShowLeft && showColumnShadow.right === isShowRight) return;
+    showColumnShadow.left = isShowLeft && isFixedLeftColumn.value;
+    showColumnShadow.right = isShowRight && isFixedRightColumn.value;
+  };
+
   // 多级表头场景较为复杂：为了滚动的阴影效果，需要知道哪些列是边界列，左侧固定列的最后一列，右侧固定列的第一列，每一层表头都需要兼顾
   const setIsLastOrFirstFixedCol = (levelNodes: FixedColumnInfo[][]) => {
     for (let t = 0; t < levelNodes.length; t++) {
@@ -290,9 +305,23 @@ export default function useFixed(props: TdBaseTableProps) {
     { immediate: true },
   );
 
+  watch(
+    [isFixedColumn, columns],
+    () => {
+      const timer = setTimeout(() => {
+        if (isFixedColumn.value) {
+          updateColumnFixedShadow(tableContentRef.value);
+        }
+        clearTimeout(timer);
+      }, 0);
+    },
+    { immediate: true },
+  );
+
   const refreshTable: BaseTableInstanceFunctions['refreshTable'] = () => {
     if (isFixedColumn.value || isFixedHeader.value) {
       updateFixedStatus();
+      updateColumnFixedShadow(tableContentRef.value, { skipScrollLimit: true });
     }
   };
 
@@ -319,6 +348,7 @@ export default function useFixed(props: TdBaseTableProps) {
     refreshTable,
     setTableElmWidth,
     setUseFixedTableElmRef,
+    updateColumnFixedShadow,
     updateTableAfterColumnResize,
   };
 }
