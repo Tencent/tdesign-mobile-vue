@@ -14,7 +14,7 @@ spline: explain
 ### 🐞 Bug Fixes
 - `ConfigProvider`: 修复在 `Search` 等个别组件中 `classPrefix` 配置无效 @anlyyao ([#1908](https://github.com/Tencent/tdesign-mobile-vue/pull/1908))
 ### 🚧 Others
-- `IDE`:  更新 `Webstorm` , `Volar` 代码提示 @liweijie0812 ([#1893](https://github.com/Tencent/tdesign-mobile-vue/pull/1893))
+- `IDE`:  更新 `Webstorm`、`Volar` 代码提示 @liweijie0812 ([#1893](https://github.com/Tencent/tdesign-mobile-vue/pull/1893))
 
 ## 🌈 1.9.2 `2025-06-26` 
 ### 🚀 Features
