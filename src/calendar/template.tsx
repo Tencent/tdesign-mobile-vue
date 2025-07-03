@@ -133,7 +133,7 @@ export default defineComponent({
 
     // 选择日期
     const handleSelect = (year: number, month: number, date: number, dateItem: TDate) => {
-      if (dateItem.type === 'disabled') return;
+      if (dateItem.type === 'disabled' || props.readonly) return;
       const selected = new Date(year, month, date);
 
       if (props.type === 'range' && Array.isArray(selectedDate.value)) {
