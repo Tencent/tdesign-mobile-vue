@@ -5,7 +5,7 @@
  * */
 
 import { LoadingProps } from '../loading';
-import { TNode } from '../common';
+import { TNode, ClassName, HTMLElementAttributes } from '../common';
 
 export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
   /**
@@ -52,6 +52,14 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    * 表格最大高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px
    */
   maxHeight?: string | number;
+  /**
+   * HTML 标签 `tr` 的属性。类型为 Function 时，参数说明：`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body` 表示属性作用于 `tbody` 中的元素；`params.type=foot` 表示属性作用于 `tfoot` 中的元素。<br />示例一：{ draggable: true }，<br />示例二：[{ draggable: true }, { title: '超出省略显示' }]。<br /> 示例三：() => [{ draggable: true }]
+   */
+  rowAttributes?: TableRowAttributes<T>;
+  /**
+   * 行类名，泛型 T 指表格数据类型。`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body`  表示类名作用于 `tbody` 中的元素；`params.type= tfoot` 表示类名作用于 `tfoot` 中的元素
+   */
+  rowClassName?: ClassName | ((params: RowClassNameParams<T>) => ClassName);
   /**
    * 唯一标识一行数据的字段名，来源于 `data` 中的字段。如果是字段嵌套多层，可以设置形如 `item.a.id` 的方法
    * @default 'id'
@@ -115,6 +123,10 @@ export interface BaseTableCol<T extends TableRowData = TableRowData> {
    */
   cell?: string | TNode<BaseTableCellParams<T>>;
   /**
+   * 列类名，值类型是 Function 使用返回值作为列类名；值类型不为 Function 时，值用于整列类名（含表头）。泛型 T 指表格数据类型
+   */
+  className?: TableColumnClassName<T> | TableColumnClassName<T>[];
+  /**
    * 渲染列所需字段，值为 `serial-number` 表示当前列为「序号」列
    * @default ''
    */
@@ -147,6 +159,18 @@ export interface BaseTableCol<T extends TableRowData = TableRowData> {
   width?: string | number;
 }
 
+export type TableRowAttributes<T> =
+  | HTMLElementAttributes
+  | ((params: { row: T; rowIndex: number; type: 'body' | 'foot' }) => HTMLElementAttributes)
+  | Array<TableRowAttributes<T>>;
+
+export interface RowClassNameParams<T> {
+  row: T;
+  rowIndex: number;
+  rowKey?: string;
+  type?: 'body' | 'foot';
+}
+
 export interface BaseTableCellEventContext<T> {
   row: T;
   col: BaseTableCol;
@@ -171,6 +195,12 @@ export interface BaseTableCellParams<T> {
   rowIndex: number;
   col: BaseTableCol<T>;
   colIndex: number;
+}
+
+export type TableColumnClassName<T> = ClassName | ((context: CellData<T>) => ClassName);
+
+export interface CellData<T> extends BaseTableCellParams<T> {
+  type: 'th' | 'td';
 }
 
 export interface BaseTableColParams<T> {
