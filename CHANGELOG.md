@@ -5,6 +5,17 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.9.3 `2025-07-03` 
+### 🚀 Features
+- `Table`: 
+    - 支持 `fixedRows` 属性，列配置项支持 `fixed` 属性 @novlan1 ([#1889](https://github.com/Tencent/tdesign-mobile-vue/pull/1889))
+    -  新增 `rowAttributes` 和 `rowClassName` 属性 @anlyyao ([#1909](https://github.com/Tencent/tdesign-mobile-vue/pull/1909))
+- `Calendar`: 新增 `readonly` 属性 @anlyyao ([#1894](https://github.com/Tencent/tdesign-mobile-vue/pull/1894))
+### 🐞 Bug Fixes
+- `ConfigProvider`: 修复在 `Search` 等个别组件中 `classPrefix` 配置无效 @anlyyao ([#1908](https://github.com/Tencent/tdesign-mobile-vue/pull/1908))
+### 🚧 Others
+- `IDE`:  更新 `Webstorm`、`Volar` 代码提示 @liweijie0812 ([#1893](https://github.com/Tencent/tdesign-mobile-vue/pull/1893))
+
 ## 🌈 1.9.2 `2025-06-26` 
 ### 🚀 Features
 - `Slider`: 新增 `vertical` 属性，支持垂直滑块 @novlan1 ([#1745](https://github.com/Tencent/tdesign-mobile-vue/pull/1745))
