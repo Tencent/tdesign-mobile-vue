@@ -40,7 +40,7 @@ const cityState = reactive({
   city: [],
 });
 
-const onConfirm = (val: string[], context: number[]) => {
+const onConfirm = (val: PickerValue[], context: { index: number[] }) => {
   console.log(val);
   console.log('context', context);
   cityState.show = false;
