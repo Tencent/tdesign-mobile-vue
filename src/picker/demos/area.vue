@@ -97,8 +97,8 @@ interface OptionsType {
   value: string;
 }
 
-const getOptions = (obj: Record<number, any>, filter?: (item: OptionsType) => boolean): OptionsType[] => {
-  const res = Object.keys(obj).map((key) => ({ value: key, label: obj[key] }));
+const getOptions = (obj: Record<number, string>, filter?: (item: OptionsType) => boolean): OptionsType[] => {
+  const res = Object.keys(obj).map((key) => ({ value: key, label: obj[key as unknown as keyof typeof obj] }));
 
   if (filter) {
     return res.filter(filter);
