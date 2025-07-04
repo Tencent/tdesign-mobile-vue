@@ -116,7 +116,7 @@ exports[`Popup > Popup customCloseVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -139,7 +139,7 @@ exports[`Popup > Popup customCloseVue demo works fine 1`] = `
     </svg>
     
   </div>
-  <!--teleport end-->
+  
 </div>
 `;
 
@@ -323,7 +323,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           </span>
           <!---->
         </button>
-        <!--teleport start-->
+        
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -363,7 +363,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           </div>
           
         </div>
-        <!--teleport end-->
+        
       </div>
       <div
         class="popup-demo"
@@ -385,7 +385,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           </span>
           <!---->
         </button>
-        <!--teleport start-->
+        
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -408,7 +408,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           </svg>
           
         </div>
-        <!--teleport end-->
+        
       </div>
       
     </div>
@@ -438,7 +438,7 @@ exports[`Popup > Popup withTitleVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -478,6 +478,6 @@ exports[`Popup > Popup withTitleVue demo works fine 1`] = `
     </div>
     
   </div>
-  <!--teleport end-->
+  
 </div>
 `;
