@@ -7,6 +7,7 @@ import MockDate from 'mockdate';
 
 import baseVue from '@/table/demos/base.vue';
 import borderedVue from '@/table/demos/bordered.vue';
+import customRowStyleVue from '@/table/demos/custom-row-style.vue';
 import mobileVue from '@/table/demos/mobile.vue';
 import scrollVue from '@/table/demos/scroll.vue';
 import stripeVue from '@/table/demos/stripe.vue';
@@ -16,6 +17,7 @@ MockDate.set('2020-12-28');
 const mapper = {
   baseVue,
   borderedVue,
+  customRowStyleVue,
   mobileVue,
   scrollVue,
   stripeVue,

@@ -10,6 +10,7 @@ import labelVue from '@/slider/demos/label.vue';
 import mobileVue from '@/slider/demos/mobile.vue';
 import rangeVue from '@/slider/demos/range.vue';
 import stepVue from '@/slider/demos/step.vue';
+import verticalVue from '@/slider/demos/vertical.vue';
 
 const mapper = {
   baseVue,
@@ -19,6 +20,7 @@ const mapper = {
   mobileVue,
   rangeVue,
   stepVue,
+  verticalVue,
 };
 
 describe('Slider', () => {
