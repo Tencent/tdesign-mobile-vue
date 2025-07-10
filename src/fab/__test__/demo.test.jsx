@@ -5,11 +5,15 @@
 import { mount } from '@vue/test-utils';
 import advanceVue from '@/fab/demos/advance.vue';
 import baseVue from '@/fab/demos/base.vue';
+import collapsibleVue from '@/fab/demos/collapsible.vue';
+import draggableVue from '@/fab/demos/draggable.vue';
 import mobileVue from '@/fab/demos/mobile.vue';
 
 const mapper = {
   advanceVue,
   baseVue,
+  collapsibleVue,
+  draggableVue,
   mobileVue,
 };
 

@@ -1432,3 +1432,156 @@ exports[`Slider > Slider stepVue demo works fine 1`] = `
   
 </div>
 `;
+
+exports[`Slider > Slider verticalVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="wrapper"
+    data-v-4aa87073=""
+  >
+    <div
+      class="t-slider t-slider--top t-slider--vertical"
+      data-v-4aa87073=""
+    >
+      <!---->
+      <div
+        class="t-slider__bar t-slider__bar--default"
+      >
+        <!---->
+        <div
+          class="t-slider__line t-slider__line--default t-slider__line--single"
+          style=""
+        >
+          <div
+            class="t-slider__dot"
+          >
+            <div
+              class="t-slider__dot-value"
+            >
+              23
+            </div>
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+  <div
+    class="wrapper"
+    data-v-4aa87073=""
+  >
+    <div
+      class="t-slider t-slider--range t-slider--vertical"
+      data-v-4aa87073=""
+    >
+      <!---->
+      <div
+        class="t-slider__bar t-slider__bar--default"
+      >
+        <!---->
+        <div
+          class="t-slider__line t-slider__line--default"
+          style="top: 0px; bottom: 0px;"
+        >
+          <div
+            class="t-slider__dot t-slider__dot--left"
+          >
+            <!---->
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+          <div
+            class="t-slider__dot t-slider__dot--right"
+          >
+            <!---->
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+  <div
+    class="wrapper"
+    data-v-4aa87073=""
+  >
+    <div
+      class="t-slider t-slider--top t-slider--vertical"
+      data-v-4aa87073=""
+    >
+      <!---->
+      <div
+        class="t-slider__bar t-slider__bar--capsule"
+      >
+        <!---->
+        <div
+          class="t-slider__line t-slider__line--capsule t-slider__line--single"
+          style=""
+        >
+          <div
+            class="t-slider__dot"
+          >
+            <div
+              class="t-slider__dot-value"
+            >
+              23
+            </div>
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+  <div
+    class="wrapper"
+    data-v-4aa87073=""
+  >
+    <div
+      class="t-slider t-slider--range t-slider--vertical"
+      data-v-4aa87073=""
+    >
+      <!---->
+      <div
+        class="t-slider__bar t-slider__bar--capsule"
+      >
+        <!---->
+        <div
+          class="t-slider__line t-slider__line--capsule"
+          style="top: 0px; bottom: 0px;"
+        >
+          <div
+            class="t-slider__dot t-slider__dot--left"
+          >
+            <!---->
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+          <div
+            class="t-slider__dot t-slider__dot--right"
+          >
+            <!---->
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+  
+</div>
+`;
