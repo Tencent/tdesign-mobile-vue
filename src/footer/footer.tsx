@@ -20,19 +20,17 @@ export default defineComponent({
       }
 
       return (
-        <a class={`${footerClass.value}__logo`} href={logo.url} target={logo.target}>
-          {logo.icon && <TImage class={`${footerClass.value}__icon`} src={logo.icon} />}
-          {logo.title && <span class={`${footerClass.value}__title`}>{logo.title}</span>}
-        </a>
+        props.logo && (
+          <a class={`${footerClass.value}__logo`} href={logo.url} target={logo.target}>
+            {logo.icon && <TImage class={`${footerClass.value}__icon`} src={logo.icon} />}
+            {logo.title && <span class={`${footerClass.value}__title`}>{logo.title}</span>}
+          </a>
+        )
       );
     };
 
     const renderText = () => {
-      if (props.logo) {
-        return;
-      }
-
-      return <div class={`${footerClass.value}__text`}>{props.text}</div>;
+      return props.text && <div class={`${footerClass.value}__text`}>{props.text}</div>;
     };
 
     const renderLink = () => {
