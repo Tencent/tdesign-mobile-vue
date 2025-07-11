@@ -106,7 +106,6 @@ export default defineComponent({
       },
       { flush: 'post', deep: true },
     );
-
     return () => {
       return (
         <ul ref={root} class={className.value}>
