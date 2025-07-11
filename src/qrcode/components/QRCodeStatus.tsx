@@ -1,7 +1,6 @@
 import { computed, defineComponent, toRefs } from 'vue';
 import { CheckCircleFilledIcon, RefreshIcon } from 'tdesign-icons-vue-next';
 import { QRCodeStatusProps } from './props';
-import { useTNodeJSX } from '../../hooks';
 import Loading from '../../loading';
 import type { TdQRCodeProps } from '../type';
 
@@ -10,8 +9,6 @@ export default defineComponent({
   props: QRCodeStatusProps,
   setup(props) {
     const { classPrefix, locale, status, statusRender } = toRefs(props);
-
-    const renderTNodeJSX = useTNodeJSX();
 
     const defaultSpin = <Loading size="32px" />;
 
