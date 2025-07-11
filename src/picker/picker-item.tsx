@@ -119,6 +119,14 @@ export default defineComponent({
                   [`${pickerItemClass.value}__item--disabled`]: lodashGet(option, keys.value?.disabled ?? 'disabled'),
                 },
               ]}
+              onClick={() => {
+                if (!lodashGet(option, keys.value?.disabled ?? 'disabled')) {
+                  setIndex(index);
+                  picker?.onChange?.(index);
+                  props.onPick?.({ value: lodashGet(option, keys.value?.value ?? 'value'), index });
+                  context.emit('pick', { value: lodashGet(option, keys.value?.value ?? 'value'), index });
+                }
+              }}
             >
               {context.slots.option ? (
                 context.slots.option(option, index)
