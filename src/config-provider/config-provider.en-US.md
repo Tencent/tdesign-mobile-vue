@@ -22,6 +22,7 @@ guide | Object | - | Guide global configs。Typescript：`GuideConfig` | N
 list | Object | - | List global configs。Typescript：`ListConfig` | N
 picker | Object | - | Picker global configs。Typescript：`PickerConfig` | N
 pullDownRefresh | Object | - | PullDownRefresh global configs。Typescript：`PullDownRefreshConfig` | N
+qrcode | Object | - | QRCode global configs。Typescript：`QRCodeConfig` | N
 rate | Object | - | Rate global configs。Typescript：`RateConfig` | N
 tabBar | Object | - | TabBar global configs。Typescript：`TabBarConfig` | N
 table | Object | - | Table global configs。Typescript：`TableConfig` | N
@@ -117,6 +118,14 @@ confirm | String | - | confirm text | N
 name | type | default | description | required
 -- | -- | -- | -- | --
 loadingTexts | Array | - | Typescript：`string[]` | N
+
+### QRCodeConfig
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+expiredText | String | - | Language configuration, "QR code expired" description text | N
+refreshText | String | - | Language configuration, "QR code refresh" description text | N
+scannedText | String | - | Language configuration, "QR code scanned" description text | N
 
 ### RateConfig
 

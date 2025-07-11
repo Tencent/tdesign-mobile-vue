@@ -57,6 +57,10 @@ export interface GlobalConfigProvider {
    */
   pullDownRefresh?: PullDownRefreshConfig;
   /**
+   * 二维码全局配置
+   */
+  qrcode?: QRCodeConfig;
+  /**
    * 评分全局配置
    */
   rate?: RateConfig;
@@ -281,6 +285,24 @@ export interface PullDownRefreshConfig {
    * 提示文本描述，默认值：['下拉刷新', '松手刷新', '正在刷新', '刷新完成']
    */
   loadingTexts?: string[];
+}
+
+export interface QRCodeConfig {
+  /**
+   * 语言配置，“二维码过期”描述文本
+   * @default ''
+   */
+  expiredText?: string;
+  /**
+   * 语言配置，“点击刷新”描述文本
+   * @default ''
+   */
+  refreshText?: string;
+  /**
+   * 语言配置，“已扫描”描述文本
+   * @default ''
+   */
+  scannedText?: string;
 }
 
 export interface RateConfig {

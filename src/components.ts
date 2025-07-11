@@ -54,6 +54,7 @@ export * from './sticky';
 export * from './swiper';
 export * from './table';
 export * from './tag';
+export * from './qrcode';
 
 // 反馈
 export * from './action-sheet';

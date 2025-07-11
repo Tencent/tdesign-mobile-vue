@@ -480,6 +480,14 @@ export const docs = [
         component: () => import('@/progress/progress.md'),
         componentEn: () => import('@/progress/progress.en-US.md'),
       },
+      {
+        title: 'QRCode 二维码',
+        titleEn: 'QRCode',
+        name: 'qrcode',
+        path: '/mobile-vue/components/qrcode',
+        component: () => import('@/qrcode/qrcode.md'),
+        componentEn: () => import('@/qrcode/qrcode.en-US.md'),
+      },
     ],
   },
   {
