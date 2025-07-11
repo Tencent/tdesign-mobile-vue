@@ -1,5 +1,4 @@
 <template>
-  <!-- theme 为 text，含有底部链接 -->
   <div class="footer-example">
     <t-footer :text="text" :links="links[0]" />
   </div>

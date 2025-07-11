@@ -300,6 +300,9 @@ class Picker {
       this.list.style.transitionDuration = `${realOptions.duration}ms`;
       this.list.style.transitionTimingFunction = 'ease-out';
     }
+
+    this.offsetY = moveOffsetY;
+    this.offsetYOfStart = moveOffsetY;
     realOptions.isChange && this.onChange(index);
   }
 
