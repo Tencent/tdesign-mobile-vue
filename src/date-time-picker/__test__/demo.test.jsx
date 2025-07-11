@@ -7,6 +7,7 @@ import baseVue from '@/date-time-picker/demos/base.vue';
 import customRangeVue from '@/date-time-picker/demos/custom-range.vue';
 import fullVue from '@/date-time-picker/demos/full.vue';
 import mobileVue from '@/date-time-picker/demos/mobile.vue';
+import stepsVue from '@/date-time-picker/demos/steps.vue';
 import timeVue from '@/date-time-picker/demos/time.vue';
 import yearMonthVue from '@/date-time-picker/demos/year-month.vue';
 
@@ -15,6 +16,7 @@ const mapper = {
   customRangeVue,
   fullVue,
   mobileVue,
+  stepsVue,
   timeVue,
   yearMonthVue,
 };

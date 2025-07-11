@@ -131,7 +131,11 @@ export default defineComponent({
               {context.slots.option ? (
                 context.slots.option(option, index)
               ) : (
-                <>{props.renderLabel ? props.renderLabel(option) : lodashGet(option, keys.value?.label ?? 'label')}</>
+                <>
+                  {props.renderLabel
+                    ? props.renderLabel(option, index)
+                    : lodashGet(option, keys.value?.label ?? 'label')}
+                </>
               )}
             </li>
           ))}
