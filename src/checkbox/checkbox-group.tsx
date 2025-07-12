@@ -3,6 +3,7 @@ import { get as lodashGet } from 'lodash-es';
 import config from '../config';
 import props from './checkbox-group-props';
 import { KeysType } from '../common';
+import log from '../_common/js/log';
 import Checkbox from './checkbox';
 import { CheckboxGroupValue, TdCheckboxGroupProps, TdCheckboxProps } from './type';
 import useVModel from '../hooks/useVModel';
@@ -56,11 +57,11 @@ export default defineComponent({
 
     const handleCheckboxChange = (data: { checked: boolean; e: Event; option: TdCheckboxProps }) => {
       const currentValue = data.option.value;
-      if (isArray(innerValue.value)) {
+      if (isArray(innerValue.value) || !innerValue.value) {
         if (currentValue === undefined) {
           return;
         }
-        const val = [...innerValue.value];
+        const val = innerValue.value ? [...innerValue.value] : [];
         if (data.checked) {
           val.push(currentValue);
         } else {
@@ -73,7 +74,7 @@ export default defineComponent({
           type: data.checked ? 'check' : 'uncheck',
         });
       } else {
-        console.warn(`TDesign CheckboxGroup Warn: \`value\` must be an array, instead of ${typeof innerValue.value}`);
+        log.warn('CheckboxGroup', `\`value\` must be an array, instead of ${typeof innerValue.value}`);
       }
     };
     const getAllCheckboxValue = (): CheckboxGroupValue => {
