@@ -29,15 +29,12 @@ export default defineComponent({
 
     const { value, modelValue } = toRefs(props);
     const [pickerValue = ref([]), setPickerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
-
     const keys = computed((): KeysType => props.keys);
-
     const getDefaultText = (prop: string | boolean, defaultText: string): string => {
       if (isString(prop)) return prop;
       if (isBoolean(prop) && prop) return defaultText;
       return '';
     };
-
     const confirmButtonText = computed(() => getDefaultText(props.confirmBtn, globalConfig.value.confirm));
     const cancelButtonText = computed(() => getDefaultText(props.cancelBtn, globalConfig.value.cancel));
     const curValueArray = ref(pickerValue.value?.map((item: PickerValue) => item) || []);
@@ -76,13 +73,10 @@ export default defineComponent({
     };
     const handlePick = (context: any, column: number) => {
       const { index } = context;
-
       curIndexArray[column] = index;
       curValueArray.value[column] = lodashGet(realColumns.value?.[column][index], keys.value?.value ?? 'value');
-
       props.onPick?.(curValueArray.value, { index, column });
     };
-
     watch(pickerValue, () => {
       curValueArray.value = pickerValue.value.map((item: PickerValue) => item);
     });
@@ -96,7 +90,6 @@ export default defineComponent({
         pickerItemInstanceArray.value[idx]?.setIndex(curIndexArray[idx]);
       });
     });
-
     provide('picker', { ...toRefs(props) });
 
     return () => {

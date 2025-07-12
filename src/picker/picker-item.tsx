@@ -106,8 +106,27 @@ export default defineComponent({
       },
       { flush: 'post', deep: true },
     );
-
     return () => {
+      // 拖拽状态数组，保证每个 li 独立
+      const startYArr: number[] = [];
+      const isDraggingArr: boolean[] = [];
+
+      const onTouchStart = (e: TouchEvent, idx: number) => {
+        startYArr[idx] = e.touches[0].clientY;
+        isDraggingArr[idx] = false;
+      };
+      const onTouchMove = (e: TouchEvent, idx: number) => {
+        if (Math.abs(e.touches[0].clientY - startYArr[idx]) > 5) {
+          isDraggingArr[idx] = true;
+        }
+      };
+      const onTouchEnd = (idx: number, option: any) => {
+        if (isDraggingArr[idx]) return;
+        if (!lodashGet(option, keys.value?.disabled ?? 'disabled')) {
+          picker?.updateIndex(idx, { isChange: true });
+        }
+      };
+
       return (
         <ul ref={root} class={className.value}>
           {(props.options || []).map((option, index) => (
@@ -119,6 +138,9 @@ export default defineComponent({
                   [`${pickerItemClass.value}__item--disabled`]: lodashGet(option, keys.value?.disabled ?? 'disabled'),
                 },
               ]}
+              onTouchstart={(e) => onTouchStart(e, index)}
+              onTouchmove={(e) => onTouchMove(e, index)}
+              onTouchend={() => onTouchEnd(index, option)}
             >
               {context.slots.option ? (
                 context.slots.option(option, index)
