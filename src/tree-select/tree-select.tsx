@@ -105,7 +105,7 @@ export default defineComponent({
     const renderSideBar = (treeOption: _TreeOptionData[]) => {
       return (
         <TSideBar
-          v-model={innerValue.value[0]}
+          v-model={(innerValue.value as TreeSelectValueGroup)[0]}
           class={`${treeSelectClass.value}-colum`}
           onChange={() => onRootChange(0)}
         >
@@ -122,7 +122,8 @@ export default defineComponent({
           key={item.value}
           class={{
             [`${treeSelectClass.value}__item`]: true,
-            [`${treeSelectClass.value}__item--active`]: item.value === innerValue.value[level],
+            [`${treeSelectClass.value}__item--active`]:
+              item.value === (innerValue.value as TreeSelectValueGroup)[level],
             [`${treeSelectClass.value}__item--disabled`]: item.disabled,
           }}
           onClick={() => handleTreeClick(item.value, level, item.disabled)}
