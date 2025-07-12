@@ -138,10 +138,12 @@ export default defineComponent({
                 />
               )}
               {renderStatus(file)}
-              <CloseIcon
-                class={`${uploadClass.value}__delete-btn`}
-                onClick={({ e }: any) => onInnerRemove({ e, file, index })}
-              />
+              {file.removeBtn !== false && (
+                <CloseIcon
+                  class={`${uploadClass.value}__delete-btn`}
+                  onClick={({ e }: any) => onInnerRemove({ e, file, index })}
+                />
+              )}
             </div>
           ))}
           {content()}

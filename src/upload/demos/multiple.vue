@@ -63,6 +63,7 @@ const files = ref([
     url: 'https://tdesign.gtimg.com/mobile/demos/upload4.png',
     name: 'uploaded1.png',
     type: 'image',
+    removeBtn: false,
   },
   {
     url: 'https://tdesign.gtimg.com/mobile/demos/upload6.png',
