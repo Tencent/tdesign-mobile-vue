@@ -1,6 +1,6 @@
 import { CanvasHTMLAttributes, CSSProperties, SVGAttributes } from 'vue';
-import type { ErrorCorrectionLevel, ImageSettings } from '@tdesign/common-js/qrcode/types';
-import { QRCodeConfig } from '@tdesign/components/config-provider/type';
+import type { ErrorCorrectionLevel, ImageSettings } from '../../_common/js/qrcode/types';
+import { QRCodeConfig } from '../../config-provider/type';
 import { StatusRenderInfo, TdQRCodeProps } from '../type';
 
 export interface QRCodeSubComponent {

@@ -8,7 +8,7 @@ export default defineComponent({
   name: 'QRCodeStatus',
   props: QRCodeStatusProps,
   setup(props) {
-    const { classPrefix, locale, status, statusRender } = toRefs(props);
+    const { classPrefix, locale, status } = toRefs(props);
 
     const defaultSpin = <Loading size="32px" />;
 
@@ -47,7 +47,7 @@ export default defineComponent({
     return () => {
       return (
         <>
-          {statusRender.value ||
+          {props.statusRender ||
             renderStatus({
               status: status.value,
               onRefresh: props.onRefresh,
