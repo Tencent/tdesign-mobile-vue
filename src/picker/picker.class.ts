@@ -173,7 +173,6 @@ class Picker {
     if (this.list) this.list.style.transition = '';
     this.startY = event.changedTouches[0].pageY;
     this.offsetYOfStart = this.offsetY;
-    // this.updateIndex(this.curIndex, { isChange: false });
     // 更新惯性参数
     this.updateInertiaParams(event, true);
   }
