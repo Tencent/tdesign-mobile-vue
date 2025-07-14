@@ -56,31 +56,39 @@ describe('ConfigProvider', () => {
   });
 
   it('provide config', () => {
-    const empty = 'Empty Data Test';
+    const testConfig = (props, expectTarget) => {
+      const ChildComponent = {
+        setup() {
+          const { globalConfig } = useConfig('table');
+          return () => <div class="t-child">{globalConfig.value.empty}</div>;
+        },
+      };
 
-    const ChildComponent = {
-      setup() {
-        const { globalConfig } = useConfig('table');
-        return () => <div class="t-child">{globalConfig.value.empty}</div>;
-      },
+      const wrapper = mount(
+        <ConfigProvider>
+          <ChildComponent />
+        </ConfigProvider>,
+        {
+          props,
+        },
+      );
+
+      const dom = wrapper.find('.t-child');
+      expect(dom.element.innerHTML).toBe(expectTarget);
     };
 
-    const wrapper = mount(
-      <ConfigProvider>
-        <ChildComponent />
-      </ConfigProvider>,
+    testConfig({}, '暂无数据');
+
+    const empty = 'Empty Data Test';
+    testConfig(
       {
-        props: {
-          globalConfig: {
-            table: {
-              empty,
-            },
+        globalConfig: {
+          table: {
+            empty,
           },
         },
       },
+      empty,
     );
-
-    const dom = wrapper.find('.t-child');
-    expect(dom.element.innerHTML).toBe(empty);
   });
 });
