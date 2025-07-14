@@ -30,14 +30,14 @@ fs.readFile(resolveCwd('test/unit/coverage/index.html'), 'utf8', (err, html) => 
     let resultCoverage = {};
     componentCoverage.forEach((item, index) => {
       const dataVal = item[0].getAttribute('data-value');
-      if (dataVal.split('/')[0] === 'src' && dataVal.split('/').length === 2) {
+      if (dataVal.split('/')[1] === 'src' && dataVal.split('/').length === 3) {
         const name = dataVal;
         const statements = `${item[2].getAttribute('data-value')}%`;
         const branches = `${item[4].getAttribute('data-value')}%`;
         const functions = `${item[6].getAttribute('data-value')}%`;
         const lines = `${item[8].getAttribute('data-value')}%`;
 
-        const key = camelCase(name.split('/')[1]);
+        const key = camelCase(name.split('/')[2]);
         resultCoverage[key] = {
           statements,
           branches,
