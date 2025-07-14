@@ -49,7 +49,7 @@ const addZero = (el) => {
 
 // 获取当前月份的天数
 const getDateCount = (Y, M) => {
-  var d = new Date(Y, M, 0);
+  const d = new Date(Y, M, 0);
   return d.getDate();
 };
 
@@ -157,7 +157,7 @@ describe('DateTimePicker', () => {
         },
       });
       const $pickerItems = wrapper.findAllComponents(PickerItem);
-      let res = {};
+      const res = {};
       $pickerItems.forEach((item, index) => {
         res[precisionRankRecord[index]] = item.findAll(`.${prefix}-picker-item__item`);
       });
@@ -190,7 +190,7 @@ describe('DateTimePicker', () => {
       const $pickerItems = wrapper.findAllComponents(PickerItem);
       expect($pickerItems.length).toEqual(3);
 
-      let res = {};
+      const res = {};
       $pickerItems.forEach((item, index) => {
         res[precisionRankRecord[index]] = item.findAll(`.${prefix}-picker-item__item`);
       });
