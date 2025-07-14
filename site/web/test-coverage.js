@@ -10,7 +10,7 @@ module.exports = {
   cell: { statements: '100%', branches: '84.37%', functions: '100%', lines: '100%' },
   checkbox: { statements: '99.18%', branches: '87.73%', functions: '92.85%', lines: '99.18%' },
   collapse: { statements: '88.51%', branches: '84.48%', functions: '95%', lines: '88.51%' },
-  colorPicker: { statements: '98.06%', branches: '85.88%', functions: '97.14%', lines: '98.06%' },
+  colorPicker: { statements: '98.83%', branches: '94.11%', functions: '97.36%', lines: '98.83%' },
   configProvider: { statements: '48.68%', branches: '68.75%', functions: '28.57%', lines: '48.68%' },
   countDown: { statements: '95.6%', branches: '89.47%', functions: '71.42%', lines: '95.6%' },
   dateTimePicker: { statements: '99.21%', branches: '94.84%', functions: '93.33%', lines: '99.21%' },
