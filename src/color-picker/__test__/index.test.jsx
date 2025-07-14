@@ -28,8 +28,8 @@ describe('color-picker', () => {
     it(': multiple', () => {
       const testCurrentProp = (type, target) => {
         const wrapper = mountColorPicker({ type });
-        const alphaDom = wrapper.findAll('.t-color-picker__saturation');
-        expect(alphaDom).toHaveLength(target);
+        const dom = wrapper.findAll('.t-color-picker__saturation');
+        expect(dom).toHaveLength(target);
       };
       testCurrentProp(undefined, 0);
       testCurrentProp('base', 0);
@@ -49,13 +49,24 @@ describe('color-picker', () => {
     it(': swatchColors', () => {
       const testSwatchColors = (swatchColors, target) => {
         const wrapper = mountColorPicker({ swatchColors });
-        const alphaDom = wrapper.findAll('.t-color-picker__swatches-item');
-        expect(alphaDom).toHaveLength(target);
+        const dom = wrapper.findAll('.t-color-picker__swatches-item');
+        expect(dom).toHaveLength(target);
       };
       testSwatchColors(null, 0);
       testSwatchColors([], 0);
       testSwatchColors(undefined, 10);
       testSwatchColors(['red', 'blur'], 2);
+    });
+
+    it(': format', () => {
+      const testFormat = (format, target) => {
+        const wrapper = mountColorPicker({ format, type: 'multiple' });
+        const dom = wrapper.find('.t-color-picker__format-item--first');
+        expect(dom.element.innerHTML).toBe(target);
+      };
+      testFormat('RGB', 'RGB');
+      testFormat('123', 'RGB');
+      testFormat('HEX', 'HEX');
     });
   });
 
@@ -75,7 +86,7 @@ describe('color-picker', () => {
     });
 
     it(': saturation change', async () => {
-      const testSaturation = (fixed) => {
+      const testSaturation = async (fixed) => {
         const onPaletteBarChange = vi.fn();
         const wrapper = mountColorPicker({ onPaletteBarChange, type: 'multiple', fixed });
         const el = wrapper.find('.t-color-picker__saturation').element;
@@ -85,11 +96,12 @@ describe('color-picker', () => {
           width: 300,
           height: 50,
         });
-        makeTouch(el, 'touchstart', { pageY: 0, pageX: 0, clientY: 0 });
+        makeTouch(el, 'touchstart');
+        makeTouch(el, 'touchmove', { pageY: 40, pageX: 0, clientY: 40 });
         makeTouch(el, 'touchmove', { pageY: 30, pageX: 0, clientY: 30 });
         makeTouch(el, 'touchend', { pageY: 30, pageX: 30, clientY: 20 });
 
-        expect(onPaletteBarChange).toHaveBeenCalledTimes(3);
+        expect(onPaletteBarChange).toHaveBeenCalledTimes(4);
         const result = 'rgba(46, 47, 51, 1)';
         const color = new Color(result);
         color.saturation = 0.1;
