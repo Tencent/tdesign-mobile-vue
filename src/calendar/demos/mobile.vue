@@ -39,7 +39,7 @@
     <tdesign-demo-block title="02 组件样式" summary="">
       <tdesign-demo-block summary="国际化">
         <div class="Calendar-demo">
-          <nationality />
+          <international />
         </div>
       </tdesign-demo-block>
 
@@ -65,7 +65,7 @@ import customRangeVue from './custom-range.vue';
 import withoutPopup from './without-popup.vue';
 import SwitchModeDemo from './switch-mode.vue';
 import customTextSingel from './custom-text-singel.vue';
-import nationality from './nationality.vue';
+import international from './international.vue';
 import cannotChoose from './cannot-choose.vue';
 </script>
 
