@@ -11,28 +11,43 @@
       <div class="Calendar-demo">
         <multipleVue />
       </div>
+      <tdesign-demo-block summary="带单行描述的日历">
+        <div class="Calendar-demo">
+          <customTextSingel />
+        </div>
+      </tdesign-demo-block>
 
-      <div class="Calendar-demo">
-        <rangeDemo />
-      </div>
+      <tdesign-demo-block summary="带双行描述的日历">
+        <div class="Calendar-demo">
+          <customTextDemo />
+        </div>
+      </tdesign-demo-block>
+
+      <tdesign-demo-block summary="带翻页功能的日历">
+        <div class="Calendar-demo">
+          <SwitchModeDemo />
+        </div>
+      </tdesign-demo-block>
+
+      <tdesign-demo-block summary="可选择区间日期的日历">
+        <div class="Calendar-demo">
+          <rangeDemo />
+        </div>
+      </tdesign-demo-block>
     </tdesign-demo-block>
 
-    <tdesign-demo-block title="02 组件样式" summary="可以自由定义想要的风格">
-      <div class="Calendar-demo">
-        <customTextDemo />
-      </div>
+    <tdesign-demo-block title="02 组件样式" summary="">
+      <tdesign-demo-block summary="国际化">
+        <div class="Calendar-demo">
+          <nationality />
+        </div>
+      </tdesign-demo-block>
 
-      <div class="Calendar-demo">
-        <customButtonVue />
-      </div>
-
-      <div class="Calendar-demo">
-        <customRangeVue />
-      </div>
-
-      <div class="Calendar-demo">
-        <SwitchModeDemo />
-      </div>
+      <tdesign-demo-block summary="含不可选的日历">
+        <div class="Calendar-demo">
+          <cannotChoose />
+        </div>
+      </tdesign-demo-block>
     </tdesign-demo-block>
 
     <tdesign-demo-block summary="不使用 Popup">
@@ -49,6 +64,9 @@ import customButtonVue from './custom-button.vue';
 import customRangeVue from './custom-range.vue';
 import withoutPopup from './without-popup.vue';
 import SwitchModeDemo from './switch-mode.vue';
+import customTextSingel from './custom-text-singel.vue';
+import nationality from './nationality.vue';
+import cannotChoose from './cannot-choose.vue';
 </script>
 
 <style scoped>

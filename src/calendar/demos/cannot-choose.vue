@@ -1,26 +1,29 @@
+<!-- 含不可选的日历 -->
 <template>
   <div>
     <t-calendar
       v-model:visible="visible"
       :min-date="minDate"
       :max-date="maxDate"
+      :format="formatDate"
       :value="defaultDate"
       @close="onClose"
       @confirm="handleConfirm"
       @select="handleSelect"
     />
-    <t-cell title="单个选择日期" arrow :note="dateNote" @click="visible = true" />
+    <t-cell title="含不可选的日期" arrow :note="dateNote" @click="visible = true" />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { TDate } from '../type';
 
 const visible = ref(false);
 const dateNote = ref('');
 const minDate = new Date(2022, 1, 1);
-const maxDate = new Date(2022, 2, 15);
-const defaultDate = new Date(2022, 1, 18);
+const maxDate = new Date(2022, 2, 20);
+
 const format = (val: Date) => {
   const date = new Date(val);
   const year = date.getFullYear();
@@ -28,7 +31,19 @@ const format = (val: Date) => {
   const day = date.getDate().toString().padStart(2, '0');
   return `${year}-${month}-${day}`;
 };
+
+const formatDate = (dateObj: TDate) => {
+  const { date } = dateObj;
+  // 这里通过formatDate来控制不可选的日期,，使得周六和周日不可选
+  if (date.getDay() === 0 || date.getDay() === 6) {
+    dateObj.type = 'disabled';
+  }
+  return dateObj;
+};
+
+const defaultDate = new Date(2022, 1, 18);
 dateNote.value = format(defaultDate);
+
 const handleConfirm = (val: Date) => {
   console.log(val);
   dateNote.value = format(val);
