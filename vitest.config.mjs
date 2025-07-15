@@ -33,6 +33,7 @@ export default mergeConfig(
         reporter: ['text', 'json', 'html'],
         reportsDirectory: 'test/unit/coverage',
         exclude: ['src/**.{js,ts}', 'src/_common/**', 'src/shared/**', 'src/**/{__test__,demos,style}/**'],
+        include: ['src/**/*'],
       },
     },
   }),
