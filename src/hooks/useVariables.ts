@@ -2,7 +2,7 @@ import { ref } from 'vue';
 import type { Ref } from 'vue';
 import { isString } from 'lodash-es';
 import { THEME_MODE } from '../_common/js/common';
-import { getColorTokenColor } from '../shared';
+import { getColorTokenColor } from '../_common/js/utils/getColorTokenColor';
 import useMutationObservable from './useMutationObservable';
 
 /**
