@@ -13,7 +13,7 @@
       </div>
       <tdesign-demo-block summary="带单行描述的日历">
         <div class="Calendar-demo">
-          <customTextSingel />
+          <customTextSingle />
         </div>
       </tdesign-demo-block>
 
@@ -64,7 +64,7 @@ import customButtonVue from './custom-button.vue';
 import customRangeVue from './custom-range.vue';
 import withoutPopup from './without-popup.vue';
 import SwitchModeDemo from './switch-mode.vue';
-import customTextSingel from './custom-text-singel.vue';
+import customTextSingle from './custom-text-single.vue';
 import international from './international.vue';
 import cannotChoose from './cannot-choose.vue';
 </script>
