@@ -1,9 +1,11 @@
 import { describe, it, expect, vi } from 'vitest';
 import { LoadingIcon } from 'tdesign-icons-vue-next';
 import { mount } from '@vue/test-utils';
+import { createApp } from 'vue';
 import Toast from '../toast';
+import { ToastPlugin } from '../index';
 import Overlay from '../../overlay';
-
+import { sleep } from '../../shared/util';
 import config from '../../config';
 
 const { prefix } = config;
@@ -92,5 +94,81 @@ describe('Toast', () => {
 
       expect(wrapper.findComponent(LoadingIcon).exists()).toEqual(true);
     });
+  });
+});
+
+describe('Toast Plugin', () => {
+  beforeEach(() => {
+    document.body.innerHTML = '';
+  });
+
+  it('show', () => {
+    ToastPlugin('Hello');
+    expect(document.body.textContent).toContain('Hello');
+  });
+
+  it('method', () => {
+    const testShow = (method, text) => {
+      document.body.innerHTML = '';
+      ToastPlugin[method](text);
+      expect(document.body.textContent).toContain(text);
+    };
+    testShow('loading', '加载中');
+    testShow('success', '成功');
+    testShow('warning', '警告');
+    testShow('error', '失败');
+    ToastPlugin.clear();
+    expect(document.body.textContent).not.toContain('失败');
+  });
+
+  it('clear', () => {
+    const onClose = vi.fn();
+    ToastPlugin({
+      message: 'hello',
+      onClose,
+    });
+    ToastPlugin.clear();
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('duration', async () => {
+    const onDestroy = vi.fn();
+    ToastPlugin({
+      message: 'hello',
+      onDestroy,
+      duration: 1000,
+    });
+
+    expect(onDestroy).not.toHaveBeenCalled();
+    await sleep(900);
+    expect(onDestroy).not.toHaveBeenCalled();
+    await sleep(100);
+    expect(onDestroy).toHaveBeenCalledTimes(1);
+  });
+
+  it('attach', () => {
+    const errorFn = vi.fn();
+    vi.spyOn(console, 'error').mockImplementation(errorFn);
+
+    ToastPlugin({
+      attach: 'abc',
+    });
+    expect(errorFn).toHaveBeenCalledWith('attach is not exist');
+
+    const div = document.createElement('div');
+    div.id = 'test-container';
+    document.body.appendChild(div);
+
+    ToastPlugin({
+      attach: `#${div.id}`,
+    });
+    expect(document.querySelector(`#${div.id} .t-toast`)).toBeTruthy();
+  });
+
+  it('use plugin', () => {
+    const wrapper = mount(() => <div></div>, { global: { plugins: [ToastPlugin] } });
+    expect(document.body.textContent).not.toContain('测试');
+    wrapper.vm.$toast('测试');
+    expect(document.body.textContent).toContain('测试');
   });
 });

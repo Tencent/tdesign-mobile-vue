@@ -59,10 +59,10 @@ module.exports = {
   switch: { statements: '92.8%', branches: '88.57%', functions: '87.5%', lines: '92.8%' },
   tabBar: { statements: '86.48%', branches: '81.03%', functions: '88.88%', lines: '86.48%' },
   table: { statements: '94.42%', branches: '68.11%', functions: '84.21%', lines: '94.42%' },
-  tabs: { statements: '97.56%', branches: '79.31%', functions: '100%', lines: '97.56%' },
+  tabs: { statements: '97.31%', branches: '79.06%', functions: '100%', lines: '97.31%' },
   tag: { statements: '98.33%', branches: '92.72%', functions: '93.75%', lines: '98.33%' },
   textarea: { statements: '91.83%', branches: '79.48%', functions: '92.3%', lines: '91.83%' },
-  toast: { statements: '65.21%', branches: '86.2%', functions: '75%', lines: '65.21%' },
+  toast: { statements: '98.06%', branches: '88.88%', functions: '100%', lines: '98.06%' },
   treeSelect: { statements: '100%', branches: '91.66%', functions: '95.45%', lines: '100%' },
   upload: { statements: '95.38%', branches: '81.48%', functions: '71.42%', lines: '95.38%' },
 };
