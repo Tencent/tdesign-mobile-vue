@@ -3,15 +3,14 @@ import { isNumber } from 'lodash-es';
 import type { ImageSettings } from '../_common/js/qrcode/types';
 import props from './props';
 import { DEFAULT_FRONT_COLOR } from '../_common/js/qrcode/utils';
-import { usePrefixClass, useConfig, useTNodeJSX } from '../hooks';
-import useThemeColor from './hooks/useThemeColor';
+import { usePrefixClass, useConfig, useTNodeJSX, useVariables } from '../hooks';
 
-import QRCodeCanvas from './components/QRCodeCanvas';
-import QRCodeSVG from './components/QRCodeSVG';
-import QRcodeStatus from './components/QRCodeStatus';
+import QRCodeCanvas from './components/qrcode-canvas';
+import QRCodeSVG from './components/qrcode-svg';
+import QRcodeStatus from './components/qrcode-status';
 
 export default defineComponent({
-  name: 'TQrcode',
+  name: 'TQRCode',
   props,
   setup(props) {
     const classPrefix = usePrefixClass();
@@ -19,7 +18,10 @@ export default defineComponent({
 
     const { globalConfig } = useConfig('qrcode');
 
-    const { color: themeFgColor, bgColor: themeBgColor } = useThemeColor();
+    const { themeFgColor, themeBgColor } = useVariables({
+      themeFgColor: '--td-text-color-primary',
+      themeBgColor: '--td-bg-color-specialcomponent',
+    });
 
     // bgColor：自定义颜色 > 主题色适配 > 透明[transparent]
     const finalBgColor = computed(() => props.bgColor || themeBgColor.value || 'transparent');

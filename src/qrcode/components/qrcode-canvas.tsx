@@ -25,8 +25,8 @@ export default defineComponent({
       const { margin, cells, numCells, calculatedImageSettings } = useQRCode({
         value: props.value,
         level: props.level,
-        minVersion: props.minVersion,
-        includeMargin: props.includeMargin,
+        minVersion: DEFAULT_MINVERSION,
+        includeMargin: DEFAULT_NEED_MARGIN,
         marginSize: props.marginSize,
         imageSettings: props.imageSettings,
         size: props.size,

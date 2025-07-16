@@ -2,7 +2,7 @@ import { computed, defineComponent, toRefs } from 'vue';
 import { CheckCircleFilledIcon, RefreshIcon } from 'tdesign-icons-vue-next';
 import { QRCodeStatusProps } from './props';
 import Loading from '../../loading';
-import type { TdQRCodeProps } from '../type';
+import type { StatusRenderInfo } from '../type';
 
 export default defineComponent({
   name: 'QRCodeStatus',
@@ -40,7 +40,7 @@ export default defineComponent({
       };
     });
 
-    const renderStatus: TdQRCodeProps['statusRender'] = (info) => {
+    const renderStatus = (info: StatusRenderInfo) => {
       return defaultNodes.value[info.status];
     };
 
