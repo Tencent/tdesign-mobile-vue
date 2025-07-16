@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import { useConfig, t, provideConfig } from '../useConfig';
 import { mergeWith } from '../context';
-import ConfigProvider from '../config-provider';
+import ConfigProvider from '../index';
 
 describe('useConfig', () => {
   it('diff config', () => {

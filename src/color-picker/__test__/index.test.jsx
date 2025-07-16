@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
-import ColorPicker from '../color-picker';
+import ColorPicker from '../index';
 import { getColorObject, Color } from '../../_common/js/color-picker';
 
 const commonProps = {};

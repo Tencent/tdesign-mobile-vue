@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { vi } from 'vitest';
-import Guide from '../guide';
+import Guide from '../index';
 import Popover from '../../popover';
 import Popup from '../../popup';
 
