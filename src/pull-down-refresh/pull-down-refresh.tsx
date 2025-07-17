@@ -72,7 +72,7 @@ export default defineComponent({
       if (!loading.value && distance.value === 0) {
         return 'initial';
       }
-      if (distance.value < loadingBarHeight.value) {
+      if (distance.value < reconvertUnit(props.loadingBarHeight)) {
         return 'pulling';
       }
       if (loading.value) {
