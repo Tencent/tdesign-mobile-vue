@@ -77,9 +77,24 @@ const generateCssVariables = async (componentName) => {
  * @param {string} variables - 生成的变量内容
  */
 const updateDocVariables = (filePath, headContent, variables) => {
-  const content = fs.readFileSync(resolveCwd(filePath), 'utf8');
-  const newContent = content.replace(/(^|\n+)### CSS Variables[\s\S]*?(?=###|$)/, `\n${headContent}${variables}`);
-  fs.writeFileSync(resolveCwd(filePath), newContent, 'utf8');
+  const path = resolveCwd(filePath);
+
+  if (!fs.existsSync(path)) return;
+
+  const content = fs.readFileSync(path, 'utf8');
+  const cssVariablesSection = `\n${headContent}${variables}`;
+
+  // 检查是否存在 ### CSS Variables 部分
+  if (content.includes('### CSS Variables')) {
+    // 替换现有部分
+    const newContent = content.replace(/(^|\n+)### CSS Variables[\s\S]*?(?=###|$)/, cssVariablesSection);
+    fs.writeFileSync(path, newContent, 'utf8');
+  } else {
+    // 追加到文件末尾
+    const trimmedContent = content.trimEnd();
+    const newContent = `${trimmedContent}\n${cssVariablesSection}`;
+    fs.writeFileSync(path, newContent, 'utf8');
+  }
 };
 
 // 批量处理所有组件

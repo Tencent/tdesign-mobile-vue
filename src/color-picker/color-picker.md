@@ -23,3 +23,34 @@ onPaletteBarChange | Function |  | TS 类型：`(context: { color: ColorObject }
 -- | -- | --
 change | `(value: string, context: { color: ColorObject; trigger: ColorPickerChangeTrigger })` | 选中的色值发生变化时触发，第一个参数 `value` 表示新色值，`context.color` 表示当前调色板控制器的色值，`context.trigger` 表示触发颜色变化的来源。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/color-picker/type.ts)。<br/>`type ColorPickerChangeTrigger = 'palette-hue-bar' \| 'palette-alpha-bar' \| 'preset' `<br/>
 palette-bar-change | `(context: { color: ColorObject })` | 调色板控制器的值变化时触发，`context.color` 指调色板控制器的值。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/color-picker/type.ts)。<br/>`interface ColorObject { alpha: number; css: string; hex: string; hex8: string; hsl: string; hsla: string; hsv: string; hsva: string; rgb: string; rgba: string; value: number;}`<br/>
+
+### CSS Variables
+
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-color-picker-background | #fff | - 
+--td-color-picker-border-radius-circle | 50% | - 
+--td-color-picker-format-background-color | @gray-color-1 | - 
+--td-color-picker-gradient-preview-height | 28px | - 
+--td-color-picker-gradient-preview-radius | 3px | - 
+--td-color-picker-gradient-preview-width | 28px | - 
+--td-color-picker-input-format-margin-left | 24px | - 
+--td-color-picker-margin | 12px | - 
+--td-color-picker-panel-padding | 16px | - 
+--td-color-picker-panel-radius | 12px | - 
+--td-color-picker-panel-width | 375px | - 
+--td-color-picker-saturation-height | 144px | - 
+--td-color-picker-saturation-radius | 6px | - 
+--td-color-picker-saturation-thumb-size | 24px | - 
+--td-color-picker-slider-height | 8px | - 
+--td-color-picker-slider-thumb-padding | 3px | - 
+--td-color-picker-slider-thumb-size | 24px | - 
+--td-color-picker-slider-thumb-transform-x | -9px | - 
+--td-color-picker-slider-wrapper-padding | 0 9px | - 
+--td-color-picker-swatch-active | rgba(0, 0, 0, 20%) | - 
+--td-color-picker-swatch-border-radius | 3px | - 
+--td-color-picker-swatch-height | 24px | - 
+--td-color-picker-swatch-padding | 0 | - 
+--td-color-picker-swatch-width | 24px | - 
+--td-color-picker-swatches-title-font | 16px | - 
