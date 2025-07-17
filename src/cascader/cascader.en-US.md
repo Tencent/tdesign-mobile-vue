@@ -36,13 +36,14 @@ pick | `(context: { value: string \| number, label: string, index: number, level
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
+--td-cascader-disabled-color | @text-color-disabled | - 
+--td-cascader-options-title-color | @text-color-placeholder | - 
+--td-cascader-step-arrow-color | @text-color-placeholder | - 
 --td-cascader-active-color | @brand-color | - 
---td-cascader-border-color | @border-color | - 
---td-cascader-disabled-color | @font-gray-4 | - 
+--td-cascader-bg-color | @bg-color-container | - 
+--td-cascader-border-color | @component-stroke | - 
 --td-cascader-options-height | 320px | - 
---td-cascader-options-title-color | @font-gray-3 | - 
---td-cascader-step-arrow-color | @font-gray-3 | - 
 --td-cascader-step-dot-size | 8px | - 
 --td-cascader-step-height | 44px | - 
---td-cascader-title-color | @font-gray-1 | - 
---td-cascder-title-font-size | 18px | -
+--td-cascader-title-color | @text-color-primary | - 
+--td-cascder-title-font-size | 18px | - 

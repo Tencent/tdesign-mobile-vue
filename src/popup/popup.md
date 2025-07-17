@@ -42,4 +42,4 @@ visible-change | `(visible: boolean, trigger: PopupSource) ` | 当浮层隐藏�
 -- | -- | --
 --td-popup-bg-color | @bg-color-container | - 
 --td-popup-border-radius | @radius-extra-large | - 
---td-popup-close-btn-color | @text-color-primary | -
+--td-popup-close-btn-color | @text-color-primary | - 

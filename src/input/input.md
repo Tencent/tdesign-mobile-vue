@@ -51,7 +51,6 @@ clear | `(context: { e: TouchEvent })` | 清空按钮点击时触发
 focus | `(value: InputValue, context: { e: FocusEvent })` | 获得焦点时触发
 validate | `(context: { error?: 'exceed-maximum' \| 'below-minimum' })` | `1.9.1`。字数超出限制时触发
 
-
 ### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。

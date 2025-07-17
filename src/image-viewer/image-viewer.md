@@ -38,4 +38,4 @@ index-change | `(index: number, context: { trigger: 'prev' \| 'next' })` | é¢„è§
 --td-image-viewer-nav-bg-color | @font-gray-3 | - 
 --td-image-viewer-nav-color | @font-white-1 | - 
 --td-image-viewer-nav-height | 48px | - 
---td-image-viewer-nav-index-font-size | @font-size-base | -
+--td-image-viewer-nav-index-font-size | @font-size-base | - 

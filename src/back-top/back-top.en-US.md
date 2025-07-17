@@ -33,4 +33,4 @@ Name | Default Value | Description
 --td-back-top-round-border-radius | @radius-circle | - 
 --td-back-top-round-color | @font-gray-1 | - 
 --td-back-top-round-dark-bg-color | @gray-color-14 | - 
---td-back-top-round-dark-color | @font-white-1 | -
+--td-back-top-round-dark-color | @font-white-1 | - 
