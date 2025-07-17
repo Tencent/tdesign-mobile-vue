@@ -106,8 +106,8 @@ describe('PullDownRefresh', () => {
       trigger(target, 'touchmove', 50, 20);
       trigger(target, 'touchmove', 50, 70);
       trigger(target, 'touchmove', 50, 120);
-      trigger(target, 'touchmove', 50, 170);
-      trigger(target, 'touchend', 50, 180);
+      trigger(target, 'touchmove', 50, 200);
+      trigger(target, 'touchend', 50, 200);
 
       await new Promise((resolve, reject) => {
         setTimeout(() => resolve(), 1000); // 超时 1000ms
