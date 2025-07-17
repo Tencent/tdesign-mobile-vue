@@ -29,7 +29,7 @@ const COMPONENT_NAME = process.argv[process.argv.indexOf('--NAME') + 1]; // 在 
 const matchReg = /(?<=var).*?(?=;)/g;
 
 function findFilePath(componentName) {
-  const path = resolveCwd(`src/_common/style/mobile/components/${componentName}/v2/_var.less`);
+  const path = resolveCwd(`src/_common/style/mobile/components/${componentName}/_var.less`);
   if (fs.existsSync(path)) {
     return path;
   }
