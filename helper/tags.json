@@ -81,6 +81,8 @@
       "loading",
       "loading-props",
       "max-height",
+      "row-attributes",
+      "row-class-name",
       "row-key",
       "show-header",
       "stripe",
@@ -119,6 +121,7 @@
       "format",
       "max-date",
       "min-date",
+      "readonly",
       "switch-mode",
       "title",
       "type",
@@ -453,6 +456,7 @@
       "label-align",
       "label-width",
       "prevent-submit-default",
+      "readonly",
       "required-mark",
       "required-mark-position",
       "reset-type",
@@ -596,6 +600,7 @@
   },
   "t-indexes": {
     "attributes": [
+      "current",
       "index-list",
       "sticky",
       "sticky-offset",
@@ -849,6 +854,23 @@
       "timeout"
     ],
     "description": "PullDownRefresh\n\n下拉刷新\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/pull-down-refresh)"
+  },
+  "t-qrcode": {
+    "attributes": [
+      "bg-color",
+      "borderless",
+      "color",
+      "icon",
+      "icon-size",
+      "level",
+      "size",
+      "status",
+      "status-render",
+      "type",
+      "value",
+      "refresh"
+    ],
+    "description": "QRCode\n\n二维码\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/qrcode)"
   },
   "t-radio": {
     "attributes": [

@@ -41,10 +41,10 @@ Name | Default Value | Description
 --td-textarea-background-color | @bg-color-container | - 
 --td-textarea-border-color | rgba(220, 220, 220, 1) | - 
 --td-textarea-border-radius | @radius-default | - 
---td-textarea-disabled-text-color | @font-gray-4 | - 
---td-textarea-indicator-text-color | @font-gray-3 | - 
---td-textarea-label-color | @font-gray-1 | - 
+--td-textarea-disabled-text-color | @text-color-disabled | - 
+--td-textarea-indicator-text-color | @text-color-placeholder | - 
+--td-textarea-label-color | @text-color-primary | - 
 --td-textarea-label-width | 64px | - 
 --td-textarea-padding | @textarea-vertical-padding @textarea-horizontal-padding | - 
---td-textarea-placeholder-color | @font-gray-3 | - 
---td-textarea-text-color | @font-gray-1 | -
+--td-textarea-placeholder-color | @text-color-placeholder | - 
+--td-textarea-text-color | @text-color-primary | - 

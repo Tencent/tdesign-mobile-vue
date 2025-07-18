@@ -11,6 +11,25 @@ const globalConfigCopy = ref<GlobalConfigProvider>();
 
 export * from './type';
 
+// 处理正则表达式
+export const t = function <T>(pattern: T, ...args: any[]) {
+  const [data] = args;
+  if (isString(pattern)) {
+    if (!data) return pattern;
+    const regular = /\{\s*([\w-]+)\s*\}/g;
+    const translated = pattern.replace(regular, (match, key) => {
+      return String(data[key]);
+    });
+    return translated;
+  }
+  if (isFunction(pattern)) {
+    // 重要：组件的渲染必须存在参数 h，不能移除
+    if (!args.length) return pattern(h);
+    return pattern(...args);
+  }
+  return '';
+};
+
 /**
  * component globalConfig
  * @param componentName
@@ -29,28 +48,6 @@ export function useConfig<T extends keyof GlobalConfigProvider>(
   const classPrefix = computed(() => {
     return mergedGlobalConfig.value.classPrefix;
   });
-
-  // 处理正则表达式
-  const t = function <T>(pattern: T, ...args: any[]) {
-    const [data] = args;
-    if (isString(pattern)) {
-      if (!data) return pattern;
-      const regular = /\{\s*([\w-]+)\s*\}/g;
-      const translated = pattern.replace(regular, (match, key) => {
-        if (data) {
-          return String(data[key]);
-        }
-        return '';
-      });
-      return translated;
-    }
-    if (isFunction(pattern)) {
-      // 重要：组件的渲染必须存在参数 h，不能移除
-      if (!args.length) return pattern(h);
-      return pattern(...args);
-    }
-    return '';
-  };
 
   return {
     t,

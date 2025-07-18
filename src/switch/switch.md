@@ -44,7 +44,10 @@ change | `(value: T, context: { e: MouseEvent })` | 数据发生变化时触发
 --td-switch-icon-size | 20px | - 
 --td-switch-icon-small-size | 16px | - 
 --td-switch-label-checked-color | @switch-checked-color | - 
---td-switch-label-color | @font-gray-4 | - 
+--td-switch-label-color | @text-color-disabled | - 
+--td-switch-label-font-size | 12px | - 
+--td-switch-label-font-size | 14px | - 
+--td-switch-label-font-size | 16px | - 
 --td-switch-large-height | 32px | - 
 --td-switch-large-radius | calc(@switch-large-height / 2) | - 
 --td-switch-large-width | 52px | - 
@@ -52,9 +55,6 @@ change | `(value: T, context: { e: MouseEvent })` | 数据发生变化时触发
 --td-switch-small-height | 24px | - 
 --td-switch-small-radius | calc(@switch-small-height / 2) | - 
 --td-switch-small-width | 39px | - 
---td-switch-unchecked-color | @font-gray-4 | - 
+--td-switch-unchecked-color | @text-color-disabled | - 
 --td-switch-unchecked-disabled-color | @bg-color-component-disabled | - 
 --td-switch-width | 45px | - 
---td-switch-label-font-size | 12px | - 
---td-switch-label-font-size | 14px | - 
---td-switch-label-font-size | 16px | -

@@ -33,4 +33,4 @@ timeout | \- | \-
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-pull-down-refresh-color | @font-gray-3 | -
+--td-pull-down-refresh-color | @text-color-placeholder | - 
