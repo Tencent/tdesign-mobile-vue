@@ -82,6 +82,7 @@ export default defineComponent({
 
       props.onPick?.(curValueArray.value, { index, column });
     };
+
     watch(pickerValue, () => {
       curValueArray.value = pickerValue.value.map((item: PickerValue) => item);
     });
