@@ -29,4 +29,4 @@ drag-start | `(context: { e: TouchEvent })` | \-
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-fab-shadow | @shadow-2 | -
+--td-fab-shadow | @shadow-2 | - 

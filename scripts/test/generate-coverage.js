@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { camelCase } = require('lodash-es');
+const camelCase = require('lodash.camelcase');
 
 const DomParser = require('dom-parser');
 const parser = new DomParser();

@@ -67,7 +67,7 @@ Name | Default Value | Description
 --td-drawer-item-padding | 16px | - 
 --td-drawer-sidebar-height | 70vh | - 
 --td-drawer-title-color | @drawer-title-color | - 
---td-drawer-title-color | @font-gray-1 | - 
+--td-drawer-title-color | @text-color-primary | - 
 --td-drawer-title-font-size | 18px | - 
 --td-drawer-title-padding | 24px 16px 8px | - 
---td-drawer-width | 280px | -
+--td-drawer-width | 280px | - 

@@ -38,6 +38,6 @@ overlimit | `(type: 'minus' \| 'plus')` | 数值超出限制时触发
 -- | -- | --
 --td-stepper-border-color | @component-border | - 
 --td-stepper-border-radius | @radius-small | - 
---td-stepper-input-color | @font-gray-1 | - 
+--td-stepper-input-color | @text-color-primary | - 
 --td-stepper-input-disabled-bg | @bg-color-component-disabled | - 
---td-stepper-input-disabled-color | @font-gray-4 | -
+--td-stepper-input-disabled-color | @text-color-disabled | - 

@@ -54,17 +54,17 @@ value | String / Number | - | 选项卡的值，唯一标识。TS 类型：`TabV
 --td-tab-border-color | @component-stroke | - 
 --td-tab-font-size | 14px | - 
 --td-tab-icon-size | 16px | - 
---td-tab-track-color | @brand-color | - 
---td-tab-track-radius | 4px | - 
---td-tab-track-thickness | 3px | - 
---td-tab-track-width | 16px | 当前激活 tab 下划线的宽度，仅在 bottomLineMode 为 'fixed' 时有效
---td-tab-nav-bg-color | @bg-color-container | - 
 --td-tab-item-active-color | @brand-color | - 
---td-tab-item-color | @font-gray-1 | - 
---td-tab-item-disabled-color | @font-gray-4 | - 
+--td-tab-item-color | @text-color-primary | - 
+--td-tab-item-disabled-color | @text-color-disabled | - 
 --td-tab-item-height | 48px | - 
 --td-tab-item-tag-active-bg | @brand-color-light | - 
 --td-tab-item-tag-bg | @bg-color-secondarycontainer | - 
 --td-tab-item-tag-height | 32px | - 
 --td-tab-item-vertical-height | 54px | - 
---td-tab-item-vertical-width | 104px | -
+--td-tab-item-vertical-width | 104px | - 
+--td-tab-nav-bg-color | @bg-color-container | - 
+--td-tab-track-color | @brand-color | - 
+--td-tab-track-radius | 4px | - 
+--td-tab-track-thickness | 3px | - 
+--td-tab-track-width | 16px | - 
