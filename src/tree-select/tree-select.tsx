@@ -190,7 +190,6 @@ export default defineComponent({
             if (level === 0) {
               levelContent = renderSideBar(item);
             } else if (level === leafLevel.value && level === treeMaxLevel.value) {
-              // ⬆ fix #1901: Add `&& level === treeMaxLevel.value` to control checkGroup visibility, display checkGroup only when current level matches max level.
               levelContent = renderLeafLevel(item, level);
             } else {
               levelContent = renderMiddleLevel(item, level);
