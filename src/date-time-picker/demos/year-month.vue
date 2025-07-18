@@ -1,10 +1,10 @@
 <template>
-  <t-cell title="选择日期(年月)" :note="valueText || '年 月'" @click="visible = true" />
+  <t-cell title="选择时间" arrow hover :note="valueText || ''" @click="visible = true" />
   <t-popup v-model="visible" placement="bottom">
     <t-date-time-picker
       v-model="value"
       mode="month"
-      title="选择日期"
+      title="选择时间"
       format="YYYY-MM"
       @change="onChange"
       @pick="onPick"
