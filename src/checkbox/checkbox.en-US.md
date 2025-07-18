@@ -61,18 +61,19 @@ Name | Default Value | Description
 -- | -- | --
 --td-checkbox-bg-color | @bg-color-container | - 
 --td-checkbox-border-color | @component-stroke | - 
---td-checkbox-description-color | @font-gray-2 | - 
---td-checkbox-description-disabled-color | @font-gray-4 | - 
+--td-checkbox-description-color | @text-color-secondary | - 
+--td-checkbox-description-disabled-color | @text-color-disabled | - 
 --td-checkbox-description-line-height | 22px | - 
 --td-checkbox-font-size | 16px | - 
 --td-checkbox-icon-checked-color | @brand-color | - 
---td-checkbox-icon-color | @gray-color-4 | - 
+--td-checkbox-icon-color | var(--td-border-level-2-color, @gray-color-4) | - 
 --td-checkbox-icon-disabled-bg-color | @bg-color-component-disabled | - 
 --td-checkbox-icon-disabled-color | @brand-color-disabled | - 
 --td-checkbox-icon-size | 24px | - 
 --td-checkbox-tag-active-bg-color | @brand-color-light | - 
 --td-checkbox-tag-active-color | @brand-color | - 
---td-checkbox-title-color | @font-gray-1 | - 
---td-checkbox-title-disabled-color | @font-gray-4 | - 
+--td-checkbox-tag-bg-color | @bg-color-component | - 
+--td-checkbox-title-color | @text-color-primary | - 
+--td-checkbox-title-disabled-color | @text-color-disabled | - 
 --td-checkbox-title-line-height | 24px | - 
---td-checkbox-vertical-padding | 16px | -
+--td-checkbox-vertical-padding | 16px | - 
