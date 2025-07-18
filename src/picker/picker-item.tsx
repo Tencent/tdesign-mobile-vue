@@ -106,29 +106,36 @@ export default defineComponent({
       },
       { flush: 'post', deep: true },
     );
+
+    // 拖拽状态，整个 ul 共享
+    const touchState = {
+      startY: 0,
+      isDragging: false,
+    };
+
+    const onTouchStart = (e: TouchEvent) => {
+      touchState.startY = e.touches[0].clientY;
+      touchState.isDragging = false;
+    };
+    const onTouchMove = (e: TouchEvent) => {
+      if (Math.abs(e.touches[0].clientY - touchState.startY) > 5) {
+        touchState.isDragging = true;
+      }
+    };
+    const onTouchEnd = () => {
+      // 这里只重置拖拽状态，不做选中
+      // touchState.isDragging = false;
+    };
+
     return () => {
-      // 拖拽状态数组，保证每个 li 独立
-      const startYArr: number[] = [];
-      const isDraggingArr: boolean[] = [];
-
-      const onTouchStart = (e: TouchEvent, idx: number) => {
-        startYArr[idx] = e.touches[0].clientY;
-        isDraggingArr[idx] = false;
-      };
-      const onTouchMove = (e: TouchEvent, idx: number) => {
-        if (Math.abs(e.touches[0].clientY - startYArr[idx]) > 5) {
-          isDraggingArr[idx] = true;
-        }
-      };
-      const onTouchEnd = (idx: number, option: any) => {
-        if (isDraggingArr[idx]) return;
-        if (!lodashGet(option, keys.value?.disabled ?? 'disabled')) {
-          picker?.updateIndex(idx, { isChange: true });
-        }
-      };
-
       return (
-        <ul ref={root} class={className.value}>
+        <ul
+          ref={root}
+          class={className.value}
+          // onTouchstart={onTouchStart}
+          // onTouchmove={onTouchMove}
+          // onTouchend={onTouchEnd}
+        >
           {(props.options || []).map((option, index) => (
             <li
               key={index}
@@ -138,9 +145,12 @@ export default defineComponent({
                   [`${pickerItemClass.value}__item--disabled`]: lodashGet(option, keys.value?.disabled ?? 'disabled'),
                 },
               ]}
-              onTouchstart={(e) => onTouchStart(e, index)}
-              onTouchmove={(e) => onTouchMove(e, index)}
-              onTouchend={() => onTouchEnd(index, option)}
+              onTouchend={() => {
+                if (touchState.isDragging) return;
+                if (!lodashGet(option, keys.value?.disabled ?? 'disabled')) {
+                  picker?.updateIndex(index, { isChange: true });
+                }
+              }}
             >
               {context.slots.option ? (
                 context.slots.option(option, index)

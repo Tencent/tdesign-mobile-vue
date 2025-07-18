@@ -89,8 +89,6 @@ class Picker {
 
   pickerColumns: PickerColumn;
 
-  lastActionIsClick = false;
-
   constructor(options: PickerOptions) {
     if (!options.el) throw new Error('options el needed!');
     this.holder = options.el;
