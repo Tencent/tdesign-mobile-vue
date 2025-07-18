@@ -2,7 +2,8 @@ import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { ref, h } from 'vue';
 import { AppIcon } from 'tdesign-icons-vue-next';
-import drawer from '../drawer';
+import Drawer, { DrawerPlugin } from '../index';
+import { sleep } from '../../shared/util';
 
 config.global.stubs = {
   teleport: false,
@@ -14,7 +15,7 @@ describe('drawer', () => {
   // test props
   describe('props', () => {
     it(': visible	', async () => {
-      const wrapper = mount(drawer, {
+      const wrapper = mount(Drawer, {
         props: {
           visible: false,
         },
@@ -28,8 +29,8 @@ describe('drawer', () => {
     });
 
     it(': placement	', async () => {
-      placementList.map((placement) => {
-        const wrapper = mount(() => <drawer visible={true} placement={placement} />);
+      placementList.forEach((placement) => {
+        const wrapper = mount(() => <Drawer visible={true} placement={placement} />);
         if (placement) {
           expect(wrapper.find(`.t-popup--${placement}`)).toBeTruthy();
         }
@@ -43,7 +44,7 @@ describe('drawer', () => {
       const visible = ref(true);
       const wrapper = mount({
         render() {
-          return <drawer visible={visible.value} closeOverlayClick={closeOverlayClick} onClose={onClose} />;
+          return <Drawer visible={visible.value} closeOverlayClick={closeOverlayClick} onClose={onClose} />;
         },
       });
 
@@ -66,7 +67,7 @@ describe('drawer', () => {
 
       const wrapper = mount({
         render() {
-          return <drawer items={titleSidebar.value} />;
+          return <Drawer items={titleSidebar.value} />;
         },
       });
 
@@ -85,7 +86,7 @@ describe('drawer', () => {
       const visible = ref(true);
       const wrapper = mount({
         render() {
-          return <drawer visible={visible.value} onOverlayClick={onOverlayClick} />;
+          return <Drawer visible={visible.value} onOverlayClick={onOverlayClick} />;
         },
       });
 
@@ -112,7 +113,7 @@ describe('drawer', () => {
 
       const wrapper = mount({
         render() {
-          return <drawer items={iconSidebar.value} onClose={onClose} />;
+          return <Drawer items={iconSidebar.value} onClose={onClose} />;
         },
       });
 
@@ -143,7 +144,7 @@ describe('drawer', () => {
 
       const wrapper = mount({
         render() {
-          return <drawer items={iconSidebar.value} onItemClick={onItemClick} />;
+          return <Drawer items={iconSidebar.value} onItemClick={onItemClick} />;
         },
       });
 
@@ -160,5 +161,86 @@ describe('drawer', () => {
         await triggerClick(index);
       });
     });
+
+    it(': footer', () => {
+      const wrapper = mount(Drawer, {
+        props: {
+          footer: () => h(<div>custom footer</div>),
+        },
+      });
+      expect(wrapper.find('.t-drawer__footer').exists()).toBeTruthy();
+    });
+
+    it(': title', () => {
+      const wrapper = mount(Drawer, {
+        props: {
+          title: () => h(<div>custom title</div>),
+        },
+      });
+      expect(wrapper.find('.t-drawer__title').exists()).toBeTruthy();
+    });
+  });
+});
+
+const isElementVisible = (el) => {
+  while (el) {
+    if (getComputedStyle(el).display === 'none') return false;
+    el = el.parentElement;
+  }
+  return true;
+};
+
+describe('Drawer Plugin', () => {
+  beforeEach(() => {
+    document.body.innerHTML = '';
+  });
+  const title = 'Hello TDesign';
+
+  it('show', async () => {
+    expect(document.querySelector('.t-drawer')).toBeFalsy();
+    const handler = DrawerPlugin({
+      items: [{ title }],
+    });
+    expect(document.body.textContent).toContain(title);
+    expect(document.querySelector('.t-drawer')).toBeTruthy();
+    expect(isElementVisible(document.querySelector('.t-drawer'))).toBe(false);
+
+    await handler.show();
+    expect(isElementVisible(document.querySelector('.t-drawer'))).toBe(true);
+
+    await handler.hide();
+    await sleep(300);
+    expect(isElementVisible(document.querySelector('.t-drawer'))).toBe(false);
+  });
+
+  it('update', async () => {
+    const title2 = 'Hello Vue';
+    expect(document.querySelector('.t-drawer')).toBeFalsy();
+    const handler = DrawerPlugin({
+      items: [{ title }],
+    });
+    expect(document.body.textContent).toContain(title);
+    await handler.update({
+      items: [{ title: title2 }],
+    });
+    expect(document.body.textContent).not.toContain(title);
+    expect(document.body.textContent).toContain(title2);
+  });
+
+  it('destroy', async () => {
+    const handler = DrawerPlugin({
+      items: [{ title }],
+    });
+    expect(document.body.textContent).toContain(title);
+    await handler.destroy();
+    expect(document.body.textContent).not.toContain(title);
+  });
+
+  it('use plugin', () => {
+    const wrapper = mount(() => <div></div>, { global: { plugins: [DrawerPlugin] } });
+    expect(typeof wrapper.vm.$drawer).toBe('function');
+    expect(document.body.textContent).not.toContain(title);
+    wrapper.vm.$drawer({ items: [{ title }] });
+    expect(document.body.textContent).toContain(title);
   });
 });

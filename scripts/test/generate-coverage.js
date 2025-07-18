@@ -10,6 +10,20 @@ function resolveCwd(...args) {
   return path.join(...args);
 }
 
+function checkTargetCoverage(name) {
+  const list = name.split('/');
+  if (list.length === 1) {
+    return [true, name];
+  }
+  if (list.length === 2) {
+    return [list[0] === 'src', list[1]];
+  }
+  if (list.length === 3) {
+    return [list[1] === 'src', list[2]];
+  }
+  return [false, ''];
+}
+
 fs.readFile(resolveCwd('test/unit/coverage/index.html'), 'utf8', (err, html) => {
   if (err) {
     console.log('please execute npm run test:unit-coverage first!', err);
@@ -30,14 +44,15 @@ fs.readFile(resolveCwd('test/unit/coverage/index.html'), 'utf8', (err, html) => 
     let resultCoverage = {};
     componentCoverage.forEach((item, index) => {
       const dataVal = item[0].getAttribute('data-value');
-      if (dataVal.split('/')[1] === 'src' && dataVal.split('/').length === 3) {
+      const [valid, targetName] = checkTargetCoverage(dataVal);
+      if (valid) {
         const name = dataVal;
         const statements = `${item[2].getAttribute('data-value')}%`;
         const branches = `${item[4].getAttribute('data-value')}%`;
         const functions = `${item[6].getAttribute('data-value')}%`;
         const lines = `${item[8].getAttribute('data-value')}%`;
 
-        const key = camelCase(name.split('/')[2]);
+        const key = camelCase(targetName);
         resultCoverage[key] = {
           statements,
           branches,
