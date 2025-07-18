@@ -366,9 +366,9 @@ export default defineComponent({
               `${sliderClass.value}__scale-item`,
               `${sliderClass.value}__scale-item--${props.theme}`,
               {
-                [`${sliderClass.value}__scale-item--active`]: !props.range && Number(innerValue.value) >= item.val,
                 [`${sliderClass.value}__scale-item--active`]:
-                  props.range && state.dotTopValue[1] >= item.val && item.val >= state.dotTopValue[0],
+                  (!props.range && Number(innerValue.value) >= item.val) ||
+                  (props.range && state.dotTopValue[1] >= item.val && item.val >= state.dotTopValue[0]),
                 [`${sliderClass.value}__scale-item--disabled`]: isDisabled.value,
                 [`${sliderClass.value}__scale-item--hidden`]:
                   ((index === 0 || index === state.scaleArray.length - 1) && props.theme === 'capsule') ||
