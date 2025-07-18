@@ -59,6 +59,7 @@ declare module 'vue' {
     TPopup: typeof import('tdesign-mobile-vue')['Popup'];
     TProgress: typeof import('tdesign-mobile-vue')['Progress'];
     TPullDownRefresh: typeof import('tdesign-mobile-vue')['PullDownRefresh'];
+    TQrcode: typeof import('tdesign-mobile-vue')['QRCode'];
     TRadio: typeof import('tdesign-mobile-vue')['Radio'];
     TRadioGroup: typeof import('tdesign-mobile-vue')['RadioGroup'];
     TRate: typeof import('tdesign-mobile-vue')['Rate'];

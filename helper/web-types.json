@@ -540,7 +540,7 @@
             },
             {
               "name": "fixed-rows",
-              "description": "【开发中】固定行（冻结行），示例：[M, N]，表示冻结表头 M 行和表尾 N 行。M 和 N 值为 0 时，表示不冻结行",
+              "description": "固定行（冻结行），示例：[M, N]，表示冻结表头 M 行和表尾 N 行。M 和 N 值为 0 时，表示不冻结行",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props",
               "type": "Array<number>"
             },
@@ -568,6 +568,18 @@
               "description": "table max height\n\n表格最大高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props",
               "type": "string | number"
+            },
+            {
+              "name": "row-attributes",
+              "description": "`tr` attributes\n\nHTML 标签 `tr` 的属性。类型为 Function 时，参数说明：`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body` 表示属性作用于 `tbody` 中的元素；`params.type=foot` 表示属性作用于 `tfoot` 中的元素。<br />示例一：{ draggable: true }，<br />示例二：[{ draggable: true }, { title: '超出省略显示' }]。<br /> 示例三：() => [{ draggable: true }]",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props",
+              "type": "TableRowAttributes<T>"
+            },
+            {
+              "name": "row-class-name",
+              "description": "table `th` classname\n\n行类名，泛型 T 指表格数据类型。`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body`  表示类名作用于 `tbody` 中的元素；`params.type= tfoot` 表示类名作用于 `tfoot` 中的元素",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props",
+              "type": "ClassName | ((params: RowClassNameParams<T>) => ClassName)"
             },
             {
               "name": "row-key",
@@ -924,8 +936,14 @@
               "type": " number | Date"
             },
             {
+              "name": "readonly",
+              "description": "是否只读，只读状态下不能选择日期",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/calendar?tab=api#calendar-props",
+              "type": "boolean"
+            },
+            {
               "name": "switch-mode",
-              "description": "切换模式。 `none` 表示水平方向平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换",
+              "description": "切换模式。 `none` 表示平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/calendar?tab=api#calendar-props",
               "type": "'none' | 'month' | 'year-month'",
               "default": "none",
@@ -3248,6 +3266,13 @@
               "default": "true"
             },
             {
+              "name": "readonly",
+              "description": "是否整个表单只读",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/form?tab=api#form-props",
+              "type": "boolean",
+              "default": "undefined"
+            },
+            {
               "name": "required-mark",
               "description": "是否显示必填符号（*），默认显示",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/form?tab=api#form-props",
@@ -3433,7 +3458,7 @@
               "name": "name",
               "description": "表单字段名称",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/form?tab=api#formitem-props",
-              "type": "string | number"
+              "type": "string"
             },
             {
               "name": "required-mark",
@@ -4199,6 +4224,12 @@
           "description": "Indexes\n\n索引",
           "doc-url": "https://tdesign.tencent.com/mobile-vue/components/indexes",
           "props": [
+            {
+              "name": "current",
+              "description": "索引列表的激活项，默认首项",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/indexes?tab=api#indexes-props",
+              "type": "string | number"
+            },
             {
               "name": "index-list",
               "description": "索引字符列表。不传默认 `A-Z`",
@@ -5570,13 +5601,13 @@
               "name": "option",
               "description": "自定义选项内容。参数为 `option: PickerColumnItem, index: number`",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/picker?tab=api#picker-props",
-              "type": "TNode"
+              "type": "(option: PickerColumnItem, index: number) => string | Record<string, string | boolean>"
             },
             {
               "name": "render-label",
               "description": "自定义label",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/picker?tab=api#picker-props",
-              "type": "(item: PickerColumnItem) => string"
+              "type": "(item: PickerColumnItem, index: number) => string"
             },
             {
               "name": "swipe-duration",
@@ -5636,7 +5667,7 @@
             },
             {
               "name": "option",
-              "description": "自定义选项内容。参数为 `option: PickerColumnItem, index: number`",
+              "description": "自定义选项内容。参数为 `option: PickerColumnItem, index: number`类型和参数：(option: PickerColumnItem, index: number) => string | Record<string, string | boolean>",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/picker?tab=api#picker-props"
             }
           ]
@@ -6133,6 +6164,154 @@
             ]
           },
           "slots": []
+        },
+        {
+          "name": "t-qrcode",
+          "source": {
+            "symbol": "QRCode"
+          },
+          "description": "QRCode\n\n二维码",
+          "doc-url": "https://tdesign.tencent.com/mobile-vue/components/qrcode",
+          "props": [
+            {
+              "name": "bg-color",
+              "description": "QR code background color\n\n二维码背景颜色",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props",
+              "type": "string"
+            },
+            {
+              "name": "borderless",
+              "description": "Is there a border\n\n是否有边框",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "color",
+              "description": "QR code color\n\n二维码颜色",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props",
+              "type": "string"
+            },
+            {
+              "name": "icon",
+              "description": "The address of the picture in the QR code\n\n二维码中图片的地址",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props",
+              "type": "string"
+            },
+            {
+              "name": "icon-size",
+              "description": "The size of the picture in the QR code\n\n二维码中图片的大小",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props",
+              "type": "number | { width: number; height: number }",
+              "default": "40"
+            },
+            {
+              "name": "level",
+              "description": "QR code error correction level\n\n二维码纠错等级",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props",
+              "type": "'L' | 'M' | 'Q' | 'H'",
+              "default": "M",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "L"
+                },
+                {
+                  "name": "M"
+                },
+                {
+                  "name": "Q"
+                },
+                {
+                  "name": "H"
+                }
+              ]
+            },
+            {
+              "name": "size",
+              "description": "QR code size\n\n二维码大小",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props",
+              "type": "number",
+              "default": "160"
+            },
+            {
+              "name": "status",
+              "description": "QR code status\n\n二维码状态",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props",
+              "type": "QRStatus",
+              "default": "active",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "active"
+                },
+                {
+                  "name": "expired"
+                },
+                {
+                  "name": "loading"
+                },
+                {
+                  "name": "scanned"
+                }
+              ]
+            },
+            {
+              "name": "status-render",
+              "description": "Custom state renderer\n\n自定义状态渲染器",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props",
+              "type": "(info:StatusRenderInfo) => TNode"
+            },
+            {
+              "name": "type",
+              "description": "render type\n\n渲染类型",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props",
+              "type": "'canvas' | 'svg'",
+              "default": "canvas",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "canvas"
+                },
+                {
+                  "name": "svg"
+                }
+              ]
+            },
+            {
+              "name": "value",
+              "description": "scanned text\n\n扫描后的文本",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props",
+              "type": "string"
+            }
+          ],
+          "js": {
+            "events": [
+              {
+                "name": "refresh",
+                "description": "Click the \"Click to refresh\" callback\n\n点击\"点击刷新\"的回调",
+                "doc-url": "https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-events"
+              }
+            ]
+          },
+          "slots": [
+            {
+              "name": "statusRender",
+              "description": "Custom state renderer\n\n自定义状态渲染器类型和参数：(info:StatusRenderInfo) => TNode【type StatusRenderInfo = {status:QRStatus;onRefresh?: () => void;}】",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props"
+            },
+            {
+              "name": "status-render",
+              "description": "Custom state renderer\n\n自定义状态渲染器类型和参数：(info:StatusRenderInfo) => TNode【type StatusRenderInfo = {status:QRStatus;onRefresh?: () => void;}】",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props"
+            }
+          ]
         },
         {
           "name": "t-radio",

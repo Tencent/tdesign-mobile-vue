@@ -237,7 +237,7 @@
   },
   "t-table/fixed-rows": {
     "type": "Array",
-    "description": "【开发中】固定行（冻结行），示例：[M, N]，表示冻结表头 M 行和表尾 N 行。M 和 N 值为 0 时，表示不冻结行\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "固定行（冻结行），示例：[M, N]，表示冻结表头 M 行和表尾 N 行。M 和 N 值为 0 时，表示不冻结行\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
   },
   "t-table/height": {
     "type": "String|Number",
@@ -254,6 +254,14 @@
   "t-table/max-height": {
     "type": "String|Number",
     "description": "table max height\n\n表格最大高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+  },
+  "t-table/row-attributes": {
+    "type": "Object|Array|Function",
+    "description": "`tr` attributes\n\nHTML 标签 `tr` 的属性。类型为 Function 时，参数说明：`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body` 表示属性作用于 `tbody` 中的元素；`params.type=foot` 表示属性作用于 `tfoot` 中的元素。<br />示例一：{ draggable: true }，<br />示例二：[{ draggable: true }, { title: '超出省略显示' }]。<br /> 示例三：() => [{ draggable: true }]\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+  },
+  "t-table/row-class-name": {
+    "type": "String|Object|Array|Function",
+    "description": "table `th` classname\n\n行类名，泛型 T 指表格数据类型。`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body`  表示类名作用于 `tbody` 中的元素；`params.type= tfoot` 表示类名作用于 `tfoot` 中的元素\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
   },
   "t-table/row-key": {
     "type": "String",
@@ -405,6 +413,10 @@
     "type": "Number|Date",
     "description": "最小可选的日期，不传则默认今天\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/calendar?tab=api#calendar-props)"
   },
+  "t-calendar/readonly": {
+    "type": "Boolean",
+    "description": "是否只读，只读状态下不能选择日期\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/calendar?tab=api#calendar-props)"
+  },
   "t-calendar/switch-mode": {
     "type": "String",
     "options": [
@@ -412,7 +424,7 @@
       "month",
       "year-month"
     ],
-    "description": "切换模式。 `none` 表示水平方向平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换\n\ndefault: none\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/calendar?tab=api#calendar-props)"
+    "description": "切换模式。 `none` 表示平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换\n\ndefault: none\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/calendar?tab=api#calendar-props)"
   },
   "t-calendar/title": {
     "type": "String|TNode",
@@ -1412,6 +1424,10 @@
     "type": "Boolean",
     "description": "是否阻止表单提交默认事件（表单提交默认事件会刷新页面），设置为 `true` 可以避免刷新\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/form?tab=api#form-props)"
   },
+  "t-form/readonly": {
+    "type": "Boolean",
+    "description": "是否整个表单只读\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/form?tab=api#form-props)"
+  },
   "t-form/required-mark": {
     "type": "Boolean",
     "description": "是否显示必填符号（*），默认显示\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/form?tab=api#form-props)"
@@ -1503,7 +1519,7 @@
     "description": "可以整体设置标签宽度，优先级高于 Form.labelWidth\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/form?tab=api#formitem-props)"
   },
   "t-form-item/name": {
-    "type": "String|Number",
+    "type": "String",
     "description": "表单字段名称\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/form?tab=api#formitem-props)"
   },
   "t-form-item/required-mark": {
@@ -1839,6 +1855,10 @@
   "t-image-viewer/index-change": {
     "type": "event",
     "description": "预览图片切换时触发，`context.prev` 切换到上一张图片，`context.next` 切换到下一张图片\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-events)"
+  },
+  "t-indexes/current": {
+    "type": "String|Number",
+    "description": "索引列表的激活项，默认首项\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/indexes?tab=api#indexes-props)"
   },
   "t-indexes/index-list": {
     "type": "Array",
@@ -2686,6 +2706,70 @@
   "t-pull-down-refresh/timeout": {
     "type": "event",
     "description": "刷新超时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/pull-down-refresh?tab=api#pulldownrefresh-events)"
+  },
+  "t-qrcode/bg-color": {
+    "type": "String",
+    "description": "QR code background color\n\n二维码背景颜色\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props)"
+  },
+  "t-qrcode/borderless": {
+    "type": "Boolean",
+    "description": "Is there a border\n\n是否有边框\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props)"
+  },
+  "t-qrcode/color": {
+    "type": "String",
+    "description": "QR code color\n\n二维码颜色\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props)"
+  },
+  "t-qrcode/icon": {
+    "type": "String",
+    "description": "The address of the picture in the QR code\n\n二维码中图片的地址\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props)"
+  },
+  "t-qrcode/icon-size": {
+    "type": "Number|Object",
+    "description": "The size of the picture in the QR code\n\n二维码中图片的大小\n\ndefault: 40\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props)"
+  },
+  "t-qrcode/level": {
+    "type": "String",
+    "options": [
+      "L",
+      "M",
+      "Q",
+      "H"
+    ],
+    "description": "QR code error correction level\n\n二维码纠错等级\n\ndefault: M\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props)"
+  },
+  "t-qrcode/size": {
+    "type": "Number",
+    "description": "QR code size\n\n二维码大小\n\ndefault: 160\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props)"
+  },
+  "t-qrcode/status": {
+    "type": "String",
+    "options": [
+      "active",
+      "expired",
+      "loading",
+      "scanned"
+    ],
+    "description": "QR code status\n\n二维码状态\n\ndefault: active\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props)"
+  },
+  "t-qrcode/status-render": {
+    "type": "TNode",
+    "description": "Custom state renderer\n\n自定义状态渲染器\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props)"
+  },
+  "t-qrcode/type": {
+    "type": "String",
+    "options": [
+      "canvas",
+      "svg"
+    ],
+    "description": "render type\n\n渲染类型\n\ndefault: canvas\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props)"
+  },
+  "t-qrcode/value": {
+    "type": "String",
+    "description": "scanned text\n\n扫描后的文本\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-props)"
+  },
+  "t-qrcode/refresh": {
+    "type": "event",
+    "description": "Click the \"Click to refresh\" callback\n\n点击\"点击刷新\"的回调\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/qrcode?tab=api#qrcode-events)"
   },
   "t-radio/allow-uncheck": {
     "type": "Boolean",
