@@ -1,13 +1,13 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Upload Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
 accept | String | - | File types that can be accepted. [W3C](https://www.w3schools.com/tags/att_input_accept.asp)，[MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input/file) | N
 action | String | - | Uploading URL | N
+addBtn | Boolean | true | \- | N
 addContent | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 allowUploadDuplicateFile | Boolean | false | allow to upload duplicate name files | N
 autoUpload | Boolean | true | post upload request automatically after files being selected | N
@@ -25,7 +25,8 @@ imageProps | Object | - | Typescript：`ImageProps`，[Image API Documents](./im
 max | Number | 0 | max count of files limit | N
 method | String | POST | HTTP request method。options: POST/GET/PUT/OPTIONS/PATCH/post/get/put/options/patch | N
 multiple | Boolean | false | multiple files uploading | N
-preview | Boolean | true | \- | N
+preview | Boolean | true | `1.6.0` | N
+removeBtn | Boolean | true | `1.9.3`。Show image delete button or not | N
 requestMethod | Function | - | custom upload request method。Typescript：`(files: UploadFile \| UploadFile[]) => Promise<RequestMethodResponse>` `interface RequestMethodResponse { status: 'success' \| 'fail'; error?: string; response: { url?: string; files?: UploadFile[]; [key: string]: any } }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts) | N
 sizeLimit | Number / Object | - | files size limit。Typescript：`number \| SizeLimitObj` `interface SizeLimitObj { size: number; unit: SizeUnit ; message?: string }` `type SizeUnitArray = ['B', 'KB', 'MB', 'GB']` `type SizeUnit = SizeUnitArray[number]`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts) | N
 useMockProgress | Boolean | true | use mock progress, instead of real progress | N
