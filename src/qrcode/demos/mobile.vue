@@ -15,7 +15,7 @@
       <StatusDemo class="tdesign-demos-qrcode" />
     </tdesign-demo-block>
     <tdesign-demo-block title="04 自定义状态渲染器" summary="通过 statusRender 的值控制二维码不同状态的渲染逻辑。">
-      <CustomStatusRenderDemo class="tdesign-demos-qrcode" />
+      <StatusRenderDemo class="tdesign-demos-qrcode" />
     </tdesign-demo-block>
     <tdesign-demo-block title="05 自定义渲染类型" summary="通过设置 type 自定义渲染结果，提供 canvas 和 svg 两个选项。">
       <TypeDemo class="tdesign-demos-qrcode" />
@@ -24,10 +24,10 @@
       title="06 自定义颜色"
       summary="通过设置 color 自定义二维码颜色，通过设置 bgColor 自定义背景颜色。"
     >
-      <CustomColorDemo class="tdesign-demos-qrcode" />
+      <ColorDemo class="tdesign-demos-qrcode" />
     </tdesign-demo-block>
     <tdesign-demo-block title="07 自定义尺寸">
-      <CustomSizeDemo class="tdesign-demos-qrcode" />
+      <SizeDemo class="tdesign-demos-qrcode" />
     </tdesign-demo-block>
     <tdesign-demo-block title="08 下载二维码" summary="下载二维码的简单实现。">
       <DownloadDemo class="tdesign-demos-qrcode" />
@@ -42,17 +42,17 @@
 import BaseDemo from './base.vue';
 import IconDemo from './icon.vue';
 import StatusDemo from './status.vue';
-import CustomStatusRenderDemo from './customStatusRender.vue';
+import StatusRenderDemo from './status-render.vue';
 import TypeDemo from './type.vue';
-import CustomColorDemo from './customColor.vue';
-import CustomSizeDemo from './customSize.vue';
+import ColorDemo from './color.vue';
+import SizeDemo from './size.vue';
 import DownloadDemo from './download.vue';
 import LevelDemo from './level.vue';
 </script>
 
 <style lang="less">
 .tdesign-demos-qrcode {
-  padding: 8px;
+  padding: 16px;
   background-color: var(--td-bg-color-container);
   display: flex;
   gap: 8px;

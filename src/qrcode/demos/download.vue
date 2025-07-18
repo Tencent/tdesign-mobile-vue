@@ -17,7 +17,9 @@
       value="https://tdesign.tencent.com/"
       icon="https://tdesign.gtimg.com/site/tdesign-logo.png"
     />
-    <t-button theme="primary" @click="handleDownload">Download</t-button>
+    <div clasName="button-group">
+      <t-button theme="primary" @click="handleDownload">Download</t-button>
+    </div>
   </div>
 </template>
 
