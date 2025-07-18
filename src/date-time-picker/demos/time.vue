@@ -1,10 +1,10 @@
 <template>
-  <t-cell title="选择日期(时分)" :note="pickerValue || '时 分'" @click="visible = true" />
+  <t-cell title="选择时间" arrow hover :note="pickerValue || ''" @click="visible = true" />
   <t-popup v-model="visible" placement="bottom">
     <t-date-time-picker
       default-value="10:10"
       :mode="[null, 'minute']"
-      title="选择日期"
+      title="选择时间"
       format="HH:mm"
       @change="onChange"
       @pick="onPick"

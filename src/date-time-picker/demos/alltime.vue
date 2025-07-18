@@ -1,12 +1,11 @@
 <template>
-  <t-cell title="选择时间" arrow hover :note="pickerValueText || ''" @click="visible = true" />
+  <t-cell title="选择时间" arrow hover :note="pickerValue || ''" @click="visible = true" />
   <t-popup v-model="visible" placement="bottom">
     <t-date-time-picker
-      :value="pickerValue"
-      :mode="['date']"
+      default-value="10:10"
+      mode="second"
       title="选择时间"
-      start="2015-5-5"
-      format="YYYY-MM-DD"
+      format="YYYY-MM-DD HH:mm:ss"
       @change="onChange"
       @pick="onPick"
       @confirm="onConfirm"
@@ -14,13 +13,12 @@
     />
   </t-popup>
 </template>
-
 <script lang="ts" setup>
-import { ref, watch } from 'vue';
+import { ref } from 'vue';
 
 const visible = ref(false);
-const pickerValue = ref('2021-12-23');
-const pickerValueText = ref('');
+const pickerValue = ref('');
+
 const onChange = (value: string) => {
   console.log('change: ', value);
 };
@@ -37,7 +35,6 @@ const onCancel = () => {
 const onConfirm = (value: string) => {
   console.log('confirm: ', value);
   pickerValue.value = value;
-  pickerValueText.value = value;
   visible.value = false;
 };
 </script>
