@@ -34,15 +34,16 @@ pick | `(context: { value: string \| number, label: string, index: number, level
 ### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。
-| 名称                              | 默认值        | 描述 |
-| --------------------------------- | ------------- | ---- |
-| --td-cascader-active-color        | @brand-color  | -    |
-| --td-cascader-border-color        | @border-color | -    |
-| --td-cascader-disabled-color      | @font-gray-4  | -    |
-| --td-cascader-options-height      | 320px         | -    |
-| --td-cascader-options-title-color | @font-gray-3  | -    |
-| --td-cascader-step-arrow-color    | @font-gray-3  | -    |
-| --td-cascader-step-dot-size       | 8px           | -    |
-| --td-cascader-step-height         | 44px          | -    |
-| --td-cascader-title-color         | @font-gray-1  | -    |
-| --td-cascder-title-font-size      | 18px          | -    |
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-cascader-disabled-color | @text-color-disabled | - 
+--td-cascader-options-title-color | @text-color-placeholder | - 
+--td-cascader-step-arrow-color | @text-color-placeholder | - 
+--td-cascader-active-color | @brand-color | - 
+--td-cascader-bg-color | @bg-color-container | - 
+--td-cascader-border-color | @component-stroke | - 
+--td-cascader-options-height | 320px | - 
+--td-cascader-step-dot-size | 8px | - 
+--td-cascader-step-height | 44px | - 
+--td-cascader-title-color | @text-color-primary | - 
+--td-cascder-title-font-size | 18px | - 

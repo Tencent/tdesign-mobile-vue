@@ -49,21 +49,13 @@ export default defineComponent({
       value: 0,
     });
     const color = new Color(props.defaultValue || props.value || DEFAULT_COLOR);
-    const formatList = ref(getFormatList(props.format, color));
+    const formatList = ref<[string, Array<string | number>]>(getFormatList(props.format, color));
     const innerSwatchList = computed(() => genSwatchList(props.swatchColors));
 
     const renderTNodeJSX = useTNodeJSX();
 
-    const getSliderThumbStyle = ({
-      value,
-      maxValue,
-      isAlpha,
-    }: {
-      value: number;
-      maxValue: number;
-      isAlpha?: boolean;
-    }) => {
-      const dom = isAlpha ? alphaSliderRect.value : hueSliderRect.value;
+    const getSliderThumbStyle = ({ value, maxValue }: { value: number; maxValue: number }) => {
+      const dom = hueSliderRect.value;
       const { width } = dom.getBoundingClientRect();
       if (!width) {
         return;
@@ -93,11 +85,11 @@ export default defineComponent({
       sliderInfo.value = { value: color.hue };
       formatList.value = getFormatList(props.format, color);
       if (isMultiple.value) {
-        const hue = getSliderThumbStyle({ value: color.hue, maxValue: HUE_MAX, isAlpha: false });
+        const hue = getSliderThumbStyle({ value: color.hue, maxValue: HUE_MAX });
         if (hue) {
           hueSliderStyle.value = hue;
         }
-        const alpha = getSliderThumbStyle({ value: color.alpha * 100, maxValue: ALPHA_MAX, isAlpha: false });
+        const alpha = getSliderThumbStyle({ value: color.alpha * 100, maxValue: ALPHA_MAX });
         if (alpha) {
           alphaSliderStyle.value = alpha;
         }
@@ -191,40 +183,31 @@ export default defineComponent({
       const { x } = coordinate;
       const maxValue = isAlpha ? ALPHA_MAX : HUE_MAX;
 
-      let value = Math.round((x / width) * maxValue * 100) / 100;
-      if (value < 0) value = 0;
-      if (value > maxValue) value = maxValue;
+      const value = Math.min(maxValue, Math.max(0, Math.round((x / width) * maxValue * 100) / 100));
       onChangeSlider({ value, isAlpha });
     };
 
-    const handleDiffDrag = (e: TouchEvent, dragType: string) => {
+    const handleDiffDrag = (e: TouchEvent, dragType: 'saturation' | 'hue-slider' | 'alpha-slider') => {
       e.preventDefault();
       e.stopPropagation();
+      const callbackMap = {
+        saturation: () => handleSaturationDrag(e),
+        'hue-slider': () => handleSliderDrag(e),
+        'alpha-slider': () => handleSliderDrag(e, true),
+      };
 
-      switch (dragType) {
-        case 'saturation':
-          handleSaturationDrag(e);
-          break;
-        case 'hue-slider':
-          handleSliderDrag(e);
-          break;
-        case 'alpha-slider':
-          handleSliderDrag(e, true);
-          break;
-        default:
-          break;
-      }
+      callbackMap[dragType]?.();
     };
 
-    const onTouchStart = (e: TouchEvent, dragType: string) => {
+    const onTouchStart = (e: TouchEvent, dragType: 'saturation' | 'hue-slider' | 'alpha-slider') => {
       handleDiffDrag(e, dragType);
     };
 
-    const onTouchMove = (e: TouchEvent, dragType: string) => {
+    const onTouchMove = (e: TouchEvent, dragType: 'saturation' | 'hue-slider' | 'alpha-slider') => {
       handleDiffDrag(e, dragType);
     };
 
-    const onTouchEnd = (e: TouchEvent, dragType: string) => {
+    const onTouchEnd = (e: TouchEvent, dragType: 'saturation' | 'hue-slider' | 'alpha-slider') => {
       handleDiffDrag(e, dragType);
     };
 
@@ -311,13 +294,13 @@ export default defineComponent({
             {isMultiple.value && (
               <div class={`${colorPickerClass.value}__format`}>
                 <div class={`${colorPickerClass.value}__format-item ${colorPickerClass.value}__format-item--first`}>
-                  {format}
+                  {formatList.value[0]}
                 </div>
                 <div class={`${colorPickerClass.value}__format-item ${colorPickerClass.value}__format-item--second`}>
                   <div class={`${colorPickerClass.value}__format-inputs`}>
-                    {formatList.value.map((formatItem, formatIndex) => (
+                    {formatList.value[1].map((formatItem, formatIndex) => (
                       <div
-                        class={`${colorPickerClass.value}__format-input ${colorPickerClass.value}__format-input--${formatIndex === formatList.value.length - 1 && formatList.value.length === 2 ? 'fixed' : 'base'}`}
+                        class={`${colorPickerClass.value}__format-input ${colorPickerClass.value}__format-input--${formatIndex === formatList.value[1].length - 1 && formatList.value[1].length === 2 ? 'fixed' : 'base'}`}
                         key={formatIndex}
                       >
                         {formatItem}

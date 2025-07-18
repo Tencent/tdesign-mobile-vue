@@ -24,19 +24,17 @@ change | `(time: TimeData)` | 时间变化时触发。[详细类型定义](https
 finish | \- | 倒计时结束时触发
 
 
+
 ### CSS Variables
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-countdown-bg-color | @error-color-6 | - 
---td-countdown-default-color | @font-gray-1 | - 
+--td-countdown-default-color | @text-color-primary | - 
 --td-countdown-round-border-radius | @radius-circle | - 
---td-countdown-round-color | @font-white-1 | - 
 --td-countdown-square-border-radius | @radius-small | - 
-
-## API
-
-
+--td-countdown-bg-color | @error-color-6 | - 
+--td-countdown-round-color | @text-color-anti | - 
 ### CountDown Props
 
 名称 | 类型 | 默认值 | 描述 | 必传

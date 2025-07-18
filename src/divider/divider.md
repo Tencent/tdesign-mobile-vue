@@ -18,7 +18,7 @@ layout | String | horizontal | 分隔线类型有两种：水平和垂直。可�
 名称 | 默认值 | 描述 
 -- | -- | --
 --td-divider-color | @bg-color-component | - 
---td-divider-content-color | @font-gray-3 | - 
+--td-divider-content-color | @text-color-placeholder | - 
 --td-divider-content-font-size | 12px | - 
 --td-divider-content-line-height | 20px | - 
---td-divider-content-line-style | solid | -
+--td-divider-content-line-style | solid | - 

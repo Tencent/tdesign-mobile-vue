@@ -20,6 +20,12 @@ trackColor | String | '' | 进度条未完成部分颜色 | N
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
+--td-progress-info-dark-color | @text-color-primary | - 
+--td-progress-info-light-color | @font-white-1 | - 
+--td-progress-inner-bg-color-active | @bg-color-container | - 
+--td-progress-inner-bg-color-error | @error-color | - 
+--td-progress-inner-bg-color-success | @success-color | - 
+--td-progress-inner-bg-color-warning | @warning-color | - 
 --td-progress-circle-inner-bg-color | @font-white-1 | - 
 --td-progress-inner-bg-color | @brand-color | - 
---td-progress-track-bg-color | @bg-color-component | -
+--td-progress-track-bg-color | @bg-color-component | - 
