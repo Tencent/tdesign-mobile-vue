@@ -18,6 +18,11 @@ export default {
     type: String,
     default: '',
   },
+  /** 添加按钮 */
+  addBtn: {
+    type: Boolean,
+    default: true,
+  },
   /** 添加按钮内容。值为空，使用默认图标渲染；值为 slot 则表示使用插槽渲染；其他值无效 */
   addContent: {
     type: [String, Function] as PropType<TdUploadProps['addContent']>,
@@ -113,6 +118,11 @@ export default {
   },
   /** 是否支持图片预览，文件没有预览 */
   preview: {
+    type: Boolean,
+    default: true,
+  },
+  /** 是否显示图片的删除按钮 */
+  removeBtn: {
     type: Boolean,
     default: true,
   },
