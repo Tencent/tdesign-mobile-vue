@@ -13,9 +13,6 @@ import sizeVue from '@/tabs/demos/size.vue';
 import statusVue from '@/tabs/demos/status.vue';
 import themeVue from '@/tabs/demos/theme.vue';
 
-// scrollTo isn't implemented in JSDOM，see: https://github.com/vuejs/vue-test-utils/issues/319
-Element.prototype.scrollTo = () => {};
-
 const mapper = {
   badgeVue,
   contentVue,
