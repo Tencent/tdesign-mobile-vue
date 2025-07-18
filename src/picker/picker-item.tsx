@@ -107,7 +107,7 @@ export default defineComponent({
       { flush: 'post', deep: true },
     );
 
-    // 拖拽状态，整个 ul 共享
+    // 整个 ul 共享
     const touchState = {
       startY: 0,
       isDragging: false,
@@ -123,8 +123,8 @@ export default defineComponent({
       }
     };
     const onTouchEnd = () => {
-      // 这里只重置拖拽状态，不做选中
-      // touchState.isDragging = false;
+      // 放在ul中这里只重置拖拽状态
+      touchState.isDragging = false;
     };
 
     return () => {
@@ -132,9 +132,9 @@ export default defineComponent({
         <ul
           ref={root}
           class={className.value}
-          // onTouchstart={onTouchStart}
-          // onTouchmove={onTouchMove}
-          // onTouchend={onTouchEnd}
+          onTouchstart={onTouchStart}
+          onTouchmove={onTouchMove}
+          onTouchend={onTouchEnd}
         >
           {(props.options || []).map((option, index) => (
             <li
