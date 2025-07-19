@@ -1,5 +1,5 @@
 <template>
-  <t-cell title="选择时间" arrow hover :note="pickerValueText || ''" @click="visible = true" />
+  <t-cell title="带标题时间选择器" arrow hover :note="pickerValueText || ''" @click="visible = true" />
   <t-popup v-model="visible" placement="bottom">
     <t-date-time-picker
       :value="pickerValue"
