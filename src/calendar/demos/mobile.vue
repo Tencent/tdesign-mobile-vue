@@ -5,15 +5,15 @@
 
     <tdesign-demo-block title="01 组件类型" summary="基础日历">
       <div class="Calendar-demo">
-        <BaseCalendarDemo />
+        <BaseDemo />
       </div>
 
       <div class="Calendar-demo">
-        <multipleVue />
+        <multipleDemo />
       </div>
       <tdesign-demo-block summary="带单行描述的日历">
         <div class="Calendar-demo">
-          <customTextSingle />
+          <customTextSingleDemo />
         </div>
       </tdesign-demo-block>
 
@@ -39,34 +39,32 @@
     <tdesign-demo-block title="02 组件样式" summary="">
       <tdesign-demo-block summary="国际化">
         <div class="Calendar-demo">
-          <international />
+          <localTextDemo />
         </div>
       </tdesign-demo-block>
 
       <tdesign-demo-block summary="含不可选的日历">
         <div class="Calendar-demo">
-          <cannotChoose />
+          <disabledDemo />
         </div>
       </tdesign-demo-block>
     </tdesign-demo-block>
 
     <tdesign-demo-block summary="不使用 Popup">
-      <withoutPopup />
+      <withoutPopupDemo />
     </tdesign-demo-block>
   </div>
 </template>
 <script lang="ts" setup>
-import BaseCalendarDemo from './base.vue';
-import multipleVue from './multiple.vue';
+import BaseDemo from './base.vue';
+import multipleDemo from './multiple.vue';
+import customTextSingleDemo from './custom-text-single.vue';
 import customTextDemo from './custom-text.vue';
 import rangeDemo from './range.vue';
-import customButtonVue from './custom-button.vue';
-import customRangeVue from './custom-range.vue';
-import withoutPopup from './without-popup.vue';
+import withoutPopupDemo from './without-popup.vue';
 import SwitchModeDemo from './switch-mode.vue';
-import customTextSingle from './custom-text-single.vue';
-import international from './international.vue';
-import cannotChoose from './cannot-choose.vue';
+import localTextDemo from './local-text.vue';
+import disabledDemo from './disabled.vue';
 </script>
 
 <style scoped>
