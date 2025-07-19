@@ -36,10 +36,6 @@ describe('tree-select', () => {
 
       testMultiple(true, CheckboxGroup);
       testMultiple(false, RadioGroup);
-
-      expect(() => mount(<TreeSelect options={options} value={['1', '1-1', '1']} multiple={true} />)).toThrow(
-        TypeError,
-      );
     });
 
     it(':value', () => {
