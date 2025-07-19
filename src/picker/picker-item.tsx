@@ -107,9 +107,35 @@ export default defineComponent({
       { flush: 'post', deep: true },
     );
 
+    // 整个 ul 共享
+    const touchState = {
+      startY: 0,
+      isDragging: false,
+    };
+
+    const onTouchStart = (e: TouchEvent) => {
+      touchState.startY = e.touches[0].clientY;
+      touchState.isDragging = false;
+    };
+    const onTouchMove = (e: TouchEvent) => {
+      if (Math.abs(e.touches[0].clientY - touchState.startY) > 5) {
+        touchState.isDragging = true;
+      }
+    };
+    const onTouchEnd = () => {
+      // 放在ul中这里只重置拖拽状态
+      touchState.isDragging = false;
+    };
+
     return () => {
       return (
-        <ul ref={root} class={className.value}>
+        <ul
+          ref={root}
+          class={className.value}
+          onTouchstart={onTouchStart}
+          onTouchmove={onTouchMove}
+          onTouchend={onTouchEnd}
+        >
           {(props.options || []).map((option, index) => (
             <li
               key={index}
@@ -119,6 +145,12 @@ export default defineComponent({
                   [`${pickerItemClass.value}__item--disabled`]: lodashGet(option, keys.value?.disabled ?? 'disabled'),
                 },
               ]}
+              onTouchend={() => {
+                if (touchState.isDragging) return;
+                if (!lodashGet(option, keys.value?.disabled ?? 'disabled')) {
+                  picker?.updateIndex(index, { isChange: true });
+                }
+              }}
             >
               {context.slots.option ? (
                 context.slots.option(option, index)
