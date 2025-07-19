@@ -185,6 +185,7 @@ export default defineComponent({
     // 手势滑动开始
     const handleTouchstart = (e: TouchEvent) => {
       if (!props.swipeable) return;
+      canMove.value = true;
       startX.value = e.targetTouches[0].clientX;
       startY.value = e.targetTouches[0].clientY;
     };
@@ -204,12 +205,10 @@ export default defineComponent({
           if (startX.value > endX.value) {
             // 向左划
             if (tabIndex.value >= itemProps.value.length - 1) return;
-            canMove.value = false;
             handleTabClick(e, itemProps.value[tabIndex.value + 1]);
           } else if (startX.value < endX.value) {
             // 向右划
             if (tabIndex.value <= 0) return;
-            canMove.value = false;
             handleTabClick(e, itemProps.value[tabIndex.value - 1]);
           }
         }
@@ -219,7 +218,7 @@ export default defineComponent({
     // 手势滑动结束
     const handleTouchend = () => {
       if (!props.swipeable) return;
-      canMove.value = true;
+      canMove.value = false;
       startX.value = 0;
       endX.value = 0;
       startY.value = 0;
