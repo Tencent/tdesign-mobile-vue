@@ -1,5 +1,5 @@
 <template>
-  <t-calendar :use-popup="false" type="multiple" @select="handleSelect" />
+  <t-calendar :use-popup="false" type="multiple" title="日历标题" @select="handleSelect" />
 </template>
 
 <script lang="ts" setup>

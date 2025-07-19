@@ -8,7 +8,7 @@
     @confirm="handleConfirm"
     @select="handleSelect"
   />
-  <t-cell title="带双行描述的日历" arrow :note="dateNote" @click="visible = true"></t-cell>
+  <t-cell title="带单行描述的日历" arrow :note="dateNote" @click="visible = true"></t-cell>
 </template>
 
 <script setup lang="ts">
@@ -32,10 +32,12 @@ const format = (day: TDate) => {
   const year = date.getFullYear();
   const month = date.getMonth() + 1;
   const curDate = date.getDate();
+
   day.suffix = '¥60';
+
   if (year === 2022) {
     if (month === 2) {
-      const map: Record<number, string> = {
+      const map = {
         1: '初一',
         2: '初二',
         3: '初三',
@@ -43,18 +45,18 @@ const format = (day: TDate) => {
         15: '元宵节',
       };
       if (curDate in map) {
-        day.prefix = map[curDate];
         day.suffix = '¥100';
-        day.className = 'is-holiday';
       }
     }
   }
 
   return day;
 };
+
 const visible = ref(false);
 const value = new Date(2022, 1, 18);
 const dateNote = ref('');
+
 const formatDate = (val: Date) => {
   const date = new Date(val);
   const year = date.getFullYear();
@@ -62,17 +64,15 @@ const formatDate = (val: Date) => {
   const day = date.getDate().toString().padStart(2, '0');
   return `${year}-${month}-${day}`;
 };
+
 dateNote.value = formatDate(value);
+
 const handleConfirm = (val: Date) => {
   console.log(val);
   dateNote.value = formatDate(val);
 };
+
 const handleSelect = (val: Date) => {
   console.log(val);
 };
 </script>
-<style lang="less">
-.is-holiday:not(.t-calendar__dates-item--selected) {
-  color: #e34d59;
-}
-</style>

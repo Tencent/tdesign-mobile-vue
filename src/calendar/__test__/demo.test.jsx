@@ -6,9 +6,10 @@ import { mount } from '@vue/test-utils';
 import MockDate from 'mockdate';
 
 import baseVue from '@/calendar/demos/base.vue';
-import customButtonVue from '@/calendar/demos/custom-button.vue';
-import customRangeVue from '@/calendar/demos/custom-range.vue';
+import customTextSingleVue from '@/calendar/demos/custom-text-single.vue';
 import customTextVue from '@/calendar/demos/custom-text.vue';
+import disabledVue from '@/calendar/demos/disabled.vue';
+import localTextVue from '@/calendar/demos/local-text.vue';
 import mobileVue from '@/calendar/demos/mobile.vue';
 import multipleVue from '@/calendar/demos/multiple.vue';
 import rangeVue from '@/calendar/demos/range.vue';
@@ -19,9 +20,10 @@ MockDate.set('2020-12-28');
 
 const mapper = {
   baseVue,
-  customButtonVue,
-  customRangeVue,
+  customTextSingleVue,
   customTextVue,
+  disabledVue,
+  localTextVue,
   mobileVue,
   multipleVue,
   rangeVue,
