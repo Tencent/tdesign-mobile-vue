@@ -6,6 +6,7 @@ import { TdUploadProps, UploadFile } from './type';
 import UploadProps from './props';
 import config from '../config';
 import useUpload from './hooks/useUpload';
+import { useDrag } from './hooks/useDrag';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 
@@ -30,7 +31,7 @@ export default defineComponent({
     'validate',
     'click-upload',
   ],
-  setup(props, { expose }) {
+  setup(props, { expose, emit }) {
     const uploadClass = usePrefixClass('upload');
     const { globalConfig } = useConfig('upload');
 
@@ -45,6 +46,12 @@ export default defineComponent({
       onInnerRemove,
       cancelUpload,
     } = useUpload(props);
+
+    const { draggedOverIndex, isDragging, dragStartIndex, getDragProps } = useDrag(
+      props,
+      emit,
+      `${uploadClass.value}__item`,
+    );
 
     const renderTNodeJSX = useTNodeJSX();
     const renderContent = useContent();
@@ -127,7 +134,17 @@ export default defineComponent({
       return (
         <div class={`${uploadClass.value}`}>
           {displayFiles.value.map((file, index) => (
-            <div key={index} class={`${uploadClass.value}__item`}>
+            <div
+              key={index}
+              class={[
+                `${uploadClass.value}__item`,
+                {
+                  [`${uploadClass.value}__item--dragging`]: isDragging.value && dragStartIndex.value === index,
+                  [`${uploadClass.value}__item--drag-over`]: draggedOverIndex.value === index,
+                },
+              ]}
+              {...getDragProps(index)}
+            >
               {file.url && (
                 <t-image
                   class={`${uploadClass.value}__image`}
