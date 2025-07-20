@@ -114,28 +114,20 @@ export default defineComponent({
     };
 
     const onTouchStart = (e: TouchEvent) => {
+      if (!e.touches || e.touches.length === 0) return;
       touchState.startY = e.touches[0].clientY;
       touchState.isDragging = false;
     };
     const onTouchMove = (e: TouchEvent) => {
+      if (!e.touches || e.touches.length === 0) return;
       if (Math.abs(e.touches[0].clientY - touchState.startY) > 5) {
         touchState.isDragging = true;
       }
     };
-    const onTouchEnd = () => {
-      // 放在ul中这里只重置拖拽状态
-      touchState.isDragging = false;
-    };
 
     return () => {
       return (
-        <ul
-          ref={root}
-          class={className.value}
-          onTouchstart={onTouchStart}
-          onTouchmove={onTouchMove}
-          onTouchend={onTouchEnd}
-        >
+        <ul ref={root} class={className.value} onTouchstart={onTouchStart} onTouchmove={onTouchMove}>
           {(props.options || []).map((option, index) => (
             <li
               key={index}
