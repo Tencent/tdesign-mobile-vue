@@ -116,6 +116,11 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 是否显示图片的删除按钮 */
+  removeBtn: {
+    type: Boolean,
+    default: true,
+  },
   /** 自定义上传方法。返回值 `status` 表示上传成功或失败；`error` 或 `response.error` 表示上传失败的原因；<br/>`response` 表示请求上传成功后的返回数据，`response.url` 表示上传成功后的图片/文件地址，`response.files` 表示一个请求上传多个文件/图片后的返回值。<br/>示例一：`{ status: 'fail', error: '上传失败', response }`。<br/>示例二：`{ status: 'success', response: { url: 'https://tdesign.gtimg.com/site/avatar.jpg' } }`。<br/> 示例三：`{ status: 'success', files: [{ url: 'https://xxx.png', name: 'xxx.png' }]}` */
   requestMethod: {
     type: Function as PropType<TdUploadProps['requestMethod']>,
