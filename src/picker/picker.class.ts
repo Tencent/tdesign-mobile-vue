@@ -89,6 +89,10 @@ class Picker {
 
   pickerColumns: PickerColumn;
 
+  _touchStartY: number | null = null;
+
+  _touchStartTime: number | null = null;
+
   constructor(options: PickerOptions) {
     if (!options.el) throw new Error('options el needed!');
     this.holder = options.el;
@@ -171,6 +175,9 @@ class Picker {
     if (this.list) this.list.style.transition = '';
     this.startY = event.changedTouches[0].pageY;
     this.offsetYOfStart = this.offsetY;
+    // 记录 touch 起点和时间
+    this._touchStartY = event.changedTouches[0].pageY;
+    this._touchStartTime = event.timeStamp || Date.now();
     // 更新惯性参数
     this.updateInertiaParams(event, true);
   }
@@ -204,17 +211,30 @@ class Picker {
     if (!this.holder) return;
     const point = event.changedTouches[0];
     const nowTime = event.timeStamp || Date.now();
+    // 判断是否为点击
+    const endY = point.pageY;
+    const moveDistance = Math.abs(endY - (this._touchStartY || 0));
+    const moveTime = nowTime - (this._touchStartTime || 0);
+    if (moveDistance < 5 && moveTime < 200) {
+      // 认为是点击，查找 li
+      const li = (event.target as HTMLElement).closest('li');
+      if (li && this.list && this.list.contains(li)) {
+        const index = Array.from(this.list.children).indexOf(li);
+        this.updateIndex(index, { isChange: true });
+        return;
+      }
+    }
     // move time gap
-    const moveTime = nowTime - this.lastMoveTime;
+    const moveTime2 = nowTime - this.lastMoveTime;
     const distance = point.pageY - this.lastMoveStart;
     // 超出一定时间不再惯性滚动
-    if (moveTime > ANIMATION_TIME_LIMIT || Math.abs(distance) < ANIMATION_DISTANCE_LIMIT || !this.swipeDuration) {
+    if (moveTime2 > ANIMATION_TIME_LIMIT || Math.abs(distance) < ANIMATION_DISTANCE_LIMIT || !this.swipeDuration) {
       this.stopInertiaMove = false;
       this.endScroll();
       return;
     }
 
-    const speed = Math.abs(distance / moveTime);
+    const speed = Math.abs(distance / moveTime2);
     let dist = this.offsetY + (speed / 0.005) * (distance < 0 ? -1 : 1);
     const { min, max } = this.getRange(3, 2);
     dist = limitNumberInRange(dist, min, max);

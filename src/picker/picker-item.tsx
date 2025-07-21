@@ -106,28 +106,9 @@ export default defineComponent({
       },
       { flush: 'post', deep: true },
     );
-
-    // 整个 ul 共享
-    const touchState = {
-      startY: 0,
-      isDragging: false,
-    };
-
-    const onTouchStart = (e: TouchEvent) => {
-      if (!e.touches || e.touches.length === 0) return;
-      touchState.startY = e.touches[0].clientY;
-      touchState.isDragging = false;
-    };
-    const onTouchMove = (e: TouchEvent) => {
-      if (!e.touches || e.touches.length === 0) return;
-      if (Math.abs(e.touches[0].clientY - touchState.startY) > 5) {
-        touchState.isDragging = true;
-      }
-    };
-
     return () => {
       return (
-        <ul ref={root} class={className.value} onTouchstart={onTouchStart} onTouchmove={onTouchMove}>
+        <ul ref={root} class={className.value}>
           {(props.options || []).map((option, index) => (
             <li
               key={index}
@@ -137,12 +118,6 @@ export default defineComponent({
                   [`${pickerItemClass.value}__item--disabled`]: lodashGet(option, keys.value?.disabled ?? 'disabled'),
                 },
               ]}
-              onTouchend={() => {
-                if (touchState.isDragging) return;
-                if (!lodashGet(option, keys.value?.disabled ?? 'disabled')) {
-                  picker?.updateIndex(index, { isChange: true });
-                }
-              }}
             >
               {context.slots.option ? (
                 context.slots.option(option, index)
