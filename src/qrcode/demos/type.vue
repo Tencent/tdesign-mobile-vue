@@ -1,6 +1,6 @@
 <template>
-  <t-space>
+  <div>
     <t-qrcode value="https://tdesign.tencent.com/" type="canvas" />
     <t-qrcode value="https://tdesign.tencent.com/" type="svg" />
-  </t-space>
+  </div>
 </template>

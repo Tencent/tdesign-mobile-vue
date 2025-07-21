@@ -99,6 +99,41 @@ exports[`DateTimePicker > DateTimePicker dateAllVue demo works fine 1`] = `
               class="t-picker-item__item t-picker-item__item--active"
             >
               
+              2010 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2011 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2012 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2013 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2014 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
               2015 年
               
             </li>
@@ -207,41 +242,6 @@ exports[`DateTimePicker > DateTimePicker dateAllVue demo works fine 1`] = `
               2030 年
               
             </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2031 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2032 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2033 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2034 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2035 年
-              
-            </li>
             
           </ul>
         </div>
@@ -255,41 +255,6 @@ exports[`DateTimePicker > DateTimePicker dateAllVue demo works fine 1`] = `
             
             <li
               class="t-picker-item__item t-picker-item__item--active"
-            >
-              
-              7 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              8 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              9 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              10 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              11 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
             >
               
               12 月
@@ -308,55 +273,6 @@ exports[`DateTimePicker > DateTimePicker dateAllVue demo works fine 1`] = `
             
             <li
               class="t-picker-item__item t-picker-item__item--active"
-            >
-              
-              21 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              22 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              23 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              24 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              25 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              26 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              27 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
             >
               
               28 日
@@ -396,6 +312,55 @@ exports[`DateTimePicker > DateTimePicker dateAllVue demo works fine 1`] = `
             
             <li
               class="t-picker-item__item t-picker-item__item--active"
+            >
+              
+              8 时
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              9 时
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              10 时
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              11 时
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              12 时
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              13 时
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              14 时
+              
+            </li>
+            <li
+              class="t-picker-item__item"
             >
               
               15 时
@@ -470,6 +435,265 @@ exports[`DateTimePicker > DateTimePicker dateAllVue demo works fine 1`] = `
             
             <li
               class="t-picker-item__item t-picker-item__item--active"
+            >
+              
+              0 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              1 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              3 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              4 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              5 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              6 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              7 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              8 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              9 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              10 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              11 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              12 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              13 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              14 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              15 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              16 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              17 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              18 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              19 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              20 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              21 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              22 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              23 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              24 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              25 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              26 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              27 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              28 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              29 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              30 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              31 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              32 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              33 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              34 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              35 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              36 分
+              
+            </li>
+            <li
+              class="t-picker-item__item"
             >
               
               37 分
@@ -642,6 +866,62 @@ exports[`DateTimePicker > DateTimePicker dateAllVue demo works fine 1`] = `
             
             <li
               class="t-picker-item__item t-picker-item__item--active"
+            >
+              
+              0 秒
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              1 秒
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2 秒
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              3 秒
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              4 秒
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              5 秒
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              6 秒
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              7 秒
+              
+            </li>
+            <li
+              class="t-picker-item__item"
             >
               
               8 秒
@@ -3130,41 +3410,6 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                   2030 年
                   
                 </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2031 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2032 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2033 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2034 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2035 年
-                  
-                </li>
                 
               </ul>
             </div>
@@ -3616,9 +3861,44 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
             >
               <ul
                 class="t-picker-item"
-                style="transform: translate3d(0, -160px, 0);"
+                style="transform: translate3d(0, -360px, 0);"
               >
                 
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2010 年
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2011 年
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2012 年
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2013 年
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2014 年
+                  
+                </li>
                 <li
                   class="t-picker-item__item"
                 >
@@ -3729,41 +4009,6 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                 >
                   
                   2030 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2031 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2032 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2033 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2034 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2035 年
                   
                 </li>
                 
@@ -5887,6 +6132,41 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                   class="t-picker-item__item t-picker-item__item--active"
                 >
                   
+                  2010 年
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2011 年
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2012 年
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2013 年
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2014 年
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
                   2015 年
                   
                 </li>
@@ -5995,41 +6275,6 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                   2030 年
                   
                 </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2031 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2032 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2033 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2034 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2035 年
-                  
-                </li>
                 
               </ul>
             </div>
@@ -6043,41 +6288,6 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                 
                 <li
                   class="t-picker-item__item t-picker-item__item--active"
-                >
-                  
-                  7 月
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  8 月
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  9 月
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  10 月
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  11 月
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
                 >
                   
                   12 月
@@ -6096,55 +6306,6 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                 
                 <li
                   class="t-picker-item__item t-picker-item__item--active"
-                >
-                  
-                  21 日
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  22 日
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  23 日
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  24 日
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  25 日
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  26 日
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  27 日
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
                 >
                   
                   28 日
@@ -6184,6 +6345,55 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                 
                 <li
                   class="t-picker-item__item t-picker-item__item--active"
+                >
+                  
+                  8 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  9 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  10 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  11 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  12 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  13 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  14 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
                 >
                   
                   15 时
@@ -6258,6 +6468,265 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                 
                 <li
                   class="t-picker-item__item t-picker-item__item--active"
+                >
+                  
+                  0 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  1 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  3 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  4 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  5 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  6 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  7 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  8 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  9 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  10 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  11 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  12 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  13 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  14 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  15 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  16 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  17 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  18 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  19 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  20 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  21 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  22 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  23 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  24 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  25 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  26 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  27 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  28 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  29 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  30 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  31 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  32 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  33 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  34 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  35 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  36 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
                 >
                   
                   37 分
@@ -6430,6 +6899,69 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                 
                 <li
                   class="t-picker-item__item t-picker-item__item--active"
+                >
+                  
+                  0 秒
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  1 秒
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2 秒
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  3 秒
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  4 秒
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  5 秒
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  6 秒
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  7 秒
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  8 秒
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
                 >
                   
                   9 秒
@@ -7032,41 +7564,6 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                   2030 年
                   
                 </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2031 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2032 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2033 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2034 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2035 年
-                  
-                </li>
                 
               </ul>
             </div>
@@ -7622,41 +8119,6 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                 >
                   
                   2030 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2031 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2032 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2033 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2034 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2035 年
                   
                 </li>
                 
@@ -8511,41 +8973,6 @@ exports[`DateTimePicker > DateTimePicker withTitleVue demo works fine 1`] = `
               2030 年
               
             </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2031 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2032 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2033 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2034 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2035 年
-              
-            </li>
             
           </ul>
         </div>
@@ -9097,41 +9524,6 @@ exports[`DateTimePicker > DateTimePicker withoutTitleVue demo works fine 1`] = `
             >
               
               2030 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2031 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2032 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2033 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2034 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2035 年
               
             </li>
             
@@ -9687,41 +10079,6 @@ exports[`DateTimePicker > DateTimePicker yearMonthDateVue demo works fine 1`] = 
               2030 年
               
             </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2031 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2032 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2033 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2034 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2035 年
-              
-            </li>
             
           </ul>
         </div>
@@ -10160,9 +10517,44 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
         >
           <ul
             class="t-picker-item"
-            style="transform: translate3d(0, -160px, 0);"
+            style="transform: translate3d(0, -360px, 0);"
           >
             
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2010 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2011 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2012 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2013 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2014 年
+              
+            </li>
             <li
               class="t-picker-item__item"
             >
@@ -10273,41 +10665,6 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
             >
               
               2030 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2031 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2032 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2033 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2034 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2035 年
               
             </li>
             
