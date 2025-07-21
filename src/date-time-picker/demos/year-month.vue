@@ -15,15 +15,16 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { DateValue } from 'tdesign-mobile-vue';
 
 const visible = ref(false);
-const value = ref('2021-09');
+const value = ref<DateValue>('2021-09');
 const valueText = ref('');
-const onChange = (value: string) => {
+const onChange = (value: DateValue) => {
   console.log('change: ', value);
 };
 
-const onPick = (value: string) => {
+const onPick = (value: DateValue) => {
   console.log('pick: ', value);
 };
 
@@ -32,9 +33,9 @@ const onCancel = () => {
   visible.value = false;
 };
 
-const onConfirm = (value: string) => {
+const onConfirm = (value: DateValue) => {
   console.log('confirm: ', value);
-  valueText.value = value;
+  valueText.value = String(value);
   visible.value = false;
 };
 </script>
