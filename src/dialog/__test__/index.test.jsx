@@ -305,6 +305,7 @@ describe('DialogPlugin', () => {
     expect(document.body.textContent).toContain(content2);
 
     handler.update({ content: content3 });
+    handler.update({ onConfirm: () => ({}) });
     await nextTick();
     expect(document.body.textContent).not.toContain(content);
     expect(document.body.textContent).not.toContain(content2);
