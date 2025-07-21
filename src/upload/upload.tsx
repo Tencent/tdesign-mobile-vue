@@ -1,5 +1,6 @@
 import { defineComponent, ref, computed } from 'vue';
 import { AddIcon, LoadingIcon, CloseIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
+import { isBoolean } from 'lodash-es';
 import TImage from '../image';
 import TImageViewer from '../image-viewer';
 import { TdUploadProps, UploadFile } from './type';
@@ -138,7 +139,7 @@ export default defineComponent({
                 />
               )}
               {renderStatus(file)}
-              {file.removeBtn !== false && (
+              {(isBoolean(file.removeBtn) ? file.removeBtn : props.removeBtn) && (
                 <CloseIcon
                   class={`${uploadClass.value}__delete-btn`}
                   onClick={({ e }: any) => onInnerRemove({ e, file, index })}
