@@ -205,7 +205,6 @@ class Picker {
     if (!this.holder) return;
     const point = event.changedTouches[0];
     const nowTime = event.timeStamp || Date.now();
-    // 统一 distance 判定
     const distance = point.pageY - (this.startY || 0);
     const absDistance = Math.abs(distance);
     const moveTime = nowTime - (this.lastMoveTime || 0);
@@ -219,8 +218,6 @@ class Picker {
         return;
       }
     }
-    // move time gap
-    // const moveTime2 = nowTime - this.lastMoveTime;
     // 超出一定时间不再惯性滚动
     if (moveTime > ANIMATION_TIME_LIMIT || absDistance < ANIMATION_DISTANCE_LIMIT || !this.swipeDuration) {
       this.stopInertiaMove = false;
