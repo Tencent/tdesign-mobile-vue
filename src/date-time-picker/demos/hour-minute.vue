@@ -1,11 +1,11 @@
 <template>
-  <t-cell title="选择时间" arrow hover :note="valueText || ''" @click="visible = true" />
+  <t-cell title="选择时间" arrow hover :note="pickerValue || ''" @click="visible = true" />
   <t-popup v-model="visible" placement="bottom">
     <t-date-time-picker
-      v-model="value"
-      mode="month"
+      default-value="10:10"
+      :mode="[null, 'minute']"
       title="选择时间"
-      format="YYYY-MM"
+      format="HH:mm"
       @change="onChange"
       @pick="onPick"
       @confirm="onConfirm"
@@ -18,8 +18,8 @@ import { ref } from 'vue';
 import { DateValue } from 'tdesign-mobile-vue';
 
 const visible = ref(false);
-const value = ref<DateValue>('2021-09');
-const valueText = ref('');
+const pickerValue = ref('');
+
 const onChange = (value: DateValue) => {
   console.log('change: ', value);
 };
@@ -35,7 +35,7 @@ const onCancel = () => {
 
 const onConfirm = (value: DateValue) => {
   console.log('confirm: ', value);
-  valueText.value = String(value);
+  pickerValue.value = String(value);
   visible.value = false;
 };
 </script>

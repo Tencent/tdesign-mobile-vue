@@ -34,7 +34,7 @@ exports[`Qrcode > Qrcode baseVue demo works fine 1`] = `
 `;
 
 exports[`Qrcode > Qrcode colorVue demo works fine 1`] = `
-<t-space>
+<div>
   <div
     class="t-qrcode"
     level="M"
@@ -61,7 +61,7 @@ exports[`Qrcode > Qrcode colorVue demo works fine 1`] = `
     <!---->
     
   </div>
-</t-space>
+</div>
 `;
 
 exports[`Qrcode > Qrcode downloadVue demo works fine 1`] = `
@@ -534,7 +534,7 @@ exports[`Qrcode > Qrcode mobileVue demo works fine 1`] = `
       class="tdesign-mobile-demo-block__slot"
     >
       
-      <t-space
+      <div
         class="tdesign-demos-qrcode"
       >
         <!-- 自定义状态-使用Function -->
@@ -689,7 +689,7 @@ exports[`Qrcode > Qrcode mobileVue demo works fine 1`] = `
           <!---->
           
         </div>
-      </t-space>
+      </div>
       
     </div>
   </div>
@@ -714,7 +714,7 @@ exports[`Qrcode > Qrcode mobileVue demo works fine 1`] = `
       class="tdesign-mobile-demo-block__slot"
     >
       
-      <t-space
+      <div
         class="tdesign-demos-qrcode"
       >
         <div
@@ -761,7 +761,7 @@ exports[`Qrcode > Qrcode mobileVue demo works fine 1`] = `
             />
           </svg>
         </div>
-      </t-space>
+      </div>
       
     </div>
   </div>
@@ -786,7 +786,7 @@ exports[`Qrcode > Qrcode mobileVue demo works fine 1`] = `
       class="tdesign-mobile-demo-block__slot"
     >
       
-      <t-space
+      <div
         class="tdesign-demos-qrcode"
       >
         <div
@@ -815,7 +815,7 @@ exports[`Qrcode > Qrcode mobileVue demo works fine 1`] = `
           <!---->
           
         </div>
-      </t-space>
+      </div>
       
     </div>
   </div>
@@ -1223,7 +1223,7 @@ exports[`Qrcode > Qrcode sizeVue demo works fine 1`] = `
 `;
 
 exports[`Qrcode > Qrcode statusRenderVue demo works fine 1`] = `
-<t-space>
+<div>
   <!-- 自定义状态-使用Function -->
   <div
     class="t-qrcode"
@@ -1376,7 +1376,7 @@ exports[`Qrcode > Qrcode statusRenderVue demo works fine 1`] = `
     <!---->
     
   </div>
-</t-space>
+</div>
 `;
 
 exports[`Qrcode > Qrcode statusVue demo works fine 1`] = `
@@ -1509,7 +1509,7 @@ exports[`Qrcode > Qrcode statusVue demo works fine 1`] = `
 `;
 
 exports[`Qrcode > Qrcode typeVue demo works fine 1`] = `
-<t-space>
+<div>
   <div
     class="t-qrcode"
     level="M"
@@ -1554,5 +1554,5 @@ exports[`Qrcode > Qrcode typeVue demo works fine 1`] = `
       />
     </svg>
   </div>
-</t-space>
+</div>
 `;

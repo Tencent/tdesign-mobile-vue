@@ -1,5 +1,5 @@
 <template>
-  <t-space>
+  <div>
     <!-- 自定义状态-使用Function -->
     <t-qrcode value="https://tdesign.tencent.com/" status="loading" :status-render="renderStatus" />
     <!-- 自定义状态-使用插槽 -->
@@ -19,7 +19,7 @@
     </t-qrcode>
     <!-- 默认状态 -->
     <t-qrcode value="https://tdesign.tencent.com/" status="scanned" />
-  </t-space>
+  </div>
 </template>
 
 <script lang="jsx" setup>

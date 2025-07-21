@@ -1,13 +1,11 @@
 <template>
-  <t-cell title="选择日期" :note="pickerValueText || '年 月 日'" @click="visible = true" />
+  <t-cell title="选择时间" arrow hover :note="pickerValue || ''" @click="visible = true" />
   <t-popup v-model="visible" placement="bottom">
     <t-date-time-picker
-      :value="pickerValue"
-      :mode="['date']"
-      title="选择日期"
-      start="2020-6-30"
-      end="2025-6-30"
-      format="YYYY-MM-DD"
+      default-value="10:10"
+      :mode="[null, 'second']"
+      title="选择时间"
+      format="HH:mm:ss"
       @change="onChange"
       @pick="onPick"
       @confirm="onConfirm"
@@ -17,15 +15,16 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { DateValue } from 'tdesign-mobile-vue';
 
 const visible = ref(false);
-const pickerValue = ref('2021-12-23');
-const pickerValueText = ref('');
-const onChange = (value: string) => {
+const pickerValue = ref('');
+
+const onChange = (value: DateValue) => {
   console.log('change: ', value);
 };
 
-const onPick = (value: string) => {
+const onPick = (value: DateValue) => {
   console.log('pick: ', value);
 };
 
@@ -34,10 +33,9 @@ const onCancel = () => {
   visible.value = false;
 };
 
-const onConfirm = (value: string) => {
+const onConfirm = (value: DateValue) => {
   console.log('confirm: ', value);
-  pickerValue.value = value;
-  pickerValueText.value = value;
+  pickerValue.value = String(value);
   visible.value = false;
 };
 </script>
