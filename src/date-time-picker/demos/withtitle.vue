@@ -3,7 +3,7 @@
   <t-popup v-model="visible" placement="bottom">
     <t-date-time-picker
       :value="pickerValue"
-      :mode="date"
+      mode="date"
       title="选择时间"
       start="2015-5-5"
       format="YYYY-MM-DD"
