@@ -219,7 +219,9 @@ class Picker {
       // 认为是点击，查找 li
       const li = (event.target as HTMLElement).closest('li');
       if (li && this.list && this.list.contains(li)) {
-        const index = Array.from(this.list.children).indexOf(li);
+        let index = Array.from(this.list.children).indexOf(li);
+        // 仿照 endScroll，跳过禁用项
+        index = findIndexOfEnabledOption(this.pickerColumns, index, this.options.keys);
         this.updateIndex(index, { isChange: true });
         return;
       }
