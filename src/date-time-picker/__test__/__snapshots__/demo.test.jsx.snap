@@ -3736,7 +3736,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         <!---->
         
         <div
-          class="t-picker"
+          class="t-picker t-date-time-picker"
         >
           <div
             class="t-picker__toolbar"
@@ -3754,7 +3754,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
             <div
               class="t-picker__confirm"
             >
-              确认
+              确定
             </div>
           </div>
           <!---->
@@ -3767,175 +3767,606 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
             >
               <ul
                 class="t-picker-item"
-                style="transform: translate3d(0, 80px, 0);"
+                style="transform: translate3d(0, -320px, 0);"
               >
                 
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  0 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  1 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  3 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  4 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  5 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  6 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  7 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  8 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  9 时
+                  
+                </li>
                 <li
                   class="t-picker-item__item t-picker-item__item--active"
                 >
                   
-                  0时
+                  10 时
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  1时
+                  11 时
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  2时
+                  12 时
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  3时
+                  13 时
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  4时
+                  14 时
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  5时
+                  15 时
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  6时
+                  16 时
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  7时
+                  17 时
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  8时
+                  18 时
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  9时
+                  19 时
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  10时
+                  20 时
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  11时
+                  21 时
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  12时
+                  22 时
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  13时
+                  23 时
+                  
+                </li>
+                
+              </ul>
+            </div>
+            <div
+              class="t-picker-item__group"
+            >
+              <ul
+                class="t-picker-item"
+                style="transform: translate3d(0, -320px, 0);"
+              >
+                
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  0 分
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  14时
+                  1 分
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  15时
+                  2 分
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  16时
+                  3 分
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  17时
+                  4 分
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  18时
+                  5 分
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  19时
+                  6 分
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  20时
+                  7 分
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  21时
+                  8 分
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  22时
+                  9 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item t-picker-item__item--active"
+                >
+                  
+                  10 分
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  23时
+                  11 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  12 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  13 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  14 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  15 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  16 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  17 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  18 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  19 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  20 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  21 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  22 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  23 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  24 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  25 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  26 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  27 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  28 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  29 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  30 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  31 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  32 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  33 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  34 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  35 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  36 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  37 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  38 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  39 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  40 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  41 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  42 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  43 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  44 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  45 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  46 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  47 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  48 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  49 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  50 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  51 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  52 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  53 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  54 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  55 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  56 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  57 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  58 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  59 分
                   
                 </li>
                 
@@ -3953,851 +4384,420 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                   class="t-picker-item__item t-picker-item__item--active"
                 >
                   
-                  0分
+                  0 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  1分
+                  1 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  2分
+                  2 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  3分
+                  3 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  4分
+                  4 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  5分
+                  5 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  6分
+                  6 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  7分
+                  7 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  8分
+                  8 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  9分
+                  9 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  10分
+                  10 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  11分
+                  11 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  12分
+                  12 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  13分
+                  13 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  14分
+                  14 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  15分
+                  15 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  16分
+                  16 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  17分
+                  17 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  18分
+                  18 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  19分
+                  19 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  20分
+                  20 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  21分
+                  21 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  22分
+                  22 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  23分
+                  23 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  24分
+                  24 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  25分
+                  25 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  26分
+                  26 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  27分
+                  27 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  28分
+                  28 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  29分
+                  29 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  30分
+                  30 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  31分
+                  31 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  32分
+                  32 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  33分
+                  33 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  34分
+                  34 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  35分
+                  35 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  36分
+                  36 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  37分
+                  37 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  38分
+                  38 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  39分
+                  39 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  40分
+                  40 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  41分
+                  41 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  42分
+                  42 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  43分
+                  43 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  44分
+                  44 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  45分
+                  45 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  46分
+                  46 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  47分
+                  47 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  48分
+                  48 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  49分
+                  49 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  50分
+                  50 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  51分
+                  51 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  52分
+                  52 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  53分
+                  53 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  54分
+                  54 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  55分
+                  55 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  56分
+                  56 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  57分
+                  57 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  58分
+                  58 秒
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  59分
-                  
-                </li>
-                
-              </ul>
-            </div>
-            <div
-              class="t-picker-item__group"
-            >
-              <ul
-                class="t-picker-item"
-                style="transform: translate3d(0, 80px, 0);"
-              >
-                
-                <li
-                  class="t-picker-item__item t-picker-item__item--active"
-                >
-                  
-                  0秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  1秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  3秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  4秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  5秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  6秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  7秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  8秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  9秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  10秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  11秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  12秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  13秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  14秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  15秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  16秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  17秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  18秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  19秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  20秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  21秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  22秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  23秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  24秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  25秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  26秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  27秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  28秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  29秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  30秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  31秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  32秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  33秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  34秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  35秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  36秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  37秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  38秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  39秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  40秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  41秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  42秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  43秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  44秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  45秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  46秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  47秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  48秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  49秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  50秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  51秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  52秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  53秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  54秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  55秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  56秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  57秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  58秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  59秒
+                  59 秒
                   
                 </li>
                 
@@ -5876,27 +5876,6 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                   class="t-picker-item__item t-picker-item__item--active"
                 >
                   
-                  18 日
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  19 日
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  20 日
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
                   21 日
                   
                 </li>
@@ -5985,6 +5964,83 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                   class="t-picker-item__item t-picker-item__item--active"
                 >
                   
+                  11 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  12 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  13 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  14 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  15 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  16 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  17 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  18 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  19 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  20 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  21 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
                   22 时
                   
                 </li>
@@ -6008,6 +6064,132 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                 
                 <li
                   class="t-picker-item__item t-picker-item__item--active"
+                >
+                  
+                  24 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  25 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  26 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  27 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  28 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  29 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  30 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  31 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  32 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  33 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  34 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  35 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  36 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  37 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  38 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  39 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  40 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  41 分
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
                 >
                   
                   42 分
@@ -6145,307 +6327,6 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                 
                 <li
                   class="t-picker-item__item t-picker-item__item--active"
-                >
-                  
-                  6 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  7 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  8 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  9 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  10 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  11 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  12 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  13 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  14 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  15 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  16 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  17 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  18 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  19 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  20 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  21 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  22 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  23 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  24 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  25 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  26 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  27 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  28 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  29 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  30 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  31 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  32 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  33 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  34 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  35 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  36 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  37 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  38 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  39 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  40 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  41 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  42 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  43 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  44 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  45 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  46 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  47 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  48 秒
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
                 >
                   
                   49 秒
