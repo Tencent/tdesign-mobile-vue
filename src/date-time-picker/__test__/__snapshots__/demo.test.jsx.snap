@@ -7445,86 +7445,9 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
             >
               <ul
                 class="t-picker-item"
-                style="transform: translate3d(0, -1760px, 0);"
+                style="transform: translate3d(0, -1320px, 0);"
               >
                 
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  1979 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  1980 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  1981 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  1982 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  1983 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  1984 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  1985 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  1986 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  1987 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  1988 年
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  1989 年
-                  
-                </li>
                 <li
                   class="t-picker-item__item"
                 >
@@ -7810,6 +7733,41 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                 >
                   
                   2030 年
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2031 年
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2032 年
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2033 年
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2034 年
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2035 年
                   
                 </li>
                 
