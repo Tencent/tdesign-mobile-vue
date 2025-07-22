@@ -30,6 +30,8 @@ export const ANIMATION_TIME_LIMIT = 460;
 export const ANIMATION_DISTANCE_LIMIT = 15;
 const ANIMATION_DURATION = 150;
 const DEFAULT_SWIPE_DURATION = 1000;
+const TAP_DISTANCE_THRESHOLD = 5; // px
+const TAP_TIME_THRESHOLD = 200; // ms
 
 /**
  * @name picker
@@ -171,7 +173,6 @@ class Picker {
     if (this.list) this.list.style.transition = '';
     this.startY = event.changedTouches[0].pageY;
     this.offsetYOfStart = this.offsetY;
-    this.lastMoveTime = event.timeStamp || Date.now();
     // 更新惯性参数
     this.updateInertiaParams(event, true);
   }
@@ -205,16 +206,19 @@ class Picker {
     if (!this.holder) return;
     const point = event.changedTouches[0];
     const nowTime = event.timeStamp || Date.now();
-    const distance = point.pageY - (this.startY || 0);
+
+    const moveTime = nowTime - this.lastMoveTime;
+    const distance = point.pageY - this.lastMoveStart;
     const absDistance = Math.abs(distance);
-    const moveTime = nowTime - (this.lastMoveTime || 0);
-    if (absDistance < 5 && moveTime < 200) {
-      // 认为是点击，查找 li
+
+    if (absDistance < TAP_DISTANCE_THRESHOLD && moveTime < TAP_TIME_THRESHOLD) {
+      // 点选操作，查找 li
       const li = (event.target as HTMLElement).closest('li');
-      if (li && this.list && this.list.contains(li)) {
-        let index = Array.from(this.list.children).indexOf(li);
-        index = findIndexOfEnabledOption(this.pickerColumns, index, this.options.keys);
-        this.updateIndex(index, { isChange: true });
+      if (li && this.list?.contains(li)) {
+        const childElements = this.list.children;
+        const rawIndex = Array.from(childElements).indexOf(li);
+        const enabledIndex = findIndexOfEnabledOption(this.pickerColumns, rawIndex, this.options.keys);
+        this.updateIndex(enabledIndex, { isChange: true });
         return;
       }
     }
