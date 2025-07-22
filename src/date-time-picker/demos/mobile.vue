@@ -22,6 +22,10 @@
       <dateAllDemo />
     </tdesign-demo-block>
 
+    <tdesign-demo-block summary="年月日带星期选择器">
+      <showWeekDemo />
+    </tdesign-demo-block>
+
     <tdesign-demo-block title="02 组件样式" summary="是否带标题">
       <withTitleDemo />
     </tdesign-demo-block>
@@ -37,6 +41,7 @@ import yearMonthDemo from './year-month.vue';
 import hourMinuteSecondDemo from './hour-minute-second.vue';
 import hourMinuteDemo from './hour-minute.vue';
 import dateAllDemo from './date-all.vue';
+import showWeekDemo from './show-week.vue';
 import withTitleDemo from './with-title.vue';
 import withoutTitleDemo from './without-title.vue';
 </script>
