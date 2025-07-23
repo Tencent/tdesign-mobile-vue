@@ -109,6 +109,25 @@ export default defineComponent({
         second: globalConfig.value.secondLabel,
       };
 
+      const generateDayWithWeekColumn = (date: Dayjs) => {
+        const startOfMonth = date.startOf('month');
+        const endOfMonth = date.endOf('month');
+        const daysOfWeek = [];
+        const type = 'date';
+
+        for (let i = 0; i <= endOfMonth.diff(startOfMonth, 'days'); i += 1) {
+          const currentDate = startOfMonth.add(i, 'days');
+          const dayName = currentDate.format('ddd');
+
+          daysOfWeek.push({
+            value: `${i + 1}`,
+            label: props.renderLabel ? props.renderLabel(type, i) : `${i + 1}${typeUnit[type] || ''} ${dayName}`,
+          });
+        }
+
+        ret.push(daysOfWeek);
+      };
+
       const generateColumn = (start: number, end: number, type: TimeModeValues) => {
         const arr: PickerColumnItem[] = [];
         const step = (props.steps as TdDateTimePickerProps['steps'])[type] || 1;
@@ -135,7 +154,11 @@ export default defineComponent({
       if (meaningColumn.value.includes('date')) {
         const lower = isInMinMonth ? minDay : 1;
         const upper = isInMaxMonth ? maxDay : dayjs(`${curYear}-${curMonth}`).daysInMonth();
-        generateColumn(lower, upper, 'date');
+        if (props.showWeek) {
+          generateDayWithWeekColumn(curDate.value);
+        } else {
+          generateColumn(lower, upper, 'date');
+        }
       }
 
       if (meaningColumn.value.includes('hour')) {
