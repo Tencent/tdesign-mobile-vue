@@ -314,6 +314,62 @@ exports[`DateTimePicker > DateTimePicker dateAllVue demo works fine 1`] = `
               class="t-picker-item__item t-picker-item__item--active"
             >
               
+              0 时
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              1 时
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2 时
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              3 时
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              4 时
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              5 时
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              6 时
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              7 时
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
               8 时
               
             </li>
@@ -6345,6 +6401,62 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                 
                 <li
                   class="t-picker-item__item t-picker-item__item--active"
+                >
+                  
+                  0 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  1 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  2 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  3 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  4 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  5 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  6 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  7 时
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
                 >
                   
                   8 时
