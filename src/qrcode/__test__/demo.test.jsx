@@ -4,6 +4,7 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/qrcode/demos/base.vue';
+import borderlessVue from '@/qrcode/demos/borderless.vue';
 import colorVue from '@/qrcode/demos/color.vue';
 import downloadVue from '@/qrcode/demos/download.vue';
 import iconVue from '@/qrcode/demos/icon.vue';
@@ -16,6 +17,7 @@ import typeVue from '@/qrcode/demos/type.vue';
 
 const mapper = {
   baseVue,
+  borderlessVue,
   colorVue,
   downloadVue,
   iconVue,

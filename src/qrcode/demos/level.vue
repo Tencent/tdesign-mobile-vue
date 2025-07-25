@@ -1,6 +1,6 @@
 <template>
-  <div style="display: flex; flex-direction: column">
-    <t-slider :min="0" :max="3" :value="level" :marks="marks" :on-change="handleTabs" />
+  <t-slider :min="0" :max="3" :value="level" :marks="marks" :on-change="handleTabs" />
+  <div class="qrcode-content">
     <t-qrcode :level="levelList[level]" value="https://tdesign.gtimg.com/site/tdesign-logo.png" />
   </div>
 </template>

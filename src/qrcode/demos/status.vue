@@ -1,27 +1,14 @@
 <template>
   <div style="display: flex; flex-direction: column">
-    <div class="button-group">
-      <t-button
-        v-for="item in statusList"
-        :key="item"
-        :theme="status === item ? 'light' : 'default'"
-        shape="round"
-        @click="handleTabs(item)"
-      >
-        {{ item }}
-      </t-button>
-    </div>
-    <t-qrcode value="https://tdesign.tencent.com/" :status="status" :on-refresh="() => console.log('Click Refresh')" />
+    <t-qrcode value="https://tdesign.tencent.com/" status="active" />
+
+    <p class="tdesign-mobile-demo-block__summary">expired</p>
+    <t-qrcode value="https://tdesign.tencent.com/" status="loading" />
+
+    <p class="tdesign-mobile-demo-block__summary">loading</p>
+    <t-qrcode value="https://tdesign.tencent.com/" status="expired" :on-refresh="() => console.log('Click Refresh')" />
+
+    <p class="tdesign-mobile-demo-block__summary">scanned</p>
+    <t-qrcode value="https://tdesign.tencent.com/" status="scanned" />
   </div>
 </template>
-
-<script setup>
-import { ref } from 'vue';
-
-const statusList = ['active', 'expired', 'loading', 'scanned'];
-const status = ref('active');
-
-const handleTabs = (val) => {
-  status.value = val;
-};
-</script>
