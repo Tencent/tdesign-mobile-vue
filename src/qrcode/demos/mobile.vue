@@ -3,15 +3,15 @@
     <h1 class="title">QRCode 二维码</h1>
     <p class="summary">用于将文本转换成二维码。</p>
     <tdesign-demo-block title="01 组件类型" summary="基本用法">
-      <BaseDemo />
+      <BaseDemo class="tdesign-demos-qrcode" />
     </tdesign-demo-block>
 
     <tdesign-demo-block summary="带 Icon 的二维码">
-      <IconDemo />
+      <IconDemo class="tdesign-demos-qrcode" />
     </tdesign-demo-block>
 
     <tdesign-demo-block summary="无边框的二维码">
-      <BorderLessDemo />
+      <BorderLessDemo class="tdesign-demos-qrcode" />
     </tdesign-demo-block>
 
     <tdesign-demo-block summary="二维码纠错等级">
