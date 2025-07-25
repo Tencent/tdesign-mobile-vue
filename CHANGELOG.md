@@ -5,6 +5,24 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.10.0 `2025-07-25` 
+### 🚀 Features
+- `QRCode`: 新增 `QRcode` 二维码组件  @Wesley-0808 ([#1921](https://github.com/Tencent/tdesign-mobile-vue/pull/1921))
+- `Checkbox`: 优化 `CheckboxGroup` 数据类型校验。⚠️若传入`value` 为 `undefined`，当用户选择时，组件将不再告警，而是将数据强制转换成 `Array` @Wesley-0808 ([#1926](https://github.com/Tencent/tdesign-mobile-vue/pull/1926))
+- `DateTimePicker`: 支持 `showWeek` 属性 @xgay231 ([#1945](https://github.com/Tencent/tdesign-mobile-vue/pull/1945))
+- `Footer`: 支持 `logo`，`Links` 与 `text` 同时存在 @anlyyao ([#1920](https://github.com/Tencent/tdesign-mobile-vue/pull/1920))
+- `Picker`: 支持点击选中 @elfaw775 ([#1939](https://github.com/Tencent/tdesign-mobile-vue/pull/1939))
+- `Upload`: 新增 `removeBtn` 属性，并支持在文件中设置单个图片的 `removeBtn` 属性  @madaoQ ([#1923](https://github.com/Tencent/tdesign-mobile-vue/pull/1923))
+### 🐞 Bug Fixes
+- `Slider`: 修复设置 `min` 属性后刻度色值错误 @mpbfx ([#1925](https://github.com/Tencent/tdesign-mobile-vue/pull/1925))
+- `TreeSelect`: 修复传入非标准 `options` 数据时，组件回显错误的问题 @Wesley-0808 ([#1926](https://github.com/Tencent/tdesign-mobile-vue/pull/1926))
+- `Tabs`: 修复二次滑动问题 @novlan1 ([#1935](https://github.com/Tencent/tdesign-mobile-vue/pull/1935))
+- `PullDownRefresh`: 修复 `touhmove` 过程中组件下拉和松手状态错误 @novlan1 ([#1937](https://github.com/Tencent/tdesign-mobile-vue/pull/1937))
+- `Radio`: 修复 `Radio` 单独使用无法切换的问题 @novlan1 ([#1947](https://github.com/Tencent/tdesign-mobile-vue/pull/1947))
+- `Switch`: 修复 `loading` 颜色、`dot` 滑块禁用态/深色模式背景色错误 @shenyaofeng ([#1949](https://github.com/Tencent/tdesign-mobile-vue/pull/1949))
+### 🚧 Others
+- `docs`: 通过 `unplugin` 插件按需引入请改为 `import { TDesignResolver } from ' @tdesign-vue-next/auto-import-resolver';` @liweijie0812 ([#1944](https://github.com/Tencent/tdesign-mobile-vue/pull/1944))
+
 ## 🌈 1.9.3 `2025-07-03` 
 ### 🚀 Features
 - `Table`: 
