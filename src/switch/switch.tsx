@@ -65,7 +65,7 @@ export default defineComponent({
 
     const renderContent = () => {
       if (props.loading) {
-        return <TLoading inherit-color size="16.25px" />;
+        return <TLoading class={`${switchClass.value}__loading`} size="16px" />;
       }
 
       if (isArray(props.label) && props.label.length === 2) {
