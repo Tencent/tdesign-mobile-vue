@@ -26,25 +26,21 @@
       <StatusDemo class="tdesign-demos-qrcode" />
     </tdesign-demo-block>
 
-    <tdesign-demo-block summary="自定义状态渲染器">
+    <!-- <tdesign-demo-block summary="自定义状态渲染器">
       <StatusRenderDemo class="tdesign-demos-qrcode" />
-    </tdesign-demo-block>
+    </tdesign-demo-block> -->
 
-    <tdesign-demo-block title="03 组件样式" summary="二维码颜色">
+    <tdesign-demo-block title="03 组件样式">
       <ColorDemo class="tdesign-demos-qrcode" />
     </tdesign-demo-block>
 
-    <tdesign-demo-block summary="二维码颜色">
-      <BgColorDemo class="tdesign-demos-qrcode" />
-    </tdesign-demo-block>
-
-    <tdesign-demo-block title="07 自定义尺寸">
+    <tdesign-demo-block title="04 组件尺寸">
       <SizeDemo class="tdesign-demos-qrcode" />
     </tdesign-demo-block>
 
-    <tdesign-demo-block title="08 下载二维码" summary="下载二维码的简单实现。">
+    <!-- <tdesign-demo-block summary="下载二维码的简单实现。">
       <DownloadDemo class="tdesign-demos-qrcode" />
-    </tdesign-demo-block>
+    </tdesign-demo-block> -->
   </div>
 </template>
 
@@ -56,7 +52,6 @@ import StatusDemo from './status.vue';
 import StatusRenderDemo from './status-render.vue';
 import TypeDemo from './type.vue';
 import ColorDemo from './color.vue';
-import BgColorDemo from './bg-color.vue';
 import SizeDemo from './size.vue';
 import DownloadDemo from './download.vue';
 import LevelDemo from './level.vue';
