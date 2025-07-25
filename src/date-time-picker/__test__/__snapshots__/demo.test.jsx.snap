@@ -9358,6 +9358,769 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
 </div>
 `;
 
+exports[`DateTimePicker > DateTimePicker showWeekVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="t-cell"
+  >
+    <div
+      class="t-cell__left"
+    >
+      <!---->
+      <!---->
+    </div>
+    <div
+      class="t-cell__title"
+    >
+      <div
+        class="t-cell__title-text"
+      >
+        选择时间
+        <!---->
+      </div>
+      <!---->
+    </div>
+    <!---->
+    <div
+      class="t-cell__right t-cell__right--middle"
+    >
+      <div
+        class="t-cell__right-icon"
+      >
+        <svg
+          class="t-icon t-icon-chevron-right"
+          fill="none"
+          height="1em"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!--teleport start-->
+  <div
+    class="t-overlay"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
+  >
+    <!---->
+  </div>
+  <div
+    class="t-popup t-popup--bottom"
+    style="display: none;"
+  >
+    <!---->
+    
+    <div
+      class="t-picker t-date-time-picker"
+    >
+      <div
+        class="t-picker__toolbar"
+      >
+        <div
+          class="t-picker__cancel"
+        >
+          取消
+        </div>
+        <div
+          class="t-picker__title"
+        >
+          选择时间
+        </div>
+        <div
+          class="t-picker__confirm"
+        >
+          确定
+        </div>
+      </div>
+      <!---->
+      <div
+        class="t-picker__main"
+      >
+        
+        <div
+          class="t-picker-item__group"
+        >
+          <ul
+            class="t-picker-item"
+            style="transform: translate3d(0, -1320px, 0);"
+          >
+            
+            <li
+              class="t-picker-item__item"
+            >
+              
+              1990 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              1991 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              1992 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              1993 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              1994 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              1995 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              1996 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              1997 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              1998 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              1999 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2000 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2001 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2002 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2003 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2004 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2005 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2006 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2007 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2008 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2009 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2010 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2011 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2012 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2013 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2014 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2015 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2016 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2017 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2018 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2019 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2020 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2021 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2022 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2023 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2024 年
+              
+            </li>
+            <li
+              class="t-picker-item__item t-picker-item__item--active"
+            >
+              
+              2025 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2026 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2027 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2028 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2029 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2030 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2031 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2032 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2033 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2034 年
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2035 年
+              
+            </li>
+            
+          </ul>
+        </div>
+        <div
+          class="t-picker-item__group"
+        >
+          <ul
+            class="t-picker-item"
+            style="transform: translate3d(0, -160px, 0);"
+          >
+            
+            <li
+              class="t-picker-item__item"
+            >
+              
+              1 月
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2 月
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              3 月
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              4 月
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              5 月
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              6 月
+              
+            </li>
+            <li
+              class="t-picker-item__item t-picker-item__item--active"
+            >
+              
+              7 月
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              8 月
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              9 月
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              10 月
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              11 月
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              12 月
+              
+            </li>
+            
+          </ul>
+        </div>
+        <div
+          class="t-picker-item__group"
+        >
+          <ul
+            class="t-picker-item"
+            style="transform: translate3d(0, -640px, 0);"
+          >
+            
+            <li
+              class="t-picker-item__item"
+            >
+              
+              1日 周二
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              2日 周三
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              3日 周四
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              4日 周五
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              5日 周六
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              6日 周日
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              7日 周一
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              8日 周二
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              9日 周三
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              10日 周四
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              11日 周五
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              12日 周六
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              13日 周日
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              14日 周一
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              15日 周二
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              16日 周三
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              17日 周四
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              18日 周五
+              
+            </li>
+            <li
+              class="t-picker-item__item t-picker-item__item--active"
+            >
+              
+              19日 周六
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              20日 周日
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              21日 周一
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              22日 周二
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              23日 周三
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              24日 周四
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              25日 周五
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              26日 周六
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              27日 周日
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              28日 周一
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              29日 周二
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              30日 周三
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              31日 周四
+              
+            </li>
+            
+          </ul>
+        </div>
+        
+        <div
+          class="t-picker__mask t-picker__mask--top"
+        />
+        <div
+          class="t-picker__mask t-picker__mask--bottom"
+        />
+        <div
+          class="t-picker__indicator"
+        />
+      </div>
+      <!---->
+    </div>
+    
+  </div>
+  <!--teleport end-->
+  
+</div>
+`;
+
 exports[`DateTimePicker > DateTimePicker stepsVue demo works fine 1`] = `
 <div
   data-v-app=""

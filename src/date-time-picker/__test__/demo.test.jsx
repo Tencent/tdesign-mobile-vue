@@ -9,6 +9,7 @@ import dateAllVue from '@/date-time-picker/demos/date-all.vue';
 import hourMinuteSecondVue from '@/date-time-picker/demos/hour-minute-second.vue';
 import hourMinuteVue from '@/date-time-picker/demos/hour-minute.vue';
 import mobileVue from '@/date-time-picker/demos/mobile.vue';
+import showWeekVue from '@/date-time-picker/demos/show-week.vue';
 import stepsVue from '@/date-time-picker/demos/steps.vue';
 import withTitleVue from '@/date-time-picker/demos/with-title.vue';
 import withoutTitleVue from '@/date-time-picker/demos/without-title.vue';
@@ -22,6 +23,7 @@ const mapper = {
   hourMinuteSecondVue,
   hourMinuteVue,
   mobileVue,
+  showWeekVue,
   stepsVue,
   withTitleVue,
   withoutTitleVue,

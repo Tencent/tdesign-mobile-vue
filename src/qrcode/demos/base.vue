@@ -1,6 +1,5 @@
 <template>
-  <div class="tdesign-demos-qrcode">
+  <div>
     <t-qrcode value="https://tdesign.tencent.com/" />
-    <t-qrcode value="https://tdesign.tencent.com/" borderless />
   </div>
 </template>

@@ -1,17 +1,14 @@
 <template>
   <div style="display: flex; flex-direction: column">
-    <div style="display: flex; flex-direction: row; gap: 8px">
-      <t-button :disabled="size <= minSize" @click="size -= 10">
-        <template #icon>
-          <MinusIcon />
-        </template>
-        Smaller
-      </t-button>
-      <t-button :disabled="size >= maxSize" @click="size += 10">
-        <template #icon>
-          <AddIcon />
-        </template>
-        Larger
+    <div class="button-group">
+      <t-button
+        v-for="item in Object.keys(sizeList)"
+        :key="item"
+        :theme="size === sizeList[item] ? 'light' : 'default'"
+        shape="round"
+        @click="handleTabs(sizeList[item])"
+      >
+        {{ item }}
       </t-button>
     </div>
     <t-qrcode
@@ -26,10 +23,15 @@
 
 <script setup>
 import { ref } from 'vue';
-import { MinusIcon, AddIcon } from 'tdesign-icons-vue-next';
 
-const minSize = 40;
-const maxSize = 300;
-
+const sizeList = {
+  Small: 108,
+  Medium: 160,
+  Large: 212,
+};
 const size = ref(160);
+
+const handleTabs = (val) => {
+  size.value = val;
+};
 </script>

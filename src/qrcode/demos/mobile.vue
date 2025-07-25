@@ -1,59 +1,73 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">QRCode 二维码</h1>
-    <p class="summary">用于将文本转换成二维码。</p>
-    <tdesign-demo-block title="01 基本用法">
+    <p class="summary">能够将文本转换生成二维码的组件，支持自定义配色和 Logo 配置</p>
+    <tdesign-demo-block title="01 组件类型" summary="基本用法" :padding="true">
       <BaseDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block title="02 带 Icon 的二维码">
+
+    <tdesign-demo-block summary="带 Icon 的二维码" :padding="true">
       <IconDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block
-      title="03 不同的状态"
-      summary="通过 status 的值控制二维码的状态，提供了 active、expired、loading、scanned 四个值"
-    >
+
+    <tdesign-demo-block summary="无边框的二维码" :padding="true">
+      <BorderLessDemo />
+    </tdesign-demo-block>
+
+    <tdesign-demo-block summary="二维码纠错等级">
+      <LevelDemo />
+    </tdesign-demo-block>
+
+    <!-- <tdesign-demo-block summary="自定义渲染类型">
+      <TypeDemo  />
+    </tdesign-demo-block> -->
+
+    <tdesign-demo-block title="02 组件状态" summary="active">
       <StatusDemo class="tdesign-demos-qrcode" />
     </tdesign-demo-block>
-    <tdesign-demo-block title="04 自定义状态渲染器" summary="通过 statusRender 的值控制二维码不同状态的渲染逻辑。">
-      <StatusRenderDemo class="tdesign-demos-qrcode" />
-    </tdesign-demo-block>
-    <tdesign-demo-block title="05 自定义渲染类型" summary="通过设置 type 自定义渲染结果，提供 canvas 和 svg 两个选项。">
-      <TypeDemo class="tdesign-demos-qrcode" />
-    </tdesign-demo-block>
-    <tdesign-demo-block
-      title="06 自定义颜色"
-      summary="通过设置 color 自定义二维码颜色，通过设置 bgColor 自定义背景颜色。"
-    >
+
+    <!-- <tdesign-demo-block summary="自定义状态渲染器">
+      <StatusRenderDemo  />
+    </tdesign-demo-block> -->
+
+    <tdesign-demo-block title="03 组件样式" summary="二维码颜色">
       <ColorDemo class="tdesign-demos-qrcode" />
     </tdesign-demo-block>
-    <tdesign-demo-block title="07 自定义尺寸">
-      <SizeDemo class="tdesign-demos-qrcode" />
-    </tdesign-demo-block>
-    <tdesign-demo-block title="08 下载二维码" summary="下载二维码的简单实现。">
-      <DownloadDemo class="tdesign-demos-qrcode" />
-    </tdesign-demo-block>
-    <tdesign-demo-block title="09 纠错比例">
-      <LevelDemo class="tdesign-demos-qrcode" />
-    </tdesign-demo-block>
+
+    <!-- <tdesign-demo-block summary="二维码尺寸">
+      <SizeDemo />
+    </tdesign-demo-block> -->
+
+    <!-- <tdesign-demo-block summary="下载二维码的简单实现。">
+      <DownloadDemo  />
+    </tdesign-demo-block> -->
   </div>
 </template>
 
 <script lang="ts" setup>
 import BaseDemo from './base.vue';
+import BorderLessDemo from './borderless.vue';
 import IconDemo from './icon.vue';
 import StatusDemo from './status.vue';
-import StatusRenderDemo from './status-render.vue';
-import TypeDemo from './type.vue';
+// import StatusRenderDemo from './status-render.vue';
+// import TypeDemo from './type.vue';
 import ColorDemo from './color.vue';
-import SizeDemo from './size.vue';
-import DownloadDemo from './download.vue';
+// import SizeDemo from './size.vue';
+// import DownloadDemo from './download.vue';
 import LevelDemo from './level.vue';
 </script>
 
 <style lang="less">
-.tdesign-demos-qrcode {
-  padding: 16px;
+.tdesign-mobile-demo {
   background-color: var(--td-bg-color-container);
+}
+
+.qrcode-content {
+  padding: 16px 16px 0;
+}
+
+.tdesign-demos-qrcode {
+  padding: 0 16px;
   display: flex;
   gap: 8px;
   flex-wrap: wrap;

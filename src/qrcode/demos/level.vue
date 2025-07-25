@@ -1,17 +1,7 @@
 <template>
-  <div style="display: flex; flex-direction: column">
-    <div class="button-group">
-      <t-button
-        v-for="item in levelList"
-        :key="item"
-        :theme="level === item ? 'light' : 'default'"
-        shape="round"
-        @click="handleTabs(item)"
-      >
-        {{ item }}
-      </t-button>
-    </div>
-    <t-qrcode :level="level" value="https://tdesign.gtimg.com/site/tdesign-logo.png" />
+  <t-slider :min="0" :max="3" :value="level" :marks="marks" :on-change="handleTabs" />
+  <div class="qrcode-content">
+    <t-qrcode :level="levelList[level]" value="https://tdesign.gtimg.com/site/tdesign-logo.png" />
   </div>
 </template>
 
@@ -19,7 +9,13 @@
 import { ref } from 'vue';
 
 const levelList = ['L', 'M', 'Q', 'H'];
-const level = ref('M');
+const level = ref(1);
+const marks = ref({
+  0: '7%',
+  1: '15%',
+  2: '25%',
+  3: '30%',
+});
 const handleTabs = (val) => {
   level.value = val;
 };
