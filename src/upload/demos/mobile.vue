@@ -14,6 +14,9 @@
     <tdesign-demo-block title="03 样式自定义" summary="单选上传">
       <CustomDemo />
     </tdesign-demo-block>
+    <tdesign-demo-block title="04 可拖拽排序" summary="开启拖拽排序">
+      <DragDemo />
+    </tdesign-demo-block>
   </div>
 </template>
 <script setup lang="ts">
@@ -21,4 +24,5 @@ import BaseDemo from './base.vue';
 import CustomDemo from './custom.vue';
 import MultipleDemo from './multiple.vue';
 import StatusDemo from './status.vue';
+import DragDemo from './drag.vue';
 </script>

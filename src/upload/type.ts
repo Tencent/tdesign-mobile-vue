@@ -54,6 +54,11 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   disabled?: boolean;
   /**
+   * 是否支持拖拽排序
+   * @default false
+   */
+  draggable?: boolean;
+  /**
    * 用于完全自定义文件列表界面内容(UI)，单文件和多文件均有效
    */
   fileListDisplay?: TNode<{ files: UploadFile[]; dragEvents?: UploadDisplayDragEvents }>;
