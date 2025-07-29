@@ -69,3 +69,25 @@ const handleDownload = () => {
   }
 };
 </script>
+
+<style lang="less" scoped>
+.button-group {
+  background-color: var(--bg-color-demo, #fff);
+  box-sizing: border-box;
+  padding: 8px 4px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 25%;
+
+  .t-button {
+    height: 32px;
+    flex: 1;
+
+    &:not(:last-child) {
+      flex: 1;
+      margin-right: 8px;
+    }
+  }
+}
+</style>
