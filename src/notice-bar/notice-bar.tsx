@@ -10,7 +10,7 @@ import {
   getCurrentInstance,
   watch,
 } from 'vue';
-import { InfoCircleFilledIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
+import { InfoCircleFilledIcon, CheckCircleFilledIcon, ErrorCircleFilledIcon } from 'tdesign-icons-vue-next';
 import isArray from 'lodash/isArray';
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
 import NoticeBarProps from './props';
@@ -24,8 +24,8 @@ const name = `${prefix}-notice-bar`;
 const iconDefault = {
   info: h(InfoCircleFilledIcon),
   success: h(CheckCircleFilledIcon),
-  warning: h(InfoCircleFilledIcon),
-  error: h(InfoCircleFilledIcon),
+  warning: h(ErrorCircleFilledIcon),
+  error: h(ErrorCircleFilledIcon),
 };
 export default defineComponent({
   name,
