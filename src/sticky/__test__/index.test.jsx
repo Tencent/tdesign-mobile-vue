@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { nextTick } from 'vue';
 import Sticky from '../sticky';
-import { useTestUtils, useVitest } from '../../shared';
+import { useTestUtils } from '../../shared';
 
 const _mount = (template, data = () => ({}), methods = {}) =>
   mount(
@@ -23,7 +23,7 @@ const TIMEOUT = 250;
  * 创建sticky测试用容器
  */
 const stickyRectMock = (wrapper, { stickyMockReturnValue, documentMockReturnValue }) => {
-  const { getBoundingClientRect } = useVitest(vi);
+  const getBoundingClientRect = (dom) => vi.spyOn(dom, 'getBoundingClientRect');
   const mockStickyRect = getBoundingClientRect(wrapper.find('.t-sticky').element).mockReturnValue(
     stickyMockReturnValue,
   );

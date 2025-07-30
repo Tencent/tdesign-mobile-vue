@@ -5,11 +5,11 @@ import './style';
 
 import { TdDrawerProps } from './type';
 
-export type DividerProps = TdDrawerProps;
+export type DrawerProps = TdDrawerProps;
 
 export * from './type';
 export * from './plugin';
 export { default as DrawerPlugin } from './plugin';
 
-const Drawer: WithInstallType<typeof _Drawer> = withInstall(_Drawer);
+export const Drawer: WithInstallType<typeof _Drawer> = withInstall(_Drawer);
 export default Drawer;

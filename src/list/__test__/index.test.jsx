@@ -1,19 +1,11 @@
 import { ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import List from '../list.vue';
+import List from '../index';
 import TLoading from '../../loading/loading';
 import TCell from '../../cell/index';
 
 const prefix = 't';
-const name = `${prefix}-list`;
-
-const sleep = (duration) =>
-  new Promise((resolve) =>
-    setTimeout(() => {
-      resolve();
-    }, duration),
-  );
 
 const LOADING_TEXT_MAP = {
   loading: '加载中...',

@@ -258,6 +258,113 @@ exports[`Swiper > Swiper controlVue demo works fine 1`] = `
 </div>
 `;
 
+exports[`Swiper > Swiper currentVue demo works fine 1`] = `
+<div
+  style="padding: 0px 16px;"
+>
+  <div
+    class="t-swiper t-swiper--default"
+  >
+    <div
+      class="t-swiper__container"
+      style="flex-direction: row; transition: none; height: auto;"
+    >
+      
+      
+      <div
+        class="t-swiper-item"
+        style="height: 192px;"
+      >
+        
+        <img
+          class="img"
+          src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+        />
+        
+      </div>
+      <div
+        class="t-swiper-item"
+        style="height: 192px;"
+      >
+        
+        <img
+          class="img"
+          src="https://tdesign.gtimg.com/mobile/demos/swiper2.png"
+        />
+        
+      </div>
+      <div
+        class="t-swiper-item"
+        style="height: 192px;"
+      >
+        
+        <img
+          class="img"
+          src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+        />
+        
+      </div>
+      <div
+        class="t-swiper-item"
+        style="height: 192px;"
+      >
+        
+        <img
+          class="img"
+          src="https://tdesign.gtimg.com/mobile/demos/swiper2.png"
+        />
+        
+      </div>
+      <div
+        class="t-swiper-item"
+        style="height: 192px;"
+      >
+        
+        <img
+          class="img"
+          src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+        />
+        
+      </div>
+      
+      
+    </div>
+    
+    <!---->
+    <span
+      class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
+    >
+      
+      
+      
+      
+      <!---->
+    </span>
+    
+  </div>
+  <div
+    class="tdesign-demo-block-row"
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+         跳转到第 2 项 
+        
+      </span>
+      <!---->
+    </button>
+  </div>
+</div>
+`;
+
 exports[`Swiper > Swiper customVue demo works fine 1`] = `
 <div
   style="padding: 0px 16px;"

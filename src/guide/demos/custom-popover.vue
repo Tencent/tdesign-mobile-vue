@@ -36,9 +36,8 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-
+import { TdGuideProps } from 'tdesign-mobile-vue';
 import MyPopover from './my-popover.vue';
-import { TdGuideProps } from '../type';
 
 const visible = ref(false);
 const current = ref(-1);

@@ -8,19 +8,34 @@ import { TdCascaderProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 父子节点选中状态不再关联，可各自选中或取消 */
+  checkStrictly: Boolean,
   /** 关闭按钮 */
   closeBtn: {
     type: [Boolean, Function] as PropType<TdCascaderProps['closeBtn']>,
     default: true,
   },
-  /** 用来定义 value / label 在 `options` 中对应的字段别名 */
+  /** 头部 */
+  header: {
+    type: Function as PropType<TdCascaderProps['header']>,
+  },
+  /** 用来定义 value / label / children / disabled 在 `options` 中对应的字段别名 */
   keys: {
     type: Object as PropType<TdCascaderProps['keys']>,
+  },
+  /** 中间内容 */
+  middleContent: {
+    type: Function as PropType<TdCascaderProps['middleContent']>,
   },
   /** 可选项数据源 */
   options: {
     type: Array as PropType<TdCascaderProps['options']>,
     default: (): TdCascaderProps['options'] => [],
+  },
+  /** 未选中时的提示文案 */
+  placeholder: {
+    type: [String, Function] as PropType<TdCascaderProps['placeholder']>,
+    default: '选择选项',
   },
   /** 每级展示的次标题 */
   subTitles: {
@@ -53,17 +68,8 @@ export default {
   defaultValue: {
     type: [String, Number] as PropType<TdCascaderProps['defaultValue']>,
   },
-  /** 未选中时的提示文案 */
-  placeholder: {
-    type: [String, Function] as PropType<TdCascaderProps['placeholder']>,
-  },
   /** 是否展示 */
   visible: Boolean,
-  /** 父子节点选中状态不再关联，可各自选中或取消 */
-  checkStrictly: {
-    type: Boolean,
-    default: false,
-  },
   /** 值发生变更时触发 */
   onChange: Function as PropType<TdCascaderProps['onChange']>,
   /** 关闭时触发 */

@@ -24,13 +24,30 @@ export default {
     type: [String, Boolean] as PropType<TdPickerProps['confirmBtn']>,
     default: true,
   },
+  /** 底部内容 */
+  footer: {
+    type: Function as PropType<TdPickerProps['footer']>,
+  },
   /** 自定义头部内容 */
   header: {
     type: Function as PropType<TdPickerProps['header']>,
   },
+  /** 用来定义 value / label / disabled 在 `columns ` 中对应的字段别名 */
+  keys: {
+    type: Object as PropType<TdPickerProps['keys']>,
+  },
+  /** 自定义选项内容。参数为 `option: PickerColumnItem, index: number` */
+  option: {
+    type: Function as PropType<TdPickerProps['option']>,
+  },
   /** 自定义label */
   renderLabel: {
     type: Function as PropType<TdPickerProps['renderLabel']>,
+  },
+  /** 快速滑动时惯性滚动的时长，单位 ms，为 0 时表示取消惯性滚动 */
+  swipeDuration: {
+    type: [String, Number] as PropType<TdPickerProps['swipeDuration']>,
+    default: 300,
   },
   /** 标题 */
   title: {
@@ -50,8 +67,6 @@ export default {
   defaultValue: {
     type: Array as PropType<TdPickerProps['defaultValue']>,
   },
-  /** 是否显示 */
-  visible: Boolean,
   /** 点击取消按钮时触发 */
   onCancel: Function as PropType<TdPickerProps['onCancel']>,
   /** 选中变化时候触发 */

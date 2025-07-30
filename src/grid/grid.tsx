@@ -2,15 +2,16 @@ import { defineComponent, provide, toRefs, computed } from 'vue';
 
 import config from '../config';
 import props from './props';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-grid`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-grid`,
   props,
   setup(props, { slots }) {
-    const { column, gutter, border, align } = toRefs(props);
+    const gridClass = usePrefixClass('grid');
+    const { column, gutter, border, align, hover } = toRefs(props);
     const rootStyle = computed(() => {
       if (column.value === 0) return [];
       const ans = [
@@ -27,14 +28,15 @@ export default defineComponent({
       border,
       align,
       gutter,
+      hover,
     });
 
     const classes = computed(() => [
-      `${name}`,
+      `${gridClass.value}`,
       {
-        [`${name}--card`]: props.theme === 'card',
-        [`${name}--auto-size`]: props.column === 0,
-        [`${name}--bordered`]: props.border && !props.gutter,
+        [`${gridClass.value}--card`]: props.theme === 'card',
+        [`${gridClass.value}--auto-size`]: props.column === 0,
+        [`${gridClass.value}--bordered`]: props.border && !props.gutter,
       },
     ]);
     return () => (

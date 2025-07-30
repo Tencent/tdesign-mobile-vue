@@ -6,14 +6,14 @@ import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
-const name = `${prefix}-navbar`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-navbar`,
   components: { TChevronLeftIcon },
   props,
   emits: ['left-click', 'right-click'],
   setup(props, { slots }) {
+    const classPrefix = usePrefixClass();
     const navbarClass = usePrefixClass('navbar');
     const renderTNodeJSX = useTNodeJSX();
 
@@ -22,6 +22,7 @@ export default defineComponent({
       navbarClass.value,
       {
         [`${navbarClass.value}--fixed`]: props.fixed,
+        [`${classPrefix.value}-safe-area-top `]: props.safeAreaInsetTop,
       },
       props.visible
         ? `${navbarClass.value}--visible${animationSuffix.value}`

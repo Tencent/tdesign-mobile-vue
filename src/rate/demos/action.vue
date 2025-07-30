@@ -2,12 +2,12 @@
   <p class="summary">只可选全星时</p>
   <div class="rate-demo-cell">
     <div class="rate-demo-cell__label">点击或滑动</div>
-    <t-rate v-model="value1" variant="filled" />
+    <t-rate v-model="value1" />
   </div>
   <p class="summary">可选半星时</p>
   <div class="rate-demo-cell">
     <div class="rate-demo-cell__label">点击或滑动</div>
-    <t-rate v-model="value2" variant="filled" allow-half />
+    <t-rate v-model="value2" allow-half />
   </div>
 </template>
 

@@ -1,12 +1,18 @@
-import config from '../config';
 import { preventDefault } from '../shared/dom';
+import { usePrefixClass } from '../hooks/useClass';
+import { PickerColumn } from './type';
+import { KeysType } from '../common';
+import { findIndexOfEnabledOption, limitNumberInRange } from './utils';
 
-const { prefix } = config;
+const classPrefix = usePrefixClass();
 
 export interface PickerOptions {
   defaultIndex?: number;
+  keys?: KeysType;
+  defaultPickerColumns?: PickerColumn;
   el: HTMLElement | HTMLDivElement | HTMLUListElement;
   onChange: (index: number) => void;
+  swipeDuration?: string | number;
 }
 
 const quartEaseOut = function (t: number, b: number, c: number, d: number) {
@@ -21,7 +27,11 @@ export const DEFAULT_ITEM_HEIGHT = 40;
 const DEFAULT_HOLDER_HEIGHT = 200;
 const OFFSET_OF_BOUND = 60;
 export const ANIMATION_TIME_LIMIT = 460;
+export const ANIMATION_DISTANCE_LIMIT = 15;
 const ANIMATION_DURATION = 150;
+const DEFAULT_SWIPE_DURATION = 1000;
+const TAP_DISTANCE_THRESHOLD = 5; // px
+const TAP_TIME_THRESHOLD = 200; // ms
 
 /**
  * @name picker
@@ -73,11 +83,22 @@ class Picker {
 
   onChange: (index: number) => void;
 
+  itemGroupHeight: number;
+
+  indicatorOffset: number;
+
+  swipeDuration?: number | string;
+
+  pickerColumns: PickerColumn;
+
   constructor(options: PickerOptions) {
     if (!options.el) throw new Error('options el needed!');
     this.holder = options.el;
+    this.pickerColumns = options.defaultPickerColumns;
     this.options = options;
     this.onChange = options.onChange;
+    this.swipeDuration = options.swipeDuration ?? DEFAULT_SWIPE_DURATION;
+
     this.init();
   }
 
@@ -105,13 +126,14 @@ class Picker {
    */
   initScrollParams(): void {
     this.list = this.holder as HTMLUListElement;
+    this.itemGroupHeight = this.holder.parentElement?.offsetHeight || DEFAULT_HOLDER_HEIGHT;
     this.elementItems = [...this.holder.querySelectorAll('li')];
     this.itemHeight = this.holder.querySelector('li')?.offsetHeight || DEFAULT_ITEM_HEIGHT;
     this.height = this.holder.offsetHeight || DEFAULT_HOLDER_HEIGHT;
-    let curIndex = this.options.defaultIndex || 0;
-    this.itemClassName = `${prefix}-picker-item__item`;
-    this.itemSelectedClassName = `${prefix}-picker-item__item--active`;
-    this.itemHeight = DEFAULT_ITEM_HEIGHT;
+    this.indicatorOffset = this.itemGroupHeight / 2 - this.itemHeight / 2;
+    let curIndex = findIndexOfEnabledOption(this.pickerColumns, this.options.defaultIndex || 0, this.options.keys);
+    this.itemClassName = `${classPrefix.value}-picker-item__item`;
+    this.itemSelectedClassName = `${classPrefix.value}-picker-item__item--active`;
     this.startY = 0;
     this.isPicking = false;
     this.lastMoveTime = 0;
@@ -127,13 +149,14 @@ class Picker {
         return curIndex;
       },
     });
-    const startOffsetY = (-this.curIndex + 2) * this.itemHeight;
+
+    const startOffsetY = this.indicatorOffset - this.curIndex * this.itemHeight;
     const itemLen = this.elementItems.length;
     this.setOffsetY(startOffsetY);
     this.offsetYOfStart = startOffsetY;
-    this.offsetYOfEnd = -this.itemHeight * (itemLen - 3);
-    this.offsetYOfStartBound = this.itemHeight * 2 + OFFSET_OF_BOUND;
-    this.offsetYOfEndBound = -(this.itemHeight * (itemLen - 3) + OFFSET_OF_BOUND);
+    this.offsetYOfEnd = this.indicatorOffset - (itemLen - 1) * this.itemHeight;
+    this.offsetYOfStartBound = this.indicatorOffset + OFFSET_OF_BOUND;
+    this.offsetYOfEndBound = this.indicatorOffset - (itemLen - 1) * this.itemHeight - OFFSET_OF_BOUND;
   }
 
   bindEvent(): void {
@@ -149,17 +172,31 @@ class Picker {
     if (!this.holder) return;
     if (this.list) this.list.style.transition = '';
     this.startY = event.changedTouches[0].pageY;
+    this.offsetYOfStart = this.offsetY;
     // 更新惯性参数
     this.updateInertiaParams(event, true);
+  }
+
+  getCount() {
+    return this.pickerColumns.length;
+  }
+
+  getRange(thresholdA = 0, thresholdB = 3) {
+    const min = -(this.getCount() - thresholdA) * this.itemHeight;
+    const max = thresholdB * this.itemHeight;
+    return { min, max };
   }
 
   touchMoveHandler(event: TouchEvent): void {
     preventDefault(event, false);
     if (!this.isPicking || !this.holder) return;
+
     const endY = event.changedTouches[0].pageY;
     const dragRange = endY - this.startY;
     this.updateInertiaParams(event, false);
-    const moveOffsetY = (-this.curIndex + 2) * this.itemHeight + dragRange;
+
+    const { min, max } = this.getRange(0, 5);
+    const moveOffsetY = limitNumberInRange(this.offsetYOfStart + dragRange, min, max);
     this.setOffsetY(moveOffsetY);
   }
 
@@ -169,34 +206,39 @@ class Picker {
     if (!this.holder) return;
     const point = event.changedTouches[0];
     const nowTime = event.timeStamp || Date.now();
-    // move time gap
+
     const moveTime = nowTime - this.lastMoveTime;
+    const distance = point.pageY - this.lastMoveStart;
+    const absDistance = Math.abs(distance);
+
+    if (absDistance < TAP_DISTANCE_THRESHOLD && moveTime < TAP_TIME_THRESHOLD) {
+      // 点选操作，查找 li
+      const li = (event.target as HTMLElement).closest('li');
+      if (li && this.list?.contains(li)) {
+        const childElements = this.list.children;
+        const rawIndex = Array.from(childElements).indexOf(li);
+        const enabledIndex = findIndexOfEnabledOption(this.pickerColumns, rawIndex, this.options.keys);
+        this.updateIndex(enabledIndex, { isChange: true });
+        return;
+      }
+    }
     // 超出一定时间不再惯性滚动
-    if (moveTime > ANIMATION_TIME_LIMIT) {
+    if (moveTime > ANIMATION_TIME_LIMIT || absDistance < ANIMATION_DISTANCE_LIMIT || !this.swipeDuration) {
       this.stopInertiaMove = false;
       this.endScroll();
       return;
     }
-    // 手指滑动的速度
-    const v = (point.pageY - this.lastMoveStart) / moveTime;
-    // 加速度方向
-    const dir = v > 0 ? -1 : 1;
-    // 摩擦系数，参考iscroll的阻尼系数
-    const dampingCoefficient = 0.0008;
-    // 加速度
-    const deceleration = -1 * dir * dampingCoefficient;
-    // 滚动持续时间
-    const duration = Math.abs(v / deceleration);
-    const endY = event.changedTouches[0].pageY;
-    const dragRange = endY - this.startY;
-    // 滚动距离
-    const dist = v * duration - (duration ** 2 * deceleration) / 2 + dragRange;
+
+    const speed = Math.abs(distance / moveTime);
+    let dist = this.offsetY + (speed / 0.005) * (distance < 0 ? -1 : 1);
+    const { min, max } = this.getRange(3, 2);
+    dist = limitNumberInRange(dist, min, max);
     if (dist === 0) {
       this.stopInertiaMove = false;
       this.endScroll();
       return;
     }
-    this.scrollDist(nowTime, this.offsetY, dist, duration);
+    this.scrollDist(nowTime, this.offsetY, dist, +this.swipeDuration);
   }
 
   /**
@@ -229,7 +271,7 @@ class Picker {
       }
       if (!start) start = timestamp;
       const progress = timestamp - start;
-      const newOffsetY = quartEaseOut(progress, startOffsetY, dist, duration);
+      const newOffsetY = quartEaseOut(progress, startOffsetY, dist - startOffsetY, duration);
       this.setOffsetY(newOffsetY);
       if (progress > duration || newOffsetY > this.offsetYOfStartBound || newOffsetY < this.offsetYOfEndBound) {
         this.endScroll();
@@ -263,13 +305,23 @@ class Picker {
     };
     this.curIndex = index;
     this.setSelectedClassName();
-    const moveOffsetY = (-index + 2) * this.itemHeight;
+    const moveOffsetY = this.indicatorOffset - index * this.itemHeight;
     if (this.list) {
       this.list.style.transform = `translate(0,${moveOffsetY}px) translateZ(0)`;
       this.list.style.transitionDuration = `${realOptions.duration}ms`;
       this.list.style.transitionTimingFunction = 'ease-out';
     }
+
+    this.offsetY = moveOffsetY;
+    this.offsetYOfStart = moveOffsetY;
     realOptions.isChange && this.onChange(index);
+  }
+
+  /**
+   * @description 更新数据源
+   */
+  updateOptions(options: PickerColumn = []): void {
+    this.pickerColumns = options;
   }
 
   /**
@@ -347,11 +399,14 @@ class Picker {
       if (this.list) {
         this.list.style.transition = `${ANIMATION_DURATION}ms ease-out`;
       }
-      curIndex = 2 - Math.round(this.offsetY / this.itemHeight);
+      curIndex = -Math.round((this.offsetY - this.indicatorOffset) / this.itemHeight);
       if (curIndex < 0) curIndex = 0;
       if (curIndex > this.elementItems.length - 1) curIndex = this.elementItems.length - 1;
     }
-    const offsetY = (-curIndex + 2) * this.itemHeight;
+
+    curIndex = findIndexOfEnabledOption(this.pickerColumns, curIndex, this.options.keys);
+
+    const offsetY = this.indicatorOffset - curIndex * this.itemHeight;
     this.setOffsetY(offsetY);
     if (curIndex !== this.curIndex) {
       // 防止事件重复触发

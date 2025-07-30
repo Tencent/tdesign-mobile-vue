@@ -15,34 +15,34 @@ import {
   h,
   RendererNode,
 } from 'vue';
-import isFunction from 'lodash/isFunction';
+import { isFunction } from 'lodash-es';
 import config from '../config';
 import props from './props';
 import TTabNavItem from './tab-nav-item';
-import { useVModel } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { preventDefault } from '../shared/dom';
-import CLASSNAMES from '../shared/constants';
 import TSticky from '../sticky';
 import { TdStickyProps } from '../sticky/type';
 import TBadge from '../badge';
 import { useTNodeJSX } from '../hooks/tnode';
 import { TdTabPanelProps } from './type';
 import { usePrefixClass } from '../hooks/useClass';
+import { useCommonClassName } from '../hooks/useCommonClassName';
 
 const { prefix } = config;
-const name = `${prefix}-tabs`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-tabs`,
   props,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();
     const tabsClass = usePrefixClass('tabs');
+    const { SIZE } = useCommonClassName();
 
     const stickyProps = computed(() => ({ ...(props.stickyProps as TdStickyProps), disabled: !props.sticky }));
     const activeClass = `${tabsClass.value}__item--active`;
     const disabledClass = `${tabsClass.value}__item--disabled`;
-    const tabsClasses = computed(() => [`${tabsClass.value}`, props.size && CLASSNAMES.SIZE[props.size]]);
+    const tabsClasses = computed(() => [`${tabsClass.value}`, props.size && SIZE.value[props.size]]);
     const navClasses = ref([`${tabsClass.value}__nav`]);
     const startX = ref(0);
     const startY = ref(0);
@@ -69,18 +69,20 @@ export default defineComponent({
       }
       let children: RendererNode[] = renderTNodeJSX('default');
       const res: RendererNode[] = [];
-      const label: RendererNode[] = [];
-      children?.forEach((child) => {
-        if (child.type === Fragment) {
-          res.push(...child.children);
-        } else {
-          res.push(child);
-        }
-        if (child.children?.label) {
-          label.push(child.children.label()[0] || null);
-        }
-      });
-
+      const label: Record<number, RendererNode> = {};
+      const handler = (children: RendererNode[]) => {
+        children?.forEach((child, index) => {
+          if (child.type === Fragment) {
+            handler(child.children);
+          } else {
+            res.push(child);
+          }
+          if (child.children?.label) {
+            label[index] = child.children.label()[0] || null;
+          }
+        });
+      };
+      handler(children);
       children = res.filter((child: RendererNode) => child.type.name === `${prefix}-tab-panel`);
       return children.map((item: RendererNode, index: number) => ({
         ...item.props,
@@ -120,6 +122,15 @@ export default defineComponent({
 
         lineStyle.value = style;
       }
+      if (navScroll.value) {
+        const tab = navScroll.value.querySelector<HTMLElement>(`.${activeClass}`);
+        if (!tab) return;
+        const tabLeft = tab?.offsetLeft;
+        const tabWidth = tab?.offsetWidth;
+        const navScrollWidth = navScroll.value.offsetWidth;
+        const scrollDistance = tabLeft - navScrollWidth / 2 + tabWidth / 2;
+        navScroll.value.scrollTo({ left: scrollDistance, behavior: 'smooth' });
+      }
     };
 
     onMounted(() => {
@@ -135,11 +146,21 @@ export default defineComponent({
       moveToActiveTab();
     });
 
-    watch(value, () => {
+    watch(currentValue, () => {
       nextTick(() => {
         moveToActiveTab();
       });
     });
+
+    watch(
+      itemProps,
+      () => {
+        nextTick(() => {
+          moveToActiveTab();
+        });
+      },
+      { deep: true },
+    );
 
     const handleTabClick = (event: Event, item: TdTabPanelProps) => {
       const { value, disabled } = item;
@@ -164,6 +185,7 @@ export default defineComponent({
     // 手势滑动开始
     const handleTouchstart = (e: TouchEvent) => {
       if (!props.swipeable) return;
+      canMove.value = true;
       startX.value = e.targetTouches[0].clientX;
       startY.value = e.targetTouches[0].clientY;
     };
@@ -183,12 +205,10 @@ export default defineComponent({
           if (startX.value > endX.value) {
             // 向左划
             if (tabIndex.value >= itemProps.value.length - 1) return;
-            canMove.value = false;
             handleTabClick(e, itemProps.value[tabIndex.value + 1]);
           } else if (startX.value < endX.value) {
             // 向右划
             if (tabIndex.value <= 0) return;
-            canMove.value = false;
             handleTabClick(e, itemProps.value[tabIndex.value - 1]);
           }
         }
@@ -198,7 +218,7 @@ export default defineComponent({
     // 手势滑动结束
     const handleTouchend = () => {
       if (!props.swipeable) return;
-      canMove.value = true;
+      canMove.value = false;
       startX.value = 0;
       endX.value = 0;
       startY.value = 0;
@@ -229,7 +249,7 @@ export default defineComponent({
                     props.theme === 'tag' && item.value === currentValue.value,
                 }}
               >
-                <TTabNavItem label={item.label} />
+                <TTabNavItem label={item.label} icon={item.icon} />
               </div>
             </TBadge>
             {props.theme === 'card' && index === currentIndex.value - 1 && (
@@ -249,7 +269,13 @@ export default defineComponent({
             <div class={navClasses.value}>
               <div
                 ref={navScroll}
-                class={`${tabsClass.value}__scroll ${tabsClass.value}__scroll--top ${tabsClass.value}__scroll--${props.theme}`}
+                class={[
+                  `${tabsClass.value}__scroll`,
+                  `${tabsClass.value}__scroll--${props.theme}`,
+                  {
+                    [`${tabsClass.value}__scroll--split`]: props.split,
+                  },
+                ]}
               >
                 <div ref={navWrap} class={`${tabsClass.value}__wrapper ${tabsClass.value}__wrapper--${props.theme}`}>
                   {readerNav()}
@@ -264,6 +290,7 @@ export default defineComponent({
               </div>
             </div>
           </TSticky>
+          {renderTNodeJSX('middle')}
           <div
             class={`${tabsClass.value}__content`}
             onTouchstart={handleTouchstart}

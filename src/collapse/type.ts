@@ -62,7 +62,7 @@ export interface TdCollapsePanelProps {
    */
   default?: string | TNode;
   /**
-   * 【暂不支持】当前面板处理折叠状态时，是否销毁面板内容
+   * 当前面板处理折叠状态时，是否销毁面板内容
    * @default false
    */
   destroyOnCollapse?: boolean;
@@ -81,7 +81,7 @@ export interface TdCollapsePanelProps {
   /**
    * 面板头左侧图标
    */
-  headerLeftIcon?: string | TNode;
+  headerLeftIcon?: TNode;
   /**
    * 面板头的右侧区域，一般用于呈现面板操作
    */

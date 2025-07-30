@@ -57,6 +57,7 @@ const change = (index: number | string) => {
 <style lang="less">
 .component-wrap {
   height: calc(100vh - 50px);
+  background-color: #fff;
 }
 
 .capsule {
@@ -65,7 +66,7 @@ const change = (index: number | string) => {
   height: 30px;
   border-radius: 15px;
   background-color: #f3f3f3;
-  padding-left: 32rpx;
+  padding-left: 16px;
   display: flex;
   align-items: center;
   font-size: 14px;

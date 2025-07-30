@@ -8,9 +8,9 @@ import { useIcon } from '../hooks/icon';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-result`;
+
 export default defineComponent({
-  name,
+  name: `${prefix}-result`,
   props: ResultProps,
   setup(props) {
     const resultClass = usePrefixClass('result');

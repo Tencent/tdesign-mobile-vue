@@ -1,6 +1,12 @@
 import { withInstall, WithInstallType } from '../shared';
-import Upload from './upload';
+import _Upload from './upload';
+
 import './style';
 
-const _Upload: WithInstallType<typeof Upload> = withInstall(Upload);
-export default _Upload;
+import { TdUploadProps } from './type';
+
+export * from './type';
+export type UploadProps = TdUploadProps;
+
+export const Upload: WithInstallType<typeof _Upload> = withInstall(_Upload);
+export default Upload;

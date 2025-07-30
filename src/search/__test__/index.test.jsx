@@ -1,8 +1,8 @@
 import { ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import Search from '../search';
 import { CloseCircleFilledIcon as TIconClear } from 'tdesign-icons-vue-next';
+import Search from '../search';
 
 const prefix = 't';
 const name = `${prefix}-search`;
@@ -134,8 +134,11 @@ describe('search', () => {
           onActionClick,
         },
       });
-      const $input = wrapper.find(`.${name}__search-action`);
-      await $input.trigger('click');
+      const $input = wrapper.find(`input`);
+      await $input.trigger('focus');
+
+      const $action = wrapper.find(`.${name}__search-action`);
+      await $action.trigger('click');
       expect(onActionClick).toBeCalled();
     });
   });
@@ -145,17 +148,19 @@ describe('search', () => {
       const action = '插槽';
 
       const wrapper = mount(Search, {
-        props:{
-          value: 'test'
+        props: {
+          value: 'test',
         },
         slots: {
           action,
         },
       });
-      // TODO: 插槽实现的 dom 结构不正确，后期另提 pr 修复
-      const $search = wrapper.find(`.${name}`);
-      
-      expect($search.text()).toEqual(action);
+      const $input = wrapper.find(`input`);
+      await $input.trigger('focus');
+
+      const $action = wrapper.find(`.${name}__search-action`);
+
+      expect($action.text()).toEqual(action);
     });
 
     it(': left-icon', async () => {

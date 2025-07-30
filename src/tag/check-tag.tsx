@@ -4,13 +4,12 @@ import config from '../config';
 import CheckTagProps from './check-tag-props';
 import { usePrefixClass } from '../hooks/useClass';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
-import { useVModel } from '../shared';
+import useVModel from '../hooks/useVModel';
 
 const { prefix } = config;
-const name = `${prefix}-check-tag`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-check-tag`,
   props: CheckTagProps,
   setup(props) {
     const tagClass = usePrefixClass('tag');

@@ -9,12 +9,16 @@
 action | String / Slot / Function | '' | 自定义右侧操作按钮文字，如：“取消”。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 autocompleteOptions | Array | - | 【讨论中】联想词列表，如果不存在或长度为 0 则不显示联想框。可以使用函数 `label` 自定义联想词为任意内容；也可使用插槽 `option` 定义联想词内容，插槽参数为 `{ option: AutocompleteOption; index: number }`。如果 `group` 值为 `true` 则表示当前项为分组标题。TS 类型：`Array<AutocompleteOption>` `type AutocompleteOption = string \| { label: string \| TNode; group?: boolean }`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/search/type.ts) | N
 center | Boolean | false | 是否居中 | N
+clearTrigger | String | always | 清空图标触发方式，仅在输入框有值时有效。可选项：always / focus | N
 clearable | Boolean | true | 是否可清空 | N
 disabled | Boolean | - | 禁用状态 | N
 focus | Boolean | false | 是否聚焦 | N
 leftIcon | String / Slot / Function | 'search' | 左侧图标。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+maxcharacter | Number | - | 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用 | N
+maxlength | String / Number | - | 用户最多可以输入的文本长度，一个中文等于一个计数长度。默认为空，不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用 | N
 placeholder | String | '' | 占位符 | N
-readonly | Boolean | false | 只读状态 | N
+readonly | Boolean | undefined | 只读状态 | N
+resultList | Array | [] | 预览结果列表。TS 类型：`Array<string>` | N
 shape | String | 'square' | 搜索框形状。可选项：square/round | N
 value | String | - | 值，搜索关键词。支持语法糖 `v-model` 或 `v-model:value` | N
 defaultValue | String | - | 值，搜索关键词。非受控属性 | N
@@ -43,14 +47,17 @@ submit | `(context: { value: string; e: KeyboardEvent })` | 提交时触发，�
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---search-label-color | @font-gray-1 | - 
 --td-search-action-color | @brand-color | - 
 --td-search-bg-color | @bg-color-secondarycontainer | - 
---td-search-clear-icon-color | @font-gray-3 | - 
+--td-search-clear-icon-color | @text-color-placeholder | - 
+--td-search-clear-icon-font-size | 24px | - 
 --td-search-font-size | @font-size-m | - 
 --td-search-height | 40px | - 
---td-search-icon-color | @font-gray-3 | - 
+--td-search-icon-color | @text-color-placeholder | - 
+--td-search-icon-font-size | 24px | - 
+--td-search-label-color | @text-color-primary | - 
 --td-search-padding | 8px 12px | - 
---td-search-placeholder-color | @font-gray-3 | - 
+--td-search-placeholder-color | @text-color-placeholder | - 
+--td-search-result-high-light-color | @brand-color | - 
 --td-search-square-radius | @radius-default | - 
---td-search-text-color | @font-gray-1 | -
+--td-search-text-color | @text-color-primary | - 

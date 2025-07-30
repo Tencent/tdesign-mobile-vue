@@ -8,6 +8,17 @@ import { TdFormItemProps } from '../form/type';
 import { PropType } from 'vue';
 
 export default {
+  /** 是否显示右侧箭头 */
+  arrow: Boolean,
+  /** 表单内容对齐方式：左对齐、右对齐 */
+  contentAlign: {
+    type: String as PropType<TdFormItemProps['contentAlign']>,
+    default: 'left' as TdFormItemProps['contentAlign'],
+    validator(val: TdFormItemProps['contentAlign']): boolean {
+      if (!val) return true;
+      return ['left', 'right'].includes(val);
+    },
+  },
   /** label 原生属性 */
   for: {
     type: String,
@@ -34,15 +45,6 @@ export default {
   labelWidth: {
     type: [String, Number] as PropType<TdFormItemProps['labelWidth']>,
   },
-  /** 表单字段标签对齐方式：左对齐、右对齐 */
-  contentAlign: {
-    type: String as PropType<TdFormItemProps['contentAlign']>,
-    default: 'left' as TdFormItemProps['contentAlign'],
-    validator(val: TdFormItemProps['contentAlign']): boolean {
-      if (!val) return true;
-      return ['left', 'right'].includes(val);
-    },
-  },
   /** 表单字段名称 */
   name: {
     type: [String, Number] as PropType<TdFormItemProps['name']>,
@@ -61,22 +63,4 @@ export default {
     type: Boolean,
     default: undefined,
   },
-  /** 校验状态，可在需要完全自主控制校验状态时使用 */
-  status: {
-    type: String as PropType<TdFormItemProps['status']>,
-    default: '',
-  },
-  /** 校验状态图标，值为 `true` 显示默认图标，默认图标有 成功、失败、警告 等，不同的状态图标不同。`statusIcon` 值为 `false`，不显示图标。`statusIcon` 值类型为渲染函数，则可以自定义右侧状态图标。优先级高级 Form 的 statusIcon */
-  statusIcon: {
-    type: [Boolean, Function] as PropType<TdFormItemProps['statusIcon']>,
-    default: undefined,
-  },
-  /** 是否显示校验成功的边框，默认不显示 */
-  successBorder: Boolean,
-  /** 自定义提示内容，样式跟随 `status` 变动，可在需要完全自主控制校验规则时使用 */
-  tips: {
-    type: [String, Function] as PropType<TdFormItemProps['tips']>,
-  },
-  /** 是否显示右侧箭头 */
-  arrow: Boolean,
 };

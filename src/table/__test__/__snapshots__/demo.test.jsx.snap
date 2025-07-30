@@ -35,6 +35,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
             
             <th
               class="t-table__th-applicant t-table-td--ellipsis"
+              data-colkey="applicant"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -44,6 +45,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
             </th>
             <th
               class="t-table__th-status t-table-td--ellipsis"
+              data-colkey="status"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -53,6 +55,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
             </th>
             <th
               class="t-table__th-channel t-table-td--ellipsis"
+              data-colkey="channel"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -62,6 +65,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
             </th>
             <th
               class="t-table__th-detail.email t-table-td--ellipsis"
+              data-colkey="detail.email"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -76,7 +80,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
           class="t-table__body"
         >
           
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -120,7 +126,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -164,7 +172,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -208,7 +218,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -252,7 +264,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -296,7 +310,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -340,7 +356,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -384,7 +402,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -428,7 +448,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -472,7 +494,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -560,6 +584,7 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
             
             <th
               class="t-table__th-applicant t-table-td--ellipsis"
+              data-colkey="applicant"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -569,6 +594,7 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
             </th>
             <th
               class="t-table__th-status t-table-td--ellipsis"
+              data-colkey="status"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -578,6 +604,7 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
             </th>
             <th
               class="t-table__th-channel t-table-td--ellipsis"
+              data-colkey="channel"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -587,6 +614,7 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
             </th>
             <th
               class="t-table__th-detail.email t-table-td--ellipsis"
+              data-colkey="detail.email"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
@@ -601,7 +629,9 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
           class="t-table__body"
         >
           
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -641,7 +671,9 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -681,7 +713,9 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -721,7 +755,9 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -761,7 +797,9 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -801,7 +839,9 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -841,7 +881,9 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -881,7 +923,9 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -921,7 +965,9 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -961,7 +1007,9 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class="t-table-td--ellipsis"
@@ -997,6 +1045,450 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
                 class="t-table__ellipsis t-text-ellipsis"
               >
                 内容
+              </div>
+            </td>
+            
+          </tr>
+          
+        </tbody>
+      </table>
+      <!---->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Table > Table customRowStyleVue demo works fine 1`] = `
+<div
+  class="example-table"
+>
+  <!-- row-class-name 设置行类名 -->
+  <!-- row-attributes 透传 style 属性到 tr -->
+  <div
+    class="t-table--column-fixed t-table t-vertical-align-middle t-table--bordered"
+    style="position: relative;"
+  >
+    <div
+      class="t-table__content"
+    >
+      <table
+        class="t-table--layout-fixed"
+      >
+        <colgroup>
+          
+          <col
+            style="width: 100px; min-width: undefined;"
+          />
+          <col
+            style="width: 120px; min-width: undefined;"
+          />
+          <col
+            style="width: 120px; min-width: undefined;"
+          />
+          <col
+            style="width: 100px; min-width: undefined;"
+          />
+          <col
+            style="width: 160px; min-width: undefined;"
+          />
+          
+        </colgroup>
+        <thead
+          class="t-table__header t-table--bordered"
+        >
+          <tr>
+            
+            <th
+              class="t-table__th-applicant"
+              data-colkey="applicant"
+            >
+              <div>
+                申请人
+              </div>
+            </th>
+            <th
+              class="t-table__th-status"
+              data-colkey="status"
+            >
+              <div>
+                审批状态
+              </div>
+            </th>
+            <th
+              class="t-table__th-time t-align-center"
+              data-colkey="time"
+            >
+              <div>
+                申请耗时(天)
+              </div>
+            </th>
+            <th
+              class="t-table__th-channel t-align-right"
+              data-colkey="channel"
+            >
+              <div>
+                签署方式
+              </div>
+            </th>
+            <th
+              class="t-table__th-detail.email t-table-td--ellipsis"
+              data-colkey="detail.email"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                邮箱地址
+              </div>
+            </th>
+            
+          </tr>
+        </thead>
+        <tbody
+          class="t-table__body"
+        >
+          
+          <tr
+            class=""
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                贾明
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                <span
+                  aria-disabled="false"
+                  class="t-tag t-tag--success t-tag--round t-tag--light-outline t-tag--medium"
+                  role="button"
+                >
+                  <!---->
+                  <span
+                    class="t-tag__text"
+                  >
+                    
+                    <svg
+                      class="t-icon t-icon-check-circle-filled"
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <path
+                        d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    审批通过
+                    
+                  </span>
+                  <!---->
+                </span>
+              </div>
+            </td>
+            <td
+              class="t-align-center"
+            >
+              <div>
+                2
+              </div>
+            </td>
+            <td
+              class="t-align-right custom-cell-class-name"
+            >
+              <div>
+                电子签署
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                w.cezkdudy@lhll.au
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class="custom-third-class-name"
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                张三
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                <span
+                  aria-disabled="false"
+                  class="t-tag t-tag--danger t-tag--round t-tag--light-outline t-tag--medium"
+                  role="button"
+                >
+                  <!---->
+                  <span
+                    class="t-tag__text"
+                  >
+                    
+                    <svg
+                      class="t-icon t-icon-close-circle-filled"
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <path
+                        d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM8.81753 7.40346L11.9999 10.5858L15.1815 7.40414L16.5957 8.81835L13.4141 12L16.5957 15.1816L15.1815 16.5958L11.9999 13.4142L8.81753 16.5965L7.40332 15.1823L10.5856 12L7.40332 8.81767L8.81753 7.40346Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    审批失败
+                    
+                  </span>
+                  <!---->
+                </span>
+              </div>
+            </td>
+            <td
+              class="t-align-center custom-cell-class-name"
+            >
+              <div>
+                10
+              </div>
+            </td>
+            <td
+              class="t-align-right custom-cell-class-name"
+            >
+              <div>
+                纸质签署
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                r.nmgw@peurezgn.sl
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class=""
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                王芳
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                <span
+                  aria-disabled="false"
+                  class="t-tag t-tag--warning t-tag--round t-tag--light-outline t-tag--medium"
+                  role="button"
+                >
+                  <!---->
+                  <span
+                    class="t-tag__text"
+                  >
+                    
+                    <svg
+                      class="t-icon t-icon-error-circle-filled"
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <path
+                        d="M12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1ZM11.0001 14H13.0001V6.49998H11.0001V14ZM13.004 15.5H11.0001V17.5039H13.004V15.5Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    审批过期
+                    
+                  </span>
+                  <!---->
+                </span>
+              </div>
+            </td>
+            <td
+              class="t-align-center"
+            >
+              <div>
+                1
+              </div>
+            </td>
+            <td
+              class="t-align-right custom-cell-class-name"
+            >
+              <div>
+                纸质签署
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                p.cumx@rampblpa.ru
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class=""
+            style="background-color: rgb(241, 235, 236);"
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                贾明
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                <span
+                  aria-disabled="false"
+                  class="t-tag t-tag--success t-tag--round t-tag--light-outline t-tag--medium"
+                  role="button"
+                >
+                  <!---->
+                  <span
+                    class="t-tag__text"
+                  >
+                    
+                    <svg
+                      class="t-icon t-icon-check-circle-filled"
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <path
+                        d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    审批通过
+                    
+                  </span>
+                  <!---->
+                </span>
+              </div>
+            </td>
+            <td
+              class="t-align-center"
+            >
+              <div>
+                2
+              </div>
+            </td>
+            <td
+              class="t-align-right custom-cell-class-name"
+            >
+              <div>
+                电子签署
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                w.cezkdudy@lhll.au
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class=""
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                张三
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                <span
+                  aria-disabled="false"
+                  class="t-tag t-tag--danger t-tag--round t-tag--light-outline t-tag--medium"
+                  role="button"
+                >
+                  <!---->
+                  <span
+                    class="t-tag__text"
+                  >
+                    
+                    <svg
+                      class="t-icon t-icon-close-circle-filled"
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <path
+                        d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM8.81753 7.40346L11.9999 10.5858L15.1815 7.40414L16.5957 8.81835L13.4141 12L16.5957 15.1816L15.1815 16.5958L11.9999 13.4142L8.81753 16.5965L7.40332 15.1823L10.5856 12L7.40332 8.81767L8.81753 7.40346Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    审批失败
+                    
+                  </span>
+                  <!---->
+                </span>
+              </div>
+            </td>
+            <td
+              class="t-align-center custom-cell-class-name"
+            >
+              <div>
+                10
+              </div>
+            </td>
+            <td
+              class="t-align-right custom-cell-class-name"
+            >
+              <div>
+                纸质签署
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                r.nmgw@peurezgn.sl
               </div>
             </td>
             
@@ -1079,6 +1571,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   
                   <th
                     class="t-table__th-applicant t-table-td--ellipsis"
+                    data-colkey="applicant"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -1088,6 +1581,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </th>
                   <th
                     class="t-table__th-status t-table-td--ellipsis"
+                    data-colkey="status"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -1097,6 +1591,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </th>
                   <th
                     class="t-table__th-channel t-table-td--ellipsis"
+                    data-colkey="channel"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -1106,6 +1601,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </th>
                   <th
                     class="t-table__th-detail.email t-table-td--ellipsis"
+                    data-colkey="detail.email"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -1120,7 +1616,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 class="t-table__body"
               >
                 
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -1164,7 +1662,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -1208,7 +1708,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -1252,7 +1754,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -1296,7 +1800,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -1340,7 +1846,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -1384,7 +1892,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -1428,7 +1938,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -1472,7 +1984,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -1516,7 +2030,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -1621,6 +2137,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   
                   <th
                     class="t-table__th-applicant"
+                    data-colkey="applicant"
                   >
                     <div>
                       标题
@@ -1628,6 +2145,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </th>
                   <th
                     class="t-table__th-status"
+                    data-colkey="status"
                   >
                     <div>
                       标题
@@ -1635,6 +2153,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </th>
                   <th
                     class="t-table__th-channel"
+                    data-colkey="channel"
                   >
                     <div>
                       标题
@@ -1642,6 +2161,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </th>
                   <th
                     class="t-table__th-detail.email"
+                    data-colkey="detail.email"
                   >
                     <div>
                       标题
@@ -1654,7 +2174,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 class="t-table__body"
               >
                 
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -1686,7 +2208,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -1718,7 +2242,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -1750,7 +2276,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -1782,7 +2310,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -1843,7 +2373,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
       
       <div>
         <div
-          class="t-table t-vertical-align-middle t-table--striped"
+          class="t-table--column-fixed t-table t-vertical-align-middle t-table--striped"
           style="position: relative;"
         >
           <div
@@ -1867,6 +2397,12 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 <col
                   style="width: 80px; min-width: undefined;"
                 />
+                <col
+                  style="width: 80px; min-width: undefined;"
+                />
+                <col
+                  style="width: 80px; min-width: undefined;"
+                />
                 
               </colgroup>
               <thead
@@ -1876,6 +2412,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   
                   <th
                     class="t-table__th-applicant"
+                    data-colkey="applicant"
                   >
                     <div>
                       标题
@@ -1883,6 +2420,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </th>
                   <th
                     class="t-table__th-status"
+                    data-colkey="status"
                   >
                     <div>
                       标题
@@ -1890,6 +2428,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </th>
                   <th
                     class="t-table__th-channel"
+                    data-colkey="channel"
                   >
                     <div>
                       标题
@@ -1897,10 +2436,27 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </th>
                   <th
                     class="t-table__th-detail.email t-table-td--ellipsis"
+                    data-colkey="detail.email"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      标题
+                    </div>
+                  </th>
+                  <th
+                    class="t-table__th-operation"
+                    data-colkey="operation"
+                  >
+                    <div>
+                      标题
+                    </div>
+                  </th>
+                  <th
+                    class="t-table__th-more"
+                    data-colkey="more"
+                  >
+                    <div>
                       标题
                     </div>
                   </th>
@@ -1911,7 +2467,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 class="t-table__body"
               >
                 
-                <tr>
+                <tr
+                  class="t-table__row--fixed-top"
+                >
                   
                   <td
                     class=""
@@ -1940,12 +2498,28 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
                       内容
                     </div>
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -1974,12 +2548,28 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
                       内容
                     </div>
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -2008,12 +2598,28 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
                       内容
                     </div>
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -2042,12 +2648,28 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
                       内容
                     </div>
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -2076,12 +2698,28 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
                       内容
                     </div>
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -2110,12 +2748,28 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
                       内容
                     </div>
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -2144,12 +2798,28 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
                       内容
                     </div>
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -2178,12 +2848,28 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
                       内容
                     </div>
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -2212,12 +2898,28 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
                       内容
                     </div>
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class=""
@@ -2246,6 +2948,520 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class=""
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class=""
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class=""
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class=""
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class=""
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class=""
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class=""
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class="t-table__row--without-border-bottom"
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class="t-table__row--fixed-bottom t-table__row--fixed-bottom-first"
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class="t-table__row--fixed-bottom"
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      内容
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
                       内容
                     </div>
                   </td>
@@ -2312,6 +3528,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   
                   <th
                     class="t-table__th-applicant t-table-td--ellipsis"
+                    data-colkey="applicant"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -2321,6 +3538,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </th>
                   <th
                     class="t-table__th-status t-table-td--ellipsis"
+                    data-colkey="status"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -2330,6 +3548,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </th>
                   <th
                     class="t-table__th-channel t-table-td--ellipsis"
+                    data-colkey="channel"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -2339,6 +3558,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </th>
                   <th
                     class="t-table__th-detail.email t-table-td--ellipsis"
+                    data-colkey="detail.email"
                   >
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
@@ -2353,7 +3573,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                 class="t-table__body"
               >
                 
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -2393,7 +3615,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -2433,7 +3657,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -2473,7 +3699,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -2513,7 +3741,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -2553,7 +3783,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -2593,7 +3825,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -2633,7 +3867,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -2673,7 +3909,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -2713,7 +3951,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                   </td>
                   
                 </tr>
-                <tr>
+                <tr
+                  class=""
+                >
                   
                   <td
                     class="t-table-td--ellipsis"
@@ -2749,6 +3989,467 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                       class="t-table__ellipsis t-text-ellipsis"
                     >
                       内容
+                    </div>
+                  </td>
+                  
+                </tr>
+                
+              </tbody>
+            </table>
+            <!---->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        可自定义样式的表格
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot with-padding"
+    >
+      
+      <div
+        class="example-table"
+      >
+        <!-- row-class-name 设置行类名 -->
+        <!-- row-attributes 透传 style 属性到 tr -->
+        <div
+          class="t-table--column-fixed t-table t-vertical-align-middle t-table--bordered"
+          style="position: relative;"
+        >
+          <div
+            class="t-table__content"
+          >
+            <table
+              class="t-table--layout-fixed"
+            >
+              <colgroup>
+                
+                <col
+                  style="width: 100px; min-width: undefined;"
+                />
+                <col
+                  style="width: 120px; min-width: undefined;"
+                />
+                <col
+                  style="width: 120px; min-width: undefined;"
+                />
+                <col
+                  style="width: 100px; min-width: undefined;"
+                />
+                <col
+                  style="width: 160px; min-width: undefined;"
+                />
+                
+              </colgroup>
+              <thead
+                class="t-table__header t-table--bordered"
+              >
+                <tr>
+                  
+                  <th
+                    class="t-table__th-applicant"
+                    data-colkey="applicant"
+                  >
+                    <div>
+                      申请人
+                    </div>
+                  </th>
+                  <th
+                    class="t-table__th-status"
+                    data-colkey="status"
+                  >
+                    <div>
+                      审批状态
+                    </div>
+                  </th>
+                  <th
+                    class="t-table__th-time t-align-center"
+                    data-colkey="time"
+                  >
+                    <div>
+                      申请耗时(天)
+                    </div>
+                  </th>
+                  <th
+                    class="t-table__th-channel t-align-right"
+                    data-colkey="channel"
+                  >
+                    <div>
+                      签署方式
+                    </div>
+                  </th>
+                  <th
+                    class="t-table__th-detail.email t-table-td--ellipsis"
+                    data-colkey="detail.email"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      邮箱地址
+                    </div>
+                  </th>
+                  
+                </tr>
+              </thead>
+              <tbody
+                class="t-table__body"
+              >
+                
+                <tr
+                  class=""
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      贾明
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      <span
+                        aria-disabled="false"
+                        class="t-tag t-tag--success t-tag--round t-tag--light-outline t-tag--medium"
+                        role="button"
+                      >
+                        <!---->
+                        <span
+                          class="t-tag__text"
+                        >
+                          
+                          <svg
+                            class="t-icon t-icon-check-circle-filled"
+                            fill="none"
+                            height="1em"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <path
+                              d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                          审批通过
+                          
+                        </span>
+                        <!---->
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    class="t-align-center"
+                  >
+                    <div>
+                      2
+                    </div>
+                  </td>
+                  <td
+                    class="t-align-right custom-cell-class-name"
+                  >
+                    <div>
+                      电子签署
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      w.cezkdudy@lhll.au
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class="custom-third-class-name"
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      张三
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      <span
+                        aria-disabled="false"
+                        class="t-tag t-tag--danger t-tag--round t-tag--light-outline t-tag--medium"
+                        role="button"
+                      >
+                        <!---->
+                        <span
+                          class="t-tag__text"
+                        >
+                          
+                          <svg
+                            class="t-icon t-icon-close-circle-filled"
+                            fill="none"
+                            height="1em"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <path
+                              d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM8.81753 7.40346L11.9999 10.5858L15.1815 7.40414L16.5957 8.81835L13.4141 12L16.5957 15.1816L15.1815 16.5958L11.9999 13.4142L8.81753 16.5965L7.40332 15.1823L10.5856 12L7.40332 8.81767L8.81753 7.40346Z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                          审批失败
+                          
+                        </span>
+                        <!---->
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    class="t-align-center custom-cell-class-name"
+                  >
+                    <div>
+                      10
+                    </div>
+                  </td>
+                  <td
+                    class="t-align-right custom-cell-class-name"
+                  >
+                    <div>
+                      纸质签署
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      r.nmgw@peurezgn.sl
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class=""
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      王芳
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      <span
+                        aria-disabled="false"
+                        class="t-tag t-tag--warning t-tag--round t-tag--light-outline t-tag--medium"
+                        role="button"
+                      >
+                        <!---->
+                        <span
+                          class="t-tag__text"
+                        >
+                          
+                          <svg
+                            class="t-icon t-icon-error-circle-filled"
+                            fill="none"
+                            height="1em"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <path
+                              d="M12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1ZM11.0001 14H13.0001V6.49998H11.0001V14ZM13.004 15.5H11.0001V17.5039H13.004V15.5Z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                          审批过期
+                          
+                        </span>
+                        <!---->
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    class="t-align-center"
+                  >
+                    <div>
+                      1
+                    </div>
+                  </td>
+                  <td
+                    class="t-align-right custom-cell-class-name"
+                  >
+                    <div>
+                      纸质签署
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      p.cumx@rampblpa.ru
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class=""
+                  style="background-color: rgb(241, 235, 236);"
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      贾明
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      <span
+                        aria-disabled="false"
+                        class="t-tag t-tag--success t-tag--round t-tag--light-outline t-tag--medium"
+                        role="button"
+                      >
+                        <!---->
+                        <span
+                          class="t-tag__text"
+                        >
+                          
+                          <svg
+                            class="t-icon t-icon-check-circle-filled"
+                            fill="none"
+                            height="1em"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <path
+                              d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                          审批通过
+                          
+                        </span>
+                        <!---->
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    class="t-align-center"
+                  >
+                    <div>
+                      2
+                    </div>
+                  </td>
+                  <td
+                    class="t-align-right custom-cell-class-name"
+                  >
+                    <div>
+                      电子签署
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      w.cezkdudy@lhll.au
+                    </div>
+                  </td>
+                  
+                </tr>
+                <tr
+                  class=""
+                >
+                  
+                  <td
+                    class=""
+                  >
+                    <div>
+                      张三
+                    </div>
+                  </td>
+                  <td
+                    class=""
+                  >
+                    <div>
+                      <span
+                        aria-disabled="false"
+                        class="t-tag t-tag--danger t-tag--round t-tag--light-outline t-tag--medium"
+                        role="button"
+                      >
+                        <!---->
+                        <span
+                          class="t-tag__text"
+                        >
+                          
+                          <svg
+                            class="t-icon t-icon-close-circle-filled"
+                            fill="none"
+                            height="1em"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <path
+                              d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM8.81753 7.40346L11.9999 10.5858L15.1815 7.40414L16.5957 8.81835L13.4141 12L16.5957 15.1816L15.1815 16.5958L11.9999 13.4142L8.81753 16.5965L7.40332 15.1823L10.5856 12L7.40332 8.81767L8.81753 7.40346Z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                          审批失败
+                          
+                        </span>
+                        <!---->
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    class="t-align-center custom-cell-class-name"
+                  >
+                    <div>
+                      10
+                    </div>
+                  </td>
+                  <td
+                    class="t-align-right custom-cell-class-name"
+                  >
+                    <div>
+                      纸质签署
+                    </div>
+                  </td>
+                  <td
+                    class="t-table-td--ellipsis"
+                  >
+                    <div
+                      class="t-table__ellipsis t-text-ellipsis"
+                    >
+                      r.nmgw@peurezgn.sl
                     </div>
                   </td>
                   
@@ -2801,6 +4502,7 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
             
             <th
               class="t-table__th-applicant"
+              data-colkey="applicant"
             >
               <div>
                 标题
@@ -2808,6 +4510,7 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
             </th>
             <th
               class="t-table__th-status"
+              data-colkey="status"
             >
               <div>
                 标题
@@ -2815,6 +4518,7 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
             </th>
             <th
               class="t-table__th-channel"
+              data-colkey="channel"
             >
               <div>
                 标题
@@ -2822,6 +4526,7 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
             </th>
             <th
               class="t-table__th-detail.email"
+              data-colkey="detail.email"
             >
               <div>
                 标题
@@ -2834,7 +4539,9 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
           class="t-table__body"
         >
           
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -2866,7 +4573,9 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -2898,7 +4607,9 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -2930,7 +4641,9 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -2962,7 +4675,9 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -3006,7 +4721,7 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
 exports[`Table > Table stripeVue demo works fine 1`] = `
 <div>
   <div
-    class="t-table t-vertical-align-middle t-table--striped"
+    class="t-table--column-fixed t-table t-vertical-align-middle t-table--striped"
     style="position: relative;"
   >
     <div
@@ -3030,6 +4745,12 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
           <col
             style="width: 80px; min-width: undefined;"
           />
+          <col
+            style="width: 80px; min-width: undefined;"
+          />
+          <col
+            style="width: 80px; min-width: undefined;"
+          />
           
         </colgroup>
         <thead
@@ -3039,6 +4760,7 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             
             <th
               class="t-table__th-applicant"
+              data-colkey="applicant"
             >
               <div>
                 标题
@@ -3046,6 +4768,7 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             </th>
             <th
               class="t-table__th-status"
+              data-colkey="status"
             >
               <div>
                 标题
@@ -3053,6 +4776,7 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             </th>
             <th
               class="t-table__th-channel"
+              data-colkey="channel"
             >
               <div>
                 标题
@@ -3060,10 +4784,27 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
             </th>
             <th
               class="t-table__th-detail.email t-table-td--ellipsis"
+              data-colkey="detail.email"
             >
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                标题
+              </div>
+            </th>
+            <th
+              class="t-table__th-operation"
+              data-colkey="operation"
+            >
+              <div>
+                标题
+              </div>
+            </th>
+            <th
+              class="t-table__th-more"
+              data-colkey="more"
+            >
+              <div>
                 标题
               </div>
             </th>
@@ -3074,7 +4815,9 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
           class="t-table__body"
         >
           
-          <tr>
+          <tr
+            class="t-table__row--fixed-top"
+          >
             
             <td
               class=""
@@ -3103,12 +4846,28 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
                 内容
               </div>
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -3137,12 +4896,28 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
                 内容
               </div>
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -3171,12 +4946,28 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
                 内容
               </div>
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -3205,12 +4996,28 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
                 内容
               </div>
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -3239,12 +5046,28 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
                 内容
               </div>
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -3273,12 +5096,28 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
                 内容
               </div>
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -3307,12 +5146,28 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
                 内容
               </div>
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -3341,12 +5196,28 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
                 内容
               </div>
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -3375,12 +5246,28 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
                 内容
               </div>
             </td>
             
           </tr>
-          <tr>
+          <tr
+            class=""
+          >
             
             <td
               class=""
@@ -3409,6 +5296,520 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class=""
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class=""
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class=""
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class=""
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class=""
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class=""
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class=""
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class="t-table__row--without-border-bottom"
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class="t-table__row--fixed-bottom t-table__row--fixed-bottom-first"
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            
+          </tr>
+          <tr
+            class="t-table__row--fixed-bottom"
+          >
+            
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class="t-table-td--ellipsis"
+            >
+              <div
+                class="t-table__ellipsis t-text-ellipsis"
+              >
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
+                内容
+              </div>
+            </td>
+            <td
+              class=""
+            >
+              <div>
                 内容
               </div>
             </td>

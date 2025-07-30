@@ -8,7 +8,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 block | Boolean | false | make button to be a block-level element | N
 content | String / Slot / Function | - | button's children elements。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-disabled | Boolean | false | disable the button, make it can not be clicked | N
+disabled | Boolean | undefined | disable the button, make it can not be clicked | N
 ghost | Boolean | false | make background-color to be transparent | N
 icon | Slot / Function | - | use it to set left icon in button。Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 loading | Boolean | false | set button to be loading state | N
@@ -18,7 +18,7 @@ size | String | medium | a button has four size。options: extra-small/small/med
 suffix | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 theme | String | default | button theme。options: default/primary/danger/light | N
 type | String | button | type of button element in html。options: submit/reset/button | N
-variant | String | base | button variant。options: base/outline/text | N
+variant | String | base | variant of button。options: base/outline/dashed/text | N
 onClick | Function |  | Typescript：`(e: MouseEvent) => void`<br/>trigger on click | N
 
 ### Button Events
@@ -39,12 +39,9 @@ Name | Default Value | Description
 --td-button-danger-bg-color | @error-color | - 
 --td-button-danger-border-color | @error-color | - 
 --td-button-danger-color | @font-white-1 | - 
---td-button-danger-dashed-border-color | @button-danger-dashed-color | - 
---td-button-danger-dashed-color | @error-color | - 
---td-button-danger-dashed-disabled-color | @button-danger-disabled-color | - 
 --td-button-danger-disabled-bg | @error-color-3 | - 
 --td-button-danger-disabled-border-color | @error-color-3 | - 
---td-button-danger-disabled-color | @font-white-1 | - 
+--td-button-danger-disabled-color | @error-color-disabled | - 
 --td-button-danger-outline-active-bg-color | @bg-color-container-active | - 
 --td-button-danger-outline-active-border-color | @error-color-7 | - 
 --td-button-danger-outline-border-color | @button-danger-outline-color | - 
@@ -57,14 +54,14 @@ Name | Default Value | Description
 --td-button-default-active-border-color | @bg-color-component-active | - 
 --td-button-default-bg-color | @bg-color-component | - 
 --td-button-default-border-color | @bg-color-component | - 
---td-button-default-color | @font-gray-1 | - 
+--td-button-default-color | @text-color-primary | - 
 --td-button-default-disabled-bg | @bg-color-component-disabled | - 
 --td-button-default-disabled-border-color | @bg-color-component-disabled | - 
---td-button-default-disabled-color | @font-gray-4 | - 
+--td-button-default-disabled-color | @text-color-disabled | - 
 --td-button-default-outline-active-bg-color | @bg-color-container-active | - 
 --td-button-default-outline-active-border-color | @component-border | - 
 --td-button-default-outline-border-color | @component-border | - 
---td-button-default-outline-color | @font-gray-1 | - 
+--td-button-default-outline-color | @text-color-primary | - 
 --td-button-default-outline-disabled-color | @component-border | - 
 --td-button-default-text-active-bg-color | @bg-color-container-active | - 
 --td-button-extra-small-font-size | @font-size-base | - 
@@ -73,11 +70,11 @@ Name | Default Value | Description
 --td-button-extra-small-padding-horizontal | 8px | - 
 --td-button-font-weight | 600 | - 
 --td-button-ghost-border-color | @button-ghost-color | - 
---td-button-ghost-color | @bg-color-container | - 
+--td-button-ghost-color | #fff | - 
 --td-button-ghost-danger-border-color | @error-color | - 
 --td-button-ghost-danger-color | @error-color | - 
 --td-button-ghost-danger-hover-color | @error-color-active | - 
---td-button-ghost-disabled-color | rgba(255, 255, 255, .35) | - 
+--td-button-ghost-disabled-color | @font-white-4 | - 
 --td-button-ghost-hover-color | @font-white-2 | - 
 --td-button-ghost-primary-border-color | @brand-color | - 
 --td-button-ghost-primary-color | @brand-color | - 
@@ -113,9 +110,6 @@ Name | Default Value | Description
 --td-button-primary-bg-color | @brand-color | - 
 --td-button-primary-border-color | @brand-color | - 
 --td-button-primary-color | @font-white-1 | - 
---td-button-primary-dashed-border-color | @button-primary-dashed-color | - 
---td-button-primary-dashed-color | @brand-color | - 
---td-button-primary-dashed-disabled-color | @brand-color-disabled | - 
 --td-button-primary-disabled-bg | @brand-color-disabled | - 
 --td-button-primary-disabled-border-color | @brand-color-disabled | - 
 --td-button-primary-disabled-color | @font-white-1 | - 
@@ -130,4 +124,4 @@ Name | Default Value | Description
 --td-button-small-font-size | @font-size-base | - 
 --td-button-small-height | 32px | - 
 --td-button-small-icon-font-size | 18px | - 
---td-button-small-padding-horizontal | 12px | -
+--td-button-small-padding-horizontal | 12px | - 

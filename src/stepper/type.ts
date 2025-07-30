@@ -14,7 +14,6 @@ export interface TdStepperProps {
   disableInput?: boolean;
   /**
    * 禁用全部操作
-   * @default false
    */
   disabled?: boolean;
   /**

@@ -1,4 +1,4 @@
-import { computed, defineComponent } from 'vue';
+import { computed, defineComponent, onBeforeUnmount, onMounted, ref } from 'vue';
 import config from '../config';
 import CountDownProps from './props';
 import { useCountDown } from '../shared/useCountDown';
@@ -6,10 +6,9 @@ import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-count-down`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-count-down`,
   props: CountDownProps,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();
@@ -19,13 +18,22 @@ export default defineComponent({
       `${countDownClass.value}--${props.theme}`,
       `${countDownClass.value}--${props.size}`,
     ]);
-
-    const { showTimes } = useCountDown(props);
+    const visibility = ref(true);
+    const visibilitychangeListener = () => {
+      visibility.value = !document.hidden;
+    };
+    onMounted(() => {
+      document.addEventListener('visibilitychange', visibilitychangeListener, false);
+    });
+    onBeforeUnmount(() => {
+      document.removeEventListener('visibilitychange', visibilitychangeListener, false);
+    });
+    const { showTimes } = useCountDown(props, visibility);
     return () => {
       const renderContent = () => {
         const content = renderTNodeJSX('content');
 
-        if (props.content !== 'default' && content) {
+        if (content !== 'default' && content) {
           return content;
         }
 

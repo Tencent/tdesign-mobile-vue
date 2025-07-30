@@ -153,7 +153,7 @@ describe('Collapse', () => {
           setup() {
             return () => (
               <Collapse theme={theme}>
-                <CollapsePanel ref="1" value="1"/>
+                <CollapsePanel ref="1" value="1" />
               </Collapse>
             );
           },
@@ -248,7 +248,7 @@ describe('Collapse', () => {
           setup() {
             return () => (
               <Collapse>
-                <CollapsePanel ref="1" value="1" placement={placement}/>
+                <CollapsePanel ref="1" value="1" placement={placement} />
               </Collapse>
             );
           },
@@ -258,6 +258,24 @@ describe('Collapse', () => {
           expect($CollapsePanel.classes()).toContain(`t-collapse-panel--${placement}`);
         }
       });
+    });
+
+    test('destroyOnCollapse', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Collapse>
+              <CollapsePanel ref="1" value="1" destroyOnCollapse />
+              <CollapsePanel ref="2" value="2" destroyOnCollapse />
+            </Collapse>
+          );
+        },
+      });
+      expect(wrapper.findAll('.t-collapse-panel__content')).toHaveLength(0);
+      const panel = wrapper.findComponent({ ref: '1' });
+
+      await panel.find('.t-collapse-panel__header').trigger('click');
+      expect(wrapper.findAll('.t-collapse-panel__content')).toHaveLength(1);
     });
   });
 });

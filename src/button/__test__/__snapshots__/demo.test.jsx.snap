@@ -7,12 +7,12 @@ exports[`Button > Button baseVue demo works fine 1`] = `
   
   <div
     class="row"
-    data-v-61a49c84=""
+    data-v-a8b06499=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-      data-v-61a49c84=""
+      data-v-a8b06499=""
       role="button"
       type="button"
     >
@@ -29,7 +29,7 @@ exports[`Button > Button baseVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
-      data-v-61a49c84=""
+      data-v-a8b06499=""
       role="button"
       type="button"
     >
@@ -46,7 +46,7 @@ exports[`Button > Button baseVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
-      data-v-61a49c84=""
+      data-v-a8b06499=""
       role="button"
       type="button"
     >
@@ -63,12 +63,12 @@ exports[`Button > Button baseVue demo works fine 1`] = `
   </div>
   <div
     class="row"
-    data-v-61a49c84=""
+    data-v-a8b06499=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
-      data-v-61a49c84=""
+      data-v-a8b06499=""
       role="button"
       type="button"
     >
@@ -84,8 +84,25 @@ exports[`Button > Button baseVue demo works fine 1`] = `
     </button>
     <button
       aria-disabled="false"
+      class="t-button t-button--size-large t-button--dashed t-button--primary t-button--rectangle"
+      data-v-a8b06499=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        虚框按钮
+        
+      </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
       class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle"
-      data-v-61a49c84=""
+      data-v-a8b06499=""
       role="button"
       type="button"
     >
@@ -107,12 +124,12 @@ exports[`Button > Button baseVue demo works fine 1`] = `
 exports[`Button > Button blockVue demo works fine 1`] = `
 <div
   class="row"
-  data-v-75d4286a=""
+  data-v-df7bddf2=""
 >
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block"
-    data-v-75d4286a=""
+    data-v-df7bddf2=""
     role="button"
     type="button"
   >
@@ -132,12 +149,12 @@ exports[`Button > Button blockVue demo works fine 1`] = `
 exports[`Button > Button ghostVue demo works fine 1`] = `
 <div
   class="row"
-  data-v-511c0528=""
+  data-v-3efbf598=""
 >
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--ghost"
-    data-v-511c0528=""
+    data-v-3efbf598=""
     role="button"
     type="button"
   >
@@ -154,7 +171,7 @@ exports[`Button > Button ghostVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle t-button--ghost"
-    data-v-511c0528=""
+    data-v-3efbf598=""
     role="button"
     type="button"
   >
@@ -171,7 +188,7 @@ exports[`Button > Button ghostVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle t-button--ghost"
-    data-v-511c0528=""
+    data-v-3efbf598=""
     role="button"
     type="button"
   >
@@ -191,12 +208,12 @@ exports[`Button > Button ghostVue demo works fine 1`] = `
 exports[`Button > Button groupVue demo works fine 1`] = `
 <div
   class="row"
-  data-v-2d21dd48=""
+  data-v-8e466c6d=""
 >
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
-    data-v-2d21dd48=""
+    data-v-8e466c6d=""
     role="button"
     type="button"
   >
@@ -213,7 +230,7 @@ exports[`Button > Button groupVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-    data-v-2d21dd48=""
+    data-v-8e466c6d=""
     role="button"
     type="button"
   >
@@ -233,12 +250,12 @@ exports[`Button > Button groupVue demo works fine 1`] = `
 exports[`Button > Button iconVue demo works fine 1`] = `
 <div
   class="row"
-  data-v-c77683a8=""
+  data-v-c0b784f5=""
 >
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-    data-v-c77683a8=""
+    data-v-c0b784f5=""
     role="button"
     type="button"
   >
@@ -251,7 +268,7 @@ exports[`Button > Button iconVue demo works fine 1`] = `
       width="1em"
     >
       <path
-        d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
+        d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
         fill="currentColor"
       />
     </svg>
@@ -267,7 +284,7 @@ exports[`Button > Button iconVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--loading"
-    data-v-c77683a8=""
+    data-v-c0b784f5=""
     role="button"
     type="button"
   >
@@ -310,7 +327,7 @@ exports[`Button > Button iconVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--square"
-    data-v-c77683a8=""
+    data-v-c0b784f5=""
     role="button"
     type="button"
   >
@@ -323,7 +340,7 @@ exports[`Button > Button iconVue demo works fine 1`] = `
       width="1em"
     >
       <path
-        d="M15.1 5.9a6.5 6.5 0 10-9.2 9.2 6.5 6.5 0 009.2-9.2zM4.49 4.5a8.5 8.5 0 0112.69 11.27l5.34 5.35-1.41 1.41-5.35-5.34A8.5 8.5 0 014.5 4.49z"
+        d="M15.0962 5.90381C12.5578 3.3654 8.44221 3.3654 5.90381 5.90381C3.3654 8.44221 3.3654 12.5578 5.90381 15.0962C8.44221 17.6346 12.5578 17.6346 15.0962 15.0962C17.6346 12.5578 17.6346 8.44221 15.0962 5.90381ZM4.48959 4.48959C7.80905 1.17014 13.191 1.17014 16.5104 4.48959C19.5906 7.56983 19.8126 12.4259 17.1764 15.7621L22.5208 21.1066L21.1066 22.5208L15.7621 17.1764C12.4259 19.8126 7.56983 19.5906 4.48959 16.5104C1.17014 13.191 1.17014 7.80905 4.48959 4.48959Z"
         fill="currentColor"
       />
     </svg>
@@ -340,23 +357,23 @@ exports[`Button > Button iconVue demo works fine 1`] = `
 exports[`Button > Button mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-7c375b15=""
+  data-v-e07177be=""
 >
   <h1
     class="title"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     Button 按钮
   </h1>
   <p
     class="summary"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     按钮用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -379,12 +396,12 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       <div
         class="row"
-        data-v-61a49c84=""
+        data-v-a8b06499=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-          data-v-61a49c84=""
+          data-v-a8b06499=""
           role="button"
           type="button"
         >
@@ -401,7 +418,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
-          data-v-61a49c84=""
+          data-v-a8b06499=""
           role="button"
           type="button"
         >
@@ -418,7 +435,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
-          data-v-61a49c84=""
+          data-v-a8b06499=""
           role="button"
           type="button"
         >
@@ -435,12 +452,12 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       </div>
       <div
         class="row"
-        data-v-61a49c84=""
+        data-v-a8b06499=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
-          data-v-61a49c84=""
+          data-v-a8b06499=""
           role="button"
           type="button"
         >
@@ -456,8 +473,25 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         </button>
         <button
           aria-disabled="false"
+          class="t-button t-button--size-large t-button--dashed t-button--primary t-button--rectangle"
+          data-v-a8b06499=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            虚框按钮
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
           class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle"
-          data-v-61a49c84=""
+          data-v-a8b06499=""
           role="button"
           type="button"
         >
@@ -478,7 +512,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -496,13 +530,13 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       <div
         class="row"
-        data-v-7c375b15=""
-        data-v-c77683a8=""
+        data-v-c0b784f5=""
+        data-v-e07177be=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-          data-v-c77683a8=""
+          data-v-c0b784f5=""
           role="button"
           type="button"
         >
@@ -515,7 +549,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
+              d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
               fill="currentColor"
             />
           </svg>
@@ -531,7 +565,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--loading"
-          data-v-c77683a8=""
+          data-v-c0b784f5=""
           role="button"
           type="button"
         >
@@ -574,7 +608,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--square"
-          data-v-c77683a8=""
+          data-v-c0b784f5=""
           role="button"
           type="button"
         >
@@ -587,7 +621,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M15.1 5.9a6.5 6.5 0 10-9.2 9.2 6.5 6.5 0 009.2-9.2zM4.49 4.5a8.5 8.5 0 0112.69 11.27l5.34 5.35-1.41 1.41-5.35-5.34A8.5 8.5 0 014.5 4.49z"
+              d="M15.0962 5.90381C12.5578 3.3654 8.44221 3.3654 5.90381 5.90381C3.3654 8.44221 3.3654 12.5578 5.90381 15.0962C8.44221 17.6346 12.5578 17.6346 15.0962 15.0962C17.6346 12.5578 17.6346 8.44221 15.0962 5.90381ZM4.48959 4.48959C7.80905 1.17014 13.191 1.17014 16.5104 4.48959C19.5906 7.56983 19.8126 12.4259 17.1764 15.7621L22.5208 21.1066L21.1066 22.5208L15.7621 17.1764C12.4259 19.8126 7.56983 19.5906 4.48959 16.5104C1.17014 13.191 1.17014 7.80905 4.48959 4.48959Z"
               fill="currentColor"
             />
           </svg>
@@ -604,7 +638,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -622,13 +656,13 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       <div
         class="row"
-        data-v-511c0528=""
-        data-v-7c375b15=""
+        data-v-3efbf598=""
+        data-v-e07177be=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--ghost"
-          data-v-511c0528=""
+          data-v-3efbf598=""
           role="button"
           type="button"
         >
@@ -645,7 +679,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle t-button--ghost"
-          data-v-511c0528=""
+          data-v-3efbf598=""
           role="button"
           type="button"
         >
@@ -662,7 +696,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle t-button--ghost"
-          data-v-511c0528=""
+          data-v-3efbf598=""
           role="button"
           type="button"
         >
@@ -682,7 +716,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -700,13 +734,13 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       <div
         class="row"
-        data-v-2d21dd48=""
-        data-v-7c375b15=""
+        data-v-8e466c6d=""
+        data-v-e07177be=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
-          data-v-2d21dd48=""
+          data-v-8e466c6d=""
           role="button"
           type="button"
         >
@@ -723,7 +757,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-          data-v-2d21dd48=""
+          data-v-8e466c6d=""
           role="button"
           type="button"
         >
@@ -743,7 +777,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -761,13 +795,13 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       <div
         class="row"
-        data-v-75d4286a=""
-        data-v-7c375b15=""
+        data-v-df7bddf2=""
+        data-v-e07177be=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block"
-          data-v-75d4286a=""
+          data-v-df7bddf2=""
           role="button"
           type="button"
         >
@@ -787,7 +821,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -810,12 +844,12 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       <div
         class="row"
-        data-v-096a7265=""
+        data-v-1d4957ba=""
       >
         <button
           aria-disabled="true"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--disabled"
-          data-v-096a7265=""
+          data-v-1d4957ba=""
           disabled=""
           role="button"
           type="button"
@@ -833,7 +867,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="true"
           class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle t-button--disabled"
-          data-v-096a7265=""
+          data-v-1d4957ba=""
           disabled=""
           role="button"
           type="button"
@@ -851,7 +885,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="true"
           class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle t-button--disabled"
-          data-v-096a7265=""
+          data-v-1d4957ba=""
           disabled=""
           role="button"
           type="button"
@@ -869,12 +903,12 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       </div>
       <div
         class="row"
-        data-v-096a7265=""
+        data-v-1d4957ba=""
       >
         <button
           aria-disabled="true"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--disabled"
-          data-v-096a7265=""
+          data-v-1d4957ba=""
           disabled=""
           role="button"
           type="button"
@@ -891,8 +925,26 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         </button>
         <button
           aria-disabled="true"
+          class="t-button t-button--size-large t-button--dashed t-button--primary t-button--rectangle t-button--disabled"
+          data-v-1d4957ba=""
+          disabled=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            虚框按钮
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="true"
           class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-button--disabled"
-          data-v-096a7265=""
+          data-v-1d4957ba=""
           disabled=""
           role="button"
           type="button"
@@ -914,7 +966,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -936,13 +988,13 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       <div
         class="row"
-        data-v-0a874498=""
-        data-v-7c375b15=""
+        data-v-78d504d8=""
+        data-v-e07177be=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-          data-v-0a874498=""
+          data-v-78d504d8=""
           role="button"
           type="button"
         >
@@ -959,7 +1011,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
-          data-v-0a874498=""
+          data-v-78d504d8=""
           role="button"
           type="button"
         >
@@ -976,7 +1028,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
-          data-v-0a874498=""
+          data-v-78d504d8=""
           role="button"
           type="button"
         >
@@ -993,7 +1045,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-extra-small t-button--base t-button--primary t-button--rectangle"
-          data-v-0a874498=""
+          data-v-78d504d8=""
           role="button"
           type="button"
         >
@@ -1013,7 +1065,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1032,12 +1084,12 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       <div
         class="row"
-        data-v-3fc3ed04=""
+        data-v-3e6d1641=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-          data-v-3fc3ed04=""
+          data-v-3e6d1641=""
           role="button"
           type="button"
         >
@@ -1055,7 +1107,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
           aria-disabled="false"
           aria-label="搜索"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--square"
-          data-v-3fc3ed04=""
+          data-v-3e6d1641=""
           role="button"
           type="button"
         >
@@ -1068,7 +1120,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M15.1 5.9a6.5 6.5 0 10-9.2 9.2 6.5 6.5 0 009.2-9.2zM4.49 4.5a8.5 8.5 0 0112.69 11.27l5.34 5.35-1.41 1.41-5.35-5.34A8.5 8.5 0 014.5 4.49z"
+              d="M15.0962 5.90381C12.5578 3.3654 8.44221 3.3654 5.90381 5.90381C3.3654 8.44221 3.3654 12.5578 5.90381 15.0962C8.44221 17.6346 12.5578 17.6346 15.0962 15.0962C17.6346 12.5578 17.6346 8.44221 15.0962 5.90381ZM4.48959 4.48959C7.80905 1.17014 13.191 1.17014 16.5104 4.48959C19.5906 7.56983 19.8126 12.4259 17.1764 15.7621L22.5208 21.1066L21.1066 22.5208L15.7621 17.1764C12.4259 19.8126 7.56983 19.5906 4.48959 16.5104C1.17014 13.191 1.17014 7.80905 4.48959 4.48959Z"
               fill="currentColor"
             />
           </svg>
@@ -1082,7 +1134,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--round"
-          data-v-3fc3ed04=""
+          data-v-3e6d1641=""
           role="button"
           type="button"
         >
@@ -1100,7 +1152,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
           aria-disabled="false"
           aria-label="搜索"
           class="t-button t-button--size-large t-button--base t-button--primary t-button--circle"
-          data-v-3fc3ed04=""
+          data-v-3e6d1641=""
           role="button"
           type="button"
         >
@@ -1113,7 +1165,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M15.1 5.9a6.5 6.5 0 10-9.2 9.2 6.5 6.5 0 009.2-9.2zM4.49 4.5a8.5 8.5 0 0112.69 11.27l5.34 5.35-1.41 1.41-5.35-5.34A8.5 8.5 0 014.5 4.49z"
+              d="M15.0962 5.90381C12.5578 3.3654 8.44221 3.3654 5.90381 5.90381C3.3654 8.44221 3.3654 12.5578 5.90381 15.0962C8.44221 17.6346 12.5578 17.6346 15.0962 15.0962C17.6346 12.5578 17.6346 8.44221 15.0962 5.90381ZM4.48959 4.48959C7.80905 1.17014 13.191 1.17014 16.5104 4.48959C19.5906 7.56983 19.8126 12.4259 17.1764 15.7621L22.5208 21.1066L21.1066 22.5208L15.7621 17.1764C12.4259 19.8126 7.56983 19.5906 4.48959 16.5104C1.17014 13.191 1.17014 7.80905 4.48959 4.48959Z"
               fill="currentColor"
             />
           </svg>
@@ -1128,7 +1180,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block rectangle-button"
-        data-v-3fc3ed04=""
+        data-v-3e6d1641=""
         role="button"
         type="button"
       >
@@ -1148,7 +1200,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-7c375b15=""
+    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1164,232 +1216,304 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       class="tdesign-mobile-demo-block__slot"
     >
       
-      
       <div
-        class="row"
-        data-v-42dcdba6=""
+        class="section-theme"
+        data-v-0e2e31f3=""
+        data-v-e07177be=""
       >
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
+        <div
+          class="row"
+          data-v-0e2e31f3=""
         >
-          <!---->
-          <span
-            class="t-button__content"
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
+            data-v-0e2e31f3=""
+            role="button"
+            type="button"
           >
-            
-            填充按钮
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              填充按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle"
+            data-v-0e2e31f3=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              描边按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--dashed t-button--default t-button--rectangle"
+            data-v-0e2e31f3=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              虚框按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle"
+            data-v-0e2e31f3=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              文字按钮
+              
+            </span>
+            <!---->
+          </button>
+        </div>
+        <div
+          class="row"
+          data-v-0e2e31f3=""
         >
-          <!---->
-          <span
-            class="t-button__content"
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
+            data-v-0e2e31f3=""
+            role="button"
+            type="button"
           >
-            
-            描边按钮
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              填充按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
+            data-v-0e2e31f3=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              描边按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--dashed t-button--primary t-button--rectangle"
+            data-v-0e2e31f3=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              虚框按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle"
+            data-v-0e2e31f3=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              文字按钮
+              
+            </span>
+            <!---->
+          </button>
+        </div>
+        <div
+          class="row"
+          data-v-0e2e31f3=""
         >
-          <!---->
-          <span
-            class="t-button__content"
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle"
+            data-v-0e2e31f3=""
+            role="button"
+            type="button"
           >
-            
-            文字按钮
-            
-          </span>
-          <!---->
-        </button>
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              填充按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--outline t-button--danger t-button--rectangle"
+            data-v-0e2e31f3=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              描边按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--dashed t-button--danger t-button--rectangle"
+            data-v-0e2e31f3=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              虚框按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--text t-button--danger t-button--rectangle"
+            data-v-0e2e31f3=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              文字按钮
+              
+            </span>
+            <!---->
+          </button>
+        </div>
+        <div
+          class="row"
+          data-v-0e2e31f3=""
+        >
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
+            data-v-0e2e31f3=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              填充按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--outline t-button--light t-button--rectangle"
+            data-v-0e2e31f3=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              描边按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--dashed t-button--light t-button--rectangle"
+            data-v-0e2e31f3=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              虚框按钮
+              
+            </span>
+            <!---->
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--text t-button--light t-button--rectangle"
+            data-v-0e2e31f3=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              文字按钮
+              
+            </span>
+            <!---->
+          </button>
+        </div>
       </div>
-      <div
-        class="row"
-        data-v-42dcdba6=""
-      >
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            填充按钮
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            描边按钮
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            文字按钮
-            
-          </span>
-          <!---->
-        </button>
-      </div>
-      <div
-        class="row"
-        data-v-42dcdba6=""
-      >
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            填充按钮
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--danger t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            描边按钮
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--text t-button--danger t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            文字按钮
-            
-          </span>
-          <!---->
-        </button>
-      </div>
-      <div
-        class="row"
-        data-v-42dcdba6=""
-      >
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            填充按钮
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--light t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            描边按钮
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--text t-button--light t-button--rectangle"
-          data-v-42dcdba6=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            文字按钮
-            
-          </span>
-          <!---->
-        </button>
-      </div>
-      
       
     </div>
   </div>
@@ -1403,12 +1527,12 @@ exports[`Button > Button shapeVue demo works fine 1`] = `
   
   <div
     class="row"
-    data-v-3fc3ed04=""
+    data-v-3e6d1641=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-      data-v-3fc3ed04=""
+      data-v-3e6d1641=""
       role="button"
       type="button"
     >
@@ -1426,7 +1550,7 @@ exports[`Button > Button shapeVue demo works fine 1`] = `
       aria-disabled="false"
       aria-label="搜索"
       class="t-button t-button--size-large t-button--base t-button--primary t-button--square"
-      data-v-3fc3ed04=""
+      data-v-3e6d1641=""
       role="button"
       type="button"
     >
@@ -1439,7 +1563,7 @@ exports[`Button > Button shapeVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M15.1 5.9a6.5 6.5 0 10-9.2 9.2 6.5 6.5 0 009.2-9.2zM4.49 4.5a8.5 8.5 0 0112.69 11.27l5.34 5.35-1.41 1.41-5.35-5.34A8.5 8.5 0 014.5 4.49z"
+          d="M15.0962 5.90381C12.5578 3.3654 8.44221 3.3654 5.90381 5.90381C3.3654 8.44221 3.3654 12.5578 5.90381 15.0962C8.44221 17.6346 12.5578 17.6346 15.0962 15.0962C17.6346 12.5578 17.6346 8.44221 15.0962 5.90381ZM4.48959 4.48959C7.80905 1.17014 13.191 1.17014 16.5104 4.48959C19.5906 7.56983 19.8126 12.4259 17.1764 15.7621L22.5208 21.1066L21.1066 22.5208L15.7621 17.1764C12.4259 19.8126 7.56983 19.5906 4.48959 16.5104C1.17014 13.191 1.17014 7.80905 4.48959 4.48959Z"
           fill="currentColor"
         />
       </svg>
@@ -1453,7 +1577,7 @@ exports[`Button > Button shapeVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--primary t-button--round"
-      data-v-3fc3ed04=""
+      data-v-3e6d1641=""
       role="button"
       type="button"
     >
@@ -1471,7 +1595,7 @@ exports[`Button > Button shapeVue demo works fine 1`] = `
       aria-disabled="false"
       aria-label="搜索"
       class="t-button t-button--size-large t-button--base t-button--primary t-button--circle"
-      data-v-3fc3ed04=""
+      data-v-3e6d1641=""
       role="button"
       type="button"
     >
@@ -1484,7 +1608,7 @@ exports[`Button > Button shapeVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M15.1 5.9a6.5 6.5 0 10-9.2 9.2 6.5 6.5 0 009.2-9.2zM4.49 4.5a8.5 8.5 0 0112.69 11.27l5.34 5.35-1.41 1.41-5.35-5.34A8.5 8.5 0 014.5 4.49z"
+          d="M15.0962 5.90381C12.5578 3.3654 8.44221 3.3654 5.90381 5.90381C3.3654 8.44221 3.3654 12.5578 5.90381 15.0962C8.44221 17.6346 12.5578 17.6346 15.0962 15.0962C17.6346 12.5578 17.6346 8.44221 15.0962 5.90381ZM4.48959 4.48959C7.80905 1.17014 13.191 1.17014 16.5104 4.48959C19.5906 7.56983 19.8126 12.4259 17.1764 15.7621L22.5208 21.1066L21.1066 22.5208L15.7621 17.1764C12.4259 19.8126 7.56983 19.5906 4.48959 16.5104C1.17014 13.191 1.17014 7.80905 4.48959 4.48959Z"
           fill="currentColor"
         />
       </svg>
@@ -1499,7 +1623,7 @@ exports[`Button > Button shapeVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block rectangle-button"
-    data-v-3fc3ed04=""
+    data-v-3e6d1641=""
     role="button"
     type="button"
   >
@@ -1520,12 +1644,12 @@ exports[`Button > Button shapeVue demo works fine 1`] = `
 exports[`Button > Button sizeVue demo works fine 1`] = `
 <div
   class="row"
-  data-v-0a874498=""
+  data-v-78d504d8=""
 >
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-    data-v-0a874498=""
+    data-v-78d504d8=""
     role="button"
     type="button"
   >
@@ -1542,7 +1666,7 @@ exports[`Button > Button sizeVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
-    data-v-0a874498=""
+    data-v-78d504d8=""
     role="button"
     type="button"
   >
@@ -1559,7 +1683,7 @@ exports[`Button > Button sizeVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
-    data-v-0a874498=""
+    data-v-78d504d8=""
     role="button"
     type="button"
   >
@@ -1576,7 +1700,7 @@ exports[`Button > Button sizeVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-button--size-extra-small t-button--base t-button--primary t-button--rectangle"
-    data-v-0a874498=""
+    data-v-78d504d8=""
     role="button"
     type="button"
   >
@@ -1600,12 +1724,12 @@ exports[`Button > Button statusVue demo works fine 1`] = `
   
   <div
     class="row"
-    data-v-096a7265=""
+    data-v-1d4957ba=""
   >
     <button
       aria-disabled="true"
       class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--disabled"
-      data-v-096a7265=""
+      data-v-1d4957ba=""
       disabled=""
       role="button"
       type="button"
@@ -1623,7 +1747,7 @@ exports[`Button > Button statusVue demo works fine 1`] = `
     <button
       aria-disabled="true"
       class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle t-button--disabled"
-      data-v-096a7265=""
+      data-v-1d4957ba=""
       disabled=""
       role="button"
       type="button"
@@ -1641,7 +1765,7 @@ exports[`Button > Button statusVue demo works fine 1`] = `
     <button
       aria-disabled="true"
       class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle t-button--disabled"
-      data-v-096a7265=""
+      data-v-1d4957ba=""
       disabled=""
       role="button"
       type="button"
@@ -1659,12 +1783,12 @@ exports[`Button > Button statusVue demo works fine 1`] = `
   </div>
   <div
     class="row"
-    data-v-096a7265=""
+    data-v-1d4957ba=""
   >
     <button
       aria-disabled="true"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--disabled"
-      data-v-096a7265=""
+      data-v-1d4957ba=""
       disabled=""
       role="button"
       type="button"
@@ -1681,8 +1805,26 @@ exports[`Button > Button statusVue demo works fine 1`] = `
     </button>
     <button
       aria-disabled="true"
+      class="t-button t-button--size-large t-button--dashed t-button--primary t-button--rectangle t-button--disabled"
+      data-v-1d4957ba=""
+      disabled=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        虚框按钮
+        
+      </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="true"
       class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-button--disabled"
-      data-v-096a7265=""
+      data-v-1d4957ba=""
       disabled=""
       role="button"
       type="button"
@@ -1704,17 +1846,17 @@ exports[`Button > Button statusVue demo works fine 1`] = `
 
 exports[`Button > Button themeVue demo works fine 1`] = `
 <div
-  data-v-app=""
+  class="section-theme"
+  data-v-0e2e31f3=""
 >
-  
   <div
     class="row"
-    data-v-42dcdba6=""
+    data-v-0e2e31f3=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1731,7 +1873,7 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1747,8 +1889,25 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     </button>
     <button
       aria-disabled="false"
+      class="t-button t-button--size-large t-button--dashed t-button--default t-button--rectangle"
+      data-v-0e2e31f3=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        虚框按钮
+        
+      </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
       class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1765,12 +1924,12 @@ exports[`Button > Button themeVue demo works fine 1`] = `
   </div>
   <div
     class="row"
-    data-v-42dcdba6=""
+    data-v-0e2e31f3=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1787,7 +1946,7 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1803,8 +1962,25 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     </button>
     <button
       aria-disabled="false"
+      class="t-button t-button--size-large t-button--dashed t-button--primary t-button--rectangle"
+      data-v-0e2e31f3=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        虚框按钮
+        
+      </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
       class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1821,12 +1997,12 @@ exports[`Button > Button themeVue demo works fine 1`] = `
   </div>
   <div
     class="row"
-    data-v-42dcdba6=""
+    data-v-0e2e31f3=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1843,7 +2019,7 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--danger t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1859,8 +2035,25 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     </button>
     <button
       aria-disabled="false"
+      class="t-button t-button--size-large t-button--dashed t-button--danger t-button--rectangle"
+      data-v-0e2e31f3=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        虚框按钮
+        
+      </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
       class="t-button t-button--size-large t-button--text t-button--danger t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1877,12 +2070,12 @@ exports[`Button > Button themeVue demo works fine 1`] = `
   </div>
   <div
     class="row"
-    data-v-42dcdba6=""
+    data-v-0e2e31f3=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1899,7 +2092,7 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--light t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1915,8 +2108,25 @@ exports[`Button > Button themeVue demo works fine 1`] = `
     </button>
     <button
       aria-disabled="false"
+      class="t-button t-button--size-large t-button--dashed t-button--light t-button--rectangle"
+      data-v-0e2e31f3=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        虚框按钮
+        
+      </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
       class="t-button t-button--size-large t-button--text t-button--light t-button--rectangle"
-      data-v-42dcdba6=""
+      data-v-0e2e31f3=""
       role="button"
       type="button"
     >
@@ -1931,6 +2141,5 @@ exports[`Button > Button themeVue demo works fine 1`] = `
       <!---->
     </button>
   </div>
-  
 </div>
 `;

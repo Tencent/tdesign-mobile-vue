@@ -21,7 +21,7 @@ exports[`Textarea > Textarea autosizeVue demo works fine 1`] = `
 exports[`Textarea > Textarea baseVue demo works fine 1`] = `
 <div
   class="t-textarea t-textarea--layout-horizontal textarea-example"
-  data-v-dc028088=""
+  data-v-b888150c=""
 >
   <!---->
   <div
@@ -44,11 +44,11 @@ exports[`Textarea > Textarea cardVue demo works fine 1`] = `
   
   <div
     class="textarea-example"
-    data-v-0fc6070a=""
+    data-v-7c5f1617=""
   >
     <div
       class="t-textarea t-textarea--layout-vertical textarea"
-      data-v-0fc6070a=""
+      data-v-7c5f1617=""
     >
       <div
         class="t-textarea__label"
@@ -60,13 +60,13 @@ exports[`Textarea > Textarea cardVue demo works fine 1`] = `
       >
         <textarea
           class="t-textarea__wrapper-inner"
-          maxlength="500"
           name=""
           placeholder="请输入文字"
         />
         <div
           class="t-textarea__indicator"
         >
+           
           0/500
         </div>
       </div>
@@ -74,17 +74,17 @@ exports[`Textarea > Textarea cardVue demo works fine 1`] = `
   </div>
   <div
     class="textarea-example card"
-    data-v-0fc6070a=""
+    data-v-7c5f1617=""
   >
     <div
       class="textarea-example__summary"
-      data-v-0fc6070a=""
+      data-v-7c5f1617=""
     >
       卡片样式
     </div>
     <div
       class="t-textarea t-textarea--layout-horizontal textarea"
-      data-v-0fc6070a=""
+      data-v-7c5f1617=""
     >
       <div
         class="t-textarea__label"
@@ -96,13 +96,13 @@ exports[`Textarea > Textarea cardVue demo works fine 1`] = `
       >
         <textarea
           class="t-textarea__wrapper-inner"
-          maxlength="500"
           name=""
           placeholder="请输入文字"
         />
         <div
           class="t-textarea__indicator"
         >
+           
           0/500
         </div>
       </div>
@@ -115,17 +115,17 @@ exports[`Textarea > Textarea cardVue demo works fine 1`] = `
 exports[`Textarea > Textarea customVue demo works fine 1`] = `
 <div
   class="textarea-example"
-  data-v-1eb98b9c=""
+  data-v-b36a81b3=""
 >
   <text
     class="textarea-example__label"
-    data-v-1eb98b9c=""
+    data-v-b36a81b3=""
   >
     标签文字
   </text>
   <div
     class="t-textarea t-textarea--layout-horizontal t-textarea--border textarea"
-    data-v-1eb98b9c=""
+    data-v-b36a81b3=""
   >
     <!---->
     <div
@@ -133,13 +133,13 @@ exports[`Textarea > Textarea customVue demo works fine 1`] = `
     >
       <textarea
         class="t-textarea__wrapper-inner"
-        maxlength="100"
         name=""
         placeholder="请输入文字"
       />
       <div
         class="t-textarea__indicator"
       >
+         
         0/100
       </div>
     </div>
@@ -150,7 +150,7 @@ exports[`Textarea > Textarea customVue demo works fine 1`] = `
 exports[`Textarea > Textarea disabledVue demo works fine 1`] = `
 <div
   class="t-textarea t-textarea--layout-horizontal textarea-example"
-  data-v-43d18467=""
+  data-v-7ec69146=""
 >
   <div
     class="t-textarea__label"
@@ -174,7 +174,7 @@ exports[`Textarea > Textarea disabledVue demo works fine 1`] = `
 exports[`Textarea > Textarea labelVue demo works fine 1`] = `
 <div
   class="t-textarea t-textarea--layout-horizontal textarea-example"
-  data-v-0ef6c9ce=""
+  data-v-d234a48f=""
 >
   <div
     class="t-textarea__label"
@@ -214,6 +214,7 @@ exports[`Textarea > Textarea maxcharacterVue demo works fine 1`] = `
     <div
       class="t-textarea__indicator"
     >
+       
       0/500
     </div>
   </div>
@@ -234,13 +235,13 @@ exports[`Textarea > Textarea maxlengthVue demo works fine 1`] = `
   >
     <textarea
       class="t-textarea__wrapper-inner"
-      maxlength="500"
       name="标签文字"
       placeholder="请输入文字"
     />
     <div
       class="t-textarea__indicator"
     >
+       
       0/500
     </div>
   </div>
@@ -284,7 +285,7 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
       
       <div
         class="t-textarea t-textarea--layout-horizontal textarea-example"
-        data-v-dc028088=""
+        data-v-b888150c=""
       >
         <!---->
         <div
@@ -320,7 +321,7 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
       
       <div
         class="t-textarea t-textarea--layout-horizontal textarea-example"
-        data-v-0ef6c9ce=""
+        data-v-d234a48f=""
       >
         <div
           class="t-textarea__label"
@@ -406,13 +407,13 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
         >
           <textarea
             class="t-textarea__wrapper-inner"
-            maxlength="500"
             name="标签文字"
             placeholder="请输入文字"
           />
           <div
             class="t-textarea__indicator"
           >
+             
             0/500
           </div>
         </div>
@@ -447,6 +448,7 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
           <div
             class="t-textarea__indicator"
           >
+             
             0/500
           </div>
         </div>
@@ -477,7 +479,7 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
       
       <div
         class="t-textarea t-textarea--layout-horizontal textarea-example"
-        data-v-43d18467=""
+        data-v-7ec69146=""
       >
         <div
           class="t-textarea__label"
@@ -523,11 +525,11 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
       
       <div
         class="textarea-example"
-        data-v-0fc6070a=""
+        data-v-7c5f1617=""
       >
         <div
           class="t-textarea t-textarea--layout-vertical textarea"
-          data-v-0fc6070a=""
+          data-v-7c5f1617=""
         >
           <div
             class="t-textarea__label"
@@ -539,13 +541,13 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
           >
             <textarea
               class="t-textarea__wrapper-inner"
-              maxlength="500"
               name=""
               placeholder="请输入文字"
             />
             <div
               class="t-textarea__indicator"
             >
+               
               0/500
             </div>
           </div>
@@ -553,17 +555,17 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
       </div>
       <div
         class="textarea-example card"
-        data-v-0fc6070a=""
+        data-v-7c5f1617=""
       >
         <div
           class="textarea-example__summary"
-          data-v-0fc6070a=""
+          data-v-7c5f1617=""
         >
           卡片样式
         </div>
         <div
           class="t-textarea t-textarea--layout-horizontal textarea"
-          data-v-0fc6070a=""
+          data-v-7c5f1617=""
         >
           <div
             class="t-textarea__label"
@@ -575,13 +577,13 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
           >
             <textarea
               class="t-textarea__wrapper-inner"
-              maxlength="500"
               name=""
               placeholder="请输入文字"
             />
             <div
               class="t-textarea__indicator"
             >
+               
               0/500
             </div>
           </div>
@@ -614,17 +616,17 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
       
       <div
         class="textarea-example"
-        data-v-1eb98b9c=""
+        data-v-b36a81b3=""
       >
         <text
           class="textarea-example__label"
-          data-v-1eb98b9c=""
+          data-v-b36a81b3=""
         >
           标签文字
         </text>
         <div
           class="t-textarea t-textarea--layout-horizontal t-textarea--border textarea"
-          data-v-1eb98b9c=""
+          data-v-b36a81b3=""
         >
           <!---->
           <div
@@ -632,13 +634,13 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
           >
             <textarea
               class="t-textarea__wrapper-inner"
-              maxlength="100"
               name=""
               placeholder="请输入文字"
             />
             <div
               class="t-textarea__indicator"
             >
+               
               0/100
             </div>
           </div>

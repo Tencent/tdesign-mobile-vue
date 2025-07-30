@@ -1,38 +1,29 @@
-import {
-  reactive,
-  ref,
-  toRefs,
-  computed,
-  onMounted,
-  nextTick,
-  defineComponent,
-  h,
-  getCurrentInstance,
-  watch,
-} from 'vue';
-import { InfoCircleFilledIcon, CheckCircleFilledIcon, ErrorCircleFilledIcon } from 'tdesign-icons-vue-next';
-import isArray from 'lodash/isArray';
+
+import { reactive, ref, toRefs, computed, onMounted, nextTick, defineComponent, watch } from 'vue';
+import { InfoCircleFilledIcon, CheckCircleFilledIcon,ErrorCircleFilledIcon } from 'tdesign-icons-vue-next';
+import { isArray, isObject } from 'lodash-es';
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
-import NoticeBarProps from './props';
-import { NoticeBarTrigger, DrawMarquee } from './type';
+import props from './props';
+import { NoticeBarTrigger, NoticeBarMarquee } from './type';
 import config from '../config';
-import { renderTNode, TNode, useVModel } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-notice-bar`;
+
 const iconDefault = {
-  info: h(InfoCircleFilledIcon),
-  success: h(CheckCircleFilledIcon),
-  warning: h(ErrorCircleFilledIcon),
-  error: h(ErrorCircleFilledIcon),
+  info: <InfoCircleFilledIcon />,
+  success: <CheckCircleFilledIcon />,
+  warning: <ErrorCircleFilledIcon />,
+  error: <ErrorCircleFilledIcon />,
 };
 export default defineComponent({
-  name,
-  components: { TNode, TSwiper, TSwiperItem },
-  props: NoticeBarProps,
-  emits: ['click'],
+  name: `${prefix}-notice-bar`,
+  props,
+  emits: ['change'],
   setup(props) {
+    const noticeBarClass = usePrefixClass('notice-bar');
     const renderTNodeJSX = useTNodeJSX();
     // 初始化数据
     const state = reactive({
@@ -50,12 +41,13 @@ export default defineComponent({
       },
     });
 
-    const rootClasses = computed(() => [`${name}`, `${name}--${props.theme}`]);
+    const rootClasses = computed(() => [`${noticeBarClass.value}`, `${noticeBarClass.value}--${props.theme}`]);
 
     // click
-    function handleClick(trigger: NoticeBarTrigger) {
+    const handleClick = (trigger: NoticeBarTrigger) => {
       props.onClick?.(trigger);
-    }
+    };
+
     // 动画 i
     const animateStyle = computed(() => ({
       transform: state.offset ? `translateX(${state.offset}px)` : '',
@@ -68,21 +60,24 @@ export default defineComponent({
 
     const { visible, modelValue } = toRefs(props);
     const [isShow, setStatusValue] = useVModel(visible, modelValue, props.defaultVisible);
-    function handleScrolling() {
-      if (!props?.marquee || (props?.marquee as DrawMarquee)?.loop === 0) {
+    const handleScrolling = () => {
+      if (!props?.marquee || (isObject(props?.marquee) && (props?.marquee as NoticeBarMarquee))?.loop === 0) {
         return;
       }
       // 初始化动画参数
       if (typeof props.marquee === 'boolean') {
         state.scroll = { ...state.scroll, marquee: props.marquee };
       }
-      const marquee = props.marquee as DrawMarquee;
-      state.scroll = {
-        marquee: true,
-        loop: typeof marquee?.loop === 'undefined' ? state.scroll.loop : marquee.loop,
-        speed: marquee.speed ?? state.scroll.speed,
-        delay: marquee.delay ?? state.scroll.delay,
-      };
+      if (isObject(props.marquee)) {
+        const marquee = props.marquee as NoticeBarMarquee;
+        state.scroll = {
+          marquee: true,
+          loop: typeof marquee?.loop === 'undefined' ? state.scroll.loop : marquee.loop,
+          speed: marquee.speed ?? state.scroll.speed,
+          delay: marquee.delay ?? state.scroll.delay,
+        };
+      }
+
       // 设置动画
       setTimeout(() => {
         const listDOMWidth = listDOM.value?.getBoundingClientRect().width;
@@ -94,9 +89,9 @@ export default defineComponent({
           state.itemWidth = itemDOMWidth;
         }
       }, state.scroll.delay);
-    }
+    };
     // 动画结束后，初始化动画
-    function handleTransitionend() {
+    const handleTransitionend = () => {
       // 触发再次滚的
       state.scroll.loop = --state.scroll.loop;
       if (state.scroll.loop === 0) {
@@ -113,7 +108,7 @@ export default defineComponent({
         state.offset = -state.itemWidth;
         state.duration = (state.itemWidth + state.listWidth) / state.scroll.speed;
       }, 0);
-    }
+    };
     onMounted(() => {
       nextTick(() => {
         if (isShow.value) {
@@ -141,7 +136,7 @@ export default defineComponent({
           const prefixIconContent = renderTNodeJSX('prefixIcon', { defaultNode: iconDefault[props.theme || 'info'] });
           if (props.prefixIcon && prefixIconContent) {
             return (
-              <div class={`${name}__prefix-icon`} onClick={() => handleClick('prefix-icon')}>
+              <div class={`${noticeBarClass.value}__prefix-icon`} onClick={() => handleClick('prefix-icon')}>
                 {prefixIconContent}
               </div>
             );
@@ -163,7 +158,7 @@ export default defineComponent({
             }
             return (
               <span
-                class={`${name}__operation`}
+                class={`${noticeBarClass.value}__operation`}
                 onClick={(event) => {
                   event.stopPropagation();
                   handleClick('operation');
@@ -174,28 +169,33 @@ export default defineComponent({
             );
           };
           return (
-            <div ref={listDOM} class={`${name}__content-wrap`} onClick={() => handleClick('content')}>
+            <div ref={listDOM} class={`${noticeBarClass.value}__content-wrap`} onClick={() => handleClick('content')}>
               {props.direction === 'vertical' && isArray(props.content) ? (
                 <div>
-                  <t-swiper
+                  <TSwiper
                     autoplay
                     loop
                     direction="vertical"
                     duration={2000}
                     height={22}
-                    class={`${name}__content--vertical`}
+                    interval={props?.interval}
+                    onChange={props?.onChange}
+                    class={`${noticeBarClass.value}__content--vertical`}
                   >
                     {props.content.map((item, index) => (
-                      <t-swiper-item key={index}>
-                        <div class={`${name}__content--vertical-item`}>{item}</div>
-                      </t-swiper-item>
+                      <TSwiperItem key={index}>
+                        <div class={`${noticeBarClass.value}__content--vertical-item`}>{item}</div>
+                      </TSwiperItem>
                     ))}
-                  </t-swiper>
+                  </TSwiper>
                 </div>
               ) : (
                 <div
                   ref={itemDOM}
-                  class={[`${name}__content`, !state.scroll.marquee ? `${name}__content-wrapable` : '']}
+                  class={[
+                    `${noticeBarClass.value}__content`,
+                    !state.scroll.marquee ? `${noticeBarClass.value}__content-wrapable` : '',
+                  ]}
                   style={state.scroll.marquee ? animateStyle.value : ''}
                   onTransitionend={handleTransitionend}
                 >
@@ -212,7 +212,7 @@ export default defineComponent({
             return null;
           }
           return (
-            <div class={`${name}__suffix-icon`} onClick={() => handleClick('suffix-icon')}>
+            <div class={`${noticeBarClass.value}__suffix-icon`} onClick={() => handleClick('suffix-icon')}>
               {suffixIconContent}
             </div>
           );

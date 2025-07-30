@@ -3,12 +3,12 @@
 exports[`Guide > Guide baseVue demo works fine 1`] = `
 <div
   class="guide-demo"
-  data-v-0878fddc=""
+  data-v-4e055ece=""
 >
   <button
     aria-disabled="false"
     class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
-    data-v-0878fddc=""
+    data-v-4e055ece=""
     role="button"
     type="button"
   >
@@ -20,19 +20,19 @@ exports[`Guide > Guide baseVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <!--v-if-->
+  <!---->
 </div>
 `;
 
 exports[`Guide > Guide customPopoverVue demo works fine 1`] = `
 <div
   class="guide-demo"
-  data-v-3d2ff394=""
+  data-v-760ff522=""
 >
   <button
     aria-disabled="false"
     class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
-    data-v-3d2ff394=""
+    data-v-760ff522=""
     role="button"
     type="button"
   >
@@ -46,27 +46,27 @@ exports[`Guide > Guide customPopoverVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <!--v-if-->
+  <!---->
 </div>
 `;
 
 exports[`Guide > Guide dialogBodyVue demo works fine 1`] = `
 <div
   class="dialog-body"
-  data-v-36c645cc=""
+  data-v-172a4578=""
 >
   <p
-    data-v-36c645cc=""
+    data-v-172a4578=""
   >
     用户引导的说明文案
   </p>
   <div
     class="img-wrapper"
-    data-v-36c645cc=""
+    data-v-172a4578=""
   >
     <img
       alt="demo"
-      data-v-36c645cc=""
+      data-v-172a4578=""
       src="https://tdesign.gtimg.com/demo/demo-image-1.png"
     />
   </div>
@@ -76,12 +76,12 @@ exports[`Guide > Guide dialogBodyVue demo works fine 1`] = `
 exports[`Guide > Guide dialogVue demo works fine 1`] = `
 <div
   class="guide-demo"
-  data-v-29551fda=""
+  data-v-365702ae=""
 >
   <button
     aria-disabled="false"
     class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
-    data-v-29551fda=""
+    data-v-365702ae=""
     role="button"
     type="button"
   >
@@ -95,30 +95,30 @@ exports[`Guide > Guide dialogVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <!--v-if-->
+  <!---->
 </div>
 `;
 
 exports[`Guide > Guide mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-810e7326=""
+  data-v-051cd1e9=""
 >
   <h1
     class="title"
-    data-v-810e7326=""
+    data-v-051cd1e9=""
   >
     Guide 引导
   </h1>
   <p
     class="summary"
-    data-v-810e7326=""
+    data-v-051cd1e9=""
   >
     逐步骤进行指引或解释说明的组件，常用于用户不熟悉的或需进行特别强调的页面。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-810e7326=""
+    data-v-051cd1e9=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -140,13 +140,13 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
       
       <div
         class="guide-demo"
-        data-v-0878fddc=""
-        data-v-810e7326=""
+        data-v-051cd1e9=""
+        data-v-4e055ece=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
-          data-v-0878fddc=""
+          data-v-4e055ece=""
           role="button"
           type="button"
         >
@@ -158,14 +158,14 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
           </span>
           <!---->
         </button>
-        <!--v-if-->
+        <!---->
       </div>
       
     </div>
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-810e7326=""
+    data-v-051cd1e9=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -183,13 +183,13 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
       
       <div
         class="guide-demo"
-        data-v-810e7326=""
-        data-v-f1ceb786=""
+        data-v-051cd1e9=""
+        data-v-230fbba9=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
-          data-v-f1ceb786=""
+          data-v-230fbba9=""
           role="button"
           type="button"
         >
@@ -203,14 +203,14 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
           </span>
           <!---->
         </button>
-        <!--v-if-->
+        <!---->
       </div>
       
     </div>
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-810e7326=""
+    data-v-051cd1e9=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -228,13 +228,13 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
       
       <div
         class="guide-demo"
-        data-v-29551fda=""
-        data-v-810e7326=""
+        data-v-051cd1e9=""
+        data-v-365702ae=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
-          data-v-29551fda=""
+          data-v-365702ae=""
           role="button"
           type="button"
         >
@@ -248,14 +248,14 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
           </span>
           <!---->
         </button>
-        <!--v-if-->
+        <!---->
       </div>
       
     </div>
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-810e7326=""
+    data-v-051cd1e9=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -273,13 +273,13 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
       
       <div
         class="guide-demo"
-        data-v-810e7326=""
-        data-v-f2851d8a=""
+        data-v-051cd1e9=""
+        data-v-45f2f5e4=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
-          data-v-f2851d8a=""
+          data-v-45f2f5e4=""
           role="button"
           type="button"
         >
@@ -293,14 +293,14 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
           </span>
           <!---->
         </button>
-        <!--v-if-->
+        <!---->
       </div>
       
     </div>
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-810e7326=""
+    data-v-051cd1e9=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -318,13 +318,13 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
       
       <div
         class="guide-demo"
-        data-v-3d2ff394=""
-        data-v-810e7326=""
+        data-v-051cd1e9=""
+        data-v-760ff522=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
-          data-v-3d2ff394=""
+          data-v-760ff522=""
           role="button"
           type="button"
         >
@@ -338,7 +338,7 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
           </span>
           <!---->
         </button>
-        <!--v-if-->
+        <!---->
       </div>
       
     </div>
@@ -349,35 +349,35 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
 exports[`Guide > Guide myPopoverVue demo works fine 1`] = `
 <div
   class="my-popover"
-  data-v-7cb786cf=""
+  data-v-eb2238b1=""
 >
   <svg
     class="t-icon t-icon-arrow-up pop-icon"
-    data-v-7cb786cf=""
+    data-v-eb2238b1=""
     fill="none"
     height="1em"
     viewBox="0 0 24 24"
     width="1em"
   >
     <path
-      d="M11 19.5V7.91l-4.5 4.5L5.09 11 12 4.09 18.91 11l-1.41 1.41-4.5-4.5V19.5h-2z"
+      d="M11.0002 19.5L11.0002 7.91424L6.50015 12.4142L5.08594 11L12.0002 4.08582L18.9144 11L17.5001 12.4142L13.0002 7.91424L13.0002 19.5H11.0002Z"
       fill="currentColor"
     />
   </svg>
   <p
     class="popover-desc"
-    data-v-7cb786cf=""
+    data-v-eb2238b1=""
   >
     自定义的图形或说明文案，用来解释或指导该功能使用。
   </p>
   <div
     class="popover-action"
-    data-v-7cb786cf=""
+    data-v-eb2238b1=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-extra-small t-button--base t-button--light t-button--rectangle"
-      data-v-7cb786cf=""
+      data-v-eb2238b1=""
       role="button"
       type="button"
     >
@@ -401,12 +401,12 @@ exports[`Guide > Guide myPopoverVue demo works fine 1`] = `
 exports[`Guide > Guide noMaskVue demo works fine 1`] = `
 <div
   class="guide-demo"
-  data-v-f1ceb786=""
+  data-v-230fbba9=""
 >
   <button
     aria-disabled="false"
     class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
-    data-v-f1ceb786=""
+    data-v-230fbba9=""
     role="button"
     type="button"
   >
@@ -420,19 +420,19 @@ exports[`Guide > Guide noMaskVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <!--v-if-->
+  <!---->
 </div>
 `;
 
 exports[`Guide > Guide popoverDialogVue demo works fine 1`] = `
 <div
   class="guide-demo"
-  data-v-f2851d8a=""
+  data-v-45f2f5e4=""
 >
   <button
     aria-disabled="false"
     class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
-    data-v-f2851d8a=""
+    data-v-45f2f5e4=""
     role="button"
     type="button"
   >
@@ -446,6 +446,6 @@ exports[`Guide > Guide popoverDialogVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
-  <!--v-if-->
+  <!---->
 </div>
 `;

@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 import { ref } from 'vue';
 
 type Direction = '' | 'vertical' | 'horizontal';

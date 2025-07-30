@@ -2,7 +2,7 @@
   <t-config-provider :global-config="globalConfig">
     <div class="rate-demo-cell rate-demo-cell--space">
       <div class="rate-demo-cell__label">Rating</div>
-      <t-rate v-model="rateValue" show-text variant="filled" />
+      <t-rate v-model="rateValue" show-text />
     </div>
 
     <t-calendar
@@ -31,8 +31,8 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import merge from 'lodash/merge';
-import enConfig from '../../locale/en_US';
+import { merge } from 'lodash-es';
+import enConfig from 'tdesign-mobile-vue/es/locale/en_US';
 
 // 全局特性配置，可以引入英文默认配置 enConfig，还可以在默认配置的基础上进行自定义配置
 const globalConfig = merge(enConfig, {

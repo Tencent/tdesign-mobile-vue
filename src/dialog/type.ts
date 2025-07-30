@@ -5,6 +5,7 @@
  * */
 
 import { ButtonProps } from '../button';
+import { OverlayProps } from '../overlay';
 import { TNode, Styles } from '../common';
 
 export interface TdDialogProps {
@@ -22,7 +23,13 @@ export interface TdDialogProps {
    */
   cancelBtn?: string | ButtonProps | TNode | null;
   /**
+   * 多按钮排列方式。可选项：true/false
+   * @default false
+   */
+  closeBtn?: boolean;
+  /**
    * 点击蒙层时是否触发关闭事件
+   * @default false
    */
   closeOnOverlayClick?: boolean;
   /**
@@ -39,10 +46,14 @@ export interface TdDialogProps {
    */
   destroyOnClose?: boolean;
   /**
+   * 中间自定义内容
+   */
+  middle?: TNode;
+  /**
    * 透传至 Overlay 组件
    * @default {}
    */
-  overlayProps?: object;
+  overlayProps?: OverlayProps;
   /**
    * 防止滚动穿透
    * @default true
@@ -57,6 +68,10 @@ export interface TdDialogProps {
    * 标题
    */
   title?: string | TNode;
+  /**
+   * 顶部自定义内容
+   */
+  top?: TNode;
   /**
    * 控制对话框是否显示
    */
@@ -78,7 +93,7 @@ export interface TdDialogProps {
    */
   onClose?: (context: DialogCloseContext) => void;
   /**
-   * 组件关闭且动画结束后执行
+   * 对话框消失动画效果结束后触发
    */
   onClosed?: () => void;
   /**
@@ -122,7 +137,7 @@ export interface DialogInstance {
   update: (props: DialogOptions) => void;
 }
 
-export type DialogEventSource = 'cancel' | 'overlay';
+export type DialogEventSource = 'cancel' | 'overlay' | 'close-btn';
 
 export interface DialogCloseContext {
   trigger: DialogEventSource;

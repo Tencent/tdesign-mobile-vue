@@ -7,9 +7,9 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 customValue | Array | - | Typescript：`Array<SwitchValue>` | N
-disabled | Boolean | - | \- | N
+disabled | Boolean | undefined | \- | N
 icon | Array | [] | Typescript：`TNode[]`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-label | Array | [] | Typescript：`string[]` | N
+label | Array / Slot / Function | [] | Typescript：`Array<string \| TNode> \| TNode<{ value: SwitchValue }>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 loading | Boolean | false | \- | N
 size | String | medium | options: small/medium/large | N
 value | String / Number / Boolean | - | `v-model` and `v-model:value` is supported。Typescript：`T` `type SwitchValue = string \| number \| boolean`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/switch/type.ts) | N
@@ -29,7 +29,7 @@ Name | Default Value | Description
 -- | -- | --
 --td-switch-checked-color | @brand-color | - 
 --td-switch-checked-disabled-color | @brand-color-disabled | - 
---td-switch-dot-border-color | @bg-color-secondarycontainer | - 
+--td-switch-dot-disabled-color | @font-white-1 | - 
 --td-switch-dot-horizontal-margin | 3px | - 
 --td-switch-dot-large-size | 26px | - 
 --td-switch-dot-plain-horizontal-margin | 5px | - 
@@ -44,17 +44,18 @@ Name | Default Value | Description
 --td-switch-icon-size | 20px | - 
 --td-switch-icon-small-size | 16px | - 
 --td-switch-label-checked-color | @switch-checked-color | - 
---td-switch-label-color | @font-gray-4 | - 
+--td-switch-label-color | @bg-color-secondarycontainer-active | - 
+--td-switch-label-font-size | 14px | - 
+--td-switch-label-large-font-size | 16px | - 
+--td-switch-label-small-font-size | 12px | - 
 --td-switch-large-height | 32px | - 
 --td-switch-large-radius | calc(@switch-large-height / 2) | - 
 --td-switch-large-width | 52px | - 
+--td-switch-loading-color | @brand-color | - 
 --td-switch-radius | calc(@switch-height / 2) | - 
 --td-switch-small-height | 24px | - 
 --td-switch-small-radius | calc(@switch-small-height / 2) | - 
 --td-switch-small-width | 39px | - 
---td-switch-unchecked-color | @font-gray-4 | - 
+--td-switch-unchecked-color | @bg-color-secondarycontainer-active | - 
 --td-switch-unchecked-disabled-color | @bg-color-component-disabled | - 
 --td-switch-width | 45px | - 
---td-switch-label-font-size | 12px | - 
---td-switch-label-font-size | 14px | - 
---td-switch-label-font-size | 16px | -

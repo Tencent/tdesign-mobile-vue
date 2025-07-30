@@ -28,11 +28,40 @@ export default {
   autofocus: Boolean,
   /** 是否开启无边框模式 */
   borderless: Boolean,
+  /** 清空图标触发方式，仅在输入框有值时有效 */
+  clearTrigger: {
+    type: String as PropType<TdInputProps['clearTrigger']>,
+    default: 'always' as TdInputProps['clearTrigger'],
+    validator(val: TdInputProps['clearTrigger']): boolean {
+      if (!val) return true;
+      return ['always', 'focus'].includes(val);
+    },
+  },
   /** 是否可清空 */
   clearable: Boolean,
+  /** 光标颜色 */
+  cursorColor: {
+    type: String,
+    default: '#0052d9',
+  },
   /** 是否禁用输入框 */
-  disabled: Boolean,
-  /** 【暂不支持】指定输入框展示值的格式 */
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
+  /** 用于控制回车键样式，此 API 仅在部分浏览器支持，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint) */
+  enterkeyhint: {
+    type: String as PropType<TdInputProps['enterkeyhint']>,
+    validator(val: TdInputProps['enterkeyhint']): boolean {
+      if (!val) return true;
+      return ['enter', 'done', 'go', 'next', 'previous', 'search', 'send'].includes(val);
+    },
+  },
+  /** 右侧额外内容 */
+  extra: {
+    type: Function as PropType<TdInputProps['extra']>,
+  },
+  /** 指定输入框展示值的格式 */
   format: {
     type: Function as PropType<TdInputProps['format']>,
   },
@@ -72,13 +101,16 @@ export default {
     type: Function as PropType<TdInputProps['prefixIcon']>,
   },
   /** 只读状态 */
-  readonly: Boolean,
+  readonly: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 是否开启拼写检查，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/spellcheck) */
   spellCheck: Boolean,
-  /** 输入框状态。默认情况会由组件内部根据实际情况呈现，如果文本过长引起的状态变化 */
+  /** 输入框状态 */
   status: {
     type: String as PropType<TdInputProps['status']>,
-    default: undefined as TdInputProps['status'],
+    default: 'default' as TdInputProps['status'],
     validator(val: TdInputProps['status']): boolean {
       if (!val) return true;
       return ['default', 'success', 'warning', 'error'].includes(val);
@@ -126,6 +158,6 @@ export default {
   onClear: Function as PropType<TdInputProps['onClear']>,
   /** 获得焦点时触发 */
   onFocus: Function as PropType<TdInputProps['onFocus']>,
-  /** 【暂不支持】字数超出限制时触发 */
+  /** 字数超出限制时触发 */
   onValidate: Function as PropType<TdInputProps['onValidate']>,
 };

@@ -14,12 +14,11 @@ exports[`Footer > Footer baseVue demo works fine 1`] = `
 </div>
 `;
 
-exports[`Footer > Footer linkVue demo works fine 1`] = `
+exports[`Footer > Footer linksVue demo works fine 1`] = `
 <div
   data-v-app=""
 >
   
-  <!-- theme 为 text，含有底部链接 -->
   <div
     class="footer-example"
   >
@@ -97,68 +96,61 @@ exports[`Footer > Footer linkVue demo works fine 1`] = `
 
 exports[`Footer > Footer logoVue demo works fine 1`] = `
 <div
-  data-v-app=""
+  class="t-footer"
 >
-  
-  <!-- theme 为 logo -->
-  <div
-    class="t-footer"
+  <a
+    class="t-footer__logo"
   >
-    <a
-      class="t-footer__logo"
+    <div
+      class="t-image t-image--square t-footer__icon"
     >
       <div
-        class="t-image t-image--square t-footer__icon"
+        class="t-image__mask"
       >
         <div
-          class="t-image__mask"
+          class="t-loading"
+          style="font-size: 20px;"
         >
           <div
-            class="t-loading"
-            style="font-size: 20px;"
+            class="t-loading__dots"
+            style="animation-duration: 800ms; width: 20px; height: 20px;"
           >
+            
             <div
-              class="t-loading__dots"
-              style="animation-duration: 800ms; width: 20px; height: 20px;"
-            >
-              
-              <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0s;"
-              />
-              <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-              />
-              <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-              />
-              
-            </div>
-            <!---->
-            <!---->
+              class="t-loading__dot"
+              style="animation-duration: 0.8s; animation-delay: 0s;"
+            />
+            <div
+              class="t-loading__dot"
+              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+            />
+            <div
+              class="t-loading__dot"
+              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+            />
+            
           </div>
-        </div>
-        <picture>
           <!---->
-          <img
-            alt=""
-            class="t-image__img"
-            src="https://tdesign.gtimg.com/mobile/demos/logo2.png"
-            style="object-fit: fill; object-position: center;"
-          />
-        </picture>
+          <!---->
+        </div>
       </div>
-      <span
-        class="t-footer__title"
-      >
-        品牌名称
-      </span>
-    </a>
-    <!---->
-    <!---->
-  </div>
+      <picture>
+        <!---->
+        <img
+          alt=""
+          class="t-image__img"
+          src="https://tdesign.gtimg.com/mobile/demos/logo2.png"
+          style="object-fit: fill; object-position: center;"
+        />
+      </picture>
+    </div>
+    <span
+      class="t-footer__title"
+    >
+      品牌名称
+    </span>
+  </a>
+  <!---->
   
 </div>
 `;
@@ -226,7 +218,6 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
     >
       
       
-      <!-- theme 为 text，含有底部链接 -->
       <div
         class="footer-example"
       >
@@ -319,8 +310,6 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
       class="tdesign-mobile-demo-block__slot"
     >
       
-      
-      <!-- theme 为 logo -->
       <div
         class="t-footer"
       >
@@ -377,9 +366,8 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
           </span>
         </a>
         <!---->
-        <!---->
+        
       </div>
-      
       
     </div>
   </div>

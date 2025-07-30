@@ -11,8 +11,9 @@ export default defineComponent({
     style: Object as PropType<CSSProperties>,
   },
   setup(props) {
+    const classPrefix = usePrefixClass();
     const gradientClass = usePrefixClass('loading__gradient');
-    const classes = [gradientClass.value, `${prefix}-icon-loading`];
+    const classes = [gradientClass.value, `${classPrefix.value}-icon-loading`];
     const circle = ref<HTMLElement>();
     const updateColor = () => {
       const circleElem = circle.value;

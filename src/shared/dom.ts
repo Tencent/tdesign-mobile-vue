@@ -1,15 +1,14 @@
-import isFunction from 'lodash/isFunction';
-import isString from 'lodash/isString';
+import { isFunction, isString } from 'lodash-es';
 import { AttachNode } from '../common';
 import { isBrowser } from './util';
 
 const trim = (str: string): string => (str || '').replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g, '');
 
-export function getAttach(node: AttachNode) {
-  if (!isBrowser) return;
-
-  const attachNode = isFunction(node) ? node() : node;
-
+export const getAttach = (node: any, triggerNode?: any): HTMLElement | Element => {
+  const attachNode = isFunction(node) ? node(triggerNode) : node;
+  if (!attachNode) {
+    return document.body;
+  }
   if (isString(attachNode)) {
     return document.querySelector(attachNode);
   }
@@ -17,7 +16,11 @@ export function getAttach(node: AttachNode) {
     return attachNode;
   }
   return document.body;
-}
+};
+
+export const getSSRAttach = () => {
+  if (process.env.NODE_ENV === 'test-snap') return 'body';
+};
 
 export function stopPropagation(event: Event) {
   event.stopPropagation();

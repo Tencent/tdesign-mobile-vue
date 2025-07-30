@@ -1,8 +1,5 @@
-import { computed, defineComponent, provide, reactive, ref, toRefs } from 'vue';
-import isEmpty from 'lodash/isEmpty';
-import isArray from 'lodash/isArray';
-import isBoolean from 'lodash/isBoolean';
-import isFunction from 'lodash/isFunction';
+import { defineComponent, provide, reactive, ref, toRefs } from 'vue';
+import { isArray, isBoolean, isEmpty, isFunction } from 'lodash-es';
 import {
   Data,
   FormResetParams,
@@ -10,6 +7,7 @@ import {
   FormValidateParams,
   FormValidateResult,
   TdFormProps,
+  ValidateResultList,
 } from './type';
 import props from './props';
 import { FormInjectionKey, FormItemContext } from './const';
@@ -19,9 +17,9 @@ import { renderContent } from '../shared';
 import { preventDefault } from '../shared/dom';
 import { FormItemValidateResult } from './form-item';
 import { useTNodeJSX } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-form`;
 
 type FormResetEvent = Event;
 // export type FormSubmitEvent = SubmitEvent; (for higher typescript version)
@@ -41,7 +39,7 @@ export const requestSubmit = (target: HTMLFormElement) => {
 };
 
 export default defineComponent({
-  name,
+  name: `${prefix}-form`,
   props,
   setup(props, { expose }) {
     const renderTNodeJSX = useTNodeJSX();
@@ -59,8 +57,7 @@ export default defineComponent({
       resetType,
     } = toRefs(props);
 
-    // @ts-ignore
-    const formRef = ref<HTMLFormElement>(null);
+    const formRef = ref<HTMLFormElement>();
     const children = ref<FormItemContext[]>([]);
 
     provide<FormDisabledProvider>('formDisabled', {
@@ -85,7 +82,7 @@ export default defineComponent({
       }),
     );
 
-    const formClass = computed(() => [name]);
+    const formClass = usePrefixClass('form');
 
     const needValidate = (name: string | number, fields: string[] | undefined) => {
       if (!fields || !isArray(fields)) return true;
@@ -113,10 +110,37 @@ export default defineComponent({
       return result;
     };
 
-    const getFirstError = (r: Result) => {
-      if (isBoolean(r)) return '';
-      return r?.[Object.keys(r)?.[0]]?.[0]?.message || '';
+    const getFirstError = (result: Result) => {
+      if (isBoolean(result)) return '';
+
+      const [firstKey] = Object.keys(result);
+      if (props.scrollToFirstError) {
+        const tmpClassName = `${formClass.value}-item__${firstKey}`;
+        scrollTo(tmpClassName);
+      }
+      const resArr = result[firstKey] as ValidateResultList;
+      if (!isArray(resArr)) return '';
+
+      return result?.[Object.keys(result)?.[0]]?.[0]?.message || '';
     };
+    // 校验不通过时，滚动到第一个错误表单
+    const scrollTo = (selector: string) => {
+      const [dom] = formRef.value.getElementsByClassName(selector);
+      const behavior = props.scrollToFirstError;
+      if (behavior) {
+        dom && dom.scrollIntoView({ behavior });
+      }
+    };
+
+    const validateOnly = async (params?: Omit<FormValidateParams, 'showErrorMessage'>) => {
+      const { fields, trigger = 'all' } = params || {};
+      const list = children.value
+        .filter((child) => isFunction(child.validateOnly) && needValidate(String(child.name), fields))
+        .map((child) => child.validateOnly(trigger));
+      const arr = await Promise.all(list);
+      return formatValidateResult(arr);
+    };
+
     const submitParams = ref<Pick<FormValidateParams, 'showErrorMessage'>>();
     const onSubmit = (e?: FormSubmitEvent) => {
       if (props.preventSubmitDefault && e) {
@@ -174,7 +198,7 @@ export default defineComponent({
       Promise.all(list);
     };
 
-    expose({ validate, submit, reset, clearValidate, setValidateMessage });
+    expose({ validate, submit, reset, clearValidate, setValidateMessage, validateOnly });
 
     return () => {
       return (

@@ -70,10 +70,12 @@ describe('Radio', () => {
     it(': icon', async () => {
       const wrapper = mount(Radio, {
         props: {
+          checked: true,
           icon: 'dot',
         },
       });
       const $icon = wrapper.find(`.${name}__icon-dot`);
+
       expect($icon.exists()).toBeTruthy();
 
       //tsx vm

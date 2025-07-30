@@ -1,7 +1,8 @@
 <template>
   <t-pull-down-refresh
     v-model="refreshing"
-    :loading-bar-height="66"
+    :loading-bar-height="80"
+    :max-bar-height="100"
     :loading-texts="['下拉刷新', '松开刷新', '正在刷新', '刷新完成']"
     @refresh="handleRefresh"
     @scrolltolower="handleScrolltolower"

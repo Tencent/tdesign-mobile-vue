@@ -12,12 +12,13 @@
 </template>
 
 <script>
-import siteConfig from '../docs.config';
-import { sortDocs } from './utils';
 import { defineComponent } from 'vue';
 import packageJson from '../../package.json';
+import siteConfig from '../docs.config';
+import { filterVersions, sortDocs } from './utils';
 
-const registryUrl = 'https://mirrors.tencent.com/npm/tdesign-mobile-vue';
+const registryUrl =
+  'https://service-edbzjd6y-1257786608.hk.apigw.tencentcs.com/release/npm/versions/tdesign-mobile-vue';
 const currentVersion = packageJson.version.replace(/\./g, '_');
 
 const { docs, enDocs } = JSON.parse(JSON.stringify(siteConfig).replace(/component:.+/g, ''));
@@ -26,32 +27,6 @@ const docsMap = {
   zh: sortDocs(docs),
   en: sortDocs(enDocs),
 };
-
-function watchHtmlMode(callback = () => {}) {
-  const targetNode = document.documentElement;
-  const config = { attributes: true };
-
-  const observerCallback = (mutationsList) => {
-    for (const mutation of mutationsList) {
-      if (mutation.attributeName === "theme-mode") {
-        const themeMode = mutation.target.getAttribute("theme-mode") || 'light';
-        if (themeMode) callback(themeMode);
-      }
-    }
-  };
-
-  const observer = new MutationObserver(observerCallback);
-  observer.observe(targetNode, config);
-
-  return observer;
-}
-
-function changeIframeMode(mode){
-  const iframe = document.querySelector('iframe');
-  if (iframe?.contentWindow) {
-    iframe.contentWindow.document.documentElement.setAttribute('theme-mode', mode);
-  }
-}
 
 export default defineComponent({
   data() {
@@ -86,9 +61,8 @@ export default defineComponent({
       const historyUrl = `https://${version}-tdesign-mobile-vue.surge.sh`;
       window.open(historyUrl, '_blank');
     };
-
     this.initHistoryVersions();
-    watchHtmlMode(changeIframeMode)
+    this.initThemeGenerator();
   },
 
   watch: {
@@ -105,14 +79,23 @@ export default defineComponent({
         .then((res) => res.json())
         .then((res) => {
           const options = [];
-          Object.keys(res.versions).forEach((v) => {
-            const nums = v.split('.');
-            if (nums[0] === '0' && nums[1] < 7) return false;
+          const versions = filterVersions(Object.keys(res.versions));
 
+          versions.forEach((v) => {
             options.unshift({ label: v, value: v.replace(/\./g, '_') });
           });
+
+          if (this.version !== options[0].value) {
+            this.version = options[0].value;
+          }
+
           this.$refs.tdSelect.options = options;
         });
+    },
+    initThemeGenerator() {
+      const generator = document.createElement('td-theme-generator');
+      generator.setAttribute('device', 'mobile');
+      document.body.appendChild(generator);
     },
     contentLoaded(callback) {
       requestAnimationFrame(() => {

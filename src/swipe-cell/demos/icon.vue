@@ -19,7 +19,7 @@
 <script setup lang="ts">
 import { reactive, h } from 'vue';
 import { Edit1Icon, DeleteIcon } from 'tdesign-icons-vue-next';
-import Toast from '../../toast/index';
+import { Toast } from 'tdesign-mobile-vue';
 
 interface InitData {
   btns0: {}[];

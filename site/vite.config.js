@@ -1,8 +1,10 @@
 import * as path from 'path';
-import createTDesignPlugin from './web/plugin-tdoc';
-import vue from '@vitejs/plugin-vue';
 import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
+
+import changelog2Json from './web/plugins/changelog-to-json';
+import tdocPlugin from './web/plugins/plugin-tdoc';
 
 const resolvePath = (r) => path.resolve(__dirname, r);
 
@@ -14,6 +16,18 @@ const publicPathMap = {
 
 const isCustomElement = (tag) => tag.startsWith('td-');
 
+// Rollup 4+ 的 tree-shaking 策略调整, 这里是为了让样式在站点构建正常
+const disableTreeShakingPlugin = (paths) => ({
+  name: 'disable-treeshake',
+  transform(code, id) {
+    for (const path of paths) {
+      if (id.includes(path)) {
+        return { code, map: null, moduleSideEffects: 'no-treeshake' };
+      }
+    }
+  },
+});
+
 export default ({ mode }) => {
   return defineConfig({
     base: publicPathMap[mode],
@@ -23,6 +37,7 @@ export default ({ mode }) => {
         '@': resolvePath('../src'),
         '@docs': resolvePath('./docs'),
         '@common': resolvePath('../src/_common'),
+        'tdesign-mobile-vue/es': resolvePath('../src'),
         'tdesign-mobile-vue': resolvePath('../src'),
       },
     },
@@ -52,7 +67,9 @@ export default ({ mode }) => {
       vueJsx({
         isCustomElement,
       }),
-      createTDesignPlugin(),
+      tdocPlugin(),
+      changelog2Json(),
+      disableTreeShakingPlugin(['style/', 'toast/']),
     ],
   });
 };

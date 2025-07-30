@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Rate Props
 
 name | type | default | description | required
@@ -8,9 +9,10 @@ name | type | default | description | required
 allowHalf | Boolean | false | \- | N
 color | String / Array | '#ED7B2F' | Typescript：`string \| Array<string>` | N
 count | Number | 5 | \- | N
-disabled | Boolean | - | \- | N
-gap | Number | 8 | \- | N
+disabled | Boolean | undefined | \- | N
+gap | String / Number | 8 | \- | N
 icon | Array / Slot / Function | - | Typescript：`Array<TNode \| Function>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+placement | String | top | options: top / bottom / '' | N
 showText | Boolean | false | \- | N
 size | String | 24px | \- | N
 texts | Array | [] | Typescript：`Array<string>` | N
@@ -24,8 +26,8 @@ name | params | description
 -- | -- | --
 change | `(value: number)` | \-
 
-
 ### CSS Variables
+
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
@@ -33,8 +35,8 @@ Name | Default Value | Description
 --td-rate-disabled-unselected-color | @gray-color-2 | - 
 --td-rate-icon-scale | 1.33 | - 
 --td-rate-selected-color | @warning-color | - 
---td-rate-text-active-color | @font-gray-1 | - 
+--td-rate-text-active-color | @text-color-primary | - 
 --td-rate-text-active-font-weight | 600 | - 
---td-rate-text-color | @font-gray-4 | - 
+--td-rate-text-color | @text-color-disabled | - 
 --td-rate-text-font-size | @font-size-m | - 
 --td-rate-unselected-color | @bg-color-secondarycomponent | - 

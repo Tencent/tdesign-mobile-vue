@@ -44,11 +44,8 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
             class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
             style="right: 0px; top: 0px;"
           >
-            <!---->
             16
-            <!---->
           </div>
-          <!---->
         </div>
       </div>
       <div
@@ -100,10 +97,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
             style="right: 0px; top: 0px;"
           >
             <!---->
-            
-            <!---->
           </div>
-          <!---->
         </div>
       </div>
       <div
@@ -154,11 +148,8 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
             class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
             style="right: 0px; top: 0px;"
           >
-            <!---->
             New
-            <!---->
           </div>
-          <!---->
         </div>
       </div>
       <div
@@ -209,11 +200,8 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
             class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
             style="right: 0px; top: 0px;"
           >
-            <!---->
             ···
-            <!---->
           </div>
-          <!---->
         </div>
       </div>
       <div
@@ -387,14 +375,14 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
 exports[`TabBar > TabBar customVue demo works fine 1`] = `
 <div
   class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal wrapper"
-  data-v-9a3dc706=""
+  data-v-d74bfed2=""
   role="tablist"
 >
   
   
   <div
     class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
-    data-v-9a3dc706=""
+    data-v-d74bfed2=""
   >
     <div
       aria-expanded="false"
@@ -409,7 +397,7 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-home"
-          data-v-9a3dc706=""
+          data-v-d74bfed2=""
           style="font-size: 20px;"
         >
           <use
@@ -429,7 +417,7 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
-    data-v-9a3dc706=""
+    data-v-d74bfed2=""
   >
     <div
       aria-expanded="false"
@@ -444,7 +432,7 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-app"
-          data-v-9a3dc706=""
+          data-v-d74bfed2=""
           style="font-size: 20px;"
         >
           <use
@@ -464,7 +452,7 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
-    data-v-9a3dc706=""
+    data-v-d74bfed2=""
   >
     <div
       aria-expanded="false"
@@ -479,7 +467,7 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-chat"
-          data-v-9a3dc706=""
+          data-v-d74bfed2=""
           style="font-size: 20px;"
         >
           <use
@@ -499,7 +487,7 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
   </div>
   <div
     class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
-    data-v-9a3dc706=""
+    data-v-d74bfed2=""
   >
     <div
       aria-expanded="false"
@@ -514,7 +502,7 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
         
         <svg
           class="t-icon t-icon-user"
-          data-v-9a3dc706=""
+          data-v-d74bfed2=""
           style="font-size: 20px;"
         >
           <use
@@ -540,23 +528,23 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
 exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-da85bda4=""
+  data-v-8bf7e573=""
 >
   <h1
     class="title"
-    data-v-da85bda4=""
+    data-v-8bf7e573=""
   >
     TabBar 标签栏
   </h1>
   <p
     class="summary"
-    data-v-da85bda4=""
+    data-v-8bf7e573=""
   >
     用于在不同功能模块之间进行快速切换，位于页面底部。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-da85bda4=""
+    data-v-8bf7e573=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -578,7 +566,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
       
       <div
         class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
-        data-v-da85bda4=""
+        data-v-8bf7e573=""
         role="tablist"
       >
         
@@ -675,7 +663,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-da85bda4=""
+    data-v-8bf7e573=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -693,7 +681,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
       
       <div
         class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
-        data-v-da85bda4=""
+        data-v-8bf7e573=""
         role="tablist"
       >
         
@@ -846,7 +834,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-da85bda4=""
+    data-v-8bf7e573=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -864,7 +852,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
       
       <div
         class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
-        data-v-da85bda4=""
+        data-v-8bf7e573=""
         role="tablist"
       >
         
@@ -1009,7 +997,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-da85bda4=""
+    data-v-8bf7e573=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1027,7 +1015,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
       
       <div
         class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
-        data-v-da85bda4=""
+        data-v-8bf7e573=""
         role="tablist"
       >
         
@@ -1095,7 +1083,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M2 4h20v2H2V4zm0 7h20v2H2v-2zm1 7H2v2h20v-2H3z"
+                  d="M2 4H3H21H22V6H21H3H2V4ZM2 11H3H21H22V13H21H3H2V11ZM3 18H2V20H3H21H22V18H21H3Z"
                   fill="currentColor"
                 />
               </svg>
@@ -1114,7 +1102,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-da85bda4=""
+    data-v-8bf7e573=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1136,7 +1124,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
       
       <div
         class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
-        data-v-da85bda4=""
+        data-v-8bf7e573=""
         role="tablist"
       >
         
@@ -1178,11 +1166,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                   class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
                   style="right: 0px; top: 0px;"
                 >
-                  <!---->
                   16
-                  <!---->
                 </div>
-                <!---->
               </div>
             </div>
             <div
@@ -1234,10 +1219,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                   style="right: 0px; top: 0px;"
                 >
                   <!---->
-                  
-                  <!---->
                 </div>
-                <!---->
               </div>
             </div>
             <div
@@ -1288,11 +1270,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                   class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
                   style="right: 0px; top: 0px;"
                 >
-                  <!---->
                   New
-                  <!---->
                 </div>
-                <!---->
               </div>
             </div>
             <div
@@ -1343,11 +1322,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                   class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
                   style="right: 0px; top: 0px;"
                 >
-                  <!---->
                   ···
-                  <!---->
                 </div>
-                <!---->
               </div>
             </div>
             <div
@@ -1369,7 +1345,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-da85bda4=""
+    data-v-8bf7e573=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1387,7 +1363,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
       
       <div
         class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--round"
-        data-v-da85bda4=""
+        data-v-8bf7e573=""
         role="tablist"
       >
         
@@ -1532,7 +1508,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-da85bda4=""
+    data-v-8bf7e573=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1554,15 +1530,15 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
       
       <div
         class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal wrapper"
-        data-v-9a3dc706=""
-        data-v-da85bda4=""
+        data-v-8bf7e573=""
+        data-v-d74bfed2=""
         role="tablist"
       >
         
         
         <div
           class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
-          data-v-9a3dc706=""
+          data-v-d74bfed2=""
         >
           <div
             aria-expanded="false"
@@ -1577,7 +1553,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
               <svg
                 class="t-icon t-icon-home"
-                data-v-9a3dc706=""
+                data-v-d74bfed2=""
                 style="font-size: 20px;"
               >
                 <use
@@ -1597,7 +1573,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
-          data-v-9a3dc706=""
+          data-v-d74bfed2=""
         >
           <div
             aria-expanded="false"
@@ -1612,7 +1588,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
               <svg
                 class="t-icon t-icon-app"
-                data-v-9a3dc706=""
+                data-v-d74bfed2=""
                 style="font-size: 20px;"
               >
                 <use
@@ -1632,7 +1608,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
-          data-v-9a3dc706=""
+          data-v-d74bfed2=""
         >
           <div
             aria-expanded="false"
@@ -1647,7 +1623,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
               <svg
                 class="t-icon t-icon-chat"
-                data-v-9a3dc706=""
+                data-v-d74bfed2=""
                 style="font-size: 20px;"
               >
                 <use
@@ -1667,7 +1643,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
-          data-v-9a3dc706=""
+          data-v-d74bfed2=""
         >
           <div
             aria-expanded="false"
@@ -1682,7 +1658,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
               <svg
                 class="t-icon t-icon-user"
-                data-v-9a3dc706=""
+                data-v-d74bfed2=""
                 style="font-size: 20px;"
               >
                 <use
@@ -2067,7 +2043,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M2 4h20v2H2V4zm0 7h20v2H2v-2zm1 7H2v2h20v-2H3z"
+            d="M2 4H3H21H22V6H21H3H2V4ZM2 11H3H21H22V13H21H3H2V11ZM3 18H2V20H3H21H22V18H21H3Z"
             fill="currentColor"
           />
         </svg>

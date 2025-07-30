@@ -1,23 +1,27 @@
-import { computed, defineComponent } from 'vue';
+import { computed, defineComponent, h, toRefs } from 'vue';
+import { isArray, isFunction, isString } from 'lodash-es';
 import TLoading from '../loading';
-import { useToggle, useDefault } from '../shared';
+import useToggle from '../hooks/useToggle';
 import config from '../config';
-import SwitchProps from './props';
+import props from './props';
 import { SwitchValue, TdSwitchProps } from './type';
 import { useFormDisabled } from '../form/hooks';
+import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-switch`;
+
 export default defineComponent({
-  name,
-  props: SwitchProps,
+  name: `${prefix}-switch`,
+  props,
   setup(props, context) {
     const switchClass = usePrefixClass('switch');
 
     const disabled = useFormDisabled();
     const switchValues = props.customValue || [true, false];
-    const [innerValue] = useDefault<SwitchValue, TdSwitchProps>(props, context.emit, 'value', 'change');
+
+    const { value, modelValue } = toRefs(props);
+    const [innerValue, setInnerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
     const { state, toggle } = useToggle<SwitchValue>(switchValues, innerValue.value);
     const checked = computed(() => innerValue.value === switchValues[0]);
     const switchClasses = computed(() => [
@@ -34,6 +38,7 @@ export default defineComponent({
       {
         [`${switchClass.value}__dot--checked`]: checked.value,
         [`${switchClass.value}__dot--plain`]: props.label?.length !== 2 && props.icon?.length !== 2 && !props.loading,
+        [`${switchClass.value}__dot--disabled`]: disabled.value || props.loading,
       },
     ]);
     const labelClasses = computed(() => [
@@ -55,22 +60,39 @@ export default defineComponent({
         toggle();
       }
 
-      innerValue.value = state.value;
+      setInnerValue(state.value);
     }
+
+    const renderContent = () => {
+      if (props.loading) {
+        return <TLoading class={`${switchClass.value}__loading`} size="16px" />;
+      }
+
+      if (isArray(props.label) && props.label.length === 2) {
+        const label = checked.value ? props.label[0] : props.label[1];
+        if (isString(label)) {
+          return label;
+        }
+        if (isFunction(label)) {
+          return label(h);
+        }
+      }
+
+      if (isFunction(props.label)) {
+        return props.label(h, { value: innerValue.value });
+      }
+      if (context.slots.label) {
+        return context.slots.label({ value: innerValue.value });
+      }
+
+      return iconContent.value;
+    };
+
     return () => {
-      const readerContent = () => {
-        if (props.loading) {
-          return <TLoading inherit-color size="16.25px" />;
-        }
-        if (props.label.length === 2) {
-          return checked.value ? props.label[0] : props.label[1];
-        }
-        return iconContent.value;
-      };
       return (
         <div class={switchClasses.value} onClick={handleToggle}>
           <div class={dotClasses.value}>
-            <div class={labelClasses.value}>{readerContent()}</div>
+            <div class={labelClasses.value}>{renderContent()}</div>
           </div>
         </div>
       );

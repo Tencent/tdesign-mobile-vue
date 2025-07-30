@@ -6,7 +6,7 @@ import config from '../config';
 import props from './props';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
-import { addClass, getAttach, removeClass } from '@/shared/dom';
+import { addClass, getAttach, removeClass } from '../shared/dom';
 
 const { prefix } = config;
 

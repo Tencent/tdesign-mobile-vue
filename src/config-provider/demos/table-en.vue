@@ -6,8 +6,8 @@
 </template>
 
 <script setup lang="ts">
-import merge from 'lodash/merge';
-import enConfig from '../../locale/en_US';
+import { merge } from 'lodash-es';
+import enConfig from 'tdesign-mobile-vue/es/locale/en_US';
 
 const columns = [
   {

@@ -5,6 +5,7 @@ import { describe, it, vi } from 'vitest';
 import ImageViewer from '../image-viewer';
 import { Swiper } from '../../swiper';
 import { trigger, triggerZoom } from './touch';
+import { CloseIcon } from 'tdesign-icons-vue-next';
 
 const images = ref([
   'https://imgcache.qq.com/open_proj/proj_qcloud_v2/rocket_images/1606728019829_yw760ok1jmpbep14i.png',
@@ -17,7 +18,7 @@ describe('ImageViewer', () => {
     it(':closeBtn', async () => {
       const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} closeBtn={false} />);
 
-      expect(wrapper.find('.t-image-viewer__nav-close').exists()).toBe(false);
+      expect(wrapper.findComponent(CloseIcon).exists()).toBeFalsy();
     });
 
     it(':images', async () => {
@@ -86,7 +87,7 @@ describe('ImageViewer', () => {
 
     it(': delete', async () => {
       const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} delete-btn={true} />);
-      
+
       await wrapper.find('.t-image-viewer__nav-delete').trigger('click');
       expect(wrapper.emitted()).toHaveProperty('delete');
     });

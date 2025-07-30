@@ -10,7 +10,7 @@ import { PropType } from 'vue';
 export default {
   /** 是否允许半选 */
   allowHalf: Boolean,
-  /** 评分图标的颜色，样式中默认为 #ED7B2F。一个值表示设置选中高亮的五角星颜色，示例：[选中颜色]。数组则表示分别设置 选中高亮的五角星颜色 和 未选中暗灰的五角星颜色，[选中颜色，未选中颜色]。示例：['#ED7B2F', '#E3E6EB']。 */
+  /** 评分图标的颜色，样式中默认为 #ED7B2F。一个值表示设置选中高亮的五角星颜色，示例：[选中颜色]。数组则表示分别设置 选中高亮的五角星颜色 和 未选中暗灰的五角星颜色，[选中颜色，未选中颜色]。示例：['#ED7B2F', '#E3E6EB'] */
   color: {
     type: [String, Array] as PropType<TdRateProps['color']>,
     default: '#ED7B2F',
@@ -21,15 +21,27 @@ export default {
     default: 5,
   },
   /** 是否禁用评分 */
-  disabled: Boolean,
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 评分图标的间距 */
   gap: {
-    type: Number,
+    type: [String, Number] as PropType<TdRateProps['gap']>,
     default: 8,
   },
   /** 自定义评分图标，[选中图标，未选中图标] */
   icon: {
     type: [Array, Function] as PropType<TdRateProps['icon']>,
+  },
+  /** 选择评分弹框的位置，值为空字符表示不显示评分弹框 */
+  placement: {
+    type: String as PropType<TdRateProps['placement']>,
+    default: 'top' as TdRateProps['placement'],
+    validator(val: TdRateProps['placement']): boolean {
+      if (!val) return true;
+      return ['top', 'bottom', ''].includes(val);
+    },
   },
   /** 是否显示对应的辅助文字 */
   showText: Boolean,
@@ -56,15 +68,6 @@ export default {
   defaultValue: {
     type: Number,
     default: 0,
-  },
-  /** 已废弃。形状类型，有描边类型和填充类型两种 */
-  variant: {
-    type: String as PropType<TdRateProps['variant']>,
-    default: 'outline' as TdRateProps['variant'],
-    validator(val: TdRateProps['variant']): boolean {
-      if (!val) return true;
-      return ['outline', 'filled'].includes(val);
-    },
   },
   /** 评分数改变时触发 */
   onChange: Function as PropType<TdRateProps['onChange']>,

@@ -1,25 +1,22 @@
-import { defineComponent, ref, Ref, ComponentInternalInstance, provide } from 'vue';
+import { defineComponent, ref, Ref, toRefs, ComponentInternalInstance, provide } from 'vue';
 import config from '../config';
 import props from './props';
 import { TdSideBarProps } from './type';
-import { useDefault } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-side-bar`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-side-bar`,
   props,
   emits: ['update:value', 'update:modelValue', 'change'],
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();
-    const [currentValue, setCurrentValue] = useDefault<TdSideBarProps['value'], TdSideBarProps>(
-      props,
-      context.emit,
-      'value',
-      'change',
-    );
+    const sideBarClass = usePrefixClass('side-bar');
+    const { value, modelValue } = toRefs(props);
+    const [currentValue, setCurrentValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
     const children: Ref<ComponentInternalInstance[]> = ref([]);
 
@@ -46,9 +43,9 @@ export default defineComponent({
     });
 
     return () => (
-      <div class={`${name}`}>
+      <div class={`${sideBarClass.value}`}>
         {renderTNodeJSX('default')}
-        <div class={`${name}__padding`}></div>
+        <div class={`${sideBarClass.value}__padding`}></div>
       </div>
     );
   },

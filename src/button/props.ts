@@ -14,8 +14,11 @@ export default {
   content: {
     type: [String, Function] as PropType<TdButtonProps['content']>,
   },
-  /** 禁用状态 */
-  disabled: Boolean,
+  /** 禁用状态。优先级：Button.disabled > Form.disabled */
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 是否为幽灵按钮（镂空按钮） */
   ghost: Boolean,
   /** 按钮内部图标，可完全自定义 */
@@ -24,7 +27,7 @@ export default {
   },
   /** 是否显示为加载状态 */
   loading: Boolean,
-  /** 透传加载组件全部属性 */
+  /** 透传 Loading 组件全部属性 */
   loadingProps: {
     type: Object as PropType<TdButtonProps['loadingProps']>,
   },
@@ -68,13 +71,13 @@ export default {
       return ['submit', 'reset', 'button'].includes(val);
     },
   },
-  /** 按钮形式，基础、线框、文字 */
+  /** 按钮形式，基础、线框、虚线、文字 */
   variant: {
     type: String as PropType<TdButtonProps['variant']>,
     default: 'base' as TdButtonProps['variant'],
     validator(val: TdButtonProps['variant']): boolean {
       if (!val) return true;
-      return ['base', 'outline', 'text'].includes(val);
+      return ['base', 'outline', 'dashed', 'text'].includes(val);
     },
   },
   /** 点击时触发 */

@@ -3,32 +3,37 @@ import dayjs, { Dayjs, UnitType } from 'dayjs';
 import weekday from 'dayjs/plugin/weekday';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import objectSupport from 'dayjs/plugin/objectSupport';
-import isArray from 'lodash/isArray';
+import { isArray } from 'lodash-es';
 
 import config from '../config';
 import DateTimePickerProps from './props';
 import { getMeaningColumn } from './shared';
-import { useVModel } from '../shared';
+import useVModel from '../hooks/useVModel';
+import { useTNodeJSX } from '../hooks/tnode';
 import { Picker as TPicker } from '../picker';
 import { PickerColumn, PickerColumnItem, PickerValue, PickerContext } from '../picker/type';
-import { useConfig } from '../config-provider/useConfig';
+import { usePrefixClass, useConfig } from '../hooks/useClass';
+
+import type { TdDateTimePickerProps, TimeModeValues } from './type';
 
 dayjs.extend(weekday);
 dayjs.extend(customParseFormat);
 dayjs.extend(objectSupport);
 
 const { prefix } = config;
-const name = `${prefix}-date-time-picker`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-date-time-picker`,
   components: { TPicker },
   props: DateTimePickerProps,
   emits: ['change', 'cancel', 'confirm', 'pick', 'update:modelValue', 'update:value'],
-  setup(props) {
+  setup(props, { slots }) {
+    const dateTimePickerClass = usePrefixClass('date-time-picker');
     const { globalConfig } = useConfig('dateTimePicker');
-    const className = computed(() => [`${name}`]);
+    const className = computed(() => [`${dateTimePickerClass.value}`]);
     const { value } = toRefs(props);
+    const renderTNodeJSX = useTNodeJSX();
+
     const [innerValue, setDateTimePickerValue] = useVModel(
       value,
       ref(props.modelValue),
@@ -104,9 +109,29 @@ export default defineComponent({
         second: globalConfig.value.secondLabel,
       };
 
-      const generateColumn = (start: number, end: number, type: string) => {
+      const generateDayWithWeekColumn = (date: Dayjs) => {
+        const startOfMonth = date.startOf('month');
+        const endOfMonth = date.endOf('month');
+        const daysOfWeek = [];
+        const type = 'date';
+
+        for (let i = 0; i <= endOfMonth.diff(startOfMonth, 'days'); i += 1) {
+          const currentDate = startOfMonth.add(i, 'days');
+          const dayName = currentDate.format('ddd');
+
+          daysOfWeek.push({
+            value: `${i + 1}`,
+            label: props.renderLabel ? props.renderLabel(type, i) : `${i + 1}${typeUnit[type] || ''} ${dayName}`,
+          });
+        }
+
+        ret.push(daysOfWeek);
+      };
+
+      const generateColumn = (start: number, end: number, type: TimeModeValues) => {
         const arr: PickerColumnItem[] = [];
-        for (let i = start; i <= end; i++) {
+        const step = (props.steps as TdDateTimePickerProps['steps'])[type] || 1;
+        for (let i = start; i <= end; i += step) {
           const value = i.toString();
           arr.push({
             label: props.renderLabel ? props.renderLabel(type, i) : `${value} ${typeUnit[type]}`,
@@ -129,7 +154,11 @@ export default defineComponent({
       if (meaningColumn.value.includes('date')) {
         const lower = isInMinMonth ? minDay : 1;
         const upper = isInMaxMonth ? maxDay : dayjs(`${curYear}-${curMonth}`).daysInMonth();
-        generateColumn(lower, upper, 'date');
+        if (props.showWeek) {
+          generateDayWithWeekColumn(curDate.value);
+        } else {
+          generateColumn(lower, upper, 'date');
+        }
       }
 
       if (meaningColumn.value.includes('hour')) {
@@ -192,6 +221,8 @@ export default defineComponent({
           onConfirm={onConfirm}
           onCancel={onCancel}
           onPick={onPick}
+          header={() => renderTNodeJSX('header')}
+          footer={() => renderTNodeJSX('footer')}
         />
       );
     };

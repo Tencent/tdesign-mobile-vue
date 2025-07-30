@@ -13,14 +13,14 @@
       </template>
     </t-cell>
     <t-cell title="单行标题" note="辅助信息" arrow hover />
-    <t-cell title="单行标题" :left-icon="lockIcon" arrow hover />
+    <t-cell title="单行标题" :left-icon="appIcon" arrow hover />
   </t-cell-group>
 </template>
 
 <script lang="ts" setup>
 import { h } from 'vue';
-import { LockOnIcon } from 'tdesign-icons-vue-next';
+import { AppIcon } from 'tdesign-icons-vue-next';
 import { Switch as TSwitch, Badge as TBadge } from 'tdesign-mobile-vue';
 
-const lockIcon = () => h(LockOnIcon);
+const appIcon = () => h(AppIcon);
 </script>

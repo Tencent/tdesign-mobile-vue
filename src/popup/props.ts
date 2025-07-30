@@ -8,7 +8,7 @@ import { TdPopupProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 制定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body */
+  /** 指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body */
   attach: {
     type: [String, Function] as PropType<TdPopupProps['attach']>,
     default: 'body',
@@ -24,6 +24,11 @@ export default {
   },
   /** 是否在关闭浮层时销毁浮层 */
   destroyOnClose: Boolean,
+  /** 动画过渡时间 */
+  duration: {
+    type: Number,
+    default: 240,
+  },
   /** 遮罩层的属性，透传至 overlay */
   overlayProps: {
     type: Object as PropType<TdPopupProps['overlayProps']>,
@@ -32,13 +37,13 @@ export default {
   /** 浮层出现位置 */
   placement: {
     type: String as PropType<TdPopupProps['placement']>,
-    // default: 'top' as TdPopupProps['placement'],
+    default: 'top' as TdPopupProps['placement'],
     validator(val: TdPopupProps['placement']): boolean {
       if (!val) return true;
       return ['top', 'left', 'right', 'bottom', 'center'].includes(val);
     },
   },
-  /** 防止滚动穿透 */
+  /** 是否阻止背景滚动 */
   preventScrollThrough: {
     type: Boolean,
     default: true,

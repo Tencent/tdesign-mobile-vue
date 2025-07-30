@@ -1,7 +1,7 @@
 import { ref, nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
-import isObject from 'lodash/isObject';
+import { isObject } from 'lodash-es';
 import { FormItem, Form } from '../index.ts';
 import Input from '../../input';
 import Radio, { RadioGroup } from '../../radio';
@@ -653,7 +653,7 @@ describe('form', () => {
 
       await wrapper.setProps({ disabled: true });
       extendedDisabled.value = false;
-      expect(actualDisabled.value).toBeTruthy();
+      expect(actualDisabled.value).toBeFalsy();
     });
   });
 });

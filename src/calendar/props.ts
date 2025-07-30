@@ -3,11 +3,12 @@
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
+
 import { TdCalendarProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。 */
+  /** 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性 */
   confirmBtn: {
     type: [String, Object, Function] as PropType<TdCalendarProps['confirmBtn']>,
     default: '',
@@ -28,6 +29,17 @@ export default {
   /** 最小可选的日期，不传则默认今天 */
   minDate: {
     type: [Number, Date] as PropType<TdCalendarProps['minDate']>,
+  },
+  /** 是否只读，只读状态下不能选择日期 */
+  readonly: Boolean,
+  /** 切换模式。 `none` 表示平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换 */
+  switchMode: {
+    type: String as PropType<TdCalendarProps['switchMode']>,
+    default: 'none' as TdCalendarProps['switchMode'],
+    validator(val: TdCalendarProps['switchMode']): boolean {
+      if (!val) return true;
+      return ['none', 'month', 'year-month'].includes(val);
+    },
   },
   /** 标题，不传默认为“请选择日期” */
   title: {
@@ -68,6 +80,10 @@ export default {
   onClose: Function as PropType<TdCalendarProps['onClose']>,
   /** 点击确认按钮时触发 */
   onConfirm: Function as PropType<TdCalendarProps['onConfirm']>,
+  /** 切换月或年时触发（switch-mode 不为 none 时有效） */
+  onPanelChange: Function as PropType<TdCalendarProps['onPanelChange']>,
+  /** 滚动时触发 */
+  onScroll: Function as PropType<TdCalendarProps['onScroll']>,
   /** 点击日期时触发 */
   onSelect: Function as PropType<TdCalendarProps['onSelect']>,
 };

@@ -6,7 +6,7 @@
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-indexList | Array | - | 索引字符列表。不传默认 `A-Z`。TS 类型：`string [] \| number[]` | N
+indexList | Array | - | 索引字符列表。不传默认 `A-Z`。TS 类型：`Array<string \| number>` | N
 sticky | Boolean | true | 索引是否吸顶，默认为true。TS 类型：`Boolean` | N
 stickyOffset | Number | 0 | 锚点吸顶时与顶部的距离	 | N
 onChange | Function |  | TS 类型：`(index: string \| number) => void`<br/>索引发生变更时触发事件 | N
@@ -32,8 +32,8 @@ index | String / Number | - | 索引字符 | N
 名称 | 默认值 | 描述 
 -- | -- | --
 --td-indexes-sidebar-active-bg-color | @brand-color | - 
---td-indexes-sidebar-active-color | @font-white-1 | - 
---td-indexes-sidebar-color | @font-gray-1 | - 
+--td-indexes-sidebar-active-color | @text-color-anti | - 
+--td-indexes-sidebar-color | @text-color-primary | - 
 --td-indexes-sidebar-font-size | 12px | - 
 --td-indexes-sidebar-item-size | 20px | - 
 --td-indexes-sidebar-line-height | 20px | - 
@@ -47,6 +47,6 @@ index | String / Number | - | 索引字符 | N
 --td-indexes-anchor-active-color | @brand-color | - 
 --td-indexes-anchor-active-font-weight | 600 | - 
 --td-indexes-anchor-bg-color | @bg-color-secondarycontainer | - 
---td-indexes-anchor-color | @font-gray-1 | - 
+--td-indexes-anchor-color | @text-color-primary | - 
 --td-indexes-anchor-font-size | 14px | - 
---td-indexes-anchor-line-height | 22px | -
+--td-indexes-anchor-line-height | 22px | - 

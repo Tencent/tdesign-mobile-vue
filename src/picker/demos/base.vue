@@ -9,13 +9,16 @@
       @confirm="onConfirm"
       @cancel="cityState.show = false"
       @pick="onPick"
-    />
+    >
+      <template #option="item">{{ item.label }}</template></t-picker
+    >
   </t-popup>
 
   <t-popup v-model="seasonState.show" placement="bottom">
     <t-picker
       v-model="seasonState.season"
       :columns="seasonColumns"
+      :option="option"
       @confirm="onConfirm"
       @cancel="onCancel"
       @pick="onPick"
@@ -25,10 +28,14 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue';
-import { PickerValue } from '../type';
+import type { PickerColumnItem, PickerValue } from 'tdesign-mobile-vue';
 
-const cityOptions = [
-  [
+const option = (item: PickerColumnItem, index: number) => {
+  return item.label;
+};
+
+const cityOptions = () => {
+  return [
     {
       label: '北京市',
       value: '北京市',
@@ -36,6 +43,7 @@ const cityOptions = [
     {
       label: '上海市',
       value: '上海市',
+      disabled: true,
     },
     {
       label: '广州市',
@@ -57,12 +65,13 @@ const cityOptions = [
       label: '长沙市',
       value: '长沙市',
     },
-  ],
-];
+  ];
+};
+
 const currentYear = Number(new Date().getFullYear());
 const yearOptions = Array.from(new Array(10), (_, index) => {
   return {
-    label: currentYear - index,
+    label: `${currentYear - index}`,
     value: `${currentYear - index}`,
   };
 });
@@ -101,7 +110,7 @@ const onCancel = () => {
   seasonState.show = false;
 };
 
-const onConfirm = (val: string[], context: number[]) => {
+const onConfirm = (val: PickerValue[], context: { index: number[] }) => {
   console.log(val);
   console.log('context', context);
   cityState.show = false;

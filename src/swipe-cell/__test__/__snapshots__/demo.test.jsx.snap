@@ -22,6 +22,7 @@ exports[`SwipeCell > SwipeCell doubleVue demo works fine 1`] = `
       class="t-swipe-cell"
     >
       <div
+        class="t-swipe-cell__wrapper"
         style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
       >
         <div
@@ -41,12 +42,12 @@ exports[`SwipeCell > SwipeCell doubleVue demo works fine 1`] = `
           <div
             style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
           >
-            <!--v-if-->
+            <!---->
           </div>
         </div>
         
         <div
-          class="t-cell t-cell--middle"
+          class="t-cell"
         >
           <div
             class="t-cell__left"
@@ -57,8 +58,12 @@ exports[`SwipeCell > SwipeCell doubleVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            左右滑操作
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              左右滑操作
+              <!---->
+            </div>
             <!---->
           </div>
           <div
@@ -91,7 +96,7 @@ exports[`SwipeCell > SwipeCell doubleVue demo works fine 1`] = `
           <div
             style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
           >
-            <!--v-if-->
+            <!---->
           </div>
         </div>
       </div>
@@ -104,7 +109,7 @@ exports[`SwipeCell > SwipeCell doubleVue demo works fine 1`] = `
 exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-  data-v-7d57325a=""
+  data-v-f06ea449=""
 >
   <div
     class="tdesign-mobile-demo-block__header"
@@ -122,9 +127,10 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
     
     <div
       class="t-swipe-cell"
-      data-v-7d57325a=""
+      data-v-f06ea449=""
     >
       <div
+        class="t-swipe-cell__wrapper"
         style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
       >
         <div
@@ -134,13 +140,13 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
           
           <div
             class="btn edit-btn"
-            data-v-7d57325a=""
+            data-v-f06ea449=""
           >
             编辑
           </div>
           <div
             class="btn delete-btn"
-            data-v-7d57325a=""
+            data-v-f06ea449=""
           >
             删除
           </div>
@@ -151,13 +157,13 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
           <div
             style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
           >
-            <!--v-if-->
+            <!---->
           </div>
         </div>
         
         <div
-          class="t-cell t-cell--middle"
-          data-v-7d57325a=""
+          class="t-cell"
+          data-v-f06ea449=""
         >
           <div
             class="t-cell__left"
@@ -168,8 +174,12 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            带二次确认的操作
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              带二次确认的操作
+              <!---->
+            </div>
             <!---->
           </div>
           <div
@@ -187,13 +197,13 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
           
           <div
             class="btn edit-btn"
-            data-v-7d57325a=""
+            data-v-f06ea449=""
           >
             编辑
           </div>
           <div
             class="btn delete-btn"
-            data-v-7d57325a=""
+            data-v-f06ea449=""
           >
             删除
           </div>
@@ -204,7 +214,7 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
           <div
             style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
           >
-            <!--v-if-->
+            <!---->
           </div>
         </div>
       </div>
@@ -240,26 +250,26 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -270,8 +280,12 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              图标加文字横排
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                图标加文字横排
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -300,7 +314,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
+                  d="M16.8281 1.41602L22.583 7.17092L7.75494 22.0001L2 22.0002L2 16.2453L16.8281 1.41602ZM16.8281 10.0974L19.7546 7.17092L16.8281 4.24444L13.9017 7.17092L16.8281 10.0974ZM12.4875 8.58517L4 17.0736L4 20.0001H6.92644L15.414 11.5116L12.4875 8.58517Z"
                   fill="currentColor"
                 />
               </svg>
@@ -323,7 +337,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M7.5 1h9v3H22v2h-2.03l-.5 17H4.53l-.5-17H2V4h5.5V1zm2 3h5V3h-5v1zM6.03 6l.44 15h11.06l.44-15H6.03zM13 8v11h-2V8h2z"
+                  d="M7.5 1H16.5V4H22V6H19.971L19.471 23H4.52898L4.02898 6H2V4H7.5V1ZM9.5 4H14.5V3H9.5V4ZM6.02984 6L6.47102 21H17.529L17.9702 6H6.02984ZM13 8V19H11V8H13Z"
                   fill="currentColor"
                 />
               </svg>
@@ -340,7 +354,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -360,26 +374,26 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -390,8 +404,12 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              纯图标
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                纯图标
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -419,11 +437,11 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
+                  d="M16.8281 1.41602L22.583 7.17092L7.75494 22.0001L2 22.0002L2 16.2453L16.8281 1.41602ZM16.8281 10.0974L19.7546 7.17092L16.8281 4.24444L13.9017 7.17092L16.8281 10.0974ZM12.4875 8.58517L4 17.0736L4 20.0001H6.92644L15.414 11.5116L12.4875 8.58517Z"
                   fill="currentColor"
                 />
               </svg>
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-swipe-cell__content btn delete-btn"
@@ -437,11 +455,11 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M7.5 1h9v3H22v2h-2.03l-.5 17H4.53l-.5-17H2V4h5.5V1zm2 3h5V3h-5v1zM6.03 6l.44 15h11.06l.44-15H6.03zM13 8v11h-2V8h2z"
+                  d="M7.5 1H16.5V4H22V6H19.971L19.471 23H4.52898L4.02898 6H2V4H7.5V1ZM9.5 4H14.5V3H9.5V4ZM6.02984 6L6.47102 21H17.529L17.9702 6H6.02984ZM13 8V19H11V8H13Z"
                   fill="currentColor"
                 />
               </svg>
-              <!--v-if-->
+              <!---->
             </div>
             
             <div
@@ -450,7 +468,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -470,26 +488,26 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -500,8 +518,12 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              图标加文字竖排
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                图标加文字竖排
+                <!---->
+              </div>
               <div
                 class="t-cell__description"
               >
@@ -534,7 +556,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
+                  d="M16.8281 1.41602L22.583 7.17092L7.75494 22.0001L2 22.0002L2 16.2453L16.8281 1.41602ZM16.8281 10.0974L19.7546 7.17092L16.8281 4.24444L13.9017 7.17092L16.8281 10.0974ZM12.4875 8.58517L4 17.0736L4 20.0001H6.92644L15.414 11.5116L12.4875 8.58517Z"
                   fill="currentColor"
                 />
               </svg>
@@ -557,7 +579,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M7.5 1h9v3H22v2h-2.03l-.5 17H4.53l-.5-17H2V4h5.5V1zm2 3h5V3h-5v1zM6.03 6l.44 15h11.06l.44-15H6.03zM13 8v11h-2V8h2z"
+                  d="M7.5 1H16.5V4H22V6H19.971L19.471 23H4.52898L4.02898 6H2V4H7.5V1ZM9.5 4H14.5V3H9.5V4ZM6.02984 6L6.47102 21H17.529L17.9702 6H6.02984ZM13 8V19H11V8H13Z"
                   fill="currentColor"
                 />
               </svg>
@@ -574,7 +596,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -616,26 +638,26 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -646,8 +668,12 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左滑单操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                左滑单操作
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -675,7 +701,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -696,26 +722,26 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -726,8 +752,12 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左滑单操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                左滑单操作
+                <!---->
+              </div>
               <div
                 class="t-cell__description"
               >
@@ -759,7 +789,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -780,26 +810,26 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -810,8 +840,12 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左滑双操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                左滑双操作
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -831,7 +865,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
               class="t-swipe-cell__content btn edit-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -842,7 +876,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
               class="t-swipe-cell__content btn delete-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -856,7 +890,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -877,26 +911,26 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -907,8 +941,12 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左滑三操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                左滑三操作
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -928,7 +966,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
               class="t-swipe-cell__content btn favor-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -939,7 +977,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
               class="t-swipe-cell__content btn edit-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -950,7 +988,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
               class="t-swipe-cell__content btn delete-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -964,7 +1002,7 @@ exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1016,26 +1054,26 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1046,8 +1084,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左滑单操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                左滑单操作
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -1075,7 +1117,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1096,26 +1138,26 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1126,8 +1168,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左滑单操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                左滑单操作
+                <!---->
+              </div>
               <div
                 class="t-cell__description"
               >
@@ -1159,7 +1205,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1180,26 +1226,26 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1210,8 +1256,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左滑双操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                左滑双操作
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -1231,7 +1281,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-swipe-cell__content btn edit-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -1242,7 +1292,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-swipe-cell__content btn delete-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -1256,7 +1306,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1277,26 +1327,26 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1307,8 +1357,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左滑三操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                左滑三操作
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -1328,7 +1382,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-swipe-cell__content btn favor-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -1339,7 +1393,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-swipe-cell__content btn edit-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -1350,7 +1404,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
               class="t-swipe-cell__content btn delete-btn"
               style="height: 100%;"
             >
-              <!--v-if-->
+              <!---->
               <span
                 class="t-swipe-cell__text"
               >
@@ -1364,7 +1418,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1394,6 +1448,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -1413,12 +1468,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1429,8 +1484,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              右滑单操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                右滑单操作
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -1445,15 +1504,14 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             class="t-swipe-cell__right"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1482,6 +1540,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -1501,12 +1560,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1517,8 +1576,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左右滑操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                左右滑操作
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -1551,7 +1614,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1581,26 +1644,26 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1611,8 +1674,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              图标加文字横排
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                图标加文字横排
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -1641,7 +1708,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
+                  d="M16.8281 1.41602L22.583 7.17092L7.75494 22.0001L2 22.0002L2 16.2453L16.8281 1.41602ZM16.8281 10.0974L19.7546 7.17092L16.8281 4.24444L13.9017 7.17092L16.8281 10.0974ZM12.4875 8.58517L4 17.0736L4 20.0001H6.92644L15.414 11.5116L12.4875 8.58517Z"
                   fill="currentColor"
                 />
               </svg>
@@ -1664,7 +1731,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M7.5 1h9v3H22v2h-2.03l-.5 17H4.53l-.5-17H2V4h5.5V1zm2 3h5V3h-5v1zM6.03 6l.44 15h11.06l.44-15H6.03zM13 8v11h-2V8h2z"
+                  d="M7.5 1H16.5V4H22V6H19.971L19.471 23H4.52898L4.02898 6H2V4H7.5V1ZM9.5 4H14.5V3H9.5V4ZM6.02984 6L6.47102 21H17.529L17.9702 6H6.02984ZM13 8V19H11V8H13Z"
                   fill="currentColor"
                 />
               </svg>
@@ -1681,7 +1748,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1701,26 +1768,26 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1731,8 +1798,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              纯图标
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                纯图标
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -1760,11 +1831,11 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
+                  d="M16.8281 1.41602L22.583 7.17092L7.75494 22.0001L2 22.0002L2 16.2453L16.8281 1.41602ZM16.8281 10.0974L19.7546 7.17092L16.8281 4.24444L13.9017 7.17092L16.8281 10.0974ZM12.4875 8.58517L4 17.0736L4 20.0001H6.92644L15.414 11.5116L12.4875 8.58517Z"
                   fill="currentColor"
                 />
               </svg>
-              <!--v-if-->
+              <!---->
             </div>
             <div
               class="t-swipe-cell__content btn delete-btn"
@@ -1778,11 +1849,11 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M7.5 1h9v3H22v2h-2.03l-.5 17H4.53l-.5-17H2V4h5.5V1zm2 3h5V3h-5v1zM6.03 6l.44 15h11.06l.44-15H6.03zM13 8v11h-2V8h2z"
+                  d="M7.5 1H16.5V4H22V6H19.971L19.471 23H4.52898L4.02898 6H2V4H7.5V1ZM9.5 4H14.5V3H9.5V4ZM6.02984 6L6.47102 21H17.529L17.9702 6H6.02984ZM13 8V19H11V8H13Z"
                   fill="currentColor"
                 />
               </svg>
-              <!--v-if-->
+              <!---->
             </div>
             
             <div
@@ -1791,7 +1862,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1811,26 +1882,26 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            
-            
+            <!---->
             <div
               style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
             />
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
           <div
-            class="t-cell t-cell--middle"
+            class="t-cell"
           >
             <div
               class="t-cell__left"
@@ -1841,8 +1912,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              图标加文字竖排
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                图标加文字竖排
+                <!---->
+              </div>
               <div
                 class="t-cell__description"
               >
@@ -1875,7 +1950,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M16.83 1.42l5.75 5.75L7.75 22H2v-5.75L16.83 1.42zm0 8.68l2.92-2.93-2.92-2.93-2.93 2.93 2.93 2.93zm-4.34-1.51L4 17.07V20h2.93l8.48-8.49L12.5 8.6z"
+                  d="M16.8281 1.41602L22.583 7.17092L7.75494 22.0001L2 22.0002L2 16.2453L16.8281 1.41602ZM16.8281 10.0974L19.7546 7.17092L16.8281 4.24444L13.9017 7.17092L16.8281 10.0974ZM12.4875 8.58517L4 17.0736L4 20.0001H6.92644L15.414 11.5116L12.4875 8.58517Z"
                   fill="currentColor"
                 />
               </svg>
@@ -1898,7 +1973,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M7.5 1h9v3H22v2h-2.03l-.5 17H4.53l-.5-17H2V4h5.5V1zm2 3h5V3h-5v1zM6.03 6l.44 15h11.06l.44-15H6.03zM13 8v11h-2V8h2z"
+                  d="M7.5 1H16.5V4H22V6H19.971L19.471 23H4.52898L4.02898 6H2V4H7.5V1ZM9.5 4H14.5V3H9.5V4ZM6.02984 6L6.47102 21H17.529L17.9702 6H6.02984ZM13 8V19H11V8H13Z"
                   fill="currentColor"
                 />
               </svg>
@@ -1915,7 +1990,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -1926,7 +2001,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
   
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-7d57325a=""
+    data-v-f06ea449=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1944,9 +2019,10 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
       
       <div
         class="t-swipe-cell"
-        data-v-7d57325a=""
+        data-v-f06ea449=""
       >
         <div
+          class="t-swipe-cell__wrapper"
           style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
         >
           <div
@@ -1956,13 +2032,13 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <div
               class="btn edit-btn"
-              data-v-7d57325a=""
+              data-v-f06ea449=""
             >
               编辑
             </div>
             <div
               class="btn delete-btn"
-              data-v-7d57325a=""
+              data-v-f06ea449=""
             >
               删除
             </div>
@@ -1973,13 +2049,13 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
           
           <div
-            class="t-cell t-cell--middle"
-            data-v-7d57325a=""
+            class="t-cell"
+            data-v-f06ea449=""
           >
             <div
               class="t-cell__left"
@@ -1990,8 +2066,12 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              带二次确认的操作
-              <!---->
+              <div
+                class="t-cell__title-text"
+              >
+                带二次确认的操作
+                <!---->
+              </div>
               <!---->
             </div>
             <div
@@ -2009,13 +2089,13 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <div
               class="btn edit-btn"
-              data-v-7d57325a=""
+              data-v-f06ea449=""
             >
               编辑
             </div>
             <div
               class="btn delete-btn"
-              data-v-7d57325a=""
+              data-v-f06ea449=""
             >
               删除
             </div>
@@ -2026,7 +2106,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div
               style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
             >
-              <!--v-if-->
+              <!---->
             </div>
           </div>
         </div>
@@ -2059,6 +2139,7 @@ exports[`SwipeCell > SwipeCell rightVue demo works fine 1`] = `
       class="t-swipe-cell"
     >
       <div
+        class="t-swipe-cell__wrapper"
         style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
       >
         <div
@@ -2078,12 +2159,12 @@ exports[`SwipeCell > SwipeCell rightVue demo works fine 1`] = `
           <div
             style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
           >
-            <!--v-if-->
+            <!---->
           </div>
         </div>
         
         <div
-          class="t-cell t-cell--middle"
+          class="t-cell"
         >
           <div
             class="t-cell__left"
@@ -2094,8 +2175,12 @@ exports[`SwipeCell > SwipeCell rightVue demo works fine 1`] = `
           <div
             class="t-cell__title"
           >
-            右滑单操作
-            <!---->
+            <div
+              class="t-cell__title-text"
+            >
+              右滑单操作
+              <!---->
+            </div>
             <!---->
           </div>
           <div
@@ -2110,15 +2195,14 @@ exports[`SwipeCell > SwipeCell rightVue demo works fine 1`] = `
           class="t-swipe-cell__right"
           style="width: auto;"
         >
-          
-          
+          <!---->
           <div
             style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); pointer-events: none;"
           />
           <div
             style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
           >
-            <!--v-if-->
+            <!---->
           </div>
         </div>
       </div>

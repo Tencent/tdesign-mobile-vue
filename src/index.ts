@@ -4,7 +4,7 @@ import * as components from './components';
 
 const install = function (app: App, option?: Record<string, unknown>): void {
   Object.keys(components).forEach((key) => {
-    app.use(components[key], option);
+    app.use(components[key as keyof typeof components], option);
   });
 };
 
@@ -14,4 +14,5 @@ const version = typeof __VERSION__ === 'undefined' ? '' : __VERSION__;
 export { install, version };
 export * from './plugins';
 export * from './components';
+export * from './common';
 export default { install, version };

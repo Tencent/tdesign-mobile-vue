@@ -1,7 +1,11 @@
-import Search from './search';
+import _Search from './search';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';
+import { TdSearchProps } from './type';
 
-const _Search: WithInstallType<typeof Search> = withInstall(Search);
-export default _Search;
+export * from './type';
+export type SearchProps = TdSearchProps;
+
+export const Search: WithInstallType<typeof _Search> = withInstall(_Search);
+export default Search;

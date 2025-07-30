@@ -1,7 +1,9 @@
-import type { ComputedRef, Ref } from 'vue';
+/* eslint-disable no-undef */
+
+import type { ComputedRef, Ref, MaybeRef } from 'vue';
 import { computed, reactive, ref } from 'vue';
 import { useEventListener } from '@vueuse/core';
-import isObject from 'lodash/isObject';
+import { isObject } from 'lodash-es';
 import { preventDefault } from '../shared/dom';
 import { isBrowser } from '../shared';
 
@@ -11,15 +13,6 @@ type Position = {
   x: number;
   y: number;
 };
-
-/**
- * Maybe it's a ref, or a plain value
- *
- * ```ts
- * type MaybeRef<T> = T | Ref<T>
- * ```
- */
-type MaybeRef<T> = T | Ref<T>;
 
 export type UseSwipeDirection = 'up' | 'down' | 'left' | 'right' | 'none';
 

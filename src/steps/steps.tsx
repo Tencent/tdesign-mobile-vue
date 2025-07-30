@@ -1,15 +1,15 @@
-import { provide, defineComponent, reactive, ComponentInternalInstance, computed } from 'vue';
+import { provide, defineComponent, reactive, ComponentInternalInstance, computed, toRefs } from 'vue';
 import props from './props';
 import config from '../config';
 import { TdStepsProps } from './type';
-import { useDefault } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-steps`;
+
 export default defineComponent({
-  name,
+  name: `${prefix}-steps`,
   props,
   emits: ['update:current', 'update:modelValue', 'change'],
   setup(props, context) {
@@ -22,11 +22,13 @@ export default defineComponent({
     ]);
     const renderTNodeJSX = useTNodeJSX();
 
-    const [current, setCurrent] = useDefault<TdStepsProps['current'], TdStepsProps>(
-      props,
-      context.emit,
+    const { current, modelValue } = toRefs(props);
+    const [innerCurrent, setInnerCurrent] = useVModel(
+      current,
+      modelValue,
+      props.defaultCurrent,
+      props.onChange,
       'current',
-      'change',
     );
 
     interface TState {
@@ -46,13 +48,13 @@ export default defineComponent({
     };
 
     const onClickItem = (cur: TdStepsProps['current'], prev: TdStepsProps['current'], e: MouseEvent) => {
-      setCurrent(cur, prev, { e });
+      setInnerCurrent(cur, prev, { e });
     };
 
     provide('stepsProvide', {
       ...props,
       state,
-      current,
+      current: innerCurrent,
       relation,
       removeRelation,
       onClickItem,

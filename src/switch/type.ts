@@ -12,7 +12,7 @@ export interface TdSwitchProps<T = SwitchValue> {
    */
   customValue?: Array<SwitchValue>;
   /**
-   * 是否禁用组件
+   * 是否禁用组件。优先级：Switch.disabled > Form.disabled
    */
   disabled?: boolean;
   /**
@@ -21,10 +21,10 @@ export interface TdSwitchProps<T = SwitchValue> {
    */
   icon?: TNode[];
   /**
-   * 开关的标签；[打开时的标签，关闭时的标签]
+   * 开关内容，[开启时内容，关闭时内容]。示例：['开', '关'] 或 (value) => value ? '开' : '关'
    * @default []
    */
-  label?: string[];
+  label?: Array<string | TNode> | TNode<{ value: SwitchValue }>;
   /**
    * 是否处于加载中状态
    * @default false

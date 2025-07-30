@@ -6,7 +6,7 @@
       <baseDemo />
     </tdesign-demo-block>
     <tdesign-demo-block summary="基础加链接页脚">
-      <linkDemo />
+      <linksDemo />
     </tdesign-demo-block>
     <tdesign-demo-block summary="品牌页脚">
       <logoDemo />
@@ -15,10 +15,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
 import baseDemo from './base.vue';
-import linkDemo from './link.vue';
+import linksDemo from './links.vue';
 import logoDemo from './logo.vue';
 </script>
-
-<style lang="less" scoped></style>

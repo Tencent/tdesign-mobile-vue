@@ -1,25 +1,24 @@
 import { onMounted, computed, ref, provide, watch, onUnmounted, toRefs, defineComponent } from 'vue';
-import isObject from 'lodash/isObject';
-import isNumber from 'lodash/isNumber';
+import { isNumber, isObject } from 'lodash-es';
 import { useSwipe } from '../swipe-cell/useSwipe';
-
 import config from '../config';
 import props from './props';
 import { SwiperChangeSource, SwiperNavigation } from './type';
-import { useVModel } from '../shared';
+import useVModel from '../hooks/useVModel';
 import { preventDefault } from '../shared/dom';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-swiper`;
-const navName = `${prefix}-swiper-nav`;
+
 export default defineComponent({
-  name,
+  name: `${prefix}-swiper`,
   props,
   emits: ['change', 'update:current', 'update:modelValue', 'transitionenter', 'transitionleave'],
   setup(props, context) {
     const swiperClass = usePrefixClass('swiper');
+    const swiperNavClass = usePrefixClass('swiper-nav');
+
     const readerTNodeJSX = useTNodeJSX();
     const setOffset = (offset: number, direction = 'X'): void => {
       translateContainer.value = `translate${direction}(${offset}px)`;
@@ -30,6 +29,7 @@ export default defineComponent({
     const { current: value, modelValue } = toRefs(props);
     const [currentIndex, setCurrent] = useVModel(value, modelValue, props.defaultCurrent);
     const swiperContainer = ref<HTMLElement | null>(null);
+    const previous = ref(currentIndex.value ?? 0);
 
     const animating = ref(false);
     const disabled = ref(false);
@@ -77,9 +77,15 @@ export default defineComponent({
       props.onClick?.(currentIndex.value ?? 0);
     };
 
-    const move = (step: number, source: SwiperChangeSource, isReset = false) => {
+    const move = (step: number, source: SwiperChangeSource, isReset = false, targetValue?: number) => {
+      const nextIndex = currentIndex.value + step;
+      if (!props.loop && !(isReset || typeof targetValue === 'number')) {
+        if (nextIndex < 0 || nextIndex >= items.value.length) return;
+      }
+
       animating.value = true;
-      processIndex(isReset ? step : (currentIndex.value as number) + step, source);
+      const innerTargetValue = targetValue ?? (isReset ? step : nextIndex);
+      processIndex(innerTargetValue, source);
 
       const moveDirection = !isVertical.value ? 'X' : 'Y';
       const distance = root.value?.[isVertical.value ? 'offsetHeight' : 'offsetWidth'] ?? 0;
@@ -117,6 +123,11 @@ export default defineComponent({
       move(1, source);
     };
 
+    const innerSetCurrent = (val: number) => {
+      setCurrent(val);
+      previous.value = val;
+    };
+
     const processIndex = (index: number, source: SwiperChangeSource) => {
       const max = items.value.length;
       let val = index;
@@ -127,7 +138,7 @@ export default defineComponent({
       if (index >= max) {
         val = props.loop ? 0 : max - 1;
       }
-      setCurrent(val);
+      innerSetCurrent(val);
       context.emit('update:current', val);
       context.emit('change', val, { source });
     };
@@ -154,9 +165,14 @@ export default defineComponent({
 
       animating.value = false;
 
+      const curIndex = currentIndex.value;
+      const maxIndex = items.value.length - 1;
       if (!isVertical.value) {
+        // 非loop状态阻止首个向右滑动，最后个向左滑动的行为
+        if (!props.loop && ((curIndex <= 0 && distanceX < 0) || (curIndex >= maxIndex && distanceX > 0))) return;
         setOffset(-distanceX);
       } else {
+        if (!props.loop && ((curIndex <= 0 && distanceY < 0) || (curIndex >= maxIndex && distanceY > 0))) return;
         setOffset(-distanceY, 'Y');
       }
     };
@@ -219,11 +235,11 @@ export default defineComponent({
     watch(currentIndex, updateContainerHeight);
     watch(
       () => props.current,
-      () => {
+      (val, oldVal) => {
         // v-model动态更新时不触发move逻辑
-        if (props.current === currentIndex.value) return;
+        if (val === previous.value) return;
         stopAutoplay();
-        move(props.current - currentIndex.value, 'autoplay');
+        move(val - oldVal, 'autoplay', false, val);
         startAutoplay();
       },
     );
@@ -253,9 +269,9 @@ export default defineComponent({
           const controlsNav = () => {
             if (!isVertical.value && !!navigation.value?.showControls) {
               return (
-                <span class={`${navName}__btn`}>
-                  <span class={`${navName}__btn--prev`} onClick={() => goPrev('nav')} />
-                  <span class={`${navName}__btn--next`} onClick={() => goNext('nav')} />
+                <span class={`${swiperNavClass.value}__btn`}>
+                  <span class={`${swiperNavClass.value}__btn--prev`} onClick={() => goPrev('nav')} />
+                  <span class={`${swiperNavClass.value}__btn--next`} onClick={() => goNext('nav')} />
                 </span>
               );
             }
@@ -271,9 +287,11 @@ export default defineComponent({
                         <span
                           key={`page${index}`}
                           class={[
-                            `${navName}__${navigation.value?.type}-item`,
-                            index === currentIndex.value ? `${navName}__${navigation.value?.type}-item--active` : '',
-                            `${navName}__${navigation.value?.type}-item--${props.direction}`,
+                            `${swiperNavClass.value}__${navigation.value?.type}-item`,
+                            index === currentIndex.value
+                              ? `${swiperNavClass.value}__${navigation.value?.type}-item--active`
+                              : '',
+                            `${swiperNavClass.value}__${navigation.value?.type}-item--${props.direction}`,
                           ]}
                         />
                       ))}
@@ -290,12 +308,12 @@ export default defineComponent({
               return (
                 <span
                   class={[
-                    `${navName}--${props.direction}`,
-                    `${navName}__${navigation.value?.type || ''}`,
-                    `${navName}--${navigation.value?.paginationPosition || 'bottom'}`,
+                    `${swiperNavClass.value}--${props.direction}`,
+                    `${swiperNavClass.value}__${navigation.value?.type || ''}`,
+                    `${swiperNavClass.value}--${navigation.value?.paginationPosition || 'bottom'}`,
                     `${
                       isBottomPagination.value && navigation.value?.placement
-                        ? `${navName}--${navigation.value?.placement}`
+                        ? `${swiperNavClass.value}--${navigation.value?.placement}`
                         : ''
                     }`,
                   ]}

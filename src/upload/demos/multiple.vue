@@ -21,7 +21,13 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue';
-import { UploadChangeContext, UploadFile, UploadRemoveContext, SuccessContext, ProgressContext } from '../type';
+import {
+  UploadChangeContext,
+  UploadFile,
+  UploadRemoveContext,
+  SuccessContext,
+  ProgressContext,
+} from 'tdesign-mobile-vue';
 
 const onFail = ({ file, e }: { file: UploadFile; e: ProgressEvent }): any => {
   console.log('---onFail', file, e);
@@ -57,6 +63,7 @@ const files = ref([
     url: 'https://tdesign.gtimg.com/mobile/demos/upload4.png',
     name: 'uploaded1.png',
     type: 'image',
+    removeBtn: false,
   },
   {
     url: 'https://tdesign.gtimg.com/mobile/demos/upload6.png',

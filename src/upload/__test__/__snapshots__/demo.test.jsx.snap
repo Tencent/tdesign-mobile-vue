@@ -3,17 +3,17 @@
 exports[`Upload > Upload baseVue demo works fine 1`] = `
 <div
   class="upload-demo"
-  data-v-4dac5dd5=""
+  data-v-43787b67=""
 >
   <div
     class="upload-title"
-    data-v-4dac5dd5=""
+    data-v-43787b67=""
   >
     单选上传
   </div>
   <div
     class="t-upload"
-    data-v-4dac5dd5=""
+    data-v-43787b67=""
   >
     
     
@@ -31,7 +31,7 @@ exports[`Upload > Upload baseVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+            d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
             fill="currentColor"
           />
         </svg>
@@ -50,21 +50,21 @@ exports[`Upload > Upload baseVue demo works fine 1`] = `
 exports[`Upload > Upload customVue demo works fine 1`] = `
 <div
   class="upload-demo"
-  data-v-b50ff116=""
+  data-v-89f78ba6=""
 >
   <div
     class="upload-title"
-    data-v-b50ff116=""
+    data-v-89f78ba6=""
   >
     请上传身份证人像面
   </div>
   <div
     class="upload-content"
-    data-v-b50ff116=""
+    data-v-89f78ba6=""
   >
     <div
       class="t-upload front"
-      data-v-b50ff116=""
+      data-v-89f78ba6=""
     >
       
       
@@ -77,11 +77,11 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
           
           <div
             class="add-content"
-            data-v-b50ff116=""
+            data-v-89f78ba6=""
           >
             <div
               class="t-image t-image--square"
-              data-v-b50ff116=""
+              data-v-89f78ba6=""
               style="width: 32px; height: 32px;"
             >
               <div
@@ -138,17 +138,17 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
   </div>
   <div
     class="upload-title"
-    data-v-b50ff116=""
+    data-v-89f78ba6=""
   >
     请上传身份证国徽面
   </div>
   <div
     class="upload-content"
-    data-v-b50ff116=""
+    data-v-89f78ba6=""
   >
     <div
       class="t-upload reverse"
-      data-v-b50ff116=""
+      data-v-89f78ba6=""
     >
       
       
@@ -161,11 +161,11 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
           
           <div
             class="add-content"
-            data-v-b50ff116=""
+            data-v-89f78ba6=""
           >
             <div
               class="t-image t-image--square"
-              data-v-b50ff116=""
+              data-v-89f78ba6=""
               style="width: 32px; height: 32px;"
             >
               <div
@@ -260,17 +260,17 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
       
       <div
         class="upload-demo"
-        data-v-4dac5dd5=""
+        data-v-43787b67=""
       >
         <div
           class="upload-title"
-          data-v-4dac5dd5=""
+          data-v-43787b67=""
         >
           单选上传
         </div>
         <div
           class="t-upload"
-          data-v-4dac5dd5=""
+          data-v-43787b67=""
         >
           
           
@@ -288,7 +288,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+                  d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
                   fill="currentColor"
                 />
               </svg>
@@ -324,17 +324,17 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
       
       <div
         class="upload-demo"
-        data-v-5eaaef94=""
+        data-v-79f9c52d=""
       >
         <div
           class="upload-title"
-          data-v-5eaaef94=""
+          data-v-79f9c52d=""
         >
           多选上传
         </div>
         <div
           class="t-upload"
-          data-v-5eaaef94=""
+          data-v-79f9c52d=""
           grid-config="[object Object]"
         >
           
@@ -385,18 +385,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </picture>
             </div>
             <!---->
-            <svg
-              class="t-icon t-icon-close t-upload__delete-btn"
-              fill="none"
-              height="1em"
-              viewBox="0 0 24 24"
-              width="1em"
-            >
-              <path
-                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
-                fill="currentColor"
-              />
-            </svg>
+            <!---->
           </div>
           <div
             class="t-upload__item"
@@ -453,7 +442,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
                 fill="currentColor"
               />
             </svg>
@@ -513,7 +502,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
                 fill="currentColor"
               />
             </svg>
@@ -533,7 +522,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+                  d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
                   fill="currentColor"
                 />
               </svg>
@@ -575,17 +564,17 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
       
       <div
         class="upload-demo"
-        data-v-12872376=""
+        data-v-6b9ad65a=""
       >
         <div
           class="upload-title"
-          data-v-12872376=""
+          data-v-6b9ad65a=""
         >
           上传图片
         </div>
         <div
           class="t-upload"
-          data-v-12872376=""
+          data-v-6b9ad65a=""
         >
           
           <div
@@ -646,9 +635,8 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M12 2.25a9.75 9.75 0 000 19.5v-2.44A7.31 7.31 0 1119.31 12h2.44A9.75 9.75 0 0012 2.25z"
+                  d="M12 2.25C6.61556 2.25 2.25 6.61556 2.25 12C2.25 17.3844 6.61556 21.75 12 21.75V19.3125C7.96142 19.3125 4.6875 16.0386 4.6875 12C4.6875 7.96142 7.96142 4.6875 12 4.6875C16.0386 4.6875 19.3125 7.96142 19.3125 12H21.75C21.75 6.61556 17.3844 2.25 12 2.25Z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               <div
@@ -667,7 +655,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
                 fill="currentColor"
               />
             </svg>
@@ -730,9 +718,8 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M12 2.25a9.75 9.75 0 000 19.5v-2.44A7.31 7.31 0 1119.31 12h2.44A9.75 9.75 0 0012 2.25z"
+                  d="M12 2.25C6.61556 2.25 2.25 6.61556 2.25 12C2.25 17.3844 6.61556 21.75 12 21.75V19.3125C7.96142 19.3125 4.6875 16.0386 4.6875 12C4.6875 7.96142 7.96142 4.6875 12 4.6875C16.0386 4.6875 19.3125 7.96142 19.3125 12H21.75C21.75 6.61556 17.3844 2.25 12 2.25Z"
                   fill="currentColor"
-                  fill-opacity="0.9"
                 />
               </svg>
               <div
@@ -751,7 +738,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
                 fill="currentColor"
               />
             </svg>
@@ -771,7 +758,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+                  d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
                   fill="currentColor"
                 />
               </svg>
@@ -788,23 +775,23 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
       </div>
       <div
         class="upload-demo__title"
-        data-v-12872376=""
+        data-v-6b9ad65a=""
       >
         上传失败
       </div>
       <div
         class="upload-demo"
-        data-v-12872376=""
+        data-v-6b9ad65a=""
       >
         <div
           class="upload-title"
-          data-v-12872376=""
+          data-v-6b9ad65a=""
         >
           上传图片
         </div>
         <div
           class="t-upload"
-          data-v-12872376=""
+          data-v-6b9ad65a=""
         >
           
           <div
@@ -864,7 +851,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zM7.4 15.18L10.6 12 7.4 8.82 8.82 7.4 12 10.6l3.18-3.19 1.42 1.42L13.4 12l3.19 3.18-1.42 1.42L12 13.4 8.82 16.6 7.4 15.18z"
+                  d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM7.40347 15.1823L10.5858 12L7.40347 8.81768L8.81768 7.40347L12 10.5858L15.1816 7.40415L16.5959 8.81836L13.4142 12L16.5959 15.1816L15.1816 16.5959L12 13.4142L8.81768 16.5965L7.40347 15.1823Z"
                   fill="currentColor"
                 />
               </svg>
@@ -882,7 +869,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
                 fill="currentColor"
               />
             </svg>
@@ -902,7 +889,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+                  d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
                   fill="currentColor"
                 />
               </svg>
@@ -944,21 +931,21 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
       
       <div
         class="upload-demo"
-        data-v-b50ff116=""
+        data-v-89f78ba6=""
       >
         <div
           class="upload-title"
-          data-v-b50ff116=""
+          data-v-89f78ba6=""
         >
           请上传身份证人像面
         </div>
         <div
           class="upload-content"
-          data-v-b50ff116=""
+          data-v-89f78ba6=""
         >
           <div
             class="t-upload front"
-            data-v-b50ff116=""
+            data-v-89f78ba6=""
           >
             
             
@@ -971,11 +958,11 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 
                 <div
                   class="add-content"
-                  data-v-b50ff116=""
+                  data-v-89f78ba6=""
                 >
                   <div
                     class="t-image t-image--square"
-                    data-v-b50ff116=""
+                    data-v-89f78ba6=""
                     style="width: 32px; height: 32px;"
                   >
                     <div
@@ -1032,17 +1019,17 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
         </div>
         <div
           class="upload-title"
-          data-v-b50ff116=""
+          data-v-89f78ba6=""
         >
           请上传身份证国徽面
         </div>
         <div
           class="upload-content"
-          data-v-b50ff116=""
+          data-v-89f78ba6=""
         >
           <div
             class="t-upload reverse"
-            data-v-b50ff116=""
+            data-v-89f78ba6=""
           >
             
             
@@ -1055,11 +1042,11 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 
                 <div
                   class="add-content"
-                  data-v-b50ff116=""
+                  data-v-89f78ba6=""
                 >
                   <div
                     class="t-image t-image--square"
-                    data-v-b50ff116=""
+                    data-v-89f78ba6=""
                     style="width: 32px; height: 32px;"
                   >
                     <div
@@ -1124,17 +1111,17 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
 exports[`Upload > Upload multipleVue demo works fine 1`] = `
 <div
   class="upload-demo"
-  data-v-5eaaef94=""
+  data-v-79f9c52d=""
 >
   <div
     class="upload-title"
-    data-v-5eaaef94=""
+    data-v-79f9c52d=""
   >
     多选上传
   </div>
   <div
     class="t-upload"
-    data-v-5eaaef94=""
+    data-v-79f9c52d=""
     grid-config="[object Object]"
   >
     
@@ -1185,18 +1172,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
         </picture>
       </div>
       <!---->
-      <svg
-        class="t-icon t-icon-close t-upload__delete-btn"
-        fill="none"
-        height="1em"
-        viewBox="0 0 24 24"
-        width="1em"
-      >
-        <path
-          d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
-          fill="currentColor"
-        />
-      </svg>
+      <!---->
     </div>
     <div
       class="t-upload__item"
@@ -1253,7 +1229,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+          d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
           fill="currentColor"
         />
       </svg>
@@ -1313,7 +1289,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+          d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
           fill="currentColor"
         />
       </svg>
@@ -1333,7 +1309,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+            d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
             fill="currentColor"
           />
         </svg>
@@ -1357,17 +1333,17 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
   
   <div
     class="upload-demo"
-    data-v-12872376=""
+    data-v-6b9ad65a=""
   >
     <div
       class="upload-title"
-      data-v-12872376=""
+      data-v-6b9ad65a=""
     >
       上传图片
     </div>
     <div
       class="t-upload"
-      data-v-12872376=""
+      data-v-6b9ad65a=""
     >
       
       <div
@@ -1428,9 +1404,8 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M12 2.25a9.75 9.75 0 000 19.5v-2.44A7.31 7.31 0 1119.31 12h2.44A9.75 9.75 0 0012 2.25z"
+              d="M12 2.25C6.61556 2.25 2.25 6.61556 2.25 12C2.25 17.3844 6.61556 21.75 12 21.75V19.3125C7.96142 19.3125 4.6875 16.0386 4.6875 12C4.6875 7.96142 7.96142 4.6875 12 4.6875C16.0386 4.6875 19.3125 7.96142 19.3125 12H21.75C21.75 6.61556 17.3844 2.25 12 2.25Z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           <div
@@ -1449,7 +1424,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
             fill="currentColor"
           />
         </svg>
@@ -1512,9 +1487,8 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M12 2.25a9.75 9.75 0 000 19.5v-2.44A7.31 7.31 0 1119.31 12h2.44A9.75 9.75 0 0012 2.25z"
+              d="M12 2.25C6.61556 2.25 2.25 6.61556 2.25 12C2.25 17.3844 6.61556 21.75 12 21.75V19.3125C7.96142 19.3125 4.6875 16.0386 4.6875 12C4.6875 7.96142 7.96142 4.6875 12 4.6875C16.0386 4.6875 19.3125 7.96142 19.3125 12H21.75C21.75 6.61556 17.3844 2.25 12 2.25Z"
               fill="currentColor"
-              fill-opacity="0.9"
             />
           </svg>
           <div
@@ -1533,7 +1507,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
             fill="currentColor"
           />
         </svg>
@@ -1553,7 +1527,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+              d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
               fill="currentColor"
             />
           </svg>
@@ -1570,23 +1544,23 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
   </div>
   <div
     class="upload-demo__title"
-    data-v-12872376=""
+    data-v-6b9ad65a=""
   >
     上传失败
   </div>
   <div
     class="upload-demo"
-    data-v-12872376=""
+    data-v-6b9ad65a=""
   >
     <div
       class="upload-title"
-      data-v-12872376=""
+      data-v-6b9ad65a=""
     >
       上传图片
     </div>
     <div
       class="t-upload"
-      data-v-12872376=""
+      data-v-6b9ad65a=""
     >
       
       <div
@@ -1646,7 +1620,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M12 21a9 9 0 100-18 9 9 0 000 18zm11-9a11 11 0 11-22 0 11 11 0 0122 0zM7.4 15.18L10.6 12 7.4 8.82 8.82 7.4 12 10.6l3.18-3.19 1.42 1.42L13.4 12l3.19 3.18-1.42 1.42L12 13.4 8.82 16.6 7.4 15.18z"
+              d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM7.40347 15.1823L10.5858 12L7.40347 8.81768L8.81768 7.40347L12 10.5858L15.1816 7.40415L16.5959 8.81836L13.4142 12L16.5959 15.1816L15.1816 16.5959L12 13.4142L8.81768 16.5965L7.40347 15.1823Z"
               fill="currentColor"
             />
           </svg>
@@ -1664,7 +1638,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M7.05 5.64L12 10.59l4.95-4.95 1.41 1.41L13.41 12l4.95 4.95-1.41 1.41L12 13.41l-4.95 4.95-1.41-1.41L10.59 12 5.64 7.05l1.41-1.41z"
+            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
             fill="currentColor"
           />
         </svg>
@@ -1684,7 +1658,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+              d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
               fill="currentColor"
             />
           </svg>

@@ -1,8 +1,15 @@
-import LocalCollapse from './collapse';
-import LocalCollapsePanel from './collapse-panel';
+import _Collapse from './collapse';
+import _CollapsePanel from './collapse-panel';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';
 
-export const Collapse: WithInstallType<typeof LocalCollapse> = withInstall(LocalCollapse);
-export const CollapsePanel: WithInstallType<typeof LocalCollapsePanel> = withInstall(LocalCollapsePanel);
+import { TdCollapseProps, TdCollapsePanelProps } from './type';
+
+export * from './type';
+export type CollapseProps = TdCollapseProps;
+export type CollapsePanelProps = TdCollapsePanelProps;
+
+export const Collapse: WithInstallType<typeof _Collapse> = withInstall(_Collapse);
+export const CollapsePanel: WithInstallType<typeof _CollapsePanel> = withInstall(_CollapsePanel);
+export default Collapse;

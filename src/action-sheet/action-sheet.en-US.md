@@ -6,17 +6,19 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-align | String | center | options：center/left | N
+align | String | center | options: center/left | N
 cancelText | String | - | \- | N
 count | Number | 8 | \- | N
 description | String | - | \- | N
-items | Array | - | required。Typescript：`Array<string \| ActionSheetItem>` `interface ActionSheetItem {label: string; color?: string; disabled?: boolean }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/action-sheet/type.ts) | Y
+items | Array | - | Typescript：`Array<string \| ActionSheetItem>` `interface ActionSheetItem { label: string; color?: string; disabled?: boolean; icon?: TNode; badge?: BadgeProps }`，[Badge API Documents](./badge?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/action-sheet/type.ts) | N
+popupProps | Object | {} | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/action-sheet/type.ts) | N
 showCancel | Boolean | true | \- | N
-theme | String | list | options：list/grid | N
+showOverlay | Boolean | true | \- | N
+theme | String | list | options: list/grid | N
 visible | Boolean | false | required。`v-model` and `v-model:visible` is supported | Y
 defaultVisible | Boolean | false | required。uncontrolled property | Y
 onCancel | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
-onClose | Function |  | Typescript：`(trigger: TriggerSource) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/action-sheet/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'command' \| 'select' `<br/> | N
+onClose | Function |  | Typescript：`(trigger: ActionSheetTriggerSource) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/action-sheet/type.ts)。<br/>`type ActionSheetTriggerSource = 'overlay' \| 'command' \| 'select' `<br/> | N
 onSelected | Function |  | Typescript：`(selected: ActionSheetItem \| string, index: number) => void`<br/> | N
 
 ### ActionSheet Events
@@ -24,23 +26,24 @@ onSelected | Function |  | Typescript：`(selected: ActionSheetItem \| string, i
 name | params | description
 -- | -- | --
 cancel | `(context: { e: MouseEvent })` | \-
-close | `(trigger: TriggerSource)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/action-sheet/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'command' \| 'select' `<br/>
+close | `(trigger: ActionSheetTriggerSource)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/action-sheet/type.ts)。<br/>`type ActionSheetTriggerSource = 'overlay' \| 'command' \| 'select' `<br/>
 selected | `(selected: ActionSheetItem \| string, index: number)` | \-
 
-
 ### CSS Variables
+
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-action-sheet-border-color | @gray-color-1 | - 
+--td-action-sheet-border-color | @component-stroke | - 
 --td-action-sheet-border-radius | @radius-extra-large | - 
 --td-action-sheet-cancel-height | 48px | - 
---td-action-sheet-color | @font-gray-1 | - 
---td-action-sheet-description-color | @font-gray-3 | - 
+--td-action-sheet-color | @text-color-primary | - 
+--td-action-sheet-description-color | @text-color-placeholder | - 
 --td-action-sheet-dot-active-color | @brand-color | - 
---td-action-sheet-dot-color | @font-gray-4 | - 
+--td-action-sheet-dot-color | @text-color-disabled | - 
 --td-action-sheet-dot-size | 8px | - 
---td-action-sheet-list-item-disabled-color | @font-gray-4 | - 
+--td-action-sheet-gap-color | var(--td-bg-color-page, @component-stroke) | - 
+--td-action-sheet-list-item-disabled-color | @text-color-disabled | - 
 --td-action-sheet-list-item-height | 56px | - 
 --td-action-sheet-text-align | center | - 
 --td-action-sheet-text-weight | 400 | - 

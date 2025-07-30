@@ -22,7 +22,7 @@ export interface TdSwipeCellProps {
   /**
    * 左侧滑动操作项。所有行为同 `right`
    */
-  left?: Array<SwipeActionItem>;
+  left?: Array<SwipeActionItem> | TNode;
   /**
    * 操作项是否呈现为打开态，值为数组时表示分别控制左右滑动的展开和收起状态
    * @default false
@@ -31,7 +31,7 @@ export interface TdSwipeCellProps {
   /**
    * 右侧滑动操作项。有两种定义方式，一种是使用数组，二种是使用插槽。`right.text` 表示操作文本，`right.className` 表示操作项类名，`right.style` 表示操作项样式，`right.onClick` 表示点击操作项后执行的回调函数。示例：`[{ text: '删除', style: 'background-color: red', onClick: () => {} }]`
    */
-  right?: Array<SwipeActionItem>;
+  right?: Array<SwipeActionItem> | TNode;
   /**
    * 菜单展开或者收回后将菜单的状态传递给父组件，值为数组时表示分别控制左右滑动的展开和收起状态。
    */
@@ -42,21 +42,21 @@ export interface TdSwipeCellProps {
   onClick?: (action: SwipeActionItem, source: SwipeSource) => void;
 }
 
+/** 组件实例方法 */
+export interface SwipeCellInstanceFunctions {
+  /**
+   * 显示二次确认内容的函数。<br/>【关于参数】`sure` 表示二次确认的具体内容，同content
+   */
+  showSure?: (sure: string | TNode, onClick?: SwipeActionItem['onClick']) => void;
+}
+
 export interface SwipeActionItem {
   text: string;
   className?: string;
   style?: string;
-  onClick?: () => void;
   sure?: string | TNode;
+  onClick?: () => void;
   [key: string]: any;
 }
 
 export type SwipeSource = 'left' | 'right';
-
-/** 组件实例方法 */
-export interface SwipeCellInstanceFunctions {
-  /**
-   * 显示二次确认内容
-   */
-  showSure: (sure: string | TNode, onClick?: SwipeActionItem['onClick']) => void;
-}

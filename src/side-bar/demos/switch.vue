@@ -25,7 +25,7 @@
 </template>
 <script lang="ts" setup>
 import { reactive, ref } from 'vue';
-import { TdSideBarProps, TdSideBarItemProps } from '../type';
+import { TdSideBarProps, TdSideBarItemProps } from 'tdesign-mobile-vue';
 
 const image = 'https://tdesign.gtimg.com/mobile/demos/example2.png';
 const items = new Array(12).fill({ label: '标题文字', image }, 0, 12);

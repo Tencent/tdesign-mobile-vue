@@ -1,7 +1,7 @@
-import Fab from './fab';
+import _Fab from './fab';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';
 
-const _Fab: WithInstallType<typeof Fab> = withInstall(Fab);
-export default _Fab;
+export const Fab: WithInstallType<typeof _Fab> = withInstall(_Fab);
+export default Fab;

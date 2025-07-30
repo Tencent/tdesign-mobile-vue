@@ -5,98 +5,95 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
   data-v-app=""
 >
   
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
+  <!--teleport start-->
+  <div
+    class="t-overlay"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
   >
+    <!---->
+  </div>
+  <div
+    class="t-popup t-popup--right"
+    style="display: none;"
+  >
+    <!---->
+    
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-drawer"
     >
       <!---->
-    </div>
-    <div
-      class="t-popup t-popup--right"
-      style="display: none;"
-    >
-      <!--v-if-->
-      
+      <!---->
       <div
-        class="t-drawer"
+        class="t-drawer__sidebar"
       >
-        <!---->
-        <!---->
+        
         <div
-          class="t-drawer__sidebar"
+          class="t-drawer__sidebar-item"
         >
-          
+          <!---->
           <div
-            class="t-drawer__sidebar-item"
+            class="t-drawer__sidebar-item-title"
           >
-            <!---->
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单一
-            </div>
+            菜单一
           </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <!---->
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单二
-            </div>
-          </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <!---->
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单三
-            </div>
-          </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <!---->
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单四
-            </div>
-          </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <!---->
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单五
-            </div>
-          </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <!---->
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单六
-            </div>
-          </div>
-          
         </div>
-        <!---->
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <!---->
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单二
+          </div>
+        </div>
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <!---->
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单三
+          </div>
+        </div>
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <!---->
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单四
+          </div>
+        </div>
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <!---->
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单五
+          </div>
+        </div>
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <!---->
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单六
+          </div>
+        </div>
+        
       </div>
-      
+      <!---->
     </div>
-  </teleport-stub>
+    
+  </div>
+  <!--teleport end-->
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -122,123 +119,120 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
   data-v-app=""
 >
   
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
+  <!--teleport start-->
+  <div
+    class="t-overlay"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
   >
+    <!---->
+  </div>
+  <div
+    class="t-popup t-popup--left"
+    style="display: none;"
+  >
+    <!---->
+    
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-drawer"
     >
       <!---->
-    </div>
-    <div
-      class="t-popup t-popup--left"
-      style="display: none;"
-    >
-      <!--v-if-->
-      
+      <!---->
       <div
-        class="t-drawer"
+        class="t-drawer__sidebar"
       >
-        <!---->
-        <!---->
+        
         <div
-          class="t-drawer__sidebar"
+          class="t-drawer__sidebar-item"
         >
-          
+          <!---->
           <div
-            class="t-drawer__sidebar-item"
+            class="t-drawer__sidebar-item-title"
           >
-            <!---->
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单一
-            </div>
+            菜单一
           </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <!---->
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单二
-            </div>
-          </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <!---->
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单三
-            </div>
-          </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <!---->
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单四
-            </div>
-          </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <!---->
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单五
-            </div>
-          </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <!---->
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单六
-            </div>
-          </div>
-          
         </div>
         <div
-          class="t-drawer__footer"
+          class="t-drawer__sidebar-item"
         >
-          
+          <!---->
           <div
-            class="button-host"
+            class="t-drawer__sidebar-item-title"
           >
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-              role="button"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                操作
-                
-              </span>
-              <!---->
-            </button>
+            菜单二
           </div>
-          
         </div>
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <!---->
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单三
+          </div>
+        </div>
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <!---->
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单四
+          </div>
+        </div>
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <!---->
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单五
+          </div>
+        </div>
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <!---->
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单六
+          </div>
+        </div>
+        
       </div>
-      
+      <div
+        class="t-drawer__footer"
+      >
+        
+        <div
+          class="button-host"
+        >
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+              操作
+              
+            </span>
+            <!---->
+          </button>
+        </div>
+        
+      </div>
     </div>
-  </teleport-stub>
+    
+  </div>
+  <!--teleport end-->
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -264,193 +258,189 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
   data-v-app=""
 >
   
-  <teleport-stub
-    data-v-6846568d=""
-    disabled="false"
-    to="[object HTMLBodyElement]"
+  <!--teleport start-->
+  <div
+    class="t-overlay"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
   >
+    <!---->
+  </div>
+  <div
+    class="t-popup t-popup--right"
+    style="display: none;"
+  >
+    <!---->
+    
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-drawer"
     >
       <!---->
-    </div>
-    <div
-      class="t-popup t-popup--right"
-      style="display: none;"
-    >
-      <!--v-if-->
-      
+      <!---->
       <div
-        class="t-drawer"
+        class="t-drawer__sidebar"
       >
-        <!---->
-        <!---->
+        
         <div
-          class="t-drawer__sidebar"
+          class="t-drawer__sidebar-item"
         >
-          
-          <div
-            class="t-drawer__sidebar-item"
+          <span
+            class="t-drawer__sidebar-item-icon"
           >
-            <span
-              class="t-drawer__sidebar-item-icon"
+            <svg
+              class="t-icon t-icon-app"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <svg
-                class="t-icon t-icon-app"
-                fill="none"
-                height="1em"
-                viewBox="0 0 24 24"
-                width="1em"
-              >
-                <path
-                  d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单一
-            </div>
-          </div>
+              <path
+                d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
           <div
-            class="t-drawer__sidebar-item"
+            class="t-drawer__sidebar-item-title"
           >
-            <span
-              class="t-drawer__sidebar-item-icon"
-            >
-              <svg
-                class="t-icon t-icon-app"
-                fill="none"
-                height="1em"
-                viewBox="0 0 24 24"
-                width="1em"
-              >
-                <path
-                  d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单二
-            </div>
+            菜单一
           </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <span
-              class="t-drawer__sidebar-item-icon"
-            >
-              <svg
-                class="t-icon t-icon-app"
-                fill="none"
-                height="1em"
-                viewBox="0 0 24 24"
-                width="1em"
-              >
-                <path
-                  d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单三
-            </div>
-          </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <span
-              class="t-drawer__sidebar-item-icon"
-            >
-              <svg
-                class="t-icon t-icon-app"
-                fill="none"
-                height="1em"
-                viewBox="0 0 24 24"
-                width="1em"
-              >
-                <path
-                  d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单四
-            </div>
-          </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <span
-              class="t-drawer__sidebar-item-icon"
-            >
-              <svg
-                class="t-icon t-icon-app"
-                fill="none"
-                height="1em"
-                viewBox="0 0 24 24"
-                width="1em"
-              >
-                <path
-                  d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单五
-            </div>
-          </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <span
-              class="t-drawer__sidebar-item-icon"
-            >
-              <svg
-                class="t-icon t-icon-app"
-                fill="none"
-                height="1em"
-                viewBox="0 0 24 24"
-                width="1em"
-              >
-                <path
-                  d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单六
-            </div>
-          </div>
-          
         </div>
-        <!---->
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <span
+            class="t-drawer__sidebar-item-icon"
+          >
+            <svg
+              class="t-icon t-icon-app"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单二
+          </div>
+        </div>
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <span
+            class="t-drawer__sidebar-item-icon"
+          >
+            <svg
+              class="t-icon t-icon-app"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单三
+          </div>
+        </div>
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <span
+            class="t-drawer__sidebar-item-icon"
+          >
+            <svg
+              class="t-icon t-icon-app"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单四
+          </div>
+        </div>
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <span
+            class="t-drawer__sidebar-item-icon"
+          >
+            <svg
+              class="t-icon t-icon-app"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单五
+          </div>
+        </div>
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <span
+            class="t-drawer__sidebar-item-icon"
+          >
+            <svg
+              class="t-icon t-icon-app"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单六
+          </div>
+        </div>
+        
       </div>
-      
+      <!---->
     </div>
-  </teleport-stub>
+    
+  </div>
+  <!--teleport end-->
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    data-v-6846568d=""
+    data-v-5cca2c30=""
     role="button"
     type="button"
   >
@@ -471,23 +461,23 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
 exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-4e345f36=""
+  data-v-bf17674a=""
 >
   <h1
     class="title"
-    data-v-4e345f36=""
+    data-v-bf17674a=""
   >
     Drawer 抽屉
   </h1>
   <p
     class="summary"
-    data-v-4e345f36=""
+    data-v-bf17674a=""
   >
     用作一组平行关系页面/内容的切换器，相较于Tab，同屏可展示更多的选项数量。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-4e345f36=""
+    data-v-bf17674a=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -508,98 +498,95 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
     >
       
       
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
+      <!--teleport start-->
+      <div
+        class="t-overlay"
+        style="z-index: 1000; transition-duration: 300ms; display: none;"
       >
+        <!---->
+      </div>
+      <div
+        class="t-popup t-popup--right"
+        style="display: none;"
+      >
+        <!---->
+        
         <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+          class="t-drawer"
         >
           <!---->
-        </div>
-        <div
-          class="t-popup t-popup--right"
-          style="display: none;"
-        >
-          <!--v-if-->
-          
+          <!---->
           <div
-            class="t-drawer"
+            class="t-drawer__sidebar"
           >
-            <!---->
-            <!---->
+            
             <div
-              class="t-drawer__sidebar"
+              class="t-drawer__sidebar-item"
             >
-              
+              <!---->
               <div
-                class="t-drawer__sidebar-item"
+                class="t-drawer__sidebar-item-title"
               >
-                <!---->
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单一
-                </div>
+                菜单一
               </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <!---->
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单二
-                </div>
-              </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <!---->
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单三
-                </div>
-              </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <!---->
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单四
-                </div>
-              </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <!---->
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单五
-                </div>
-              </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <!---->
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单六
-                </div>
-              </div>
-              
             </div>
-            <!---->
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单二
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单三
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单四
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单五
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单六
+              </div>
+            </div>
+            
           </div>
-          
+          <!---->
         </div>
-      </teleport-stub>
+        
+      </div>
+      <!--teleport end-->
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -622,7 +609,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-4e345f36=""
+    data-v-bf17674a=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -639,193 +626,189 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
     >
       
       
-      <teleport-stub
-        data-v-6846568d=""
-        disabled="false"
-        to="[object HTMLBodyElement]"
+      <!--teleport start-->
+      <div
+        class="t-overlay"
+        style="z-index: 1000; transition-duration: 300ms; display: none;"
       >
+        <!---->
+      </div>
+      <div
+        class="t-popup t-popup--right"
+        style="display: none;"
+      >
+        <!---->
+        
         <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+          class="t-drawer"
         >
           <!---->
-        </div>
-        <div
-          class="t-popup t-popup--right"
-          style="display: none;"
-        >
-          <!--v-if-->
-          
+          <!---->
           <div
-            class="t-drawer"
+            class="t-drawer__sidebar"
           >
-            <!---->
-            <!---->
+            
             <div
-              class="t-drawer__sidebar"
+              class="t-drawer__sidebar-item"
             >
-              
-              <div
-                class="t-drawer__sidebar-item"
+              <span
+                class="t-drawer__sidebar-item-icon"
               >
-                <span
-                  class="t-drawer__sidebar-item-icon"
+                <svg
+                  class="t-icon t-icon-app"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
                 >
-                  <svg
-                    class="t-icon t-icon-app"
-                    fill="none"
-                    height="1em"
-                    viewBox="0 0 24 24"
-                    width="1em"
-                  >
-                    <path
-                      d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </span>
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单一
-                </div>
-              </div>
+                  <path
+                    d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
               <div
-                class="t-drawer__sidebar-item"
+                class="t-drawer__sidebar-item-title"
               >
-                <span
-                  class="t-drawer__sidebar-item-icon"
-                >
-                  <svg
-                    class="t-icon t-icon-app"
-                    fill="none"
-                    height="1em"
-                    viewBox="0 0 24 24"
-                    width="1em"
-                  >
-                    <path
-                      d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </span>
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单二
-                </div>
+                菜单一
               </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <span
-                  class="t-drawer__sidebar-item-icon"
-                >
-                  <svg
-                    class="t-icon t-icon-app"
-                    fill="none"
-                    height="1em"
-                    viewBox="0 0 24 24"
-                    width="1em"
-                  >
-                    <path
-                      d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </span>
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单三
-                </div>
-              </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <span
-                  class="t-drawer__sidebar-item-icon"
-                >
-                  <svg
-                    class="t-icon t-icon-app"
-                    fill="none"
-                    height="1em"
-                    viewBox="0 0 24 24"
-                    width="1em"
-                  >
-                    <path
-                      d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </span>
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单四
-                </div>
-              </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <span
-                  class="t-drawer__sidebar-item-icon"
-                >
-                  <svg
-                    class="t-icon t-icon-app"
-                    fill="none"
-                    height="1em"
-                    viewBox="0 0 24 24"
-                    width="1em"
-                  >
-                    <path
-                      d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </span>
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单五
-                </div>
-              </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <span
-                  class="t-drawer__sidebar-item-icon"
-                >
-                  <svg
-                    class="t-icon t-icon-app"
-                    fill="none"
-                    height="1em"
-                    viewBox="0 0 24 24"
-                    width="1em"
-                  >
-                    <path
-                      d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </span>
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单六
-                </div>
-              </div>
-              
             </div>
-            <!---->
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <span
+                class="t-drawer__sidebar-item-icon"
+              >
+                <svg
+                  class="t-icon t-icon-app"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单二
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <span
+                class="t-drawer__sidebar-item-icon"
+              >
+                <svg
+                  class="t-icon t-icon-app"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单三
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <span
+                class="t-drawer__sidebar-item-icon"
+              >
+                <svg
+                  class="t-icon t-icon-app"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单四
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <span
+                class="t-drawer__sidebar-item-icon"
+              >
+                <svg
+                  class="t-icon t-icon-app"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单五
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <span
+                class="t-drawer__sidebar-item-icon"
+              >
+                <svg
+                  class="t-icon t-icon-app"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单六
+              </div>
+            </div>
+            
           </div>
-          
+          <!---->
         </div>
-      </teleport-stub>
+        
+      </div>
+      <!--teleport end-->
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        data-v-6846568d=""
+        data-v-5cca2c30=""
         role="button"
         type="button"
       >
@@ -845,7 +828,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-4e345f36=""
+    data-v-bf17674a=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -866,102 +849,99 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
     >
       
       
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
+      <!--teleport start-->
+      <div
+        class="t-overlay"
+        style="z-index: 1000; transition-duration: 300ms; display: none;"
       >
+        <!---->
+      </div>
+      <div
+        class="t-popup t-popup--left"
+        style="display: none;"
+      >
+        <!---->
+        
         <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+          class="t-drawer"
         >
+          <div
+            class="t-drawer__title"
+          >
+            标题
+          </div>
+          <!---->
+          <div
+            class="t-drawer__sidebar"
+          >
+            
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单一
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单二
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单三
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单四
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单五
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单六
+              </div>
+            </div>
+            
+          </div>
           <!---->
         </div>
-        <div
-          class="t-popup t-popup--left"
-          style="display: none;"
-        >
-          <!--v-if-->
-          
-          <div
-            class="t-drawer"
-          >
-            <div
-              class="t-drawer__title"
-            >
-              标题
-            </div>
-            <!---->
-            <div
-              class="t-drawer__sidebar"
-            >
-              
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <!---->
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单一
-                </div>
-              </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <!---->
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单二
-                </div>
-              </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <!---->
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单三
-                </div>
-              </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <!---->
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单四
-                </div>
-              </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <!---->
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单五
-                </div>
-              </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <!---->
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单六
-                </div>
-              </div>
-              
-            </div>
-            <!---->
-          </div>
-          
-        </div>
-      </teleport-stub>
+        
+      </div>
+      <!--teleport end-->
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -984,7 +964,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-4e345f36=""
+    data-v-bf17674a=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1001,123 +981,120 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
     >
       
       
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
+      <!--teleport start-->
+      <div
+        class="t-overlay"
+        style="z-index: 1000; transition-duration: 300ms; display: none;"
       >
+        <!---->
+      </div>
+      <div
+        class="t-popup t-popup--left"
+        style="display: none;"
+      >
+        <!---->
+        
         <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+          class="t-drawer"
         >
           <!---->
-        </div>
-        <div
-          class="t-popup t-popup--left"
-          style="display: none;"
-        >
-          <!--v-if-->
-          
+          <!---->
           <div
-            class="t-drawer"
+            class="t-drawer__sidebar"
           >
-            <!---->
-            <!---->
+            
             <div
-              class="t-drawer__sidebar"
+              class="t-drawer__sidebar-item"
             >
-              
+              <!---->
               <div
-                class="t-drawer__sidebar-item"
+                class="t-drawer__sidebar-item-title"
               >
-                <!---->
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单一
-                </div>
+                菜单一
               </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <!---->
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单二
-                </div>
-              </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <!---->
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单三
-                </div>
-              </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <!---->
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单四
-                </div>
-              </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <!---->
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单五
-                </div>
-              </div>
-              <div
-                class="t-drawer__sidebar-item"
-              >
-                <!---->
-                <div
-                  class="t-drawer__sidebar-item-title"
-                >
-                  菜单六
-                </div>
-              </div>
-              
             </div>
             <div
-              class="t-drawer__footer"
+              class="t-drawer__sidebar-item"
             >
-              
+              <!---->
               <div
-                class="button-host"
+                class="t-drawer__sidebar-item-title"
               >
-                <button
-                  aria-disabled="false"
-                  class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-                  role="button"
-                  type="button"
-                >
-                  <!---->
-                  <span
-                    class="t-button__content"
-                  >
-                    
-                    操作
-                    
-                  </span>
-                  <!---->
-                </button>
+                菜单二
               </div>
-              
             </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单三
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单四
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单五
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单六
+              </div>
+            </div>
+            
           </div>
-          
+          <div
+            class="t-drawer__footer"
+          >
+            
+            <div
+              class="button-host"
+            >
+              <button
+                aria-disabled="false"
+                class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
+                role="button"
+                type="button"
+              >
+                <!---->
+                <span
+                  class="t-button__content"
+                >
+                  
+                  操作
+                  
+                </span>
+                <!---->
+              </button>
+            </div>
+            
+          </div>
         </div>
-      </teleport-stub>
+        
+      </div>
+      <!--teleport end-->
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -1140,7 +1117,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-4e345f36=""
+    data-v-bf17674a=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1163,7 +1140,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        data-v-4e345f36=""
+        data-v-bf17674a=""
         role="button"
         type="button"
       >
@@ -1207,102 +1184,99 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
   data-v-app=""
 >
   
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
+  <!--teleport start-->
+  <div
+    class="t-overlay"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
   >
+    <!---->
+  </div>
+  <div
+    class="t-popup t-popup--left"
+    style="display: none;"
+  >
+    <!---->
+    
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-drawer"
     >
+      <div
+        class="t-drawer__title"
+      >
+        标题
+      </div>
+      <!---->
+      <div
+        class="t-drawer__sidebar"
+      >
+        
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <!---->
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单一
+          </div>
+        </div>
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <!---->
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单二
+          </div>
+        </div>
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <!---->
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单三
+          </div>
+        </div>
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <!---->
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单四
+          </div>
+        </div>
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <!---->
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单五
+          </div>
+        </div>
+        <div
+          class="t-drawer__sidebar-item"
+        >
+          <!---->
+          <div
+            class="t-drawer__sidebar-item-title"
+          >
+            菜单六
+          </div>
+        </div>
+        
+      </div>
       <!---->
     </div>
-    <div
-      class="t-popup t-popup--left"
-      style="display: none;"
-    >
-      <!--v-if-->
-      
-      <div
-        class="t-drawer"
-      >
-        <div
-          class="t-drawer__title"
-        >
-          标题
-        </div>
-        <!---->
-        <div
-          class="t-drawer__sidebar"
-        >
-          
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <!---->
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单一
-            </div>
-          </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <!---->
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单二
-            </div>
-          </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <!---->
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单三
-            </div>
-          </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <!---->
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单四
-            </div>
-          </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <!---->
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单五
-            </div>
-          </div>
-          <div
-            class="t-drawer__sidebar-item"
-          >
-            <!---->
-            <div
-              class="t-drawer__sidebar-item-title"
-            >
-              菜单六
-            </div>
-          </div>
-          
-        </div>
-        <!---->
-      </div>
-      
-    </div>
-  </teleport-stub>
+    
+  </div>
+  <!--teleport end-->
   <button
     aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"

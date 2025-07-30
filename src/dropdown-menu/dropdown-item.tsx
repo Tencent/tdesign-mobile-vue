@@ -1,27 +1,31 @@
 import { ref, watch, toRefs, inject, computed, reactive, onBeforeMount, defineComponent, nextTick } from 'vue';
+import { get as lodashGet } from 'lodash-es';
 import TRadio, { RadioGroup as TRadioGroup } from '../radio';
 import config from '../config';
 import TButton from '../button';
 import TPopup from '../popup';
 import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
-import { useVModel, uniqueFactory } from '../shared';
-import DropdownItemProps from './dropdown-item-props';
+import { uniqueFactory, getWindowSize } from '../shared';
+import props from './dropdown-item-props';
 import { DropdownMenuState, DropdownMenuControl } from './context';
 import { TdDropdownMenuProps, DropdownValue } from './type';
 import { KeysType } from '../common';
-import { useConfig } from '../config-provider/useConfig';
+import useVModel from '../hooks/useVModel';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
+import { usePrefixClass, useConfig } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-dropdown-item`;
+
 const getUniqueID = uniqueFactory('dropdown-popup');
 
 export default defineComponent({
-  name,
-  components: { TRadio, TButton, TPopup, TCheckbox, TRadioGroup, TCheckboxGroup },
-  props: DropdownItemProps,
+  name: `${prefix}-dropdown-item`,
+  props,
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
   setup(props) {
+    const classPrefix = usePrefixClass();
+    const dropdownItemClass = usePrefixClass('dropdown-item');
+
     const { globalConfig } = useConfig('dropdownMenu');
     const renderContent = useContent();
     const renderTNodeJSX = useTNodeJSX();
@@ -36,7 +40,7 @@ export default defineComponent({
     const { expandMenu, collapseMenu, emitEvents } = inject('dropdownMenuControl') as DropdownMenuControl;
 
     // 组件样式
-    const classes = computed(() => [`${name}`]);
+    const classes = computed(() => [`${dropdownItemClass.value}`]);
 
     const itemId = ref(0);
     onBeforeMount(() => {
@@ -53,10 +57,12 @@ export default defineComponent({
       multiple: computed(() => props.multiple),
       options: computed(() => {
         if (props.keys) {
+          const keys = props.keys as KeysType;
+
           return props.options?.map((item) => ({
-            value: item[(props.keys as KeysType)?.value ?? 'value'],
-            label: item[(props.keys as KeysType)?.label ?? 'label'],
-            disabled: item.disabled,
+            value: lodashGet(item, keys?.value ?? 'value'),
+            label: lodashGet(item, keys?.label ?? 'label'),
+            disabled: lodashGet(item, keys?.disabled ?? 'disabled'),
           }));
         }
         return props.options;
@@ -65,34 +71,31 @@ export default defineComponent({
 
     const isCheckedRadio = (value: DropdownValue) => value === radioSelect.value;
     const styleDropRadio = (value: DropdownValue) => [
-      `${name}__radio-item`,
+      `${dropdownItemClass.value}__radio-item`,
       {
-        [`${prefix}-is-tick`]: !props.multiple,
-        [`${prefix}-is-checked`]: isCheckedRadio(value),
+        [`${classPrefix.value}-is-tick`]: !props.multiple,
+        [`${classPrefix.value}-is-checked`]: isCheckedRadio(value),
       },
     ];
     const popupStyle = computed(() => {
       return {
         zIndex: menuProps.zIndex && menuProps.zIndex + 1,
         position: 'absolute',
+        overflow: 'hidden',
       };
     });
-    const styleContent = computed(() => {
-      return [`${name}__content`, `t-popup__content`];
-    });
-    const contentStyle = computed(() => {
-      return menuProps.direction === 'up' ? { transform: 'rotateX(180deg) rotateY(180deg)' } : {};
-    });
+
     const popupId = getUniqueID();
     // 设置展开/收起状态
     const setExpand = (val: boolean) => {
       // 菜单定位
       const { bottom, top } = menuState.barRect;
+      const winHeight = getWindowSize().height;
+
       menuProps.direction === 'up'
         ? (state.expandStyle = {
-            transform: menuProps.direction === 'up' ? 'rotateX(180deg) rotateY(180deg)' : '',
             zIndex: menuProps.zIndex,
-            bottom: `calc(100vh - ${top}px)`,
+            bottom: `${winHeight - top}px`,
           })
         : (state.expandStyle = {
             zIndex: menuProps.zIndex,
@@ -212,14 +215,14 @@ export default defineComponent({
         if (!multiple.value) {
           // 单选列表
           return (
-            <t-radio-group
+            <TRadioGroup
               value={radioSelect.value}
               onChange={handleRadioChange}
-              placement="right"
-              class={`${name}__radio-group`}
+              placement={props.placement}
+              class={`${dropdownItemClass.value}__radio-group`}
             >
               {(options.value || []).map((option) => (
-                <t-radio
+                <TRadio
                   key={option.value}
                   value={option.value}
                   label={option.label}
@@ -229,21 +232,21 @@ export default defineComponent({
                   icon="line"
                 />
               ))}
-            </t-radio-group>
+            </TRadioGroup>
           );
         }
         // 多选列表
         return (
-          <t-checkbox-group
+          <TCheckboxGroup
             value={checkSelect.value}
             onChange={handleCheckboxChange}
-            class={`${name}__checkbox-group`}
+            class={`${dropdownItemClass.value}__checkbox-group`}
             style={`grid-template-columns: repeat(${props.optionsColumns}, 1fr)`}
           >
             {(options.value || []).map((option) => (
-              <t-checkbox
+              <TCheckbox
                 key={option.value}
-                class={`${name}__checkbox-item t-checkbox--tag`}
+                class={`${dropdownItemClass.value}__checkbox-item t-checkbox--tag`}
                 icon={false}
                 borderless
                 value={option.value}
@@ -251,30 +254,30 @@ export default defineComponent({
                 disabled={option.disabled}
               />
             ))}
-          </t-checkbox-group>
+          </TCheckboxGroup>
         );
       };
 
       const footerSlot = () => {
         if (multiple.value) {
           return (
-            <div class={`${name}__footer`}>
-              <t-button
+            <div class={`${dropdownItemClass.value}__footer`}>
+              <TButton
                 theme="light"
-                class={`${name}__footer-btn ${name}__reset-btn`}
+                class={`${dropdownItemClass.value}__footer-btn ${dropdownItemClass.value}__reset-btn`}
                 disabled={isBtnDisabled.value}
                 onClick={resetSelect}
               >
                 {globalConfig.value.reset}
-              </t-button>
-              <t-button
+              </TButton>
+              <TButton
                 theme="primary"
-                class={`${name}__footer-btn ${name}__confirm-btn`}
+                class={`${dropdownItemClass.value}__footer-btn ${dropdownItemClass.value}__confirm-btn`}
                 disabled={isBtnDisabled.value}
                 onClick={confirmSelect}
               >
                 {globalConfig.value.confirm}
-              </t-button>
+              </TButton>
             </div>
           );
         }
@@ -287,21 +290,21 @@ export default defineComponent({
       return (
         wrapperVisible.value && (
           <div id={popupId} class={classes.value} style={{ ...expandStyle.value }}>
-            <t-popup
+            <TPopup
               visible={isShowItems.value}
-              duration={duration.value}
+              placement={menuProps.direction === 'up' ? 'bottom' : 'top'}
+              duration={Number(duration.value)}
               showOverlay={showOverlay.value}
               style={popupStyle.value}
               overlayProps={{ style: 'position: absolute' }}
-              class={`${name}__popup-host`}
               attach={`#${popupId}`}
               onVisibleChange={onVisibleChange}
             >
-              <div ref={popupContent} class={styleContent.value} style={contentStyle.value}>
-                <div class={`${name}__body`}>{content || defaultSlot()}</div>
+              <div ref={popupContent} class={`${dropdownItemClass.value}__content`}>
+                <div class={`${dropdownItemClass.value}__body`}>{content || defaultSlot()}</div>
                 {footer || footerSlot()}
               </div>
-            </t-popup>
+            </TPopup>
           </div>
         )
       );

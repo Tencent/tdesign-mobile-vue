@@ -3,6 +3,7 @@ default.check-filename = true
 [default.extend-words]
 actived = "actived"
 colum = "colum"
+loosing = "loosing"
 
 [files]
-extend-exclude = ["CHANGELOG.md", "*.snap"]
+extend-exclude = ["CHANGELOG*.md", "*.snap"]

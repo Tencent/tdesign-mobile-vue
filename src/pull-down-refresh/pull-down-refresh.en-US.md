@@ -6,6 +6,7 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+disabled | Boolean | false | disabled pull down refresh | N
 loadingBarHeight | String / Number | 50 | \- | N
 loadingProps | Object | - | Typescript：`LoadingProps`，[Loading API Documents](./loading?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/pull-down-refresh/type.ts) | N
 loadingTexts | Array | [] | Typescript：`string[]` | N
@@ -27,9 +28,9 @@ refresh | \- | \-
 scrolltolower | \- | \-
 timeout | \- | \-
 
-
 ### CSS Variables
+
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-pull-down-refresh-color | @font-gray-3 | - 
+--td-pull-down-refresh-color | @text-color-placeholder | - 

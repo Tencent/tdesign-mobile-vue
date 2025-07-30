@@ -8,6 +8,8 @@ import { TdPullDownRefreshProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 是否禁用下拉刷新 */
+  disabled: Boolean,
   /** 加载中下拉高度，如果值为数字则单位是：'px' */
   loadingBarHeight: {
     type: [String, Number] as PropType<TdPullDownRefreshProps['loadingBarHeight']>,

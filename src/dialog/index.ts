@@ -8,7 +8,7 @@ import './style';
 
 export type DialogType = 'alert' | 'confirm' | 'show';
 
-export const DialogPropsDefault = {
+const DialogPropsDefault = {
   title: '',
   content: '',
   confirmBtn: '',
@@ -56,12 +56,15 @@ function create(options: Partial<TdDialogProps> | string): DialogInstance {
     },
     onClose: (context: DialogCloseContext) => {
       callFn('onClose', context);
-      root.remove();
+      params.visible = false;
     },
     onClosed: () => {
       callFn('onClosed');
       // 卸载创建的app
-      params.destroyOnClose && app.unmount();
+      // 修复调用destroy未清除滚动锁定问题
+      nextTick(() => {
+        params.destroyOnClose && app.unmount();
+      });
     },
   });
 
@@ -140,7 +143,7 @@ type DialogApi = {
 export const DialogPlugin: WithInstallType<typeof Dialog> & DialogApi = Dialog as any;
 export default DialogPlugin;
 
-declare module '@vue/runtime-core' {
+declare module 'vue' {
   // Bind to `this` keyword
   export interface ComponentCustomProperties {
     $dialog: DialogApi;

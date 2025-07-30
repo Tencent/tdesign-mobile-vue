@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
-import { getBackgroundColor } from '../utils';
-import Progress from '../progress';
 import { mount } from '@vue/test-utils';
+import { getBackgroundColor } from '../utils';
+import Progress from '../index';
 
 describe('Progress', () => {
   // jsdom 不支持 linear-gradient 等 css 样式 https://github.com/jsdom/jsdom/issues/2166
@@ -101,6 +101,11 @@ describe('Progress', () => {
       const bar = wrapper.find('.t-progress__bar');
       expect(bar.exists()).toBeTruthy();
       expect(bar.classes()).toContain('t-progress--plump');
+
+      await wrapper.setProps({
+        theme: 'circle',
+      });
+      expect(wrapper.find('.t-progress--circle')).toBeTruthy();
     });
   });
 

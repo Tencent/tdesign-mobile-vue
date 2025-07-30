@@ -22,10 +22,18 @@ export interface TdDateTimePickerProps {
    */
   end?: string | number;
   /**
+   * 底部内容
+   */
+  footer?: TNode;
+  /**
    * 用于pick、change、confirm事件参数格式化[详细文档](https://day.js.org/docs/en/display/format)
    * @default 'YYYY-MM-DD HH:mm:ss'
    */
   format?: string;
+  /**
+   * 头部内容
+   */
+  header?: TNode;
   /**
    * year = 年；month = 年月；date = 年月日；hour = 年月日时； minute = 年月日时分；当类型为数组时，第一个值控制年月日，第二个值控制时分秒
    * @default 'date'
@@ -36,7 +44,7 @@ export interface TdDateTimePickerProps {
    */
   renderLabel?: (type: string, value: number) => string;
   /**
-   * 【开发中】是否在日期旁边显示周几（如周一，周二，周日等）
+   * 是否在日期旁边显示周几（如周一，周二，周日等）
    * @default false
    */
   showWeek?: boolean;
@@ -44,6 +52,11 @@ export interface TdDateTimePickerProps {
    * 选择器的最小可选时间，默认为当前时间-10年
    */
   start?: string | number;
+  /**
+   * 时间间隔步数，示例：`{ minute: 5 }`
+   * @default {}
+   */
+  steps?: { [key in TimeModeValues]?: number };
   /**
    * 标题
    * @default '选择时间'

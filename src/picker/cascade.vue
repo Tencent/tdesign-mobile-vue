@@ -7,7 +7,9 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from 'vue';
+import { get as lodashGet } from 'lodash-es';
 import config from '../config';
+import { KeysType } from '../common';
 import PickerProps from './props';
 import { PickerColumn, PickerValue } from './type';
 import Picker from './picker';
@@ -20,6 +22,7 @@ export default defineComponent({
   props: PickerProps,
   setup(props: any, context) {
     const pickerProps = computed(() => ({ ...props }));
+    const keys = computed((): KeysType => props.keys);
     const finalDepth = ref(1);
     const finalSubOptionsRecord = ref({});
     const generateCascadePickerColumns = (
@@ -58,7 +61,7 @@ export default defineComponent({
         if (!option.children) {
           return;
         }
-        subOptionsRecord[option.value] = option.children;
+        subOptionsRecord[lodashGet(option, keys.value?.value ?? 'value')] = option.children;
         const nextDepth = currentDepth + 1;
         if (nextDepth > depth) {
           depth = nextDepth;
@@ -74,6 +77,7 @@ export default defineComponent({
       finalSubOptionsRecord.value = subOptionsRecord;
     };
     initDepthAndRecord(props.columns);
+
     return {
       name,
       finalDepth,

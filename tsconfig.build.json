@@ -1,4 +1,4 @@
 {
   "extends": "./tsconfig",
-  "exclude": ["node_modules", "src/**/demos", "src/_common", "dist", "es", "esm", "lib", "site"]
+  "exclude": ["node_modules", "src/**/demos", "src/_common", "dist", "es", "esm", "lib", "cjs", "site"]
 }

@@ -20,7 +20,7 @@ exports[`Fab > Fab advanceVue demo works fine 1`] = `
       width="1em"
     >
       <path
-        d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+        d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
         fill="currentColor"
       />
     </svg>
@@ -56,7 +56,133 @@ exports[`Fab > Fab baseVue demo works fine 1`] = `
       width="1em"
     >
       <path
-        d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+        d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+        fill="currentColor"
+      />
+    </svg>
+    <span
+      class="t-button__content"
+    >
+      
+      
+      
+    </span>
+    <!---->
+  </button>
+</div>
+`;
+
+exports[`Fab > Fab collapsibleVue demo works fine 1`] = `
+<div
+  class="t-fab"
+  data-v-dd5afc13=""
+  style="right: 16px; bottom: 24px;"
+>
+  <div>
+    
+    <div
+      class="wrap"
+      data-v-dd5afc13=""
+    >
+      <div
+        class="item"
+        data-v-dd5afc13=""
+      >
+        <svg
+          class="t-icon t-icon-add-circle"
+          data-v-dd5afc13=""
+          fill="none"
+          height="1em"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM13 6.5L13 11H17.5V13H13L13 17.5H11L11 13H6.5V11H11L11 6.5H13Z"
+            fill="currentColor"
+          />
+        </svg>
+        <span
+          class="text"
+          data-v-dd5afc13=""
+        >
+          添加
+        </span>
+      </div>
+      <div
+        class="item"
+        data-v-dd5afc13=""
+      >
+        <svg
+          class="t-icon t-icon-star"
+          data-v-dd5afc13=""
+          fill="none"
+          height="1em"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M12.0003 0.630371L14.9029 8.98093L23.7417 9.16105L16.6969 14.5021L19.2569 22.964L12.0003 17.9144L4.74363 22.964L7.30367 14.5021L0.258789 9.16105L9.09761 8.98093L12.0003 0.630371ZM12.0003 6.72181L10.5298 10.9522L6.05209 11.0434L9.62099 13.7492L8.32409 18.0359L12.0003 15.4778L15.6764 18.0359L14.3795 13.7492L17.9484 11.0434L13.4707 10.9522L12.0003 6.72181Z"
+            fill="currentColor"
+          />
+        </svg>
+        <span
+          class="text"
+          data-v-dd5afc13=""
+        >
+          收藏
+        </span>
+      </div>
+      <div
+        class="item"
+        data-v-dd5afc13=""
+      >
+        <svg
+          class="t-icon t-icon-jump"
+          data-v-dd5afc13=""
+          fill="none"
+          height="1em"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+            fill="currentColor"
+          />
+        </svg>
+        <span
+          class="text"
+          data-v-dd5afc13=""
+        >
+          分享
+        </span>
+      </div>
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`Fab > Fab draggableVue demo works fine 1`] = `
+<div
+  class="t-fab"
+  style="right: 16px; bottom: 32px;"
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--base t-button--primary t-button--circle t-fab__button"
+    role="button"
+    type="button"
+  >
+    <svg
+      class="t-icon t-icon-add"
+      fill="none"
+      height="1em"
+      style="font-size: 24px;"
+      viewBox="0 0 24 24"
+      width="1em"
+    >
+      <path
+        d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
         fill="currentColor"
       />
     </svg>
@@ -75,23 +201,23 @@ exports[`Fab > Fab baseVue demo works fine 1`] = `
 exports[`Fab > Fab mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-38a07a02=""
+  data-v-760ddee4=""
 >
   <h1
     class="title"
-    data-v-38a07a02=""
+    data-v-760ddee4=""
   >
     Fab 悬浮按钮
   </h1>
   <p
     class="summary"
-    data-v-38a07a02=""
+    data-v-760ddee4=""
   >
     当功能使用图标即可表示清楚时，可使用纯图标悬浮按钮，例如：添加、发布。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-38a07a02=""
+    data-v-760ddee4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -114,7 +240,7 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        data-v-38a07a02=""
+        data-v-760ddee4=""
         role="button"
         type="button"
       >
@@ -133,7 +259,7 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-38a07a02=""
+    data-v-760ddee4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -152,7 +278,7 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
       <button
         aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        data-v-38a07a02=""
+        data-v-760ddee4=""
         role="button"
         type="button"
       >
@@ -170,8 +296,288 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
+    class="tdesign-mobile-demo-block"
+    data-v-760ddee4=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        02 组件样式
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        可移动悬浮按钮
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot with-padding"
+    >
+      
+      <button
+        aria-disabled="false"
+        class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+        data-v-760ddee4=""
+        role="button"
+        type="button"
+      >
+        <!---->
+        <span
+          class="t-button__content"
+        >
+          
+          可移动悬浮按钮
+          
+        </span>
+        <!---->
+      </button>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-760ddee4=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        带自动收缩功能
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot with-padding"
+    >
+      
+      <button
+        aria-disabled="false"
+        class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+        data-v-760ddee4=""
+        role="button"
+        type="button"
+      >
+        <!---->
+        <span
+          class="t-button__content"
+        >
+          
+          带自动收缩功能
+          
+        </span>
+        <!---->
+      </button>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-760ddee4=""
+  >
+    <!--v-if-->
+    <div
+      class="tdesign-mobile-demo-block__slot with-padding"
+    >
+      
+      
+      <div
+        class="group"
+        data-v-760ddee4=""
+      >
+        <div
+          class="t-skeleton"
+          data-v-760ddee4=""
+        >
+          
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 163.5px; height: 163.5px; border-radius: 12px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 61%;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          
+          
+        </div>
+        <div
+          class="t-skeleton"
+          data-v-760ddee4=""
+        >
+          
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 163.5px; height: 163.5px; border-radius: 12px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 61%;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          
+          
+        </div>
+      </div>
+      <div
+        class="group"
+        data-v-760ddee4=""
+      >
+        <div
+          class="t-skeleton"
+          data-v-760ddee4=""
+        >
+          
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 163.5px; height: 163.5px; border-radius: 12px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 61%;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          
+          
+        </div>
+        <div
+          class="t-skeleton"
+          data-v-760ddee4=""
+        >
+          
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 163.5px; height: 163.5px; border-radius: 12px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 61%;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          
+          
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
     class="t-fab"
-    data-v-38a07a02=""
+    data-v-760ddee4=""
     style="right: 16px; bottom: 32px;"
   >
     <button
@@ -189,7 +595,7 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
         width="1em"
       >
         <path
-          d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4h2z"
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
           fill="currentColor"
         />
       </svg>
@@ -203,6 +609,8 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
       <!---->
     </button>
   </div>
+  <!--v-if-->
+  <!--v-if-->
   <!--v-if-->
 </div>
 `;

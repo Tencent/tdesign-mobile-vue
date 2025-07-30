@@ -3,11 +3,13 @@
  */
 
 import { mount } from '@vue/test-utils';
+import alignVue from '@/image-viewer/demos/align.vue';
 import baseVue from '@/image-viewer/demos/base.vue';
 import mobileVue from '@/image-viewer/demos/mobile.vue';
 import operationVue from '@/image-viewer/demos/operation.vue';
 
 const mapper = {
+  alignVue,
   baseVue,
   mobileVue,
   operationVue,

@@ -1,19 +1,25 @@
-import { PropType, ref, computed, defineComponent, toRefs, nextTick, watch } from 'vue';
-import { CloseCircleFilledIcon as TCloseCircleFilledIcon } from 'tdesign-icons-vue-next';
-import { useFocus } from '@vueuse/core';
+import { PropType, ref, toRefs, computed, defineComponent, nextTick, watch, inject } from 'vue';
+import {
+  BrowseIcon as TBrowseIcon,
+  BrowseOffIcon as TBrowseOffIcon,
+  CloseCircleFilledIcon as TCloseCircleFilledIcon,
+} from 'tdesign-icons-vue-next';
+import { isFunction } from 'lodash-es';
 import config from '../config';
 import InputProps from './props';
 import { InputValue, TdInputProps } from './type';
-import { getCharacterLength, useDefault, extendAPI } from '../shared';
+import { extendAPI } from '../shared';
+import { FormItemInjectionKey } from '../form/const';
 import { useFormDisabled } from '../form/hooks';
+import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
+import useLengthLimit from '../hooks/useLengthLimit';
 
 const { prefix } = config;
-const name = `${prefix}-input`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-input`,
   props: {
     ...InputProps,
     labelAlign: {
@@ -32,17 +38,19 @@ export default defineComponent({
     },
   },
   setup(props, context) {
-    const readerTNodeJSX = useTNodeJSX();
+    const renderTNodeJSX = useTNodeJSX();
     const inputClass = usePrefixClass('input');
     const isDisabled = useFormDisabled();
 
     const inputRef = ref();
-    const { autofocus } = toRefs(props);
-    const [innerValue] = useDefault<string, TdInputProps>(props, context.emit, 'value', 'change');
+
+    const { value, modelValue } = toRefs(props);
+    const [innerValue, setInnerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
     const status = props.status || 'default';
-
-    const { focused } = useFocus(inputRef, { initialValue: props.autofocus });
+    const renderType = ref(props.type);
+    const focused = ref(false);
+    const formItem = inject(FormItemInjectionKey, undefined);
 
     const inputClasses = computed(() => [
       `${inputClass.value}__control`,
@@ -61,6 +69,25 @@ export default defineComponent({
         [`${inputClass.value}--border`]: !props.borderless,
       },
     ]);
+    const showClear = computed(() => {
+      if (isDisabled.value || props.readonly === true) return false;
+
+      if (props.clearable && innerValue.value && String(innerValue.value).length > 0) {
+        return props.clearTrigger === 'always' || (props.clearTrigger === 'focus' && focused.value);
+      }
+      return false;
+    });
+
+    const limitParams = computed(() => ({
+      value: [undefined, null].includes(innerValue.value) ? undefined : String(innerValue.value),
+      maxlength: Number(props.maxlength),
+      maxcharacter: props.maxcharacter,
+      allowInputOverMax: props.allowInputOverMax,
+      status: props.status,
+      onValidate: props.onValidate,
+    }));
+
+    const { getValueByLimitNumber } = useLengthLimit(limitParams);
 
     const setInputValue = (v: InputValue = '') => {
       const input = inputRef.value as HTMLInputElement;
@@ -84,58 +111,86 @@ export default defineComponent({
 
     const inputValueChangeHandle = (e: Event) => {
       const { value } = e.target as HTMLInputElement;
-      const { allowInputOverMax, maxcharacter } = props;
-      if (!allowInputOverMax && maxcharacter && maxcharacter > 0 && !Number.isNaN(maxcharacter)) {
-        const { length = 0, characters = '' } = getCharacterLength(value, maxcharacter) as {
-          length: number;
-          characters: string;
-        };
-        innerValue.value = characters;
-      } else {
-        innerValue.value = value;
-      }
+      setInnerValue(getValueByLimitNumber(value));
       nextTick(() => setInputValue(innerValue.value));
     };
 
     const focus = () => {
       focused.value = true;
+      inputRef.value?.focus();
     };
 
     const blur = () => {
       focused.value = false;
-      // inputRef.value?.blur();
+      inputRef.value?.blur();
     };
 
     extendAPI({ focus, blur });
 
-    const handleClear = (e: MouseEvent) => {
-      innerValue.value = '';
-      focused.value = true;
+    const handleClear = (e: TouchEvent) => {
+      e.preventDefault();
+      const val = props.type === 'number' ? undefined : '';
+      setInnerValue(val);
+      focus();
       props.onClear?.({ e });
     };
+
     const handleFocus = (e: FocusEvent) => {
+      focused.value = true;
       props.onFocus?.(innerValue.value, { e });
     };
+
     const handleBlur = (e: FocusEvent) => {
+      focused.value = false;
+      // 失焦时处理 format
+      if (isFunction(props.format)) {
+        setInnerValue(props.format(innerValue.value));
+        nextTick(() => {
+          setInputValue(innerValue.value);
+          props.onBlur?.(innerValue.value, { e });
+          formItem?.handleBlur();
+        });
+        return;
+      }
+
       props.onBlur?.(innerValue.value, { e });
+      formItem?.handleBlur();
     };
 
     const handleCompositionend = (e: CompositionEvent) => {
       inputValueChangeHandle(e);
     };
 
-    watch(autofocus, (autofocus, prevAutofocus) => {
-      if (autofocus === true) {
-        nextTick(() => {
-          focused.value = true;
-        });
-      }
-    });
+    const handlePwdIconClick = () => {
+      if (isDisabled.value) return;
+
+      renderType.value = renderType.value === 'password' ? 'text' : 'password';
+    };
+
+    watch(
+      () => props.autofocus,
+      (v) => {
+        if (v === true) {
+          nextTick(() => {
+            focus();
+          });
+        }
+      },
+      { immediate: true },
+    );
+
+    watch(
+      () => props.type,
+      (v) => {
+        renderType.value = v;
+      },
+      { immediate: true },
+    );
 
     return () => {
-      const readerPrefix = () => {
-        const prefixIcon = readerTNodeJSX('prefixIcon');
-        const label = readerTNodeJSX('label');
+      const renderPrefix = () => {
+        const prefixIcon = renderTNodeJSX('prefixIcon');
+        const label = renderTNodeJSX('label');
 
         return (
           <div class={`${inputClass.value}__wrap--prefix`}>
@@ -144,70 +199,90 @@ export default defineComponent({
           </div>
         );
       };
-      const readerClearable = () => {
-        if (props.clearable && innerValue.value && innerValue.value.length > 0) {
+      const renderClearable = () => {
+        if (showClear.value) {
           return (
-            <div class={`${inputClass.value}__wrap--clearable-icon`} onClick={handleClear}>
+            <div class={`${inputClass.value}__wrap--clearable-icon`} onTouchend={handleClear}>
               <TCloseCircleFilledIcon />
             </div>
           );
         }
+
         return null;
       };
-      const readerSuffix = () => {
-        const suffix = readerTNodeJSX('suffix');
+      const renderSuffix = () => {
+        const suffix = renderTNodeJSX('suffix');
         if (!suffix) {
           return null;
         }
         return <div class={`${inputClass.value}__wrap--suffix`}>{suffix}</div>;
       };
 
-      const readerSuffixIcon = () => {
-        const suffixIcon = readerTNodeJSX('suffixIcon');
+      const renderSuffixIcon = () => {
+        let suffixIcon = renderTNodeJSX('suffixIcon');
+        if (props.type === 'password') {
+          if (renderType.value === 'password') {
+            suffixIcon = <TBrowseOffIcon onClick={handlePwdIconClick} />;
+          } else if (renderType.value === 'text') {
+            suffixIcon = <TBrowseIcon onClick={handlePwdIconClick} />;
+          }
+        }
+
         if (!suffixIcon) {
           return null;
         }
         return <div class={`${inputClass.value}__wrap--suffix-icon`}>{suffixIcon}</div>;
       };
 
-      const readerTips = () => {
-        const tips = readerTNodeJSX('tips');
+      const renderExtra = () => {
+        return renderTNodeJSX('extra');
+      };
+
+      const renderTips = () => {
+        const tips = renderTNodeJSX('tips');
         if (!tips) {
           return null;
         }
         return <div class={`${inputClass.value}__tips ${inputClass.value}--${props.align}`}>{tips}</div>;
       };
 
+      // 参考： https://github.com/Tencent/tdesign-vue-next/issues/4413
+      // 不传给 input 原生元素 maxlength，浏览器默认行为会按照 unicode 进行限制，与 maxLength API 违背
+      const inputAttrs = {
+        ref: inputRef,
+        class: inputClasses.value,
+        value: innerValue.value,
+        name: props.name,
+        type: renderType.value,
+        disabled: isDisabled.value,
+        autocomplete: props.autocomplete ? 'On' : 'Off',
+        placeholder: props.placeholder,
+        readonly: props.readonly,
+        // maxlength: props.maxlength,
+        pattern: props.pattern,
+        inputmode: props.inputmode,
+        spellcheck: props.spellCheck,
+        enterkeyhint: props.enterkeyhint,
+        style: { '--td-input-cursor-color': props.cursorColor },
+        onFocus: handleFocus,
+        onBlur: handleBlur,
+        onInput: handleInput,
+        onCompositionend: handleCompositionend,
+      };
+
       return (
         <div class={rootClasses.value}>
-          {readerPrefix()}
+          {renderPrefix()}
           <div class={`${inputClass.value}__wrap`}>
             <div class={`${inputClass.value}__content ${inputClass.value}--${status || 'default'}`}>
-              <input
-                ref={inputRef}
-                value={innerValue.value}
-                name={props.name}
-                class={inputClasses.value}
-                type={props.type}
-                disabled={isDisabled.value}
-                autocomplete={props.autocomplete ? 'On' : 'Off'}
-                placeholder={props.placeholder}
-                readonly={props.readonly}
-                maxlength={props.maxlength || -1}
-                pattern={props.pattern}
-                inputmode={props.inputmode}
-                spellcheck={props.spellCheck}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-                onInput={handleInput}
-                onCompositionend={handleCompositionend}
-              />
-              {readerClearable()}
-              {readerSuffix()}
-              {readerSuffixIcon()}
+              <input {...inputAttrs} />
+              {renderClearable()}
+              {renderSuffix()}
+              {renderSuffixIcon()}
             </div>
-            {readerTips()}
+            {renderTips()}
           </div>
+          {renderExtra()}
         </div>
       );
     };

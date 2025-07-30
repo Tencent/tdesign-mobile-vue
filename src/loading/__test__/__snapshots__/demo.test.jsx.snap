@@ -1,5 +1,35 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Loading > Loading attachVue demo works fine 1`] = `
+<div
+  class="loading-demo"
+  data-v-322a8e53=""
+>
+  <div
+    class="loading-attach-demo__title"
+    data-v-322a8e53=""
+    id="alice"
+  >
+    Hello, I'm Alice. I'm going to be a front-end developer.
+  </div>
+  <!---->
+  <div
+    class="t-switch t-switch--small"
+    data-v-322a8e53=""
+  >
+    <div
+      class="t-switch__dot t-switch__dot--small"
+    >
+      <div
+        class="t-switch__label t-switch__label--small"
+      >
+        关
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Loading > Loading baseVue demo works fine 1`] = `
 <div
   data-v-app=""
@@ -7,7 +37,7 @@ exports[`Loading > Loading baseVue demo works fine 1`] = `
   
   <div
     class="t-loading"
-    data-v-4a68c35c=""
+    data-v-ed539936=""
     style="font-size: 20px;"
   >
     <svg
@@ -35,7 +65,7 @@ exports[`Loading > Loading baseVue demo works fine 1`] = `
   </div>
   <div
     class="t-loading"
-    data-v-4a68c35c=""
+    data-v-ed539936=""
     style="font-size: 20px;"
   >
     <span
@@ -86,7 +116,7 @@ exports[`Loading > Loading baseVue demo works fine 1`] = `
   </div>
   <div
     class="t-loading"
-    data-v-4a68c35c=""
+    data-v-ed539936=""
     style="font-size: 40px;"
   >
     <div
@@ -122,11 +152,11 @@ exports[`Loading > Loading delayVue demo works fine 1`] = `
   
   <div
     class="switch-wrap"
-    data-v-559e6688=""
+    data-v-c584110f=""
   >
     <div
       class="t-switch t-switch--medium"
-      data-v-559e6688=""
+      data-v-c584110f=""
     >
       <div
         class="t-switch__dot t-switch__dot--medium t-switch__dot--plain"
@@ -139,14 +169,14 @@ exports[`Loading > Loading delayVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      data-v-559e6688=""
+      data-v-c584110f=""
     >
       请求结束，隐藏loading
     </div>
   </div>
   <div
     class="t-loading"
-    data-v-559e6688=""
+    data-v-c584110f=""
     style="font-size: 20px;"
   >
     <!---->
@@ -157,6 +187,34 @@ exports[`Loading > Loading delayVue demo works fine 1`] = `
 </div>
 `;
 
+exports[`Loading > Loading fullscreenVue demo works fine 1`] = `
+<div
+  class="loading-demo"
+  data-v-f91db58e=""
+>
+  <!---->
+  <div
+    data-v-f91db58e=""
+  >
+     全局加载开关（开启加载1秒后自动归位）： 
+    <div
+      class="t-switch t-switch--small"
+      data-v-f91db58e=""
+    >
+      <div
+        class="t-switch__dot t-switch__dot--small t-switch__dot--plain"
+      >
+        <div
+          class="t-switch__label t-switch__label--small"
+        >
+          <!---->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Loading > Loading horzVue demo works fine 1`] = `
 <div
   data-v-app=""
@@ -164,7 +222,7 @@ exports[`Loading > Loading horzVue demo works fine 1`] = `
   
   <div
     class="t-loading"
-    data-v-c48bb9cc=""
+    data-v-9d98c19e=""
     style="font-size: 20px;"
   >
     <svg
@@ -196,7 +254,7 @@ exports[`Loading > Loading horzVue demo works fine 1`] = `
   </div>
   <div
     class="t-loading"
-    data-v-c48bb9cc=""
+    data-v-9d98c19e=""
     style="font-size: 20px;"
   >
     <span
@@ -256,23 +314,23 @@ exports[`Loading > Loading horzVue demo works fine 1`] = `
 exports[`Loading > Loading mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-448d2bed=""
+  data-v-e4d4f46b=""
 >
   <h1
     class="title"
-    data-v-448d2bed=""
+    data-v-e4d4f46b=""
   >
     Loading 加载中
   </h1>
   <p
     class="summary"
-    data-v-448d2bed=""
+    data-v-e4d4f46b=""
   >
     用于表示页面或操作的加载状态，给予用户反馈的同时减缓等待的焦虑感，由一个或一组反馈动效组成。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-448d2bed=""
+    data-v-e4d4f46b=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -294,12 +352,12 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
       
       <div
         class="loading-demo--flex"
-        data-v-448d2bed=""
+        data-v-e4d4f46b=""
       >
         
         <div
           class="t-loading"
-          data-v-4a68c35c=""
+          data-v-ed539936=""
           style="font-size: 20px;"
         >
           <svg
@@ -327,7 +385,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-loading"
-          data-v-4a68c35c=""
+          data-v-ed539936=""
           style="font-size: 20px;"
         >
           <span
@@ -378,7 +436,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-loading"
-          data-v-4a68c35c=""
+          data-v-ed539936=""
           style="font-size: 40px;"
         >
           <div
@@ -410,7 +468,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-448d2bed=""
+    data-v-e4d4f46b=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -428,12 +486,12 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
       
       <div
         class="loading-demo--flex"
-        data-v-448d2bed=""
+        data-v-e4d4f46b=""
       >
         
         <div
           class="t-loading"
-          data-v-c48bb9cc=""
+          data-v-9d98c19e=""
           style="font-size: 20px;"
         >
           <svg
@@ -465,7 +523,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-loading"
-          data-v-c48bb9cc=""
+          data-v-9d98c19e=""
           style="font-size: 20px;"
         >
           <span
@@ -525,7 +583,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-448d2bed=""
+    data-v-e4d4f46b=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -543,16 +601,16 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
       
       <div
         class="loading-demo--flex"
-        data-v-448d2bed=""
+        data-v-e4d4f46b=""
       >
         <div
           class="container"
-          data-v-3ab7b9bc=""
-          data-v-448d2bed=""
+          data-v-a2ea6ccb=""
+          data-v-e4d4f46b=""
         >
           <div
             class="t-loading t-loading--vertical"
-            data-v-3ab7b9bc=""
+            data-v-a2ea6ccb=""
             style="font-size: 20px;"
           >
             <svg
@@ -584,7 +642,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-loading t-loading--vertical"
-            data-v-3ab7b9bc=""
+            data-v-a2ea6ccb=""
             style="font-size: 20px;"
           >
             <span
@@ -644,7 +702,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-448d2bed=""
+    data-v-e4d4f46b=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -662,11 +720,11 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
       
       <div
         class="loading-demo--flex"
-        data-v-448d2bed=""
+        data-v-e4d4f46b=""
       >
         <div
           class="t-loading"
-          data-v-448d2bed=""
+          data-v-e4d4f46b=""
           style="font-size: 20px;"
         >
           <!---->
@@ -683,7 +741,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-448d2bed=""
+    data-v-e4d4f46b=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -702,17 +760,17 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
       
       <div
         class="loading-demo"
-        data-v-38fef6e8=""
+        data-v-8b49e899=""
       >
         <div
           class="loading-demo__summary mb-16"
-          data-v-38fef6e8=""
+          data-v-8b49e899=""
         >
           大尺寸
         </div>
         <div
           class="t-loading"
-          data-v-38fef6e8=""
+          data-v-8b49e899=""
           style="font-size: 26px;"
         >
           <svg
@@ -745,17 +803,17 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
       </div>
       <div
         class="loading-demo"
-        data-v-38fef6e8=""
+        data-v-8b49e899=""
       >
         <div
           class="loading-demo__summary mt-24 mb-16"
-          data-v-38fef6e8=""
+          data-v-8b49e899=""
         >
           中尺寸
         </div>
         <div
           class="t-loading"
-          data-v-38fef6e8=""
+          data-v-8b49e899=""
           style="font-size: 22px;"
         >
           <svg
@@ -788,17 +846,17 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
       </div>
       <div
         class="loading-demo"
-        data-v-38fef6e8=""
+        data-v-8b49e899=""
       >
         <div
           class="loading-demo__summary mt-24 mb-16"
-          data-v-38fef6e8=""
+          data-v-8b49e899=""
         >
           小尺寸
         </div>
         <div
           class="t-loading"
-          data-v-38fef6e8=""
+          data-v-8b49e899=""
           style="font-size: 20px;"
         >
           <svg
@@ -835,7 +893,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-448d2bed=""
+    data-v-e4d4f46b=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -858,11 +916,11 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
       
       <div
         class="loading-demo"
-        data-v-0fadab4c=""
+        data-v-4a5d8906=""
       >
         <div
           class="t-loading"
-          data-v-0fadab4c=""
+          data-v-4a5d8906=""
           style="font-size: 20px;"
         >
           <svg
@@ -895,11 +953,11 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
       </div>
       <div
         class="slider-wrap"
-        data-v-0fadab4c=""
+        data-v-4a5d8906=""
       >
         <div
           class="t-slider"
-          data-v-0fadab4c=""
+          data-v-4a5d8906=""
         >
           <!---->
           <div
@@ -958,6 +1016,60 @@ exports[`Loading > Loading pureTextVue demo works fine 1`] = `
 </div>
 `;
 
+exports[`Loading > Loading serviceVue demo works fine 1`] = `
+<div
+  class="loading-demo"
+  data-v-3c7f36de=""
+>
+  <div
+    class="loading-service-demo"
+    data-v-3c7f36de=""
+    id="loading-service-demo"
+  >
+    Loading 挂载容器
+  </div>
+  <div
+    class="space"
+    data-v-3c7f36de=""
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-small t-button--base t-button--default t-button--rectangle t-loading__btn"
+      data-v-3c7f36de=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+         函数方式加载（局部） 
+        
+      </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-small t-button--base t-button--default t-button--rectangle"
+      data-v-3c7f36de=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        函数方式加载（全屏）
+        
+      </span>
+      <!---->
+    </button>
+  </div>
+</div>
+`;
+
 exports[`Loading > Loading sizeVue demo works fine 1`] = `
 <div
   data-v-app=""
@@ -965,17 +1077,17 @@ exports[`Loading > Loading sizeVue demo works fine 1`] = `
   
   <div
     class="loading-demo"
-    data-v-38fef6e8=""
+    data-v-8b49e899=""
   >
     <div
       class="loading-demo__summary mb-16"
-      data-v-38fef6e8=""
+      data-v-8b49e899=""
     >
       大尺寸
     </div>
     <div
       class="t-loading"
-      data-v-38fef6e8=""
+      data-v-8b49e899=""
       style="font-size: 26px;"
     >
       <svg
@@ -1008,17 +1120,17 @@ exports[`Loading > Loading sizeVue demo works fine 1`] = `
   </div>
   <div
     class="loading-demo"
-    data-v-38fef6e8=""
+    data-v-8b49e899=""
   >
     <div
       class="loading-demo__summary mt-24 mb-16"
-      data-v-38fef6e8=""
+      data-v-8b49e899=""
     >
       中尺寸
     </div>
     <div
       class="t-loading"
-      data-v-38fef6e8=""
+      data-v-8b49e899=""
       style="font-size: 22px;"
     >
       <svg
@@ -1051,17 +1163,17 @@ exports[`Loading > Loading sizeVue demo works fine 1`] = `
   </div>
   <div
     class="loading-demo"
-    data-v-38fef6e8=""
+    data-v-8b49e899=""
   >
     <div
       class="loading-demo__summary mt-24 mb-16"
-      data-v-38fef6e8=""
+      data-v-8b49e899=""
     >
       小尺寸
     </div>
     <div
       class="t-loading"
-      data-v-38fef6e8=""
+      data-v-8b49e899=""
       style="font-size: 20px;"
     >
       <svg
@@ -1103,11 +1215,11 @@ exports[`Loading > Loading speedVue demo works fine 1`] = `
   
   <div
     class="loading-demo"
-    data-v-0fadab4c=""
+    data-v-4a5d8906=""
   >
     <div
       class="t-loading"
-      data-v-0fadab4c=""
+      data-v-4a5d8906=""
       style="font-size: 20px;"
     >
       <svg
@@ -1140,11 +1252,11 @@ exports[`Loading > Loading speedVue demo works fine 1`] = `
   </div>
   <div
     class="slider-wrap"
-    data-v-0fadab4c=""
+    data-v-4a5d8906=""
   >
     <div
       class="t-slider"
-      data-v-0fadab4c=""
+      data-v-4a5d8906=""
     >
       <!---->
       <div
@@ -1175,11 +1287,11 @@ exports[`Loading > Loading speedVue demo works fine 1`] = `
 exports[`Loading > Loading vertVue demo works fine 1`] = `
 <div
   class="container"
-  data-v-3ab7b9bc=""
+  data-v-a2ea6ccb=""
 >
   <div
     class="t-loading t-loading--vertical"
-    data-v-3ab7b9bc=""
+    data-v-a2ea6ccb=""
     style="font-size: 20px;"
   >
     <svg
@@ -1211,7 +1323,7 @@ exports[`Loading > Loading vertVue demo works fine 1`] = `
   </div>
   <div
     class="t-loading t-loading--vertical"
-    data-v-3ab7b9bc=""
+    data-v-a2ea6ccb=""
     style="font-size: 20px;"
   >
     <span

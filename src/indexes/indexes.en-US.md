@@ -6,7 +6,7 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-indexList | Array | - | Typescript：`string [] \| number[]` | N
+indexList | Array | - | Typescript：`Array<string \| number>` | N
 sticky | Boolean | true | Typescript：`Boolean` | N
 stickyOffset | Number | 0 | \- | N
 onChange | Function |  | Typescript：`(index: string \| number) => void`<br/> | N
@@ -32,8 +32,8 @@ The component provides the following CSS variables, which can be used to customi
 Name | Default Value | Description 
 -- | -- | --
 --td-indexes-sidebar-active-bg-color | @brand-color | - 
---td-indexes-sidebar-active-color | @font-white-1 | - 
---td-indexes-sidebar-color | @font-gray-1 | - 
+--td-indexes-sidebar-active-color | @text-color-anti | - 
+--td-indexes-sidebar-color | @text-color-primary | - 
 --td-indexes-sidebar-font-size | 12px | - 
 --td-indexes-sidebar-item-size | 20px | - 
 --td-indexes-sidebar-line-height | 20px | - 
@@ -47,6 +47,6 @@ Name | Default Value | Description
 --td-indexes-anchor-active-color | @brand-color | - 
 --td-indexes-anchor-active-font-weight | 600 | - 
 --td-indexes-anchor-bg-color | @bg-color-secondarycontainer | - 
---td-indexes-anchor-color | @font-gray-1 | - 
+--td-indexes-anchor-color | @text-color-primary | - 
 --td-indexes-anchor-font-size | 14px | - 
---td-indexes-anchor-line-height | 22px | -
+--td-indexes-anchor-line-height | 22px | - 

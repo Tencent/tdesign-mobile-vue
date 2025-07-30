@@ -85,9 +85,9 @@ import 'tdesign-mobile-vue/es/style/index.css';
 
 const app = createApp(App);
 ```
-并安装两个unplugin相关的第三方包
+并安装 @tdesign-vue-next/auto-import-resolver 和两个 unplugin 相关的第三方包
 ```bash
-npm install -D unplugin-vue-components unplugin-auto-import
+npm install -D @tdesign-vue-next/auto-import-resolver unplugin-vue-components unplugin-auto-import
 ```
 
 然后在 Webpack 或 Vite 对应的配置文件添加上述插件。
@@ -97,7 +97,7 @@ npm install -D unplugin-vue-components unplugin-auto-import
 ```js
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
-import { TDesignResolver } from 'unplugin-vue-components/resolvers';
+import { TDesignResolver } from '@tdesign-vue-next/auto-import-resolver';
 export default {
   plugins: [
     // ...
@@ -120,7 +120,7 @@ export default {
 ```js
 const AutoImport = require('unplugin-auto-import/webpack');
 const Components = require('unplugin-vue-components/webpack');
-const { TDesignResolver } = require('unplugin-vue-components/resolvers');
+const { TDesignResolver } = require('@tdesign-vue-next/auto-import-resolver');
 module.exports = {
   // ...
   plugins: [
@@ -138,8 +138,13 @@ module.exports = {
 };
 ```
 
-> `TDesignResolver` 支持的配置，可以点击此[链接](https://github.com/antfu/unplugin-vue-components/blob/main/src/core/resolvers/tdesign.ts#L4)。
+> `TDesignResolver` 支持的配置，可以点击此[链接](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/auto-import-resolver/README.md#%E9%80%89%E9%A1%B9)。
 
+## 编辑器提示
+
+安装注册 TDesign 之后，在开发项目时，可以配合插件在VSCode等主流编辑器中达到提示组件名及API的效果。
+
+推荐安装 `Volar`，并在项目的 tsconfig.json 的 `includes` 属性中增加`node_modules/tdesign-mobile-vue/global.d.ts`，即可实现该效果。
 
 ## 浏览器兼容性
 

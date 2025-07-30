@@ -3,7 +3,7 @@
     <t-slider :value="value" :label="true" :on-change="onChange" />
   </div>
   <div class="wrapper">
-    <t-slider range :default-value="[20, 60]" :label="true" show-extreme-value />
+    <t-slider range :default-value="[20, 60]" :label="handleLabel" show-extreme-value />
   </div>
 </template>
 
@@ -13,6 +13,10 @@ import { ref } from 'vue';
 const value = ref(10);
 const onChange = (e: number) => {
   value.value = e;
+};
+
+const handleLabel = (value: any) => {
+  return value;
 };
 </script>
 

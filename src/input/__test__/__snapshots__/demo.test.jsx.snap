@@ -27,10 +27,10 @@ exports[`Input > Input alignVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--default"
-          maxlength="-1"
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -39,6 +39,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -62,10 +63,10 @@ exports[`Input > Input alignVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--center t-input--default"
-          maxlength="-1"
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -74,6 +75,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -97,10 +99,10 @@ exports[`Input > Input alignVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--right t-input--default"
-          maxlength="-1"
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -109,6 +111,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   
 </div>
@@ -117,7 +120,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
 exports[`Input > Input bannerVue demo works fine 1`] = `
 <div
   class="t-input t-input--layout-horizontal t-input--border input-demo"
-  data-v-378bb8e9=""
+  data-v-6c136f2f=""
 >
   <div
     class="t-input__wrap--prefix"
@@ -138,10 +141,10 @@ exports[`Input > Input bannerVue demo works fine 1`] = `
       <input
         autocomplete="Off"
         class="t-input__control t-input--default"
-        maxlength="-1"
         name=""
         placeholder="请输入文字"
         spellcheck="false"
+        style="--td-input-cursor-color: #0052d9;"
         type="text"
       />
       <!---->
@@ -150,6 +153,7 @@ exports[`Input > Input bannerVue demo works fine 1`] = `
     </div>
     <!---->
   </div>
+  <!---->
 </div>
 `;
 
@@ -180,10 +184,10 @@ exports[`Input > Input baseVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--default"
-          maxlength="-1"
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -192,6 +196,7 @@ exports[`Input > Input baseVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -215,10 +220,10 @@ exports[`Input > Input baseVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--default"
-          maxlength="-1"
           name=""
           placeholder="请输入文字(选填)"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -227,6 +232,7 @@ exports[`Input > Input baseVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -250,10 +256,10 @@ exports[`Input > Input baseVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--default"
-          maxlength="-1"
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -262,6 +268,7 @@ exports[`Input > Input baseVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   
 </div>
@@ -270,17 +277,17 @@ exports[`Input > Input baseVue demo works fine 1`] = `
 exports[`Input > Input borderedVue demo works fine 1`] = `
 <div
   class="input-demo"
-  data-v-0b3942c8=""
+  data-v-f23aff25=""
 >
   <div
     class="input-demo__summary"
-    data-v-0b3942c8=""
+    data-v-f23aff25=""
   >
     标签文字
   </div>
   <div
     class="t-input t-input--layout-horizontal custom-input"
-    data-v-0b3942c8=""
+    data-v-f23aff25=""
   >
     <div
       class="t-input__wrap--prefix"
@@ -301,10 +308,10 @@ exports[`Input > Input borderedVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--default"
-          maxlength="-1"
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -315,14 +322,14 @@ exports[`Input > Input borderedVue demo works fine 1`] = `
           
           <svg
             class="t-icon t-icon-error-circle-filled"
-            data-v-0b3942c8=""
+            data-v-f23aff25=""
             fill="none"
             height="1em"
             viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M12 1a11 11 0 110 22 11 11 0 010-22zm-1 13h2V6.5h-2V14zm2 1.5h-2v2h2v-2z"
+              d="M12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1ZM11.0001 14H13.0001V6.49998H11.0001V14ZM13.004 15.5H11.0001V17.5039H13.004V15.5Z"
               fill="currentColor"
             />
           </svg>
@@ -331,6 +338,7 @@ exports[`Input > Input borderedVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
 </div>
 `;
@@ -338,11 +346,11 @@ exports[`Input > Input borderedVue demo works fine 1`] = `
 exports[`Input > Input customVue demo works fine 1`] = `
 <div
   class="input-demo"
-  data-v-16c31aae=""
+  data-v-c3916633=""
 >
   <div
     class="t-input t-input--layout-horizontal t-input--border"
-    data-v-16c31aae=""
+    data-v-c3916633=""
   >
     <div
       class="t-input__wrap--prefix"
@@ -363,10 +371,10 @@ exports[`Input > Input customVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--default"
-          maxlength="-1"
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -375,6 +383,7 @@ exports[`Input > Input customVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
 </div>
 `;
@@ -402,10 +411,10 @@ exports[`Input > Input labelVue demo works fine 1`] = `
       <input
         autocomplete="Off"
         class="t-input__control t-input--default"
-        maxlength="-1"
         name=""
         placeholder="请输入文字"
         spellcheck="false"
+        style="--td-input-cursor-color: #0052d9;"
         type="text"
       />
       <!---->
@@ -414,6 +423,7 @@ exports[`Input > Input labelVue demo works fine 1`] = `
     </div>
     <!---->
   </div>
+  <!---->
 </div>
 `;
 
@@ -440,10 +450,10 @@ exports[`Input > Input layoutVue demo works fine 1`] = `
       <input
         autocomplete="Off"
         class="t-input__control t-input--default"
-        maxlength="-1"
         name=""
         placeholder="请输入文字"
         spellcheck="false"
+        style="--td-input-cursor-color: #0052d9;"
         type="text"
       />
       <!---->
@@ -460,7 +470,7 @@ exports[`Input > Input layoutVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M12 1a11 11 0 110 22 11 11 0 010-22zm-1 13h2V6.5h-2V14zm2 1.5h-2v2h2v-2z"
+            d="M12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1ZM11.0001 14H13.0001V6.49998H11.0001V14ZM13.004 15.5H11.0001V17.5039H13.004V15.5Z"
             fill="currentColor"
           />
         </svg>
@@ -469,6 +479,7 @@ exports[`Input > Input layoutVue demo works fine 1`] = `
     </div>
     <!---->
   </div>
+  <!---->
 </div>
 `;
 
@@ -499,10 +510,10 @@ exports[`Input > Input maxLengthVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--default"
-          maxlength="10"
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -515,6 +526,7 @@ exports[`Input > Input maxLengthVue demo works fine 1`] = `
         最大输入10个字符
       </div>
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -538,10 +550,10 @@ exports[`Input > Input maxLengthVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--default"
-          maxlength="-1"
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -554,6 +566,7 @@ exports[`Input > Input maxLengthVue demo works fine 1`] = `
         最大输入10个字符，汉字算两个
       </div>
     </div>
+    <!---->
   </div>
   
 </div>
@@ -617,10 +630,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--default"
-              maxlength="-1"
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -629,6 +642,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -652,10 +666,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--default"
-              maxlength="-1"
               name=""
               placeholder="请输入文字(选填)"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -664,6 +678,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -687,10 +702,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--default"
-              maxlength="-1"
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -699,6 +714,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       
       
@@ -744,10 +760,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--default"
-              maxlength="10"
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -760,6 +776,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             最大输入10个字符
           </div>
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -783,10 +800,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--default"
-              maxlength="-1"
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -799,6 +816,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             最大输入10个字符，汉字算两个
           </div>
         </div>
+        <!---->
       </div>
       
       
@@ -844,10 +862,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--default"
-              maxlength="-1"
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -864,7 +882,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
+                  d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM10.996 8.50002V6.49611H12.9999V8.50002H10.996ZM12.9999 10L12.9999 17.5H10.9999V10L12.9999 10Z"
                   fill="currentColor"
                 />
               </svg>
@@ -873,6 +891,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -896,39 +915,36 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--default"
-              maxlength="-1"
               name=""
               placeholder="请输入手机号码"
               spellcheck="false"
-              type="text"
+              style="--td-input-cursor-color: #0052d9;"
+              type="tel"
             />
             <!---->
-            <div
-              class="t-input__wrap--suffix"
-            >
-              
-              <button
-                aria-disabled="false"
-                class="t-button t-button--size-extra-small t-button--base t-button--primary t-button--rectangle"
-                role="button"
-                type="button"
-              >
-                <!---->
-                <span
-                  class="t-button__content"
-                >
-                  
-                   操作按钮 
-                  
-                </span>
-                <!---->
-              </button>
-              
-            </div>
+            <!---->
             <!---->
           </div>
           <!---->
         </div>
+        
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-extra-small t-button--base t-button--primary t-button--rectangle"
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+             操作按钮 
+            
+          </span>
+          <!---->
+        </button>
+        
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -952,10 +968,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--default"
-              maxlength="-1"
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -972,7 +988,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M2 2h20v20H2V2zm17.5 18h.5V4H4v16h.5a5 5 0 015-5h5a5 5 0 015 5zM12 7a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM7.5 9.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zm2 7.5a3 3 0 00-3 3h11a3 3 0 00-3-3h-5z"
+                  d="M2 2L22 2L22 22L2 22L2 2ZM19.5 20H20L20 4L4 4L4 20H4.5C4.5 17.2386 6.73858 15 9.5 15H14.5C17.2614 15 19.5 17.2386 19.5 20ZM12 7C10.6193 7 9.5 8.11929 9.5 9.5C9.5 10.8807 10.6193 12 12 12C13.3807 12 14.5 10.8807 14.5 9.5C14.5 8.11929 13.3807 7 12 7ZM7.5 9.5C7.5 7.01472 9.51472 5 12 5C14.4853 5 16.5 7.01472 16.5 9.5C16.5 11.9853 14.4853 14 12 14C9.51472 14 7.5 11.9853 7.5 9.5ZM9.5 17C7.84315 17 6.5 18.3431 6.5 20L17.5 20C17.5 18.3431 16.1569 17 14.5 17H9.5Z"
                   fill="currentColor"
                 />
               </svg>
@@ -981,6 +997,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       
       
@@ -1022,7 +1039,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
+                d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
                 fill="currentColor"
               />
             </svg>
@@ -1043,10 +1060,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--default"
-              maxlength="-1"
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1055,6 +1072,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -1074,7 +1092,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               width="1em"
             >
               <path
-                d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
+                d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
                 fill="currentColor"
               />
             </svg>
@@ -1095,10 +1113,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--default"
-              maxlength="-1"
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1107,6 +1125,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       
       
@@ -1152,9 +1171,9 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--default"
-              maxlength="-1"
               name=""
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="password"
             />
             <!---->
@@ -1162,7 +1181,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <div
               class="t-input__wrap--suffix-icon"
             >
-              
               <svg
                 class="t-icon t-icon-browse-off"
                 fill="none"
@@ -1171,15 +1189,15 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M4 1.59l6.17 6.17 7.07 7.07L23.41 21 22 22.41l-2.97-2.96A12.5 12.5 0 011.08 12.3L1 12l.1-.3c.77-2.4 2.24-4.5 4.18-6.02L2.59 3 4 1.59zM6.7 7.1A10.53 10.53 0 003.1 12a10.5 10.5 0 0014.45 5.97l-1.8-1.8a5 5 0 01-6.93-6.93L6.7 7.11zm3.6 3.6a3 3 0 004 4l-4-4zM13 5c-.58 0-1.14.05-1.7.14l-.98.16L10 3.32l.99-.16A12.5 12.5 0 0124.9 11.7l.1.31-.1.3c-.41 1.3-1.03 2.5-1.82 3.58l-.59.8-1.61-1.18.59-.8c.6-.82 1.08-1.73 1.42-2.7A10.5 10.5 0 0013 5zm.51 1.93l.96.29a5 5 0 013.31 3.31l.3.96-1.92.58-.3-.95a3 3 0 00-1.98-1.99l-.95-.3.58-1.9z"
+                  d="M3.99999 1.58582L10.1714 7.75774L17.2425 14.8288L23.4137 21L21.9995 22.4142L19.0345 19.4492C17.2447 20.4377 15.1866 21.0001 12.9996 21.0001C7.42102 21.0001 2.69842 17.3465 1.08922 12.3042L0.992188 12.0001L1.08922 11.6961C1.85645 9.29201 3.33009 7.20571 5.26511 5.67975L2.58567 2.99993L3.99999 1.58582ZM6.69098 7.10574C5.05507 8.33729 3.79122 10.0353 3.09676 12.0001C4.53843 16.0793 8.42915 19.0001 12.9996 19.0001C14.6314 19.0001 16.1745 18.6285 17.5507 17.9655L15.7571 16.1719C14.9668 16.695 14.0185 17.0003 12.9999 17.0003C10.2385 17.0003 7.99989 14.7618 7.99989 12.0003C7.99989 10.9817 8.3052 10.0334 8.82835 9.24312L6.69098 7.10574ZM10.292 10.7068C10.1046 11.0984 9.99989 11.5368 9.99989 12.0003C9.99989 13.6572 11.343 15.0003 12.9999 15.0003C13.4634 15.0003 13.9018 14.8956 14.2934 14.7082L10.292 10.7068ZM13 5.00003C12.4234 5.00003 11.8583 5.04642 11.3081 5.13548L10.321 5.29527L10.0014 3.32097L10.9885 3.16117C11.644 3.05508 12.3159 3.00003 13 3.00003C18.5786 3.00003 23.3012 6.65367 24.9104 11.696L25.0074 12L24.9104 12.3041C24.4968 13.5999 23.878 14.8034 23.0926 15.8763L22.5019 16.6833L20.8881 15.5019L21.4788 14.695C22.0769 13.8778 22.5595 12.9715 22.9028 12C21.4612 7.92082 17.5704 5.00003 13 5.00003ZM13.5132 6.92636L14.4691 7.21985C16.0499 7.70515 17.2953 8.95049 17.7806 10.5313L18.0741 11.4873L16.1621 12.0742L15.8687 11.1183C15.578 10.1715 14.829 9.42243 13.8822 9.13178L12.9262 8.8383L13.5132 6.92636Z"
                   fill="currentColor"
                 />
               </svg>
-              
             </div>
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -1203,10 +1221,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--default"
-              maxlength="-1"
               name=""
               placeholder="输入验证码"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1273,6 +1291,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -1296,10 +1315,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--default"
-              maxlength="-1"
               name=""
               placeholder="输入手机号码"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1326,6 +1345,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -1349,10 +1369,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--right t-input--default"
-              maxlength="-1"
               name=""
               placeholder="0.00"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="number"
             />
             <!---->
@@ -1365,6 +1385,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -1388,10 +1409,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--right t-input--default"
-              maxlength="-1"
               name=""
               placeholder="填写个数"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="number"
             />
             <!---->
@@ -1404,6 +1425,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       
       
@@ -1453,10 +1475,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--error"
-              maxlength="-1"
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1469,6 +1491,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             辅助说明
           </div>
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -1493,9 +1516,9 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               autocomplete="Off"
               class="t-input__control t-input--default t-input__control--disabled"
               disabled=""
-              maxlength="-1"
               name=""
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1504,6 +1527,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       
       
@@ -1548,10 +1572,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--default"
-              maxlength="-1"
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1560,6 +1584,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       
     </div>
@@ -1608,10 +1633,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--default"
-              maxlength="-1"
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1620,6 +1645,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -1643,10 +1669,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--center t-input--default"
-              maxlength="-1"
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1655,6 +1681,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       <div
         class="t-input t-input--layout-horizontal t-input--border"
@@ -1678,10 +1705,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--right t-input--default"
-              maxlength="-1"
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1690,6 +1717,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       
       
@@ -1734,10 +1762,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--default"
-              maxlength="-1"
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1754,7 +1782,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 width="1em"
               >
                 <path
-                  d="M12 1a11 11 0 110 22 11 11 0 010-22zm-1 13h2V6.5h-2V14zm2 1.5h-2v2h2v-2z"
+                  d="M12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1ZM11.0001 14H13.0001V6.49998H11.0001V14ZM13.004 15.5H11.0001V17.5039H13.004V15.5Z"
                   fill="currentColor"
                 />
               </svg>
@@ -1763,6 +1791,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       
     </div>
@@ -1786,7 +1815,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
       
       <div
         class="t-input t-input--layout-horizontal t-input--border input-demo"
-        data-v-378bb8e9=""
+        data-v-6c136f2f=""
       >
         <div
           class="t-input__wrap--prefix"
@@ -1807,10 +1836,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             <input
               autocomplete="Off"
               class="t-input__control t-input--default"
-              maxlength="-1"
               name=""
               placeholder="请输入文字"
               spellcheck="false"
+              style="--td-input-cursor-color: #0052d9;"
               type="text"
             />
             <!---->
@@ -1819,6 +1848,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
+        <!---->
       </div>
       
     </div>
@@ -1842,17 +1872,17 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
       
       <div
         class="input-demo"
-        data-v-0b3942c8=""
+        data-v-f23aff25=""
       >
         <div
           class="input-demo__summary"
-          data-v-0b3942c8=""
+          data-v-f23aff25=""
         >
           标签文字
         </div>
         <div
           class="t-input t-input--layout-horizontal custom-input"
-          data-v-0b3942c8=""
+          data-v-f23aff25=""
         >
           <div
             class="t-input__wrap--prefix"
@@ -1873,10 +1903,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               <input
                 autocomplete="Off"
                 class="t-input__control t-input--default"
-                maxlength="-1"
                 name=""
                 placeholder="请输入文字"
                 spellcheck="false"
+                style="--td-input-cursor-color: #0052d9;"
                 type="text"
               />
               <!---->
@@ -1887,14 +1917,14 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 
                 <svg
                   class="t-icon t-icon-error-circle-filled"
-                  data-v-0b3942c8=""
+                  data-v-f23aff25=""
                   fill="none"
                   height="1em"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
                   <path
-                    d="M12 1a11 11 0 110 22 11 11 0 010-22zm-1 13h2V6.5h-2V14zm2 1.5h-2v2h2v-2z"
+                    d="M12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1ZM11.0001 14H13.0001V6.49998H11.0001V14ZM13.004 15.5H11.0001V17.5039H13.004V15.5Z"
                     fill="currentColor"
                   />
                 </svg>
@@ -1903,6 +1933,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
+          <!---->
         </div>
       </div>
       
@@ -1927,11 +1958,11 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
       
       <div
         class="input-demo"
-        data-v-16c31aae=""
+        data-v-c3916633=""
       >
         <div
           class="t-input t-input--layout-horizontal t-input--border"
-          data-v-16c31aae=""
+          data-v-c3916633=""
         >
           <div
             class="t-input__wrap--prefix"
@@ -1952,10 +1983,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               <input
                 autocomplete="Off"
                 class="t-input__control t-input--default"
-                maxlength="-1"
                 name=""
                 placeholder="请输入文字"
                 spellcheck="false"
+                style="--td-input-cursor-color: #0052d9;"
                 type="text"
               />
               <!---->
@@ -1964,6 +1995,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
+          <!---->
         </div>
       </div>
       
@@ -1995,7 +2027,7 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
+            d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
             fill="currentColor"
           />
         </svg>
@@ -2016,10 +2048,10 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--default"
-          maxlength="-1"
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -2028,6 +2060,7 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -2047,7 +2080,7 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
           width="1em"
         >
           <path
-            d="M2 2h9v9H2V2zm2 2v5h5V4H4zm13.5 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM13 6.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM2 13h9v9H2v-9zm2 2v5h5v-5H4zm9-2h9v9h-9v-9zm2 2v5h5v-5h-5z"
+            d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
             fill="currentColor"
           />
         </svg>
@@ -2068,10 +2101,10 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--default"
-          maxlength="-1"
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -2080,6 +2113,7 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   
 </div>
@@ -2112,9 +2146,9 @@ exports[`Input > Input specialVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--default"
-          maxlength="-1"
           name=""
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="password"
         />
         <!---->
@@ -2122,7 +2156,6 @@ exports[`Input > Input specialVue demo works fine 1`] = `
         <div
           class="t-input__wrap--suffix-icon"
         >
-          
           <svg
             class="t-icon t-icon-browse-off"
             fill="none"
@@ -2131,15 +2164,15 @@ exports[`Input > Input specialVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M4 1.59l6.17 6.17 7.07 7.07L23.41 21 22 22.41l-2.97-2.96A12.5 12.5 0 011.08 12.3L1 12l.1-.3c.77-2.4 2.24-4.5 4.18-6.02L2.59 3 4 1.59zM6.7 7.1A10.53 10.53 0 003.1 12a10.5 10.5 0 0014.45 5.97l-1.8-1.8a5 5 0 01-6.93-6.93L6.7 7.11zm3.6 3.6a3 3 0 004 4l-4-4zM13 5c-.58 0-1.14.05-1.7.14l-.98.16L10 3.32l.99-.16A12.5 12.5 0 0124.9 11.7l.1.31-.1.3c-.41 1.3-1.03 2.5-1.82 3.58l-.59.8-1.61-1.18.59-.8c.6-.82 1.08-1.73 1.42-2.7A10.5 10.5 0 0013 5zm.51 1.93l.96.29a5 5 0 013.31 3.31l.3.96-1.92.58-.3-.95a3 3 0 00-1.98-1.99l-.95-.3.58-1.9z"
+              d="M3.99999 1.58582L10.1714 7.75774L17.2425 14.8288L23.4137 21L21.9995 22.4142L19.0345 19.4492C17.2447 20.4377 15.1866 21.0001 12.9996 21.0001C7.42102 21.0001 2.69842 17.3465 1.08922 12.3042L0.992188 12.0001L1.08922 11.6961C1.85645 9.29201 3.33009 7.20571 5.26511 5.67975L2.58567 2.99993L3.99999 1.58582ZM6.69098 7.10574C5.05507 8.33729 3.79122 10.0353 3.09676 12.0001C4.53843 16.0793 8.42915 19.0001 12.9996 19.0001C14.6314 19.0001 16.1745 18.6285 17.5507 17.9655L15.7571 16.1719C14.9668 16.695 14.0185 17.0003 12.9999 17.0003C10.2385 17.0003 7.99989 14.7618 7.99989 12.0003C7.99989 10.9817 8.3052 10.0334 8.82835 9.24312L6.69098 7.10574ZM10.292 10.7068C10.1046 11.0984 9.99989 11.5368 9.99989 12.0003C9.99989 13.6572 11.343 15.0003 12.9999 15.0003C13.4634 15.0003 13.9018 14.8956 14.2934 14.7082L10.292 10.7068ZM13 5.00003C12.4234 5.00003 11.8583 5.04642 11.3081 5.13548L10.321 5.29527L10.0014 3.32097L10.9885 3.16117C11.644 3.05508 12.3159 3.00003 13 3.00003C18.5786 3.00003 23.3012 6.65367 24.9104 11.696L25.0074 12L24.9104 12.3041C24.4968 13.5999 23.878 14.8034 23.0926 15.8763L22.5019 16.6833L20.8881 15.5019L21.4788 14.695C22.0769 13.8778 22.5595 12.9715 22.9028 12C21.4612 7.92082 17.5704 5.00003 13 5.00003ZM13.5132 6.92636L14.4691 7.21985C16.0499 7.70515 17.2953 8.95049 17.7806 10.5313L18.0741 11.4873L16.1621 12.0742L15.8687 11.1183C15.578 10.1715 14.829 9.42243 13.8822 9.13178L12.9262 8.8383L13.5132 6.92636Z"
               fill="currentColor"
             />
           </svg>
-          
         </div>
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -2163,10 +2196,10 @@ exports[`Input > Input specialVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--default"
-          maxlength="-1"
           name=""
           placeholder="输入验证码"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -2233,6 +2266,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -2256,10 +2290,10 @@ exports[`Input > Input specialVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--default"
-          maxlength="-1"
           name=""
           placeholder="输入手机号码"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -2286,6 +2320,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -2309,10 +2344,10 @@ exports[`Input > Input specialVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--right t-input--default"
-          maxlength="-1"
           name=""
           placeholder="0.00"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="number"
         />
         <!---->
@@ -2325,6 +2360,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -2348,10 +2384,10 @@ exports[`Input > Input specialVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--right t-input--default"
-          maxlength="-1"
           name=""
           placeholder="填写个数"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="number"
         />
         <!---->
@@ -2364,6 +2400,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   
 </div>
@@ -2396,10 +2433,10 @@ exports[`Input > Input statusVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--error"
-          maxlength="-1"
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -2412,6 +2449,7 @@ exports[`Input > Input statusVue demo works fine 1`] = `
         辅助说明
       </div>
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -2436,9 +2474,9 @@ exports[`Input > Input statusVue demo works fine 1`] = `
           autocomplete="Off"
           class="t-input__control t-input--default t-input__control--disabled"
           disabled=""
-          maxlength="-1"
           name=""
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -2447,6 +2485,7 @@ exports[`Input > Input statusVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   
 </div>
@@ -2479,10 +2518,10 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--default"
-          maxlength="-1"
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -2499,7 +2538,7 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M12 23a11 11 0 100-22 11 11 0 000 22zM11 8.5v-2h2v2h-2zm2 1.5v7.5h-2V10h2z"
+              d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM10.996 8.50002V6.49611H12.9999V8.50002H10.996ZM12.9999 10L12.9999 17.5H10.9999V10L12.9999 10Z"
               fill="currentColor"
             />
           </svg>
@@ -2508,6 +2547,7 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -2531,39 +2571,36 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--default"
-          maxlength="-1"
           name=""
           placeholder="请输入手机号码"
           spellcheck="false"
-          type="text"
+          style="--td-input-cursor-color: #0052d9;"
+          type="tel"
         />
         <!---->
-        <div
-          class="t-input__wrap--suffix"
-        >
-          
-          <button
-            aria-disabled="false"
-            class="t-button t-button--size-extra-small t-button--base t-button--primary t-button--rectangle"
-            role="button"
-            type="button"
-          >
-            <!---->
-            <span
-              class="t-button__content"
-            >
-              
-               操作按钮 
-              
-            </span>
-            <!---->
-          </button>
-          
-        </div>
+        <!---->
         <!---->
       </div>
       <!---->
     </div>
+    
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-extra-small t-button--base t-button--primary t-button--rectangle"
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+         操作按钮 
+        
+      </span>
+      <!---->
+    </button>
+    
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
@@ -2587,10 +2624,10 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
         <input
           autocomplete="Off"
           class="t-input__control t-input--default"
-          maxlength="-1"
           name=""
           placeholder="请输入文字"
           spellcheck="false"
+          style="--td-input-cursor-color: #0052d9;"
           type="text"
         />
         <!---->
@@ -2607,7 +2644,7 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              d="M2 2h20v20H2V2zm17.5 18h.5V4H4v16h.5a5 5 0 015-5h5a5 5 0 015 5zM12 7a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM7.5 9.5a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zm2 7.5a3 3 0 00-3 3h11a3 3 0 00-3-3h-5z"
+              d="M2 2L22 2L22 22L2 22L2 2ZM19.5 20H20L20 4L4 4L4 20H4.5C4.5 17.2386 6.73858 15 9.5 15H14.5C17.2614 15 19.5 17.2386 19.5 20ZM12 7C10.6193 7 9.5 8.11929 9.5 9.5C9.5 10.8807 10.6193 12 12 12C13.3807 12 14.5 10.8807 14.5 9.5C14.5 8.11929 13.3807 7 12 7ZM7.5 9.5C7.5 7.01472 9.51472 5 12 5C14.4853 5 16.5 7.01472 16.5 9.5C16.5 11.9853 14.4853 14 12 14C9.51472 14 7.5 11.9853 7.5 9.5ZM9.5 17C7.84315 17 6.5 18.3431 6.5 20L17.5 20C17.5 18.3431 16.1569 17 14.5 17H9.5Z"
               fill="currentColor"
             />
           </svg>
@@ -2616,6 +2653,7 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
+    <!---->
   </div>
   
 </div>

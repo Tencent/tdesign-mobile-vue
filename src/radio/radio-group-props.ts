@@ -12,14 +12,17 @@ export default {
   allowUncheck: Boolean,
   /** 是否开启无边框模式；优先级低于 Radio */
   borderless: Boolean,
-  /** 是否禁用全部子单选框。默认为 false。RadioGroup.disabled 优先级低于 Radio.disabled */
-  disabled: Boolean,
+  /** 是否禁用全部子单选框。优先级：Radio.disabled > RadioGroup.disabled > Form.disabled */
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标 */
   icon: {
     type: [String, Array] as PropType<TdRadioGroupProps['icon']>,
     default: 'circle',
   },
-  /** 用来定义 value / label 在 `options` 中对应的字段别名 */
+  /** 用来定义 value / label / disabled 在 `options` 中对应的字段别名 */
   keys: {
     type: Object as PropType<TdRadioGroupProps['keys']>,
   },
@@ -32,7 +35,7 @@ export default {
   options: {
     type: Array as PropType<TdRadioGroupProps['options']>,
   },
-  /** 复选框和内容相对位置 */
+  /** 复选框和内容相对位置。优先级低于 Radio.placement */
   placement: {
     type: String as PropType<TdRadioGroupProps['placement']>,
     default: 'left' as TdRadioGroupProps['placement'],
@@ -40,6 +43,11 @@ export default {
       if (!val) return true;
       return ['left', 'right'].includes(val);
     },
+  },
+  /** 只读状态 */
+  readonly: {
+    type: Boolean,
+    default: undefined,
   },
   /** 选中的值 */
   value: {
@@ -54,6 +62,6 @@ export default {
   defaultValue: {
     type: [String, Number, Boolean] as PropType<TdRadioGroupProps['defaultValue']>,
   },
-  /** 选中值发生变化时触发 */
+  /** 选中值发生变化时触发, `context.name` 指 RadioGroup 的 name 属性 */
   onChange: Function as PropType<TdRadioGroupProps['onChange']>,
 };

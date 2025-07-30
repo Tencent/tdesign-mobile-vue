@@ -1,4 +1,4 @@
-import Switch from './switch';
+import _Switch from './switch';
 import { withInstall, WithInstallType } from '../shared';
 import { TdSwitchProps } from './type';
 
@@ -7,5 +7,5 @@ import './style';
 export * from './type';
 export type SwitchProps = TdSwitchProps;
 
-const _Switch: WithInstallType<typeof Switch> = withInstall(Switch);
-export default _Switch;
+export const Switch: WithInstallType<typeof _Switch> = withInstall(_Switch);
+export default Switch;

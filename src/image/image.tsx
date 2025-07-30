@@ -2,7 +2,7 @@ import { ref, computed, defineComponent, watchEffect } from 'vue';
 import { useIntersectionObserver } from '@vueuse/core';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
-import Loading from '../loading';
+import TLoading from '../loading';
 import config from '../config';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
@@ -10,11 +10,9 @@ import { usePrefixClass } from '../hooks/useClass';
 import props from './props';
 
 const { prefix } = config;
-const name = `${prefix}-image`;
 
 export default defineComponent({
-  name,
-  components: { CloseIcon, Loading },
+  name: `${prefix}-image`,
   props,
   setup(props, context) {
     const imageClass = usePrefixClass('image');
@@ -22,7 +20,7 @@ export default defineComponent({
 
     // 默认loading和error状态展示，slot支持Node和Function
     const closeIcon = <CloseIcon size="22px" />;
-    const LoadingIcon = <Loading theme="dots" inheritColor={true} />;
+    const LoadingIcon = <TLoading theme="dots" inheritColor={true} />;
 
     // 记录图片的loading、error状态
     const isLoading = ref(true);
@@ -68,6 +66,10 @@ export default defineComponent({
       props.onError?.({ e });
       isLoading.value = false;
       isError.value = true;
+      if (props.fallback) {
+        realSrc.value = props.fallback;
+        isError.value = false;
+      }
     };
 
     const maskContent = computed(() => {
@@ -91,7 +93,7 @@ export default defineComponent({
           if (props.lazy && realSrc.value === '') {
             return;
           }
-          return <div class={`${name}__mask`}>{statusContent()}</div>;
+          return <div class={`${imageClass.value}__mask`}>{statusContent()}</div>;
         }
       };
       return node();
@@ -106,10 +108,11 @@ export default defineComponent({
               Object.entries(props.srcset).map((item, index) => <source key={index} type={item[0]} srcset={item[1]} />)}
             <img
               ref={imageDOM}
-              class={`${name}__img`}
+              class={`${imageClass.value}__img`}
               style={imageStyles.value}
               src={realSrc.value}
               alt={props.alt}
+              referrerpolicy={props.referrerpolicy}
               onLoad={handleImgLoadCompleted}
               onError={handleImgLoadError}
             />

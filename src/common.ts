@@ -1,5 +1,6 @@
 /** Vue3 特有全局类型 */
 type VNode = import('vue').VNode;
+export type AppContext = import('vue').AppContext;
 export type ScopedSlot = () => SlotReturnValue;
 export type SlotReturnValue = VNode | string | boolean | null | undefined | SlotReturnArray;
 export type SlotReturnArray = Array<SlotReturnValue>;
@@ -63,6 +64,8 @@ export type TreeOptionData<T = string | number> = {
 } & PlainObject;
 
 export type SizeEnum = 'small' | 'medium' | 'large';
+
+export type ShapeEnum = 'circle' | 'round';
 
 export type HorizontalAlignEnum = 'left' | 'center' | 'right';
 

@@ -1,4 +1,4 @@
-import Calendar from './calendar';
+import _Calendar from './calendar';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';
@@ -7,5 +7,5 @@ import { TdCalendarProps } from './type';
 export * from './type';
 export type CalendarProps = TdCalendarProps;
 
-const _Calendar: WithInstallType<typeof Calendar> = withInstall(Calendar);
-export default _Calendar;
+export const Calendar: WithInstallType<typeof _Calendar> = withInstall(_Calendar);
+export default Calendar;

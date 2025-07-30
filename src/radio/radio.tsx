@@ -1,10 +1,9 @@
-import { inject, computed, defineComponent, getCurrentInstance, Ref, toRefs } from 'vue';
+import { inject, computed, defineComponent, Ref, toRefs } from 'vue';
 import { CheckIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
-
-import { NOOP, useVModel } from '../shared';
 import config from '../config';
 import props from './props';
-import { RadioValue, TdRadioGroupProps } from './type';
+import { TdRadioGroupProps, TdRadioProps } from './type';
+import useVModel from '../hooks/useVModel';
 import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
@@ -14,12 +13,13 @@ const { prefix } = config;
 export default defineComponent({
   name: `${prefix}-radio`,
   props,
-  setup(props) {
+  emits: ['update:checked', 'update:modelValue', 'change'],
+  setup(props, context) {
     const renderTNodeContent = useContent();
     const renderTNodeJSX = useTNodeJSX();
     const radioClass = usePrefixClass('radio');
 
-    const { checked, modelValue, block } = toRefs(props);
+    const { checked, modelValue } = toRefs(props);
     const [innerChecked, setInnerChecked] = useVModel(
       checked,
       modelValue,
@@ -27,20 +27,18 @@ export default defineComponent({
       props.onChange,
       'checked',
     );
-
     const rootGroupProps = inject('rootGroupProps', {}) as TdRadioGroupProps;
     const rootGroupValue = inject('rootGroupValue', {}) as Ref;
-    const rootGroupChange = inject('rootGroupChange', NOOP) as (val: RadioValue, e: Event) => void;
+    const rootGroupChange = inject('rootGroupChange', undefined);
 
     // extend radioGroup disabled props
     const groupDisabled = computed(() => rootGroupProps?.disabled);
-    const formDisabled = useFormDisabled(groupDisabled);
+    const isDisabled = useFormDisabled(groupDisabled);
 
-    const isDisabled = computed(() => {
-      if (formDisabled.value == null && 'disabled' in rootGroupProps) return rootGroupProps.disabled;
-      return formDisabled.value;
-    });
-    const radioChecked = computed(() => innerChecked.value || props.value === rootGroupValue?.value);
+    const radioChecked = computed(() =>
+      rootGroupValue?.value !== undefined ? props.value === rootGroupValue?.value : innerChecked.value,
+    );
+
     const finalBorderless = computed(() => {
       if (props.borderless == null && 'borderless' in rootGroupProps) return rootGroupProps.borderless;
       return props.borderless;
@@ -50,16 +48,16 @@ export default defineComponent({
       return props.placement || 'left';
     });
 
-    const finalAllowUncheck = computed(() => {
-      if (props.allowUncheck == null && 'allowUncheck' in rootGroupProps) return rootGroupProps.allowUncheck;
-      return props.allowUncheck;
-    });
+    const finalAllowUncheck = computed(() => Boolean(props.allowUncheck || rootGroupProps?.allowUncheck));
+
+    const finalReadonly = computed(() => Boolean(props.readonly || rootGroupProps?.readonly));
 
     // input props attribute
     const inputProps = computed(() => ({
       name: rootGroupProps.name || props.name,
       checked: radioChecked.value,
       disabled: isDisabled.value,
+      readonly: finalReadonly.value,
       value: props.value,
     }));
 
@@ -75,7 +73,7 @@ export default defineComponent({
       `${radioClass.value}`,
       `${radioClass.value}--${finalPlacement.value}`,
       {
-        [`${radioClass.value}--block`]: block.value,
+        [`${radioClass.value}--block`]: props.block,
       },
     ]);
 
@@ -104,14 +102,15 @@ export default defineComponent({
     };
 
     const radioOrgChange = (e: Event) => {
-      if (isDisabled.value) {
+      if (isDisabled.value || finalReadonly.value) {
         return;
       }
       if (rootGroupChange) {
-        rootGroupChange(finalAllowUncheck.value && radioChecked.value ? '' : props.value, e);
+        const value = finalAllowUncheck.value && radioChecked.value ? undefined : props.value;
+        rootGroupChange(value, { e, name: props.name });
       } else {
-        if (!finalAllowUncheck.value && radioChecked.value) return;
-        setInnerChecked(!radioChecked.value, { e });
+        const value = finalAllowUncheck.value ? !radioChecked.value : true;
+        setInnerChecked(value, { e });
       }
     };
 

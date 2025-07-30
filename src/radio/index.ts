@@ -1,4 +1,4 @@
-import Radio from './radio';
+import _Radio from './radio';
 import _RadioGroup from './radio-group';
 import { withInstall, WithInstallType } from '../shared';
 
@@ -12,5 +12,5 @@ export type RadioGroupProps = TdRadioGroupProps;
 
 export const RadioGroup = withInstall(_RadioGroup);
 
-const _Radio: WithInstallType<typeof Radio> = withInstall(Radio);
-export default _Radio;
+export const Radio: WithInstallType<typeof _Radio> = withInstall(_Radio);
+export default Radio;

@@ -21,28 +21,38 @@ export interface TdMessageProps {
    */
   content?: string | TNode;
   /**
-   * 消息内置计时器，计时到达时会触发 duration-end 事件。单位：毫秒。值为 0 则表示没有计时器。
+   * 消息内置计时器，计时到达时会触发 duration-end 事件。单位：毫秒。值为 0 则表示没有计时器
    * @default 3000
    */
   duration?: number;
+  /**
+   * 两条 `message` 之间的间距
+   * @default 12
+   */
+  gap?: string | number | boolean;
   /**
    * 用于自定义消息前面的图标，优先级大于 theme 设定的图标。值为 false 则不显示图标，值为 true 显示 theme 设定图标
    * @default true
    */
   icon?: boolean | TNode;
   /**
-   * 链接名称。值为字符串表示链接名称，值为 Object 类型，表示透传至 Link
+   * 链接名称。值为字符串表示链接名称，值为 `Object` 类型，表示透传至 `Link`
    */
   link?: string | object | TNode;
   /**
    * 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放
    * @default false
    */
-  marquee?: boolean | DrawMarquee;
+  marquee?: boolean | MessageMarquee;
   /**
    * 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10rpx', '8rpx']
    */
   offset?: Array<string | number>;
+  /**
+   * 是否保持仅显示一条信息
+   * @default true
+   */
+  single?: boolean;
   /**
    * 消息组件风格
    * @default info
@@ -76,14 +86,14 @@ export interface TdMessageProps {
    */
   onDurationEnd?: () => void;
   /**
-   * 当link链接存在时，点击链接文本时触发
+   * 当`link`链接存在时，点击链接文本时触发
    */
   onLinkClick?: (context: { e: MouseEvent }) => void;
 }
 
 export type MessageAlignType = 'left' | 'center';
 
-export interface DrawMarquee {
+export interface MessageMarquee {
   speed?: number;
   loop?: number;
   delay?: number;

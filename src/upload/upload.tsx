@@ -1,27 +1,21 @@
-import { defineComponent, ref, computed, toRefs } from 'vue';
+import { defineComponent, ref, computed } from 'vue';
 import { AddIcon, LoadingIcon, CloseIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
-
+import { isBoolean } from 'lodash-es';
 import TImage from '../image';
 import TImageViewer from '../image-viewer';
-import { UploadFile } from './type';
+import { TdUploadProps, UploadFile } from './type';
 import UploadProps from './props';
 import config from '../config';
 import useUpload from './hooks/useUpload';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
-import { useConfig } from '../config-provider/useConfig';
+import { usePrefixClass, useConfig } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-upload`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-upload`,
   components: {
-    AddIcon,
-    LoadingIcon,
-    CloseCircleIcon,
-    CloseIcon,
     TImage,
-    TImageViewer,
   },
   props: UploadProps,
   emits: [
@@ -37,21 +31,17 @@ export default defineComponent({
     'validate',
     'click-upload',
   ],
-  setup(props, context) {
+  setup(props, { expose }) {
+    const uploadClass = usePrefixClass('upload');
     const { globalConfig } = useConfig('upload');
 
     const {
-      toUploadFiles,
-      uploadValue,
+      disabled,
       displayFiles,
-      sizeOverLimitMessage,
       uploading,
       inputRef,
-      disabled,
-      xhrReq,
       uploadFilePercent,
       uploadFiles,
-      onFileChange,
       onNormalFileChange,
       onInnerRemove,
       cancelUpload,
@@ -65,7 +55,7 @@ export default defineComponent({
 
     const handlePreview = (e: MouseEvent, file: UploadFile, index: number) => {
       initialIndex.value = index;
-      showViewer.value = true;
+      showViewer.value = props.preview;
       props.onPreview?.({
         e,
         file,
@@ -93,19 +83,19 @@ export default defineComponent({
     const renderStatus = (file: UploadFile) => {
       if (file.status === 'fail' || file.status === 'progress') {
         return (
-          <div class={`${name}__progress-mask`}>
+          <div class={`${uploadClass.value}__progress-mask`}>
             {file.status === 'progress' ? (
               <>
-                <loading-icon class={`${name}__progress-loading`} size="24" />
-                <div class={`${name}__progress-text`}>
+                <LoadingIcon class={`${uploadClass.value}__progress-loading`} size="24" />
+                <div class={`${uploadClass.value}__progress-text`}>
                   {file.percent ? `${file.percent}%` : globalConfig.value.progress.uploadingText}
                 </div>
               </>
             ) : (
-              <close-circle-icon size="24" />
+              <CloseCircleIcon size="24" />
             )}
             {file.status === 'fail' && (
-              <div class={`${name}__progress-text`}>{globalConfig.value.progress.failText}</div>
+              <div class={`${uploadClass.value}__progress-text`}>{globalConfig.value.progress.failText}</div>
             )}
           </div>
         );
@@ -120,79 +110,62 @@ export default defineComponent({
           return <div onClick={triggerUpload}>{defaultContent}</div>;
         }
         return (
-          <div class={`${name}__item ${name}__item--add`} onClick={triggerUpload}>
-            <div class={`${name}__add-icon`}>{addContent || <add-icon size="28" />}</div>
+          <div class={`${uploadClass.value}__item ${uploadClass.value}__item--add`} onClick={triggerUpload}>
+            <div class={`${uploadClass.value}__add-icon`}>{addContent || <AddIcon size="28" />}</div>
           </div>
         );
       }
     };
-
-    return {
-      ...toRefs(props),
-      name,
-      globalConfig,
-      initialIndex,
-      showViewer,
-      previewImgs,
-      toUploadFiles,
-      uploadValue,
-      displayFiles,
-      sizeOverLimitMessage,
+    expose({
+      upload: inputRef.value,
       uploading,
-      inputRef,
-      disabled,
-      xhrReq,
-      handlePreview,
       triggerUpload,
-      uploadFilePercent,
       uploadFiles,
-      onFileChange,
-      onNormalFileChange,
-      onInnerRemove,
       cancelUpload,
-      handleImageClose,
-      renderStatus,
-      content,
+      uploadFilePercent,
+    });
+    return () => {
+      return (
+        <div class={`${uploadClass.value}`}>
+          {displayFiles.value.map((file, index) => (
+            <div key={index} class={`${uploadClass.value}__item`}>
+              {file.url && (
+                <t-image
+                  class={`${uploadClass.value}__image`}
+                  shape="round"
+                  {...(props.imageProps as TdUploadProps['imageProps'])}
+                  src={file.url}
+                  onClick={(e: MouseEvent) => handlePreview(e, file, index)}
+                />
+              )}
+              {renderStatus(file)}
+              {(isBoolean(file.removeBtn) ? file.removeBtn : props.removeBtn) && (
+                <CloseIcon
+                  class={`${uploadClass.value}__delete-btn`}
+                  onClick={({ e }: any) => onInnerRemove({ e, file, index })}
+                />
+              )}
+            </div>
+          ))}
+          {content()}
+          <input
+            ref={inputRef}
+            value={props.files}
+            type="file"
+            multiple={props.multiple}
+            hidden
+            capture={props.capture as unknown as boolean}
+            accept={props.accept}
+            onChange={onNormalFileChange}
+          />
+          <TImageViewer
+            visible={showViewer.value}
+            images={previewImgs.value}
+            index={initialIndex.value}
+            onClose={handleImageClose}
+          />
+        </div>
+      );
     };
-  },
-  render() {
-    return (
-      <div class={`${name}`}>
-        {this.displayFiles.map((file, index) => (
-          <div key={index} class={`${name}__item`}>
-            {file.url && (
-              <t-image
-                class={`${name}__image`}
-                shape="round"
-                {...(this.$props.imageProps as object)}
-                src={file.url}
-                onClick={(e: MouseEvent) => this.handlePreview(e, file, index)}
-              />
-            )}
-            {this.renderStatus(file)}
-            <close-icon
-              class={`${name}__delete-btn`}
-              onClick={({ e }: any) => this.onInnerRemove({ e, file, index })}
-            />
-          </div>
-        ))}
-        {this.content()}
-        <input
-          ref="inputRef"
-          value={this.$props.files}
-          type="file"
-          multiple={this.$props.multiple}
-          hidden
-          accept={this.$props.accept}
-          onChange={this.onNormalFileChange}
-        />
-        <t-image-viewer
-          visible={this.showViewer}
-          images={this.previewImgs}
-          index={this.initialIndex}
-          onClose={this.handleImageClose}
-        />
-      </div>
-    );
   },
 });

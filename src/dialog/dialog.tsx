@@ -1,23 +1,24 @@
 import { CloseIcon } from 'tdesign-icons-vue-next';
 import { computed, defineComponent } from 'vue';
-import get from 'lodash/get';
-import isString from 'lodash/isString';
+import { get, isString, isObject } from 'lodash-es';
 
 import TButton, { ButtonProps } from '../button';
 import TPopup from '../popup';
 import config from '../config';
 import props from './props';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
+import { usePrefixClass } from '../hooks/useClass';
+import { TdDialogProps } from './type';
 
 const { prefix } = config;
-const name = `${prefix}-dialog`;
 
 export default defineComponent({
-  name,
-  components: { TPopup, TButton, CloseIcon },
+  name: `${prefix}-dialog`,
   props,
   emits: ['update:visible', 'confirm', 'overlay-click', 'cancel', 'close', 'closed'],
   setup(props, context) {
+    const dialogClass = usePrefixClass('dialog');
+
     const renderTNodeJSX = useTNodeJSX();
     const renderContent = useContent();
     const isTextStyleBtn = computed(() =>
@@ -25,18 +26,18 @@ export default defineComponent({
     );
 
     const footerClass = computed(() => [
-      `${name}__footer`,
+      `${dialogClass.value}__footer`,
       {
-        [`${name}__footer--column`]: props.buttonLayout === 'vertical',
-        [`${name}__footer--full`]: isTextStyleBtn.value && get(props.actions, 'length', 0) === 0,
+        [`${dialogClass.value}__footer--column`]: props.buttonLayout === 'vertical',
+        [`${dialogClass.value}__footer--full`]: isTextStyleBtn.value && get(props.actions, 'length', 0) === 0,
       },
     ]);
 
     const buttonClass = computed(() => [
-      `${name}__button`,
+      `${dialogClass.value}__button`,
       {
-        [`${name}__button--${props.buttonLayout}`]: !isTextStyleBtn.value,
-        [`${name}__button--text`]: isTextStyleBtn.value,
+        [`${dialogClass.value}__button--${props.buttonLayout}`]: !isTextStyleBtn.value,
+        [`${dialogClass.value}__button--text`]: isTextStyleBtn.value,
       },
     ]);
 
@@ -75,27 +76,38 @@ export default defineComponent({
       context.emit('overlay-click', { e });
     };
 
-    const calcBtn = (btn: any) => (isString(btn) ? { content: btn } : btn);
-    const confirmBtnProps = computed(() => ({
+    const calcBtn = (btn: TdDialogProps['cancelBtn'] | TdDialogProps['confirmBtn']) => {
+      if (isString(btn)) {
+        return { content: btn };
+      }
+
+      if (isObject(btn)) {
+        return btn;
+      }
+
+      return {};
+    };
+
+    const confirmBtnProps = computed<ButtonProps>(() => ({
       theme: 'primary',
       ...calcBtn(props.confirmBtn),
     }));
+
     const cancelBtnProps = computed<ButtonProps>(() => ({
       theme: isTextStyleBtn.value ? 'default' : 'light',
       ...calcBtn(props.cancelBtn),
     }));
+
     const actionsBtnProps = computed(() => props.actions?.map((item) => calcBtn(item)));
 
     return () => {
-      const { visible, showOverlay, overlayProps, preventScrollThrough, destroyOnClose, zIndex, closeBtn, actions } =
-        props;
       const renderTitleNode = () => {
         const titleNode = renderTNodeJSX('title');
         if (!titleNode) {
           return null;
         }
 
-        return <div class={`${name}__header`}>{titleNode}</div>;
+        return <div class={`${dialogClass.value}__header`}>{titleNode}</div>;
       };
       const renderContentNode = () => {
         const contentNode = renderContent('default', 'content');
@@ -103,8 +115,8 @@ export default defineComponent({
           return null;
         }
         return (
-          <div class={`${name}__body`}>
-            <div class={`${name}__body-text`}>{contentNode}</div>
+          <div class={`${dialogClass.value}__body`}>
+            <div class={`${dialogClass.value}__body-text`}>{contentNode}</div>
           </div>
         );
       };
@@ -112,46 +124,53 @@ export default defineComponent({
         const actionsNode = renderTNodeJSX('actions');
         if (actionsNode && actionsBtnProps.value) {
           return actionsBtnProps.value.map((item, index) => (
-            <t-button key={index} {...item} class={buttonClass.value} onClick={handleCancel} />
+            <TButton key={index} {...item} class={buttonClass.value} onClick={handleCancel} />
           ));
         }
         return null;
       };
       const renderCancelBtnNode = () => {
         const cancelBtnNode = renderTNodeJSX('cancelBtn');
-        if (!actions && cancelBtnNode) {
-          return <t-button {...cancelBtnProps.value} class={buttonClass.value} onClick={handleCancel} />;
+        if (!props.actions && cancelBtnNode) {
+          if (context.slots.cancelBtn) {
+            return cancelBtnNode;
+          }
+          return <TButton {...cancelBtnProps.value} class={buttonClass.value} onClick={handleCancel} />;
         }
         return null;
       };
 
       const renderConfirmBntNode = () => {
         const confirmBtnNode = renderTNodeJSX('confirmBtn');
-        if (!actions && confirmBtnNode) {
-          return <t-button {...confirmBtnProps.value} class={buttonClass.value} onClick={handleConfirm} />;
+        if (!props.actions && confirmBtnNode) {
+          if (context.slots.confirmBtn) {
+            return confirmBtnNode;
+          }
+          return <TButton {...confirmBtnProps.value} class={buttonClass.value} onClick={handleConfirm} />;
         }
         return null;
       };
       return (
-        <t-popup
-          visible={visible}
+        <TPopup
+          class={`${dialogClass.value}__wrapper`}
+          visible={props.visible}
           placement="center"
-          show-overlay={showOverlay}
-          overlay-props={overlayProps}
-          prevent-scroll-through={preventScrollThrough}
-          destroy-on-close={destroyOnClose}
-          z-index={zIndex}
+          show-overlay={props.showOverlay}
+          overlay-props={props.overlayProps}
+          prevent-scroll-through={props.preventScrollThrough}
+          destroy-on-close={props.destroyOnClose}
+          z-index={props.zIndex}
           onClose={handleOverlayClick}
           onClosed={handleClosed}
         >
-          <div class={`${name} ${context.attrs.class || ''}`} style={rootStyles.value}>
+          <div class={`${dialogClass.value} ${context.attrs.class || ''}`} style={rootStyles.value}>
             {renderTNodeJSX('top')}
-            {closeBtn && (
-              <div class={`${name}__close-btn`}>
-                <close-icon onClick={handleClose} />
+            {props.closeBtn && (
+              <div class={`${dialogClass.value}__close-btn`}>
+                <CloseIcon onClick={handleClose} />
               </div>
             )}
-            <div class={`${name}__content`}>
+            <div class={`${dialogClass.value}__content`}>
               {renderTitleNode()}
               {renderContentNode()}
             </div>
@@ -162,7 +181,7 @@ export default defineComponent({
               {renderConfirmBntNode()}
             </div>
           </div>
-        </t-popup>
+        </TPopup>
       );
     };
   },

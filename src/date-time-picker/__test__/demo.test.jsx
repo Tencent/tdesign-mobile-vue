@@ -3,19 +3,31 @@
  */
 
 import { mount } from '@vue/test-utils';
-import baseVue from '@/date-time-picker/demos/base.vue';
-import customRangeVue from '@/date-time-picker/demos/custom-range.vue';
-import fullVue from '@/date-time-picker/demos/full.vue';
+import MockDate from 'mockdate';
+
+import dateAllVue from '@/date-time-picker/demos/date-all.vue';
+import hourMinuteSecondVue from '@/date-time-picker/demos/hour-minute-second.vue';
+import hourMinuteVue from '@/date-time-picker/demos/hour-minute.vue';
 import mobileVue from '@/date-time-picker/demos/mobile.vue';
-import timeVue from '@/date-time-picker/demos/time.vue';
+import showWeekVue from '@/date-time-picker/demos/show-week.vue';
+import stepsVue from '@/date-time-picker/demos/steps.vue';
+import withTitleVue from '@/date-time-picker/demos/with-title.vue';
+import withoutTitleVue from '@/date-time-picker/demos/without-title.vue';
+import yearMonthDateVue from '@/date-time-picker/demos/year-month-date.vue';
 import yearMonthVue from '@/date-time-picker/demos/year-month.vue';
 
+MockDate.set('2020-12-28');
+
 const mapper = {
-  baseVue,
-  customRangeVue,
-  fullVue,
+  dateAllVue,
+  hourMinuteSecondVue,
+  hourMinuteVue,
   mobileVue,
-  timeVue,
+  showWeekVue,
+  stepsVue,
+  withTitleVue,
+  withoutTitleVue,
+  yearMonthDateVue,
   yearMonthVue,
 };
 

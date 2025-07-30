@@ -32,16 +32,34 @@ export interface TdInputProps {
    */
   borderless?: boolean;
   /**
+   * 清空图标触发方式，仅在输入框有值时有效
+   * @default always
+   */
+  clearTrigger?: 'always' | 'focus';
+  /**
    * 是否可清空
    * @default false
    */
   clearable?: boolean;
   /**
+   * 光标颜色
+   * @default #0052d9
+   */
+  cursorColor?: string;
+  /**
    * 是否禁用输入框
    */
   disabled?: boolean;
   /**
-   * 【暂不支持】指定输入框展示值的格式
+   * 用于控制回车键样式，此 API 仅在部分浏览器支持，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint)
+   */
+  enterkeyhint?: 'enter' | 'done' | 'go' | 'next' | 'previous' | 'search' | 'send';
+  /**
+   * 右侧额外内容
+   */
+  extra?: TNode;
+  /**
+   * 指定输入框展示值的格式
    */
   format?: InputFormatType;
   /**
@@ -76,7 +94,6 @@ export interface TdInputProps {
   prefixIcon?: TNode;
   /**
    * 只读状态
-   * @default false
    */
   readonly?: boolean;
   /**
@@ -85,7 +102,8 @@ export interface TdInputProps {
    */
   spellCheck?: boolean;
   /**
-   * 输入框状态。默认情况会由组件内部根据实际情况呈现，如果文本过长引起的状态变化
+   * 输入框状态
+   * @default default
    */
   status?: 'default' | 'success' | 'warning' | 'error';
   /**
@@ -131,13 +149,13 @@ export interface TdInputProps {
   /**
    * 清空按钮点击时触发
    */
-  onClear?: (context: { e: MouseEvent }) => void;
+  onClear?: (context: { e: TouchEvent }) => void;
   /**
    * 获得焦点时触发
    */
   onFocus?: (value: InputValue, context: { e: FocusEvent }) => void;
   /**
-   * 【暂不支持】字数超出限制时触发
+   * 字数超出限制时触发
    */
   onValidate?: (context: { error?: 'exceed-maximum' | 'below-minimum' }) => void;
 }

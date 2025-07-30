@@ -87,8 +87,8 @@ describe('Link', () => {
       expect(wrapper.find('.t-link--content')).toBeTruthy();
     });
     it('prefixIcon', () => {
-      const wrapper = mount(() => <Link prefixIcon={<Icon />}>text</Link>)
-      expect(wrapper.findComponent(Icon)).toBeTruthy()
+      const wrapper = mount(() => <Link prefixIcon={<Icon />}>text</Link>);
+      expect(wrapper.findComponent(Icon)).toBeTruthy();
     });
   });
 

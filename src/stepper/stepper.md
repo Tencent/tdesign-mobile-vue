@@ -7,7 +7,7 @@
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 disableInput | Boolean | false | 禁用输入框 | N
-disabled | Boolean | false | 禁用全部操作 | N
+disabled | Boolean | undefined | 禁用全部操作 | N
 inputWidth | Number | - | 输入框宽度 | N
 integer | Boolean | true | 是否整型 | N
 max | Number | 100 | 最大值 | N
@@ -38,6 +38,6 @@ overlimit | `(type: 'minus' \| 'plus')` | 数值超出限制时触发
 -- | -- | --
 --td-stepper-border-color | @component-border | - 
 --td-stepper-border-radius | @radius-small | - 
---td-stepper-input-color | @font-gray-1 | - 
+--td-stepper-input-color | @text-color-primary | - 
 --td-stepper-input-disabled-bg | @bg-color-component-disabled | - 
---td-stepper-input-disabled-color | @font-gray-4 | -
+--td-stepper-input-disabled-color | @text-color-disabled | - 

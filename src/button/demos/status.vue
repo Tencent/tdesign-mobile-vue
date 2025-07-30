@@ -6,6 +6,7 @@
   </div>
   <div class="row">
     <t-button size="large" disabled theme="primary" variant="outline">描边按钮</t-button>
+    <t-button size="large" disabled theme="primary" variant="dashed">虚框按钮</t-button>
     <t-button size="large" disabled theme="primary" variant="text">文字按钮</t-button>
   </div>
 </template>

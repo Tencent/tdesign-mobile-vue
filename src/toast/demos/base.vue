@@ -1,5 +1,5 @@
 <template>
-  <div class="toast-demo">
+  <div id="toast-demo" class="toast-demo">
     <t-button block size="large" theme="primary" variant="outline" @click="showText()">纯文本</t-button>
     <t-button block size="large" theme="primary" variant="outline" @click="showMultiText()">多行文字</t-button>
     <t-button block size="large" theme="primary" variant="outline" @click="showHorizontalText()">带横向图标</t-button>
@@ -9,7 +9,6 @@
 </template>
 
 <script setup lang="ts">
-import { h, ref } from 'vue';
 import { Toast } from 'tdesign-mobile-vue';
 
 const showText = () => {
@@ -20,6 +19,10 @@ const showMultiText = () => {
 };
 const showHorizontalText = () => {
   Toast({
+    attach: '#toast-demo',
+    className: 'toast-root--test',
+    style: { backgroundColor: 'pink' },
+    duration: 10000,
     theme: 'success',
     direction: 'row',
     message: '轻提示文字内容',

@@ -5,9 +5,9 @@ import config from '../config';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-footer`;
+
 export default defineComponent({
-  name,
+  name: `${prefix}-footer`,
   props: FooterProps,
   setup(props) {
     const footerClass = usePrefixClass('footer');
@@ -28,29 +28,21 @@ export default defineComponent({
     };
 
     const renderText = () => {
-      if (props.logo) {
-        return;
-      }
-
-      return <div class={`${footerClass.value}__text`}>{props.text}</div>;
+      return props.text && <div class={`${footerClass.value}__text`}>{props.text}</div>;
     };
 
     const renderLink = () => {
-      const { links, logo } = props;
-      const linksLength = links.length - 1;
-      if (logo || linksLength < 0) {
-        return;
-      }
+      if (!props.links.length) return null;
 
       return (
         <div class={`${footerLinkClass.value}-list`}>
-          {links.map((link, index) => {
+          {props.links.map((link, index) => {
             return (
               <>
                 <a href={link.url} target={link.target} class={`${footerLinkClass.value}-item`}>
                   {link.name}
                 </a>
-                {linksLength !== index && <div class={`${footerLinkClass.value}-line`}>|</div>}
+                {index !== props.links.length - 1 && <div class={`${footerLinkClass.value}-line`}>|</div>}
               </>
             );
           })}

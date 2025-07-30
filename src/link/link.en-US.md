@@ -8,7 +8,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 content | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 default | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-disabled | Boolean | - | make link to be disabled | N
+disabled | Boolean | undefined | make link to be disabled | N
 hover | Boolean | - | \- | N
 href | String | - | \- | N
 prefixIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
@@ -34,7 +34,7 @@ Name | Default Value | Description
 --td-link-danger-color | @error-color | - 
 --td-link-danger-disabled-color | @error-color-disabled | - 
 --td-link-default-active-color | @brand-color-active | - 
---td-link-default-color | @font-gray-1 | - 
+--td-link-default-color | @text-color-primary | - 
 --td-link-default-disabled-color | @text-color-disabled | - 
 --td-link-primary-active-color | @brand-color-active | - 
 --td-link-primary-color | @brand-color | - 
@@ -44,4 +44,4 @@ Name | Default Value | Description
 --td-link-success-disabled-color | @success-color-disabled | - 
 --td-link-warning-active-color | @warning-color-active | - 
 --td-link-warning-color | @warning-color | - 
---td-link-warning-disabled-color | @warning-color-disabled | -
+--td-link-warning-disabled-color | @warning-color-disabled | - 

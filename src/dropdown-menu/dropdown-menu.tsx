@@ -1,8 +1,7 @@
 import { defineComponent, computed, ref, reactive, watch, provide } from 'vue';
 import { onClickOutside } from '@vueuse/core';
 import { CaretDownSmallIcon, CaretUpSmallIcon } from 'tdesign-icons-vue-next';
-import camelCase from 'lodash/camelCase';
-
+import { camelCase, get as lodashGet } from 'lodash-es';
 import config from '../config';
 import {
   context as menuContext,
@@ -11,20 +10,27 @@ import {
   DropdownMenuExpandState,
   TriggerSource,
 } from './context';
-import { useExpose } from '../shared';
+import useExpose from '../hooks/useExpose';
 import { findRelativeRect, findRelativeContainer } from './dom-utils';
 import { useContent } from '../hooks/tnode';
 import DropdownMenuProps from './props';
+import { TdDropdownItemProps } from './type';
+import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-dropdown-menu`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-dropdown-menu`,
   components: { CaretDownSmallIcon, CaretUpSmallIcon },
-  props: DropdownMenuProps,
+  props: {
+    onMenuOpened: Function,
+    onMenuClosed: Function,
+    ...DropdownMenuProps,
+  },
   emits: ['menuOpened', 'menuClosed'],
   setup(props, { slots }) {
+    const dropdownMenuClass = usePrefixClass('dropdown-menu');
+
     const renderContent = useContent();
 
     // 菜单状态
@@ -54,23 +60,25 @@ export default defineComponent({
 
     // 通过 slots.default 子成员，计算标题栏选项
     const menuTitles = computed(() =>
-      menuItems.value.map((item: any, index: number) => {
-        const { keys, label, value, modelValue, defaultValue, disabled, options } = item.props;
+      menuItems.value?.map((item: any, index: number) => {
+        const { keys, label, value, modelValue, defaultValue, disabled, options } = item.props as TdDropdownItemProps;
         const currentValue = value || modelValue || defaultValue;
-        const target = options?.find((item: any) => item[keys?.value ?? 'value'] === currentValue);
+        const target = options?.find((item: any) => lodashGet(item, keys?.value ?? 'value') === currentValue);
         if (state.itemsLabel.length < index + 1) {
-          const targetLabel = (target && target[keys?.label ?? 'label']) || '';
+          const targetLabel = (target && lodashGet(target, keys?.label ?? 'label')) || '';
           const computedLabel = label || targetLabel;
 
           state.itemsLabel.push(computedLabel);
 
           return {
+            labelProps: label, // 优先级： label属性 > 选中项
             label: computedLabel,
             disabled: disabled !== undefined && disabled !== false,
           };
         }
         return {
-          label: label || target.label,
+          labelProps: label,
+          label: label || lodashGet(target, keys?.label ?? 'label'),
           disabled: disabled !== undefined && disabled !== false,
         };
       }),
@@ -80,20 +88,20 @@ export default defineComponent({
     provide('dropdownMenuProps', props);
     provide('dropdownMenuState', state);
     // 根结点样式
-    const classes = computed(() => [`${name}`]);
+    const classes = computed(() => [`${dropdownMenuClass.value}`]);
     // 标题栏结点引用
     const refBar = ref();
     const styleBarItem = computed(() => (item: any, idx: number) => [
-      `${name}__item`,
+      `${dropdownMenuClass.value}__item`,
       {
-        [`${name}__item--disabled`]: item.disabled,
-        [`${name}__item--active`]: idx === state.activeId,
+        [`${dropdownMenuClass.value}__item--disabled`]: item.disabled,
+        [`${dropdownMenuClass.value}__item--active`]: idx === state.activeId,
       },
     ]);
     const styleIcon = computed(() => (item: any, idx: number) => [
-      `${name}__icon`,
+      `${dropdownMenuClass.value}__icon`,
       {
-        [`${name}__icon--active`]: idx === state.activeId,
+        [`${dropdownMenuClass.value}__icon--active`]: idx === state.activeId,
       },
     ]);
 
@@ -136,6 +144,7 @@ export default defineComponent({
 
     // dropdown-menu外面点击触发dropdown下拉框收起
     onClickOutside(refBar, () => {
+      if (state.activeId === null) return;
       collapseMenu();
       props.onMenuClosed?.({ trigger: 'outside' });
     });
@@ -144,7 +153,8 @@ export default defineComponent({
       expandMenu,
       collapseMenu,
       emitEvents(emit: string, trigger?: TriggerSource) {
-        props[`on${camelCase(emit)}`]?.(trigger);
+        const eventHandler = props[`on${camelCase(emit)}` as keyof typeof props] as Function;
+        eventHandler?.(trigger);
       },
     };
     // 提供子组件访问
@@ -177,12 +187,14 @@ export default defineComponent({
 
       return (
         <div ref={refBar} class={classes.value}>
-          {(menuTitles.value || []).map((item: { label: any }, idx: number) => (
-            <div class={styleBarItem.value(item, idx)} onClick={() => expandMenu(item, idx)}>
-              <div class={`${name}__title`}>{item.label}</div>
-              {renderDownIcon(item, idx)}
-            </div>
-          ))}
+          {(menuTitles.value || []).map(
+            (item: { label: any; labelProps: TdDropdownItemProps['label'] }, idx: number) => (
+              <div class={styleBarItem.value(item, idx)} onClick={() => expandMenu(item, idx)}>
+                <div class={`${dropdownMenuClass.value}__title`}>{item.labelProps || item.label}</div>
+                {renderDownIcon(item, idx)}
+              </div>
+            ),
+          )}
           {defaultSlot}
         </div>
       );

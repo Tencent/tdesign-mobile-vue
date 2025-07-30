@@ -1,10 +1,5 @@
-import { h, ComponentPublicInstance, VNode, isVNode } from 'vue';
-import isEmpty from 'lodash/isEmpty';
-import isString from 'lodash/isString';
-import isFunction from 'lodash/isFunction';
-import isObject from 'lodash/isObject';
-import camelCase from 'lodash/camelCase';
-import kebabCase from 'lodash/kebabCase';
+import { h, ComponentPublicInstance, VNode, isVNode, Fragment } from 'vue';
+import { camelCase, kebabCase, isArray, isEmpty, isFunction, isString, isObject } from 'lodash-es';
 
 export interface JSXRenderContext {
   defaultNode?: VNode | string;
@@ -27,12 +22,30 @@ export function getDefaultNode(options?: OptionsType) {
   return defaultNode;
 }
 
+export function getChildren(content: VNode[]) {
+  const childList: VNode[] = [];
+  const innerGetChildren = (content: VNode[]) => {
+    if (!isArray(content)) return;
+    content.forEach((item: VNode) => {
+      if (item.children && isArray(item.children)) {
+        if (item.type !== Fragment) return;
+        innerGetChildren(item.children as VNode[]);
+      } else {
+        childList.push(item);
+      }
+    });
+    return childList;
+  };
+
+  return innerGetChildren(content);
+}
+
 export function getParams(options?: OptionsType) {
   return isObject(options) && 'params' in options ? options.params : {};
 }
 
 export function getSlotFirst(options?: OptionsType) {
-  return isObject(options) && 'slotFirst' in options ? options.slotFirst : {};
+  return isObject(options) && 'slotFirst' in options ? options.slotFirst : false;
 }
 
 // 同时支持驼峰命名和中划线命名的插槽，示例：value-display 和 valueDisplay

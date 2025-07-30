@@ -9,5 +9,7 @@ export * from './type';
 
 export type SideBarProps = TdSideBarProps;
 export type SideBarItemProps = TdSideBarItemProps;
+
 export const SideBar: WithInstallType<typeof _SideBar> = withInstall(_SideBar);
 export const SideBarItem: WithInstallType<typeof _SideBarItem> = withInstall(_SideBarItem);
+export default SideBar;

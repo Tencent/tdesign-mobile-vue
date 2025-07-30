@@ -7,12 +7,12 @@ exports[`Message > Message baseVue demo works fine 1`] = `
   
   <div
     class="button-demo"
-    data-v-e60c559e=""
+    data-v-3044d6da=""
   >
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-e60c559e=""
+      data-v-3044d6da=""
       role="button"
       type="button"
     >
@@ -29,7 +29,7 @@ exports[`Message > Message baseVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-e60c559e=""
+      data-v-3044d6da=""
       role="button"
       type="button"
     >
@@ -46,7 +46,7 @@ exports[`Message > Message baseVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-e60c559e=""
+      data-v-3044d6da=""
       role="button"
       type="button"
     >
@@ -63,7 +63,7 @@ exports[`Message > Message baseVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-e60c559e=""
+      data-v-3044d6da=""
       role="button"
       type="button"
     >
@@ -80,7 +80,7 @@ exports[`Message > Message baseVue demo works fine 1`] = `
     <button
       aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-e60c559e=""
+      data-v-3044d6da=""
       role="button"
       type="button"
     >
@@ -96,15 +96,15 @@ exports[`Message > Message baseVue demo works fine 1`] = `
     </button>
   </div>
   <!-- 纯文字通知 -->
-  <!--v-if-->
+  <!---->
   <!-- 带图标通知 -->
-  <!--v-if-->
+  <!---->
   <!-- 带关闭通知 -->
-  <!--v-if-->
+  <!---->
   <!-- 滚动通知 -->
-  <!--v-if-->
+  <!---->
   <!-- 带按钮通知 -->
-  <!--v-if-->
+  <!---->
   
 </div>
 `;
@@ -187,12 +187,12 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
       
       <div
         class="button-demo"
-        data-v-e60c559e=""
+        data-v-3044d6da=""
       >
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-e60c559e=""
+          data-v-3044d6da=""
           role="button"
           type="button"
         >
@@ -209,7 +209,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-e60c559e=""
+          data-v-3044d6da=""
           role="button"
           type="button"
         >
@@ -226,7 +226,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-e60c559e=""
+          data-v-3044d6da=""
           role="button"
           type="button"
         >
@@ -243,7 +243,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-e60c559e=""
+          data-v-3044d6da=""
           role="button"
           type="button"
         >
@@ -260,7 +260,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-e60c559e=""
+          data-v-3044d6da=""
           role="button"
           type="button"
         >
@@ -276,15 +276,15 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
         </button>
       </div>
       <!-- 纯文字通知 -->
-      <!--v-if-->
+      <!---->
       <!-- 带图标通知 -->
-      <!--v-if-->
+      <!---->
       <!-- 带关闭通知 -->
-      <!--v-if-->
+      <!---->
       <!-- 滚动通知 -->
-      <!--v-if-->
+      <!---->
       <!-- 带按钮通知 -->
-      <!--v-if-->
+      <!---->
       
       
     </div>

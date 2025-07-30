@@ -16,7 +16,7 @@ text | String | '' | 版权信息 | N
 名称 | 默认值 | 描述 
 -- | -- | --
 --td-footer-link-color | @brand-color | - 
---td-footer-link-dividing-line-color | @font-gray-3 | - 
+--td-footer-link-dividing-line-color | @text-color-placeholder | - 
 --td-footer-link-dividing-line-padding | @spacer-1 | - 
 --td-footer-link-font-size | @font-size-s | - 
 --td-footer-link-line-height | 20px | - 
@@ -26,7 +26,8 @@ text | String | '' | 版权信息 | N
 --td-footer-logo-title-font-size | @font-size-m | - 
 --td-footer-logo-title-line-height | 24px | - 
 --td-footer-logo-title-url-width | 128px | - 
---td-footer-text-color | @font-gray-3 | - 
+--td-footer-text-color | @text-color-placeholder | - 
 --td-footer-text-font-size | @font-size-s | - 
 --td-footer-text-line-height | 20px | - 
---td-footer-text-margin-top | 4px | -
+--td-footer-text-margin-top | 4px | - 
+--td-footer-title-color | @text-color-primary | - 

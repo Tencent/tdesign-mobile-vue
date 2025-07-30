@@ -13,7 +13,7 @@ export interface TdRateProps {
    */
   allowHalf?: boolean;
   /**
-   * 评分图标的颜色，样式中默认为 #ED7B2F。一个值表示设置选中高亮的五角星颜色，示例：[选中颜色]。数组则表示分别设置 选中高亮的五角星颜色 和 未选中暗灰的五角星颜色，[选中颜色，未选中颜色]。示例：['#ED7B2F', '#E3E6EB']。
+   * 评分图标的颜色，样式中默认为 #ED7B2F。一个值表示设置选中高亮的五角星颜色，示例：[选中颜色]。数组则表示分别设置 选中高亮的五角星颜色 和 未选中暗灰的五角星颜色，[选中颜色，未选中颜色]。示例：['#ED7B2F', '#E3E6EB']
    * @default '#ED7B2F'
    */
   color?: string | Array<string>;
@@ -30,11 +30,16 @@ export interface TdRateProps {
    * 评分图标的间距
    * @default 8
    */
-  gap?: number;
+  gap?: string | number;
   /**
    * 自定义评分图标，[选中图标，未选中图标]
    */
   icon?: Array<TNode | Function>;
+  /**
+   * 选择评分弹框的位置，值为空字符表示不显示评分弹框
+   * @default top
+   */
+  placement?: 'top' | 'bottom' | '';
   /**
    * 是否显示对应的辅助文字
    * @default false
@@ -65,11 +70,6 @@ export interface TdRateProps {
    * @default 0
    */
   modelValue?: number;
-  /**
-   * 已废弃。形状类型，有描边类型和填充类型两种
-   * @default outline
-   */
-  variant?: 'outline' | 'filled';
   /**
    * 评分数改变时触发
    */

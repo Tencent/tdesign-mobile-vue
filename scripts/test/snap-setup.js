@@ -1,6 +1,6 @@
 import { config } from '@vue/test-utils';
 import { createApp } from 'vue';
-import { renderToString } from '@vue/server-renderer';
+import { renderToString } from 'vue/server-renderer';
 import TDesign from '@/index';
 import DemoBlock from '../../site/mobile/components/demo-block.vue';
 
@@ -10,7 +10,7 @@ config.global.components = {
 };
 
 config.global.stubs = {
-  teleport: true,
+  teleport: false,
 };
 
 config.global.createSSRApp = (comp) => {

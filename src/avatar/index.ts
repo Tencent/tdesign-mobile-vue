@@ -9,6 +9,6 @@ export * from './type';
 export type AvatarProps = TdAvatarProps;
 export type AvatarGroupProps = TdAvatarGroupProps;
 
-const Avatar: WithInstallType<typeof _Avatar> = withInstall(_Avatar);
+export const Avatar: WithInstallType<typeof _Avatar> = withInstall(_Avatar);
 export const AvatarGroup: WithInstallType<typeof _AvatarGroup> = withInstall(_AvatarGroup);
 export default Avatar;

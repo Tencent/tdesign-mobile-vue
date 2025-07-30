@@ -1,21 +1,20 @@
-import { DirectiveBinding, VNode } from 'vue';
+import { DirectiveBinding } from 'vue';
 
 interface BindingObj {
-  disabledName: string;
+  disabledHover: boolean;
   className: string;
 }
 
 const Hover = {
-  created(el: HTMLElement, binding: DirectiveBinding<BindingObj>, vnode: VNode) {
+  created(el: HTMLElement, binding: DirectiveBinding<BindingObj>) {
     const startTime = 50;
     const stayTime = 70;
-    const { className, disabledName = 'disabled' } = binding.value;
+    const { className, disabledHover = false } = binding.value;
 
     el.addEventListener(
       'touchstart',
       () => {
-        // @ts-ignore
-        if (vnode.ctx.ctx[disabledName]) return;
+        if (disabledHover) return;
 
         setTimeout(() => {
           el?.classList.add(className);
@@ -27,8 +26,7 @@ const Hover = {
     el.addEventListener(
       'touchend',
       () => {
-        // @ts-ignore
-        if (vnode.ctx.ctx[disabledName]) return;
+        if (disabledHover) return;
 
         setTimeout(() => {
           el?.classList.remove(className);

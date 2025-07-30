@@ -1,4 +1,4 @@
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
 import { useConfig } from '../config-provider/useConfig';
 
 export function usePrefixClass(componentName?: string) {
@@ -8,3 +8,5 @@ export function usePrefixClass(componentName?: string) {
     return componentName ? `${classPrefix.value}-${componentName}` : classPrefix.value;
   });
 }
+
+export { useConfig };

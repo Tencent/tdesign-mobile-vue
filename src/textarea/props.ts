@@ -17,7 +17,10 @@ export default {
   /** 是否显示外边框 */
   bordered: Boolean,
   /** 是否禁用文本框 */
-  disabled: Boolean,
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 显示文本计数器，如 0/140。当 `maxlength < 0 && maxcharacter < 0` 成立时， indicator无效 */
   indicator: Boolean,
   /** 左侧文本 */

@@ -7,11 +7,9 @@ import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
-const name = `${prefix}-drawer`;
 
 export default defineComponent({
-  name,
-  components: { TPopup },
+  name: `${prefix}-drawer`,
   props,
   emits: ['update:visible', 'itemClick', 'overlayClick'],
   setup(props, context) {
@@ -59,7 +57,7 @@ export default defineComponent({
         return <div class={`${drawerClass.value}__footer`}>{footerNode}</div>;
       };
       return (
-        <t-popup
+        <TPopup
           v-model={open.value}
           placement={placement}
           attach={attach}
@@ -89,7 +87,7 @@ export default defineComponent({
 
             {renderFooterNode()}
           </div>
-        </t-popup>
+        </TPopup>
       );
     };
   },

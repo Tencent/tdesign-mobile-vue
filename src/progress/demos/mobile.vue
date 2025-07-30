@@ -2,7 +2,7 @@
   <div class="tdesign-mobile-demo">
     <h1 class="title">Progress 进度条</h1>
     <p class="summary">用于展示任务当前的进度</p>
-    <tdesign-demo-block title="01 类型" summary="基础进度条" :padding="true">
+    <tdesign-demo-block title="01 类型" summary="基础进度条">
       <BaseDemo />
     </tdesign-demo-block>
     <tdesign-demo-block summary="过渡样式" :padding="true">

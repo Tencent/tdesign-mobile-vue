@@ -4,11 +4,12 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { OverlayProps } from '../overlay';
 import { TNode, AttachNode } from '../common';
 
 export interface TdPopupProps {
   /**
-   * 制定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body
+   * 指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body
    * @default 'body'
    */
   attach?: AttachNode;
@@ -27,17 +28,22 @@ export interface TdPopupProps {
    */
   destroyOnClose?: boolean;
   /**
+   * 动画过渡时间
+   * @default 240
+   */
+  duration?: number;
+  /**
    * 遮罩层的属性，透传至 overlay
    * @default {}
    */
-  overlayProps?: object;
+  overlayProps?: OverlayProps;
   /**
    * 浮层出现位置
    * @default top
    */
-  placement?: 'top' | 'left' | 'right' | 'bottom' | 'center' | '';
+  placement?: 'top' | 'left' | 'right' | 'bottom' | 'center';
   /**
-   * 防止滚动穿透
+   * 是否阻止背景滚动
    * @default true
    */
   preventScrollThrough?: boolean;

@@ -1,11 +1,12 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Cell Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-align | String | middle | 内容的对齐方式，默认居中对齐。可选项：top/middle/bottom | N
+align | String | middle | 右侧内容的对齐方式，默认居中对齐。可选项：top/middle/bottom | N
 arrow | Boolean | false | 是否显示右侧箭头 | N
 bordered | Boolean | true | 是否显示下边框 | N
 description | String / Slot / Function | - | 下方内容描述。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
@@ -24,26 +25,33 @@ onClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>�
 -- | -- | --
 click | `(context: { e: MouseEvent })` | 右侧内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)
 
+
 ### CellGroup Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 bordered | Boolean | false | 是否显示组边框 | N
 theme | String | default | `0.15.0`。单元格组风格。可选项：default/card | N
 title | String | - | 单元格组标题 | N
 
-
 ### CSS Variables
+
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
+--td-border-left-space | @cell-horizontal-padding | - 
 --td-cell-bg-color | @bg-color-container | - 
 --td-cell-border-color | @component-stroke | - 
---td-cell-border-left-space | @cell-horizontal-padding | - 
 --td-cell-border-right-space | 0 | - 
---td-cell-description-color | @font-gray-2 | - 
+--td-cell-description-color | @text-color-secondary | - 
 --td-cell-description-font-size | @font-size-base | - 
 --td-cell-description-line-height | 22px | - 
+--td-cell-group-border-color | @border-color | - 
+--td-cell-group-title-bg-color | @bg-color-secondarycontainer | - 
+--td-cell-group-title-color | @text-color-placeholder | - 
+--td-cell-group-title-font-size | 14px | - 
+--td-cell-group-title-line-height | 45px | - 
+--td-cell-group-title-padding-left | 16px | - 
 --td-cell-height | auto | - 
 --td-cell-horizontal-padding | 16px | - 
 --td-cell-hover-color | @bg-color-secondarycontainer | - 
@@ -52,18 +60,12 @@ title | String | - | 单元格组标题 | N
 --td-cell-left-icon-color | @brand-color | - 
 --td-cell-left-icon-font-size | 24px | - 
 --td-cell-line-height | 24px | - 
---td-cell-note-color | @font-gray-3 | - 
+--td-cell-note-color | @text-color-placeholder | - 
 --td-cell-note-font-size | @font-size-m | - 
 --td-cell-required-color | @error-color-6 | - 
 --td-cell-required-font-size | @font-size-m | - 
---td-cell-right-icon-color | @font-gray-3 | - 
+--td-cell-right-icon-color | @text-color-placeholder | - 
 --td-cell-right-icon-font-size | 24px | - 
---td-cell-title-color | @font-gray-1 | - 
+--td-cell-title-color | @text-color-primary | - 
 --td-cell-title-font-size | @font-size-m | - 
 --td-cell-vertical-padding | 16px | - 
---td-cell-group-border-color | @border-color | - 
---td-cell-group-title-bg-color | @bg-color-secondarycontainer | - 
---td-cell-group-title-color | @font-gray-3 | - 
---td-cell-group-title-font-size | 14px | - 
---td-cell-group-title-line-height | 45px | - 
---td-cell-group-title-padding-left | 16px | - 

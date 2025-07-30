@@ -6,10 +6,9 @@ import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
 const { prefix } = config;
-const name = `${prefix}-overlay`;
 
 export default defineComponent({
-  name,
+  name: `${prefix}-overlay`,
   props: OverlayProps,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();
@@ -48,7 +47,7 @@ export default defineComponent({
     };
 
     return () => (
-      <Transition name={name}>
+      <Transition name={overlayClass.value}>
         <div
           v-show={props.visible}
           class={overlayClasses.value}

@@ -26,17 +26,22 @@ export default {
   content: {
     type: [String, Function] as PropType<TdMessageProps['content']>,
   },
-  /** 消息内置计时器，计时到达时会触发 duration-end 事件。单位：毫秒。值为 0 则表示没有计时器。 */
+  /** 消息内置计时器，计时到达时会触发 duration-end 事件。单位：毫秒。值为 0 则表示没有计时器 */
   duration: {
     type: Number,
     default: 3000,
+  },
+  /** 两条 `message` 之间的间距 */
+  gap: {
+    type: [String, Number, Boolean] as PropType<TdMessageProps['gap']>,
+    default: 12,
   },
   /** 用于自定义消息前面的图标，优先级大于 theme 设定的图标。值为 false 则不显示图标，值为 true 显示 theme 设定图标 */
   icon: {
     type: [Boolean, Function] as PropType<TdMessageProps['icon']>,
     default: true,
   },
-  /** 链接名称。值为字符串表示链接名称，值为 Object 类型，表示透传至 Link */
+  /** 链接名称。值为字符串表示链接名称，值为 `Object` 类型，表示透传至 `Link` */
   link: {
     type: [String, Object, Function] as PropType<TdMessageProps['link']>,
   },
@@ -48,6 +53,11 @@ export default {
   /** 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10rpx', '8rpx'] */
   offset: {
     type: Array as PropType<TdMessageProps['offset']>,
+  },
+  /** 是否保持仅显示一条信息 */
+  single: {
+    type: Boolean,
+    default: true,
   },
   /** 消息组件风格 */
   theme: {
@@ -77,6 +87,6 @@ export default {
   onCloseBtnClick: Function as PropType<TdMessageProps['onCloseBtnClick']>,
   /** 计时结束后触发 */
   onDurationEnd: Function as PropType<TdMessageProps['onDurationEnd']>,
-  /** 当link链接存在时，点击链接文本时触发 */
+  /** 当`link`链接存在时，点击链接文本时触发 */
   onLinkClick: Function as PropType<TdMessageProps['onLinkClick']>,
 };
