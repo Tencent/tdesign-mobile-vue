@@ -525,7 +525,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
 
 exports[`Steps > Steps mobileVue demo works fine 1`] = `
 <div
-  class="tdesign-mobile-demo"
+  class="tdesign-mobile-demo steps-demo"
 >
   <h1
     class="title"
