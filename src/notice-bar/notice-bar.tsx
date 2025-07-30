@@ -1,5 +1,5 @@
 import { reactive, ref, toRefs, computed, onMounted, nextTick, defineComponent, watch } from 'vue';
-import { InfoCircleFilledIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
+import { InfoCircleFilledIcon, CheckCircleFilledIcon, ErrorCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { isArray, isObject } from 'lodash-es';
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
 import props from './props';
@@ -14,8 +14,8 @@ const { prefix } = config;
 const iconDefault = {
   info: <InfoCircleFilledIcon />,
   success: <CheckCircleFilledIcon />,
-  warning: <InfoCircleFilledIcon />,
-  error: <InfoCircleFilledIcon />,
+  warning: <ErrorCircleFilledIcon />,
+  error: <ErrorCircleFilledIcon />,
 };
 export default defineComponent({
   name: `${prefix}-notice-bar`,
