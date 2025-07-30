@@ -873,14 +873,14 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
           class="t-notice-bar__prefix-icon"
         >
           <svg
-            class="t-icon t-icon-info-circle-filled"
+            class="t-icon t-icon-error-circle-filled"
             fill="none"
             height="1em"
             viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM10.996 8.50002V6.49611H12.9999V8.50002H10.996ZM12.9999 10L12.9999 17.5H10.9999V10L12.9999 10Z"
+              d="M12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1ZM11.0001 14H13.0001V6.49998H11.0001V14ZM13.004 15.5H11.0001V17.5039H13.004V15.5Z"
               fill="currentColor"
             />
           </svg>
@@ -905,14 +905,14 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
           class="t-notice-bar__prefix-icon"
         >
           <svg
-            class="t-icon t-icon-info-circle-filled"
+            class="t-icon t-icon-error-circle-filled"
             fill="none"
             height="1em"
             viewBox="0 0 24 24"
             width="1em"
           >
             <path
-              d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM10.996 8.50002V6.49611H12.9999V8.50002H10.996ZM12.9999 10L12.9999 17.5H10.9999V10L12.9999 10Z"
+              d="M12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1ZM11.0001 14H13.0001V6.49998H11.0001V14ZM13.004 15.5H11.0001V17.5039H13.004V15.5Z"
               fill="currentColor"
             />
           </svg>
@@ -1404,14 +1404,14 @@ exports[`NoticeBar > NoticeBar themeVue demo works fine 1`] = `
       class="t-notice-bar__prefix-icon"
     >
       <svg
-        class="t-icon t-icon-info-circle-filled"
+        class="t-icon t-icon-error-circle-filled"
         fill="none"
         height="1em"
         viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM10.996 8.50002V6.49611H12.9999V8.50002H10.996ZM12.9999 10L12.9999 17.5H10.9999V10L12.9999 10Z"
+          d="M12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1ZM11.0001 14H13.0001V6.49998H11.0001V14ZM13.004 15.5H11.0001V17.5039H13.004V15.5Z"
           fill="currentColor"
         />
       </svg>
@@ -1436,14 +1436,14 @@ exports[`NoticeBar > NoticeBar themeVue demo works fine 1`] = `
       class="t-notice-bar__prefix-icon"
     >
       <svg
-        class="t-icon t-icon-info-circle-filled"
+        class="t-icon t-icon-error-circle-filled"
         fill="none"
         height="1em"
         viewBox="0 0 24 24"
         width="1em"
       >
         <path
-          d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM10.996 8.50002V6.49611H12.9999V8.50002H10.996ZM12.9999 10L12.9999 17.5H10.9999V10L12.9999 10Z"
+          d="M12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1ZM11.0001 14H13.0001V6.49998H11.0001V14ZM13.004 15.5H11.0001V17.5039H13.004V15.5Z"
           fill="currentColor"
         />
       </svg>
