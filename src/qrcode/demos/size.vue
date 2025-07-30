@@ -25,7 +25,7 @@ const size = ref(160);
   width: 100%;
   display: flex;
   padding: 0;
-  border: 1px solid var(--td-gray-color-4);
+  border: 1px solid var(--td-component-border);
   border-radius: 6px;
   margin-bottom: 16px;
   overflow: hidden;
@@ -33,7 +33,7 @@ const size = ref(160);
   .line {
     height: auto;
     width: 1px;
-    background-color: var(--td-gray-color-4);
+    background-color: var(--td-component-border);
   }
 
   .button {
