@@ -1,5 +1,5 @@
 import { reactive, ref, toRefs, computed, onMounted, nextTick, defineComponent, watch } from 'vue';
-import { InfoCircleFilledIcon, CheckCircleFilledIcon,ErrorCircleFilledIcon } from 'tdesign-icons-vue-next';
+import { InfoCircleFilledIcon, CheckCircleFilledIcon, ErrorCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { isArray, isObject } from 'lodash-es';
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
 import props from './props';
