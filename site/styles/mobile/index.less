@@ -14,21 +14,9 @@
   }
   .tdesign-demo-topnav {
     background-color: var(--bg-color-demo);
-    &-title {
-      color: #fff;
-    }
-    &__back {
-      color: #fff;
-    }
   }
   .tdesign-demo-main .tdesign-mobile-demo {
     background-color: var(--bg-color-demo);
-  }
-  .tdesign-demo-main .title,
-  .tdesign-demo-main .summary,
-  .tdesign-mobile-demo-block__title,
-  .tdesign-mobile-demo-block__summary {
-    color: #fff;
   }
 }
 
@@ -146,15 +134,18 @@ body {
   justify-content: center;
   height: 50px;
   background-color: #fff;
-  // box-shadow: @shadow-level-1;
+
   &-title{
     font-size: 18px;
+    font-weight: 500;
+    color: var(--td-text-color-primary);
   }
   &__back{
     position: absolute;
     left: 16px;
     font-size: 24px;
     cursor: pointer;
+    color: var(--td-text-color-primary);
   }
 }
 

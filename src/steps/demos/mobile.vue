@@ -1,5 +1,5 @@
 <template>
-  <div class="tdesign-mobile-demo">
+  <div class="tdesign-mobile-demo steps-demo">
     <h1 class="title">Steps 步骤条</h1>
     <p class="summary">用于任务步骤展示或任务进度展示。</p>
     <tdesign-demo-block title="01 组件类型">
@@ -23,7 +23,7 @@ import status from './status.vue';
 import special from './special.vue';
 </script>
 
-<style>
+<style lang="less">
 .steps-horizontal-demo-block {
   margin: 16px 0 24px;
   padding: 16px 0;
@@ -33,5 +33,10 @@ import special from './special.vue';
   margin: 16px 0 24px;
   padding: 16px;
   background-color: var(--bg-color-demo, #fff);
+}
+.steps-demo {
+  .tdesign-mobile-demo-block__slot {
+    margin-top: 8px;
+  }
 }
 </style>
