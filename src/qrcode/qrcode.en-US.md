@@ -25,3 +25,13 @@ onRefresh | Function |  | Typescript：`() => void`<br/>Click the "Click to refr
 name | params | description
 -- | -- | --
 refresh | \- | Click the "Click to refresh" callback
+
+
+### CSS Variables
+
+The component provides the following CSS variables, which can be used to customize styles.
+Name | Default Value | Description 
+-- | -- | --
+--td-brand-color-hover | --td-brand-color-hover | - 
+--td-font-size-title-small | --td-font-size-title-small | - 
+--td-success-color | --td-success-color | - 

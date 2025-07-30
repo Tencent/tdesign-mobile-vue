@@ -88,7 +88,7 @@ The component provides the following CSS variables, which can be used to customi
 Name | Default Value | Description 
 -- | -- | --
 --td-dialog-body-max-height | 456px | - 
---td-dialog-border-radius | @radius-extra-large | - 
+--td-dialog-border-radius | @radius-extraLarge | - 
 --td-dialog-close-color | @text-color-placeholder | - 
 --td-dialog-close-font-size | 22px | - 
 --td-dialog-content-color | @text-color-secondary | - 
