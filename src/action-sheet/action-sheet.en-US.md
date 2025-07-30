@@ -35,7 +35,7 @@ The component provides the following CSS variables, which can be used to customi
 Name | Default Value | Description 
 -- | -- | --
 --td-action-sheet-border-color | @component-stroke | - 
---td-action-sheet-border-radius | @radius-extra-large | - 
+--td-action-sheet-border-radius | @radius-extraLarge | - 
 --td-action-sheet-cancel-height | 48px | - 
 --td-action-sheet-color | @text-color-primary | - 
 --td-action-sheet-description-color | @text-color-placeholder | - 

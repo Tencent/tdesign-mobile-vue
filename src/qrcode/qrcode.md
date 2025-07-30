@@ -25,3 +25,13 @@ onRefresh | Function |  | TS 类型：`() => void`<br/>点击"点击刷新"的�
 名称 | 参数 | 描述
 -- | -- | --
 refresh | \- | 点击"点击刷新"的回调
+
+
+### CSS Variables
+
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-brand-color-hover | --td-brand-color-hover | - 
+--td-font-size-title-small | --td-font-size-title-small | - 
+--td-success-color | --td-success-color | - 

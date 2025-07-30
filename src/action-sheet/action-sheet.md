@@ -35,7 +35,7 @@ selected | `(selected: ActionSheetItem \| string, index: number)` | 选择菜单
 名称 | 默认值 | 描述 
 -- | -- | --
 --td-action-sheet-border-color | @component-stroke | - 
---td-action-sheet-border-radius | @radius-extra-large | - 
+--td-action-sheet-border-radius | @radius-extraLarge | - 
 --td-action-sheet-cancel-height | 48px | - 
 --td-action-sheet-color | @text-color-primary | - 
 --td-action-sheet-description-color | @text-color-placeholder | - 
