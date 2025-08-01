@@ -146,6 +146,7 @@ export default defineComponent({
         disabled: isDisabled.value,
         placeholder: props.placeholder,
         readonly: props.readonly,
+        autofocus: props.autofocus,
         onFocus: handleFocus,
         onBlur: handleBlur,
         onInput: handleInput,
