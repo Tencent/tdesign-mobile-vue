@@ -194,8 +194,6 @@ describe('Tabs', () => {
         setup() {
           return () => (
             <Tabs value={currentValue.value} animation={animation.value} showBottomLine={showBottomLine.value}>
-              {/* <TabPanel value="1" label="标签页一" panel="标签一内容区" />
-              <TabPanel value="2" label="标签页二" panel="标签二内容区" /> */}
               {tabPanelList.map((item) => {
                 return <TabPanel {...item}>{item.panel}</TabPanel>;
               })}
@@ -206,8 +204,10 @@ describe('Tabs', () => {
 
       // 触发moveToActiveTab()
       currentValue.value = '2';
-
       // 等待组件异步更新样式
+      await sleep(0);
+
+      currentValue.value = '1';
       await sleep(0);
 
       const navWrap = wrapper.find(`.${name}__wrapper`);

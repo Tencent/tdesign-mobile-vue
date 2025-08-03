@@ -25,9 +25,10 @@ import TSticky from '../sticky';
 import { TdStickyProps } from '../sticky/type';
 import TBadge from '../badge';
 import { useTNodeJSX } from '../hooks/tnode';
-import { TdTabPanelProps } from './type';
+import { TdTabPanelProps, TabValue } from './type';
 import { usePrefixClass } from '../hooks/useClass';
 import { useCommonClassName } from '../hooks/useCommonClassName';
+import { Styles } from '../common';
 
 const { prefix } = config;
 
@@ -62,6 +63,7 @@ export default defineComponent({
 
     const { value, modelValue } = toRefs(props);
     const [currentValue, setCurrentValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+    const previousValue = ref<TabValue>();
 
     const itemProps = computed<Array<TdTabPanelProps>>(() => {
       if (props.list) {
@@ -96,14 +98,16 @@ export default defineComponent({
     const navScroll = ref<HTMLElement>();
     const navWrap = ref<HTMLElement>();
     const navLine = ref<HTMLElement>();
-    const lineStyle = ref();
+    const lineStyle = ref<Styles>({
+      opacity: 0,
+    });
     const moveToActiveTab = () => {
       if (navWrap.value && navLine.value && props.showBottomLine) {
         const tab = navWrap.value.querySelector<HTMLElement>(`.${activeClass}`);
         if (!tab) return;
         const line = navLine.value;
         const tabInner = tab.querySelector<HTMLElement>(`.${prefix}-badge`);
-        const style: CSSProperties = {};
+        const style: Styles = { opacity: 1 };
         if (props.bottomLineMode === 'auto') {
           style.width = `${Number(tabInner?.offsetWidth)}px`;
           style.transform = `translateX(${Number(tab?.offsetLeft) + Number(tabInner?.offsetLeft)}px)`;
@@ -116,7 +120,12 @@ export default defineComponent({
           }px)`;
         }
 
-        if (props.animation) {
+        const isInit = previousValue.value === undefined;
+        previousValue.value = currentValue.value;
+
+        if (isInit) {
+          style.transitionDuration = `0s`;
+        } else if (props.animation) {
           style.transitionDuration = `${props.animation.duration}ms`;
         }
 
