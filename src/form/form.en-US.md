@@ -15,6 +15,7 @@ labelAlign | String | right | options: left/right/top | N
 labelWidth | String / Number | '81px' | \- | N
 preventSubmitDefault | Boolean | true | \- | N
 requiredMark | Boolean | undefined | \- | N
+requiredMarkPosition | String | left | Display position of required symbols。options: left/right | N
 resetType | String | empty | options: empty/initial | N
 rules | Object | - | Typescript：`FormRules<FormData>` `type FormRules<T extends Data> = { [field in keyof T]?: Array<FormRule> }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/form/type.ts) | N
 scrollToFirstError | String | - | options: ''/smooth/auto | N
