@@ -35,7 +35,7 @@ const marks = {
 };
 
 const onChange = (e: number) => {
-  console.log(`[change] ${e}`);
+  console.log(`[onChange] ${e}`);
 };
 
 const onDragend = (value: number, e: TouchEvent) => {

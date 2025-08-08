@@ -47,7 +47,7 @@ const iconSidebar = ref([
 const visible = ref(false);
 
 const itemClick = (index: number, item: DrawerItem, context: { e: MouseEvent }) => {
-  console.log('itemclick: ', index, item, context);
+  console.log('itemClick: ', index, item, context);
 };
 
 const onClose = ({ trigger }: DrawerCloseContext) => {

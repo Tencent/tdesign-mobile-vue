@@ -63,11 +63,11 @@ const items = ref([
 const visible = ref(false);
 const count = ref(8);
 
-const handleSelected = (selected: ActionSheetItem, selectedIndex: number) => {
-  console.log(selected, selectedIndex);
+const handleSelected = (selected: ActionSheetItem | string, selectedIndex: number) => {
+  console.log('[handleSelected]', { selected, selectedIndex });
 };
 const handleCancel = (): void => {
-  console.log('cancel');
+  console.log('[handleCancel]');
 };
 </script>
 
