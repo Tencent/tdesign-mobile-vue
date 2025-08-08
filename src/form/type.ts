@@ -33,6 +33,10 @@ export interface TdFormProps<FormData extends Data = Data> {
    */
   errorMessage?: FormErrorMessage;
   /**
+   * 表单原生的id属性，支持用于配合非表单内的按钮通过form属性来触发表单事件
+   */
+  id?: string;
+  /**
    * 表单字段标签对齐方式：左对齐、右对齐、顶部对齐
    * @default right
    */
@@ -47,6 +51,10 @@ export interface TdFormProps<FormData extends Data = Data> {
    * @default true
    */
   preventSubmitDefault?: boolean;
+  /**
+   * 是否整个表单只读
+   */
+  readonly?: boolean;
   /**
    * 是否显示必填符号（*），默认显示
    */
@@ -155,8 +163,9 @@ export interface TdFormItemProps {
   labelWidth?: string | number;
   /**
    * 表单字段名称
+   * @default ''
    */
-  name?: string | number;
+  name?: string;
   /**
    * 是否显示必填符号（*），优先级高于 Form.requiredMark
    */
@@ -216,7 +225,7 @@ export interface FormRule {
   /**
    * 内置校验方法，校验值是否符合正则表达式匹配结果，示例：`{ pattern: /@qq.com/, message: '请输入 QQ 邮箱' }`
    */
-  pattern?: RegExp;
+  pattern?: RegExp | string;
   /**
    * 内置校验方法，校验值是否已经填写。该值为 true，默认显示必填标记，可通过设置 `requiredMark: false` 隐藏必填标记
    */
@@ -229,7 +238,7 @@ export interface FormRule {
    * 校验触发方式
    * @default change
    */
-  trigger?: 'change' | 'blur';
+  trigger?: ValidateTriggerType;
   /**
    * 校验未通过时呈现的错误信息类型，有 告警信息提示 和 错误信息提示 等两种
    * @default error
@@ -315,9 +324,14 @@ export interface FormErrorMessage {
    * @default ''
    */
   validator?: string;
+  /**
+   * 值为空格校验不通过时表单项显示文案，全局配置默认是：`'${name}不能为空`
+   * @default ''
+   */
+  whitespace?: string;
 }
 
-export type FormRules<T extends Data> = { [field in keyof T]?: Array<FormRule> };
+export type FormRules<T extends Data = any> = { [field in keyof T]?: Array<FormRule> };
 
 export interface SubmitContext<T extends Data = Data> {
   e?: FormSubmitEvent;
@@ -362,7 +376,7 @@ export interface FormValidateParams {
   trigger?: ValidateTriggerType;
 }
 
-export type ValidateTriggerType = 'blur' | 'change' | 'all';
+export type ValidateTriggerType = 'blur' | 'change' | 'submit' | 'all';
 
 export type Data = { [key: string]: any };
 
