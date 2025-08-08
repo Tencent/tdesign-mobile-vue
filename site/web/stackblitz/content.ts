@@ -67,8 +67,8 @@ export const styleContent = `
 
 export const stackblitzRc = `
   {
-    "installDependencies": true,
-    "startCommand": "npm run dev"
+    "installDependencies": false,
+    "startCommand": "pnpm install && pnpm dev"
   }
 `;
 
