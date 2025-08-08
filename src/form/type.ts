@@ -368,7 +368,7 @@ export interface FormValidateParams {
   trigger?: ValidateTriggerType;
 }
 
-export type ValidateTriggerType = 'blur' | 'change' | 'submit' | 'all';
+export type ValidateTriggerType = 'blur' | 'change' | 'all';
 
 export type Data = { [key: string]: any };
 
