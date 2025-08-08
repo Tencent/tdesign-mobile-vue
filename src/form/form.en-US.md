@@ -11,11 +11,9 @@ contentAlign | String | left | options: left/right | N
 data | Object | {} | Typescript：`FormData` | N
 disabled | Boolean | undefined | \- | N
 errorMessage | Object | - | Typescript：`FormErrorMessage` | N
-id | String | undefined |  native id attribute of the form，which supports being used in conjunction with non-form buttons through the form attribute to trigger form events | N
 labelAlign | String | right | options: left/right/top | N
 labelWidth | String / Number | '81px' | \- | N
 preventSubmitDefault | Boolean | true | \- | N
-readonly | Boolean | undefined | \- | N
 requiredMark | Boolean | undefined | \- | N
 requiredMarkPosition | String | left | Display position of required symbols。options: left/right | N
 resetType | String | empty | options: empty/initial | N

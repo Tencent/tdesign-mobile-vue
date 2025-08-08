@@ -11,11 +11,9 @@ contentAlign | String | left | 表单内容对齐方式：左对齐、右对齐�
 data | Object | {} | 表单数据。TS 类型：`FormData` | N
 disabled | Boolean | undefined | 是否禁用整个表单 | N
 errorMessage | Object | - | 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`。TS 类型：`FormErrorMessage` | N
-id | String | undefined | 表单原生的id属性，支持用于配合非表单内的按钮通过form属性来触发表单事件 | N
 labelAlign | String | right | 表单字段标签对齐方式：左对齐、右对齐、顶部对齐。可选项：left/right/top | N
 labelWidth | String / Number | '81px' | 可以整体设置label标签宽度，默认为81px | N
 preventSubmitDefault | Boolean | true | 是否阻止表单提交默认事件（表单提交默认事件会刷新页面），设置为 `true` 可以避免刷新 | N
-readonly | Boolean | undefined | 是否整个表单只读 | N
 requiredMark | Boolean | undefined | 是否显示必填符号（*），默认显示 | N
 requiredMarkPosition | String | left | 表单必填符号（*）显示位置。可选项：left/right | N
 resetType | String | empty | 重置表单的方式，值为 empty 表示重置表单为空，值为 initial 表示重置表单数据为初始值。可选项：empty/initial | N
