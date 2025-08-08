@@ -5,6 +5,16 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.10.1 `2025-08-08` 
+### 🚀 Features
+- `Tabs`: 优化首次加载时底部激活线条动画 @novlan1 ([#1962](https://github.com/Tencent/tdesign-mobile-vue/pull/1962))
+- `Form`: 
+  - 新增 `requiredMarkPosition`，可定义必填符号的位置 @Wesley-0808 ([#1969](https://github.com/Tencent/tdesign-mobile-vue/pull/1969))
+  - 校验规则 `pattern` 字段支持字符串类型 @novlan1 ([#1972](https://github.com/Tencent/tdesign-mobile-vue/pull/1972))
+- `Textarea`: 新增 `cursorColor` 属性 @anlyyao ([#1970](https://github.com/Tencent/tdesign-mobile-vue/pull/1970))
+### 🐞 Bug Fixes
+- `NoticeBar`: 修复 `warning` 和 `error` 主题默认图标错误 @12um18ara ([#1955](https://github.com/Tencent/tdesign-mobile-vue/pull/1955))
+
 ## 🌈 1.10.0 `2025-07-25` 
 ### 🚀 Features
 - `QRCode`: 新增 `QRcode` 二维码组件  @Wesley-0808 ([#1921](https://github.com/Tencent/tdesign-mobile-vue/pull/1921))
