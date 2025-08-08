@@ -71,7 +71,7 @@ const data = reactive({
 });
 
 const onSideBarClick = (value: TdSideBarProps['value'], label: TdSideBarItemProps['label']) => {
-  console.log('=onSideBarClick===', value, label);
+  console.log('[onSideBarClick]', { value, label });
 };
 
 const onSideBarChange = (value: TdSideBarProps['value']) => {

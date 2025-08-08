@@ -30,11 +30,11 @@ const items = ref([{ label: '选项1' }, { label: '选项2' }, { label: '选项3
 const centerVisible = ref(false);
 const leftVisible = ref(false);
 
-const handleSelected = (selected: ActionSheetItem, selectedIndex: number) => {
-  console.log(selected, selectedIndex);
+const handleSelected = (selected: ActionSheetItem | string, selectedIndex: number) => {
+  console.log('[handleSelected]', { selected, selectedIndex });
 };
 const handleCancel = (): void => {
-  console.log('cancel');
+  console.log('[handleCancel]');
 };
 </script>
 
