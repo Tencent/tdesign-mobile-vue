@@ -35,15 +35,15 @@ const marks = {
 };
 
 const onChange = (e: number) => {
-  console.log(`change to ${e}`);
+  console.log(`[change] ${e}`);
 };
 
 const onDragend = (value: number, e: TouchEvent) => {
-  console.log('onDragend: ', value, e);
+  console.log('[onDragend] ', value, e);
 };
 
 const onDragstart = (e: TouchEvent) => {
-  console.log('onDragstart: ', e);
+  console.log('[onDragstart] ', e);
 };
 
 const handleLabel = (value: any) => {
