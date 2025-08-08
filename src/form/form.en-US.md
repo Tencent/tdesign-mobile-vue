@@ -14,6 +14,7 @@ errorMessage | Object | - | Typescript：`FormErrorMessage` | N
 labelAlign | String | right | options: left/right/top | N
 labelWidth | String / Number | '81px' | \- | N
 preventSubmitDefault | Boolean | true | \- | N
+readonly | Boolean | undefined | \- | N
 requiredMark | Boolean | undefined | \- | N
 requiredMarkPosition | String | left | Display position of required symbols。options: left/right | N
 resetType | String | empty | options: empty/initial | N
