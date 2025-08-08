@@ -12,10 +12,18 @@ export default {
   allowInputOverMax: Boolean,
   /** 自动聚焦，拉起键盘 */
   autofocus: Boolean,
-  /** 是否自动增高，值为 autosize 时，style.height 不生效 */
-  autosize: Boolean,
+  /** 高度自动撑开。 autosize = true 表示组件高度自动撑开，同时，依旧允许手动拖高度。如果设置了 autosize.maxRows 或者 autosize.minRows 则不允许手动调整高度 */
+  autosize: {
+    type: [Boolean, Object] as PropType<TdTextareaProps['autosize']>,
+    default: false,
+  },
   /** 是否显示外边框 */
   bordered: Boolean,
+  /** 光标颜色 */
+  cursorColor: {
+    type: String,
+    default: '#0052d9',
+  },
   /** 是否禁用文本框 */
   disabled: {
     type: Boolean,
@@ -42,7 +50,7 @@ export default {
   },
   /** 用户最多可以输入的字符个数 */
   maxlength: {
-    type: Number,
+    type: [String, Number] as PropType<TdTextareaProps['maxlength']>,
   },
   /** 名称，HTML 元素原生属性 */
   name: {
@@ -55,7 +63,10 @@ export default {
     default: undefined,
   },
   /** 只读状态 */
-  readonly: Boolean,
+  readonly: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 文本框值 */
   value: {
     type: [String, Number] as PropType<TdTextareaProps['value']>,
