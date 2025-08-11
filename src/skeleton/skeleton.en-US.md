@@ -9,7 +9,7 @@ name | type | default | description | required
 animation | String | none | options: gradient/flashed/none | N
 delay | Number | 0 | \- | N
 loading | Boolean | true | \- | N
-rowCol | Array | - | Typescript：`SkeletonRowCol` `type SkeletonRowCol = Array<Number \| SkeletonRowColObj \| Array<SkeletonRowColObj>>` `interface SkeletonRowColObj { width?: string; height?: string; size?: string; marginRight?: string; marginLeft?: string; margin?: string; content?: string \| TNode; type?: 'rect' \| 'circle' \| 'text' }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/skeleton/type.ts) | N
+rowCol | Array | - | Typescript：`SkeletonRowCol` `type SkeletonRowCol = Array<number \| SkeletonRowColObj \| Array<SkeletonRowColObj>>` `interface SkeletonRowColObj { width?: string; height?: string; size?: string; marginRight?: string; marginLeft?: string; margin?: string; content?: string \| TNode; type?: 'rect' \| 'circle' \| 'text' }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/skeleton/type.ts) | N
 theme | String | text | options: avatar/image/text/paragraph | N
 
 ### CSS Variables
@@ -26,4 +26,4 @@ Name | Default Value | Description
 --td-skeleton-rect-height | 16px | - 
 --td-skeleton-row-spacing | @spacer-2 | - 
 --td-skeleton-text-border-radius | @radius-small | - 
---td-skeleton-text-height | 16px | - 
+--td-skeleton-text-height | 16px | -
