@@ -38,10 +38,10 @@ const iconData = {
 };
 
 const handleSelected = (selected: ActionSheetItem, selectedIndex: number) => {
-  console.log(selected, selectedIndex);
+  console.log('[handleSelected]', { selected, selectedIndex });
 };
 const handleCancel = (): void => {
-  console.log('cancel');
+  console.log('[handleCancel]');
 };
 </script>
 <style lang="less" scoped>

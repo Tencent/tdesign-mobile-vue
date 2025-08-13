@@ -12,10 +12,10 @@ const showOverlay = () => {
   Toast({
     message: '未知点击事件',
     onClose: () => {
-      console.log('onClose');
+      console.log('[onClose]');
     },
     onDestroy: () => {
-      console.log('onDestroy');
+      console.log('[onDestroy]');
     },
     duration: 0,
   });

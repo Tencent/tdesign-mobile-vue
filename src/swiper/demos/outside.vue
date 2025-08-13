@@ -27,7 +27,7 @@ const handleChange = (index: number, context: any) => {
 };
 
 const handleClick = (value: number) => {
-  console.log('click: ', value);
+  console.log('[click] ', value);
 };
 </script>
 

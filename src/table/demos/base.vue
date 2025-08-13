@@ -65,14 +65,14 @@ const columns = ref([
 ]);
 
 const handleRowClick = (e: any) => {
-  console.log('row-cliek=====', e);
+  console.log('[row-click]', e);
 };
 
 const handleCellClick = (e: any) => {
-  console.log('cell-cliek=====', e);
+  console.log('[cell-click]', e);
 };
 
 const handleScroll = (e: any) => {
-  console.log('scroll=====', e);
+  console.log('[scroll]', e);
 };
 </script>
