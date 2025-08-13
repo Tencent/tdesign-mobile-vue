@@ -25,5 +25,5 @@ click | `(context: { e: MouseEvent })` | 遮罩层的点击事件
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-overlay-bg-color | @font-gray-2 | - 
---td-overlay-zindex | 1000 | - 
+--td-overlay-bg-color | @mask-active | - 
+--td-overlay-zindex | 1000 | -
