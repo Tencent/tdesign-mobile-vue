@@ -61,7 +61,7 @@ export const docs = [
     ],
   },
   {
-    title: '基础组件',
+    title: '基础',
     titleEn: 'Base',
     type: 'component', // 组件文档
     children: [
@@ -492,7 +492,7 @@ export const docs = [
   },
   {
     title: '反馈',
-    titleEn: 'FeedBack',
+    titleEn: 'Feedback',
     type: 'component', // 组件文档
     children: [
       {
