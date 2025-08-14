@@ -19,7 +19,7 @@ import IndexesProps from './props';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 import { TdIndexesAnchorProps } from './type';
-import useVModel from '@/hooks/useVModel';
+import useVModel from '../hooks/useVModel';
 
 interface State {
   showSidebarTip: boolean;
@@ -41,10 +41,12 @@ export default defineComponent({
   props: IndexesProps,
   emits: ['select', 'change', 'update:current'],
   setup(props) {
+    const { current, modelValue } = toRefs(props);
     const readerTNodeJSX = useTNodeJSX();
     const indexesClass = usePrefixClass('indexes');
-    const { current, modelValue } = toRefs(props);
+
     const [currentIndex, setCurrentIndex] = useVModel(current, modelValue, props.defaultCurrent, () => {}, 'current');
+
     let timeOut: number;
     const indexesRoot = ref<HTMLElement>();
     const parentRect = ref();
