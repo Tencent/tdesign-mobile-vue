@@ -10,6 +10,7 @@ import {
   watch,
   ComponentPublicInstance,
   nextTick,
+  toRefs,
 } from 'vue';
 import { throttle } from 'lodash-es';
 import { preventDefault } from '../shared/dom';
@@ -18,6 +19,7 @@ import IndexesProps from './props';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 import { TdIndexesAnchorProps } from './type';
+import useVModel from '@/hooks/useVModel';
 
 interface State {
   showSidebarTip: boolean;
@@ -37,10 +39,12 @@ const { prefix } = config;
 export default defineComponent({
   name: `${prefix}-indexes`,
   props: IndexesProps,
-  emits: ['select', 'change'],
+  emits: ['select', 'change', 'update:current'],
   setup(props) {
     const readerTNodeJSX = useTNodeJSX();
     const indexesClass = usePrefixClass('indexes');
+    const { current, modelValue } = toRefs(props);
+    const [currentIndex, setCurrentIndex] = useVModel(current, modelValue, props.defaultCurrent, () => {}, 'current');
     let timeOut: number;
     const indexesRoot = ref<HTMLElement>();
     const parentRect = ref();
@@ -75,6 +79,7 @@ export default defineComponent({
       if (curIndex === -1) return;
       state.activeSidebar = groupTop[curIndex].anchor;
       const curGroup = groupTop[curIndex];
+      setCurrentIndex(curGroup.anchor);
       if (sticky) {
         const offset = curGroup.top - scrollTop;
         const betwixt = offset < curGroup.height && offset > 0 && scrollTop > stickyTop;
@@ -114,6 +119,7 @@ export default defineComponent({
       const curGroup = groupTop.find((item) => item.anchor === index);
       if (indexesRoot.value) {
         indexesRoot.value.scrollTo?.(0, curGroup.top ?? 0);
+        setCurrentIndex(index);
       }
     };
 
@@ -201,6 +207,7 @@ export default defineComponent({
             item.totalHeight = (next?.top || Infinity) - item.top;
           });
           setAnchorOnScroll(0);
+          scrollToByIndex(currentIndex.value);
         });
       });
     };
@@ -208,6 +215,13 @@ export default defineComponent({
     onMounted(init);
 
     watch(() => props.indexList, init);
+    watch(
+      () => currentIndex.value,
+      (val) => {
+        scrollToByIndex(val);
+      },
+      { immediate: true },
+    );
 
     onBeforeUnmount(() => {
       timeOut && clearTimeout(timeOut);
