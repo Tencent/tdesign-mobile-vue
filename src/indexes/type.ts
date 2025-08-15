@@ -6,6 +6,18 @@
 
 export interface TdIndexesProps {
   /**
+   * 索引列表的激活项，默认首项
+   */
+  current?: string | number;
+  /**
+   * 索引列表的激活项，默认首项，非受控属性
+   */
+  defaultCurrent?: string | number;
+  /**
+   * 索引列表的激活项，默认首项
+   */
+  modelValue?: string | number;
+  /**
    * 索引字符列表。不传默认 `A-Z`
    */
   indexList?: Array<string | number>;

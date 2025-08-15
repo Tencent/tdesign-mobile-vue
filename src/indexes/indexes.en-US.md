@@ -6,6 +6,8 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+current | String / Number | - | `v-model` and `v-model:current` is supported | N
+defaultCurrent | String / Number | - | uncontrolled property | N
 indexList | Array | - | Typescript：`Array<string \| number>` | N
 sticky | Boolean | true | Typescript：`Boolean` | N
 stickyOffset | Number | 0 | \- | N
