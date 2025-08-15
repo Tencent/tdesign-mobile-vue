@@ -46,6 +46,23 @@ export default defineComponent({
       props.onScroll?.(scrollHeight - (scrollTop + offsetHeight), scrollTop);
     };
 
+    const renderLoading = () => {
+      if (typeof props.asyncLoading === 'string' && ['loading', 'load-more'].includes(props.asyncLoading)) {
+        return (
+          <TLoading
+            indicator={props.asyncLoading === 'loading'}
+            text={
+              typeof props.asyncLoading === 'string'
+                ? LOADING_TEXT_MAP[props.asyncLoading as keyof typeof LOADING_TEXT_MAP]
+                : ''
+            }
+            class={`${listClass.value}__loading`}
+          />
+        );
+      }
+      return renderTNodeJSX('asyncLoading');
+    };
+
     useEventListener(scrollParent, 'scroll', handleScroll);
     return () => {
       const headerContent = renderTNodeJSX('header');
@@ -55,13 +72,7 @@ export default defineComponent({
           {headerContent}
           {slots.default && slots.default()}
           <div class={`${listClass.value}__loading--wrapper`} onClick={onLoadMore}>
-            {typeof props.asyncLoading === 'string' && ['loading', 'load-more'].includes(props.asyncLoading) && (
-              <TLoading
-                indicator={props.asyncLoading === 'loading'}
-                text={typeof props.asyncLoading === 'string' ? LOADING_TEXT_MAP[props.asyncLoading] : ''}
-                class={`${listClass.value}__loading`}
-              />
-            )}
+            {renderLoading()}
           </div>
           {footerContent}
         </div>
