@@ -13,14 +13,29 @@ const LOADING_TEXT_MAP = {
 };
 describe('list', () => {
   describe('props', () => {
-    it(': asyncLoading', () => {
-      const wrapper = mount(List, {
+    it(': asyncLoading', async () => {
+      const wrapper = await mount(List, {
         props: {
           // 加载中状态
           asyncLoading: 'loading',
         },
       });
       expect(wrapper.findComponent(TLoading).props().text).toEqual(LOADING_TEXT_MAP.loading);
+      const text = 'Hello. TDesign List';
+      await wrapper.setProps({
+        asyncLoading: () => text,
+      });
+
+      expect(wrapper.find(`.t-list__loading--wrapper`).exists()).toBeTruthy();
+      expect(wrapper.find('.t-list__loading--wrapper').text()).toEqual(text);
+
+      const textWithSlots = 'Hello. TDesign List Loading';
+      const wrapperWithSlots = await mount(List, {
+        slots: {
+          asyncLoading: textWithSlots,
+        },
+      });
+      expect(wrapperWithSlots.find('.t-list__loading--wrapper').text()).toEqual(textWithSlots);
     });
 
     it(': footer', () => {

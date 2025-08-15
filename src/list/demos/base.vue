@@ -8,6 +8,7 @@
 
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
+import { ListProps } from 'tdesign-mobile-vue';
 
 const loadData = (data: any, isRefresh?: Boolean) => {
   const ONCE_LOAD_NUM = 20;
@@ -35,7 +36,7 @@ const loadData = (data: any, isRefresh?: Boolean) => {
 };
 
 const list = ref<any[]>([]);
-const loading = ref('');
+const loading = ref<ListProps['asyncLoading']>('');
 
 const onLoad = (isRefresh?: Boolean) => {
   if ((list.value.length >= 60 && !isRefresh) || loading.value) {
