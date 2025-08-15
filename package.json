@@ -115,7 +115,7 @@
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.1.1",
     "@rollup/plugin-replace": "^2.3.4",
-    "@rollup/plugin-url": "^6.0.0",
+    "@rollup/plugin-url": "^8.0.2",
     "@soerenmartius/vue3-clipboard": "^0.1.1",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "18.8.0",
