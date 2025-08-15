@@ -1105,6 +1105,319 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
       
     </div>
   </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        04 可拖拽排序
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        开启拖拽排序
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="upload-demo"
+        data-v-10ccb48e=""
+      >
+        <div
+          class="upload-title"
+          data-v-10ccb48e=""
+        >
+          可拖拽排序
+        </div>
+        <div
+          class="t-upload"
+          data-v-10ccb48e=""
+        >
+          
+          <div
+            class="t-upload__item"
+            draggable="true"
+          >
+            <div
+              class="t-image t-image--round t-upload__image"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!---->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!---->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/upload4.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </picture>
+            </div>
+            <!---->
+            <svg
+              class="t-icon t-icon-close t-upload__delete-btn"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-upload__item"
+            draggable="true"
+          >
+            <div
+              class="t-image t-image--round t-upload__image"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!---->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!---->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/upload6.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </picture>
+            </div>
+            <!---->
+            <svg
+              class="t-icon t-icon-close t-upload__delete-btn"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-upload__item"
+            draggable="true"
+          >
+            <div
+              class="t-image t-image--round t-upload__image"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!---->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!---->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/upload5.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </picture>
+            </div>
+            <!---->
+            <svg
+              class="t-icon t-icon-close t-upload__delete-btn"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-upload__item"
+            draggable="true"
+          >
+            <div
+              class="t-image t-image--round t-upload__image"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!---->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!---->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/upload6.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </picture>
+            </div>
+            <!---->
+            <svg
+              class="t-icon t-icon-close t-upload__delete-btn"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          
+          <div
+            class="t-upload__item t-upload__item--add"
+          >
+            <div
+              class="t-upload__add-icon"
+            >
+              <svg
+                class="t-icon t-icon-add"
+                fill="none"
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <input
+            accept="image/png"
+            hidden=""
+            multiple=""
+            type="file"
+          />
+          <!---->
+        </div>
+      </div>
+      
+    </div>
+  </div>
 </div>
 `;
 
