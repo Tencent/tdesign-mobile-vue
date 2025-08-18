@@ -11,7 +11,7 @@ export default {
   /** 指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body */
   attach: {
     type: [String, Function] as PropType<TdPopupProps['attach']>,
-    default: 'body',
+    default: 'body' as TdPopupProps['attach'],
   },
   /** 是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以自定义关闭按钮 */
   closeBtn: {

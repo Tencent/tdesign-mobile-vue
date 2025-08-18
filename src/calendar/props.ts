@@ -11,7 +11,7 @@ export default {
   /** 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性 */
   confirmBtn: {
     type: [String, Object, Function] as PropType<TdCalendarProps['confirmBtn']>,
-    default: '',
+    default: '' as TdCalendarProps['confirmBtn'],
   },
   /** 第一天从星期几开始，默认 0 = 周日 */
   firstDayOfWeek: {
@@ -62,11 +62,11 @@ export default {
   /** 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组 */
   value: {
     type: [Number, Array, Date] as PropType<TdCalendarProps['value']>,
-    default: undefined,
+    default: undefined as TdCalendarProps['value'],
   },
   modelValue: {
     type: [Number, Array, Date] as PropType<TdCalendarProps['value']>,
-    default: undefined,
+    default: undefined as TdCalendarProps['value'],
   },
   /** 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组，非受控属性 */
   defaultValue: {

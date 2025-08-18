@@ -48,7 +48,7 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 弹出气泡主题。 */
+  /** 弹出气泡主题 */
   theme: {
     type: String as PropType<TdPopoverProps['theme']>,
     default: 'dark' as TdPopoverProps['theme'],

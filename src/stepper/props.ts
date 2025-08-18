@@ -60,16 +60,16 @@ export default {
   /** 值 */
   value: {
     type: [String, Number] as PropType<TdStepperProps['value']>,
-    default: undefined,
+    default: undefined as TdStepperProps['value'],
   },
   modelValue: {
     type: [String, Number] as PropType<TdStepperProps['value']>,
-    default: undefined,
+    default: undefined as TdStepperProps['value'],
   },
   /** 值，非受控属性 */
   defaultValue: {
     type: [String, Number] as PropType<TdStepperProps['defaultValue']>,
-    default: 0,
+    default: 0 as TdStepperProps['defaultValue'],
   },
   /** 输入框失去焦点时触发 */
   onBlur: Function as PropType<TdStepperProps['onBlur']>,
