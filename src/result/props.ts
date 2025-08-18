@@ -32,6 +32,6 @@ export default {
   /** 标题 */
   title: {
     type: [String, Function] as PropType<TdResultProps['title']>,
-    default: '',
+    default: '' as TdResultProps['title'],
   },
 };

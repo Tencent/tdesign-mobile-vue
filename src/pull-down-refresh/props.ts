@@ -13,7 +13,7 @@ export default {
   /** 加载中下拉高度，如果值为数字则单位是：'px' */
   loadingBarHeight: {
     type: [String, Number] as PropType<TdPullDownRefreshProps['loadingBarHeight']>,
-    default: 50,
+    default: 50 as TdPullDownRefreshProps['loadingBarHeight'],
   },
   /** 加载loading样式 */
   loadingProps: {
@@ -27,7 +27,7 @@ export default {
   /** 最大下拉高度，如果值为数字则单位是：'px' */
   maxBarHeight: {
     type: [String, Number] as PropType<TdPullDownRefreshProps['maxBarHeight']>,
-    default: 80,
+    default: 80 as TdPullDownRefreshProps['maxBarHeight'],
   },
   /** 刷新超时时间 */
   refreshTimeout: {

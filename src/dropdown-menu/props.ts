@@ -25,7 +25,7 @@ export default {
   /** 动画时长 */
   duration: {
     type: [String, Number] as PropType<TdDropdownMenuProps['duration']>,
-    default: 200,
+    default: 200 as TdDropdownMenuProps['duration'],
   },
   /** 是否显示遮罩层 */
   showOverlay: {

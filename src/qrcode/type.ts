@@ -50,7 +50,7 @@ export interface TdQRCodeProps {
   /**
    * 自定义状态渲染器
    */
-  statusRender?: TNode<StatusRenderInfo>;
+  statusRender?: (info: StatusRenderInfo) => TNode;
   /**
    * 渲染类型
    * @default canvas
