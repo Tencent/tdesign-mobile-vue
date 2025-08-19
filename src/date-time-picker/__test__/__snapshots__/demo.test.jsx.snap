@@ -173,1047 +173,6 @@ exports[`DateTimePicker > DateTimePicker dateAllVue demo works fine 1`] = `
               
             </li>
             <li
-              class="t-picker-item__item t-picker-item__item--active"
-            >
-              
-              2021 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2022 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2023 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2024 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2025 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2026 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2027 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2028 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2029 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2030 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2031 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2032 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2033 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2034 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2035 年
-              
-            </li>
-            
-          </ul>
-        </div>
-        <div
-          class="t-picker-item__group"
-        >
-          <ul
-            class="t-picker-item"
-            style="transform: translate3d(0, -360px, 0);"
-          >
-            
-            <li
-              class="t-picker-item__item"
-            >
-              
-              1 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              3 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              4 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              5 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              6 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              7 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              8 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              9 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              10 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              11 月
-              
-            </li>
-            <li
-              class="t-picker-item__item t-picker-item__item--active"
-            >
-              
-              12 月
-              
-            </li>
-            
-          </ul>
-        </div>
-        <div
-          class="t-picker-item__group"
-        >
-          <ul
-            class="t-picker-item"
-            style="transform: translate3d(0, -800px, 0);"
-          >
-            
-            <li
-              class="t-picker-item__item"
-            >
-              
-              1 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              3 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              4 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              5 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              6 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              7 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              8 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              9 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              10 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              11 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              12 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              13 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              14 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              15 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              16 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              17 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              18 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              19 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              20 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              21 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              22 日
-              
-            </li>
-            <li
-              class="t-picker-item__item t-picker-item__item--active"
-            >
-              
-              23 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              24 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              25 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              26 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              27 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              28 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              29 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              30 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              31 日
-              
-            </li>
-            
-          </ul>
-        </div>
-        
-        <div
-          class="t-picker__mask t-picker__mask--top"
-        />
-        <div
-          class="t-picker__mask t-picker__mask--bottom"
-        />
-        <div
-          class="t-picker__indicator"
-        />
-      </div>
-      <!---->
-    </div>
-    
-  </div>
-  
-  
-</div>
-`;
-
-exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <div
-    class="t-cell"
-  >
-    <div
-      class="t-cell__left"
-    >
-      <!---->
-      <!---->
-    </div>
-    <div
-      class="t-cell__title"
-    >
-      <div
-        class="t-cell__title-text"
-      >
-        选择日期
-        <!---->
-      </div>
-      <!---->
-    </div>
-    <div
-      class="t-cell__note"
-    >
-      年 月 日
-    </div>
-    <!---->
-  </div>
-  
-  <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
-  >
-    <!---->
-  </div>
-  <div
-    class="t-popup t-popup--bottom"
-    style="display: none;"
-  >
-    <!---->
-    
-    <div
-      class="t-picker t-date-time-picker"
-    >
-      <div
-        class="t-picker__toolbar"
-      >
-        <div
-          class="t-picker__cancel"
-        >
-          取消
-        </div>
-        <div
-          class="t-picker__title"
-        >
-          选择日期
-        </div>
-        <div
-          class="t-picker__confirm"
-        >
-          确定
-        </div>
-      </div>
-      <!---->
-      <div
-        class="t-picker__main"
-      >
-        
-        <div
-          class="t-picker-item__group"
-        >
-          <ul
-            class="t-picker-item"
-            style="transform: translate3d(0, 40px, 0);"
-          >
-            
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2020 年
-              
-            </li>
-            <li
-              class="t-picker-item__item t-picker-item__item--active"
-            >
-              
-              2021 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2022 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2023 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2024 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2025 年
-              
-            </li>
-            
-          </ul>
-        </div>
-        <div
-          class="t-picker-item__group"
-        >
-          <ul
-            class="t-picker-item"
-            style="transform: translate3d(0, -360px, 0);"
-          >
-            
-            <li
-              class="t-picker-item__item"
-            >
-              
-              1 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              3 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              4 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              5 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              6 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              7 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              8 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              9 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              10 月
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              11 月
-              
-            </li>
-            <li
-              class="t-picker-item__item t-picker-item__item--active"
-            >
-              
-              12 月
-              
-            </li>
-            
-          </ul>
-        </div>
-        <div
-          class="t-picker-item__group"
-        >
-          <ul
-            class="t-picker-item"
-            style="transform: translate3d(0, -800px, 0);"
-          >
-            
-            <li
-              class="t-picker-item__item"
-            >
-              
-              1 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              3 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              4 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              5 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              6 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              7 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              8 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              9 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              10 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              11 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              12 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              13 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              14 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              15 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              16 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              17 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              18 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              19 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              20 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              21 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              22 日
-              
-            </li>
-            <li
-              class="t-picker-item__item t-picker-item__item--active"
-            >
-              
-              23 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              24 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              25 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              26 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              27 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              28 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              29 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              30 日
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              31 日
-              
-            </li>
-            
-          </ul>
-        </div>
-        
-        <div
-          class="t-picker__mask t-picker__mask--top"
-        />
-        <div
-          class="t-picker__mask t-picker__mask--bottom"
-        />
-        <div
-          class="t-picker__indicator"
-        />
-      </div>
-      <!---->
-    </div>
-    
-  </div>
-  
-  
-</div>
-`;
-
-exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <div
-    class="t-cell"
-  >
-    <div
-      class="t-cell__left"
-    >
-      <!---->
-      <!---->
-    </div>
-    <div
-      class="t-cell__title"
-    >
-      <div
-        class="t-cell__title-text"
-      >
-        选择日期(年月日时分)
-        <!---->
-      </div>
-      <!---->
-    </div>
-    <div
-      class="t-cell__note"
-    >
-      2020-08-10 12:50:00
-    </div>
-    <!---->
-  </div>
-  
-  <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
-  >
-    <!---->
-  </div>
-  <div
-    class="t-popup t-popup--bottom"
-    style="display: none;"
-  >
-    <!---->
-    
-    <div
-      class="t-picker t-date-time-picker"
-    >
-      <div
-        class="t-picker__toolbar"
-      >
-        <div
-          class="t-picker__cancel"
-        >
-          取消
-        </div>
-        <div
-          class="t-picker__title"
-        >
-          选择日期时间
-        </div>
-        <div
-          class="t-picker__confirm"
-        >
-          确定
-        </div>
-      </div>
-      <!---->
-      <div
-        class="t-picker__main"
-      >
-        
-        <div
-          class="t-picker-item__group"
-        >
-          <ul
-            class="t-picker-item"
-            style="transform: translate3d(0, -120px, 0);"
-          >
-            
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2015 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2016 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2017 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2018 年
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2019 年
-              
-            </li>
-            <li
-              class="t-picker-item__item t-picker-item__item--active"
-            >
-              
-              2020 年
-              
-            </li>
-            <li
               class="t-picker-item__item"
             >
               
@@ -1353,62 +312,6 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
             
             <li
               class="t-picker-item__item t-picker-item__item--active"
-            >
-              
-              0 时
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              1 时
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              2 时
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              3 时
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              4 时
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              5 时
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              6 时
-              
-            </li>
-            <li
-              class="t-picker-item__item"
-            >
-              
-              7 时
-              
-            </li>
-            <li
-              class="t-picker-item__item"
             >
               
               8 时
@@ -2451,7 +1354,7 @@ exports[`DateTimePicker > DateTimePicker hourMinuteSecondVue demo works fine 1`]
       </div>
     </div>
   </div>
-  <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -3547,7 +2450,7 @@ exports[`DateTimePicker > DateTimePicker hourMinuteSecondVue demo works fine 1`]
     </div>
     
   </div>
-  <!--teleport end-->
+  
   
 </div>
 `;
@@ -3599,7 +2502,7 @@ exports[`DateTimePicker > DateTimePicker hourMinuteVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -4264,7 +3167,7 @@ exports[`DateTimePicker > DateTimePicker hourMinuteVue demo works fine 1`] = `
     </div>
     
   </div>
-  <!--teleport end-->
+  
   
 </div>
 `;
@@ -6382,7 +5285,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         </div>
         
       </div>
-      <!--teleport end-->
+      
       
       
     </div>
@@ -6447,7 +5350,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <!--teleport start-->
+      
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -7444,62 +6347,6 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                   class="t-picker-item__item t-picker-item__item--active"
                 >
                   
-                  0 时
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  1 时
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  2 时
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  3 时
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  4 时
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  5 时
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  6 时
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
-                  7 时
-                  
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  
                   8 时
                   
                 </li>
@@ -8488,7 +7335,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         </div>
         
       </div>
-      <!--teleport end-->
+      
       
       
     </div>
@@ -8553,7 +7400,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <!--teleport start-->
+      
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -9834,7 +8681,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         </div>
         
       </div>
-      <!--teleport end-->
+      
       
       
     </div>
@@ -9890,7 +8737,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <!--teleport start-->
+      
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -10446,7 +9293,7 @@ exports[`DateTimePicker > DateTimePicker showWeekVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -11157,7 +10004,7 @@ exports[`DateTimePicker > DateTimePicker showWeekVue demo works fine 1`] = `
     </div>
     
   </div>
-  <!--teleport end-->
+  
   
 </div>
 `;
@@ -12006,7 +10853,7 @@ exports[`DateTimePicker > DateTimePicker withTitleVue demo works fine 1`] = `
     </div>
     
   </div>
-  <!--teleport end-->
+  
   
 </div>
 `;
@@ -12058,7 +10905,7 @@ exports[`DateTimePicker > DateTimePicker withoutTitleVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -12559,7 +11406,7 @@ exports[`DateTimePicker > DateTimePicker withoutTitleVue demo works fine 1`] = `
     </div>
     
   </div>
-  <!--teleport end-->
+  
   
 </div>
 `;
@@ -12611,7 +11458,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthDateVue demo works fine 1`] = 
       </div>
     </div>
   </div>
-  <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -13112,7 +11959,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthDateVue demo works fine 1`] = 
     </div>
     
   </div>
-  <!--teleport end-->
+  
   
 </div>
 `;
@@ -13164,7 +12011,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <!--teleport start-->
+  
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"
