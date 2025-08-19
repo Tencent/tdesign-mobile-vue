@@ -19,6 +19,7 @@ export default defineComponent({
   props: searchProps,
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();
+    const classPrefix = usePrefixClass();
     const searchClass = usePrefixClass('search');
 
     const isShowResultList = ref(false);
@@ -32,12 +33,12 @@ export default defineComponent({
       `${searchClass.value}__input-box`,
       `${searchClass.value}__input-box--${props.shape}`,
       {
-        [`${prefix}-is-focused`]: focused.value,
+        [`${classPrefix.value}-is-focused`]: focused.value,
       },
     ]);
 
     const inputClasses = computed(() => [
-      `${prefix}-input__keyword`,
+      `${classPrefix.value}-input__keyword`,
       { [`${searchClass.value}--center`]: props.center },
     ]);
 
@@ -134,7 +135,7 @@ export default defineComponent({
         const action = renderTNodeJSX('action');
         if (action) {
           return (
-            <div class={`${searchClass.value}__search-action ${prefix}-class-action`} onClick={handleAction}>
+            <div class={`${searchClass.value}__search-action ${classPrefix.value}-class-action`} onClick={handleAction}>
               {action}
             </div>
           );

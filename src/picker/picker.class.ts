@@ -30,6 +30,8 @@ export const ANIMATION_TIME_LIMIT = 460;
 export const ANIMATION_DISTANCE_LIMIT = 15;
 const ANIMATION_DURATION = 150;
 const DEFAULT_SWIPE_DURATION = 1000;
+const TAP_DISTANCE_THRESHOLD = 5; // px
+const TAP_TIME_THRESHOLD = 200; // ms
 
 /**
  * @name picker
@@ -204,11 +206,24 @@ class Picker {
     if (!this.holder) return;
     const point = event.changedTouches[0];
     const nowTime = event.timeStamp || Date.now();
-    // move time gap
+
     const moveTime = nowTime - this.lastMoveTime;
     const distance = point.pageY - this.lastMoveStart;
+    const absDistance = Math.abs(distance);
+
+    if (absDistance < TAP_DISTANCE_THRESHOLD && moveTime < TAP_TIME_THRESHOLD) {
+      // 点选操作，查找 li
+      const li = (event.target as HTMLElement).closest('li');
+      if (li && this.list?.contains(li)) {
+        const childElements = this.list.children;
+        const rawIndex = Array.from(childElements).indexOf(li);
+        const enabledIndex = findIndexOfEnabledOption(this.pickerColumns, rawIndex, this.options.keys);
+        this.updateIndex(enabledIndex, { isChange: true });
+        return;
+      }
+    }
     // 超出一定时间不再惯性滚动
-    if (moveTime > ANIMATION_TIME_LIMIT || Math.abs(distance) < ANIMATION_DISTANCE_LIMIT || !this.swipeDuration) {
+    if (moveTime > ANIMATION_TIME_LIMIT || absDistance < ANIMATION_DISTANCE_LIMIT || !this.swipeDuration) {
       this.stopInertiaMove = false;
       this.endScroll();
       return;
@@ -218,7 +233,6 @@ class Picker {
     let dist = this.offsetY + (speed / 0.005) * (distance < 0 ? -1 : 1);
     const { min, max } = this.getRange(3, 2);
     dist = limitNumberInRange(dist, min, max);
-
     if (dist === 0) {
       this.stopInertiaMove = false;
       this.endScroll();
@@ -297,6 +311,9 @@ class Picker {
       this.list.style.transitionDuration = `${realOptions.duration}ms`;
       this.list.style.transitionTimingFunction = 'ease-out';
     }
+
+    this.offsetY = moveOffsetY;
+    this.offsetYOfStart = moveOffsetY;
     realOptions.isChange && this.onChange(index);
   }
 

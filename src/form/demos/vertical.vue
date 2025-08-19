@@ -86,7 +86,7 @@
       </t-upload>
     </t-form-item>
     <div class="button-group">
-      <t-button theme="primary" variant="light" type="submit" size="large">提交</t-button>
+      <t-button theme="primary" variant="base" type="submit" size="large">提交</t-button>
       <t-button theme="default" variant="base" type="reset" size="large">重置</t-button>
     </div>
   </t-form>
@@ -110,27 +110,27 @@ const { disabled } = toRefs(props);
 
 // upload
 const onFail = ({ file, e }: { file: UploadFile; e: ProgressEvent }): any => {
-  console.log('---onFail', file, e);
+  console.log('[onFail]', { file, e });
   return null;
 };
 
 const onProgress = ({ file, percent, type, e }: ProgressContext) => {
-  console.log('---onProgress:', file, percent, type, e);
+  console.log('[onProgress]', { file, percent, type, e });
 };
 const onChangeUpload = (files: Array<UploadFile>, { e, response, trigger, index, file }: UploadChangeContext) => {
-  console.log('====onChange', files, e, response, trigger, index, file);
+  console.log('[onChange]', { files, e, response, trigger, index, file });
 };
 const onPreview = ({ file, e }: { file: UploadFile; e: MouseEvent }) => {
-  console.log('====onPreview', file, e);
+  console.log('[onPreview]', { file, e });
 };
 const onSuccess = ({ file, fileList, response, e }: SuccessContext) => {
-  console.log('====onSuccess', file, fileList, e, response);
+  console.log('[onSuccess]', { file, fileList, e, response });
 };
 const onRemove = ({ index, file, e }: UploadRemoveContext) => {
-  console.log('====onRemove', index, file, e);
+  console.log('[onRemove]', { index, file, e });
 };
 const onSelectChange = (files: Array<UploadFile>) => {
-  console.log('====onSelectChange', files);
+  console.log('[[onSelectChange]', files);
 };
 const action = 'https://service-bv448zsw-1257786608.gz.apigw.tencentcs.com/api/upload-demo';
 const files = ref([
@@ -268,11 +268,11 @@ const rateGap = 8;
 
 // form
 const onReset = () => {
-  console.log('===onReset');
+  console.log('[onReset]');
 };
 
 const onSubmit = (e: any) => {
-  console.log('===onSubmit', e);
+  console.log('[onSubmit]', e);
 };
 
 const rules = {

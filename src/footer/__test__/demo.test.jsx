@@ -4,13 +4,13 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/footer/demos/base.vue';
-import linkVue from '@/footer/demos/link.vue';
+import linksVue from '@/footer/demos/links.vue';
 import logoVue from '@/footer/demos/logo.vue';
 import mobileVue from '@/footer/demos/mobile.vue';
 
 const mapper = {
   baseVue,
-  linkVue,
+  linksVue,
   logoVue,
   mobileVue,
 };

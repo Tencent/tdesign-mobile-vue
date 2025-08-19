@@ -2,7 +2,7 @@ import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { ref } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
-import Popup from '../popup';
+import Popup from '../index';
 
 config.global.stubs = {
   teleport: false,

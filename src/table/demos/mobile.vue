@@ -16,6 +16,9 @@
     <tdesign-demo-block summary="带边框表格样式" :padding="true">
       <borderedDemo />
     </tdesign-demo-block>
+    <tdesign-demo-block summary="可自定义样式的表格" :padding="true">
+      <customRowStyle />
+    </tdesign-demo-block>
   </div>
 </template>
 
@@ -24,4 +27,5 @@ import baseDemo from './base.vue';
 import scrollDemo from './scroll.vue';
 import stripeDemo from './stripe.vue';
 import borderedDemo from './bordered.vue';
+import customRowStyle from './custom-row-style.vue';
 </script>

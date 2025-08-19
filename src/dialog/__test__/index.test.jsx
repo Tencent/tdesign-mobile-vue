@@ -1,10 +1,13 @@
 import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { CloseIcon } from 'tdesign-icons-vue-next';
+import { nextTick } from 'vue';
 import Dialog from '../dialog';
+import { DialogPlugin } from '../index';
 import Button from '../../button/button';
 
 import prefixConfig from '../../config';
+import { sleep } from '../../shared/util';
 
 const { prefix } = prefixConfig;
 const name = `${prefix}-dialog`;
@@ -250,5 +253,62 @@ describe('dialog', () => {
       expect(onClose).toBeCalledTimes(2);
       expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'close-btn' });
     });
+  });
+});
+
+describe('DialogPlugin', () => {
+  beforeEach(() => {
+    document.body.innerHTML = '';
+  });
+
+  it('method', () => {
+    const testMethod = (method, content) => {
+      document.body.innerHTML = '';
+      DialogPlugin[method](content);
+      expect(document.body.textContent).toContain(content);
+    };
+
+    testMethod('show', 'Hello TDesign');
+    testMethod('alert', 'Hello TDesign Mobile');
+    testMethod('confirm', 'Hello TDesign Vue');
+  });
+
+  it('hide & show', async () => {
+    const content = 'Hello TDesign';
+    const handler = await DialogPlugin.show(content);
+
+    expect(document.body.querySelector('.t-dialog')).toBeTruthy();
+    await sleep(300);
+    expect(document.body.querySelector('.t-overlay').style.display).not.toBe('none');
+
+    handler.hide();
+    await sleep(300);
+    expect(document.body.querySelector('.t-overlay').style.display).toBe('none');
+
+    handler.show();
+    await sleep(300);
+    expect(document.body.querySelector('.t-overlay').style.display).not.toBe('none');
+  });
+
+  it('update', async () => {
+    const content = 'Hello Vue';
+    const content2 = 'Hello TDesign';
+    const content3 = 'Hello Vapor';
+    const handler = await DialogPlugin.show(content);
+
+    expect(document.body.textContent).toContain(content);
+    expect(document.body.textContent).not.toContain(content2);
+
+    handler.update(content2);
+    await nextTick();
+    expect(document.body.textContent).not.toContain(content);
+    expect(document.body.textContent).toContain(content2);
+
+    handler.update({ content: content3 });
+    handler.update({ onConfirm: () => ({}) });
+    await nextTick();
+    expect(document.body.textContent).not.toContain(content);
+    expect(document.body.textContent).not.toContain(content2);
+    expect(document.body.textContent).toContain(content3);
   });
 });

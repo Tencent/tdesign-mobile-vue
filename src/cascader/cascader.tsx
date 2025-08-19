@@ -123,6 +123,10 @@ export default defineComponent({
         childrenInfo.value = value;
         childrenInfo.level = level;
       } else {
+        items.length = level + 1;
+        steps.length = level + 1;
+        stepIndex.value = level;
+
         setCascaderValue(
           lodashGet(item, keys?.value ?? 'value'),
           items.map((item, index) => toRaw(item?.[selectedIndexes[index]])),
@@ -148,7 +152,7 @@ export default defineComponent({
       }
     };
 
-    const handleSelect = (value: RadioValue, level: number, emitPick = true) => {
+    const handleSelect = (value: RadioValue, level: number, fromHandler = true) => {
       const keys = props.keys as KeysType;
       const index = items[level].findIndex((item: any) => lodashGet(item, keys?.value ?? 'value') === value);
       const item = items[level][index];
@@ -156,7 +160,7 @@ export default defineComponent({
         return;
       }
 
-      if (emitPick) {
+      if (fromHandler) {
         props.onPick?.({
           value: lodashGet(item, keys?.value ?? 'value'),
           label: lodashGet(item, keys?.label ?? 'label'),
@@ -165,7 +169,7 @@ export default defineComponent({
         });
       }
 
-      if (props.checkStrictly && selectedValue.includes(String(value))) {
+      if (props.checkStrictly && selectedValue.includes(String(value)) && fromHandler) {
         cancelSelect(value, level, index, item);
       } else {
         chooseSelect(value, level, index, item);

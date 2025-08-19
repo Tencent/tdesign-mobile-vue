@@ -5,18 +5,16 @@
 import { mount } from '@vue/test-utils';
 import areaVue from '@/picker/demos/area.vue';
 import baseVue from '@/picker/demos/base.vue';
-import cascadeVue from '@/picker/demos/cascade.vue';
 import customHeightVue from '@/picker/demos/customHeight.vue';
 import mobileVue from '@/picker/demos/mobile.vue';
-import titleVue from '@/picker/demos/title.vue';
+import withTitleVue from '@/picker/demos/with-title.vue';
 
 const mapper = {
   areaVue,
   baseVue,
-  cascadeVue,
   customHeightVue,
   mobileVue,
-  titleVue,
+  withTitleVue,
 };
 
 describe('Picker', () => {

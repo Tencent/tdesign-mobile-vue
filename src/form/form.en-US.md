@@ -15,8 +15,9 @@ labelAlign | String | right | options: left/right/top | N
 labelWidth | String / Number | '81px' | \- | N
 preventSubmitDefault | Boolean | true | \- | N
 requiredMark | Boolean | undefined | \- | N
+requiredMarkPosition | String | left | Display position of required symbols。options: left/right | N
 resetType | String | empty | options: empty/initial | N
-rules | Object | - | Typescript：`FormRules<FormData>` `type FormRules<T extends Data> = { [field in keyof T]?: Array<FormRule> }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/form/type.ts) | N
+rules | Object | - | Typescript：`FormRules<FormData>` `type FormRules<T extends Data = any> = { [field in keyof T]?: Array<FormRule> }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/form/type.ts) | N
 scrollToFirstError | String | - | options: ''/smooth/auto | N
 showErrorMessage | Boolean | true | \- | N
 submitWithWarningMessage | Boolean | false | \- | N
@@ -55,7 +56,7 @@ help | String / Slot / Function | - | Typescript：`string \| TNode`。[see more
 label | String / Slot / Function | '' | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 labelAlign | String | - | options: left/right/top | N
 labelWidth | String / Number | - | \- | N
-name | String / Number | - | Typescript：`string \| number` | N
+name | String | - | \- | N
 requiredMark | Boolean | undefined | \- | N
 rules | Array | - | Typescript：`Array<FormRule>` | N
 showErrorMessage | Boolean | undefined | \- | N
@@ -74,10 +75,10 @@ max | Number / Boolean | - | \- | N
 message | String | - | \- | N
 min | Number / Boolean | - | \- | N
 number | Boolean | - | \- | N
-pattern | Object | - | Typescript：`RegExp` | N
+pattern | String / Object | - | Typescript：`RegExp \| string` | N
 required | Boolean | - | \- | N
 telnumber | Boolean | - | \- | N
-trigger | String | change | options: change/blur | N
+trigger | String | change | Typescript：`ValidateTriggerType` | N
 type | String | error | options: error/warning | N
 url | Boolean / Object | - | Typescript：`boolean \| IsURLOptions` `import { IsURLOptions } from 'validator/es/lib/isURL'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/form/type.ts) | N
 validator | Function | - | Typescript：`CustomValidator` `type CustomValidator = (val: ValueType) => CustomValidateResolveType \| Promise<CustomValidateResolveType>` `type CustomValidateResolveType = boolean \| CustomValidateObj` `interface CustomValidateObj { result: boolean; message: string; type?: 'error' \| 'warning' \| 'success' }` `type ValueType = any`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/form/type.ts) | N
@@ -100,3 +101,4 @@ required | String | - | \- | N
 telnumber | String | - | \- | N
 url | String | - | \- | N
 validator | String | - | \- | N
+whitespace | String | - | \- | N

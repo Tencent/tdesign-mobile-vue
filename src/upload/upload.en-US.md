@@ -26,6 +26,7 @@ max | Number | 0 | max count of files limit | N
 method | String | POST | HTTP request method。options: POST/GET/PUT/OPTIONS/PATCH/post/get/put/options/patch | N
 multiple | Boolean | false | multiple files uploading | N
 preview | Boolean | true | \- | N
+removeBtn | Boolean | true | `1.10.0`。Show image delete button or not | N
 requestMethod | Function | - | custom upload request method。Typescript：`(files: UploadFile \| UploadFile[]) => Promise<RequestMethodResponse>` `interface RequestMethodResponse { status: 'success' \| 'fail'; error?: string; response: { url?: string; files?: UploadFile[]; [key: string]: any } }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts) | N
 sizeLimit | Number / Object | - | files size limit。Typescript：`number \| SizeLimitObj` `interface SizeLimitObj { size: number; unit: SizeUnit ; message?: string }` `type SizeUnitArray = ['B', 'KB', 'MB', 'GB']` `type SizeUnit = SizeUnitArray[number]`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts) | N
 useMockProgress | Boolean | true | use mock progress, instead of real progress | N
@@ -77,11 +78,12 @@ url | String | - | \- | N
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-upload-add-color | @font-gray-3 | - 
+--td-upload-add-bg-color | @bg-color-secondarycontainer | - 
+--td-upload-add-color | @text-color-placeholder | - 
 --td-upload-add-icon-font-size | 28px | - 
 --td-upload-background | @upload-add-bg-color | - 
---td-upload-delete-icon-color | @font-white-1 | - 
+--td-upload-delete-icon-color | #fff | - 
 --td-upload-grid-columns | 4 | - 
 --td-upload-height | 80px | - 
 --td-upload-radius | @radius-default | - 
---td-upload-width | 80px | -
+--td-upload-width | 80px | - 

@@ -541,19 +541,19 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
               class="t-switch t-switch--medium t-switch--disabled"
             >
               <div
-                class="t-switch__dot t-switch__dot--medium"
+                class="t-switch__dot t-switch__dot--medium t-switch__dot--disabled"
               >
                 <div
                   class="t-switch__label t-switch__label--medium"
                 >
                   <div
-                    class="t-loading"
-                    style="font-size: 16.25px;"
+                    class="t-loading t-switch__loading"
+                    style="font-size: 16px;"
                   >
                     <svg
                       class="t-loading__gradient t-icon-loading"
                       height="1em"
-                      style="animation-duration: 800ms; width: 16.25px; height: 16.25px;"
+                      style="animation-duration: 800ms; width: 16px; height: 16px;"
                       version="1.1"
                       viewBox="0 0 12 12"
                       width="1em"
@@ -612,19 +612,19 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
               class="t-switch t-switch--medium t-switch--checked t-switch--disabled"
             >
               <div
-                class="t-switch__dot t-switch__dot--medium t-switch__dot--checked"
+                class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--disabled"
               >
                 <div
                   class="t-switch__label t-switch__label--medium t-switch__label--checked"
                 >
                   <div
-                    class="t-loading"
-                    style="font-size: 16.25px;"
+                    class="t-loading t-switch__loading"
+                    style="font-size: 16px;"
                   >
                     <svg
                       class="t-loading__gradient t-icon-loading"
                       height="1em"
-                      style="animation-duration: 800ms; width: 16.25px; height: 16.25px;"
+                      style="animation-duration: 800ms; width: 16px; height: 16px;"
                       version="1.1"
                       viewBox="0 0 12 12"
                       width="1em"
@@ -688,7 +688,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
               class="t-switch t-switch--medium t-switch--disabled"
             >
               <div
-                class="t-switch__dot t-switch__dot--medium t-switch__dot--plain"
+                class="t-switch__dot t-switch__dot--medium t-switch__dot--plain t-switch__dot--disabled"
               >
                 <div
                   class="t-switch__label t-switch__label--medium"
@@ -733,7 +733,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
               class="t-switch t-switch--medium t-switch--checked t-switch--disabled"
             >
               <div
-                class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
+                class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain t-switch__dot--disabled"
               >
                 <div
                   class="t-switch__label t-switch__label--medium t-switch__label--checked"
@@ -1107,19 +1107,19 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
           class="t-switch t-switch--medium t-switch--disabled"
         >
           <div
-            class="t-switch__dot t-switch__dot--medium"
+            class="t-switch__dot t-switch__dot--medium t-switch__dot--disabled"
           >
             <div
               class="t-switch__label t-switch__label--medium"
             >
               <div
-                class="t-loading"
-                style="font-size: 16.25px;"
+                class="t-loading t-switch__loading"
+                style="font-size: 16px;"
               >
                 <svg
                   class="t-loading__gradient t-icon-loading"
                   height="1em"
-                  style="animation-duration: 800ms; width: 16.25px; height: 16.25px;"
+                  style="animation-duration: 800ms; width: 16px; height: 16px;"
                   version="1.1"
                   viewBox="0 0 12 12"
                   width="1em"
@@ -1178,19 +1178,19 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
           class="t-switch t-switch--medium t-switch--checked t-switch--disabled"
         >
           <div
-            class="t-switch__dot t-switch__dot--medium t-switch__dot--checked"
+            class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--disabled"
           >
             <div
               class="t-switch__label t-switch__label--medium t-switch__label--checked"
             >
               <div
-                class="t-loading"
-                style="font-size: 16.25px;"
+                class="t-loading t-switch__loading"
+                style="font-size: 16px;"
               >
                 <svg
                   class="t-loading__gradient t-icon-loading"
                   height="1em"
-                  style="animation-duration: 800ms; width: 16.25px; height: 16.25px;"
+                  style="animation-duration: 800ms; width: 16px; height: 16px;"
                   version="1.1"
                   viewBox="0 0 12 12"
                   width="1em"
@@ -1254,7 +1254,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
           class="t-switch t-switch--medium t-switch--disabled"
         >
           <div
-            class="t-switch__dot t-switch__dot--medium t-switch__dot--plain"
+            class="t-switch__dot t-switch__dot--medium t-switch__dot--plain t-switch__dot--disabled"
           >
             <div
               class="t-switch__label t-switch__label--medium"
@@ -1299,7 +1299,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
           class="t-switch t-switch--medium t-switch--checked t-switch--disabled"
         >
           <div
-            class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
+            class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain t-switch__dot--disabled"
           >
             <div
               class="t-switch__label t-switch__label--medium t-switch__label--checked"

@@ -23,6 +23,7 @@ export default defineComponent({
   props,
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
   setup(props) {
+    const classPrefix = usePrefixClass();
     const dropdownItemClass = usePrefixClass('dropdown-item');
 
     const { globalConfig } = useConfig('dropdownMenu');
@@ -72,8 +73,8 @@ export default defineComponent({
     const styleDropRadio = (value: DropdownValue) => [
       `${dropdownItemClass.value}__radio-item`,
       {
-        [`${prefix}-is-tick`]: !props.multiple,
-        [`${prefix}-is-checked`]: isCheckedRadio(value),
+        [`${classPrefix.value}-is-tick`]: !props.multiple,
+        [`${classPrefix.value}-is-checked`]: isCheckedRadio(value),
       },
     ];
     const popupStyle = computed(() => {

@@ -21,13 +21,14 @@ import props from './props';
 import TTabNavItem from './tab-nav-item';
 import useVModel from '../hooks/useVModel';
 import { preventDefault } from '../shared/dom';
-import CLASSNAMES from '../shared/constants';
 import TSticky from '../sticky';
 import { TdStickyProps } from '../sticky/type';
 import TBadge from '../badge';
 import { useTNodeJSX } from '../hooks/tnode';
-import { TdTabPanelProps } from './type';
+import { TdTabPanelProps, TabValue } from './type';
 import { usePrefixClass } from '../hooks/useClass';
+import { useCommonClassName } from '../hooks/useCommonClassName';
+import { Styles } from '../common';
 
 const { prefix } = config;
 
@@ -37,11 +38,12 @@ export default defineComponent({
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();
     const tabsClass = usePrefixClass('tabs');
+    const { SIZE } = useCommonClassName();
 
     const stickyProps = computed(() => ({ ...(props.stickyProps as TdStickyProps), disabled: !props.sticky }));
     const activeClass = `${tabsClass.value}__item--active`;
     const disabledClass = `${tabsClass.value}__item--disabled`;
-    const tabsClasses = computed(() => [`${tabsClass.value}`, props.size && CLASSNAMES.SIZE[props.size]]);
+    const tabsClasses = computed(() => [`${tabsClass.value}`, props.size && SIZE.value[props.size]]);
     const navClasses = ref([`${tabsClass.value}__nav`]);
     const startX = ref(0);
     const startY = ref(0);
@@ -61,6 +63,7 @@ export default defineComponent({
 
     const { value, modelValue } = toRefs(props);
     const [currentValue, setCurrentValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+    const previousValue = ref<TabValue>();
 
     const itemProps = computed<Array<TdTabPanelProps>>(() => {
       if (props.list) {
@@ -95,14 +98,16 @@ export default defineComponent({
     const navScroll = ref<HTMLElement>();
     const navWrap = ref<HTMLElement>();
     const navLine = ref<HTMLElement>();
-    const lineStyle = ref();
+    const lineStyle = ref<Styles>({
+      opacity: 0,
+    });
     const moveToActiveTab = () => {
       if (navWrap.value && navLine.value && props.showBottomLine) {
         const tab = navWrap.value.querySelector<HTMLElement>(`.${activeClass}`);
         if (!tab) return;
         const line = navLine.value;
         const tabInner = tab.querySelector<HTMLElement>(`.${prefix}-badge`);
-        const style: CSSProperties = {};
+        const style: Styles = { opacity: 1 };
         if (props.bottomLineMode === 'auto') {
           style.width = `${Number(tabInner?.offsetWidth)}px`;
           style.transform = `translateX(${Number(tab?.offsetLeft) + Number(tabInner?.offsetLeft)}px)`;
@@ -115,7 +120,12 @@ export default defineComponent({
           }px)`;
         }
 
-        if (props.animation) {
+        const isInit = previousValue.value === undefined;
+        previousValue.value = currentValue.value;
+
+        if (isInit) {
+          style.transitionDuration = `0s`;
+        } else if (props.animation) {
           style.transitionDuration = `${props.animation.duration}ms`;
         }
 
@@ -151,6 +161,16 @@ export default defineComponent({
       });
     });
 
+    watch(
+      itemProps,
+      () => {
+        nextTick(() => {
+          moveToActiveTab();
+        });
+      },
+      { deep: true },
+    );
+
     const handleTabClick = (event: Event, item: TdTabPanelProps) => {
       const { value, disabled } = item;
       if (disabled || currentValue.value === value) {
@@ -174,6 +194,7 @@ export default defineComponent({
     // 手势滑动开始
     const handleTouchstart = (e: TouchEvent) => {
       if (!props.swipeable) return;
+      canMove.value = true;
       startX.value = e.targetTouches[0].clientX;
       startY.value = e.targetTouches[0].clientY;
     };
@@ -193,12 +214,10 @@ export default defineComponent({
           if (startX.value > endX.value) {
             // 向左划
             if (tabIndex.value >= itemProps.value.length - 1) return;
-            canMove.value = false;
             handleTabClick(e, itemProps.value[tabIndex.value + 1]);
           } else if (startX.value < endX.value) {
             // 向右划
             if (tabIndex.value <= 0) return;
-            canMove.value = false;
             handleTabClick(e, itemProps.value[tabIndex.value - 1]);
           }
         }
@@ -208,7 +227,7 @@ export default defineComponent({
     // 手势滑动结束
     const handleTouchend = () => {
       if (!props.swipeable) return;
-      canMove.value = true;
+      canMove.value = false;
       startX.value = 0;
       endX.value = 0;
       startY.value = 0;

@@ -1,7 +1,5 @@
 import { isNumber } from 'lodash-es';
-import config from '../config';
-
-const { prefix } = config;
+import { usePrefixClass } from '../hooks/useClass';
 
 export function toCamel(str: string): string {
   return str.replace(/^\S/, (m) => m.toUpperCase());
@@ -13,7 +11,8 @@ export const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve
 
 export const uniqueFactory = (compName: string) => {
   let number = 0;
-  return () => `${prefix}-${compName}_${number++}`;
+  const prefixClass = usePrefixClass();
+  return () => `${prefixClass.value}-${compName}_${number++}`;
 };
 
 export const convertUnit = (val: string | number | undefined) => {

@@ -1,6 +1,14 @@
 <template>
   <div>
-    <t-calendar v-model:visible="visible" @close="onClose" @confirm="handleConfirm" @select="handleSelect" />
+    <t-calendar
+      v-model:visible="visible"
+      :min-date="minDate"
+      :max-date="maxDate"
+      :value="defaultDate"
+      @close="onClose"
+      @confirm="handleConfirm"
+      @select="handleSelect"
+    />
     <t-cell title="单个选择日期" arrow :note="dateNote" @click="visible = true" />
   </div>
 </template>
@@ -10,12 +18,17 @@ import { ref } from 'vue';
 
 const visible = ref(false);
 const dateNote = ref('');
-
+const minDate = new Date(2022, 1, 1);
+const maxDate = new Date(2022, 2, 15);
+const defaultDate = new Date(2022, 1, 18);
 const format = (val: Date) => {
   const date = new Date(val);
-  return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+  const year = date.getFullYear();
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const day = date.getDate().toString().padStart(2, '0');
+  return `${year}-${month}-${day}`;
 };
-
+dateNote.value = format(defaultDate);
 const handleConfirm = (val: Date) => {
   console.log(val);
   dateNote.value = format(val);

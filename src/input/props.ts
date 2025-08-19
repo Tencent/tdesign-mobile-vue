@@ -39,7 +39,7 @@ export default {
   },
   /** 是否可清空 */
   clearable: Boolean,
-  /** 光标颜色，默认颜色值 #0052d9 */
+  /** 光标颜色 */
   cursorColor: {
     type: String,
     default: '#0052d9',
@@ -56,6 +56,10 @@ export default {
       if (!val) return true;
       return ['enter', 'done', 'go', 'next', 'previous', 'search', 'send'].includes(val);
     },
+  },
+  /** 右侧额外内容 */
+  extra: {
+    type: Function as PropType<TdInputProps['extra']>,
   },
   /** 指定输入框展示值的格式 */
   format: {
@@ -136,11 +140,11 @@ export default {
   /** 输入框的值 */
   value: {
     type: [String, Number] as PropType<TdInputProps['value']>,
-    default: undefined,
+    default: undefined as TdInputProps['value'],
   },
   modelValue: {
     type: [String, Number] as PropType<TdInputProps['value']>,
-    default: undefined,
+    default: undefined as TdInputProps['value'],
   },
   /** 输入框的值，非受控属性 */
   defaultValue: {
@@ -154,6 +158,6 @@ export default {
   onClear: Function as PropType<TdInputProps['onClear']>,
   /** 获得焦点时触发 */
   onFocus: Function as PropType<TdInputProps['onFocus']>,
-  /** 【暂不支持】字数超出限制时触发 */
+  /** 字数超出限制时触发 */
   onValidate: Function as PropType<TdInputProps['onValidate']>,
 };

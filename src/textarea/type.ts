@@ -18,15 +18,20 @@ export interface TdTextareaProps {
    */
   autofocus?: boolean;
   /**
-   * 是否自动增高，值为 autosize 时，style.height 不生效
+   * 高度自动撑开。 autosize = true 表示组件高度自动撑开，同时，依旧允许手动拖高度。如果设置了 autosize.maxRows 或者 autosize.minRows 则不允许手动调整高度
    * @default false
    */
-  autosize?: boolean;
+  autosize?: boolean | { minRows?: number; maxRows?: number };
   /**
    * 是否显示外边框
    * @default false
    */
   bordered?: boolean;
+  /**
+   * 光标颜色
+   * @default #0052d9
+   */
+  cursorColor?: string;
   /**
    * 是否禁用文本框
    */
@@ -52,7 +57,7 @@ export interface TdTextareaProps {
   /**
    * 用户最多可以输入的字符个数
    */
-  maxlength?: number;
+  maxlength?: string | number;
   /**
    * 名称，HTML 元素原生属性
    * @default ''
@@ -64,7 +69,6 @@ export interface TdTextareaProps {
   placeholder?: string;
   /**
    * 只读状态
-   * @default false
    */
   readonly?: boolean;
   /**

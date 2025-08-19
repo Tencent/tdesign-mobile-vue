@@ -56,7 +56,7 @@ const onClick = (tem: string, txt: string) => {
   props.container?.()?.scrollTo(0, 1200);
 };
 function handleToTop() {
-  console.log('handleToTop');
+  console.log('[handleToTop]');
 }
 </script>
 

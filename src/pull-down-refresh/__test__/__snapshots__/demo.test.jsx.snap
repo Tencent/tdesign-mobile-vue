@@ -11,11 +11,11 @@ exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
   >
     <div
       class="t-pull-down-refresh__tips"
-      style="height: 80px;"
+      style="height: 100px;"
     >
       <div
         class="t-pull-down-refresh__loading"
-        style="transform: translateY(7px); height: 0px; max-height: 66px;"
+        style="transform: translateY(10px); height: 0px; max-height: 80px;"
       >
         <div
           class="t-pull-down-refresh__text"
@@ -394,11 +394,11 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
     >
       <div
         class="t-pull-down-refresh__tips"
-        style="height: 80px;"
+        style="height: 100px;"
       >
         <div
           class="t-pull-down-refresh__loading"
-          style="transform: translateY(7px); height: 0px; max-height: 66px;"
+          style="transform: translateY(10px); height: 0px; max-height: 80px;"
         >
           <div
             class="t-pull-down-refresh__text"

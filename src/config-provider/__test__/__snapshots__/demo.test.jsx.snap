@@ -377,6 +377,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 
                 <th
                   class="t-table__th-type"
+                  data-colkey="type"
                 >
                   <div>
                     Type
@@ -384,6 +385,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 </th>
                 <th
                   class="t-table__th-platform"
+                  data-colkey="platform"
                 >
                   <div>
                     Platform
@@ -391,6 +393,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 </th>
                 <th
                   class="t-table__th-property"
+                  data-colkey="property"
                 >
                   <div>
                     Property
@@ -7016,6 +7019,7 @@ exports[`ConfigProvider > ConfigProvider tableEnVue demo works fine 1`] = `
             
             <th
               class="t-table__th-type"
+              data-colkey="type"
             >
               <div>
                 Type
@@ -7023,6 +7027,7 @@ exports[`ConfigProvider > ConfigProvider tableEnVue demo works fine 1`] = `
             </th>
             <th
               class="t-table__th-platform"
+              data-colkey="platform"
             >
               <div>
                 Platform
@@ -7030,6 +7035,7 @@ exports[`ConfigProvider > ConfigProvider tableEnVue demo works fine 1`] = `
             </th>
             <th
               class="t-table__th-property"
+              data-colkey="property"
             >
               <div>
                 Property

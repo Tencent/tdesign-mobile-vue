@@ -17,7 +17,6 @@ export default function useDefaultValue<T, P extends any[]>(
     Object.prototype.hasOwnProperty.call(vProps, propsName) ||
     Object.prototype.hasOwnProperty.call(vProps, kebabCase(propsName));
 
-  console.log('-isVMP---', isVMP);
   if (isVMP) {
     return [
       value,

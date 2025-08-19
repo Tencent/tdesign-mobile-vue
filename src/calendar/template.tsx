@@ -8,21 +8,17 @@ import {
 } from 'tdesign-icons-vue-next';
 import TButton from '../button';
 import config from '../config';
-import Props from './template-props';
+import props from './template-props';
 import { useTNodeJSX } from '../hooks/tnode';
 import { TdCalendarProps, TDate, TDateType } from './type';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 import { getPrevMonth, getPrevYear, getNextMonth, getNextYear } from './utils';
 
 const { prefix } = config;
-const name = `${prefix}-calendar`;
 
 export default defineComponent({
-  name,
-  components: {
-    TButton,
-  },
-  props: Props,
+  name: `${prefix}-calendar-template`,
+  props,
   emits: ['visible-change'],
   setup(_props, context) {
     const renderTNodeJSX = useTNodeJSX();
@@ -137,7 +133,7 @@ export default defineComponent({
 
     // 选择日期
     const handleSelect = (year: number, month: number, date: number, dateItem: TDate) => {
-      if (dateItem.type === 'disabled') return;
+      if (dateItem.type === 'disabled' || props.readonly) return;
       const selected = new Date(year, month, date);
 
       if (props.type === 'range' && Array.isArray(selectedDate.value)) {
@@ -329,7 +325,7 @@ export default defineComponent({
         return confirmBtn.value;
       }
       if (confirmBtn.value && typeof confirmBtn.value === 'object') {
-        return <t-button block theme="primary" {...confirmBtn.value} onClick={handleConfirm} />;
+        return <TButton block theme="primary" {...confirmBtn.value} onClick={handleConfirm} />;
       }
     };
 

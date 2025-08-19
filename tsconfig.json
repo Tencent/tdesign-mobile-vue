@@ -60,8 +60,7 @@
     "esm",
     "lib",
     "cjs",
-    "site",
-    "global.d.ts"
+    "site"
   ],
   "compileOnSave": false
 }

@@ -125,27 +125,27 @@ const { disabled } = toRefs(props);
 
 // upload
 const onFail = ({ file, e }: { file: UploadFile; e: ProgressEvent }): any => {
-  console.log('---onFail', file, e);
+  console.log('[onFail]', { file, e });
   return null;
 };
 
 const onProgress = ({ file, percent, type, e }: ProgressContext) => {
-  console.log('---onProgress:', file, percent, type, e);
+  console.log('[onProgress]:', { file, percent, type, e });
 };
 const onChangeUpload = (files: Array<UploadFile>, { e, response, trigger, index, file }: UploadChangeContext) => {
-  console.log('====onChange', files, e, response, trigger, index, file);
+  console.log('[onChange]', { files, e, response, trigger, index, file });
 };
 const onPreview = ({ file, e }: { file: UploadFile; e: MouseEvent }) => {
-  console.log('====onPreview', file, e);
+  console.log('[onPreview]', { file, e });
 };
 const onSuccess = ({ file, fileList, response, e }: SuccessContext) => {
-  console.log('====onSuccess', file, fileList, e, response);
+  console.log('[onSuccess]', { file, fileList, e, response });
 };
 const onRemove = ({ index, file, e }: UploadRemoveContext) => {
-  console.log('====onRemove', index, file, e);
+  console.log('[onRemove]', { index, file, e });
 };
 const onSelectChange = (files: Array<UploadFile>) => {
-  console.log('====onSelectChange', files);
+  console.log('[onSelectChange]', files);
 };
 const action = 'https://service-bv448zsw-1257786608.gz.apigw.tencentcs.com/api/upload-demo';
 const files = ref([
@@ -180,20 +180,20 @@ const groupChangeFn = (value: any, context: { e: Event }) => {
 
 const visible = ref(false);
 const onChange = (value: string) => {
-  console.log('change: ', value);
+  console.log('[change] ', value);
 };
 
 const onPick = (value: string) => {
-  console.log('pick: ', value);
+  console.log('[pick] ', value);
 };
 
 const onCancel = () => {
-  console.log('cancel');
+  console.log('[cancel]');
   visible.value = false;
 };
 
 const onConfirm = (value: string) => {
-  console.log('confirm: ', value);
+  console.log('[confirm] ', value);
   formData.birth = value;
   visible.value = false;
 };
@@ -283,15 +283,15 @@ const rateGap = 8;
 
 // form
 const onReset = () => {
-  console.log('===onReset');
+  console.log('[onReset]');
 };
 
 const onSubmit = (e: any) => {
-  console.log('===onSubmit', e);
+  console.log('[onSubmit]', e);
 };
 
 const rules = {
-  name: [{ validator: (val: any) => val.length === 8, message: '只能输入8个字符英文' }],
+  name: [{ pattern: '[a-zA-Z]{8}', validator: (val: any) => val.length === 8, message: '只能输入8个字符英文' }],
   password: [{ validator: (val: any) => val.length > 6, message: '长度大于6个字符' }],
   gender: [{ validator: (val: any) => val !== '', message: '不能为空' }],
   birth: [{ validator: (val: any) => val !== '', message: '不能为空' }],

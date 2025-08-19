@@ -1364,11 +1364,10 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       class="tdesign-mobile-demo-block__slot"
     >
       
-      <!-- &lt;CasCadeDemo /&gt; -->
       
       <div
         class="t-cell"
-        data-v-08f016c6=""
+        data-v-5a52d0f7=""
       >
         <div
           class="t-cell__left"
@@ -1411,7 +1410,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-cell"
-        data-v-08f016c6=""
+        data-v-5a52d0f7=""
       >
         <div
           class="t-cell__left"
@@ -1467,7 +1466,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         
         <div
           class="t-picker"
-          data-v-08f016c6=""
+          data-v-5a52d0f7=""
         >
           <div
             class="t-picker__toolbar"
@@ -1600,14 +1599,14 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
 </div>
 `;
 
-exports[`Picker > Picker titleVue demo works fine 1`] = `
+exports[`Picker > Picker withTitleVue demo works fine 1`] = `
 <div
   data-v-app=""
 >
   
   <div
     class="t-cell"
-    data-v-08f016c6=""
+    data-v-5a52d0f7=""
   >
     <div
       class="t-cell__left"
@@ -1650,7 +1649,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
   </div>
   <div
     class="t-cell"
-    data-v-08f016c6=""
+    data-v-5a52d0f7=""
   >
     <div
       class="t-cell__left"
@@ -1706,7 +1705,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
     
     <div
       class="t-picker"
-      data-v-08f016c6=""
+      data-v-5a52d0f7=""
     >
       <div
         class="t-picker__toolbar"

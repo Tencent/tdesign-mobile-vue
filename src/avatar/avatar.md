@@ -45,16 +45,17 @@ collapsed-item-click | `(context: { e: MouseEvent })` | 点击头像折叠元素
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-avatar-group-margin-left-large | -8px | - 
---td-avatar-group-margin-left-medium | -6px | - 
---td-avatar-group-margin-left-small | -4px | - 
 --td-avatar-bg-color | @brand-color-light-active | - 
---td-avatar-border-color | #fff | - 
---td-avatar-border-width-large | 4px | - 
---td-avatar-border-width-medium | 3px | - 
---td-avatar-border-width-small | 2px | - 
+--td-avatar-border-color | @bg-color-container | - 
+--td-avatar-border-width-large | 3px | - 
+--td-avatar-border-width-medium | 2px | - 
+--td-avatar-border-width-small | 1px | - 
 --td-avatar-circle-border-radius | @radius-circle | - 
 --td-avatar-content-color | @brand-color | - 
+--td-avatar-group-line-spacing | 2px | - 
+--td-avatar-group-margin-left-large | -8px | - 
+--td-avatar-group-margin-left-medium | -8px | - 
+--td-avatar-group-margin-left-small | -8px | - 
 --td-avatar-icon-large-font-size | 32px | - 
 --td-avatar-icon-medium-font-size | 24px | - 
 --td-avatar-icon-small-font-size | 20px | - 
@@ -63,6 +64,6 @@ collapsed-item-click | `(context: { e: MouseEvent })` | 点击头像折叠元素
 --td-avatar-medium-width | 48px | - 
 --td-avatar-round-border-radius | @radius-default | - 
 --td-avatar-small-width | 40px | - 
---td-avatar-text-large-font-size | 16px | - 
---td-avatar-text-medium-font-size | @font-size-base | - 
---td-avatar-text-small-font-size | @font-size-s | -
+--td-avatar-text-large-font-size | @font-size-xl | - 
+--td-avatar-text-medium-font-size | @font-size-m | - 
+--td-avatar-text-small-font-size | @font-size-base | - 

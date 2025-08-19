@@ -28,8 +28,7 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue';
-import { PickerValue } from 'tdesign-mobile-vue';
-import type { PickerColumnItem } from 'tdesign-mobile-vue';
+import type { PickerColumnItem, PickerValue } from 'tdesign-mobile-vue';
 
 const option = (item: PickerColumnItem, index: number) => {
   return item.label;
@@ -72,7 +71,7 @@ const cityOptions = () => {
 const currentYear = Number(new Date().getFullYear());
 const yearOptions = Array.from(new Array(10), (_, index) => {
   return {
-    label: currentYear - index,
+    label: `${currentYear - index}`,
     value: `${currentYear - index}`,
   };
 });
@@ -111,7 +110,7 @@ const onCancel = () => {
   seasonState.show = false;
 };
 
-const onConfirm = (val: string[], context: number[]) => {
+const onConfirm = (val: PickerValue[], context: { index: number[] }) => {
   console.log(val);
   console.log('context', context);
   cityState.show = false;

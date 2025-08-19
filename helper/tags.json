@@ -69,30 +69,6 @@
     ],
     "description": "Badge\n\n徽标数\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/badge)"
   },
-  "t-base-table": {
-    "attributes": [
-      "bordered",
-      "cell-empty-content",
-      "columns",
-      "data",
-      "empty",
-      "fixed-rows",
-      "height",
-      "loading",
-      "loading-props",
-      "max-height",
-      "row-key",
-      "show-header",
-      "stripe",
-      "table-content-width",
-      "table-layout",
-      "vertical-align",
-      "cell-click",
-      "row-click",
-      "scroll"
-    ],
-    "description": "BaseTable\n\n基础表格\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table)"
-  },
   "t-table": {
     "attributes": [
       "bordered",
@@ -105,6 +81,8 @@
       "loading",
       "loading-props",
       "max-height",
+      "row-attributes",
+      "row-class-name",
       "row-key",
       "show-header",
       "stripe",
@@ -139,11 +117,11 @@
   "t-calendar": {
     "attributes": [
       "confirm-btn",
-      "default-visible",
       "first-day-of-week",
       "format",
       "max-date",
       "min-date",
+      "readonly",
       "switch-mode",
       "title",
       "type",
@@ -163,7 +141,9 @@
     "attributes": [
       "check-strictly",
       "close-btn",
+      "header",
       "keys",
+      "middle-content",
       "options",
       "placeholder",
       "sub-titles",
@@ -293,14 +273,15 @@
   "t-color-picker": {
     "attributes": [
       "clearable",
+      "color-modes",
       "enable-alpha",
+      "enable-multiple-gradient",
       "fixed",
       "format",
       "swatch-colors",
       "type",
       "value",
       "change",
-      "close",
       "palette-bar-change"
     ],
     "description": "ColorPicker\n\n颜色选择器\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker)"
@@ -333,11 +314,14 @@
       "confirm-btn",
       "end",
       "filter",
+      "footer",
       "format",
+      "header",
       "mode",
       "render-label",
       "show-week",
       "start",
+      "steps",
       "title",
       "use-popup",
       "value",
@@ -358,10 +342,12 @@
       "confirm-btn",
       "content",
       "destroy-on-close",
+      "middle",
       "overlay-props",
       "prevent-scroll-through",
       "show-overlay",
       "title",
+      "top",
       "visible",
       "width",
       "z-index",
@@ -466,10 +452,13 @@
       "data",
       "disabled",
       "error-message",
+      "id",
       "label-align",
       "label-width",
       "prevent-submit-default",
+      "readonly",
       "required-mark",
+      "required-mark-position",
       "reset-type",
       "rules",
       "scroll-to-first-error",
@@ -542,7 +531,19 @@
     ],
     "description": "Guide\n\n引导\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide)"
   },
-  "t-icon-svg": {
+  "icon-font": {
+    "attributes": [
+      "load-default-icons",
+      "name",
+      "size",
+      "style",
+      "tag",
+      "url",
+      "click"
+    ],
+    "description": "IconFont\n\n图标（IconFont）\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/icon)"
+  },
+  "icon": {
     "attributes": [
       "load-default-icons",
       "name",
@@ -563,18 +564,6 @@
       "click"
     ],
     "description": "IconSVG\n\n图标（IconSVG）\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/icon)"
-  },
-  "t-iconfont": {
-    "attributes": [
-      "load-default-icons",
-      "name",
-      "size",
-      "style",
-      "tag",
-      "url",
-      "click"
-    ],
-    "description": "Iconfont\n\n图标（Iconfont）\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/icon)"
   },
   "t-image": {
     "attributes": [
@@ -611,6 +600,7 @@
   },
   "t-indexes": {
     "attributes": [
+      "current",
       "index-list",
       "sticky",
       "sticky-offset",
@@ -637,6 +627,7 @@
       "cursor-color",
       "disabled",
       "enterkeyhint",
+      "extra",
       "format",
       "label",
       "layout",
@@ -661,13 +652,6 @@
       "validate"
     ],
     "description": "Input\n\n输入框\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/input)"
-  },
-  "t-input-adornment": {
-    "attributes": [
-      "append",
-      "prepend"
-    ],
-    "description": "InputAdornment\n\n输入装饰器\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/input-adornment)"
   },
   "t-link": {
     "attributes": [
@@ -722,10 +706,12 @@
       "close-btn",
       "content",
       "duration",
+      "gap",
       "icon",
       "link",
       "marquee",
       "offset",
+      "single",
       "theme",
       "visible",
       "z-index",
@@ -743,6 +729,7 @@
       "left",
       "left-arrow",
       "right",
+      "safe-area-inset-top",
       "title",
       "title-max-length",
       "visible",
@@ -775,7 +762,11 @@
       "prevent-scroll-through",
       "visible",
       "z-index",
-      "click"
+      "click",
+      "close",
+      "closed",
+      "open",
+      "opened"
     ],
     "description": "Overlay\n\n遮罩层\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/overlay)"
   },
@@ -784,10 +775,12 @@
       "cancel-btn",
       "columns",
       "confirm-btn",
+      "footer",
       "header",
       "keys",
       "option",
       "render-label",
+      "swipe-duration",
       "title",
       "value",
       "cancel",
@@ -796,19 +789,6 @@
       "pick"
     ],
     "description": "Picker\n\n选择器\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/picker)"
-  },
-  "t-picker-item": {
-    "attributes": [
-      "format",
-      "options"
-    ],
-    "description": "PickerItem\n\n选择器选项\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/picker-item)"
-  },
-  "t-popconfirm": {
-    "attributes": [
-      "default"
-    ],
-    "description": "Popconfirm\n\n气泡确认框\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/popconfirm)"
   },
   "t-popover": {
     "attributes": [
@@ -830,6 +810,7 @@
       "close-btn",
       "close-on-overlay-click",
       "destroy-on-close",
+      "duration",
       "overlay-props",
       "placement",
       "prevent-scroll-through",
@@ -850,6 +831,7 @@
       "color",
       "label",
       "percentage",
+      "size",
       "status",
       "stroke-width",
       "theme",
@@ -859,6 +841,7 @@
   },
   "t-pull-down-refresh": {
     "attributes": [
+      "disabled",
       "loading-bar-height",
       "loading-props",
       "loading-texts",
@@ -872,29 +855,24 @@
     ],
     "description": "PullDownRefresh\n\n下拉刷新\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/pull-down-refresh)"
   },
-  "t-radio": {
+  "t-qrcode": {
     "attributes": [
-      "allow-uncheck",
-      "block",
+      "bg-color",
       "borderless",
-      "checked",
-      "content",
-      "content-disabled",
-      "default",
-      "disabled",
+      "color",
       "icon",
-      "label",
-      "max-content-row",
-      "max-label-row",
-      "name",
-      "placement",
-      "readonly",
+      "icon-size",
+      "level",
+      "size",
+      "status",
+      "status-render",
+      "type",
       "value",
-      "change"
+      "refresh"
     ],
-    "description": "Radio\n\n单选框\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/radio)"
+    "description": "QRCode\n\n二维码\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/qrcode)"
   },
-  "t-radio-button": {
+  "t-radio": {
     "attributes": [
       "allow-uncheck",
       "block",
@@ -931,39 +909,6 @@
       "change"
     ],
     "description": "RadioGroup\n\n单选框组\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/radio)"
-  },
-  "t-range-input": {
-    "attributes": [
-      "active-index",
-      "clearable",
-      "disabled",
-      "format",
-      "input-props",
-      "label",
-      "placeholder",
-      "prefix-icon",
-      "readonly",
-      "separator",
-      "status",
-      "suffix",
-      "suffix-icon",
-      "tips",
-      "value",
-      "blur",
-      "change",
-      "clear",
-      "click",
-      "enter",
-      "focus"
-    ],
-    "description": "RangeInput\n\n范围输入框\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/range-input)"
-  },
-  "t-range-input-popup": {
-    "attributes": [
-      "status",
-      "tips"
-    ],
-    "description": "RangeInputPopup\n\n范围输入框触发器\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/range-input)"
   },
   "t-rate": {
     "attributes": [
@@ -1025,14 +970,6 @@
     ],
     "description": "Search\n\n搜索\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/search)"
   },
-  "t-select": {
-    "attributes": [
-      "select-input-props",
-      "tag-input-props",
-      "tag-props"
-    ],
-    "description": "Select\n\n选择器\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/select)"
-  },
   "t-side-bar": {
     "attributes": [
       "value",
@@ -1080,23 +1017,10 @@
     ],
     "description": "Slider\n\n滑块\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/slider)"
   },
-  "t-space": {
-    "attributes": [
-      "align",
-      "break-line",
-      "direction",
-      "separator",
-      "size"
-    ],
-    "description": "Space\n\n间距\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/space)"
-  },
-  "t-statistic": {
-    "attributes": [],
-    "description": "Statistic\n\n统计数值\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/statistic)"
-  },
   "t-step-item": {
     "attributes": [
       "content",
+      "extra",
       "icon",
       "status",
       "title",
@@ -1129,7 +1053,6 @@
       "current-status",
       "layout",
       "readonly",
-      "separator",
       "sequence",
       "theme",
       "change"
@@ -1155,7 +1078,9 @@
       "opened",
       "right",
       "change",
-      "click"
+      "click",
+      "dragend",
+      "dragstart"
     ],
     "description": "SwipeCell\n\n滑动操作\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/swipe-cell)"
   },
@@ -1176,19 +1101,6 @@
       "click"
     ],
     "description": "Swiper\n\n轮播\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/swiper)"
-  },
-  "t-swiper-nav": {
-    "attributes": [
-      "current",
-      "direction",
-      "min-show-num",
-      "pagination-position",
-      "placement",
-      "show-controls",
-      "total",
-      "type"
-    ],
-    "description": "SwiperNav\n\n轮播导航\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/swiper-nav)"
   },
   "t-switch": {
     "attributes": [
@@ -1316,6 +1228,7 @@
   },
   "t-tree-select": {
     "attributes": [
+      "custom-value",
       "height",
       "keys",
       "multiple",
@@ -1329,6 +1242,7 @@
     "attributes": [
       "accept",
       "action",
+      "add-btn",
       "add-content",
       "allow-upload-duplicate-file",
       "auto-upload",
@@ -1346,6 +1260,7 @@
       "method",
       "multiple",
       "preview",
+      "remove-btn",
       "request-method",
       "size-limit",
       "use-mock-progress",

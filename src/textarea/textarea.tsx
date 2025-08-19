@@ -139,7 +139,7 @@ export default defineComponent({
       const textareaAttrs = {
         ref: textareaRef,
         class: textareaInnerClasses.value,
-        style: textareaStyle.value,
+        style: { ...textareaStyle.value, caretColor: props.cursorColor },
         value: innerValue.value,
         name: props.name,
         // maxlength: props.maxlength,

@@ -1,13 +1,15 @@
-import { computed, ComputedRef } from 'vue';
+import { computed, ComputedRef, onMounted, watch } from 'vue';
 import { isNumber, isObject } from 'lodash-es';
 import log from '../_common/js/log';
 import { getCharacterLength, getUnicodeLength, limitUnicodeMaxLength } from '../_common/js/utils/helper';
+import { TdInputProps } from '../input/type';
 
 export interface UseLengthLimitParams {
   value: string;
   maxlength: number;
   maxcharacter: number;
   allowInputOverMax: boolean;
+  onValidate?: TdInputProps['onValidate'];
 }
 
 export default function useLengthLimit(params: ComputedRef<UseLengthLimitParams>) {
@@ -43,6 +45,25 @@ export default function useLengthLimit(params: ComputedRef<UseLengthLimitParams>
     return '';
   });
 
+  const innerStatus = computed(() => {
+    if (limitNumber.value) {
+      const [current, total] = limitNumber.value.split('/');
+      return Number(current) > Number(total) ? 'error' : '';
+    }
+    return '';
+  });
+
+  const onValidateChange = () => {
+    params.value.onValidate?.({
+      error: innerStatus.value ? 'exceed-maximum' : undefined,
+    });
+  };
+
+  watch(innerStatus, onValidateChange);
+
+  onMounted(() => {
+    innerStatus.value && onValidateChange();
+  });
   return {
     limitNumber,
     getValueByLimitNumber,

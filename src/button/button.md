@@ -41,7 +41,7 @@ click | `(e: MouseEvent)` | 点击时触发
 --td-button-danger-color | @font-white-1 | - 
 --td-button-danger-disabled-bg | @error-color-3 | - 
 --td-button-danger-disabled-border-color | @error-color-3 | - 
---td-button-danger-disabled-color | @font-white-1 | - 
+--td-button-danger-disabled-color | @error-color-disabled | - 
 --td-button-danger-outline-active-bg-color | @bg-color-container-active | - 
 --td-button-danger-outline-active-border-color | @error-color-7 | - 
 --td-button-danger-outline-border-color | @button-danger-outline-color | - 
@@ -70,11 +70,11 @@ click | `(e: MouseEvent)` | 点击时触发
 --td-button-extra-small-padding-horizontal | 8px | - 
 --td-button-font-weight | 600 | - 
 --td-button-ghost-border-color | @button-ghost-color | - 
---td-button-ghost-color | @bg-color-container | - 
+--td-button-ghost-color | #fff | - 
 --td-button-ghost-danger-border-color | @error-color | - 
 --td-button-ghost-danger-color | @error-color | - 
 --td-button-ghost-danger-hover-color | @error-color-active | - 
---td-button-ghost-disabled-color | rgba(255, 255, 255, .35) | - 
+--td-button-ghost-disabled-color | @font-white-4 | - 
 --td-button-ghost-hover-color | @font-white-2 | - 
 --td-button-ghost-primary-border-color | @brand-color | - 
 --td-button-ghost-primary-color | @brand-color | - 

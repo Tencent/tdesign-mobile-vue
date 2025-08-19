@@ -1,6 +1,14 @@
 <template>
-  <t-calendar v-model:visible="visible" :value="value" :format="format" :min-date="minDate" :max-date="maxDate" />
-  <t-cell title="自定义文案" arrow @click="visible = true"></t-cell>
+  <t-calendar
+    v-model:visible="visible"
+    :value="value"
+    :format="format"
+    :min-date="minDate"
+    :max-date="maxDate"
+    @confirm="handleConfirm"
+    @select="handleSelect"
+  />
+  <t-cell title="带双行描述的日历" arrow :note="dateNote" @click="visible = true"></t-cell>
 </template>
 
 <script setup lang="ts">
@@ -24,12 +32,10 @@ const format = (day: TDate) => {
   const year = date.getFullYear();
   const month = date.getMonth() + 1;
   const curDate = date.getDate();
-
   day.suffix = '¥60';
-
   if (year === 2022) {
     if (month === 2) {
-      const map = {
+      const map: Record<number, string> = {
         1: '初一',
         2: '初二',
         3: '初三',
@@ -46,11 +52,25 @@ const format = (day: TDate) => {
 
   return day;
 };
-
 const visible = ref(false);
-const value = new Date(2022, 1, 15);
+const value = new Date(2022, 1, 18);
+const dateNote = ref('');
+const formatDate = (val: Date) => {
+  const date = new Date(val);
+  const year = date.getFullYear();
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const day = date.getDate().toString().padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
+dateNote.value = formatDate(value);
+const handleConfirm = (val: Date) => {
+  console.log(val);
+  dateNote.value = formatDate(val);
+};
+const handleSelect = (val: Date) => {
+  console.log(val);
+};
 </script>
-
 <style lang="less">
 .is-holiday:not(.t-calendar__dates-item--selected) {
   color: #e34d59;

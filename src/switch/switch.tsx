@@ -1,7 +1,7 @@
 import { computed, defineComponent, h, toRefs } from 'vue';
 import { isArray, isFunction, isString } from 'lodash-es';
 import TLoading from '../loading';
-import { useToggle } from '../shared';
+import useToggle from '../hooks/useToggle';
 import config from '../config';
 import props from './props';
 import { SwitchValue, TdSwitchProps } from './type';
@@ -38,6 +38,7 @@ export default defineComponent({
       {
         [`${switchClass.value}__dot--checked`]: checked.value,
         [`${switchClass.value}__dot--plain`]: props.label?.length !== 2 && props.icon?.length !== 2 && !props.loading,
+        [`${switchClass.value}__dot--disabled`]: disabled.value || props.loading,
       },
     ]);
     const labelClasses = computed(() => [
@@ -64,7 +65,7 @@ export default defineComponent({
 
     const renderContent = () => {
       if (props.loading) {
-        return <TLoading inherit-color size="16.25px" />;
+        return <TLoading class={`${switchClass.value}__loading`} size="16px" />;
       }
 
       if (isArray(props.label) && props.label.length === 2) {

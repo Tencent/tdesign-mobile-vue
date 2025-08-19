@@ -25,6 +25,5 @@ click | `(context: { e: MouseEvent })` | \-
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-overlay-bg-color | @font-gray-1 | - 
---td-overlay-transition-duration | 300ms | - 
+--td-overlay-bg-color | @mask-active | - 
 --td-overlay-zindex | 1000 | -

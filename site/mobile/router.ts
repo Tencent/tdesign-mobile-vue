@@ -27,7 +27,7 @@ function getDocsRoutes(docs: any[]): RouteRecordRaw[] {
       docsRoutes.push({
         path: `/${item.name}`,
         name: item.name,
-        meta: { title: item.title },
+        meta: { title: item.titleEn },
         component: demoModules[`../../src/${item.name}/demos/mobile.vue`],
       });
     }
@@ -48,8 +48,8 @@ const demoRouteGenerator = (compName, demos, title) => {
 };
 
 // 组件需要多页面展示时，需要多个路由
-demoRouteGenerator('side-bar', ['base', 'switch', 'with-icon', 'custom'], 'SideBar 侧边栏');
-demoRouteGenerator('indexes', ['base', 'custom'], 'Indexes 索引');
+demoRouteGenerator('side-bar', ['base', 'switch', 'with-icon', 'custom'], 'SideBar');
+demoRouteGenerator('indexes', ['base', 'custom'], 'Indexes');
 
 const routes: Array<RouteRecordRaw> = [
   {

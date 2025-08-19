@@ -24,8 +24,8 @@ export const docs = [
         titleEn: 'Overview',
         name: 'overview',
         path: '/mobile-vue/overview',
-        component: () => import('@/_common/docs/mobile/overview.md'),
-        componentEn: () => import('@/_common/docs/mobile/overview.en-US.md'),
+        component: () => import('@docs/overview.md'),
+        componentEn: () => import('@docs/overview.en-US.md'),
       },
     ],
   },
@@ -51,7 +51,7 @@ export const docs = [
         componentEn: () => import('@/_common/docs/mobile/theme.en-US.md'),
       },
       {
-        title: '暗黑模式',
+        title: '深色模式',
         titleEn: 'Dark Mode',
         name: 'dark-mode',
         path: '/mobile-vuet/dark-mode',
@@ -61,7 +61,7 @@ export const docs = [
     ],
   },
   {
-    title: '基础组件',
+    title: '基础',
     titleEn: 'Base',
     type: 'component', // 组件文档
     children: [
@@ -173,7 +173,7 @@ export const docs = [
         title: 'TabBar 标签栏',
         titleEn: 'TabBar',
         name: 'tab-bar',
-        path: '/mobile-vue/components/tabbar',
+        path: '/mobile-vue/components/tab-bar',
         component: () => import('@/tab-bar/tab-bar.md'),
         componentEn: () => import('@/tab-bar/tab-bar.en-US.md'),
       },
@@ -480,11 +480,19 @@ export const docs = [
         component: () => import('@/progress/progress.md'),
         componentEn: () => import('@/progress/progress.en-US.md'),
       },
+      {
+        title: 'QRCode 二维码',
+        titleEn: 'QRCode',
+        name: 'qrcode',
+        path: '/mobile-vue/components/qrcode',
+        component: () => import('@/qrcode/qrcode.md'),
+        componentEn: () => import('@/qrcode/qrcode.en-US.md'),
+      },
     ],
   },
   {
     title: '反馈',
-    titleEn: 'FeedBack',
+    titleEn: 'Feedback',
     type: 'component', // 组件文档
     children: [
       {
@@ -507,7 +515,7 @@ export const docs = [
         title: 'ActionSheet 动作面板',
         titleEn: 'ActionSheet',
         name: 'action-sheet',
-        path: '/mobile-vue/components/actionsheet',
+        path: '/mobile-vue/components/action-sheet',
         component: () => import('@/action-sheet/action-sheet.md'),
         componentEn: () => import('@/action-sheet/action-sheet.en-US.md'),
       },

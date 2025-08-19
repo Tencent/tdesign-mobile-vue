@@ -66,6 +66,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               </div>
               <!---->
             </div>
+            <!---->
           </div>
           
         </div>
@@ -154,6 +155,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               </div>
               <!---->
             </div>
+            <!---->
           </div>
           
         </div>
@@ -358,6 +360,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               </div>
               <!---->
             </div>
+            <!---->
           </div>
           
           <div
@@ -886,6 +889,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               </div>
               <!---->
             </div>
+            <!---->
           </div>
           
           <div
@@ -1394,6 +1398,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 class="t-textarea__wrapper-inner"
                 name=""
                 placeholder="请输入个人简介"
+                style="caret-color: #0052d9;"
               />
               <div
                 class="t-textarea__indicator"
@@ -1847,6 +1852,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     </div>
                     <!---->
                   </div>
+                  <!---->
                 </div>
                 
               </div>
@@ -1935,6 +1941,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     </div>
                     <!---->
                   </div>
+                  <!---->
                 </div>
                 
               </div>
@@ -2139,6 +2146,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     </div>
                     <!---->
                   </div>
+                  <!---->
                 </div>
                 
                 <div
@@ -2667,6 +2675,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     </div>
                     <!---->
                   </div>
+                  <!---->
                 </div>
                 
                 <div
@@ -3175,6 +3184,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       class="t-textarea__wrapper-inner"
                       name=""
                       placeholder="请输入个人简介"
+                      style="caret-color: #0052d9;"
                     />
                     <div
                       class="t-textarea__indicator"
@@ -3493,6 +3503,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               </div>
               <!---->
             </div>
+            <!---->
           </div>
           
         </div>
@@ -3579,6 +3590,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               </div>
               <!---->
             </div>
+            <!---->
           </div>
           
         </div>
@@ -3779,6 +3791,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               </div>
               <!---->
             </div>
+            <!---->
           </div>
           
           <div
@@ -4305,6 +4318,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               </div>
               <!---->
             </div>
+            <!---->
           </div>
           
           <div
@@ -4807,6 +4821,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 class="t-textarea__wrapper-inner"
                 name=""
                 placeholder="请输入个人简介"
+                style="caret-color: #0052d9;"
               />
               <div
                 class="t-textarea__indicator"
@@ -5015,7 +5030,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-button--size-large t-button--light t-button--primary t-button--rectangle"
+      class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
       data-v-39ff7205=""
       role="button"
       type="submit"

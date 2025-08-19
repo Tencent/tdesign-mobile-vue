@@ -34,8 +34,8 @@ index-change | `(index: number, context: { trigger: 'prev' \| 'next' })` | é¢„è§
 -- | -- | --
 --td-image-viewer-close-margin-left | @spacer-1 | - 
 --td-image-viewer-delete-margin-right | @spacer-1 | - 
---td-image-viewer-mask-bg-color | #000 | - 
---td-image-viewer-nav-bg-color | @font-gray-3 | - 
+--td-image-viewer-mask-bg-color | @mask-active | - 
+--td-image-viewer-nav-bg-color | #000 | - 
 --td-image-viewer-nav-color | @font-white-1 | - 
 --td-image-viewer-nav-height | 48px | - 
 --td-image-viewer-nav-index-font-size | @font-size-base | -

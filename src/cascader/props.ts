@@ -13,7 +13,7 @@ export default {
   /** 关闭按钮 */
   closeBtn: {
     type: [Boolean, Function] as PropType<TdCascaderProps['closeBtn']>,
-    default: true,
+    default: true as TdCascaderProps['closeBtn'],
   },
   /** 头部 */
   header: {
@@ -35,7 +35,7 @@ export default {
   /** 未选中时的提示文案 */
   placeholder: {
     type: [String, Function] as PropType<TdCascaderProps['placeholder']>,
-    default: '选择选项',
+    default: '选择选项' as TdCascaderProps['placeholder'],
   },
   /** 每级展示的次标题 */
   subTitles: {
@@ -58,11 +58,11 @@ export default {
   /** 选项值 */
   value: {
     type: [String, Number] as PropType<TdCascaderProps['value']>,
-    default: undefined,
+    default: undefined as TdCascaderProps['value'],
   },
   modelValue: {
     type: [String, Number] as PropType<TdCascaderProps['value']>,
-    default: undefined,
+    default: undefined as TdCascaderProps['value'],
   },
   /** 选项值，非受控属性 */
   defaultValue: {

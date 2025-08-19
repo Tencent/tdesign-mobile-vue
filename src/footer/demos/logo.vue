@@ -1,5 +1,4 @@
 <template>
-  <!-- theme 为 logo -->
   <t-footer :logo="logo" />
 </template>
 

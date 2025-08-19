@@ -87,6 +87,10 @@ export default defineComponent({
       return requiredMark ?? isRequired;
     });
 
+    const requiredMarkPosition = computed(() => {
+      return form?.requiredMarkPosition;
+    });
+
     const hasLabel = computed(() => slots.label || props.label);
     const hasColon = computed(() => !!(form?.colon && hasLabel.value));
     const labelClass = `${formClass.value}__label`;
@@ -98,6 +102,7 @@ export default defineComponent({
       labelClass,
       {
         [`${labelClass}--required`]: needRequiredMark.value,
+        [`${labelClass}--required-right`]: needRequiredMark.value && requiredMarkPosition.value === 'right',
         [`${labelClass}--colon`]: hasColon.value,
         [`${labelClass}--top`]: hasLabel.value && (labelAlign.value === 'top' || !labelWidth.value),
         [`${labelClass}--left`]: labelAlign.value === 'left' && labelWidth.value,
