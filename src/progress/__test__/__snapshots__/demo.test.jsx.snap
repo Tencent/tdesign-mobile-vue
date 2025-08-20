@@ -194,7 +194,7 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
         <div
           class="t-progress__info"
         >
-          80%
+          30%
         </div>
         <svg
           height="112"
@@ -215,7 +215,7 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
             cy="56"
             fill="none"
             r="53"
-            stroke-dasharray="266.4070570244145  66.6017642561036"
+            stroke-dasharray="99.90264638415542  233.10617489636263"
             stroke-linecap="round"
             stroke-width="6"
             transform="matrix(0,-1,1,0,0,112)"
@@ -273,7 +273,7 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
             cy="56"
             fill="none"
             r="53"
-            stroke-dasharray="266.4070570244145  66.6017642561036"
+            stroke-dasharray="99.90264638415542  233.10617489636263"
             stroke-linecap="round"
             stroke-width="6"
             transform="matrix(0,-1,1,0,0,112)"
@@ -331,7 +331,7 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
             cy="56"
             fill="none"
             r="53"
-            stroke-dasharray="266.4070570244145  66.6017642561036"
+            stroke-dasharray="99.90264638415542  233.10617489636263"
             stroke-linecap="round"
             stroke-width="6"
             transform="matrix(0,-1,1,0,0,112)"
@@ -389,87 +389,13 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
             cy="56"
             fill="none"
             r="53"
-            stroke-dasharray="266.4070570244145  66.6017642561036"
+            stroke-dasharray="333.0088212805181  0"
             stroke-linecap="round"
             stroke-width="6"
             transform="matrix(0,-1,1,0,0,112)"
           />
         </svg>
       </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Progress > Progress customVue demo works fine 1`] = `
-<div
-  class="example-progress"
-  data-v-22bbf0e5=""
->
-  <div
-    class="example-progress__item"
-    data-v-22bbf0e5=""
-  >
-    <div
-      class="t-progress"
-      data-v-22bbf0e5=""
-    >
-      <div
-        class="t-progress--thin t-progress--status-default"
-      >
-        <div
-          class="t-progress__bar"
-          style="background-color: rgb(234, 201, 255);"
-        >
-          <div
-            class="t-progress__inner"
-            style="width: 88%; background: rgb(205, 4, 255);"
-          />
-        </div>
-        <div
-          class="t-progress__info"
-        >
-          
-          <span
-            class="label--color"
-            data-v-22bbf0e5=""
-          >
-            88%
-          </span>
-          
-        </div>
-      </div>
-      <!---->
-      <!---->
-    </div>
-  </div>
-  <div
-    class="example-progress__item"
-    data-v-22bbf0e5=""
-  >
-    <div
-      class="t-progress radius--round"
-      data-v-22bbf0e5=""
-    >
-      <div
-        class="t-progress--thin t-progress--status-default"
-      >
-        <div
-          class="t-progress__bar"
-        >
-          <div
-            class="t-progress__inner"
-            style="width: 88%;"
-          />
-        </div>
-        <div
-          class="t-progress__info"
-        >
-          88%
-        </div>
-      </div>
-      <!---->
-      <!---->
     </div>
   </div>
 </div>
@@ -496,13 +422,13 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
         >
           <div
             class="t-progress__inner"
-            style="width: 80%;"
+            style="width: 78%;"
           />
         </div>
         <div
           class="t-progress__info"
         >
-          80%
+          78%
         </div>
       </div>
       <!---->
@@ -525,7 +451,7 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
         >
           <div
             class="t-progress__inner"
-            style="width: 88%;"
+            style="width: 80%;"
           />
         </div>
         <div
@@ -565,7 +491,7 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
         >
           <div
             class="t-progress__inner"
-            style="width: 88%;"
+            style="width: 80%;"
           />
         </div>
         <div
@@ -605,7 +531,7 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
         >
           <div
             class="t-progress__inner"
-            style="width: 88%;"
+            style="width: 80%;"
           />
         </div>
         <div
@@ -623,6 +549,35 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
               fill="currentColor"
             />
           </svg>
+        </div>
+      </div>
+      <!---->
+      <!---->
+    </div>
+  </div>
+  <div
+    class="example-progress__item"
+    data-v-fdfcc2a1=""
+  >
+    <div
+      class="t-progress"
+      data-v-fdfcc2a1=""
+    >
+      <div
+        class="t-progress--thin t-progress--status-default"
+      >
+        <div
+          class="t-progress__bar"
+        >
+          <div
+            class="t-progress__inner"
+            style="width: 78%;"
+          />
+        </div>
+        <div
+          class="t-progress__info"
+        >
+          78%
         </div>
       </div>
       <!---->
@@ -647,7 +602,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     class="summary"
     data-v-973a32c7=""
   >
-    用于展示任务当前的进度
+    用于展示任务当前的进度。
   </p>
   <div
     class="tdesign-mobile-demo-block"
@@ -659,12 +614,12 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        01 类型
+        01 组件类型
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"
       >
-        基础进度条
+        线性进度条
       </p>
     </div>
     <div
@@ -845,193 +800,6 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-973a32c7=""
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        过渡样式
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot with-padding"
-    >
-      
-      <div
-        class="example-progress"
-        data-v-07c66edf=""
-        data-v-973a32c7=""
-      >
-        <div
-          class="t-progress"
-          data-v-07c66edf=""
-        >
-          <div
-            class="t-progress--thin t-progress--status-default"
-          >
-            <div
-              class="t-progress__bar"
-            >
-              <div
-                class="t-progress__inner"
-                style="width: 88%;"
-              />
-            </div>
-            <div
-              class="t-progress__info"
-            >
-              88%
-            </div>
-          </div>
-          <!---->
-          <!---->
-        </div>
-        <div
-          class="button-group"
-          data-v-07c66edf=""
-        >
-          <button
-            aria-disabled="false"
-            class="t-button t-button--size-small t-button--outline t-button--primary t-button--rectangle"
-            data-v-07c66edf=""
-            role="button"
-            type="button"
-          >
-            <!---->
-            <span
-              class="t-button__content"
-            >
-              
-              减少
-              
-            </span>
-            <!---->
-          </button>
-          <div
-            class="space"
-            data-v-07c66edf=""
-          />
-          <button
-            aria-disabled="false"
-            class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
-            data-v-07c66edf=""
-            role="button"
-            type="button"
-          >
-            <!---->
-            <span
-              class="t-button__content"
-            >
-              
-              增加
-              
-            </span>
-            <!---->
-          </button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-973a32c7=""
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        自定义颜色/圆角
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot with-padding"
-    >
-      
-      <div
-        class="example-progress"
-        data-v-22bbf0e5=""
-        data-v-973a32c7=""
-      >
-        <div
-          class="example-progress__item"
-          data-v-22bbf0e5=""
-        >
-          <div
-            class="t-progress"
-            data-v-22bbf0e5=""
-          >
-            <div
-              class="t-progress--thin t-progress--status-default"
-            >
-              <div
-                class="t-progress__bar"
-                style="background-color: rgb(234, 201, 255);"
-              >
-                <div
-                  class="t-progress__inner"
-                  style="width: 88%; background: rgb(205, 4, 255);"
-                />
-              </div>
-              <div
-                class="t-progress__info"
-              >
-                
-                <span
-                  class="label--color"
-                  data-v-22bbf0e5=""
-                >
-                  88%
-                </span>
-                
-              </div>
-            </div>
-            <!---->
-            <!---->
-          </div>
-        </div>
-        <div
-          class="example-progress__item"
-          data-v-22bbf0e5=""
-        >
-          <div
-            class="t-progress radius--round"
-            data-v-22bbf0e5=""
-          >
-            <div
-              class="t-progress--thin t-progress--status-default"
-            >
-              <div
-                class="t-progress__bar"
-              >
-                <div
-                  class="t-progress__inner"
-                  style="width: 88%;"
-                />
-              </div>
-              <div
-                class="t-progress__info"
-              >
-                88%
-              </div>
-            </div>
-            <!---->
-            <!---->
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
     class="tdesign-mobile-demo-block"
     data-v-973a32c7=""
   >
@@ -1074,13 +842,13 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
               >
                 <div
                   class="t-progress__inner"
-                  style="width: 80%;"
+                  style="width: 78%;"
                 />
               </div>
               <div
                 class="t-progress__info"
               >
-                80%
+                78%
               </div>
             </div>
             <!---->
@@ -1103,7 +871,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
               >
                 <div
                   class="t-progress__inner"
-                  style="width: 88%;"
+                  style="width: 80%;"
                 />
               </div>
               <div
@@ -1143,7 +911,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
               >
                 <div
                   class="t-progress__inner"
-                  style="width: 88%;"
+                  style="width: 80%;"
                 />
               </div>
               <div
@@ -1183,7 +951,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
               >
                 <div
                   class="t-progress__inner"
-                  style="width: 88%;"
+                  style="width: 80%;"
                 />
               </div>
               <div
@@ -1201,6 +969,35 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                     fill="currentColor"
                   />
                 </svg>
+              </div>
+            </div>
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <div
+          class="example-progress__item"
+          data-v-fdfcc2a1=""
+        >
+          <div
+            class="t-progress"
+            data-v-fdfcc2a1=""
+          >
+            <div
+              class="t-progress--thin t-progress--status-default"
+            >
+              <div
+                class="t-progress__bar"
+              >
+                <div
+                  class="t-progress__inner"
+                  style="width: 78%;"
+                />
+              </div>
+              <div
+                class="t-progress__info"
+              >
+                78%
               </div>
             </div>
             <!---->
@@ -1271,16 +1068,43 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
           >
             <!---->
             <div
-              class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-warning"
+              class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-success"
             >
               <div
                 class="t-progress__inner"
-                style="width: 88%;"
+                style="width: 100%;"
               >
                 <div
                   class="t-progress__info"
                 >
-                  88%
+                  100%
+                </div>
+              </div>
+              <!---->
+            </div>
+            <!---->
+          </div>
+        </div>
+        <div
+          class="example-progress__item"
+          data-v-119b6ec1=""
+        >
+          <div
+            class="t-progress"
+            data-v-119b6ec1=""
+          >
+            <!---->
+            <div
+              class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-warning"
+            >
+              <div
+                class="t-progress__inner"
+                style="width: 80%;"
+              >
+                <div
+                  class="t-progress__info"
+                >
+                  80%
                 </div>
               </div>
               <!---->
@@ -1302,12 +1126,12 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             >
               <div
                 class="t-progress__inner"
-                style="width: 88%;"
+                style="width: 80%;"
               >
                 <div
                   class="t-progress__info"
                 >
-                  88%
+                  80%
                 </div>
               </div>
               <!---->
@@ -1325,16 +1149,16 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
           >
             <!---->
             <div
-              class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-success"
+              class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-default"
             >
               <div
                 class="t-progress__inner"
-                style="width: 88%;"
+                style="width: 80%;"
               >
                 <div
                   class="t-progress__info"
                 >
-                  88%
+                  80%
                 </div>
               </div>
               <!---->
@@ -1386,7 +1210,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
               <div
                 class="t-progress__info"
               >
-                80%
+                30%
               </div>
               <svg
                 height="112"
@@ -1407,7 +1231,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                   cy="56"
                   fill="none"
                   r="53"
-                  stroke-dasharray="266.4070570244145  66.6017642561036"
+                  stroke-dasharray="99.90264638415542  233.10617489636263"
                   stroke-linecap="round"
                   stroke-width="6"
                   transform="matrix(0,-1,1,0,0,112)"
@@ -1465,7 +1289,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                   cy="56"
                   fill="none"
                   r="53"
-                  stroke-dasharray="266.4070570244145  66.6017642561036"
+                  stroke-dasharray="99.90264638415542  233.10617489636263"
                   stroke-linecap="round"
                   stroke-width="6"
                   transform="matrix(0,-1,1,0,0,112)"
@@ -1523,7 +1347,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                   cy="56"
                   fill="none"
                   r="53"
-                  stroke-dasharray="266.4070570244145  66.6017642561036"
+                  stroke-dasharray="99.90264638415542  233.10617489636263"
                   stroke-linecap="round"
                   stroke-width="6"
                   transform="matrix(0,-1,1,0,0,112)"
@@ -1581,7 +1405,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                   cy="56"
                   fill="none"
                   r="53"
-                  stroke-dasharray="266.4070570244145  66.6017642561036"
+                  stroke-dasharray="333.0088212805181  0"
                   stroke-linecap="round"
                   stroke-width="6"
                   transform="matrix(0,-1,1,0,0,112)"
@@ -1639,16 +1463,43 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
     >
       <!---->
       <div
-        class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-warning"
+        class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-success"
       >
         <div
           class="t-progress__inner"
-          style="width: 88%;"
+          style="width: 100%;"
         >
           <div
             class="t-progress__info"
           >
-            88%
+            100%
+          </div>
+        </div>
+        <!---->
+      </div>
+      <!---->
+    </div>
+  </div>
+  <div
+    class="example-progress__item"
+    data-v-119b6ec1=""
+  >
+    <div
+      class="t-progress"
+      data-v-119b6ec1=""
+    >
+      <!---->
+      <div
+        class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-warning"
+      >
+        <div
+          class="t-progress__inner"
+          style="width: 80%;"
+        >
+          <div
+            class="t-progress__info"
+          >
+            80%
           </div>
         </div>
         <!---->
@@ -1670,12 +1521,12 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
       >
         <div
           class="t-progress__inner"
-          style="width: 88%;"
+          style="width: 80%;"
         >
           <div
             class="t-progress__info"
           >
-            88%
+            80%
           </div>
         </div>
         <!---->
@@ -1693,97 +1544,22 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
     >
       <!---->
       <div
-        class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-success"
+        class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-default"
       >
         <div
           class="t-progress__inner"
-          style="width: 88%;"
+          style="width: 80%;"
         >
           <div
             class="t-progress__info"
           >
-            88%
+            80%
           </div>
         </div>
         <!---->
       </div>
       <!---->
     </div>
-  </div>
-</div>
-`;
-
-exports[`Progress > Progress transitionVue demo works fine 1`] = `
-<div
-  class="example-progress"
-  data-v-07c66edf=""
->
-  <div
-    class="t-progress"
-    data-v-07c66edf=""
-  >
-    <div
-      class="t-progress--thin t-progress--status-default"
-    >
-      <div
-        class="t-progress__bar"
-      >
-        <div
-          class="t-progress__inner"
-          style="width: 88%;"
-        />
-      </div>
-      <div
-        class="t-progress__info"
-      >
-        88%
-      </div>
-    </div>
-    <!---->
-    <!---->
-  </div>
-  <div
-    class="button-group"
-    data-v-07c66edf=""
-  >
-    <button
-      aria-disabled="false"
-      class="t-button t-button--size-small t-button--outline t-button--primary t-button--rectangle"
-      data-v-07c66edf=""
-      role="button"
-      type="button"
-    >
-      <!---->
-      <span
-        class="t-button__content"
-      >
-        
-        减少
-        
-      </span>
-      <!---->
-    </button>
-    <div
-      class="space"
-      data-v-07c66edf=""
-    />
-    <button
-      aria-disabled="false"
-      class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
-      data-v-07c66edf=""
-      role="button"
-      type="button"
-    >
-      <!---->
-      <span
-        class="t-button__content"
-      >
-        
-        增加
-        
-      </span>
-      <!---->
-    </button>
   </div>
 </div>
 `;
