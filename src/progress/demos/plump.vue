@@ -13,7 +13,7 @@
       <t-progress theme="plump" :percentage="80" status="error" />
     </div>
     <div class="example-progress__item">
-      <t-progress theme="plump" :percentage="80" :color="['#0052D9', '#2BA471']" />
+      <t-progress theme="plump" :percentage="80" :color="['#0052D9', '#2BA471']" status="active" />
     </div>
   </div>
 </template>

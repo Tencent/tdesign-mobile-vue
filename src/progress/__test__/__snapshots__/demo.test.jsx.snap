@@ -564,7 +564,7 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
       data-v-fdfcc2a1=""
     >
       <div
-        class="t-progress--thin t-progress--status-default"
+        class="t-progress--thin t-progress--status-active"
       >
         <div
           class="t-progress__bar"
@@ -984,7 +984,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             data-v-fdfcc2a1=""
           >
             <div
-              class="t-progress--thin t-progress--status-default"
+              class="t-progress--thin t-progress--status-active"
             >
               <div
                 class="t-progress__bar"
@@ -1149,7 +1149,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
           >
             <!---->
             <div
-              class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-default"
+              class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-active"
             >
               <div
                 class="t-progress__inner"
@@ -1544,7 +1544,7 @@ exports[`Progress > Progress plumpVue demo works fine 1`] = `
     >
       <!---->
       <div
-        class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-default"
+        class="t-progress__bar t-progress--plump t-progress--over-ten t-progress--status-active"
       >
         <div
           class="t-progress__inner"
