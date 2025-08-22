@@ -132,6 +132,7 @@ class Picker {
     this.height = this.holder.offsetHeight || DEFAULT_HOLDER_HEIGHT;
     this.indicatorOffset = this.itemGroupHeight / 2 - this.itemHeight / 2;
     let curIndex = findIndexOfEnabledOption(this.pickerColumns, this.options.defaultIndex || 0, this.options.keys);
+    if (curIndex !== (this.options.defaultIndex || 0)) this.onChange(curIndex);
     this.itemClassName = `${classPrefix.value}-picker-item__item`;
     this.itemSelectedClassName = `${classPrefix.value}-picker-item__item--active`;
     this.startY = 0;

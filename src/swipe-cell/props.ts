@@ -25,13 +25,13 @@ export default {
   /** 操作项是否呈现为打开态，值为数组时表示分别控制左右滑动的展开和收起状态 */
   opened: {
     type: [Boolean, Array] as PropType<TdSwipeCellProps['opened']>,
-    default: false,
+    default: false as TdSwipeCellProps['opened'],
   },
   /** 右侧滑动操作项。有两种定义方式，一种是使用数组，二种是使用插槽。`right.text` 表示操作文本，`right.className` 表示操作项类名，`right.style` 表示操作项样式，`right.onClick` 表示点击操作项后执行的回调函数。示例：`[{ text: '删除', style: 'background-color: red', onClick: () => {} }]` */
   right: {
     type: [Array, Function] as PropType<TdSwipeCellProps['right']>,
   },
-  /** 菜单展开或者收回后将菜单的状态传递给父组件，值为数组时表示分别控制左右滑动的展开和收起状态。 */
+  /** 菜单展开或者收回后将菜单的状态传递给父组件，值为数组时表示分别控制左右滑动的展开和收起状态 */
   onChange: Function as PropType<TdSwipeCellProps['onChange']>,
   /** 操作项点击时触发（插槽写法组件不触发，业务侧自定义内容和事件） */
   onClick: Function as PropType<TdSwipeCellProps['onClick']>,

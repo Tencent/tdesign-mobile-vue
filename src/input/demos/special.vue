@@ -1,9 +1,5 @@
 <template>
-  <t-input label="输入密码" type="password" default-value="520 TDesign" :clearable="false">
-    <template #suffixIcon>
-      <BrowseOffIcon />
-    </template>
-  </t-input>
+  <t-input label="输入密码" type="password" default-value="520 TDesign" :clearable="false"> </t-input>
   <t-input placeholder="输入验证码" label="验证码">
     <template #suffix>
       <div class="suffix">

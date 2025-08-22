@@ -25,7 +25,7 @@ export default {
   /** 开关内容，[开启时内容，关闭时内容]。示例：['开', '关'] 或 (value) => value ? '开' : '关' */
   label: {
     type: [Array, Function] as PropType<TdSwitchProps['label']>,
-    default: (): TdSwitchProps['label'] => [],
+    default: (): TdSwitchProps['label'] => [] as TdSwitchProps['label'],
   },
   /** 是否处于加载中状态 */
   loading: Boolean,
@@ -41,11 +41,11 @@ export default {
   /** 开关值 */
   value: {
     type: [String, Number, Boolean] as PropType<TdSwitchProps['value']>,
-    default: undefined,
+    default: undefined as TdSwitchProps['value'],
   },
   modelValue: {
     type: [String, Number, Boolean] as PropType<TdSwitchProps['value']>,
-    default: undefined,
+    default: undefined as TdSwitchProps['value'],
   },
   /** 开关值，非受控属性 */
   defaultValue: {

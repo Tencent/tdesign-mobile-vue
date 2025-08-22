@@ -11,18 +11,18 @@ export default {
   /** 取消按钮文字 */
   cancelBtn: {
     type: [String, Boolean] as PropType<TdPickerProps['cancelBtn']>,
-    default: true,
+    default: true as TdPickerProps['cancelBtn'],
   },
   /** 配置每一列的选项 */
   columns: {
     type: [Array, Function] as PropType<TdPickerProps['columns']>,
-    default: (): TdPickerProps['columns'] => [],
+    default: (): TdPickerProps['columns'] => [] as TdPickerProps['columns'],
     required: true,
   },
   /** 确定按钮文字 */
   confirmBtn: {
     type: [String, Boolean] as PropType<TdPickerProps['confirmBtn']>,
-    default: true,
+    default: true as TdPickerProps['confirmBtn'],
   },
   /** 底部内容 */
   footer: {
@@ -47,7 +47,7 @@ export default {
   /** 快速滑动时惯性滚动的时长，单位 ms，为 0 时表示取消惯性滚动 */
   swipeDuration: {
     type: [String, Number] as PropType<TdPickerProps['swipeDuration']>,
-    default: 300,
+    default: 300 as TdPickerProps['swipeDuration'],
   },
   /** 标题 */
   title: {
@@ -57,11 +57,11 @@ export default {
   /** 选中值 */
   value: {
     type: Array as PropType<TdPickerProps['value']>,
-    default: undefined,
+    default: undefined as TdPickerProps['value'],
   },
   modelValue: {
     type: Array as PropType<TdPickerProps['value']>,
-    default: undefined,
+    default: undefined as TdPickerProps['value'],
   },
   /** 选中值，非受控属性 */
   defaultValue: {

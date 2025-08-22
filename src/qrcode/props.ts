@@ -28,7 +28,7 @@ export default {
   /** 二维码中图片的大小 */
   iconSize: {
     type: [Number, Object] as PropType<TdQRCodeProps['iconSize']>,
-    default: 40,
+    default: 40 as TdQRCodeProps['iconSize'],
   },
   /** 二维码纠错等级 */
   level: {

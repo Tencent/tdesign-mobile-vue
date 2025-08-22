@@ -75,7 +75,7 @@ max | Number / Boolean | - | \- | N
 message | String | - | \- | N
 min | Number / Boolean | - | \- | N
 number | Boolean | - | \- | N
-pattern | Object | - | Typescript：`RegExp \| string` | N
+pattern | String / Object | - | Typescript：`RegExp \| string` | N
 required | Boolean | - | \- | N
 telnumber | Boolean | - | \- | N
 trigger | String | change | Typescript：`ValidateTriggerType` | N

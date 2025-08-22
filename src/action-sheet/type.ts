@@ -57,17 +57,17 @@ export interface TdActionSheetProps {
    * 显示与隐藏
    * @default false
    */
-  visible: boolean;
+  visible?: boolean;
   /**
    * 显示与隐藏，非受控属性
    * @default false
    */
-  defaultVisible: boolean;
+  defaultVisible?: boolean;
   /**
    * 显示与隐藏
    * @default false
    */
-  modelValue: boolean;
+  modelValue?: boolean;
   /**
    * 点击取消按钮时触发
    */

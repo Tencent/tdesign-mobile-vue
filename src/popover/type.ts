@@ -43,7 +43,7 @@ export interface TdPopoverProps {
    */
   showArrow?: boolean;
   /**
-   * 弹出气泡主题。
+   * 弹出气泡主题
    * @default dark
    */
   theme?: 'dark' | 'light' | 'brand' | 'success' | 'warning' | 'error';

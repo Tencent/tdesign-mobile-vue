@@ -27,7 +27,7 @@ export default {
   /** 空表格呈现样式，支持全局配置 `GlobalConfigProvider` */
   empty: {
     type: [String, Function] as PropType<TdBaseTableProps['empty']>,
-    default: '',
+    default: '' as TdBaseTableProps['empty'],
   },
   /** 固定行（冻结行），示例：[M, N]，表示冻结表头 M 行和表尾 N 行。M 和 N 值为 0 时，表示不冻结行 */
   fixedRows: {
@@ -40,7 +40,7 @@ export default {
   /** 加载中状态。值为 `true` 会显示默认加载中样式，可以通过 Function 和 插槽 自定义加载状态呈现内容和样式。值为 `false` 则会取消加载状态 */
   loading: {
     type: [Boolean, Function] as PropType<TdBaseTableProps['loading']>,
-    default: undefined,
+    default: undefined as TdBaseTableProps['loading'],
   },
   /** 透传加载组件全部属性 */
   loadingProps: {

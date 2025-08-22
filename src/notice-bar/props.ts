@@ -29,7 +29,7 @@ export default {
   /** 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放 */
   marquee: {
     type: [Boolean, Object] as PropType<TdNoticeBarProps['marquee']>,
-    default: false,
+    default: false as TdNoticeBarProps['marquee'],
   },
   /** 右侧额外信息 */
   operation: {
@@ -38,7 +38,7 @@ export default {
   /** 用于自定义公告栏前面的图标，优先级大于 theme 设定的图标。值为 false 则不显示图标，值为 true 显示 theme 设定图标 */
   prefixIcon: {
     type: [Boolean, Function] as PropType<TdNoticeBarProps['prefixIcon']>,
-    default: true,
+    default: true as TdNoticeBarProps['prefixIcon'],
   },
   /** 后缀图标 */
   suffixIcon: {
