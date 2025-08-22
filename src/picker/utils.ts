@@ -26,7 +26,8 @@ export function findIndexOfEnabledOption(options: PickerColumn, startIndex: numb
   }
 
   // 双向搜索
-  for (let i = 0; i <= Math.max(limitStartIndex, options.length - limitStartIndex); i++) {
+  const maxOffset = Math.max(limitStartIndex, options.length - 1 - limitStartIndex);
+  for (let i = 0; i <= maxOffset; i++) {
     // Forward Search
     const forwardIdx = limitStartIndex + i;
     if (forwardIdx < options.length && !lodashGet(options[forwardIdx], disabledKey)) {
