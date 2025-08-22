@@ -18,8 +18,7 @@ export default function siteMetadata() {
     }
   }
 
-  if (!commitHash) commitHash = 'unknown';
-
+  console.log('process.envh:', process.env);
   return {
     name: 'site-metadata',
     config() {
