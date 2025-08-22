@@ -1395,7 +1395,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               class="t-textarea__wrapper"
             >
               <textarea
-                class="t-textarea__wrapper-inner"
+                class="t-textarea__wrapper-inner t-textarea__placeholder"
                 name=""
                 placeholder="请输入个人简介"
                 style="caret-color: #0052d9;"
@@ -3181,7 +3181,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     class="t-textarea__wrapper"
                   >
                     <textarea
-                      class="t-textarea__wrapper-inner"
+                      class="t-textarea__wrapper-inner t-textarea__placeholder"
                       name=""
                       placeholder="请输入个人简介"
                       style="caret-color: #0052d9;"
@@ -4818,7 +4818,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               class="t-textarea__wrapper"
             >
               <textarea
-                class="t-textarea__wrapper-inner"
+                class="t-textarea__wrapper-inner t-textarea__placeholder"
                 name=""
                 placeholder="请输入个人简介"
                 style="caret-color: #0052d9;"
