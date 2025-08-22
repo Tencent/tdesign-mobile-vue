@@ -17,24 +17,27 @@ export const limitNumberInRange = (num: number, min: number, max: number): numbe
 
 export function findIndexOfEnabledOption(options: PickerColumn, startIndex: number, keys?: KeysType): number {
   // 确保起始索引在合法范围内
-  const limitStartIndex = limitNumberInRange(startIndex, 0, options.length - 1);
+  const limitStartIndex = limitNumberInRange(startIndex, 0, Math.max(options.length - 1, 0));
+  const disabledKey = keys?.disabled ?? 'disabled';
 
-  // Forward Search
-  const forwardIndex = options.findIndex(
-    (opt, idx) => !lodashGet(opt, keys?.disabled ?? 'disabled') && idx >= limitStartIndex,
-  );
-  if (forwardIndex !== -1) {
-    return forwardIndex;
+  // 检查 limitStartIndex 是否已经是有效选项，若是直接返回
+  if (!lodashGet(options[limitStartIndex], disabledKey)) {
+    return limitStartIndex;
   }
 
-  // Backward Search
-  const backwardIndex = options
-    .slice(0, limitStartIndex)
-    .reverse()
-    .findIndex((opt) => !lodashGet(opt, keys?.disabled ?? 'disabled'));
-  if (backwardIndex !== -1) {
-    return limitStartIndex - 1 - backwardIndex;
-  }
+  // 双向搜索
+  for (let i = 0; i <= Math.max(limitStartIndex, options.length - limitStartIndex); i++) {
+    // Forward Search
+    const forwardIdx = limitStartIndex + i;
+    if (forwardIdx < options.length && !lodashGet(options[forwardIdx], disabledKey)) {
+      return forwardIdx;
+    }
 
+    // Backward Search
+    const backwardIdx = limitStartIndex - i;
+    if (backwardIdx >= 0 && !lodashGet(options[backwardIdx], disabledKey)) {
+      return backwardIdx;
+    }
+  }
   return 0;
 }
