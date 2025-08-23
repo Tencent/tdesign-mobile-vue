@@ -37,6 +37,8 @@ export default defineComponent({
     ]);
 
     const handleClick = (e: MouseEvent) => {
+      // eslint-disable-next-line no-console
+      console.log('111');
       if (!props.loading && !isDisabled.value) {
         props.onClick?.(e);
       } else {
@@ -69,7 +71,7 @@ export default defineComponent({
           onClick={handleClick}
           v-hover={{ className: `${buttonClass.value}--hover`, disabledHover: hoverDisabled.value }}
         >
-          1{readerIcon()}
+          {readerIcon()}
           {readerContent()}
           {suffix}
         </button>
