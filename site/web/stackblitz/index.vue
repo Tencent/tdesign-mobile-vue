@@ -51,7 +51,13 @@ export default defineComponent({
       viteConfigContent,
       packageJSONContent,
     };
-
+    const match = window.location.hostname.match(/preview-pr-(\d+)-tdesign-mobile-vue.surge.sh/);
+    if (match) {
+      const packageJSON = JSON.parse(packageJSONContent);
+      packageJSON.dependencies['tdesign-mobile-vue'] =
+        `https://pkg.pr.new/Tencent/tdesign-mobile-vue/tdesign-mobile-vue@${match[1]}`;
+      data.packageJSONContent = JSON.stringify(packageJSON, null, 2);
+    }
     const formRef = ref(null);
 
     const submit = () => {
