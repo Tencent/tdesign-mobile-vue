@@ -69,7 +69,7 @@ export default defineComponent({
           onClick={handleClick}
           v-hover={{ className: `${buttonClass.value}--hover`, disabledHover: hoverDisabled.value }}
         >
-          {readerIcon()}
+          1{readerIcon()}
           {readerContent()}
           {suffix}
         </button>
