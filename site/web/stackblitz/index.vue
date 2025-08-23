@@ -51,14 +51,12 @@ export default defineComponent({
       viteConfigContent,
       packageJSONContent,
     };
-
-    if (window.location.hostname.endsWith('tdesign-mobile-vue.surge.sh')) {
-      if (__SITE_METADATA__?.commitHash) {
-        const packageJSON = JSON.parse(packageJSONContent);
-        packageJSON.dependencies['tdesign-mobile-vue'] =
-          `https://pkg.pr.new/Tencent/tdesign-mobile-vue/tdesign-mobile-vue@${__SITE_METADATA__.commitHash}`;
-        data.packageJSONContent = JSON.stringify(packageJSON, null, 2);
-      }
+    const match = window.location.hostname.match(/preview-pr-(\d+)-tdesign-mobile-vue.surge.sh/);
+    if (match) {
+      const packageJSON = JSON.parse(packageJSONContent);
+      packageJSON.dependencies['tdesign-mobile-vue'] =
+        `https://pkg.pr.new/Tencent/tdesign-mobile-vue/tdesign-mobile-vue@${match[1]}`;
+      data.packageJSONContent = JSON.stringify(packageJSON, null, 2);
     }
     const formRef = ref(null);
 
