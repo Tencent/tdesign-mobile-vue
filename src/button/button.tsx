@@ -37,8 +37,6 @@ export default defineComponent({
     ]);
 
     const handleClick = (e: MouseEvent) => {
-      // eslint-disable-next-line no-console
-      console.log('111');
       if (!props.loading && !isDisabled.value) {
         props.onClick?.(e);
       } else {
