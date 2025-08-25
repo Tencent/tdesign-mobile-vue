@@ -11,7 +11,7 @@ import {
 } from './type';
 import props from './props';
 import { FormInjectionKey, FormItemContext } from './const';
-import { FormDisabledProvider } from './hooks';
+import { FormDisabledProvider, FormReadonlyProvider } from './hooks';
 import config from '../config';
 import { renderContent } from '../shared';
 import { preventDefault } from '../shared/dom';
@@ -45,6 +45,7 @@ export default defineComponent({
     const renderTNodeJSX = useTNodeJSX();
     const {
       disabled,
+      readonly,
       showErrorMessage,
       labelWidth,
       labelAlign,
@@ -63,6 +64,9 @@ export default defineComponent({
 
     provide<FormDisabledProvider>('formDisabled', {
       disabled,
+    });
+    provide<FormReadonlyProvider>('formReadonly', {
+      readonly,
     });
 
     provide(

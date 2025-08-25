@@ -5,6 +5,7 @@ import props from './props';
 import { useTNodeJSX } from '../hooks/tnode';
 import TCalendarTemplate from './template';
 import { usePrefixClass } from '../hooks/useClass';
+import { useFormReadonly } from '../form/hooks';
 
 const { prefix } = config;
 
@@ -17,8 +18,9 @@ export default defineComponent({
 
     const calendarTemplateRef = ref();
     const renderTNodeJSX = useTNodeJSX();
+    const isReadonly = useFormReadonly();
 
-    provide('templateProps', reactive(props));
+    provide('templateProps', { ...reactive(props), readonly: isReadonly.value });
     const selectedValueIntoView = () => {
       const type = props.type === 'range' ? 'start' : 'selected';
       const { templateRef } = calendarTemplateRef.value;
