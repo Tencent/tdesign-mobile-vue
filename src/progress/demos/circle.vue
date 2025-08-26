@@ -1,16 +1,16 @@
 <template>
   <div class="example-progress">
     <div class="example-progress__item">
-      <t-progress theme="circle" :percentage="80" />
+      <t-progress theme="circle" :percentage="30" />
     </div>
     <div class="example-progress__item">
-      <t-progress theme="circle" :percentage="80" status="warning" />
+      <t-progress theme="circle" :percentage="30" status="warning" />
     </div>
     <div class="example-progress__item">
-      <t-progress theme="circle" :percentage="80" status="error" />
+      <t-progress theme="circle" :percentage="30" status="error" />
     </div>
     <div class="example-progress__item">
-      <t-progress theme="circle" :percentage="80" status="success" />
+      <t-progress theme="circle" :percentage="100" status="success" />
     </div>
   </div>
 </template>

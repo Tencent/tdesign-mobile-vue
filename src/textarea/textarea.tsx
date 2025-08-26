@@ -31,6 +31,7 @@ export default defineComponent({
     ]);
     const textareaInnerClasses = computed(() => [
       `${textareaClass.value}__wrapper-inner`,
+      `${textareaClass.value}__placeholder`,
       {
         [`${textareaClass.value}--disabled`]: isDisabled.value,
         [`${textareaClass.value}--readonly`]: props.readonly,
