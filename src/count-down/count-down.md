@@ -25,6 +25,7 @@ finish | \- | 倒计时结束时触发
 
 
 
+
 ### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。
@@ -34,4 +35,4 @@ finish | \- | 倒计时结束时触发
 --td-countdown-round-border-radius | @radius-circle | - 
 --td-countdown-square-border-radius | @radius-small | - 
 --td-countdown-bg-color | @error-color-6 | - 
---td-countdown-round-color | @text-color-anti | - 
+--td-countdown-round-color | @text-color-anti | -
