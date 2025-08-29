@@ -4,7 +4,7 @@ import config from '../config';
 import props from './props';
 import { TdRadioGroupProps, TdRadioProps } from './type';
 import useVModel from '../hooks/useVModel';
-import { useFormDisabled } from '../form/hooks';
+import { useFormDisabled, useFormReadonly } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 
@@ -14,7 +14,7 @@ export default defineComponent({
   name: `${prefix}-radio`,
   props,
   emits: ['update:checked', 'update:modelValue', 'change'],
-  setup(props, context) {
+  setup(props) {
     const renderTNodeContent = useContent();
     const renderTNodeJSX = useTNodeJSX();
     const radioClass = usePrefixClass('radio');
@@ -35,6 +35,9 @@ export default defineComponent({
     const groupDisabled = computed(() => rootGroupProps?.disabled);
     const isDisabled = useFormDisabled(groupDisabled);
 
+    const groupReadonly = computed(() => rootGroupProps?.readonly);
+    const isReadonly = useFormReadonly(groupReadonly);
+
     const radioChecked = computed(() =>
       rootGroupValue?.value !== undefined ? props.value === rootGroupValue?.value : innerChecked.value,
     );
@@ -50,14 +53,12 @@ export default defineComponent({
 
     const finalAllowUncheck = computed(() => Boolean(props.allowUncheck || rootGroupProps?.allowUncheck));
 
-    const finalReadonly = computed(() => Boolean(props.readonly || rootGroupProps?.readonly));
-
     // input props attribute
     const inputProps = computed(() => ({
       name: rootGroupProps.name || props.name,
       checked: radioChecked.value,
       disabled: isDisabled.value,
-      readonly: finalReadonly.value,
+      readonly: isReadonly.value,
       value: props.value,
     }));
 
@@ -102,7 +103,7 @@ export default defineComponent({
     };
 
     const radioOrgChange = (e: Event) => {
-      if (isDisabled.value || finalReadonly.value) {
+      if (isDisabled.value || isReadonly.value) {
         return;
       }
       if (rootGroupChange) {
