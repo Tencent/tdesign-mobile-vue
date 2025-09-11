@@ -22,7 +22,8 @@ export function useCountDown(props: TdUseCountDownProps, visibility?: Ref<boolea
 
   visibility &&
     watch(visibility, (val) => {
-      if (val) {
+      if (val && autoStart) {
+        // 默认不开启倒计时才记录隐藏的时间
         count.value -= Date.now() - hiddenTime;
         rafFn();
       } else {
