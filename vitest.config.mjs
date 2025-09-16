@@ -2,7 +2,7 @@ import { defineConfig } from 'vitest/config';
 import path from 'path';
 import { mergeConfig } from 'vite';
 
-import viteConfig from './site/vite.config';
+import viteConfig from './site/vite.config.mjs';
 
 const testSnap = process.env.NODE_ENV === 'test-snap';
 
