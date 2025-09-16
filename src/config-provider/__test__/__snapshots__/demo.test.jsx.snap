@@ -100,12 +100,14 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-loading t-upload__progress-loading"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
                   d="M12 2.25C6.61556 2.25 2.25 6.61556 2.25 12C2.25 17.3844 6.61556 21.75 12 21.75V19.3125C7.96142 19.3125 4.6875 16.0386 4.6875 12C4.6875 7.96142 7.96142 4.6875 12 4.6875C16.0386 4.6875 19.3125 7.96142 19.3125 12H21.75C21.75 6.61556 17.3844 2.25 12 2.25Z"
                   fill="currentColor"
+                  id="loading"
                 />
               </svg>
               <div
@@ -120,13 +122,21 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                fill="currentColor"
-              />
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
           <div
@@ -183,12 +193,14 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-loading t-upload__progress-loading"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
                 <path
                   d="M12 2.25C6.61556 2.25 2.25 6.61556 2.25 12C2.25 17.3844 6.61556 21.75 12 21.75V19.3125C7.96142 19.3125 4.6875 16.0386 4.6875 12C4.6875 7.96142 7.96142 4.6875 12 4.6875C16.0386 4.6875 19.3125 7.96142 19.3125 12H21.75C21.75 6.61556 17.3844 2.25 12 2.25Z"
                   fill="currentColor"
+                  id="loading"
                 />
               </svg>
               <div
@@ -203,13 +215,21 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                fill="currentColor"
-              />
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
           <div
@@ -265,13 +285,33 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-close-circle"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <path
-                  d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM7.40347 15.1823L10.5858 12L7.40347 8.81768L8.81768 7.40347L12 10.5858L15.1816 7.40415L16.5959 8.81836L13.4142 12L16.5959 15.1816L15.1816 16.5959L12 13.4142L8.81768 16.5965L7.40347 15.1823Z"
-                  fill="currentColor"
-                />
+                <g
+                  id="close-circle"
+                >
+                  <path
+                    d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                    fill="transparent"
+                    id="fill1"
+                  />
+                  <path
+                    d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
+                    id="stroke2"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
               </svg>
               <div
                 class="t-upload__progress-text"
@@ -283,13 +323,21 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                fill="currentColor"
-              />
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
           
@@ -303,13 +351,21 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-add"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <path
-                  d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
-                  fill="currentColor"
-                />
+                <g
+                  id="add"
+                >
+                  <path
+                    d="M12 5L12 19M19 12L5 12"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -474,6 +530,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
@@ -492,6 +549,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
@@ -510,6 +568,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
@@ -528,6 +587,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
@@ -546,6 +606,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-star-filled"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
@@ -593,13 +654,21 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               class="t-icon t-icon-close t-calendar__close-btn"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                fill="currentColor"
-              />
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
             <!---->
             <div
@@ -3163,13 +3232,21 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -3746,6 +3823,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -3764,6 +3842,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -3782,6 +3861,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -3800,6 +3880,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -3818,6 +3899,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
             class="t-icon t-icon-star-filled"
             fill="none"
             height="1em"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -3865,13 +3947,21 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
           class="t-icon t-icon-close t-calendar__close-btn"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-            fill="currentColor"
-          />
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
         <!---->
         <div
@@ -6435,13 +6525,21 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-            fill="currentColor"
-          />
+          <g
+            id="chevron-right"
+          >
+            <path
+              d="M9.5 17.5L15 12L9.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
     </div>
@@ -7139,12 +7237,14 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
             class="t-icon t-icon-loading t-upload__progress-loading"
             fill="none"
             height="1em"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
             <path
               d="M12 2.25C6.61556 2.25 2.25 6.61556 2.25 12C2.25 17.3844 6.61556 21.75 12 21.75V19.3125C7.96142 19.3125 4.6875 16.0386 4.6875 12C4.6875 7.96142 7.96142 4.6875 12 4.6875C16.0386 4.6875 19.3125 7.96142 19.3125 12H21.75C21.75 6.61556 17.3844 2.25 12 2.25Z"
               fill="currentColor"
+              id="loading"
             />
           </svg>
           <div
@@ -7159,13 +7259,21 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-            fill="currentColor"
-          />
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
       <div
@@ -7222,12 +7330,14 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
             class="t-icon t-icon-loading t-upload__progress-loading"
             fill="none"
             height="1em"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
             <path
               d="M12 2.25C6.61556 2.25 2.25 6.61556 2.25 12C2.25 17.3844 6.61556 21.75 12 21.75V19.3125C7.96142 19.3125 4.6875 16.0386 4.6875 12C4.6875 7.96142 7.96142 4.6875 12 4.6875C16.0386 4.6875 19.3125 7.96142 19.3125 12H21.75C21.75 6.61556 17.3844 2.25 12 2.25Z"
               fill="currentColor"
+              id="loading"
             />
           </svg>
           <div
@@ -7242,13 +7352,21 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-            fill="currentColor"
-          />
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
       <div
@@ -7304,13 +7422,33 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
             class="t-icon t-icon-close-circle"
             fill="none"
             height="1em"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <path
-              d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM7.40347 15.1823L10.5858 12L7.40347 8.81768L8.81768 7.40347L12 10.5858L15.1816 7.40415L16.5959 8.81836L13.4142 12L16.5959 15.1816L15.1816 16.5959L12 13.4142L8.81768 16.5965L7.40347 15.1823Z"
-              fill="currentColor"
-            />
+            <g
+              id="close-circle"
+            >
+              <path
+                d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                fill="transparent"
+                id="fill1"
+              />
+              <path
+                d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                id="stroke1"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+              <path
+                d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
+                id="stroke2"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
           </svg>
           <div
             class="t-upload__progress-text"
@@ -7322,13 +7460,21 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-            fill="currentColor"
-          />
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
       
@@ -7342,13 +7488,21 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
             class="t-icon t-icon-add"
             fill="none"
             height="1em"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <path
-              d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
-              fill="currentColor"
-            />
+            <g
+              id="add"
+            >
+              <path
+                d="M12 5L12 19M19 12L5 12"
+                id="stroke1"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
           </svg>
         </div>
       </div>

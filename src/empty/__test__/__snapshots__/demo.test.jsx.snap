@@ -14,6 +14,7 @@ exports[`Empty > Empty baseVue demo works fine 1`] = `
         class="t-icon t-icon-info-circle-filled"
         fill="none"
         height="1em"
+        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
@@ -47,6 +48,7 @@ exports[`Empty > Empty buttonEmptyVue demo works fine 1`] = `
         class="t-icon t-icon-info-circle-filled"
         fill="none"
         height="1em"
+        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
@@ -191,6 +193,7 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
               class="t-icon t-icon-info-circle-filled"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
@@ -318,6 +321,7 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
               class="t-icon t-icon-info-circle-filled"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >

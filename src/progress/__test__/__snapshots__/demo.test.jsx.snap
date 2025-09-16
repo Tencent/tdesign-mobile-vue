@@ -245,13 +245,21 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
             class="t-icon t-icon-error t-progress__icon"
             fill="none"
             height="1em"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <path
-              d="M13 2L13 16.5H11L11 2L13 2ZM11 19H13.0039V21.0039H11V19Z"
-              fill="currentColor"
-            />
+            <g
+              id="error"
+            >
+              <path
+                d="M12 3L12 15.5M12 20H12.0039V20.0039H12V20Z"
+                id="stroke1"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
           </svg>
         </div>
         <svg
@@ -303,13 +311,21 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
             class="t-icon t-icon-close t-progress__icon"
             fill="none"
             height="1em"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <path
-              d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-              fill="currentColor"
-            />
+            <g
+              id="close"
+            >
+              <path
+                d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                id="stroke1"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
           </svg>
         </div>
         <svg
@@ -361,13 +377,21 @@ exports[`Progress > Progress circleVue demo works fine 1`] = `
             class="t-icon t-icon-check t-progress__icon"
             fill="none"
             height="1em"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <path
-              d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
-              fill="currentColor"
-            />
+            <g
+              id="check"
+            >
+              <path
+                d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                id="stroke1"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
           </svg>
         </div>
         <svg
@@ -461,6 +485,7 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
             class="t-icon t-icon-error-circle-filled t-progress__icon"
             fill="none"
             height="1em"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -501,6 +526,7 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
             class="t-icon t-icon-error-circle-filled t-progress__icon"
             fill="none"
             height="1em"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -541,6 +567,7 @@ exports[`Progress > Progress lineVue demo works fine 1`] = `
             class="t-icon t-icon-check-circle-filled t-progress__icon"
             fill="none"
             height="1em"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -881,6 +908,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-error-circle-filled t-progress__icon"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
@@ -921,6 +949,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-error-circle-filled t-progress__icon"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
@@ -961,6 +990,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-check-circle-filled t-progress__icon"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
@@ -1261,13 +1291,21 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-error t-progress__icon"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <path
-                    d="M13 2L13 16.5H11L11 2L13 2ZM11 19H13.0039V21.0039H11V19Z"
-                    fill="currentColor"
-                  />
+                  <g
+                    id="error"
+                  >
+                    <path
+                      d="M12 3L12 15.5M12 20H12.0039V20.0039H12V20Z"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
                 </svg>
               </div>
               <svg
@@ -1319,13 +1357,21 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-close t-progress__icon"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <path
-                    d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                    fill="currentColor"
-                  />
+                  <g
+                    id="close"
+                  >
+                    <path
+                      d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
                 </svg>
               </div>
               <svg
@@ -1377,13 +1423,21 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-check t-progress__icon"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <path
-                    d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
-                    fill="currentColor"
-                  />
+                  <g
+                    id="check"
+                  >
+                    <path
+                      d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
                 </svg>
               </div>
               <svg
