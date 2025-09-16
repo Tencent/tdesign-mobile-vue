@@ -10,7 +10,6 @@ import '@tdesign/site-components/lib/styles/prism-theme-dark.less';
 import '@tdesign/site-components/lib/styles/prism-theme.less';
 import '@tdesign/site-components/lib/styles/style.css';
 
-import 'tdesign-icons-view';
 import 'tdesign-theme-generator';
 
 import App from './app.vue';
