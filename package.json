@@ -27,7 +27,7 @@
     "build:tsc-cjs": "vue-tsc --declaration --emitDeclarationOnly -p tsconfig.build.json --outDir cjs/",
     "site": "cd site && vite build",
     "site:intranet": "cd site && vite build --mode intranet",
-    "site:preview": "cd site && cross-env NODE_ENV=development vite build --mode preview",
+    "site:preview": "cd site && vite build --mode preview",
     "postsite:preview": "cp _site/index.html _site/404.html",
     "test": "npm run test:unit && npm run test:snap",
     "test:unit": "vitest run",
