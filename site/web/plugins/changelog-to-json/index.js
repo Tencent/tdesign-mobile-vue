@@ -19,7 +19,7 @@ export default function changelog2Json() {
     },
     async closeBundle() {
       // 生产构建时写入物理文件
-      if (process.env.NODE_ENV === 'production') {
+      if (['production', 'preview'].includes(process.env.NODE_ENV)) {
         const json = await generateChangelogJson(changelogPath, 'mobile');
         await promises.writeFile(outputPath, JSON.stringify(json));
       }
