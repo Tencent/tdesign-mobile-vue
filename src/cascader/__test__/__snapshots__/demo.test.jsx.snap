@@ -40,13 +40,21 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-            fill="currentColor"
-          />
+          <g
+            id="chevron-right"
+          >
+            <path
+              d="M9.5 17.5L15 12L9.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
     </div>
@@ -79,14 +87,21 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
           class="t-icon t-icon-close"
           fill="none"
           height="1em"
-          style="font-size: 24px;"
+          style="fill: none; font-size: 24px;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-            fill="currentColor"
-          />
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
       <!---->
@@ -112,13 +127,21 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right t-cascader__step-arrow"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
           
@@ -258,13 +281,21 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-            fill="currentColor"
-          />
+          <g
+            id="chevron-right"
+          >
+            <path
+              d="M9.5 17.5L15 12L9.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
     </div>
@@ -325,13 +356,21 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right t-cascader__step-arrow"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
           
@@ -470,13 +509,21 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-            fill="currentColor"
-          />
+          <g
+            id="chevron-right"
+          >
+            <path
+              d="M9.5 17.5L15 12L9.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
     </div>
@@ -509,14 +556,21 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
           class="t-icon t-icon-close"
           fill="none"
           height="1em"
-          style="font-size: 24px;"
+          style="fill: none; font-size: 24px;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-            fill="currentColor"
-          />
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
       <!---->
@@ -542,13 +596,21 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right t-cascader__step-arrow"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
           
@@ -687,13 +749,21 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-            fill="currentColor"
-          />
+          <g
+            id="chevron-right"
+          >
+            <path
+              d="M9.5 17.5L15 12L9.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
     </div>
@@ -726,14 +796,21 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
           class="t-icon t-icon-close"
           fill="none"
           height="1em"
-          style="font-size: 24px;"
+          style="fill: none; font-size: 24px;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-            fill="currentColor"
-          />
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
       <!---->
@@ -759,13 +836,21 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right t-cascader__step-arrow"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
           
@@ -905,13 +990,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -944,14 +1037,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-close"
               fill="none"
               height="1em"
-              style="font-size: 24px;"
+              style="fill: none; font-size: 24px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                fill="currentColor"
-              />
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
           <!---->
@@ -977,13 +1077,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <path
-                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                    fill="currentColor"
-                  />
+                  <g
+                    id="chevron-right"
+                  >
+                    <path
+                      d="M9.5 17.5L15 12L9.5 6.5"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
                 </svg>
               </div>
               
@@ -1135,13 +1243,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -1174,14 +1290,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-close"
               fill="none"
               height="1em"
-              style="font-size: 24px;"
+              style="fill: none; font-size: 24px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                fill="currentColor"
-              />
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
           <!---->
@@ -1340,13 +1463,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -1379,14 +1510,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-close"
               fill="none"
               height="1em"
-              style="font-size: 24px;"
+              style="fill: none; font-size: 24px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                fill="currentColor"
-              />
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
           <!---->
@@ -1412,13 +1550,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <path
-                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                    fill="currentColor"
-                  />
+                  <g
+                    id="chevron-right"
+                  >
+                    <path
+                      d="M9.5 17.5L15 12L9.5 6.5"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
                 </svg>
               </div>
               
@@ -1570,13 +1716,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -1609,14 +1763,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-close"
               fill="none"
               height="1em"
-              style="font-size: 24px;"
+              style="fill: none; font-size: 24px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                fill="currentColor"
-              />
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
           <!---->
@@ -1642,13 +1803,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <path
-                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                    fill="currentColor"
-                  />
+                  <g
+                    id="chevron-right"
+                  >
+                    <path
+                      d="M9.5 17.5L15 12L9.5 6.5"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
                 </svg>
               </div>
               
@@ -1800,13 +1969,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -1839,14 +2016,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-close"
               fill="none"
               height="1em"
-              style="font-size: 24px;"
+              style="fill: none; font-size: 24px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                fill="currentColor"
-              />
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
           <!---->
@@ -1872,13 +2056,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <path
-                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                    fill="currentColor"
-                  />
+                  <g
+                    id="chevron-right"
+                  >
+                    <path
+                      d="M9.5 17.5L15 12L9.5 6.5"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
                 </svg>
               </div>
               
@@ -2034,13 +2226,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -2073,14 +2273,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-close"
               fill="none"
               height="1em"
-              style="font-size: 24px;"
+              style="fill: none; font-size: 24px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                fill="currentColor"
-              />
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
           <!---->
@@ -2106,13 +2313,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <path
-                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                    fill="currentColor"
-                  />
+                  <g
+                    id="chevron-right"
+                  >
+                    <path
+                      d="M9.5 17.5L15 12L9.5 6.5"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
                 </svg>
               </div>
               
@@ -2235,13 +2450,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -2302,13 +2525,21 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <path
-                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                    fill="currentColor"
-                  />
+                  <g
+                    id="chevron-right"
+                  >
+                    <path
+                      d="M9.5 17.5L15 12L9.5 6.5"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
                 </svg>
               </div>
               
@@ -2450,13 +2681,21 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-            fill="currentColor"
-          />
+          <g
+            id="chevron-right"
+          >
+            <path
+              d="M9.5 17.5L15 12L9.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
     </div>
@@ -2489,14 +2728,21 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
           class="t-icon t-icon-close"
           fill="none"
           height="1em"
-          style="font-size: 24px;"
+          style="fill: none; font-size: 24px;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-            fill="currentColor"
-          />
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
       <!---->
@@ -2638,13 +2884,21 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-            fill="currentColor"
-          />
+          <g
+            id="chevron-right"
+          >
+            <path
+              d="M9.5 17.5L15 12L9.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
     </div>
@@ -2677,14 +2931,21 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
           class="t-icon t-icon-close"
           fill="none"
           height="1em"
-          style="font-size: 24px;"
+          style="fill: none; font-size: 24px;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-            fill="currentColor"
-          />
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
       <!---->
@@ -2710,13 +2971,21 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right t-cascader__step-arrow"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
           
@@ -2859,13 +3128,21 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-            fill="currentColor"
-          />
+          <g
+            id="chevron-right"
+          >
+            <path
+              d="M9.5 17.5L15 12L9.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
     </div>
@@ -2898,14 +3175,21 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
           class="t-icon t-icon-close"
           fill="none"
           height="1em"
-          style="font-size: 24px;"
+          style="fill: none; font-size: 24px;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-            fill="currentColor"
-          />
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
       <!---->
@@ -2931,13 +3215,21 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right t-cascader__step-arrow"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
           

@@ -1176,6 +1176,7 @@ exports[`Table > Table customRowStyleVue demo works fine 1`] = `
                       class="t-icon t-icon-check-circle-filled"
                       fill="none"
                       height="1em"
+                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
@@ -1245,6 +1246,7 @@ exports[`Table > Table customRowStyleVue demo works fine 1`] = `
                       class="t-icon t-icon-close-circle-filled"
                       fill="none"
                       height="1em"
+                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
@@ -1314,6 +1316,7 @@ exports[`Table > Table customRowStyleVue demo works fine 1`] = `
                       class="t-icon t-icon-error-circle-filled"
                       fill="none"
                       height="1em"
+                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
@@ -1384,6 +1387,7 @@ exports[`Table > Table customRowStyleVue demo works fine 1`] = `
                       class="t-icon t-icon-check-circle-filled"
                       fill="none"
                       height="1em"
+                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
@@ -1453,6 +1457,7 @@ exports[`Table > Table customRowStyleVue demo works fine 1`] = `
                       class="t-icon t-icon-close-circle-filled"
                       fill="none"
                       height="1em"
+                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
@@ -4137,6 +4142,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                             class="t-icon t-icon-check-circle-filled"
                             fill="none"
                             height="1em"
+                            style="fill: none;"
                             viewBox="0 0 24 24"
                             width="1em"
                           >
@@ -4206,6 +4212,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                             class="t-icon t-icon-close-circle-filled"
                             fill="none"
                             height="1em"
+                            style="fill: none;"
                             viewBox="0 0 24 24"
                             width="1em"
                           >
@@ -4275,6 +4282,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                             class="t-icon t-icon-error-circle-filled"
                             fill="none"
                             height="1em"
+                            style="fill: none;"
                             viewBox="0 0 24 24"
                             width="1em"
                           >
@@ -4345,6 +4353,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                             class="t-icon t-icon-check-circle-filled"
                             fill="none"
                             height="1em"
+                            style="fill: none;"
                             viewBox="0 0 24 24"
                             width="1em"
                           >
@@ -4414,6 +4423,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                             class="t-icon t-icon-close-circle-filled"
                             fill="none"
                             height="1em"
+                            style="fill: none;"
                             viewBox="0 0 24 24"
                             width="1em"
                           >
