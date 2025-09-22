@@ -29,16 +29,24 @@ import single from './single.vue';
 </script>
 
 <style lang="less">
+.tdesign-demo-topnav,
+.tdesign-mobile-demo {
+  color: var(--td-text-color-primary);
+  --bg-color-demo: var(--td-bg-color-container);
+}
+
 .t-demo-iconfont {
   .t-icon,
   .cps-icon {
     margin-right: 24px;
   }
-}
 
-:root[theme-mode='dark'] {
-  .tdesign-mobile-demo {
-    color: var(--td-text-color-primary);
+  .t-demo-row {
+    &__slider {
+      .t-slider__bar {
+        margin: 16px 0;
+      }
+    }
   }
 }
 </style>
