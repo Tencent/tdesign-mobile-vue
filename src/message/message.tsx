@@ -1,5 +1,5 @@
 import { h, ref, computed, watch, defineComponent, toRefs, reactive, nextTick, onMounted, Transition } from 'vue';
-import { CheckCircleFilledIcon, CloseIcon, InfoCircleFilledIcon } from 'tdesign-icons-vue-next';
+import { CheckCircleFilledIcon, CloseIcon, InfoCircleFilledIcon, ErrorCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { isString, isObject } from 'lodash-es';
 
 import Link from '../link';
@@ -15,8 +15,8 @@ const { prefix } = config;
 const iconDefault = {
   info: h(InfoCircleFilledIcon),
   success: h(CheckCircleFilledIcon),
-  warning: h(InfoCircleFilledIcon),
-  error: h(InfoCircleFilledIcon),
+  warning: h(ErrorCircleFilledIcon),
+  error: h(ErrorCircleFilledIcon),
 };
 const closeBtnDefault = h(CloseIcon);
 let messageIndex = -1;

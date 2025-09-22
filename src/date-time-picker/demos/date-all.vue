@@ -2,7 +2,7 @@
   <t-cell title="选择时间" arrow hover :note="pickerValue || ''" @click="visible = true" />
   <t-popup v-model="visible" placement="bottom">
     <t-date-time-picker
-      default-value="10:10"
+      default-value="2025-08-19 10:10:10"
       mode="second"
       title="选择时间"
       format="YYYY-MM-DD HH:mm:ss"

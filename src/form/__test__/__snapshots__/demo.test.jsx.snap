@@ -143,13 +143,28 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                     class="t-icon t-icon-browse-off"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 26 24"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M3.99999 1.58582L10.1714 7.75774L17.2425 14.8288L23.4137 21L21.9995 22.4142L19.0345 19.4492C17.2447 20.4377 15.1866 21.0001 12.9996 21.0001C7.42102 21.0001 2.69842 17.3465 1.08922 12.3042L0.992188 12.0001L1.08922 11.6961C1.85645 9.29201 3.33009 7.20571 5.26511 5.67975L2.58567 2.99993L3.99999 1.58582ZM6.69098 7.10574C5.05507 8.33729 3.79122 10.0353 3.09676 12.0001C4.53843 16.0793 8.42915 19.0001 12.9996 19.0001C14.6314 19.0001 16.1745 18.6285 17.5507 17.9655L15.7571 16.1719C14.9668 16.695 14.0185 17.0003 12.9999 17.0003C10.2385 17.0003 7.99989 14.7618 7.99989 12.0003C7.99989 10.9817 8.3052 10.0334 8.82835 9.24312L6.69098 7.10574ZM10.292 10.7068C10.1046 11.0984 9.99989 11.5368 9.99989 12.0003C9.99989 13.6572 11.343 15.0003 12.9999 15.0003C13.4634 15.0003 13.9018 14.8956 14.2934 14.7082L10.292 10.7068ZM13 5.00003C12.4234 5.00003 11.8583 5.04642 11.3081 5.13548L10.321 5.29527L10.0014 3.32097L10.9885 3.16117C11.644 3.05508 12.3159 3.00003 13 3.00003C18.5786 3.00003 23.3012 6.65367 24.9104 11.696L25.0074 12L24.9104 12.3041C24.4968 13.5999 23.878 14.8034 23.0926 15.8763L22.5019 16.6833L20.8881 15.5019L21.4788 14.695C22.0769 13.8778 22.5595 12.9715 22.9028 12C21.4612 7.92082 17.5704 5.00003 13 5.00003ZM13.5132 6.92636L14.4691 7.21985C16.0499 7.70515 17.2953 8.95049 17.7806 10.5313L18.0741 11.4873L16.1621 12.0742L15.8687 11.1183C15.578 10.1715 14.829 9.42243 13.8822 9.13178L12.9262 8.8383L13.5132 6.92636Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="browse-off"
+                    >
+                      <path
+                        d="M13.1758 8.17578C14.4396 8.56376 15.4368 9.56096 15.8247 10.8247M21.2858 15.2856C22.0085 14.2983 22.5776 13.1913 22.9578 12C21.4771 7.36017 17.131 4 12.0001 4C11.3698 4 10.7513 4.05072 10.1484 4.1483M5.80747 5.80786C3.57225 7.23888 1.86478 9.42193 1.04199 12.0001C2.52275 16.6399 6.86881 20.0001 11.9997 20.0001C14.2796 20.0001 16.4045 19.3367 18.1919 18.1923L5.80747 5.80786ZM8 12.0003C8 10.8957 8.44771 9.89573 9.17157 9.17188L14.8284 14.8287C14.1046 15.5526 13.1046 16.0003 12 16.0003C9.79086 16.0003 8 14.2094 8 12.0003Z"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M20.9996 21L3 3"
+                        id="stroke2"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -362,7 +377,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
-          <!--teleport start-->
+          
           <div
             class="t-overlay"
             style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -808,7 +823,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!--teleport end-->
+          
           
         </div>
         <!---->
@@ -819,14 +834,21 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       class="t-icon t-icon-chevron-right"
       fill="none"
       height="1em"
-      style="font-size: 24px; color: rgba(0, 0, 0, 0.4);"
+      style="fill: none; font-size: 24px; color: rgba(0, 0, 0, 0.4);"
       viewBox="0 0 24 24"
       width="1em"
     >
-      <path
-        d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-        fill="currentColor"
-      />
+      <g
+        id="chevron-right"
+      >
+        <path
+          d="M9.5 17.5L15 12L9.5 6.5"
+          id="stroke1"
+          stroke="currentColor"
+          stroke-linecap="square"
+          stroke-width="2"
+        />
+      </g>
     </svg>
   </div>
   <div
@@ -891,7 +913,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
-          <!--teleport start-->
+          
           <div
             class="t-overlay"
             style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -919,14 +941,21 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   class="t-icon t-icon-close"
                   fill="none"
                   height="1em"
-                  style="font-size: 24px;"
+                  style="fill: none; font-size: 24px;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <path
-                    d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                    fill="currentColor"
-                  />
+                  <g
+                    id="close"
+                  >
+                    <path
+                      d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
                 </svg>
               </div>
               <!---->
@@ -952,13 +981,21 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                       class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                       fill="none"
                       height="1em"
+                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
-                      <path
-                        d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                        fill="currentColor"
-                      />
+                      <g
+                        id="chevron-right"
+                      >
+                        <path
+                          d="M9.5 17.5L15 12L9.5 6.5"
+                          id="stroke1"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                      </g>
                     </svg>
                   </div>
                   
@@ -1052,7 +1089,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!--teleport end-->
+          
           
         </div>
         <!---->
@@ -1063,14 +1100,21 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       class="t-icon t-icon-chevron-right"
       fill="none"
       height="1em"
-      style="font-size: 24px; color: rgba(0, 0, 0, 0.4);"
+      style="fill: none; font-size: 24px; color: rgba(0, 0, 0, 0.4);"
       viewBox="0 0 24 24"
       width="1em"
     >
-      <path
-        d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-        fill="currentColor"
-      />
+      <g
+        id="chevron-right"
+      >
+        <path
+          d="M9.5 17.5L15 12L9.5 6.5"
+          id="stroke1"
+          stroke="currentColor"
+          stroke-linecap="square"
+          stroke-width="2"
+        />
+      </g>
     </svg>
   </div>
   <div
@@ -1109,13 +1153,21 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 class="t-icon t-icon-remove t-stepper__minus-icon"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <path
-                  d="M4 11L20 11V13L4 13L4 11Z"
-                  fill="currentColor"
-                />
+                <g
+                  id="remove"
+                >
+                  <path
+                    d="M19 12L5 12"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
               </svg>
             </div>
             <input
@@ -1131,13 +1183,21 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 class="t-icon t-icon-add t-stepper__plus-icon"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <path
-                  d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
-                  fill="currentColor"
-                />
+                <g
+                  id="add"
+                >
+                  <path
+                    d="M12 5L12 19M19 12L5 12"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -1194,6 +1254,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
+                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
@@ -1207,6 +1268,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
@@ -1227,6 +1289,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
+                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
@@ -1240,6 +1303,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
@@ -1260,6 +1324,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
+                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
@@ -1273,6 +1338,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
@@ -1293,6 +1359,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
+                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
@@ -1306,6 +1373,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
@@ -1326,6 +1394,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
+                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
@@ -1339,6 +1408,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
@@ -1497,13 +1567,21 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 class="t-icon t-icon-close t-upload__delete-btn"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <path
-                  d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                  fill="currentColor"
-                />
+                <g
+                  id="close"
+                >
+                  <path
+                    d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
               </svg>
             </div>
             <div
@@ -1557,13 +1635,21 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 class="t-icon t-icon-close t-upload__delete-btn"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <path
-                  d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                  fill="currentColor"
-                />
+                <g
+                  id="close"
+                >
+                  <path
+                    d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
               </svg>
             </div>
             
@@ -1577,13 +1663,21 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   class="t-icon t-icon-add"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <path
-                    d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
-                    fill="currentColor"
-                  />
+                  <g
+                    id="add"
+                  >
+                    <path
+                      d="M12 5L12 19M19 12L5 12"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -1929,13 +2023,28 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                           class="t-icon t-icon-browse-off"
                           fill="none"
                           height="1em"
-                          viewBox="0 0 26 24"
+                          style="fill: none;"
+                          viewBox="0 0 24 24"
                           width="1em"
                         >
-                          <path
-                            d="M3.99999 1.58582L10.1714 7.75774L17.2425 14.8288L23.4137 21L21.9995 22.4142L19.0345 19.4492C17.2447 20.4377 15.1866 21.0001 12.9996 21.0001C7.42102 21.0001 2.69842 17.3465 1.08922 12.3042L0.992188 12.0001L1.08922 11.6961C1.85645 9.29201 3.33009 7.20571 5.26511 5.67975L2.58567 2.99993L3.99999 1.58582ZM6.69098 7.10574C5.05507 8.33729 3.79122 10.0353 3.09676 12.0001C4.53843 16.0793 8.42915 19.0001 12.9996 19.0001C14.6314 19.0001 16.1745 18.6285 17.5507 17.9655L15.7571 16.1719C14.9668 16.695 14.0185 17.0003 12.9999 17.0003C10.2385 17.0003 7.99989 14.7618 7.99989 12.0003C7.99989 10.9817 8.3052 10.0334 8.82835 9.24312L6.69098 7.10574ZM10.292 10.7068C10.1046 11.0984 9.99989 11.5368 9.99989 12.0003C9.99989 13.6572 11.343 15.0003 12.9999 15.0003C13.4634 15.0003 13.9018 14.8956 14.2934 14.7082L10.292 10.7068ZM13 5.00003C12.4234 5.00003 11.8583 5.04642 11.3081 5.13548L10.321 5.29527L10.0014 3.32097L10.9885 3.16117C11.644 3.05508 12.3159 3.00003 13 3.00003C18.5786 3.00003 23.3012 6.65367 24.9104 11.696L25.0074 12L24.9104 12.3041C24.4968 13.5999 23.878 14.8034 23.0926 15.8763L22.5019 16.6833L20.8881 15.5019L21.4788 14.695C22.0769 13.8778 22.5595 12.9715 22.9028 12C21.4612 7.92082 17.5704 5.00003 13 5.00003ZM13.5132 6.92636L14.4691 7.21985C16.0499 7.70515 17.2953 8.95049 17.7806 10.5313L18.0741 11.4873L16.1621 12.0742L15.8687 11.1183C15.578 10.1715 14.829 9.42243 13.8822 9.13178L12.9262 8.8383L13.5132 6.92636Z"
-                            fill="currentColor"
-                          />
+                          <g
+                            id="browse-off"
+                          >
+                            <path
+                              d="M13.1758 8.17578C14.4396 8.56376 15.4368 9.56096 15.8247 10.8247M21.2858 15.2856C22.0085 14.2983 22.5776 13.1913 22.9578 12C21.4771 7.36017 17.131 4 12.0001 4C11.3698 4 10.7513 4.05072 10.1484 4.1483M5.80747 5.80786C3.57225 7.23888 1.86478 9.42193 1.04199 12.0001C2.52275 16.6399 6.86881 20.0001 11.9997 20.0001C14.2796 20.0001 16.4045 19.3367 18.1919 18.1923L5.80747 5.80786ZM8 12.0003C8 10.8957 8.44771 9.89573 9.17157 9.17188L14.8284 14.8287C14.1046 15.5526 13.1046 16.0003 12 16.0003C9.79086 16.0003 8 14.2094 8 12.0003Z"
+                              id="stroke1"
+                              stroke="currentColor"
+                              stroke-linecap="square"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M20.9996 21L3 3"
+                              id="stroke2"
+                              stroke="currentColor"
+                              stroke-linecap="square"
+                              stroke-width="2"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -2148,7 +2257,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   </div>
                   <!---->
                 </div>
-                <!--teleport start-->
+                
                 <div
                   class="t-overlay"
                   style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -2594,7 +2703,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!--teleport end-->
+                
                 
               </div>
               <!---->
@@ -2605,14 +2714,21 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            style="font-size: 24px; color: rgba(0, 0, 0, 0.4);"
+            style="fill: none; font-size: 24px; color: rgba(0, 0, 0, 0.4);"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <path
-              d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-              fill="currentColor"
-            />
+            <g
+              id="chevron-right"
+            >
+              <path
+                d="M9.5 17.5L15 12L9.5 6.5"
+                id="stroke1"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
           </svg>
         </div>
         <div
@@ -2677,7 +2793,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   </div>
                   <!---->
                 </div>
-                <!--teleport start-->
+                
                 <div
                   class="t-overlay"
                   style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -2705,14 +2821,21 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-close"
                         fill="none"
                         height="1em"
-                        style="font-size: 24px;"
+                        style="fill: none; font-size: 24px;"
                         viewBox="0 0 24 24"
                         width="1em"
                       >
-                        <path
-                          d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                          fill="currentColor"
-                        />
+                        <g
+                          id="close"
+                        >
+                          <path
+                            d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                            id="stroke1"
+                            stroke="currentColor"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </g>
                       </svg>
                     </div>
                     <!---->
@@ -2738,13 +2861,21 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                             class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                             fill="none"
                             height="1em"
+                            style="fill: none;"
                             viewBox="0 0 24 24"
                             width="1em"
                           >
-                            <path
-                              d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                              fill="currentColor"
-                            />
+                            <g
+                              id="chevron-right"
+                            >
+                              <path
+                                d="M9.5 17.5L15 12L9.5 6.5"
+                                id="stroke1"
+                                stroke="currentColor"
+                                stroke-linecap="square"
+                                stroke-width="2"
+                              />
+                            </g>
                           </svg>
                         </div>
                         
@@ -2838,7 +2969,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   </div>
                   
                 </div>
-                <!--teleport end-->
+                
                 
               </div>
               <!---->
@@ -2849,14 +2980,21 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            style="font-size: 24px; color: rgba(0, 0, 0, 0.4);"
+            style="fill: none; font-size: 24px; color: rgba(0, 0, 0, 0.4);"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <path
-              d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-              fill="currentColor"
-            />
+            <g
+              id="chevron-right"
+            >
+              <path
+                d="M9.5 17.5L15 12L9.5 6.5"
+                id="stroke1"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
           </svg>
         </div>
         <div
@@ -2895,13 +3033,21 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-remove t-stepper__minus-icon"
                       fill="none"
                       height="1em"
+                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
-                      <path
-                        d="M4 11L20 11V13L4 13L4 11Z"
-                        fill="currentColor"
-                      />
+                      <g
+                        id="remove"
+                      >
+                        <path
+                          d="M19 12L5 12"
+                          id="stroke1"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                      </g>
                     </svg>
                   </div>
                   <input
@@ -2917,13 +3063,21 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-add t-stepper__plus-icon"
                       fill="none"
                       height="1em"
+                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
-                      <path
-                        d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
-                        fill="currentColor"
-                      />
+                      <g
+                        id="add"
+                      >
+                        <path
+                          d="M12 5L12 19M19 12L5 12"
+                          id="stroke1"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -2980,6 +3134,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                           class="t-icon t-icon-star-filled"
                           fill="none"
                           height="1em"
+                          style="fill: none;"
                           viewBox="0 0 24 24"
                           width="1em"
                         >
@@ -2993,6 +3148,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-star-filled"
                         fill="none"
                         height="1em"
+                        style="fill: none;"
                         viewBox="0 0 24 24"
                         width="1em"
                       >
@@ -3013,6 +3169,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                           class="t-icon t-icon-star-filled"
                           fill="none"
                           height="1em"
+                          style="fill: none;"
                           viewBox="0 0 24 24"
                           width="1em"
                         >
@@ -3026,6 +3183,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-star-filled"
                         fill="none"
                         height="1em"
+                        style="fill: none;"
                         viewBox="0 0 24 24"
                         width="1em"
                       >
@@ -3046,6 +3204,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                           class="t-icon t-icon-star-filled"
                           fill="none"
                           height="1em"
+                          style="fill: none;"
                           viewBox="0 0 24 24"
                           width="1em"
                         >
@@ -3059,6 +3218,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-star-filled"
                         fill="none"
                         height="1em"
+                        style="fill: none;"
                         viewBox="0 0 24 24"
                         width="1em"
                       >
@@ -3079,6 +3239,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                           class="t-icon t-icon-star-filled"
                           fill="none"
                           height="1em"
+                          style="fill: none;"
                           viewBox="0 0 24 24"
                           width="1em"
                         >
@@ -3092,6 +3253,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-star-filled"
                         fill="none"
                         height="1em"
+                        style="fill: none;"
                         viewBox="0 0 24 24"
                         width="1em"
                       >
@@ -3112,6 +3274,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                           class="t-icon t-icon-star-filled"
                           fill="none"
                           height="1em"
+                          style="fill: none;"
                           viewBox="0 0 24 24"
                           width="1em"
                         >
@@ -3125,6 +3288,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-star-filled"
                         fill="none"
                         height="1em"
+                        style="fill: none;"
                         viewBox="0 0 24 24"
                         width="1em"
                       >
@@ -3283,13 +3447,21 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-close t-upload__delete-btn"
                       fill="none"
                       height="1em"
+                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
-                      <path
-                        d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                        fill="currentColor"
-                      />
+                      <g
+                        id="close"
+                      >
+                        <path
+                          d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                          id="stroke1"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                      </g>
                     </svg>
                   </div>
                   <div
@@ -3343,13 +3515,21 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-close t-upload__delete-btn"
                       fill="none"
                       height="1em"
+                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
-                      <path
-                        d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                        fill="currentColor"
-                      />
+                      <g
+                        id="close"
+                      >
+                        <path
+                          d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                          id="stroke1"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                      </g>
                     </svg>
                   </div>
                   
@@ -3363,13 +3543,21 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-add"
                         fill="none"
                         height="1em"
+                        style="fill: none;"
                         viewBox="0 0 24 24"
                         width="1em"
                       >
-                        <path
-                          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
-                          fill="currentColor"
-                        />
+                        <g
+                          id="add"
+                        >
+                          <path
+                            d="M12 5L12 19M19 12L5 12"
+                            id="stroke1"
+                            stroke="currentColor"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -3578,13 +3766,28 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                     class="t-icon t-icon-browse-off"
                     fill="none"
                     height="1em"
-                    viewBox="0 0 26 24"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M3.99999 1.58582L10.1714 7.75774L17.2425 14.8288L23.4137 21L21.9995 22.4142L19.0345 19.4492C17.2447 20.4377 15.1866 21.0001 12.9996 21.0001C7.42102 21.0001 2.69842 17.3465 1.08922 12.3042L0.992188 12.0001L1.08922 11.6961C1.85645 9.29201 3.33009 7.20571 5.26511 5.67975L2.58567 2.99993L3.99999 1.58582ZM6.69098 7.10574C5.05507 8.33729 3.79122 10.0353 3.09676 12.0001C4.53843 16.0793 8.42915 19.0001 12.9996 19.0001C14.6314 19.0001 16.1745 18.6285 17.5507 17.9655L15.7571 16.1719C14.9668 16.695 14.0185 17.0003 12.9999 17.0003C10.2385 17.0003 7.99989 14.7618 7.99989 12.0003C7.99989 10.9817 8.3052 10.0334 8.82835 9.24312L6.69098 7.10574ZM10.292 10.7068C10.1046 11.0984 9.99989 11.5368 9.99989 12.0003C9.99989 13.6572 11.343 15.0003 12.9999 15.0003C13.4634 15.0003 13.9018 14.8956 14.2934 14.7082L10.292 10.7068ZM13 5.00003C12.4234 5.00003 11.8583 5.04642 11.3081 5.13548L10.321 5.29527L10.0014 3.32097L10.9885 3.16117C11.644 3.05508 12.3159 3.00003 13 3.00003C18.5786 3.00003 23.3012 6.65367 24.9104 11.696L25.0074 12L24.9104 12.3041C24.4968 13.5999 23.878 14.8034 23.0926 15.8763L22.5019 16.6833L20.8881 15.5019L21.4788 14.695C22.0769 13.8778 22.5595 12.9715 22.9028 12C21.4612 7.92082 17.5704 5.00003 13 5.00003ZM13.5132 6.92636L14.4691 7.21985C16.0499 7.70515 17.2953 8.95049 17.7806 10.5313L18.0741 11.4873L16.1621 12.0742L15.8687 11.1183C15.578 10.1715 14.829 9.42243 13.8822 9.13178L12.9262 8.8383L13.5132 6.92636Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="browse-off"
+                    >
+                      <path
+                        d="M13.1758 8.17578C14.4396 8.56376 15.4368 9.56096 15.8247 10.8247M21.2858 15.2856C22.0085 14.2983 22.5776 13.1913 22.9578 12C21.4771 7.36017 17.131 4 12.0001 4C11.3698 4 10.7513 4.05072 10.1484 4.1483M5.80747 5.80786C3.57225 7.23888 1.86478 9.42193 1.04199 12.0001C2.52275 16.6399 6.86881 20.0001 11.9997 20.0001C14.2796 20.0001 16.4045 19.3367 18.1919 18.1923L5.80747 5.80786ZM8 12.0003C8 10.8957 8.44771 9.89573 9.17157 9.17188L14.8284 14.8287C14.1046 15.5526 13.1046 16.0003 12 16.0003C9.79086 16.0003 8 14.2094 8 12.0003Z"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M20.9996 21L3 3"
+                        id="stroke2"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -3793,7 +3996,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
-          <!--teleport start-->
+          
           <div
             class="t-overlay"
             style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -4239,7 +4442,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!--teleport end-->
+          
           
         </div>
         <!---->
@@ -4250,14 +4453,21 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
       class="t-icon t-icon-chevron-right"
       fill="none"
       height="1em"
-      style="font-size: 24px; color: rgba(0, 0, 0, 0.4);"
+      style="fill: none; font-size: 24px; color: rgba(0, 0, 0, 0.4);"
       viewBox="0 0 24 24"
       width="1em"
     >
-      <path
-        d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-        fill="currentColor"
-      />
+      <g
+        id="chevron-right"
+      >
+        <path
+          d="M9.5 17.5L15 12L9.5 6.5"
+          id="stroke1"
+          stroke="currentColor"
+          stroke-linecap="square"
+          stroke-width="2"
+        />
+      </g>
     </svg>
   </div>
   <div
@@ -4320,7 +4530,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
-          <!--teleport start-->
+          
           <div
             class="t-overlay"
             style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -4348,14 +4558,21 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   class="t-icon t-icon-close"
                   fill="none"
                   height="1em"
-                  style="font-size: 24px;"
+                  style="fill: none; font-size: 24px;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <path
-                    d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                    fill="currentColor"
-                  />
+                  <g
+                    id="close"
+                  >
+                    <path
+                      d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
                 </svg>
               </div>
               <!---->
@@ -4381,13 +4598,21 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                       class="t-icon t-icon-chevron-right t-cascader__step-arrow"
                       fill="none"
                       height="1em"
+                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
-                      <path
-                        d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                        fill="currentColor"
-                      />
+                      <g
+                        id="chevron-right"
+                      >
+                        <path
+                          d="M9.5 17.5L15 12L9.5 6.5"
+                          id="stroke1"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                      </g>
                     </svg>
                   </div>
                   
@@ -4481,7 +4706,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             </div>
             
           </div>
-          <!--teleport end-->
+          
           
         </div>
         <!---->
@@ -4492,14 +4717,21 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
       class="t-icon t-icon-chevron-right"
       fill="none"
       height="1em"
-      style="font-size: 24px; color: rgba(0, 0, 0, 0.4);"
+      style="fill: none; font-size: 24px; color: rgba(0, 0, 0, 0.4);"
       viewBox="0 0 24 24"
       width="1em"
     >
-      <path
-        d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-        fill="currentColor"
-      />
+      <g
+        id="chevron-right"
+      >
+        <path
+          d="M9.5 17.5L15 12L9.5 6.5"
+          id="stroke1"
+          stroke="currentColor"
+          stroke-linecap="square"
+          stroke-width="2"
+        />
+      </g>
     </svg>
   </div>
   <div
@@ -4536,13 +4768,21 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 class="t-icon t-icon-remove t-stepper__minus-icon"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <path
-                  d="M4 11L20 11V13L4 13L4 11Z"
-                  fill="currentColor"
-                />
+                <g
+                  id="remove"
+                >
+                  <path
+                    d="M19 12L5 12"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
               </svg>
             </div>
             <input
@@ -4558,13 +4798,21 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 class="t-icon t-icon-add t-stepper__plus-icon"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <path
-                  d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
-                  fill="currentColor"
-                />
+                <g
+                  id="add"
+                >
+                  <path
+                    d="M12 5L12 19M19 12L5 12"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -4619,6 +4867,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
+                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
@@ -4632,6 +4881,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
@@ -4652,6 +4902,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
+                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
@@ -4665,6 +4916,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
@@ -4685,6 +4937,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
+                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
@@ -4698,6 +4951,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
@@ -4718,6 +4972,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
+                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
@@ -4731,6 +4986,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
@@ -4751,6 +5007,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                     class="t-icon t-icon-star-filled"
                     fill="none"
                     height="1em"
+                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
@@ -4764,6 +5021,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   class="t-icon t-icon-star-filled"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
@@ -4918,13 +5176,21 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 class="t-icon t-icon-close t-upload__delete-btn"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <path
-                  d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                  fill="currentColor"
-                />
+                <g
+                  id="close"
+                >
+                  <path
+                    d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
               </svg>
             </div>
             <div
@@ -4978,13 +5244,21 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 class="t-icon t-icon-close t-upload__delete-btn"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <path
-                  d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                  fill="currentColor"
-                />
+                <g
+                  id="close"
+                >
+                  <path
+                    d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
               </svg>
             </div>
             
@@ -4998,13 +5272,21 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   class="t-icon t-icon-add"
                   fill="none"
                   height="1em"
+                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <path
-                    d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
-                    fill="currentColor"
-                  />
+                  <g
+                    id="add"
+                  >
+                    <path
+                      d="M12 5L12 19M19 12L5 12"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
