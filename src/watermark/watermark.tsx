@@ -5,11 +5,14 @@ import injectStyle from '../_common/js/utils/injectStyle';
 import { useContent, usePrefixClass, useVariables } from '../hooks';
 import setStyle from '../_common/js/utils/setStyle';
 import { useMutationObserver } from './hooks';
+import config from '../config';
 
 import props from './props';
 
+const { prefix } = config;
+
 export default defineComponent({
-  name: 'TWatermark',
+  name: `${prefix}-watermark`,
   props,
   setup(props) {
     const backgroundImage = ref('');

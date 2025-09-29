@@ -488,6 +488,14 @@ export const docs = [
         component: () => import('@/qrcode/qrcode.md'),
         componentEn: () => import('@/qrcode/qrcode.en-US.md'),
       },
+      {
+        title: 'Watermark 水印',
+        titleEn: 'Watermark',
+        name: 'watermark',
+        path: '/mobile-vue/components/watermark',
+        component: () => import('@/watermark/watermark.md'),
+        componentEn: () => import('@/watermark/watermark.en-US.md'),
+      },
     ],
   },
   {

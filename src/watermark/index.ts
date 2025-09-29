@@ -1,7 +1,12 @@
-import { withInstall } from '@tdesign/shared-utils';
+import { withInstall, WithInstallType } from '../shared';
 import _Watermark from './watermark';
+
+import { TdWatermarkProps } from './type';
 
 export * from './type';
 
-export const Watermark = withInstall(_Watermark);
+export type WatermarkProps = TdWatermarkProps;
+
+export const Watermark: WithInstallType<typeof _Watermark> = withInstall(_Watermark);
+
 export default Watermark;
