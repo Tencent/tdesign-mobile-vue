@@ -3,10 +3,10 @@
     <t-avatar
       class="avatar-example"
       image="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
-      :badge-props="{ dot: true, offset: [4, 4] }"
+      :badge-props="{ dot: true }"
     />
-    <t-avatar class="avatar-example external-class-content" :badge-props="{ count: 8, offset: [6, 6] }">A</t-avatar>
-    <t-avatar class="avatar-example" :icon="userIcon" :badge-props="{ count: 12, offset: [6, 6] }" />
+    <t-avatar class="avatar-example external-class-content" :badge-props="{ count: 8, offset: [4, 4] }">A</t-avatar>
+    <t-avatar class="avatar-example" :icon="userIcon" :badge-props="{ count: 12, offset: [4, 4] }" />
   </div>
 </template>
 
