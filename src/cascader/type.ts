@@ -4,6 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { OverlayProps } from '../overlay';
 import { TNode, TreeOptionData, TreeKeysType } from '../common';
 
 export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOptionData> {
@@ -34,6 +35,11 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    * @default []
    */
   options?: Array<CascaderOption>;
+  /**
+   * 遮罩层的属性，透传至 overlay
+   * @default {}
+   */
+  overlayProps?: OverlayProps;
   /**
    * 未选中时的提示文案
    * @default '选择选项'

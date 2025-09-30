@@ -32,6 +32,11 @@ export default {
     type: Array as PropType<TdCascaderProps['options']>,
     default: (): TdCascaderProps['options'] => [],
   },
+  /** 遮罩层的属性，透传至 overlay */
+  overlayProps: {
+    type: Object as PropType<TdCascaderProps['overlayProps']>,
+    default: () => ({}),
+  },
   /** 未选中时的提示文案 */
   placeholder: {
     type: [String, Function] as PropType<TdCascaderProps['placeholder']>,
