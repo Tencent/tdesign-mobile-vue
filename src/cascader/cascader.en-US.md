@@ -12,6 +12,7 @@ header | Slot / Function | - | Typescript：`TNode`。[see more ts definition](h
 keys | Object | - | Typescript：`CascaderKeysType` `type CascaderKeysType = TreeKeysType`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts) | N
 middleContent | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 options | Array | [] | Typescript：`Array<CascaderOption>` | N
+overlayProps | Object | {} | Typescript：`OverlayProps`，[Overlay API Documents](./overlay?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts) | N
 placeholder | String / Slot / Function | '选择选项' | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 subTitles | Array | [] | Typescript：`Array<string>` | N
 theme | String | step | options: step/tab | N
@@ -46,4 +47,4 @@ Name | Default Value | Description
 --td-cascader-step-dot-size | 8px | - 
 --td-cascader-step-height | 44px | - 
 --td-cascader-title-color | @text-color-primary | - 
---td-cascder-title-font-size | 18px | - 
+--td-cascder-title-font-size | 18px | -

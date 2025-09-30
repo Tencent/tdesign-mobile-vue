@@ -51,7 +51,7 @@ export default defineComponent({
     const stepIndex = ref(0);
     const selectedIndexes = reactive<number[]>([]);
     const selectedValue = reactive<Array<string | number>>([]);
-    const items: Array<Array<TreeOptionData>> = reactive([props.options ?? []]);
+    const items = computed<Array<Array<TreeOptionData>>>(() => [props.options ?? []]);
     const steps = reactive([placeholder.value]);
 
     const initWithValue = () => {
@@ -71,24 +71,24 @@ export default defineComponent({
 
     const watchSelectedIndexes = () => {
       if (props.options && props.options.length > 0) {
-        items.splice(0, items.length, ...[props.options]);
+        items.value.splice(0, items.value.length, ...[props.options]);
 
         const keys = props.keys as KeysType;
         for (let i = 0, size = selectedIndexes.length; i < size; i += 1) {
           const index = selectedIndexes[i];
-          const next = items[i]?.[index];
+          const next = items.value[i]?.[index];
           selectedValue.push(lodashGet(next, keys?.value ?? 'value'));
           steps.push(lodashGet(next, keys?.label ?? 'label'));
           if (lodashGet(next, keys?.children ?? 'children')) {
-            items.push(lodashGet(next, keys?.children ?? 'children'));
+            items.value.push(lodashGet(next, keys?.children ?? 'children'));
           }
         }
       }
 
-      if (steps.length < items.length) {
+      if (steps.length < items.value.length) {
         steps.push(placeholder.value);
       }
-      stepIndex.value = items.length - 1;
+      stepIndex.value = items.value.length - 1;
     };
 
     const getIndexesByValue = (options: any, value: any) => {
@@ -114,8 +114,8 @@ export default defineComponent({
       selectedValue.length = level + 1;
       steps[level] = lodashGet(item, keys?.label ?? 'label');
       if (lodashGet(item, keys?.children ?? 'children')?.length) {
-        items[level + 1] = lodashGet(item, keys?.children ?? 'children');
-        items.length = level + 2;
+        items.value[level + 1] = lodashGet(item, keys?.children ?? 'children');
+        items.value.length = level + 2;
         stepIndex.value += 1;
         steps[level + 1] = placeholder.value;
         steps.length = level + 2;
@@ -123,13 +123,13 @@ export default defineComponent({
         childrenInfo.value = value;
         childrenInfo.level = level;
       } else {
-        items.length = level + 1;
+        items.value.length = level + 1;
         steps.length = level + 1;
         stepIndex.value = level;
 
         setCascaderValue(
           lodashGet(item, keys?.value ?? 'value'),
-          items.map((item, index) => toRaw(item?.[selectedIndexes[index]])),
+          items.value.map((item, index) => toRaw(item?.[selectedIndexes[index]])),
         );
         close('finish');
       }
@@ -145,7 +145,7 @@ export default defineComponent({
       steps.length = level + 1;
 
       if (lodashGet(item, keys?.children ?? 'children')?.length) {
-        items[level + 1] = lodashGet(item, keys?.children ?? 'children');
+        items.value[level + 1] = lodashGet(item, keys?.children ?? 'children');
       } else if (lodashGet(item, keys?.children ?? 'children')?.length === 0) {
         childrenInfo.value = value;
         childrenInfo.level = level;
@@ -154,8 +154,8 @@ export default defineComponent({
 
     const handleSelect = (value: RadioValue, level: number, fromHandler = true) => {
       const keys = props.keys as KeysType;
-      const index = items[level].findIndex((item: any) => lodashGet(item, keys?.value ?? 'value') === value);
-      const item = items[level][index];
+      const index = items.value[level].findIndex((item: any) => lodashGet(item, keys?.value ?? 'value') === value);
+      const item = items.value[level][index];
       if (lodashGet(item, keys?.disabled ?? 'disabled')) {
         return;
       }
@@ -188,7 +188,7 @@ export default defineComponent({
     const updateCascaderValue = () => {
       setCascaderValue(
         selectedValue[selectedValue.length - 1],
-        items
+        items.value
           .filter((item, index) => !!item && selectedIndexes.length > index)
           .map((item, index) => toRaw(item?.[selectedIndexes[index]])),
       );
@@ -232,7 +232,7 @@ export default defineComponent({
       () => {
         initWithValue();
 
-        if (open.value) {
+        if (open.value && cascaderValue.value) {
           handleSelect(childrenInfo.value, childrenInfo.level, false);
         }
       },
@@ -315,7 +315,12 @@ export default defineComponent({
         }
       };
       return (
-        <TPopup v-model={open.value} placement="bottom" onVisibleChange={handleVisibleChange}>
+        <TPopup
+          overlayProps={props.overlayProps}
+          v-model={open.value}
+          placement="bottom"
+          onVisibleChange={handleVisibleChange}
+        >
           <div class={`${cascaderClass.value}`}>
             <div class={`${cascaderClass.value}__title`}>{title}</div>
             <div class={`${cascaderClass.value}__close-btn`} onClick={onCloseBtn}>
@@ -330,9 +335,9 @@ export default defineComponent({
               )}
               <div
                 class={`${cascaderClass.value}__options-container`}
-                style={`width: ${items.length + 1}00vw; transform: translateX(-${stepIndex.value}00vw);`}
+                style={`width: ${items.value.length + 1}00vw; transform: translateX(-${stepIndex.value}00vw);`}
               >
-                {items.map((options, index) => {
+                {items.value.map((options, index) => {
                   return (
                     <div class={`${cascaderClass.value}__options`}>
                       <Transition appear name="slide">
