@@ -75,7 +75,7 @@ export const getShowTimes = (
   const showTimes: TdUseCountDownShowTimes = [];
   if (format?.indexOf('DD') > -1) {
     showTimes?.push({
-      mark: getMark(format, 'DD'),
+      mark: splitWithUnit ? TimeDataUnit.DD : getMark(format, 'DD'),
       value: fillZero(times?.days),
     });
   }
