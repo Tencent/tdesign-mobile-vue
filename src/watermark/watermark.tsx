@@ -132,11 +132,7 @@ export default defineComponent({
       const renderContent = useContent();
 
       return (
-        <div
-          style={{ position: 'relative', overflow: 'hidden', width: '100%' }}
-          class={COMPONENT_NAME.value}
-          ref={watermarkRef}
-        >
+        <div class={COMPONENT_NAME.value} ref={watermarkRef}>
           {renderContent('default', 'content')}
         </div>
       );
