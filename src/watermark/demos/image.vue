@@ -1,14 +1,12 @@
 <template>
   <t-watermark
     :watermark-content="{
-      url: 'https://tdesign.gtimg.com/site/logo-watermark.svg',
+      url: 'https://tdesign.gtimg.com/starter/brand-logo-light.png',
     }"
-    :width="104"
-    :height="65.5"
-    :x="90"
-    :y="100"
-    :rotate="0"
-    :removable="false"
+    :width="120"
+    :height="20"
+    :x="56"
+    :y="76"
   >
     <div style="height: 300px" />
   </t-watermark>

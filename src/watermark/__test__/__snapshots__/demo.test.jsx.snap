@@ -1,0 +1,454 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Watermark > Watermark baseVue demo works fine 1`] = `
+<div
+  class="t-watermark"
+>
+  
+  <div
+    style="height: 300px;"
+  />
+  
+  <div
+    style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; width: 100%; height: 100%; background-size: 124px; pointer-events: none; background-repeat: repeat; background-image: url(); animation: none;"
+  />
+</div>
+`;
+
+exports[`Watermark > Watermark grayVue demo works fine 1`] = `
+<div
+  class="t-watermark"
+>
+  
+  <div
+    style="height: 300px;"
+  />
+  
+  <div
+    style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; width: 100%; height: 100%; background-size: 176px; pointer-events: none; background-repeat: repeat; background-image: url(); animation: none;"
+  />
+</div>
+`;
+
+exports[`Watermark > Watermark imageVue demo works fine 1`] = `
+<div
+  class="t-watermark"
+>
+  
+  <div
+    style="height: 300px;"
+  />
+  
+  <div
+    style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; width: 100%; height: 100%; background-size: 176px; pointer-events: none; background-repeat: repeat; background-image: url(); animation: none;"
+  />
+</div>
+`;
+
+exports[`Watermark > Watermark layoutVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="tdesign-mobile-demo-block__summary"
+    style="margin: 8px 0px 16px 16px;"
+  >
+    Rectangular Grid 矩形布局
+  </div>
+  <div
+    class="t-watermark"
+  >
+    
+    <div
+      style="height: 300px;"
+    />
+    
+    <div
+      style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; width: 100%; height: 100%; background-size: 124px; pointer-events: none; background-repeat: repeat; background-image: url(); animation: none;"
+    />
+  </div>
+  <div
+    class="tdesign-mobile-demo-block__summary"
+    style="margin: 24px 0px 16px 16px;"
+  >
+    Hexagonal Grid 六边形网格
+  </div>
+  <div
+    class="t-watermark"
+  >
+    
+    <div
+      style="height: 300px;"
+    />
+    
+    <div
+      style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; width: 100%; height: 100%; background-size: 124px; pointer-events: none; background-repeat: repeat; background-image: url(); animation: none;"
+    />
+  </div>
+  
+</div>
+`;
+
+exports[`Watermark > Watermark mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+>
+  <h1
+    class="title"
+  >
+    Watermark 水印
+  </h1>
+  <p
+    class="summary"
+  >
+    给页面的某个区域加上水印。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        01 组件类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        文本水印
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-watermark"
+      >
+        
+        <div
+          style="height: 300px;"
+        />
+        
+        <div
+          style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; width: 100%; height: 100%; background-size: 124px; pointer-events: none; background-repeat: repeat; background-image: url(); animation: none;"
+        />
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        图片水印
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-watermark"
+      >
+        
+        <div
+          style="height: 300px;"
+        />
+        
+        <div
+          style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; width: 100%; height: 100%; background-size: 176px; pointer-events: none; background-repeat: repeat; background-image: url(); animation: none;"
+        />
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        图片灰阶水印
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-watermark"
+      >
+        
+        <div
+          style="height: 300px;"
+        />
+        
+        <div
+          style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; width: 100%; height: 100%; background-size: 176px; pointer-events: none; background-repeat: repeat; background-image: url(); animation: none;"
+        />
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        多行图文水印
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-watermark"
+      >
+        
+        <div
+          style="height: 300px;"
+        />
+        
+        <div
+          style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; width: 100%; height: 100%; background-size: 176px; pointer-events: none; background-repeat: repeat; background-image: url(); animation: none;"
+        />
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        多行图文灰阶水印
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-watermark"
+      >
+        
+        <div
+          style="height: 300px;"
+        />
+        
+        <div
+          style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; width: 100%; height: 100%; background-size: 176px; pointer-events: none; background-repeat: repeat; background-image: url(); animation: none;"
+        />
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        运动文字水印
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-watermark"
+      >
+        
+        <div
+          style="height: 300px;"
+        />
+        
+        <div
+          style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; width: 100%; height: 100%; background-size: 120px; pointer-events: none; background-repeat: no-repeat; background-image: url(); animation: watermark infinite 200s;"
+        />
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        运动图片水印
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-watermark"
+      >
+        
+        <div
+          style="height: 300px;"
+        />
+        
+        <div
+          style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; width: 100%; height: 100%; background-size: 158px; pointer-events: none; background-repeat: no-repeat; background-image: url(); animation: watermark infinite 200s;"
+        />
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        02 组件样式
+      </h2>
+      <!--v-if-->
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="tdesign-mobile-demo-block__summary"
+        style="margin: 8px 0px 16px 16px;"
+      >
+        Rectangular Grid 矩形布局
+      </div>
+      <div
+        class="t-watermark"
+      >
+        
+        <div
+          style="height: 300px;"
+        />
+        
+        <div
+          style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; width: 100%; height: 100%; background-size: 124px; pointer-events: none; background-repeat: repeat; background-image: url(); animation: none;"
+        />
+      </div>
+      <div
+        class="tdesign-mobile-demo-block__summary"
+        style="margin: 24px 0px 16px 16px;"
+      >
+        Hexagonal Grid 六边形网格
+      </div>
+      <div
+        class="t-watermark"
+      >
+        
+        <div
+          style="height: 300px;"
+        />
+        
+        <div
+          style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; width: 100%; height: 100%; background-size: 124px; pointer-events: none; background-repeat: repeat; background-image: url(); animation: none;"
+        />
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Watermark > Watermark movingImageVue demo works fine 1`] = `
+<div
+  class="t-watermark"
+>
+  
+  <div
+    style="height: 300px;"
+  />
+  
+  <div
+    style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; width: 100%; height: 100%; background-size: 158px; pointer-events: none; background-repeat: no-repeat; background-image: url(); animation: watermark infinite 200s;"
+  />
+</div>
+`;
+
+exports[`Watermark > Watermark movingTextVue demo works fine 1`] = `
+<div
+  class="t-watermark"
+>
+  
+  <div
+    style="height: 300px;"
+  />
+  
+  <div
+    style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; width: 100%; height: 100%; background-size: 120px; pointer-events: none; background-repeat: no-repeat; background-image: url(); animation: watermark infinite 200s;"
+  />
+</div>
+`;
+
+exports[`Watermark > Watermark multiLineGrayVue demo works fine 1`] = `
+<div
+  class="t-watermark"
+>
+  
+  <div
+    style="height: 300px;"
+  />
+  
+  <div
+    style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; width: 100%; height: 100%; background-size: 176px; pointer-events: none; background-repeat: repeat; background-image: url(); animation: none;"
+  />
+</div>
+`;
+
+exports[`Watermark > Watermark multiLineVue demo works fine 1`] = `
+<div
+  class="t-watermark"
+>
+  
+  <div
+    style="height: 300px;"
+  />
+  
+  <div
+    style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; width: 100%; height: 100%; background-size: 176px; pointer-events: none; background-repeat: repeat; background-image: url(); animation: none;"
+  />
+</div>
+`;
