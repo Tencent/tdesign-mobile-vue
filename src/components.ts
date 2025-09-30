@@ -34,6 +34,7 @@ export * from './switch';
 export * from './textarea';
 export * from './tree-select';
 export * from './upload';
+export * from './watermark';
 
 // 数据展示
 export * from './avatar';
