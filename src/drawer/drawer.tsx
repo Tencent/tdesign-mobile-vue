@@ -1,4 +1,5 @@
 import { ref, watch, toRefs, defineComponent, h } from 'vue';
+import { over } from 'lodash-es';
 import TPopup from '../popup';
 import config from '../config';
 import props from './props';
@@ -41,7 +42,8 @@ export default defineComponent({
     };
 
     return () => {
-      const { attach, zIndex, closeOnOverlayClick, destroyOnClose, items, placement, showOverlay } = props;
+      const { attach, zIndex, closeOnOverlayClick, destroyOnClose, items, placement, showOverlay, overlayProps } =
+        props;
       const renderTitleNode = () => {
         const titleNode = renderTNodeJSX('title');
         if (!titleNode) {
@@ -62,6 +64,7 @@ export default defineComponent({
           placement={placement}
           attach={attach}
           showOverlay={showOverlay}
+          overlayProps={overlayProps}
           zIndex={zIndex}
           closeOnOverlayClick={closeOnOverlayClick}
           destroyOnClose={destroyOnClose}
