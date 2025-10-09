@@ -12,7 +12,7 @@
       <template #title>
         <div class="date-range-container">
           <span class="start-date">{{ formatDate(value[0]) }}</span>
-          <span class="arrow-icon">→</span>
+          <swap-right-icon :fill-color="'transparent'" :stroke-color="'rgba(0, 0, 0, 0.4)'" :stroke-width="2" />
           <span class="end-date">{{ formatDate(value[1]) }}</span>
         </div>
       </template>
@@ -22,6 +22,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { SwapRightIcon } from 'tdesign-icons-vue-next';
 
 const visible = ref(false);
 
