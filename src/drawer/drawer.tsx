@@ -1,5 +1,4 @@
 import { ref, watch, toRefs, defineComponent, h } from 'vue';
-import { over } from 'lodash-es';
 import TPopup from '../popup';
 import config from '../config';
 import props from './props';
