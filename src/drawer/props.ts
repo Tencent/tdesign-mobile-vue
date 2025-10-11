@@ -27,6 +27,11 @@ export default {
   items: {
     type: Array as PropType<TdDrawerProps['items']>,
   },
+  /** 遮罩层的属性，透传至 overlay */
+  overlayProps: {
+    type: Object as PropType<TdDrawerProps['overlayProps']>,
+    default: () => ({}),
+  },
   /** 抽屉方向 */
   placement: {
     type: String as PropType<TdDrawerProps['placement']>,

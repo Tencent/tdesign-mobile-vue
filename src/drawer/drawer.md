@@ -11,6 +11,7 @@ closeOnOverlayClick | Boolean | true | 点击蒙层时是否触发抽屉关闭�
 destroyOnClose | Boolean | false | 抽屉关闭时是否销毁节点 | N
 footer | Slot / Function | - | 抽屉的底部。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 items | Array | - | 抽屉里的列表项。TS 类型：`DrawerItem[] ` `interface DrawerItem { title: string; icon?: TNode; }`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/drawer/type.ts) | N
+overlayProps | Object | {} | 遮罩层的属性，透传至 overlay。TS 类型：`OverlayProps`，[Overlay API Documents](./overlay?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/drawer/type.ts) | N
 placement | String | right | 抽屉方向。可选项：left/right | N
 showOverlay | Boolean | true | 是否显示遮罩层 | N
 title | String / Slot / Function | - | 抽屉的标题。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
@@ -70,4 +71,4 @@ options | \- | - | TS 类型：`DrawerOptions`
 --td-drawer-title-color | @text-color-primary | - 
 --td-drawer-title-font-size | 18px | - 
 --td-drawer-title-padding | 24px 16px 8px | - 
---td-drawer-width | 280px | - 
+--td-drawer-width | 280px | -
