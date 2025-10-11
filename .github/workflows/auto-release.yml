@@ -78,6 +78,8 @@ jobs:
           token: ${{ secrets.PERSONAL_TOKEN }}
       - name: tag and push if needed
         run: |
+          git fetch origin develop
+          git checkout origin/develop -- CHANGELOG.md
           data=$(cat package.json)
           re="\"version\": \"([^\"]*)\""
           [[ $data =~ $re ]]
