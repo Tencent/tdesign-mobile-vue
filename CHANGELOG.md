@@ -12,8 +12,8 @@ spline: explain
 - `ImageViwer`: 修复背景色错误，导航背景色固定为 `#000`，遮罩背景色使用 `@mask-active` @anlyyao ([#1984](https://github.com/Tencent/tdesign-mobile-vue/pull/1984))
 - `Textarea`: 修复 `--td-textarea-placeholder-color` 无效 @anlyyao ([#2000](https://github.com/Tencent/tdesign-mobile-vue/pull/2000))
 - `Picker`: 修复初始值为 `0` 且禁用时，`confirm` 事件返回值错误 @anlyyao ([#1999](https://github.com/Tencent/tdesign-mobile-vue/pull/1999))
-- `List`: 修复 `asyncLoading` 为 `slot/function` 时无效
-- `Textarea`: 修复 `autosize` 属性类型报错
+- `List`: 修复 `asyncLoading` 为 `slot/function` 时无效 @novlan1 ([#1990](https://github.com/Tencent/tdesign-mobile-vue/pull/1990))
+- `Textarea`: 修复 `autosize` 属性类型报错 @Wesley-0808 ([#1992](https://github.com/Tencent/tdesign-mobile-vue/pull/1992))
 
 ## 🌈 1.10.1 `2025-08-08` 
 ### 🚀 Features
@@ -41,6 +41,7 @@ spline: explain
 - `Radio`: 修复 `Radio` 单独使用无法切换的问题 @novlan1 ([#1947](https://github.com/Tencent/tdesign-mobile-vue/pull/1947))
 - `Switch`: 修复 `loading` 颜色、`dot` 滑块禁用态/深色模式背景色错误 @shenyaofeng ([#1949](https://github.com/Tencent/tdesign-mobile-vue/pull/1949))
 ### 🚧 Others
+
 - `docs`: 通过 `unplugin` 插件按需引入请改为 `import { TDesignResolver } from ' @tdesign-vue-next/auto-import-resolver';` @liweijie0812 ([#1944](https://github.com/Tencent/tdesign-mobile-vue/pull/1944))
 
 ## 🌈 1.9.3 `2025-07-03` 
