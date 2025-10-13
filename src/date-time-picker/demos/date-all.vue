@@ -1,15 +1,15 @@
 <template>
-  <t-cell title="选择时间" arrow hover :note="pickerValue || ''" @click="visible = true" />
+  <t-cell :bordered="false" :note="pickerValue || ''" arrow hover title="选择时间" @click="visible = true" />
   <t-popup v-model="visible" placement="bottom">
     <t-date-time-picker
       default-value="2025-08-19 10:10:10"
+      format="YYYY-MM-DD HH:mm:ss"
       mode="second"
       title="选择时间"
-      format="YYYY-MM-DD HH:mm:ss"
-      @change="onChange"
-      @pick="onPick"
-      @confirm="onConfirm"
       @cancel="onCancel"
+      @change="onChange"
+      @confirm="onConfirm"
+      @pick="onPick"
     />
   </t-popup>
 </template>
