@@ -10,7 +10,7 @@ const resolvePath = (r) => path.resolve(__dirname, r);
 
 const publicPathMap = {
   preview: '/',
-  production: '/mobile-vue/',
+  production: 'https://static.tdesign.tencent.com/mobile-vue/',
 };
 
 const isCustomElement = (tag) => tag.startsWith('td-');
