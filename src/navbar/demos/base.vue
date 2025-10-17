@@ -1,7 +1,7 @@
 <template>
-  <t-navbar title="标题文字" :fixed="false" left-arrow @left-click="handleClick" />
+  <t-navbar :fixed="false" left-arrow title="标题文字" @left-click="handleClick" />
 
-  <t-navbar title="标题文字" :fixed="false" left-arrow @left-click="handleClick">
+  <t-navbar :fixed="false" left-arrow title="标题文字" @left-click="handleClick">
     <template #left>
       <t-icon name="close" size="24px" />
     </template>
@@ -10,15 +10,9 @@
     </template>
   </t-navbar>
 
-  <t-navbar title="标题文字超出" :title-max-length="5" :fixed="false" @left-click="handleClick">
-    <template #capsule>
-      <div class="custom-capsule">
-        <t-icon name="chevron-left" size="20px" class="custom-capsule__icon" />
-        <t-divider layout="vertical" />
-        <t-icon name="home" size="20px" class="custom-capsule__icon" />
-      </div>
-    </template>
+  <t-navbar :fixed="false" :title-max-length="5" left-arrow title="标题文字超出" @left-click="handleClick">
     <template #right>
+      <t-icon name="home" size="24px" />
       <t-icon name="ellipsis" size="24px" />
     </template>
   </t-navbar>
