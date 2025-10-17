@@ -1,6 +1,6 @@
 <template>
   <div class="tdesign-mobile-link-demo">
-    <t-link hover theme="primary" underline>
+    <t-link hover theme="primary">
       <template #prefixIcon>
         <link-icon />
       </template>
