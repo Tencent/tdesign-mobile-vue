@@ -123,7 +123,9 @@ export default defineComponent({
       const resArr = result[firstKey] as ValidateResultList;
       if (!isArray(resArr)) return '';
 
-      return result?.[Object.keys(result)?.[0]]?.[0]?.message || '';
+      let firstErrorIndex = 0;
+      if (resArr.length > 1) firstErrorIndex = resArr.findIndex((item) => !item.result);
+      return resArr[firstErrorIndex]?.message || '';
     };
     // 校验不通过时，滚动到第一个错误表单
     const scrollTo = (selector: string) => {
