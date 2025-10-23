@@ -42,21 +42,20 @@ type | String | dots | Typescript：`SwiperNavigationType` `type SwiperNavigatio
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-swiper-placement-outside-padding | calc(@spacer-1 + @swiper-nav-dot-size) | - 
---td-swiper-border-radius | 8px | - 
---td-swiper-item-left-padding | 6px | - 
---td-swiper-item-right-padding | 6px | - 
-less | less | - 
---td-swiper-nav-btn-bg-color | @font-gray-3 | - 
---td-swiper-nav-btn-color | @font-white-1 | - 
---td-swiper-nav-btn-size | 24px | - 
---td-swiper-nav-dot-active-color | @font-white-1 | - 
---td-swiper-nav-dot-color | @font-white-2 | - 
---td-swiper-nav-dot-size | 6px | - 
---td-swiper-nav-dots-bar-active-width | 20px | - 
---td-swiper-nav-fraction-bg-color | @font-gray-3 | - 
---td-swiper-nav-fraction-color | @font-white-1 | - 
---td-swiper-nav-fraction-font-size | 12px | - 
---td-swiper-nav-fraction-height | 24px | - 
---td-swiper-nav-outside-bg | @gray-color-3 | - 
---td-swiper-nav-outside-bg-active | @brand-color-7 | - 
+--td-swiper-placement-outside-padding | calc(@spacer-1 + @swiper-nav-dot-size) | -
+--td-swiper-border-radius | 8px | -
+--td-swiper-item-left-padding | 6px | -
+--td-swiper-item-right-padding | 6px | -
+--td-swiper-nav-btn-bg-color | @font-gray-3 | -
+--td-swiper-nav-btn-color | @font-white-1 | -
+--td-swiper-nav-btn-size | 24px | -
+--td-swiper-nav-dot-active-color | @font-white-1 | -
+--td-swiper-nav-dot-color | @font-white-2 | -
+--td-swiper-nav-dot-size | 6px | -
+--td-swiper-nav-dots-bar-active-width | 20px | -
+--td-swiper-nav-fraction-bg-color | @font-gray-3 | -
+--td-swiper-nav-fraction-color | @font-white-1 | -
+--td-swiper-nav-fraction-font-size | 12px | -
+--td-swiper-nav-fraction-height | 24px | -
+--td-swiper-nav-outside-bg | @gray-color-3 | -
+--td-swiper-nav-outside-bg-active | @brand-color-7 | -

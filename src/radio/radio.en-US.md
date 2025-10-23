@@ -60,18 +60,18 @@ change | `(value: T, context: { e: Event; name?:string })` | \-
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-radio-bg-color | @bg-color-container | - 
---td-radio-border-color | @component-stroke | - 
---td-radio-content-color | @text-color-secondary | - 
---td-radio-content-disabled-color | @text-color-disabled | - 
---td-radio-content-line-height | 22px | - 
---td-radio-font-size | 16px | - 
---td-radio-icon-checked-color | @brand-color | - 
---td-radio-icon-color | @component-border | - 
---td-radio-icon-disabled-bg-color | @bg-color-component-disabled | - 
---td-radio-icon-disabled-color | @brand-color-disabled | - 
---td-radio-icon-size | 24px | - 
---td-radio-label-color | @text-color-primary | - 
---td-radio-label-disabled-color | @text-color-disabled | - 
---td-radio-label-line-height | 24px | - 
---td-radio-vertical-padding | 16px | - 
+--td-radio-bg-color | @bg-color-container | -
+--td-radio-border-color | @component-stroke | -
+--td-radio-content-color | @text-color-secondary | -
+--td-radio-content-disabled-color | @text-color-disabled | -
+--td-radio-content-line-height | 22px | -
+--td-radio-font-size | 16px | -
+--td-radio-icon-checked-color | @brand-color | -
+--td-radio-icon-color | @component-border | -
+--td-radio-icon-disabled-bg-color | @bg-color-component-disabled | -
+--td-radio-icon-disabled-color | @brand-color-disabled | -
+--td-radio-icon-size | 24px | -
+--td-radio-label-color | @text-color-primary | -
+--td-radio-label-disabled-color | @text-color-disabled | -
+--td-radio-label-line-height | 24px | -
+--td-radio-vertical-padding | 16px | -

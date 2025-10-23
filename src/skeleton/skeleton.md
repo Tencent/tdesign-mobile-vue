@@ -17,13 +17,13 @@ theme | String | text | 骨架图风格，有基础、头像组合等两大类�
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-skeleton-animation-flashed | rgba(90%, 90%, 90%, .3) | - 
---td-skeleton-animation-gradient | @text-color-placeholder | - 
---td-skeleton-bg-color | @bg-color-secondarycontainer | - 
---td-skeleton-circle-border-radius | @radius-circle | - 
---td-skeleton-circle-height | 48px | - 
---td-skeleton-rect-border-radius | @radius-default | - 
---td-skeleton-rect-height | 16px | - 
---td-skeleton-row-spacing | @spacer-2 | - 
---td-skeleton-text-border-radius | @radius-small | - 
+--td-skeleton-animation-flashed | rgba(90%, 90%, 90%, .3) | -
+--td-skeleton-animation-gradient | @text-color-placeholder | -
+--td-skeleton-bg-color | @bg-color-secondarycontainer | -
+--td-skeleton-circle-border-radius | @radius-circle | -
+--td-skeleton-circle-height | 48px | -
+--td-skeleton-rect-border-radius | @radius-default | -
+--td-skeleton-rect-height | 16px | -
+--td-skeleton-row-spacing | @spacer-2 | -
+--td-skeleton-text-border-radius | @radius-small | -
 --td-skeleton-text-height | 16px | -

@@ -31,15 +31,15 @@ right-click | \- | \-
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-navbar-bg-color | @bg-color-container | - 
---td-navbar-capsule-border-color | #e3e6ea | - 
---td-navbar-capsule-border-radius | 16px | - 
---td-navbar-capsule-height | 32px | - 
---td-navbar-capsule-width | 88px | - 
---td-navbar-color | @text-color-primary | - 
---td-navbar-height | 48px | - 
---td-navbar-left-arrow-size | 24px | - 
---td-navbar-padding-top | 0 | - 
---td-navbar-right | 95px | - 
---td-navbar-title-font-size | 18px | - 
---td-navbar-title-font-weight | 600 | - 
+--td-navbar-bg-color | @bg-color-container | -
+--td-navbar-capsule-border-color | #e3e6ea | -
+--td-navbar-capsule-border-radius | 16px | -
+--td-navbar-capsule-height | 32px | -
+--td-navbar-capsule-width | 88px | -
+--td-navbar-color | @text-color-primary | -
+--td-navbar-height | 48px | -
+--td-navbar-left-arrow-size | 24px | -
+--td-navbar-padding-top | 0 | -
+--td-navbar-right | 95px | -
+--td-navbar-title-font-size | 18px | -
+--td-navbar-title-font-weight | 600 | -

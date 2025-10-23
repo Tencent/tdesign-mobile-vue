@@ -59,16 +59,15 @@ options | \- | - | TS 类型：`DrawerOptions`
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-drawer-bg-color | @bg-color-container | - 
---td-drawer-border-color | @border-color | - 
---td-drawer-footer-padding-bottom | 20px | - 
---td-drawer-hover-color | @bg-color-secondarycontainer | - 
---td-drawer-item-height | 24px | - 
---td-drawer-item-icon-size | 24px | - 
---td-drawer-item-padding | 16px | - 
---td-drawer-sidebar-height | 70vh | - 
---td-drawer-title-color | @drawer-title-color | - 
---td-drawer-title-color | @text-color-primary | - 
---td-drawer-title-font-size | 18px | - 
---td-drawer-title-padding | 24px 16px 8px | - 
+--td-drawer-bg-color | @bg-color-container | -
+--td-drawer-border-color | @border-color | -
+--td-drawer-footer-padding-bottom | 20px | -
+--td-drawer-hover-color | @bg-color-secondarycontainer | -
+--td-drawer-item-height | 24px | -
+--td-drawer-item-icon-size | 24px | -
+--td-drawer-item-padding | 16px | -
+--td-drawer-sidebar-height | 70vh | -
+--td-drawer-title-color | @drawer-title-color | -
+--td-drawer-title-font-size | 18px | -
+--td-drawer-title-padding | 24px 16px 8px | -
 --td-drawer-width | 280px | -

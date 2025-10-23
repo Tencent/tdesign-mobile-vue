@@ -40,6 +40,6 @@ visible-change | `(visible: boolean, trigger: PopupSource) ` | 当浮层隐藏�
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-popup-bg-color | @bg-color-container | - 
---td-popup-border-radius | @radius-extraLarge | - 
---td-popup-close-btn-color | @text-color-primary | - 
+--td-popup-bg-color | @bg-color-container | -
+--td-popup-border-radius | @radius-extraLarge | -
+--td-popup-close-btn-color | @text-color-primary | -
