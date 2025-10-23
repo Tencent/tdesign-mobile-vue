@@ -16,9 +16,9 @@ image | String / Slot / Function | - | 图片地址。TS 类型：`string \| TNo
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-empty-action-margin-top | @spacer-4 | - 
---td-empty-description-color | @text-color-placeholder | - 
---td-empty-description-font-size | @font-size-base | - 
---td-empty-description-line-height | 44rpx | - 
---td-empty-description-margin-top | @spacer-2 | - 
---td-empty-icon-color | @text-color-placeholder | - 
+--td-empty-action-margin-top | @spacer-4 | -
+--td-empty-description-color | @text-color-placeholder | -
+--td-empty-description-font-size | @font-size-base | -
+--td-empty-description-line-height | 44rpx | -
+--td-empty-description-margin-top | @spacer-2 | -
+--td-empty-icon-color | @text-color-placeholder | -

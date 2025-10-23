@@ -34,16 +34,16 @@ selected | `(selected: ActionSheetItem \| string, index: number)` | \-
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-action-sheet-border-color | @component-stroke | - 
---td-action-sheet-border-radius | @radius-extraLarge | - 
---td-action-sheet-cancel-height | 48px | - 
---td-action-sheet-color | @text-color-primary | - 
---td-action-sheet-description-color | @text-color-placeholder | - 
---td-action-sheet-dot-active-color | @brand-color | - 
---td-action-sheet-dot-color | @text-color-disabled | - 
---td-action-sheet-dot-size | 8px | - 
---td-action-sheet-gap-color | var(--td-bg-color-page, @component-stroke) | - 
---td-action-sheet-list-item-disabled-color | @text-color-disabled | - 
---td-action-sheet-list-item-height | 56px | - 
---td-action-sheet-text-align | center | - 
---td-action-sheet-text-weight | 400 | - 
+--td-action-sheet-border-color | @component-stroke | -
+--td-action-sheet-border-radius | @radius-extraLarge | -
+--td-action-sheet-cancel-height | 48px | -
+--td-action-sheet-color | @text-color-primary | -
+--td-action-sheet-description-color | @text-color-placeholder | -
+--td-action-sheet-dot-active-color | @brand-color | -
+--td-action-sheet-dot-color | @text-color-disabled | -
+--td-action-sheet-dot-size | 8px | -
+--td-action-sheet-gap-color | var(--td-bg-color-page, @component-stroke) | -
+--td-action-sheet-list-item-disabled-color | @text-color-disabled | -
+--td-action-sheet-list-item-height | 56px | -
+--td-action-sheet-text-align | center | -
+--td-action-sheet-text-weight | 400 | -

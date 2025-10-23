@@ -59,21 +59,21 @@ change | `(value: T, context: CheckboxGroupChangeContext)` | 值变化时触发�
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-checkbox-bg-color | @bg-color-container | - 
---td-checkbox-border-color | @component-stroke | - 
---td-checkbox-description-color | @text-color-secondary | - 
---td-checkbox-description-disabled-color | @text-color-disabled | - 
---td-checkbox-description-line-height | 22px | - 
---td-checkbox-font-size | 16px | - 
---td-checkbox-icon-checked-color | @brand-color | - 
---td-checkbox-icon-color | var(--td-border-level-2-color, @gray-color-4) | - 
---td-checkbox-icon-disabled-bg-color | @bg-color-component-disabled | - 
---td-checkbox-icon-disabled-color | @brand-color-disabled | - 
---td-checkbox-icon-size | 24px | - 
---td-checkbox-tag-active-bg-color | @brand-color-light | - 
---td-checkbox-tag-active-color | @brand-color | - 
---td-checkbox-tag-bg-color | @bg-color-component | - 
---td-checkbox-title-color | @text-color-primary | - 
---td-checkbox-title-disabled-color | @text-color-disabled | - 
---td-checkbox-title-line-height | 24px | - 
---td-checkbox-vertical-padding | 16px | - 
+--td-checkbox-bg-color | @bg-color-container | -
+--td-checkbox-border-color | @component-stroke | -
+--td-checkbox-description-color | @text-color-secondary | -
+--td-checkbox-description-disabled-color | @text-color-disabled | -
+--td-checkbox-description-line-height | 22px | -
+--td-checkbox-font-size | 16px | -
+--td-checkbox-icon-checked-color | @brand-color | -
+--td-checkbox-icon-color | var(--td-border-level-2-color, @gray-color-4) | -
+--td-checkbox-icon-disabled-bg-color | @bg-color-component-disabled | -
+--td-checkbox-icon-disabled-color | @brand-color-disabled | -
+--td-checkbox-icon-size | 24px | -
+--td-checkbox-tag-active-bg-color | @brand-color-light | -
+--td-checkbox-tag-active-color | @brand-color | -
+--td-checkbox-tag-bg-color | @bg-color-component | -
+--td-checkbox-title-color | @text-color-primary | -
+--td-checkbox-title-disabled-color | @text-color-disabled | -
+--td-checkbox-title-line-height | 24px | -
+--td-checkbox-vertical-padding | 16px | -

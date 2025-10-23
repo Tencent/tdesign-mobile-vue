@@ -40,6 +40,6 @@ visible-change | `(visible: boolean, trigger: PopupSource) ` | [see more ts defi
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-popup-bg-color | @bg-color-container | - 
---td-popup-border-radius | @radius-extraLarge | - 
---td-popup-close-btn-color | @text-color-primary | - 
+--td-popup-bg-color | @bg-color-container | -
+--td-popup-border-radius | @radius-extraLarge | -
+--td-popup-close-btn-color | @text-color-primary | -

@@ -37,12 +37,12 @@ link-click | `(context: { e: MouseEvent })` | 当`link`链接存在时，点击�
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-message-bg-color | @bg-color-container | - 
---td-message-border-radius | @radius-default | - 
---td-message-box-shadow | @shadow-4 | - 
---td-message-close-icon-color | @text-color-placeholder | - 
---td-message-content-font-color | @text-color-primary | - 
---td-message-error-color | @error-color | - 
---td-message-info-color | @brand-color | - 
---td-message-success-color | @success-color | - 
---td-message-warning-color | @warning-color | - 
+--td-message-bg-color | @bg-color-container | -
+--td-message-border-radius | @radius-default | -
+--td-message-box-shadow | @shadow-4 | -
+--td-message-close-icon-color | @text-color-placeholder | -
+--td-message-content-font-color | @text-color-primary | -
+--td-message-error-color | @error-color | -
+--td-message-info-color | @brand-color | -
+--td-message-success-color | @success-color | -
+--td-message-warning-color | @warning-color | -

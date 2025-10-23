@@ -17,13 +17,13 @@ theme | String | text | options: avatar/image/text/paragraph | N
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-skeleton-animation-flashed | rgba(90%, 90%, 90%, .3) | - 
---td-skeleton-animation-gradient | @text-color-placeholder | - 
---td-skeleton-bg-color | @bg-color-secondarycontainer | - 
---td-skeleton-circle-border-radius | @radius-circle | - 
---td-skeleton-circle-height | 48px | - 
---td-skeleton-rect-border-radius | @radius-default | - 
---td-skeleton-rect-height | 16px | - 
---td-skeleton-row-spacing | @spacer-2 | - 
---td-skeleton-text-border-radius | @radius-small | - 
+--td-skeleton-animation-flashed | rgba(90%, 90%, 90%, .3) | -
+--td-skeleton-animation-gradient | @text-color-placeholder | -
+--td-skeleton-bg-color | @bg-color-secondarycontainer | -
+--td-skeleton-circle-border-radius | @radius-circle | -
+--td-skeleton-circle-height | 48px | -
+--td-skeleton-rect-border-radius | @radius-default | -
+--td-skeleton-rect-height | 16px | -
+--td-skeleton-row-spacing | @spacer-2 | -
+--td-skeleton-text-border-radius | @radius-small | -
 --td-skeleton-text-height | 16px | -

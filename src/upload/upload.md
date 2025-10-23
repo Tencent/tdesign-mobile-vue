@@ -78,12 +78,12 @@ url | String | - | 文件上传成功后的下载/访问地址 | N
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-upload-add-bg-color | @bg-color-secondarycontainer | - 
---td-upload-add-color | @text-color-placeholder | - 
---td-upload-add-icon-font-size | 28px | - 
---td-upload-background | @upload-add-bg-color | - 
---td-upload-delete-icon-color | #fff | - 
---td-upload-grid-columns | 4 | - 
---td-upload-height | 80px | - 
---td-upload-radius | @radius-default | - 
---td-upload-width | 80px | - 
+--td-upload-add-bg-color | @bg-color-secondarycontainer | -
+--td-upload-add-color | @text-color-placeholder | -
+--td-upload-add-icon-font-size | 28px | -
+--td-upload-background | @upload-add-bg-color | -
+--td-upload-delete-icon-color | #fff | -
+--td-upload-grid-columns | 4 | -
+--td-upload-height | 80px | -
+--td-upload-radius | @radius-default | -
+--td-upload-width | 80px | -
