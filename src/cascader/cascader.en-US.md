@@ -47,4 +47,4 @@ Name | Default Value | Description
 --td-cascader-step-dot-size | 8px | -
 --td-cascader-step-height | 44px | -
 --td-cascader-title-color | @text-color-primary | -
---td-cascder-title-font-size | 18px | -
+--td-cascader-title-font-size | 18px | -
