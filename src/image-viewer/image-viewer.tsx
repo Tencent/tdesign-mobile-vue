@@ -12,7 +12,7 @@ import { usePrefixClass } from '../hooks/useClass';
 
 // inner components
 import { SwiperChangeSource, Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
-import { TdImageViewerProps, ImageInfo } from './type';
+import { TdImageViewerProps, ImageInfo, ImageViewerCloseTrigger } from './type';
 
 const { prefix } = config;
 
@@ -112,10 +112,20 @@ export default defineComponent({
       state.extraDraggedX = 0;
     };
 
-    const handleClose = (e: Event, trigger: string) => {
+    const handleClose = (e: Event, trigger: ImageViewerCloseTrigger) => {
       beforeClose();
       setVisibleValue(false);
       emit('close', { trigger, e });
+    };
+
+    // 通过(事件委托)将点击事件绑定到组件根，判断点击目标
+    const handleClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.tagName === 'IMG') {
+        handleClose(e, 'image');
+      } else {
+        handleClose(e, 'overlay');
+      }
     };
 
     const handleDelete = () => {
@@ -393,8 +403,8 @@ export default defineComponent({
     return () => (
       <Transition name="fade">
         {visibleValue.value && (
-          <div ref={rootRef} class={`${imageViewerClass.value}`}>
-            <div class={`${imageViewerClass.value}__mask`} onClick={(e) => handleClose(e, 'overlay')} />
+          <div ref={rootRef} class={`${imageViewerClass.value}`} onClick={handleClick}>
+            <div class={`${imageViewerClass.value}__mask`} />
             <TSwiper
               ref={swiperRootRef}
               autoplay={false}

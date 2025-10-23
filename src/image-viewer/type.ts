@@ -34,7 +34,7 @@ export interface TdImageViewerProps {
    * 【开发中】最大放大比例
    * @default 3
    */
-  maxZoom?: Number;
+  maxZoom?: number;
   /**
    * 是否显示页码
    * @default false
@@ -58,7 +58,7 @@ export interface TdImageViewerProps {
   /**
    * 关闭时触发
    */
-  onClose?: (context: { trigger: 'overlay' | 'close-btn'; visible: boolean; index: number }) => void;
+  onClose?: (context: { trigger: ImageViewerCloseTrigger; visible: boolean; index: number }) => void;
   /**
    * 点击删除操作按钮时触发
    */
@@ -73,3 +73,5 @@ export interface ImageInfo {
   url: string;
   align: 'start' | 'center' | 'end';
 }
+
+export type ImageViewerCloseTrigger = 'image' | 'overlay' | 'close-btn';
