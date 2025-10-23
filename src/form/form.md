@@ -14,6 +14,7 @@ errorMessage | Object | - | 表单错误信息配置，示例：`{ idcard: '请�
 labelAlign | String | right | 表单字段标签对齐方式：左对齐、右对齐、顶部对齐。可选项：left/right/top | N
 labelWidth | String / Number | '81px' | 可以整体设置label标签宽度，默认为81px | N
 preventSubmitDefault | Boolean | true | 是否阻止表单提交默认事件（表单提交默认事件会刷新页面），设置为 `true` 可以避免刷新 | N
+readonly | Boolean | undefined | 是否整个表单只读 | N
 requiredMark | Boolean | undefined | 是否显示必填符号（*），默认显示 | N
 requiredMarkPosition | String | left | 表单必填符号（*）显示位置。可选项：left/right | N
 resetType | String | empty | 重置表单的方式，值为 empty 表示重置表单为空，值为 initial 表示重置表单数据为初始值。可选项：empty/initial | N

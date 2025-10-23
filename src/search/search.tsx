@@ -11,6 +11,7 @@ import useLengthLimit from '../hooks/useLengthLimit';
 import { TdSearchProps } from './type';
 import { ENTER_REG } from '../_common/js/common';
 import TCell from '../cell/cell';
+import { useFormReadonly, useFormDisabled } from '../form/hooks';
 
 const { prefix } = config;
 
@@ -21,6 +22,8 @@ export default defineComponent({
     const renderTNodeJSX = useTNodeJSX();
     const classPrefix = usePrefixClass();
     const searchClass = usePrefixClass('search');
+    const isDisabled = useFormDisabled();
+    const isReadonly = useFormReadonly();
 
     const isShowResultList = ref(false);
     const inputRef = ref<HTMLInputElement>();
@@ -191,8 +194,8 @@ export default defineComponent({
                 class={inputClasses.value}
                 autofocus={props.focus}
                 placeholder={props.placeholder}
-                readonly={props.readonly}
-                disabled={props.disabled}
+                readonly={isReadonly.value}
+                disabled={isDisabled.value}
                 onKeypress={handleSearch}
                 onFocus={handleFocus}
                 onBlur={handleBlur}

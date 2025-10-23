@@ -14,7 +14,7 @@ import { TNode } from '../shared';
 import useVModel from '../hooks/useVModel';
 import { TdCheckboxProps } from '../checkbox/type';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
-import { useFormDisabled } from '../form/hooks';
+import { useFormDisabled, useFormReadonly } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 
 const { prefix } = config;
@@ -40,6 +40,8 @@ export default defineComponent({
 
     const checkboxGroup: any = inject('checkboxGroup', undefined);
     const disabled = useFormDisabled(checkboxGroup?.disabled);
+    const isReadonly = useFormReadonly(checkboxGroup?.readonly);
+
     const indeterminate = computed<boolean>(() => {
       if (props.checkAll && checkboxGroup != null) return checkboxGroup.checkAllStatus.value === 'indeterminate';
       return props.indeterminate;
@@ -83,10 +85,8 @@ export default defineComponent({
       return disabled.value;
     });
 
-    const finalReadonly = computed(() => Boolean(props.readonly || checkboxGroup?.readonly.value));
-
     const handleChange = (e: Event, source?: string) => {
-      if (isDisabled.value || finalReadonly.value) return;
+      if (isDisabled.value || isReadonly.value) return;
       if (source === 'text' && props.contentDisabled) return;
 
       const value = !isChecked.value;

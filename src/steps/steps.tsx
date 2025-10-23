@@ -5,6 +5,7 @@ import { TdStepsProps } from './type';
 import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
+import { useFormReadonly } from '../form/hooks';
 
 const { prefix } = config;
 
@@ -14,11 +15,12 @@ export default defineComponent({
   emits: ['update:current', 'update:modelValue', 'change'],
   setup(props, context) {
     const stepsClass = usePrefixClass('steps');
+    const isReadonly = useFormReadonly();
     const baseClass = computed(() => [
       stepsClass.value,
       `${stepsClass.value}--${props.layout}`,
       `${stepsClass.value}--${props.sequence}`,
-      { [`${stepsClass.value}--readonly`]: props.readonly },
+      { [`${stepsClass.value}--readonly`]: isReadonly.value },
     ]);
     const renderTNodeJSX = useTNodeJSX();
 
