@@ -39,7 +39,7 @@ const getAllComponentName = async (dirPath) => {
 
 const generateCssVariables = async (componentName) => {
   const lessPath = [];
-
+  const parsedKeys = [];
   let cssVariableBodyContent = '';
 
   if (combine[componentName]) {
@@ -56,14 +56,20 @@ const generateCssVariables = async (componentName) => {
   const fileContents = await Promise.all(validPaths.map((item) => fs.promises.readFile(item, 'utf8')));
 
   fileContents.forEach((file) => {
-    const matchReg = /(?<=var)[\s\S]*?(?=;)/g;
+    const matchReg = /(?<=var)\([\s\S]*?(?=;)/g;
 
     const list = file.match(matchReg)?.sort();
 
-    list?.forEach((item, index) => {
-      cssVariableBodyContent += `${item.slice(1, item.indexOf(',')).trim()} | ${item
-        .slice(item.indexOf(',') + 2, item.length - 1)
-        .trim()} | -${index === list.length - 1 ? '' : ' \n'}`;
+    list?.forEach((item) => {
+      const key = item.slice(1, item.indexOf(',')).trim();
+      const value = item.slice(item.indexOf(',') + 2, item.length - 1).trim();
+      if (!key || !value) {
+        throw new Error('⚠️ 解析失败，请检查 less 文件');
+      }
+      if (!parsedKeys.includes(key)) {
+        parsedKeys.push(key);
+        cssVariableBodyContent += `${key} | ${value} | -${'\n'}`;
+      }
     });
   });
 

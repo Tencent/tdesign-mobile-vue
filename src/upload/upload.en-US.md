@@ -78,12 +78,12 @@ url | String | - | \- | N
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-upload-add-bg-color | @bg-color-secondarycontainer | - 
---td-upload-add-color | @text-color-placeholder | - 
---td-upload-add-icon-font-size | 28px | - 
---td-upload-background | @upload-add-bg-color | - 
---td-upload-delete-icon-color | #fff | - 
---td-upload-grid-columns | 4 | - 
---td-upload-height | 80px | - 
---td-upload-radius | @radius-default | - 
---td-upload-width | 80px | - 
+--td-upload-add-bg-color | @bg-color-secondarycontainer | -
+--td-upload-add-color | @text-color-placeholder | -
+--td-upload-add-icon-font-size | 28px | -
+--td-upload-background | @upload-add-bg-color | -
+--td-upload-delete-icon-color | #fff | -
+--td-upload-grid-columns | 4 | -
+--td-upload-height | 80px | -
+--td-upload-radius | @radius-default | -
+--td-upload-width | 80px | -

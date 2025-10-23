@@ -42,14 +42,14 @@ value | String / Number | - | \- | N
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-collapse-border-color | @border-color | - 
---td-collapse-content-font-size | @font-size-base | - 
---td-collapse-content-line-height | 1.5 | - 
---td-collapse-content-padding | 16px | - 
---td-collapse-content-text-color | @text-color-primary | - 
---td-collapse-extra-font-size | @font-size-m | - 
---td-collapse-header-text-color | @text-color-primary | - 
---td-collapse-header-text-disabled-color | @text-color-disabled | - 
---td-collapse-icon-color | @text-color-placeholder | - 
---td-collapse-panel-bg-color | @bg-color-container | - 
---td-collapse-title-font-size | @font-size-m | - 
+--td-collapse-border-color | @border-color | -
+--td-collapse-content-font-size | @font-size-base | -
+--td-collapse-content-line-height | 1.5 | -
+--td-collapse-content-padding | 16px | -
+--td-collapse-content-text-color | @text-color-primary | -
+--td-collapse-extra-font-size | @font-size-m | -
+--td-collapse-header-text-color | @text-color-primary | -
+--td-collapse-header-text-disabled-color | @text-color-disabled | -
+--td-collapse-icon-color | @text-color-placeholder | -
+--td-collapse-panel-bg-color | @bg-color-container | -
+--td-collapse-title-font-size | @font-size-m | -

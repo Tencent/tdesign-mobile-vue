@@ -5,6 +5,31 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.11.0 `2025-10-23` 
+### 🚀 Features
+- `Icon`:  
+  - `tdesign-icons-vue-next` 发布 `0.4.1` 版本，新增`align-bottom`、`no-result`、`no-result-filled`、 `tree-list`、`wifi-no`、 `wifi-no-filled`、`logo-stackblitz-filled`、`logo-stackblitz`、`logo-wecom-filled` 图标；移除 `video-camera-3`、`video-camera-3-filled`、`list` 图标，此前有依赖以上移除图标升级请注意 ⚠️ @uyarn  @liweijie0812 ([#2017](https://github.com/Tencent/tdesign-mobile-vue/pull/2017))
+  - 按需加载方式使用的图标资源支持可变粗细功能，通过`strokeWidth`属性进行配置 @uyarn  @liweijie0812 ([#2017](https://github.com/Tencent/tdesign-mobile-vue/pull/2017))
+  - 按需加载方式使用的图标资源支持多色填充功能，通过`strokeColor` 和 `fillColor` 属性进行配置 @uyarn  @liweijie0812 ([#2017](https://github.com/Tencent/tdesign-mobile-vue/pull/2017))
+- `Watermark`: 新增 `Watermark` 水印组件 @Wesley-0808 ([#2024](https://github.com/Tencent/tdesign-mobile-vue/pull/2024))
+- `Popup`: `mounted` 后才显示，避免 `ssr` 下 `mismatch` @novlan1 ([#1654](https://github.com/Tencent/tdesign-mobile-vue/pull/1654))
+- `Cascader`: 支持透传 `overlayProps` @novlan1 ([#2027](https://github.com/Tencent/tdesign-mobile-vue/pull/2027))
+- `Drawer`: 新增 `overlayProps` 属性 @anlyyao ([#2034](https://github.com/Tencent/tdesign-mobile-vue/pull/2034))
+- `ImageViwer`: 修复点击遮罩层 `close` 事件未触发，并补充触发源 `image`，表示点击图片关闭图片预览 @liweijie0812 ([#2045](https://github.com/Tencent/tdesign-mobile-vue/pull/2045))
+### 🐞 Bug Fixes
+- `Message`: 修复 `error` 和 `warning` 主题图标错误 @anlyyao ([#2008](https://github.com/Tencent/tdesign-mobile-vue/pull/2008))
+- `CountDown`: 开启 `autostart` 后，置于后台的状态不更新时间 @SinzoL ([#2010](https://github.com/Tencent/tdesign-mobile-vue/pull/2010))
+- `Textarea`: 修复输入文本颜色错误 @anlyyao ([#2026](https://github.com/Tencent/tdesign-mobile-vue/pull/2026))
+- `CountDown`: 开启 `splitWithUnit` 后，单位不显示 @Linzsong ([#2019](https://github.com/Tencent/tdesign-mobile-vue/pull/2019))
+- `Button`: 修复 `disabled` 或 `loading` 动态变化时，`hover` 态异常 @liweijie0812 ([#1998](https://github.com/Tencent/tdesign-mobile-vue/pull/1998))
+- `Cascader`: 修复异步加载数据问题 @novlan1 ([#2027](https://github.com/Tencent/tdesign-mobile-vue/pull/2027))
+- `ConfigProvider`: 修复错误消息 `max` 和 `min` 英文翻译错误 @liweijie0812([#2048](https://github.com/Tencent/tdesign-mobile-vue/pull/2048))
+- `QRCode`: 修复按需导出名称错误 @liweijie0812 ([#2043](https://github.com/Tencent/tdesign-mobile-vue/pull/2043))
+- `Upload`: 
+  - 修复 `addContent` 插槽位置错误 @anlyyao ([#2055](https://github.com/Tencent/tdesign-mobile-vue/pull/2055))
+  - 修复 `--td-upload-add-icon-font-size` 无效 @anlyyao ([#2055](https://github.com/Tencent/tdesign-mobile-vue/pull/2055))
+  - 修复 `add` 图标不居中问题 @anlyyao ([#2308](https://github.com/Tencent/tdesign-common/pull/2308))
+
 ## 🌈 1.10.2 `2025-08-22` 
 ### 🚀 Features
 - `Indexes`: 新增 `current` 属性，支持受控与非受控使用，用于自定义索引列表激活项 @Wesley-0808 ([#1987](https://github.com/Tencent/tdesign-mobile-vue/pull/1987))

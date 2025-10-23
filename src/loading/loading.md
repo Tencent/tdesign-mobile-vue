@@ -37,12 +37,12 @@ options | Function | - | 必需。TS 类型：`boolean \| TdLoadingProps`
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-loading-color | @brand-color | - 
---td-loading-dot-size | 8px | - 
---td-loading-full-bg-color | rgba(255, 255, 255, 60%) | - 
---td-loading-line-bg-color | @text-color-primary | - 
---td-loading-size | 20px | - 
---td-loading-text-color | @text-color-primary | - 
---td-loading-text-font-size | 12px | - 
---td-loading-text-line-height | 20px | - 
---td-loading-z-index | 3500 | - 
+--td-loading-color | @brand-color | -
+--td-loading-dot-size | 8px | -
+--td-loading-full-bg-color | rgba(255, 255, 255, 60%) | -
+--td-loading-line-bg-color | @text-color-primary | -
+--td-loading-size | 20px | -
+--td-loading-text-color | @text-color-primary | -
+--td-loading-text-font-size | 12px | -
+--td-loading-text-line-height | 20px | -
+--td-loading-z-index | 3500 | -

@@ -37,12 +37,12 @@ options | Function | - | required。Typescript：`boolean \| TdLoadingProps`
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-loading-color | @brand-color | - 
---td-loading-dot-size | 8px | - 
---td-loading-full-bg-color | rgba(255, 255, 255, 60%) | - 
---td-loading-line-bg-color | @text-color-primary | - 
---td-loading-size | 20px | - 
---td-loading-text-color | @text-color-primary | - 
---td-loading-text-font-size | 12px | - 
---td-loading-text-line-height | 20px | - 
---td-loading-z-index | 3500 | - 
+--td-loading-color | @brand-color | -
+--td-loading-dot-size | 8px | -
+--td-loading-full-bg-color | rgba(255, 255, 255, 60%) | -
+--td-loading-line-bg-color | @text-color-primary | -
+--td-loading-size | 20px | -
+--td-loading-text-color | @text-color-primary | -
+--td-loading-text-font-size | 12px | -
+--td-loading-text-line-height | 20px | -
+--td-loading-z-index | 3500 | -

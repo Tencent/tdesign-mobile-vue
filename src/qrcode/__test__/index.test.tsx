@@ -1,11 +1,11 @@
 import { mount } from '@vue/test-utils';
 import type { VueWrapper } from '@vue/test-utils';
 import { vi } from 'vitest';
-import { Qrcode, TdQRCodeProps } from '../index';
+import { QRCode, TdQRCodeProps } from '../index';
 
 describe('QRCode', () => {
   describe('props', () => {
-    let wrapper: VueWrapper<InstanceType<typeof Qrcode>> | null = null;
+    let wrapper: VueWrapper<InstanceType<typeof QRCode>> | null = null;
     // 因单测环境下无法获取主题色，若未定义颜色，组件将由默认颜色兜底。所以单测的颜色要为默认颜色。
     // 颜色优先级如下：
     // bgColor：自定义颜色 > 主题色适配 > 透明[transparent]
@@ -14,7 +14,7 @@ describe('QRCode', () => {
     const defaultFgColor = '#000000'; // 实际使用时为 rgba(0, 0, 0, .9)
     const defaultSize = 160;
     beforeEach(() => {
-      wrapper = mount(Qrcode, {
+      wrapper = mount(QRCode, {
         props: {
           value: 'https://tdesign.tencent.com/',
         },

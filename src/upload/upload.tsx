@@ -111,7 +111,7 @@ export default defineComponent({
         }
         return (
           <div class={`${uploadClass.value}__item ${uploadClass.value}__item--add`} onClick={triggerUpload}>
-            <div class={`${uploadClass.value}__add-icon`}>{addContent || <AddIcon size="28" />}</div>
+            {addContent || <div class={`${uploadClass.value}__add-icon`}>{<AddIcon />}</div>}
           </div>
         );
       }

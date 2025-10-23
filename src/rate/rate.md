@@ -31,12 +31,12 @@ change | `(value: number)` | 评分数改变时触发
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-rate-disabled-selected-color | @warning-color-3 | - 
---td-rate-disabled-unselected-color | @gray-color-2 | - 
---td-rate-icon-scale | 1.33 | - 
---td-rate-selected-color | @warning-color | - 
---td-rate-text-active-color | @text-color-primary | - 
---td-rate-text-active-font-weight | 600 | - 
---td-rate-text-color | @text-color-disabled | - 
---td-rate-text-font-size | @font-size-m | - 
---td-rate-unselected-color | @bg-color-secondarycomponent | - 
+--td-rate-disabled-selected-color | @warning-color-3 | -
+--td-rate-disabled-unselected-color | @gray-color-2 | -
+--td-rate-icon-scale | 1.33 | -
+--td-rate-selected-color | @warning-color | -
+--td-rate-text-active-color | @text-color-primary | -
+--td-rate-text-active-font-weight | 600 | -
+--td-rate-text-color | @text-color-disabled | -
+--td-rate-text-font-size | @font-size-m | -
+--td-rate-unselected-color | @bg-color-secondarycomponent | -

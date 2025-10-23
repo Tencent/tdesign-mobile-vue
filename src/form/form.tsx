@@ -91,7 +91,7 @@ export default defineComponent({
       return fields.indexOf(`${name}`) !== -1;
     };
     const formatValidateResult = <T extends Data>(validateResultList: FormItemValidateResult<T>[]) => {
-      const result = validateResultList.reduce((r, err) => Object.assign(r || {}, err), {});
+      const result: Record<string, any> = validateResultList.reduce((r, err) => Object.assign(r || {}, err), {});
       Object.keys(result).forEach((key) => {
         if (result[key] === true) {
           delete result[key];
@@ -123,7 +123,7 @@ export default defineComponent({
       const resArr = result[firstKey] as ValidateResultList;
       if (!isArray(resArr)) return '';
 
-      return result?.[Object.keys(result)?.[0]]?.[0]?.message || '';
+      return resArr.filter((item) => !item.result)[0].message;
     };
     // 校验不通过时，滚动到第一个错误表单
     const scrollTo = (selector: string) => {
@@ -196,7 +196,7 @@ export default defineComponent({
       if (!keys.length) return;
       const list = children.value
         .filter((child) => isFunction(child.setValidateMessage) && keys.includes(`${child.name}`))
-        .map((child) => child.setValidateMessage(validateMessage[`${child.name}`]));
+        .map((child) => child.setValidateMessage(validateMessage[child.name as keyof FormData]));
       Promise.all(list);
     };
 

@@ -21,16 +21,16 @@ size | String | medium | 尺寸。可选项：medium/large | N
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-badge-basic-height | 16px | - 
---td-badge-basic-padding | 4px | - 
---td-badge-basic-width | 16px | - 
---td-badge-bg-color | @error-color | - 
---td-badge-border-radius | 2px | - 
---td-badge-bubble-border-radius | 10px 10px 10px 1px | - 
---td-badge-dot-size | 8px | - 
---td-badge-font-size | @font-size-xs | - 
---td-badge-font-weight | 600 | - 
---td-badge-large-font-size | @font-size-s | - 
---td-badge-large-height | 20px | - 
---td-badge-large-padding | 5px | - 
---td-badge-text-color | @font-white-1 | - 
+--td-badge-basic-height | 16px | -
+--td-badge-basic-padding | 4px | -
+--td-badge-basic-width | 16px | -
+--td-badge-bg-color | @error-color | -
+--td-badge-border-radius | 2px | -
+--td-badge-bubble-border-radius | 10px 10px 10px 1px | -
+--td-badge-dot-size | 8px | -
+--td-badge-font-size | @font-size-xs | -
+--td-badge-font-weight | 600 | -
+--td-badge-large-font-size | @font-size-s | -
+--td-badge-large-height | 20px | -
+--td-badge-large-padding | 5px | -
+--td-badge-text-color | @font-white-1 | -

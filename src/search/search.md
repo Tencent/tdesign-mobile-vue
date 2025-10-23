@@ -47,17 +47,17 @@ submit | `(context: { value: string; e: KeyboardEvent })` | 提交时触发，�
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-search-action-color | @brand-color | - 
---td-search-bg-color | @bg-color-secondarycontainer | - 
---td-search-clear-icon-color | @text-color-placeholder | - 
---td-search-clear-icon-font-size | 24px | - 
---td-search-font-size | @font-size-m | - 
---td-search-height | 40px | - 
---td-search-icon-color | @text-color-placeholder | - 
---td-search-icon-font-size | 24px | - 
---td-search-label-color | @text-color-primary | - 
---td-search-padding | 8px 12px | - 
---td-search-placeholder-color | @text-color-placeholder | - 
---td-search-result-high-light-color | @brand-color | - 
---td-search-square-radius | @radius-default | - 
---td-search-text-color | @text-color-primary | - 
+--td-search-action-color | @brand-color | -
+--td-search-bg-color | @bg-color-secondarycontainer | -
+--td-search-clear-icon-color | @text-color-placeholder | -
+--td-search-clear-icon-font-size | 24px | -
+--td-search-font-size | @font-size-m | -
+--td-search-height | 40px | -
+--td-search-icon-color | @text-color-placeholder | -
+--td-search-icon-font-size | 24px | -
+--td-search-label-color | @text-color-primary | -
+--td-search-padding | 8px 12px | -
+--td-search-placeholder-color | @text-color-placeholder | -
+--td-search-result-high-light-color | @brand-color | -
+--td-search-square-radius | @radius-default | -
+--td-search-text-color | @text-color-primary | -

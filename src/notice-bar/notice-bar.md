@@ -31,14 +31,14 @@ click | `(trigger: NoticeBarTrigger)` | 点击事件。[详细类型定义](http
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-notice-bar-error-bg-color | @error-color-1 | - 
---td-notice-bar-error-color | @error-color-6 | - 
---td-notice-bar-font-color | @text-color-primary | - 
---td-notice-bar-info-bg-color | @brand-color-light | - 
---td-notice-bar-info-color | @brand-color | - 
---td-notice-bar-operation-font-color | @brand-color | - 
---td-notice-bar-success-bg-color | @success-color-1 | - 
---td-notice-bar-success-color | @success-color | - 
---td-notice-bar-suffix-icon-color | @text-color-placeholder | - 
---td-notice-bar-warning-bg-color | @warning-color-1 | - 
---td-notice-bar-warning-color | @warning-color | - 
+--td-notice-bar-error-bg-color | @error-color-1 | -
+--td-notice-bar-error-color | @error-color-6 | -
+--td-notice-bar-font-color | @text-color-primary | -
+--td-notice-bar-info-bg-color | @brand-color-light | -
+--td-notice-bar-info-color | @brand-color | -
+--td-notice-bar-operation-font-color | @brand-color | -
+--td-notice-bar-success-bg-color | @success-color-1 | -
+--td-notice-bar-success-color | @success-color | -
+--td-notice-bar-suffix-icon-color | @text-color-placeholder | -
+--td-notice-bar-warning-bg-color | @warning-color-1 | -
+--td-notice-bar-warning-color | @warning-color | -
