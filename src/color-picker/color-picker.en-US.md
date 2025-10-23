@@ -53,4 +53,4 @@ Name | Default Value | Description
 --td-color-picker-swatch-height | 24px | - 
 --td-color-picker-swatch-padding | 0 | - 
 --td-color-picker-swatch-width | 24px | - 
---td-color-picker-swatches-title-font | 16px | - 
+--td-color-picker-swatches-title-font | 16px | -

@@ -60,4 +60,4 @@ submit | `(context: { value: string; e: KeyboardEvent })` | 提交时触发，�
 --td-search-placeholder-color | @text-color-placeholder | - 
 --td-search-result-high-light-color | @brand-color | - 
 --td-search-square-radius | @radius-default | - 
---td-search-text-color | @text-color-primary | - 
+--td-search-text-color | @text-color-primary | -

@@ -76,4 +76,4 @@ Name | Default Value | Description
 --td-checkbox-title-color | @text-color-primary | - 
 --td-checkbox-title-disabled-color | @text-color-disabled | - 
 --td-checkbox-title-line-height | 24px | - 
---td-checkbox-vertical-padding | 16px | - 
+--td-checkbox-vertical-padding | 16px | -

@@ -45,4 +45,4 @@ Name | Default Value | Description
 --td-message-error-color | @error-color | - 
 --td-message-info-color | @brand-color | - 
 --td-message-success-color | @success-color | - 
---td-message-warning-color | @warning-color | - 
+--td-message-warning-color | @warning-color | -

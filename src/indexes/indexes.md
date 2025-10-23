@@ -44,11 +44,10 @@ index | String / Number | - | 索引字符 | N
 --td-indexes-sidebar-tips-color | @brand-color | - 
 --td-indexes-sidebar-tips-font-size | 20px | - 
 --td-indexes-sidebar-tips-right | 38px | - 
---td-indexes-sidebar-tips-size | 48px | - 
---td-indexes-anchor-active-bg-color | @bg-color-container | - 
+--td-indexes-sidebar-tips-size | 48px | ---td-indexes-anchor-active-bg-color | @bg-color-container | - 
 --td-indexes-anchor-active-color | @brand-color | - 
 --td-indexes-anchor-active-font-weight | 600 | - 
 --td-indexes-anchor-bg-color | @bg-color-secondarycontainer | - 
 --td-indexes-anchor-color | @text-color-primary | - 
 --td-indexes-anchor-font-size | 14px | - 
---td-indexes-anchor-line-height | 22px | - 
+--td-indexes-anchor-line-height | 22px | -

@@ -58,4 +58,4 @@ change | `(value: T, context: { e: MouseEvent })` | 数据发生变化时触发
 --td-switch-small-width | 39px | - 
 --td-switch-unchecked-color | @bg-color-secondarycontainer-active | - 
 --td-switch-unchecked-disabled-color | @bg-color-component-disabled | - 
---td-switch-width | 45px | - 
+--td-switch-width | 45px | -

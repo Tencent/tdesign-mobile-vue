@@ -35,4 +35,4 @@ Name | Default Value | Description
 --td-image-color | @text-color-placeholder | - 
 --td-image-loading-bg-color | @bg-color-secondarycontainer | - 
 --td-image-loading-color | @text-color-placeholder | - 
---td-image-round-radius | @radius-default | - 
+--td-image-round-radius | @radius-default | -

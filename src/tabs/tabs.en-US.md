@@ -67,4 +67,4 @@ Name | Default Value | Description
 --td-tab-track-color | @brand-color | - 
 --td-tab-track-radius | 4px | - 
 --td-tab-track-thickness | 3px | - 
---td-tab-track-width | 16px | - 
+--td-tab-track-width | 16px | -

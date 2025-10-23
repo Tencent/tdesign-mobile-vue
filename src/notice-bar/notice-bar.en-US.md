@@ -41,4 +41,4 @@ Name | Default Value | Description
 --td-notice-bar-success-color | @success-color | - 
 --td-notice-bar-suffix-icon-color | @text-color-placeholder | - 
 --td-notice-bar-warning-bg-color | @warning-color-1 | - 
---td-notice-bar-warning-color | @warning-color | - 
+--td-notice-bar-warning-color | @warning-color | -

@@ -21,4 +21,4 @@ image | String / Slot / Function | - | 图片地址。TS 类型：`string \| TNo
 --td-empty-description-font-size | @font-size-base | - 
 --td-empty-description-line-height | 44rpx | - 
 --td-empty-description-margin-top | @spacer-2 | - 
---td-empty-icon-color | @text-color-placeholder | - 
+--td-empty-icon-color | @text-color-placeholder | -

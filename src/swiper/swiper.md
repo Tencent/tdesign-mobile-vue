@@ -45,8 +45,7 @@ type | String | dots | 导航器类型，点状(dots)、点条状(dots-bar)、�
 --td-swiper-border-radius | 8px | - 
 --td-swiper-item-left-padding | 6px | - 
 --td-swiper-item-right-padding | 6px | - 
-less | less | - 
---td-swiper-nav-btn-bg-color | @font-gray-3 | - 
+less | less | ---td-swiper-nav-btn-bg-color | @font-gray-3 | - 
 --td-swiper-nav-btn-color | @font-white-1 | - 
 --td-swiper-nav-btn-size | 24px | - 
 --td-swiper-nav-dot-active-color | @font-white-1 | - 
@@ -58,4 +57,4 @@ less | less | -
 --td-swiper-nav-fraction-font-size | 12px | - 
 --td-swiper-nav-fraction-height | 24px | - 
 --td-swiper-nav-outside-bg | @gray-color-3 | - 
---td-swiper-nav-outside-bg-active | @brand-color-7 | - 
+--td-swiper-nav-outside-bg-active | @brand-color-7 | -

@@ -33,4 +33,4 @@ size | String | medium | 尺寸。可选项：medium/large | N
 --td-badge-large-font-size | @font-size-s | - 
 --td-badge-large-height | 20px | - 
 --td-badge-large-padding | 5px | - 
---td-badge-text-color | @font-white-1 | - 
+--td-badge-text-color | @font-white-1 | -

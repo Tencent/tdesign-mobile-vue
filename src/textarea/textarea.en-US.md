@@ -40,7 +40,7 @@ The component provides the following CSS variables, which can be used to customi
 Name | Default Value | Description 
 -- | -- | --
 --td-textarea-background-color | @bg-color-container | - 
---td-textarea-border-color | rgba(220, 220, 220, 1) | - 
+--td-textarea-border-color | @component-border | - 
 --td-textarea-border-radius | @radius-default | - 
 --td-textarea-disabled-text-color | @text-color-disabled | - 
 --td-textarea-indicator-text-color | @text-color-placeholder | - 

@@ -62,4 +62,4 @@ titleRight | String / Slot / Function | '' | 标题右侧数据 仅支持 layout
 --td-step-item-process-circle-color | @font-white-1 | - 
 --td-step-item-process-dot-border-color | @brand-color | - 
 --td-step-item-process-icon-color | @brand-color | - 
---td-step-item-process-title-color | @brand-color | - 
+--td-step-item-process-title-color | @brand-color | -

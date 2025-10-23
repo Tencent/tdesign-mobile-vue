@@ -45,4 +45,4 @@ Name | Default Value | Description
 --td-loading-text-color | @text-color-primary | - 
 --td-loading-text-font-size | 12px | - 
 --td-loading-text-line-height | 20px | - 
---td-loading-z-index | 3500 | - 
+--td-loading-z-index | 3500 | -

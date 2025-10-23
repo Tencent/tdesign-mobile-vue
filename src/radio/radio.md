@@ -74,4 +74,4 @@ change | `(value: T, context: { e: Event; name?:string })` | 选中值发生变�
 --td-radio-label-color | @text-color-primary | - 
 --td-radio-label-disabled-color | @text-color-disabled | - 
 --td-radio-label-line-height | 24px | - 
---td-radio-vertical-padding | 16px | - 
+--td-radio-vertical-padding | 16px | -

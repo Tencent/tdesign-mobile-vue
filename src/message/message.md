@@ -45,4 +45,4 @@ link-click | `(context: { e: MouseEvent })` | 当`link`链接存在时，点击�
 --td-message-error-color | @error-color | - 
 --td-message-info-color | @brand-color | - 
 --td-message-success-color | @success-color | - 
---td-message-warning-color | @warning-color | - 
+--td-message-warning-color | @warning-color | -

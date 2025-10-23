@@ -86,4 +86,4 @@ url | String | - | 文件上传成功后的下载/访问地址 | N
 --td-upload-grid-columns | 4 | - 
 --td-upload-height | 80px | - 
 --td-upload-radius | @radius-default | - 
---td-upload-width | 80px | - 
+--td-upload-width | 80px | -

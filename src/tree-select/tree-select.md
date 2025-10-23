@@ -33,4 +33,4 @@ change | `(value: TreeSelectValue, level: TreeLevel) ` | 点击任何节点均�
 --td-tree-item-active-color | @brand-color | - 
 --td-tree-item-font-size | 16px | - 
 --td-tree-item-height | 56px | - 
---td-tree-root-bg-color | @bg-color-secondarycontainer | - 
+--td-tree-root-bg-color | @bg-color-secondarycontainer | -

@@ -46,4 +46,4 @@ Name | Default Value | Description
 --td-action-sheet-list-item-disabled-color | @text-color-disabled | - 
 --td-action-sheet-list-item-height | 56px | - 
 --td-action-sheet-text-align | center | - 
---td-action-sheet-text-weight | 400 | - 
+--td-action-sheet-text-weight | 400 | -

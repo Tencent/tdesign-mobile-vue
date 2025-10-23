@@ -27,4 +27,4 @@ visible-change | `(visible: boolean)` | 确认框显示或隐藏时触发
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-popover-padding | 12px | - 
+--td-popover-padding | 12px | -

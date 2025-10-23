@@ -77,4 +77,4 @@ validate | `(context: { error?: 'exceed-maximum' \| 'below-minimum' })` | `1.9.1
 --td-input-suffix-text-color | @text-color-primary | - 
 --td-input-vertical-padding | 16px | - 
 --td-input-warning-text-color | @warning-color | - 
---td-input-warning-tips-color | @warning-color | - 
+--td-input-warning-tips-color | @warning-color | -

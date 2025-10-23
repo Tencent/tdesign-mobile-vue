@@ -98,4 +98,4 @@ Name | Default Value | Description
 --td-tag-warning-color | @warning-color | - 
 --td-tag-warning-light-color | @warning-color-1 | - 
 ant
-@tag-outline-bg-color: var(--td-tag-outline-bg-color | @bg-color-container | - 
+@tag-outline-bg-color: var(--td-tag-outline-bg-color | @bg-color-container | -

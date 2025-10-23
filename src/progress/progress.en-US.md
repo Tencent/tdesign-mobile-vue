@@ -28,4 +28,4 @@ Name | Default Value | Description
 --td-progress-inner-bg-color-warning | @warning-color | - 
 --td-progress-circle-inner-bg-color | @font-white-1 | - 
 --td-progress-inner-bg-color | @brand-color | - 
---td-progress-track-bg-color | @bg-color-component | - 
+--td-progress-track-bg-color | @bg-color-component | -

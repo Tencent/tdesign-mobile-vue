@@ -40,4 +40,4 @@ Name | Default Value | Description
 --td-stepper-border-radius | @radius-small | - 
 --td-stepper-input-color | @text-color-primary | - 
 --td-stepper-input-disabled-bg | @bg-color-component-disabled | - 
---td-stepper-input-disabled-color | @text-color-disabled | - 
+--td-stepper-input-disabled-color | @text-color-disabled | -

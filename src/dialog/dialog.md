@@ -98,4 +98,4 @@ options | Object | - | TS 类型：`Omit<DialogOptions, 'cancelBtn'>`
 --td-dialog-title-color | @text-color-primary | - 
 --td-dialog-title-font-size | 18px | - 
 --td-dialog-title-line-height | 26px | - 
---td-dialog-width | 311px | - 
+--td-dialog-width | 311px | -

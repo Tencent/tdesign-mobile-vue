@@ -49,4 +49,4 @@ Name | Default Value | Description
 --td-slider-dot-bg-color | #fff | - 
 --td-slider-dot-color | @bg-color-secondarycontainer | - 
 --td-slider-dot-size | 20px | - 
---td-slider-scale-desc-color | @text-color-primary | - 
+--td-slider-scale-desc-color | @text-color-primary | -

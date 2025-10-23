@@ -32,8 +32,7 @@ Name | Default Value | Description
 -- | -- | --
 --td-grid-bg-color | @bg-color-container | - 
 --td-grid-card-radius | @radius-large | - 
-less | less | - 
---td-grid-item-description-color | @text-color-placeholder | - 
+less | less | ---td-grid-item-description-color | @text-color-placeholder | - 
 --td-grid-item-description-font-size | 12px | - 
 --td-grid-item-description-line-height | 20px | - 
 --td-grid-item-description-padding-top | 4px | - 
@@ -52,4 +51,4 @@ less | less | -
 --td-grid-item-text-font-size | 14px | - 
 --td-grid-item-text-line-height | 22px | - 
 --td-grid-item-text-padding-top | 8px | - 
---td-grid-item-vertical-padding | 16px 0 12px | - 
+--td-grid-item-vertical-padding | 16px 0 12px | -

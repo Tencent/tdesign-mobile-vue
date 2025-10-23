@@ -66,4 +66,4 @@ collapsed-item-click | `(context: { e: MouseEvent })` | 点击头像折叠元素
 --td-avatar-small-width | 40px | - 
 --td-avatar-text-large-font-size | @font-size-xl | - 
 --td-avatar-text-medium-font-size | @font-size-m | - 
---td-avatar-text-small-font-size | @font-size-base | - 
+--td-avatar-text-small-font-size | @font-size-base | -

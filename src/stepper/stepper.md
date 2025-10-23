@@ -40,4 +40,4 @@ overlimit | `(type: 'minus' \| 'plus')` | 数值超出限制时触发
 --td-stepper-border-radius | @radius-small | - 
 --td-stepper-input-color | @text-color-primary | - 
 --td-stepper-input-disabled-bg | @bg-color-component-disabled | - 
---td-stepper-input-disabled-color | @text-color-disabled | - 
+--td-stepper-input-disabled-color | @text-color-disabled | -

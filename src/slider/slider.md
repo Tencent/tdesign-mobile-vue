@@ -49,4 +49,4 @@ dragstart | `(context: {e: TouchEvent})` | 开始拖动时触发
 --td-slider-dot-bg-color | #fff | - 
 --td-slider-dot-color | @bg-color-secondarycontainer | - 
 --td-slider-dot-size | 20px | - 
---td-slider-scale-desc-color | @text-color-primary | - 
+--td-slider-scale-desc-color | @text-color-primary | -

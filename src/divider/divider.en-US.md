@@ -21,4 +21,4 @@ Name | Default Value | Description
 --td-divider-content-color | @text-color-placeholder | - 
 --td-divider-content-font-size | 12px | - 
 --td-divider-content-line-height | 20px | - 
---td-divider-content-line-style | solid | - 
+--td-divider-content-line-style | solid | -

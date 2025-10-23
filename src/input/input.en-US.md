@@ -77,4 +77,4 @@ Name | Default Value | Description
 --td-input-suffix-text-color | @text-color-primary | - 
 --td-input-vertical-padding | 16px | - 
 --td-input-warning-text-color | @warning-color | - 
---td-input-warning-tips-color | @warning-color | - 
+--td-input-warning-tips-color | @warning-color | -

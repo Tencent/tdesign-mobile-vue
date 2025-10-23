@@ -42,4 +42,4 @@ Name | Default Value | Description
 --td-navbar-padding-top | 0 | - 
 --td-navbar-right | 95px | - 
 --td-navbar-title-font-size | 18px | - 
---td-navbar-title-font-weight | 600 | - 
+--td-navbar-title-font-weight | 600 | -

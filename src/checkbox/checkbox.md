@@ -76,4 +76,4 @@ change | `(value: T, context: CheckboxGroupChangeContext)` | 值变化时触发�
 --td-checkbox-title-color | @text-color-primary | - 
 --td-checkbox-title-disabled-color | @text-color-disabled | - 
 --td-checkbox-title-line-height | 24px | - 
---td-checkbox-vertical-padding | 16px | - 
+--td-checkbox-vertical-padding | 16px | -

@@ -68,4 +68,4 @@ Name | Default Value | Description
 --td-cell-right-icon-font-size | 24px | - 
 --td-cell-title-color | @text-color-primary | - 
 --td-cell-title-font-size | @font-size-m | - 
---td-cell-vertical-padding | 16px | - 
+--td-cell-vertical-padding | 16px | -

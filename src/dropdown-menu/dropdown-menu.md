@@ -49,11 +49,10 @@ reset | `(value: DropdownValue)` | 点击重置时触发
 --td-dropdown-menu-colorm | @text-color-primary | - 
 --td-dropdown-menu-disabled-colorm | @text-color-disabled | - 
 --td-dropdown-menu-font-sizem | 14px | - 
---td-dropdown-menu-icon-sizem | 24px | - 
---td-dropdown-body-max-height | 280px | - 
+--td-dropdown-menu-icon-sizem | 24px | ---td-dropdown-body-max-height | 280px | - 
 --td-dropdown-menu-bg-color | @bg-color-container | - 
 --td-tree-bg-color | @bg-color-container | - 
 --td-tree-item-active-color | @brand-color | - 
 --td-tree-item-font-size | 16px | - 
 --td-tree-item-height | 48px | - 
---td-tree-root-bg-color | @bg-color-secondarycontainer | - 
+--td-tree-root-bg-color | @bg-color-secondarycontainer | -

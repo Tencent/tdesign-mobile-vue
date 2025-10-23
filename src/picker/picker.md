@@ -57,4 +57,4 @@ pick | `(value: Array<PickerValue>,context: PickerContext)` | 任何一列选中
 --td-picker-title-font-size | 18px | - 
 --td-picker-title-font-weight | 600 | - 
 --td-picker-title-line-height | 26px | - 
---td-picker-toolbar-height | 58px | - 
+--td-picker-toolbar-height | 58px | -

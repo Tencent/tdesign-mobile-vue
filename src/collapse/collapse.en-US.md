@@ -52,4 +52,4 @@ Name | Default Value | Description
 --td-collapse-header-text-disabled-color | @text-color-disabled | - 
 --td-collapse-icon-color | @text-color-placeholder | - 
 --td-collapse-panel-bg-color | @bg-color-container | - 
---td-collapse-title-font-size | @font-size-m | - 
+--td-collapse-title-font-size | @font-size-m | -

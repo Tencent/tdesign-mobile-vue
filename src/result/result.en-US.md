@@ -28,4 +28,4 @@ Name | Default Value | Description
 --td-result-title-color | @text-color-primary | - 
 --td-result-title-font-size | @font-size-xl | - 
 --td-result-title-line-height | 28px | - 
---td-result-title-margin-top | @spacer-1 | - 
+--td-result-title-margin-top | @spacer-1 | -

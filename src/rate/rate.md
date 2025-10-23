@@ -39,4 +39,4 @@ change | `(value: number)` | 评分数改变时触发
 --td-rate-text-active-font-weight | 600 | - 
 --td-rate-text-color | @text-color-disabled | - 
 --td-rate-text-font-size | @font-size-m | - 
---td-rate-unselected-color | @bg-color-secondarycomponent | - 
+--td-rate-unselected-color | @bg-color-secondarycomponent | -

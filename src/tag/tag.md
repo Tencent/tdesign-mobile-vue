@@ -98,4 +98,4 @@ close | `(context: { e: MouseEvent })` | 如果关闭按钮存在，点击关闭
 --td-tag-warning-color | @warning-color | - 
 --td-tag-warning-light-color | @warning-color-1 | - 
 ant
-@tag-outline-bg-color: var(--td-tag-outline-bg-color | @bg-color-container | - 
+@tag-outline-bg-color: var(--td-tag-outline-bg-color | @bg-color-container | -

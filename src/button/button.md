@@ -124,4 +124,4 @@ click | `(e: MouseEvent)` | 点击时触发
 --td-button-small-font-size | @font-size-base | - 
 --td-button-small-height | 32px | - 
 --td-button-small-icon-font-size | 18px | - 
---td-button-small-padding-horizontal | 12px | - 
+--td-button-small-padding-horizontal | 12px | -

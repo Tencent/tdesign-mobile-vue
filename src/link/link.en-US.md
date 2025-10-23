@@ -44,4 +44,4 @@ Name | Default Value | Description
 --td-link-success-disabled-color | @success-color-disabled | - 
 --td-link-warning-active-color | @warning-color-active | - 
 --td-link-warning-color | @warning-color | - 
---td-link-warning-disabled-color | @warning-color-disabled | - 
+--td-link-warning-disabled-color | @warning-color-disabled | -

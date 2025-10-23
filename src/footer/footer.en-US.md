@@ -30,4 +30,4 @@ Name | Default Value | Description
 --td-footer-text-font-size | @font-size-s | - 
 --td-footer-text-line-height | 20px | - 
 --td-footer-text-margin-top | 4px | - 
---td-footer-title-color | @text-color-primary | - 
+--td-footer-title-color | @text-color-primary | -
