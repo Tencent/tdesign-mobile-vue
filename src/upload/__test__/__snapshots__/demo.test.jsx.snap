@@ -79,62 +79,58 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
       <div
         class="t-upload__item t-upload__item--add"
       >
+        
         <div
-          class="t-upload__add-icon"
+          class="add-content"
+          data-v-89f78ba6=""
         >
-          
           <div
-            class="add-content"
+            class="t-image t-image--square"
             data-v-89f78ba6=""
+            style="width: 32px; height: 32px;"
           >
             <div
-              class="t-image t-image--square"
-              data-v-89f78ba6=""
-              style="width: 32px; height: 32px;"
+              class="t-image__mask"
             >
               <div
-                class="t-image__mask"
+                class="t-loading"
+                style="font-size: 20px;"
               >
                 <div
-                  class="t-loading"
-                  style="font-size: 20px;"
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
                 >
+                  
                   <div
-                    class="t-loading__dots"
-                    style="animation-duration: 800ms; width: 20px; height: 20px;"
-                  >
-                    
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0s;"
-                    />
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                    />
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                    />
-                    
-                  </div>
-                  <!---->
-                  <!---->
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                  
                 </div>
-              </div>
-              <picture>
                 <!---->
-                <img
-                  alt=""
-                  class="t-image__img"
-                  src="https://tdesign.gtimg.com/mobile/demos/upload3.png"
-                  style="object-fit: fill; object-position: center;"
-                />
-              </picture>
+                <!---->
+              </div>
             </div>
+            <picture>
+              <!---->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/upload3.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
-          
         </div>
+        
       </div>
       <input
         accept="image/png"
@@ -163,62 +159,58 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
       <div
         class="t-upload__item t-upload__item--add"
       >
+        
         <div
-          class="t-upload__add-icon"
+          class="add-content"
+          data-v-89f78ba6=""
         >
-          
           <div
-            class="add-content"
+            class="t-image t-image--square"
             data-v-89f78ba6=""
+            style="width: 32px; height: 32px;"
           >
             <div
-              class="t-image t-image--square"
-              data-v-89f78ba6=""
-              style="width: 32px; height: 32px;"
+              class="t-image__mask"
             >
               <div
-                class="t-image__mask"
+                class="t-loading"
+                style="font-size: 20px;"
               >
                 <div
-                  class="t-loading"
-                  style="font-size: 20px;"
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
                 >
+                  
                   <div
-                    class="t-loading__dots"
-                    style="animation-duration: 800ms; width: 20px; height: 20px;"
-                  >
-                    
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0s;"
-                    />
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                    />
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                    />
-                    
-                  </div>
-                  <!---->
-                  <!---->
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                  
                 </div>
-              </div>
-              <picture>
                 <!---->
-                <img
-                  alt=""
-                  class="t-image__img"
-                  src="https://tdesign.gtimg.com/mobile/demos/upload3.png"
-                  style="object-fit: fill; object-position: center;"
-                />
-              </picture>
+                <!---->
+              </div>
             </div>
+            <picture>
+              <!---->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/upload3.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
-          
         </div>
+        
       </div>
       <input
         accept="image/png"
@@ -1056,62 +1048,58 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             <div
               class="t-upload__item t-upload__item--add"
             >
+              
               <div
-                class="t-upload__add-icon"
+                class="add-content"
+                data-v-89f78ba6=""
               >
-                
                 <div
-                  class="add-content"
+                  class="t-image t-image--square"
                   data-v-89f78ba6=""
+                  style="width: 32px; height: 32px;"
                 >
                   <div
-                    class="t-image t-image--square"
-                    data-v-89f78ba6=""
-                    style="width: 32px; height: 32px;"
+                    class="t-image__mask"
                   >
                     <div
-                      class="t-image__mask"
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
                       <div
-                        class="t-loading"
-                        style="font-size: 20px;"
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
                       >
+                        
                         <div
-                          class="t-loading__dots"
-                          style="animation-duration: 800ms; width: 20px; height: 20px;"
-                        >
-                          
-                          <div
-                            class="t-loading__dot"
-                            style="animation-duration: 0.8s; animation-delay: 0s;"
-                          />
-                          <div
-                            class="t-loading__dot"
-                            style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                          />
-                          <div
-                            class="t-loading__dot"
-                            style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                          />
-                          
-                        </div>
-                        <!---->
-                        <!---->
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                        
                       </div>
-                    </div>
-                    <picture>
                       <!---->
-                      <img
-                        alt=""
-                        class="t-image__img"
-                        src="https://tdesign.gtimg.com/mobile/demos/upload3.png"
-                        style="object-fit: fill; object-position: center;"
-                      />
-                    </picture>
+                      <!---->
+                    </div>
                   </div>
+                  <picture>
+                    <!---->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/upload3.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
-                
               </div>
+              
             </div>
             <input
               accept="image/png"
@@ -1140,62 +1128,58 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             <div
               class="t-upload__item t-upload__item--add"
             >
+              
               <div
-                class="t-upload__add-icon"
+                class="add-content"
+                data-v-89f78ba6=""
               >
-                
                 <div
-                  class="add-content"
+                  class="t-image t-image--square"
                   data-v-89f78ba6=""
+                  style="width: 32px; height: 32px;"
                 >
                   <div
-                    class="t-image t-image--square"
-                    data-v-89f78ba6=""
-                    style="width: 32px; height: 32px;"
+                    class="t-image__mask"
                   >
                     <div
-                      class="t-image__mask"
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
                       <div
-                        class="t-loading"
-                        style="font-size: 20px;"
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
                       >
+                        
                         <div
-                          class="t-loading__dots"
-                          style="animation-duration: 800ms; width: 20px; height: 20px;"
-                        >
-                          
-                          <div
-                            class="t-loading__dot"
-                            style="animation-duration: 0.8s; animation-delay: 0s;"
-                          />
-                          <div
-                            class="t-loading__dot"
-                            style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                          />
-                          <div
-                            class="t-loading__dot"
-                            style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                          />
-                          
-                        </div>
-                        <!---->
-                        <!---->
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                        
                       </div>
-                    </div>
-                    <picture>
                       <!---->
-                      <img
-                        alt=""
-                        class="t-image__img"
-                        src="https://tdesign.gtimg.com/mobile/demos/upload3.png"
-                        style="object-fit: fill; object-position: center;"
-                      />
-                    </picture>
+                      <!---->
+                    </div>
                   </div>
+                  <picture>
+                    <!---->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/upload3.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
-                
               </div>
+              
             </div>
             <input
               accept="image/png"
