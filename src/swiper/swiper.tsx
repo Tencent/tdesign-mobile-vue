@@ -1,4 +1,4 @@
-import { onMounted, computed, ref, provide, watch, onUnmounted, toRefs, defineComponent } from 'vue';
+import { onMounted, computed, ref, provide, watch, onUnmounted, toRefs, defineComponent, isVNode } from 'vue';
 import { isNumber, isObject } from 'lodash-es';
 import { useSwipe } from '../swipe-cell/useSwipe';
 import config from '../config';
@@ -9,6 +9,13 @@ import { preventDefault } from '../shared/dom';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
+const defaultSwiperNavigation: SwiperNavigation = {
+  paginationPosition: 'bottom',
+  placement: 'inside',
+  showControls: false,
+  type: 'dots',
+};
+
 const { prefix } = config;
 
 export default defineComponent({
@@ -18,6 +25,8 @@ export default defineComponent({
   setup(props, context) {
     const swiperClass = usePrefixClass('swiper');
     const swiperNavClass = usePrefixClass('swiper-nav');
+
+    const { navigation } = toRefs(props);
 
     const readerTNodeJSX = useTNodeJSX();
     const setOffset = (offset: number, direction = 'X'): void => {
@@ -39,34 +48,41 @@ export default defineComponent({
     const isVertical = computed(() => props.direction === 'vertical');
     const containerHeight = ref('auto');
 
-    const navigation = computed((): SwiperNavigation => props.navigation);
-
-    const isBottomPagination = computed(() => {
-      let isShowSwiperNav = false;
-      if (typeof props.navigation === 'object') {
-        isShowSwiperNav =
-          (!navigation.value?.paginationPosition || navigation.value?.paginationPosition === 'bottom') &&
-          (navigation.value?.type === 'dots' || navigation.value?.type === 'dots-bar') &&
-          enableNavigation?.value;
+    // const isBottomPagination = computed(() => {
+    //   let isShowSwiperNav = false;
+    //   if (typeof props.navigation === 'object') {
+    //     isShowSwiperNav =
+    //       (!navigation.value?.paginationPosition || navigation.value?.paginationPosition === 'bottom') &&
+    //       (navigation.value?.type === 'dots' || navigation.value?.type === 'dots-bar') &&
+    //       enableNavigation?.value;
+    //   }
+    //   return isShowSwiperNav;
+    // });
+    const navigationConfig = computed<SwiperNavigation>(() => {
+      if (navigation.value === true) {
+        return defaultSwiperNavigation;
       }
-      return isShowSwiperNav;
+      if (isObject(navigation.value)) {
+        return {
+          ...defaultSwiperNavigation,
+          ...navigation.value,
+        } as SwiperNavigation;
+      }
+
+      return {};
     });
 
     const rootClass = computed(() => {
       return [
         `${swiperClass.value}`,
         `${swiperClass.value}--${props.type}`,
-        `${
-          isBottomPagination.value && navigation.value?.placement
-            ? `${swiperClass.value}--${navigation.value?.placement}`
-            : ''
-        }`,
+        `${navigationConfig.value?.placement ? `${swiperClass.value}--${navigationConfig.value?.placement}` : ''}`,
       ];
     });
 
     const enableNavigation = computed(() => {
       if (typeof props.navigation === 'object') {
-        return navigation.value?.minShowNum ? items.value.length >= navigation.value?.minShowNum : true;
+        return navigationConfig.value?.minShowNum ? items.value.length >= navigationConfig.value?.minShowNum : true;
       }
       return false;
     });
@@ -267,7 +283,7 @@ export default defineComponent({
       const swiperNav = () => {
         if (navigation.value && enableNavigation.value) {
           const controlsNav = () => {
-            if (!isVertical.value && !!navigation.value?.showControls) {
+            if (!isVertical.value && !!navigationConfig.value?.showControls) {
               return (
                 <span class={`${swiperNavClass.value}__btn`}>
                   <span class={`${swiperNavClass.value}__btn--prev`} onClick={() => goPrev('nav')} />
@@ -277,21 +293,21 @@ export default defineComponent({
             }
           };
           const typeNav = () => {
-            if ('type' in navigation.value) {
+            if ('type' in navigationConfig.value) {
               // dots
               const dots = () => {
-                if (['dots', 'dots-bar'].includes(navigation.value?.type || '')) {
+                if (['dots', 'dots-bar'].includes(navigationConfig.value.type || '')) {
                   return (
                     <>
                       {items.value.map((_: any, index: number) => (
                         <span
                           key={`page${index}`}
                           class={[
-                            `${swiperNavClass.value}__${navigation.value?.type}-item`,
+                            `${swiperNavClass.value}__${navigationConfig.value?.type}-item`,
                             index === currentIndex.value
-                              ? `${swiperNavClass.value}__${navigation.value?.type}-item--active`
+                              ? `${swiperNavClass.value}__${navigationConfig.value?.type}-item--active`
                               : '',
-                            `${swiperNavClass.value}__${navigation.value?.type}-item--${props.direction}`,
+                            `${swiperNavClass.value}__${navigationConfig.value?.type}-item--${props.direction}`,
                           ]}
                         />
                       ))}
@@ -301,7 +317,7 @@ export default defineComponent({
               };
               // fraction
               const fraction = () => {
-                if (navigation.value?.type === 'fraction') {
+                if (navigationConfig.value?.type === 'fraction') {
                   return <span>{`${(currentIndex.value ?? 0) + 1}/${items.value.length}`}</span>;
                 }
               };
@@ -309,11 +325,11 @@ export default defineComponent({
                 <span
                   class={[
                     `${swiperNavClass.value}--${props.direction}`,
-                    `${swiperNavClass.value}__${navigation.value?.type || ''}`,
-                    `${swiperNavClass.value}--${navigation.value?.paginationPosition || 'bottom'}`,
+                    `${swiperNavClass.value}__${navigationConfig.value?.type || ''}`,
+                    `${swiperNavClass.value}--${navigationConfig.value?.paginationPosition || 'bottom'}`,
                     `${
-                      isBottomPagination.value && navigation.value?.placement
-                        ? `${swiperNavClass.value}--${navigation.value?.placement}`
+                      navigationConfig.value?.placement
+                        ? `${swiperNavClass.value}--${navigationConfig.value?.placement}`
                         : ''
                     }`,
                   ]}
