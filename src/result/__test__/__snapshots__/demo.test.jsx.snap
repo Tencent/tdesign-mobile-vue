@@ -101,7 +101,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        01 类型
+        组件类型
       </h2>
       <!--v-if-->
     </div>
@@ -123,12 +123,13 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
       <p
         class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        不同结果状态
+        基础结果
       </p>
     </div>
     <div
       class="tdesign-mobile-demo-block__slot"
     >
+      
       
       
       <div>
@@ -142,33 +143,13 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
               class="t-icon t-icon-check-circle t-result__icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="check-circle"
-              >
-                <path
-                  d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-                  fill="transparent"
-                  id="fill1"
-                />
-                <path
-                  d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M16.5 9L10.5 15L7.5 12"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM10.5 16.4142L6.08578 12L7.5 10.5858L10.5 13.5858L16.5 7.58579L17.9142 9L10.5 16.4142Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
           <div
@@ -176,11 +157,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
           >
             成功状态
           </div>
-          <div
-            class="t-result__description"
-          >
-            描述文字
-          </div>
+          <!---->
         </div>
       </div>
       <div>
@@ -194,33 +171,13 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
               class="t-icon t-icon-close-circle t-result__icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="close-circle"
-              >
-                <path
-                  d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-                  fill="transparent"
-                  id="fill1"
-                />
-                <path
-                  d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM7.40347 15.1823L10.5858 12L7.40347 8.81768L8.81768 7.40347L12 10.5858L15.1816 7.40415L16.5959 8.81836L13.4142 12L16.5959 15.1816L15.1816 16.5959L12 13.4142L8.81768 16.5965L7.40347 15.1823Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
           <div
@@ -228,11 +185,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
           >
             失败状态
           </div>
-          <div
-            class="t-result__description"
-          >
-            描述文字
-          </div>
+          <!---->
         </div>
       </div>
       <div>
@@ -246,33 +199,13 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
               class="t-icon t-icon-info-circle t-result__icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="info-circle"
-              >
-                <path
-                  d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-                  fill="transparent"
-                  id="fill1"
-                />
-                <path
-                  d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M12 16.5L12 11M12 7.5L11.9961 7.5L11.9961 7.49609L12 7.49609L12 7.5Z"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM11 17.5L11 10H13L13 17.5L11 17.5ZM13 8.5H10.9961L10.9961 6.49609H13L13 8.5Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
           <div
@@ -280,11 +213,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
           >
             警示状态
           </div>
-          <div
-            class="t-result__description"
-          >
-            描述文字
-          </div>
+          <!---->
         </div>
       </div>
       <div>
@@ -298,33 +227,13 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
               class="t-icon t-icon-info-circle t-result__icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="info-circle"
-              >
-                <path
-                  d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-                  fill="transparent"
-                  id="fill1"
-                />
-                <path
-                  d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M12 16.5L12 11M12 7.5L11.9961 7.5L11.9961 7.49609L12 7.49609L12 7.5Z"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM11 17.5L11 10H13L13 17.5L11 17.5ZM13 8.5H10.9961L10.9961 6.49609H13L13 8.5Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
           <div
@@ -332,11 +241,158 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
           >
             默认状态
           </div>
-          <div
-            class="t-result__description"
+          <!---->
+        </div>
+      </div>
+      
+      <div
+        class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+      >
+        <div
+          class="tdesign-mobile-demo-block__header"
+        >
+          <!--v-if-->
+          <p
+            class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
           >
-            描述文字
+            带描述的结果
+          </p>
+        </div>
+        <div
+          class="tdesign-mobile-demo-block__slot"
+        >
+          
+          
+          <div>
+            <div
+              class="t-result t-result--theme-success space"
+            >
+              <div
+                class="t-result__thumb"
+              >
+                <svg
+                  class="t-icon t-icon-check-circle t-result__icon"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM10.5 16.4142L6.08578 12L7.5 10.5858L10.5 13.5858L16.5 7.58579L17.9142 9L10.5 16.4142Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <div
+                class="t-result__title"
+              >
+                成功状态
+              </div>
+              <div
+                class="t-result__description"
+              >
+                描述文字
+              </div>
+            </div>
           </div>
+          <div>
+            <div
+              class="t-result t-result--theme-error space"
+            >
+              <div
+                class="t-result__thumb"
+              >
+                <svg
+                  class="t-icon t-icon-close-circle t-result__icon"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM7.40347 15.1823L10.5858 12L7.40347 8.81768L8.81768 7.40347L12 10.5858L15.1816 7.40415L16.5959 8.81836L13.4142 12L16.5959 15.1816L15.1816 16.5959L12 13.4142L8.81768 16.5965L7.40347 15.1823Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <div
+                class="t-result__title"
+              >
+                失败状态
+              </div>
+              <div
+                class="t-result__description"
+              >
+                描述文字
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="t-result t-result--theme-warning space"
+            >
+              <div
+                class="t-result__thumb"
+              >
+                <svg
+                  class="t-icon t-icon-info-circle t-result__icon"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM11 17.5L11 10H13L13 17.5L11 17.5ZM13 8.5H10.9961L10.9961 6.49609H13L13 8.5Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <div
+                class="t-result__title"
+              >
+                警示状态
+              </div>
+              <div
+                class="t-result__description"
+              >
+                描述文字
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="t-result t-result--theme-default space"
+            >
+              <div
+                class="t-result__thumb"
+              >
+                <svg
+                  class="t-icon t-icon-info-circle t-result__icon"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM11 17.5L11 10H13L13 17.5L11 17.5ZM13 8.5H10.9961L10.9961 6.49609H13L13 8.5Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <div
+                class="t-result__title"
+              >
+                默认状态
+              </div>
+              <div
+                class="t-result__description"
+              >
+                描述文字
+              </div>
+            </div>
+          </div>
+          
+          
         </div>
       </div>
       
@@ -470,7 +526,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
             class="t-button__content"
           >
             
-             页面位置展示 
+             页面位置展示
             
           </span>
           <!---->
@@ -487,6 +543,7 @@ exports[`Result > Result themeVue demo works fine 1`] = `
   data-v-app=""
 >
   
+  
   <div>
     <div
       class="t-result t-result--theme-success space"
@@ -498,33 +555,13 @@ exports[`Result > Result themeVue demo works fine 1`] = `
           class="t-icon t-icon-check-circle t-result__icon"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="check-circle"
-          >
-            <path
-              d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-              fill="transparent"
-              id="fill1"
-            />
-            <path
-              d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-            <path
-              d="M16.5 9L10.5 15L7.5 12"
-              id="stroke2"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM10.5 16.4142L6.08578 12L7.5 10.5858L10.5 13.5858L16.5 7.58579L17.9142 9L10.5 16.4142Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
       <div
@@ -532,11 +569,7 @@ exports[`Result > Result themeVue demo works fine 1`] = `
       >
         成功状态
       </div>
-      <div
-        class="t-result__description"
-      >
-        描述文字
-      </div>
+      <!---->
     </div>
   </div>
   <div>
@@ -550,33 +583,13 @@ exports[`Result > Result themeVue demo works fine 1`] = `
           class="t-icon t-icon-close-circle t-result__icon"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="close-circle"
-          >
-            <path
-              d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-              fill="transparent"
-              id="fill1"
-            />
-            <path
-              d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-            <path
-              d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
-              id="stroke2"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM7.40347 15.1823L10.5858 12L7.40347 8.81768L8.81768 7.40347L12 10.5858L15.1816 7.40415L16.5959 8.81836L13.4142 12L16.5959 15.1816L15.1816 16.5959L12 13.4142L8.81768 16.5965L7.40347 15.1823Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
       <div
@@ -584,11 +597,7 @@ exports[`Result > Result themeVue demo works fine 1`] = `
       >
         失败状态
       </div>
-      <div
-        class="t-result__description"
-      >
-        描述文字
-      </div>
+      <!---->
     </div>
   </div>
   <div>
@@ -602,33 +611,13 @@ exports[`Result > Result themeVue demo works fine 1`] = `
           class="t-icon t-icon-info-circle t-result__icon"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="info-circle"
-          >
-            <path
-              d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-              fill="transparent"
-              id="fill1"
-            />
-            <path
-              d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-            <path
-              d="M12 16.5L12 11M12 7.5L11.9961 7.5L11.9961 7.49609L12 7.49609L12 7.5Z"
-              id="stroke2"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM11 17.5L11 10H13L13 17.5L11 17.5ZM13 8.5H10.9961L10.9961 6.49609H13L13 8.5Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
       <div
@@ -636,11 +625,7 @@ exports[`Result > Result themeVue demo works fine 1`] = `
       >
         警示状态
       </div>
-      <div
-        class="t-result__description"
-      >
-        描述文字
-      </div>
+      <!---->
     </div>
   </div>
   <div>
@@ -654,33 +639,13 @@ exports[`Result > Result themeVue demo works fine 1`] = `
           class="t-icon t-icon-info-circle t-result__icon"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="info-circle"
-          >
-            <path
-              d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-              fill="transparent"
-              id="fill1"
-            />
-            <path
-              d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-            <path
-              d="M12 16.5L12 11M12 7.5L11.9961 7.5L11.9961 7.49609L12 7.49609L12 7.5Z"
-              id="stroke2"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM11 17.5L11 10H13L13 17.5L11 17.5ZM13 8.5H10.9961L10.9961 6.49609H13L13 8.5Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
       <div
@@ -688,11 +653,158 @@ exports[`Result > Result themeVue demo works fine 1`] = `
       >
         默认状态
       </div>
-      <div
-        class="t-result__description"
+      <!---->
+    </div>
+  </div>
+  
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        描述文字
+        带描述的结果
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div>
+        <div
+          class="t-result t-result--theme-success space"
+        >
+          <div
+            class="t-result__thumb"
+          >
+            <svg
+              class="t-icon t-icon-check-circle t-result__icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM10.5 16.4142L6.08578 12L7.5 10.5858L10.5 13.5858L16.5 7.58579L17.9142 9L10.5 16.4142Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-result__title"
+          >
+            成功状态
+          </div>
+          <div
+            class="t-result__description"
+          >
+            描述文字
+          </div>
+        </div>
       </div>
+      <div>
+        <div
+          class="t-result t-result--theme-error space"
+        >
+          <div
+            class="t-result__thumb"
+          >
+            <svg
+              class="t-icon t-icon-close-circle t-result__icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM7.40347 15.1823L10.5858 12L7.40347 8.81768L8.81768 7.40347L12 10.5858L15.1816 7.40415L16.5959 8.81836L13.4142 12L16.5959 15.1816L15.1816 16.5959L12 13.4142L8.81768 16.5965L7.40347 15.1823Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-result__title"
+          >
+            失败状态
+          </div>
+          <div
+            class="t-result__description"
+          >
+            描述文字
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="t-result t-result--theme-warning space"
+        >
+          <div
+            class="t-result__thumb"
+          >
+            <svg
+              class="t-icon t-icon-info-circle t-result__icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM11 17.5L11 10H13L13 17.5L11 17.5ZM13 8.5H10.9961L10.9961 6.49609H13L13 8.5Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-result__title"
+          >
+            警示状态
+          </div>
+          <div
+            class="t-result__description"
+          >
+            描述文字
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="t-result t-result--theme-default space"
+        >
+          <div
+            class="t-result__thumb"
+          >
+            <svg
+              class="t-icon t-icon-info-circle t-result__icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM11 17.5L11 10H13L13 17.5L11 17.5ZM13 8.5H10.9961L10.9961 6.49609H13L13 8.5Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-result__title"
+          >
+            默认状态
+          </div>
+          <div
+            class="t-result__description"
+          >
+            描述文字
+          </div>
+        </div>
+      </div>
+      
+      
     </div>
   </div>
   

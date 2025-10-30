@@ -290,60 +290,13 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
               class="t-icon t-icon-app"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="app"
-              >
-                <g
-                  id="fill1"
-                >
-                  <path
-                    d="M3 3H10V10H3V3Z"
-                    fill="transparent"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    fill="transparent"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
-                    fill="transparent"
-                  />
-                </g>
-                <path
-                  d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                  fill="transparent"
-                  id="fill2"
-                />
-                <g
-                  id="stroke1"
-                >
-                  <path
-                    d="M3 3H10V10H3V3Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                </g>
-                <path
-                  d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                fill="currentColor"
+              />
             </svg>
           </span>
           <div
@@ -362,60 +315,13 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
               class="t-icon t-icon-app"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="app"
-              >
-                <g
-                  id="fill1"
-                >
-                  <path
-                    d="M3 3H10V10H3V3Z"
-                    fill="transparent"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    fill="transparent"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
-                    fill="transparent"
-                  />
-                </g>
-                <path
-                  d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                  fill="transparent"
-                  id="fill2"
-                />
-                <g
-                  id="stroke1"
-                >
-                  <path
-                    d="M3 3H10V10H3V3Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                </g>
-                <path
-                  d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                fill="currentColor"
+              />
             </svg>
           </span>
           <div
@@ -434,60 +340,13 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
               class="t-icon t-icon-app"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="app"
-              >
-                <g
-                  id="fill1"
-                >
-                  <path
-                    d="M3 3H10V10H3V3Z"
-                    fill="transparent"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    fill="transparent"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
-                    fill="transparent"
-                  />
-                </g>
-                <path
-                  d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                  fill="transparent"
-                  id="fill2"
-                />
-                <g
-                  id="stroke1"
-                >
-                  <path
-                    d="M3 3H10V10H3V3Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                </g>
-                <path
-                  d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                fill="currentColor"
+              />
             </svg>
           </span>
           <div
@@ -506,60 +365,13 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
               class="t-icon t-icon-app"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="app"
-              >
-                <g
-                  id="fill1"
-                >
-                  <path
-                    d="M3 3H10V10H3V3Z"
-                    fill="transparent"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    fill="transparent"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
-                    fill="transparent"
-                  />
-                </g>
-                <path
-                  d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                  fill="transparent"
-                  id="fill2"
-                />
-                <g
-                  id="stroke1"
-                >
-                  <path
-                    d="M3 3H10V10H3V3Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                </g>
-                <path
-                  d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                fill="currentColor"
+              />
             </svg>
           </span>
           <div
@@ -578,60 +390,13 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
               class="t-icon t-icon-app"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="app"
-              >
-                <g
-                  id="fill1"
-                >
-                  <path
-                    d="M3 3H10V10H3V3Z"
-                    fill="transparent"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    fill="transparent"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
-                    fill="transparent"
-                  />
-                </g>
-                <path
-                  d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                  fill="transparent"
-                  id="fill2"
-                />
-                <g
-                  id="stroke1"
-                >
-                  <path
-                    d="M3 3H10V10H3V3Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                </g>
-                <path
-                  d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                fill="currentColor"
+              />
             </svg>
           </span>
           <div
@@ -650,60 +415,13 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
               class="t-icon t-icon-app"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="app"
-              >
-                <g
-                  id="fill1"
-                >
-                  <path
-                    d="M3 3H10V10H3V3Z"
-                    fill="transparent"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    fill="transparent"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
-                    fill="transparent"
-                  />
-                </g>
-                <path
-                  d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                  fill="transparent"
-                  id="fill2"
-                />
-                <g
-                  id="stroke1"
-                >
-                  <path
-                    d="M3 3H10V10H3V3Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                </g>
-                <path
-                  d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                fill="currentColor"
+              />
             </svg>
           </span>
           <div
@@ -940,60 +658,13 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-app"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="app"
-                  >
-                    <g
-                      id="fill1"
-                    >
-                      <path
-                        d="M3 3H10V10H3V3Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
-                        fill="transparent"
-                      />
-                    </g>
-                    <path
-                      d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                      fill="transparent"
-                      id="fill2"
-                    />
-                    <g
-                      id="stroke1"
-                    >
-                      <path
-                        d="M3 3H10V10H3V3Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                    </g>
-                    <path
-                      d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                      id="stroke2"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </span>
               <div
@@ -1012,60 +683,13 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-app"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="app"
-                  >
-                    <g
-                      id="fill1"
-                    >
-                      <path
-                        d="M3 3H10V10H3V3Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
-                        fill="transparent"
-                      />
-                    </g>
-                    <path
-                      d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                      fill="transparent"
-                      id="fill2"
-                    />
-                    <g
-                      id="stroke1"
-                    >
-                      <path
-                        d="M3 3H10V10H3V3Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                    </g>
-                    <path
-                      d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                      id="stroke2"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </span>
               <div
@@ -1084,60 +708,13 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-app"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="app"
-                  >
-                    <g
-                      id="fill1"
-                    >
-                      <path
-                        d="M3 3H10V10H3V3Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
-                        fill="transparent"
-                      />
-                    </g>
-                    <path
-                      d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                      fill="transparent"
-                      id="fill2"
-                    />
-                    <g
-                      id="stroke1"
-                    >
-                      <path
-                        d="M3 3H10V10H3V3Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                    </g>
-                    <path
-                      d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                      id="stroke2"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </span>
               <div
@@ -1156,60 +733,13 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-app"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="app"
-                  >
-                    <g
-                      id="fill1"
-                    >
-                      <path
-                        d="M3 3H10V10H3V3Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
-                        fill="transparent"
-                      />
-                    </g>
-                    <path
-                      d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                      fill="transparent"
-                      id="fill2"
-                    />
-                    <g
-                      id="stroke1"
-                    >
-                      <path
-                        d="M3 3H10V10H3V3Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                    </g>
-                    <path
-                      d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                      id="stroke2"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </span>
               <div
@@ -1228,60 +758,13 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-app"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="app"
-                  >
-                    <g
-                      id="fill1"
-                    >
-                      <path
-                        d="M3 3H10V10H3V3Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
-                        fill="transparent"
-                      />
-                    </g>
-                    <path
-                      d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                      fill="transparent"
-                      id="fill2"
-                    />
-                    <g
-                      id="stroke1"
-                    >
-                      <path
-                        d="M3 3H10V10H3V3Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                    </g>
-                    <path
-                      d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                      id="stroke2"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </span>
               <div
@@ -1300,60 +783,13 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-app"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="app"
-                  >
-                    <g
-                      id="fill1"
-                    >
-                      <path
-                        d="M3 3H10V10H3V3Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
-                        fill="transparent"
-                      />
-                    </g>
-                    <path
-                      d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                      fill="transparent"
-                      id="fill2"
-                    />
-                    <g
-                      id="stroke1"
-                    >
-                      <path
-                        d="M3 3H10V10H3V3Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                    </g>
-                    <path
-                      d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                      id="stroke2"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </span>
               <div

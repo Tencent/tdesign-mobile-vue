@@ -21,21 +21,13 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-left t-navbar__left-arrow"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-left"
-          >
-            <path
-              d="M14.5 17.5L9 12L14.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M15.9144 17.5L10.4144 12L15.9144 6.50003L14.5002 5.08582L7.58594 12L14.5002 18.9142L15.9144 17.5Z"
+            fill="currentColor"
+          />
         </svg>
         <!---->
         <!---->
@@ -68,21 +60,13 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-left t-navbar__left-arrow"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-left"
-          >
-            <path
-              d="M14.5 17.5L9 12L14.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M15.9144 17.5L10.4144 12L15.9144 6.50003L14.5002 5.08582L7.58594 12L14.5002 18.9142L15.9144 17.5Z"
+            fill="currentColor"
+          />
         </svg>
         
         <svg
@@ -135,48 +119,20 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
       <div
         class="t-navbar__left"
       >
-        <!---->
-        <!---->
-        <div
-          class="t-navbar__capsule"
+        <svg
+          class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+          fill="none"
+          height="1em"
+          viewBox="0 0 24 24"
+          width="1em"
         >
-          
-          <div
-            class="custom-capsule"
-            data-v-fcc0cda1=""
-          >
-            <svg
-              class="t-icon t-icon-chevron-left custom-capsule__icon"
-              data-v-fcc0cda1=""
-              style="font-size: 20px;"
-            >
-              <use
-                href="#t-icon-chevron-left"
-              />
-            </svg>
-            <div
-              class="t-divider t-divider--vertical t-divider--center"
-              data-v-fcc0cda1=""
-              role="separator"
-            >
-              <div
-                class="t-divider__content"
-              >
-                <!---->
-              </div>
-            </div>
-            <svg
-              class="t-icon t-icon-home custom-capsule__icon"
-              data-v-fcc0cda1=""
-              style="font-size: 20px;"
-            >
-              <use
-                href="#t-icon-home"
-              />
-            </svg>
-          </div>
-          
-        </div>
+          <path
+            d="M15.9144 17.5L10.4144 12L15.9144 6.50003L14.5002 5.08582L7.58594 12L14.5002 18.9142L15.9144 17.5Z"
+            fill="currentColor"
+          />
+        </svg>
+        <!---->
+        <!---->
       </div>
       <div
         class="t-navbar__center"
@@ -191,6 +147,15 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
         class="t-navbar__right"
       >
         
+        <svg
+          class="t-icon t-icon-home"
+          data-v-fcc0cda1=""
+          style="font-size: 24px;"
+        >
+          <use
+            href="#t-icon-home"
+          />
+        </svg>
         <svg
           class="t-icon t-icon-ellipsis"
           data-v-fcc0cda1=""
@@ -225,21 +190,13 @@ exports[`Navbar > Navbar customColorVue demo works fine 1`] = `
         class="t-icon t-icon-chevron-left t-navbar__left-arrow"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="chevron-left"
-        >
-          <path
-            d="M14.5 17.5L9 12L14.5 6.5"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M15.9144 17.5L10.4144 12L15.9144 6.50003L14.5002 5.08582L7.58594 12L14.5002 18.9142L15.9144 17.5Z"
+          fill="currentColor"
+        />
       </svg>
       <!---->
       <!---->
@@ -388,21 +345,13 @@ exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-left t-navbar__left-arrow"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-left"
-          >
-            <path
-              d="M14.5 17.5L9 12L14.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M15.9144 17.5L10.4144 12L15.9144 6.50003L14.5002 5.08582L7.58594 12L14.5002 18.9142L15.9144 17.5Z"
+            fill="currentColor"
+          />
         </svg>
         <!---->
         <!---->
@@ -449,21 +398,13 @@ exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-left t-navbar__left-arrow"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-left"
-          >
-            <path
-              d="M14.5 17.5L9 12L14.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M15.9144 17.5L10.4144 12L15.9144 6.50003L14.5002 5.08582L7.58594 12L14.5002 18.9142L15.9144 17.5Z"
+            fill="currentColor"
+          />
         </svg>
         
         <span
@@ -566,21 +507,13 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-left t-navbar__left-arrow"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="chevron-left"
-              >
-                <path
-                  d="M14.5 17.5L9 12L14.5 6.5"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M15.9144 17.5L10.4144 12L15.9144 6.50003L14.5002 5.08582L7.58594 12L14.5002 18.9142L15.9144 17.5Z"
+                fill="currentColor"
+              />
             </svg>
             <!---->
             <!---->
@@ -613,21 +546,13 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-left t-navbar__left-arrow"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="chevron-left"
-              >
-                <path
-                  d="M14.5 17.5L9 12L14.5 6.5"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M15.9144 17.5L10.4144 12L15.9144 6.50003L14.5002 5.08582L7.58594 12L14.5002 18.9142L15.9144 17.5Z"
+                fill="currentColor"
+              />
             </svg>
             
             <svg
@@ -680,48 +605,20 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
           <div
             class="t-navbar__left"
           >
-            <!---->
-            <!---->
-            <div
-              class="t-navbar__capsule"
+            <svg
+              class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+              fill="none"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              
-              <div
-                class="custom-capsule"
-                data-v-fcc0cda1=""
-              >
-                <svg
-                  class="t-icon t-icon-chevron-left custom-capsule__icon"
-                  data-v-fcc0cda1=""
-                  style="font-size: 20px;"
-                >
-                  <use
-                    href="#t-icon-chevron-left"
-                  />
-                </svg>
-                <div
-                  class="t-divider t-divider--vertical t-divider--center"
-                  data-v-fcc0cda1=""
-                  role="separator"
-                >
-                  <div
-                    class="t-divider__content"
-                  >
-                    <!---->
-                  </div>
-                </div>
-                <svg
-                  class="t-icon t-icon-home custom-capsule__icon"
-                  data-v-fcc0cda1=""
-                  style="font-size: 20px;"
-                >
-                  <use
-                    href="#t-icon-home"
-                  />
-                </svg>
-              </div>
-              
-            </div>
+              <path
+                d="M15.9144 17.5L10.4144 12L15.9144 6.50003L14.5002 5.08582L7.58594 12L14.5002 18.9142L15.9144 17.5Z"
+                fill="currentColor"
+              />
+            </svg>
+            <!---->
+            <!---->
           </div>
           <div
             class="t-navbar__center"
@@ -736,6 +633,15 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             class="t-navbar__right"
           >
             
+            <svg
+              class="t-icon t-icon-home"
+              data-v-fcc0cda1=""
+              style="font-size: 24px;"
+            >
+              <use
+                href="#t-icon-home"
+              />
+            </svg>
             <svg
               class="t-icon t-icon-ellipsis"
               data-v-fcc0cda1=""
@@ -787,6 +693,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             <!---->
             
             <div
+              class="navbar-search"
               data-v-614a1e54=""
             >
               <div
@@ -799,33 +706,14 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-search"
                     fill="none"
                     height="1em"
-                    style="fill: none; font-size: 24px;"
+                    style="font-size: 24px;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <g
-                      id="search"
-                    >
-                      <path
-                        d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
-                        fill="transparent"
-                        id="fill1"
-                      />
-                      <path
-                        d="M15.8027 15.8037L21.106 21.107"
-                        id="stroke2"
-                        stroke="currentColor"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
-                        id="stroke1"
-                        stroke="currentColor"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </g>
+                    <path
+                      d="M15.0962 5.90381C12.5578 3.3654 8.44221 3.3654 5.90381 5.90381C3.3654 8.44221 3.3654 12.5578 5.90381 15.0962C8.44221 17.6346 12.5578 17.6346 15.0962 15.0962C17.6346 12.5578 17.6346 8.44221 15.0962 5.90381ZM4.48959 4.48959C7.80905 1.17014 13.191 1.17014 16.5104 4.48959C19.5906 7.56983 19.8126 12.4259 17.1764 15.7621L22.5208 21.1066L21.1066 22.5208L15.7621 17.1764C12.4259 19.8126 7.56983 19.5906 4.48959 16.5104C1.17014 13.191 1.17014 7.80905 4.48959 4.48959Z"
+                      fill="currentColor"
+                    />
                   </svg>
                   <input
                     class="t-input__keyword"
@@ -1029,21 +917,13 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-left t-navbar__left-arrow"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="chevron-left"
-              >
-                <path
-                  d="M14.5 17.5L9 12L14.5 6.5"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M15.9144 17.5L10.4144 12L15.9144 6.50003L14.5002 5.08582L7.58594 12L14.5002 18.9142L15.9144 17.5Z"
+                fill="currentColor"
+              />
             </svg>
             <!---->
             <!---->
@@ -1090,21 +970,13 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-left t-navbar__left-arrow"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="chevron-left"
-              >
-                <path
-                  d="M14.5 17.5L9 12L14.5 6.5"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M15.9144 17.5L10.4144 12L15.9144 6.50003L14.5002 5.08582L7.58594 12L14.5002 18.9142L15.9144 17.5Z"
+                fill="currentColor"
+              />
             </svg>
             
             <span
@@ -1186,21 +1058,13 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-left t-navbar__left-arrow"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="chevron-left"
-              >
-                <path
-                  d="M14.5 17.5L9 12L14.5 6.5"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M15.9144 17.5L10.4144 12L15.9144 6.50003L14.5002 5.08582L7.58594 12L14.5002 18.9142L15.9144 17.5Z"
+                fill="currentColor"
+              />
             </svg>
             <!---->
             <!---->
@@ -1247,21 +1111,13 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-left t-navbar__left-arrow"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="chevron-left"
-              >
-                <path
-                  d="M14.5 17.5L9 12L14.5 6.5"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M15.9144 17.5L10.4144 12L15.9144 6.50003L14.5002 5.08582L7.58594 12L14.5002 18.9142L15.9144 17.5Z"
+                fill="currentColor"
+              />
             </svg>
             <!---->
             <!---->
@@ -1342,21 +1198,13 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-left t-navbar__left-arrow"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="chevron-left"
-              >
-                <path
-                  d="M14.5 17.5L9 12L14.5 6.5"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M15.9144 17.5L10.4144 12L15.9144 6.50003L14.5002 5.08582L7.58594 12L14.5002 18.9142L15.9144 17.5Z"
+                fill="currentColor"
+              />
             </svg>
             <!---->
             <!---->
@@ -1409,6 +1257,7 @@ exports[`Navbar > Navbar searchVue demo works fine 1`] = `
       <!---->
       
       <div
+        class="navbar-search"
         data-v-614a1e54=""
       >
         <div
@@ -1421,33 +1270,14 @@ exports[`Navbar > Navbar searchVue demo works fine 1`] = `
               class="t-icon t-icon-search"
               fill="none"
               height="1em"
-              style="fill: none; font-size: 24px;"
+              style="font-size: 24px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="search"
-              >
-                <path
-                  d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
-                  fill="transparent"
-                  id="fill1"
-                />
-                <path
-                  d="M15.8027 15.8037L21.106 21.107"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M15.0962 5.90381C12.5578 3.3654 8.44221 3.3654 5.90381 5.90381C3.3654 8.44221 3.3654 12.5578 5.90381 15.0962C8.44221 17.6346 12.5578 17.6346 15.0962 15.0962C17.6346 12.5578 17.6346 8.44221 15.0962 5.90381ZM4.48959 4.48959C7.80905 1.17014 13.191 1.17014 16.5104 4.48959C19.5906 7.56983 19.8126 12.4259 17.1764 15.7621L22.5208 21.1066L21.1066 22.5208L15.7621 17.1764C12.4259 19.8126 7.56983 19.5906 4.48959 16.5104C1.17014 13.191 1.17014 7.80905 4.48959 4.48959Z"
+                fill="currentColor"
+              />
             </svg>
             <input
               class="t-input__keyword"
@@ -1518,21 +1348,13 @@ exports[`Navbar > Navbar sizeVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-left t-navbar__left-arrow"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-left"
-          >
-            <path
-              d="M14.5 17.5L9 12L14.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M15.9144 17.5L10.4144 12L15.9144 6.50003L14.5002 5.08582L7.58594 12L14.5002 18.9142L15.9144 17.5Z"
+            fill="currentColor"
+          />
         </svg>
         <!---->
         <!---->
@@ -1579,21 +1401,13 @@ exports[`Navbar > Navbar sizeVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-left t-navbar__left-arrow"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-left"
-          >
-            <path
-              d="M14.5 17.5L9 12L14.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M15.9144 17.5L10.4144 12L15.9144 6.50003L14.5002 5.08582L7.58594 12L14.5002 18.9142L15.9144 17.5Z"
+            fill="currentColor"
+          />
         </svg>
         <!---->
         <!---->

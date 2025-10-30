@@ -28,21 +28,13 @@ exports[`Calendar > Calendar baseVue demo works fine 1`] = `
           class="t-icon t-icon-close t-calendar__close-btn"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="close"
-          >
-            <path
-              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+            fill="currentColor"
+          />
         </svg>
         <!---->
         <div
@@ -834,21 +826,13 @@ exports[`Calendar > Calendar baseVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-right"
-          >
-            <path
-              d="M9.5 17.5L15 12L9.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
     </div>
@@ -887,21 +871,13 @@ exports[`Calendar > Calendar customTextSingleVue demo works fine 1`] = `
           class="t-icon t-icon-close t-calendar__close-btn"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="close"
-          >
-            <path
-              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+            fill="currentColor"
+          />
         </svg>
         <!---->
         <div
@@ -1929,21 +1905,13 @@ exports[`Calendar > Calendar customTextSingleVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-right"
-          >
-            <path
-              d="M9.5 17.5L15 12L9.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
     </div>
@@ -1983,21 +1951,13 @@ exports[`Calendar > Calendar customTextVue demo works fine 1`] = `
           class="t-icon t-icon-close t-calendar__close-btn"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="close"
-          >
-            <path
-              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+            fill="currentColor"
+          />
         </svg>
         <!---->
         <div
@@ -3045,21 +3005,13 @@ exports[`Calendar > Calendar customTextVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-right"
-          >
-            <path
-              d="M9.5 17.5L15 12L9.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
     </div>
@@ -3096,21 +3048,13 @@ exports[`Calendar > Calendar disabledVue demo works fine 1`] = `
           class="t-icon t-icon-close t-calendar__close-btn"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="close"
-          >
-            <path
-              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+            fill="currentColor"
+          />
         </svg>
         <!---->
         <div
@@ -3902,21 +3846,13 @@ exports[`Calendar > Calendar disabledVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-right"
-          >
-            <path
-              d="M9.5 17.5L15 12L9.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
     </div>
@@ -3954,21 +3890,13 @@ exports[`Calendar > Calendar localTextVue demo works fine 1`] = `
           class="t-icon t-icon-close t-calendar__close-btn"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="close"
-          >
-            <path
-              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+            fill="currentColor"
+          />
         </svg>
         <!---->
         <div
@@ -4760,21 +4688,13 @@ exports[`Calendar > Calendar localTextVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-right"
-          >
-            <path
-              d="M9.5 17.5L15 12L9.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
     </div>
@@ -4856,21 +4776,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-close t-calendar__close-btn"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="close"
-                  >
-                    <path
-                      d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+                    fill="currentColor"
+                  />
                 </svg>
                 <!---->
                 <div
@@ -5662,21 +5574,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="chevron-right"
-                  >
-                    <path
-                      d="M9.5 17.5L15 12L9.5 6.5"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -5716,21 +5620,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-close t-calendar__close-btn"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="close"
-                  >
-                    <path
-                      d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+                    fill="currentColor"
+                  />
                 </svg>
                 <!---->
                 <div
@@ -6522,21 +6418,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="chevron-right"
-                  >
-                    <path
-                      d="M9.5 17.5L15 12L9.5 6.5"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -6592,21 +6480,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-close t-calendar__close-btn"
                     fill="none"
                     height="1em"
-                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <g
-                      id="close"
-                    >
-                      <path
-                        d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
-                        id="stroke1"
-                        stroke="currentColor"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </g>
+                    <path
+                      d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+                      fill="currentColor"
+                    />
                   </svg>
                   <!---->
                   <div
@@ -7634,21 +7514,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-chevron-right"
                     fill="none"
                     height="1em"
-                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <g
-                      id="chevron-right"
-                    >
-                      <path
-                        d="M9.5 17.5L15 12L9.5 6.5"
-                        id="stroke1"
-                        stroke="currentColor"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </g>
+                    <path
+                      d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                      fill="currentColor"
+                    />
                   </svg>
                 </div>
               </div>
@@ -7707,21 +7579,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-close t-calendar__close-btn"
                     fill="none"
                     height="1em"
-                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <g
-                      id="close"
-                    >
-                      <path
-                        d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
-                        id="stroke1"
-                        stroke="currentColor"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </g>
+                    <path
+                      d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+                      fill="currentColor"
+                    />
                   </svg>
                   <!---->
                   <div
@@ -8769,21 +8633,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-chevron-right"
                     fill="none"
                     height="1em"
-                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <g
-                      id="chevron-right"
-                    >
-                      <path
-                        d="M9.5 17.5L15 12L9.5 6.5"
-                        id="stroke1"
-                        stroke="currentColor"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </g>
+                    <path
+                      d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                      fill="currentColor"
+                    />
                   </svg>
                 </div>
               </div>
@@ -8844,21 +8700,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-close t-calendar__close-btn"
                       fill="none"
                       height="1em"
-                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
-                      <g
-                        id="close"
-                      >
-                        <path
-                          d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
+                      <path
+                        d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+                        fill="currentColor"
+                      />
                     </svg>
                     <div
                       class="t-calendar-header"
@@ -8873,21 +8721,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                             class="t-icon t-icon-chevron-left-double"
                             fill="none"
                             height="1em"
-                            style="fill: none;"
                             viewBox="0 0 24 24"
                             width="1em"
                           >
-                            <g
-                              id="chevron-left.double"
-                            >
-                              <path
-                                d="M10.5 7.5L6 12L10.5 16.5M17 7.5L12.5 12L17 16.5"
-                                id="stroke1"
-                                stroke="currentColor"
-                                stroke-linecap="square"
-                                stroke-width="2"
-                              />
-                            </g>
+                            <path
+                              d="M18.4144 7.50003L13.9144 12L18.4144 16.5L17.0001 17.9142L11.0859 12L17.0002 6.08582L18.4144 7.50003ZM11.9144 7.50003L7.41436 12L11.9144 16.5L10.5002 17.9142L4.58594 12L10.5002 6.08582L11.9144 7.50003Z"
+                              fill="currentColor"
+                            />
                           </svg>
                         </div>
                         <div
@@ -8897,21 +8737,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                             class="t-icon t-icon-chevron-left"
                             fill="none"
                             height="1em"
-                            style="fill: none;"
                             viewBox="0 0 24 24"
                             width="1em"
                           >
-                            <g
-                              id="chevron-left"
-                            >
-                              <path
-                                d="M14.5 17.5L9 12L14.5 6.5"
-                                id="stroke1"
-                                stroke="currentColor"
-                                stroke-linecap="square"
-                                stroke-width="2"
-                              />
-                            </g>
+                            <path
+                              d="M15.9144 17.5L10.4144 12L15.9144 6.50003L14.5002 5.08582L7.58594 12L14.5002 18.9142L15.9144 17.5Z"
+                              fill="currentColor"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -8930,21 +8762,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                             class="t-icon t-icon-chevron-right"
                             fill="none"
                             height="1em"
-                            style="fill: none;"
                             viewBox="0 0 24 24"
                             width="1em"
                           >
-                            <g
-                              id="chevron-right"
-                            >
-                              <path
-                                d="M9.5 17.5L15 12L9.5 6.5"
-                                id="stroke1"
-                                stroke="currentColor"
-                                stroke-linecap="square"
-                                stroke-width="2"
-                              />
-                            </g>
+                            <path
+                              d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                              fill="currentColor"
+                            />
                           </svg>
                         </div>
                         <div
@@ -8954,21 +8778,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                             class="t-icon t-icon-chevron-right-double"
                             fill="none"
                             height="1em"
-                            style="fill: none;"
                             viewBox="0 0 24 24"
                             width="1em"
                           >
-                            <g
-                              id="chevron-right.double"
-                            >
-                              <path
-                                d="M13.5 16.5L18 12L13.5 7.5M7 16.5L11.5 12L7 7.5"
-                                id="stroke1"
-                                stroke="currentColor"
-                                stroke-linecap="square"
-                                stroke-width="2"
-                              />
-                            </g>
+                            <path
+                              d="M5.58594 16.5L10.0859 12L5.58594 7.50003L7.00015 6.08582L12.9144 12L7.00015 17.9142L5.58594 16.5ZM12.0859 16.5L16.5859 12L12.0859 7.50003L13.5002 6.08582L19.4144 12L13.5001 17.9142L12.0859 16.5Z"
+                              fill="currentColor"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -9400,21 +9216,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-chevron-right"
                       fill="none"
                       height="1em"
-                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
-                      <g
-                        id="chevron-right"
-                      >
-                        <path
-                          d="M9.5 17.5L15 12L9.5 6.5"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
+                      <path
+                        d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                        fill="currentColor"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -9478,21 +9286,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-close t-calendar__close-btn"
                       fill="none"
                       height="1em"
-                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
-                      <g
-                        id="close"
-                      >
-                        <path
-                          d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
+                      <path
+                        d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+                        fill="currentColor"
+                      />
                     </svg>
                     <!---->
                     <div
@@ -10276,12 +10076,22 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                       >
                         2022-02-19
                       </span>
-                      <span
-                        class="arrow-icon"
+                      <svg
+                        class="t-icon t-icon-swap-right"
                         data-v-0c10181d=""
+                        fill="none"
+                        fill-color="transparent"
+                        height="1em"
+                        stroke-color="rgba(0, 0, 0, 0.4)"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="1em"
                       >
-                        →
-                      </span>
+                        <path
+                          d="M15 7.58569L22.4142 14.9999L2 14.9999V12.9999L17.5858 12.9999L13.5858 8.99991L15 7.58569Z"
+                          fill="currentColor"
+                        />
+                      </svg>
                       <span
                         class="end-date"
                         data-v-0c10181d=""
@@ -10305,21 +10115,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-chevron-right"
                       fill="none"
                       height="1em"
-                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
-                      <g
-                        id="chevron-right"
-                      >
-                        <path
-                          d="M9.5 17.5L15 12L9.5 6.5"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
+                      <path
+                        d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                        fill="currentColor"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -10403,21 +10205,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-close t-calendar__close-btn"
                       fill="none"
                       height="1em"
-                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
-                      <g
-                        id="close"
-                      >
-                        <path
-                          d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
+                      <path
+                        d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+                        fill="currentColor"
+                      />
                     </svg>
                     <!---->
                     <div
@@ -11209,21 +11003,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-chevron-right"
                       fill="none"
                       height="1em"
-                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
-                      <g
-                        id="chevron-right"
-                      >
-                        <path
-                          d="M9.5 17.5L15 12L9.5 6.5"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
+                      <path
+                        d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                        fill="currentColor"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -11286,21 +11072,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-close t-calendar__close-btn"
                       fill="none"
                       height="1em"
-                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
-                      <g
-                        id="close"
-                      >
-                        <path
-                          d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
+                      <path
+                        d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+                        fill="currentColor"
+                      />
                     </svg>
                     <!---->
                     <div
@@ -12092,21 +11870,13 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-chevron-right"
                       fill="none"
                       height="1em"
-                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
-                      <g
-                        id="chevron-right"
-                      >
-                        <path
-                          d="M9.5 17.5L15 12L9.5 6.5"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
+                      <path
+                        d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                        fill="currentColor"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -14693,21 +14463,13 @@ exports[`Calendar > Calendar multipleVue demo works fine 1`] = `
           class="t-icon t-icon-close t-calendar__close-btn"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="close"
-          >
-            <path
-              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+            fill="currentColor"
+          />
         </svg>
         <!---->
         <div
@@ -15499,21 +15261,13 @@ exports[`Calendar > Calendar multipleVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-right"
-          >
-            <path
-              d="M9.5 17.5L15 12L9.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
     </div>
@@ -15553,21 +15307,13 @@ exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
           class="t-icon t-icon-close t-calendar__close-btn"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="close"
-          >
-            <path
-              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+            fill="currentColor"
+          />
         </svg>
         <!---->
         <div
@@ -16351,12 +16097,22 @@ exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
           >
             2022-02-19
           </span>
-          <span
-            class="arrow-icon"
+          <svg
+            class="t-icon t-icon-swap-right"
             data-v-0c10181d=""
+            fill="none"
+            fill-color="transparent"
+            height="1em"
+            stroke-color="rgba(0, 0, 0, 0.4)"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
           >
-            →
-          </span>
+            <path
+              d="M15 7.58569L22.4142 14.9999L2 14.9999V12.9999L17.5858 12.9999L13.5858 8.99991L15 7.58569Z"
+              fill="currentColor"
+            />
+          </svg>
           <span
             class="end-date"
             data-v-0c10181d=""
@@ -16380,21 +16136,13 @@ exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-right"
-          >
-            <path
-              d="M9.5 17.5L15 12L9.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
     </div>
@@ -16430,21 +16178,13 @@ exports[`Calendar > Calendar switchModeVue demo works fine 1`] = `
           class="t-icon t-icon-close t-calendar__close-btn"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="close"
-          >
-            <path
-              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+            fill="currentColor"
+          />
         </svg>
         <div
           class="t-calendar-header"
@@ -16459,21 +16199,13 @@ exports[`Calendar > Calendar switchModeVue demo works fine 1`] = `
                 class="t-icon t-icon-chevron-left-double"
                 fill="none"
                 height="1em"
-                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <g
-                  id="chevron-left.double"
-                >
-                  <path
-                    d="M10.5 7.5L6 12L10.5 16.5M17 7.5L12.5 12L17 16.5"
-                    id="stroke1"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
+                <path
+                  d="M18.4144 7.50003L13.9144 12L18.4144 16.5L17.0001 17.9142L11.0859 12L17.0002 6.08582L18.4144 7.50003ZM11.9144 7.50003L7.41436 12L11.9144 16.5L10.5002 17.9142L4.58594 12L10.5002 6.08582L11.9144 7.50003Z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
             <div
@@ -16483,21 +16215,13 @@ exports[`Calendar > Calendar switchModeVue demo works fine 1`] = `
                 class="t-icon t-icon-chevron-left"
                 fill="none"
                 height="1em"
-                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <g
-                  id="chevron-left"
-                >
-                  <path
-                    d="M14.5 17.5L9 12L14.5 6.5"
-                    id="stroke1"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
+                <path
+                  d="M15.9144 17.5L10.4144 12L15.9144 6.50003L14.5002 5.08582L7.58594 12L14.5002 18.9142L15.9144 17.5Z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
           </div>
@@ -16516,21 +16240,13 @@ exports[`Calendar > Calendar switchModeVue demo works fine 1`] = `
                 class="t-icon t-icon-chevron-right"
                 fill="none"
                 height="1em"
-                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <g
-                  id="chevron-right"
-                >
-                  <path
-                    d="M9.5 17.5L15 12L9.5 6.5"
-                    id="stroke1"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
+                <path
+                  d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
             <div
@@ -16540,21 +16256,13 @@ exports[`Calendar > Calendar switchModeVue demo works fine 1`] = `
                 class="t-icon t-icon-chevron-right-double"
                 fill="none"
                 height="1em"
-                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <g
-                  id="chevron-right.double"
-                >
-                  <path
-                    d="M13.5 16.5L18 12L13.5 7.5M7 16.5L11.5 12L7 7.5"
-                    id="stroke1"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
+                <path
+                  d="M5.58594 16.5L10.0859 12L5.58594 7.50003L7.00015 6.08582L12.9144 12L7.00015 17.9142L5.58594 16.5ZM12.0859 16.5L16.5859 12L12.0859 7.50003L13.5002 6.08582L19.4144 12L13.5001 17.9142L12.0859 16.5Z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
           </div>
@@ -16986,21 +16694,13 @@ exports[`Calendar > Calendar switchModeVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-right"
-          >
-            <path
-              d="M9.5 17.5L15 12L9.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
     </div>

@@ -15,7 +15,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
       <div
         class="t-input__label"
       >
-        左对齐
+        标签左对齐
       </div>
     </div>
     <div
@@ -51,7 +51,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
       <div
         class="t-input__label"
       >
-        居中
+        标签居中
       </div>
     </div>
     <div
@@ -87,7 +87,7 @@ exports[`Input > Input alignVue demo works fine 1`] = `
       <div
         class="t-input__label"
       >
-        右对齐
+        标签右对齐
       </div>
     </div>
     <div
@@ -208,7 +208,13 @@ exports[`Input > Input baseVue demo works fine 1`] = `
       <div
         class="t-input__label"
       >
-        标签文字
+        
+        <div
+          class="custom-label"
+        >
+          标签文字
+        </div>
+        
       </div>
     </div>
     <div
@@ -221,7 +227,7 @@ exports[`Input > Input baseVue demo works fine 1`] = `
           autocomplete="Off"
           class="t-input__control t-input--default"
           name=""
-          placeholder="请输入文字(选填)"
+          placeholder="请输入文字"
           spellcheck="false"
           style="--td-input-cursor-color: #0052d9;"
           type="text"
@@ -325,7 +331,6 @@ exports[`Input > Input borderedVue demo works fine 1`] = `
             data-v-f23aff25=""
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -467,7 +472,6 @@ exports[`Input > Input layoutVue demo works fine 1`] = `
           class="t-icon t-icon-error-circle-filled"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
@@ -656,7 +660,13 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__label"
           >
-            标签文字
+            
+            <div
+              class="custom-label"
+            >
+              标签文字
+            </div>
+            
           </div>
         </div>
         <div
@@ -669,7 +679,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               autocomplete="Off"
               class="t-input__control t-input--default"
               name=""
-              placeholder="请输入文字(选填)"
+              placeholder="请输入文字"
               spellcheck="false"
               style="--td-input-cursor-color: #0052d9;"
               type="text"
@@ -880,7 +890,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-info-circle-filled"
                 fill="none"
                 height="1em"
-                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
@@ -987,54 +996,13 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-user-avatar"
                 fill="none"
                 height="1em"
-                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <g
-                  id="user-avatar"
-                >
-                  <path
-                    d="M3 3L21 3L21 21L3 21L3 3Z"
-                    fill="transparent"
-                    id="fill1"
-                  />
-                  <g
-                    id="fill2"
-                  >
-                    <path
-                      d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z"
-                      fill="transparent"
-                    />
-                    <path
-                      d="M5.5 20C5.5 17.7909 7.29086 16 9.5 16H14.5C16.7091 16 18.5 17.7909 18.5 20V21H5.5V20Z"
-                      fill="transparent"
-                    />
-                  </g>
-                  <g
-                    id="stroke2"
-                  >
-                    <path
-                      d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M5.5 20C5.5 17.7909 7.29086 16 9.5 16H14.5C16.7091 16 18.5 17.7909 18.5 20V21H5.5V20Z"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
-                  <path
-                    d="M3 3L21 3L21 21L3 21L3 3Z"
-                    id="stroke1"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
+                <path
+                  d="M2 2L22 2L22 22L2 22L2 2ZM19.5 20H20L20 4L4 4L4 20H4.5C4.5 17.2386 6.73858 15 9.5 15H14.5C17.2614 15 19.5 17.2386 19.5 20ZM12 7C10.6193 7 9.5 8.11929 9.5 9.5C9.5 10.8807 10.6193 12 12 12C13.3807 12 14.5 10.8807 14.5 9.5C14.5 8.11929 13.3807 7 12 7ZM7.5 9.5C7.5 7.01472 9.51472 5 12 5C14.4853 5 16.5 7.01472 16.5 9.5C16.5 11.9853 14.4853 14 12 14C9.51472 14 7.5 11.9853 7.5 9.5ZM9.5 17C7.84315 17 6.5 18.3431 6.5 20L17.5 20C17.5 18.3431 16.1569 17 14.5 17H9.5Z"
+                  fill="currentColor"
+                />
               </svg>
               
             </div>
@@ -1079,60 +1047,13 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               class="t-icon t-icon-app"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="app"
-              >
-                <g
-                  id="fill1"
-                >
-                  <path
-                    d="M3 3H10V10H3V3Z"
-                    fill="transparent"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    fill="transparent"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
-                    fill="transparent"
-                  />
-                </g>
-                <path
-                  d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                  fill="transparent"
-                  id="fill2"
-                />
-                <g
-                  id="stroke1"
-                >
-                  <path
-                    d="M3 3H10V10H3V3Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                </g>
-                <path
-                  d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                fill="currentColor"
+              />
             </svg>
             
           </div>
@@ -1179,60 +1100,13 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               class="t-icon t-icon-app"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="app"
-              >
-                <g
-                  id="fill1"
-                >
-                  <path
-                    d="M3 3H10V10H3V3Z"
-                    fill="transparent"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    fill="transparent"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
-                    fill="transparent"
-                  />
-                </g>
-                <path
-                  d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                  fill="transparent"
-                  id="fill2"
-                />
-                <g
-                  id="stroke1"
-                >
-                  <path
-                    d="M3 3H10V10H3V3Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                </g>
-                <path
-                  d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                fill="currentColor"
+              />
             </svg>
             
           </div>
@@ -1308,7 +1182,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           >
             <input
               autocomplete="Off"
-              class="t-input__control t-input--default"
+              class="t-input__control t-input--default t-input--password"
               name=""
               spellcheck="false"
               style="--td-input-cursor-color: #0052d9;"
@@ -1323,28 +1197,13 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-browse-off"
                 fill="none"
                 height="1em"
-                style="fill: none;"
-                viewBox="0 0 24 24"
+                viewBox="0 0 26 24"
                 width="1em"
               >
-                <g
-                  id="browse-off"
-                >
-                  <path
-                    d="M13.1758 8.17578C14.4396 8.56376 15.4368 9.56096 15.8247 10.8247M21.2858 15.2856C22.0085 14.2983 22.5776 13.1913 22.9578 12C21.4771 7.36017 17.131 4 12.0001 4C11.3698 4 10.7513 4.05072 10.1484 4.1483M5.80747 5.80786C3.57225 7.23888 1.86478 9.42193 1.04199 12.0001C2.52275 16.6399 6.86881 20.0001 11.9997 20.0001C14.2796 20.0001 16.4045 19.3367 18.1919 18.1923L5.80747 5.80786ZM8 12.0003C8 10.8957 8.44771 9.89573 9.17157 9.17188L14.8284 14.8287C14.1046 15.5526 13.1046 16.0003 12 16.0003C9.79086 16.0003 8 14.2094 8 12.0003Z"
-                    id="stroke1"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M20.9996 21L3 3"
-                    id="stroke2"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
+                <path
+                  d="M3.99999 1.58582L10.1714 7.75774L17.2425 14.8288L23.4137 21L21.9995 22.4142L19.0345 19.4492C17.2447 20.4377 15.1866 21.0001 12.9996 21.0001C7.42102 21.0001 2.69842 17.3465 1.08922 12.3042L0.992188 12.0001L1.08922 11.6961C1.85645 9.29201 3.33009 7.20571 5.26511 5.67975L2.58567 2.99993L3.99999 1.58582ZM6.69098 7.10574C5.05507 8.33729 3.79122 10.0353 3.09676 12.0001C4.53843 16.0793 8.42915 19.0001 12.9996 19.0001C14.6314 19.0001 16.1745 18.6285 17.5507 17.9655L15.7571 16.1719C14.9668 16.695 14.0185 17.0003 12.9999 17.0003C10.2385 17.0003 7.99989 14.7618 7.99989 12.0003C7.99989 10.9817 8.3052 10.0334 8.82835 9.24312L6.69098 7.10574ZM10.292 10.7068C10.1046 11.0984 9.99989 11.5368 9.99989 12.0003C9.99989 13.6572 11.343 15.0003 12.9999 15.0003C13.4634 15.0003 13.9018 14.8956 14.2934 14.7082L10.292 10.7068ZM13 5.00003C12.4234 5.00003 11.8583 5.04642 11.3081 5.13548L10.321 5.29527L10.0014 3.32097L10.9885 3.16117C11.644 3.05508 12.3159 3.00003 13 3.00003C18.5786 3.00003 23.3012 6.65367 24.9104 11.696L25.0074 12L24.9104 12.3041C24.4968 13.5999 23.878 14.8034 23.0926 15.8763L22.5019 16.6833L20.8881 15.5019L21.4788 14.695C22.0769 13.8778 22.5595 12.9715 22.9028 12C21.4612 7.92082 17.5704 5.00003 13 5.00003ZM13.5132 6.92636L14.4691 7.21985C16.0499 7.70515 17.2953 8.95049 17.7806 10.5313L18.0741 11.4873L16.1621 12.0742L15.8687 11.1183C15.578 10.1715 14.829 9.42243 13.8822 9.13178L12.9262 8.8383L13.5132 6.92636Z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
           </div>
@@ -1636,7 +1495,25 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
             />
             <!---->
             <!---->
-            <!---->
+            <div
+              class="t-input__wrap--suffix-icon"
+            >
+              
+              <svg
+                class="t-icon t-icon-close"
+                fill="none"
+                height="1em"
+                style="color: rgb(213, 73, 65);"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+                  fill="currentColor"
+                />
+              </svg>
+              
+            </div>
           </div>
           <div
             class="t-input__tips t-input--left"
@@ -1656,7 +1533,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__label"
           >
-            不可编辑
+            标签文字
           </div>
         </div>
         <div
@@ -1774,7 +1651,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__label"
           >
-            左对齐
+            标签左对齐
           </div>
         </div>
         <div
@@ -1810,7 +1687,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__label"
           >
-            居中
+            标签居中
           </div>
         </div>
         <div
@@ -1846,7 +1723,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
           <div
             class="t-input__label"
           >
-            右对齐
+            标签右对齐
           </div>
         </div>
         <div
@@ -1931,7 +1808,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-error-circle-filled"
                 fill="none"
                 height="1em"
-                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
@@ -2074,7 +1950,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                   data-v-f23aff25=""
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
@@ -2178,60 +2053,13 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
           class="t-icon t-icon-app"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="app"
-          >
-            <g
-              id="fill1"
-            >
-              <path
-                d="M3 3H10V10H3V3Z"
-                fill="transparent"
-              />
-              <path
-                d="M14 14H21V21H14V14Z"
-                fill="transparent"
-              />
-              <path
-                d="M3 14H10V21H3V14Z"
-                fill="transparent"
-              />
-            </g>
-            <path
-              d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-              fill="transparent"
-              id="fill2"
-            />
-            <g
-              id="stroke1"
-            >
-              <path
-                d="M3 3H10V10H3V3Z"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-              <path
-                d="M14 14H21V21H14V14Z"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-              <path
-                d="M3 14H10V21H3V14Z"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-            </g>
-            <path
-              d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-              id="stroke2"
-              stroke="currentColor"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+            fill="currentColor"
+          />
         </svg>
         
       </div>
@@ -2278,60 +2106,13 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
           class="t-icon t-icon-app"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="app"
-          >
-            <g
-              id="fill1"
-            >
-              <path
-                d="M3 3H10V10H3V3Z"
-                fill="transparent"
-              />
-              <path
-                d="M14 14H21V21H14V14Z"
-                fill="transparent"
-              />
-              <path
-                d="M3 14H10V21H3V14Z"
-                fill="transparent"
-              />
-            </g>
-            <path
-              d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-              fill="transparent"
-              id="fill2"
-            />
-            <g
-              id="stroke1"
-            >
-              <path
-                d="M3 3H10V10H3V3Z"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-              <path
-                d="M14 14H21V21H14V14Z"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-              <path
-                d="M3 14H10V21H3V14Z"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-            </g>
-            <path
-              d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-              id="stroke2"
-              stroke="currentColor"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+            fill="currentColor"
+          />
         </svg>
         
       </div>
@@ -2394,7 +2175,7 @@ exports[`Input > Input specialVue demo works fine 1`] = `
       >
         <input
           autocomplete="Off"
-          class="t-input__control t-input--default"
+          class="t-input__control t-input--default t-input--password"
           name=""
           spellcheck="false"
           style="--td-input-cursor-color: #0052d9;"
@@ -2409,28 +2190,13 @@ exports[`Input > Input specialVue demo works fine 1`] = `
             class="t-icon t-icon-browse-off"
             fill="none"
             height="1em"
-            style="fill: none;"
-            viewBox="0 0 24 24"
+            viewBox="0 0 26 24"
             width="1em"
           >
-            <g
-              id="browse-off"
-            >
-              <path
-                d="M13.1758 8.17578C14.4396 8.56376 15.4368 9.56096 15.8247 10.8247M21.2858 15.2856C22.0085 14.2983 22.5776 13.1913 22.9578 12C21.4771 7.36017 17.131 4 12.0001 4C11.3698 4 10.7513 4.05072 10.1484 4.1483M5.80747 5.80786C3.57225 7.23888 1.86478 9.42193 1.04199 12.0001C2.52275 16.6399 6.86881 20.0001 11.9997 20.0001C14.2796 20.0001 16.4045 19.3367 18.1919 18.1923L5.80747 5.80786ZM8 12.0003C8 10.8957 8.44771 9.89573 9.17157 9.17188L14.8284 14.8287C14.1046 15.5526 13.1046 16.0003 12 16.0003C9.79086 16.0003 8 14.2094 8 12.0003Z"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-              <path
-                d="M20.9996 21L3 3"
-                id="stroke2"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M3.99999 1.58582L10.1714 7.75774L17.2425 14.8288L23.4137 21L21.9995 22.4142L19.0345 19.4492C17.2447 20.4377 15.1866 21.0001 12.9996 21.0001C7.42102 21.0001 2.69842 17.3465 1.08922 12.3042L0.992188 12.0001L1.08922 11.6961C1.85645 9.29201 3.33009 7.20571 5.26511 5.67975L2.58567 2.99993L3.99999 1.58582ZM6.69098 7.10574C5.05507 8.33729 3.79122 10.0353 3.09676 12.0001C4.53843 16.0793 8.42915 19.0001 12.9996 19.0001C14.6314 19.0001 16.1745 18.6285 17.5507 17.9655L15.7571 16.1719C14.9668 16.695 14.0185 17.0003 12.9999 17.0003C10.2385 17.0003 7.99989 14.7618 7.99989 12.0003C7.99989 10.9817 8.3052 10.0334 8.82835 9.24312L6.69098 7.10574ZM10.292 10.7068C10.1046 11.0984 9.99989 11.5368 9.99989 12.0003C9.99989 13.6572 11.343 15.0003 12.9999 15.0003C13.4634 15.0003 13.9018 14.8956 14.2934 14.7082L10.292 10.7068ZM13 5.00003C12.4234 5.00003 11.8583 5.04642 11.3081 5.13548L10.321 5.29527L10.0014 3.32097L10.9885 3.16117C11.644 3.05508 12.3159 3.00003 13 3.00003C18.5786 3.00003 23.3012 6.65367 24.9104 11.696L25.0074 12L24.9104 12.3041C24.4968 13.5999 23.878 14.8034 23.0926 15.8763L22.5019 16.6833L20.8881 15.5019L21.4788 14.695C22.0769 13.8778 22.5595 12.9715 22.9028 12C21.4612 7.92082 17.5704 5.00003 13 5.00003ZM13.5132 6.92636L14.4691 7.21985C16.0499 7.70515 17.2953 8.95049 17.7806 10.5313L18.0741 11.4873L16.1621 12.0742L15.8687 11.1183C15.578 10.1715 14.829 9.42243 13.8822 9.13178L12.9262 8.8383L13.5132 6.92636Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
       </div>
@@ -2705,7 +2471,25 @@ exports[`Input > Input statusVue demo works fine 1`] = `
         />
         <!---->
         <!---->
-        <!---->
+        <div
+          class="t-input__wrap--suffix-icon"
+        >
+          
+          <svg
+            class="t-icon t-icon-close"
+            fill="none"
+            height="1em"
+            style="color: rgb(213, 73, 65);"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
+              fill="currentColor"
+            />
+          </svg>
+          
+        </div>
       </div>
       <div
         class="t-input__tips t-input--left"
@@ -2725,7 +2509,7 @@ exports[`Input > Input statusVue demo works fine 1`] = `
       <div
         class="t-input__label"
       >
-        不可编辑
+        标签文字
       </div>
     </div>
     <div
@@ -2798,7 +2582,6 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
             class="t-icon t-icon-info-circle-filled"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -2905,54 +2688,13 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
             class="t-icon t-icon-user-avatar"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="user-avatar"
-            >
-              <path
-                d="M3 3L21 3L21 21L3 21L3 3Z"
-                fill="transparent"
-                id="fill1"
-              />
-              <g
-                id="fill2"
-              >
-                <path
-                  d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z"
-                  fill="transparent"
-                />
-                <path
-                  d="M5.5 20C5.5 17.7909 7.29086 16 9.5 16H14.5C16.7091 16 18.5 17.7909 18.5 20V21H5.5V20Z"
-                  fill="transparent"
-                />
-              </g>
-              <g
-                id="stroke2"
-              >
-                <path
-                  d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M5.5 20C5.5 17.7909 7.29086 16 9.5 16H14.5C16.7091 16 18.5 17.7909 18.5 20V21H5.5V20Z"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
-              <path
-                d="M3 3L21 3L21 21L3 21L3 3Z"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M2 2L22 2L22 22L2 22L2 2ZM19.5 20H20L20 4L4 4L4 20H4.5C4.5 17.2386 6.73858 15 9.5 15H14.5C17.2614 15 19.5 17.2386 19.5 20ZM12 7C10.6193 7 9.5 8.11929 9.5 9.5C9.5 10.8807 10.6193 12 12 12C13.3807 12 14.5 10.8807 14.5 9.5C14.5 8.11929 13.3807 7 12 7ZM7.5 9.5C7.5 7.01472 9.51472 5 12 5C14.4853 5 16.5 7.01472 16.5 9.5C16.5 11.9853 14.4853 14 12 14C9.51472 14 7.5 11.9853 7.5 9.5ZM9.5 17C7.84315 17 6.5 18.3431 6.5 20L17.5 20C17.5 18.3431 16.1569 17 14.5 17H9.5Z"
+              fill="currentColor"
+            />
           </svg>
           
         </div>

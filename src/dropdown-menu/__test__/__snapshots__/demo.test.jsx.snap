@@ -18,14 +18,12 @@ exports[`DropdownMenu > DropdownMenu customizedVue demo works fine 1`] = `
       class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      style="fill: none;"
       viewBox="0 0 24 24"
       width="1em"
     >
       <path
         d="M12.0001 15L17.5 9.5H6.5L12.0001 15Z"
         fill="currentColor"
-        id="caret-down-small"
       />
     </svg>
   </div>
@@ -53,14 +51,12 @@ exports[`DropdownMenu > DropdownMenu directionVue demo works fine 1`] = `
       class="t-icon t-icon-caret-up-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      style="fill: none;"
       viewBox="0 0 24 24"
       width="1em"
     >
       <path
         d="M12.0001 9L17.5 14.5L6.5 14.5L12.0001 9Z"
         fill="currentColor"
-        id="caret-up-small"
       />
     </svg>
   </div>
@@ -76,14 +72,12 @@ exports[`DropdownMenu > DropdownMenu directionVue demo works fine 1`] = `
       class="t-icon t-icon-caret-up-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      style="fill: none;"
       viewBox="0 0 24 24"
       width="1em"
     >
       <path
         d="M12.0001 9L17.5 14.5L6.5 14.5L12.0001 9Z"
         fill="currentColor"
-        id="caret-up-small"
       />
     </svg>
   </div>
@@ -112,14 +106,12 @@ exports[`DropdownMenu > DropdownMenu disabledVue demo works fine 1`] = `
       class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      style="fill: none;"
       viewBox="0 0 24 24"
       width="1em"
     >
       <path
         d="M12.0001 15L17.5 9.5H6.5L12.0001 15Z"
         fill="currentColor"
-        id="caret-down-small"
       />
     </svg>
   </div>
@@ -135,14 +127,12 @@ exports[`DropdownMenu > DropdownMenu disabledVue demo works fine 1`] = `
       class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      style="fill: none;"
       viewBox="0 0 24 24"
       width="1em"
     >
       <path
         d="M12.0001 15L17.5 9.5H6.5L12.0001 15Z"
         fill="currentColor"
-        id="caret-down-small"
       />
     </svg>
   </div>
@@ -210,14 +200,12 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
             <path
               d="M12.0001 15L17.5 9.5H6.5L12.0001 15Z"
               fill="currentColor"
-              id="caret-down-small"
             />
           </svg>
         </div>
@@ -233,14 +221,12 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
             <path
               d="M12.0001 15L17.5 9.5H6.5L12.0001 15Z"
               fill="currentColor"
-              id="caret-down-small"
             />
           </svg>
         </div>
@@ -288,14 +274,12 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
             <path
               d="M12.0001 15L17.5 9.5H6.5L12.0001 15Z"
               fill="currentColor"
-              id="caret-down-small"
             />
           </svg>
         </div>
@@ -311,14 +295,12 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
             <path
               d="M12.0001 15L17.5 9.5H6.5L12.0001 15Z"
               fill="currentColor"
-              id="caret-down-small"
             />
           </svg>
         </div>
@@ -334,14 +316,12 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
             <path
               d="M12.0001 15L17.5 9.5H6.5L12.0001 15Z"
               fill="currentColor"
-              id="caret-down-small"
             />
           </svg>
         </div>
@@ -390,14 +370,12 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-up-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
             <path
               d="M12.0001 9L17.5 14.5L6.5 14.5L12.0001 9Z"
               fill="currentColor"
-              id="caret-up-small"
             />
           </svg>
         </div>
@@ -413,14 +391,12 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-up-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
             <path
               d="M12.0001 9L17.5 14.5L6.5 14.5L12.0001 9Z"
               fill="currentColor"
-              id="caret-up-small"
             />
           </svg>
         </div>
@@ -472,14 +448,12 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
             <path
               d="M12.0001 15L17.5 9.5H6.5L12.0001 15Z"
               fill="currentColor"
-              id="caret-down-small"
             />
           </svg>
         </div>
@@ -495,14 +469,12 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
             <path
               d="M12.0001 15L17.5 9.5H6.5L12.0001 15Z"
               fill="currentColor"
-              id="caret-down-small"
             />
           </svg>
         </div>
@@ -551,14 +523,12 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
             class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
             <path
               d="M12.0001 15L17.5 9.5H6.5L12.0001 15Z"
               fill="currentColor"
-              id="caret-down-small"
             />
           </svg>
         </div>
@@ -594,14 +564,12 @@ exports[`DropdownMenu > DropdownMenu multipleVue demo works fine 1`] = `
       class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      style="fill: none;"
       viewBox="0 0 24 24"
       width="1em"
     >
       <path
         d="M12.0001 15L17.5 9.5H6.5L12.0001 15Z"
         fill="currentColor"
-        id="caret-down-small"
       />
     </svg>
   </div>
@@ -617,14 +585,12 @@ exports[`DropdownMenu > DropdownMenu multipleVue demo works fine 1`] = `
       class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      style="fill: none;"
       viewBox="0 0 24 24"
       width="1em"
     >
       <path
         d="M12.0001 15L17.5 9.5H6.5L12.0001 15Z"
         fill="currentColor"
-        id="caret-down-small"
       />
     </svg>
   </div>
@@ -640,14 +606,12 @@ exports[`DropdownMenu > DropdownMenu multipleVue demo works fine 1`] = `
       class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      style="fill: none;"
       viewBox="0 0 24 24"
       width="1em"
     >
       <path
         d="M12.0001 15L17.5 9.5H6.5L12.0001 15Z"
         fill="currentColor"
-        id="caret-down-small"
       />
     </svg>
   </div>
@@ -677,14 +641,12 @@ exports[`DropdownMenu > DropdownMenu singleVue demo works fine 1`] = `
       class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      style="fill: none;"
       viewBox="0 0 24 24"
       width="1em"
     >
       <path
         d="M12.0001 15L17.5 9.5H6.5L12.0001 15Z"
         fill="currentColor"
-        id="caret-down-small"
       />
     </svg>
   </div>
@@ -700,14 +662,12 @@ exports[`DropdownMenu > DropdownMenu singleVue demo works fine 1`] = `
       class="t-icon t-icon-caret-down-small t-dropdown-menu__icon"
       fill="none"
       height="1em"
-      style="fill: none;"
       viewBox="0 0 24 24"
       width="1em"
     >
       <path
         d="M12.0001 15L17.5 9.5H6.5L12.0001 15Z"
         fill="currentColor"
-        id="caret-down-small"
       />
     </svg>
   </div>
