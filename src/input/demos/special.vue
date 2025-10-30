@@ -1,34 +1,33 @@
 <template>
-  <t-input label="输入密码" type="password" default-value="520 TDesign" :clearable="false"> </t-input>
-  <t-input placeholder="输入验证码" label="验证码">
+  <t-input :clearable="false" default-value="520 TDesign" label="输入密码" type="password"></t-input>
+  <t-input label="验证码" placeholder="输入验证码">
     <template #suffix>
       <div class="suffix">
         <div class="suffix--line"></div>
         <t-image
-          class="image"
-          src="https://wwcdn.weixin.qq.com/node/wework/images/202010241547.ac6876be9c.png"
-          mode="heightFix"
-          aria-role="img"
           aria-label="验证码"
+          aria-role="img"
+          class="image"
+          mode="heightFix"
+          src="https://wwcdn.weixin.qq.com/node/wework/images/202010241547.ac6876be9c.png"
         />
       </div>
     </template>
   </t-input>
-  <t-input v-model="phoneNumber" label="手机号" placeholder="输入手机号码" :tips="tips">
+  <t-input v-model="phoneNumber" :tips="tips" label="手机号" placeholder="输入手机号码">
     <template #suffix>
       <div class="suffix">
         <div class="suffix--line"></div>
-        <div class="verify" aria-role="button">发送验证码</div>
+        <t-button size="extra-small" theme="primary" variant="text">发送验证码</t-button>
       </div>
     </template>
   </t-input>
-  <t-input label="价格" align="right" placeholder="0.00" suffix="元" type="number" />
-  <t-input label="数量" align="right" placeholder="填写个数" suffix="个" type="number" />
+  <t-input align="right" label="价格" placeholder="0.00" suffix="元" type="number" />
+  <t-input align="right" label="数量" placeholder="填写个数" suffix="个" type="number" />
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from 'vue';
-import { BrowseOffIcon } from 'tdesign-icons-vue-next';
+import { computed, ref } from 'vue';
 
 const phoneNumber = ref('17600600600');
 
@@ -51,7 +50,10 @@ const tips = computed(() => {
 .suffix {
   display: flex;
   align-items: center;
+
+  --td-button-extra-small-padding-horizontal: 0;
 }
+
 .suffix--line {
   width: 1px;
   height: 24px;
