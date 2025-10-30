@@ -1344,12 +1344,22 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 <div
                   class="suffix--line"
                 />
-                <div
-                  aria-role="button"
-                  class="verify"
+                <button
+                  aria-disabled="false"
+                  class="t-button t-button--size-extra-small t-button--text t-button--primary t-button--rectangle"
+                  role="button"
+                  type="button"
                 >
-                  发送验证码
-                </div>
+                  <!---->
+                  <span
+                    class="t-button__content"
+                  >
+                    
+                    发送验证码
+                    
+                  </span>
+                  <!---->
+                </button>
               </div>
               
             </div>
@@ -2337,12 +2347,22 @@ exports[`Input > Input specialVue demo works fine 1`] = `
             <div
               class="suffix--line"
             />
-            <div
-              aria-role="button"
-              class="verify"
+            <button
+              aria-disabled="false"
+              class="t-button t-button--size-extra-small t-button--text t-button--primary t-button--rectangle"
+              role="button"
+              type="button"
             >
-              发送验证码
-            </div>
+              <!---->
+              <span
+                class="t-button__content"
+              >
+                
+                发送验证码
+                
+              </span>
+              <!---->
+            </button>
           </div>
           
         </div>

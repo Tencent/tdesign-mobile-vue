@@ -247,7 +247,7 @@ exports[`Slider > Slider disabledVue demo works fine 1`] = `
           style=""
         >
           <div
-            class="t-slider__dot"
+            class="t-slider__dot t-slider__dot--disabled"
           >
             <!---->
             <div
@@ -281,7 +281,7 @@ exports[`Slider > Slider disabledVue demo works fine 1`] = `
           style="left: 0px; right: 0px;"
         >
           <div
-            class="t-slider__dot t-slider__dot--left"
+            class="t-slider__dot t-slider__dot--left t-slider__dot--disabled"
           >
             <div
               class="t-slider__dot-value"
@@ -293,7 +293,7 @@ exports[`Slider > Slider disabledVue demo works fine 1`] = `
             />
           </div>
           <div
-            class="t-slider__dot t-slider__dot--right"
+            class="t-slider__dot t-slider__dot--right t-slider__dot--disabled"
           >
             <div
               class="t-slider__dot-value"
@@ -331,7 +331,7 @@ exports[`Slider > Slider disabledVue demo works fine 1`] = `
           style="left: 0px; right: 0px;"
         >
           <div
-            class="t-slider__dot t-slider__dot--left"
+            class="t-slider__dot t-slider__dot--left t-slider__dot--disabled"
           >
             <!---->
             <div
@@ -339,7 +339,7 @@ exports[`Slider > Slider disabledVue demo works fine 1`] = `
             />
           </div>
           <div
-            class="t-slider__dot t-slider__dot--right"
+            class="t-slider__dot t-slider__dot--right t-slider__dot--disabled"
           >
             <!---->
             <div
@@ -891,7 +891,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               style=""
             >
               <div
-                class="t-slider__dot"
+                class="t-slider__dot t-slider__dot--disabled"
               >
                 <!---->
                 <div
@@ -925,7 +925,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               style="left: 0px; right: 0px;"
             >
               <div
-                class="t-slider__dot t-slider__dot--left"
+                class="t-slider__dot t-slider__dot--left t-slider__dot--disabled"
               >
                 <div
                   class="t-slider__dot-value"
@@ -937,7 +937,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
                 />
               </div>
               <div
-                class="t-slider__dot t-slider__dot--right"
+                class="t-slider__dot t-slider__dot--right t-slider__dot--disabled"
               >
                 <div
                   class="t-slider__dot-value"
@@ -975,7 +975,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               style="left: 0px; right: 0px;"
             >
               <div
-                class="t-slider__dot t-slider__dot--left"
+                class="t-slider__dot t-slider__dot--left t-slider__dot--disabled"
               >
                 <!---->
                 <div
@@ -983,7 +983,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
                 />
               </div>
               <div
-                class="t-slider__dot t-slider__dot--right"
+                class="t-slider__dot t-slider__dot--right t-slider__dot--disabled"
               >
                 <!---->
                 <div

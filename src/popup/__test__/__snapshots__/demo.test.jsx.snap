@@ -318,7 +318,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
             class="t-button__content"
           >
             
-            底部弹出层-带标题及操作
+            底部弹出层-带标题及操作 
             
           </span>
           <!---->
@@ -433,7 +433,7 @@ exports[`Popup > Popup withTitleVue demo works fine 1`] = `
       class="t-button__content"
     >
       
-      底部弹出层-带标题及操作
+      底部弹出层-带标题及操作 
       
     </span>
     <!---->
