@@ -1,12 +1,12 @@
 <template>
   <div class="avatar-demo">
     <t-avatar
+      :badge-props="{ dot: true }"
       class="avatar-example"
       image="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
-      :badge-props="{ dot: true }"
     />
-    <t-avatar class="avatar-example external-class-content" :badge-props="{ count: 8, offset: [4, 4] }">A</t-avatar>
-    <t-avatar class="avatar-example" :icon="userIcon" :badge-props="{ count: 12, offset: [4, 4] }" />
+    <t-avatar :badge-props="{ count: 8, offset: [4, 4] }" class="avatar-example external-class-content">A</t-avatar>
+    <t-avatar :badge-props="{ count: 12, offset: [4, 4] }" :icon="userIcon" class="avatar-example" />
   </div>
 </template>
 
@@ -18,6 +18,8 @@ const userIcon = () => h(UserIcon);
 </script>
 
 <style lang="less">
+@import '../../_common/style/mobile/_variables';
+
 .avatar-demo {
   margin-left: 16px;
   margin-bottom: 16px;
@@ -25,10 +27,11 @@ const userIcon = () => h(UserIcon);
   .avatar-example:not(:last-child) {
     margin-right: 32px;
   }
+
   .external-class-content {
     .t-avatar {
       color: #fff;
-      background-color: #0052d9;
+      background-color: @brand-color;
       font-weight: 400;
     }
   }
