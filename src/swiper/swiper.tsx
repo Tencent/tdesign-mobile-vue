@@ -1,4 +1,4 @@
-import { onMounted, computed, ref, provide, watch, onUnmounted, toRefs, defineComponent, isVNode } from 'vue';
+import { onMounted, computed, ref, provide, watch, onUnmounted, toRefs, defineComponent } from 'vue';
 import { isNumber, isObject } from 'lodash-es';
 import { useSwipe } from '../swipe-cell/useSwipe';
 import config from '../config';
@@ -16,7 +16,19 @@ const defaultSwiperNavigation: SwiperNavigation = {
   type: 'dots',
 };
 
+/**
+ * 滑动触发阈值
+ */
+const SWIPE_THRESHOLD = 100;
+
 const { prefix } = config;
+
+// 定义 SwiperItem 的接口
+interface SwiperItemInstance {
+  uid: number;
+  proxy: any;
+  calcTranslateStyle: (index: number, activeIndex: number) => void;
+}
 
 export default defineComponent({
   name: `${prefix}-swiper`,
@@ -26,38 +38,41 @@ export default defineComponent({
     const swiperClass = usePrefixClass('swiper');
     const swiperNavClass = usePrefixClass('swiper-nav');
 
-    const { navigation } = toRefs(props);
+    // 解构 props，保持响应性
+    const {
+      autoplay,
+      interval,
+      navigation,
+      disabled: propsDisabled,
+      direction,
+      type,
+      loop,
+      height,
+      duration,
+      onClick,
+      defaultCurrent,
+    } = toRefs(props);
 
-    const readerTNodeJSX = useTNodeJSX();
-    const setOffset = (offset: number, direction = 'X'): void => {
-      translateContainer.value = `translate${direction}(${offset}px)`;
+    const renderTNodeJSX = useTNodeJSX();
+    const setOffset = (offset: number, dir: 'X' | 'Y' = 'X'): void => {
+      translateContainer.value = `translate${dir}(${offset}px)`;
     };
 
     const root = ref();
-    const items = ref<any>([]);
+    const items = ref<SwiperItemInstance[]>([]);
     const { current: value, modelValue } = toRefs(props);
-    const [currentIndex, setCurrent] = useVModel(value, modelValue, props.defaultCurrent);
+    const [currentIndex, setCurrent] = useVModel(value, modelValue, defaultCurrent.value);
     const swiperContainer = ref<HTMLElement | null>(null);
     const previous = ref(currentIndex.value ?? 0);
 
     const animating = ref(false);
     const disabled = ref(false);
-    const isSwiperDisabled = computed(() => props.disabled === true);
+    const isSwiperDisabled = computed(() => propsDisabled.value === true);
     const translateContainer = ref('');
 
-    const isVertical = computed(() => props.direction === 'vertical');
+    const isVertical = computed(() => direction.value === 'vertical');
     const containerHeight = ref('auto');
 
-    // const isBottomPagination = computed(() => {
-    //   let isShowSwiperNav = false;
-    //   if (typeof props.navigation === 'object') {
-    //     isShowSwiperNav =
-    //       (!navigation.value?.paginationPosition || navigation.value?.paginationPosition === 'bottom') &&
-    //       (navigation.value?.type === 'dots' || navigation.value?.type === 'dots-bar') &&
-    //       enableNavigation?.value;
-    //   }
-    //   return isShowSwiperNav;
-    // });
     const navigationConfig = computed<SwiperNavigation>(() => {
       if (navigation.value === true) {
         return defaultSwiperNavigation;
@@ -73,29 +88,35 @@ export default defineComponent({
     });
 
     const rootClass = computed(() => {
-      return [
-        `${swiperClass.value}`,
-        `${swiperClass.value}--${props.type}`,
-        `${navigationConfig.value?.placement ? `${swiperClass.value}--${navigationConfig.value?.placement}` : ''}`,
-      ];
+      const classes = [swiperClass.value, `${swiperClass.value}--${type.value}`];
+      if (navigationConfig.value?.placement) {
+        classes.push(`${swiperClass.value}--${navigationConfig.value.placement}`);
+      }
+      return classes;
     });
 
     const enableNavigation = computed(() => {
-      if (typeof props.navigation === 'object') {
+      if (!navigation.value) return false;
+
+      if (navigation.value === true) return true;
+
+      // navigation 为对象时，检查 minShowNum 配置
+      if (typeof navigation.value === 'object') {
         return navigationConfig.value?.minShowNum ? items.value.length >= navigationConfig.value?.minShowNum : true;
       }
+
       return false;
     });
 
-    let autoplayTimer: any = null;
+    let autoplayTimer: ReturnType<typeof setInterval> | null = null;
 
     const onItemClick = () => {
-      props.onClick?.(currentIndex.value ?? 0);
+      onClick?.value?.(currentIndex.value ?? 0);
     };
 
     const move = (step: number, source: SwiperChangeSource, isReset = false, targetValue?: number) => {
       const nextIndex = currentIndex.value + step;
-      if (!props.loop && !(isReset || typeof targetValue === 'number')) {
+      if (!loop.value && !(isReset || typeof targetValue === 'number')) {
         if (nextIndex < 0 || nextIndex >= items.value.length) return;
       }
 
@@ -112,22 +133,22 @@ export default defineComponent({
     const handleAnimationEnd = () => {
       disabled.value = false;
       animating.value = false;
-      translateContainer.value = 'translateX(0)';
+      translateContainer.value = `translate${isVertical.value ? 'Y' : 'X'}(0)`;
 
       updateItemPosition();
     };
 
     const stopAutoplay = () => {
       if (!autoplayTimer) return;
-      clearInterval(autoplayTimer as number);
+      clearInterval(autoplayTimer);
       autoplayTimer = null;
     };
 
     const startAutoplay = () => {
-      if (!props?.autoplay || autoplayTimer !== null) return false; // stop repeat autoplay
+      if (!autoplay.value || autoplayTimer !== null) return false; // stop repeat autoplay
       autoplayTimer = setInterval(() => {
         goNext('autoplay');
-      }, props?.interval);
+      }, interval.value);
     };
 
     const goPrev = (source: SwiperChangeSource) => {
@@ -149,10 +170,10 @@ export default defineComponent({
       let val = index;
 
       if (index < 0) {
-        val = props.loop ? max - 1 : 0;
+        val = loop.value ? max - 1 : 0;
       }
       if (index >= max) {
-        val = props.loop ? 0 : max - 1;
+        val = loop.value ? 0 : max - 1;
       }
       innerSetCurrent(val);
       context.emit('update:current', val);
@@ -176,30 +197,26 @@ export default defineComponent({
 
     const onTouchMove = (event: TouchEvent) => {
       preventDefault(event, false);
-      const distanceX = lengthX.value;
-      const distanceY = lengthY.value;
 
       animating.value = false;
 
       const curIndex = currentIndex.value;
       const maxIndex = items.value.length - 1;
-      if (!isVertical.value) {
-        // 非loop状态阻止首个向右滑动，最后个向左滑动的行为
-        if (!props.loop && ((curIndex <= 0 && distanceX < 0) || (curIndex >= maxIndex && distanceX > 0))) return;
-        setOffset(-distanceX);
-      } else {
-        if (!props.loop && ((curIndex <= 0 && distanceY < 0) || (curIndex >= maxIndex && distanceY > 0))) return;
-        setOffset(-distanceY, 'Y');
-      }
+      const distance = isVertical.value ? lengthY.value : lengthX.value;
+      const dir = isVertical.value ? 'Y' : 'X';
+
+      // 非loop状态: 阻止第一项向左滑(显示上一项)和最后一项向右滑(显示下一项)
+      if (!loop.value && ((curIndex <= 0 && distance < 0) || (curIndex >= maxIndex && distance > 0))) return;
+
+      setOffset(-distance, dir);
     };
 
     const onTouchEnd = () => {
-      const distanceX = lengthX.value;
-      const distanceY = lengthY.value;
+      const distance = isVertical.value ? lengthY.value : lengthX.value;
 
-      if ((!isVertical.value && distanceX < -100) || (isVertical.value && distanceY < -100)) {
+      if (distance < -SWIPE_THRESHOLD) {
         move(-1, 'touch');
-      } else if ((!isVertical.value && distanceX > 100) || (isVertical.value && distanceY > 100)) {
+      } else if (distance > SWIPE_THRESHOLD) {
         move(1, 'touch');
       } else {
         move(currentIndex.value as number, 'touch', true);
@@ -215,21 +232,37 @@ export default defineComponent({
       context.emit('transitionleave', event);
     };
 
-    const addChild = (item: any) => {
+    const addChild = (item: SwiperItemInstance) => {
       items.value.push(item);
     };
 
     const removeChild = (uid: number) => {
-      const index = items.value.findIndex((item: any) => item.uid === uid);
-      items.value.splice(index, 1);
+      const removedIndex = items.value.findIndex((item) => item.uid === uid);
+      if (removedIndex === -1) return;
 
-      if (currentIndex.value + 1 > items.value.length) {
-        goNext('autoplay');
+      items.value.splice(removedIndex, 1);
+
+      // 如果删除后没有项了，重置索引
+      if (items.value.length === 0) {
+        innerSetCurrent(0);
+        return;
       }
+
+      // 根据删除位置调整当前索引
+      if (removedIndex < currentIndex.value) {
+        // 删除的是前面的项，当前索引需要 -1（保持显示相同内容）
+        innerSetCurrent(currentIndex.value - 1);
+      } else if (removedIndex === currentIndex.value && currentIndex.value >= items.value.length) {
+        // 删除的是当前项，且索引已越界，调整到最后一项
+        innerSetCurrent(items.value.length - 1);
+      }
+
+      updateItemPosition();
     };
 
     const updateItemPosition = () => {
-      items.value.forEach((item: any, index: number) => {
+      if (!items.value.length) return;
+      items.value.forEach((item, index) => {
         item.calcTranslateStyle(index, currentIndex.value);
       });
     };
@@ -238,12 +271,14 @@ export default defineComponent({
       (containerHeight.value = isNumber(height) ? `${height}px` : height);
 
     const updateContainerHeight = () => {
+      if (height.value) {
+        setContainerHeight(height.value);
+        return;
+      }
+
       const target = items.value[currentIndex.value ?? 0];
       const rect = target?.proxy?.$el.getBoundingClientRect();
-
-      if (props.height) {
-        setContainerHeight(props.height);
-      } else if (rect) {
+      if (rect) {
         setContainerHeight(rect.height);
       }
     };
@@ -261,7 +296,7 @@ export default defineComponent({
     );
 
     provide('parent', {
-      loop: props.loop,
+      loop,
       root,
       items,
       isVertical,
@@ -279,85 +314,86 @@ export default defineComponent({
     onUnmounted(() => {
       stopAutoplay();
     });
+
+    // 渲染控制按钮（左右箭头）
+    const renderControlsNav = () => {
+      if (isVertical.value || !navigationConfig.value?.showControls) return null;
+
+      return (
+        <span class={`${swiperNavClass.value}__btn`}>
+          <span class={`${swiperNavClass.value}__btn--prev`} onClick={() => goPrev('nav')} />
+          <span class={`${swiperNavClass.value}__btn--next`} onClick={() => goNext('nav')} />
+        </span>
+      );
+    };
+
+    // 渲染点状导航
+    const renderDotsNav = () => {
+      const navType = navigationConfig.value.type;
+      if (!navType || !['dots', 'dots-bar'].includes(navType)) return null;
+
+      return (
+        <>
+          {items.value.map((_, index) => (
+            <span
+              key={`page${index}`}
+              class={[
+                `${swiperNavClass.value}__${navType}-item`,
+                index === currentIndex.value && `${swiperNavClass.value}__${navType}-item--active`,
+                `${swiperNavClass.value}__${navType}-item--${direction.value}`,
+              ]}
+            />
+          ))}
+        </>
+      );
+    };
+
+    // 渲染分式导航 (1/5)
+    const renderFractionNav = () => {
+      if (navigationConfig.value?.type !== 'fraction') return null;
+      return <span>{`${(currentIndex.value ?? 0) + 1}/${items.value.length}`}</span>;
+    };
+
+    // 渲染导航类型（dots/fraction）
+    const renderTypeNav = () => {
+      if (!('type' in navigationConfig.value)) return null;
+
+      return (
+        <span
+          class={[
+            `${swiperNavClass.value}--${direction.value}`,
+            `${swiperNavClass.value}__${navigationConfig.value?.type || ''}`,
+            `${swiperNavClass.value}--${navigationConfig.value?.paginationPosition || 'bottom'}`,
+            navigationConfig.value?.placement && `${swiperNavClass.value}--${navigationConfig.value.placement}`,
+          ].filter(Boolean)}
+        >
+          {renderDotsNav()}
+          {renderFractionNav()}
+        </span>
+      );
+    };
+
     return () => {
       const swiperNav = () => {
-        if (navigation.value && enableNavigation.value) {
-          const controlsNav = () => {
-            if (!isVertical.value && !!navigationConfig.value?.showControls) {
-              return (
-                <span class={`${swiperNavClass.value}__btn`}>
-                  <span class={`${swiperNavClass.value}__btn--prev`} onClick={() => goPrev('nav')} />
-                  <span class={`${swiperNavClass.value}__btn--next`} onClick={() => goNext('nav')} />
-                </span>
-              );
-            }
-          };
-          const typeNav = () => {
-            if ('type' in navigationConfig.value) {
-              // dots
-              const dots = () => {
-                if (['dots', 'dots-bar'].includes(navigationConfig.value.type || '')) {
-                  return (
-                    <>
-                      {items.value.map((_: any, index: number) => (
-                        <span
-                          key={`page${index}`}
-                          class={[
-                            `${swiperNavClass.value}__${navigationConfig.value?.type}-item`,
-                            index === currentIndex.value
-                              ? `${swiperNavClass.value}__${navigationConfig.value?.type}-item--active`
-                              : '',
-                            `${swiperNavClass.value}__${navigationConfig.value?.type}-item--${props.direction}`,
-                          ]}
-                        />
-                      ))}
-                    </>
-                  );
-                }
-              };
-              // fraction
-              const fraction = () => {
-                if (navigationConfig.value?.type === 'fraction') {
-                  return <span>{`${(currentIndex.value ?? 0) + 1}/${items.value.length}`}</span>;
-                }
-              };
-              return (
-                <span
-                  class={[
-                    `${swiperNavClass.value}--${props.direction}`,
-                    `${swiperNavClass.value}__${navigationConfig.value?.type || ''}`,
-                    `${swiperNavClass.value}--${navigationConfig.value?.paginationPosition || 'bottom'}`,
-                    `${
-                      navigationConfig.value?.placement
-                        ? `${swiperNavClass.value}--${navigationConfig.value?.placement}`
-                        : ''
-                    }`,
-                  ]}
-                >
-                  {dots()}
-                  {fraction()}
-                </span>
-              );
-            }
-          };
-
+        if (enableNavigation.value) {
           return (
             <>
-              {controlsNav()}
-              {typeNav()}
+              {renderControlsNav()}
+              {renderTypeNav()}
             </>
           );
         }
-        return isObject(props.navigation) ? '' : readerTNodeJSX('navigation');
+        return isObject(navigation.value) ? null : renderTNodeJSX('navigation');
       };
+
       return (
         <div ref={root} class={rootClass.value}>
           <div
             ref={swiperContainer}
             class={`${swiperClass.value}__container`}
             style={{
-              flexDirection: !isVertical.value ? 'row' : 'column',
-              transition: animating.value ? `transform ${props.duration}ms` : 'none',
+              flexDirection: isVertical.value ? 'column' : 'row',
+              transition: animating.value ? `transform ${duration.value}ms` : 'none',
               transform: translateContainer.value,
               height: containerHeight.value,
             }}
@@ -370,7 +406,7 @@ export default defineComponent({
             }}
             onClick={onItemClick}
           >
-            {readerTNodeJSX('default')}
+            {renderTNodeJSX('default')}
           </div>
           {swiperNav()}
         </div>
