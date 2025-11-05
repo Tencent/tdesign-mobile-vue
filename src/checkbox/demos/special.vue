@@ -22,8 +22,18 @@ import { ref } from 'vue';
 const value = ref([1, 2]);
 const value1 = ref([1, 2]);
 </script>
-<style lang="less" scoped>
+<style lang="less">
 @import '../../_common/style/mobile/_variables';
+
+:root[theme-mode='light'] {
+  --checkbox-special-demo-border-color: @brand-color-7;
+  --checkbox-special-demo-icon-color: #fff;
+}
+
+:root[theme-mode='dark'] {
+  --checkbox-special-demo-border-color: @brand-color-8;
+  --checkbox-special-demo-icon-color: @gray-color-13;
+}
 
 .card {
   position: relative;
@@ -35,7 +45,7 @@ const value1 = ref([1, 2]);
 }
 
 .card--active {
-  border-color: @brand-color;
+  border-color: var(--checkbox-special-demo-border-color);
 }
 
 .card--active::after {
@@ -45,13 +55,13 @@ const value1 = ref([1, 2]);
   left: 0;
   top: 0;
   width: 0;
-  border: 14px solid @brand-color;
+  border: 14px solid var(--checkbox-special-demo-border-color);
   border-bottom-color: transparent;
   border-right-color: transparent;
 }
 
 .card__icon {
-  color: #fff;
+  color: var(--checkbox-special-demo-icon-color);
   position: absolute;
   left: 1.5px;
   top: 1.5px;
