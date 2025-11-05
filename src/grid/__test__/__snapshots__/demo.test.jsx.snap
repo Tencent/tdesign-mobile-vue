@@ -2589,13 +2589,11 @@ exports[`Grid > Grid descVue demo works fine 1`] = `
 exports[`Grid > Grid iconVue demo works fine 1`] = `
 <div
   class="t-grid grid-demo"
-  data-v-0db0af22=""
   style="grid-template-columns: repeat(4, 1fr);"
 >
   
   <div
     class="t-grid-item t-grid-item--vertical"
-    data-v-0db0af22=""
     style="text-align: center; flex-basis: 25%;"
   >
     <div
@@ -2604,11 +2602,9 @@ exports[`Grid > Grid iconVue demo works fine 1`] = `
       
       <div
         class="icon-wrapper"
-        data-v-0db0af22=""
       >
         <svg
           class="t-icon t-icon-share"
-          data-v-0db0af22=""
           fill="none"
           height="1em"
           viewBox="0 0 24 24"
@@ -2639,7 +2635,6 @@ exports[`Grid > Grid iconVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid-item t-grid-item--vertical"
-    data-v-0db0af22=""
     style="text-align: center; flex-basis: 25%;"
   >
     <div
@@ -2676,7 +2671,6 @@ exports[`Grid > Grid iconVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid-item t-grid-item--vertical"
-    data-v-0db0af22=""
     style="text-align: center; flex-basis: 25%;"
   >
     <div
@@ -2713,7 +2707,6 @@ exports[`Grid > Grid iconVue demo works fine 1`] = `
   </div>
   <div
     class="t-grid-item t-grid-item--vertical"
-    data-v-0db0af22=""
     style="text-align: center; flex-basis: 25%;"
   >
     <div
@@ -5439,13 +5432,11 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
       
       <div
         class="t-grid grid-demo"
-        data-v-0db0af22=""
         style="grid-template-columns: repeat(4, 1fr);"
       >
         
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-0db0af22=""
           style="text-align: center; flex-basis: 25%;"
         >
           <div
@@ -5454,11 +5445,9 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
             
             <div
               class="icon-wrapper"
-              data-v-0db0af22=""
             >
               <svg
                 class="t-icon t-icon-share"
-                data-v-0db0af22=""
                 fill="none"
                 height="1em"
                 viewBox="0 0 24 24"
@@ -5489,7 +5478,6 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-0db0af22=""
           style="text-align: center; flex-basis: 25%;"
         >
           <div
@@ -5526,7 +5514,6 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-0db0af22=""
           style="text-align: center; flex-basis: 25%;"
         >
           <div
@@ -5563,7 +5550,6 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item t-grid-item--vertical"
-          data-v-0db0af22=""
           style="text-align: center; flex-basis: 25%;"
         >
           <div

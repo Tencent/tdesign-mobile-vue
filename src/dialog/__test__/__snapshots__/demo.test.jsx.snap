@@ -289,7 +289,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
       class="t-button__content"
     >
       
-       反馈类-基础 
+       反馈类-基础
       
     </span>
     <!---->
@@ -1657,7 +1657,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-button__content"
         >
           
-           反馈类-基础 
+           反馈类-基础
           
         </span>
         <!---->
@@ -3309,7 +3309,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       
       
       <div
-        class="demo-desc"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle demo-desc"
       >
         文字按钮
       </div>
@@ -3324,7 +3324,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-button__content"
         >
           
-           文字按钮 
+           文字按钮
           
         </span>
         <!---->
@@ -3407,7 +3407,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         class="btn-gap"
       />
       <div
-        class="demo-desc"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle demo-desc"
       >
         水平基础按钮
       </div>
@@ -3422,7 +3422,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-button__content"
         >
           
-           水平基础按钮 
+           水平基础按钮
           
         </span>
         <!---->
@@ -3505,7 +3505,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         class="btn-gap"
       />
       <div
-        class="demo-desc"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle demo-desc"
       >
         垂直基础按钮
       </div>
@@ -3520,7 +3520,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-button__content"
         >
           
-           垂直基础按钮 
+           垂直基础按钮
           
         </span>
         <!---->
@@ -3603,7 +3603,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         class="btn-gap"
       />
       <div
-        class="demo-desc"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle demo-desc"
       >
         多按钮
       </div>
@@ -3618,7 +3618,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           class="t-button__content"
         >
           
-           多按钮 
+           多按钮
           
         </span>
         <!---->
@@ -3718,7 +3718,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         class="btn-gap"
       />
       <div
-        class="demo-desc"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle demo-desc"
       >
         带关闭按钮的对话框
       </div>
@@ -3878,7 +3878,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
 >
   
   <div
-    class="demo-desc"
+    class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle demo-desc"
   >
     文字按钮
   </div>
@@ -3893,7 +3893,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       class="t-button__content"
     >
       
-       文字按钮 
+       文字按钮
       
     </span>
     <!---->
@@ -3976,7 +3976,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     class="btn-gap"
   />
   <div
-    class="demo-desc"
+    class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle demo-desc"
   >
     水平基础按钮
   </div>
@@ -3991,7 +3991,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       class="t-button__content"
     >
       
-       水平基础按钮 
+       水平基础按钮
       
     </span>
     <!---->
@@ -4074,7 +4074,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     class="btn-gap"
   />
   <div
-    class="demo-desc"
+    class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle demo-desc"
   >
     垂直基础按钮
   </div>
@@ -4089,7 +4089,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       class="t-button__content"
     >
       
-       垂直基础按钮 
+       垂直基础按钮
       
     </span>
     <!---->
@@ -4172,7 +4172,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     class="btn-gap"
   />
   <div
-    class="demo-desc"
+    class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle demo-desc"
   >
     多按钮
   </div>
@@ -4187,7 +4187,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       class="t-button__content"
     >
       
-       多按钮 
+       多按钮
       
     </span>
     <!---->
@@ -4287,7 +4287,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     class="btn-gap"
   />
   <div
-    class="demo-desc"
+    class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle demo-desc"
   >
     带关闭按钮的对话框
   </div>
