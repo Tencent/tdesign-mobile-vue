@@ -2,7 +2,7 @@
   <div v-for="(themeItem, index) in themeList" :key="index">
     <div class="demo-section__desc">{{ themeItem.title }}</div>
     <div class="demo-section__content">
-      <t-skeleton :theme="themeItem.value" :loading="themeItem.loading"></t-skeleton>
+      <t-skeleton :loading="themeItem.loading" :theme="themeItem.value"></t-skeleton>
     </div>
   </div>
 </template>
@@ -34,7 +34,7 @@ const themeList = [
 <style lang="less" scoped>
 .demo-section__desc {
   font-size: 14px;
-  color: var(--td-text-color-disabled, rgba(0, 0, 0, 0.4));
+  color: var(--td-text-color-secondary);
   margin-top: 8px;
   line-height: 22px;
 }

@@ -69,28 +69,13 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
         data-v-81744b9c=""
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="jump"
-        >
-          <path
-            d="M9 4L4 4L4 20L20 20L20 15"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-          <path
-            d="M19.25 4.75L12 12M14 4H20L20 10"
-            id="stroke2"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+          fill="currentColor"
+        />
       </svg>
       
     </span>
@@ -118,28 +103,13 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
         data-v-81744b9c=""
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="jump"
-        >
-          <path
-            d="M9 4L4 4L4 20L20 20L20 15"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-          <path
-            d="M19.25 4.75L12 12M14 4H20L20 10"
-            id="stroke2"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+          fill="currentColor"
+        />
       </svg>
       
     </span>
@@ -167,28 +137,13 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
         data-v-81744b9c=""
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="jump"
-        >
-          <path
-            d="M9 4L4 4L4 20L20 20L20 15"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-          <path
-            d="M19.25 4.75L12 12M14 4H20L20 10"
-            id="stroke2"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+          fill="currentColor"
+        />
       </svg>
       
     </span>
@@ -352,7 +307,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
       >
         <a
           aria-disabled="false"
-          class="t-link t-link--primary t-link--medium t-link--underline t-link--hover"
+          class="t-link t-link--primary t-link--medium t-link--hover"
           data-v-00ec48a6=""
           target=""
         >
@@ -365,21 +320,13 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-00ec48a6=""
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="link"
-              >
-                <path
-                  d="M11.6762 6.99023L13.9998 4.6666C15.4726 3.19382 17.8604 3.19382 19.3332 4.6666C20.806 6.13938 20.806 8.52723 19.3332 10L17.0096 12.3236M6.98974 11.6766L4.66611 14.0003C3.19333 15.4731 3.19333 17.8609 4.66611 19.3337C6.13889 20.8065 8.52675 20.8065 9.99953 19.3337L12.3232 17.0101M13.9985 9.99989L9.99847 14"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M13.2925 3.95949C15.1558 2.09618 18.1768 2.09619 20.0401 3.95949C21.9034 5.8228 21.9034 8.84381 20.0401 10.7071L17.0094 13.7379L15.5952 12.3236L18.6259 9.29291C19.7082 8.21065 19.7082 6.45596 18.6259 5.37371C17.5436 4.29145 15.789 4.29145 14.7067 5.3737L11.676 8.40444L10.2617 6.99023L13.2925 3.95949ZM15.4125 9.99989L9.99826 15.4142L8.58405 14L13.9983 8.58568L15.4125 9.99989ZM8.40395 11.6764L5.37322 14.7072C4.29096 15.7894 4.29096 17.5441 5.37322 18.6264C6.45547 19.7086 8.21016 19.7086 9.29242 18.6264L12.3232 15.5956L13.7374 17.0099L10.7066 20.0406C8.84333 21.9039 5.82231 21.9039 3.959 20.0406C2.0957 18.1773 2.0957 15.1563 3.959 13.293L6.98974 10.2622L8.40395 11.6764Z"
+                fill="currentColor"
+              />
             </svg>
             
           </span>
@@ -407,21 +354,13 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-00ec48a6=""
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="link"
-              >
-                <path
-                  d="M11.6762 6.99023L13.9998 4.6666C15.4726 3.19382 17.8604 3.19382 19.3332 4.6666C20.806 6.13938 20.806 8.52723 19.3332 10L17.0096 12.3236M6.98974 11.6766L4.66611 14.0003C3.19333 15.4731 3.19333 17.8609 4.66611 19.3337C6.13889 20.8065 8.52675 20.8065 9.99953 19.3337L12.3232 17.0101M13.9985 9.99989L9.99847 14"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M13.2925 3.95949C15.1558 2.09618 18.1768 2.09619 20.0401 3.95949C21.9034 5.8228 21.9034 8.84381 20.0401 10.7071L17.0094 13.7379L15.5952 12.3236L18.6259 9.29291C19.7082 8.21065 19.7082 6.45596 18.6259 5.37371C17.5436 4.29145 15.789 4.29145 14.7067 5.3737L11.676 8.40444L10.2617 6.99023L13.2925 3.95949ZM15.4125 9.99989L9.99826 15.4142L8.58405 14L13.9983 8.58568L15.4125 9.99989ZM8.40395 11.6764L5.37322 14.7072C4.29096 15.7894 4.29096 17.5441 5.37322 18.6264C6.45547 19.7086 8.21016 19.7086 9.29242 18.6264L12.3232 15.5956L13.7374 17.0099L10.7066 20.0406C8.84333 21.9039 5.82231 21.9039 3.959 20.0406C2.0957 18.1773 2.0957 15.1563 3.959 13.293L6.98974 10.2622L8.40395 11.6764Z"
+                fill="currentColor"
+              />
             </svg>
             
           </span>
@@ -482,28 +421,13 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-a3d673c9=""
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="jump"
-              >
-                <path
-                  d="M9 4L4 4L4 20L20 20L20 15"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M19.25 4.75L12 12M14 4H20L20 10"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+                fill="currentColor"
+              />
             </svg>
             
           </span>
@@ -531,28 +455,13 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-a3d673c9=""
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="jump"
-              >
-                <path
-                  d="M9 4L4 4L4 20L20 20L20 15"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M19.25 4.75L12 12M14 4H20L20 10"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+                fill="currentColor"
+              />
             </svg>
             
           </span>
@@ -610,28 +519,13 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-f45dd796=""
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="jump"
-              >
-                <path
-                  d="M9 4L4 4L4 20L20 20L20 15"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M19.25 4.75L12 12M14 4H20L20 10"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+                fill="currentColor"
+              />
             </svg>
             
           </span>
@@ -659,28 +553,13 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-f45dd796=""
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="jump"
-              >
-                <path
-                  d="M9 4L4 4L4 20L20 20L20 15"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M19.25 4.75L12 12M14 4H20L20 10"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+                fill="currentColor"
+              />
             </svg>
             
           </span>
@@ -708,28 +587,13 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-f45dd796=""
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="jump"
-              >
-                <path
-                  d="M9 4L4 4L4 20L20 20L20 15"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M19.25 4.75L12 12M14 4H20L20 10"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+                fill="currentColor"
+              />
             </svg>
             
           </span>
@@ -762,28 +626,13 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-f45dd796=""
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="jump"
-              >
-                <path
-                  d="M9 4L4 4L4 20L20 20L20 15"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M19.25 4.75L12 12M14 4H20L20 10"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+                fill="currentColor"
+              />
             </svg>
             
           </span>
@@ -811,28 +660,13 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-f45dd796=""
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="jump"
-              >
-                <path
-                  d="M9 4L4 4L4 20L20 20L20 15"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M19.25 4.75L12 12M14 4H20L20 10"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+                fill="currentColor"
+              />
             </svg>
             
           </span>
@@ -887,28 +721,13 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-ecea4a30=""
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="jump"
-              >
-                <path
-                  d="M9 4L4 4L4 20L20 20L20 15"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M19.25 4.75L12 12M14 4H20L20 10"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+                fill="currentColor"
+              />
             </svg>
             
           </span>
@@ -936,28 +755,13 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-ecea4a30=""
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="jump"
-              >
-                <path
-                  d="M9 4L4 4L4 20L20 20L20 15"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M19.25 4.75L12 12M14 4H20L20 10"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+                fill="currentColor"
+              />
             </svg>
             
           </span>
@@ -985,28 +789,13 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-ecea4a30=""
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="jump"
-              >
-                <path
-                  d="M9 4L4 4L4 20L20 20L20 15"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M19.25 4.75L12 12M14 4H20L20 10"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+                fill="currentColor"
+              />
             </svg>
             
           </span>
@@ -1039,28 +828,13 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-ecea4a30=""
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="jump"
-              >
-                <path
-                  d="M9 4L4 4L4 20L20 20L20 15"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M19.25 4.75L12 12M14 4H20L20 10"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+                fill="currentColor"
+              />
             </svg>
             
           </span>
@@ -1088,28 +862,13 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-ecea4a30=""
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="jump"
-              >
-                <path
-                  d="M9 4L4 4L4 20L20 20L20 15"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M19.25 4.75L12 12M14 4H20L20 10"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+                fill="currentColor"
+              />
             </svg>
             
           </span>
@@ -1167,28 +926,13 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-81744b9c=""
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="jump"
-              >
-                <path
-                  d="M9 4L4 4L4 20L20 20L20 15"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M19.25 4.75L12 12M14 4H20L20 10"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+                fill="currentColor"
+              />
             </svg>
             
           </span>
@@ -1216,28 +960,13 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-81744b9c=""
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="jump"
-              >
-                <path
-                  d="M9 4L4 4L4 20L20 20L20 15"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M19.25 4.75L12 12M14 4H20L20 10"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+                fill="currentColor"
+              />
             </svg>
             
           </span>
@@ -1265,28 +994,13 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
               data-v-81744b9c=""
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="jump"
-              >
-                <path
-                  d="M9 4L4 4L4 20L20 20L20 15"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M19.25 4.75L12 12M14 4H20L20 10"
-                  id="stroke2"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+                fill="currentColor"
+              />
             </svg>
             
           </span>
@@ -1305,7 +1019,7 @@ exports[`Link > Link prefixVue demo works fine 1`] = `
 >
   <a
     aria-disabled="false"
-    class="t-link t-link--primary t-link--medium t-link--underline t-link--hover"
+    class="t-link t-link--primary t-link--medium t-link--hover"
     data-v-00ec48a6=""
     target=""
   >
@@ -1318,21 +1032,13 @@ exports[`Link > Link prefixVue demo works fine 1`] = `
         data-v-00ec48a6=""
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="link"
-        >
-          <path
-            d="M11.6762 6.99023L13.9998 4.6666C15.4726 3.19382 17.8604 3.19382 19.3332 4.6666C20.806 6.13938 20.806 8.52723 19.3332 10L17.0096 12.3236M6.98974 11.6766L4.66611 14.0003C3.19333 15.4731 3.19333 17.8609 4.66611 19.3337C6.13889 20.8065 8.52675 20.8065 9.99953 19.3337L12.3232 17.0101M13.9985 9.99989L9.99847 14"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M13.2925 3.95949C15.1558 2.09618 18.1768 2.09619 20.0401 3.95949C21.9034 5.8228 21.9034 8.84381 20.0401 10.7071L17.0094 13.7379L15.5952 12.3236L18.6259 9.29291C19.7082 8.21065 19.7082 6.45596 18.6259 5.37371C17.5436 4.29145 15.789 4.29145 14.7067 5.3737L11.676 8.40444L10.2617 6.99023L13.2925 3.95949ZM15.4125 9.99989L9.99826 15.4142L8.58405 14L13.9983 8.58568L15.4125 9.99989ZM8.40395 11.6764L5.37322 14.7072C4.29096 15.7894 4.29096 17.5441 5.37322 18.6264C6.45547 19.7086 8.21016 19.7086 9.29242 18.6264L12.3232 15.5956L13.7374 17.0099L10.7066 20.0406C8.84333 21.9039 5.82231 21.9039 3.959 20.0406C2.0957 18.1773 2.0957 15.1563 3.959 13.293L6.98974 10.2622L8.40395 11.6764Z"
+          fill="currentColor"
+        />
       </svg>
       
     </span>
@@ -1360,21 +1066,13 @@ exports[`Link > Link prefixVue demo works fine 1`] = `
         data-v-00ec48a6=""
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="link"
-        >
-          <path
-            d="M11.6762 6.99023L13.9998 4.6666C15.4726 3.19382 17.8604 3.19382 19.3332 4.6666C20.806 6.13938 20.806 8.52723 19.3332 10L17.0096 12.3236M6.98974 11.6766L4.66611 14.0003C3.19333 15.4731 3.19333 17.8609 4.66611 19.3337C6.13889 20.8065 8.52675 20.8065 9.99953 19.3337L12.3232 17.0101M13.9985 9.99989L9.99847 14"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M13.2925 3.95949C15.1558 2.09618 18.1768 2.09619 20.0401 3.95949C21.9034 5.8228 21.9034 8.84381 20.0401 10.7071L17.0094 13.7379L15.5952 12.3236L18.6259 9.29291C19.7082 8.21065 19.7082 6.45596 18.6259 5.37371C17.5436 4.29145 15.789 4.29145 14.7067 5.3737L11.676 8.40444L10.2617 6.99023L13.2925 3.95949ZM15.4125 9.99989L9.99826 15.4142L8.58405 14L13.9983 8.58568L15.4125 9.99989ZM8.40395 11.6764L5.37322 14.7072C4.29096 15.7894 4.29096 17.5441 5.37322 18.6264C6.45547 19.7086 8.21016 19.7086 9.29242 18.6264L12.3232 15.5956L13.7374 17.0099L10.7066 20.0406C8.84333 21.9039 5.82231 21.9039 3.959 20.0406C2.0957 18.1773 2.0957 15.1563 3.959 13.293L6.98974 10.2622L8.40395 11.6764Z"
+          fill="currentColor"
+        />
       </svg>
       
     </span>
@@ -1422,28 +1120,13 @@ exports[`Link > Link statusVue demo works fine 1`] = `
           data-v-ecea4a30=""
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="jump"
-          >
-            <path
-              d="M9 4L4 4L4 20L20 20L20 15"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-            <path
-              d="M19.25 4.75L12 12M14 4H20L20 10"
-              id="stroke2"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+            fill="currentColor"
+          />
         </svg>
         
       </span>
@@ -1471,28 +1154,13 @@ exports[`Link > Link statusVue demo works fine 1`] = `
           data-v-ecea4a30=""
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="jump"
-          >
-            <path
-              d="M9 4L4 4L4 20L20 20L20 15"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-            <path
-              d="M19.25 4.75L12 12M14 4H20L20 10"
-              id="stroke2"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+            fill="currentColor"
+          />
         </svg>
         
       </span>
@@ -1520,28 +1188,13 @@ exports[`Link > Link statusVue demo works fine 1`] = `
           data-v-ecea4a30=""
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="jump"
-          >
-            <path
-              d="M9 4L4 4L4 20L20 20L20 15"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-            <path
-              d="M19.25 4.75L12 12M14 4H20L20 10"
-              id="stroke2"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+            fill="currentColor"
+          />
         </svg>
         
       </span>
@@ -1574,28 +1227,13 @@ exports[`Link > Link statusVue demo works fine 1`] = `
           data-v-ecea4a30=""
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="jump"
-          >
-            <path
-              d="M9 4L4 4L4 20L20 20L20 15"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-            <path
-              d="M19.25 4.75L12 12M14 4H20L20 10"
-              id="stroke2"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+            fill="currentColor"
+          />
         </svg>
         
       </span>
@@ -1623,28 +1261,13 @@ exports[`Link > Link statusVue demo works fine 1`] = `
           data-v-ecea4a30=""
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="jump"
-          >
-            <path
-              d="M9 4L4 4L4 20L20 20L20 15"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-            <path
-              d="M19.25 4.75L12 12M14 4H20L20 10"
-              id="stroke2"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+            fill="currentColor"
+          />
         </svg>
         
       </span>
@@ -1682,28 +1305,13 @@ exports[`Link > Link suffixVue demo works fine 1`] = `
         data-v-a3d673c9=""
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="jump"
-        >
-          <path
-            d="M9 4L4 4L4 20L20 20L20 15"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-          <path
-            d="M19.25 4.75L12 12M14 4H20L20 10"
-            id="stroke2"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+          fill="currentColor"
+        />
       </svg>
       
     </span>
@@ -1731,28 +1339,13 @@ exports[`Link > Link suffixVue demo works fine 1`] = `
         data-v-a3d673c9=""
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="jump"
-        >
-          <path
-            d="M9 4L4 4L4 20L20 20L20 15"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-          <path
-            d="M19.25 4.75L12 12M14 4H20L20 10"
-            id="stroke2"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+          fill="currentColor"
+        />
       </svg>
       
     </span>
@@ -1792,28 +1385,13 @@ exports[`Link > Link themeVue demo works fine 1`] = `
           data-v-f45dd796=""
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="jump"
-          >
-            <path
-              d="M9 4L4 4L4 20L20 20L20 15"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-            <path
-              d="M19.25 4.75L12 12M14 4H20L20 10"
-              id="stroke2"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+            fill="currentColor"
+          />
         </svg>
         
       </span>
@@ -1841,28 +1419,13 @@ exports[`Link > Link themeVue demo works fine 1`] = `
           data-v-f45dd796=""
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="jump"
-          >
-            <path
-              d="M9 4L4 4L4 20L20 20L20 15"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-            <path
-              d="M19.25 4.75L12 12M14 4H20L20 10"
-              id="stroke2"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+            fill="currentColor"
+          />
         </svg>
         
       </span>
@@ -1890,28 +1453,13 @@ exports[`Link > Link themeVue demo works fine 1`] = `
           data-v-f45dd796=""
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="jump"
-          >
-            <path
-              d="M9 4L4 4L4 20L20 20L20 15"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-            <path
-              d="M19.25 4.75L12 12M14 4H20L20 10"
-              id="stroke2"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+            fill="currentColor"
+          />
         </svg>
         
       </span>
@@ -1944,28 +1492,13 @@ exports[`Link > Link themeVue demo works fine 1`] = `
           data-v-f45dd796=""
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="jump"
-          >
-            <path
-              d="M9 4L4 4L4 20L20 20L20 15"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-            <path
-              d="M19.25 4.75L12 12M14 4H20L20 10"
-              id="stroke2"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+            fill="currentColor"
+          />
         </svg>
         
       </span>
@@ -1993,28 +1526,13 @@ exports[`Link > Link themeVue demo works fine 1`] = `
           data-v-f45dd796=""
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="jump"
-          >
-            <path
-              d="M9 4L4 4L4 20L20 20L20 15"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-            <path
-              d="M19.25 4.75L12 12M14 4H20L20 10"
-              id="stroke2"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M3 21L3 3L10.0909 3V5H5L5 19H19V13.9091H21V21H3ZM10.5858 12L17.5858 5L13 5V3L21 3L21 11H19V6.41421L12 13.4142L10.5858 12Z"
+            fill="currentColor"
+          />
         </svg>
         
       </span>

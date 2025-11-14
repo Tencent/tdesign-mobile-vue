@@ -14,21 +14,13 @@ exports[`Stepper > Stepper baseVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="remove"
-        >
-          <path
-            d="M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M4 11L20 11V13L4 13L4 11Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
     <input
@@ -44,21 +36,13 @@ exports[`Stepper > Stepper baseVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="add"
-        >
-          <path
-            d="M12 5L12 19M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
   </div>
@@ -72,21 +56,13 @@ exports[`Stepper > Stepper baseVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="remove"
-        >
-          <path
-            d="M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M4 11L20 11V13L4 13L4 11Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
     <input
@@ -102,21 +78,13 @@ exports[`Stepper > Stepper baseVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="add"
-        >
-          <path
-            d="M12 5L12 19M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
   </div>
@@ -137,21 +105,13 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="remove"
-        >
-          <path
-            d="M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M4 11L20 11V13L4 13L4 11Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
     <input
@@ -167,21 +127,13 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="add"
-        >
-          <path
-            d="M12 5L12 19M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
   </div>
@@ -195,21 +147,13 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="remove"
-        >
-          <path
-            d="M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M4 11L20 11V13L4 13L4 11Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
     <input
@@ -225,21 +169,13 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="add"
-        >
-          <path
-            d="M12 5L12 19M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
   </div>
@@ -253,21 +189,13 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="remove"
-        >
-          <path
-            d="M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M4 11L20 11V13L4 13L4 11Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
     <input
@@ -283,21 +211,13 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="add"
-        >
-          <path
-            d="M12 5L12 19M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
   </div>
@@ -352,21 +272,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="remove"
-              >
-                <path
-                  d="M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M4 11L20 11V13L4 13L4 11Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
           <input
@@ -382,21 +294,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="add"
-              >
-                <path
-                  d="M12 5L12 19M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -410,21 +314,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="remove"
-              >
-                <path
-                  d="M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M4 11L20 11V13L4 13L4 11Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
           <input
@@ -440,21 +336,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="add"
-              >
-                <path
-                  d="M12 5L12 19M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -496,21 +384,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="remove"
-              >
-                <path
-                  d="M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M4 11L20 11V13L4 13L4 11Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
           <input
@@ -526,21 +406,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="add"
-              >
-                <path
-                  d="M12 5L12 19M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -554,21 +426,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="remove"
-              >
-                <path
-                  d="M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M4 11L20 11V13L4 13L4 11Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
           <input
@@ -584,21 +448,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="add"
-              >
-                <path
-                  d="M12 5L12 19M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -612,21 +468,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="remove"
-              >
-                <path
-                  d="M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M4 11L20 11V13L4 13L4 11Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
           <input
@@ -642,21 +490,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="add"
-              >
-                <path
-                  d="M12 5L12 19M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -694,21 +534,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="remove"
-              >
-                <path
-                  d="M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M4 11L20 11V13L4 13L4 11Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
           <input
@@ -725,21 +557,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="add"
-              >
-                <path
-                  d="M12 5L12 19M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -781,21 +605,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="remove"
-              >
-                <path
-                  d="M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M4 11L20 11V13L4 13L4 11Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
           <input
@@ -811,21 +627,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="add"
-              >
-                <path
-                  d="M12 5L12 19M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -839,21 +647,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="remove"
-              >
-                <path
-                  d="M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M4 11L20 11V13L4 13L4 11Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
           <input
@@ -869,21 +669,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="add"
-              >
-                <path
-                  d="M12 5L12 19M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -897,21 +689,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="remove"
-              >
-                <path
-                  d="M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M4 11L20 11V13L4 13L4 11Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
           <input
@@ -927,21 +711,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="add"
-              >
-                <path
-                  d="M12 5L12 19M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -979,21 +755,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="remove"
-              >
-                <path
-                  d="M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M4 11L20 11V13L4 13L4 11Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
           <input
@@ -1009,21 +777,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="add"
-              >
-                <path
-                  d="M12 5L12 19M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -1037,21 +797,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="remove"
-              >
-                <path
-                  d="M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M4 11L20 11V13L4 13L4 11Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
           <input
@@ -1067,21 +819,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="add"
-              >
-                <path
-                  d="M12 5L12 19M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -1095,21 +839,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-remove t-stepper__minus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="remove"
-              >
-                <path
-                  d="M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M4 11L20 11V13L4 13L4 11Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
           <input
@@ -1125,21 +861,13 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
               class="t-icon t-icon-add t-stepper__plus-icon"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="add"
-              >
-                <path
-                  d="M12 5L12 19M19 12L5 12"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -1164,21 +892,13 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="remove"
-        >
-          <path
-            d="M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M4 11L20 11V13L4 13L4 11Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
     <input
@@ -1194,21 +914,13 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="add"
-        >
-          <path
-            d="M12 5L12 19M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
   </div>
@@ -1222,21 +934,13 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="remove"
-        >
-          <path
-            d="M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M4 11L20 11V13L4 13L4 11Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
     <input
@@ -1252,21 +956,13 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="add"
-        >
-          <path
-            d="M12 5L12 19M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
   </div>
@@ -1280,21 +976,13 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="remove"
-        >
-          <path
-            d="M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M4 11L20 11V13L4 13L4 11Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
     <input
@@ -1310,21 +998,13 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="add"
-        >
-          <path
-            d="M12 5L12 19M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
   </div>
@@ -1345,21 +1025,13 @@ exports[`Stepper > Stepper statusVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="remove"
-        >
-          <path
-            d="M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M4 11L20 11V13L4 13L4 11Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
     <input
@@ -1376,21 +1048,13 @@ exports[`Stepper > Stepper statusVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="add"
-        >
-          <path
-            d="M12 5L12 19M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
   </div>
@@ -1411,21 +1075,13 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="remove"
-        >
-          <path
-            d="M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M4 11L20 11V13L4 13L4 11Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
     <input
@@ -1441,21 +1097,13 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="add"
-        >
-          <path
-            d="M12 5L12 19M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
   </div>
@@ -1469,21 +1117,13 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="remove"
-        >
-          <path
-            d="M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M4 11L20 11V13L4 13L4 11Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
     <input
@@ -1499,21 +1139,13 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="add"
-        >
-          <path
-            d="M12 5L12 19M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
   </div>
@@ -1527,21 +1159,13 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
         class="t-icon t-icon-remove t-stepper__minus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="remove"
-        >
-          <path
-            d="M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M4 11L20 11V13L4 13L4 11Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
     <input
@@ -1557,21 +1181,13 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
         class="t-icon t-icon-add t-stepper__plus-icon"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="add"
-        >
-          <path
-            d="M12 5L12 19M19 12L5 12"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M13 4V11L20 11V13L13 13V20H11L11 13H4L4 11L11 11L11 4L13 4Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
   </div>

@@ -1,17 +1,17 @@
 <template>
   <t-radio-group :value="radio" @change="onChange">
     <view v-for="(item, index) in 3" :key="index" :class="`card ${radio == index ? 'card--active' : ''}`">
-      <icon v-if="radio == index" name="check" class="card__icon" />
-      <t-radio :value="index" label="单选" content="描述信息描述信息描述信息描述信息描述信息" icon="none" borderless />
+      <icon v-if="radio == index" class="card__icon" name="check" />
+      <t-radio :value="index" borderless content="描述信息描述信息描述信息描述信息描述信息" icon="none" label="单选" />
     </view>
   </t-radio-group>
 
   <view class="demo-desc" style="margin: 24px 16px 16px">横向卡片单选框</view>
 
-  <t-radio-group class="horizontal-box" :value="radio1" @change="onChange1">
+  <t-radio-group :value="radio1" class="horizontal-box" @change="onChange1">
     <view v-for="(item, index) in 3" :key="index" :class="`card ${radio1 == index ? 'card--active' : ''}`">
-      <icon v-if="radio1 == index" name="check" class="card__icon" />
-      <t-radio :value="index" label="单选" icon="none" borderless />
+      <icon v-if="radio1 == index" class="card__icon" name="check" />
+      <t-radio :value="index" borderless icon="none" label="单选" />
     </view>
   </t-radio-group>
 </template>
@@ -31,7 +31,9 @@ const onChange1 = (value: any, context: { e: Event }) => {
   radio1.value = value;
 };
 </script>
-<style scoped lang="less">
+<style lang="less" scoped>
+@import '../../_common/style/mobile/_variables';
+
 .demo-desc {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
@@ -49,7 +51,7 @@ const onChange1 = (value: any, context: { e: Event }) => {
 }
 
 .card--active {
-  border-color: #0052d9;
+  border-color: @brand-color;
 }
 
 .card--active::after {
@@ -59,7 +61,7 @@ const onChange1 = (value: any, context: { e: Event }) => {
   left: 0;
   top: 0;
   width: 0;
-  border: 14px solid #0052d9;
+  border: 14px solid @brand-color;
   border-bottom-color: transparent;
   border-right-color: transparent;
 }

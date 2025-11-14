@@ -1,6 +1,6 @@
 <template>
   <div class="tdesign-mobile-link-demo">
-    <t-link theme="primary" disabled>
+    <t-link disabled theme="primary">
       <template #suffixIcon>
         <jump-icon />
       </template>
@@ -12,7 +12,7 @@
       </template>
       跳转链接
     </t-link>
-    <t-link theme="danger" disabled>
+    <t-link disabled theme="danger">
       <template #suffixIcon>
         <jump-icon />
       </template>
@@ -20,13 +20,13 @@
     </t-link>
   </div>
   <div class="tdesign-mobile-link-demo">
-    <t-link theme="success" disabled>
+    <t-link disabled theme="success">
       <template #suffixIcon>
         <jump-icon />
       </template>
       跳转链接
     </t-link>
-    <t-link theme="warning" disabled>
+    <t-link disabled theme="warning">
       <template #suffixIcon>
         <jump-icon />
       </template>
@@ -42,7 +42,7 @@ import { JumpIcon } from 'tdesign-icons-vue-next';
   height: 48px;
   background-color: var(--bg-color-demo, #fff);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-bottom: 6.4vw;
 }
 </style>

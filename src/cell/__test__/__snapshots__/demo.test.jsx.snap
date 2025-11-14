@@ -20,60 +20,13 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
             class="t-icon t-icon-app"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="app"
-            >
-              <g
-                id="fill1"
-              >
-                <path
-                  d="M3 3H10V10H3V3Z"
-                  fill="transparent"
-                />
-                <path
-                  d="M14 14H21V21H14V14Z"
-                  fill="transparent"
-                />
-                <path
-                  d="M3 14H10V21H3V14Z"
-                  fill="transparent"
-                />
-              </g>
-              <path
-                d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                fill="transparent"
-                id="fill2"
-              />
-              <g
-                id="stroke1"
-              >
-                <path
-                  d="M3 3H10V10H3V3Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-                <path
-                  d="M14 14H21V21H14V14Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-                <path
-                  d="M3 14H10V21H3V14Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-              </g>
-              <path
-                d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                id="stroke2"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
         <!---->
@@ -100,21 +53,13 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="chevron-right"
-            >
-              <path
-                d="M9.5 17.5L15 12L9.5 6.5"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
       </div>
@@ -132,37 +77,13 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
             class="t-icon t-icon-service"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="service"
-            >
-              <g
-                id="fill1"
-              >
-                <path
-                  d="M3 12H7V18H5C3.89543 18 3 17.1734 3 16.1538V12Z"
-                  fill="transparent"
-                />
-                <path
-                  d="M21 12H17V18H19C20.1046 18 21 17.1734 21 16.1538V12Z"
-                  fill="transparent"
-                />
-              </g>
-              <path
-                d="M10.25 21.5C10.25 21.0858 10.5858 20.75 11 20.75H13C13.4142 20.75 13.75 21.0858 13.75 21.5C13.75 21.9142 13.4142 22.25 13 22.25H11C10.5858 22.25 10.25 21.9142 10.25 21.5Z"
-                fill="transparent"
-                id="fill2"
-              />
-              <path
-                d="M21 12V11C21 6.02944 16.9706 2 12 2C7.02944 2 3 6.02944 3 11V12M21 12H17V18H19C20.1046 18 21 17.1734 21 16.1538V12ZM3 12H7V18H5M3 12V16.1538C3 17.1734 3.89543 18 5 18M10.25 21.5H8C6.34315 21.5 5 20.1569 5 18.5V18M10.25 21.5C10.25 21.9142 10.5858 22.25 11 22.25H13C13.4142 22.25 13.75 21.9142 13.75 21.5C13.75 21.0858 13.4142 20.75 13 20.75H11C10.5858 20.75 10.25 21.0858 10.25 21.5Z"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M2 11C2 5.47715 6.47715 1 12 1C17.5228 1 22 5.47715 22 11V16.1538C22 17.7996 20.58 19 19 19H16V11H20C20 6.58172 16.4183 3 12 3C7.58172 3 4 6.58172 4 11H8V19H6.06301C6.28503 19.8626 7.06808 20.5 8 20.5H9.56367C9.87991 20.0466 10.4053 19.75 11 19.75H13C13.9665 19.75 14.75 20.5335 14.75 21.5C14.75 22.4665 13.9665 23.25 13 23.25H11C10.4053 23.25 9.87991 22.9534 9.56367 22.5H8C5.90559 22.5 4.18714 20.8903 4.0143 18.8406C2.87438 18.4625 2 17.4453 2 16.1538V11ZM6 17V13H4V16.1538C4 16.5473 4.37084 17 5 17H6ZM20 13H18V17H19C19.6292 17 20 16.5473 20 16.1538V13Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
         <!---->
@@ -189,21 +110,13 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="chevron-right"
-            >
-              <path
-                d="M9.5 17.5L15 12L9.5 6.5"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
       </div>
@@ -221,38 +134,13 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
             class="t-icon t-icon-internet"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="internet"
-            >
-              <path
-                d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5229 6.47715 22 12 22C17.5228 22 22 17.5229 22 12C22 6.47715 17.5228 2 12 2Z"
-                fill="transparent"
-                id="fill1"
-              />
-              <path
-                d="M11.4987 21.9877C11.6646 21.9959 11.8315 22 11.9994 22C12.1673 22 12.3342 21.9959 12.5 21.9877C17.113 16.2216 17.1129 7.77835 12.4999 2.01231C12.3341 2.00414 12.1672 2 11.9994 2C11.8315 2 11.6646 2.00414 11.4988 2.01231C6.88584 7.77835 6.88581 16.2216 11.4987 21.9877Z"
-                fill="transparent"
-                id="fill2"
-              />
-              <path
-                d="M3 12H21M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5229 17.5228 22 12 22C6.47715 22 2 17.5229 2 12Z"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-              <path
-                d="M11.4987 21.9877C11.6646 21.9959 11.8315 22 11.9994 22C12.1673 22 12.3342 21.9959 12.5 21.9877C17.113 16.2216 17.1129 7.77835 12.4999 2.01231C12.3341 2.00414 12.1672 2 11.9994 2C11.8315 2 11.6646 2.00414 11.4988 2.01231C6.88584 7.77835 6.88581 16.2216 11.4987 21.9877Z"
-                id="stroke2"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M3.05493 11C3.45261 7.40254 5.97062 4.44413 9.33156 3.40217C8.00851 5.65483 7.1892 8.23957 7.02895 11H3.05493ZM10.9922 1.04555C5.38944 1.55442 1 6.26461 1 12C1 17.7354 5.3894 22.4455 10.9922 22.9545L11 22.9643L11.4254 22.9853C11.4932 22.9887 11.5611 22.9916 11.6292 22.9939C11.7523 22.9979 11.8759 23 12 23C12.1187 23 12.2369 22.9981 12.3546 22.9944C12.4281 22.9921 12.5015 22.989 12.5746 22.9853L13 22.9643L13.0078 22.9545C18.6106 22.4455 23 17.7354 23 12C23 6.26461 18.6106 1.55443 13.0078 1.04555L12.9999 1.03571L12.5736 1.0147C12.4767 1.00972 12.3795 1.006 12.2819 1.00354C12.1882 1.00119 12.0942 1 12 1C11.9051 1 11.8104 1.0012 11.7161 1.00359C11.6192 1.00605 11.5226 1.00976 11.4263 1.0147L11.0001 1.03571L10.9922 1.04555ZM12.0011 3C13.6972 5.25767 14.7704 8.00828 14.9672 11H9.03278C9.22955 8.00828 10.3028 5.25767 11.9989 3C11.9992 3 11.9996 3 12 3C12.0004 3 12.0008 3 12.0011 3ZM7.02894 13C7.18917 15.7604 8.00847 18.3452 9.3315 20.5978C5.97059 19.5558 3.45261 16.5974 3.05493 13H7.02894ZM11.9988 21C10.3028 18.7423 9.22953 15.9917 9.03277 13H14.9672C14.7705 15.9917 13.6972 18.7423 12.0012 21C12.0008 21 12.0004 21 12 21C11.9996 21 11.9992 21 11.9988 21ZM14.6685 20.5978C15.9915 18.3452 16.8108 15.7604 16.9711 13H20.9451C20.5474 16.5974 18.0294 19.5558 14.6685 20.5978ZM16.9711 11C16.8108 8.23957 15.9915 5.65483 14.6684 3.40217C18.0294 4.44413 20.5474 7.40254 20.9451 11H16.9711Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
         <!---->
@@ -279,21 +167,13 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="chevron-right"
-            >
-              <path
-                d="M9.5 17.5L15 12L9.5 6.5"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
       </div>
@@ -381,21 +261,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="chevron-right"
-                  >
-                    <path
-                      d="M9.5 17.5L15 12L9.5 6.5"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -435,21 +307,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="chevron-right"
-                  >
-                    <path
-                      d="M9.5 17.5L15 12L9.5 6.5"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -504,21 +368,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="chevron-right"
-                  >
-                    <path
-                      d="M9.5 17.5L15 12L9.5 6.5"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -599,21 +455,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="chevron-right"
-                  >
-                    <path
-                      d="M9.5 17.5L15 12L9.5 6.5"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -631,60 +479,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-app"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="app"
-                  >
-                    <g
-                      id="fill1"
-                    >
-                      <path
-                        d="M3 3H10V10H3V3Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
-                        fill="transparent"
-                      />
-                    </g>
-                    <path
-                      d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                      fill="transparent"
-                      id="fill2"
-                    />
-                    <g
-                      id="stroke1"
-                    >
-                      <path
-                        d="M3 3H10V10H3V3Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                    </g>
-                    <path
-                      d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                      id="stroke2"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
               <!---->
@@ -711,21 +512,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="chevron-right"
-                  >
-                    <path
-                      d="M9.5 17.5L15 12L9.5 6.5"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -797,21 +590,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="chevron-right"
-                  >
-                    <path
-                      d="M9.5 17.5L15 12L9.5 6.5"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -855,21 +640,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="chevron-right"
-                  >
-                    <path
-                      d="M9.5 17.5L15 12L9.5 6.5"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -928,21 +705,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="chevron-right"
-                  >
-                    <path
-                      d="M9.5 17.5L15 12L9.5 6.5"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -1031,21 +800,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="chevron-right"
-                  >
-                    <path
-                      d="M9.5 17.5L15 12L9.5 6.5"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -1064,60 +825,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-app"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="app"
-                  >
-                    <g
-                      id="fill1"
-                    >
-                      <path
-                        d="M3 3H10V10H3V3Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
-                        fill="transparent"
-                      />
-                    </g>
-                    <path
-                      d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                      fill="transparent"
-                      id="fill2"
-                    />
-                    <g
-                      id="stroke1"
-                    >
-                      <path
-                        d="M3 3H10V10H3V3Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                    </g>
-                    <path
-                      d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                      id="stroke2"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                    fill="currentColor"
+                  />
                 </svg>
                 
               </div>
@@ -1149,21 +863,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="chevron-right"
-                  >
-                    <path
-                      d="M9.5 17.5L15 12L9.5 6.5"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -1184,33 +890,6 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-cell__title-text"
               >
                 单行标题
-                <!---->
-              </div>
-              <div
-                class="t-cell__description"
-              >
-                一段很长很长的内容文字，长文本自动换行，该选项的描述是一段很长的内容
-              </div>
-            </div>
-            <!---->
-            <!---->
-          </div>
-          <div
-            class="t-cell"
-          >
-            <div
-              class="t-cell__left"
-            >
-              <!---->
-              <!---->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              <div
-                class="t-cell__title-text"
-              >
-                多行高度不定，长文本自动换行，该选项的描述是一段很长的内容
                 <!---->
               </div>
               <div
@@ -1328,21 +1007,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="chevron-right"
-                  >
-                    <path
-                      d="M9.5 17.5L15 12L9.5 6.5"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -1426,60 +1097,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-app"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="app"
-                  >
-                    <g
-                      id="fill1"
-                    >
-                      <path
-                        d="M3 3H10V10H3V3Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
-                        fill="transparent"
-                      />
-                    </g>
-                    <path
-                      d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                      fill="transparent"
-                      id="fill2"
-                    />
-                    <g
-                      id="stroke1"
-                    >
-                      <path
-                        d="M3 3H10V10H3V3Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                    </g>
-                    <path
-                      d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                      id="stroke2"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
               <!---->
@@ -1506,21 +1130,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="chevron-right"
-                  >
-                    <path
-                      d="M9.5 17.5L15 12L9.5 6.5"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -1538,37 +1154,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-service"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="service"
-                  >
-                    <g
-                      id="fill1"
-                    >
-                      <path
-                        d="M3 12H7V18H5C3.89543 18 3 17.1734 3 16.1538V12Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M21 12H17V18H19C20.1046 18 21 17.1734 21 16.1538V12Z"
-                        fill="transparent"
-                      />
-                    </g>
-                    <path
-                      d="M10.25 21.5C10.25 21.0858 10.5858 20.75 11 20.75H13C13.4142 20.75 13.75 21.0858 13.75 21.5C13.75 21.9142 13.4142 22.25 13 22.25H11C10.5858 22.25 10.25 21.9142 10.25 21.5Z"
-                      fill="transparent"
-                      id="fill2"
-                    />
-                    <path
-                      d="M21 12V11C21 6.02944 16.9706 2 12 2C7.02944 2 3 6.02944 3 11V12M21 12H17V18H19C20.1046 18 21 17.1734 21 16.1538V12ZM3 12H7V18H5M3 12V16.1538C3 17.1734 3.89543 18 5 18M10.25 21.5H8C6.34315 21.5 5 20.1569 5 18.5V18M10.25 21.5C10.25 21.9142 10.5858 22.25 11 22.25H13C13.4142 22.25 13.75 21.9142 13.75 21.5C13.75 21.0858 13.4142 20.75 13 20.75H11C10.5858 20.75 10.25 21.0858 10.25 21.5Z"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M2 11C2 5.47715 6.47715 1 12 1C17.5228 1 22 5.47715 22 11V16.1538C22 17.7996 20.58 19 19 19H16V11H20C20 6.58172 16.4183 3 12 3C7.58172 3 4 6.58172 4 11H8V19H6.06301C6.28503 19.8626 7.06808 20.5 8 20.5H9.56367C9.87991 20.0466 10.4053 19.75 11 19.75H13C13.9665 19.75 14.75 20.5335 14.75 21.5C14.75 22.4665 13.9665 23.25 13 23.25H11C10.4053 23.25 9.87991 22.9534 9.56367 22.5H8C5.90559 22.5 4.18714 20.8903 4.0143 18.8406C2.87438 18.4625 2 17.4453 2 16.1538V11ZM6 17V13H4V16.1538C4 16.5473 4.37084 17 5 17H6ZM20 13H18V17H19C19.6292 17 20 16.5473 20 16.1538V13Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
               <!---->
@@ -1595,21 +1187,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="chevron-right"
-                  >
-                    <path
-                      d="M9.5 17.5L15 12L9.5 6.5"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -1627,38 +1211,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-internet"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="internet"
-                  >
-                    <path
-                      d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5229 6.47715 22 12 22C17.5228 22 22 17.5229 22 12C22 6.47715 17.5228 2 12 2Z"
-                      fill="transparent"
-                      id="fill1"
-                    />
-                    <path
-                      d="M11.4987 21.9877C11.6646 21.9959 11.8315 22 11.9994 22C12.1673 22 12.3342 21.9959 12.5 21.9877C17.113 16.2216 17.1129 7.77835 12.4999 2.01231C12.3341 2.00414 12.1672 2 11.9994 2C11.8315 2 11.6646 2.00414 11.4988 2.01231C6.88584 7.77835 6.88581 16.2216 11.4987 21.9877Z"
-                      fill="transparent"
-                      id="fill2"
-                    />
-                    <path
-                      d="M3 12H21M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5229 17.5228 22 12 22C6.47715 22 2 17.5229 2 12Z"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M11.4987 21.9877C11.6646 21.9959 11.8315 22 11.9994 22C12.1673 22 12.3342 21.9959 12.5 21.9877C17.113 16.2216 17.1129 7.77835 12.4999 2.01231C12.3341 2.00414 12.1672 2 11.9994 2C11.8315 2 11.6646 2.00414 11.4988 2.01231C6.88584 7.77835 6.88581 16.2216 11.4987 21.9877Z"
-                      id="stroke2"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M3.05493 11C3.45261 7.40254 5.97062 4.44413 9.33156 3.40217C8.00851 5.65483 7.1892 8.23957 7.02895 11H3.05493ZM10.9922 1.04555C5.38944 1.55442 1 6.26461 1 12C1 17.7354 5.3894 22.4455 10.9922 22.9545L11 22.9643L11.4254 22.9853C11.4932 22.9887 11.5611 22.9916 11.6292 22.9939C11.7523 22.9979 11.8759 23 12 23C12.1187 23 12.2369 22.9981 12.3546 22.9944C12.4281 22.9921 12.5015 22.989 12.5746 22.9853L13 22.9643L13.0078 22.9545C18.6106 22.4455 23 17.7354 23 12C23 6.26461 18.6106 1.55443 13.0078 1.04555L12.9999 1.03571L12.5736 1.0147C12.4767 1.00972 12.3795 1.006 12.2819 1.00354C12.1882 1.00119 12.0942 1 12 1C11.9051 1 11.8104 1.0012 11.7161 1.00359C11.6192 1.00605 11.5226 1.00976 11.4263 1.0147L11.0001 1.03571L10.9922 1.04555ZM12.0011 3C13.6972 5.25767 14.7704 8.00828 14.9672 11H9.03278C9.22955 8.00828 10.3028 5.25767 11.9989 3C11.9992 3 11.9996 3 12 3C12.0004 3 12.0008 3 12.0011 3ZM7.02894 13C7.18917 15.7604 8.00847 18.3452 9.3315 20.5978C5.97059 19.5558 3.45261 16.5974 3.05493 13H7.02894ZM11.9988 21C10.3028 18.7423 9.22953 15.9917 9.03277 13H14.9672C14.7705 15.9917 13.6972 18.7423 12.0012 21C12.0008 21 12.0004 21 12 21C11.9996 21 11.9992 21 11.9988 21ZM14.6685 20.5978C15.9915 18.3452 16.8108 15.7604 16.9711 13H20.9451C20.5474 16.5974 18.0294 19.5558 14.6685 20.5978ZM16.9711 11C16.8108 8.23957 15.9915 5.65483 14.6684 3.40217C18.0294 4.44413 20.5474 7.40254 20.9451 11H16.9711Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
               <!---->
@@ -1685,21 +1244,13 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-chevron-right"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="chevron-right"
-                  >
-                    <path
-                      d="M9.5 17.5L15 12L9.5 6.5"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -1755,21 +1306,13 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="chevron-right"
-            >
-              <path
-                d="M9.5 17.5L15 12L9.5 6.5"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
       </div>
@@ -1813,21 +1356,13 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="chevron-right"
-            >
-              <path
-                d="M9.5 17.5L15 12L9.5 6.5"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
       </div>
@@ -1886,21 +1421,13 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="chevron-right"
-            >
-              <path
-                d="M9.5 17.5L15 12L9.5 6.5"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
       </div>
@@ -1989,21 +1516,13 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="chevron-right"
-            >
-              <path
-                d="M9.5 17.5L15 12L9.5 6.5"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
       </div>
@@ -2022,60 +1541,13 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
             class="t-icon t-icon-app"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="app"
-            >
-              <g
-                id="fill1"
-              >
-                <path
-                  d="M3 3H10V10H3V3Z"
-                  fill="transparent"
-                />
-                <path
-                  d="M14 14H21V21H14V14Z"
-                  fill="transparent"
-                />
-                <path
-                  d="M3 14H10V21H3V14Z"
-                  fill="transparent"
-                />
-              </g>
-              <path
-                d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                fill="transparent"
-                id="fill2"
-              />
-              <g
-                id="stroke1"
-              >
-                <path
-                  d="M3 3H10V10H3V3Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-                <path
-                  d="M14 14H21V21H14V14Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-                <path
-                  d="M3 14H10V21H3V14Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-              </g>
-              <path
-                d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                id="stroke2"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+              fill="currentColor"
+            />
           </svg>
           
         </div>
@@ -2107,21 +1579,13 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="chevron-right"
-            >
-              <path
-                d="M9.5 17.5L15 12L9.5 6.5"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
       </div>
@@ -2142,33 +1606,6 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
           class="t-cell__title-text"
         >
           单行标题
-          <!---->
-        </div>
-        <div
-          class="t-cell__description"
-        >
-          一段很长很长的内容文字，长文本自动换行，该选项的描述是一段很长的内容
-        </div>
-      </div>
-      <!---->
-      <!---->
-    </div>
-    <div
-      class="t-cell"
-    >
-      <div
-        class="t-cell__left"
-      >
-        <!---->
-        <!---->
-      </div>
-      <div
-        class="t-cell__title"
-      >
-        <div
-          class="t-cell__title-text"
-        >
-          多行高度不定，长文本自动换行，该选项的描述是一段很长的内容
           <!---->
         </div>
         <div
@@ -2286,21 +1723,13 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="chevron-right"
-            >
-              <path
-                d="M9.5 17.5L15 12L9.5 6.5"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
       </div>
@@ -2378,21 +1807,13 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="chevron-right"
-            >
-              <path
-                d="M9.5 17.5L15 12L9.5 6.5"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
       </div>
@@ -2432,21 +1853,13 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="chevron-right"
-            >
-              <path
-                d="M9.5 17.5L15 12L9.5 6.5"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
       </div>
@@ -2501,21 +1914,13 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="chevron-right"
-            >
-              <path
-                d="M9.5 17.5L15 12L9.5 6.5"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
       </div>
@@ -2596,21 +2001,13 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="chevron-right"
-            >
-              <path
-                d="M9.5 17.5L15 12L9.5 6.5"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
       </div>
@@ -2628,60 +2025,13 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
             class="t-icon t-icon-app"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="app"
-            >
-              <g
-                id="fill1"
-              >
-                <path
-                  d="M3 3H10V10H3V3Z"
-                  fill="transparent"
-                />
-                <path
-                  d="M14 14H21V21H14V14Z"
-                  fill="transparent"
-                />
-                <path
-                  d="M3 14H10V21H3V14Z"
-                  fill="transparent"
-                />
-              </g>
-              <path
-                d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                fill="transparent"
-                id="fill2"
-              />
-              <g
-                id="stroke1"
-              >
-                <path
-                  d="M3 3H10V10H3V3Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-                <path
-                  d="M14 14H21V21H14V14Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-                <path
-                  d="M3 14H10V21H3V14Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-              </g>
-              <path
-                d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
-                id="stroke2"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M17.5 3.5C15.8431 3.5 14.5 4.84315 14.5 6.5C14.5 8.15685 15.8431 9.5 17.5 9.5C19.1569 9.5 20.5 8.15685 20.5 6.5C20.5 4.84315 19.1569 3.5 17.5 3.5ZM12.5 6.5C12.5 3.73858 14.7386 1.5 17.5 1.5C20.2614 1.5 22.5 3.73858 22.5 6.5C22.5 9.26142 20.2614 11.5 17.5 11.5C14.7386 11.5 12.5 9.26142 12.5 6.5ZM2 2H11V11H2V2ZM4 4V9H9V4H4ZM2 13H11V22H2V13ZM4 15V20H9V15H4ZM13 13H22V22H13V13ZM20 15H15V20H20V15Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
         <!---->
@@ -2708,21 +2058,13 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
             class="t-icon t-icon-chevron-right"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="chevron-right"
-            >
-              <path
-                d="M9.5 17.5L15 12L9.5 6.5"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+              fill="currentColor"
+            />
           </svg>
         </div>
       </div>

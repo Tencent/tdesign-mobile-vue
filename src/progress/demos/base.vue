@@ -13,7 +13,7 @@
     </div>
     <div className="summary">微型环形进度条</div>
     <div className="example-progress__item">
-      <t-progress theme="circle" size="micro" :percentage="30" :label="false" />
+      <t-progress theme="circle" size="micro" :percentage="80" :label="false" />
     </div>
   </div>
 </template>

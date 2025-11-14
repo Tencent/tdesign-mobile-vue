@@ -1,4 +1,4 @@
-import { ref, toRefs, computed, reactive, defineComponent, watch, onMounted } from 'vue';
+import { computed, defineComponent, onMounted, reactive, ref, toRefs, watch } from 'vue';
 import { isFunction } from 'lodash-es';
 import { useIntersectionObserver } from '@vueuse/core';
 import config from '../config';
@@ -398,7 +398,12 @@ export default defineComponent({
         >
           <div
             ref="singleDot"
-            class={`${sliderClass.value}__dot`}
+            class={[
+              `${sliderClass.value}__dot`,
+              {
+                [`${sliderClass.value}__dot--disabled`]: isDisabled.value,
+              },
+            ]}
             onTouchstart={onTouchStart}
             onTouchmove={onSingleDotMove}
             onTouchend={onTouchEnd}
@@ -435,7 +440,13 @@ export default defineComponent({
         >
           <div
             ref={leftDot}
-            class={[`${sliderClass.value}__dot`, `${sliderClass.value}__dot--left`]}
+            class={[
+              `${sliderClass.value}__dot`,
+              `${sliderClass.value}__dot--left`,
+              {
+                [`${sliderClass.value}__dot--disabled`]: isDisabled.value,
+              },
+            ]}
             onTouchstart={onTouchStart}
             onTouchmove={onTouchMoveLeft}
             onTouchend={onTouchEnd}
@@ -455,7 +466,13 @@ export default defineComponent({
           </div>
           <div
             ref={rightDot}
-            class={[`${sliderClass.value}__dot`, `${sliderClass.value}__dot--right`]}
+            class={[
+              `${sliderClass.value}__dot`,
+              `${sliderClass.value}__dot--right`,
+              {
+                [`${sliderClass.value}__dot--disabled`]: isDisabled.value,
+              },
+            ]}
             onTouchstart={onTouchStart}
             onTouchmove={onTouchMoveRight}
             onTouchend={onTouchEnd}

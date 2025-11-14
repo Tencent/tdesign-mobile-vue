@@ -1,79 +1,79 @@
 <template>
-  <div class="demo-desc">文字按钮</div>
-  <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog4 = true"> 文字按钮 </t-button>
+  <div class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle demo-desc">文字按钮</div>
+  <t-button block size="large" theme="primary" variant="outline" @click="isShowDialog4 = true"> 文字按钮</t-button>
   <t-dialog
     v-model:visible="isShowDialog4"
-    title="对话框标题"
-    content="告知当前状态、信息和解决方法"
     :cancel-btn="cancelBtn"
     :confirm-btn="confirmBtn"
-    @confirm="onConfirm"
+    content="告知当前状态、信息和解决方法"
+    title="对话框标题"
     @cancel="onCancel"
+    @confirm="onConfirm"
   >
   </t-dialog>
   <div class="btn-gap"></div>
 
-  <div class="demo-desc">水平基础按钮</div>
-  <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog5 = true"> 水平基础按钮 </t-button>
+  <div class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle demo-desc">水平基础按钮</div>
+  <t-button block size="large" theme="primary" variant="outline" @click="isShowDialog5 = true"> 水平基础按钮</t-button>
   <t-dialog
     v-model:visible="isShowDialog5"
-    title="对话框标题"
-    content="告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内"
     cancel-btn="取消"
     confirm-btn="确认"
-    @confirm="onConfirm"
+    content="告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内"
+    title="对话框标题"
     @cancel="onCancel"
+    @confirm="onConfirm"
   >
   </t-dialog>
   <div class="btn-gap"></div>
 
-  <div class="demo-desc">垂直基础按钮</div>
-  <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog6 = true"> 垂直基础按钮 </t-button>
+  <div class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle demo-desc">垂直基础按钮</div>
+  <t-button block size="large" theme="primary" variant="outline" @click="isShowDialog6 = true"> 垂直基础按钮</t-button>
   <t-dialog
     v-model:visible="isShowDialog6"
-    title="对话框标题"
-    content="告知当前状态、信息和解决方法"
+    button-layout="vertical"
     cancel-btn="取消"
     confirm-btn="确认"
-    button-layout="vertical"
-    @confirm="onConfirm"
+    content="告知当前状态、信息和解决方法"
+    title="对话框标题"
     @cancel="onCancel"
+    @confirm="onConfirm"
   >
   </t-dialog>
 
   <div class="btn-gap"></div>
 
-  <div class="demo-desc">多按钮</div>
-  <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog7 = true"> 多按钮 </t-button>
+  <div class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle demo-desc">多按钮</div>
+  <t-button block size="large" theme="primary" variant="outline" @click="isShowDialog7 = true"> 多按钮</t-button>
   <t-dialog
     v-model:visible="isShowDialog7"
-    title="对话框标题"
-    content="告知当前状态、信息和解决方法"
+    :actions="actions"
+    button-layout="vertical"
     cancel-btn="取消"
     confirm-btn="确认"
-    button-layout="vertical"
-    :actions="actions"
-    @confirm="onConfirm"
+    content="告知当前状态、信息和解决方法"
+    title="对话框标题"
     @cancel="onCancel"
+    @confirm="onConfirm"
   >
   </t-dialog>
 
   <div class="btn-gap"></div>
 
-  <div class="demo-desc">带关闭按钮的对话框</div>
-  <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog8 = true">
+  <div class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle demo-desc">带关闭按钮的对话框</div>
+  <t-button block size="large" theme="primary" variant="outline" @click="isShowDialog8 = true">
     带关闭按钮的对话框
   </t-button>
   <t-dialog
     v-model:visible="isShowDialog8"
-    title="对话框标题"
-    content="告知当前状态、信息和解决方法"
-    close-btn
-    cancel-btn="取消"
-    confirm-btn="确认"
     button-layout="vertical"
-    @confirm="onConfirm"
+    cancel-btn="取消"
+    close-btn
+    confirm-btn="确认"
+    content="告知当前状态、信息和解决方法"
+    title="对话框标题"
     @cancel="onCancel"
+    @confirm="onConfirm"
   >
   </t-dialog>
 </template>
@@ -120,7 +120,6 @@ const onClose = () => {
 <style lang="less">
 .demo-desc {
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.6);
   margin-bottom: 16px;
 }
 </style>

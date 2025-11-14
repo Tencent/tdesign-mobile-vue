@@ -1,16 +1,16 @@
 <template>
-  <t-cell title="选择日期(间隔)" :note="pickerValue || '时 分'" @click="visible = true" />
+  <t-cell :bordered="false" :note="pickerValue || '时 分'" title="选择日期(间隔)" @click="visible = true" />
   <t-popup v-model="visible" placement="bottom">
     <t-date-time-picker
-      default-value="10:10"
       :mode="[null, 'minute']"
       :steps="{ minute: 30 }"
-      title="选择日期"
+      default-value="10:10"
       format="HH:mm"
-      @change="onChange"
-      @pick="onPick"
-      @confirm="onConfirm"
+      title="选择日期"
       @cancel="onCancel"
+      @change="onChange"
+      @confirm="onConfirm"
+      @pick="onPick"
     />
   </t-popup>
 </template>

@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import { Ref, ref } from 'vue';
 
 const children = new Array(5).fill('列表内容');
@@ -55,9 +55,23 @@ const change = (index: number | string) => {
 };
 </script>
 <style lang="less">
+:root[theme-mode='light'] {
+  --capsule-bg: #f3f3f3;
+  --capsule-active-bg: #fff;
+  --capsule-active-border-color: #e7e7e7;
+  --capsule-wrap-bg: #fff;
+}
+
+:root[theme-mode='dark'] {
+  --capsule-bg: #2c2c2c;
+  --capsule-active-bg: #242424;
+  --capsule-active-border-color: #383838;
+  --capsule-wrap-bg: #242424;
+}
+
 .component-wrap {
   height: calc(100vh - 50px);
-  background-color: #fff;
+  background-color: var(--capsule-wrap-bg);
 }
 
 .capsule {
@@ -65,7 +79,7 @@ const change = (index: number | string) => {
   padding: 0 16px;
   height: 30px;
   border-radius: 15px;
-  background-color: #f3f3f3;
+  background-color: var(--capsule-bg);
   padding-left: 16px;
   display: flex;
   align-items: center;
@@ -74,7 +88,7 @@ const change = (index: number | string) => {
 }
 
 .capsule--active {
-  background: #fff;
-  border: 1px solid #e7e7e7;
+  background: var(--capsule-active-bg);
+  border: 1px solid var(--capsule-active-border-color);
 }
 </style>

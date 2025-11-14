@@ -1,5 +1,5 @@
 <template>
-  <t-grid :column="4" class="grid-demo" theme="card">
+  <t-grid :column="4" class="grid-demo">
     <t-grid-item :image="imgUrl" text="标题文字" />
     <t-grid-item :image="imgUrl" text="标题文字" />
     <t-grid-item :image="imgUrl" text="标题文字" />
@@ -8,10 +8,6 @@
     <t-grid-item :image="imgUrl" text="标题文字" />
     <t-grid-item :image="imgUrl" text="标题文字" />
     <t-grid-item :image="imgUrl" text="最多五个字" />
-  </t-grid>
-  <t-grid :column="2" class="grid-demo" theme="card">
-    <t-grid-item :image="imgUrl" description="描述文字" layout="horizontal" text="标题文字" />
-    <t-grid-item :image="imgUrl" description="描述文字" layout="horizontal" text="标题文字" />
   </t-grid>
 </template>
 <script lang="ts" setup>

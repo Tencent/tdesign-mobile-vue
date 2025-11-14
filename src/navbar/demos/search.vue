@@ -1,7 +1,7 @@
 <template>
   <t-navbar :fixed="false">
     <template #left>
-      <t-search placeholder="搜索预设文案" shape="round" />
+      <t-search class="navbar-search" placeholder="搜索预设文案" shape="round" />
     </template>
     <template #right>
       <t-icon name="home" size="24px" />
@@ -15,6 +15,10 @@ import { Icon as TIcon } from 'tdesign-icons-vue-next';
 </script>
 
 <style lang="less" scoped>
+.navbar-search {
+  --td-search-font-size: 14px;
+}
+
 .t-icon-home {
   margin-right: 8px;
 }

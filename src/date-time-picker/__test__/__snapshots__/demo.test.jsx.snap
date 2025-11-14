@@ -6,7 +6,7 @@ exports[`DateTimePicker > DateTimePicker dateAllVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell"
+    class="t-cell t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -36,21 +36,13 @@ exports[`DateTimePicker > DateTimePicker dateAllVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-right"
-          >
-            <path
-              d="M9.5 17.5L15 12L9.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
     </div>
@@ -1643,7 +1635,7 @@ exports[`DateTimePicker > DateTimePicker hourMinuteSecondVue demo works fine 1`]
 >
   
   <div
-    class="t-cell"
+    class="t-cell t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -1673,21 +1665,13 @@ exports[`DateTimePicker > DateTimePicker hourMinuteSecondVue demo works fine 1`]
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-right"
-          >
-            <path
-              d="M9.5 17.5L15 12L9.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
     </div>
@@ -2799,7 +2783,7 @@ exports[`DateTimePicker > DateTimePicker hourMinuteVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell"
+    class="t-cell t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -2829,21 +2813,13 @@ exports[`DateTimePicker > DateTimePicker hourMinuteVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-right"
-          >
-            <path
-              d="M9.5 17.5L15 12L9.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
     </div>
@@ -3555,7 +3531,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell"
+        class="t-cell t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -3585,21 +3561,13 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="chevron-right"
-              >
-                <path
-                  d="M9.5 17.5L15 12L9.5 6.5"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -4129,7 +4097,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell"
+        class="t-cell t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -4159,21 +4127,13 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="chevron-right"
-              >
-                <path
-                  d="M9.5 17.5L15 12L9.5 6.5"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -4510,7 +4470,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell"
+        class="t-cell t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -4540,21 +4500,13 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="chevron-right"
-              >
-                <path
-                  d="M9.5 17.5L15 12L9.5 6.5"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -5679,7 +5631,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell"
+        class="t-cell t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -5709,21 +5661,13 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="chevron-right"
-              >
-                <path
-                  d="M9.5 17.5L15 12L9.5 6.5"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -6417,7 +6361,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell"
+        class="t-cell t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -6447,21 +6391,13 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="chevron-right"
-              >
-                <path
-                  d="M9.5 17.5L15 12L9.5 6.5"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -8067,7 +8003,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell"
+        class="t-cell t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -8097,21 +8033,13 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="chevron-right"
-              >
-                <path
-                  d="M9.5 17.5L15 12L9.5 6.5"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -8855,7 +8783,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell"
+        class="t-cell t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -8885,21 +8813,13 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="chevron-right"
-              >
-                <path
-                  d="M9.5 17.5L15 12L9.5 6.5"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -9420,7 +9340,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell"
+        class="t-cell t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -9450,21 +9370,13 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <g
-                id="chevron-right"
-              >
-                <path
-                  d="M9.5 17.5L15 12L9.5 6.5"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
+              <path
+                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -9984,7 +9896,7 @@ exports[`DateTimePicker > DateTimePicker showWeekVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell"
+    class="t-cell t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -10014,21 +9926,13 @@ exports[`DateTimePicker > DateTimePicker showWeekVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-right"
-          >
-            <path
-              d="M9.5 17.5L15 12L9.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
     </div>
@@ -10755,7 +10659,7 @@ exports[`DateTimePicker > DateTimePicker stepsVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell"
+    class="t-cell t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -11051,7 +10955,7 @@ exports[`DateTimePicker > DateTimePicker withTitleVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell"
+    class="t-cell t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -11081,21 +10985,13 @@ exports[`DateTimePicker > DateTimePicker withTitleVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-right"
-          >
-            <path
-              d="M9.5 17.5L15 12L9.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
     </div>
@@ -11612,7 +11508,7 @@ exports[`DateTimePicker > DateTimePicker withoutTitleVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell"
+    class="t-cell t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -11642,21 +11538,13 @@ exports[`DateTimePicker > DateTimePicker withoutTitleVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-right"
-          >
-            <path
-              d="M9.5 17.5L15 12L9.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
     </div>
@@ -12173,7 +12061,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthDateVue demo works fine 1`] = 
 >
   
   <div
-    class="t-cell"
+    class="t-cell t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -12203,21 +12091,13 @@ exports[`DateTimePicker > DateTimePicker yearMonthDateVue demo works fine 1`] = 
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-right"
-          >
-            <path
-              d="M9.5 17.5L15 12L9.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
     </div>
@@ -12734,7 +12614,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell"
+    class="t-cell t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -12764,21 +12644,13 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <g
-            id="chevron-right"
-          >
-            <path
-              d="M9.5 17.5L15 12L9.5 6.5"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
+          <path
+            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
+            fill="currentColor"
+          />
         </svg>
       </div>
     </div>

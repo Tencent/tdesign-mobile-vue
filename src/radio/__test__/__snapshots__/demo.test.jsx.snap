@@ -88,7 +88,6 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
           class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
@@ -180,7 +179,6 @@ exports[`Radio > Radio cardVue demo works fine 1`] = `
           class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
           fill="none"
           height="1em"
-          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
@@ -635,7 +633,6 @@ exports[`Radio > Radio horizontalVue demo works fine 1`] = `
         class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
@@ -684,21 +681,13 @@ exports[`Radio > Radio iconVue demo works fine 1`] = `
         class="t-icon t-icon-check t-radio__icon-wrap"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
-        <g
-          id="check"
-        >
-          <path
-            d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
+        <path
+          d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
+          fill="currentColor"
+        />
       </svg>
       <!---->
     </div>
@@ -875,7 +864,6 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
                 fill="none"
                 height="1em"
-                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
@@ -1043,7 +1031,6 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
@@ -1116,7 +1103,6 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
               class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
               fill="none"
               height="1em"
-              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
@@ -1219,21 +1205,13 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             class="t-icon t-icon-check t-radio__icon-wrap"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <g
-              id="check"
-            >
-              <path
-                d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
+            <path
+              d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
+              fill="currentColor"
+            />
           </svg>
           <!---->
         </div>
@@ -1322,7 +1300,6 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -1364,7 +1341,6 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
             fill="none"
             height="1em"
-            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -1434,7 +1410,6 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
                 fill="none"
                 height="1em"
-                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
@@ -1848,7 +1823,6 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
         class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
@@ -1890,7 +1864,6 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
         class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >
@@ -1944,7 +1917,6 @@ exports[`Radio > Radio statusVue demo works fine 1`] = `
         class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >

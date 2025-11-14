@@ -1,4 +1,4 @@
-import { PropType, ref, toRefs, computed, defineComponent, nextTick, watch, inject } from 'vue';
+import { computed, defineComponent, inject, nextTick, PropType, ref, toRefs, watch } from 'vue';
 import {
   BrowseIcon as TBrowseIcon,
   BrowseOffIcon as TBrowseOffIcon,
@@ -7,7 +7,7 @@ import {
 import { isFunction } from 'lodash-es';
 import config from '../config';
 import InputProps from './props';
-import { InputValue, TdInputProps } from './type';
+import { InputValue } from './type';
 import { extendAPI } from '../shared';
 import { FormItemInjectionKey } from '../form/const';
 import { useFormDisabled } from '../form/hooks';
@@ -58,6 +58,7 @@ export default defineComponent({
         [`${inputClass.value}--${props.align}`]: props.align !== 'left',
         [`${inputClass.value}--${status}`]: status,
         [`${inputClass.value}__control--disabled`]: isDisabled.value,
+        [`${inputClass.value}--password`]: renderType.value === 'password',
       },
     ]);
 

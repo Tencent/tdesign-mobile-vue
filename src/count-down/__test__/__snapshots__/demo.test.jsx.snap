@@ -11,7 +11,7 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
     <text
       class="demo-count-down-desc"
     >
-       时分秒 
+       时分秒
     </text>
     <div
       class="demo-count-down-content"
@@ -62,7 +62,7 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
     <text
       class="demo-count-down-desc"
     >
-       带毫秒 
+       带毫秒
     </text>
     <div
       class="demo-count-down-content"
@@ -125,7 +125,7 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
     <text
       class="demo-count-down-desc"
     >
-       带方形底 
+       带方形底
     </text>
     <div
       class="demo-count-down-content"
@@ -176,7 +176,7 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
     <text
       class="demo-count-down-desc"
     >
-       带圆形底 
+       带圆形底
     </text>
     <div
       class="demo-count-down-content"
@@ -227,7 +227,7 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
     <text
       class="demo-count-down-desc"
     >
-       带单位 
+       带单位
     </text>
     <div
       class="demo-count-down-content"
@@ -282,7 +282,7 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
     <text
       class="demo-count-down-desc"
     >
-       无底色带单位 
+       无底色带单位
     </text>
     <div
       class="demo-count-down-content"
@@ -377,7 +377,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
         <text
           class="demo-count-down-desc"
         >
-           时分秒 
+           时分秒
         </text>
         <div
           class="demo-count-down-content"
@@ -428,7 +428,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
         <text
           class="demo-count-down-desc"
         >
-           带毫秒 
+           带毫秒
         </text>
         <div
           class="demo-count-down-content"
@@ -491,7 +491,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
         <text
           class="demo-count-down-desc"
         >
-           带方形底 
+           带方形底
         </text>
         <div
           class="demo-count-down-content"
@@ -542,7 +542,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
         <text
           class="demo-count-down-desc"
         >
-           带圆形底 
+           带圆形底
         </text>
         <div
           class="demo-count-down-content"
@@ -593,7 +593,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
         <text
           class="demo-count-down-desc"
         >
-           带单位 
+           带单位
         </text>
         <div
           class="demo-count-down-content"
@@ -648,7 +648,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
         <text
           class="demo-count-down-desc"
         >
-           无底色带单位 
+           无底色带单位
         </text>
         <div
           class="demo-count-down-content"

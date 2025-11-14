@@ -1,10 +1,10 @@
-import { computed, onMounted, inject, defineComponent, getCurrentInstance } from 'vue';
+import { computed, defineComponent, inject, onMounted } from 'vue';
 import { ChevronDownIcon, ChevronUpIcon } from 'tdesign-icons-vue-next';
 import TCell from '../cell';
 import props from './collapse-panel-props';
 import config from '../config';
 import { findIndex } from './util';
-import { useTNodeJSX, useContent } from '../hooks/tnode';
+import { useContent, useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import { CollapseProvide } from './collapse';
 
@@ -37,7 +37,7 @@ export default defineComponent({
       }
     };
 
-    const handleClick = (e: MouseEvent) => {
+    const handleClick = ({ e }: { e: MouseEvent }) => {
       e?.stopPropagation();
       if (disabled.value) {
         return;
@@ -81,21 +81,21 @@ export default defineComponent({
 
       return (
         <div class={rootClass.value}>
-          <div class={`${collapsePanelClass.value}__title`} onClick={handleClick}>
-            <TCell
-              class={[
-                `${collapsePanelClass.value}__header`,
-                `${collapsePanelClass.value}__header--${props.placement}`,
-                { [`${collapsePanelClass.value}__header--expanded`]: isActive.value },
-              ]}
-              v-slots={{
-                leftIcon: () => leftIcon,
-                title: () => headerContent,
-                note: () => noteContent,
-                rightIcon: () => renderRightIcon(),
-              }}
-            ></TCell>
-          </div>
+          <TCell
+            class={[
+              `${collapsePanelClass.value}__title`,
+              `${collapsePanelClass.value}__header`,
+              `${collapsePanelClass.value}__header--${props.placement}`,
+              { [`${collapsePanelClass.value}__header--expanded`]: isActive.value },
+            ]}
+            v-slots={{
+              leftIcon: () => leftIcon,
+              title: () => headerContent,
+              note: () => noteContent,
+              rightIcon: () => renderRightIcon(),
+            }}
+            onClick={handleClick}
+          ></TCell>
           <div class={`${collapsePanelClass.value}__body`} style={{ gridTemplateRows: isActive.value ? '1fr' : '0fr' }}>
             <div class={`${collapsePanelClass.value}__inner`}>{renderPanelContent()}</div>
           </div>

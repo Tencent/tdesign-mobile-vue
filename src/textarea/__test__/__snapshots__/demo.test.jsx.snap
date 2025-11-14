@@ -4,13 +4,17 @@ exports[`Textarea > Textarea autosizeVue demo works fine 1`] = `
 <div
   class="t-textarea t-textarea--layout-horizontal"
 >
-  <!---->
+  <div
+    class="t-textarea__label"
+  >
+    标签文字
+  </div>
   <div
     class="t-textarea__wrapper"
   >
     <textarea
       class="t-textarea__wrapper-inner t-textarea__placeholder"
-      name="标签文字"
+      name=""
       placeholder="请输入文字"
       style="caret-color: #0052d9;"
     />
@@ -373,13 +377,17 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
       <div
         class="t-textarea t-textarea--layout-horizontal"
       >
-        <!---->
+        <div
+          class="t-textarea__label"
+        >
+          标签文字
+        </div>
         <div
           class="t-textarea__wrapper"
         >
           <textarea
             class="t-textarea__wrapper-inner t-textarea__placeholder"
-            name="标签文字"
+            name=""
             placeholder="请输入文字"
             style="caret-color: #0052d9;"
           />

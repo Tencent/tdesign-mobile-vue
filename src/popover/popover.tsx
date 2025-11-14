@@ -32,7 +32,11 @@ export default defineComponent({
     const referenceRef = ref<HTMLElement>();
     const popoverRef = ref<HTMLElement>();
 
-    const contentClasses = computed(() => [`${popoverClass.value}__content`, `${popoverClass.value}--${props.theme}`]);
+    const contentClasses = computed(() => [
+      `${popoverClass.value}__content`,
+      `${popoverClass.value}--${props.theme}`,
+      props.showArrow ? `${popoverClass.value}__content--arrow` : '',
+    ]);
 
     /** popperjs instance */
     let popper: ReturnType<typeof createPopper>;
@@ -93,7 +97,7 @@ export default defineComponent({
         const padding = isEnd ? small(width + x, popperWidth) : small(windowWidth - x, popperWidth);
         return {
           // border-radius: 6, arrow width: 16;
-          [isEnd ? 'left' : 'right']: padding - 22,
+          [isEnd ? 'left' : 'right']: padding - 28,
         };
       }
 
@@ -101,7 +105,7 @@ export default defineComponent({
       if (isVertical) {
         return {
           // border-radius: 6, arrow height: 16;
-          [isEnd ? 'top' : 'bottom']: popperHeight - 22,
+          [isEnd ? 'top' : 'bottom']: popperHeight - 28,
         };
       }
     };

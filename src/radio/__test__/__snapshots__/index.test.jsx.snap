@@ -54,7 +54,6 @@ exports[`Radio > props > : checked 1`] = `
         class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
         fill="none"
         height="1em"
-        style="fill: none;"
         viewBox="0 0 24 24"
         width="1em"
       >

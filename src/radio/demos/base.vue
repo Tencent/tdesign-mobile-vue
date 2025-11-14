@@ -28,5 +28,13 @@ const groupChangeFn = (value: any, context: { e: Event }) => {
 <style>
 .radio-group-demo {
   background: #fff;
+
+  &:last-child {
+    .t-radio {
+      .t-radio__border {
+        display: none;
+      }
+    }
+  }
 }
 </style>

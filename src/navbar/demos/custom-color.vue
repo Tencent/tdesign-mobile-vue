@@ -1,5 +1,5 @@
 <template>
-  <t-navbar title="标题文字" :fixed="false" left-arrow class="custom-navbar">
+  <t-navbar :fixed="false" class="custom-navbar" left-arrow title="标题文字">
     <template #right>
       <t-icon name="ellipsis" size="24px" />
     </template>
@@ -11,8 +11,10 @@ import { Icon as TIcon } from 'tdesign-icons-vue-next';
 </script>
 
 <style lang="less" scoped>
+@import '../../_common/style/mobile/_variables';
+
 .custom-navbar {
-  --td-navbar-bg-color: #0052d9;
+  --td-navbar-bg-color: @brand-color;
   --td-navbar-color: #fff;
 }
 </style>

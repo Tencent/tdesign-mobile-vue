@@ -1,10 +1,12 @@
 <template>
   <div class="wrapper">
-    <t-slider :value="value" :label="true" :on-change="onChange" />
+    <t-slider :label="true" :on-change="onChange" :value="value" />
   </div>
-  <div class="wrapper">
-    <t-slider range :default-value="[20, 60]" :label="handleLabel" show-extreme-value />
-  </div>
+  <tdesign-demo-block summary="带数值双游标滑块">
+    <div class="wrapper">
+      <t-slider :default-value="[20, 60]" :label="handleLabel" range show-extreme-value />
+    </div>
+  </tdesign-demo-block>
 </template>
 
 <script lang="ts" setup>

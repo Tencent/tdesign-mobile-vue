@@ -364,33 +364,14 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
                   class="t-icon t-icon-user-add"
                   fill="none"
                   height="1em"
-                  style="fill: none; font-size: 24px;"
+                  style="font-size: 24px;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="user-add"
-                  >
-                    <path
-                      d="M16 7.5C16 9.98528 13.9853 12 11.5 12C9.01472 12 7 9.98528 7 7.5C7 5.01472 9.01472 3 11.5 3C13.9853 3 16 5.01472 16 7.5Z"
-                      fill="transparent"
-                      id="fill1"
-                    />
-                    <path
-                      d="M11 15H8C5.23858 15 3 17.2386 3 20V21H11.0508M16 7.5C16 9.98528 13.9853 12 11.5 12C9.01472 12 7 9.98528 7 7.5C7 5.01472 9.01472 3 11.5 3C13.9853 3 16 5.01472 16 7.5Z"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M18 14V18M18 18V22M18 18H14M18 18H22"
-                      id="stroke2"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                  <path
+                    d="M11.5 4C9.567 4 8 5.567 8 7.5C8 9.433 9.567 11 11.5 11C13.433 11 15 9.433 15 7.5C15 5.567 13.433 4 11.5 4ZM6 7.5C6 4.46243 8.46243 2 11.5 2C14.5376 2 17 4.46243 17 7.5C17 10.5376 14.5376 13 11.5 13C8.46243 13 6 10.5376 6 7.5ZM19 13V17H23V19H19V23H17V19H13V17H17V13H19ZM8 16C5.79086 16 4 17.7909 4 20H12.0508V22H2V20C2 16.6863 4.68629 14 8 14H12V16H8Z"
+                    fill="currentColor"
+                  />
                 </svg>
                 
                 
@@ -476,7 +457,6 @@ exports[`Avatar > Avatar badgeAvatarVue demo works fine 1`] = `
         </div>
         <div
           class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-          style="right: 4px; top: 4px;"
         >
           <!---->
         </div>
@@ -509,7 +489,7 @@ exports[`Avatar > Avatar badgeAvatarVue demo works fine 1`] = `
         </div>
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-          style="right: 6px; top: 6px;"
+          style="right: 4px; top: 4px;"
         >
           8
         </div>
@@ -539,42 +519,13 @@ exports[`Avatar > Avatar badgeAvatarVue demo works fine 1`] = `
                 class="t-icon t-icon-user"
                 fill="none"
                 height="1em"
-                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <g
-                  id="user"
-                >
-                  <g
-                    id="fill1"
-                  >
-                    <path
-                      d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                      fill="transparent"
-                    />
-                    <path
-                      d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                      fill="transparent"
-                    />
-                  </g>
-                  <g
-                    id="stroke1"
-                  >
-                    <path
-                      d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
-                </g>
+                <path
+                  d="M12 4C10.067 4 8.5 5.567 8.5 7.5C8.5 9.433 10.067 11 12 11C13.933 11 15.5 9.433 15.5 7.5C15.5 5.567 13.933 4 12 4ZM6.5 7.5C6.5 4.46243 8.96243 2 12 2C15.0376 2 17.5 4.46243 17.5 7.5C17.5 10.5376 15.0376 13 12 13C8.96243 13 6.5 10.5376 6.5 7.5ZM3 19C3 16.2386 5.23858 14 8 14H16C18.7614 14 21 16.2386 21 19V22H3V19ZM8 16C6.34315 16 5 17.3431 5 19V20H19V19C19 17.3431 17.6569 16 16 16H8Z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
           </div>
@@ -582,7 +533,7 @@ exports[`Avatar > Avatar badgeAvatarVue demo works fine 1`] = `
         </div>
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-          style="right: 6px; top: 6px;"
+          style="right: 4px; top: 4px;"
         >
           12
         </div>
@@ -1058,42 +1009,13 @@ exports[`Avatar > Avatar iconAvatarVue demo works fine 1`] = `
                 class="t-icon t-icon-user"
                 fill="none"
                 height="1em"
-                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <g
-                  id="user"
-                >
-                  <g
-                    id="fill1"
-                  >
-                    <path
-                      d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                      fill="transparent"
-                    />
-                    <path
-                      d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                      fill="transparent"
-                    />
-                  </g>
-                  <g
-                    id="stroke1"
-                  >
-                    <path
-                      d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
-                </g>
+                <path
+                  d="M12 4C10.067 4 8.5 5.567 8.5 7.5C8.5 9.433 10.067 11 12 11C13.933 11 15.5 9.433 15.5 7.5C15.5 5.567 13.933 4 12 4ZM6.5 7.5C6.5 4.46243 8.96243 2 12 2C15.0376 2 17.5 4.46243 17.5 7.5C17.5 10.5376 15.0376 13 12 13C8.96243 13 6.5 10.5376 6.5 7.5ZM3 19C3 16.2386 5.23858 14 8 14H16C18.7614 14 21 16.2386 21 19V22H3V19ZM8 16C6.34315 16 5 17.3431 5 19V20H19V19C19 17.3431 17.6569 16 16 16H8Z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
           </div>
@@ -1126,42 +1048,13 @@ exports[`Avatar > Avatar iconAvatarVue demo works fine 1`] = `
                 class="t-icon t-icon-user"
                 fill="none"
                 height="1em"
-                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <g
-                  id="user"
-                >
-                  <g
-                    id="fill1"
-                  >
-                    <path
-                      d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                      fill="transparent"
-                    />
-                    <path
-                      d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                      fill="transparent"
-                    />
-                  </g>
-                  <g
-                    id="stroke1"
-                  >
-                    <path
-                      d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
-                </g>
+                <path
+                  d="M12 4C10.067 4 8.5 5.567 8.5 7.5C8.5 9.433 10.067 11 12 11C13.933 11 15.5 9.433 15.5 7.5C15.5 5.567 13.933 4 12 4ZM6.5 7.5C6.5 4.46243 8.96243 2 12 2C15.0376 2 17.5 4.46243 17.5 7.5C17.5 10.5376 15.0376 13 12 13C8.96243 13 6.5 10.5376 6.5 7.5ZM3 19C3 16.2386 5.23858 14 8 14H16C18.7614 14 21 16.2386 21 19V22H3V19ZM8 16C6.34315 16 5 17.3431 5 19V20H19V19C19 17.3431 17.6569 16 16 16H8Z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
           </div>
@@ -1620,42 +1513,13 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-user"
                       fill="none"
                       height="1em"
-                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
-                      <g
-                        id="user"
-                      >
-                        <g
-                          id="fill1"
-                        >
-                          <path
-                            d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                            fill="transparent"
-                          />
-                          <path
-                            d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                            fill="transparent"
-                          />
-                        </g>
-                        <g
-                          id="stroke1"
-                        >
-                          <path
-                            d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                            stroke="currentColor"
-                            stroke-linecap="square"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                            stroke="currentColor"
-                            stroke-linecap="square"
-                            stroke-width="2"
-                          />
-                        </g>
-                      </g>
+                      <path
+                        d="M12 4C10.067 4 8.5 5.567 8.5 7.5C8.5 9.433 10.067 11 12 11C13.933 11 15.5 9.433 15.5 7.5C15.5 5.567 13.933 4 12 4ZM6.5 7.5C6.5 4.46243 8.96243 2 12 2C15.0376 2 17.5 4.46243 17.5 7.5C17.5 10.5376 15.0376 13 12 13C8.96243 13 6.5 10.5376 6.5 7.5ZM3 19C3 16.2386 5.23858 14 8 14H16C18.7614 14 21 16.2386 21 19V22H3V19ZM8 16C6.34315 16 5 17.3431 5 19V20H19V19C19 17.3431 17.6569 16 16 16H8Z"
+                        fill="currentColor"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -1688,42 +1552,13 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-user"
                       fill="none"
                       height="1em"
-                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
-                      <g
-                        id="user"
-                      >
-                        <g
-                          id="fill1"
-                        >
-                          <path
-                            d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                            fill="transparent"
-                          />
-                          <path
-                            d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                            fill="transparent"
-                          />
-                        </g>
-                        <g
-                          id="stroke1"
-                        >
-                          <path
-                            d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                            stroke="currentColor"
-                            stroke-linecap="square"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                            stroke="currentColor"
-                            stroke-linecap="square"
-                            stroke-width="2"
-                          />
-                        </g>
-                      </g>
+                      <path
+                        d="M12 4C10.067 4 8.5 5.567 8.5 7.5C8.5 9.433 10.067 11 12 11C13.933 11 15.5 9.433 15.5 7.5C15.5 5.567 13.933 4 12 4ZM6.5 7.5C6.5 4.46243 8.96243 2 12 2C15.0376 2 17.5 4.46243 17.5 7.5C17.5 10.5376 15.0376 13 12 13C8.96243 13 6.5 10.5376 6.5 7.5ZM3 19C3 16.2386 5.23858 14 8 14H16C18.7614 14 21 16.2386 21 19V22H3V19ZM8 16C6.34315 16 5 17.3431 5 19V20H19V19C19 17.3431 17.6569 16 16 16H8Z"
+                        fill="currentColor"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -1823,7 +1658,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-                style="right: 4px; top: 4px;"
               >
                 <!---->
               </div>
@@ -1856,7 +1690,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                style="right: 6px; top: 6px;"
+                style="right: 4px; top: 4px;"
               >
                 8
               </div>
@@ -1886,42 +1720,13 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                       class="t-icon t-icon-user"
                       fill="none"
                       height="1em"
-                      style="fill: none;"
                       viewBox="0 0 24 24"
                       width="1em"
                     >
-                      <g
-                        id="user"
-                      >
-                        <g
-                          id="fill1"
-                        >
-                          <path
-                            d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                            fill="transparent"
-                          />
-                          <path
-                            d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                            fill="transparent"
-                          />
-                        </g>
-                        <g
-                          id="stroke1"
-                        >
-                          <path
-                            d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                            stroke="currentColor"
-                            stroke-linecap="square"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                            stroke="currentColor"
-                            stroke-linecap="square"
-                            stroke-width="2"
-                          />
-                        </g>
-                      </g>
+                      <path
+                        d="M12 4C10.067 4 8.5 5.567 8.5 7.5C8.5 9.433 10.067 11 12 11C13.933 11 15.5 9.433 15.5 7.5C15.5 5.567 13.933 4 12 4ZM6.5 7.5C6.5 4.46243 8.96243 2 12 2C15.0376 2 17.5 4.46243 17.5 7.5C17.5 10.5376 15.0376 13 12 13C8.96243 13 6.5 10.5376 6.5 7.5ZM3 19C3 16.2386 5.23858 14 8 14H16C18.7614 14 21 16.2386 21 19V22H3V19ZM8 16C6.34315 16 5 17.3431 5 19V20H19V19C19 17.3431 17.6569 16 16 16H8Z"
+                        fill="currentColor"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -1929,7 +1734,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                style="right: 6px; top: 6px;"
+                style="right: 4px; top: 4px;"
               >
                 12
               </div>
@@ -2720,33 +2525,14 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-user-add"
                         fill="none"
                         height="1em"
-                        style="fill: none; font-size: 24px;"
+                        style="font-size: 24px;"
                         viewBox="0 0 24 24"
                         width="1em"
                       >
-                        <g
-                          id="user-add"
-                        >
-                          <path
-                            d="M16 7.5C16 9.98528 13.9853 12 11.5 12C9.01472 12 7 9.98528 7 7.5C7 5.01472 9.01472 3 11.5 3C13.9853 3 16 5.01472 16 7.5Z"
-                            fill="transparent"
-                            id="fill1"
-                          />
-                          <path
-                            d="M11 15H8C5.23858 15 3 17.2386 3 20V21H11.0508M16 7.5C16 9.98528 13.9853 12 11.5 12C9.01472 12 7 9.98528 7 7.5C7 5.01472 9.01472 3 11.5 3C13.9853 3 16 5.01472 16 7.5Z"
-                            id="stroke1"
-                            stroke="currentColor"
-                            stroke-linecap="square"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M18 14V18M18 18V22M18 18H14M18 18H22"
-                            id="stroke2"
-                            stroke="currentColor"
-                            stroke-linecap="square"
-                            stroke-width="2"
-                          />
-                        </g>
+                        <path
+                          d="M11.5 4C9.567 4 8 5.567 8 7.5C8 9.433 9.567 11 11.5 11C13.433 11 15 9.433 15 7.5C15 5.567 13.433 4 11.5 4ZM6 7.5C6 4.46243 8.46243 2 11.5 2C14.5376 2 17 4.46243 17 7.5C17 10.5376 14.5376 13 11.5 13C8.46243 13 6 10.5376 6 7.5ZM19 13V17H23V19H19V23H17V19H13V17H17V13H19ZM8 16C5.79086 16 4 17.7909 4 20H12.0508V22H2V20C2 16.6863 4.68629 14 8 14H12V16H8Z"
+                          fill="currentColor"
+                        />
                       </svg>
                       
                       
@@ -2911,42 +2697,13 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-user"
                         fill="none"
                         height="1em"
-                        style="fill: none;"
                         viewBox="0 0 24 24"
                         width="1em"
                       >
-                        <g
-                          id="user"
-                        >
-                          <g
-                            id="fill1"
-                          >
-                            <path
-                              d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                              fill="transparent"
-                            />
-                            <path
-                              d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                              fill="transparent"
-                            />
-                          </g>
-                          <g
-                            id="stroke1"
-                          >
-                            <path
-                              d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                              stroke="currentColor"
-                              stroke-linecap="square"
-                              stroke-width="2"
-                            />
-                            <path
-                              d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                              stroke="currentColor"
-                              stroke-linecap="square"
-                              stroke-width="2"
-                            />
-                          </g>
-                        </g>
+                        <path
+                          d="M12 4C10.067 4 8.5 5.567 8.5 7.5C8.5 9.433 10.067 11 12 11C13.933 11 15.5 9.433 15.5 7.5C15.5 5.567 13.933 4 12 4ZM6.5 7.5C6.5 4.46243 8.96243 2 12 2C15.0376 2 17.5 4.46243 17.5 7.5C17.5 10.5376 15.0376 13 12 13C8.96243 13 6.5 10.5376 6.5 7.5ZM3 19C3 16.2386 5.23858 14 8 14H16C18.7614 14 21 16.2386 21 19V22H3V19ZM8 16C6.34315 16 5 17.3431 5 19V20H19V19C19 17.3431 17.6569 16 16 16H8Z"
+                          fill="currentColor"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -3077,42 +2834,13 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-user"
                         fill="none"
                         height="1em"
-                        style="fill: none;"
                         viewBox="0 0 24 24"
                         width="1em"
                       >
-                        <g
-                          id="user"
-                        >
-                          <g
-                            id="fill1"
-                          >
-                            <path
-                              d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                              fill="transparent"
-                            />
-                            <path
-                              d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                              fill="transparent"
-                            />
-                          </g>
-                          <g
-                            id="stroke1"
-                          >
-                            <path
-                              d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                              stroke="currentColor"
-                              stroke-linecap="square"
-                              stroke-width="2"
-                            />
-                            <path
-                              d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                              stroke="currentColor"
-                              stroke-linecap="square"
-                              stroke-width="2"
-                            />
-                          </g>
-                        </g>
+                        <path
+                          d="M12 4C10.067 4 8.5 5.567 8.5 7.5C8.5 9.433 10.067 11 12 11C13.933 11 15.5 9.433 15.5 7.5C15.5 5.567 13.933 4 12 4ZM6.5 7.5C6.5 4.46243 8.96243 2 12 2C15.0376 2 17.5 4.46243 17.5 7.5C17.5 10.5376 15.0376 13 12 13C8.96243 13 6.5 10.5376 6.5 7.5ZM3 19C3 16.2386 5.23858 14 8 14H16C18.7614 14 21 16.2386 21 19V22H3V19ZM8 16C6.34315 16 5 17.3431 5 19V20H19V19C19 17.3431 17.6569 16 16 16H8Z"
+                          fill="currentColor"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -3243,42 +2971,13 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-user"
                         fill="none"
                         height="1em"
-                        style="fill: none;"
                         viewBox="0 0 24 24"
                         width="1em"
                       >
-                        <g
-                          id="user"
-                        >
-                          <g
-                            id="fill1"
-                          >
-                            <path
-                              d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                              fill="transparent"
-                            />
-                            <path
-                              d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                              fill="transparent"
-                            />
-                          </g>
-                          <g
-                            id="stroke1"
-                          >
-                            <path
-                              d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                              stroke="currentColor"
-                              stroke-linecap="square"
-                              stroke-width="2"
-                            />
-                            <path
-                              d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                              stroke="currentColor"
-                              stroke-linecap="square"
-                              stroke-width="2"
-                            />
-                          </g>
-                        </g>
+                        <path
+                          d="M12 4C10.067 4 8.5 5.567 8.5 7.5C8.5 9.433 10.067 11 12 11C13.933 11 15.5 9.433 15.5 7.5C15.5 5.567 13.933 4 12 4ZM6.5 7.5C6.5 4.46243 8.96243 2 12 2C15.0376 2 17.5 4.46243 17.5 7.5C17.5 10.5376 15.0376 13 12 13C8.96243 13 6.5 10.5376 6.5 7.5ZM3 19C3 16.2386 5.23858 14 8 14H16C18.7614 14 21 16.2386 21 19V22H3V19ZM8 16C6.34315 16 5 17.3431 5 19V20H19V19C19 17.3431 17.6569 16 16 16H8Z"
+                          fill="currentColor"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -3420,42 +3119,13 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
                   class="t-icon t-icon-user"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="user"
-                  >
-                    <g
-                      id="fill1"
-                    >
-                      <path
-                        d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                        fill="transparent"
-                      />
-                    </g>
-                    <g
-                      id="stroke1"
-                    >
-                      <path
-                        d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                        stroke="currentColor"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                        stroke="currentColor"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </g>
-                  </g>
+                  <path
+                    d="M12 4C10.067 4 8.5 5.567 8.5 7.5C8.5 9.433 10.067 11 12 11C13.933 11 15.5 9.433 15.5 7.5C15.5 5.567 13.933 4 12 4ZM6.5 7.5C6.5 4.46243 8.96243 2 12 2C15.0376 2 17.5 4.46243 17.5 7.5C17.5 10.5376 15.0376 13 12 13C8.96243 13 6.5 10.5376 6.5 7.5ZM3 19C3 16.2386 5.23858 14 8 14H16C18.7614 14 21 16.2386 21 19V22H3V19ZM8 16C6.34315 16 5 17.3431 5 19V20H19V19C19 17.3431 17.6569 16 16 16H8Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -3586,42 +3256,13 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
                   class="t-icon t-icon-user"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="user"
-                  >
-                    <g
-                      id="fill1"
-                    >
-                      <path
-                        d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                        fill="transparent"
-                      />
-                    </g>
-                    <g
-                      id="stroke1"
-                    >
-                      <path
-                        d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                        stroke="currentColor"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                        stroke="currentColor"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </g>
-                  </g>
+                  <path
+                    d="M12 4C10.067 4 8.5 5.567 8.5 7.5C8.5 9.433 10.067 11 12 11C13.933 11 15.5 9.433 15.5 7.5C15.5 5.567 13.933 4 12 4ZM6.5 7.5C6.5 4.46243 8.96243 2 12 2C15.0376 2 17.5 4.46243 17.5 7.5C17.5 10.5376 15.0376 13 12 13C8.96243 13 6.5 10.5376 6.5 7.5ZM3 19C3 16.2386 5.23858 14 8 14H16C18.7614 14 21 16.2386 21 19V22H3V19ZM8 16C6.34315 16 5 17.3431 5 19V20H19V19C19 17.3431 17.6569 16 16 16H8Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -3752,42 +3393,13 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
                   class="t-icon t-icon-user"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <g
-                    id="user"
-                  >
-                    <g
-                      id="fill1"
-                    >
-                      <path
-                        d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                        fill="transparent"
-                      />
-                      <path
-                        d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                        fill="transparent"
-                      />
-                    </g>
-                    <g
-                      id="stroke1"
-                    >
-                      <path
-                        d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                        stroke="currentColor"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                        stroke="currentColor"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </g>
-                  </g>
+                  <path
+                    d="M12 4C10.067 4 8.5 5.567 8.5 7.5C8.5 9.433 10.067 11 12 11C13.933 11 15.5 9.433 15.5 7.5C15.5 5.567 13.933 4 12 4ZM6.5 7.5C6.5 4.46243 8.96243 2 12 2C15.0376 2 17.5 4.46243 17.5 7.5C17.5 10.5376 15.0376 13 12 13C8.96243 13 6.5 10.5376 6.5 7.5ZM3 19C3 16.2386 5.23858 14 8 14H16C18.7614 14 21 16.2386 21 19V22H3V19ZM8 16C6.34315 16 5 17.3431 5 19V20H19V19C19 17.3431 17.6569 16 16 16H8Z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>

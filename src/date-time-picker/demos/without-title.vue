@@ -1,16 +1,23 @@
 <template>
-  <t-cell title="无标题时间选择器" arrow hover :note="pickerValueText || ''" @click="visible = true" />
+  <t-cell
+    :bordered="false"
+    :note="pickerValueText || ''"
+    arrow
+    hover
+    title="无标题时间选择器"
+    @click="visible = true"
+  />
   <t-popup v-model="visible" placement="bottom">
     <t-date-time-picker
       :value="pickerValue"
-      mode="date"
-      title=" "
-      start="2015-5-5"
       format="YYYY-MM-DD"
-      @change="onChange"
-      @pick="onPick"
-      @confirm="onConfirm"
+      mode="date"
+      start="2015-5-5"
+      title=" "
       @cancel="onCancel"
+      @change="onChange"
+      @confirm="onConfirm"
+      @pick="onPick"
     />
   </t-popup>
 </template>
