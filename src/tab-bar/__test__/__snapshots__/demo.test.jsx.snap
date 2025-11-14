@@ -1429,13 +1429,21 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-view-list t-tab-bar-item__icon-menu"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <path
-                  d="M2 4H3H21H22V6H21H3H2V4ZM2 11H3H21H22V13H21H3H2V11ZM3 18H2V20H3H21H22V18H21H3Z"
-                  fill="currentColor"
-                />
+                <g
+                  id="view-list"
+                >
+                  <path
+                    d="M3 5H21M3 12H21M3 19H21"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
               </svg>
               
               我的
@@ -2734,13 +2742,21 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
           class="t-icon t-icon-view-list t-tab-bar-item__icon-menu"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M2 4H3H21H22V6H21H3H2V4ZM2 11H3H21H22V13H21H3H2V11ZM3 18H2V20H3H21H22V18H21H3Z"
-            fill="currentColor"
-          />
+          <g
+            id="view-list"
+          >
+            <path
+              d="M3 5H21M3 12H21M3 19H21"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
         
         我的

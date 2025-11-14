@@ -28,13 +28,21 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
               class="t-icon t-icon-check"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
-                fill="currentColor"
-              />
+              <g
+                id="check"
+              >
+                <path
+                  d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -193,14 +201,21 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
               class="t-icon t-icon-cart"
               fill="none"
               height="1em"
-              style="font-size: 20px;"
+              style="fill: none; font-size: 20px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                fill="currentColor"
-              />
+              <g
+                id="cart"
+              >
+                <path
+                  d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
             
           </div>
@@ -241,14 +256,21 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
               class="t-icon t-icon-cart"
               fill="none"
               height="1em"
-              style="font-size: 20px;"
+              style="fill: none; font-size: 20px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                fill="currentColor"
-              />
+              <g
+                id="cart"
+              >
+                <path
+                  d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
             
           </div>
@@ -289,14 +311,21 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
               class="t-icon t-icon-cart"
               fill="none"
               height="1em"
-              style="font-size: 20px;"
+              style="fill: none; font-size: 20px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                fill="currentColor"
-              />
+              <g
+                id="cart"
+              >
+                <path
+                  d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
             
           </div>
@@ -337,14 +366,21 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
               class="t-icon t-icon-cart"
               fill="none"
               height="1em"
-              style="font-size: 20px;"
+              style="fill: none; font-size: 20px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                fill="currentColor"
-              />
+              <g
+                id="cart"
+              >
+                <path
+                  d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
             
           </div>
@@ -581,13 +617,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-check"
                     fill="none"
                     height="1em"
+                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="check"
+                    >
+                      <path
+                        d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -746,14 +790,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-cart"
                     fill="none"
                     height="1em"
-                    style="font-size: 20px;"
+                    style="fill: none; font-size: 20px;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="cart"
+                    >
+                      <path
+                        d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                   
                 </div>
@@ -794,14 +845,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-cart"
                     fill="none"
                     height="1em"
-                    style="font-size: 20px;"
+                    style="fill: none; font-size: 20px;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="cart"
+                    >
+                      <path
+                        d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                   
                 </div>
@@ -842,14 +900,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-cart"
                     fill="none"
                     height="1em"
-                    style="font-size: 20px;"
+                    style="fill: none; font-size: 20px;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="cart"
+                    >
+                      <path
+                        d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                   
                 </div>
@@ -890,14 +955,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-cart"
                     fill="none"
                     height="1em"
-                    style="font-size: 20px;"
+                    style="fill: none; font-size: 20px;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="cart"
+                    >
+                      <path
+                        d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                   
                 </div>
@@ -1101,13 +1173,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-check"
                     fill="none"
                     height="1em"
+                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="check"
+                    >
+                      <path
+                        d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -1266,14 +1346,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-cart"
                     fill="none"
                     height="1em"
-                    style="font-size: 20px;"
+                    style="fill: none; font-size: 20px;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="cart"
+                    >
+                      <path
+                        d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                   
                 </div>
@@ -1314,14 +1401,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-cart"
                     fill="none"
                     height="1em"
-                    style="font-size: 20px;"
+                    style="fill: none; font-size: 20px;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="cart"
+                    >
+                      <path
+                        d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                   
                 </div>
@@ -1362,14 +1456,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-cart"
                     fill="none"
                     height="1em"
-                    style="font-size: 20px;"
+                    style="fill: none; font-size: 20px;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="cart"
+                    >
+                      <path
+                        d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                   
                 </div>
@@ -1410,14 +1511,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-cart"
                     fill="none"
                     height="1em"
-                    style="font-size: 20px;"
+                    style="fill: none; font-size: 20px;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="cart"
+                    >
+                      <path
+                        d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                   
                 </div>
@@ -1832,13 +1940,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-check"
                     fill="none"
                     height="1em"
+                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="check"
+                    >
+                      <path
+                        d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -1877,13 +1993,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-close"
                     fill="none"
                     height="1em"
+                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="close"
+                    >
+                      <path
+                        d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -2003,14 +2127,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-cart"
                     fill="none"
                     height="1em"
-                    style="font-size: 20px;"
+                    style="fill: none; font-size: 20px;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="cart"
+                    >
+                      <path
+                        d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                   
                 </div>
@@ -2051,14 +2182,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-cart"
                     fill="none"
                     height="1em"
-                    style="font-size: 20px;"
+                    style="fill: none; font-size: 20px;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="cart"
+                    >
+                      <path
+                        d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                   
                 </div>
@@ -2099,14 +2237,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-cart"
                     fill="none"
                     height="1em"
-                    style="font-size: 20px;"
+                    style="fill: none; font-size: 20px;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="cart"
+                    >
+                      <path
+                        d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                   
                 </div>
@@ -2147,14 +2292,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-cart"
                     fill="none"
                     height="1em"
-                    style="font-size: 20px;"
+                    style="fill: none; font-size: 20px;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="cart"
+                    >
+                      <path
+                        d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                   
                 </div>
@@ -2383,14 +2535,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     color="rgba(0, 0, 0, .4)"
                     fill="none"
                     height="1em"
-                    style="font-size: 22px;"
+                    style="fill: none; font-size: 22px;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="chevron-right"
+                    >
+                      <path
+                        d="M9.5 17.5L15 12L9.5 6.5"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                   
                 </div>
@@ -2430,14 +2589,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     color="rgba(0, 0, 0, .4)"
                     fill="none"
                     height="1em"
-                    style="font-size: 22px;"
+                    style="fill: none; font-size: 22px;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="chevron-right"
+                    >
+                      <path
+                        d="M9.5 17.5L15 12L9.5 6.5"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                   
                 </div>
@@ -2477,14 +2643,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     color="rgba(0, 0, 0, .4)"
                     fill="none"
                     height="1em"
-                    style="font-size: 22px;"
+                    style="fill: none; font-size: 22px;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="chevron-right"
+                    >
+                      <path
+                        d="M9.5 17.5L15 12L9.5 6.5"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                   
                 </div>
@@ -2524,14 +2697,21 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                     color="rgba(0, 0, 0, .4)"
                     fill="none"
                     height="1em"
-                    style="font-size: 22px;"
+                    style="fill: none; font-size: 22px;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <path
-                      d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                      fill="currentColor"
-                    />
+                    <g
+                      id="chevron-right"
+                    >
+                      <path
+                        d="M9.5 17.5L15 12L9.5 6.5"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
                   </svg>
                   
                 </div>
@@ -2759,14 +2939,21 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
               color="rgba(0, 0, 0, .4)"
               fill="none"
               height="1em"
-              style="font-size: 22px;"
+              style="fill: none; font-size: 22px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
             
           </div>
@@ -2806,14 +2993,21 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
               color="rgba(0, 0, 0, .4)"
               fill="none"
               height="1em"
-              style="font-size: 22px;"
+              style="fill: none; font-size: 22px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
             
           </div>
@@ -2853,14 +3047,21 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
               color="rgba(0, 0, 0, .4)"
               fill="none"
               height="1em"
-              style="font-size: 22px;"
+              style="fill: none; font-size: 22px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
             
           </div>
@@ -2900,14 +3101,21 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
               color="rgba(0, 0, 0, .4)"
               fill="none"
               height="1em"
-              style="font-size: 22px;"
+              style="fill: none; font-size: 22px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
             
           </div>
@@ -3121,13 +3329,21 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
               class="t-icon t-icon-check"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
-                fill="currentColor"
-              />
+              <g
+                id="check"
+              >
+                <path
+                  d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -3166,13 +3382,21 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
               class="t-icon t-icon-close"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M7.04996 5.63599L11.9997 10.5857L16.9494 5.63599L18.3637 7.0502L13.4139 11.9999L18.3637 16.9497L16.9494 18.3639L11.9997 13.4142L7.04996 18.3639L5.63574 16.9497L10.5855 11.9999L5.63574 7.0502L7.04996 5.63599Z"
-                fill="currentColor"
-              />
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -3292,14 +3516,21 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
               class="t-icon t-icon-cart"
               fill="none"
               height="1em"
-              style="font-size: 20px;"
+              style="fill: none; font-size: 20px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                fill="currentColor"
-              />
+              <g
+                id="cart"
+              >
+                <path
+                  d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
             
           </div>
@@ -3340,14 +3571,21 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
               class="t-icon t-icon-cart"
               fill="none"
               height="1em"
-              style="font-size: 20px;"
+              style="fill: none; font-size: 20px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                fill="currentColor"
-              />
+              <g
+                id="cart"
+              >
+                <path
+                  d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
             
           </div>
@@ -3388,14 +3626,21 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
               class="t-icon t-icon-cart"
               fill="none"
               height="1em"
-              style="font-size: 20px;"
+              style="fill: none; font-size: 20px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                fill="currentColor"
-              />
+              <g
+                id="cart"
+              >
+                <path
+                  d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
             
           </div>
@@ -3436,14 +3681,21 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
               class="t-icon t-icon-cart"
               fill="none"
               height="1em"
-              style="font-size: 20px;"
+              style="fill: none; font-size: 20px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                fill="currentColor"
-              />
+              <g
+                id="cart"
+              >
+                <path
+                  d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
             
           </div>
@@ -3645,13 +3897,21 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
               class="t-icon t-icon-check"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M20.9852 7.37845L10.3786 17.985L4.01465 11.6211L5.42886 10.2069L10.3786 15.1566L19.571 5.96423L20.9852 7.37845Z"
-                fill="currentColor"
-              />
+              <g
+                id="check"
+              >
+                <path
+                  d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -3810,14 +4070,21 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
               class="t-icon t-icon-cart"
               fill="none"
               height="1em"
-              style="font-size: 20px;"
+              style="fill: none; font-size: 20px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                fill="currentColor"
-              />
+              <g
+                id="cart"
+              >
+                <path
+                  d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
             
           </div>
@@ -3858,14 +4125,21 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
               class="t-icon t-icon-cart"
               fill="none"
               height="1em"
-              style="font-size: 20px;"
+              style="fill: none; font-size: 20px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                fill="currentColor"
-              />
+              <g
+                id="cart"
+              >
+                <path
+                  d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
             
           </div>
@@ -3906,14 +4180,21 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
               class="t-icon t-icon-cart"
               fill="none"
               height="1em"
-              style="font-size: 20px;"
+              style="fill: none; font-size: 20px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                fill="currentColor"
-              />
+              <g
+                id="cart"
+              >
+                <path
+                  d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
             
           </div>
@@ -3954,14 +4235,21 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
               class="t-icon t-icon-cart"
               fill="none"
               height="1em"
-              style="font-size: 20px;"
+              style="fill: none; font-size: 20px;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M0 1H4.7638L5.30925 3H23.3874L19.7208 14H7.78078L7.28078 16H22V18H4.71922L5.96648 13.011L3.2362 3H0V1ZM7.7638 12H18.2792L20.6126 5H5.8547L7.7638 12ZM4 21C4 19.8954 4.89543 19 6 19C7.10457 19 8 19.8954 8 21C8 22.1046 7.10457 23 6 23C4.89543 23 4 22.1046 4 21ZM18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z"
-                fill="currentColor"
-              />
+              <g
+                id="cart"
+              >
+                <path
+                  d="M1 2H4L7 13L6 17H21M7 21C7 21.5523 6.55228 22 6 22C5.44772 22 5 21.5523 5 21C5 20.4477 5.44772 20 6 20C6.55228 20 7 20.4477 7 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21ZM6.99947 13H18.9995L21.9995 4H4.54492L6.99947 13Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
             
           </div>

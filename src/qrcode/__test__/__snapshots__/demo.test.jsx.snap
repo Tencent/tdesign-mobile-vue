@@ -491,13 +491,21 @@ exports[`Qrcode > Qrcode mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-refresh"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <path
-                  d="M20.4997 5.83468C18.5918 3.20865 15.4961 1.5 11.9997 1.5C6.57341 1.5 2.10958 5.61542 1.55717 10.896L1.45312 11.8905L3.44227 12.0986L3.54632 11.104C3.9933 6.83125 7.60814 3.5 11.9997 3.5C15.0404 3.5 17.7099 5.09688 19.2125 7.5H15.4997V9.5H22.4997V2.5H20.4997V5.83468ZM20.5572 11.9014L20.4532 12.896C20.0062 17.1687 16.3913 20.5 11.9997 20.5C8.95904 20.5 6.28956 18.9031 4.78702 16.5H8.49974V14.5H1.49974V21.5H3.49974V18.1653C5.40769 20.7914 8.50342 22.5 11.9997 22.5C17.4261 22.5 21.8899 18.3846 22.4423 13.104L22.5464 12.1095L20.5572 11.9014Z"
-                  fill="currentColor"
-                />
+                <g
+                  id="refresh"
+                >
+                  <path
+                    d="M21.448 13C20.9483 17.7767 16.909 21.5 12 21.5C8.18227 21.5 4.89052 19.248 3.38065 16M2.5 20.5V15.5H5.5M2.55176 11C3.05145 6.22334 7.09079 2.5 11.9998 2.5C15.8175 2.5 19.1092 4.75197 20.6191 8M21.4998 3.5V8.5H18.4998"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
               </svg>
               点击刷新
             </p>
@@ -582,6 +590,7 @@ exports[`Qrcode > Qrcode mobileVue demo works fine 1`] = `
                 class="t-icon t-icon-check-circle-filled t-scanned__icon"
                 fill="none"
                 height="1em"
+                style="fill: none;"
                 viewBox="0 0 24 24"
                 width="1em"
               >
@@ -907,6 +916,7 @@ exports[`Qrcode > Qrcode statusRenderVue demo works fine 1`] = `
             class="t-icon t-icon-close-circle-filled"
             fill="none"
             height="1em"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -926,13 +936,21 @@ exports[`Qrcode > Qrcode statusRenderVue demo works fine 1`] = `
             class="t-icon t-icon-refresh"
             fill="none"
             height="1em"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
-            <path
-              d="M20.4997 5.83468C18.5918 3.20865 15.4961 1.5 11.9997 1.5C6.57341 1.5 2.10958 5.61542 1.55717 10.896L1.45312 11.8905L3.44227 12.0986L3.54632 11.104C3.9933 6.83125 7.60814 3.5 11.9997 3.5C15.0404 3.5 17.7099 5.09688 19.2125 7.5H15.4997V9.5H22.4997V2.5H20.4997V5.83468ZM20.5572 11.9014L20.4532 12.896C20.0062 17.1687 16.3913 20.5 11.9997 20.5C8.95904 20.5 6.28956 18.9031 4.78702 16.5H8.49974V14.5H1.49974V21.5H3.49974V18.1653C5.40769 20.7914 8.50342 22.5 11.9997 22.5C17.4261 22.5 21.8899 18.3846 22.4423 13.104L22.5464 12.1095L20.5572 11.9014Z"
-              fill="currentColor"
-            />
+            <g
+              id="refresh"
+            >
+              <path
+                d="M21.448 13C20.9483 17.7767 16.909 21.5 12 21.5C8.18227 21.5 4.89052 19.248 3.38065 16M2.5 20.5V15.5H5.5M2.55176 11C3.05145 6.22334 7.09079 2.5 11.9998 2.5C15.8175 2.5 19.1092 4.75197 20.6191 8M21.4998 3.5V8.5H18.4998"
+                id="stroke1"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
           </svg>
           <span>
             点击刷新
@@ -966,6 +984,7 @@ exports[`Qrcode > Qrcode statusRenderVue demo works fine 1`] = `
           class="t-icon t-icon-check-circle-filled t-scanned__icon"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
@@ -1032,13 +1051,21 @@ exports[`Qrcode > Qrcode statusVue demo works fine 1`] = `
           class="t-icon t-icon-refresh"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M20.4997 5.83468C18.5918 3.20865 15.4961 1.5 11.9997 1.5C6.57341 1.5 2.10958 5.61542 1.55717 10.896L1.45312 11.8905L3.44227 12.0986L3.54632 11.104C3.9933 6.83125 7.60814 3.5 11.9997 3.5C15.0404 3.5 17.7099 5.09688 19.2125 7.5H15.4997V9.5H22.4997V2.5H20.4997V5.83468ZM20.5572 11.9014L20.4532 12.896C20.0062 17.1687 16.3913 20.5 11.9997 20.5C8.95904 20.5 6.28956 18.9031 4.78702 16.5H8.49974V14.5H1.49974V21.5H3.49974V18.1653C5.40769 20.7914 8.50342 22.5 11.9997 22.5C17.4261 22.5 21.8899 18.3846 22.4423 13.104L22.5464 12.1095L20.5572 11.9014Z"
-            fill="currentColor"
-          />
+          <g
+            id="refresh"
+          >
+            <path
+              d="M21.448 13C20.9483 17.7767 16.909 21.5 12 21.5C8.18227 21.5 4.89052 19.248 3.38065 16M2.5 20.5V15.5H5.5M2.55176 11C3.05145 6.22334 7.09079 2.5 11.9998 2.5C15.8175 2.5 19.1092 4.75197 20.6191 8M21.4998 3.5V8.5H18.4998"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
         点击刷新
       </p>
@@ -1123,6 +1150,7 @@ exports[`Qrcode > Qrcode statusVue demo works fine 1`] = `
           class="t-icon t-icon-check-circle-filled t-scanned__icon"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >

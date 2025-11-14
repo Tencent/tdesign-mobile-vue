@@ -36,13 +36,21 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-            fill="currentColor"
-          />
+          <g
+            id="chevron-right"
+          >
+            <path
+              d="M9.5 17.5L15 12L9.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
     </div>
@@ -191,13 +199,21 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-            fill="currentColor"
-          />
+          <g
+            id="chevron-right"
+          >
+            <path
+              d="M9.5 17.5L15 12L9.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
     </div>
@@ -234,13 +250,21 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-            fill="currentColor"
-          />
+          <g
+            id="chevron-right"
+          >
+            <path
+              d="M9.5 17.5L15 12L9.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
     </div>
@@ -579,13 +603,21 @@ exports[`Picker > Picker customHeightVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-            fill="currentColor"
-          />
+          <g
+            id="chevron-right"
+          >
+            <path
+              d="M9.5 17.5L15 12L9.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
     </div>
@@ -663,13 +695,21 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -706,13 +746,21 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -1044,13 +1092,21 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -1212,13 +1268,21 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -1255,13 +1319,21 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -1395,13 +1467,21 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
               class="t-icon t-icon-chevron-right"
               fill="none"
               height="1em"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >
-              <path
-                d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-                fill="currentColor"
-              />
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -1451,13 +1531,21 @@ exports[`Picker > Picker withTitleVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-            fill="currentColor"
-          />
+          <g
+            id="chevron-right"
+          >
+            <path
+              d="M9.5 17.5L15 12L9.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
     </div>
@@ -1494,13 +1582,21 @@ exports[`Picker > Picker withTitleVue demo works fine 1`] = `
           class="t-icon t-icon-chevron-right"
           fill="none"
           height="1em"
+          style="fill: none;"
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M8.08594 17.5L13.5859 12L8.08594 6.50003L9.50015 5.08582L16.4144 12L9.50015 18.9142L8.08594 17.5Z"
-            fill="currentColor"
-          />
+          <g
+            id="chevron-right"
+          >
+            <path
+              d="M9.5 17.5L15 12L9.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
         </svg>
       </div>
     </div>
