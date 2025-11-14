@@ -40,8 +40,8 @@ style | String / Object | - | 弹框 style 属性，输入 [CSSStyleDeclaration.
 名称 | 默认值 | 描述 
 -- | -- | --
 --td-toast-bg-color | @mask-active | -
---td-toast-color | @font-white-1 | -
+--td-toast-color | @text-color-anti | -
 --td-toast-column-icon-size | 32px | -
 --td-toast-max-width | 185px | -
---td-toast-radius | 4px | -
+--td-toast-radius | @radius-default | -
 --td-toast-row-icon-size | 24px | -
