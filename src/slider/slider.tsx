@@ -398,12 +398,7 @@ export default defineComponent({
         >
           <div
             ref="singleDot"
-            class={[
-              `${sliderClass.value}__dot`,
-              {
-                [`${sliderClass.value}__dot--disabled`]: isDisabled.value,
-              },
-            ]}
+            class={`${sliderClass.value}__dot`}
             onTouchstart={onTouchStart}
             onTouchmove={onSingleDotMove}
             onTouchend={onTouchEnd}
@@ -440,13 +435,7 @@ export default defineComponent({
         >
           <div
             ref={leftDot}
-            class={[
-              `${sliderClass.value}__dot`,
-              `${sliderClass.value}__dot--left`,
-              {
-                [`${sliderClass.value}__dot--disabled`]: isDisabled.value,
-              },
-            ]}
+            class={[`${sliderClass.value}__dot`, `${sliderClass.value}__dot--left`]}
             onTouchstart={onTouchStart}
             onTouchmove={onTouchMoveLeft}
             onTouchend={onTouchEnd}
@@ -466,13 +455,7 @@ export default defineComponent({
           </div>
           <div
             ref={rightDot}
-            class={[
-              `${sliderClass.value}__dot`,
-              `${sliderClass.value}__dot--right`,
-              {
-                [`${sliderClass.value}__dot--disabled`]: isDisabled.value,
-              },
-            ]}
+            class={[`${sliderClass.value}__dot`, `${sliderClass.value}__dot--right`]}
             onTouchstart={onTouchStart}
             onTouchmove={onTouchMoveRight}
             onTouchend={onTouchEnd}

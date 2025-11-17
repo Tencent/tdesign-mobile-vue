@@ -39,6 +39,7 @@ exports[`DropdownMenu > DropdownMenu customizedVue demo works fine 1`] = `
 exports[`DropdownMenu > DropdownMenu directionVue demo works fine 1`] = `
 <div
   class="t-dropdown-menu"
+  placement="right"
 >
   
   <div
@@ -196,6 +197,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
       <div
         class="t-dropdown-menu"
         data-v-71cc592a=""
+        placement="right"
       >
         
         <div
@@ -376,6 +378,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
       <div
         class="t-dropdown-menu"
         data-v-71cc592a=""
+        placement="right"
       >
         
         <div
@@ -663,6 +666,7 @@ exports[`DropdownMenu > DropdownMenu multipleVue demo works fine 1`] = `
 exports[`DropdownMenu > DropdownMenu singleVue demo works fine 1`] = `
 <div
   class="t-dropdown-menu"
+  placement="right"
 >
   
   <div

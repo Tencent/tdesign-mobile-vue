@@ -229,7 +229,6 @@ export default defineComponent({
                   disabled={option.disabled}
                   class={styleDropRadio(option.value)}
                   checked={isCheckedRadio(option.value)}
-                  placement="right"
                   icon="line"
                 />
               ))}
