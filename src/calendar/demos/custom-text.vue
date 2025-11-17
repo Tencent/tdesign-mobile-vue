@@ -1,17 +1,17 @@
 <template>
   <t-calendar
     v-model:visible="visible"
-    :value="value"
     :format="format"
-    :min-date="minDate"
     :max-date="maxDate"
+    :min-date="minDate"
+    :value="value"
     @confirm="handleConfirm"
     @select="handleSelect"
   />
-  <t-cell title="带双行描述的日历" arrow :note="dateNote" @click="visible = true"></t-cell>
+  <t-cell :note="dateNote" arrow title="带双行描述的日历" @click="visible = true"></t-cell>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import { ref } from 'vue';
 
 type TDateType = 'selected' | 'disabled' | 'start' | 'centre' | 'end' | '';
@@ -72,7 +72,9 @@ const handleSelect = (val: Date) => {
 };
 </script>
 <style lang="less">
+@import '../../_common/style/mobile/_variables';
+
 .is-holiday:not(.t-calendar__dates-item--selected) {
-  color: #e34d59;
+  color: @error-color-6;
 }
 </style>

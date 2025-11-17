@@ -6,7 +6,7 @@ exports[`DateTimePicker > DateTimePicker dateAllVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell"
+    class="t-cell t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -1643,7 +1643,7 @@ exports[`DateTimePicker > DateTimePicker hourMinuteSecondVue demo works fine 1`]
 >
   
   <div
-    class="t-cell"
+    class="t-cell t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -2799,7 +2799,7 @@ exports[`DateTimePicker > DateTimePicker hourMinuteVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell"
+    class="t-cell t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -3555,7 +3555,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell"
+        class="t-cell t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -4129,7 +4129,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell"
+        class="t-cell t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -4510,7 +4510,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell"
+        class="t-cell t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -5679,7 +5679,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell"
+        class="t-cell t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -6417,7 +6417,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell"
+        class="t-cell t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -8067,7 +8067,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell"
+        class="t-cell t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -8855,7 +8855,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell"
+        class="t-cell t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -9420,7 +9420,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell"
+        class="t-cell t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -9984,7 +9984,7 @@ exports[`DateTimePicker > DateTimePicker showWeekVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell"
+    class="t-cell t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -10755,7 +10755,7 @@ exports[`DateTimePicker > DateTimePicker stepsVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell"
+    class="t-cell t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -11051,7 +11051,7 @@ exports[`DateTimePicker > DateTimePicker withTitleVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell"
+    class="t-cell t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -11612,7 +11612,7 @@ exports[`DateTimePicker > DateTimePicker withoutTitleVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell"
+    class="t-cell t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -12173,7 +12173,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthDateVue demo works fine 1`] = 
 >
   
   <div
-    class="t-cell"
+    class="t-cell t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -12734,7 +12734,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell"
+    class="t-cell t-cell--borderless"
   >
     <div
       class="t-cell__left"

@@ -1,18 +1,18 @@
 <template>
   <div class="tdesign-mobile-link-demo">
-    <t-link theme="primary" size="small">
+    <t-link size="small" theme="primary">
       <template #suffixIcon>
         <jump-icon />
       </template>
       S跳转链接
     </t-link>
-    <t-link theme="primary" size="medium">
+    <t-link size="medium" theme="primary">
       <template #suffixIcon>
         <jump-icon />
       </template>
       M跳转链接
     </t-link>
-    <t-link theme="primary" size="large">
+    <t-link size="large" theme="primary">
       <template #suffixIcon>
         <jump-icon />
       </template>
@@ -28,7 +28,7 @@ import { JumpIcon } from 'tdesign-icons-vue-next';
   height: 48px;
   background-color: var(--bg-color-demo, #fff);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 </style>

@@ -10276,12 +10276,27 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                       >
                         2022-02-19
                       </span>
-                      <span
-                        class="arrow-icon"
+                      <svg
+                        class="t-icon t-icon-swap-right"
                         data-v-0c10181d=""
+                        fill="none"
+                        height="1em"
+                        style="fill: none;"
+                        viewBox="0 0 24 24"
+                        width="1em"
                       >
-                        →
-                      </span>
+                        <g
+                          id="swap-right"
+                        >
+                          <path
+                            d="M3 14L20 14L15 9"
+                            id="stroke1"
+                            stroke="rgba(0, 0, 0, 0.4)"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </g>
+                      </svg>
                       <span
                         class="end-date"
                         data-v-0c10181d=""
@@ -16351,12 +16366,27 @@ exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
           >
             2022-02-19
           </span>
-          <span
-            class="arrow-icon"
+          <svg
+            class="t-icon t-icon-swap-right"
             data-v-0c10181d=""
+            fill="none"
+            height="1em"
+            style="fill: none;"
+            viewBox="0 0 24 24"
+            width="1em"
           >
-            →
-          </span>
+            <g
+              id="swap-right"
+            >
+              <path
+                d="M3 14L20 14L15 9"
+                id="stroke1"
+                stroke="rgba(0, 0, 0, 0.4)"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
           <span
             class="end-date"
             data-v-0c10181d=""

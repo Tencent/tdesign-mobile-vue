@@ -127,7 +127,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               >
                 <input
                   autocomplete="Off"
-                  class="t-input__control t-input--default"
+                  class="t-input__control t-input--default t-input--password"
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
@@ -2007,7 +2007,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     >
                       <input
                         autocomplete="Off"
-                        class="t-input__control t-input--default"
+                        class="t-input__control t-input--default t-input--password"
                         name=""
                         placeholder="请输入内容"
                         spellcheck="false"
@@ -3750,7 +3750,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               >
                 <input
                   autocomplete="Off"
-                  class="t-input__control t-input--default"
+                  class="t-input__control t-input--default t-input--password"
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"

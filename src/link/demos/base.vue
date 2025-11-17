@@ -1,6 +1,6 @@
 <template>
   <div class="tdesign-mobile-link-demo">
-    <t-link theme="primary" href="/mobile-vue/overview">跳转链接</t-link>
+    <t-link href="/mobile-vue/overview" theme="primary">跳转链接</t-link>
     <t-link hover>跳转链接</t-link>
   </div>
 </template>
@@ -9,6 +9,6 @@
   height: 48px;
   background-color: var(--bg-color-demo, #fff);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 </style>

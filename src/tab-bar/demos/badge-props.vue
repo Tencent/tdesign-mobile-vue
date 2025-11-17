@@ -1,21 +1,51 @@
 <template>
-  <t-tab-bar v-model="value" :split="false">
-    <t-tab-bar-item
-      v-for="item in list"
-      :key="item.name"
-      :value="item.name"
-      :badge-props="item.badgeProps"
-      :aria-label="item.ariaLabel"
-    >
-      {{ item.text }}
-      <template #icon>
-        <t-icon :name="item.icon" />
-      </template>
-    </t-tab-bar-item>
-  </t-tab-bar>
+  <div class="bar-wrapper">
+    <t-tab-bar v-model="value" :split="false">
+      <t-tab-bar-item
+        v-for="item in list"
+        :key="item.name"
+        :aria-label="item.ariaLabel"
+        :badge-props="item.badgeProps"
+        :value="item.name"
+      >
+        {{ item.text }}
+      </t-tab-bar-item>
+    </t-tab-bar>
+  </div>
+  <div class="bar-wrapper">
+    <t-tab-bar v-model="value" :split="false">
+      <t-tab-bar-item
+        v-for="item in list"
+        :key="item.name"
+        :aria-label="item.ariaLabel"
+        :badge-props="item.badgeProps"
+        :value="item.name"
+      >
+        <template #icon>
+          <t-icon :name="item.icon" />
+        </template>
+      </t-tab-bar-item>
+    </t-tab-bar>
+  </div>
+  <div class="bar-wrapper">
+    <t-tab-bar v-model="value" :split="false">
+      <t-tab-bar-item
+        v-for="item in list"
+        :key="item.name"
+        :aria-label="item.ariaLabel"
+        :badge-props="item.badgeProps"
+        :value="item.name"
+      >
+        {{ item.text }}
+        <template #icon>
+          <t-icon :name="item.icon" />
+        </template>
+      </t-tab-bar-item>
+    </t-tab-bar>
+  </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import { ref } from 'vue';
 import { Icon as TIcon } from 'tdesign-icons-vue-next';
 
@@ -27,3 +57,15 @@ const list = ref([
   { name: 'label_4', text: '我的', icon: 'user', badgeProps: { count: '···' }, ariaLabel: '我的，有很多消息' },
 ]);
 </script>
+
+<style lang="less" scoped>
+.bar-wrapper {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .t-tab-bar {
+    position: relative;
+  }
+}
+</style>

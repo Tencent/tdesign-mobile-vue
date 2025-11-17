@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-link-demo">
     <t-link theme="primary" underline @click="clickHandle">跳转链接</t-link>
-    <t-link underline hover>跳转链接</t-link>
+    <t-link hover underline>跳转链接</t-link>
   </div>
 </template>
 <script lang="ts" setup>
@@ -14,7 +14,7 @@ const clickHandle = () => {
   height: 48px;
   background-color: var(--bg-color-demo, #fff);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-bottom: 6.4vw;
   align-items: center;
 }

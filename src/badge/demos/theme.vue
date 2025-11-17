@@ -2,21 +2,21 @@
   <div>
     <div class="summary">圆形徽标</div>
     <div class="badge-demo">
-      <t-badge count="2" :offset="[-2, -2]">
+      <t-badge count="8" :offset="[-2, -2]">
         <t-icon name="notification" size="24" aria-label="通知" />
       </t-badge>
     </div>
 
     <div class="summary">方形徽标</div>
     <div class="badge-demo">
-      <t-badge count="2" shape="square" :offset="[-2, -2]">
+      <t-badge count="8" shape="square" :offset="[-2, -6]">
         <t-icon name="notification" size="24" aria-label="通知" />
       </t-badge>
     </div>
 
     <div class="summary">气泡徽标</div>
     <div class="badge-demo">
-      <t-badge count="领积分" shape="bubble" aria-role="button">
+      <t-badge count="领取积分" shape="bubble" aria-role="button">
         <t-button :icon="IconShop" aria-label="商店" shape="square" size="large" />
       </t-badge>
     </div>

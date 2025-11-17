@@ -1,32 +1,32 @@
 <template>
-  <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog1 = true"> 反馈类-基础 </t-button>
+  <t-button block size="large" theme="primary" variant="outline" @click="isShowDialog1 = true"> 反馈类-基础</t-button>
   <t-dialog
     v-model:visible="isShowDialog1"
-    title="对话框标题"
-    content="告知当前状态、信息等内容。描述文案尽可能控制在三行内"
-    confirm-btn="知道了"
     :close-on-overlay-click="false"
+    confirm-btn="知道了"
+    content="告知当前状态、信息等内容。描述文案尽可能控制在三行内"
+    title="对话框标题"
   >
   </t-dialog>
   <div class="btn-gap"></div>
-  <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog2 = true">
+  <t-button block size="large" theme="primary" variant="outline" @click="isShowDialog2 = true">
     反馈类-无标题
   </t-button>
   <t-dialog
     v-model:visible="isShowDialog2"
-    content="告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内"
-    confirm-btn="知道了"
     :close-on-overlay-click="false"
+    confirm-btn="知道了"
+    content="告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内"
   >
   </t-dialog>
   <div class="btn-gap"></div>
-  <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog3 = true">
+  <t-button block size="large" theme="primary" variant="outline" @click="isShowDialog3 = true">
     反馈类-内容超长
   </t-button>
   <t-dialog
     v-model:visible="isShowDialog3"
-    title="对话框标题"
     confirm-btn="知道了"
+    title="对话框标题"
     @confirm="onConfirm"
     @overlay-click="onClickOverlay"
   >
@@ -59,7 +59,7 @@ const onClickOverlay = () => {
   height: 264px;
   overflow-y: auto;
   font-size: 16px;
-  color: var(--td-font-gray-2);
+  color: var(--td-text-color-secondary);
   line-height: 24px;
   white-space: pre-line;
 

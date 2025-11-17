@@ -1552,18 +1552,15 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
         
         <div
           class="t-checkbox-group"
-          data-v-0aacc3fb=""
         >
           
           
           <div
             class="card card--active"
-            data-v-0aacc3fb=""
           >
             <svg
               aria-hidden="true"
               class="t-icon t-icon-check card__icon"
-              data-v-0aacc3fb=""
             >
               <use
                 href="#t-icon-check"
@@ -1571,7 +1568,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             </svg>
             <div
               class="t-checkbox t-checkbox--left t-checkbox--checked t-checkbox--block"
-              data-v-0aacc3fb=""
             >
               <div
                 class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
@@ -1597,12 +1593,10 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           </div>
           <div
             class="card card--active"
-            data-v-0aacc3fb=""
           >
             <svg
               aria-hidden="true"
               class="t-icon t-icon-check card__icon"
-              data-v-0aacc3fb=""
             >
               <use
                 href="#t-icon-check"
@@ -1610,7 +1604,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             </svg>
             <div
               class="t-checkbox t-checkbox--left t-checkbox--checked t-checkbox--block"
-              data-v-0aacc3fb=""
             >
               <div
                 class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
@@ -1636,12 +1629,10 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           </div>
           <div
             class="card -1"
-            data-v-0aacc3fb=""
           >
             <!--v-if-->
             <div
               class="t-checkbox t-checkbox--left t-checkbox--block"
-              data-v-0aacc3fb=""
             >
               <div
                 class="t-checkbox__icon t-checkbox__icon--left"
@@ -1673,25 +1664,21 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
         </div>
         <div
           class="tdesign-mobile-demo-block__summary"
-          data-v-0aacc3fb=""
           style="margin-left: 16px; margin-top: 24px;"
         >
           横向卡片多选框
         </div>
         <div
           class="t-checkbox-group horizontal-box"
-          data-v-0aacc3fb=""
         >
           
           
           <div
             class="card card--active"
-            data-v-0aacc3fb=""
           >
             <svg
               aria-hidden="true"
               class="t-icon t-icon-check card__icon"
-              data-v-0aacc3fb=""
             >
               <use
                 href="#t-icon-check"
@@ -1699,7 +1686,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             </svg>
             <div
               class="t-checkbox t-checkbox--left t-checkbox--checked t-checkbox--block"
-              data-v-0aacc3fb=""
             >
               <div
                 class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
@@ -1725,12 +1711,10 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           </div>
           <div
             class="card card--active"
-            data-v-0aacc3fb=""
           >
             <svg
               aria-hidden="true"
               class="t-icon t-icon-check card__icon"
-              data-v-0aacc3fb=""
             >
               <use
                 href="#t-icon-check"
@@ -1738,7 +1722,6 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             </svg>
             <div
               class="t-checkbox t-checkbox--left t-checkbox--checked t-checkbox--block"
-              data-v-0aacc3fb=""
             >
               <div
                 class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
@@ -1764,12 +1747,10 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           </div>
           <div
             class="card -1"
-            data-v-0aacc3fb=""
           >
             <!--v-if-->
             <div
               class="t-checkbox t-checkbox--left t-checkbox--block"
-              data-v-0aacc3fb=""
             >
               <div
                 class="t-checkbox__icon t-checkbox__icon--left"
@@ -1903,18 +1884,15 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
   
   <div
     class="t-checkbox-group"
-    data-v-0aacc3fb=""
   >
     
     
     <div
       class="card card--active"
-      data-v-0aacc3fb=""
     >
       <svg
         aria-hidden="true"
         class="t-icon t-icon-check card__icon"
-        data-v-0aacc3fb=""
       >
         <use
           href="#t-icon-check"
@@ -1922,7 +1900,6 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
       </svg>
       <div
         class="t-checkbox t-checkbox--left t-checkbox--checked t-checkbox--block"
-        data-v-0aacc3fb=""
       >
         <div
           class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
@@ -1948,12 +1925,10 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
     </div>
     <div
       class="card card--active"
-      data-v-0aacc3fb=""
     >
       <svg
         aria-hidden="true"
         class="t-icon t-icon-check card__icon"
-        data-v-0aacc3fb=""
       >
         <use
           href="#t-icon-check"
@@ -1961,7 +1936,6 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
       </svg>
       <div
         class="t-checkbox t-checkbox--left t-checkbox--checked t-checkbox--block"
-        data-v-0aacc3fb=""
       >
         <div
           class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
@@ -1987,12 +1961,10 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
     </div>
     <div
       class="card -1"
-      data-v-0aacc3fb=""
     >
       <!--v-if-->
       <div
         class="t-checkbox t-checkbox--left t-checkbox--block"
-        data-v-0aacc3fb=""
       >
         <div
           class="t-checkbox__icon t-checkbox__icon--left"
@@ -2024,25 +1996,21 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block__summary"
-    data-v-0aacc3fb=""
     style="margin-left: 16px; margin-top: 24px;"
   >
     横向卡片多选框
   </div>
   <div
     class="t-checkbox-group horizontal-box"
-    data-v-0aacc3fb=""
   >
     
     
     <div
       class="card card--active"
-      data-v-0aacc3fb=""
     >
       <svg
         aria-hidden="true"
         class="t-icon t-icon-check card__icon"
-        data-v-0aacc3fb=""
       >
         <use
           href="#t-icon-check"
@@ -2050,7 +2018,6 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
       </svg>
       <div
         class="t-checkbox t-checkbox--left t-checkbox--checked t-checkbox--block"
-        data-v-0aacc3fb=""
       >
         <div
           class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
@@ -2076,12 +2043,10 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
     </div>
     <div
       class="card card--active"
-      data-v-0aacc3fb=""
     >
       <svg
         aria-hidden="true"
         class="t-icon t-icon-check card__icon"
-        data-v-0aacc3fb=""
       >
         <use
           href="#t-icon-check"
@@ -2089,7 +2054,6 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
       </svg>
       <div
         class="t-checkbox t-checkbox--left t-checkbox--checked t-checkbox--block"
-        data-v-0aacc3fb=""
       >
         <div
           class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
@@ -2115,12 +2079,10 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
     </div>
     <div
       class="card -1"
-      data-v-0aacc3fb=""
     >
       <!--v-if-->
       <div
         class="t-checkbox t-checkbox--left t-checkbox--block"
-        data-v-0aacc3fb=""
       >
         <div
           class="t-checkbox__icon t-checkbox__icon--left"
