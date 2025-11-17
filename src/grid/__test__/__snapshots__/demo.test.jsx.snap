@@ -4809,7 +4809,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
           style="text-align: center;"
         >
           <div
-            class="t-grid-item__image t-grid-item__image--small"
+            class="t-grid-item__image t-grid-item__image--middle"
           >
             <div
               class="t-image t-image--round"
@@ -4859,7 +4859,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
             class="t-grid-item__content t-grid-item__content--vertical"
           >
             <div
-              class="t-grid-item__title t-grid-item__title--small"
+              class="t-grid-item__title t-grid-item__title--middle"
             >
               标题文字
             </div>
@@ -4876,7 +4876,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
           style="text-align: center;"
         >
           <div
-            class="t-grid-item__image t-grid-item__image--small"
+            class="t-grid-item__image t-grid-item__image--middle"
           >
             <div
               class="t-image t-image--round"
@@ -4926,7 +4926,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
             class="t-grid-item__content t-grid-item__content--vertical"
           >
             <div
-              class="t-grid-item__title t-grid-item__title--small"
+              class="t-grid-item__title t-grid-item__title--middle"
             >
               标题文字
             </div>
@@ -4943,7 +4943,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
           style="text-align: center;"
         >
           <div
-            class="t-grid-item__image t-grid-item__image--small"
+            class="t-grid-item__image t-grid-item__image--middle"
           >
             <div
               class="t-image t-image--round"
@@ -4993,7 +4993,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
             class="t-grid-item__content t-grid-item__content--vertical"
           >
             <div
-              class="t-grid-item__title t-grid-item__title--small"
+              class="t-grid-item__title t-grid-item__title--middle"
             >
               标题文字
             </div>
@@ -5010,7 +5010,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
           style="text-align: center;"
         >
           <div
-            class="t-grid-item__image t-grid-item__image--small"
+            class="t-grid-item__image t-grid-item__image--middle"
           >
             <div
               class="t-image t-image--round"
@@ -5060,7 +5060,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
             class="t-grid-item__content t-grid-item__content--vertical"
           >
             <div
-              class="t-grid-item__title t-grid-item__title--small"
+              class="t-grid-item__title t-grid-item__title--middle"
             >
               标题文字
             </div>
@@ -5077,7 +5077,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
           style="text-align: center;"
         >
           <div
-            class="t-grid-item__image t-grid-item__image--small"
+            class="t-grid-item__image t-grid-item__image--middle"
           >
             <div
               class="t-image t-image--round"
@@ -5127,7 +5127,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
             class="t-grid-item__content t-grid-item__content--vertical"
           >
             <div
-              class="t-grid-item__title t-grid-item__title--small"
+              class="t-grid-item__title t-grid-item__title--middle"
             >
               标题文字
             </div>
@@ -5144,7 +5144,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
           style="text-align: center;"
         >
           <div
-            class="t-grid-item__image t-grid-item__image--small"
+            class="t-grid-item__image t-grid-item__image--middle"
           >
             <div
               class="t-image t-image--round"
@@ -5194,7 +5194,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
             class="t-grid-item__content t-grid-item__content--vertical"
           >
             <div
-              class="t-grid-item__title t-grid-item__title--small"
+              class="t-grid-item__title t-grid-item__title--middle"
             >
               标题文字
             </div>
@@ -5211,7 +5211,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
           style="text-align: center;"
         >
           <div
-            class="t-grid-item__image t-grid-item__image--small"
+            class="t-grid-item__image t-grid-item__image--middle"
           >
             <div
               class="t-image t-image--round"
@@ -5261,7 +5261,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
             class="t-grid-item__content t-grid-item__content--vertical"
           >
             <div
-              class="t-grid-item__title t-grid-item__title--small"
+              class="t-grid-item__title t-grid-item__title--middle"
             >
               标题文字
             </div>
@@ -5278,7 +5278,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
           style="text-align: center;"
         >
           <div
-            class="t-grid-item__image t-grid-item__image--small"
+            class="t-grid-item__image t-grid-item__image--middle"
           >
             <div
               class="t-image t-image--round"
@@ -5328,7 +5328,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
             class="t-grid-item__content t-grid-item__content--vertical"
           >
             <div
-              class="t-grid-item__title t-grid-item__title--small"
+              class="t-grid-item__title t-grid-item__title--middle"
             >
               标题文字
             </div>
@@ -5345,7 +5345,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
           style="text-align: center;"
         >
           <div
-            class="t-grid-item__image t-grid-item__image--small"
+            class="t-grid-item__image t-grid-item__image--middle"
           >
             <div
               class="t-image t-image--round"
@@ -5395,7 +5395,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
             class="t-grid-item__content t-grid-item__content--vertical"
           >
             <div
-              class="t-grid-item__title t-grid-item__title--small"
+              class="t-grid-item__title t-grid-item__title--middle"
             >
               标题文字
             </div>
@@ -5412,7 +5412,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
           style="text-align: center;"
         >
           <div
-            class="t-grid-item__image t-grid-item__image--small"
+            class="t-grid-item__image t-grid-item__image--middle"
           >
             <div
               class="t-image t-image--round"
@@ -5462,7 +5462,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
             class="t-grid-item__content t-grid-item__content--vertical"
           >
             <div
-              class="t-grid-item__title t-grid-item__title--small"
+              class="t-grid-item__title t-grid-item__title--middle"
             >
               标题文字
             </div>
@@ -7017,7 +7017,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
     style="text-align: center;"
   >
     <div
-      class="t-grid-item__image t-grid-item__image--small"
+      class="t-grid-item__image t-grid-item__image--middle"
     >
       <div
         class="t-image t-image--round"
@@ -7067,7 +7067,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
       class="t-grid-item__content t-grid-item__content--vertical"
     >
       <div
-        class="t-grid-item__title t-grid-item__title--small"
+        class="t-grid-item__title t-grid-item__title--middle"
       >
         标题文字
       </div>
@@ -7084,7 +7084,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
     style="text-align: center;"
   >
     <div
-      class="t-grid-item__image t-grid-item__image--small"
+      class="t-grid-item__image t-grid-item__image--middle"
     >
       <div
         class="t-image t-image--round"
@@ -7134,7 +7134,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
       class="t-grid-item__content t-grid-item__content--vertical"
     >
       <div
-        class="t-grid-item__title t-grid-item__title--small"
+        class="t-grid-item__title t-grid-item__title--middle"
       >
         标题文字
       </div>
@@ -7151,7 +7151,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
     style="text-align: center;"
   >
     <div
-      class="t-grid-item__image t-grid-item__image--small"
+      class="t-grid-item__image t-grid-item__image--middle"
     >
       <div
         class="t-image t-image--round"
@@ -7201,7 +7201,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
       class="t-grid-item__content t-grid-item__content--vertical"
     >
       <div
-        class="t-grid-item__title t-grid-item__title--small"
+        class="t-grid-item__title t-grid-item__title--middle"
       >
         标题文字
       </div>
@@ -7218,7 +7218,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
     style="text-align: center;"
   >
     <div
-      class="t-grid-item__image t-grid-item__image--small"
+      class="t-grid-item__image t-grid-item__image--middle"
     >
       <div
         class="t-image t-image--round"
@@ -7268,7 +7268,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
       class="t-grid-item__content t-grid-item__content--vertical"
     >
       <div
-        class="t-grid-item__title t-grid-item__title--small"
+        class="t-grid-item__title t-grid-item__title--middle"
       >
         标题文字
       </div>
@@ -7285,7 +7285,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
     style="text-align: center;"
   >
     <div
-      class="t-grid-item__image t-grid-item__image--small"
+      class="t-grid-item__image t-grid-item__image--middle"
     >
       <div
         class="t-image t-image--round"
@@ -7335,7 +7335,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
       class="t-grid-item__content t-grid-item__content--vertical"
     >
       <div
-        class="t-grid-item__title t-grid-item__title--small"
+        class="t-grid-item__title t-grid-item__title--middle"
       >
         标题文字
       </div>
@@ -7352,7 +7352,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
     style="text-align: center;"
   >
     <div
-      class="t-grid-item__image t-grid-item__image--small"
+      class="t-grid-item__image t-grid-item__image--middle"
     >
       <div
         class="t-image t-image--round"
@@ -7402,7 +7402,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
       class="t-grid-item__content t-grid-item__content--vertical"
     >
       <div
-        class="t-grid-item__title t-grid-item__title--small"
+        class="t-grid-item__title t-grid-item__title--middle"
       >
         标题文字
       </div>
@@ -7419,7 +7419,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
     style="text-align: center;"
   >
     <div
-      class="t-grid-item__image t-grid-item__image--small"
+      class="t-grid-item__image t-grid-item__image--middle"
     >
       <div
         class="t-image t-image--round"
@@ -7469,7 +7469,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
       class="t-grid-item__content t-grid-item__content--vertical"
     >
       <div
-        class="t-grid-item__title t-grid-item__title--small"
+        class="t-grid-item__title t-grid-item__title--middle"
       >
         标题文字
       </div>
@@ -7486,7 +7486,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
     style="text-align: center;"
   >
     <div
-      class="t-grid-item__image t-grid-item__image--small"
+      class="t-grid-item__image t-grid-item__image--middle"
     >
       <div
         class="t-image t-image--round"
@@ -7536,7 +7536,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
       class="t-grid-item__content t-grid-item__content--vertical"
     >
       <div
-        class="t-grid-item__title t-grid-item__title--small"
+        class="t-grid-item__title t-grid-item__title--middle"
       >
         标题文字
       </div>
@@ -7553,7 +7553,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
     style="text-align: center;"
   >
     <div
-      class="t-grid-item__image t-grid-item__image--small"
+      class="t-grid-item__image t-grid-item__image--middle"
     >
       <div
         class="t-image t-image--round"
@@ -7603,7 +7603,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
       class="t-grid-item__content t-grid-item__content--vertical"
     >
       <div
-        class="t-grid-item__title t-grid-item__title--small"
+        class="t-grid-item__title t-grid-item__title--middle"
       >
         标题文字
       </div>
@@ -7620,7 +7620,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
     style="text-align: center;"
   >
     <div
-      class="t-grid-item__image t-grid-item__image--small"
+      class="t-grid-item__image t-grid-item__image--middle"
     >
       <div
         class="t-image t-image--round"
@@ -7670,7 +7670,7 @@ exports[`Grid > Grid scrollVue demo works fine 1`] = `
       class="t-grid-item__content t-grid-item__content--vertical"
     >
       <div
-        class="t-grid-item__title t-grid-item__title--small"
+        class="t-grid-item__title t-grid-item__title--middle"
       >
         标题文字
       </div>
