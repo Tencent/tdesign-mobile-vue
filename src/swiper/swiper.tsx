@@ -383,7 +383,7 @@ export default defineComponent({
             </>
           );
         }
-        return isObject(navigation.value) ? null : renderTNodeJSX('navigation');
+        return isObject(navigation.value) ? '' : renderTNodeJSX('navigation');
       };
 
       return (
