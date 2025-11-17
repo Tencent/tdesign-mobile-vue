@@ -377,17 +377,14 @@ export default defineComponent({
       const swiperNav = () => {
         const hasNavSlot = Boolean(context.slots?.navigation);
 
-        // 优先级 1：当 navigation 非对象（如 undefined/true/Function）且存在插槽时，优先渲染插槽
-        if (navigation.value !== false && !isObject(navigation.value) && hasNavSlot) {
+        if (!enableNavigation.value) return null;
+
+        // 优先级 1：slot 方式自定义导航、函数方式自定义导航
+        if ((!isObject(enableNavigation.value) && hasNavSlot) || typeof navigation.value === 'function') {
           return renderTNodeJSX('navigation');
         }
 
-        // 优先级 2：当 navigation 为 Function（TNode）时，渲染函数返回的自定义导航
-        if (typeof navigation.value === 'function') {
-          return renderTNodeJSX('navigation');
-        }
-
-        // 优先级 3：内置导航（navigation 为 true 或对象且满足 minShowNum）
+        // 优先级 2：内置导航（navigation 为 true 或对象且满足 minShowNum）
         if (enableNavigation.value) {
           return (
             <>
