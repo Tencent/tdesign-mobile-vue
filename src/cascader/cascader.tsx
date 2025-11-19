@@ -113,16 +113,15 @@ export default defineComponent({
       selectedValue[level] = typeof value === 'number' ? value : String(value);
       selectedValue.length = level + 1;
       steps[level] = lodashGet(item, keys?.label ?? 'label');
-      if (lodashGet(item, keys?.children ?? 'children')?.length) {
-        items.value[level + 1] = lodashGet(item, keys?.children ?? 'children');
+      const children = lodashGet(item, keys?.children ?? 'children');
+      if (children && children.length > 0) {
+        items.value[level + 1] = children;
         items.value.length = level + 2;
         stepIndex.value += 1;
         steps[level + 1] = placeholder.value;
         steps.length = level + 2;
-      } else if (lodashGet(item, keys?.children ?? 'children')?.length === 0) {
-        childrenInfo.value = value;
-        childrenInfo.level = level;
       } else {
+        // children 不存在或为空数组时，都视为叶子节点，完成选择
         items.value.length = level + 1;
         steps.length = level + 1;
         stepIndex.value = level;
@@ -144,11 +143,9 @@ export default defineComponent({
       steps[level + 1] = placeholder.value;
       steps.length = level + 1;
 
-      if (lodashGet(item, keys?.children ?? 'children')?.length) {
-        items.value[level + 1] = lodashGet(item, keys?.children ?? 'children');
-      } else if (lodashGet(item, keys?.children ?? 'children')?.length === 0) {
-        childrenInfo.value = value;
-        childrenInfo.level = level;
+      const children = lodashGet(item, keys?.children ?? 'children');
+      if (children && children.length > 0) {
+        items.value[level + 1] = children;
       }
     };
 
@@ -227,18 +224,37 @@ export default defineComponent({
       }
     });
 
+    // 根据当前已选择路径重新构建 items 层级（不做深度遍历，避免大数据性能问题）
+    const rebuildFromSelectedPath = () => {
+      items.value.splice(0, items.value.length, props.options ?? []);
+      const keys = props.keys as KeysType;
+      let current: any = props.options ?? [];
+      for (let level = 0; level < selectedIndexes.length; level++) {
+        const idx = selectedIndexes[level];
+        const node = current?.[idx];
+        if (!node) {
+          items.value.length = level + 1;
+          break;
+        }
+        const children = lodashGet(node, keys?.children ?? 'children');
+        if (children && Array.isArray(children) && children.length) {
+          items.value[level + 1] = children;
+          current = children;
+        } else {
+          items.value.length = level + 1;
+          break;
+        }
+      }
+      stepIndex.value = items.value.length - 1;
+    };
+
     watch(
       () => props.options,
       () => {
-        initWithValue();
-
-        if (open.value && cascaderValue.value) {
-          handleSelect(childrenInfo.value, childrenInfo.level, false);
-        }
+        if (!open.value) return;
+        rebuildFromSelectedPath();
       },
-      {
-        deep: true,
-      },
+      { deep: false },
     );
 
     watch(placeholder, (newValue, oldValue) => {
