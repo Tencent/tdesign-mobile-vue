@@ -19,8 +19,8 @@ import { ref } from 'vue';
 const visible = ref(false);
 const dateNote = ref('');
 const minDate = new Date(2022, 1, 1);
-const maxDate = new Date(2022, 2, 15);
-const defaultDate = new Date(2022, 1, 18);
+const maxDate = new Date(2025, 2, 15);
+const defaultDate = new Date(2023, 1, 18);
 const format = (val: Date) => {
   const date = new Date(val);
   const year = date.getFullYear();
