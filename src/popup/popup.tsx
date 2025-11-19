@@ -5,7 +5,7 @@ import popupProps from './props';
 import TOverlay from '../overlay';
 import config from '../config';
 import { TdPopupProps } from './type';
-import { TNode } from '../shared';
+import { TNode, isBrowser } from '../shared';
 import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 import { useLockScroll } from '../hooks/useLockScroll';
@@ -42,7 +42,7 @@ export default defineComponent({
     const innerVisible = ref(currentVisible.value);
 
     // mounted 后才显示，避免 ssr 下 mismatch (#1654)
-    const mounted = ref(false);
+    const mounted = ref(!!isBrowser);
 
     // 因为开启 destroyOnClose，会影响 transition 的动画，因此需要前后设置 visible
     watch(currentVisible, (v, oldV) => {
