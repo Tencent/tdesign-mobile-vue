@@ -137,7 +137,7 @@ export default defineComponent({
       const selected = new Date(year, month, date);
 
       if (props.type === 'range' && Array.isArray(selectedDate.value)) {
-        if (selectedDate.value.length === 1) {
+        if (selectedDate.value.length === 1 && selected >= selectedDate.value[0]) {
           if (selectedDate.value[0] > selected) {
             selectedDate.value = [selected];
           } else {
@@ -223,7 +223,10 @@ export default defineComponent({
         if (props.type === 'range') {
           if (Array.isArray(selectedDate.value)) {
             const [startDate, endDate] = selectedDate.value;
+            const compareWithStart = startDate && isSameDate({ year, month, date }, startDate);
+            const compareWithEnd = endDate && isSameDate({ year, month, date }, endDate);
 
+            if (compareWithStart && compareWithEnd && props.allowSameDay) return 'start-end';
             if (startDate && isSameDate({ year, month, date }, startDate)) return 'start';
             if (endDate && isSameDate({ year, month, date }, endDate)) return 'end';
             if (
