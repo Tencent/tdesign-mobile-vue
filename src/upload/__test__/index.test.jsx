@@ -280,11 +280,7 @@ describe('Upload', () => {
     });
 
     it(': trigger', async () => {
-      const wrapper = mount(
-        <Upload>
-          <UploadIcon />
-        </Upload>,
-      );
+      const wrapper = mount(<Upload addContent={() => <UploadIcon />}></Upload>);
 
       await nextTick();
 
