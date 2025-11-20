@@ -19,6 +19,11 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   action?: string;
   /**
+   * 添加按钮
+   * @default true
+   */
+  addBtn?: boolean;
+  /**
    * 添加按钮内容。值为空，使用默认图标渲染；值为 slot 则表示使用插槽渲染；其他值无效
    */
   addContent?: string | TNode;
@@ -122,7 +127,7 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   preview?: boolean;
   /**
-   * 是否显示图片的删除按钮
+   * 移除按钮
    * @default true
    */
   removeBtn?: boolean;

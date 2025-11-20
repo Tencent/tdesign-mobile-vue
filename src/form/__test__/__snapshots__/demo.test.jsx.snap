@@ -1687,6 +1687,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             </div>
             <input
               accept=""
+              capture=""
               hidden=""
               multiple=""
               type="file"
@@ -3571,6 +3572,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   </div>
                   <input
                     accept=""
+                    capture=""
                     hidden=""
                     multiple=""
                     type="file"
@@ -5304,6 +5306,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             </div>
             <input
               accept=""
+              capture=""
               hidden=""
               multiple=""
               type="file"
