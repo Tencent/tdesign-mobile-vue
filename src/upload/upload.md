@@ -10,7 +10,7 @@ accept | String | - | 接受上传的文件类型，[查看 W3C示例](https://w
 action | String | - | 上传接口。设接口响应数据为字段 `response`，那么 `response.error` 存在时会判断此次上传失败，并显示错误文本信息；`response.url` 会作为文件上传成功后的地址，并使用该地址显示图片或文件 | N
 addBtn | Boolean | true | `1.11.1`。添加按钮 | N
 addContent | String / Slot / Function | - | 添加按钮内容。值为空，使用默认图标渲染；值为 slot 则表示使用插槽渲染；其他值无效。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-allowUploadDuplicateFile | Boolean | false | 是否允许重复上传相同文件名的文件 | N
+allowUploadDuplicateFile | Boolean | false | 是否允许重复上传相同文件名的文件。在 `capture = ''` + 拍照上传场景中，`allowUploadDuplicateFile` 应取 `true`，避免拍照上传的文件被同名文件校验过滤 | N
 autoUpload | Boolean | true | 是否在选择文件后自动发起请求上传文件 | N
 beforeUpload | Function | - | 如果是自动上传模式 `autoUpload=true`，表示单个文件上传之前的钩子函数，若函数返回值为 `false` 则表示不上传当前文件。<br/>如果是非自动上传模式 `autoUpload=false`，函数返回值为 `false` 时表示从上传文件中剔除当前文件。TS 类型：`(file: UploadFile) => boolean \| Promise<boolean>` | N
 capture | String | - | 图片选取模式，可选值为 camera (直接调起摄像头) | N
