@@ -1,7 +1,7 @@
 import { defineComponent, computed, ref, reactive, watch, provide } from 'vue';
 import { onClickOutside } from '@vueuse/core';
 import { CaretDownSmallIcon, CaretUpSmallIcon } from 'tdesign-icons-vue-next';
-import { camelCase, get as lodashGet } from 'lodash-es';
+import { camelCase, get as lodashGet, isFunction } from 'lodash-es';
 import config from '../config';
 import {
   context as menuContext,
@@ -61,7 +61,8 @@ export default defineComponent({
     // 通过 slots.default 子成员，计算标题栏选项
     const menuTitles = computed(() =>
       menuItems.value?.map((item: any, index: number) => {
-        const { keys, label, value, modelValue, defaultValue, disabled, options } = item.props as TdDropdownItemProps;
+        const { keys, label, value, modelValue, defaultValue, disabled, options, icon } =
+          item.props as TdDropdownItemProps;
         const currentValue = value || modelValue || defaultValue;
         const target = options?.find((item: any) => lodashGet(item, keys?.value ?? 'value') === currentValue);
         if (state.itemsLabel.length < index + 1) {
@@ -74,12 +75,14 @@ export default defineComponent({
             labelProps: label, // 优先级： label属性 > 选中项
             label: computedLabel,
             disabled: disabled !== undefined && disabled !== false,
+            icon,
           };
         }
         return {
           labelProps: label,
           label: label || lodashGet(target, keys?.label ?? 'label'),
           disabled: disabled !== undefined && disabled !== false,
+          icon,
         };
       }),
     );
@@ -131,8 +134,8 @@ export default defineComponent({
       menuContext.recordMenuExpanded(container, control, DropdownMenuExpandState.expanded);
     };
     const collapseMenu = () => {
-      menuTitles.value.forEach((item: any, index: number) => {
-        item.label = state.itemsLabel[index];
+      menuTitles.value.forEach((_item: any, index: number) => {
+        menuTitles.value[index].label = state.itemsLabel[index];
       });
       state.activeId = null;
 
@@ -178,11 +181,32 @@ export default defineComponent({
     return () => {
       const defaultSlot = renderContent('default', 'content');
 
-      const renderDownIcon = (item: any, idx: number) => {
-        if (props.direction === 'down') {
-          return <caret-down-small-icon class={styleIcon.value(item, idx)} />;
+      const renderDropdownItemIcon = (item: any, idx: number) => {
+        const { icon } = item;
+        const isActive = idx === state.activeId; // 面板是否打开
+        const iconClass = [styleIcon.value(item, idx)];
+
+        // 使用自定义图标
+        if (icon) {
+          const isArray = Array.isArray(icon);
+          const isTwoIcons = isArray && icon.length === 2;
+
+          let selectedIcon;
+          if (isTwoIcons) {
+            selectedIcon = isActive ? icon[0] : icon[1];
+          } else {
+            selectedIcon = isArray ? icon[0] : icon;
+          }
+
+          const iconContent = isFunction(selectedIcon) ? selectedIcon() : selectedIcon;
+          return <div class={iconClass}>{iconContent}</div>;
         }
-        return <caret-up-small-icon class={styleIcon.value(item, idx)} />;
+
+        return props.direction === 'down' ? (
+          <caret-down-small-icon class={iconClass} />
+        ) : (
+          <caret-up-small-icon class={iconClass} />
+        );
       };
 
       return (
@@ -191,7 +215,7 @@ export default defineComponent({
             (item: { label: any; labelProps: TdDropdownItemProps['label'] }, idx: number) => (
               <div class={styleBarItem.value(item, idx)} onClick={() => expandMenu(item, idx)}>
                 <div class={`${dropdownMenuClass.value}__title`}>{item.labelProps || item.label}</div>
-                {renderDownIcon(item, idx)}
+                {renderDropdownItemIcon(item, idx)}
               </div>
             ),
           )}

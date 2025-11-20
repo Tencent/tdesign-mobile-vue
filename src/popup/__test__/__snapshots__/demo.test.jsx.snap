@@ -92,6 +92,7 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
     <!---->
   </button>
   
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -107,6 +108,7 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
     <!---->
   </div>
   
+  <!--teleport end-->
 </div>
 `;
 
@@ -130,6 +132,7 @@ exports[`Popup > Popup customCloseVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -154,6 +157,7 @@ exports[`Popup > Popup customCloseVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
 </div>
 `;
 
@@ -288,6 +292,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           <!---->
         </button>
         
+        <!--teleport start-->
         
         <div
           class="t-overlay"
@@ -303,6 +308,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           <!---->
         </div>
         
+        <!--teleport end-->
       </div>
       
     </div>
@@ -351,6 +357,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           </span>
           <!---->
         </button>
+        <!--teleport start-->
         
         <div
           class="t-overlay"
@@ -392,6 +399,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           
         </div>
         
+        <!--teleport end-->
       </div>
       <div
         class="popup-demo"
@@ -413,6 +421,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           </span>
           <!---->
         </button>
+        <!--teleport start-->
         
         <div
           class="t-overlay"
@@ -437,6 +446,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           
         </div>
         
+        <!--teleport end-->
       </div>
       
     </div>
@@ -466,6 +476,7 @@ exports[`Popup > Popup withTitleVue demo works fine 1`] = `
     </span>
     <!---->
   </button>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -507,5 +518,6 @@ exports[`Popup > Popup withTitleVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
 </div>
 `;

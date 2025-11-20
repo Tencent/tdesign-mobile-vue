@@ -45,6 +45,10 @@ export interface TdDropdownItemProps {
    */
   footer?: TNode;
   /**
+   * 自定义菜单子项图标，值为 `undefined` 表示使用默认图标。[面板打开时的图标，面板关闭时的图标]
+   */
+  icon?: TNode | TNode[] | undefined;
+  /**
    * 用来定义 value / label / disabled 在 `options` 中对应的字段别名
    */
   keys?: KeysType;
