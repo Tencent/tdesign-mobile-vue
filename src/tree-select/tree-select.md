@@ -27,10 +27,11 @@ change | `(value: TreeSelectValue, level: TreeLevel) ` | 点击任何节点均�
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-tree-item-disabled-color | @text-color-disabled | -
 --td-tree-bg-color | @bg-color-container | -
+--td-tree-colum-text-color | @text-color-primary | -
 --td-tree-colum-width | 103px | -
 --td-tree-item-active-color | @brand-color | -
+--td-tree-item-disabled-color | @text-color-disabled | -
 --td-tree-item-font-size | 16px | -
 --td-tree-item-height | 56px | -
 --td-tree-root-bg-color | @bg-color-secondarycontainer | -
