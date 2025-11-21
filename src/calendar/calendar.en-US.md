@@ -14,28 +14,28 @@ maxDate | Number / Date | - | Typescript: ` number \| Date` | N
 minDate | Number / Date | - | Typescript: ` number \| Date` | N
 readonly | Boolean | - | `1.9.3` | N
 switchMode | String | none | `1.8.1`。options: none/month/year-month | N
-title | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-type | String | 'single' | options: single/multiple/range | N
+title | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+type | String | single | options: single/multiple/range | N
 usePopup | Boolean | true | \- | N
-value | Number / Array / Date | - | `v-model` and `v-model:value` is supported。Typescript：`number \| Date \| TCalendarValue[]` `type TCalendarValue = number \| Date`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts) | N
-defaultValue | Number / Array / Date | - | uncontrolled property。Typescript：`number \| Date \| TCalendarValue[]` `type TCalendarValue = number \| Date`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts) | N
+value | Number / Array / Date | - | `v-model` and `v-model:value` is supported。Typescript: `CalendarValue` `type CalendarValue = TCalendarValue \| TCalendarValue[]` `type TCalendarValue = number \| Date`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts) | N
+defaultValue | Number / Array / Date | - | uncontrolled property。Typescript: `CalendarValue` `type CalendarValue = TCalendarValue \| TCalendarValue[]` `type TCalendarValue = number \| Date`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts) | N
 visible | Boolean | false | \- | N
-onChange | Function |  | Typescript：`(value: Date) => void`<br/> | N
-onClose | Function |  | Typescript：`(trigger: CalendarTrigger) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts)。<br/>`type CalendarTrigger = 'close-btn' \| 'confirm-btn' \| 'overlay'`<br/> | N
-onConfirm | Function |  | Typescript：`(value: Date) => void`<br/> | N
-onPanelChange | Function |  | Typescript：`(context: { year: number, month: number }) => void`<br/>`1.8.1` | N
-onScroll | Function |  | Typescript：`(context: {e: Event}) => void`<br/>triggered when scrolling | N
-onSelect | Function |  | Typescript：`(value: Date) => void`<br/> | N
+onChange | Function |  | Typescript: `(value: CalendarValue) => void`<br/> | N
+onClose | Function |  | Typescript: `(trigger: CalendarTrigger) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts)。<br/>`type CalendarTrigger = 'close-btn' \| 'confirm-btn' \| 'overlay'`<br/> | N
+onConfirm | Function |  | Typescript: `(value: CalendarValue) => void`<br/> | N
+onPanelChange | Function |  | Typescript: `(context: { year: number, month: number }) => void`<br/>`1.8.1` | N
+onScroll | Function |  | Typescript: `(context: {e: Event}) => void`<br/>`1.8.1`。triggered when scrolling | N
+onSelect | Function |  | Typescript: `(value: Date) => void`<br/> | N
 
 ### Calendar Events
 
 name | params | description
 -- | -- | --
-change | `(value: Date)` | \-
+change | `(value: CalendarValue)` | \-
 close | `(trigger: CalendarTrigger)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts)。<br/>`type CalendarTrigger = 'close-btn' \| 'confirm-btn' \| 'overlay'`<br/>
-confirm | `(value: Date)` | \-
+confirm | `(value: CalendarValue)` | \-
 panel-change | `(context: { year: number, month: number })` | `1.8.1`
-scroll | `(context: {e: Event})` | triggered when scrolling
+scroll | `(context: {e: Event})` | `1.8.1`。triggered when scrolling
 select | `(value: Date)` | \-
 
 ### CSS Variables

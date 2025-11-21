@@ -17,7 +17,8 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { TDate } from '../type';
+import type { TDate, CalendarValue, TCalendarValue } from 'tdesign-mobile-vue';
+import { D } from 'vitest/dist/chunks/reporters.d.BFLkQcL6';
 
 const visible = ref(false);
 const dateNote = ref('');
@@ -44,9 +45,9 @@ const formatDate = (dateObj: TDate) => {
 const defaultDate = new Date(2022, 1, 18);
 dateNote.value = format(defaultDate);
 
-const handleConfirm = (val: Date) => {
+const handleConfirm = (val: CalendarValue) => {
   console.log(val);
-  dateNote.value = format(val);
+  dateNote.value = format(val as Date);
 };
 const handleSelect = (val: Date) => {
   console.log(val);

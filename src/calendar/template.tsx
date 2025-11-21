@@ -10,7 +10,7 @@ import TButton from '../button';
 import config from '../config';
 import props from './template-props';
 import { useTNodeJSX } from '../hooks/tnode';
-import { TdCalendarProps, TDate, TDateType } from './type';
+import { TdCalendarProps, TDate, TDateType, CalendarValue } from './type';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 import { getPrevMonth, getPrevYear, getNextMonth, getNextYear } from './utils';
 
@@ -134,7 +134,7 @@ export default defineComponent({
     // 选择日期
     const handleSelect = (year: number, month: number, date: number, dateItem: TDate) => {
       if (dateItem.type === 'disabled' || props.readonly) return;
-      const selected = new Date(year, month, date);
+      const selected: CalendarValue = new Date(year, month, date);
 
       if (props.type === 'range' && Array.isArray(selectedDate.value)) {
         if (selectedDate.value.length === 1 && selected >= selectedDate.value[0]) {
