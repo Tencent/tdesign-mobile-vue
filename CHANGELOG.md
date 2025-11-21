@@ -5,6 +5,25 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.11.1 `2025-11-21` 
+### 🚀 Features
+- `Calendar`: 新增 `allowSameDay` 属性，允许 `type='range'` 场景的起止时间相同 @liweijie0812 ([#2076](https://github.com/Tencent/tdesign-mobile-vue/pull/2076))
+- `DropdownItem`: 新增 `icon` 属性，支持自定义图标 @anlyyao ([#2073](https://github.com/Tencent/tdesign-mobile-vue/pull/2073))
+- `Upload`: 
+  - 新增 `addBtn` 属性 @anlyyao ([#2074](https://github.com/Tencent/tdesign-mobile-vue/pull/2074))
+  - 启用 `capture` 属性时跳过文件名重复检测；在 `capture = ''` + 拍照上传场景中，`allowUploadDuplicateFile` 应取 `true` @anlyyao ([#2079](https://github.com/Tencent/tdesign-mobile-vue/pull/2079))
+### 🐞 Bug Fixes
+- `Calendar`: 修复 `value =[]` 结合 `switch-mode = 'year-month'` 使用时当前月份计算错误 @anlyyao ([#2080](https://github.com/Tencent/tdesign-mobile-vue/pull/2080))
+- `DropdownMenu`: 修复首次渲染时动画错误 @anlyyao ([#2073](https://github.com/Tencent/tdesign-mobile-vue/pull/2073))
+- `DropdownItem`: 修复图标左侧间距错误 @anlyyao ([#2073](https://github.com/Tencent/tdesign-mobile-vue/pull/2073))
+- `Dialog`: 修复 `actions` 插槽无效的问题 @anlyyao ([#2075](https://github.com/Tencent/tdesign-mobile-vue/pull/2075))
+- `Popover`: 修复箭头间距错误 @slatejack ([#2059](https://github.com/Tencent/tdesign-mobile-vue/pull/2059))
+- `GridItem`: 修复标题行高错误 @anlyyao ([#2059](https://github.com/Tencent/tdesign-mobile-vue/pull/2059))
+- `Slider`: 修复深色模式下滑轨背景色、滑块禁用态背景色错误 @anlyyao ([#2069](https://github.com/Tencent/tdesign-mobile-vue/pull/2069))
+- `Popup`: 
+  - 修复 `visible` 变更为 `true` 时，`visible-change` 事件未触发 @anlyyao ([#2072](https://github.com/Tencent/tdesign-mobile-vue/pull/2072))
+  - 修复`visible-change` 事件参数错误 @anlyyao ([#2072](https://github.com/Tencent/tdesign-mobile-vue/pull/2072))
+
 ## 🌈 1.11.0 `2025-10-23` 
 ### 🚀 Features
 - `Icon`:  
