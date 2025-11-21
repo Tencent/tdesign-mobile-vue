@@ -42,10 +42,12 @@ Name | Default Value | Description
 --td-slider-capsule-bar-height | 24px | -
 --td-slider-capsule-bar-width | 24px | -
 --td-slider-capsule-line-height | 18px | -
---td-slider-default-color | @bg-color-component-disabled | -
+--td-slider-default-color | @bg-color-component | -
 --td-slider-disabled-color | @brand-color-disabled | -
 --td-slider-disabled-text-color | @text-color-disabled | -
 --td-slider-dot-bg-color | #fff | -
---td-slider-dot-color | @bg-color-secondarycontainer | -
+--td-slider-dot-color | @component-border | -
+--td-slider-dot-disabled-bg-color | #fff | -
+--td-slider-dot-disabled-border-color | #f3f3f3 | -
 --td-slider-dot-size | 20px | -
---td-slider-scale-desc-color | @text-color-primary | -
+--td-slider-text-color | @text-color-primary | -
