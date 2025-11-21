@@ -15,6 +15,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import type { CalendarValue } from 'tdesign-mobile-vue';
 
 const visible = ref(false);
 const dateNote = ref('');
@@ -29,9 +30,9 @@ const format = (val: Date) => {
   return `${year}-${month}-${day}`;
 };
 dateNote.value = format(defaultDate);
-const handleConfirm = (val: Date) => {
+const handleConfirm = (val: CalendarValue) => {
   console.log(val);
-  dateNote.value = format(val);
+  dateNote.value = format(val as Date);
 };
 const handleSelect = (val: Date) => {
   console.log(val);

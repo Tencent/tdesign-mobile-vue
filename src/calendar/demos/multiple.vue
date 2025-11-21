@@ -16,7 +16,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import type { TDate, CalendarValue, TCalendarValue } from 'tdesign-mobile-vue';
+import type { CalendarValue, TCalendarValue } from 'tdesign-mobile-vue';
 
 const visible = ref(false);
 const dateNote = ref('');
