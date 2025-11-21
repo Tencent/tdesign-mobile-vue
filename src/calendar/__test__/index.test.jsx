@@ -18,6 +18,7 @@ const day = 15;
 const minDate = new Date(year, month, 1);
 const maxDate = new Date(year, month, 31);
 const value = new Date(year, month, day);
+const rangeValue = [new Date(year, month, day)];
 const confirmBtn = 'confirmBtn';
 
 const dayFormat = (date, character) => {
@@ -67,12 +68,12 @@ describe('calendar', () => {
       const time = ref('');
       const character = '-';
       const onConfirm = vi.fn((e) => {
-        time.value = dayFormat(e, character);
+        time.value = e;
       });
       const wrapper = mount(
         <Calendar
           visible={true}
-          value={value}
+          value={rangeValue}
           type="range"
           minDate={minDate}
           maxDate={maxDate}
@@ -83,7 +84,7 @@ describe('calendar', () => {
       const $dates = wrapper.findAll(`.t-calendar__dates-item`);
       expect($dates).toHaveLength(31);
 
-      // 默认日期是2022/1/15， 模拟点选第2项，和第8项
+      // 默认日期是2022/1/15， 模拟点选第2项(3号)，和第8项(9号)
       const selectFirstIndex = 2;
       const selectLastIndex = 8;
       await $dates[selectFirstIndex].trigger('click');
@@ -94,8 +95,8 @@ describe('calendar', () => {
       const $button = wrapper.findComponent(Button);
       await $button.trigger('click');
 
-      // TODO：区间选择器时，返回的应该是数组，但测试环境下只有单条 Date 对象数据
-      expect(time.value).toEqual([year, month + 1, selectLastIndex + 1].join(character));
+      expect(dayFormat(time.value[0])).toEqual(dayFormat([year, month + 1, selectFirstIndex + 1]));
+      expect(dayFormat(time.value[1])).toEqual(dayFormat([year, month + 1, selectLastIndex + 1]));
       // TODO: && type = 'multiple'
 
       // 覆盖 type = '' 情况

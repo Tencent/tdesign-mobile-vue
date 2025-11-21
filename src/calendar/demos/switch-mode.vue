@@ -6,7 +6,6 @@
       :min-date="minDate"
       :max-date="maxDate"
       :value="defaultDate"
-      :default-value="defaultDate"
       @scroll="onScroll"
       @confirm="handleConfirm"
       @select="handleSelect"

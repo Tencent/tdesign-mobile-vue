@@ -161,6 +161,7 @@ export default function useUpload(props: TdUploadProps) {
       uploadValue: uploadValue.value as UploadFile[],
       files: [...files],
       allowUploadDuplicateFile: props.allowUploadDuplicateFile,
+      capture: props.capture,
       max: props.max,
       sizeLimit: props.sizeLimit,
       isBatchUpload: isBatchUpload?.value,
