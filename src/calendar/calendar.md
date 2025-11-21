@@ -15,27 +15,27 @@ minDate | Number / Date | - | 最小可选的日期，不传则默认今天。TS
 readonly | Boolean | - | `1.9.3`。是否只读，只读状态下不能选择日期 | N
 switchMode | String | none | `1.8.1`。切换模式。 `none` 表示平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换。可选项：none/month/year-month | N
 title | String / Slot / Function | - | 标题，不传默认为“请选择日期”。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-type | String | 'single' | 日历的选择类型，single = 单选；multiple = 多选; range = 区间选择。可选项：single/multiple/range | N
+type | String | single | 日历的选择类型，single = 单选；multiple = 多选; range = 区间选择。可选项：single/multiple/range | N
 usePopup | Boolean | true | 是否使用弹出层包裹日历 | N
-value | Number / Array / Date | - | 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`number \| Date \| TCalendarValue[]` `type TCalendarValue = number \| Date`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts) | N
-defaultValue | Number / Array / Date | - | 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组。非受控属性。TS 类型：`number \| Date \| TCalendarValue[]` `type TCalendarValue = number \| Date`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts) | N
+value | Number / Array / Date | - | 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`CalendarValue` `type CalendarValue = TCalendarValue \| TCalendarValue[]` `type TCalendarValue = number \| Date`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts) | N
+defaultValue | Number / Array / Date | - | 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组。非受控属性。TS 类型：`CalendarValue` `type CalendarValue = TCalendarValue \| TCalendarValue[]` `type TCalendarValue = number \| Date`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts) | N
 visible | Boolean | false | 是否显示日历；`usePopup` 为 true 时有效 | N
-onChange | Function |  | TS 类型：`(value: Date) => void`<br/>不显示 confirm-btn 时，完成选择时触发（暂不支持 type = multiple） | N
+onChange | Function |  | TS 类型：`(value: CalendarValue) => void`<br/>不显示 confirm-btn 时，完成选择时触发（暂不支持 type = multiple） | N
 onClose | Function |  | TS 类型：`(trigger: CalendarTrigger) => void`<br/>关闭按钮时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts)。<br/>`type CalendarTrigger = 'close-btn' \| 'confirm-btn' \| 'overlay'`<br/> | N
-onConfirm | Function |  | TS 类型：`(value: Date) => void`<br/>点击确认按钮时触发 | N
+onConfirm | Function |  | TS 类型：`(value: CalendarValue) => void`<br/>点击确认按钮时触发 | N
 onPanelChange | Function |  | TS 类型：`(context: { year: number, month: number }) => void`<br/>`1.8.1`。切换月或年时触发（switch-mode 不为 none 时有效） | N
-onScroll | Function |  | TS 类型：`(context: {e: Event}) => void`<br/>滚动时触发 | N
+onScroll | Function |  | TS 类型：`(context: {e: Event}) => void`<br/>`1.8.1`。滚动时触发 | N
 onSelect | Function |  | TS 类型：`(value: Date) => void`<br/>点击日期时触发 | N
 
 ### Calendar Events
 
 名称 | 参数 | 描述
 -- | -- | --
-change | `(value: Date)` | 不显示 confirm-btn 时，完成选择时触发（暂不支持 type = multiple）
+change | `(value: CalendarValue)` | 不显示 confirm-btn 时，完成选择时触发（暂不支持 type = multiple）
 close | `(trigger: CalendarTrigger)` | 关闭按钮时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts)。<br/>`type CalendarTrigger = 'close-btn' \| 'confirm-btn' \| 'overlay'`<br/>
-confirm | `(value: Date)` | 点击确认按钮时触发
+confirm | `(value: CalendarValue)` | 点击确认按钮时触发
 panel-change | `(context: { year: number, month: number })` | `1.8.1`。切换月或年时触发（switch-mode 不为 none 时有效）
-scroll | `(context: {e: Event})` | 滚动时触发
+scroll | `(context: {e: Event})` | `1.8.1`。滚动时触发
 select | `(value: Date)` | 点击日期时触发
 
 ### CSS Variables

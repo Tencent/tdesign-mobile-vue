@@ -13,17 +13,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-
-type TDateType = 'selected' | 'disabled' | 'start' | 'centre' | 'end' | '';
-
-interface TDate {
-  date: Date;
-  day: number;
-  type: TDateType;
-  className?: string;
-  prefix?: string;
-  suffix?: string;
-}
+import type { TDate, CalendarValue, TCalendarValue } from 'tdesign-mobile-vue';
 
 const minDate = new Date(2022, 1, 1);
 const maxDate = new Date(2022, 2, 15);
@@ -63,9 +53,9 @@ const formatDate = (val: Date) => {
   return `${year}-${month}-${day}`;
 };
 dateNote.value = formatDate(value);
-const handleConfirm = (val: Date) => {
+const handleConfirm = (val: CalendarValue) => {
   console.log(val);
-  dateNote.value = formatDate(val);
+  dateNote.value = formatDate(val as Date);
 };
 const handleSelect = (val: Date) => {
   console.log(val);
