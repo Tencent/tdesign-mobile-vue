@@ -10,7 +10,7 @@ import TButton from '../button';
 import config from '../config';
 import props from './template-props';
 import { useTNodeJSX } from '../hooks/tnode';
-import { TdCalendarProps, TDate, TDateType, CalendarValue } from './type';
+import { TdCalendarProps, TDate, TDateType, CalendarValue, TCalendarValue } from './type';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 import { getPrevMonth, getPrevYear, getNextMonth, getNextYear } from './utils';
 
@@ -137,17 +137,20 @@ export default defineComponent({
       const selected: CalendarValue = new Date(year, month, date);
 
       if (props.type === 'range' && Array.isArray(selectedDate.value)) {
-        if (selectedDate.value.length === 1 && selected >= selectedDate.value[0]) {
-          if (selectedDate.value[0] > selected) {
+        if (selectedDate.value.length === 1) {
+          const firstDate = selectedDate.value[0];
+          if (selected.getTime() === firstDate.getTime()) {
+            selectedDate.value = props.allowSameDay ? [firstDate, selected] : [selected];
+          } else if (selected < firstDate) {
             selectedDate.value = [selected];
           } else {
-            selectedDate.value = [selectedDate.value[0], selected];
+            selectedDate.value = [firstDate, selected];
           }
         } else {
           selectedDate.value = [selected];
-          if (!confirmBtn.value && selectedDate.value.length === 2) {
-            props.onChange?.(selectedDate.value);
-          }
+        }
+        if (!confirmBtn.value && selectedDate.value.length === 2) {
+          props.onChange?.(selectedDate.value);
         }
       } else if (props.type === 'multiple') {
         const newVal = [...selectedDate.value];
@@ -272,15 +275,53 @@ export default defineComponent({
       return ans;
     });
 
+    const createDateTypeHandler = () => {
+      const now = minDate.value;
+
+      const createRangePair = (baseDate: Date): [Date, Date] =>
+        props.allowSameDay ? [baseDate, baseDate] : [baseDate, new Date(baseDate.getTime() + 24 * 3600 * 1000)];
+
+      const convertToDateArray = (value: TCalendarValue[]): Date[] => value.map((item) => new Date(item));
+
+      return {
+        // 初始化空日期
+        initialize: {
+          single: () => now,
+          multiple: () => [now],
+          range: () => createRangePair(now),
+        },
+        // 转换已有值
+        transform: {
+          single: (value: TCalendarValue): Date => new Date(value),
+
+          multiple: (value: TCalendarValue[]): Date[] => {
+            const dates = convertToDateArray(value);
+            return dates.length ? dates : [now];
+          },
+          range: (value: TCalendarValue[]): Date[] => {
+            const dates = convertToDateArray(value);
+            // 传入值为空数组或只有一个值时
+            if (dates.length <= 1) {
+              return createRangePair(dates[0] || now);
+            }
+            return dates;
+          },
+        },
+      };
+    };
+
+    const dateTypeHandler = createDateTypeHandler();
+
     watch(
       valueRef,
       () => {
-        if (Array.isArray(valueRef.value)) {
-          selectedDate.value = valueRef.value.map((item) => new Date(item));
-        } else if (valueRef.value) {
-          selectedDate.value = new Date(valueRef.value);
+        if (!valueRef.value) {
+          selectedDate.value = dateTypeHandler.initialize[props.type]?.();
         } else {
-          selectedDate.value = props.type === 'multiple' ? [new Date()] : new Date();
+          selectedDate.value =
+            props.type === 'single'
+              ? dateTypeHandler.transform.single?.(valueRef.value as TCalendarValue)
+              : dateTypeHandler.transform[props.type]?.(valueRef.value as TCalendarValue[]);
         }
       },
       { immediate: true },
