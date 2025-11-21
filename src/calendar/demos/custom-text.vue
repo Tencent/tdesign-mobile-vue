@@ -13,7 +13,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import type { TDate, CalendarValue, TCalendarValue } from 'tdesign-mobile-vue';
+import type { TDate, CalendarValue } from 'tdesign-mobile-vue';
 
 const minDate = new Date(2022, 1, 1);
 const maxDate = new Date(2022, 2, 15);

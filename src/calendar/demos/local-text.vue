@@ -18,7 +18,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import enConfig from 'tdesign-mobile-vue/es/locale/en_US';
-import type { TDate, CalendarValue, TCalendarValue } from 'tdesign-mobile-vue';
+import type { CalendarValue } from 'tdesign-mobile-vue';
 
 const globalConfig = enConfig;
 
