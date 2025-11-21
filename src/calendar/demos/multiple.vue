@@ -16,10 +16,11 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import type { CalendarValue, TCalendarValue } from 'tdesign-mobile-vue';
 
 const visible = ref(false);
 const dateNote = ref('');
-const selectedDates = ref([new Date(2022, 1, 18), new Date(2022, 1, 20)]); // 默认选择今天
+const selectedDates = ref<TCalendarValue[]>([new Date(2022, 1, 18), new Date(2022, 1, 20)]); // 默认选择今天
 const minDate = new Date(2022, 1, 1);
 const maxDate = new Date(2022, 2, 15);
 const formatDate = (date: Date) => {
@@ -30,11 +31,11 @@ const formatDate = (date: Date) => {
   return `${year}-${month}-${day}`;
 };
 
-const formatMultipleDates = (dates: Date[]) => {
+const formatMultipleDates = (dates: TCalendarValue[]) => {
   if (!dates || !dates.length) return '未选择';
-  if (dates.length === 1) return formatDate(dates[0]);
+  if (dates.length === 1) return formatDate(dates[0] as Date);
 
-  const dateStrings = dates.map((date) => formatDate(date));
+  const dateStrings = dates.map((date) => formatDate(date as Date));
   const result = dateStrings.join(', ');
 
   if (result.length > 12) {
@@ -46,7 +47,7 @@ const formatMultipleDates = (dates: Date[]) => {
 
 dateNote.value = formatMultipleDates(selectedDates.value);
 
-const handleConfirm = (val: any) => {
+const handleConfirm = (val: CalendarValue) => {
   console.log(val);
   if (Array.isArray(val)) {
     selectedDates.value = val;
@@ -54,7 +55,7 @@ const handleConfirm = (val: any) => {
   }
 };
 
-const handleSelect = (val: any) => {
+const handleSelect = (val: Date) => {
   console.log(val);
 };
 

@@ -6,15 +6,18 @@
         size: 'large',
         theme: 'primary',
         variant: 'outline',
-        content: '圆形返回顶部',
+        content: '半圆形返回顶部',
       }"
-      @click="onClick('round', '顶部')"
+      @click="onClick('half-round', '返回顶部')"
     />
+  </div>
+  <div class="group">
+    <t-skeleton v-for="i in 6" :key="i" :row-col="rowCols" class="item" />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { defineEmits, defineProps } from 'vue';
+import { defineProps, defineEmits } from 'vue';
 
 const props = defineProps({
   container: {
@@ -23,9 +26,18 @@ const props = defineProps({
   text: String,
   theme: String,
 });
-
 const emit = defineEmits(['update:text', 'update:theme']);
 
+const rowCols = [
+  {
+    width: '165.5px',
+    height: '165.5px',
+    borderRadius: '12px',
+  },
+  {
+    width: '100px',
+  },
+];
 const onClick = (tem: string, txt: string) => {
   emit('update:text', txt);
   emit('update:theme', tem);
@@ -35,10 +47,20 @@ const onClick = (tem: string, txt: string) => {
 
 <style lang="less" scoped>
 .button-group {
-  padding: 0 16px;
+  padding: 0px 16px 16px;
 
   .t-button {
     margin-bottom: 10px;
+  }
+}
+.group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 16px 30px 16px;
+  .item {
+    width: 47%;
+    margin-bottom: 16px;
   }
 }
 </style>

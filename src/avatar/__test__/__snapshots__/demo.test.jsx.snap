@@ -476,7 +476,6 @@ exports[`Avatar > Avatar badgeAvatarVue demo works fine 1`] = `
         </div>
         <div
           class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-          style="right: 4px; top: 4px;"
         >
           <!---->
         </div>
@@ -509,7 +508,7 @@ exports[`Avatar > Avatar badgeAvatarVue demo works fine 1`] = `
         </div>
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-          style="right: 6px; top: 6px;"
+          style="right: 4px; top: 4px;"
         >
           8
         </div>
@@ -582,7 +581,7 @@ exports[`Avatar > Avatar badgeAvatarVue demo works fine 1`] = `
         </div>
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-          style="right: 6px; top: 6px;"
+          style="right: 4px; top: 4px;"
         >
           12
         </div>
@@ -1823,7 +1822,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-                style="right: 4px; top: 4px;"
               >
                 <!---->
               </div>
@@ -1856,7 +1854,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                style="right: 6px; top: 6px;"
+                style="right: 4px; top: 4px;"
               >
                 8
               </div>
@@ -1929,7 +1927,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                style="right: 6px; top: 6px;"
+                style="right: 4px; top: 4px;"
               >
                 12
               </div>

@@ -1201,33 +1201,6 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             <div
               class="t-cell__left"
             >
-              <!---->
-              <!---->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              <div
-                class="t-cell__title-text"
-              >
-                多行高度不定，长文本自动换行，该选项的描述是一段很长的内容
-                <!---->
-              </div>
-              <div
-                class="t-cell__description"
-              >
-                一段很长很长的内容文字，长文本自动换行，该选项的描述是一段很长的内容
-              </div>
-            </div>
-            <!---->
-            <!---->
-          </div>
-          <div
-            class="t-cell"
-          >
-            <div
-              class="t-cell__left"
-            >
               <div
                 class="t-cell__left-icon"
               >
@@ -2142,33 +2115,6 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
           class="t-cell__title-text"
         >
           单行标题
-          <!---->
-        </div>
-        <div
-          class="t-cell__description"
-        >
-          一段很长很长的内容文字，长文本自动换行，该选项的描述是一段很长的内容
-        </div>
-      </div>
-      <!---->
-      <!---->
-    </div>
-    <div
-      class="t-cell"
-    >
-      <div
-        class="t-cell__left"
-      >
-        <!---->
-        <!---->
-      </div>
-      <div
-        class="t-cell__title"
-      >
-        <div
-          class="t-cell__title-text"
-        >
-          多行高度不定，长文本自动换行，该选项的描述是一段很长的内容
           <!---->
         </div>
         <div

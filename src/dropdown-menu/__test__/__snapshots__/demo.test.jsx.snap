@@ -39,6 +39,7 @@ exports[`DropdownMenu > DropdownMenu customizedVue demo works fine 1`] = `
 exports[`DropdownMenu > DropdownMenu directionVue demo works fine 1`] = `
 <div
   class="t-dropdown-menu"
+  placement="right"
 >
   
   <div
@@ -49,20 +50,32 @@ exports[`DropdownMenu > DropdownMenu directionVue demo works fine 1`] = `
     >
       全部产品
     </div>
-    <svg
-      class="t-icon t-icon-caret-up-small t-dropdown-menu__icon"
-      fill="none"
-      height="1em"
-      style="fill: none;"
-      viewBox="0 0 24 24"
-      width="1em"
+    <div
+      class="t-dropdown-menu__icon"
     >
-      <path
-        d="M12.0001 9L17.5 14.5L6.5 14.5L12.0001 9Z"
-        fill="currentColor"
-        id="caret-up-small"
-      />
-    </svg>
+      
+      <svg
+        class="t-icon t-icon-chevron-down"
+        fill="none"
+        height="1em"
+        style="fill: none; font-size: 20px;"
+        viewBox="0 0 24 24"
+        width="1em"
+      >
+        <g
+          id="chevron-down"
+        >
+          <path
+            d="M17.5 9.5L12 15L6.5 9.5"
+            id="stroke1"
+            stroke="currentColor"
+            stroke-linecap="square"
+            stroke-width="2"
+          />
+        </g>
+      </svg>
+      
+    </div>
   </div>
   <div
     class="t-dropdown-menu__item"
@@ -196,6 +209,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
       <div
         class="t-dropdown-menu"
         data-v-71cc592a=""
+        placement="right"
       >
         
         <div
@@ -376,6 +390,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
       <div
         class="t-dropdown-menu"
         data-v-71cc592a=""
+        placement="right"
       >
         
         <div
@@ -386,20 +401,32 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
           >
             全部产品
           </div>
-          <svg
-            class="t-icon t-icon-caret-up-small t-dropdown-menu__icon"
-            fill="none"
-            height="1em"
-            style="fill: none;"
-            viewBox="0 0 24 24"
-            width="1em"
+          <div
+            class="t-dropdown-menu__icon"
           >
-            <path
-              d="M12.0001 9L17.5 14.5L6.5 14.5L12.0001 9Z"
-              fill="currentColor"
-              id="caret-up-small"
-            />
-          </svg>
+            
+            <svg
+              class="t-icon t-icon-chevron-down"
+              fill="none"
+              height="1em"
+              style="fill: none; font-size: 20px;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="chevron-down"
+              >
+                <path
+                  d="M17.5 9.5L12 15L6.5 9.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+            
+          </div>
         </div>
         <div
           class="t-dropdown-menu__item"
@@ -663,6 +690,7 @@ exports[`DropdownMenu > DropdownMenu multipleVue demo works fine 1`] = `
 exports[`DropdownMenu > DropdownMenu singleVue demo works fine 1`] = `
 <div
   class="t-dropdown-menu"
+  placement="right"
 >
   
   <div

@@ -1,31 +1,31 @@
 <template>
   <div class="action-sheet-demo">
-    <t-button block variant="outline" theme="primary" @click="visible = true">常规列表型</t-button>
-    <t-button block variant="outline" theme="primary" @click="showOverlayCallAPI">函数调用</t-button>
-    <t-button block variant="outline" theme="primary" @click="descVisible = true">带描述列表型</t-button>
-    <t-button block variant="outline" theme="primary" @click="iconVisible = true">带图标列表型</t-button>
-    <t-button block variant="outline" theme="primary" @click="badgeVisible = true">带徽标列表型</t-button>
+    <t-button block theme="primary" variant="outline" @click="visible = true">常规列表型</t-button>
+    <t-button block theme="primary" variant="outline" @click="showOverlayCallAPI">函数调用</t-button>
+    <t-button block theme="primary" variant="outline" @click="descVisible = true">带描述列表型</t-button>
+    <t-button block theme="primary" variant="outline" @click="iconVisible = true">带图标列表型</t-button>
+    <t-button block theme="primary" variant="outline" @click="badgeVisible = true">带徽标列表型</t-button>
   </div>
-  <t-action-sheet v-model="visible" :items="baseData.items" @selected="handleSelected" @cancel="handleCancel" />
+  <t-action-sheet v-model="visible" :items="baseData.items" @cancel="handleCancel" @selected="handleSelected" />
   <t-action-sheet
     v-model="descVisible"
     :description="descData.description"
     :items="descData.items"
-    @selected="handleSelected"
     @cancel="handleCancel"
+    @selected="handleSelected"
   />
-  <t-action-sheet v-model="iconVisible" :items="iconData.items" @selected="handleSelected" @cancel="handleCancel" />
+  <t-action-sheet v-model="iconVisible" :items="iconData.items" @cancel="handleCancel" @selected="handleSelected" />
   <t-action-sheet
     v-model="badgeVisible"
     :description="badgeData.description"
     :items="badgeData.items"
-    @selected="handleSelected"
     @cancel="handleCancel"
+    @selected="handleSelected"
   />
 </template>
 
 <script lang="ts" setup>
-import { ref, h } from 'vue';
+import { h, ref } from 'vue';
 import { AppIcon } from 'tdesign-icons-vue-next';
 import { ActionSheet, ActionSheetItem } from 'tdesign-mobile-vue';
 
@@ -67,19 +67,19 @@ const badgeData = {
   items: [
     {
       label: '选项一',
-      badge: { count: 1 },
+      badge: { count: 1, offset: [-8, 12] },
     },
     {
       label: '选项二',
-      badge: { dot: true },
+      badge: { dot: true, offset: [-4, 12] },
     },
     {
       label: '选项三',
-      badge: { dot: true },
+      badge: { dot: true, offset: [-4, 12] },
     },
     {
       label: '选项四',
-      badge: { dot: true },
+      badge: { dot: true, offset: [-4, 12] },
     },
   ],
 };

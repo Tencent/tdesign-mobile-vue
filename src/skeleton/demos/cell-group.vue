@@ -1,12 +1,12 @@
 <template>
   <div class="group">
-    <t-skeleton class="group-avatar" :row-col="rowColsAvater" loading></t-skeleton>
-    <t-skeleton class="group-content" :row-col="rowColsContent" loading></t-skeleton>
+    <t-skeleton :row-col="rowColsAvater" class="group-avatar" loading></t-skeleton>
+    <t-skeleton :row-col="rowColsContent" class="group-content" loading></t-skeleton>
   </div>
 
   <div class="group">
-    <t-skeleton class="group-avatar" :row-col="rowColsImage" loading></t-skeleton>
-    <t-skeleton class="group-content" :row-col="rowColsContent" loading></t-skeleton>
+    <t-skeleton :row-col="rowColsImage" class="group-avatar" loading></t-skeleton>
+    <t-skeleton :row-col="rowColsContent" class="group-content" loading></t-skeleton>
   </div>
 </template>
 
@@ -24,7 +24,7 @@ const rowColsContent = [{ width: '50%' }, { width: '100%' }];
 }
 
 .group-avatar {
-  margin-right: 12px;
+  margin-right: 16px;
 }
 
 .group-content {

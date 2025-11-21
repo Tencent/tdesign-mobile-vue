@@ -1,4 +1,4 @@
-import { ref, toRefs, computed, reactive, defineComponent, watch, onMounted } from 'vue';
+import { computed, defineComponent, onMounted, reactive, ref, toRefs, watch } from 'vue';
 import { isFunction } from 'lodash-es';
 import { useIntersectionObserver } from '@vueuse/core';
 import config from '../config';

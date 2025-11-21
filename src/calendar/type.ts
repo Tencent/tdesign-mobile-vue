@@ -9,6 +9,11 @@ import { TNode } from '../common';
 
 export interface TdCalendarProps {
   /**
+   * 是否允许区间选择日历的起止时间相同，仅当 `type='range'` 时有效
+   * @default false
+   */
+  allowSameDay?: boolean;
+  /**
    * 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性
    * @default ''
    */
@@ -45,7 +50,7 @@ export interface TdCalendarProps {
   title?: string | TNode;
   /**
    * 日历的选择类型，single = 单选；multiple = 多选; range = 区间选择
-   * @default 'single'
+   * @default single
    */
   type?: 'single' | 'multiple' | 'range';
   /**
@@ -56,15 +61,15 @@ export interface TdCalendarProps {
   /**
    * 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组
    */
-  value?: number | Date | TCalendarValue[];
+  value?: CalendarValue;
   /**
    * 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组，非受控属性
    */
-  defaultValue?: number | Date | TCalendarValue[];
+  defaultValue?: CalendarValue;
   /**
    * 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组
    */
-  modelValue?: number | Date | TCalendarValue[];
+  modelValue?: CalendarValue;
   /**
    * 是否显示日历；`usePopup` 为 true 时有效
    * @default false
@@ -73,7 +78,7 @@ export interface TdCalendarProps {
   /**
    * 不显示 confirm-btn 时，完成选择时触发（暂不支持 type = multiple）
    */
-  onChange?: (value: Date) => void;
+  onChange?: (value: CalendarValue) => void;
   /**
    * 关闭按钮时触发
    */
@@ -81,7 +86,7 @@ export interface TdCalendarProps {
   /**
    * 点击确认按钮时触发
    */
-  onConfirm?: (value: Date) => void;
+  onConfirm?: (value: CalendarValue) => void;
   /**
    * 切换月或年时触发（switch-mode 不为 none 时有效）
    */
@@ -98,7 +103,7 @@ export interface TdCalendarProps {
 
 export type CalendarFormatType = (day: TDate) => TDate;
 
-export type TDateType = 'selected' | 'disabled' | 'start' | 'centre' | 'end' | '';
+export type TDateType = 'selected' | 'disabled' | 'start' | 'start-end' | 'centre' | 'end' | '';
 
 export interface TDate {
   date: Date;
@@ -108,6 +113,8 @@ export interface TDate {
   prefix?: string;
   suffix?: string;
 }
+
+export type CalendarValue = TCalendarValue | TCalendarValue[];
 
 export type TCalendarValue = number | Date;
 

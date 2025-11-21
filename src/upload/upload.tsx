@@ -48,7 +48,6 @@ export default defineComponent({
     } = useUpload(props);
 
     const renderTNodeJSX = useTNodeJSX();
-    const renderContent = useContent();
 
     const showViewer = ref(false);
     const initialIndex = ref(0);
@@ -102,19 +101,19 @@ export default defineComponent({
       }
     };
 
-    const content = () => {
-      const defaultContent = renderContent('default', 'content');
-      const addContent = renderTNodeJSX('addContent');
+    const renderAddContent = () => {
+      if (!props.addBtn) return null;
+
       if (props.max === 0 || (props.max > 0 && displayFiles.value?.length < props.max)) {
-        if (defaultContent) {
-          return <div onClick={triggerUpload}>{defaultContent}</div>;
-        }
+        const addBtnNode = renderTNodeJSX('addBtn', <AddIcon />);
+        const addContentNode = renderTNodeJSX('addContent');
         return (
           <div class={`${uploadClass.value}__item ${uploadClass.value}__item--add`} onClick={triggerUpload}>
-            {addContent || <div class={`${uploadClass.value}__add-icon`}>{<AddIcon />}</div>}
+            {<div class={`${uploadClass.value}__add-icon`}>{addContentNode || addBtnNode}</div>}
           </div>
         );
       }
+      return null;
     };
     expose({
       upload: inputRef.value,
@@ -147,7 +146,7 @@ export default defineComponent({
               )}
             </div>
           ))}
-          {content()}
+          {renderAddContent()}
           <input
             ref={inputRef}
             value={props.files}

@@ -8,8 +8,9 @@
 -- | -- | -- | -- | --
 accept | String | - | 接受上传的文件类型，[查看 W3C示例](https://www.w3schools.com/tags/att_input_accept.asp)，[查看 MDN 示例](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input/file) | N
 action | String | - | 上传接口。设接口响应数据为字段 `response`，那么 `response.error` 存在时会判断此次上传失败，并显示错误文本信息；`response.url` 会作为文件上传成功后的地址，并使用该地址显示图片或文件 | N
+addBtn | Boolean | true | `1.11.1`。添加按钮 | N
 addContent | String / Slot / Function | - | 添加按钮内容。值为空，使用默认图标渲染；值为 slot 则表示使用插槽渲染；其他值无效。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-allowUploadDuplicateFile | Boolean | false | 是否允许重复上传相同文件名的文件 | N
+allowUploadDuplicateFile | Boolean | false | 是否允许重复上传相同文件名的文件。在 `capture = ''` + 拍照上传场景中，`allowUploadDuplicateFile` 应取 `true`，避免拍照上传的文件被同名文件校验过滤 | N
 autoUpload | Boolean | true | 是否在选择文件后自动发起请求上传文件 | N
 beforeUpload | Function | - | 如果是自动上传模式 `autoUpload=true`，表示单个文件上传之前的钩子函数，若函数返回值为 `false` 则表示不上传当前文件。<br/>如果是非自动上传模式 `autoUpload=false`，函数返回值为 `false` 时表示从上传文件中剔除当前文件。TS 类型：`(file: UploadFile) => boolean \| Promise<boolean>` | N
 capture | String | - | 图片选取模式，可选值为 camera (直接调起摄像头) | N
@@ -25,8 +26,8 @@ imageProps | Object | - | 透传 Image 组件全部属性。TS 类型：`ImagePr
 max | Number | 0 | 用于控制文件上传数量，值为 0 则不限制 | N
 method | String | POST | HTTP 请求类型。可选项：POST/GET/PUT/OPTIONS/PATCH/post/get/put/options/patch | N
 multiple | Boolean | false | 支持多文件上传 | N
-preview | Boolean | true | 是否支持图片预览，文件没有预览 | N
-removeBtn | Boolean | true | `1.10.0`。是否显示图片的删除按钮 | N
+preview | Boolean | true | `1.6.0`。是否支持图片预览，文件没有预览 | N
+removeBtn | Boolean | true | `1.10.0`。移除按钮 | N
 requestMethod | Function | - | 自定义上传方法。返回值 `status` 表示上传成功或失败；`error` 或 `response.error` 表示上传失败的原因；<br/>`response` 表示请求上传成功后的返回数据，`response.url` 表示上传成功后的图片/文件地址，`response.files` 表示一个请求上传多个文件/图片后的返回值。<br/>示例一：`{ status: 'fail', error: '上传失败', response }`。<br/>示例二：`{ status: 'success', response: { url: 'https://tdesign.gtimg.com/site/avatar.jpg' } }`。<br/> 示例三：`{ status: 'success', files: [{ url: 'https://xxx.png', name: 'xxx.png' }]}`。TS 类型：`(files: UploadFile \| UploadFile[]) => Promise<RequestMethodResponse>` `interface RequestMethodResponse { status: 'success' \| 'fail'; error?: string; response: { url?: string; files?: UploadFile[]; [key: string]: any } }`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts) | N
 sizeLimit | Number / Object | - | 图片文件大小限制，默认单位 KB。可选单位有：`'B' \| 'KB' \| 'MB' \| 'GB'`。示例一：`1000`。示例二：`{ size: 2, unit: 'MB', message: '图片大小不超过 {sizeLimit} MB' }`。TS 类型：`number \| SizeLimitObj` `interface SizeLimitObj { size: number; unit: SizeUnit ; message?: string }` `type SizeUnitArray = ['B', 'KB', 'MB', 'GB']` `type SizeUnit = SizeUnitArray[number]`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts) | N
 useMockProgress | Boolean | true | 是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传 | N

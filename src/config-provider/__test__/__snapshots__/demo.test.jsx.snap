@@ -371,6 +371,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
           </div>
           <input
             accept="image/png"
+            capture=""
             hidden=""
             multiple=""
             type="file"
@@ -629,6 +630,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
       <div
         data-v-075292d6=""
       >
+        <!--teleport start-->
         
         <div
           class="t-overlay"
@@ -3199,6 +3201,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
           
         </div>
         
+        <!--teleport end-->
       </div>
       <div
         class="t-cell"
@@ -3279,6 +3282,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
         </div>
         <!---->
       </div>
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -3782,6 +3786,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       
       
       
@@ -3922,6 +3927,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
   <div
     data-v-075292d6=""
   >
+    <!--teleport start-->
     
     <div
       class="t-overlay"
@@ -6492,6 +6498,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
       
     </div>
     
+    <!--teleport end-->
   </div>
   <div
     class="t-cell"
@@ -6572,6 +6579,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
     </div>
     <!---->
   </div>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -7075,6 +7083,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   
   
 </div>
@@ -7508,6 +7517,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
       </div>
       <input
         accept="image/png"
+        capture=""
         hidden=""
         multiple=""
         type="file"

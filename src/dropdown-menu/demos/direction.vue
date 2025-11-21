@@ -1,11 +1,17 @@
 <template>
-  <t-dropdown-menu direction="up" @menu-opened="handleMenuOpened" @menu-closed="handleMenuClosed">
-    <t-dropdown-item :options="product.options" :value="product.value" @change="onChange" />
+  <t-dropdown-menu direction="up" placement="right" @menu-opened="handleMenuOpened" @menu-closed="handleMenuClosed">
+    <t-dropdown-item :options="product.options" :value="product.value" :icon="icons" @change="onChange" />
     <t-dropdown-item :options="sorter.options" :value="sorter.value" />
   </t-dropdown-menu>
 </template>
 
 <script lang="ts" setup>
+import { h } from 'vue';
+import { ChevronDownIcon } from 'tdesign-icons-vue-next';
+
+// [h(ChevronDownIcon, { size: '20px' })] 和 h(ChevronDownIcon, { size: '20px' }) 等效
+const icons = () => [h(ChevronDownIcon, { size: '20px' })];
+
 const product = {
   value: 'all',
   options: [

@@ -100,6 +100,23 @@ export default defineComponent({
 
     const actionsBtnProps = computed(() => props.actions?.map((item) => calcBtn(item)));
 
+    const renderButtonNode = (
+      btnType: 'cancelBtn' | 'confirmBtn',
+      btnProps: ButtonProps,
+      handleClick: (e: MouseEvent) => void,
+    ) => {
+      if (actionsBtnProps.value) return null;
+
+      const btnNode = renderTNodeJSX(btnType);
+      if (!btnNode) return null;
+
+      if (context.slots[btnType]) {
+        return btnNode;
+      }
+
+      return <TButton {...btnProps} class={buttonClass.value} onClick={handleClick} />;
+    };
+
     return () => {
       const renderTitleNode = () => {
         const titleNode = renderTNodeJSX('title');
@@ -121,35 +138,17 @@ export default defineComponent({
         );
       };
       const renderActionsNode = () => {
-        const actionsNode = renderTNodeJSX('actions');
-        if (actionsNode && actionsBtnProps.value) {
+        if (actionsBtnProps.value) {
           return actionsBtnProps.value.map((item, index) => (
             <TButton key={index} {...item} class={buttonClass.value} onClick={handleCancel} />
           ));
         }
-        return null;
-      };
-      const renderCancelBtnNode = () => {
-        const cancelBtnNode = renderTNodeJSX('cancelBtn');
-        if (!props.actions && cancelBtnNode) {
-          if (context.slots.cancelBtn) {
-            return cancelBtnNode;
-          }
-          return <TButton {...cancelBtnProps.value} class={buttonClass.value} onClick={handleCancel} />;
-        }
-        return null;
-      };
 
-      const renderConfirmBntNode = () => {
-        const confirmBtnNode = renderTNodeJSX('confirmBtn');
-        if (!props.actions && confirmBtnNode) {
-          if (context.slots.confirmBtn) {
-            return confirmBtnNode;
-          }
-          return <TButton {...confirmBtnProps.value} class={buttonClass.value} onClick={handleConfirm} />;
-        }
-        return null;
+        return renderTNodeJSX('actions');
       };
+      const renderCancelBtnNode = () => renderButtonNode('cancelBtn', cancelBtnProps.value, handleCancel);
+
+      const renderConfirmBtnNode = () => renderButtonNode('confirmBtn', confirmBtnProps.value, handleConfirm);
       return (
         <TPopup
           class={`${dialogClass.value}__wrapper`}
@@ -178,7 +177,7 @@ export default defineComponent({
             <div class={footerClass.value}>
               {renderActionsNode()}
               {renderCancelBtnNode()}
-              {renderConfirmBntNode()}
+              {renderConfirmBtnNode()}
             </div>
           </div>
         </TPopup>

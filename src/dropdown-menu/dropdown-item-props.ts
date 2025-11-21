@@ -14,6 +14,11 @@ export default {
   footer: {
     type: Function as PropType<TdDropdownItemProps['footer']>,
   },
+  /** 自定义菜单子项图标，值为 `undefined` 表示使用默认图标。[面板打开时的图标，面板关闭时的图标] */
+  icon: {
+    type: [Array, Function] as PropType<TdDropdownItemProps['icon']>,
+    default: undefined as TdDropdownItemProps['icon'],
+  },
   /** 用来定义 value / label / disabled 在 `options` 中对应的字段别名 */
   keys: {
     type: Object as PropType<TdDropdownItemProps['keys']>,
@@ -33,7 +38,7 @@ export default {
   /** 选项分栏（1-3） */
   optionsColumns: {
     type: [String, Number] as PropType<TdDropdownItemProps['optionsColumns']>,
-    default: 1,
+    default: 1 as TdDropdownItemProps['optionsColumns'],
   },
   /** 复选框和内容相对位置，仅单选菜单栏有效 */
   placement: {
@@ -47,16 +52,16 @@ export default {
   /** 选中值 */
   value: {
     type: [String, Number, Array] as PropType<TdDropdownItemProps['value']>,
-    default: undefined,
+    default: undefined as TdDropdownItemProps['value'],
   },
   modelValue: {
     type: [String, Number, Array] as PropType<TdDropdownItemProps['value']>,
-    default: undefined,
+    default: undefined as TdDropdownItemProps['value'],
   },
   /** 选中值，非受控属性 */
   defaultValue: {
     type: [String, Number, Array] as PropType<TdDropdownItemProps['defaultValue']>,
-    default: undefined,
+    default: undefined as TdDropdownItemProps['defaultValue'],
   },
   /** 值改变时触发 */
   onChange: Function as PropType<TdDropdownItemProps['onChange']>,

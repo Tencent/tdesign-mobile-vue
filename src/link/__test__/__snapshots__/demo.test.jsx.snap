@@ -352,7 +352,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
       >
         <a
           aria-disabled="false"
-          class="t-link t-link--primary t-link--medium t-link--underline t-link--hover"
+          class="t-link t-link--primary t-link--medium t-link--hover"
           data-v-00ec48a6=""
           target=""
         >
@@ -1305,7 +1305,7 @@ exports[`Link > Link prefixVue demo works fine 1`] = `
 >
   <a
     aria-disabled="false"
-    class="t-link t-link--primary t-link--medium t-link--underline t-link--hover"
+    class="t-link t-link--primary t-link--medium t-link--hover"
     data-v-00ec48a6=""
     target=""
   >

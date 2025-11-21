@@ -18,6 +18,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import enConfig from 'tdesign-mobile-vue/es/locale/en_US';
+import type { CalendarValue } from 'tdesign-mobile-vue';
 
 const globalConfig = enConfig;
 
@@ -37,9 +38,9 @@ const format = (val: Date) => {
 const defaultDate = new Date(2022, 1, 18);
 dateNote.value = format(defaultDate);
 
-const handleConfirm = (val: Date) => {
+const handleConfirm = (val: CalendarValue) => {
   console.log(val);
-  dateNote.value = format(val);
+  dateNote.value = format(val as Date);
 };
 const handleSelect = (val: Date) => {
   console.log(val);

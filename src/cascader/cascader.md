@@ -37,13 +37,13 @@ pick | `(context: { value: string \| number, label: string, index: number, level
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-cascader-disabled-color | @text-color-disabled | -
---td-cascader-options-title-color | @text-color-placeholder | -
---td-cascader-step-arrow-color | @text-color-placeholder | -
 --td-cascader-active-color | @brand-color | -
 --td-cascader-bg-color | @bg-color-container | -
 --td-cascader-border-color | @component-stroke | -
+--td-cascader-disabled-color | @text-color-disabled | -
 --td-cascader-options-height | 320px | -
+--td-cascader-options-title-color | @text-color-placeholder | -
+--td-cascader-step-arrow-color | @text-color-placeholder | -
 --td-cascader-step-dot-size | 8px | -
 --td-cascader-step-height | 44px | -
 --td-cascader-title-color | @text-color-primary | -
