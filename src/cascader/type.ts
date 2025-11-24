@@ -29,7 +29,7 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
   /**
    * 加载子树数据的方法（仅当节点 children 为 true 时生效）
    */
-  load?: (node: TreeNodeModel<CascaderOption>) => Promise<Array<CascaderOption>>;
+  load?: (node: CascaderOption) => Promise<Array<CascaderOption>>;
   /**
    * 中间内容
    */
