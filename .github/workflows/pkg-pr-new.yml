@@ -15,12 +15,16 @@ jobs:
         with:
           submodules: recursive
 
+      - uses: pnpm/action-setup@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - run: npm install
+      - run: pnpm install
 
-      - run: npm run build
+      - run: pnpm run build
 
-      - run: npx pkg-pr-new publish --compact
+      - run: node ./script/workflows/pkg-pr-new-generate-template.mjs
+
+      - run: pnpm dlx pkg-pr-new publish --pnpm --template ./tdesign-mobile-vue-demo
