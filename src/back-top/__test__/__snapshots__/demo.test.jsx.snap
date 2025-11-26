@@ -32,7 +32,7 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
     class="title"
     data-v-9970a0e7=""
   >
-    BackTop 回到顶部
+    BackTop 返回顶部
   </h1>
   <p
     class="summary"

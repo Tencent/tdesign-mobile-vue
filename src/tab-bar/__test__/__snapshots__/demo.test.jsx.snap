@@ -884,7 +884,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     class="title"
     data-v-8bf7e573=""
   >
-    TabBar 标签栏
+    TabBar 底部标签栏
   </h1>
   <p
     class="summary"

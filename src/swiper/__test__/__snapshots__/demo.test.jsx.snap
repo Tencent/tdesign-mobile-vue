@@ -545,7 +545,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
   <h1
     class="title"
   >
-    Swiper 轮播
+    Swiper 轮播图
   </h1>
   <p
     class="summary"
