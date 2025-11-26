@@ -39,7 +39,7 @@ Name | Default Value | Description
 -- | -- | --
 --td-picker-bg-color | @bg-color-container | -
 --td-picker-border-radius | 12px | -
---td-picker-button-font-size | 16px | -
+--td-picker-button-font | @font-body-large | -
 --td-picker-cancel-color | @text-color-secondary | -
 --td-picker-confirm-color | @brand-color | -
 --td-picker-group-height | 200px | -
@@ -52,7 +52,5 @@ Name | Default Value | Description
 --td-picker-mask-color-bottom | hsla(0, 0%, 100%, .4) | -
 --td-picker-mask-color-top | hsla(0, 0%, 100%, .92) | -
 --td-picker-title-color | @text-color-primary | -
---td-picker-title-font-size | 18px | -
---td-picker-title-font-weight | 600 | -
---td-picker-title-line-height | 26px | -
+--td-picker-title-font | @font-title-large | -
 --td-picker-toolbar-height | 58px | -
