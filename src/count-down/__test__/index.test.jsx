@@ -28,9 +28,8 @@ describe('countdown.vue', async () => {
       // Advance time and verify countdown progresses
       await vi.advanceTimersByTimeAsync(1100);
       // After about 1 second, the display should have changed
-      const afterFirstAdvance = wrapper.text();
       // Could be 00:00:01 or 00:00:00 depending on exact frame timing
-      expect(afterFirstAdvance.includes('00:00:01') || afterFirstAdvance.includes('00:00:00')).toBe(true);
+      expect(wrapper.text()).toMatch(/00:00:0[01]/);
       // Advance enough to ensure countdown completes
       await vi.advanceTimersByTimeAsync(1100);
       expect(wrapper.text()).toContain('00:00:00');
