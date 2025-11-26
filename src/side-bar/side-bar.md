@@ -40,10 +40,9 @@ value | String / Number | - | 当前选项的值 | N
 --td-side-bar-bg-color | @bg-color-secondarycontainer | -
 --td-side-bar-border-radius | 9px | -
 --td-side-bar-color | @text-color-primary | -
---td-side-bar-font-size | 16px | -
+--td-side-bar-font | @font-body-large | -
 --td-side-bar-height | 100% | -
 --td-side-bar-icon-size | 20px | -
 --td-side-bar-item-height | 56px | -
---td-side-bar-item-line-height | 24px | -
 --td-side-bar-item-padding | @spacer-2 | -
 --td-side-bar-width | 103px | -

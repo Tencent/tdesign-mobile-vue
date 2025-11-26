@@ -41,7 +41,7 @@ Name | Default Value | Description
 --td-message-border-radius | @radius-default | -
 --td-message-box-shadow | @shadow-4 | -
 --td-message-close-icon-color | @text-color-placeholder | -
---td-message-content-font-color | @text-color-primary | -
+--td-message-content-color | @text-color-primary | -
 --td-message-error-color | @error-color | -
 --td-message-info-color | @brand-color | -
 --td-message-success-color | @success-color | -

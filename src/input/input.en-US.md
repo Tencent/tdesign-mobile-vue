@@ -69,7 +69,9 @@ Name | Default Value | Description
 --td-input-error-text-color | @error-color | -
 --td-input-error-tips-color | @error-color | -
 --td-input-label-text-color | @text-color-primary | -
+--td-input-label-text-font | @font-body-large | -
 --td-input-placeholder-text-color | @text-color-placeholder | -
+--td-input-placeholder-text-font | @font-body-large | -
 --td-input-prefix-icon-color | @text-color-primary | -
 --td-input-success-text-color | @success-color | -
 --td-input-success-tips-color | @success-color | -

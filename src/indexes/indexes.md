@@ -36,13 +36,13 @@ index | String / Number | - | 索引字符 | N
 --td-indexes-sidebar-active-bg-color | @brand-color | -
 --td-indexes-sidebar-active-color | @text-color-anti | -
 --td-indexes-sidebar-color | @text-color-primary | -
---td-indexes-sidebar-font-size | 12px | -
+--td-indexes-sidebar-font | @font-body-small | -
 --td-indexes-sidebar-item-size | 20px | -
 --td-indexes-sidebar-line-height | 20px | -
 --td-indexes-sidebar-right | 8px | -
 --td-indexes-sidebar-tips-bg-color | @brand-color-light | -
 --td-indexes-sidebar-tips-color | @brand-color | -
---td-indexes-sidebar-tips-font-size | 20px | -
+--td-indexes-sidebar-tips-font | @font-title-extraLarge | -
 --td-indexes-sidebar-tips-right | 38px | -
 --td-indexes-sidebar-tips-size | 48px | -
 --td-indexes-anchor-active-bg-color | @bg-color-container | -
@@ -50,5 +50,4 @@ index | String / Number | - | 索引字符 | N
 --td-indexes-anchor-active-font-weight | 600 | -
 --td-indexes-anchor-bg-color | @bg-color-secondarycontainer | -
 --td-indexes-anchor-color | @text-color-primary | -
---td-indexes-anchor-font-size | 14px | -
---td-indexes-anchor-line-height | 22px | -
+--td-indexes-anchor-font | @font-body-medium | -
