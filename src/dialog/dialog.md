@@ -91,7 +91,7 @@ options | Object | - | TS 类型：`Omit<DialogOptions, 'cancelBtn'>`
 --td-dialog-body-max-height | 456px | -
 --td-dialog-border-radius | @radius-extraLarge | -
 --td-dialog-close-color | @text-color-placeholder | -
---td-dialog-close-icon-font-size | 22px | -
+--td-dialog-close-icon-size | 22px | -
 --td-dialog-content-color | @text-color-secondary | -
 --td-dialog-content-font | @font-body-large | -
 --td-dialog-title-color | @text-color-primary | -
