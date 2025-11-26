@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">SideBar 侧边栏</h1>
-    <p class="summary">用于内容分类后的展示切换。</p>
+    <p class="summary">用于信息分类后的展示切换或锚点，位于页面左侧。</p>
     <tdesign-demo-block title="01 组件类型" summary="侧边导航用法" :padding="true">
       <t-button size="large" theme="primary" variant="outline" block @click="handleClick('base')"> 锚点用法 </t-button>
       <t-button size="large" theme="primary" variant="outline" block @click="handleClick('switch')">

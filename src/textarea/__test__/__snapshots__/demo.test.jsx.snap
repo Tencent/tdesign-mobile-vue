@@ -273,7 +273,7 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
   <p
     class="summary"
   >
-    用于多行文本的输入
+    用于多行文本的输入。
   </p>
   <div
     class="tdesign-mobile-demo-block"
