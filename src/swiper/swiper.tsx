@@ -380,7 +380,7 @@ export default defineComponent({
         if (!enableNavigation.value) return null;
 
         // 优先级 1：slot 方式自定义导航、函数方式自定义导航
-        if ((!isObject(enableNavigation.value) && hasNavSlot) || typeof navigation.value === 'function') {
+        if ((!isObject(navigation.value) && hasNavSlot) || typeof navigation.value === 'function') {
           return renderTNodeJSX('navigation');
         }
 
