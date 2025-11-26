@@ -51,7 +51,7 @@ Name | Default Value | Description
 --td-search-bg-color | @bg-color-secondarycontainer | -
 --td-search-clear-icon-color | @text-color-placeholder | -
 --td-search-clear-icon-font-size | 24px | -
---td-search-font-size | @font-size-m | -
+--td-search-font | @font-body-large | -
 --td-search-height | 40px | -
 --td-search-icon-color | @text-color-placeholder | -
 --td-search-icon-font-size | 24px | -

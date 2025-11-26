@@ -28,9 +28,9 @@ size | String | medium | 尺寸。可选项：medium/large | N
 --td-badge-border-radius | 2px | -
 --td-badge-bubble-border-radius | 10px 10px 10px 1px | -
 --td-badge-dot-size | 8px | -
---td-badge-font-size | @font-size-xs | -
+--td-badge-font | @font-mark-extraSmall | -
 --td-badge-font-weight | 600 | -
---td-badge-large-font-size | @font-size-s | -
+--td-badge-large-font | @font-mark-small | -
 --td-badge-large-height | 20px | -
 --td-badge-large-padding | 5px | -
 --td-badge-text-color | @font-white-1 | -

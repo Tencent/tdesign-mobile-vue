@@ -52,7 +52,7 @@ The component provides the following CSS variables, which can be used to customi
 Name | Default Value | Description 
 -- | -- | --
 --td-tab-border-color | @component-stroke | -
---td-tab-font-size | 14px | -
+--td-tab-font | @font-body-medium | -
 --td-tab-icon-size | 16px | -
 --td-tab-item-active-color | @brand-color | -
 --td-tab-item-color | @text-color-primary | -
@@ -63,7 +63,7 @@ Name | Default Value | Description
 --td-tab-item-tag-height | 32px | -
 --td-tab-item-vertical-height | 54px | -
 --td-tab-item-vertical-width | 104px | -
---td-tab-nav-bg-color | @bg-color-container | -
+--td-tab-nav-background | @bg-color-container | -
 --td-tab-track-color | @brand-color | -
 --td-tab-track-radius | 4px | -
 --td-tab-track-thickness | 3px | -

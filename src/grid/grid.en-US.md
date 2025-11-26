@@ -47,6 +47,8 @@ Name | Default Value | Description
 --td-grid-item-image-small-width | 32px | -
 --td-grid-item-image-width | 48px | -
 --td-grid-item-text-color | @text-color-primary | -
---td-grid-item-text-font | @font-body-small | -
+--td-grid-item-text-font | @font-body-medium | -
+--td-grid-item-text-middle-font | @font-body-small | -
 --td-grid-item-text-padding-top | 8px | -
+--td-grid-item-text-small-font | @font-body-extraSmall | -
 --td-grid-item-vertical-padding | 16px 0 12px | -

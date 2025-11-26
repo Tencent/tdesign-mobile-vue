@@ -29,14 +29,12 @@ palette-bar-change | `(context: { color: ColorObject })` | 调色板控制器的
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
---td-color-picker-background | #fff | -
---td-color-picker-border-radius-circle | 50% | -
 --td-color-picker-format-background-color | @gray-color-1 | -
 --td-color-picker-gradient-preview-height | 28px | -
 --td-color-picker-gradient-preview-radius | 3px | -
 --td-color-picker-gradient-preview-width | 28px | -
 --td-color-picker-input-format-margin-left | 24px | -
---td-color-picker-margin | 12px | -
+--td-color-picker-panel-background | @bg-color-container | -
 --td-color-picker-panel-padding | 16px | -
 --td-color-picker-panel-radius | 12px | -
 --td-color-picker-panel-width | 375px | -
@@ -49,8 +47,8 @@ palette-bar-change | `(context: { color: ColorObject })` | 调色板控制器的
 --td-color-picker-slider-thumb-transform-x | -9px | -
 --td-color-picker-slider-wrapper-padding | 0 9px | -
 --td-color-picker-swatch-active | rgba(0, 0, 0, 20%) | -
---td-color-picker-swatch-border-radius | 3px | -
+--td-color-picker-swatch-border-radius | @radius-small | -
 --td-color-picker-swatch-height | 24px | -
 --td-color-picker-swatch-padding | 0 | -
 --td-color-picker-swatch-width | 24px | -
---td-color-picker-swatches-title-font | 16px | -
+--td-color-picker-swatches-title-font | @font-title-medium | -

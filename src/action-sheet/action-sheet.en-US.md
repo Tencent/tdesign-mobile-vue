@@ -39,6 +39,7 @@ Name | Default Value | Description
 --td-action-sheet-cancel-height | 48px | -
 --td-action-sheet-color | @text-color-primary | -
 --td-action-sheet-description-color | @text-color-placeholder | -
+--td-action-sheet-description-font | @font-body-medium | -
 --td-action-sheet-dot-active-color | @brand-color | -
 --td-action-sheet-dot-color | @text-color-disabled | -
 --td-action-sheet-dot-size | 8px | -

@@ -18,7 +18,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       
       <div
         aria-label="首页，有16条消息"
-        class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+        class="t-tab-bar-item t-tab-bar-item--normal"
         data-v-56c81c82=""
       >
         <div
@@ -41,7 +41,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       </div>
       <div
         aria-label="软件，有新的消息"
-        class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+        class="t-tab-bar-item t-tab-bar-item--normal"
         data-v-56c81c82=""
       >
         <div
@@ -64,7 +64,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       </div>
       <div
         aria-label="聊天，New"
-        class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+        class="t-tab-bar-item t-tab-bar-item--normal"
         data-v-56c81c82=""
       >
         <div
@@ -87,7 +87,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       </div>
       <div
         aria-label="我的，有很多消息"
-        class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+        class="t-tab-bar-item t-tab-bar-item--normal"
         data-v-56c81c82=""
       >
         <div
@@ -922,7 +922,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         
         
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -943,7 +943,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           <!---->
         </div>
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -964,7 +964,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           <!---->
         </div>
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -985,7 +985,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           <!---->
         </div>
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -1371,7 +1371,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         
         
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -1392,7 +1392,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           <!---->
         </div>
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -1413,7 +1413,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           <!---->
         </div>
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -1494,7 +1494,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           
           <div
             aria-label="首页，有16条消息"
-            class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+            class="t-tab-bar-item t-tab-bar-item--normal"
             data-v-56c81c82=""
           >
             <div
@@ -1517,7 +1517,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           </div>
           <div
             aria-label="软件，有新的消息"
-            class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+            class="t-tab-bar-item t-tab-bar-item--normal"
             data-v-56c81c82=""
           >
             <div
@@ -1540,7 +1540,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           </div>
           <div
             aria-label="聊天，New"
-            class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+            class="t-tab-bar-item t-tab-bar-item--normal"
             data-v-56c81c82=""
           >
             <div
@@ -1563,7 +1563,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           </div>
           <div
             aria-label="我的，有很多消息"
-            class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+            class="t-tab-bar-item t-tab-bar-item--normal"
             data-v-56c81c82=""
           >
             <div
@@ -2684,7 +2684,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
   
   
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"
@@ -2705,7 +2705,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"
@@ -2726,7 +2726,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"
@@ -2778,7 +2778,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
   
   
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"
@@ -2799,7 +2799,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"
@@ -2820,7 +2820,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"
@@ -2841,7 +2841,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"

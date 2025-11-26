@@ -43,13 +43,12 @@ value | String / Number | - | 当前面板唯一标识，如果值为空则取�
 名称 | 默认值 | 描述 
 -- | -- | --
 --td-collapse-border-color | @border-color | -
---td-collapse-content-font-size | @font-size-base | -
---td-collapse-content-line-height | 1.5 | -
+--td-collapse-content-font | @font-body-medium | -
 --td-collapse-content-padding | 16px | -
 --td-collapse-content-text-color | @text-color-primary | -
---td-collapse-extra-font-size | @font-size-m | -
+--td-collapse-extra-font | @font-body-large | -
 --td-collapse-header-text-color | @text-color-primary | -
 --td-collapse-header-text-disabled-color | @text-color-disabled | -
 --td-collapse-icon-color | @text-color-placeholder | -
 --td-collapse-panel-bg-color | @bg-color-container | -
---td-collapse-title-font-size | @font-size-m | -
+--td-collapse-title-font | @font-body-large | -

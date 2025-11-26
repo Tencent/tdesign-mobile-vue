@@ -26,6 +26,8 @@ trackColor | String | '' | 进度条未完成部分颜色 | N
 --td-progress-inner-bg-color-error | @error-color | -
 --td-progress-inner-bg-color-success | @success-color | -
 --td-progress-inner-bg-color-warning | @warning-color | -
+--td-progress-circle-icon-font-size | 48px | -
 --td-progress-circle-inner-bg-color | @font-white-1 | -
+--td-progress-circle-label-font | @font-title-extraLarge | -
 --td-progress-inner-bg-color | @brand-color | -
 --td-progress-track-bg-color | @bg-color-component | -
