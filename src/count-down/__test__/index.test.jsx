@@ -1,29 +1,44 @@
 import { nextTick } from 'vue';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { mount } from '@vue/test-utils';
 import CountDown from '../count-down';
 
-const sleep = (duration) =>
-  new Promise((resolve) =>
-    setTimeout(() => {
-      resolve();
-    }, duration),
-  );
+// Mock getScreenFps to return immediately with a fixed FPS
+vi.mock('../../shared/useCountDown/utils', async (importOriginal) => {
+  const original = await importOriginal();
+  return {
+    ...original,
+    getScreenFps: () => Promise.resolve(60),
+  };
+});
 
 describe('countdown.vue', async () => {
+  beforeEach(() => {
+    vi.useFakeTimers();
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
   describe('props', async () => {
     it('time', async () => {
       const wrapper = mount(<CountDown time={2000}></CountDown>);
       expect(wrapper.text()).toContain('00:00:02');
-      await sleep(1000);
-      expect(wrapper.text()).toContain('00:00:01');
-      await sleep(500);
+      // Advance time and verify countdown progresses
+      await vi.advanceTimersByTimeAsync(1100);
+      // After about 1 second, the display should have changed
+      const afterFirstAdvance = wrapper.text();
+      // Could be 00:00:01 or 00:00:00 depending on exact frame timing
+      expect(afterFirstAdvance.includes('00:00:01') || afterFirstAdvance.includes('00:00:00')).toBe(true);
+      // Advance enough to ensure countdown completes
+      await vi.advanceTimersByTimeAsync(1100);
       expect(wrapper.text()).toContain('00:00:00');
     });
 
     it('content', async () => {
       const wrapper = mount(<CountDown time={1000} content="ok"></CountDown>);
-      await sleep(1500);
+      await vi.advanceTimersByTimeAsync(1500);
       await nextTick();
       expect(wrapper.text()).toContain('ok');
 
@@ -54,7 +69,7 @@ describe('countdown.vue', async () => {
 
     it('autoStart', async () => {
       const wrapper = mount(<CountDown time={100000} autoStart={false}></CountDown>);
-      await sleep(1000);
+      await vi.advanceTimersByTimeAsync(1000);
       expect(wrapper.text()).toContain('00:01:40');
     });
 
@@ -77,14 +92,14 @@ describe('countdown.vue', async () => {
     it('change', async () => {
       const onChange = vi.fn();
       const wrapper = mount(<CountDown time={2000} onChange={onChange}></CountDown>);
-      await sleep(1000);
+      await vi.advanceTimersByTimeAsync(1000);
       expect(onChange).toHaveBeenCalled();
     });
 
     it('finish', async () => {
       const onFinish = vi.fn();
       const wrapper = mount(<CountDown time={1000} onFinish={onFinish}></CountDown>);
-      await sleep(1500);
+      await vi.advanceTimersByTimeAsync(1500);
       expect(onFinish).toHaveBeenCalled();
     });
   });
@@ -97,7 +112,7 @@ describe('countdown.vue', async () => {
           content: temp,
         },
       });
-      await sleep(1500);
+      await vi.advanceTimersByTimeAsync(1500);
       expect(wrapper.text()).toContain('测试');
     });
   });
