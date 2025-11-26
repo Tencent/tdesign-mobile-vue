@@ -92,7 +92,7 @@ Name | Default Value | Description
 --td-dialog-close-color | @text-color-placeholder | -
 --td-dialog-close-icon-font-size | 22px | -
 --td-dialog-content-color | @text-color-secondary | -
---td-dialog-content-font-size | @font-body-large | -
+--td-dialog-content-font | @font-body-large | -
 --td-dialog-title-color | @text-color-primary | -
 --td-dialog-title-font | @font-title-large | -
 --td-dialog-width | 311px | -
