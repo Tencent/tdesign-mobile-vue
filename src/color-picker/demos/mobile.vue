@@ -1,6 +1,6 @@
 <template>
   <div class="tdesign-mobile-demo">
-    <h1 class="title">ColorPicker 选择器</h1>
+    <h1 class="title">ColorPicker 颜色选择器</h1>
     <p class="summary">用于颜色选择，支持多种格式。</p>
     <tdesign-demo-block title="01 组件类型" summary="基础颜色选择器">
       <baseVue />
