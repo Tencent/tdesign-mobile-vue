@@ -1762,7 +1762,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
     class="summary"
     data-v-abfd963f=""
   >
-    用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。
+    用以收集、校验和提交数据，一般由输入框、单选框、复选框、选择器等控件组成。
   </p>
   <div
     class="tdesign-mobile-demo-block"

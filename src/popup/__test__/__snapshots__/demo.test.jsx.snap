@@ -176,7 +176,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
     class="summary"
     data-v-12934826=""
   >
-    由其他控件触发，屏幕滑出或弹出一块自定义内容区域
+    由其他控件触发，屏幕滑出或弹出一块自定义内容区域。
   </p>
   <div
     class="tdesign-mobile-demo-block"

@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">Slider 滑动选择器</h1>
-    <p class="summary">用于选择横轴上的数值、区间、档位</p>
+    <p class="summary">用于选择横轴上的数值、区间、档位。</p>
     <tdesign-demo-block summary="单游标滑块" title="01 类型">
       <baseDemo />
     </tdesign-demo-block>

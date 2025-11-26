@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">Switch 开关</h1>
-    <p class="summary">开关用于切换当个设置项的状态，开启、关闭为两个互斥的操作</p>
+    <p class="summary">用于控制某个功能的开启和关闭。</p>
     <tdesign-demo-block title="01 组件类型" summary="基础开关">
       <baseDemo />
     </tdesign-demo-block>

@@ -32,13 +32,13 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
     class="title"
     data-v-9970a0e7=""
   >
-    BackTop 回到顶部
+    BackTop 返回顶部
   </h1>
   <p
     class="summary"
     data-v-9970a0e7=""
   >
-    当页面过长往下滑动是会出现返回顶部的便捷操作，帮助用户快速回到页面顶部
+    用于当页面过长往下滑动时，帮助用户快速回到页面顶部。
   </p>
   <div
     class="tdesign-mobile-demo-block"
