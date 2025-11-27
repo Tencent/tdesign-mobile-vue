@@ -16,7 +16,7 @@
 import { UserIcon } from 'tdesign-icons-vue-next';
 import { h } from 'vue';
 
-const IconUser = () => h(UserIcon);
+const IconUser = () => h(UserIcon, { size: '24px' });
 </script>
 
 <style>
