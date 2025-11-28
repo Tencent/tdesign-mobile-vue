@@ -46,7 +46,7 @@
     "lint:fix-prettier": "prettier ./ --ignore-path .gitignore --ignore-path .eslintignore --ignore-path .prettierignore --write './*.{vue,ts,tsx}' --ignore-unknown",
     "lint:vue": "vue-tsc --noEmit -p tsconfig.build.json",
     "generate:coverage-badge": "npm run test:unit-coverage && node scripts/test/generate-coverage.js && prettier --write site/web/test-coverage.js",
-    "api:css": "node src/_common/scripts/generate-css-vars.mjs",
+    "api:css": "node src/_common/scripts/generate-css-vars.mjs 'Mobile(Vue)'",
     "changelog": "publish-cli changelog",
     "robot": "publish-cli robot-msg",
     "commit": "git-cz"
