@@ -23,6 +23,6 @@ jobs:
 
       - run: npm run build
 
-      - run: node ./script/workflows/pkg-pr-new-generate-template.mjs
+      - run: node ./scripts/workflows/pkg-pr-new-generate-template.mjs
 
       - run: npx pkg-pr-new publish --template ./tdesign-mobile-vue-demo
