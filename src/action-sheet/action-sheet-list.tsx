@@ -12,10 +12,6 @@ export default defineComponent({
       type: Array as PropType<ActionSheetItem[]>,
       required: true,
     },
-    align: {
-      type: String as PropType<'left' | 'center'>,
-      default: 'center',
-    },
   },
   emits: ['selected'],
   setup(props, { emit }) {
@@ -23,7 +19,7 @@ export default defineComponent({
 
     const renderTNodeJSX = useTNodeDefault();
 
-    const { align, items } = toRefs(props);
+    const { items } = toRefs(props);
     const handleSelected = (index: number) => {
       emit('selected', index);
     };

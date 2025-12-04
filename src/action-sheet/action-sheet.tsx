@@ -70,7 +70,7 @@ export default defineComponent({
         };
         const list = () => {
           if (props.theme === 'list') {
-            return <TActionSheetList align={props.align} items={actionItems.value} onSelected={handleSelected} />;
+            return <TActionSheetList items={actionItems.value} onSelected={handleSelected} />;
           }
         };
         const grid = () => {
