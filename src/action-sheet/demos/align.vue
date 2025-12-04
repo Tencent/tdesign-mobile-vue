@@ -26,7 +26,7 @@
 
 <script lang="ts" setup>
 import { ref, h } from 'vue';
-import { EnterIcon, BookIcon, PinIcon, CloudUploadIcon } from 'tdesign-icons-vue-next';
+import { EnterIcon, BookmarkIcon, PinIcon, CloudUploadIcon } from 'tdesign-icons-vue-next';
 import { ActionSheetItem } from 'tdesign-mobile-vue';
 
 const items = ref([
@@ -36,7 +36,7 @@ const items = ref([
   },
   {
     label: 'Mark as important',
-    icon: () => h(BookIcon),
+    icon: () => h(BookmarkIcon),
   },
   {
     label: 'Unsubscribe',

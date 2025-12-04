@@ -40,7 +40,7 @@
 
 <script lang="ts" setup>
 import { h, ref } from 'vue';
-import { EnterIcon, BookIcon, PinIcon, CloudUploadIcon } from 'tdesign-icons-vue-next';
+import { EnterIcon, BookmarkIcon, PinIcon, CloudUploadIcon } from 'tdesign-icons-vue-next';
 import { ActionSheet, ActionSheetItem } from 'tdesign-mobile-vue';
 
 const visible = ref(false);
@@ -63,7 +63,7 @@ const iconData = {
     },
     {
       label: 'Mark as important',
-      icon: () => h(BookIcon),
+      icon: () => h(BookmarkIcon),
     },
     {
       label: 'Unsubscribe',
