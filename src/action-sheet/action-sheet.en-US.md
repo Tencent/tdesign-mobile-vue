@@ -36,15 +36,12 @@ Name | Default Value | Description
 -- | -- | --
 --td-action-sheet-border-color | @component-stroke | -
 --td-action-sheet-border-radius | @radius-extraLarge | -
---td-action-sheet-cancel-height | 48px | -
+--td-action-sheet-cancel-color | @text-color-primary | -
 --td-action-sheet-color | @text-color-primary | -
 --td-action-sheet-description-color | @text-color-placeholder | -
 --td-action-sheet-description-font | @font-body-medium | -
+--td-action-sheet-disabled-color | @text-color-disabled | -
 --td-action-sheet-dot-active-color | @brand-color | -
 --td-action-sheet-dot-color | @text-color-disabled | -
 --td-action-sheet-dot-size | 8px | -
---td-action-sheet-gap-color | var(--td-bg-color-page, @component-stroke) | -
---td-action-sheet-list-item-disabled-color | @text-color-disabled | -
---td-action-sheet-list-item-height | 56px | -
---td-action-sheet-text-align | center | -
---td-action-sheet-text-weight | 400 | -
+--td-action-sheet-gap-color | @bg-color-page | -
