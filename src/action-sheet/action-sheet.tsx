@@ -32,12 +32,12 @@ export default defineComponent({
     const { visible, modelValue } = toRefs(props);
     const [currentVisible] = useVModel(visible, modelValue, props.defaultVisible, () => {}, 'visible');
 
-    const rootClasses = computed(() => ({
-      [`${actionSheetClass.value}__content`]: true,
-    }));
+    const rootClasses = computed(() => [
+      { [`${actionSheetClass.value}__content`]: true },
+      `${actionSheetClass.value}__content--${props.align}`,
+    ]);
     const descriptionClasses = computed(() => ({
       [`${actionSheetClass.value}__description`]: true,
-      [`${actionSheetClass.value}__description--left`]: props.align === 'left',
       [`${actionSheetClass.value}__description--grid`]: props.theme === 'grid',
     }));
 

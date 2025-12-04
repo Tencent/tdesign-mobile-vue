@@ -1,6 +1,7 @@
-import { computed, defineComponent, PropType, toRefs } from 'vue';
+import { computed, defineComponent, PropType, toRefs, h } from 'vue';
 import TButton from '../button';
 import TBadge from '../badge';
+import { TNode } from '../common';
 import { ActionSheetItem } from './type';
 import { useTNodeDefault } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
@@ -28,14 +29,21 @@ export default defineComponent({
     };
     const itemClasses = computed(() => ({
       [`${actionSheetClass.value}__list-item`]: true,
-      [`${actionSheetClass.value}__list-item--left`]: align.value === 'left',
     }));
+
+    const renderTNode = (node: TNode) => {
+      if (!node) return null;
+      if (typeof node === 'function') {
+        return node(h);
+      }
+      return node;
+    };
 
     return () => {
       const renderButtonNode = () => {
-        const renderBadgeNode = (item: ActionSheetItem) => {
-          if (item.badge) {
-            const content = () => {
+        const renderContent = (item: ActionSheetItem) => {
+          const renderLabel = () => {
+            if (item.badge) {
               if (item.badge.dot || item.badge.count) {
                 return (
                   <TBadge
@@ -44,7 +52,7 @@ export default defineComponent({
                     dot={item.badge.dot}
                     content={item.badge.content}
                     size={item.badge.size}
-                    offset={item.badge.offset || [-16, 20]}
+                    offset={item.badge.offset}
                   >
                     <span class={`${actionSheetClass.value}__list-item-text`}> {item.label}</span>
                   </TBadge>
@@ -53,10 +61,29 @@ export default defineComponent({
               return renderTNodeJSX('badge', {
                 defaultNode: <span class={`${actionSheetClass.value}__list-item-text`}>{item.label}</span>,
               });
-            };
-            return content();
-          }
-          return <span class={`${actionSheetClass.value}__list-item-text`}>{item.label}</span>;
+            }
+            return <span class={`${actionSheetClass.value}__list-item-text`}>{item.label}</span>;
+          };
+
+          const iconContent = renderTNode(item.icon);
+          const suffixIconContent = renderTNode(item.suffixIcon);
+
+          return (
+            <>
+              <div class={`${actionSheetClass.value}__list-item-content`}>
+                {iconContent && <span class={`${actionSheetClass.value}__list-item-icon`}>{iconContent}</span>}
+                {renderLabel()}
+                {suffixIconContent && (
+                  <span
+                    class={`${actionSheetClass.value}__list-item-icon ${actionSheetClass.value}__list-item-icon--suffix`}
+                  >
+                    {suffixIconContent}
+                  </span>
+                )}
+              </div>
+              {item.description && <div class={`${actionSheetClass.value}__list-item-desc`}>{item.description}</div>}
+            </>
+          );
         };
         const buttonList = items.value.map((item, index) => (
           <TButton
@@ -65,11 +92,10 @@ export default defineComponent({
             block
             class={[itemClasses.value, { [`${actionSheetClass.value}__list-item--disabled`]: item.disabled }]}
             disabled={item.disabled}
-            icon={item.icon}
             style={{ color: item.color }}
             onClick={() => handleSelected(index)}
           >
-            {renderBadgeNode(item)}
+            {renderContent(item)}
           </TButton>
         ));
         return buttonList;
