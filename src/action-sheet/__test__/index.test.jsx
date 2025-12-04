@@ -38,9 +38,9 @@ describe('ActionSheet', () => {
           <ActionSheet items={[]} visible={true} description={'动作面板描述文字'} align={align}></ActionSheet>
         ));
         if (align === 'left') {
-          expect(wrapper.find(`.${name}__description--left`).exists()).toBeTruthy();
+          expect(wrapper.find(`.${name}__content--left`).exists()).toBeTruthy();
         } else {
-          expect(wrapper.find(`.${name}__description--left`).exists()).toBeFalsy();
+          expect(wrapper.find(`.${name}__content--left`).exists()).toBeFalsy();
         }
       });
     });

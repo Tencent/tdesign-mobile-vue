@@ -31,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-import { Icon as TIcon, ShopIcon } from 'tdesign-icons-vue-next';
+import { ShopIcon, NotificationIcon } from 'tdesign-icons-vue-next';
 import { h } from 'vue';
 
 const IconShop = () => h(ShopIcon, { size: '24px' });
