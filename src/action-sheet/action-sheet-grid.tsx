@@ -53,6 +53,7 @@ export default defineComponent({
             <TGridItem
               key={index}
               text={item.label}
+              description={item.description}
               image={item.icon}
               badge={item.badge}
               onClick={(event: MouseEvent) => {
@@ -89,6 +90,7 @@ export default defineComponent({
             <TGridItem
               key={index}
               text={item.label}
+              description={item.description}
               image={item.icon}
               badge={item.badge}
               onClick={() => handleSelected(index)}

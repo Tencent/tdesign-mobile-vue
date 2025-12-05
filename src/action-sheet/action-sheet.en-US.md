@@ -10,16 +10,16 @@ align | String | center | options: center/left | N
 cancelText | String | - | \- | N
 count | Number | 8 | \- | N
 description | String | - | \- | N
-items | Array | - | Typescript：`Array<string \| ActionSheetItem>` `interface ActionSheetItem { label: string; color?: string; disabled?: boolean; icon?: TNode; badge?: BadgeProps }`，[Badge API Documents](./badge?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/action-sheet/type.ts) | N
-popupProps | Object | {} | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/action-sheet/type.ts) | N
+items | Array | - | Typescript: `Array<string \| ActionSheetItem>` `interface ActionSheetItem { label: string; description?: string; color?: string; disabled?: boolean; icon?: TNode; suffixIcon?: TNode; badge?: BadgeProps }`，[Badge API Documents](./badge?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/action-sheet/type.ts) | N
+popupProps | Object | {} | Typescript: `PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/action-sheet/type.ts) | N
 showCancel | Boolean | true | \- | N
 showOverlay | Boolean | true | \- | N
 theme | String | list | options: list/grid | N
-visible | Boolean | false | required。`v-model` and `v-model:visible` is supported | Y
-defaultVisible | Boolean | false | required。uncontrolled property | Y
-onCancel | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
-onClose | Function |  | Typescript：`(trigger: ActionSheetTriggerSource) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/action-sheet/type.ts)。<br/>`type ActionSheetTriggerSource = 'overlay' \| 'command' \| 'select' `<br/> | N
-onSelected | Function |  | Typescript：`(selected: ActionSheetItem \| string, index: number) => void`<br/> | N
+visible | Boolean | false | `v-model` and `v-model:visible` is supported | N
+defaultVisible | Boolean | false | uncontrolled property | N
+onCancel | Function |  | Typescript: `(context: { e: MouseEvent }) => void`<br/> | N
+onClose | Function |  | Typescript: `(trigger: ActionSheetTriggerSource) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/action-sheet/type.ts)。<br/>`type ActionSheetTriggerSource = 'overlay' \| 'command' \| 'select' `<br/> | N
+onSelected | Function |  | Typescript: `(selected: ActionSheetItem \| string, index: number) => void`<br/> | N
 
 ### ActionSheet Events
 
@@ -36,15 +36,12 @@ Name | Default Value | Description
 -- | -- | --
 --td-action-sheet-border-color | @component-stroke | -
 --td-action-sheet-border-radius | @radius-extraLarge | -
---td-action-sheet-cancel-height | 48px | -
+--td-action-sheet-cancel-color | @text-color-primary | -
 --td-action-sheet-color | @text-color-primary | -
 --td-action-sheet-description-color | @text-color-placeholder | -
 --td-action-sheet-description-font | @font-body-medium | -
+--td-action-sheet-disabled-color | @text-color-disabled | -
 --td-action-sheet-dot-active-color | @brand-color | -
 --td-action-sheet-dot-color | @text-color-disabled | -
 --td-action-sheet-dot-size | 8px | -
---td-action-sheet-gap-color | var(--td-bg-color-page, @component-stroke) | -
---td-action-sheet-list-item-disabled-color | @text-color-disabled | -
---td-action-sheet-list-item-height | 56px | -
---td-action-sheet-text-align | center | -
---td-action-sheet-text-weight | 400 | -
+--td-action-sheet-gap-color | @bg-color-page | -
