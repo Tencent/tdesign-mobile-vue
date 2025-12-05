@@ -86,6 +86,7 @@ declare module 'vue' {
     TToast: typeof import('tdesign-mobile-vue')['Toast'];
     TTreeSelect: typeof import('tdesign-mobile-vue')['TreeSelect'];
     TUpload: typeof import('tdesign-mobile-vue')['Upload'];
+    TWatermark: typeof import('tdesign-mobile-vue')['Watermark'];
   }
 }
 
