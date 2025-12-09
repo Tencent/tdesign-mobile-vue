@@ -9,7 +9,7 @@ import { preventDefault } from '../shared/dom';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
-const defaultSwiperNavigation: SwiperNavigation = {
+const DEFAULT_SWIPER_NAVIGATION: SwiperNavigation = {
   paginationPosition: 'bottom',
   placement: 'inside',
   showControls: false,
@@ -75,11 +75,11 @@ export default defineComponent({
 
     const navigationConfig = computed<SwiperNavigation>(() => {
       if (navigation.value === true) {
-        return defaultSwiperNavigation;
+        return DEFAULT_SWIPER_NAVIGATION;
       }
       if (isObject(navigation.value)) {
         return {
-          ...defaultSwiperNavigation,
+          ...DEFAULT_SWIPER_NAVIGATION,
           ...navigation.value,
         } as SwiperNavigation;
       }
@@ -377,11 +377,9 @@ export default defineComponent({
       const swiperNav = () => {
         const hasNavSlot = Boolean(context.slots?.navigation);
 
-        if (!enableNavigation.value) return null;
-
-        // 优先级 1：slot 方式自定义导航、函数方式自定义导航
-        if ((!isObject(navigation.value) && hasNavSlot) || typeof navigation.value === 'function') {
-          return renderTNodeJSX('navigation');
+        // 优先级 1：禁用导航
+        if (navigation.value === false) {
+          return null;
         }
 
         // 优先级 2：内置导航（navigation 为 true 或对象且满足 minShowNum）
@@ -394,7 +392,12 @@ export default defineComponent({
           );
         }
 
-        // 优先级 4：明确禁用，或对象但不满足 minShowNum，则不渲染
+        // 优先级 3：slot 方式自定义导航、函数方式自定义导航
+        if (typeof navigation.value === 'function' || hasNavSlot) {
+          return renderTNodeJSX('navigation');
+        }
+
+        // 优先级 4：明确禁用, 或对象但不满足 minShowNum, 则不渲染
         return null;
       };
 
