@@ -5,12 +5,11 @@ import Swiper from '../swiper';
 import SwiperItem from '../swiper-item';
 
 const sleep = (duration) =>
-  new Promise((resolve) =>
+  new Promise((resolve) => {
     setTimeout(() => {
       resolve();
-    }, duration),
-  );
-
+    }, duration);
+  });
 const classPrefix = 't-swiper';
 const list = [
   {

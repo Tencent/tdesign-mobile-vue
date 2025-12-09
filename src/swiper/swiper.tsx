@@ -38,20 +38,7 @@ export default defineComponent({
     const swiperClass = usePrefixClass('swiper');
     const swiperNavClass = usePrefixClass('swiper-nav');
 
-    // 解构 props，保持响应性
-    const {
-      autoplay,
-      interval,
-      navigation,
-      disabled: propsDisabled,
-      direction,
-      type,
-      loop,
-      height,
-      duration,
-      onClick,
-      defaultCurrent,
-    } = toRefs(props);
+    // 使用 props 直接访问，不单独解构以保持代码简洁
 
     const renderTNodeJSX = useTNodeJSX();
     const setOffset = (offset: number, dir: 'X' | 'Y' = 'X'): void => {
@@ -61,26 +48,26 @@ export default defineComponent({
     const root = ref();
     const items = ref<SwiperItemInstance[]>([]);
     const { current: value, modelValue } = toRefs(props);
-    const [currentIndex, setCurrent] = useVModel(value, modelValue, defaultCurrent.value);
+    const [currentIndex, setCurrent] = useVModel(value, modelValue, props.defaultCurrent);
     const swiperContainer = ref<HTMLElement | null>(null);
     const previous = ref(currentIndex.value ?? 0);
 
     const animating = ref(false);
     const disabled = ref(false);
-    const isSwiperDisabled = computed(() => propsDisabled.value === true);
+    const isSwiperDisabled = computed(() => props.disabled === true);
     const translateContainer = ref('');
 
-    const isVertical = computed(() => direction.value === 'vertical');
+    const isVertical = computed(() => props.direction === 'vertical');
     const containerHeight = ref('auto');
 
     const navigationConfig = computed<SwiperNavigation>(() => {
-      if (navigation.value === true) {
+      if (props.navigation === true) {
         return DEFAULT_SWIPER_NAVIGATION;
       }
-      if (isObject(navigation.value)) {
+      if (isObject(props.navigation)) {
         return {
           ...DEFAULT_SWIPER_NAVIGATION,
-          ...navigation.value,
+          ...props.navigation,
         } as SwiperNavigation;
       }
 
@@ -88,20 +75,18 @@ export default defineComponent({
     });
 
     const rootClass = computed(() => {
-      const classes = [swiperClass.value, `${swiperClass.value}--${type.value}`];
+      const classes = [swiperClass.value, `${swiperClass.value}--${props.type}`];
       if (navigationConfig.value?.placement) {
         classes.push(`${swiperClass.value}--${navigationConfig.value.placement}`);
       }
       return classes;
     });
 
-    const enableNavigation = computed(() => {
-      if (!navigation.value) return false;
-
-      if (navigation.value === true) return true;
+    const enableNavigationConfig = computed(() => {
+      if (!props.navigation) return false;
 
       // navigation 为对象时，检查 minShowNum 配置
-      if (typeof navigation.value === 'object') {
+      if (typeof props.navigation === 'object') {
         return navigationConfig.value?.minShowNum ? items.value.length >= navigationConfig.value?.minShowNum : true;
       }
 
@@ -111,12 +96,12 @@ export default defineComponent({
     let autoplayTimer: ReturnType<typeof setInterval> | null = null;
 
     const onItemClick = () => {
-      onClick?.value?.(currentIndex.value ?? 0);
+      props.onClick?.(currentIndex.value ?? 0);
     };
 
     const move = (step: number, source: SwiperChangeSource, isReset = false, targetValue?: number) => {
       const nextIndex = currentIndex.value + step;
-      if (!loop.value && !(isReset || typeof targetValue === 'number')) {
+      if (!props.loop && !(isReset || typeof targetValue === 'number')) {
         if (nextIndex < 0 || nextIndex >= items.value.length) return;
       }
 
@@ -145,10 +130,10 @@ export default defineComponent({
     };
 
     const startAutoplay = () => {
-      if (!autoplay.value || autoplayTimer !== null) return false; // stop repeat autoplay
+      if (!props.autoplay || autoplayTimer !== null) return false; // stop repeat autoplay
       autoplayTimer = setInterval(() => {
         goNext('autoplay');
-      }, interval.value);
+      }, props.interval);
     };
 
     const goPrev = (source: SwiperChangeSource) => {
@@ -170,10 +155,10 @@ export default defineComponent({
       let val = index;
 
       if (index < 0) {
-        val = loop.value ? max - 1 : 0;
+        val = props.loop ? max - 1 : 0;
       }
       if (index >= max) {
-        val = loop.value ? 0 : max - 1;
+        val = props.loop ? 0 : max - 1;
       }
       innerSetCurrent(val);
       context.emit('update:current', val);
@@ -206,7 +191,7 @@ export default defineComponent({
       const dir = isVertical.value ? 'Y' : 'X';
 
       // 非loop状态: 阻止第一项向左滑(显示上一项)和最后一项向右滑(显示下一项)
-      if (!loop.value && ((curIndex <= 0 && distance < 0) || (curIndex >= maxIndex && distance > 0))) return;
+      if (!props.loop && ((curIndex <= 0 && distance < 0) || (curIndex >= maxIndex && distance > 0))) return;
 
       setOffset(-distance, dir);
     };
@@ -271,8 +256,8 @@ export default defineComponent({
       (containerHeight.value = isNumber(height) ? `${height}px` : height);
 
     const updateContainerHeight = () => {
-      if (height.value) {
-        setContainerHeight(height.value);
+      if (props.height) {
+        setContainerHeight(props.height);
         return;
       }
 
@@ -296,7 +281,7 @@ export default defineComponent({
     );
 
     provide('parent', {
-      loop,
+      loop: props.loop,
       root,
       items,
       isVertical,
@@ -340,7 +325,7 @@ export default defineComponent({
               class={[
                 `${swiperNavClass.value}__${navType}-item`,
                 index === currentIndex.value && `${swiperNavClass.value}__${navType}-item--active`,
-                `${swiperNavClass.value}__${navType}-item--${direction.value}`,
+                `${swiperNavClass.value}__${navType}-item--${props.direction}`,
               ]}
             />
           ))}
@@ -361,7 +346,7 @@ export default defineComponent({
       return (
         <span
           class={[
-            `${swiperNavClass.value}--${direction.value}`,
+            `${swiperNavClass.value}--${props.direction}`,
             `${swiperNavClass.value}__${navigationConfig.value?.type || ''}`,
             `${swiperNavClass.value}--${navigationConfig.value?.paginationPosition || 'bottom'}`,
             navigationConfig.value?.placement && `${swiperNavClass.value}--${navigationConfig.value.placement}`,
@@ -378,12 +363,12 @@ export default defineComponent({
         const hasNavSlot = Boolean(context.slots?.navigation);
 
         // 优先级 1：禁用导航
-        if (navigation.value === false) {
+        if (props.navigation === false) {
           return null;
         }
 
         // 优先级 2：内置导航（navigation 为 true 或对象且满足 minShowNum）
-        if (enableNavigation.value) {
+        if (enableNavigationConfig.value) {
           return (
             <>
               {renderControlsNav()}
@@ -393,7 +378,7 @@ export default defineComponent({
         }
 
         // 优先级 3：slot 方式自定义导航、函数方式自定义导航
-        if (typeof navigation.value === 'function' || hasNavSlot) {
+        if (typeof props.navigation === 'function' || hasNavSlot) {
           return renderTNodeJSX('navigation');
         }
 
@@ -408,7 +393,7 @@ export default defineComponent({
             class={`${swiperClass.value}__container`}
             style={{
               flexDirection: isVertical.value ? 'column' : 'row',
-              transition: animating.value ? `transform ${duration.value}ms` : 'none',
+              transition: animating.value ? `transform ${props.duration}ms` : 'none',
               transform: translateContainer.value,
               height: containerHeight.value,
             }}
