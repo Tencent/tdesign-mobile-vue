@@ -1263,18 +1263,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
                 
                 
               </div>
-              
               <!---->
-              <span
-                class="t-swiper-nav--vertical t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--inside"
-              >
-                
-                
-                
-                
-                <!---->
-              </span>
-              
             </div>
           </div>
         </div>
@@ -1464,18 +1453,7 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
             
             
           </div>
-          
           <!---->
-          <span
-            class="t-swiper-nav--vertical t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--inside"
-          >
-            
-            
-            
-            
-            <!---->
-          </span>
-          
         </div>
       </div>
     </div>
