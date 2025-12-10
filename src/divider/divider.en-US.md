@@ -17,8 +17,11 @@ layout | String | horizontal | options: horizontal/vertical | N
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
+--td-divider-border-width | 1px | -
 --td-divider-color | @bg-color-component | -
 --td-divider-content-color | @text-color-placeholder | -
---td-divider-content-font-size | 12px | -
---td-divider-content-line-height | 20px | -
+--td-divider-content-font | @font-body-small | -
 --td-divider-content-line-style | solid | -
+--td-divider-content-margin | @spacer-1 | -
+--td-divider-horizontal-margin | 10px | -
+--td-divider-vertical-margin | @spacer | -

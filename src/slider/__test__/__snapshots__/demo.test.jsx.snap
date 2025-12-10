@@ -488,7 +488,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     class="summary"
     data-v-556740d4=""
   >
-    用于选择横轴上的数值、区间、档位
+    用于选择横轴上的数值、区间、档位。
   </p>
   <div
     class="tdesign-mobile-demo-block"

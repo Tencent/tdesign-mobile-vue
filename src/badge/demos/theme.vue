@@ -3,14 +3,14 @@
     <div class="summary">圆形徽标</div>
     <div class="badge-demo">
       <t-badge count="8" :offset="[-2, -2]">
-        <t-icon name="notification" size="24" aria-label="通知" />
+        <NotificationIcon size="24px" />
       </t-badge>
     </div>
 
     <div class="summary">方形徽标</div>
     <div class="badge-demo">
       <t-badge count="8" shape="square" :offset="[-2, -6]">
-        <t-icon name="notification" size="24" aria-label="通知" />
+        <NotificationIcon size="24px" />
       </t-badge>
     </div>
 
@@ -31,8 +31,8 @@
 </template>
 
 <script setup lang="ts">
-import { Icon as TIcon, ShopIcon } from 'tdesign-icons-vue-next';
+import { ShopIcon, NotificationIcon } from 'tdesign-icons-vue-next';
 import { h } from 'vue';
 
-const IconShop = () => h(ShopIcon);
+const IconShop = () => h(ShopIcon, { size: '24px' });
 </script>

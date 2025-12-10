@@ -179,7 +179,6 @@ export default defineComponent({
           class={{
             [`${tabBarItemClass.value}`]: true,
             [`${tabBarItemClass.value}--split`]: split.value,
-            [`${tabBarItemClass.value}--text-only`]: !iconContent(),
             [`${tabBarItemClass.value}--crowded`]: crowded.value,
             [`${tabBarItemClass.value}--${shape.value}`]: true,
             [`${context.attrs.class || ''}`]: true,

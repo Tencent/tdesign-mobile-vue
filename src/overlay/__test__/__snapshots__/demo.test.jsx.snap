@@ -43,7 +43,7 @@ exports[`Overlay > Overlay mobileVue demo works fine 1`] = `
   <p
     class="summary"
   >
-    通过遮罩层，可以强调部分内容
+    通过遮罩层，可以强调部分内容。
   </p>
   <div
     class="tdesign-mobile-demo-block"

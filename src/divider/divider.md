@@ -17,8 +17,11 @@ layout | String | horizontal | 分隔线类型有两种：水平和垂直。可�
 组件提供了下列 CSS 变量，可用于自定义样式。
 名称 | 默认值 | 描述 
 -- | -- | --
+--td-divider-border-width | 1px | -
 --td-divider-color | @bg-color-component | -
 --td-divider-content-color | @text-color-placeholder | -
---td-divider-content-font-size | 12px | -
---td-divider-content-line-height | 20px | -
+--td-divider-content-font | @font-body-small | -
 --td-divider-content-line-style | solid | -
+--td-divider-content-margin | @spacer-1 | -
+--td-divider-horizontal-margin | 10px | -
+--td-divider-vertical-margin | @spacer | -

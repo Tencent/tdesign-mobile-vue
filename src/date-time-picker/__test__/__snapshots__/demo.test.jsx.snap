@@ -3536,7 +3536,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
   <p
     class="summary"
   >
-    用于选择一个时间点或者一个时间段
+    用于选择一个时间点或者一个时间段。
   </p>
   <div
     class="tdesign-mobile-demo-block"

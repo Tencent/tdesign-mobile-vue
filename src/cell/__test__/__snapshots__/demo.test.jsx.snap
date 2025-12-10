@@ -318,7 +318,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
     class="summary"
     data-v-45d5c39d=""
   >
-    一行内容/功能的垂直排列方式。一行项目左侧为主要内容展示区域，右侧可增加更多操作内容
+    用于各个类别行的信息展示。
   </p>
   <div
     class="tdesign-mobile-demo-block"

@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">DateTimePicker 时间选择器</h1>
-    <p class="summary">用于选择一个时间点或者一个时间段</p>
+    <p class="summary">用于选择一个时间点或者一个时间段。</p>
     <tdesign-demo-block title="01 组件类型" summary="年月日选择器">
       <yearMonthDateDemo />
     </tdesign-demo-block>

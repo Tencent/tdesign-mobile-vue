@@ -230,7 +230,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
   <p
     class="summary"
   >
-    开关用于切换当个设置项的状态，开启、关闭为两个互斥的操作
+    用于控制某个功能的开启和关闭。
   </p>
   <div
     class="tdesign-mobile-demo-block"
