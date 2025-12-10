@@ -54,7 +54,7 @@ export const docs = [
         title: '深色模式',
         titleEn: 'Dark Mode',
         name: 'dark-mode',
-        path: '/mobile-vuet/dark-mode',
+        path: '/mobile-vue/dark-mode',
         component: () => import('@/_common/docs/dark-mode.md'),
         componentEn: () => import('@/_common/docs/dark-mode.en-US.md'),
       },
