@@ -72,12 +72,6 @@ export default defineComponent({
       return {} as SwiperNavigation;
     });
 
-    const navPlacementClass = computed(() =>
-      navigationConfig.value.placement === 'outside'
-        ? `${swiperNavClass.value}--${navigationConfig.value.placement}`
-        : '',
-    );
-
     /**
      * @description 是否启用底部分页器
      */
@@ -88,14 +82,10 @@ export default defineComponent({
       return paginationPosition === 'bottom' && (type === 'dots' || type === 'dots-bar');
     });
 
-    const isOutsideBottomPagination = computed(
-      () => isBottomPagination.value && navigationConfig.value.placement === 'outside',
-    );
-
     const rootClass = computed(() => [
       `${swiperClass.value}`,
       `${swiperClass.value}--${props.type}`,
-      { [`${swiperClass.value}--${navigationConfig.value.placement}`]: isOutsideBottomPagination.value },
+      { [`${swiperClass.value}--${navigationConfig.value.placement}`]: isBottomPagination.value },
     ]);
 
     /**
@@ -367,7 +357,7 @@ export default defineComponent({
             `${swiperNavClass.value}--${props.direction}`,
             `${swiperNavClass.value}__${navigationConfig.value?.type || ''}`,
             `${swiperNavClass.value}--${navigationConfig.value?.paginationPosition || 'bottom'}`,
-            navPlacementClass.value,
+            navigationConfig.value.placement && `${swiperNavClass.value}--${navigationConfig.value.placement}`,
           ].filter(Boolean)}
         >
           {renderDotsNav()}
