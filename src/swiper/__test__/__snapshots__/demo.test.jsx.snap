@@ -253,7 +253,7 @@ exports[`Swiper > Swiper controlVue demo works fine 1`] = `
       />
     </span>
     <span
-      class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom-right t-swiper-nav--inside"
+      class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--inside"
     >
       
       
@@ -465,7 +465,7 @@ exports[`Swiper > Swiper fractionVue demo works fine 1`] = `
   style="padding: 0px 16px;"
 >
   <div
-    class="t-swiper t-swiper--default t-swiper--inside"
+    class="t-swiper t-swiper--default"
   >
     <div
       class="t-swiper__container"
@@ -793,7 +793,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
         style="padding: 0px 16px;"
       >
         <div
-          class="t-swiper t-swiper--default t-swiper--inside"
+          class="t-swiper t-swiper--default"
         >
           <div
             class="t-swiper__container"
@@ -974,7 +974,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             />
           </span>
           <span
-            class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom-right t-swiper-nav--inside"
+            class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--inside"
           >
             
             
@@ -1137,7 +1137,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
         style="padding: 0px 16px;"
       >
         <div
-          class="t-swiper t-swiper--default t-swiper--inside"
+          class="t-swiper t-swiper--default"
         >
           <div
             class="t-swiper__container"
@@ -1419,7 +1419,7 @@ exports[`Swiper > Swiper verticalVue demo works fine 1`] = `
   style="padding: 0px 16px;"
 >
   <div
-    class="t-swiper t-swiper--default t-swiper--inside"
+    class="t-swiper t-swiper--default"
   >
     <div
       class="t-swiper__container"

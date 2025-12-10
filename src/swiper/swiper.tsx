@@ -38,11 +38,9 @@ export default defineComponent({
     const swiperClass = usePrefixClass('swiper');
     const swiperNavClass = usePrefixClass('swiper-nav');
 
-    // 使用 props 直接访问，不单独解构以保持代码简洁
-
     const renderTNodeJSX = useTNodeJSX();
-    const setOffset = (offset: number, dir: 'X' | 'Y' = 'X'): void => {
-      translateContainer.value = `translate${dir}(${offset}px)`;
+    const setOffset = (offset: number, direction: 'X' | 'Y' = 'X'): void => {
+      translateContainer.value = `translate${direction}(${offset}px)`;
     };
 
     const root = ref();
@@ -74,15 +72,25 @@ export default defineComponent({
       return {};
     });
 
-    const rootClass = computed(() => {
-      const classes = [swiperClass.value, `${swiperClass.value}--${props.type}`];
-      if (navigationConfig.value?.placement) {
-        classes.push(`${swiperClass.value}--${navigationConfig.value.placement}`);
-      }
-      return classes;
+    const isBottomPagination = computed(() => {
+      if (typeof props.navigation !== 'object') return false;
+
+      const { paginationPosition, type } = navigationConfig.value;
+      const isBottom = !paginationPosition || paginationPosition === 'bottom';
+      const isDots = type === 'dots' || type === 'dots-bar';
+
+      return isBottom && isDots && enableNavigation.value;
     });
 
-    const enableNavigationConfig = computed(() => {
+    const rootClass = computed(() => [
+      `${swiperClass.value}`,
+      `${swiperClass.value}--${props.type}`,
+      {
+        [`${swiperClass.value}--${navigationConfig.value?.placement}`]: isBottomPagination.value,
+      },
+    ]);
+
+    const enableNavigation = computed(() => {
       if (!props.navigation) return false;
 
       // navigation 为对象时，检查 minShowNum 配置
@@ -368,7 +376,7 @@ export default defineComponent({
         }
 
         // 优先级 2：内置导航（navigation 为 true 或对象且满足 minShowNum）
-        if (enableNavigationConfig.value) {
+        if (enableNavigation.value) {
           return (
             <>
               {renderControlsNav()}
