@@ -69,17 +69,17 @@ export default defineComponent({
         } as SwiperNavigation;
       }
 
-      return {};
+      return {} as SwiperNavigation;
     });
 
+    /**
+     * @description 是否启用底部分页器
+     */
     const isBottomPagination = computed(() => {
-      if (typeof props.navigation !== 'object') return false;
+      if (!enableNavigation.value) return false;
 
       const { paginationPosition, type } = navigationConfig.value;
-      const isBottom = !paginationPosition || paginationPosition === 'bottom';
-      const isDots = type === 'dots' || type === 'dots-bar';
-
-      return isBottom && isDots && enableNavigation.value;
+      return paginationPosition === 'bottom' && (type === 'dots' || type === 'dots-bar');
     });
 
     const rootClass = computed(() => [
@@ -90,15 +90,17 @@ export default defineComponent({
       },
     ]);
 
+    /**
+     * @description 是否启用内置导航器
+     * - navigation 为 true 时，启用默认导航
+     * - navigation 为对象时，根据 minShowNum 判断是否满足最小展示数量
+     */
     const enableNavigation = computed(() => {
-      if (!props.navigation) return false;
+      if (props.navigation === true) return true;
+      if (!isObject(props.navigation)) return false;
 
-      // navigation 为对象时，检查 minShowNum 配置
-      if (typeof props.navigation === 'object') {
-        return navigationConfig.value?.minShowNum ? items.value.length >= navigationConfig.value?.minShowNum : true;
-      }
-
-      return false;
+      const { minShowNum } = navigationConfig.value;
+      return minShowNum ? items.value.length >= minShowNum : true;
     });
 
     let autoplayTimer: ReturnType<typeof setInterval> | null = null;
@@ -368,14 +370,10 @@ export default defineComponent({
 
     return () => {
       const swiperNav = () => {
-        const hasNavSlot = Boolean(context.slots?.navigation);
+        // 明确禁用导航
+        if (props.navigation === false) return null;
 
-        // 优先级 1：禁用导航
-        if (props.navigation === false) {
-          return null;
-        }
-
-        // 优先级 2：内置导航（navigation 为 true 或对象且满足 minShowNum）
+        // 使用内置导航器
         if (enableNavigation.value) {
           return (
             <>
@@ -385,12 +383,11 @@ export default defineComponent({
           );
         }
 
-        // 优先级 3：slot 方式自定义导航、函数方式自定义导航
-        if (typeof props.navigation === 'function' || hasNavSlot) {
+        // 自定义导航（slot 或函数）
+        if (typeof props.navigation === 'function' || context.slots?.navigation) {
           return renderTNodeJSX('navigation');
         }
 
-        // 优先级 4：明确禁用, 或对象但不满足 minShowNum, 则不渲染
         return null;
       };
 
