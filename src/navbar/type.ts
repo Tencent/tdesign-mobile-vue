@@ -31,6 +31,11 @@ export interface TdNavbarProps {
    */
   leftArrow?: boolean;
   /**
+   * 固定在顶部时是否开启占位
+   * @default false
+   */
+  placeholder?: boolean;
+  /**
    * 右侧区域
    */
   right?: TNode;
