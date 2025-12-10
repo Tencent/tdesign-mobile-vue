@@ -56,6 +56,11 @@ export interface TdTabBarProps {
    */
   modelValue?: string | number | Array<string | number>;
   /**
+   * 标签栏层级
+   * @default 1
+   */
+  zIndex?: number;
+  /**
    * 选中标签切换时触发
    */
   onChange?: (value: string | number) => void;

@@ -61,6 +61,11 @@ export default {
   defaultValue: {
     type: [String, Number, Array] as PropType<TdTabBarProps['defaultValue']>,
   },
+  /** 标签栏层级 */
+  zIndex: {
+    type: Number,
+    default: 1,
+  },
   /** 选中标签切换时触发 */
   onChange: Function as PropType<TdTabBarProps['onChange']>,
 };

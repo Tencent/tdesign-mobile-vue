@@ -1,4 +1,4 @@
-import { defineComponent, ref, provide, Ref, computed, toRefs, VNode } from 'vue';
+import { defineComponent, ref, provide, Ref, computed, toRefs, VNode, CSSProperties } from 'vue';
 import TabBarProps from './props';
 import config from '../config';
 import useChildSlots from '../hooks/useChildSlots';
@@ -39,6 +39,10 @@ export default defineComponent({
       `${tabBarClass.value}--${props.shape}`,
     ]);
 
+    const style = computed<CSSProperties>(() => ({
+      zIndex: props.zIndex,
+    }));
+
     const { height: tabBarHeight } = useElementHeight(root, {
       immediate: props.fixed && props.placeholder,
     });
@@ -67,7 +71,7 @@ export default defineComponent({
       updateItemCount(vNodes);
 
       const renderTabBar = (
-        <div ref={root} class={rootClass.value} role="tablist">
+        <div ref={root} role="tablist" class={rootClass.value} style={style.value}>
           {renderTNodeJSX('default')}
         </div>
       );
