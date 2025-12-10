@@ -58,6 +58,11 @@ export interface TdNavbarProps {
    */
   visible?: boolean;
   /**
+   * 导航条层级
+   * @default 1
+   */
+  zIndex?: number;
+  /**
    * 点击左侧按钮时触发
    */
   onLeftClick?: () => void;

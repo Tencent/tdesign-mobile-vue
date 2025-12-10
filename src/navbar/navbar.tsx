@@ -1,4 +1,4 @@
-import { defineComponent, computed } from 'vue';
+import { defineComponent, computed, CSSProperties } from 'vue';
 import { ChevronLeftIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import props from './props';
@@ -27,6 +27,10 @@ export default defineComponent({
         ? `${navbarClass.value}--visible${animationSuffix.value}`
         : `${navbarClass.value}--hide${animationSuffix.value}`,
     ]);
+
+    const styles = computed<CSSProperties>(() => ({
+      zIndex: props.zIndex,
+    }));
 
     const handleLeftClick = () => {
       props.onLeftClick?.();
@@ -106,7 +110,7 @@ export default defineComponent({
       };
 
       return (
-        <div class={navClass.value}>
+        <div class={navClass.value} style={styles.value}>
           {renderPlaceholder()}
           <div class={`${navbarClass.value}__content`}>
             {renderLeft()}

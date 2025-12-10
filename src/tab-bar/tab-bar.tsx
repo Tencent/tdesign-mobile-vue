@@ -39,7 +39,7 @@ export default defineComponent({
       `${tabBarClass.value}--${props.shape}`,
     ]);
 
-    const style = computed<CSSProperties>(() => ({
+    const styles = computed<CSSProperties>(() => ({
       zIndex: props.zIndex,
     }));
 
@@ -71,7 +71,7 @@ export default defineComponent({
       updateItemCount(vNodes);
 
       const renderTabBar = (
-        <div ref={root} role="tablist" class={rootClass.value} style={style.value}>
+        <div ref={root} role="tablist" class={rootClass.value} style={styles.value}>
           {renderTNodeJSX('default')}
         </div>
       );

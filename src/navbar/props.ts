@@ -52,6 +52,11 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 导航条层级 */
+  zIndex: {
+    type: Number,
+    default: 1,
+  },
   /** 点击左侧按钮时触发 */
   onLeftClick: Function as PropType<TdNavbarProps['onLeftClick']>,
   /** 点击右侧图标时触发 */
