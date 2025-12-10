@@ -72,6 +72,12 @@ export default defineComponent({
       return {} as SwiperNavigation;
     });
 
+    const navPlacementClass = computed(() =>
+      navigationConfig.value.placement === 'outside'
+        ? `${swiperNavClass.value}--${navigationConfig.value.placement}`
+        : '',
+    );
+
     /**
      * @description 是否启用底部分页器
      */
@@ -361,7 +367,7 @@ export default defineComponent({
             `${swiperNavClass.value}--${props.direction}`,
             `${swiperNavClass.value}__${navigationConfig.value?.type || ''}`,
             `${swiperNavClass.value}--${navigationConfig.value?.paginationPosition || 'bottom'}`,
-            navigationConfig.value?.placement && `${swiperNavClass.value}--${navigationConfig.value.placement}`,
+            navPlacementClass.value,
           ].filter(Boolean)}
         >
           {renderDotsNav()}

@@ -74,7 +74,7 @@ exports[`Swiper > Swiper baseVue demo works fine 1`] = `
     
     <!---->
     <span
-      class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--inside"
+      class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
     >
       
       
@@ -158,7 +158,7 @@ exports[`Swiper > Swiper cardVue demo works fine 1`] = `
   
   <!---->
   <span
-    class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--inside"
+    class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
   >
     
     
@@ -253,7 +253,7 @@ exports[`Swiper > Swiper controlVue demo works fine 1`] = `
       />
     </span>
     <span
-      class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--inside"
+      class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
     >
       
       
@@ -340,7 +340,7 @@ exports[`Swiper > Swiper currentVue demo works fine 1`] = `
     
     <!---->
     <span
-      class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--inside"
+      class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
     >
       
       
@@ -447,7 +447,7 @@ exports[`Swiper > Swiper customVue demo works fine 1`] = `
     
     <!---->
     <span
-      class="t-swiper-nav--horizontal t-swiper-nav__dots-bar t-swiper-nav--bottom t-swiper-nav--inside"
+      class="t-swiper-nav--horizontal t-swiper-nav__dots-bar t-swiper-nav--bottom"
     >
       
       
@@ -534,7 +534,7 @@ exports[`Swiper > Swiper fractionVue demo works fine 1`] = `
     
     <!---->
     <span
-      class="t-swiper-nav--horizontal t-swiper-nav__fraction t-swiper-nav--bottom-right t-swiper-nav--inside"
+      class="t-swiper-nav--horizontal t-swiper-nav__fraction t-swiper-nav--bottom-right"
     >
       <!---->
       <span>
@@ -654,7 +654,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
           
           <!---->
           <span
-            class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--inside"
+            class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
           >
             
             
@@ -758,7 +758,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
           
           <!---->
           <span
-            class="t-swiper-nav--horizontal t-swiper-nav__dots-bar t-swiper-nav--bottom t-swiper-nav--inside"
+            class="t-swiper-nav--horizontal t-swiper-nav__dots-bar t-swiper-nav--bottom"
           >
             
             
@@ -862,7 +862,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
           
           <!---->
           <span
-            class="t-swiper-nav--horizontal t-swiper-nav__fraction t-swiper-nav--bottom-right t-swiper-nav--inside"
+            class="t-swiper-nav--horizontal t-swiper-nav__fraction t-swiper-nav--bottom-right"
           >
             <!---->
             <span>
@@ -974,7 +974,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             />
           </span>
           <span
-            class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--inside"
+            class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
           >
             
             
@@ -1078,7 +1078,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
           
           <!---->
           <span
-            class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--inside"
+            class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom"
           >
             
             
@@ -1206,7 +1206,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
           
           <!---->
           <span
-            class="t-swiper-nav--vertical t-swiper-nav__dots-bar t-swiper-nav--right t-swiper-nav--inside"
+            class="t-swiper-nav--vertical t-swiper-nav__dots-bar t-swiper-nav--right"
           >
             
             
@@ -1488,7 +1488,7 @@ exports[`Swiper > Swiper verticalVue demo works fine 1`] = `
     
     <!---->
     <span
-      class="t-swiper-nav--vertical t-swiper-nav__dots-bar t-swiper-nav--right t-swiper-nav--inside"
+      class="t-swiper-nav--vertical t-swiper-nav__dots-bar t-swiper-nav--right"
     >
       
       
