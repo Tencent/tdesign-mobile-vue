@@ -1,0 +1,1588 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Navbar > Navbar baseVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="t-navbar t-safe-area-top t-navbar--visible-animation"
+    data-v-fcc0cda1=""
+    style="z-index: 1;"
+  >
+    <!---->
+    <div
+      class="t-navbar__content"
+    >
+      <div
+        class="t-navbar__left"
+      >
+        <svg
+          class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="chevron-left"
+          >
+            <path
+              d="M14.5 17.5L9 12L14.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+        <!---->
+        <!---->
+      </div>
+      <div
+        class="t-navbar__center"
+      >
+        <span
+          class="t-navbar__center-title"
+        >
+          标题文字
+        </span>
+      </div>
+      <!---->
+    </div>
+  </div>
+  <div
+    class="t-navbar t-safe-area-top t-navbar--visible-animation"
+    data-v-fcc0cda1=""
+    style="z-index: 1;"
+  >
+    <!---->
+    <div
+      class="t-navbar__content"
+    >
+      <div
+        class="t-navbar__left"
+      >
+        <svg
+          class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="chevron-left"
+          >
+            <path
+              d="M14.5 17.5L9 12L14.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+        
+        <svg
+          class="t-icon t-icon-close"
+          data-v-fcc0cda1=""
+          style="font-size: 24px;"
+        >
+          <use
+            href="#t-icon-close"
+          />
+        </svg>
+        
+        <!---->
+      </div>
+      <div
+        class="t-navbar__center"
+      >
+        <span
+          class="t-navbar__center-title"
+        >
+          标题文字
+        </span>
+      </div>
+      <div
+        class="t-navbar__right"
+      >
+        
+        <svg
+          class="t-icon t-icon-ellipsis"
+          data-v-fcc0cda1=""
+          style="font-size: 24px;"
+        >
+          <use
+            href="#t-icon-ellipsis"
+          />
+        </svg>
+        
+      </div>
+    </div>
+  </div>
+  <div
+    class="t-navbar t-safe-area-top t-navbar--visible-animation"
+    data-v-fcc0cda1=""
+    style="z-index: 1;"
+  >
+    <!---->
+    <div
+      class="t-navbar__content"
+    >
+      <div
+        class="t-navbar__left"
+      >
+        <svg
+          class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="chevron-left"
+          >
+            <path
+              d="M14.5 17.5L9 12L14.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+        <!---->
+        <!---->
+      </div>
+      <div
+        class="t-navbar__center"
+      >
+        <span
+          class="t-navbar__center-title"
+        >
+          标题文字超...
+        </span>
+      </div>
+      <div
+        class="t-navbar__right"
+      >
+        
+        <svg
+          class="t-icon t-icon-home"
+          data-v-fcc0cda1=""
+          style="font-size: 24px;"
+        >
+          <use
+            href="#t-icon-home"
+          />
+        </svg>
+        <svg
+          class="t-icon t-icon-ellipsis"
+          data-v-fcc0cda1=""
+          style="font-size: 24px;"
+        >
+          <use
+            href="#t-icon-ellipsis"
+          />
+        </svg>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+`;
+
+exports[`Navbar > Navbar customColorVue demo works fine 1`] = `
+<div
+  class="t-navbar t-safe-area-top t-navbar--visible-animation custom-navbar"
+  data-v-3ef3b10f=""
+  style="z-index: 1;"
+>
+  <!---->
+  <div
+    class="t-navbar__content"
+  >
+    <div
+      class="t-navbar__left"
+    >
+      <svg
+        class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+        fill="none"
+        height="1em"
+        style="fill: none;"
+        viewBox="0 0 24 24"
+        width="1em"
+      >
+        <g
+          id="chevron-left"
+        >
+          <path
+            d="M14.5 17.5L9 12L14.5 6.5"
+            id="stroke1"
+            stroke="currentColor"
+            stroke-linecap="square"
+            stroke-width="2"
+          />
+        </g>
+      </svg>
+      <!---->
+      <!---->
+    </div>
+    <div
+      class="t-navbar__center"
+    >
+      <span
+        class="t-navbar__center-title"
+      >
+        标题文字
+      </span>
+    </div>
+    <div
+      class="t-navbar__right"
+    >
+      
+      <svg
+        class="t-icon t-icon-ellipsis"
+        data-v-3ef3b10f=""
+        style="font-size: 24px;"
+      >
+        <use
+          href="#t-icon-ellipsis"
+        />
+      </svg>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Navbar > Navbar imgVue demo works fine 1`] = `
+<div
+  class="t-navbar t-safe-area-top t-navbar--visible-animation"
+  data-v-ed0b13d1=""
+  style="z-index: 1;"
+>
+  <!---->
+  <div
+    class="t-navbar__content"
+  >
+    <div
+      class="t-navbar__left"
+    >
+      <!---->
+      
+      <div
+        class="t-image t-image--square logo"
+        data-v-ed0b13d1=""
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!---->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/logo1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </picture>
+      </div>
+      
+      <!---->
+    </div>
+    <!---->
+    <div
+      class="t-navbar__right"
+    >
+      
+      <svg
+        class="t-icon t-icon-home"
+        data-v-ed0b13d1=""
+        style="font-size: 24px;"
+      >
+        <use
+          href="#t-icon-home"
+        />
+      </svg>
+      <svg
+        class="t-icon t-icon-ellipsis"
+        data-v-ed0b13d1=""
+        style="font-size: 24px;"
+      >
+        <use
+          href="#t-icon-ellipsis"
+        />
+      </svg>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="t-navbar t-safe-area-top t-navbar--visible-animation"
+    data-v-593dba5f=""
+    style="z-index: 1;"
+  >
+    <!---->
+    <div
+      class="t-navbar__content"
+    >
+      <div
+        class="t-navbar__left"
+      >
+        <svg
+          class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="chevron-left"
+          >
+            <path
+              d="M14.5 17.5L9 12L14.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+        <!---->
+        <!---->
+      </div>
+      <div
+        class="t-navbar__center"
+      >
+        <span
+          class="t-navbar__center-title"
+        >
+          标题居中
+        </span>
+      </div>
+      <div
+        class="t-navbar__right"
+      >
+        
+        <svg
+          class="t-icon t-icon-ellipsis"
+          data-v-593dba5f=""
+          style="font-size: 24px;"
+        >
+          <use
+            href="#t-icon-ellipsis"
+          />
+        </svg>
+        
+      </div>
+    </div>
+  </div>
+  <div
+    class="t-navbar t-safe-area-top t-navbar--visible-animation"
+    data-v-593dba5f=""
+    style="z-index: 1;"
+  >
+    <!---->
+    <div
+      class="t-navbar__content"
+    >
+      <div
+        class="t-navbar__left"
+      >
+        <svg
+          class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="chevron-left"
+          >
+            <path
+              d="M14.5 17.5L9 12L14.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+        
+        <span
+          class="custom-title"
+          data-v-593dba5f=""
+        >
+          标题左对齐
+        </span>
+        
+        <!---->
+      </div>
+      <!---->
+      <div
+        class="t-navbar__right"
+      >
+        
+        <svg
+          class="t-icon t-icon-home"
+          data-v-593dba5f=""
+          style="font-size: 24px;"
+        >
+          <use
+            href="#t-icon-home"
+          />
+        </svg>
+        <svg
+          class="t-icon t-icon-ellipsis"
+          data-v-593dba5f=""
+          style="font-size: 24px;"
+        >
+          <use
+            href="#t-icon-ellipsis"
+          />
+        </svg>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+`;
+
+exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+  data-v-0270c729=""
+>
+  <h1
+    class="title"
+    data-v-0270c729=""
+  >
+    NavBar 导航栏
+  </h1>
+  <p
+    class="summary"
+    data-v-0270c729=""
+  >
+    用于不同页面之间切换或者跳转，位于内容区的上方，系统状态栏的下方。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-0270c729=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        01 组件类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        基础导航栏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        data-v-fcc0cda1=""
+        style="z-index: 1;"
+      >
+        <!---->
+        <div
+          class="t-navbar__content"
+        >
+          <div
+            class="t-navbar__left"
+          >
+            <svg
+              class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="chevron-left"
+              >
+                <path
+                  d="M14.5 17.5L9 12L14.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+            <!---->
+            <!---->
+          </div>
+          <div
+            class="t-navbar__center"
+          >
+            <span
+              class="t-navbar__center-title"
+            >
+              标题文字
+            </span>
+          </div>
+          <!---->
+        </div>
+      </div>
+      <div
+        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        data-v-fcc0cda1=""
+        style="z-index: 1;"
+      >
+        <!---->
+        <div
+          class="t-navbar__content"
+        >
+          <div
+            class="t-navbar__left"
+          >
+            <svg
+              class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="chevron-left"
+              >
+                <path
+                  d="M14.5 17.5L9 12L14.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+            
+            <svg
+              class="t-icon t-icon-close"
+              data-v-fcc0cda1=""
+              style="font-size: 24px;"
+            >
+              <use
+                href="#t-icon-close"
+              />
+            </svg>
+            
+            <!---->
+          </div>
+          <div
+            class="t-navbar__center"
+          >
+            <span
+              class="t-navbar__center-title"
+            >
+              标题文字
+            </span>
+          </div>
+          <div
+            class="t-navbar__right"
+          >
+            
+            <svg
+              class="t-icon t-icon-ellipsis"
+              data-v-fcc0cda1=""
+              style="font-size: 24px;"
+            >
+              <use
+                href="#t-icon-ellipsis"
+              />
+            </svg>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        data-v-fcc0cda1=""
+        style="z-index: 1;"
+      >
+        <!---->
+        <div
+          class="t-navbar__content"
+        >
+          <div
+            class="t-navbar__left"
+          >
+            <svg
+              class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="chevron-left"
+              >
+                <path
+                  d="M14.5 17.5L9 12L14.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+            <!---->
+            <!---->
+          </div>
+          <div
+            class="t-navbar__center"
+          >
+            <span
+              class="t-navbar__center-title"
+            >
+              标题文字超...
+            </span>
+          </div>
+          <div
+            class="t-navbar__right"
+          >
+            
+            <svg
+              class="t-icon t-icon-home"
+              data-v-fcc0cda1=""
+              style="font-size: 24px;"
+            >
+              <use
+                href="#t-icon-home"
+              />
+            </svg>
+            <svg
+              class="t-icon t-icon-ellipsis"
+              data-v-fcc0cda1=""
+              style="font-size: 24px;"
+            >
+              <use
+                href="#t-icon-ellipsis"
+              />
+            </svg>
+            
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-0270c729=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        带搜索导航栏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        data-v-0270c729=""
+        data-v-614a1e54=""
+        style="z-index: 1;"
+      >
+        <!---->
+        <div
+          class="t-navbar__content"
+        >
+          <div
+            class="t-navbar__left"
+          >
+            <!---->
+            
+            <div
+              class="navbar-search"
+              data-v-614a1e54=""
+            >
+              <div
+                class="t-search"
+              >
+                <div
+                  class="t-search__input-box t-search__input-box--round"
+                >
+                  <svg
+                    class="t-icon t-icon-search"
+                    fill="none"
+                    height="1em"
+                    style="fill: none; font-size: 24px;"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                  >
+                    <g
+                      id="search"
+                    >
+                      <path
+                        d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                        fill="transparent"
+                        id="fill1"
+                      />
+                      <path
+                        d="M15.8027 15.8037L21.106 21.107"
+                        id="stroke2"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
+                  <input
+                    class="t-input__keyword"
+                    enterkeyhint="search"
+                    placeholder="搜索预设文案"
+                    type="search"
+                  />
+                  <!---->
+                </div>
+                <!---->
+              </div>
+              <!---->
+            </div>
+            
+            <!---->
+          </div>
+          <!---->
+          <div
+            class="t-navbar__right"
+          >
+            
+            <svg
+              class="t-icon t-icon-home"
+              data-v-614a1e54=""
+              style="font-size: 24px;"
+            >
+              <use
+                href="#t-icon-home"
+              />
+            </svg>
+            <svg
+              class="t-icon t-icon-ellipsis"
+              data-v-614a1e54=""
+              style="font-size: 24px;"
+            >
+              <use
+                href="#t-icon-ellipsis"
+              />
+            </svg>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-0270c729=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        带图片导航栏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        data-v-0270c729=""
+        data-v-ed0b13d1=""
+        style="z-index: 1;"
+      >
+        <!---->
+        <div
+          class="t-navbar__content"
+        >
+          <div
+            class="t-navbar__left"
+          >
+            <!---->
+            
+            <div
+              class="t-image t-image--square logo"
+              data-v-ed0b13d1=""
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!---->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!---->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/logo1.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </picture>
+            </div>
+            
+            <!---->
+          </div>
+          <!---->
+          <div
+            class="t-navbar__right"
+          >
+            
+            <svg
+              class="t-icon t-icon-home"
+              data-v-ed0b13d1=""
+              style="font-size: 24px;"
+            >
+              <use
+                href="#t-icon-home"
+              />
+            </svg>
+            <svg
+              class="t-icon t-icon-ellipsis"
+              data-v-ed0b13d1=""
+              style="font-size: 24px;"
+            >
+              <use
+                href="#t-icon-ellipsis"
+              />
+            </svg>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-0270c729=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        02 组件样式
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        标题对齐
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        data-v-593dba5f=""
+        style="z-index: 1;"
+      >
+        <!---->
+        <div
+          class="t-navbar__content"
+        >
+          <div
+            class="t-navbar__left"
+          >
+            <svg
+              class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="chevron-left"
+              >
+                <path
+                  d="M14.5 17.5L9 12L14.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+            <!---->
+            <!---->
+          </div>
+          <div
+            class="t-navbar__center"
+          >
+            <span
+              class="t-navbar__center-title"
+            >
+              标题居中
+            </span>
+          </div>
+          <div
+            class="t-navbar__right"
+          >
+            
+            <svg
+              class="t-icon t-icon-ellipsis"
+              data-v-593dba5f=""
+              style="font-size: 24px;"
+            >
+              <use
+                href="#t-icon-ellipsis"
+              />
+            </svg>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        data-v-593dba5f=""
+        style="z-index: 1;"
+      >
+        <!---->
+        <div
+          class="t-navbar__content"
+        >
+          <div
+            class="t-navbar__left"
+          >
+            <svg
+              class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="chevron-left"
+              >
+                <path
+                  d="M14.5 17.5L9 12L14.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+            
+            <span
+              class="custom-title"
+              data-v-593dba5f=""
+            >
+              标题左对齐
+            </span>
+            
+            <!---->
+          </div>
+          <!---->
+          <div
+            class="t-navbar__right"
+          >
+            
+            <svg
+              class="t-icon t-icon-home"
+              data-v-593dba5f=""
+              style="font-size: 24px;"
+            >
+              <use
+                href="#t-icon-home"
+              />
+            </svg>
+            <svg
+              class="t-icon t-icon-ellipsis"
+              data-v-593dba5f=""
+              style="font-size: 24px;"
+            >
+              <use
+                href="#t-icon-ellipsis"
+              />
+            </svg>
+            
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-0270c729=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        标题尺寸
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        data-v-f6e31b98=""
+        style="z-index: 1;"
+      >
+        <!---->
+        <div
+          class="t-navbar__content"
+        >
+          <div
+            class="t-navbar__left"
+          >
+            <svg
+              class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="chevron-left"
+              >
+                <path
+                  d="M14.5 17.5L9 12L14.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+            <!---->
+            <!---->
+          </div>
+          <div
+            class="t-navbar__center"
+          >
+            <span
+              class="t-navbar__center-title"
+            >
+              标题文字
+            </span>
+          </div>
+          <div
+            class="t-navbar__right"
+          >
+            
+            <svg
+              class="t-icon t-icon-ellipsis"
+              data-v-f6e31b98=""
+              style="font-size: 24px;"
+            >
+              <use
+                href="#t-icon-ellipsis"
+              />
+            </svg>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-navbar t-safe-area-top t-navbar--visible-animation custom-navbar"
+        data-v-f6e31b98=""
+        style="z-index: 1;"
+      >
+        <!---->
+        <div
+          class="t-navbar__content"
+        >
+          <div
+            class="t-navbar__left"
+          >
+            <svg
+              class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="chevron-left"
+              >
+                <path
+                  d="M14.5 17.5L9 12L14.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+            <!---->
+            <!---->
+          </div>
+          <!---->
+          <div
+            class="t-navbar__right"
+          >
+            
+            <svg
+              class="t-icon t-icon-home"
+              data-v-f6e31b98=""
+              style="font-size: 24px;"
+            >
+              <use
+                href="#t-icon-home"
+              />
+            </svg>
+            <svg
+              class="t-icon t-icon-ellipsis"
+              data-v-f6e31b98=""
+              style="font-size: 24px;"
+            >
+              <use
+                href="#t-icon-ellipsis"
+              />
+            </svg>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        class="header-title"
+        data-v-f6e31b98=""
+      >
+        大尺寸标题
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-0270c729=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        自定义颜色
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-navbar t-safe-area-top t-navbar--visible-animation custom-navbar"
+        data-v-0270c729=""
+        data-v-3ef3b10f=""
+        style="z-index: 1;"
+      >
+        <!---->
+        <div
+          class="t-navbar__content"
+        >
+          <div
+            class="t-navbar__left"
+          >
+            <svg
+              class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="chevron-left"
+              >
+                <path
+                  d="M14.5 17.5L9 12L14.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+            <!---->
+            <!---->
+          </div>
+          <div
+            class="t-navbar__center"
+          >
+            <span
+              class="t-navbar__center-title"
+            >
+              标题文字
+            </span>
+          </div>
+          <div
+            class="t-navbar__right"
+          >
+            
+            <svg
+              class="t-icon t-icon-ellipsis"
+              data-v-3ef3b10f=""
+              style="font-size: 24px;"
+            >
+              <use
+                href="#t-icon-ellipsis"
+              />
+            </svg>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Navbar > Navbar searchVue demo works fine 1`] = `
+<div
+  class="t-navbar t-safe-area-top t-navbar--visible-animation"
+  data-v-614a1e54=""
+  style="z-index: 1;"
+>
+  <!---->
+  <div
+    class="t-navbar__content"
+  >
+    <div
+      class="t-navbar__left"
+    >
+      <!---->
+      
+      <div
+        class="navbar-search"
+        data-v-614a1e54=""
+      >
+        <div
+          class="t-search"
+        >
+          <div
+            class="t-search__input-box t-search__input-box--round"
+          >
+            <svg
+              class="t-icon t-icon-search"
+              fill="none"
+              height="1em"
+              style="fill: none; font-size: 24px;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="search"
+              >
+                <path
+                  d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                  fill="transparent"
+                  id="fill1"
+                />
+                <path
+                  d="M15.8027 15.8037L21.106 21.107"
+                  id="stroke2"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+                <path
+                  d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+            <input
+              class="t-input__keyword"
+              enterkeyhint="search"
+              placeholder="搜索预设文案"
+              type="search"
+            />
+            <!---->
+          </div>
+          <!---->
+        </div>
+        <!---->
+      </div>
+      
+      <!---->
+    </div>
+    <!---->
+    <div
+      class="t-navbar__right"
+    >
+      
+      <svg
+        class="t-icon t-icon-home"
+        data-v-614a1e54=""
+        style="font-size: 24px;"
+      >
+        <use
+          href="#t-icon-home"
+        />
+      </svg>
+      <svg
+        class="t-icon t-icon-ellipsis"
+        data-v-614a1e54=""
+        style="font-size: 24px;"
+      >
+        <use
+          href="#t-icon-ellipsis"
+        />
+      </svg>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Navbar > Navbar sizeVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="t-navbar t-safe-area-top t-navbar--visible-animation"
+    data-v-f6e31b98=""
+    style="z-index: 1;"
+  >
+    <!---->
+    <div
+      class="t-navbar__content"
+    >
+      <div
+        class="t-navbar__left"
+      >
+        <svg
+          class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="chevron-left"
+          >
+            <path
+              d="M14.5 17.5L9 12L14.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+        <!---->
+        <!---->
+      </div>
+      <div
+        class="t-navbar__center"
+      >
+        <span
+          class="t-navbar__center-title"
+        >
+          标题文字
+        </span>
+      </div>
+      <div
+        class="t-navbar__right"
+      >
+        
+        <svg
+          class="t-icon t-icon-ellipsis"
+          data-v-f6e31b98=""
+          style="font-size: 24px;"
+        >
+          <use
+            href="#t-icon-ellipsis"
+          />
+        </svg>
+        
+      </div>
+    </div>
+  </div>
+  <div
+    class="t-navbar t-safe-area-top t-navbar--visible-animation custom-navbar"
+    data-v-f6e31b98=""
+    style="z-index: 1;"
+  >
+    <!---->
+    <div
+      class="t-navbar__content"
+    >
+      <div
+        class="t-navbar__left"
+      >
+        <svg
+          class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="chevron-left"
+          >
+            <path
+              d="M14.5 17.5L9 12L14.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+        <!---->
+        <!---->
+      </div>
+      <!---->
+      <div
+        class="t-navbar__right"
+      >
+        
+        <svg
+          class="t-icon t-icon-home"
+          data-v-f6e31b98=""
+          style="font-size: 24px;"
+        >
+          <use
+            href="#t-icon-home"
+          />
+        </svg>
+        <svg
+          class="t-icon t-icon-ellipsis"
+          data-v-f6e31b98=""
+          style="font-size: 24px;"
+        >
+          <use
+            href="#t-icon-ellipsis"
+          />
+        </svg>
+        
+      </div>
+    </div>
+  </div>
+  <div
+    class="header-title"
+    data-v-f6e31b98=""
+  >
+    大尺寸标题
+  </div>
+  
+</div>
+`;
