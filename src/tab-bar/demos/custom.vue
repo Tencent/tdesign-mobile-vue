@@ -1,5 +1,5 @@
 <template>
-  <t-tab-bar v-model="value" class="wrapper">
+  <t-tab-bar v-model="value" :fixed="false" class="wrapper">
     <t-tab-bar-item v-for="item in list" :key="item.value" :value="item.value">
       <template #icon>
         <t-icon :name="item.icon" />

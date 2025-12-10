@@ -1,5 +1,5 @@
 <template>
-  <t-tab-bar default-value="home" theme="tag" :split="false" @change="change">
+  <t-tab-bar default-value="home" theme="tag" :fixed="false" :split="false" @change="change">
     <t-tab-bar-item v-for="item in list" :key="item.value" :value="item.value" :sub-tab-bar="item.children">
       {{ item.label }}
     </t-tab-bar-item>

@@ -10,9 +10,10 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
     data-v-56c81c82=""
   >
     <div
-      class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+      class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
       data-v-56c81c82=""
       role="tablist"
+      style="z-index: 1;"
     >
       
       
@@ -117,9 +118,10 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
     data-v-56c81c82=""
   >
     <div
-      class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+      class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
       data-v-56c81c82=""
       role="tablist"
+      style="z-index: 1;"
     >
       
       
@@ -340,9 +342,10 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
     data-v-56c81c82=""
   >
     <div
-      class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+      class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
       data-v-56c81c82=""
       role="tablist"
+      style="z-index: 1;"
     >
       
       
@@ -572,8 +575,9 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
 
 exports[`TabBar > TabBar baseVue demo works fine 1`] = `
 <div
-  class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
   role="tablist"
+  style="z-index: 1;"
 >
   
   
@@ -724,9 +728,10 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
 
 exports[`TabBar > TabBar customVue demo works fine 1`] = `
 <div
-  class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal wrapper"
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal wrapper"
   data-v-d74bfed2=""
   role="tablist"
+  style="z-index: 1;"
 >
   
   
@@ -915,9 +920,10 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
         data-v-8bf7e573=""
         role="tablist"
+        style="z-index: 1;"
       >
         
         
@@ -1030,9 +1036,10 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
         data-v-8bf7e573=""
         role="tablist"
+        style="z-index: 1;"
       >
         
         
@@ -1201,9 +1208,10 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
         data-v-8bf7e573=""
         role="tablist"
+        style="z-index: 1;"
       >
         
         
@@ -1364,9 +1372,10 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
         data-v-8bf7e573=""
         role="tablist"
+        style="z-index: 1;"
       >
         
         
@@ -1486,9 +1495,10 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         data-v-56c81c82=""
       >
         <div
-          class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+          class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
           data-v-56c81c82=""
           role="tablist"
+          style="z-index: 1;"
         >
           
           
@@ -1593,9 +1603,10 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         data-v-56c81c82=""
       >
         <div
-          class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+          class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
           data-v-56c81c82=""
           role="tablist"
+          style="z-index: 1;"
         >
           
           
@@ -1816,9 +1827,10 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         data-v-56c81c82=""
       >
         <div
-          class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+          class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
           data-v-56c81c82=""
           role="tablist"
+          style="z-index: 1;"
         >
           
           
@@ -2065,9 +2077,10 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--round"
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--round"
         data-v-8bf7e573=""
         role="tablist"
+        style="z-index: 1;"
       >
         
         
@@ -2232,10 +2245,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal wrapper"
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal wrapper"
         data-v-8bf7e573=""
         data-v-d74bfed2=""
         role="tablist"
+        style="z-index: 1;"
       >
         
         
@@ -2390,8 +2404,9 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
 
 exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
 <div
-  class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
   role="tablist"
+  style="z-index: 1;"
 >
   
   
@@ -2534,8 +2549,9 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
 
 exports[`TabBar > TabBar roundVue demo works fine 1`] = `
 <div
-  class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--round"
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--round"
   role="tablist"
+  style="z-index: 1;"
 >
   
   
@@ -2678,8 +2694,9 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
 
 exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
 <div
-  class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
   role="tablist"
+  style="z-index: 1;"
 >
   
   
@@ -2772,8 +2789,9 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
 
 exports[`TabBar > TabBar textVue demo works fine 1`] = `
 <div
-  class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
   role="tablist"
+  style="z-index: 1;"
 >
   
   
