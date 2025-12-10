@@ -1192,7 +1192,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
         >
           <div>
             <div
-              class="t-swiper t-swiper--default t-swiper--inside t-notice-bar__content--vertical"
+              class="t-swiper t-swiper--default t-notice-bar__content--vertical"
             >
               <div
                 class="t-swiper__container"
@@ -1393,7 +1393,7 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
     >
       <div>
         <div
-          class="t-swiper t-swiper--default t-swiper--inside t-notice-bar__content--vertical"
+          class="t-swiper t-swiper--default t-notice-bar__content--vertical"
         >
           <div
             class="t-swiper__container"

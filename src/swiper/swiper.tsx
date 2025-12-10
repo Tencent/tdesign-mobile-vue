@@ -82,12 +82,14 @@ export default defineComponent({
       return paginationPosition === 'bottom' && (type === 'dots' || type === 'dots-bar');
     });
 
+    const isOutsideBottomPagination = computed(
+      () => isBottomPagination.value && navigationConfig.value.placement === 'outside',
+    );
+
     const rootClass = computed(() => [
       `${swiperClass.value}`,
       `${swiperClass.value}--${props.type}`,
-      {
-        [`${swiperClass.value}--${navigationConfig.value?.placement}`]: isBottomPagination.value,
-      },
+      { [`${swiperClass.value}--${navigationConfig.value.placement}`]: isOutsideBottomPagination.value },
     ]);
 
     /**
