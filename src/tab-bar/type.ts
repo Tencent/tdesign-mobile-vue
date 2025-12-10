@@ -19,6 +19,11 @@ export interface TdTabBarProps {
    */
   fixed?: boolean;
   /**
+   * 固定在底部时是否开启占位
+   * @default false
+   */
+  placeholder?: boolean;
+  /**
    * 是否开启底部安全区适配
    * @default true
    */

@@ -18,6 +18,8 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 固定在底部时是否开启占位 */
+  placeholder: Boolean,
   /** 是否开启底部安全区适配 */
   safeAreaInsetBottom: {
     type: Boolean,
@@ -49,11 +51,11 @@ export default {
   /** 当前选中标签的索引 */
   value: {
     type: [String, Number, Array] as PropType<TdTabBarProps['value']>,
-    default: undefined,
+    default: undefined as TdTabBarProps['value'],
   },
   modelValue: {
     type: [String, Number, Array] as PropType<TdTabBarProps['value']>,
-    default: undefined,
+    default: undefined as TdTabBarProps['value'],
   },
   /** 当前选中标签的索引，非受控属性 */
   defaultValue: {

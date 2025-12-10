@@ -5,6 +5,7 @@ import useChildSlots from '../hooks/useChildSlots';
 import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
+import useElementHeight from '../hooks/useElementHeight';
 
 const { prefix } = config;
 
@@ -13,6 +14,7 @@ export default defineComponent({
   props: TabBarProps,
   emits: ['update:value', 'update:modelValue', 'change'],
   setup(props, context) {
+    const root = ref<HTMLElement>();
     const tabBarClass = usePrefixClass('tab-bar');
 
     const renderTNodeJSX = useTNodeJSX();
@@ -37,6 +39,10 @@ export default defineComponent({
       `${tabBarClass.value}--${props.shape}`,
     ]);
 
+    const { height: tabBarHeight } = useElementHeight(root, {
+      immediate: props.fixed && props.placeholder,
+    });
+
     provide('tab-bar', {
       ...toRefs(props),
       defaultIndex,
@@ -60,11 +66,21 @@ export default defineComponent({
       const vNodes = context.slots.default ? context.slots.default() : [];
       updateItemCount(vNodes);
 
-      return (
-        <div class={rootClass.value} role="tablist">
+      const renderTabBar = (
+        <div ref={root} class={rootClass.value} role="tablist">
           {renderTNodeJSX('default')}
         </div>
       );
+
+      if (props.fixed && props.placeholder) {
+        return (
+          <div class={`${tabBarClass.value}__placeholder`} style={{ height: `${tabBarHeight.value}px` }}>
+            {renderTabBar}
+          </div>
+        );
+      }
+
+      return renderTabBar;
     };
   },
 });
