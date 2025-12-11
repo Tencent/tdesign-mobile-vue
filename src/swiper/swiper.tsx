@@ -73,10 +73,22 @@ export default defineComponent({
     });
 
     /**
+     * @description 是否启用内置导航器
+     * - 非空 navigationConfig 代表启用内置导航器;
+     * - navigation 为对象时，根据 minShowNum 判断是否满足最小展示数量
+     */
+    const enableBuiltinNavigation = computed(() => {
+      if (!Object.keys(navigationConfig.value || {}).length) return false;
+
+      const { minShowNum } = navigationConfig.value;
+      return minShowNum ? items.value.length >= minShowNum : true;
+    });
+
+    /**
      * @description 是否启用底部分页器
      */
     const isBottomPagination = computed(() => {
-      if (!enableNavigation.value) return false;
+      if (!enableBuiltinNavigation.value) return false;
 
       const { paginationPosition, type } = navigationConfig.value;
       return paginationPosition === 'bottom' && (type === 'dots' || type === 'dots-bar');
@@ -88,18 +100,7 @@ export default defineComponent({
       { [`${swiperClass.value}--${navigationConfig.value.placement}`]: isBottomPagination.value },
     ]);
 
-    /**
-     * @description 是否启用内置导航器
-     * - navigation 为 true 时，启用默认导航
-     * - navigation 为对象时，根据 minShowNum 判断是否满足最小展示数量
-     */
-    const enableNavigation = computed(() => {
-      if (props.navigation === true) return true;
-      if (!isObject(props.navigation)) return false;
-
-      const { minShowNum } = navigationConfig.value;
-      return minShowNum ? items.value.length >= minShowNum : true;
-    });
+    const useCustomNavigation = computed(() => typeof props.navigation === 'function' || context.slots?.navigation);
 
     let autoplayTimer: ReturnType<typeof setInterval> | null = null;
 
@@ -369,15 +370,10 @@ export default defineComponent({
     return () => {
       const swiperNav = () => {
         // 明确禁用导航
-        if (props.navigation === false) return null;
-
-        // 自定义导航（slot 或函数）优先级最高
-        if (typeof props.navigation === 'function' || context.slots?.navigation) {
-          return renderTNodeJSX('navigation');
-        }
+        if (!props.navigation === false) return null;
 
         // 使用内置导航器
-        if (enableNavigation.value) {
+        if (enableBuiltinNavigation.value) {
           return (
             <>
               {renderControlsNav()}
@@ -386,6 +382,12 @@ export default defineComponent({
           );
         }
 
+        // 自定义导航（slot 或函数）
+        if (useCustomNavigation.value) {
+          return renderTNodeJSX('navigation');
+        }
+
+        // 其他情况（明确禁用或配置不满足时不渲染）
         return null;
       };
 
