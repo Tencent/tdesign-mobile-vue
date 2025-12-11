@@ -71,7 +71,18 @@ exports[`Swiper > Swiper baseVue demo works fine 1`] = `
       
       
     </div>
+    
     <!---->
+    <span
+      class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--inside"
+    >
+      
+      
+      
+      
+      <!---->
+    </span>
+    
   </div>
 </div>
 `;
@@ -144,7 +155,18 @@ exports[`Swiper > Swiper cardVue demo works fine 1`] = `
     
     
   </div>
+  
   <!---->
+  <span
+    class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--inside"
+  >
+    
+    
+    
+    
+    <!---->
+  </span>
+  
 </div>
 `;
 
@@ -219,7 +241,27 @@ exports[`Swiper > Swiper controlVue demo works fine 1`] = `
       
       
     </div>
-    <!---->
+    
+    <span
+      class="t-swiper-nav__btn"
+    >
+      <span
+        class="t-swiper-nav__btn--prev"
+      />
+      <span
+        class="t-swiper-nav__btn--next"
+      />
+    </span>
+    <span
+      class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--inside"
+    >
+      
+      
+      
+      
+      <!---->
+    </span>
+    
   </div>
 </div>
 `;
@@ -295,7 +337,18 @@ exports[`Swiper > Swiper currentVue demo works fine 1`] = `
       
       
     </div>
+    
     <!---->
+    <span
+      class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--inside"
+    >
+      
+      
+      
+      
+      <!---->
+    </span>
+    
   </div>
   <div
     class="tdesign-demo-block-row"
@@ -391,7 +444,18 @@ exports[`Swiper > Swiper customVue demo works fine 1`] = `
       
       
     </div>
+    
     <!---->
+    <span
+      class="t-swiper-nav--horizontal t-swiper-nav__dots-bar t-swiper-nav--bottom t-swiper-nav--inside"
+    >
+      
+      
+      
+      
+      <!---->
+    </span>
+    
   </div>
 </div>
 `;
@@ -467,7 +531,17 @@ exports[`Swiper > Swiper fractionVue demo works fine 1`] = `
       
       
     </div>
+    
     <!---->
+    <span
+      class="t-swiper-nav--horizontal t-swiper-nav__fraction t-swiper-nav--bottom-right t-swiper-nav--inside"
+    >
+      <!---->
+      <span>
+        1/0
+      </span>
+    </span>
+    
   </div>
 </div>
 `;
@@ -577,7 +651,18 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             
             
           </div>
+          
           <!---->
+          <span
+            class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--inside"
+          >
+            
+            
+            
+            
+            <!---->
+          </span>
+          
         </div>
       </div>
       
@@ -670,7 +755,18 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             
             
           </div>
+          
           <!---->
+          <span
+            class="t-swiper-nav--horizontal t-swiper-nav__dots-bar t-swiper-nav--bottom t-swiper-nav--inside"
+          >
+            
+            
+            
+            
+            <!---->
+          </span>
+          
         </div>
       </div>
       
@@ -763,7 +859,17 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             
             
           </div>
+          
           <!---->
+          <span
+            class="t-swiper-nav--horizontal t-swiper-nav__fraction t-swiper-nav--bottom-right t-swiper-nav--inside"
+          >
+            <!---->
+            <span>
+              1/0
+            </span>
+          </span>
+          
         </div>
       </div>
       
@@ -856,7 +962,27 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             
             
           </div>
-          <!---->
+          
+          <span
+            class="t-swiper-nav__btn"
+          >
+            <span
+              class="t-swiper-nav__btn--prev"
+            />
+            <span
+              class="t-swiper-nav__btn--next"
+            />
+          </span>
+          <span
+            class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--inside"
+          >
+            
+            
+            
+            
+            <!---->
+          </span>
+          
         </div>
       </div>
       
@@ -949,7 +1075,18 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             
             
           </div>
+          
           <!---->
+          <span
+            class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--inside"
+          >
+            
+            
+            
+            
+            <!---->
+          </span>
+          
         </div>
         <div
           class="tdesign-demo-block-row"
@@ -1066,7 +1203,18 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             
             
           </div>
+          
           <!---->
+          <span
+            class="t-swiper-nav--vertical t-swiper-nav__dots-bar t-swiper-nav--right t-swiper-nav--inside"
+          >
+            
+            
+            
+            
+            <!---->
+          </span>
+          
         </div>
       </div>
       
@@ -1159,7 +1307,18 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
             
             
           </div>
+          
           <!---->
+          <span
+            class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--outside"
+          >
+            
+            
+            
+            
+            <!---->
+          </span>
+          
         </div>
       </div>
       
@@ -1239,7 +1398,18 @@ exports[`Swiper > Swiper outsideVue demo works fine 1`] = `
       
       
     </div>
+    
     <!---->
+    <span
+      class="t-swiper-nav--horizontal t-swiper-nav__dots t-swiper-nav--bottom t-swiper-nav--outside"
+    >
+      
+      
+      
+      
+      <!---->
+    </span>
+    
   </div>
 </div>
 `;
@@ -1315,7 +1485,18 @@ exports[`Swiper > Swiper verticalVue demo works fine 1`] = `
       
       
     </div>
+    
     <!---->
+    <span
+      class="t-swiper-nav--vertical t-swiper-nav__dots-bar t-swiper-nav--right t-swiper-nav--inside"
+    >
+      
+      
+      
+      
+      <!---->
+    </span>
+    
   </div>
 </div>
 `;

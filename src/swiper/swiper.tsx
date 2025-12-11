@@ -370,7 +370,7 @@ export default defineComponent({
     return () => {
       const swiperNav = () => {
         // 明确禁用导航
-        if (!props.navigation === false) return null;
+        if (props.navigation === false) return null;
 
         // 使用内置导航器
         if (enableBuiltinNavigation.value) {
