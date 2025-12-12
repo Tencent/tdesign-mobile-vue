@@ -2,7 +2,7 @@
   <div style="padding: 0 16px">
     <t-swiper
       :autoplay="true"
-      :navigation="{ showControls: true, paginationPosition: 'bottom-right' }"
+      :navigation="{ showControls: true, paginationPosition: 'bottom' }"
       height="192"
       @change="handleChange"
     >
