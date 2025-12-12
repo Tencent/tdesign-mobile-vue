@@ -372,6 +372,11 @@ export default defineComponent({
         // 明确禁用导航
         if (props.navigation === false) return null;
 
+        // 自定义导航（slot 或函数）- 优先级最高
+        if (useCustomNavigation.value) {
+          return renderTNodeJSX('navigation');
+        }
+
         // 使用内置导航器
         if (enableBuiltinNavigation.value) {
           return (
@@ -380,11 +385,6 @@ export default defineComponent({
               {renderTypeNav()}
             </>
           );
-        }
-
-        // 自定义导航（slot 或函数）
-        if (useCustomNavigation.value) {
-          return renderTNodeJSX('navigation');
         }
 
         // 其他情况（明确禁用或配置不满足时不渲染）
