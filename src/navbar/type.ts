@@ -31,6 +31,11 @@ export interface TdNavbarProps {
    */
   leftArrow?: boolean;
   /**
+   * 固定在顶部时是否开启占位
+   * @default false
+   */
+  placeholder?: boolean;
+  /**
    * 右侧区域
    */
   right?: TNode;
@@ -52,6 +57,11 @@ export interface TdNavbarProps {
    * @default true
    */
   visible?: boolean;
+  /**
+   * 导航条层级
+   * @default 1
+   */
+  zIndex?: number;
   /**
    * 点击左侧按钮时触发
    */

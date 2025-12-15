@@ -1,5 +1,5 @@
-import { defineComponent, computed } from 'vue';
-import { ChevronLeftIcon as TChevronLeftIcon } from 'tdesign-icons-vue-next';
+import { defineComponent, computed, CSSProperties } from 'vue';
+import { ChevronLeftIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import props from './props';
 import { usePrefixClass } from '../hooks/useClass';
@@ -9,7 +9,6 @@ const { prefix } = config;
 
 export default defineComponent({
   name: `${prefix}-navbar`,
-  components: { TChevronLeftIcon },
   props,
   emits: ['left-click', 'right-click'],
   setup(props, { slots }) {
@@ -22,14 +21,16 @@ export default defineComponent({
       navbarClass.value,
       {
         [`${navbarClass.value}--fixed`]: props.fixed,
-        [`${classPrefix.value}-safe-area-top `]: props.safeAreaInsetTop,
+        [`${classPrefix.value}-safe-area-top`]: props.safeAreaInsetTop,
       },
       props.visible
         ? `${navbarClass.value}--visible${animationSuffix.value}`
         : `${navbarClass.value}--hide${animationSuffix.value}`,
     ]);
 
-    const navStyle = computed(() => `position: ${props.fixed ? 'fixed' : 'relative'};`);
+    const styles = computed<CSSProperties>(() => ({
+      zIndex: props.zIndex,
+    }));
 
     const handleLeftClick = () => {
       props.onLeftClick?.();
@@ -40,9 +41,9 @@ export default defineComponent({
     };
 
     return () => {
-      const { fixed, titleMaxLength, title, leftArrow } = props;
+      const { fixed, placeholder, titleMaxLength, title, leftArrow } = props;
 
-      const renderRightContent = () => {
+      const renderRight = () => {
         const rightContent = renderTNodeJSX('right');
         if (!rightContent) {
           return null;
@@ -54,6 +55,13 @@ export default defineComponent({
         );
       };
 
+      const renderLeftArrow = () => {
+        if (leftArrow) {
+          return <ChevronLeftIcon class={`${navbarClass.value}__left-arrow`} />;
+        }
+        return null;
+      };
+
       const renderCapsuleContent = () => {
         const capsuleContent = renderTNodeJSX('capsule');
         if (!capsuleContent) {
@@ -62,7 +70,17 @@ export default defineComponent({
         return <div class={`${navbarClass.value}__capsule`}>{capsuleContent}</div>;
       };
 
-      const renderTitleContent = () => {
+      const renderLeft = () => {
+        return (
+          <div class={`${navbarClass.value}__left`} onClick={handleLeftClick}>
+            {renderLeftArrow()}
+            {renderTNodeJSX('left')}
+            {renderCapsuleContent()}
+          </div>
+        );
+      };
+
+      const renderCenter = () => {
         const isStringTitle = typeof title === 'string' && !slots.title;
         let titleContent = renderTNodeJSX('title');
         if (!titleContent) {
@@ -76,19 +94,28 @@ export default defineComponent({
           }
         }
 
-        return isStringTitle ? <span class={`${navbarClass.value}__center-title`}>{titleContent}</span> : titleContent;
+        const finalTitle = isStringTitle ? (
+          <span class={`${navbarClass.value}__center-title`}>{titleContent}</span>
+        ) : (
+          titleContent
+        );
+        return <div class={`${navbarClass.value}__center`}>{finalTitle}</div>;
       };
+
+      const renderPlaceholder = () => {
+        if (fixed && placeholder) {
+          return <div class={`${navbarClass.value}__placeholder`}></div>;
+        }
+        return null;
+      };
+
       return (
-        <div class={navClass.value} style={navStyle.value}>
-          {fixed && <div class={`${navbarClass.value}____placeholder`}></div>}
+        <div class={navClass.value} style={styles.value}>
+          {renderPlaceholder()}
           <div class={`${navbarClass.value}__content`}>
-            <div class={`${navbarClass.value}__left`} onClick={handleLeftClick}>
-              {leftArrow && <t-chevron-left-icon class={`${navbarClass.value}__left-arrow`} />}
-              {renderTNodeJSX('left')}
-              {renderCapsuleContent()}
-            </div>
-            <div class={`${navbarClass.value}__center`}>{renderTitleContent()}</div>
-            {renderRightContent()}
+            {renderLeft()}
+            {renderCenter()}
+            {renderRight()}
           </div>
         </div>
       );

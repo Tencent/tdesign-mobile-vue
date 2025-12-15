@@ -3,11 +3,9 @@
 exports[`navbar > events > left-click 1`] = `
 <div
   class="t-navbar t-navbar--fixed t-safe-area-top t-navbar--visible-animation"
-  style="position: fixed;"
+  style="z-index: 1;"
 >
-  <div
-    class="t-navbar____placeholder"
-  />
+  <!---->
   <div
     class="t-navbar__content"
   >
@@ -95,11 +93,9 @@ exports[`navbar > events > left-click 1`] = `
 exports[`navbar > events > right-click 1`] = `
 <div
   class="t-navbar t-navbar--fixed t-safe-area-top t-navbar--visible-animation"
-  style="position: fixed;"
+  style="z-index: 1;"
 >
-  <div
-    class="t-navbar____placeholder"
-  />
+  <!---->
   <div
     class="t-navbar__content"
   >
