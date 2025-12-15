@@ -96,7 +96,7 @@ export default defineComponent({
 
     const rootClass = computed(() => [
       `${swiperClass.value}`,
-      `${swiperClass.value}--${props.type}`,
+      `${swiperClass.value}--${navigationConfig.value.type}`,
       { [`${swiperClass.value}--${navigationConfig.value.placement}`]: isBottomPagination.value },
     ]);
 
@@ -356,8 +356,8 @@ export default defineComponent({
         <span
           class={[
             `${swiperNavClass.value}--${props.direction}`,
-            `${swiperNavClass.value}__${navigationConfig.value?.type || ''}`,
-            `${swiperNavClass.value}--${navigationConfig.value?.paginationPosition || 'bottom'}`,
+            `${swiperNavClass.value}__${navigationConfig.value.type || ''}`,
+            `${swiperNavClass.value}--${navigationConfig.value.paginationPosition || 'bottom'}`,
             `${swiperNavClass.value}--${navigationConfig.value.placement}`,
           ]}
         >
