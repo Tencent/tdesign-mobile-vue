@@ -1,11 +1,16 @@
 <template>
   <div v-for="(item, index) in resultList" :key="index">
-    <t-result :theme="item.theme" :title="item.title" :description="item.description" class="space" />
+    <t-result :theme="item.theme" :title="item.title" class="space" />
   </div>
+  <tdesign-demo-block summary="带描述的结果">
+    <div v-for="(item, index) in resultList" :key="index">
+      <t-result :description="item.description" :theme="item.theme" :title="item.title" class="space" />
+    </div>
+  </tdesign-demo-block>
 </template>
 
 <script lang="ts" setup>
-import { toRefs, defineProps } from 'vue';
+import { defineProps } from 'vue';
 
 const resultList = [
   {

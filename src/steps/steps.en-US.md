@@ -37,8 +37,8 @@ titleRight | String / Slot / Function | '' | Typescript：`string \| TNode`。[s
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-step-item-circle-font-size | 14px | -
 --td-step-item-circle-size | 22px | -
+--td-step-item-circle-text-font | @font-body-medium | -
 --td-step-item-default-circle-bg | @bg-color-secondarycontainer | -
 --td-step-item-default-circle-color | @text-color-placeholder | -
 --td-step-item-default-dot-border-color | @component-border | -

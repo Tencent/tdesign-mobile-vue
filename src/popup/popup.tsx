@@ -5,7 +5,7 @@ import popupProps from './props';
 import TOverlay from '../overlay';
 import config from '../config';
 import { TdPopupProps } from './type';
-import { TNode } from '../shared';
+import { TNode, isBrowser } from '../shared';
 import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 import { useLockScroll } from '../hooks/useLockScroll';
@@ -40,11 +40,18 @@ export default defineComponent({
 
     const wrapperVisible = ref(currentVisible.value);
     const innerVisible = ref(currentVisible.value);
-    const mounted = ref(false);
+
+    // mounted 后才显示，避免 ssr 下 mismatch (#1654)
+    const mounted = ref(!!isBrowser);
 
     // 因为开启 destroyOnClose，会影响 transition 的动画，因此需要前后设置 visible
-    watch(currentVisible, (v) => {
+    watch(currentVisible, (v, oldV) => {
       if (v) {
+        // 当外部 visible 更新为 true 时，触发 onVisibleChange 回调
+        if (v !== oldV) {
+          props.onVisibleChange?.(v, 'document');
+        }
+
         wrapperVisible.value = v;
         if (props.destroyOnClose) {
           nextTick(() => {
@@ -83,7 +90,7 @@ export default defineComponent({
 
     const handleCloseClick = (e: MouseEvent) => {
       props.onClose?.({ e });
-      setCurrentVisible(false, { trigger: 'close-btn' });
+      setCurrentVisible(false, 'close-btn');
     };
 
     const handleOverlayClick = (args: { e: MouseEvent }) => {
@@ -92,7 +99,7 @@ export default defineComponent({
         return;
       }
       props.onClose?.({ e });
-      setCurrentVisible(false, { trigger: 'overlay' });
+      setCurrentVisible(false, 'overlay');
     };
 
     const afterLeave = () => {

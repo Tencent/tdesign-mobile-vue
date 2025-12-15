@@ -1,4 +1,4 @@
-import orgPkg from '../../../package.json';
+import orgPkg from '../../../../package.json';
 
 export const htmlContent = `
   <!DOCTYPE html>

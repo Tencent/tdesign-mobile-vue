@@ -6,7 +6,8 @@
   <t-action-sheet
     v-model="centerVisible"
     :items="items"
-    description="动作面板描述文字"
+    description="Email Settings"
+    cancel-text="cancel"
     @selected="handleSelected"
     @cancel="handleCancel"
   >
@@ -15,7 +16,8 @@
     v-model="leftVisible"
     align="left"
     :items="items"
-    description="动作面板描述文字"
+    description="Email Settings"
+    cancel-text="cancel"
     @selected="handleSelected"
     @cancel="handleCancel"
   >
@@ -23,10 +25,28 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref, h } from 'vue';
+import { EnterIcon, BookmarkIcon, PinIcon, CloudUploadIcon } from 'tdesign-icons-vue-next';
 import { ActionSheetItem } from 'tdesign-mobile-vue';
 
-const items = ref([{ label: '选项1' }, { label: '选项2' }, { label: '选项3' }, { label: '选项4' }]);
+const items = ref([
+  {
+    label: 'Move',
+    icon: () => h(EnterIcon),
+  },
+  {
+    label: 'Mark as important',
+    icon: () => h(BookmarkIcon),
+  },
+  {
+    label: 'Unsubscribe',
+    icon: h(PinIcon),
+  },
+  {
+    label: 'Add to Tasks',
+    icon: h(CloudUploadIcon),
+  },
+]);
 const centerVisible = ref(false);
 const leftVisible = ref(false);
 

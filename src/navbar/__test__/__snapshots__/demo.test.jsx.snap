@@ -135,48 +135,28 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
       <div
         class="t-navbar__left"
       >
-        <!---->
-        <!---->
-        <div
-          class="t-navbar__capsule"
+        <svg
+          class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
         >
-          
-          <div
-            class="custom-capsule"
-            data-v-fcc0cda1=""
+          <g
+            id="chevron-left"
           >
-            <svg
-              class="t-icon t-icon-chevron-left custom-capsule__icon"
-              data-v-fcc0cda1=""
-              style="font-size: 20px;"
-            >
-              <use
-                href="#t-icon-chevron-left"
-              />
-            </svg>
-            <div
-              class="t-divider t-divider--vertical t-divider--center"
-              data-v-fcc0cda1=""
-              role="separator"
-            >
-              <div
-                class="t-divider__content"
-              >
-                <!---->
-              </div>
-            </div>
-            <svg
-              class="t-icon t-icon-home custom-capsule__icon"
-              data-v-fcc0cda1=""
-              style="font-size: 20px;"
-            >
-              <use
-                href="#t-icon-home"
-              />
-            </svg>
-          </div>
-          
-        </div>
+            <path
+              d="M14.5 17.5L9 12L14.5 6.5"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+        <!---->
+        <!---->
       </div>
       <div
         class="t-navbar__center"
@@ -191,6 +171,15 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
         class="t-navbar__right"
       >
         
+        <svg
+          class="t-icon t-icon-home"
+          data-v-fcc0cda1=""
+          style="font-size: 24px;"
+        >
+          <use
+            href="#t-icon-home"
+          />
+        </svg>
         <svg
           class="t-icon t-icon-ellipsis"
           data-v-fcc0cda1=""
@@ -680,48 +669,28 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
           <div
             class="t-navbar__left"
           >
-            <!---->
-            <!---->
-            <div
-              class="t-navbar__capsule"
+            <svg
+              class="t-icon t-icon-chevron-left t-navbar__left-arrow"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              
-              <div
-                class="custom-capsule"
-                data-v-fcc0cda1=""
+              <g
+                id="chevron-left"
               >
-                <svg
-                  class="t-icon t-icon-chevron-left custom-capsule__icon"
-                  data-v-fcc0cda1=""
-                  style="font-size: 20px;"
-                >
-                  <use
-                    href="#t-icon-chevron-left"
-                  />
-                </svg>
-                <div
-                  class="t-divider t-divider--vertical t-divider--center"
-                  data-v-fcc0cda1=""
-                  role="separator"
-                >
-                  <div
-                    class="t-divider__content"
-                  >
-                    <!---->
-                  </div>
-                </div>
-                <svg
-                  class="t-icon t-icon-home custom-capsule__icon"
-                  data-v-fcc0cda1=""
-                  style="font-size: 20px;"
-                >
-                  <use
-                    href="#t-icon-home"
-                  />
-                </svg>
-              </div>
-              
-            </div>
+                <path
+                  d="M14.5 17.5L9 12L14.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+            <!---->
+            <!---->
           </div>
           <div
             class="t-navbar__center"
@@ -736,6 +705,15 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             class="t-navbar__right"
           >
             
+            <svg
+              class="t-icon t-icon-home"
+              data-v-fcc0cda1=""
+              style="font-size: 24px;"
+            >
+              <use
+                href="#t-icon-home"
+              />
+            </svg>
             <svg
               class="t-icon t-icon-ellipsis"
               data-v-fcc0cda1=""
@@ -787,6 +765,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             <!---->
             
             <div
+              class="navbar-search"
               data-v-614a1e54=""
             >
               <div
@@ -1409,6 +1388,7 @@ exports[`Navbar > Navbar searchVue demo works fine 1`] = `
       <!---->
       
       <div
+        class="navbar-search"
         data-v-614a1e54=""
       >
         <div

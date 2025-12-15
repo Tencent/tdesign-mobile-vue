@@ -24,7 +24,7 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
       </div>
       <div
         class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-        style="right: -4px; top: 4px;"
+        style="right: -3px; top: 3px;"
       >
         <!---->
       </div>
@@ -37,12 +37,43 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
       >
         
         <svg
-          aria-label="通知"
           class="t-icon t-icon-notification"
+          fill="none"
+          height="1em"
+          style="fill: none; font-size: 24px;"
+          viewBox="0 0 24 24"
+          width="1em"
         >
-          <use
-            href="#t-icon-notification"
-          />
+          <g
+            id="notification"
+          >
+            <path
+              d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
+              fill="transparent"
+              id="fill1"
+            />
+            <path
+              d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
+              fill="transparent"
+              id="fill2"
+            />
+            <g
+              id="stroke1"
+            >
+              <path
+                d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+              <path
+                d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
+          </g>
         </svg>
         
       </div>
@@ -108,7 +139,7 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
       </div>
       <div
         class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-        style="right: -8px; top: 0px;"
+        style="right: 0px; top: 0px;"
       >
         8
       </div>
@@ -121,12 +152,43 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
       >
         
         <svg
-          aria-label="通知"
           class="t-icon t-icon-notification"
+          fill="none"
+          height="1em"
+          style="fill: none; font-size: 24px;"
+          viewBox="0 0 24 24"
+          width="1em"
         >
-          <use
-            href="#t-icon-notification"
-          />
+          <g
+            id="notification"
+          >
+            <path
+              d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
+              fill="transparent"
+              id="fill1"
+            />
+            <path
+              d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
+              fill="transparent"
+              id="fill2"
+            />
+            <g
+              id="stroke1"
+            >
+              <path
+                d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+              <path
+                d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
+          </g>
         </svg>
         
       </div>
@@ -134,7 +196,7 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
         class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         style="right: -2px; top: -2px;"
       >
-        2
+        8
       </div>
     </div>
     <div
@@ -197,7 +259,7 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
             class="t-icon t-icon-notification"
             fill="none"
             height="1em"
-            style="fill: none;"
+            style="fill: none; font-size: 24px;"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -306,7 +368,7 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-              style="right: -4px; top: 4px;"
+              style="right: -3px; top: 3px;"
             >
               <!---->
             </div>
@@ -319,12 +381,43 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
             >
               
               <svg
-                aria-label="通知"
                 class="t-icon t-icon-notification"
+                fill="none"
+                height="1em"
+                style="fill: none; font-size: 24px;"
+                viewBox="0 0 24 24"
+                width="1em"
               >
-                <use
-                  href="#t-icon-notification"
-                />
+                <g
+                  id="notification"
+                >
+                  <path
+                    d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
+                    fill="transparent"
+                    id="fill1"
+                  />
+                  <path
+                    d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
+                    fill="transparent"
+                    id="fill2"
+                  />
+                  <g
+                    id="stroke1"
+                  >
+                    <path
+                      d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
+                </g>
               </svg>
               
             </div>
@@ -390,7 +483,7 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-              style="right: -8px; top: 0px;"
+              style="right: 0px; top: 0px;"
             >
               8
             </div>
@@ -403,12 +496,43 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
             >
               
               <svg
-                aria-label="通知"
                 class="t-icon t-icon-notification"
+                fill="none"
+                height="1em"
+                style="fill: none; font-size: 24px;"
+                viewBox="0 0 24 24"
+                width="1em"
               >
-                <use
-                  href="#t-icon-notification"
-                />
+                <g
+                  id="notification"
+                >
+                  <path
+                    d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
+                    fill="transparent"
+                    id="fill1"
+                  />
+                  <path
+                    d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
+                    fill="transparent"
+                    id="fill2"
+                  />
+                  <g
+                    id="stroke1"
+                  >
+                    <path
+                      d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
+                </g>
               </svg>
               
             </div>
@@ -416,7 +540,7 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
               class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
               style="right: -2px; top: -2px;"
             >
-              2
+              8
             </div>
           </div>
           <div
@@ -479,7 +603,7 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-notification"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
+                  style="fill: none; font-size: 24px;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
@@ -569,12 +693,43 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
             >
               
               <svg
-                aria-label="通知"
                 class="t-icon t-icon-notification"
+                fill="none"
+                height="1em"
+                style="fill: none; font-size: 24px;"
+                viewBox="0 0 24 24"
+                width="1em"
               >
-                <use
-                  href="#t-icon-notification"
-                />
+                <g
+                  id="notification"
+                >
+                  <path
+                    d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
+                    fill="transparent"
+                    id="fill1"
+                  />
+                  <path
+                    d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
+                    fill="transparent"
+                    id="fill2"
+                  />
+                  <g
+                    id="stroke1"
+                  >
+                    <path
+                      d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
+                </g>
               </svg>
               
             </div>
@@ -582,7 +737,7 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
               class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
               style="right: -2px; top: -2px;"
             >
-              2
+              8
             </div>
           </div>
         </div>
@@ -602,20 +757,51 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
             >
               
               <svg
-                aria-label="通知"
                 class="t-icon t-icon-notification"
+                fill="none"
+                height="1em"
+                style="fill: none; font-size: 24px;"
+                viewBox="0 0 24 24"
+                width="1em"
               >
-                <use
-                  href="#t-icon-notification"
-                />
+                <g
+                  id="notification"
+                >
+                  <path
+                    d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
+                    fill="transparent"
+                    id="fill1"
+                  />
+                  <path
+                    d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
+                    fill="transparent"
+                    id="fill2"
+                  />
+                  <g
+                    id="stroke1"
+                  >
+                    <path
+                      d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
+                </g>
               </svg>
               
             </div>
             <div
               class="t-badge--basic t-badge--medium t-badge--square t-badge--count t-has-count"
-              style="right: -2px; top: -2px;"
+              style="right: -2px; top: -6px;"
             >
-              2
+              8
             </div>
           </div>
         </div>
@@ -646,7 +832,7 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                   class="t-icon t-icon-shop"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
+                  style="fill: none; font-size: 24px;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
@@ -679,7 +865,7 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
             <div
               class="t-badge--basic t-badge--medium t-badge--bubble t-badge--count t-has-count"
             >
-              领积分
+              领取积分
             </div>
           </div>
         </div>
@@ -785,7 +971,7 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-user"
                         fill="none"
                         height="1em"
-                        style="fill: none;"
+                        style="fill: none; font-size: 24px;"
                         viewBox="0 0 24 24"
                         width="1em"
                       >
@@ -867,7 +1053,7 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                         class="t-icon t-icon-user"
                         fill="none"
                         height="1em"
-                        style="fill: none;"
+                        style="fill: none; font-size: 24px;"
                         viewBox="0 0 24 24"
                         width="1em"
                       >
@@ -958,7 +1144,7 @@ exports[`Badge > Badge sizeVue demo works fine 1`] = `
                   class="t-icon t-icon-user"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
+                  style="fill: none; font-size: 24px;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
@@ -1040,7 +1226,7 @@ exports[`Badge > Badge sizeVue demo works fine 1`] = `
                   class="t-icon t-icon-user"
                   fill="none"
                   height="1em"
-                  style="fill: none;"
+                  style="fill: none; font-size: 24px;"
                   viewBox="0 0 24 24"
                   width="1em"
                 >
@@ -1112,12 +1298,43 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
       >
         
         <svg
-          aria-label="通知"
           class="t-icon t-icon-notification"
+          fill="none"
+          height="1em"
+          style="fill: none; font-size: 24px;"
+          viewBox="0 0 24 24"
+          width="1em"
         >
-          <use
-            href="#t-icon-notification"
-          />
+          <g
+            id="notification"
+          >
+            <path
+              d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
+              fill="transparent"
+              id="fill1"
+            />
+            <path
+              d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
+              fill="transparent"
+              id="fill2"
+            />
+            <g
+              id="stroke1"
+            >
+              <path
+                d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+              <path
+                d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
+          </g>
         </svg>
         
       </div>
@@ -1125,7 +1342,7 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
         class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         style="right: -2px; top: -2px;"
       >
-        2
+        8
       </div>
     </div>
   </div>
@@ -1145,20 +1362,51 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
       >
         
         <svg
-          aria-label="通知"
           class="t-icon t-icon-notification"
+          fill="none"
+          height="1em"
+          style="fill: none; font-size: 24px;"
+          viewBox="0 0 24 24"
+          width="1em"
         >
-          <use
-            href="#t-icon-notification"
-          />
+          <g
+            id="notification"
+          >
+            <path
+              d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
+              fill="transparent"
+              id="fill1"
+            />
+            <path
+              d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
+              fill="transparent"
+              id="fill2"
+            />
+            <g
+              id="stroke1"
+            >
+              <path
+                d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+              <path
+                d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
+          </g>
         </svg>
         
       </div>
       <div
         class="t-badge--basic t-badge--medium t-badge--square t-badge--count t-has-count"
-        style="right: -2px; top: -2px;"
+        style="right: -2px; top: -6px;"
       >
-        2
+        8
       </div>
     </div>
   </div>
@@ -1189,7 +1437,7 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
             class="t-icon t-icon-shop"
             fill="none"
             height="1em"
-            style="fill: none;"
+            style="fill: none; font-size: 24px;"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -1222,7 +1470,7 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
       <div
         class="t-badge--basic t-badge--medium t-badge--bubble t-badge--count t-has-count"
       >
-        领积分
+        领取积分
       </div>
     </div>
   </div>

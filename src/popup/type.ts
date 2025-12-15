@@ -90,9 +90,9 @@ export interface TdPopupProps {
    */
   onOpened?: () => void;
   /**
-   * 当浮层隐藏或显示时触发
+   * 当浮层隐藏或显示时触发，trigger=document 表示点击弹出层元素触发
    */
   onVisibleChange?: (visible: boolean, trigger: PopupSource) => void;
 }
 
-export type PopupSource = 'close-btn' | 'overlay';
+export type PopupSource = 'close-btn' | 'overlay' | 'document';

@@ -1,5 +1,5 @@
 <template>
-  <t-dropdown-menu @menu-opened="handleMenuOpened" @menu-closed="handleMenuClosed">
+  <t-dropdown-menu placement="right" @menu-opened="handleMenuOpened" @menu-closed="handleMenuClosed">
     <t-dropdown-item :options="product.options" :value="product.value" @change="onChange" />
     <t-dropdown-item :options="sorter.options" :value="sorter.value" />
   </t-dropdown-menu>

@@ -10,70 +10,60 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
     class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
   >
     <div
-      class="t-collapse-panel__title"
+      class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
     >
       <div
-        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
+        class="t-cell__left"
+      >
+        <!---->
+        <!---->
+      </div>
+      <div
+        class="t-cell__title"
       >
         <div
-          class="t-cell__left"
-        >
-          <!---->
-          <!---->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          <div
-            class="t-cell__title-text"
-          >
-            
-            折叠面板标题
-            
-            <!---->
-          </div>
-          <!---->
-        </div>
-        <div
-          class="t-cell__note"
+          class="t-cell__title-text"
         >
           
-          单元测试
+          折叠面板标题
           
+          <!---->
         </div>
+        <!---->
+      </div>
+      <!---->
+      <div
+        class="t-cell__right t-cell__right--middle"
+      >
         <div
-          class="t-cell__right t-cell__right--middle"
+          class="t-cell__right-icon"
         >
+          
           <div
-            class="t-cell__right-icon"
+            class="t-collapse-panel__header-icon"
           >
-            
-            <div
-              class="t-collapse-panel__header-icon"
+            <svg
+              class="t-icon t-icon-chevron-up"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <svg
-                class="t-icon t-icon-chevron-up"
-                fill="none"
-                height="1em"
-                style="fill: none;"
-                viewBox="0 0 24 24"
-                width="1em"
+              <g
+                id="chevron-up"
               >
-                <g
-                  id="chevron-up"
-                >
-                  <path
-                    d="M17.5 14.5L12 9L6.5 14.5"
-                    id="stroke1"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
-              </svg>
-            </div>
-            
+                <path
+                  d="M17.5 14.5L12 9L6.5 14.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
           </div>
+          
         </div>
       </div>
     </div>
@@ -102,70 +92,60 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
     class="t-collapse-panel t-collapse-panel--bottom"
   >
     <div
-      class="t-collapse-panel__title"
+      class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom"
     >
       <div
-        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
+        class="t-cell__left"
+      >
+        <!---->
+        <!---->
+      </div>
+      <div
+        class="t-cell__title"
       >
         <div
-          class="t-cell__left"
-        >
-          <!---->
-          <!---->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          <div
-            class="t-cell__title-text"
-          >
-            
-            折叠面板标题
-            
-            <!---->
-          </div>
-          <!---->
-        </div>
-        <div
-          class="t-cell__note"
+          class="t-cell__title-text"
         >
           
-          单元测试
+          折叠面板标题
           
+          <!---->
         </div>
+        <!---->
+      </div>
+      <!---->
+      <div
+        class="t-cell__right t-cell__right--middle"
+      >
         <div
-          class="t-cell__right t-cell__right--middle"
+          class="t-cell__right-icon"
         >
+          
           <div
-            class="t-cell__right-icon"
+            class="t-collapse-panel__header-icon"
           >
-            
-            <div
-              class="t-collapse-panel__header-icon"
+            <svg
+              class="t-icon t-icon-chevron-down"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <svg
-                class="t-icon t-icon-chevron-down"
-                fill="none"
-                height="1em"
-                style="fill: none;"
-                viewBox="0 0 24 24"
-                width="1em"
+              <g
+                id="chevron-down"
               >
-                <g
-                  id="chevron-down"
-                >
-                  <path
-                    d="M17.5 9.5L12 15L6.5 9.5"
-                    id="stroke1"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
-              </svg>
-            </div>
-            
+                <path
+                  d="M17.5 9.5L12 15L6.5 9.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
           </div>
+          
         </div>
       </div>
     </div>
@@ -194,70 +174,60 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
     class="t-collapse-panel t-collapse-panel--bottom"
   >
     <div
-      class="t-collapse-panel__title"
+      class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom"
     >
       <div
-        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
+        class="t-cell__left"
+      >
+        <!---->
+        <!---->
+      </div>
+      <div
+        class="t-cell__title"
       >
         <div
-          class="t-cell__left"
-        >
-          <!---->
-          <!---->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          <div
-            class="t-cell__title-text"
-          >
-            
-            折叠面板标题
-            
-            <!---->
-          </div>
-          <!---->
-        </div>
-        <div
-          class="t-cell__note"
+          class="t-cell__title-text"
         >
           
-          单元测试
+          折叠面板标题
           
+          <!---->
         </div>
+        <!---->
+      </div>
+      <!---->
+      <div
+        class="t-cell__right t-cell__right--middle"
+      >
         <div
-          class="t-cell__right t-cell__right--middle"
+          class="t-cell__right-icon"
         >
+          
           <div
-            class="t-cell__right-icon"
+            class="t-collapse-panel__header-icon"
           >
-            
-            <div
-              class="t-collapse-panel__header-icon"
+            <svg
+              class="t-icon t-icon-chevron-down"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <svg
-                class="t-icon t-icon-chevron-down"
-                fill="none"
-                height="1em"
-                style="fill: none;"
-                viewBox="0 0 24 24"
-                width="1em"
+              <g
+                id="chevron-down"
               >
-                <g
-                  id="chevron-down"
-                >
-                  <path
-                    d="M17.5 9.5L12 15L6.5 9.5"
-                    id="stroke1"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
-              </svg>
-            </div>
-            
+                <path
+                  d="M17.5 9.5L12 15L6.5 9.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
           </div>
+          
         </div>
       </div>
     </div>
@@ -286,70 +256,60 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
     class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--disabled"
   >
     <div
-      class="t-collapse-panel__title"
+      class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom"
     >
       <div
-        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
+        class="t-cell__left"
+      >
+        <!---->
+        <!---->
+      </div>
+      <div
+        class="t-cell__title"
       >
         <div
-          class="t-cell__left"
-        >
-          <!---->
-          <!---->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          <div
-            class="t-cell__title-text"
-          >
-            
-            折叠面板标题
-            
-            <!---->
-          </div>
-          <!---->
-        </div>
-        <div
-          class="t-cell__note"
+          class="t-cell__title-text"
         >
           
-          单元测试
+          折叠面板标题
           
+          <!---->
         </div>
+        <!---->
+      </div>
+      <!---->
+      <div
+        class="t-cell__right t-cell__right--middle"
+      >
         <div
-          class="t-cell__right t-cell__right--middle"
+          class="t-cell__right-icon"
         >
+          
           <div
-            class="t-cell__right-icon"
+            class="t-collapse-panel__header-icon"
           >
-            
-            <div
-              class="t-collapse-panel__header-icon"
+            <svg
+              class="t-icon t-icon-chevron-down"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <svg
-                class="t-icon t-icon-chevron-down"
-                fill="none"
-                height="1em"
-                style="fill: none;"
-                viewBox="0 0 24 24"
-                width="1em"
+              <g
+                id="chevron-down"
               >
-                <g
-                  id="chevron-down"
-                >
-                  <path
-                    d="M17.5 9.5L12 15L6.5 9.5"
-                    id="stroke1"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
-              </svg>
-            </div>
-            
+                <path
+                  d="M17.5 9.5L12 15L6.5 9.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
           </div>
+          
         </div>
       </div>
     </div>
@@ -388,70 +348,66 @@ exports[`Collapse > Collapse actionVue demo works fine 1`] = `
     class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
   >
     <div
-      class="t-collapse-panel__title"
+      class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
     >
       <div
-        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
+        class="t-cell__left"
+      >
+        <!---->
+        <!---->
+      </div>
+      <div
+        class="t-cell__title"
       >
         <div
-          class="t-cell__left"
-        >
-          <!---->
-          <!---->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          <div
-            class="t-cell__title-text"
-          >
-            
-            折叠面板标题
-            
-            <!---->
-          </div>
-          <!---->
-        </div>
-        <div
-          class="t-cell__note"
+          class="t-cell__title-text"
         >
           
-          收起
+          折叠面板标题
           
+          <!---->
         </div>
+        <!---->
+      </div>
+      <div
+        class="t-cell__note"
+      >
+        
+        收起
+        
+      </div>
+      <div
+        class="t-cell__right t-cell__right--middle"
+      >
         <div
-          class="t-cell__right t-cell__right--middle"
+          class="t-cell__right-icon"
         >
+          
           <div
-            class="t-cell__right-icon"
+            class="t-collapse-panel__header-icon"
           >
-            
-            <div
-              class="t-collapse-panel__header-icon"
+            <svg
+              class="t-icon t-icon-chevron-up"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <svg
-                class="t-icon t-icon-chevron-up"
-                fill="none"
-                height="1em"
-                style="fill: none;"
-                viewBox="0 0 24 24"
-                width="1em"
+              <g
+                id="chevron-up"
               >
-                <g
-                  id="chevron-up"
-                >
-                  <path
-                    d="M17.5 14.5L12 9L6.5 14.5"
-                    id="stroke1"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
-              </svg>
-            </div>
-            
+                <path
+                  d="M17.5 14.5L12 9L6.5 14.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
           </div>
+          
         </div>
       </div>
     </div>
@@ -489,64 +445,60 @@ exports[`Collapse > Collapse baseVue demo works fine 1`] = `
     class="t-collapse-panel t-collapse-panel--bottom"
   >
     <div
-      class="t-collapse-panel__title"
+      class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom"
     >
       <div
-        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
+        class="t-cell__left"
+      >
+        <!---->
+        <!---->
+      </div>
+      <div
+        class="t-cell__title"
       >
         <div
-          class="t-cell__left"
+          class="t-cell__title-text"
         >
-          <!---->
-          <!---->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          <div
-            class="t-cell__title-text"
-          >
-            
-            折叠面板标题
-            
-            <!---->
-          </div>
+          
+          折叠面板标题
+          
           <!---->
         </div>
         <!---->
+      </div>
+      <!---->
+      <div
+        class="t-cell__right t-cell__right--middle"
+      >
         <div
-          class="t-cell__right t-cell__right--middle"
+          class="t-cell__right-icon"
         >
+          
           <div
-            class="t-cell__right-icon"
+            class="t-collapse-panel__header-icon"
           >
-            
-            <div
-              class="t-collapse-panel__header-icon"
+            <svg
+              class="t-icon t-icon-chevron-down"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <svg
-                class="t-icon t-icon-chevron-down"
-                fill="none"
-                height="1em"
-                style="fill: none;"
-                viewBox="0 0 24 24"
-                width="1em"
+              <g
+                id="chevron-down"
               >
-                <g
-                  id="chevron-down"
-                >
-                  <path
-                    d="M17.5 9.5L12 15L6.5 9.5"
-                    id="stroke1"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
-              </svg>
-            </div>
-            
+                <path
+                  d="M17.5 9.5L12 15L6.5 9.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
           </div>
+          
         </div>
       </div>
     </div>
@@ -585,64 +537,60 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
     class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
   >
     <div
-      class="t-collapse-panel__title"
+      class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
     >
       <div
-        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
+        class="t-cell__left"
+      >
+        <!---->
+        <!---->
+      </div>
+      <div
+        class="t-cell__title"
       >
         <div
-          class="t-cell__left"
+          class="t-cell__title-text"
         >
-          <!---->
-          <!---->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          <div
-            class="t-cell__title-text"
-          >
-            
-            折叠面板标题
-            
-            <!---->
-          </div>
+          
+          折叠面板标题
+          
           <!---->
         </div>
         <!---->
+      </div>
+      <!---->
+      <div
+        class="t-cell__right t-cell__right--middle"
+      >
         <div
-          class="t-cell__right t-cell__right--middle"
+          class="t-cell__right-icon"
         >
+          
           <div
-            class="t-cell__right-icon"
+            class="t-collapse-panel__header-icon"
           >
-            
-            <div
-              class="t-collapse-panel__header-icon"
+            <svg
+              class="t-icon t-icon-chevron-up"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <svg
-                class="t-icon t-icon-chevron-up"
-                fill="none"
-                height="1em"
-                style="fill: none;"
-                viewBox="0 0 24 24"
-                width="1em"
+              <g
+                id="chevron-up"
               >
-                <g
-                  id="chevron-up"
-                >
-                  <path
-                    d="M17.5 14.5L12 9L6.5 14.5"
-                    id="stroke1"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
-              </svg>
-            </div>
-            
+                <path
+                  d="M17.5 14.5L12 9L6.5 14.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
           </div>
+          
         </div>
       </div>
     </div>
@@ -671,64 +619,60 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
     class="t-collapse-panel t-collapse-panel--bottom"
   >
     <div
-      class="t-collapse-panel__title"
+      class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom"
     >
       <div
-        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
+        class="t-cell__left"
+      >
+        <!---->
+        <!---->
+      </div>
+      <div
+        class="t-cell__title"
       >
         <div
-          class="t-cell__left"
+          class="t-cell__title-text"
         >
-          <!---->
-          <!---->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          <div
-            class="t-cell__title-text"
-          >
-            
-            折叠面板标题
-            
-            <!---->
-          </div>
+          
+          折叠面板标题
+          
           <!---->
         </div>
         <!---->
+      </div>
+      <!---->
+      <div
+        class="t-cell__right t-cell__right--middle"
+      >
         <div
-          class="t-cell__right t-cell__right--middle"
+          class="t-cell__right-icon"
         >
+          
           <div
-            class="t-cell__right-icon"
+            class="t-collapse-panel__header-icon"
           >
-            
-            <div
-              class="t-collapse-panel__header-icon"
+            <svg
+              class="t-icon t-icon-chevron-down"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <svg
-                class="t-icon t-icon-chevron-down"
-                fill="none"
-                height="1em"
-                style="fill: none;"
-                viewBox="0 0 24 24"
-                width="1em"
+              <g
+                id="chevron-down"
               >
-                <g
-                  id="chevron-down"
-                >
-                  <path
-                    d="M17.5 9.5L12 15L6.5 9.5"
-                    id="stroke1"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
-              </svg>
-            </div>
-            
+                <path
+                  d="M17.5 9.5L12 15L6.5 9.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
           </div>
+          
         </div>
       </div>
     </div>
@@ -757,64 +701,60 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
     class="t-collapse-panel t-collapse-panel--bottom"
   >
     <div
-      class="t-collapse-panel__title"
+      class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom"
     >
       <div
-        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
+        class="t-cell__left"
+      >
+        <!---->
+        <!---->
+      </div>
+      <div
+        class="t-cell__title"
       >
         <div
-          class="t-cell__left"
+          class="t-cell__title-text"
         >
-          <!---->
-          <!---->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          <div
-            class="t-cell__title-text"
-          >
-            
-            折叠面板标题
-            
-            <!---->
-          </div>
+          
+          折叠面板标题
+          
           <!---->
         </div>
         <!---->
+      </div>
+      <!---->
+      <div
+        class="t-cell__right t-cell__right--middle"
+      >
         <div
-          class="t-cell__right t-cell__right--middle"
+          class="t-cell__right-icon"
         >
+          
           <div
-            class="t-cell__right-icon"
+            class="t-collapse-panel__header-icon"
           >
-            
-            <div
-              class="t-collapse-panel__header-icon"
+            <svg
+              class="t-icon t-icon-chevron-down"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <svg
-                class="t-icon t-icon-chevron-down"
-                fill="none"
-                height="1em"
-                style="fill: none;"
-                viewBox="0 0 24 24"
-                width="1em"
+              <g
+                id="chevron-down"
               >
-                <g
-                  id="chevron-down"
-                >
-                  <path
-                    d="M17.5 9.5L12 15L6.5 9.5"
-                    id="stroke1"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
-              </svg>
-            </div>
-            
+                <path
+                  d="M17.5 9.5L12 15L6.5 9.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
           </div>
+          
         </div>
       </div>
     </div>
@@ -843,64 +783,60 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
     class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--disabled"
   >
     <div
-      class="t-collapse-panel__title"
+      class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom"
     >
       <div
-        class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
+        class="t-cell__left"
+      >
+        <!---->
+        <!---->
+      </div>
+      <div
+        class="t-cell__title"
       >
         <div
-          class="t-cell__left"
+          class="t-cell__title-text"
         >
-          <!---->
-          <!---->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          <div
-            class="t-cell__title-text"
-          >
-            
-            折叠面板标题
-            
-            <!---->
-          </div>
+          
+          折叠面板标题
+          
           <!---->
         </div>
         <!---->
+      </div>
+      <!---->
+      <div
+        class="t-cell__right t-cell__right--middle"
+      >
         <div
-          class="t-cell__right t-cell__right--middle"
+          class="t-cell__right-icon"
         >
+          
           <div
-            class="t-cell__right-icon"
+            class="t-collapse-panel__header-icon"
           >
-            
-            <div
-              class="t-collapse-panel__header-icon"
+            <svg
+              class="t-icon t-icon-chevron-down"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <svg
-                class="t-icon t-icon-chevron-down"
-                fill="none"
-                height="1em"
-                style="fill: none;"
-                viewBox="0 0 24 24"
-                width="1em"
+              <g
+                id="chevron-down"
               >
-                <g
-                  id="chevron-down"
-                >
-                  <path
-                    d="M17.5 9.5L12 15L6.5 9.5"
-                    id="stroke1"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
-              </svg>
-            </div>
-            
+                <path
+                  d="M17.5 9.5L12 15L6.5 9.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
           </div>
+          
         </div>
       </div>
     </div>
@@ -942,7 +878,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
   <p
     class="summary"
   >
-    用于对复杂区域进行分组和隐藏 常用于订单信息展示等
+    可以折叠/展开的内容区域。
   </p>
   <div
     class="tdesign-mobile-demo-block"
@@ -973,64 +909,60 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
           class="t-collapse-panel t-collapse-panel--bottom"
         >
           <div
-            class="t-collapse-panel__title"
+            class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom"
           >
             <div
-              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
+              class="t-cell__left"
+            >
+              <!---->
+              <!---->
+            </div>
+            <div
+              class="t-cell__title"
             >
               <div
-                class="t-cell__left"
+                class="t-cell__title-text"
               >
-                <!---->
-                <!---->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                <div
-                  class="t-cell__title-text"
-                >
-                  
-                  折叠面板标题
-                  
-                  <!---->
-                </div>
+                
+                折叠面板标题
+                
                 <!---->
               </div>
               <!---->
+            </div>
+            <!---->
+            <div
+              class="t-cell__right t-cell__right--middle"
+            >
               <div
-                class="t-cell__right t-cell__right--middle"
+                class="t-cell__right-icon"
               >
+                
                 <div
-                  class="t-cell__right-icon"
+                  class="t-collapse-panel__header-icon"
                 >
-                  
-                  <div
-                    class="t-collapse-panel__header-icon"
+                  <svg
+                    class="t-icon t-icon-chevron-down"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <svg
-                      class="t-icon t-icon-chevron-down"
-                      fill="none"
-                      height="1em"
-                      style="fill: none;"
-                      viewBox="0 0 24 24"
-                      width="1em"
+                    <g
+                      id="chevron-down"
                     >
-                      <g
-                        id="chevron-down"
-                      >
-                        <path
-                          d="M17.5 9.5L12 15L6.5 9.5"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                  
+                      <path
+                        d="M17.5 9.5L12 15L6.5 9.5"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -1085,64 +1017,60 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
           class="t-collapse-panel t-collapse-panel--top"
         >
           <div
-            class="t-collapse-panel__title"
+            class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--top"
           >
             <div
-              class="t-cell t-collapse-panel__header t-collapse-panel__header--top"
+              class="t-cell__left"
+            >
+              <!---->
+              <!---->
+            </div>
+            <div
+              class="t-cell__title"
             >
               <div
-                class="t-cell__left"
+                class="t-cell__title-text"
               >
-                <!---->
-                <!---->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                <div
-                  class="t-cell__title-text"
-                >
-                  
-                  折叠面板标题
-                  
-                  <!---->
-                </div>
+                
+                折叠面板标题
+                
                 <!---->
               </div>
               <!---->
+            </div>
+            <!---->
+            <div
+              class="t-cell__right t-cell__right--middle"
+            >
               <div
-                class="t-cell__right t-cell__right--middle"
+                class="t-cell__right-icon"
               >
+                
                 <div
-                  class="t-cell__right-icon"
+                  class="t-collapse-panel__header-icon"
                 >
-                  
-                  <div
-                    class="t-collapse-panel__header-icon"
+                  <svg
+                    class="t-icon t-icon-chevron-up"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <svg
-                      class="t-icon t-icon-chevron-up"
-                      fill="none"
-                      height="1em"
-                      style="fill: none;"
-                      viewBox="0 0 24 24"
-                      width="1em"
+                    <g
+                      id="chevron-up"
                     >
-                      <g
-                        id="chevron-up"
-                      >
-                        <path
-                          d="M17.5 14.5L12 9L6.5 14.5"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                  
+                      <path
+                        d="M17.5 14.5L12 9L6.5 14.5"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -1193,70 +1121,66 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
           class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
         >
           <div
-            class="t-collapse-panel__title"
+            class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
           >
             <div
-              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
+              class="t-cell__left"
+            >
+              <!---->
+              <!---->
+            </div>
+            <div
+              class="t-cell__title"
             >
               <div
-                class="t-cell__left"
-              >
-                <!---->
-                <!---->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                <div
-                  class="t-cell__title-text"
-                >
-                  
-                  折叠面板标题
-                  
-                  <!---->
-                </div>
-                <!---->
-              </div>
-              <div
-                class="t-cell__note"
+                class="t-cell__title-text"
               >
                 
-                收起
+                折叠面板标题
                 
+                <!---->
               </div>
+              <!---->
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              
+              收起
+              
+            </div>
+            <div
+              class="t-cell__right t-cell__right--middle"
+            >
               <div
-                class="t-cell__right t-cell__right--middle"
+                class="t-cell__right-icon"
               >
+                
                 <div
-                  class="t-cell__right-icon"
+                  class="t-collapse-panel__header-icon"
                 >
-                  
-                  <div
-                    class="t-collapse-panel__header-icon"
+                  <svg
+                    class="t-icon t-icon-chevron-up"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <svg
-                      class="t-icon t-icon-chevron-up"
-                      fill="none"
-                      height="1em"
-                      style="fill: none;"
-                      viewBox="0 0 24 24"
-                      width="1em"
+                    <g
+                      id="chevron-up"
                     >
-                      <g
-                        id="chevron-up"
-                      >
-                        <path
-                          d="M17.5 14.5L12 9L6.5 14.5"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                  
+                      <path
+                        d="M17.5 14.5L12 9L6.5 14.5"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -1312,70 +1236,60 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
           class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
         >
           <div
-            class="t-collapse-panel__title"
+            class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
           >
             <div
-              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
+              class="t-cell__left"
+            >
+              <!---->
+              <!---->
+            </div>
+            <div
+              class="t-cell__title"
             >
               <div
-                class="t-cell__left"
-              >
-                <!---->
-                <!---->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                <div
-                  class="t-cell__title-text"
-                >
-                  
-                  折叠面板标题
-                  
-                  <!---->
-                </div>
-                <!---->
-              </div>
-              <div
-                class="t-cell__note"
+                class="t-cell__title-text"
               >
                 
-                单元测试
+                折叠面板标题
                 
+                <!---->
               </div>
+              <!---->
+            </div>
+            <!---->
+            <div
+              class="t-cell__right t-cell__right--middle"
+            >
               <div
-                class="t-cell__right t-cell__right--middle"
+                class="t-cell__right-icon"
               >
+                
                 <div
-                  class="t-cell__right-icon"
+                  class="t-collapse-panel__header-icon"
                 >
-                  
-                  <div
-                    class="t-collapse-panel__header-icon"
+                  <svg
+                    class="t-icon t-icon-chevron-up"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <svg
-                      class="t-icon t-icon-chevron-up"
-                      fill="none"
-                      height="1em"
-                      style="fill: none;"
-                      viewBox="0 0 24 24"
-                      width="1em"
+                    <g
+                      id="chevron-up"
                     >
-                      <g
-                        id="chevron-up"
-                      >
-                        <path
-                          d="M17.5 14.5L12 9L6.5 14.5"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                  
+                      <path
+                        d="M17.5 14.5L12 9L6.5 14.5"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -1404,70 +1318,60 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
           class="t-collapse-panel t-collapse-panel--bottom"
         >
           <div
-            class="t-collapse-panel__title"
+            class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom"
           >
             <div
-              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
+              class="t-cell__left"
+            >
+              <!---->
+              <!---->
+            </div>
+            <div
+              class="t-cell__title"
             >
               <div
-                class="t-cell__left"
-              >
-                <!---->
-                <!---->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                <div
-                  class="t-cell__title-text"
-                >
-                  
-                  折叠面板标题
-                  
-                  <!---->
-                </div>
-                <!---->
-              </div>
-              <div
-                class="t-cell__note"
+                class="t-cell__title-text"
               >
                 
-                单元测试
+                折叠面板标题
                 
+                <!---->
               </div>
+              <!---->
+            </div>
+            <!---->
+            <div
+              class="t-cell__right t-cell__right--middle"
+            >
               <div
-                class="t-cell__right t-cell__right--middle"
+                class="t-cell__right-icon"
               >
+                
                 <div
-                  class="t-cell__right-icon"
+                  class="t-collapse-panel__header-icon"
                 >
-                  
-                  <div
-                    class="t-collapse-panel__header-icon"
+                  <svg
+                    class="t-icon t-icon-chevron-down"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <svg
-                      class="t-icon t-icon-chevron-down"
-                      fill="none"
-                      height="1em"
-                      style="fill: none;"
-                      viewBox="0 0 24 24"
-                      width="1em"
+                    <g
+                      id="chevron-down"
                     >
-                      <g
-                        id="chevron-down"
-                      >
-                        <path
-                          d="M17.5 9.5L12 15L6.5 9.5"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                  
+                      <path
+                        d="M17.5 9.5L12 15L6.5 9.5"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -1496,70 +1400,60 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
           class="t-collapse-panel t-collapse-panel--bottom"
         >
           <div
-            class="t-collapse-panel__title"
+            class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom"
           >
             <div
-              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
+              class="t-cell__left"
+            >
+              <!---->
+              <!---->
+            </div>
+            <div
+              class="t-cell__title"
             >
               <div
-                class="t-cell__left"
-              >
-                <!---->
-                <!---->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                <div
-                  class="t-cell__title-text"
-                >
-                  
-                  折叠面板标题
-                  
-                  <!---->
-                </div>
-                <!---->
-              </div>
-              <div
-                class="t-cell__note"
+                class="t-cell__title-text"
               >
                 
-                单元测试
+                折叠面板标题
                 
+                <!---->
               </div>
+              <!---->
+            </div>
+            <!---->
+            <div
+              class="t-cell__right t-cell__right--middle"
+            >
               <div
-                class="t-cell__right t-cell__right--middle"
+                class="t-cell__right-icon"
               >
+                
                 <div
-                  class="t-cell__right-icon"
+                  class="t-collapse-panel__header-icon"
                 >
-                  
-                  <div
-                    class="t-collapse-panel__header-icon"
+                  <svg
+                    class="t-icon t-icon-chevron-down"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <svg
-                      class="t-icon t-icon-chevron-down"
-                      fill="none"
-                      height="1em"
-                      style="fill: none;"
-                      viewBox="0 0 24 24"
-                      width="1em"
+                    <g
+                      id="chevron-down"
                     >
-                      <g
-                        id="chevron-down"
-                      >
-                        <path
-                          d="M17.5 9.5L12 15L6.5 9.5"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                  
+                      <path
+                        d="M17.5 9.5L12 15L6.5 9.5"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -1588,70 +1482,60 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
           class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--disabled"
         >
           <div
-            class="t-collapse-panel__title"
+            class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom"
           >
             <div
-              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
+              class="t-cell__left"
+            >
+              <!---->
+              <!---->
+            </div>
+            <div
+              class="t-cell__title"
             >
               <div
-                class="t-cell__left"
-              >
-                <!---->
-                <!---->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                <div
-                  class="t-cell__title-text"
-                >
-                  
-                  折叠面板标题
-                  
-                  <!---->
-                </div>
-                <!---->
-              </div>
-              <div
-                class="t-cell__note"
+                class="t-cell__title-text"
               >
                 
-                单元测试
+                折叠面板标题
                 
+                <!---->
               </div>
+              <!---->
+            </div>
+            <!---->
+            <div
+              class="t-cell__right t-cell__right--middle"
+            >
               <div
-                class="t-cell__right t-cell__right--middle"
+                class="t-cell__right-icon"
               >
+                
                 <div
-                  class="t-cell__right-icon"
+                  class="t-collapse-panel__header-icon"
                 >
-                  
-                  <div
-                    class="t-collapse-panel__header-icon"
+                  <svg
+                    class="t-icon t-icon-chevron-down"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <svg
-                      class="t-icon t-icon-chevron-down"
-                      fill="none"
-                      height="1em"
-                      style="fill: none;"
-                      viewBox="0 0 24 24"
-                      width="1em"
+                    <g
+                      id="chevron-down"
                     >
-                      <g
-                        id="chevron-down"
-                      >
-                        <path
-                          d="M17.5 9.5L12 15L6.5 9.5"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                  
+                      <path
+                        d="M17.5 9.5L12 15L6.5 9.5"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -1712,64 +1596,60 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
           class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
         >
           <div
-            class="t-collapse-panel__title"
+            class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
           >
             <div
-              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
+              class="t-cell__left"
+            >
+              <!---->
+              <!---->
+            </div>
+            <div
+              class="t-cell__title"
             >
               <div
-                class="t-cell__left"
+                class="t-cell__title-text"
               >
-                <!---->
-                <!---->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                <div
-                  class="t-cell__title-text"
-                >
-                  
-                  折叠面板标题
-                  
-                  <!---->
-                </div>
+                
+                折叠面板标题
+                
                 <!---->
               </div>
               <!---->
+            </div>
+            <!---->
+            <div
+              class="t-cell__right t-cell__right--middle"
+            >
               <div
-                class="t-cell__right t-cell__right--middle"
+                class="t-cell__right-icon"
               >
+                
                 <div
-                  class="t-cell__right-icon"
+                  class="t-collapse-panel__header-icon"
                 >
-                  
-                  <div
-                    class="t-collapse-panel__header-icon"
+                  <svg
+                    class="t-icon t-icon-chevron-up"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <svg
-                      class="t-icon t-icon-chevron-up"
-                      fill="none"
-                      height="1em"
-                      style="fill: none;"
-                      viewBox="0 0 24 24"
-                      width="1em"
+                    <g
+                      id="chevron-up"
                     >
-                      <g
-                        id="chevron-up"
-                      >
-                        <path
-                          d="M17.5 14.5L12 9L6.5 14.5"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                  
+                      <path
+                        d="M17.5 14.5L12 9L6.5 14.5"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -1798,64 +1678,60 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
           class="t-collapse-panel t-collapse-panel--bottom"
         >
           <div
-            class="t-collapse-panel__title"
+            class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom"
           >
             <div
-              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
+              class="t-cell__left"
+            >
+              <!---->
+              <!---->
+            </div>
+            <div
+              class="t-cell__title"
             >
               <div
-                class="t-cell__left"
+                class="t-cell__title-text"
               >
-                <!---->
-                <!---->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                <div
-                  class="t-cell__title-text"
-                >
-                  
-                  折叠面板标题
-                  
-                  <!---->
-                </div>
+                
+                折叠面板标题
+                
                 <!---->
               </div>
               <!---->
+            </div>
+            <!---->
+            <div
+              class="t-cell__right t-cell__right--middle"
+            >
               <div
-                class="t-cell__right t-cell__right--middle"
+                class="t-cell__right-icon"
               >
+                
                 <div
-                  class="t-cell__right-icon"
+                  class="t-collapse-panel__header-icon"
                 >
-                  
-                  <div
-                    class="t-collapse-panel__header-icon"
+                  <svg
+                    class="t-icon t-icon-chevron-down"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <svg
-                      class="t-icon t-icon-chevron-down"
-                      fill="none"
-                      height="1em"
-                      style="fill: none;"
-                      viewBox="0 0 24 24"
-                      width="1em"
+                    <g
+                      id="chevron-down"
                     >
-                      <g
-                        id="chevron-down"
-                      >
-                        <path
-                          d="M17.5 9.5L12 15L6.5 9.5"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                  
+                      <path
+                        d="M17.5 9.5L12 15L6.5 9.5"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -1884,64 +1760,60 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
           class="t-collapse-panel t-collapse-panel--bottom"
         >
           <div
-            class="t-collapse-panel__title"
+            class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom"
           >
             <div
-              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
+              class="t-cell__left"
+            >
+              <!---->
+              <!---->
+            </div>
+            <div
+              class="t-cell__title"
             >
               <div
-                class="t-cell__left"
+                class="t-cell__title-text"
               >
-                <!---->
-                <!---->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                <div
-                  class="t-cell__title-text"
-                >
-                  
-                  折叠面板标题
-                  
-                  <!---->
-                </div>
+                
+                折叠面板标题
+                
                 <!---->
               </div>
               <!---->
+            </div>
+            <!---->
+            <div
+              class="t-cell__right t-cell__right--middle"
+            >
               <div
-                class="t-cell__right t-cell__right--middle"
+                class="t-cell__right-icon"
               >
+                
                 <div
-                  class="t-cell__right-icon"
+                  class="t-collapse-panel__header-icon"
                 >
-                  
-                  <div
-                    class="t-collapse-panel__header-icon"
+                  <svg
+                    class="t-icon t-icon-chevron-down"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <svg
-                      class="t-icon t-icon-chevron-down"
-                      fill="none"
-                      height="1em"
-                      style="fill: none;"
-                      viewBox="0 0 24 24"
-                      width="1em"
+                    <g
+                      id="chevron-down"
                     >
-                      <g
-                        id="chevron-down"
-                      >
-                        <path
-                          d="M17.5 9.5L12 15L6.5 9.5"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                  
+                      <path
+                        d="M17.5 9.5L12 15L6.5 9.5"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -1970,64 +1842,60 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
           class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--disabled"
         >
           <div
-            class="t-collapse-panel__title"
+            class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom"
           >
             <div
-              class="t-cell t-collapse-panel__header t-collapse-panel__header--bottom"
+              class="t-cell__left"
+            >
+              <!---->
+              <!---->
+            </div>
+            <div
+              class="t-cell__title"
             >
               <div
-                class="t-cell__left"
+                class="t-cell__title-text"
               >
-                <!---->
-                <!---->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                <div
-                  class="t-cell__title-text"
-                >
-                  
-                  折叠面板标题
-                  
-                  <!---->
-                </div>
+                
+                折叠面板标题
+                
                 <!---->
               </div>
               <!---->
+            </div>
+            <!---->
+            <div
+              class="t-cell__right t-cell__right--middle"
+            >
               <div
-                class="t-cell__right t-cell__right--middle"
+                class="t-cell__right-icon"
               >
+                
                 <div
-                  class="t-cell__right-icon"
+                  class="t-collapse-panel__header-icon"
                 >
-                  
-                  <div
-                    class="t-collapse-panel__header-icon"
+                  <svg
+                    class="t-icon t-icon-chevron-down"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <svg
-                      class="t-icon t-icon-chevron-down"
-                      fill="none"
-                      height="1em"
-                      style="fill: none;"
-                      viewBox="0 0 24 24"
-                      width="1em"
+                    <g
+                      id="chevron-down"
                     >
-                      <g
-                        id="chevron-down"
-                      >
-                        <path
-                          d="M17.5 9.5L12 15L6.5 9.5"
-                          id="stroke1"
-                          stroke="currentColor"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                  
+                      <path
+                        d="M17.5 9.5L12 15L6.5 9.5"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -2070,64 +1938,60 @@ exports[`Collapse > Collapse placementVue demo works fine 1`] = `
     class="t-collapse-panel t-collapse-panel--top"
   >
     <div
-      class="t-collapse-panel__title"
+      class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--top"
     >
       <div
-        class="t-cell t-collapse-panel__header t-collapse-panel__header--top"
+        class="t-cell__left"
+      >
+        <!---->
+        <!---->
+      </div>
+      <div
+        class="t-cell__title"
       >
         <div
-          class="t-cell__left"
+          class="t-cell__title-text"
         >
-          <!---->
-          <!---->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          <div
-            class="t-cell__title-text"
-          >
-            
-            折叠面板标题
-            
-            <!---->
-          </div>
+          
+          折叠面板标题
+          
           <!---->
         </div>
         <!---->
+      </div>
+      <!---->
+      <div
+        class="t-cell__right t-cell__right--middle"
+      >
         <div
-          class="t-cell__right t-cell__right--middle"
+          class="t-cell__right-icon"
         >
+          
           <div
-            class="t-cell__right-icon"
+            class="t-collapse-panel__header-icon"
           >
-            
-            <div
-              class="t-collapse-panel__header-icon"
+            <svg
+              class="t-icon t-icon-chevron-up"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <svg
-                class="t-icon t-icon-chevron-up"
-                fill="none"
-                height="1em"
-                style="fill: none;"
-                viewBox="0 0 24 24"
-                width="1em"
+              <g
+                id="chevron-up"
               >
-                <g
-                  id="chevron-up"
-                >
-                  <path
-                    d="M17.5 14.5L12 9L6.5 14.5"
-                    id="stroke1"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
-              </svg>
-            </div>
-            
+                <path
+                  d="M17.5 14.5L12 9L6.5 14.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
           </div>
+          
         </div>
       </div>
     </div>

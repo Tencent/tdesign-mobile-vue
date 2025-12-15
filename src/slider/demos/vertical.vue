@@ -10,14 +10,14 @@
     />
   </div>
   <div class="wrapper">
-    <t-slider :default-value="rangeValue" :marks="marks" range :step="20" vertical @change="onChange" />
+    <t-slider :default-value="rangeValue" :marks="marks" :step="20" range vertical @change="onChange" />
   </div>
   <div class="wrapper">
     <t-slider :default-value="23" label="handleLabel" theme="capsule" vertical @change="onChange" />
   </div>
 
   <div class="wrapper">
-    <t-slider :default-value="[20, 80]" range :marks="marks" :step="20" theme="capsule" vertical @change="onChange" />
+    <t-slider :default-value="[20, 80]" :marks="marks" :step="20" range theme="capsule" vertical @change="onChange" />
   </div>
 </template>
 <script lang="ts" setup>
@@ -54,5 +54,6 @@ const handleLabel = (value: any) => {
 .wrapper {
   background: var(--bg-color-demo, #fff);
   padding: 18px 0;
+  margin-bottom: 16px;
 }
 </style>

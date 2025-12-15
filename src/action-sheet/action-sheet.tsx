@@ -32,14 +32,14 @@ export default defineComponent({
     const { visible, modelValue } = toRefs(props);
     const [currentVisible] = useVModel(visible, modelValue, props.defaultVisible, () => {}, 'visible');
 
-    const rootClasses = computed(() => ({
-      [`${actionSheetClass.value}__content`]: true,
-    }));
-    const descriptionClasses = computed(() => ({
-      [`${actionSheetClass.value}__description`]: true,
-      [`${actionSheetClass.value}__description--left`]: props.align === 'left',
-      [`${actionSheetClass.value}__description--grid`]: props.theme === 'grid',
-    }));
+    const rootClasses = computed(() => [
+      `${actionSheetClass.value}`,
+      `${actionSheetClass.value}--${props.theme}`,
+      `${actionSheetClass.value}--${props.align}`,
+      {
+        [`${actionSheetClass.value}--no-description`]: !props.description,
+      },
+    ]);
 
     const hide = (trigger: string) => {
       context.emit('update:modelValue', false);
@@ -64,13 +64,13 @@ export default defineComponent({
       const root = () => {
         const description = () => {
           if (props.description) {
-            return <p class={descriptionClasses.value}>{props.description}</p>;
+            return <p class={`${actionSheetClass.value}__description`}>{props.description}</p>;
           }
           return null;
         };
         const list = () => {
           if (props.theme === 'list') {
-            return <TActionSheetList align={props.align} items={actionItems.value} onSelected={handleSelected} />;
+            return <TActionSheetList items={actionItems.value} onSelected={handleSelected} />;
           }
         };
         const grid = () => {
@@ -91,7 +91,7 @@ export default defineComponent({
           }
         };
         return (
-          <div class={rootClasses.value}>
+          <div class={`${actionSheetClass.value}__content`}>
             {description()}
             {list()}
             {grid()}
@@ -105,7 +105,7 @@ export default defineComponent({
           visible={currentVisible.value}
           placement="bottom"
           destroy-on-close={true}
-          class={actionSheetClass.value}
+          class={rootClasses.value}
           onClose={handleClose}
           showOverlay={props.showOverlay}
         >

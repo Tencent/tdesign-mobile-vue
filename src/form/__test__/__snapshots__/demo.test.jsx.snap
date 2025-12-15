@@ -127,7 +127,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               >
                 <input
                   autocomplete="Off"
-                  class="t-input__control t-input--default"
+                  class="t-input__control t-input--default t-input--password"
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
@@ -377,6 +377,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
+          <!--teleport start-->
           
           <div
             class="t-overlay"
@@ -824,6 +825,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             
           </div>
           
+          <!--teleport end-->
           
         </div>
         <!---->
@@ -913,6 +915,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
+          <!--teleport start-->
           
           <div
             class="t-overlay"
@@ -1090,6 +1093,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             
           </div>
           
+          <!--teleport end-->
           
         </div>
         <!---->
@@ -1683,6 +1687,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             </div>
             <input
               accept=""
+              capture=""
               hidden=""
               multiple=""
               type="file"
@@ -1757,7 +1762,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
     class="summary"
     data-v-abfd963f=""
   >
-    用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。
+    用以收集、校验和提交数据，一般由输入框、单选框、复选框、选择器等控件组成。
   </p>
   <div
     class="tdesign-mobile-demo-block"
@@ -2007,7 +2012,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     >
                       <input
                         autocomplete="Off"
-                        class="t-input__control t-input--default"
+                        class="t-input__control t-input--default t-input--password"
                         name=""
                         placeholder="请输入内容"
                         spellcheck="false"
@@ -2257,6 +2262,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   </div>
                   <!---->
                 </div>
+                <!--teleport start-->
                 
                 <div
                   class="t-overlay"
@@ -2704,6 +2710,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   
                 </div>
                 
+                <!--teleport end-->
                 
               </div>
               <!---->
@@ -2793,6 +2800,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   </div>
                   <!---->
                 </div>
+                <!--teleport start-->
                 
                 <div
                   class="t-overlay"
@@ -2970,6 +2978,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   
                 </div>
                 
+                <!--teleport end-->
                 
               </div>
               <!---->
@@ -3563,6 +3572,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   </div>
                   <input
                     accept=""
+                    capture=""
                     hidden=""
                     multiple=""
                     type="file"
@@ -3750,7 +3760,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               >
                 <input
                   autocomplete="Off"
-                  class="t-input__control t-input--default"
+                  class="t-input__control t-input--default t-input--password"
                   name=""
                   placeholder="请输入内容"
                   spellcheck="false"
@@ -3996,6 +4006,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
+          <!--teleport start-->
           
           <div
             class="t-overlay"
@@ -4443,6 +4454,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             
           </div>
           
+          <!--teleport end-->
           
         </div>
         <!---->
@@ -4530,6 +4542,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
+          <!--teleport start-->
           
           <div
             class="t-overlay"
@@ -4707,6 +4720,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             
           </div>
           
+          <!--teleport end-->
           
         </div>
         <!---->
@@ -5292,6 +5306,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             </div>
             <input
               accept=""
+              capture=""
               hidden=""
               multiple=""
               type="file"

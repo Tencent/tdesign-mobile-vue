@@ -2,9 +2,9 @@
   <div>
     <div class="summary">红点徽标</div>
     <div class="badge-demo">
-      <t-badge dot :offset="[-4, 4]" class="badge-item" content="消息" />
+      <t-badge dot :offset="[-3, 3]" class="badge-item" content="消息" />
       <t-badge dot :offset="[1, -1]" class="badge-item">
-        <t-icon name="notification" size="24" aria-label="通知" />
+        <NotificationIcon size="24px" />
       </t-badge>
       <t-badge dot :offset="[1, 1]" class="badge-item">
         <t-button>按钮</t-button>
@@ -13,9 +13,9 @@
 
     <div class="summary">数字徽标</div>
     <div class="badge-demo">
-      <t-badge count="8" content="消息" :offset="[-8, 0]" class="badge-item" />
-      <t-badge count="2" :offset="[-2, -2]" class="badge-item">
-        <t-icon name="notification" size="24" aria-label="通知" />
+      <t-badge count="8" content="消息" :offset="[0, 0]" class="badge-item" />
+      <t-badge count="8" :offset="[-2, -2]" class="badge-item">
+        <NotificationIcon size="24px" />
       </t-badge>
       <t-badge count="8" :offset="[2, 2]" class="badge-item">
         <t-button>按钮</t-button>
@@ -32,10 +32,10 @@
 </template>
 
 <script setup lang="ts">
-import { Icon as TIcon, NotificationIcon } from 'tdesign-icons-vue-next';
+import { NotificationIcon } from 'tdesign-icons-vue-next';
 import { h } from 'vue';
 
-const IconNotification = () => h(NotificationIcon);
+const IconNotification = () => h(NotificationIcon, { size: '24px' });
 </script>
 <style lang="less">
 .badge-demo {

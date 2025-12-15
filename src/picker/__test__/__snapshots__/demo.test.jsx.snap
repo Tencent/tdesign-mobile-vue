@@ -55,6 +55,7 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
       </div>
     </div>
   </div>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -158,6 +159,7 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   
 </div>
 `;
@@ -269,6 +271,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
       </div>
     </div>
   </div>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -386,6 +389,8 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -563,6 +568,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   
 </div>
 `;
@@ -765,6 +771,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -882,6 +889,8 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -1059,6 +1068,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       
       
       <div
@@ -1111,6 +1121,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -1214,6 +1225,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       
       
     </div>
@@ -1338,6 +1350,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
+      <!--teleport start-->
       
       <div
         class="t-overlay"
@@ -1434,6 +1447,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         
       </div>
       
+      <!--teleport end-->
       
       
       <div
@@ -1601,6 +1615,7 @@ exports[`Picker > Picker withTitleVue demo works fine 1`] = `
       </div>
     </div>
   </div>
+  <!--teleport start-->
   
   <div
     class="t-overlay"
@@ -1697,6 +1712,7 @@ exports[`Picker > Picker withTitleVue demo works fine 1`] = `
     
   </div>
   
+  <!--teleport end-->
   
 </div>
 `;

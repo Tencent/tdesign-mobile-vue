@@ -1,85 +1,98 @@
 <template>
   <div class="action-sheet-demo">
-    <t-button block variant="outline" theme="primary" @click="visible = true">常规列表型</t-button>
-    <t-button block variant="outline" theme="primary" @click="showOverlayCallAPI">函数调用</t-button>
-    <t-button block variant="outline" theme="primary" @click="descVisible = true">带描述列表型</t-button>
-    <t-button block variant="outline" theme="primary" @click="iconVisible = true">带图标列表型</t-button>
-    <t-button block variant="outline" theme="primary" @click="badgeVisible = true">带徽标列表型</t-button>
+    <t-button block theme="primary" variant="outline" @click="visible = true">常规列表型</t-button>
+    <t-button block theme="primary" variant="outline" @click="showOverlayCallAPI">函数调用</t-button>
+    <t-button block theme="primary" variant="outline" @click="descVisible = true">带描述列表型</t-button>
+    <t-button block theme="primary" variant="outline" @click="iconVisible = true">带图标列表型</t-button>
+    <t-button block theme="primary" variant="outline" @click="badgeVisible = true">带徽标列表型</t-button>
   </div>
-  <t-action-sheet v-model="visible" :items="baseData.items" @selected="handleSelected" @cancel="handleCancel" />
+  <t-action-sheet
+    v-model="visible"
+    :items="baseData.items"
+    cancel-text="cancel"
+    @cancel="handleCancel"
+    @selected="handleSelected"
+  />
   <t-action-sheet
     v-model="descVisible"
     :description="descData.description"
     :items="descData.items"
-    @selected="handleSelected"
+    cancel-text="cancel"
     @cancel="handleCancel"
+    @selected="handleSelected"
   />
-  <t-action-sheet v-model="iconVisible" :items="iconData.items" @selected="handleSelected" @cancel="handleCancel" />
+  <t-action-sheet
+    v-model="iconVisible"
+    :items="iconData.items"
+    cancel-text="cancel"
+    @cancel="handleCancel"
+    @selected="handleSelected"
+  />
   <t-action-sheet
     v-model="badgeVisible"
     :description="badgeData.description"
     :items="badgeData.items"
-    @selected="handleSelected"
+    cancel-text="cancel"
     @cancel="handleCancel"
+    @selected="handleSelected"
   />
 </template>
 
 <script lang="ts" setup>
-import { ref, h } from 'vue';
-import { AppIcon } from 'tdesign-icons-vue-next';
+import { h, ref } from 'vue';
+import { EnterIcon, BookmarkIcon, PinIcon, CloudUploadIcon } from 'tdesign-icons-vue-next';
 import { ActionSheet, ActionSheetItem } from 'tdesign-mobile-vue';
 
-const apIcon = () => h(AppIcon, { size: '24px' });
 const visible = ref(false);
 const descVisible = ref(false);
 const iconVisible = ref(false);
 const badgeVisible = ref(false);
 const baseData = {
-  items: ['选项一', '选项二', '选项三', '选项四'],
+  items: ['Move', 'Mark as important', 'Unsubscribe', 'Add to Tasks'],
 };
 const descData = {
-  description: '动作面板描述文字',
-  items: ['选项一', '选项二', '选项三', '选项四'],
+  description: 'Email Settings',
+  items: ['Move', 'Mark as important', 'Unsubscribe', 'Add to Tasks'],
 };
 const iconData = {
-  description: '动作面板描述文字',
+  description: 'Email Settings',
   items: [
     {
-      label: '选项一',
-      icon: () => h(AppIcon, { size: '24px' }),
+      label: 'Move',
+      icon: () => h(EnterIcon),
     },
     {
-      label: '选项二',
-      icon: () => h(AppIcon, { size: '24px' }),
+      label: 'Mark as important',
+      icon: () => h(BookmarkIcon),
     },
     {
-      label: '选项三',
-      icon: apIcon,
+      label: 'Unsubscribe',
+      icon: h(PinIcon),
     },
     {
-      label: '选项四',
-      icon: apIcon,
+      label: 'Add to Tasks',
+      icon: h(CloudUploadIcon),
     },
   ],
 };
 const badgeData = {
-  description: '动作面板描述文字',
+  description: 'Email Settings',
   items: [
     {
-      label: '选项一',
-      badge: { count: 1 },
-    },
-    {
-      label: '选项二',
+      label: 'Move',
       badge: { dot: true },
     },
     {
-      label: '选项三',
-      badge: { dot: true },
+      label: 'Mark as important',
+      badge: { count: 8, offset: [-6, 2] },
     },
     {
-      label: '选项四',
-      badge: { dot: true },
+      label: 'Unsubscribe',
+      badge: { count: 99, offset: [-6, 2] },
+    },
+    {
+      label: 'Add to Tasks',
+      badge: { count: 1000, offset: [-10, 2] },
     },
   ],
 };
@@ -93,6 +106,7 @@ const handleCancel = (e: any): void => {
 const showOverlayCallAPI = () => {
   ActionSheet.show({
     items: baseData.items,
+    cancelText: 'cancel',
     onSelected: handleSelected,
     onCancel: handleCancel,
     onClose: handleCancel,

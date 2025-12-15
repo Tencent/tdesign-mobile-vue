@@ -43,7 +43,7 @@ import { JumpIcon } from 'tdesign-icons-vue-next';
   height: 48px;
   background-color: var(--bg-color-demo, #fff);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-bottom: 6.4vw;
   align-items: center;
 }

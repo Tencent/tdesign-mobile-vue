@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdUploadProps, UploadFile } from './type';
+import { TdUploadProps } from './type';
 import { PropType } from 'vue';
 
 export default {
@@ -18,11 +18,16 @@ export default {
     type: String,
     default: '',
   },
+  /** 添加按钮 */
+  addBtn: {
+    type: Boolean,
+    default: true,
+  },
   /** 添加按钮内容。值为空，使用默认图标渲染；值为 slot 则表示使用插槽渲染；其他值无效 */
   addContent: {
     type: [String, Function] as PropType<TdUploadProps['addContent']>,
   },
-  /** 是否允许重复上传相同文件名的文件 */
+  /** 是否允许重复上传相同文件名的文件。在 `capture = ''` + 拍照上传场景中，`allowUploadDuplicateFile` 应取 `true`，避免拍照上传的文件被同名文件校验过滤 */
   allowUploadDuplicateFile: Boolean,
   /** 是否在选择文件后自动发起请求上传文件 */
   autoUpload: {
@@ -40,6 +45,7 @@ export default {
   /** 图片选取模式，可选值为 camera (直接调起摄像头) */
   capture: {
     type: String,
+    default: '',
   },
   /** 上传请求所需的额外字段，默认字段有 `file`，表示文件信息。可以添加额外的文件名字段，如：`{file_name: "custom-file-name.txt"}`。`autoUpload=true` 时有效。也可以使用 `formatRequest` 完全自定义上传请求的字段 */
   data: {
@@ -57,7 +63,7 @@ export default {
   /** 已上传文件列表，同 `value`。TS 类型：`UploadFile` */
   files: {
     type: Array as PropType<TdUploadProps['files']>,
-    default: undefined,
+    default: undefined as TdUploadProps['files'],
   },
   /** 已上传文件列表，同 `value`。TS 类型：`UploadFile`，非受控属性 */
   defaultFiles: {
@@ -116,7 +122,7 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 是否显示图片的删除按钮 */
+  /** 移除按钮 */
   removeBtn: {
     type: Boolean,
     default: true,
@@ -139,11 +145,11 @@ export default {
   /** 已上传文件列表，同 `files`。TS 类型：`UploadFile` */
   value: {
     type: Array as PropType<TdUploadProps['value']>,
-    default: undefined,
+    default: undefined as TdUploadProps['value'],
   },
   modelValue: {
     type: Array as PropType<TdUploadProps['value']>,
-    default: undefined,
+    default: undefined as TdUploadProps['value'],
   },
   /** 已上传文件列表，同 `files`。TS 类型：`UploadFile`，非受控属性 */
   defaultValue: {

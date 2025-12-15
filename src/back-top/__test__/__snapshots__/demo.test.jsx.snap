@@ -2,252 +2,341 @@
 
 exports[`BackTop > BackTop baseVue demo works fine 1`] = `
 <div
-  data-v-app=""
+  class="button-group"
+  data-v-db5fce21=""
 >
-  
-  <div
-    class="button-group"
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-db5fce21=""
+    role="button"
+    type="button"
   >
-    <button
-      aria-disabled="false"
-      class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-db5fce21=""
-      role="button"
-      type="button"
+    <!---->
+    <span
+      class="t-button__content"
     >
-      <!---->
-      <span
-        class="t-button__content"
+      圆形返回顶部
+    </span>
+    <!---->
+  </button>
+</div>
+`;
+
+exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+  data-v-9970a0e7=""
+>
+  <h1
+    class="title"
+    data-v-9970a0e7=""
+  >
+    BackTop 返回顶部
+  </h1>
+  <p
+    class="summary"
+    data-v-9970a0e7=""
+  >
+    用于当页面过长往下滑动时，帮助用户快速回到页面顶部。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-9970a0e7=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        组件类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
       >
         圆形返回顶部
-      </span>
-      <!---->
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-db5fce21=""
-      role="button"
-      type="button"
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
     >
-      <!---->
-      <span
-        class="t-button__content"
+      
+      <div
+        class="button-group"
+        data-v-9970a0e7=""
+        data-v-db5fce21=""
       >
-        半圆形返回顶部
-      </span>
-      <!---->
-    </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+          data-v-db5fce21=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            圆形返回顶部
+          </span>
+          <!---->
+        </button>
+      </div>
+      
+    </div>
   </div>
   <div
-    class="group"
-    data-v-db5fce21=""
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-9970a0e7=""
   >
-    
     <div
-      class="t-skeleton item"
-      data-v-db5fce21=""
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        半圆形返回顶部
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
     >
       
       
       <div
-        class="t-skeleton__row"
+        class="button-group"
+        data-v-37c0a853=""
       >
-        
-        <div
-          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-          style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+          data-v-37c0a853=""
+          role="button"
+          type="button"
         >
           <!---->
-        </div>
-        
+          <span
+            class="t-button__content"
+          >
+            半圆形返回顶部
+          </span>
+          <!---->
+        </button>
       </div>
       <div
-        class="t-skeleton__row"
+        class="group"
+        data-v-37c0a853=""
       >
         
         <div
-          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-          style="width: 100px;"
+          class="t-skeleton item"
+          data-v-37c0a853=""
         >
-          <!---->
+          
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 100px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          
+          
+        </div>
+        <div
+          class="t-skeleton item"
+          data-v-37c0a853=""
+        >
+          
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 100px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          
+          
+        </div>
+        <div
+          class="t-skeleton item"
+          data-v-37c0a853=""
+        >
+          
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 100px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          
+          
+        </div>
+        <div
+          class="t-skeleton item"
+          data-v-37c0a853=""
+        >
+          
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 100px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          
+          
+        </div>
+        <div
+          class="t-skeleton item"
+          data-v-37c0a853=""
+        >
+          
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 100px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          
+          
+        </div>
+        <div
+          class="t-skeleton item"
+          data-v-37c0a853=""
+        >
+          
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 100px;"
+            >
+              <!---->
+            </div>
+            
+          </div>
+          
+          
         </div>
         
       </div>
       
       
     </div>
-    <div
-      class="t-skeleton item"
-      data-v-db5fce21=""
-    >
-      
-      
-      <div
-        class="t-skeleton__row"
-      >
-        
-        <div
-          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-          style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-        >
-          <!---->
-        </div>
-        
-      </div>
-      <div
-        class="t-skeleton__row"
-      >
-        
-        <div
-          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-          style="width: 100px;"
-        >
-          <!---->
-        </div>
-        
-      </div>
-      
-      
-    </div>
-    <div
-      class="t-skeleton item"
-      data-v-db5fce21=""
-    >
-      
-      
-      <div
-        class="t-skeleton__row"
-      >
-        
-        <div
-          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-          style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-        >
-          <!---->
-        </div>
-        
-      </div>
-      <div
-        class="t-skeleton__row"
-      >
-        
-        <div
-          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-          style="width: 100px;"
-        >
-          <!---->
-        </div>
-        
-      </div>
-      
-      
-    </div>
-    <div
-      class="t-skeleton item"
-      data-v-db5fce21=""
-    >
-      
-      
-      <div
-        class="t-skeleton__row"
-      >
-        
-        <div
-          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-          style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-        >
-          <!---->
-        </div>
-        
-      </div>
-      <div
-        class="t-skeleton__row"
-      >
-        
-        <div
-          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-          style="width: 100px;"
-        >
-          <!---->
-        </div>
-        
-      </div>
-      
-      
-    </div>
-    <div
-      class="t-skeleton item"
-      data-v-db5fce21=""
-    >
-      
-      
-      <div
-        class="t-skeleton__row"
-      >
-        
-        <div
-          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-          style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-        >
-          <!---->
-        </div>
-        
-      </div>
-      <div
-        class="t-skeleton__row"
-      >
-        
-        <div
-          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-          style="width: 100px;"
-        >
-          <!---->
-        </div>
-        
-      </div>
-      
-      
-    </div>
-    <div
-      class="t-skeleton item"
-      data-v-db5fce21=""
-    >
-      
-      
-      <div
-        class="t-skeleton__row"
-      >
-        
-        <div
-          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-          style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-        >
-          <!---->
-        </div>
-        
-      </div>
-      <div
-        class="t-skeleton__row"
-      >
-        
-        <div
-          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-          style="width: 100px;"
-        >
-          <!---->
-        </div>
-        
-      </div>
-      
-      
-    </div>
-    
   </div>
   <div
     class="t-back-top t-back-top--fixed t-back-top--round"
-    data-v-db5fce21=""
+    data-v-9970a0e7=""
     style="display: none;"
   >
     <svg
@@ -275,321 +364,6 @@ exports[`BackTop > BackTop baseVue demo works fine 1`] = `
     >
       顶部
     </span>
-  </div>
-  
-</div>
-`;
-
-exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
-<div
-  class="tdesign-mobile-demo"
-  data-v-9970a0e7=""
->
-  <h1
-    class="title"
-    data-v-9970a0e7=""
-  >
-    BackTop 回到顶部
-  </h1>
-  <p
-    class="summary"
-    data-v-9970a0e7=""
-  >
-    当页面过长往下滑动是会出现返回顶部的便捷操作，帮助用户快速回到页面顶部
-  </p>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-9970a0e7=""
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <h2
-        class="tdesign-mobile-demo-block__title"
-      >
-        组件类型
-      </h2>
-      <!--v-if-->
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      
-      <div
-        class="button-group"
-        data-v-db5fce21=""
-      >
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-db5fce21=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            圆形返回顶部
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-db5fce21=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            半圆形返回顶部
-          </span>
-          <!---->
-        </button>
-      </div>
-      <div
-        class="group"
-        data-v-db5fce21=""
-      >
-        
-        <div
-          class="t-skeleton item"
-          data-v-db5fce21=""
-        >
-          
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 100px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          
-          
-        </div>
-        <div
-          class="t-skeleton item"
-          data-v-db5fce21=""
-        >
-          
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 100px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          
-          
-        </div>
-        <div
-          class="t-skeleton item"
-          data-v-db5fce21=""
-        >
-          
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 100px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          
-          
-        </div>
-        <div
-          class="t-skeleton item"
-          data-v-db5fce21=""
-        >
-          
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 100px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          
-          
-        </div>
-        <div
-          class="t-skeleton item"
-          data-v-db5fce21=""
-        >
-          
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 100px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          
-          
-        </div>
-        <div
-          class="t-skeleton item"
-          data-v-db5fce21=""
-        >
-          
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-              style="width: 100px;"
-            >
-              <!---->
-            </div>
-            
-          </div>
-          
-          
-        </div>
-        
-      </div>
-      <div
-        class="t-back-top t-back-top--fixed t-back-top--round"
-        data-v-db5fce21=""
-        style="display: none;"
-      >
-        <svg
-          class="t-icon t-icon-backtop"
-          fill="none"
-          height="1em"
-          style="fill: none; font-size: 22px;"
-          viewBox="0 0 24 24"
-          width="1em"
-        >
-          <g
-            id="backtop"
-          >
-            <path
-              d="M17.5 14.5L12 9L6.5 14.5M5 5H19M12 10.25V20"
-              id="stroke1"
-              stroke="currentColor"
-              stroke-linecap="square"
-              stroke-width="2"
-            />
-          </g>
-        </svg>
-        <span
-          class="t-back-top__text--round"
-        >
-          顶部
-        </span>
-      </div>
-      
-      
-    </div>
   </div>
 </div>
 `;

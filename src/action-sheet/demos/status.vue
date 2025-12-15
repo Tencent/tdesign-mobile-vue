@@ -2,37 +2,42 @@
   <div class="action-sheet-demo">
     <t-button block variant="outline" theme="primary" @click="visible = true">列表型选项状态</t-button>
   </div>
-  <t-action-sheet v-model="visible" :items="iconData.items" @selected="handleSelected" @cancel="handleCancel" />
+  <t-action-sheet
+    v-model="visible"
+    :items="iconData.items"
+    cancel-text="cancel"
+    @selected="handleSelected"
+    @cancel="handleCancel"
+  />
 </template>
 
 <script lang="ts" setup>
 import { ref, h } from 'vue';
-import { AppIcon } from 'tdesign-icons-vue-next';
+import { EnterIcon, BookmarkIcon, PinIcon, CloudUploadIcon } from 'tdesign-icons-vue-next';
 import { ActionSheetItem } from 'tdesign-mobile-vue';
 
-const apIcon = () => h(AppIcon, { size: '24px' });
 const visible = ref(false);
 const iconData = {
   description: '列表型选项状态',
   items: [
     {
-      label: '选项一',
-      icon: () => h(AppIcon, { size: '24px' }),
+      label: 'Move',
+      icon: () => h(EnterIcon),
     },
     {
-      label: '选项二',
-      icon: () => h(AppIcon, { size: '24px' }),
+      label: 'Mark as important',
+      icon: () => h(BookmarkIcon),
       color: '#0052D9',
     },
     {
-      label: '选项三',
-      icon: apIcon,
-      disabled: true,
+      label: 'Unsubscribe',
+      icon: h(PinIcon),
+      color: '#E34D59',
     },
     {
-      label: '选项四',
-      icon: apIcon,
-      color: '#E34D59',
+      label: 'Add to Tasks',
+      icon: h(CloudUploadIcon),
+      disabled: true,
     },
   ],
 };

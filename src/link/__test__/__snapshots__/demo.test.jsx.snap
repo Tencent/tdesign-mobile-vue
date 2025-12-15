@@ -208,7 +208,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
   <p
     class="summary"
   >
-    当功能使用图标即可表意清楚时，可使用纯图标悬浮按钮，例如：添加、发布。
+    文字超链接用于跳转一个新页面，如当前项目跳转，友情链接等。
   </p>
   <div
     class="tdesign-mobile-demo-block"
@@ -352,7 +352,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
       >
         <a
           aria-disabled="false"
-          class="t-link t-link--primary t-link--medium t-link--underline t-link--hover"
+          class="t-link t-link--primary t-link--medium t-link--hover"
           data-v-00ec48a6=""
           target=""
         >
@@ -1305,7 +1305,7 @@ exports[`Link > Link prefixVue demo works fine 1`] = `
 >
   <a
     aria-disabled="false"
-    class="t-link t-link--primary t-link--medium t-link--underline t-link--hover"
+    class="t-link t-link--primary t-link--medium t-link--hover"
     data-v-00ec48a6=""
     target=""
   >

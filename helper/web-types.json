@@ -904,6 +904,13 @@
           "doc-url": "https://tdesign.tencent.com/mobile-vue/components/calendar",
           "props": [
             {
+              "name": "allow-same-day",
+              "description": "是否允许区间选择日历的起止时间相同，仅当 `type='range'` 时有效",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/calendar?tab=api#calendar-props",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
               "name": "confirm-btn",
               "description": "确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/calendar?tab=api#calendar-props",
@@ -973,7 +980,7 @@
               "description": "日历的选择类型，single = 单选；multiple = 多选; range = 区间选择",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/calendar?tab=api#calendar-props",
               "type": "'single' | 'multiple' | 'range'",
-              "default": "'single'",
+              "default": "single",
               "attribute-value": {
                 "type": "enum"
               },
@@ -998,9 +1005,9 @@
             },
             {
               "name": "value",
-              "description": "当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组",
+              "description": "当前选择的日期，不传则选用 minDate 属性值或今天，优先级：minDate > today。当 type = multiple 或 range 时传入数组",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/calendar?tab=api#calendar-props",
-              "type": "number | Date | TCalendarValue[]"
+              "type": "CalendarValue"
             },
             {
               "name": "visible",
@@ -1110,11 +1117,24 @@
               "default": "[]"
             },
             {
+              "name": "overlay-props",
+              "description": "遮罩层的属性，透传至 overlay",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props",
+              "type": "OverlayProps",
+              "default": "{}"
+            },
+            {
               "name": "placeholder",
               "description": "未选中时的提示文案",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props",
               "type": "string | TNode",
               "default": "'选择选项'"
+            },
+            {
+              "name": "scroll",
+              "description": "Lazy loading and virtual scrolling. To maximize the benefits of the component, when the amount of data is less than the threshold `scroll.threshold`, regardless of whether the virtual scrolling configuration exists, virtual scrolling will not be enabled within the component. `scroll.threshold` defaults to `100`\n\n懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props",
+              "type": "TScroll"
             },
             {
               "name": "sub-titles",
@@ -2713,6 +2733,12 @@
                   "name": "vertical"
                 }
               ]
+            },
+            {
+              "name": "size",
+              "description": "Spacing size\n\n间距大小",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/divider?tab=api#divider-props",
+              "type": "string | number"
             }
           ],
           "slots": [
@@ -2767,6 +2793,13 @@
               "description": "抽屉里的列表项",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/drawer?tab=api#drawer-props",
               "type": "DrawerItem[] "
+            },
+            {
+              "name": "overlay-props",
+              "description": "遮罩层的属性，透传至 overlay",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/drawer?tab=api#drawer-props",
+              "type": "OverlayProps",
+              "default": "{}"
             },
             {
               "name": "placement",
@@ -2867,6 +2900,13 @@
               "type": "TNode"
             },
             {
+              "name": "icon",
+              "description": "自定义菜单子项图标，值为 `undefined` 表示使用默认图标。[面板打开时的图标，面板关闭时的图标]",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownitem-props",
+              "type": "TNode | TNode[] | undefined",
+              "default": "undefined"
+            },
+            {
               "name": "keys",
               "description": "用来定义 value / label / disabled 在 `options` 中对应的字段别名",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownitem-props",
@@ -2948,6 +2988,11 @@
             {
               "name": "footer",
               "description": "底部",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownitem-props"
+            },
+            {
+              "name": "icon",
+              "description": "自定义菜单子项图标，值为 `undefined` 表示使用默认图标。[面板打开时的图标，面板关闭时的图标]类型和参数：TNode | TNode[] | undefined",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownitem-props"
             }
           ]
@@ -3393,10 +3438,9 @@
             },
             {
               "name": "content-align",
-              "description": "表单内容对齐方式：左对齐、右对齐",
+              "description": "表单内容对齐方式，优先级高于 Form.contentAlign",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/form?tab=api#formitem-props",
               "type": "'left' | 'right'",
-              "default": "left",
               "attribute-value": {
                 "type": "enum"
               },
@@ -4156,7 +4200,7 @@
               "name": "max-zoom",
               "description": "【开发中】最大放大比例",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props",
-              "type": "Number",
+              "type": "number",
               "default": "3"
             },
             {
@@ -5119,7 +5163,7 @@
             },
             {
               "name": "offset",
-              "description": "相对于 placement 的偏移量，示例：[-10, 20] 或 ['10rpx', '8rpx']",
+              "description": "相对于 placement 的偏移量，示例：[-10, 20] 或 ['10px', '8px']",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/message?tab=api#message-props",
               "type": "Array<string | number>"
             },
@@ -5210,7 +5254,7 @@
             },
             {
               "name": "link",
-              "description": "链接名称。值为字符串表示链接名称，值为 `Object` 类型，表示透传至 `Link`",
+              "description": "链接名称。值为字符串表示链接名称，值为 `Object` 类型，表示透传至 `Link`类型和参数：string | object | TNode",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/message?tab=api#message-props"
             }
           ]
@@ -5962,7 +6006,7 @@
               },
               {
                 "name": "visible-change",
-                "description": "当浮层隐藏或显示时触发",
+                "description": "当浮层隐藏或显示时触发，trigger=document 表示点击弹出层元素触发",
                 "doc-url": "https://tdesign.tencent.com/mobile-vue/components/popup?tab=api#popup-events"
               }
             ]
@@ -6130,6 +6174,13 @@
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/pull-down-refresh?tab=api#pulldownrefresh-props",
               "type": "number",
               "default": "3000"
+            },
+            {
+              "name": "success-duration",
+              "description": "刷新成功提示展示时长，单位 'ms'",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/pull-down-refresh?tab=api#pulldownrefresh-props",
+              "type": "string | number",
+              "default": "500"
             },
             {
               "name": "value",
@@ -8494,7 +8545,7 @@
           "props": [
             {
               "name": "allow-input-over-max",
-              "description": "超出maxlength或maxcharacter之后是否还允许输入",
+              "description": "Allow input after exceeding `maxlength` or `maxcharacter`\n\n超出 `maxlength` 或 `maxcharacter` 之后是否还允许输入",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/textarea?tab=api#textarea-props",
               "type": "boolean",
               "default": "false"
@@ -8519,6 +8570,13 @@
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/textarea?tab=api#textarea-props",
               "type": "boolean",
               "default": "false"
+            },
+            {
+              "name": "cursor-color",
+              "description": "光标颜色",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/textarea?tab=api#textarea-props",
+              "type": "string",
+              "default": "#0052d9"
             },
             {
               "name": "disabled",
@@ -8855,7 +8913,7 @@
             },
             {
               "name": "allow-upload-duplicate-file",
-              "description": "allow to upload duplicate name files\n\n是否允许重复上传相同文件名的文件",
+              "description": "allow to upload duplicate name files\n\n是否允许重复上传相同文件名的文件。在 `capture = ''` + 拍照上传场景中，`allowUploadDuplicateFile` 应取 `true`，避免拍照上传的文件被同名文件校验过滤",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/upload?tab=api#upload-props",
               "type": "boolean",
               "default": "false"
@@ -9092,6 +9150,149 @@
               "name": "add-content",
               "description": "添加按钮内容。值为空，使用默认图标渲染；值为 slot 则表示使用插槽渲染；其他值无效",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/upload?tab=api#upload-props"
+            }
+          ]
+        },
+        {
+          "name": "t-watermark",
+          "source": {
+            "symbol": "Watermark"
+          },
+          "description": "Watermark\n\n水印",
+          "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark",
+          "props": [
+            {
+              "name": "alpha",
+              "description": "水印整体透明度，取值范围 [0-1]",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props",
+              "type": "number",
+              "default": "1"
+            },
+            {
+              "name": "content",
+              "description": "水印所覆盖的内容节点",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props",
+              "type": "string | TNode"
+            },
+            {
+              "name": "default",
+              "description": "水印所覆盖的内容节点，同 `content`",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props",
+              "type": "string | TNode"
+            },
+            {
+              "name": "height",
+              "description": "水印高度",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props",
+              "type": "number"
+            },
+            {
+              "name": "is-repeat",
+              "description": "水印是否重复出现",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "layout",
+              "description": "水印的布局方式，rectangular：矩形，即横平竖直的水印；hexagonal：六边形，即错位的水印",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props",
+              "type": "'rectangular' | 'hexagonal'",
+              "default": "rectangular",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "rectangular"
+                },
+                {
+                  "name": "hexagonal"
+                }
+              ]
+            },
+            {
+              "name": "line-space",
+              "description": "行间距，只作用在多行（`content` 配置为数组）情况下",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props",
+              "type": "number",
+              "default": "16"
+            },
+            {
+              "name": "movable",
+              "description": "水印是否可移动",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "move-interval",
+              "description": "水印发生运动位移的间隙，单位：毫秒",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props",
+              "type": "number",
+              "default": "3000"
+            },
+            {
+              "name": "offset",
+              "description": "水印在画布上绘制的水平和垂直偏移量，正常情况下水印绘制在中间位置，即 `offset = [gapX / 2, gapY / 2]`",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props",
+              "type": "Array<number>"
+            },
+            {
+              "name": "removable",
+              "description": "水印是否可被删除",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "rotate",
+              "description": "水印旋转的角度，单位 °",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props",
+              "type": "number",
+              "default": "-22"
+            },
+            {
+              "name": "watermark-content",
+              "description": "水印内容，需要显示多行情况下可配置为数组",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props",
+              "type": "WatermarkText|WatermarkImage|Array<WatermarkText|WatermarkImage>"
+            },
+            {
+              "name": "width",
+              "description": "水印宽度",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props",
+              "type": "number"
+            },
+            {
+              "name": "x",
+              "description": "水印之间的水平间距",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props",
+              "type": "number"
+            },
+            {
+              "name": "y",
+              "description": "水印之间的垂直间距",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props",
+              "type": "number"
+            },
+            {
+              "name": "z-index",
+              "description": "水印元素的 `z-index`，默认值写在 CSS 中",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props",
+              "type": "number"
+            }
+          ],
+          "slots": [
+            {
+              "name": "content",
+              "description": "水印所覆盖的内容节点",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props"
+            },
+            {
+              "name": "default",
+              "description": "水印所覆盖的内容节点，同 `content`",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/watermark?tab=api#watermark-props"
             }
           ]
         }

@@ -318,7 +318,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
     class="summary"
     data-v-45d5c39d=""
   >
-    一行内容/功能的垂直排列方式。一行项目左侧为主要内容展示区域，右侧可增加更多操作内容
+    用于各个类别行的信息展示。
   </p>
   <div
     class="tdesign-mobile-demo-block"
@@ -1184,33 +1184,6 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
                 class="t-cell__title-text"
               >
                 单行标题
-                <!---->
-              </div>
-              <div
-                class="t-cell__description"
-              >
-                一段很长很长的内容文字，长文本自动换行，该选项的描述是一段很长的内容
-              </div>
-            </div>
-            <!---->
-            <!---->
-          </div>
-          <div
-            class="t-cell"
-          >
-            <div
-              class="t-cell__left"
-            >
-              <!---->
-              <!---->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              <div
-                class="t-cell__title-text"
-              >
-                多行高度不定，长文本自动换行，该选项的描述是一段很长的内容
                 <!---->
               </div>
               <div
@@ -2142,33 +2115,6 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
           class="t-cell__title-text"
         >
           单行标题
-          <!---->
-        </div>
-        <div
-          class="t-cell__description"
-        >
-          一段很长很长的内容文字，长文本自动换行，该选项的描述是一段很长的内容
-        </div>
-      </div>
-      <!---->
-      <!---->
-    </div>
-    <div
-      class="t-cell"
-    >
-      <div
-        class="t-cell__left"
-      >
-        <!---->
-        <!---->
-      </div>
-      <div
-        class="t-cell__title"
-      >
-        <div
-          class="t-cell__title-text"
-        >
-          多行高度不定，长文本自动换行，该选项的描述是一段很长的内容
           <!---->
         </div>
         <div

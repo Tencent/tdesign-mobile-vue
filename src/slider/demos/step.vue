@@ -1,11 +1,13 @@
 <template>
   <div class="wrapper">
-    <t-slider v-model="value" :marks="marksRange" :min="5" :max="10" :step="0.5" />
+    <t-slider v-model="value" :marks="marksRange" :max="10" :min="5" :step="0.5" />
   </div>
 
-  <div class="wrapper">
-    <t-slider range :default-value="[20, 60]" :marks="marks" :step="20" />
-  </div>
+  <tdesign-demo-block summary="带刻度双游标滑块">
+    <div class="wrapper">
+      <t-slider :default-value="[20, 60]" :marks="marks" :step="20" range />
+    </div>
+  </tdesign-demo-block>
 </template>
 
 <script lang="ts" setup>

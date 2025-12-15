@@ -33,8 +33,9 @@ export default defineComponent({
     });
 
     const size = computed(() => {
-      if (column.value > 4 || !column.value) return 'small';
-      return column.value < 4 ? 'large' : 'middle';
+      const col = column.value;
+      if (!col || col === 4) return 'middle';
+      return col > 4 ? 'small' : 'large';
     });
 
     const realImage = computed(() => {

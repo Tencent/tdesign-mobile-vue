@@ -2,220 +2,570 @@
 
 exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
 <div
-  class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
-  role="tablist"
+  data-v-app=""
 >
   
-  
   <div
-    aria-label="首页，有16条消息"
-    class="t-tab-bar-item t-tab-bar-item--normal"
+    class="bar-wrapper"
+    data-v-56c81c82=""
   >
     <div
-      aria-expanded="false"
-      aria-selected="true"
-      class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
-      role="tab"
+      class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+      data-v-56c81c82=""
+      role="tablist"
     >
+      
+      
       <div
-        class="t-tab-bar-item__icon"
-        style="height: 20px;"
+        aria-label="首页，有16条消息"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
       >
         <div
-          class="t-badge"
+          aria-expanded="false"
+          aria-selected="true"
+          class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+          role="tab"
         >
+          <!---->
           <div
-            class="t-badge__content"
+            class="t-tab-bar-item__text"
           >
+            <!---->
             
+            首页
             
-            <svg
-              class="t-icon t-icon-home"
-              style="font-size: 20px;"
-            >
-              <use
-                href="#t-icon-home"
-              />
-            </svg>
-            
-            
-          </div>
-          <div
-            class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-            style="right: 0px; top: 0px;"
-          >
-            16
           </div>
         </div>
-      </div>
-      <div
-        class="t-tab-bar-item__text t-tab-bar-item__text--small"
-      >
         <!---->
-        
-        首页 
-        
       </div>
-    </div>
-    <!---->
-  </div>
-  <div
-    aria-label="软件，有新的消息"
-    class="t-tab-bar-item t-tab-bar-item--normal"
-  >
-    <div
-      aria-expanded="false"
-      aria-selected="false"
-      class="t-tab-bar-item__content t-tab-bar-item__content--normal"
-      role="tab"
-    >
       <div
-        class="t-tab-bar-item__icon"
-        style="height: 20px;"
+        aria-label="软件，有新的消息"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
       >
         <div
-          class="t-badge"
+          aria-expanded="false"
+          aria-selected="false"
+          class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+          role="tab"
         >
+          <!---->
           <div
-            class="t-badge__content"
+            class="t-tab-bar-item__text"
           >
+            <!---->
             
-            
-            <svg
-              class="t-icon t-icon-app"
-              style="font-size: 20px;"
-            >
-              <use
-                href="#t-icon-app"
-              />
-            </svg>
-            
+            软件
             
           </div>
+        </div>
+        <!---->
+      </div>
+      <div
+        aria-label="聊天，New"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-selected="false"
+          class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <!---->
           <div
-            class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-            style="right: 0px; top: 0px;"
+            class="t-tab-bar-item__text"
           >
+            <!---->
+            
+            聊天
+            
+          </div>
+        </div>
+        <!---->
+      </div>
+      <div
+        aria-label="我的，有很多消息"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-selected="false"
+          class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <!---->
+          <div
+            class="t-tab-bar-item__text"
+          >
+            <!---->
+            
+            我的
+            
+          </div>
+        </div>
+        <!---->
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="bar-wrapper"
+    data-v-56c81c82=""
+  >
+    <div
+      class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+      data-v-56c81c82=""
+      role="tablist"
+    >
+      
+      
+      <div
+        aria-label="首页，有16条消息"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-selected="true"
+          class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__icon"
+            style="height: 20px;"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__content"
+              >
+                
+                
+                <svg
+                  class="t-icon t-icon-home"
+                  data-v-56c81c82=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-home"
+                  />
+                </svg>
+                
+                
+              </div>
+              <div
+                class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                style="right: 0px; top: 0px;"
+              >
+                16
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-tab-bar-item__text t-tab-bar-item__text--small"
+          >
+            <!---->
             <!---->
           </div>
         </div>
-      </div>
-      <div
-        class="t-tab-bar-item__text t-tab-bar-item__text--small"
-      >
         <!---->
-        
-        软件 
-        
       </div>
-    </div>
-    <!---->
-  </div>
-  <div
-    aria-label="聊天，New"
-    class="t-tab-bar-item t-tab-bar-item--normal"
-  >
-    <div
-      aria-expanded="false"
-      aria-selected="false"
-      class="t-tab-bar-item__content t-tab-bar-item__content--normal"
-      role="tab"
-    >
       <div
-        class="t-tab-bar-item__icon"
-        style="height: 20px;"
+        aria-label="软件，有新的消息"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
       >
         <div
-          class="t-badge"
+          aria-expanded="false"
+          aria-selected="false"
+          class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+          role="tab"
         >
           <div
-            class="t-badge__content"
+            class="t-tab-bar-item__icon"
+            style="height: 20px;"
           >
-            
-            
-            <svg
-              class="t-icon t-icon-chat"
-              style="font-size: 20px;"
+            <div
+              class="t-badge"
             >
-              <use
-                href="#t-icon-chat"
-              />
-            </svg>
-            
-            
+              <div
+                class="t-badge__content"
+              >
+                
+                
+                <svg
+                  class="t-icon t-icon-app"
+                  data-v-56c81c82=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-app"
+                  />
+                </svg>
+                
+                
+              </div>
+              <div
+                class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+                style="right: 0px; top: 0px;"
+              >
+                <!---->
+              </div>
+            </div>
           </div>
           <div
-            class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-            style="right: 0px; top: 0px;"
+            class="t-tab-bar-item__text t-tab-bar-item__text--small"
           >
-            New
+            <!---->
+            <!---->
           </div>
         </div>
-      </div>
-      <div
-        class="t-tab-bar-item__text t-tab-bar-item__text--small"
-      >
         <!---->
-        
-        聊天 
-        
       </div>
-    </div>
-    <!---->
-  </div>
-  <div
-    aria-label="我的，有很多消息"
-    class="t-tab-bar-item t-tab-bar-item--normal"
-  >
-    <div
-      aria-expanded="false"
-      aria-selected="false"
-      class="t-tab-bar-item__content t-tab-bar-item__content--normal"
-      role="tab"
-    >
       <div
-        class="t-tab-bar-item__icon"
-        style="height: 20px;"
+        aria-label="聊天，New"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
       >
         <div
-          class="t-badge"
+          aria-expanded="false"
+          aria-selected="false"
+          class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+          role="tab"
         >
           <div
-            class="t-badge__content"
+            class="t-tab-bar-item__icon"
+            style="height: 20px;"
           >
-            
-            
-            <svg
-              class="t-icon t-icon-user"
-              style="font-size: 20px;"
+            <div
+              class="t-badge"
             >
-              <use
-                href="#t-icon-user"
-              />
-            </svg>
-            
-            
+              <div
+                class="t-badge__content"
+              >
+                
+                
+                <svg
+                  class="t-icon t-icon-chat"
+                  data-v-56c81c82=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-chat"
+                  />
+                </svg>
+                
+                
+              </div>
+              <div
+                class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                style="right: 0px; top: 0px;"
+              >
+                New
+              </div>
+            </div>
           </div>
           <div
-            class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-            style="right: 0px; top: 0px;"
+            class="t-tab-bar-item__text t-tab-bar-item__text--small"
           >
-            ···
+            <!---->
+            <!---->
           </div>
         </div>
+        <!---->
       </div>
       <div
-        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+        aria-label="我的，有很多消息"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
       >
+        <div
+          aria-expanded="false"
+          aria-selected="false"
+          class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__icon"
+            style="height: 20px;"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__content"
+              >
+                
+                
+                <svg
+                  class="t-icon t-icon-user"
+                  data-v-56c81c82=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-user"
+                  />
+                </svg>
+                
+                
+              </div>
+              <div
+                class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                style="right: 0px; top: 0px;"
+              >
+                ···
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-tab-bar-item__text t-tab-bar-item__text--small"
+          >
+            <!---->
+            <!---->
+          </div>
+        </div>
         <!---->
-        
-        我的 
-        
       </div>
+      
+      
     </div>
-    <!---->
   </div>
-  
+  <div
+    class="bar-wrapper"
+    data-v-56c81c82=""
+  >
+    <div
+      class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+      data-v-56c81c82=""
+      role="tablist"
+    >
+      
+      
+      <div
+        aria-label="首页，有16条消息"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-selected="true"
+          class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__icon"
+            style="height: 20px;"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__content"
+              >
+                
+                
+                <svg
+                  class="t-icon t-icon-home"
+                  data-v-56c81c82=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-home"
+                  />
+                </svg>
+                
+                
+              </div>
+              <div
+                class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                style="right: 0px; top: 0px;"
+              >
+                16
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-tab-bar-item__text t-tab-bar-item__text--small"
+          >
+            <!---->
+            
+            首页 
+            
+          </div>
+        </div>
+        <!---->
+      </div>
+      <div
+        aria-label="软件，有新的消息"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-selected="false"
+          class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__icon"
+            style="height: 20px;"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__content"
+              >
+                
+                
+                <svg
+                  class="t-icon t-icon-app"
+                  data-v-56c81c82=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-app"
+                  />
+                </svg>
+                
+                
+              </div>
+              <div
+                class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+                style="right: 0px; top: 0px;"
+              >
+                <!---->
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-tab-bar-item__text t-tab-bar-item__text--small"
+          >
+            <!---->
+            
+            软件 
+            
+          </div>
+        </div>
+        <!---->
+      </div>
+      <div
+        aria-label="聊天，New"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-selected="false"
+          class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__icon"
+            style="height: 20px;"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__content"
+              >
+                
+                
+                <svg
+                  class="t-icon t-icon-chat"
+                  data-v-56c81c82=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-chat"
+                  />
+                </svg>
+                
+                
+              </div>
+              <div
+                class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                style="right: 0px; top: 0px;"
+              >
+                New
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-tab-bar-item__text t-tab-bar-item__text--small"
+          >
+            <!---->
+            
+            聊天 
+            
+          </div>
+        </div>
+        <!---->
+      </div>
+      <div
+        aria-label="我的，有很多消息"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-selected="false"
+          class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__icon"
+            style="height: 20px;"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__content"
+              >
+                
+                
+                <svg
+                  class="t-icon t-icon-user"
+                  data-v-56c81c82=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-user"
+                  />
+                </svg>
+                
+                
+              </div>
+              <div
+                class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                style="right: 0px; top: 0px;"
+              >
+                ···
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-tab-bar-item__text t-tab-bar-item__text--small"
+          >
+            <!---->
+            
+            我的 
+            
+          </div>
+        </div>
+        <!---->
+      </div>
+      
+      
+    </div>
+  </div>
   
 </div>
 `;
@@ -534,7 +884,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     class="title"
     data-v-8bf7e573=""
   >
-    TabBar 标签栏
+    TabBar 底部标签栏
   </h1>
   <p
     class="summary"
@@ -572,7 +922,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         
         
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -593,7 +943,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           <!---->
         </div>
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -614,7 +964,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           <!---->
         </div>
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -635,7 +985,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           <!---->
         </div>
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -1021,7 +1371,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         
         
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -1042,7 +1392,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           <!---->
         </div>
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -1063,7 +1413,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           <!---->
         </div>
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -1118,7 +1468,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        01 组件样式
+        02 组件样式
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"
@@ -1130,224 +1480,569 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
       class="tdesign-mobile-demo-block__slot"
     >
       
+      
       <div
-        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
-        data-v-8bf7e573=""
-        role="tablist"
+        class="bar-wrapper"
+        data-v-56c81c82=""
       >
-        
-        
         <div
-          aria-label="首页，有16条消息"
-          class="t-tab-bar-item t-tab-bar-item--normal"
+          class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+          data-v-56c81c82=""
+          role="tablist"
         >
+          
+          
           <div
-            aria-expanded="false"
-            aria-selected="true"
-            class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
-            role="tab"
+            aria-label="首页，有16条消息"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
           >
             <div
-              class="t-tab-bar-item__icon"
-              style="height: 20px;"
-            >
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__content"
-                >
-                  
-                  
-                  <svg
-                    class="t-icon t-icon-home"
-                    style="font-size: 20px;"
-                  >
-                    <use
-                      href="#t-icon-home"
-                    />
-                  </svg>
-                  
-                  
-                </div>
-                <div
-                  class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                  style="right: 0px; top: 0px;"
-                >
-                  16
-                </div>
-              </div>
-            </div>
-            <div
-              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              aria-expanded="false"
+              aria-selected="true"
+              class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+              role="tab"
             >
               <!---->
-              
-              首页 
-              
+              <div
+                class="t-tab-bar-item__text"
+              >
+                <!---->
+                
+                首页
+                
+              </div>
             </div>
+            <!---->
           </div>
-          <!---->
-        </div>
-        <div
-          aria-label="软件，有新的消息"
-          class="t-tab-bar-item t-tab-bar-item--normal"
-        >
           <div
-            aria-expanded="false"
-            aria-selected="false"
-            class="t-tab-bar-item__content t-tab-bar-item__content--normal"
-            role="tab"
+            aria-label="软件，有新的消息"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
           >
             <div
-              class="t-tab-bar-item__icon"
-              style="height: 20px;"
-            >
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__content"
-                >
-                  
-                  
-                  <svg
-                    class="t-icon t-icon-app"
-                    style="font-size: 20px;"
-                  >
-                    <use
-                      href="#t-icon-app"
-                    />
-                  </svg>
-                  
-                  
-                </div>
-                <div
-                  class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-                  style="right: 0px; top: 0px;"
-                >
-                  <!---->
-                </div>
-              </div>
-            </div>
-            <div
-              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              aria-expanded="false"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+              role="tab"
             >
               <!---->
-              
-              软件 
-              
+              <div
+                class="t-tab-bar-item__text"
+              >
+                <!---->
+                
+                软件
+                
+              </div>
             </div>
+            <!---->
           </div>
-          <!---->
-        </div>
-        <div
-          aria-label="聊天，New"
-          class="t-tab-bar-item t-tab-bar-item--normal"
-        >
           <div
-            aria-expanded="false"
-            aria-selected="false"
-            class="t-tab-bar-item__content t-tab-bar-item__content--normal"
-            role="tab"
+            aria-label="聊天，New"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
           >
             <div
-              class="t-tab-bar-item__icon"
-              style="height: 20px;"
-            >
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__content"
-                >
-                  
-                  
-                  <svg
-                    class="t-icon t-icon-chat"
-                    style="font-size: 20px;"
-                  >
-                    <use
-                      href="#t-icon-chat"
-                    />
-                  </svg>
-                  
-                  
-                </div>
-                <div
-                  class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                  style="right: 0px; top: 0px;"
-                >
-                  New
-                </div>
-              </div>
-            </div>
-            <div
-              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              aria-expanded="false"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+              role="tab"
             >
               <!---->
-              
-              聊天 
-              
+              <div
+                class="t-tab-bar-item__text"
+              >
+                <!---->
+                
+                聊天
+                
+              </div>
             </div>
+            <!---->
           </div>
-          <!---->
-        </div>
-        <div
-          aria-label="我的，有很多消息"
-          class="t-tab-bar-item t-tab-bar-item--normal"
-        >
           <div
-            aria-expanded="false"
-            aria-selected="false"
-            class="t-tab-bar-item__content t-tab-bar-item__content--normal"
-            role="tab"
+            aria-label="我的，有很多消息"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
           >
             <div
-              class="t-tab-bar-item__icon"
-              style="height: 20px;"
-            >
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__content"
-                >
-                  
-                  
-                  <svg
-                    class="t-icon t-icon-user"
-                    style="font-size: 20px;"
-                  >
-                    <use
-                      href="#t-icon-user"
-                    />
-                  </svg>
-                  
-                  
-                </div>
-                <div
-                  class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                  style="right: 0px; top: 0px;"
-                >
-                  ···
-                </div>
-              </div>
-            </div>
-            <div
-              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              aria-expanded="false"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+              role="tab"
             >
               <!---->
-              
-              我的 
-              
+              <div
+                class="t-tab-bar-item__text"
+              >
+                <!---->
+                
+                我的
+                
+              </div>
             </div>
+            <!---->
           </div>
-          <!---->
+          
+          
         </div>
-        
-        
       </div>
+      <div
+        class="bar-wrapper"
+        data-v-56c81c82=""
+      >
+        <div
+          class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+          data-v-56c81c82=""
+          role="tablist"
+        >
+          
+          
+          <div
+            aria-label="首页，有16条消息"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="true"
+              class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    
+                    <svg
+                      class="t-icon t-icon-home"
+                      data-v-56c81c82=""
+                      style="font-size: 20px;"
+                    >
+                      <use
+                        href="#t-icon-home"
+                      />
+                    </svg>
+                    
+                    
+                  </div>
+                  <div
+                    class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                    style="right: 0px; top: 0px;"
+                  >
+                    16
+                  </div>
+                </div>
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            aria-label="软件，有新的消息"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    
+                    <svg
+                      class="t-icon t-icon-app"
+                      data-v-56c81c82=""
+                      style="font-size: 20px;"
+                    >
+                      <use
+                        href="#t-icon-app"
+                      />
+                    </svg>
+                    
+                    
+                  </div>
+                  <div
+                    class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+                    style="right: 0px; top: 0px;"
+                  >
+                    <!---->
+                  </div>
+                </div>
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            aria-label="聊天，New"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    
+                    <svg
+                      class="t-icon t-icon-chat"
+                      data-v-56c81c82=""
+                      style="font-size: 20px;"
+                    >
+                      <use
+                        href="#t-icon-chat"
+                      />
+                    </svg>
+                    
+                    
+                  </div>
+                  <div
+                    class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                    style="right: 0px; top: 0px;"
+                  >
+                    New
+                  </div>
+                </div>
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            aria-label="我的，有很多消息"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    
+                    <svg
+                      class="t-icon t-icon-user"
+                      data-v-56c81c82=""
+                      style="font-size: 20px;"
+                    >
+                      <use
+                        href="#t-icon-user"
+                      />
+                    </svg>
+                    
+                    
+                  </div>
+                  <div
+                    class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                    style="right: 0px; top: 0px;"
+                  >
+                    ···
+                  </div>
+                </div>
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+          
+          
+        </div>
+      </div>
+      <div
+        class="bar-wrapper"
+        data-v-56c81c82=""
+      >
+        <div
+          class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+          data-v-56c81c82=""
+          role="tablist"
+        >
+          
+          
+          <div
+            aria-label="首页，有16条消息"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="true"
+              class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    
+                    <svg
+                      class="t-icon t-icon-home"
+                      data-v-56c81c82=""
+                      style="font-size: 20px;"
+                    >
+                      <use
+                        href="#t-icon-home"
+                      />
+                    </svg>
+                    
+                    
+                  </div>
+                  <div
+                    class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                    style="right: 0px; top: 0px;"
+                  >
+                    16
+                  </div>
+                </div>
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                
+                首页 
+                
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            aria-label="软件，有新的消息"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    
+                    <svg
+                      class="t-icon t-icon-app"
+                      data-v-56c81c82=""
+                      style="font-size: 20px;"
+                    >
+                      <use
+                        href="#t-icon-app"
+                      />
+                    </svg>
+                    
+                    
+                  </div>
+                  <div
+                    class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+                    style="right: 0px; top: 0px;"
+                  >
+                    <!---->
+                  </div>
+                </div>
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                
+                软件 
+                
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            aria-label="聊天，New"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    
+                    <svg
+                      class="t-icon t-icon-chat"
+                      data-v-56c81c82=""
+                      style="font-size: 20px;"
+                    >
+                      <use
+                        href="#t-icon-chat"
+                      />
+                    </svg>
+                    
+                    
+                  </div>
+                  <div
+                    class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                    style="right: 0px; top: 0px;"
+                  >
+                    New
+                  </div>
+                </div>
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                
+                聊天 
+                
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            aria-label="我的，有很多消息"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    
+                    <svg
+                      class="t-icon t-icon-user"
+                      data-v-56c81c82=""
+                      style="font-size: 20px;"
+                    >
+                      <use
+                        href="#t-icon-user"
+                      />
+                    </svg>
+                    
+                    
+                  </div>
+                  <div
+                    class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                    style="right: 0px; top: 0px;"
+                  >
+                    ···
+                  </div>
+                </div>
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                
+                我的 
+                
+              </div>
+            </div>
+            <!---->
+          </div>
+          
+          
+        </div>
+      </div>
+      
       
     </div>
   </div>
@@ -1989,7 +2684,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
   
   
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"
@@ -2010,7 +2705,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"
@@ -2031,7 +2726,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"
@@ -2083,7 +2778,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
   
   
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"
@@ -2104,7 +2799,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"
@@ -2125,7 +2820,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"
@@ -2146,7 +2841,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"

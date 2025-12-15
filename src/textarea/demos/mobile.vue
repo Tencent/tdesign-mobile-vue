@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">Textarea 多行文本框</h1>
-    <p class="summary">用于多行文本的输入</p>
+    <p class="summary">用于多行文本的输入。</p>
     <tdesign-demo-block title="01 组件类型" summary="基础多行文本框">
       <baseDemo />
     </tdesign-demo-block>

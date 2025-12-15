@@ -66,7 +66,7 @@ click | `(e: MouseEvent)` | 点击时触发
 --td-button-default-text-active-bg-color | @bg-color-container-active | -
 --td-button-extra-small-font-size | @font-size-base | -
 --td-button-extra-small-height | 28px | -
---td-button-extra-small-icon-font-size | 18px | -
+--td-button-extra-small-icon-size | 18px | -
 --td-button-extra-small-padding-horizontal | 8px | -
 --td-button-font-weight | 600 | -
 --td-button-ghost-border-color | @button-ghost-color | -
@@ -83,7 +83,7 @@ click | `(e: MouseEvent)` | 点击时触发
 --td-button-icon-spacer | @spacer | -
 --td-button-large-font-size | @font-size-m | -
 --td-button-large-height | 48px | -
---td-button-large-icon-font-size | 24px | -
+--td-button-large-icon-size | 24px | -
 --td-button-large-padding-horizontal | 20px | -
 --td-button-light-active-bg-color | @brand-color-light-active | -
 --td-button-light-active-border-color | @brand-color-light-active | -
@@ -103,7 +103,7 @@ click | `(e: MouseEvent)` | 点击时触发
 --td-button-light-text-color | @brand-color | -
 --td-button-medium-font-size | @font-size-m | -
 --td-button-medium-height | 40px | -
---td-button-medium-icon-font-size | 20px | -
+--td-button-medium-icon-size | 20px | -
 --td-button-medium-padding-horizontal | 16px | -
 --td-button-primary-active-bg-color | @brand-color-active | -
 --td-button-primary-active-border-color | @brand-color-active | -
@@ -123,5 +123,5 @@ click | `(e: MouseEvent)` | 点击时触发
 --td-button-primary-text-disabled-color | @brand-color-disabled | -
 --td-button-small-font-size | @font-size-base | -
 --td-button-small-height | 32px | -
---td-button-small-icon-font-size | 18px | -
+--td-button-small-icon-size | 18px | -
 --td-button-small-padding-horizontal | 12px | -

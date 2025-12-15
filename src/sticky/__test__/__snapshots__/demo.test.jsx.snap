@@ -81,7 +81,7 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
     class="title"
     data-v-8783f7c8=""
   >
-    Sticky 吸顶
+    Sticky 吸顶容器
   </h1>
   <p
     class="summary"

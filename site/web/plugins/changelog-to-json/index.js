@@ -21,7 +21,8 @@ export default function changelog2Json() {
         res.end(JSON.stringify(json));
       });
     },
-    async closeBundle() {
+    async closeBundle(error) {
+      if (error) return;
       // 生产构建时写入物理文件
       if (config.env.PROD || config.env.MODE === 'preview') {
         const json = await generateChangelogJson(changelogPath, 'mobile');

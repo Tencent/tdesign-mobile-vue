@@ -81,6 +81,6 @@ export default {
   onOpen: Function as PropType<TdPopupProps['onOpen']>,
   /** 组件展示且动画结束后执行 */
   onOpened: Function as PropType<TdPopupProps['onOpened']>,
-  /** 当浮层隐藏或显示时触发 */
+  /** 当浮层隐藏或显示时触发，trigger=document 表示点击弹出层元素触发 */
   onVisibleChange: Function as PropType<TdPopupProps['onVisibleChange']>,
 };

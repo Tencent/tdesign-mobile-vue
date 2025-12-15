@@ -23,7 +23,7 @@ export default defineComponent({
         const image = renderTNodeJSX('image');
         if (image) {
           if (typeof props.image === 'string') {
-            return <TImage v-if="typeof image === 'string'" src={props.image} />;
+            return <TImage src={props.image} />;
           }
           return image;
         }

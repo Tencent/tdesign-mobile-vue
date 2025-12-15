@@ -27,10 +27,11 @@ change | `(value: TreeSelectValue, level: TreeLevel) ` | [see more ts definition
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-tree-item-disabled-color | @text-color-disabled | -
 --td-tree-bg-color | @bg-color-container | -
+--td-tree-colum-text-color | @text-color-primary | -
 --td-tree-colum-width | 103px | -
 --td-tree-item-active-color | @brand-color | -
+--td-tree-item-disabled-color | @text-color-disabled | -
 --td-tree-item-font-size | 16px | -
 --td-tree-item-height | 56px | -
 --td-tree-root-bg-color | @bg-color-secondarycontainer | -
