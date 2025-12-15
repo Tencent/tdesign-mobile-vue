@@ -358,8 +358,8 @@ export default defineComponent({
             `${swiperNavClass.value}--${props.direction}`,
             `${swiperNavClass.value}__${navigationConfig.value?.type || ''}`,
             `${swiperNavClass.value}--${navigationConfig.value?.paginationPosition || 'bottom'}`,
-            navigationConfig.value.placement && `${swiperNavClass.value}--${navigationConfig.value.placement}`,
-          ].filter(Boolean)}
+            `${swiperNavClass.value}--${navigationConfig.value.placement}`,
+          ]}
         >
           {renderDotsNav()}
           {renderFractionNav()}
