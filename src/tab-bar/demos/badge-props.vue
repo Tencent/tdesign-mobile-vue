@@ -1,6 +1,6 @@
 <template>
   <div class="bar-wrapper">
-    <t-tab-bar v-model="value" :split="false">
+    <t-tab-bar v-model="value" :fixed="false" :split="false">
       <t-tab-bar-item
         v-for="item in list"
         :key="item.name"
@@ -13,7 +13,7 @@
     </t-tab-bar>
   </div>
   <div class="bar-wrapper">
-    <t-tab-bar v-model="value" :split="false">
+    <t-tab-bar v-model="value" :fixed="false" :split="false">
       <t-tab-bar-item
         v-for="item in list"
         :key="item.name"
@@ -28,7 +28,7 @@
     </t-tab-bar>
   </div>
   <div class="bar-wrapper">
-    <t-tab-bar v-model="value" :split="false">
+    <t-tab-bar v-model="value" :fixed="false" :split="false">
       <t-tab-bar-item
         v-for="item in list"
         :key="item.name"
@@ -62,10 +62,6 @@ const list = ref([
 .bar-wrapper {
   &:not(:last-child) {
     margin-bottom: 16px;
-  }
-
-  .t-tab-bar {
-    position: relative;
   }
 }
 </style>

@@ -1,18 +1,18 @@
 import { h } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
-import NavBar from '../navbar';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
+import NavBar from '../navbar';
 
 const iconFunc = () => h(TIconApp);
 describe('navbar', () => {
   describe('props', () => {
     it('fixed', async () => {
       const navbar = mount(<NavBar title="标题" />);
-      expect(navbar.element.style.position).toBe('fixed');
+      expect(navbar.element.className).toContain('t-navbar--fixed');
 
       await navbar.setProps({ fixed: false });
-      expect(navbar.element.style.position).toBe('relative');
+      expect(navbar.element.className).not.toContain('t-navbar--fixed');
     });
 
     it('leftArrow', () => {

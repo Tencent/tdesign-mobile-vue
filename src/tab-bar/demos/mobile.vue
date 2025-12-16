@@ -38,10 +38,6 @@ import CustomPropsDemo from './custom.vue';
 
 <style lang="less" scoped>
 .tdesign-mobile-demo {
-  .t-tab-bar {
-    position: relative;
-  }
-
   .t-tab-bar + .t-tab-bar {
     margin-top: 16px;
   }

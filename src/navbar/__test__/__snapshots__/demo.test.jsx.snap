@@ -8,7 +8,7 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
   <div
     class="t-navbar t-safe-area-top t-navbar--visible-animation"
     data-v-fcc0cda1=""
-    style="position: relative;"
+    style="z-index: 1;"
   >
     <!---->
     <div
@@ -55,7 +55,7 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
   <div
     class="t-navbar t-safe-area-top t-navbar--visible-animation"
     data-v-fcc0cda1=""
-    style="position: relative;"
+    style="z-index: 1;"
   >
     <!---->
     <div
@@ -126,7 +126,7 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
   <div
     class="t-navbar t-safe-area-top t-navbar--visible-animation"
     data-v-fcc0cda1=""
-    style="position: relative;"
+    style="z-index: 1;"
   >
     <!---->
     <div
@@ -201,7 +201,7 @@ exports[`Navbar > Navbar customColorVue demo works fine 1`] = `
 <div
   class="t-navbar t-safe-area-top t-navbar--visible-animation custom-navbar"
   data-v-3ef3b10f=""
-  style="position: relative;"
+  style="z-index: 1;"
 >
   <!---->
   <div
@@ -265,7 +265,7 @@ exports[`Navbar > Navbar imgVue demo works fine 1`] = `
 <div
   class="t-navbar t-safe-area-top t-navbar--visible-animation"
   data-v-ed0b13d1=""
-  style="position: relative;"
+  style="z-index: 1;"
 >
   <!---->
   <div
@@ -323,11 +323,7 @@ exports[`Navbar > Navbar imgVue demo works fine 1`] = `
       
       <!---->
     </div>
-    <div
-      class="t-navbar__center"
-    >
-      <!---->
-    </div>
+    <!---->
     <div
       class="t-navbar__right"
     >
@@ -364,7 +360,7 @@ exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
   <div
     class="t-navbar t-safe-area-top t-navbar--visible-animation"
     data-v-593dba5f=""
-    style="position: relative;"
+    style="z-index: 1;"
   >
     <!---->
     <div
@@ -425,7 +421,7 @@ exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
   <div
     class="t-navbar t-safe-area-top t-navbar--visible-animation"
     data-v-593dba5f=""
-    style="position: relative;"
+    style="z-index: 1;"
   >
     <!---->
     <div
@@ -464,11 +460,7 @@ exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
         
         <!---->
       </div>
-      <div
-        class="t-navbar__center"
-      >
-        <!---->
-      </div>
+      <!---->
       <div
         class="t-navbar__right"
       >
@@ -542,7 +534,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
       <div
         class="t-navbar t-safe-area-top t-navbar--visible-animation"
         data-v-fcc0cda1=""
-        style="position: relative;"
+        style="z-index: 1;"
       >
         <!---->
         <div
@@ -589,7 +581,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
       <div
         class="t-navbar t-safe-area-top t-navbar--visible-animation"
         data-v-fcc0cda1=""
-        style="position: relative;"
+        style="z-index: 1;"
       >
         <!---->
         <div
@@ -660,7 +652,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
       <div
         class="t-navbar t-safe-area-top t-navbar--visible-animation"
         data-v-fcc0cda1=""
-        style="position: relative;"
+        style="z-index: 1;"
       >
         <!---->
         <div
@@ -753,7 +745,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         class="t-navbar t-safe-area-top t-navbar--visible-animation"
         data-v-0270c729=""
         data-v-614a1e54=""
-        style="position: relative;"
+        style="z-index: 1;"
       >
         <!---->
         <div
@@ -821,11 +813,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             
             <!---->
           </div>
-          <div
-            class="t-navbar__center"
-          >
-            <!---->
-          </div>
+          <!---->
           <div
             class="t-navbar__right"
           >
@@ -877,7 +865,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         class="t-navbar t-safe-area-top t-navbar--visible-animation"
         data-v-0270c729=""
         data-v-ed0b13d1=""
-        style="position: relative;"
+        style="z-index: 1;"
       >
         <!---->
         <div
@@ -935,11 +923,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             
             <!---->
           </div>
-          <div
-            class="t-navbar__center"
-          >
-            <!---->
-          </div>
+          <!---->
           <div
             class="t-navbar__right"
           >
@@ -995,7 +979,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
       <div
         class="t-navbar t-safe-area-top t-navbar--visible-animation"
         data-v-593dba5f=""
-        style="position: relative;"
+        style="z-index: 1;"
       >
         <!---->
         <div
@@ -1056,7 +1040,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
       <div
         class="t-navbar t-safe-area-top t-navbar--visible-animation"
         data-v-593dba5f=""
-        style="position: relative;"
+        style="z-index: 1;"
       >
         <!---->
         <div
@@ -1095,11 +1079,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             
             <!---->
           </div>
-          <div
-            class="t-navbar__center"
-          >
-            <!---->
-          </div>
+          <!---->
           <div
             class="t-navbar__right"
           >
@@ -1152,7 +1132,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
       <div
         class="t-navbar t-safe-area-top t-navbar--visible-animation"
         data-v-f6e31b98=""
-        style="position: relative;"
+        style="z-index: 1;"
       >
         <!---->
         <div
@@ -1213,7 +1193,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
       <div
         class="t-navbar t-safe-area-top t-navbar--visible-animation custom-navbar"
         data-v-f6e31b98=""
-        style="position: relative;"
+        style="z-index: 1;"
       >
         <!---->
         <div
@@ -1245,11 +1225,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
             <!---->
             <!---->
           </div>
-          <div
-            class="t-navbar__center"
-          >
-            <!---->
-          </div>
+          <!---->
           <div
             class="t-navbar__right"
           >
@@ -1308,7 +1284,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         class="t-navbar t-safe-area-top t-navbar--visible-animation custom-navbar"
         data-v-0270c729=""
         data-v-3ef3b10f=""
-        style="position: relative;"
+        style="z-index: 1;"
       >
         <!---->
         <div
@@ -1376,7 +1352,7 @@ exports[`Navbar > Navbar searchVue demo works fine 1`] = `
 <div
   class="t-navbar t-safe-area-top t-navbar--visible-animation"
   data-v-614a1e54=""
-  style="position: relative;"
+  style="z-index: 1;"
 >
   <!---->
   <div
@@ -1444,11 +1420,7 @@ exports[`Navbar > Navbar searchVue demo works fine 1`] = `
       
       <!---->
     </div>
-    <div
-      class="t-navbar__center"
-    >
-      <!---->
-    </div>
+    <!---->
     <div
       class="t-navbar__right"
     >
@@ -1485,7 +1457,7 @@ exports[`Navbar > Navbar sizeVue demo works fine 1`] = `
   <div
     class="t-navbar t-safe-area-top t-navbar--visible-animation"
     data-v-f6e31b98=""
-    style="position: relative;"
+    style="z-index: 1;"
   >
     <!---->
     <div
@@ -1546,7 +1518,7 @@ exports[`Navbar > Navbar sizeVue demo works fine 1`] = `
   <div
     class="t-navbar t-safe-area-top t-navbar--visible-animation custom-navbar"
     data-v-f6e31b98=""
-    style="position: relative;"
+    style="z-index: 1;"
   >
     <!---->
     <div
@@ -1578,11 +1550,7 @@ exports[`Navbar > Navbar sizeVue demo works fine 1`] = `
         <!---->
         <!---->
       </div>
-      <div
-        class="t-navbar__center"
-      >
-        <!---->
-      </div>
+      <!---->
       <div
         class="t-navbar__right"
       >

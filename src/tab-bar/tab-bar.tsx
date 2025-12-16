@@ -1,10 +1,11 @@
-import { defineComponent, ref, provide, Ref, computed, toRefs, VNode } from 'vue';
+import { defineComponent, ref, provide, Ref, computed, toRefs, VNode, CSSProperties } from 'vue';
 import TabBarProps from './props';
 import config from '../config';
 import useChildSlots from '../hooks/useChildSlots';
 import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
+import useElementHeight from '../hooks/useElementHeight';
 
 const { prefix } = config;
 
@@ -13,6 +14,7 @@ export default defineComponent({
   props: TabBarProps,
   emits: ['update:value', 'update:modelValue', 'change'],
   setup(props, context) {
+    const root = ref<HTMLElement>();
     const tabBarClass = usePrefixClass('tab-bar');
 
     const renderTNodeJSX = useTNodeJSX();
@@ -37,6 +39,14 @@ export default defineComponent({
       `${tabBarClass.value}--${props.shape}`,
     ]);
 
+    const styles = computed<CSSProperties>(() => ({
+      zIndex: props.zIndex,
+    }));
+
+    const { height: tabBarHeight } = useElementHeight(root, {
+      immediate: props.fixed && props.placeholder,
+    });
+
     provide('tab-bar', {
       ...toRefs(props),
       defaultIndex,
@@ -60,11 +70,21 @@ export default defineComponent({
       const vNodes = context.slots.default ? context.slots.default() : [];
       updateItemCount(vNodes);
 
-      return (
-        <div class={rootClass.value} role="tablist">
+      const renderTabBar = (
+        <div ref={root} role="tablist" class={rootClass.value} style={styles.value}>
           {renderTNodeJSX('default')}
         </div>
       );
+
+      if (props.fixed && props.placeholder) {
+        return (
+          <div class={`${tabBarClass.value}__placeholder`} style={{ height: `${tabBarHeight.value}px` }}>
+            {renderTabBar}
+          </div>
+        );
+      }
+
+      return renderTabBar;
     };
   },
 });

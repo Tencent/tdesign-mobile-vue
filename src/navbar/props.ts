@@ -28,6 +28,8 @@ export default {
   },
   /** 是否展示左侧箭头 */
   leftArrow: Boolean,
+  /** 固定在顶部时是否开启占位 */
+  placeholder: Boolean,
   /** 右侧区域 */
   right: {
     type: Function as PropType<TdNavbarProps['right']>,
@@ -49,6 +51,11 @@ export default {
   visible: {
     type: Boolean,
     default: true,
+  },
+  /** 导航条层级 */
+  zIndex: {
+    type: Number,
+    default: 1,
   },
   /** 点击左侧按钮时触发 */
   onLeftClick: Function as PropType<TdNavbarProps['onLeftClick']>,
