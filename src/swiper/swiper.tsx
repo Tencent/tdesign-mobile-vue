@@ -1,5 +1,5 @@
 import { onMounted, computed, ref, provide, watch, onUnmounted, toRefs, defineComponent } from 'vue';
-import { isNumber, isObject } from 'lodash-es';
+import { isNumber } from 'lodash-es';
 import { useSwipe } from '../swipe-cell/useSwipe';
 import config from '../config';
 import props from './props';
@@ -62,7 +62,7 @@ export default defineComponent({
       if (props.navigation === true) {
         return DEFAULT_SWIPER_NAVIGATION;
       }
-      if (isObject(props.navigation)) {
+      if (typeof props.navigation === 'object' && props.navigation !== null) {
         return {
           ...DEFAULT_SWIPER_NAVIGATION,
           ...props.navigation,
@@ -78,7 +78,7 @@ export default defineComponent({
      * - navigation 为对象时，根据 minShowNum 判断是否满足最小展示数量
      */
     const enableBuiltinNavigation = computed(() => {
-      if (!Object.keys(navigationConfig.value || {}).length) return false;
+      if (!Object.keys(navigationConfig.value).length) return false;
 
       const { minShowNum } = navigationConfig.value;
       return minShowNum ? items.value.length >= minShowNum : true;
@@ -99,8 +99,6 @@ export default defineComponent({
       `${swiperClass.value}--${props.type}`,
       { [`${swiperClass.value}--${navigationConfig.value.placement}`]: isBottomPagination.value },
     ]);
-
-    const useCustomNavigation = computed(() => typeof props.navigation === 'function' || context.slots?.navigation);
 
     let autoplayTimer: ReturnType<typeof setInterval> | null = null;
 
@@ -369,10 +367,8 @@ export default defineComponent({
 
     return () => {
       const swiperNav = () => {
-        // 明确禁用导航
         if (props.navigation === false) return null;
 
-        // 使用内置导航器
         if (enableBuiltinNavigation.value) {
           return (
             <>
@@ -382,12 +378,10 @@ export default defineComponent({
           );
         }
 
-        // 自定义导航（slot 或函数）
-        if (useCustomNavigation.value) {
-          return renderTNodeJSX('navigation');
-        }
+        if (typeof props.navigation === 'function') return (props.navigation as Function)();
 
-        // 其他情况（明确禁用或配置不满足时不渲染）
+        if (context.slots?.navigation) return context.slots.navigation();
+
         return null;
       };
 

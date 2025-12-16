@@ -1,6 +1,6 @@
 <template>
   <div style="padding: 0 16px">
-    <t-swiper :navigation="{ type: 'dots' }" :autoplay="false" @click="handleClick" @change="handleChange">
+    <t-swiper :autoplay="false" @click="handleClick" @change="handleChange">
       <t-swiper-item v-for="(item, index) in swiperList" :key="index" style="height: 192px">
         <img :src="item" class="img" />
       </t-swiper-item>

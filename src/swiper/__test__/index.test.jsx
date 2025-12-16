@@ -327,7 +327,7 @@ describe('navigation', () => {
     const wrapper = mount({
       setup() {
         return () => (
-          <Swiper>
+          <Swiper navigation={null}>
             {{
               default: list.map((item) => (
                 <SwiperItem>
