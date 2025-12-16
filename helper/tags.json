@@ -144,11 +144,11 @@
       "close-btn",
       "header",
       "keys",
+      "load",
       "middle-content",
       "options",
       "overlay-props",
       "placeholder",
-      "scroll",
       "sub-titles",
       "theme",
       "title",
@@ -408,7 +408,7 @@
       "confirm",
       "reset"
     ],
-    "description": "DropdownItem\n\n下拉菜单选项\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-menu)"
+    "description": "DropdownItem\n\n下拉菜单选项\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item)"
   },
   "t-dropdown-menu": {
     "attributes": [
@@ -734,11 +734,13 @@
       "fixed",
       "left",
       "left-arrow",
+      "placeholder",
       "right",
       "safe-area-inset-top",
       "title",
       "title-max-length",
       "visible",
+      "z-index",
       "left-click",
       "right-click"
     ],
@@ -1126,11 +1128,13 @@
     "attributes": [
       "bordered",
       "fixed",
+      "placeholder",
       "safe-area-inset-bottom",
       "shape",
       "split",
       "theme",
       "value",
+      "z-index",
       "change"
     ],
     "description": "TabBar\n\n标签栏\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tab-bar)"
