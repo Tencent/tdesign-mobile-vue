@@ -10,7 +10,7 @@ checkStrictly | Boolean | false | 父子节点选中状态不再关联，可各�
 closeBtn | Boolean / Slot / Function | true | 关闭按钮。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 header | Slot / Function | - | 头部。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 keys | Object | - | 用来定义 value / label / children / disabled 在 `options` 中对应的字段别名。TS 类型：`CascaderKeysType` `type CascaderKeysType = TreeKeysType`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts) | N
-load | Function | - | `1.11.2`。加载子树数据的方法（仅当节点 children 为 true 时生效）。TS 类型：`(node: CascaderOption) => Promise<Array<CascaderOption>>` | N
+load | Function | - | `1.12.0`。加载子树数据的方法（仅当节点 children 为 true 时生效）。TS 类型：`(node: CascaderOption) => Promise<Array<CascaderOption>>` | N
 middleContent | Slot / Function | - | 中间内容。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 options | Array | [] | 可选项数据源。TS 类型：`Array<CascaderOption>` | N
 overlayProps | Object | {} | 遮罩层的属性，透传至 overlay。TS 类型：`OverlayProps`，[Overlay API Documents](./overlay?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/cascader/type.ts) | N
