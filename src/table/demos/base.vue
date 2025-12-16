@@ -11,20 +11,21 @@
       @scroll="handleScroll"
     >
       <!-- 插槽方式 自定义单元格：cell 的值为插槽名称，参数有：{col, colIndex, row, rowIndex}  -->
-      <template #type-slot-name="{ col, row }">
-        {{ row[col.colKey] }}
-      </template>
+      <template #cell-slot-name="{ col, row }"> {{ row[col.colKey] }}</template>
 
       <!-- 插槽方式 自定义单元格， colKey 的值默认为插槽名称  -->
-      <template #status="{ col, row }">
-        {{ row[col.colKey] }}
-      </template>
+      <template #status="{ col, row }"> {{ row[col.colKey] }} </template>
+
+      <!-- 插槽方式 自定义表头：title 的值为插槽名称  -->
+      <template #title-slot-name> 标题 </template>
     </t-table>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { UserCircleIcon } from 'tdesign-icons-vue-next';
+import { BaseTableColumns } from 'tdesign-mobile-vue';
 
 const data: any[] = [];
 const total = 10;
@@ -42,25 +43,36 @@ for (let i = 0; i < total; i++) {
 
 const showHeader = ref(true);
 
-const columns = ref([
-  { colKey: 'applicant', title: '标题', ellipsis: true, cell: 'type-slot-name' },
+const columns = ref<BaseTableColumns>([
+  {
+    colKey: 'applicant',
+    title: '标题',
+    cell: (_, { col, row }) => row[col.colKey],
+    ellipsis: true,
+  },
   {
     colKey: 'status',
-    title: '标题',
+    title: 'title-slot-name',
     ellipsis: true,
   },
   {
     colKey: 'channel',
     title: '标题',
-    // @ts-ignore
-    cell: (h, { col, row }) => row[col.colKey],
+    cell: 'cell-slot-name',
     ellipsis: true,
   },
   {
     colKey: 'detail.email',
     title: '标题',
-    cell: () => '内容',
     ellipsis: true,
+    // render 可以渲染表头，也可以渲染单元格
+    render(_, context) {
+      const { type } = context;
+      return {
+        title: '标题',
+        cell: '内容',
+      }[type];
+    },
   },
 ]);
 
