@@ -12,7 +12,7 @@ import { usePrefixClass } from '../hooks/useClass';
 
 // inner components
 import { SwiperChangeSource, Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
-import { TdImageViewerProps, ImageInfo, ImageViewerCloseTrigger } from './type';
+import { TdImageViewerProps, ImageInfo, ImageViewerCloseTrigger, ImageSlotParams } from './type';
 
 const { prefix } = config;
 
@@ -400,70 +400,87 @@ export default defineComponent({
       clearTimeout(dblTapTimer);
     });
 
-    return () => (
-      <Transition name="fade">
-        {visibleValue.value && (
-          <div ref={rootRef} class={`${imageViewerClass.value}`} onClick={handleClick}>
-            <div class={`${imageViewerClass.value}__mask`} />
-            <TSwiper
-              ref={swiperRootRef}
-              autoplay={false}
-              class={`${imageViewerClass.value}__content`}
-              height="100vh"
-              defaultCurrent={currentIndex.value}
-              disabled={disabled.value}
-              onChange={onSwiperChange}
-            >
-              {imageInfoList.value.map((info, index) => (
-                <TSwiperItem
-                  ref={(item: any) => (swiperItemRefs.value[index] = item)}
-                  key={index}
-                  class={`${imageViewerClass.value}__swiper-item`}
-                  style={`touch-action: none; align-items:${info.image.align};`}
-                >
-                  {info.preload ? (
-                    <img
-                      src={info.image.url}
-                      style={`
-                      transform: ${index === state.touchIndex ? imageTransform.value : 'matrix(1, 0, 0, 1, 0, 0)'};
-                      ${imageTransitionDuration.value};`}
-                      class={`${imageViewerClass.value}__img`}
-                      onLoad={(event: Event) => onImgLoad(event, index)}
-                      onTransitionstart={(event: TransitionEvent) => {
-                        if (event.target === event.currentTarget) {
-                          onTransitionStart(index);
-                        }
-                      }}
-                      onTransitionend={(event: TransitionEvent) => {
-                        if (event.target === event.currentTarget) {
-                          onTransitionEnd(index);
-                        }
-                      }}
-                    />
-                  ) : (
-                    <span></span>
-                  )}
-                </TSwiperItem>
-              ))}
-            </TSwiper>
-            <div class={`${imageViewerClass.value}__nav`}>
-              <div class={`${imageViewerClass.value}__nav-close`} onClick={(e) => handleClose(e, 'close-btn')}>
-                {closeNode.value}
-              </div>
+    return () => {
+      const renderCoverContent = () => {
+        const coverContent = renderTNodeJSX('cover');
+        if (coverContent) return <div class={`${imageViewerClass.value}__cover`}>{coverContent}</div>;
+      };
 
-              {props.showIndex && (
-                <div class={`${imageViewerClass.value}__nav-index`}>
-                  {`${Math.min((currentIndex.value ?? 0) + 1, props.images?.length)}/${props.images?.length}`}
+      return (
+        <Transition name="fade">
+          {visibleValue.value && (
+            <div ref={rootRef} class={`${imageViewerClass.value}`} onClick={handleClick}>
+              {renderCoverContent()}
+              <div class={`${imageViewerClass.value}__mask`} />
+              <TSwiper
+                ref={swiperRootRef}
+                autoplay={false}
+                class={`${imageViewerClass.value}__content`}
+                height="100vh"
+                defaultCurrent={currentIndex.value}
+                disabled={disabled.value}
+                onChange={onSwiperChange}
+              >
+                {imageInfoList.value.map((info, index) => (
+                  <TSwiperItem
+                    ref={(item: any) => (swiperItemRefs.value[index] = item)}
+                    key={index}
+                    class={`${imageViewerClass.value}__swiper-item`}
+                    style={`touch-action: none; align-items:${info.image.align};`}
+                  >
+                    {info.preload ? (
+                      (() => {
+                        const imageSlotParams: ImageSlotParams = {
+                          className: `${imageViewerClass.value}__img`,
+                          style: `
+                            transform: ${index === state.touchIndex ? imageTransform.value : 'matrix(1, 0, 0, 1, 0, 0)'};
+                            ${index === state.touchIndex ? imageTransitionDuration.value : 'transition-duration: 0s;'};
+                          `,
+                          src: info.image.url,
+                          onLoad: (e: Event) => onImgLoad(e, index),
+                          onTransitionstart: (e: TransitionEvent) => {
+                            if (e.target === e.currentTarget) {
+                              onTransitionStart(index);
+                            }
+                          },
+                          onTransitionend: (e: TransitionEvent) => {
+                            if (e.target === e.currentTarget) {
+                              onTransitionEnd(index);
+                            }
+                          },
+                        };
+
+                        const imageContent = renderTNodeJSX('image', { params: imageSlotParams });
+
+                        if (imageContent) return imageContent;
+
+                        return <img {...imageSlotParams} />;
+                      })()
+                    ) : (
+                      <span></span>
+                    )}
+                  </TSwiperItem>
+                ))}
+              </TSwiper>
+              <div class={`${imageViewerClass.value}__nav`}>
+                <div class={`${imageViewerClass.value}__nav-close`} onClick={(e) => handleClose(e, 'close-btn')}>
+                  {closeNode.value}
                 </div>
-              )}
 
-              <div class={`${imageViewerClass.value}__nav-delete`} onClick={handleDelete}>
-                {deleteNode.value}
+                {props.showIndex && (
+                  <div class={`${imageViewerClass.value}__nav-index`}>
+                    {`${Math.min((currentIndex.value ?? 0) + 1, props.images?.length)}/${props.images?.length}`}
+                  </div>
+                )}
+
+                <div class={`${imageViewerClass.value}__nav-delete`} onClick={handleDelete}>
+                  {deleteNode.value}
+                </div>
               </div>
             </div>
-          </div>
-        )}
-      </Transition>
-    );
+          )}
+        </Transition>
+      );
+    };
   },
 });
