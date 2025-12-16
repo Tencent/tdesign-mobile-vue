@@ -5,7 +5,7 @@
  * */
 
 import { OverlayProps } from '../overlay';
-import { TNode, TreeOptionData, TreeKeysType, TScroll } from '../common';
+import { TNode, TreeOptionData, TreeKeysType } from '../common';
 
 export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOptionData> {
   /**
@@ -49,10 +49,6 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    * @default '选择选项'
    */
   placeholder?: string | TNode;
-  /**
-   * 懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`
-   */
-  scroll?: TScroll;
   /**
    * 每级展示的次标题
    * @default []
