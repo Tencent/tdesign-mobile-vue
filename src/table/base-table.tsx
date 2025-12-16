@@ -1,10 +1,11 @@
-import { defineComponent, computed, h, ref } from 'vue';
+import { defineComponent, computed, h, ref, SetupContext } from 'vue';
 import { get, isFunction, isString } from 'lodash-es';
 import baseTableProps from './base-table-props';
 import config from '../config';
 import useClassName from './hooks/useClassName';
 import useStyle, { formatCSSUnit } from './hooks/useStyle';
 import useFixed, { getRowFixedStyles, getColumnFixedStyles } from './hooks/useFixed';
+import { renderTitle } from './hooks/useTableHeader';
 import { ClassName } from '../common';
 
 import { BaseTableCellParams, BaseTableCol, TableRowData, TdBaseTableProps } from './type';
@@ -88,6 +89,7 @@ export default defineComponent({
 
     const renderCell = (
       params: BaseTableCellParams<TableRowData>,
+      slots: SetupContext['slots'],
       cellEmptyContent?: TdBaseTableProps['cellEmptyContent'],
     ) => {
       const { col, row, rowIndex } = params;
@@ -99,13 +101,19 @@ export default defineComponent({
       if (isFunction(col.cell)) {
         return col.cell(h, params);
       }
-      if (context.slots[col.colKey]) {
-        return context.slots[col.colKey](params);
+
+      if (slots[col.colKey]) {
+        return slots[col.colKey](params);
       }
 
-      if (isString(col.cell) && context.slots?.[col.cell]) {
-        return context.slots[col.cell](params);
+      if (isString(col.cell) && slots?.[col.cell]) {
+        return slots[col.cell](params);
       }
+
+      if (isFunction(col.render)) {
+        return col.render(h, { ...params, type: 'cell' });
+      }
+
       const r = get(row, col.colKey);
       // 0 和 false 属于正常可用值，不能使用兜底逻辑 cellEmptyContent
       if (![undefined, '', null].includes(r)) return r;
@@ -161,13 +169,6 @@ export default defineComponent({
         className = `${className} ${tdAlignClasses[`${item_th.align}`]}`;
       }
       return [className, extra];
-    };
-
-    const renderTitle = (item_th: BaseTableCol<TableRowData>, index: number) => {
-      if (isFunction(item_th?.title)) {
-        return item_th?.title(h, { col: item_th, colIndex: index });
-      }
-      return item_th?.title;
     };
 
     const renderTableBody = () => {
@@ -239,6 +240,7 @@ export default defineComponent({
                     <div class={td_item.ellipsis && ellipsisClasses.value}>
                       {renderCell(
                         { row: tr_item, col: td_item, rowIndex: tr_index, colIndex: td_index },
+                        context.slots,
                         props.cellEmptyContent,
                       )}
                     </div>
@@ -290,7 +292,7 @@ export default defineComponent({
                           data-colKey={item_th.colKey}
                         >
                           <div class={(item_th.ellipsisTitle || item_th.ellipsis) && ellipsisClasses.value}>
-                            {renderTitle(item_th, index_th)}
+                            {renderTitle(context.slots, item_th, index_th)}
                           </div>
                         </th>
                       );
