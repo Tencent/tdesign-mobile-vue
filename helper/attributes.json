@@ -1844,9 +1844,17 @@
     "type": "Boolean|TNode",
     "description": "是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以完全自定义关闭按钮\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props)"
   },
+  "t-image-viewer/cover": {
+    "type": "TNode",
+    "description": "支持自定义覆盖在图片预览最上方的内容\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props)"
+  },
   "t-image-viewer/delete-btn": {
     "type": "Boolean|TNode",
     "description": "是否显示删除操作，前提需要开启页码\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props)"
+  },
+  "t-image-viewer/image": {
+    "type": "TNode",
+    "description": "自定义图片内容\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props)"
   },
   "t-image-viewer/images": {
     "type": "Array",

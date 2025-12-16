@@ -592,7 +592,9 @@
   "t-image-viewer": {
     "attributes": [
       "close-btn",
+      "cover",
       "delete-btn",
+      "image",
       "images",
       "index",
       "max-zoom",
