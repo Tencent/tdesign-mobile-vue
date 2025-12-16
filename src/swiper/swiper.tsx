@@ -1,5 +1,5 @@
 import { onMounted, computed, ref, provide, watch, onUnmounted, toRefs, defineComponent } from 'vue';
-import { isNumber, isObject } from 'lodash-es';
+import { isNumber } from 'lodash-es';
 import { useSwipe } from '../swipe-cell/useSwipe';
 import config from '../config';
 import props from './props';
@@ -9,7 +9,26 @@ import { preventDefault } from '../shared/dom';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
+const DEFAULT_SWIPER_NAVIGATION: SwiperNavigation = {
+  paginationPosition: 'bottom',
+  placement: 'inside',
+  showControls: false,
+  type: 'dots',
+};
+
+/**
+ * 滑动触发阈值
+ */
+const SWIPE_THRESHOLD = 100;
+
 const { prefix } = config;
+
+// 定义 SwiperItem 的接口
+interface SwiperItemInstance {
+  uid: number;
+  proxy: any;
+  calcTranslateStyle: (index: number, activeIndex: number) => void;
+}
 
 export default defineComponent({
   name: `${prefix}-swiper`,
@@ -19,13 +38,13 @@ export default defineComponent({
     const swiperClass = usePrefixClass('swiper');
     const swiperNavClass = usePrefixClass('swiper-nav');
 
-    const readerTNodeJSX = useTNodeJSX();
-    const setOffset = (offset: number, direction = 'X'): void => {
+    const renderTNodeJSX = useTNodeJSX();
+    const setOffset = (offset: number, direction: 'X' | 'Y' = 'X'): void => {
       translateContainer.value = `translate${direction}(${offset}px)`;
     };
 
     const root = ref();
-    const items = ref<any>([]);
+    const items = ref<SwiperItemInstance[]>([]);
     const { current: value, modelValue } = toRefs(props);
     const [currentIndex, setCurrent] = useVModel(value, modelValue, props.defaultCurrent);
     const swiperContainer = ref<HTMLElement | null>(null);
@@ -39,39 +58,49 @@ export default defineComponent({
     const isVertical = computed(() => props.direction === 'vertical');
     const containerHeight = ref('auto');
 
-    const navigation = computed((): SwiperNavigation => props.navigation);
+    const navigationConfig = computed<SwiperNavigation>(() => {
+      if (props.navigation === true) {
+        return DEFAULT_SWIPER_NAVIGATION;
+      }
+      if (typeof props.navigation === 'object' && props.navigation !== null) {
+        return {
+          ...DEFAULT_SWIPER_NAVIGATION,
+          ...props.navigation,
+        } as SwiperNavigation;
+      }
 
+      return {} as SwiperNavigation;
+    });
+
+    /**
+     * @description 是否启用内置导航器
+     * - 非空 navigationConfig 代表启用内置导航器;
+     * - navigation 为对象时，根据 minShowNum 判断是否满足最小展示数量
+     */
+    const enableBuiltinNavigation = computed(() => {
+      if (!Object.keys(navigationConfig.value).length) return false;
+
+      const { minShowNum } = navigationConfig.value;
+      return minShowNum ? items.value.length >= minShowNum : true;
+    });
+
+    /**
+     * @description 是否启用底部分页器
+     */
     const isBottomPagination = computed(() => {
-      let isShowSwiperNav = false;
-      if (typeof props.navigation === 'object') {
-        isShowSwiperNav =
-          (!navigation.value?.paginationPosition || navigation.value?.paginationPosition === 'bottom') &&
-          (navigation.value?.type === 'dots' || navigation.value?.type === 'dots-bar') &&
-          enableNavigation?.value;
-      }
-      return isShowSwiperNav;
+      if (!enableBuiltinNavigation.value) return false;
+
+      const { paginationPosition, type } = navigationConfig.value;
+      return paginationPosition === 'bottom' && (type === 'dots' || type === 'dots-bar');
     });
 
-    const rootClass = computed(() => {
-      return [
-        `${swiperClass.value}`,
-        `${swiperClass.value}--${props.type}`,
-        `${
-          isBottomPagination.value && navigation.value?.placement
-            ? `${swiperClass.value}--${navigation.value?.placement}`
-            : ''
-        }`,
-      ];
-    });
+    const rootClass = computed(() => [
+      `${swiperClass.value}`,
+      `${swiperClass.value}--${props.type}`,
+      { [`${swiperClass.value}--${navigationConfig.value.placement}`]: isBottomPagination.value },
+    ]);
 
-    const enableNavigation = computed(() => {
-      if (typeof props.navigation === 'object') {
-        return navigation.value?.minShowNum ? items.value.length >= navigation.value?.minShowNum : true;
-      }
-      return false;
-    });
-
-    let autoplayTimer: any = null;
+    let autoplayTimer: ReturnType<typeof setInterval> | null = null;
 
     const onItemClick = () => {
       props.onClick?.(currentIndex.value ?? 0);
@@ -96,22 +125,22 @@ export default defineComponent({
     const handleAnimationEnd = () => {
       disabled.value = false;
       animating.value = false;
-      translateContainer.value = 'translateX(0)';
+      translateContainer.value = `translate${isVertical.value ? 'Y' : 'X'}(0)`;
 
       updateItemPosition();
     };
 
     const stopAutoplay = () => {
       if (!autoplayTimer) return;
-      clearInterval(autoplayTimer as number);
+      clearInterval(autoplayTimer);
       autoplayTimer = null;
     };
 
     const startAutoplay = () => {
-      if (!props?.autoplay || autoplayTimer !== null) return false; // stop repeat autoplay
+      if (!props.autoplay || autoplayTimer !== null) return false; // stop repeat autoplay
       autoplayTimer = setInterval(() => {
         goNext('autoplay');
-      }, props?.interval);
+      }, props.interval);
     };
 
     const goPrev = (source: SwiperChangeSource) => {
@@ -160,30 +189,26 @@ export default defineComponent({
 
     const onTouchMove = (event: TouchEvent) => {
       preventDefault(event, false);
-      const distanceX = lengthX.value;
-      const distanceY = lengthY.value;
 
       animating.value = false;
 
       const curIndex = currentIndex.value;
       const maxIndex = items.value.length - 1;
-      if (!isVertical.value) {
-        // 非loop状态阻止首个向右滑动，最后个向左滑动的行为
-        if (!props.loop && ((curIndex <= 0 && distanceX < 0) || (curIndex >= maxIndex && distanceX > 0))) return;
-        setOffset(-distanceX);
-      } else {
-        if (!props.loop && ((curIndex <= 0 && distanceY < 0) || (curIndex >= maxIndex && distanceY > 0))) return;
-        setOffset(-distanceY, 'Y');
-      }
+      const distance = isVertical.value ? lengthY.value : lengthX.value;
+      const dir = isVertical.value ? 'Y' : 'X';
+
+      // 非loop状态: 阻止第一项向左滑(显示上一项)和最后一项向右滑(显示下一项)
+      if (!props.loop && ((curIndex <= 0 && distance < 0) || (curIndex >= maxIndex && distance > 0))) return;
+
+      setOffset(-distance, dir);
     };
 
     const onTouchEnd = () => {
-      const distanceX = lengthX.value;
-      const distanceY = lengthY.value;
+      const distance = isVertical.value ? lengthY.value : lengthX.value;
 
-      if ((!isVertical.value && distanceX < -100) || (isVertical.value && distanceY < -100)) {
+      if (distance < -SWIPE_THRESHOLD) {
         move(-1, 'touch');
-      } else if ((!isVertical.value && distanceX > 100) || (isVertical.value && distanceY > 100)) {
+      } else if (distance > SWIPE_THRESHOLD) {
         move(1, 'touch');
       } else {
         move(currentIndex.value as number, 'touch', true);
@@ -199,21 +224,37 @@ export default defineComponent({
       context.emit('transitionleave', event);
     };
 
-    const addChild = (item: any) => {
+    const addChild = (item: SwiperItemInstance) => {
       items.value.push(item);
     };
 
     const removeChild = (uid: number) => {
-      const index = items.value.findIndex((item: any) => item.uid === uid);
-      items.value.splice(index, 1);
+      const removedIndex = items.value.findIndex((item) => item.uid === uid);
+      if (removedIndex === -1) return;
 
-      if (currentIndex.value + 1 > items.value.length) {
-        goNext('autoplay');
+      items.value.splice(removedIndex, 1);
+
+      // 如果删除后没有项了，重置索引
+      if (items.value.length === 0) {
+        innerSetCurrent(0);
+        return;
       }
+
+      // 根据删除位置调整当前索引
+      if (removedIndex < currentIndex.value) {
+        // 删除的是前面的项，当前索引需要 -1（保持显示相同内容）
+        innerSetCurrent(currentIndex.value - 1);
+      } else if (removedIndex === currentIndex.value && currentIndex.value >= items.value.length) {
+        // 删除的是当前项，且索引已越界，调整到最后一项
+        innerSetCurrent(items.value.length - 1);
+      }
+
+      updateItemPosition();
     };
 
     const updateItemPosition = () => {
-      items.value.forEach((item: any, index: number) => {
+      if (!items.value.length) return;
+      items.value.forEach((item, index) => {
         item.calcTranslateStyle(index, currentIndex.value);
       });
     };
@@ -222,12 +263,14 @@ export default defineComponent({
       (containerHeight.value = isNumber(height) ? `${height}px` : height);
 
     const updateContainerHeight = () => {
-      const target = items.value[currentIndex.value ?? 0];
-      const rect = target?.proxy?.$el.getBoundingClientRect();
-
       if (props.height) {
         setContainerHeight(props.height);
-      } else if (rect) {
+        return;
+      }
+
+      const target = items.value[currentIndex.value ?? 0];
+      const rect = target?.proxy?.$el.getBoundingClientRect();
+      if (rect) {
         setContainerHeight(rect.height);
       }
     };
@@ -263,84 +306,92 @@ export default defineComponent({
     onUnmounted(() => {
       stopAutoplay();
     });
+
+    // 渲染控制按钮（左右箭头）
+    const renderControlsNav = () => {
+      if (isVertical.value || !navigationConfig.value?.showControls) return null;
+
+      return (
+        <span class={`${swiperNavClass.value}__btn`}>
+          <span class={`${swiperNavClass.value}__btn--prev`} onClick={() => goPrev('nav')} />
+          <span class={`${swiperNavClass.value}__btn--next`} onClick={() => goNext('nav')} />
+        </span>
+      );
+    };
+
+    // 渲染点状导航
+    const renderDotsNav = () => {
+      const navType = navigationConfig.value.type;
+      if (!navType || !['dots', 'dots-bar'].includes(navType)) return null;
+
+      return (
+        <>
+          {items.value.map((_, index) => (
+            <span
+              key={`page${index}`}
+              class={[
+                `${swiperNavClass.value}__${navType}-item`,
+                index === currentIndex.value && `${swiperNavClass.value}__${navType}-item--active`,
+                `${swiperNavClass.value}__${navType}-item--${props.direction}`,
+              ]}
+            />
+          ))}
+        </>
+      );
+    };
+
+    // 渲染分式导航 (1/5)
+    const renderFractionNav = () => {
+      if (navigationConfig.value?.type !== 'fraction') return null;
+      return <span>{`${(currentIndex.value ?? 0) + 1}/${items.value.length}`}</span>;
+    };
+
+    // 渲染导航类型（dots/fraction）
+    const renderTypeNav = () => {
+      if (!('type' in navigationConfig.value)) return null;
+
+      return (
+        <span
+          class={[
+            `${swiperNavClass.value}--${props.direction}`,
+            `${swiperNavClass.value}__${navigationConfig.value.type || ''}`,
+            `${swiperNavClass.value}--${navigationConfig.value.paginationPosition || 'bottom'}`,
+            `${swiperNavClass.value}--${navigationConfig.value.placement}`,
+          ]}
+        >
+          {renderDotsNav()}
+          {renderFractionNav()}
+        </span>
+      );
+    };
+
     return () => {
       const swiperNav = () => {
-        if (navigation.value && enableNavigation.value) {
-          const controlsNav = () => {
-            if (!isVertical.value && !!navigation.value?.showControls) {
-              return (
-                <span class={`${swiperNavClass.value}__btn`}>
-                  <span class={`${swiperNavClass.value}__btn--prev`} onClick={() => goPrev('nav')} />
-                  <span class={`${swiperNavClass.value}__btn--next`} onClick={() => goNext('nav')} />
-                </span>
-              );
-            }
-          };
-          const typeNav = () => {
-            if ('type' in navigation.value) {
-              // dots
-              const dots = () => {
-                if (['dots', 'dots-bar'].includes(navigation.value?.type || '')) {
-                  return (
-                    <>
-                      {items.value.map((_: any, index: number) => (
-                        <span
-                          key={`page${index}`}
-                          class={[
-                            `${swiperNavClass.value}__${navigation.value?.type}-item`,
-                            index === currentIndex.value
-                              ? `${swiperNavClass.value}__${navigation.value?.type}-item--active`
-                              : '',
-                            `${swiperNavClass.value}__${navigation.value?.type}-item--${props.direction}`,
-                          ]}
-                        />
-                      ))}
-                    </>
-                  );
-                }
-              };
-              // fraction
-              const fraction = () => {
-                if (navigation.value?.type === 'fraction') {
-                  return <span>{`${(currentIndex.value ?? 0) + 1}/${items.value.length}`}</span>;
-                }
-              };
-              return (
-                <span
-                  class={[
-                    `${swiperNavClass.value}--${props.direction}`,
-                    `${swiperNavClass.value}__${navigation.value?.type || ''}`,
-                    `${swiperNavClass.value}--${navigation.value?.paginationPosition || 'bottom'}`,
-                    `${
-                      isBottomPagination.value && navigation.value?.placement
-                        ? `${swiperNavClass.value}--${navigation.value?.placement}`
-                        : ''
-                    }`,
-                  ]}
-                >
-                  {dots()}
-                  {fraction()}
-                </span>
-              );
-            }
-          };
+        if (props.navigation === false) return null;
 
+        if (enableBuiltinNavigation.value) {
           return (
             <>
-              {controlsNav()}
-              {typeNav()}
+              {renderControlsNav()}
+              {renderTypeNav()}
             </>
           );
         }
-        return isObject(props.navigation) ? '' : readerTNodeJSX('navigation');
+
+        if (typeof props.navigation === 'function') return (props.navigation as Function)();
+
+        if (context.slots?.navigation) return context.slots.navigation();
+
+        return null;
       };
+
       return (
         <div ref={root} class={rootClass.value}>
           <div
             ref={swiperContainer}
             class={`${swiperClass.value}__container`}
             style={{
-              flexDirection: !isVertical.value ? 'row' : 'column',
+              flexDirection: isVertical.value ? 'column' : 'row',
               transition: animating.value ? `transform ${props.duration}ms` : 'none',
               transform: translateContainer.value,
               height: containerHeight.value,
@@ -354,7 +405,7 @@ export default defineComponent({
             }}
             onClick={onItemClick}
           >
-            {readerTNodeJSX('default')}
+            {renderTNodeJSX('default')}
           </div>
           {swiperNav()}
         </div>
