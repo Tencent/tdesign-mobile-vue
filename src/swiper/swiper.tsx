@@ -96,7 +96,7 @@ export default defineComponent({
 
     const rootClass = computed(() => [
       `${swiperClass.value}`,
-      `${swiperClass.value}--${navigationConfig.value.type}`,
+      `${swiperClass.value}--${props.type}`,
       { [`${swiperClass.value}--${navigationConfig.value.placement}`]: isBottomPagination.value },
     ]);
 
