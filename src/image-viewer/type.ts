@@ -13,10 +13,18 @@ export interface TdImageViewerProps {
    */
   closeBtn?: boolean | TNode;
   /**
+   * 支持自定义覆盖在图片预览最上方的内容
+   */
+  cover?: TNode;
+  /**
    * 是否显示删除操作，前提需要开启页码
    * @default false
    */
   deleteBtn?: boolean | TNode;
+  /**
+   * 自定义图片内容
+   */
+  image?: TNode<ImageSlotParams>;
   /**
    * 图片数组
    * @default []
@@ -67,6 +75,15 @@ export interface TdImageViewerProps {
    * 预览图片切换时触发，`context.prev` 切换到上一张图片，`context.next` 切换到下一张图片
    */
   onIndexChange?: (index: number, context: { trigger: 'prev' | 'next' }) => void;
+}
+
+export interface ImageSlotParams {
+  src: string;
+  className?: string;
+  style?: string;
+  onLoad?: (e: Event) => void;
+  onTransitionstart?: (e: TransitionEvent) => void;
+  onTransitionend?: (e: TransitionEvent) => void;
 }
 
 export interface ImageInfo {

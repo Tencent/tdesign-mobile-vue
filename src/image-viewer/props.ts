@@ -13,10 +13,18 @@ export default {
     type: [Boolean, Function] as PropType<TdImageViewerProps['closeBtn']>,
     default: true as TdImageViewerProps['closeBtn'],
   },
+  /** 支持自定义覆盖在图片预览最上方的内容 */
+  cover: {
+    type: Function as PropType<TdImageViewerProps['cover']>,
+  },
   /** 是否显示删除操作，前提需要开启页码 */
   deleteBtn: {
     type: [Boolean, Function] as PropType<TdImageViewerProps['deleteBtn']>,
     default: false as TdImageViewerProps['deleteBtn'],
+  },
+  /** 自定义图片内容 */
+  image: {
+    type: Function as PropType<TdImageViewerProps['image']>,
   },
   /** 图片数组 */
   images: {

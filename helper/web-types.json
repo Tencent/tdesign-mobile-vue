@@ -4177,11 +4177,23 @@
               "default": "true"
             },
             {
+              "name": "cover",
+              "description": "支持自定义覆盖在图片预览最上方的内容",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props",
+              "type": "TNode"
+            },
+            {
               "name": "delete-btn",
               "description": "是否显示删除操作，前提需要开启页码",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props",
               "type": "boolean | TNode",
               "default": "false"
+            },
+            {
+              "name": "image",
+              "description": "自定义图片内容",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props",
+              "type": "TNode<ImageSlotParams>"
             },
             {
               "name": "images",
@@ -4249,6 +4261,11 @@
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props"
             },
             {
+              "name": "cover",
+              "description": "支持自定义覆盖在图片预览最上方的内容",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props"
+            },
+            {
               "name": "deleteBtn",
               "description": "是否显示删除操作，前提需要开启页码",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props"
@@ -4256,6 +4273,11 @@
             {
               "name": "delete-btn",
               "description": "是否显示删除操作，前提需要开启页码",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props"
+            },
+            {
+              "name": "image",
+              "description": "自定义图片内容类型和参数：TNode<ImageSlotParams>【interface ImageSlotParams {src: string; className?: string; style?: string; onLoad?: (e: Event) => void; onTransitionstart?: (e: TransitionEvent) => void; onTransitionend?: (e: TransitionEvent) => void;} 】",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props"
             }
           ]
