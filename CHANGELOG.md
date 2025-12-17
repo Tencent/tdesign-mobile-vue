@@ -5,6 +5,33 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.12.0 `2025-12-17` 
+### 🚀 Features
+- `ActionSheet`: `item` 属性补充 `description`、`suffixIcon` 字段 @anlyyao ([#2098](https://github.com/Tencent/tdesign-mobile-vue/pull/2098))
+- `Navbar`: 新增 `placeholder` 属性，默认值为 `false`；新增 `zIndex` 属性，默认值为 `1` @anlyyao ([#2103](https://github.com/Tencent/tdesign-mobile-vue/pull/2103))
+- `TabBar`: 新增 `placeholder` 属性，默认值为 `false`；新增 `zIndex` 属性，默认值为 `1` @anlyyao ([#2103](https://github.com/Tencent/tdesign-mobile-vue/pull/2103))
+- `Cascader`: 添加 `load` 函数用于异步加载 options 数据 @RSS1102 ([#2087](https://github.com/Tencent/tdesign-mobile-vue/pull/2087))
+- `Table`: 新增 `columns.render` 配置，支持自定义表头或单元格 @anlyyao ([#2107](https://github.com/Tencent/tdesign-mobile-vue/pull/2107))
+- `Swiper`: `navigation` 属性扩展支持 `boolean` 类型 @RSS1102 ([#2060](https://github.com/Tencent/tdesign-mobile-vue/pull/2060))
+- `ImageViwer`: @anlyyao ([#2108](https://github.com/Tencent/tdesign-mobile-vue/pull/2108))
+  - 新增 `cover` 插槽，用于自定义图片预览最上层内容 
+  - 新增 `image` 插槽，用于自定义图片区域的内容 
+### 🐞 Bug Fixes
+- `Search`: 修复在小屏幕不遵循 `flex:1` 的问题 @LittleTurtle2333 ([common#2268](https://github.com/Tencent/tdesign-common/pull/2268))([#2090](https://github.com/Tencent/tdesign-mobile-vue/pull/2090))
+- `BackTop`: 修复文本字重错误 @anlyyao ([#2089](https://github.com/Tencent/tdesign-mobile-vue/pull/2089))
+- `ColorPicker`: 修复组件深色模式背景、边框、文本色错误 @anlyyao ([#2089](https://github.com/Tencent/tdesign-mobile-vue/pull/2089))
+- `ActionSheet`: @anlyyao ([#2098](https://github.com/Tencent/tdesign-mobile-vue/pull/2098))
+  - 修复左对齐场景下，子项 `border` 左间距错误
+  - 修复 `grid` 主题，`description` 描述文本行高错误
+  - 修复 `grid` 主题 +  无 `description` 描述文本场景下，顶部间距错误
+  - `list` 主题最后一项不应设置底边框
+- `Empty`: 修复控制台 `Failed to resolve directive: if` 的告警 @parade0393 ([#2086](https://github.com/Tencent/tdesign-mobile-vue/pull/2086))
+- `Table`: 修复 `columns.title` 为 `string` 时，表头插槽无效的问题 @anlyyao ([#2107](https://github.com/Tencent/tdesign-mobile-vue/pull/2107))
+### 🚧 Others
+- `feat`: 新增支持 `.dark` 类名，丰富切换深色模式的方式 ([common#2355](https://github.com/Tencent/tdesign-common/pull/2355)) @liweijie0812 ([#2104](https://github.com/Tencent/tdesign-mobile-vue/pull/2104))
+- ⚠️ chore: 改用 `Font token`，组件级 CSS Vars 有调整，涉及组件有：`ActionSheet`、`Badge`、`Calendar`、`Cascader` 等 30+ 组件 @anlyyao ([#2089](https://github.com/Tencent/tdesign-mobile-vue/pull/2089))
+- ⚠️chore:  `--td-xx-icon-font-size` 统一更名为  `--td-xx-icon-size`，涉及组件有 `BackTop`、`Button`、`Cell`、`Empty`、`Grid`、`ImageViewer`、`NoticeBar`、`Progress`、`Result`、`Search` 和 `Upload`，共计 11 个组件 @anlyyao ([#2089](https://github.com/Tencent/tdesign-mobile-vue/pull/2089))
+
 ## 🌈 1.11.1 `2025-11-21` 
 ### 🚀 Features
 - `Calendar`: 新增 `allowSameDay` 属性，允许 `type='range'` 场景的起止时间相同 @liweijie0812 ([#2076](https://github.com/Tencent/tdesign-mobile-vue/pull/2076))
@@ -48,6 +75,7 @@ spline: explain
   - 修复 `addContent` 插槽位置错误 @anlyyao ([#2055](https://github.com/Tencent/tdesign-mobile-vue/pull/2055))
   - 修复 `--td-upload-add-icon-font-size` 无效 @anlyyao ([#2055](https://github.com/Tencent/tdesign-mobile-vue/pull/2055))
   - 修复 `add` 图标不居中问题 @anlyyao ([#2308](https://github.com/Tencent/tdesign-common/pull/2308))
+- `Form`: 修复字段有多条规则时 `onSubmit` 的 `context.firstError` 参数错误 @anlyyao ([#2054](https://github.com/Tencent/tdesign-mobile-vue/pull/2054))
 
 ## 🌈 1.10.2 `2025-08-22` 
 ### 🚀 Features
