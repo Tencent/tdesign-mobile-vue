@@ -10,15 +10,16 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
     data-v-56c81c82=""
   >
     <div
-      class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+      class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
       data-v-56c81c82=""
       role="tablist"
+      style="z-index: 1;"
     >
       
       
       <div
         aria-label="首页，有16条消息"
-        class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+        class="t-tab-bar-item t-tab-bar-item--normal"
         data-v-56c81c82=""
       >
         <div
@@ -41,7 +42,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       </div>
       <div
         aria-label="软件，有新的消息"
-        class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+        class="t-tab-bar-item t-tab-bar-item--normal"
         data-v-56c81c82=""
       >
         <div
@@ -64,7 +65,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       </div>
       <div
         aria-label="聊天，New"
-        class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+        class="t-tab-bar-item t-tab-bar-item--normal"
         data-v-56c81c82=""
       >
         <div
@@ -87,7 +88,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       </div>
       <div
         aria-label="我的，有很多消息"
-        class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+        class="t-tab-bar-item t-tab-bar-item--normal"
         data-v-56c81c82=""
       >
         <div
@@ -117,9 +118,10 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
     data-v-56c81c82=""
   >
     <div
-      class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+      class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
       data-v-56c81c82=""
       role="tablist"
+      style="z-index: 1;"
     >
       
       
@@ -340,9 +342,10 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
     data-v-56c81c82=""
   >
     <div
-      class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+      class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
       data-v-56c81c82=""
       role="tablist"
+      style="z-index: 1;"
     >
       
       
@@ -572,8 +575,9 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
 
 exports[`TabBar > TabBar baseVue demo works fine 1`] = `
 <div
-  class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
   role="tablist"
+  style="z-index: 1;"
 >
   
   
@@ -724,9 +728,10 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
 
 exports[`TabBar > TabBar customVue demo works fine 1`] = `
 <div
-  class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal wrapper"
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal wrapper"
   data-v-d74bfed2=""
   role="tablist"
+  style="z-index: 1;"
 >
   
   
@@ -884,7 +889,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     class="title"
     data-v-8bf7e573=""
   >
-    TabBar 标签栏
+    TabBar 底部标签栏
   </h1>
   <p
     class="summary"
@@ -915,14 +920,15 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
         data-v-8bf7e573=""
         role="tablist"
+        style="z-index: 1;"
       >
         
         
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -943,7 +949,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           <!---->
         </div>
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -964,7 +970,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           <!---->
         </div>
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -985,7 +991,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           <!---->
         </div>
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -1030,9 +1036,10 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
         data-v-8bf7e573=""
         role="tablist"
+        style="z-index: 1;"
       >
         
         
@@ -1201,9 +1208,10 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
         data-v-8bf7e573=""
         role="tablist"
+        style="z-index: 1;"
       >
         
         
@@ -1364,14 +1372,15 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
         data-v-8bf7e573=""
         role="tablist"
+        style="z-index: 1;"
       >
         
         
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -1392,7 +1401,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           <!---->
         </div>
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -1413,7 +1422,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           <!---->
         </div>
         <div
-          class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+          class="t-tab-bar-item t-tab-bar-item--normal"
         >
           <div
             aria-expanded="false"
@@ -1486,15 +1495,16 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         data-v-56c81c82=""
       >
         <div
-          class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+          class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
           data-v-56c81c82=""
           role="tablist"
+          style="z-index: 1;"
         >
           
           
           <div
             aria-label="首页，有16条消息"
-            class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+            class="t-tab-bar-item t-tab-bar-item--normal"
             data-v-56c81c82=""
           >
             <div
@@ -1517,7 +1527,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           </div>
           <div
             aria-label="软件，有新的消息"
-            class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+            class="t-tab-bar-item t-tab-bar-item--normal"
             data-v-56c81c82=""
           >
             <div
@@ -1540,7 +1550,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           </div>
           <div
             aria-label="聊天，New"
-            class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+            class="t-tab-bar-item t-tab-bar-item--normal"
             data-v-56c81c82=""
           >
             <div
@@ -1563,7 +1573,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           </div>
           <div
             aria-label="我的，有很多消息"
-            class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+            class="t-tab-bar-item t-tab-bar-item--normal"
             data-v-56c81c82=""
           >
             <div
@@ -1593,9 +1603,10 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         data-v-56c81c82=""
       >
         <div
-          class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+          class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
           data-v-56c81c82=""
           role="tablist"
+          style="z-index: 1;"
         >
           
           
@@ -1816,9 +1827,10 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         data-v-56c81c82=""
       >
         <div
-          class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+          class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
           data-v-56c81c82=""
           role="tablist"
+          style="z-index: 1;"
         >
           
           
@@ -2065,9 +2077,10 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--round"
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--round"
         data-v-8bf7e573=""
         role="tablist"
+        style="z-index: 1;"
       >
         
         
@@ -2232,10 +2245,11 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal wrapper"
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal wrapper"
         data-v-8bf7e573=""
         data-v-d74bfed2=""
         role="tablist"
+        style="z-index: 1;"
       >
         
         
@@ -2390,8 +2404,9 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
 
 exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
 <div
-  class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
   role="tablist"
+  style="z-index: 1;"
 >
   
   
@@ -2534,8 +2549,9 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
 
 exports[`TabBar > TabBar roundVue demo works fine 1`] = `
 <div
-  class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--round"
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--round"
   role="tablist"
+  style="z-index: 1;"
 >
   
   
@@ -2678,13 +2694,14 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
 
 exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
 <div
-  class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
   role="tablist"
+  style="z-index: 1;"
 >
   
   
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"
@@ -2705,7 +2722,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"
@@ -2726,7 +2743,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"
@@ -2772,13 +2789,14 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
 
 exports[`TabBar > TabBar textVue demo works fine 1`] = `
 <div
-  class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed t-tab-bar--safe t-tab-bar--normal"
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
   role="tablist"
+  style="z-index: 1;"
 >
   
   
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"
@@ -2799,7 +2817,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"
@@ -2820,7 +2838,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"
@@ -2841,7 +2859,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-tab-bar-item t-tab-bar-item--text-only t-tab-bar-item--normal"
+    class="t-tab-bar-item t-tab-bar-item--normal"
   >
     <div
       aria-expanded="false"

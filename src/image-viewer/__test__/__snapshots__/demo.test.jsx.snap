@@ -67,7 +67,7 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
     class="summary"
     data-v-c1082d12=""
   >
-    图片全屏放大预览效果，包含全屏背景色、页码位置样式、增加操作等规范
+    用于图片内容的缩略展示与查看。
   </p>
   <div
     class="tdesign-mobile-demo-block"

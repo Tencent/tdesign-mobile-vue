@@ -1,7 +1,7 @@
 <template>
   <div v-if="!showResult" class="tdesign-mobile-demo">
     <h1 class="title">Result 结果</h1>
-    <p class="summary">结果反馈</p>
+    <p class="summary">用于反馈不同结果的展示。</p>
     <tdesign-demo-block title="组件类型" />
 
     <tdesign-demo-block summary="基础结果">

@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Swiper Props
 
 name | type | default | description | required
@@ -13,7 +14,7 @@ duration | Number | 300 | \- | N
 height | Number / String | - | \- | N
 interval | Number | 5000 | \- | N
 loop | Boolean | true | \- | N
-navigation | Object / Slot / Function | - | Typescript：`SwiperNavigation \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+navigation | Boolean / Object / Slot / Function | true | navigation all config, `true` for using default config。Typescript：`SwiperNavigation \| TNode \| Boolean`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 nextMargin | String / Number | 0 | \- | N
 previousMargin | String / Number | 0 | \- | N
 type | String | default | options：default/card | N
@@ -40,7 +41,8 @@ type | String | dots | Typescript：`SwiperNavigationType` `type SwiperNavigatio
 ### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
-Name | Default Value | Description 
+
+Name | Default Value | Description
 -- | -- | --
 --td-swiper-placement-outside-padding | calc(@spacer-1 + @swiper-nav-dot-size) | -
 --td-swiper-border-radius | 8px | -
@@ -55,7 +57,7 @@ Name | Default Value | Description
 --td-swiper-nav-dots-bar-active-width | 20px | -
 --td-swiper-nav-fraction-bg-color | @font-gray-3 | -
 --td-swiper-nav-fraction-color | @font-white-1 | -
---td-swiper-nav-fraction-font-size | 12px | -
+--td-swiper-nav-fraction-font | @font-body-small | -
 --td-swiper-nav-fraction-height | 24px | -
 --td-swiper-nav-outside-bg | @gray-color-3 | -
 --td-swiper-nav-outside-bg-active | @brand-color | -

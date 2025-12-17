@@ -1,6 +1,20 @@
 <template>
   <t-button block size="large" variant="outline" theme="primary" @click="visible = true">基础图片预览</t-button>
-  <t-image-viewer v-model:images="images" v-model:visible="visible" @index-change="onIndexChange" @close="onClose" />
+  <t-image-viewer v-model:images="images" :visible="visible" @index-change="onIndexChange" @close="onClose">
+    <!-- <template #cover>cover</template> -->
+    <template #image="{ src, className, onLoad, onTransitionstart, onTransitionend, style }">
+      <div>
+        <img
+          :src="src"
+          :style="style"
+          :className="className"
+          @load="onLoad"
+          @transitionstart="onTransitionstart"
+          @transitionend="onTransitionend"
+        />
+      </div>
+    </template>
+  </t-image-viewer>
 </template>
 
 <script lang="ts" setup>
@@ -18,6 +32,16 @@ const onIndexChange = (index: number, context: { trigger: 'prev' | 'next' }) => 
 };
 
 const onClose = (context: { trigger: ImageViewerCloseTrigger; visible: boolean; index: number }) => {
-  console.log('onClose', context);
+  if (context.trigger !== 'image') {
+    visible.value = false;
+  }
 };
 </script>
+
+<style lang="less">
+img,
+video {
+  // disable desktop browser image drag
+  -webkit-user-drag: none;
+}
+</style>

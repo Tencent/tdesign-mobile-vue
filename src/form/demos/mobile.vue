@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">Form 表单</h1>
-    <p class="summary">用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。</p>
+    <p class="summary">用以收集、校验和提交数据，一般由输入框、单选框、复选框、选择器等控件组成。</p>
     <tdesign-demo-block title="01 基础类型" summary="基础表单">
       <div class="option">
         <div class="button-group">

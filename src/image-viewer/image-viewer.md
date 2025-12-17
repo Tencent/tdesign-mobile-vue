@@ -7,7 +7,9 @@
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 closeBtn | Boolean / Slot / Function | true | 是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以完全自定义关闭按钮。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+cover | Slot / Function | - | `1.12.0`。支持自定义覆盖在图片预览最上方的内容。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 deleteBtn | Boolean / Slot / Function | false | 是否显示删除操作，前提需要开启页码。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+image | Slot / Function | - | `1.12.0`。自定义图片内容。TS 类型：`TNode<ImageSlotParams>` `interface ImageSlotParams {src: string; className?: string; style?: string; onLoad?: (e: Event) => void; onTransitionstart?: (e: TransitionEvent) => void; onTransitionend?: (e: TransitionEvent) => void;} `。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image-viewer/type.ts) | N
 images | Array | [] | 图片数组。TS 类型：`Array<string \| ImageInfo>` `interface ImageInfo { url: string; align: 'start' \| 'center' \| 'end' }`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image-viewer/type.ts) | N
 index | Number | - | 当前预览图片所在的下标。支持语法糖 `v-model:index` | N
 defaultIndex | Number | - | 当前预览图片所在的下标。非受控属性 | N

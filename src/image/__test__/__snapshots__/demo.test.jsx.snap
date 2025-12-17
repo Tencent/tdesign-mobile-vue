@@ -320,7 +320,7 @@ exports[`Image > Image mobileVue demo works fine 1`] = `
     class="summary"
     data-v-786eab7a=""
   >
-    用于展示图片素材。
+    用于展示效果，主要为上下左右居中裁切、拉伸、平铺等方式。
   </p>
   <div
     class="tdesign-mobile-demo-block"

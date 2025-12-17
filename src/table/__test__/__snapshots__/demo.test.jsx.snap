@@ -50,7 +50,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
-                标题
+                
+                 标题 
+                
               </div>
             </th>
             <th
@@ -90,9 +92,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
-                
                 内容
-                
               </div>
             </td>
             <td
@@ -112,7 +112,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                
                 内容
+                
               </div>
             </td>
             <td
@@ -136,9 +138,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
-                
                 内容
-                
               </div>
             </td>
             <td
@@ -158,7 +158,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                
                 内容
+                
               </div>
             </td>
             <td
@@ -182,9 +184,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
-                
                 内容
-                
               </div>
             </td>
             <td
@@ -204,7 +204,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                
                 内容
+                
               </div>
             </td>
             <td
@@ -228,9 +230,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
-                
                 内容
-                
               </div>
             </td>
             <td
@@ -250,7 +250,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                
                 内容
+                
               </div>
             </td>
             <td
@@ -274,9 +276,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
-                
                 内容
-                
               </div>
             </td>
             <td
@@ -296,7 +296,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                
                 内容
+                
               </div>
             </td>
             <td
@@ -320,9 +322,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
-                
                 内容
-                
               </div>
             </td>
             <td
@@ -342,7 +342,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                
                 内容
+                
               </div>
             </td>
             <td
@@ -366,9 +368,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
-                
                 内容
-                
               </div>
             </td>
             <td
@@ -388,7 +388,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                
                 内容
+                
               </div>
             </td>
             <td
@@ -412,9 +414,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
-                
                 内容
-                
               </div>
             </td>
             <td
@@ -434,7 +434,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                
                 内容
+                
               </div>
             </td>
             <td
@@ -458,9 +460,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
-                
                 内容
-                
               </div>
             </td>
             <td
@@ -480,7 +480,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                
                 内容
+                
               </div>
             </td>
             <td
@@ -504,9 +506,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
-                
                 内容
-                
               </div>
             </td>
             <td
@@ -526,7 +526,9 @@ exports[`Table > Table baseVue demo works fine 1`] = `
               <div
                 class="t-table__ellipsis t-text-ellipsis"
               >
+                
                 内容
+                
               </div>
             </td>
             <td
@@ -1591,7 +1593,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
-                      标题
+                      
+                       标题 
+                      
                     </div>
                   </th>
                   <th
@@ -1631,9 +1635,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
-                      
                       内容
-                      
                     </div>
                   </td>
                   <td
@@ -1653,7 +1655,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      
                       内容
+                      
                     </div>
                   </td>
                   <td
@@ -1677,9 +1681,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
-                      
                       内容
-                      
                     </div>
                   </td>
                   <td
@@ -1699,7 +1701,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      
                       内容
+                      
                     </div>
                   </td>
                   <td
@@ -1723,9 +1727,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
-                      
                       内容
-                      
                     </div>
                   </td>
                   <td
@@ -1745,7 +1747,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      
                       内容
+                      
                     </div>
                   </td>
                   <td
@@ -1769,9 +1773,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
-                      
                       内容
-                      
                     </div>
                   </td>
                   <td
@@ -1791,7 +1793,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      
                       内容
+                      
                     </div>
                   </td>
                   <td
@@ -1815,9 +1819,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
-                      
                       内容
-                      
                     </div>
                   </td>
                   <td
@@ -1837,7 +1839,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      
                       内容
+                      
                     </div>
                   </td>
                   <td
@@ -1861,9 +1865,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
-                      
                       内容
-                      
                     </div>
                   </td>
                   <td
@@ -1883,7 +1885,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      
                       内容
+                      
                     </div>
                   </td>
                   <td
@@ -1907,9 +1911,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
-                      
                       内容
-                      
                     </div>
                   </td>
                   <td
@@ -1929,7 +1931,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      
                       内容
+                      
                     </div>
                   </td>
                   <td
@@ -1953,9 +1957,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
-                      
                       内容
-                      
                     </div>
                   </td>
                   <td
@@ -1975,7 +1977,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      
                       内容
+                      
                     </div>
                   </td>
                   <td
@@ -1999,9 +2003,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
-                      
                       内容
-                      
                     </div>
                   </td>
                   <td
@@ -2021,7 +2023,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      
                       内容
+                      
                     </div>
                   </td>
                   <td
@@ -2045,9 +2049,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
-                      
                       内容
-                      
                     </div>
                   </td>
                   <td
@@ -2067,7 +2069,9 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
                     <div
                       class="t-table__ellipsis t-text-ellipsis"
                     >
+                      
                       内容
+                      
                     </div>
                   </td>
                   <td

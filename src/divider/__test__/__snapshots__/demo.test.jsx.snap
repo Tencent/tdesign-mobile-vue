@@ -121,7 +121,7 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
     class="title"
     data-v-57625aa4=""
   >
-    Divider 分割符
+    Divider 分割线
   </h1>
   <p
     class="summary"

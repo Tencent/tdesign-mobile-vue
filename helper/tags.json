@@ -116,6 +116,7 @@
   },
   "t-calendar": {
     "attributes": [
+      "allow-same-day",
       "confirm-btn",
       "first-day-of-week",
       "format",
@@ -143,8 +144,10 @@
       "close-btn",
       "header",
       "keys",
+      "load",
       "middle-content",
       "options",
+      "overlay-props",
       "placeholder",
       "sub-titles",
       "theme",
@@ -365,7 +368,8 @@
       "content",
       "dashed",
       "default",
-      "layout"
+      "layout",
+      "size"
     ],
     "description": "Divider\n\n分割线\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/divider)"
   },
@@ -376,6 +380,7 @@
       "destroy-on-close",
       "footer",
       "items",
+      "overlay-props",
       "placement",
       "show-overlay",
       "title",
@@ -391,6 +396,7 @@
     "attributes": [
       "disabled",
       "footer",
+      "icon",
       "keys",
       "label",
       "multiple",
@@ -402,7 +408,7 @@
       "confirm",
       "reset"
     ],
-    "description": "DropdownItem\n\n下拉菜单选项\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-menu)"
+    "description": "DropdownItem\n\n下拉菜单选项\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item)"
   },
   "t-dropdown-menu": {
     "attributes": [
@@ -586,7 +592,9 @@
   "t-image-viewer": {
     "attributes": [
       "close-btn",
+      "cover",
       "delete-btn",
+      "image",
       "images",
       "index",
       "max-zoom",
@@ -728,11 +736,13 @@
       "fixed",
       "left",
       "left-arrow",
+      "placeholder",
       "right",
       "safe-area-inset-top",
       "title",
       "title-max-length",
       "visible",
+      "z-index",
       "left-click",
       "right-click"
     ],
@@ -847,6 +857,7 @@
       "loading-texts",
       "max-bar-height",
       "refresh-timeout",
+      "success-duration",
       "value",
       "change",
       "refresh",
@@ -1119,11 +1130,13 @@
     "attributes": [
       "bordered",
       "fixed",
+      "placeholder",
       "safe-area-inset-bottom",
       "shape",
       "split",
       "theme",
       "value",
+      "z-index",
       "change"
     ],
     "description": "TabBar\n\n标签栏\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tab-bar)"
@@ -1194,6 +1207,7 @@
       "autofocus",
       "autosize",
       "bordered",
+      "cursor-color",
       "disabled",
       "indicator",
       "label",
@@ -1277,5 +1291,27 @@
       "validate"
     ],
     "description": "Upload\n\n上传\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/upload)"
+  },
+  "t-watermark": {
+    "attributes": [
+      "alpha",
+      "content",
+      "default",
+      "height",
+      "is-repeat",
+      "layout",
+      "line-space",
+      "movable",
+      "move-interval",
+      "offset",
+      "removable",
+      "rotate",
+      "watermark-content",
+      "width",
+      "x",
+      "y",
+      "z-index"
+    ],
+    "description": "Watermark\n\n水印\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/watermark)"
   }
 }

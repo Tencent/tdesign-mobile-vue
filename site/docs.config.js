@@ -54,9 +54,9 @@ export const docs = [
         title: '深色模式',
         titleEn: 'Dark Mode',
         name: 'dark-mode',
-        path: '/mobile-vuet/dark-mode',
-        component: () => import('@/_common/dark-mode.md'),
-        componentEn: () => import('@/_common/dark-mode.en-US.md'),
+        path: '/mobile-vue/dark-mode',
+        component: () => import('@/_common/docs/dark-mode.md'),
+        componentEn: () => import('@/_common/docs/dark-mode.en-US.md'),
       },
     ],
   },
@@ -74,7 +74,7 @@ export const docs = [
         componentEn: () => import('@/button/button.en-US.md'),
       },
       {
-        title: 'Divider 分割符',
+        title: 'Divider 分割线',
         titleEn: 'Divider',
         name: 'divider',
         path: '/mobile-vue/components/divider',
@@ -146,7 +146,7 @@ export const docs = [
         componentEn: () => import('@/indexes/indexes.en-US.md'),
       },
       {
-        title: 'Navbar 导航条',
+        title: 'Navbar 导航栏',
         titleEn: 'Navbar',
         name: 'navbar',
         path: '/mobile-vue/components/navbar',
@@ -170,7 +170,7 @@ export const docs = [
         componentEn: () => import('@/steps/steps.en-US.md'),
       },
       {
-        title: 'TabBar 标签栏',
+        title: 'TabBar 底部标签栏',
         titleEn: 'TabBar',
         name: 'tab-bar',
         path: '/mobile-vue/components/tab-bar',
@@ -209,7 +209,7 @@ export const docs = [
         componentEn: () => import('@/calendar/calendar.en-US.md'),
       },
       {
-        title: 'CheckBox 复选框',
+        title: 'CheckBox 多选框',
         titleEn: 'CheckBox',
         name: 'checkbox',
         path: '/mobile-vue/components/checkbox',
@@ -233,7 +233,7 @@ export const docs = [
         componentEn: () => import('@/input/input.en-US.md'),
       },
       {
-        title: 'Textarea 多行输入框',
+        title: 'Textarea 多行文本框',
         titleEn: 'Textarea',
         name: 'textarea',
         path: '/mobile-vue/components/textarea',
@@ -425,7 +425,7 @@ export const docs = [
         componentEn: () => import('@/sticky/sticky.en-US.md'),
       },
       {
-        title: 'Swiper 轮播',
+        title: 'Swiper 轮播图',
         titleEn: 'Swiper',
         name: 'swiper',
         path: '/mobile-vue/components/swiper',
@@ -536,7 +536,7 @@ export const docs = [
         componentEn: () => import('@/toast/toast.en-US.md'),
       },
       {
-        title: 'Message 消息',
+        title: 'Message 消息通知',
         titleEn: 'Message',
         name: 'message',
         path: '/mobile-vue/components/message',
@@ -584,7 +584,7 @@ export const docs = [
         componentEn: () => import('@/overlay/overlay.en-US.md'),
       },
       {
-        title: 'SwipeCell 滑动单元格',
+        title: 'SwipeCell 滑动操作',
         titleEn: 'SwipeCell',
         name: 'swipe-cell',
         path: '/mobile-vue/components/swipe-cell',
@@ -600,7 +600,7 @@ export const docs = [
         componentEn: () => import('@/notice-bar/notice-bar.en-US.md'),
       },
       {
-        title: 'Loading 加载中',
+        title: 'Loading 加载',
         titleEn: 'Loading',
         name: 'loading',
         path: '/mobile-vue/components/loading',

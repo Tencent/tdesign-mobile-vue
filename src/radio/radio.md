@@ -64,8 +64,8 @@ change | `(value: T, context: { e: Event; name?:string })` | 选中值发生变�
 --td-radio-border-color | @component-stroke | -
 --td-radio-content-color | @text-color-secondary | -
 --td-radio-content-disabled-color | @text-color-disabled | -
---td-radio-content-line-height | 22px | -
---td-radio-font-size | 16px | -
+--td-radio-content-font | @font-body-medium | -
+--td-radio-font | @font-body-large | -
 --td-radio-icon-checked-color | @brand-color | -
 --td-radio-icon-color | @component-border | -
 --td-radio-icon-disabled-bg-color | @bg-color-component-disabled | -

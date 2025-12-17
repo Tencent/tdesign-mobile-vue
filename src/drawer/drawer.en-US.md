@@ -63,11 +63,10 @@ Name | Default Value | Description
 --td-drawer-border-color | @border-color | -
 --td-drawer-footer-padding-bottom | 20px | -
 --td-drawer-hover-color | @bg-color-secondarycontainer | -
---td-drawer-item-height | 24px | -
 --td-drawer-item-icon-size | 24px | -
 --td-drawer-item-padding | 16px | -
 --td-drawer-sidebar-height | 70vh | -
 --td-drawer-title-color | @drawer-title-color | -
---td-drawer-title-font-size | 18px | -
+--td-drawer-title-font | @font-title-large | -
 --td-drawer-title-padding | 24px 16px 8px | -
 --td-drawer-width | 280px | -

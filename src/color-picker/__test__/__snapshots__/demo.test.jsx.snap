@@ -378,7 +378,7 @@ exports[`ColorPicker > ColorPicker mobileVue demo works fine 1`] = `
   <h1
     class="title"
   >
-    ColorPicker 选择器
+    ColorPicker 颜色选择器
   </h1>
   <p
     class="summary"

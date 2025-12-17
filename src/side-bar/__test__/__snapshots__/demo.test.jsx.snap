@@ -6148,7 +6148,7 @@ exports[`SideBar > SideBar mobileVue demo works fine 1`] = `
   <p
     class="summary"
   >
-    用于内容分类后的展示切换。
+    用于信息分类后的展示切换或锚点，位于页面左侧。
   </p>
   <div
     class="tdesign-mobile-demo-block"

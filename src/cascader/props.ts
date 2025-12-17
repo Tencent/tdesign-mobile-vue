@@ -23,6 +23,10 @@ export default {
   keys: {
     type: Object as PropType<TdCascaderProps['keys']>,
   },
+  /** 加载子树数据的方法（仅当节点 children 为 true 时生效） */
+  load: {
+    type: Function as PropType<TdCascaderProps['load']>,
+  },
   /** 中间内容 */
   middleContent: {
     type: Function as PropType<TdCascaderProps['middleContent']>,

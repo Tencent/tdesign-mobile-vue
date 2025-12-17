@@ -320,7 +320,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
     class="title"
     data-v-e4d4f46b=""
   >
-    Loading 加载中
+    Loading 加载
   </h1>
   <p
     class="summary"

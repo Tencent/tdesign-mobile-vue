@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">Cascader 级联选择器</h1>
-    <p class="summary">用于多层级数据选择，主要为树形结构，可展示更多的数据</p>
+    <p class="summary">用于多层级数据的逐级选择。</p>
     <tdesign-demo-block title="01 基础" summary="基本用法">
       <baseDemo />
     </tdesign-demo-block>

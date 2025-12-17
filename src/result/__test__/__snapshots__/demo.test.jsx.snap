@@ -89,7 +89,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
     class="summary"
     data-v-f5693a74=""
   >
-    结果反馈
+    用于反馈不同结果的展示。
   </p>
   <div
     class="tdesign-mobile-demo-block"

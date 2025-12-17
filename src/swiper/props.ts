@@ -66,7 +66,8 @@ export default {
   },
   /** 导航器全部配置 */
   navigation: {
-    type: [Object, Function] as PropType<TdSwiperProps['navigation']>,
+    type: [Boolean, Object, Function] as PropType<TdSwiperProps['navigation']>,
+    default: true as TdSwiperProps['navigation'],
   },
   /** 后边距，可用于露出后一项的一小部分。默认单位 `px` */
   nextMargin: {

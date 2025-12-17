@@ -12,6 +12,8 @@ import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import { CascaderTriggerSource } from './type';
+import { TreeNodeModel } from '../_common/js/tree/tree-node-model';
+import { TreeNode } from '../_common/js/tree/tree-node';
 
 const { prefix } = config;
 const name = `${prefix}-cascader`;
@@ -79,8 +81,9 @@ export default defineComponent({
           const next = items.value[i]?.[index];
           selectedValue.push(lodashGet(next, keys?.value ?? 'value'));
           steps.push(lodashGet(next, keys?.label ?? 'label'));
-          if (lodashGet(next, keys?.children ?? 'children')) {
-            items.value.push(lodashGet(next, keys?.children ?? 'children'));
+          const children = lodashGet(next, keys?.children ?? 'children');
+          if (Array.isArray(children) && children.length > 0) {
+            items.value.push(children);
           }
         }
       }
@@ -97,8 +100,9 @@ export default defineComponent({
         if (lodashGet(options[i], keys?.value ?? 'value') === value) {
           return [i];
         }
-        if (lodashGet(options[i], keys?.children ?? 'children')) {
-          const res: any = getIndexesByValue(lodashGet(options[i], keys?.children ?? 'children'), value);
+        const children = lodashGet(options[i], keys?.children ?? 'children');
+        if (Array.isArray(children) && children.length > 0) {
+          const res: any = getIndexesByValue(children, value);
           if (res) {
             return [i, ...res];
           }
@@ -113,15 +117,34 @@ export default defineComponent({
       selectedValue[level] = typeof value === 'number' ? value : String(value);
       selectedValue.length = level + 1;
       steps[level] = lodashGet(item, keys?.label ?? 'label');
-      if (lodashGet(item, keys?.children ?? 'children')?.length) {
-        items.value[level + 1] = lodashGet(item, keys?.children ?? 'children');
+
+      const children = lodashGet(item, keys?.children ?? 'children');
+      if (children === true && props.load) {
+        // 异步加载子节点
+        const nodeModel = {
+          data: item,
+          value: lodashGet(item, keys?.value ?? 'value'),
+          label: lodashGet(item, keys?.label ?? 'label'),
+        } as any;
+        props
+          .load(nodeModel)
+          .then((loadedChildren) => {
+            // 将加载的数据与现有 options 结合
+            items.value[level + 1] = loadedChildren;
+            items.value.length = level + 2;
+            stepIndex.value += 1;
+            steps[level + 1] = placeholder.value;
+            steps.length = level + 2;
+          })
+          .catch((error) => {
+            console.error('Load children failed:', error);
+          });
+      } else if (Array.isArray(children) && children.length > 0) {
+        items.value[level + 1] = children;
         items.value.length = level + 2;
         stepIndex.value += 1;
         steps[level + 1] = placeholder.value;
         steps.length = level + 2;
-      } else if (lodashGet(item, keys?.children ?? 'children')?.length === 0) {
-        childrenInfo.value = value;
-        childrenInfo.level = level;
       } else {
         items.value.length = level + 1;
         steps.length = level + 1;
@@ -144,11 +167,9 @@ export default defineComponent({
       steps[level + 1] = placeholder.value;
       steps.length = level + 1;
 
-      if (lodashGet(item, keys?.children ?? 'children')?.length) {
-        items.value[level + 1] = lodashGet(item, keys?.children ?? 'children');
-      } else if (lodashGet(item, keys?.children ?? 'children')?.length === 0) {
-        childrenInfo.value = value;
-        childrenInfo.level = level;
+      const children = lodashGet(item, keys?.children ?? 'children');
+      if (Array.isArray(children) && children.length > 0) {
+        items.value[level + 1] = children;
       }
     };
 

@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">Link 链接</h1>
-    <p class="summary">当功能使用图标即可表意清楚时，可使用纯图标悬浮按钮，例如：添加、发布。</p>
+    <p class="summary">文字超链接用于跳转一个新页面，如当前项目跳转，友情链接等。</p>
     <tdesign-demo-block title="01 组件类型" summary="基础文字链接">
       <base-demo />
     </tdesign-demo-block>

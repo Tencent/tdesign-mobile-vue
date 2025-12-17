@@ -5,12 +5,11 @@ import Swiper from '../swiper';
 import SwiperItem from '../swiper-item';
 
 const sleep = (duration) =>
-  new Promise((resolve) =>
+  new Promise((resolve) => {
     setTimeout(() => {
       resolve();
-    }, duration),
-  );
-
+    }, duration);
+  });
 const classPrefix = 't-swiper';
 const list = [
   {
@@ -328,7 +327,7 @@ describe('navigation', () => {
     const wrapper = mount({
       setup() {
         return () => (
-          <Swiper navigation={undefined}>
+          <Swiper navigation={null}>
             {{
               default: list.map((item) => (
                 <SwiperItem>
@@ -342,5 +341,25 @@ describe('navigation', () => {
       },
     });
     expect(wrapper.find('.test-navigation').text()).toBe('navigation');
+  });
+
+  it(':slot [navigation={false}]', async () => {
+    const wrapper = mount({
+      setup() {
+        return () => (
+          <Swiper navigation={false}>
+            {{
+              default: list.map((item) => (
+                <SwiperItem>
+                  <img src={item.image} />
+                </SwiperItem>
+              )),
+              navigation: () => <div class="test-navigation">navigation</div>,
+            }}
+          </Swiper>
+        );
+      },
+    });
+    expect(wrapper.find('.test-navigation').exists()).toBe(false);
   });
 });
