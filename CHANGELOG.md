@@ -75,6 +75,7 @@ spline: explain
   - 修复 `addContent` 插槽位置错误 @anlyyao ([#2055](https://github.com/Tencent/tdesign-mobile-vue/pull/2055))
   - 修复 `--td-upload-add-icon-font-size` 无效 @anlyyao ([#2055](https://github.com/Tencent/tdesign-mobile-vue/pull/2055))
   - 修复 `add` 图标不居中问题 @anlyyao ([#2308](https://github.com/Tencent/tdesign-common/pull/2308))
+- `Form`: 修复字段有多条规则时 `onSubmit` 的 `context.firstError` 参数错误 @anlyyao ([#2054](https://github.com/Tencent/tdesign-mobile-vue/pull/2054))
 
 ## 🌈 1.10.2 `2025-08-22` 
 ### 🚀 Features
