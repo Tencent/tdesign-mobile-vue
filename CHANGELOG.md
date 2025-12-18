@@ -5,6 +5,10 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.12.1 `2025-12-18` 
+### 🐞 Bug Fixes
+- `fix`: 修复 `1.12.0` 版本打包产物中有不存在的 sourceMap 引用而产生的警告 @liweijie0812 ([#2111](https://github.com/Tencent/tdesign-mobile-vue/pull/2111))
+
 ## 🌈 1.12.0 `2025-12-17` 
 ### 🚀 Features
 - `ActionSheet`: `item` 属性补充 `description`、`suffixIcon` 字段 @anlyyao ([#2098](https://github.com/Tencent/tdesign-mobile-vue/pull/2098))
