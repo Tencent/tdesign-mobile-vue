@@ -50,9 +50,13 @@ exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
                   </div>
                   <div
                     class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-                    style="right: -4px; top: 1px;"
+                    style="top: 1px;"
                   >
-                    <!---->
+                    <div
+                      class="t-badge__count"
+                    >
+                      <!---->
+                    </div>
                   </div>
                 </div>
                 <!---->
@@ -80,9 +84,13 @@ exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
                   </div>
                   <div
                     class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                    style="right: -8px; top: 3px;"
+                    style="top: 1px;"
                   >
-                    8
+                    <div
+                      class="t-badge__count"
+                    >
+                      8
+                    </div>
                   </div>
                 </div>
                 <!---->
@@ -2627,9 +2635,13 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         </div>
                         <div
                           class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-                          style="right: -4px; top: 1px;"
+                          style="top: 1px;"
                         >
-                          <!---->
+                          <div
+                            class="t-badge__count"
+                          >
+                            <!---->
+                          </div>
                         </div>
                       </div>
                       <!---->
@@ -2657,9 +2669,13 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                         </div>
                         <div
                           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                          style="right: -8px; top: 3px;"
+                          style="top: 1px;"
                         >
-                          8
+                          <div
+                            class="t-badge__count"
+                          >
+                            8
+                          </div>
                         </div>
                       </div>
                       <!---->

@@ -2,14 +2,14 @@
   <div>
     <div class="summary">圆形徽标</div>
     <div class="badge-demo">
-      <t-badge count="8" :offset="[-2, -2]">
+      <t-badge count="8" :offset="[2, -2]">
         <NotificationIcon size="24px" />
       </t-badge>
     </div>
 
     <div class="summary">方形徽标</div>
     <div class="badge-demo">
-      <t-badge count="8" shape="square" :offset="[-2, -6]">
+      <t-badge count="8" shape="square" :offset="[1, -2]">
         <NotificationIcon size="24px" />
       </t-badge>
     </div>
@@ -24,7 +24,14 @@
     <div class="summary" style="margin-bottom: 16px">角标</div>
     <t-cell title="单行标题">
       <template #note>
-        <t-badge count="New" :offset="[0, 0]" shape="ribbon" />
+        <t-badge count="NEW" :offset="[0, 0]" shape="ribbon" />
+      </template>
+    </t-cell>
+
+    <div class="summary" style="margin-bottom: 16px">三角角标</div>
+    <t-cell title="单行标题">
+      <template #note>
+        <t-badge count="NEW" :offset="[0, 0]" shape="triangle-right" />
       </template>
     </t-cell>
   </div>
