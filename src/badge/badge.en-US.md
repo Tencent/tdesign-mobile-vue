@@ -27,9 +27,10 @@ Name | Default Value | Description
 --td-badge-bg-color | @error-color | -
 --td-badge-border-radius | 2px | -
 --td-badge-bubble-border-radius | 10px 10px 10px 1px | -
+--td-badge-content-text-color | @text-color-primary | -
 --td-badge-dot-size | 8px | -
 --td-badge-font | @font-mark-extraSmall | -
 --td-badge-large-font | @font-mark-small | -
 --td-badge-large-height | 20px | -
 --td-badge-large-padding | 5px | -
---td-badge-text-color | @font-white-1 | -
+--td-badge-text-color | @text-color-anti | -
