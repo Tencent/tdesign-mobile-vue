@@ -5,7 +5,7 @@
       <t-avatar :icon="IconUser" size="large" :badge-props="{ count: 8, size: 'large', offset: [7, 7] }" />
     </div>
 
-    <div class="summary">Middle</div>
+    <div class="summary">Medium</div>
     <div class="block">
       <t-avatar :icon="IconUser" :badge-props="{ count: 8, offset: [5, 5] }" />
     </div>

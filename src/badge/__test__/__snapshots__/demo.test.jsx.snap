@@ -1150,7 +1150,7 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
         <div
           class="summary"
         >
-          Middle
+          Medium
         </div>
         <div
           class="block"
@@ -1331,7 +1331,7 @@ exports[`Badge > Badge sizeVue demo works fine 1`] = `
   <div
     class="summary"
   >
-    Middle
+    Medium
   </div>
   <div
     class="block"
