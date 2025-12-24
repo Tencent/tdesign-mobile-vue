@@ -33,7 +33,7 @@ export default {
   offset: {
     type: Array as PropType<TdBadgeProps['offset']>,
   },
-  /** 徽标形状，其中 ribbon 和 ribbon-right 等价 */
+  /** 徽标形状，其中 ribbon 和 ribbon-right 等效 */
   shape: {
     type: String as PropType<TdBadgeProps['shape']>,
     default: 'circle' as TdBadgeProps['shape'],

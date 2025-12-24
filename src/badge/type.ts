@@ -36,7 +36,7 @@ export interface TdBadgeProps {
    */
   offset?: Array<string | number>;
   /**
-   * 徽标形状，其中 ribbon 和 ribbon-right 等价
+   * 徽标形状，其中 ribbon 和 ribbon-right 等效
    * @default circle
    */
   shape?:
