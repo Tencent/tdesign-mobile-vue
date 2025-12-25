@@ -24,11 +24,21 @@
     <div class="summary" style="margin-bottom: 16px">角标</div>
     <t-cell title="单行标题">
       <template #note>
+        <t-badge count="NEW" :offset="[0, 0]" shape="ribbon-left" />
+      </template>
+    </t-cell>
+    <t-cell title="单行标题">
+      <template #note>
         <t-badge count="NEW" :offset="[0, 0]" shape="ribbon" />
       </template>
     </t-cell>
 
     <div class="summary" style="margin-bottom: 16px">三角角标</div>
+    <t-cell title="单行标题">
+      <template #note>
+        <t-badge count="NEW" :offset="[0, 0]" shape="triangle-left" />
+      </template>
+    </t-cell>
     <t-cell title="单行标题">
       <template #note>
         <t-badge count="NEW" :offset="[0, 0]" shape="triangle-right" />

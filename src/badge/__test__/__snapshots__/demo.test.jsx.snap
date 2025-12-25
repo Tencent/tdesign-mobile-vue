@@ -966,6 +966,52 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
           >
             
             <div
+              class="t-badge t-badge__ribbon-left-outer"
+            >
+              <div
+                class="t-badge__content"
+              >
+                <!---->
+              </div>
+              <div
+                class="t-badge--basic t-badge--medium t-badge--ribbon-left t-badge--count t-has-count"
+              >
+                <div
+                  class="t-badge__count"
+                >
+                  NEW
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-cell"
+        >
+          <div
+            class="t-cell__left"
+          >
+            <!---->
+            <!---->
+          </div>
+          <div
+            class="t-cell__title"
+          >
+            <div
+              class="t-cell__title-text"
+            >
+              单行标题
+              <!---->
+            </div>
+            <!---->
+          </div>
+          <div
+            class="t-cell__note"
+          >
+            
+            <div
               class="t-badge t-badge__ribbon-outer"
             >
               <div
@@ -992,6 +1038,52 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
           style="margin-bottom: 16px;"
         >
           三角角标
+        </div>
+        <div
+          class="t-cell"
+        >
+          <div
+            class="t-cell__left"
+          >
+            <!---->
+            <!---->
+          </div>
+          <div
+            class="t-cell__title"
+          >
+            <div
+              class="t-cell__title-text"
+            >
+              单行标题
+              <!---->
+            </div>
+            <!---->
+          </div>
+          <div
+            class="t-cell__note"
+          >
+            
+            <div
+              class="t-badge t-badge__triangle-left-outer"
+            >
+              <div
+                class="t-badge__content"
+              >
+                <!---->
+              </div>
+              <div
+                class="t-badge--basic t-badge--medium t-badge--triangle-left t-badge--count t-has-count"
+              >
+                <div
+                  class="t-badge__count"
+                >
+                  NEW
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <!---->
         </div>
         <div
           class="t-cell"
@@ -1654,6 +1746,52 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
     >
       
       <div
+        class="t-badge t-badge__ribbon-left-outer"
+      >
+        <div
+          class="t-badge__content"
+        >
+          <!---->
+        </div>
+        <div
+          class="t-badge--basic t-badge--medium t-badge--ribbon-left t-badge--count t-has-count"
+        >
+          <div
+            class="t-badge__count"
+          >
+            NEW
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!---->
+  </div>
+  <div
+    class="t-cell"
+  >
+    <div
+      class="t-cell__left"
+    >
+      <!---->
+      <!---->
+    </div>
+    <div
+      class="t-cell__title"
+    >
+      <div
+        class="t-cell__title-text"
+      >
+        单行标题
+        <!---->
+      </div>
+      <!---->
+    </div>
+    <div
+      class="t-cell__note"
+    >
+      
+      <div
         class="t-badge t-badge__ribbon-outer"
       >
         <div
@@ -1680,6 +1818,52 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
     style="margin-bottom: 16px;"
   >
     三角角标
+  </div>
+  <div
+    class="t-cell"
+  >
+    <div
+      class="t-cell__left"
+    >
+      <!---->
+      <!---->
+    </div>
+    <div
+      class="t-cell__title"
+    >
+      <div
+        class="t-cell__title-text"
+      >
+        单行标题
+        <!---->
+      </div>
+      <!---->
+    </div>
+    <div
+      class="t-cell__note"
+    >
+      
+      <div
+        class="t-badge t-badge__triangle-left-outer"
+      >
+        <div
+          class="t-badge__content"
+        >
+          <!---->
+        </div>
+        <div
+          class="t-badge--basic t-badge--medium t-badge--triangle-left t-badge--count t-has-count"
+        >
+          <div
+            class="t-badge__count"
+          >
+            NEW
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!---->
   </div>
   <div
     class="t-cell"
