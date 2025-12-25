@@ -2,7 +2,7 @@
   <div>
     <div class="summary">红点徽标</div>
     <div class="badge-demo">
-      <t-badge dot :offset="[-3, 3]" class="badge-item" content="消息" />
+      <t-badge dot class="badge-item" content="消息" />
       <t-badge dot :offset="[1, -1]" class="badge-item">
         <NotificationIcon size="24px" />
       </t-badge>
@@ -13,8 +13,8 @@
 
     <div class="summary">数字徽标</div>
     <div class="badge-demo">
-      <t-badge count="8" content="消息" :offset="[0, 0]" class="badge-item" />
-      <t-badge count="8" :offset="[-2, -2]" class="badge-item">
+      <t-badge count="8" content="消息" :offset="[4, 0]" class="badge-item" />
+      <t-badge count="8" :offset="[2, -2]" class="badge-item">
         <NotificationIcon size="24px" />
       </t-badge>
       <t-badge count="8" :offset="[2, 2]" class="badge-item">

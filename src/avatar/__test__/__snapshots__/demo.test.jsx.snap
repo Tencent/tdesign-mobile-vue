@@ -476,8 +476,13 @@ exports[`Avatar > Avatar badgeAvatarVue demo works fine 1`] = `
         </div>
         <div
           class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+          style="top: 4px;"
         >
-          <!---->
+          <div
+            class="t-badge__count"
+          >
+            <!---->
+          </div>
         </div>
       </div>
     </div>
@@ -508,9 +513,13 @@ exports[`Avatar > Avatar badgeAvatarVue demo works fine 1`] = `
         </div>
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-          style="right: 4px; top: 4px;"
+          style="left: calc(100% + -6px); top: 6px;"
         >
-          8
+          <div
+            class="t-badge__count"
+          >
+            8
+          </div>
         </div>
       </div>
     </div>
@@ -581,9 +590,13 @@ exports[`Avatar > Avatar badgeAvatarVue demo works fine 1`] = `
         </div>
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-          style="right: 4px; top: 4px;"
+          style="left: calc(100% + -6px); top: 6px;"
         >
-          12
+          <div
+            class="t-badge__count"
+          >
+            12
+          </div>
         </div>
       </div>
     </div>
@@ -1822,8 +1835,13 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+                style="top: 4px;"
               >
-                <!---->
+                <div
+                  class="t-badge__count"
+                >
+                  <!---->
+                </div>
               </div>
             </div>
           </div>
@@ -1854,9 +1872,13 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                style="right: 4px; top: 4px;"
+                style="left: calc(100% + -6px); top: 6px;"
               >
-                8
+                <div
+                  class="t-badge__count"
+                >
+                  8
+                </div>
               </div>
             </div>
           </div>
@@ -1927,9 +1949,13 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                style="right: 4px; top: 4px;"
+                style="left: calc(100% + -6px); top: 6px;"
               >
-                12
+                <div
+                  class="t-badge__count"
+                >
+                  12
+                </div>
               </div>
             </div>
           </div>

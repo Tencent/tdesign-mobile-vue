@@ -68,7 +68,11 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
         >
-          <!---->
+          <div
+            class="t-badge__count"
+          >
+            <!---->
+          </div>
         </div>
       </div>
     </div>
@@ -149,7 +153,11 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         >
-          8
+          <div
+            class="t-badge__count"
+          >
+            8
+          </div>
         </div>
       </div>
     </div>
@@ -230,7 +238,11 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         >
-          13
+          <div
+            class="t-badge__count"
+          >
+            13
+          </div>
         </div>
       </div>
     </div>
@@ -311,7 +323,11 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
         <div
           class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
         >
-          NEW
+          <div
+            class="t-badge__count"
+          >
+            NEW
+          </div>
         </div>
       </div>
     </div>
@@ -4513,7 +4529,11 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
               <div
                 class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
               >
-                <!---->
+                <div
+                  class="t-badge__count"
+                >
+                  <!---->
+                </div>
               </div>
             </div>
           </div>
@@ -4594,7 +4614,11 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
               >
-                8
+                <div
+                  class="t-badge__count"
+                >
+                  8
+                </div>
               </div>
             </div>
           </div>
@@ -4675,7 +4699,11 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
               >
-                13
+                <div
+                  class="t-badge__count"
+                >
+                  13
+                </div>
               </div>
             </div>
           </div>
@@ -4756,7 +4784,11 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
               >
-                NEW
+                <div
+                  class="t-badge__count"
+                >
+                  NEW
+                </div>
               </div>
             </div>
           </div>
