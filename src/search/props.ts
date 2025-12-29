@@ -11,7 +11,7 @@ export default {
   /** 自定义右侧操作按钮文字，如：“取消” */
   action: {
     type: [String, Function] as PropType<TdSearchProps['action']>,
-    default: '',
+    default: '' as TdSearchProps['action'],
   },
   /** 【讨论中】联想词列表，如果不存在或长度为 0 则不显示联想框。可以使用函数 `label` 自定义联想词为任意内容；也可使用插槽 `option` 定义联想词内容，插槽参数为 `{ option: AutocompleteOption; index: number }`。如果 `group` 值为 `true` 则表示当前项为分组标题 */
   autocompleteOptions: {
@@ -33,6 +33,11 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 光标颜色 */
+  cursorColor: {
+    type: String,
+    default: '#0052d9',
+  },
   /** 禁用状态 */
   disabled: Boolean,
   /** 是否聚焦 */
@@ -40,7 +45,7 @@ export default {
   /** 左侧图标 */
   leftIcon: {
     type: [String, Function] as PropType<TdSearchProps['leftIcon']>,
-    default: 'search',
+    default: 'search' as TdSearchProps['leftIcon'],
   },
   /** 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用 */
   maxcharacter: {

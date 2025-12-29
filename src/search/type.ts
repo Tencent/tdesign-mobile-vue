@@ -32,6 +32,11 @@ export interface TdSearchProps {
    */
   clearable?: boolean;
   /**
+   * 光标颜色
+   * @default #0052d9
+   */
+  cursorColor?: string;
+  /**
    * 禁用状态
    */
   disabled?: boolean;
