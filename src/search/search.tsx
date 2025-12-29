@@ -189,6 +189,7 @@ export default defineComponent({
                 value={searchValue.value}
                 type="search"
                 class={inputClasses.value}
+                style={{ '--td-search-cursor-color': props.cursorColor }}
                 autofocus={props.focus}
                 placeholder={props.placeholder}
                 readonly={props.readonly}
