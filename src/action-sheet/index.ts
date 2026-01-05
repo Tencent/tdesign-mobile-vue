@@ -1,6 +1,6 @@
 import { createApp, DefineComponent, ref, App, nextTick } from 'vue';
-import ActionSheetVue from './action-sheet';
-import { WithInstallType, isBrowser } from '../shared';
+import _ActionSheet from './action-sheet';
+import { withInstall, WithInstallType, isBrowser } from '../shared';
 
 import './style';
 import { TdActionSheetProps } from './type';
@@ -27,7 +27,7 @@ function create(props: Partial<TdActionSheetProps>): DefineComponent<TdActionShe
     instance.clear();
   }
 
-  instance = ActionSheetVue;
+  instance = _ActionSheet;
 
   instance.clear = (trigger: any) => {
     app.unmount();
@@ -62,16 +62,15 @@ const ActionSheetPlugin = {
     }
   },
   install(app: App, options?: Record<string, unknown>) {
-    const name = (options?.name as string) || ActionSheetVue.name;
-    app.component(name, ActionSheetVue);
+    const name = (options?.name as string) || _ActionSheet.name;
+    app.component(name, _ActionSheet);
   },
 } as ActionSheetApi & { install: (app: App, options?: Record<string, unknown>) => void };
 
 // 导出 Vue 组件 (用于按需引入作为组件使用)
-export const ActionSheet = ActionSheetVue as WithInstallType<typeof ActionSheetVue>;
+export const ActionSheet: WithInstallType<typeof _ActionSheet> = withInstall(_ActionSheet);
 
 // 导出函数式调用 API (用于按需引入作为函数使用)
 export { ActionSheetPlugin };
 
-// 默认导出,保持向后兼容 (同时支持组件和函数调用)
-export default ActionSheetPlugin as WithInstallType<typeof ActionSheetVue> & ActionSheetApi;
+export default ActionSheet;
