@@ -7,6 +7,5 @@ export { ActionSheetPlugin } from './action-sheet';
 
 // 兼容原使用方式（2.x 移除）
 export { default as Dialog } from './dialog';
-export { default as ActionSheet } from './action-sheet';
 export { default as Message } from './message';
 export { default as Toast } from './toast/plugin';
