@@ -61,10 +61,11 @@ const ActionSheetPlugin = {
       instance.clear(trigger);
     }
   },
-  install(app: App, name = '') {
-    app.component(name || ActionSheetVue.name, ActionSheetVue);
+  install(app: App, options?: Record<string, unknown>) {
+    const name = (options?.name as string) || ActionSheetVue.name;
+    app.component(name, ActionSheetVue);
   },
-} as ActionSheetApi & { install: (app: App, name?: string) => void };
+} as ActionSheetApi & { install: (app: App, options?: Record<string, unknown>) => void };
 
 // 导出 Vue 组件 (用于按需引入作为组件使用)
 export const ActionSheet = ActionSheetVue as WithInstallType<typeof ActionSheetVue>;
