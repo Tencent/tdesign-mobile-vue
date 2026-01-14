@@ -41,7 +41,7 @@
 <script lang="ts" setup>
 import { h, ref } from 'vue';
 import { EnterIcon, BookmarkIcon, PinIcon, CloudUploadIcon } from 'tdesign-icons-vue-next';
-import { ActionSheet, ActionSheetItem } from 'tdesign-mobile-vue';
+import { ActionSheetItem, ActionSheetPlugin } from 'tdesign-mobile-vue';
 
 const visible = ref(false);
 const descVisible = ref(false);
@@ -96,15 +96,15 @@ const badgeData = {
     },
   ],
 };
-const handleSelected = (selected: ActionSheetItem, selectedIndex: number) => {
+const handleSelected = (selected: ActionSheetItem | string, selectedIndex: number) => {
   console.log(selected, selectedIndex);
-  ActionSheet.close();
+  ActionSheetPlugin.close();
 };
-const handleCancel = (e: any): void => {
-  ActionSheet.close();
+const handleCancel = (): void => {
+  ActionSheetPlugin.close();
 };
 const showOverlayCallAPI = () => {
-  ActionSheet.show({
+  ActionSheetPlugin.show({
     items: baseData.items,
     cancelText: 'cancel',
     onSelected: handleSelected,
