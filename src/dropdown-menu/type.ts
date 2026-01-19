@@ -94,9 +94,25 @@ export interface TdDropdownItemProps {
    */
   onChange?: (value: DropdownValue) => void;
   /**
+   * 关闭时触发
+   */
+  onClose?: () => void;
+  /**
+   * 关闭且动画结束后触发
+   */
+  onClosed?: () => void;
+  /**
    * 点击确认时触发
    */
   onConfirm?: (value: DropdownValue) => void;
+  /**
+   * 打开时触发
+   */
+  onOpen?: () => void;
+  /**
+   * 打开且动画结束后触发
+   */
+  onOpened?: () => void;
   /**
    * 点击重置时触发
    */

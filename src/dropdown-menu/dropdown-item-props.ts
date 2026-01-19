@@ -65,8 +65,16 @@ export default {
   },
   /** 值改变时触发 */
   onChange: Function as PropType<TdDropdownItemProps['onChange']>,
+  /** 关闭时触发 */
+  onClose: Function as PropType<TdDropdownItemProps['onClose']>,
+  /** 关闭且动画结束后触发 */
+  onClosed: Function as PropType<TdDropdownItemProps['onClosed']>,
   /** 点击确认时触发 */
   onConfirm: Function as PropType<TdDropdownItemProps['onConfirm']>,
+  /** 打开时触发 */
+  onOpen: Function as PropType<TdDropdownItemProps['onOpen']>,
+  /** 打开且动画结束后触发 */
+  onOpened: Function as PropType<TdDropdownItemProps['onOpened']>,
   /** 点击重置时触发 */
   onReset: Function as PropType<TdDropdownItemProps['onReset']>,
 };
