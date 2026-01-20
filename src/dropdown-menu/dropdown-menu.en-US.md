@@ -29,7 +29,11 @@ placement | String | left | options: left/right | N
 value | String / Number / Array | undefined | `v-model` and `v-model:value` is supported。Typescript: `DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
 defaultValue | String / Number / Array | undefined | uncontrolled property。Typescript: `DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
 onChange | Function |  | Typescript: `(value: DropdownValue) => void`<br/> | N
+onClose | Function |  | Typescript: `() => void`<br/> | N
+onClosed | Function |  | Typescript: `() => void`<br/> | N
 onConfirm | Function |  | Typescript: `(value: DropdownValue) => void`<br/> | N
+onOpen | Function |  | Typescript: `() => void`<br/> | N
+onOpened | Function |  | Typescript: `() => void`<br/> | N
 onReset | Function |  | Typescript: `(value: DropdownValue) => void`<br/> | N
 
 ### DropdownItem Events
@@ -37,7 +41,11 @@ onReset | Function |  | Typescript: `(value: DropdownValue) => void`<br/> | N
 name | params | description
 -- | -- | --
 change | `(value: DropdownValue)` | \-
+close | \- | \-
+closed | \- | \-
 confirm | `(value: DropdownValue)` | \-
+open | \- | \-
+opened | \- | \-
 reset | `(value: DropdownValue)` | \-
 
 ### CSS Variables
