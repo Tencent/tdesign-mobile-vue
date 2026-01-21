@@ -162,9 +162,12 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
               </div>
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                style="right: 0px; top: 0px;"
               >
-                16
+                <div
+                  class="t-badge__count"
+                >
+                  16
+                </div>
               </div>
             </div>
           </div>
@@ -214,9 +217,12 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
               </div>
               <div
                 class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-                style="right: 0px; top: 0px;"
               >
-                <!---->
+                <div
+                  class="t-badge__count"
+                >
+                  <!---->
+                </div>
               </div>
             </div>
           </div>
@@ -266,9 +272,12 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
               </div>
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                style="right: 0px; top: 0px;"
               >
-                New
+                <div
+                  class="t-badge__count"
+                >
+                  New
+                </div>
               </div>
             </div>
           </div>
@@ -318,9 +327,12 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
               </div>
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                style="right: 0px; top: 0px;"
               >
-                ···
+                <div
+                  class="t-badge__count"
+                >
+                  ···
+                </div>
               </div>
             </div>
           </div>
@@ -386,9 +398,12 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
               </div>
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                style="right: 0px; top: 0px;"
               >
-                16
+                <div
+                  class="t-badge__count"
+                >
+                  16
+                </div>
               </div>
             </div>
           </div>
@@ -440,9 +455,12 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
               </div>
               <div
                 class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-                style="right: 0px; top: 0px;"
               >
-                <!---->
+                <div
+                  class="t-badge__count"
+                >
+                  <!---->
+                </div>
               </div>
             </div>
           </div>
@@ -494,9 +512,12 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
               </div>
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                style="right: 0px; top: 0px;"
               >
-                New
+                <div
+                  class="t-badge__count"
+                >
+                  New
+                </div>
               </div>
             </div>
           </div>
@@ -548,9 +569,12 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
               </div>
               <div
                 class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                style="right: 0px; top: 0px;"
               >
-                ···
+                <div
+                  class="t-badge__count"
+                >
+                  ···
+                </div>
               </div>
             </div>
           </div>
@@ -1647,9 +1671,12 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                   </div>
                   <div
                     class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                    style="right: 0px; top: 0px;"
                   >
-                    16
+                    <div
+                      class="t-badge__count"
+                    >
+                      16
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1699,9 +1726,12 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                   </div>
                   <div
                     class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-                    style="right: 0px; top: 0px;"
                   >
-                    <!---->
+                    <div
+                      class="t-badge__count"
+                    >
+                      <!---->
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1751,9 +1781,12 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                   </div>
                   <div
                     class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                    style="right: 0px; top: 0px;"
                   >
-                    New
+                    <div
+                      class="t-badge__count"
+                    >
+                      New
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1803,9 +1836,12 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                   </div>
                   <div
                     class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                    style="right: 0px; top: 0px;"
                   >
-                    ···
+                    <div
+                      class="t-badge__count"
+                    >
+                      ···
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1871,9 +1907,12 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                   </div>
                   <div
                     class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                    style="right: 0px; top: 0px;"
                   >
-                    16
+                    <div
+                      class="t-badge__count"
+                    >
+                      16
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1925,9 +1964,12 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                   </div>
                   <div
                     class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-                    style="right: 0px; top: 0px;"
                   >
-                    <!---->
+                    <div
+                      class="t-badge__count"
+                    >
+                      <!---->
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1979,9 +2021,12 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                   </div>
                   <div
                     class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                    style="right: 0px; top: 0px;"
                   >
-                    New
+                    <div
+                      class="t-badge__count"
+                    >
+                      New
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2033,9 +2078,12 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                   </div>
                   <div
                     class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                    style="right: 0px; top: 0px;"
                   >
-                    ···
+                    <div
+                      class="t-badge__count"
+                    >
+                      ···
+                    </div>
                   </div>
                 </div>
               </div>

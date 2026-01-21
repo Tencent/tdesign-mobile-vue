@@ -1,4 +1,4 @@
-import { defineComponent, computed } from 'vue';
+import { defineComponent, computed, CSSProperties } from 'vue';
 import { isNumber, isString } from 'lodash-es';
 import config from '../config';
 import BadgeProps from './props';
@@ -17,10 +17,19 @@ export default defineComponent({
     const badgeClass = usePrefixClass('badge');
     const classPrefix = usePrefixClass();
 
+    // 是否使用外层类名
+    const useOuterClass = computed(() => {
+      const target = ['ribbon', 'ribbon-right', 'ribbon-left', 'triangle-right', 'triangle-left'];
+      if (props.content || !target.includes(props.shape)) {
+        return false;
+      }
+      return !renderTNodeContent('default', 'content');
+    });
+
     // 徽标外层样式类
     const badgeClasses = computed(() => ({
       [`${badgeClass.value}`]: true,
-      [`${badgeClass.value}__ribbon-outer`]: props.shape === 'ribbon',
+      [`${badgeClass.value}__${props.shape}-outer`]: useOuterClass.value,
     }));
 
     // 徽标内层样式类
@@ -46,28 +55,34 @@ export default defineComponent({
       return true;
     });
 
-    const hasUnit = (unit: string) =>
-      unit.indexOf('px') > 0 ||
-      unit.indexOf('rpx') > 0 ||
-      unit.indexOf('em') > 0 ||
-      unit.indexOf('rem') > 0 ||
-      unit.indexOf('%') > 0 ||
-      unit.indexOf('vh') > 0 ||
-      unit.indexOf('vm') > 0;
+    const hasUnit = (value: string): boolean => {
+      return /px|rpx|em|rem|%|vh|vw/.test(value);
+    };
+
+    const addUnit = (value: string | number): string => {
+      const strValue = value.toString();
+      return hasUnit(strValue) ? strValue : `${value}px`;
+    };
 
     // 徽标自定义样式
     const badgeStyles = computed(() => {
-      if (!props.offset) {
-        return { background: props.color };
+      const styles: CSSProperties = {};
+
+      if (props.color) {
+        styles.background = props.color;
       }
-      let [xOffset = 0, yOffset = 0]: Array<string | number> = props.offset;
-      xOffset = hasUnit(xOffset.toString()) ? xOffset : `${xOffset}px`;
-      yOffset = hasUnit(yOffset.toString()) ? yOffset : `${yOffset}px`;
-      return {
-        background: props.color,
-        right: xOffset,
-        top: yOffset,
-      };
+
+      const [xOffset = 0, yOffset = 0] = props.offset || [];
+
+      if (xOffset) {
+        styles.left = `calc(100% + ${addUnit(xOffset)})`;
+      }
+
+      if (yOffset) {
+        styles.top = addUnit(yOffset);
+      }
+
+      return styles;
     });
 
     return () => {
@@ -95,7 +110,7 @@ export default defineComponent({
         }
         return (
           <div class={badgeInnerClasses.value} style={badgeStyles.value}>
-            {readerCount()}
+            <div class={`${badgeClass.value}__count`}>{readerCount()}</div>
           </div>
         );
       };
