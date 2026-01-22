@@ -12,4 +12,4 @@ export * from './useExpose';
 export * from './useGesture';
 export * from './useMutationObservable';
 export * from './useVariables';
-export * from './useElementHeight';
+export * from './useElementRect';

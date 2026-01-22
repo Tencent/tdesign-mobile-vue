@@ -5,7 +5,7 @@ import useChildSlots from '../hooks/useChildSlots';
 import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
-import useElementHeight from '../hooks/useElementHeight';
+import useElementRect from '../hooks/useElementRect';
 
 const { prefix } = config;
 
@@ -43,9 +43,11 @@ export default defineComponent({
       zIndex: props.zIndex,
     }));
 
-    const { height: tabBarHeight } = useElementHeight(root, {
+    const { rect: tabBarRect } = useElementRect(root, {
       immediate: props.fixed && props.placeholder,
     });
+
+    const tabBarHeight = computed(() => tabBarRect.value.height);
 
     provide('tab-bar', {
       ...toRefs(props),
