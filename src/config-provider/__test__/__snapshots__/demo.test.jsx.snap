@@ -371,7 +371,6 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
           </div>
           <input
             accept="image/png"
-            capture=""
             hidden=""
             multiple=""
             type="file"
@@ -7517,7 +7516,6 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
       </div>
       <input
         accept="image/png"
-        capture=""
         hidden=""
         multiple=""
         type="file"
