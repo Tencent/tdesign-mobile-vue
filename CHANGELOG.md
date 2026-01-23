@@ -5,6 +5,23 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.13.0 `2026-01-23` 
+### 🚨 Breaking Changes
+- `ActionSheet`: 调整导出方式，分离组件和函数式 API 的使用方式 @anlyyao ([#2122](https://github.com/Tencent/tdesign-mobile-vue/pull/2122))
+### 🚀 Features
+- `ActionSheet`: 新增 `ActionSheetPlugin` 导出，提供独立的函数式调用 `API` @anlyyao ([#2122](https://github.com/Tencent/tdesign-mobile-vue/pull/2122))
+- `Icon`: 新增 217 个与人工智能、文档、徽标和文件相关的图标 @uyarn([#2131](https://github.com/Tencent/tdesign-mobile-vue/pull/2131))
+- `Search`: 新增 `cursorColor` 属性 @anlyyao ([#2116](https://github.com/Tencent/tdesign-mobile-vue/pull/2116))
+- `Badge`: @anlyyao ([#2114](https://github.com/Tencent/tdesign-mobile-vue/pull/2114))
+  - `shape` 属性新增 `ribbon-right/ribbon-left/triangle-right/triangle-left` 可选项，其中 `ribbon` 与 `ribbon-right` 等效 
+  - 优化 `ribbon` 实现，改用 `background: linear-gradient()`，移除伪元素相关样式
+### 🐞 Bug Fixes
+- `Sticky`: 修复 `container` 为 `Vue Ref` 对象时报错 @anlyyao ([#2130](https://github.com/Tencent/tdesign-mobile-vue/pull/2130))
+- `Upload`:  移除默认值 `''`，增强 `capture` 类型，解决移动端只能调用摄像头的问题 @anlyyao ([#2132](https://github.com/Tencent/tdesign-mobile-vue/pull/2132))
+- `ActionSheet`: @anlyyao ([#2122](https://github.com/Tencent/tdesign-mobile-vue/pull/2122))
+  - 修复按需引入时组件和函数式调用混用导致表现不一致的问题 
+  - 修复函数式调用时控制台告警
+
 ## 🌈 1.12.1 `2025-12-18` 
 ### 🐞 Bug Fixes
 - `fix`: 修复 `1.12.0` 版本打包产物中有不存在的 sourceMap 引用而产生的警告 @liweijie0812 ([#2111](https://github.com/Tencent/tdesign-mobile-vue/pull/2111))
