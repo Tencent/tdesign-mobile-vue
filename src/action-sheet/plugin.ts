@@ -1,42 +1,57 @@
-import { createApp, DefineComponent, ref, App, nextTick } from 'vue';
+import { createApp, h, App, reactive, nextTick } from 'vue';
 import { isBrowser } from '../shared';
 import _ActionSheet from './action-sheet';
 import { TdActionSheetProps } from './type';
 
 let instance: any = null;
 let app: App<Element>;
+let root: HTMLElement;
 
-function create(props: Partial<TdActionSheetProps>): DefineComponent<TdActionSheetProps> {
+function create(props: Partial<TdActionSheetProps>): any {
   if (!isBrowser) return;
 
-  const root = document.createElement('div');
-  document.body.appendChild(root);
-
-  const visible = ref(false);
-  const propsObject = {
-    visible,
-    ...props,
-  };
-
   if (instance) {
-    instance.clear();
+    instance.close();
+    // 等待上一次的清理完成
+    nextTick(() => {
+      createInstance(props);
+    });
+    return;
   }
 
-  instance = _ActionSheet;
+  createInstance(props);
+}
 
-  instance.clear = (trigger: any) => {
-    app.unmount();
-    root.remove();
-    if (propsObject.onClose && trigger && trigger.trigger !== 'overlay') {
-      propsObject.onClose(trigger);
-    }
-    instance = null;
-  };
-  app = createApp(instance, { ...propsObject });
-  app.mount(root);
-  nextTick(() => {
-    visible.value = true;
+function createInstance(props: Partial<TdActionSheetProps>): any {
+  root = document.createElement('div');
+  document.body.appendChild(root);
+
+  const params = reactive({
+    visible: false,
+    ...props,
   });
+
+  instance = {
+    close: (trigger?: any) => {
+      params.visible = false;
+      nextTick(() => {
+        app.unmount();
+        root.remove();
+        instance = null;
+      });
+      if (props.onClose && trigger && trigger.trigger !== 'overlay') {
+        props.onClose(trigger);
+      }
+    },
+  };
+
+  app = createApp(() => h(_ActionSheet, params));
+  app.mount(root);
+
+  nextTick(() => {
+    params.visible = true;
+  });
+
   return instance;
 }
 
@@ -53,7 +68,7 @@ export const ActionSheetPlugin: ActionSheetApi = {
   },
   close(trigger?: any) {
     if (instance) {
-      instance.clear(trigger);
+      instance.close(trigger);
     }
   },
 };
