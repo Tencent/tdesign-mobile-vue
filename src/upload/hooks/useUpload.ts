@@ -310,6 +310,13 @@ export default function useUpload(props: TdUploadProps) {
     );
   }
 
+  function onInnerRemoveAll() {
+    sizeOverLimitMessage.value = '';
+    toUploadFiles.value = [];
+    props.onWaitingUploadFilesChange?.({ files: [], trigger: 'remove' });
+    setUploadValue([], { trigger: 'remove' });
+  }
+
   function onInnerRemove(p: UploadRemoveContext) {
     sizeOverLimitMessage.value = '';
     p.e.stopPropagation?.();
@@ -385,5 +392,6 @@ export default function useUpload(props: TdUploadProps) {
     onNormalFileChange,
     onInnerRemove,
     cancelUpload,
+    onInnerRemoveAll,
   };
 }
