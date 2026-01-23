@@ -129,7 +129,7 @@
     "@vitejs/plugin-vue-jsx": "^4.1.2",
     "@vitest/coverage-v8": "^3.2.4",
     "@vitest/ui": "^3.2.4",
-    "@vue/babel-plugin-jsx": "1.1.1",
+    "@vue/babel-plugin-jsx": "2.0.1",
     "@vue/eslint-config-typescript": "^9.1.0",
     "@vue/runtime-core": "^3.2.41",
     "@vue/shared": "3.3.8",
