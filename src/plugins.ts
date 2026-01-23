@@ -3,7 +3,7 @@ export { MessagePlugin } from './message';
 export { ToastPlugin } from './toast';
 export { DrawerPlugin } from './drawer';
 export { LoadingPlugin } from './loading';
-export { ActionSheetPlugin } from './action-sheet';
+export { ActionSheetPlugin } from './action-sheet/plugin';
 
 // 兼容原使用方式（2.x 移除）
 export { default as Dialog } from './dialog';
