@@ -47,7 +47,6 @@ exports[`Upload > Upload baseVue demo works fine 1`] = `
     </div>
     <input
       accept="image/png"
-      capture=""
       hidden=""
       type="file"
     />
@@ -139,7 +138,6 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
       </div>
       <input
         accept="image/png"
-        capture=""
         hidden=""
         type="file"
       />
@@ -224,7 +222,6 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
       </div>
       <input
         accept="image/png"
-        capture=""
         hidden=""
         type="file"
       />
@@ -315,7 +312,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <input
             accept="image/png"
-            capture=""
             hidden=""
             type="file"
           />
@@ -574,7 +570,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <input
             accept=""
-            capture=""
             hidden=""
             multiple=""
             type="file"
@@ -839,7 +834,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <input
             accept="image/png"
-            capture=""
             hidden=""
             multiple=""
             type="file"
@@ -1007,7 +1001,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <input
             accept=""
-            capture=""
             hidden=""
             multiple=""
             type="file"
@@ -1122,7 +1115,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             </div>
             <input
               accept="image/png"
-              capture=""
               hidden=""
               type="file"
             />
@@ -1207,7 +1199,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             </div>
             <input
               accept="image/png"
-              capture=""
               hidden=""
               type="file"
             />
@@ -1454,7 +1445,6 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
     </div>
     <input
       accept=""
-      capture=""
       hidden=""
       multiple=""
       type="file"
@@ -1701,7 +1691,6 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
       </div>
       <input
         accept="image/png"
-        capture=""
         hidden=""
         multiple=""
         type="file"
@@ -1869,7 +1858,6 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
       </div>
       <input
         accept=""
-        capture=""
         hidden=""
         multiple=""
         type="file"

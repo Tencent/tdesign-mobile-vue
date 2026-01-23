@@ -110,6 +110,6 @@ describe('Badge', () => {
       </Badge>
     ));
     const inner = wrapper.find(`.${name}--basic`);
-    expect(inner.attributes('style').includes(`right: ${offset[0]}px; top: ${offset[1]}px`)).toBeTruthy();
+    expect(inner.attributes('style').includes(`left: calc(100% + ${offset[0]}px); top: ${offset[1]}px`)).toBeTruthy();
   });
 });

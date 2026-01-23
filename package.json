@@ -1,7 +1,7 @@
 {
   "name": "tdesign-mobile-vue",
   "purename": "tdesign",
-  "version": "1.12.1",
+  "version": "1.13.0",
   "description": "tdesign-mobile-vue",
   "author": "TDesign Group",
   "homepage": "https://tdesign.tencent.com/mobile-vue/",
@@ -91,7 +91,7 @@
     "@vueuse/core": "10.7.0",
     "dayjs": "^1.10.7",
     "lodash-es": "^4.17.21",
-    "tdesign-icons-vue-next": "^0.4.1",
+    "tdesign-icons-vue-next": "^0.4.2",
     "tinycolor2": "^1.6.0",
     "validator": "^13.5.1"
   },

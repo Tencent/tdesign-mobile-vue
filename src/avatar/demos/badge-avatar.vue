@@ -1,12 +1,12 @@
 <template>
   <div class="avatar-demo">
     <t-avatar
-      :badge-props="{ dot: true }"
+      :badge-props="{ dot: true, offset: [0, 4] }"
       class="avatar-example"
       image="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
     />
-    <t-avatar :badge-props="{ count: 8, offset: [4, 4] }" class="avatar-example external-class-content">A</t-avatar>
-    <t-avatar :badge-props="{ count: 12, offset: [4, 4] }" :icon="userIcon" class="avatar-example" />
+    <t-avatar :badge-props="{ count: 8, offset: [-6, 6] }" class="avatar-example external-class-content">A</t-avatar>
+    <t-avatar :badge-props="{ count: 12, offset: [-6, 6] }" :icon="userIcon" class="avatar-example" />
   </div>
 </template>
 

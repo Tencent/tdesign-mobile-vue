@@ -1,4 +1,5 @@
 import { defineComponent, ref, computed } from 'vue';
+import type { InputHTMLAttributes } from 'vue';
 import { AddIcon, LoadingIcon, CloseIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
 import { isBoolean } from 'lodash-es';
 import TImage from '../image';
@@ -153,7 +154,7 @@ export default defineComponent({
             type="file"
             multiple={props.multiple}
             hidden
-            capture={props.capture as unknown as boolean}
+            {...(props.capture ? { capture: props.capture as InputHTMLAttributes['capture'] } : {})}
             accept={props.accept}
             onChange={onNormalFileChange}
           />

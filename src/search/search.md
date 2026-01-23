@@ -11,6 +11,7 @@ autocompleteOptions | Array | - | 【讨论中】联想词列表，如果不存�
 center | Boolean | false | 是否居中 | N
 clearTrigger | String | always | 清空图标触发方式，仅在输入框有值时有效。可选项：always / focus | N
 clearable | Boolean | true | 是否可清空 | N
+cursorColor | String | #0052d9 | `1.12.2`。光标颜色 | N
 disabled | Boolean | - | 禁用状态 | N
 focus | Boolean | false | 是否聚焦 | N
 leftIcon | String / Slot / Function | 'search' | 左侧图标。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
@@ -51,6 +52,7 @@ submit | `(context: { value: string; e: KeyboardEvent })` | 提交时触发，�
 --td-search-bg-color | @bg-color-secondarycontainer | -
 --td-search-clear-icon-color | @text-color-placeholder | -
 --td-search-clear-icon-size | 24px | -
+--td-search-cursor-color | @brand-color | -
 --td-search-font | @font-body-large | -
 --td-search-height | 40px | -
 --td-search-icon-color | @text-color-placeholder | -

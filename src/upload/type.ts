@@ -49,7 +49,7 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    * 图片选取模式，可选值为 camera (直接调起摄像头)
    * @default ''
    */
-  capture?: string;
+  capture?: string | boolean;
   /**
    * 上传请求所需的额外字段，默认字段有 `file`，表示文件信息。可以添加额外的文件名字段，如：`{file_name: "custom-file-name.txt"}`。`autoUpload=true` 时有效。也可以使用 `formatRequest` 完全自定义上传请求的字段
    */

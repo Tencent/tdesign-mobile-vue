@@ -10,7 +10,7 @@ import { PropType } from 'vue';
 export default {
   /** 指定容器对应的NodesRef节点为组件的外部容器，滚动时组件会始终保持在容器范围内，当组件即将超出容器底部时，会返回原位置 */
   container: {
-    type: Object as PropType<TdStickyProps['container']>,
+    type: [String, Object] as PropType<TdStickyProps['container']>,
   },
   /** 是否禁用组件 */
   disabled: Boolean,

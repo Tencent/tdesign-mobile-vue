@@ -12,7 +12,7 @@ count | String / Number / Slot / Function | 0 | 徽标右上角内容。可以�
 dot | Boolean | false | 是否为红点 | N
 maxCount | Number | 99 | 封顶的数字值 | N
 offset | Array | - | 设置状态点的位置偏移，示例：[-10, 20] 或 ['10em', '8rem']。TS 类型：`Array<string \| number>` | N
-shape | String | circle | 形状。可选项：circle/square/bubble/ribbon | N
+shape | String | circle | 徽标形状，其中 ribbon 和 ribbon-right 等效。可选项：circle/square/bubble/ribbon/ribbon-right/ribbon-left/triangle-right/triangle-left | N
 showZero | Boolean | false | 当数值为 0 时，是否展示徽标 | N
 size | String | medium | 尺寸。可选项：medium/large | N
 
@@ -27,9 +27,10 @@ size | String | medium | 尺寸。可选项：medium/large | N
 --td-badge-bg-color | @error-color | -
 --td-badge-border-radius | 2px | -
 --td-badge-bubble-border-radius | 10px 10px 10px 1px | -
+--td-badge-content-text-color | @text-color-primary | -
 --td-badge-dot-size | 8px | -
 --td-badge-font | @font-mark-extraSmall | -
 --td-badge-large-font | @font-mark-small | -
 --td-badge-large-height | 20px | -
 --td-badge-large-padding | 5px | -
---td-badge-text-color | @font-white-1 | -
+--td-badge-text-color | @text-color-anti | -
