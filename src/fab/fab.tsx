@@ -82,14 +82,20 @@ export default defineComponent({
     const getSwitchButtonSafeAreaXY = (x: number, y: number) => {
       const bottomThreshold = reconvertUnit(props.yBounds?.[1] ?? 0);
       const topThreshold = reconvertUnit(props.yBounds?.[0] ?? 0);
+      const leftBound = reconvertUnit(props.xBounds?.[0] ?? 0);
+      const rightBound = reconvertUnit(props.xBounds?.[1] ?? 0);
 
       const docWidth = Math.min(window.innerWidth, document.documentElement.clientWidth, screen.width);
       const docHeight = Math.min(window.innerHeight, document.documentElement.clientHeight, screen.height);
 
       const maxY = docHeight - fabButtonSize.value.height - topThreshold;
-      const maxX = docWidth - fabButtonSize.value.width;
+      // x 是 right 值：
+      // - 最小 right 值是右边界（即 right = rightBound，最靠近右边）
+      // - 最大 right 值是 docWidth - width - leftBound（即 left = leftBound，最靠近左边）
+      const minX = rightBound;
+      const maxX = docWidth - fabButtonSize.value.width - leftBound;
 
-      x = Math.max(0, Math.min(maxX, x));
+      x = Math.max(minX, Math.min(maxX, x));
       y = Math.max(bottomThreshold, Math.min(maxY, y));
 
       return [x, y];
@@ -104,6 +110,34 @@ export default defineComponent({
       switchPos.value.startY = 0;
       switchPos.value.hasMoved = false;
       setSwitchPosition(switchPos.value.endX, switchPos.value.endY);
+
+      // 自动吸附
+      if (props.magnet) {
+        handleMagnet();
+      }
+    };
+
+    const handleMagnet = () => {
+      const docWidth = Math.min(window.innerWidth, document.documentElement.clientWidth, screen.width);
+      const currentRight = btnSwitchPos.value.x;
+      const currentLeft = docWidth - fabButtonSize.value.width - currentRight;
+      const leftBound = reconvertUnit(props.xBounds?.[0] ?? 0);
+      const rightBound = reconvertUnit(props.xBounds?.[1] ?? 0);
+
+      if (props.magnet === 'left') {
+        // 固定吸附到左边（right = docWidth - width - leftBound）
+        setSwitchPosition(docWidth - fabButtonSize.value.width - leftBound, switchPos.value.y);
+      } else if (props.magnet === 'right') {
+        // 固定吸附到右边（right = rightBound）
+        setSwitchPosition(rightBound, switchPos.value.y);
+      } else if (props.magnet === true) {
+        // 自动判断吸附到左右两侧
+        if (currentLeft < currentRight) {
+          setSwitchPosition(docWidth - fabButtonSize.value.width - leftBound, switchPos.value.y);
+        } else {
+          setSwitchPosition(rightBound, switchPos.value.y);
+        }
+      }
     };
 
     const setSwitchPosition = (switchX: number, switchY: number) => {
@@ -121,9 +155,16 @@ export default defineComponent({
 
     const fabStyle = computed(() => {
       const { x, y } = btnSwitchPos.value;
+      // TODO: 验收之后可移除
+      const transition = !switchPos.value.hasMoved ? 'transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)' : '';
 
-      return `right: ${x}px;bottom: ${y}px;`;
+      return `right: ${x}px;bottom: ${y}px;${transition};`;
     });
+
+    const fabClasses = computed(() => [
+      `${fabClass.value}`,
+      { [`${fabClass.value}--animation`]: !switchPos.value.hasMoved && props.magnet },
+    ]);
 
     onMounted(() => {
       mounted.value = true;
@@ -183,7 +224,7 @@ export default defineComponent({
       const customNode = renderTNodeJSX('default');
       return (
         <div
-          class={fabClass.value}
+          class={fabClasses.value}
           style={mounted.value && props.draggable ? fabStyle.value : props.style}
           onClick={handleClick}
           onTouchstart={onTouchStart}
