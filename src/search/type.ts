@@ -106,7 +106,10 @@ export interface TdSearchProps {
    * 搜索关键词发生变化时触发，可能场景有：搜索框内容发生变化、点击联想词
    * @default ''
    */
-  onChange?: (value: string, context: { e?: InputEvent | MouseEvent }) => void;
+  onChange?: (
+    value: string,
+    context: { trigger: 'input-change' | 'option-click' | 'clear'; e?: InputEvent | MouseEvent },
+  ) => void;
   /**
    * 点击清除时触发
    * @default ''
