@@ -54,7 +54,7 @@ export default defineComponent({
       [loading, loadingBarHeight],
       ([val], [prevVal]) => {
         if (val) {
-          distance.value = loadingBarHeight.value;
+          distance.value = Math.round(loadingBarHeight.value);
         }
         if (!val && prevVal) {
           afterLoading.value = true;
@@ -66,13 +66,14 @@ export default defineComponent({
     );
 
     const status = computed(() => {
+      const reconvertHeight = Math.round(reconvertUnit(props.loadingBarHeight));
       if (afterLoading.value) {
         return 'success';
       }
       if (!loading.value && distance.value === 0) {
         return 'initial';
       }
-      if (distance.value < reconvertUnit(props.loadingBarHeight)) {
+      if (distance.value < reconvertHeight) {
         return 'pulling';
       }
       if (loading.value) {
