@@ -38,16 +38,15 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   autoUpload?: boolean;
   /**
-   * 如果是自动上传模式 `autoUpload=true`，表示单个文件上传之前的钩子函数，若函数返回值为 `false` 则表示不上传当前文件。<br/>如果是非自动上传模式 `autoUpload=false`，函数返回值为 `false` 时表示从上传文件中剔除当前文件
-   */
-  /**
    * 如果是自动上传模式 `autoUpload=true`，表示全部文件上传之前的钩子函数，函数参数为上传的文件，函数返回值决定是否继续上传，若返回值为 `false` 则终止上传。<br/>如果是非自动上传模式 `autoUpload=false`，则函数返回值为 `false` 时表示本次选中的文件不会加入到文件列表中，即不触发 `onChange` 事件
    */
   beforeAllFilesUpload?: (file: UploadFile[]) => boolean | Promise<boolean>;
+  /**
+   * 如果是自动上传模式 `autoUpload=true`，表示单个文件上传之前的钩子函数，若函数返回值为 `false` 则表示不上传当前文件。<br/>如果是非自动上传模式 `autoUpload=false`，函数返回值为 `false` 时表示从上传文件中剔除当前文件
+   */
   beforeUpload?: (file: UploadFile) => boolean | Promise<boolean>;
   /**
    * 图片选取模式，可选值为 camera (直接调起摄像头)
-   * @default ''
    */
   capture?: string | boolean;
   /**
@@ -58,6 +57,10 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    * 是否禁用组件
    */
   disabled?: boolean;
+  /**
+   * 是否启用拖拽上传
+   */
+  draggable?: boolean;
   /**
    * 用于完全自定义文件列表界面内容(UI)，单文件和多文件均有效
    */
@@ -93,14 +96,14 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   imageProps?: ImageProps;
   /**
-   * 用于控制文件上传数量，值为 0 则不限制
-   * @default 0
-   */
-  /**
    * 多个文件是否作为一个独立文件包，整体替换，整体删除。不允许追加文件，只允许替换文件。`theme=file-flow` 时有效
    * @default false
    */
   isBatchUpload?: boolean;
+  /**
+   * 用于控制文件上传数量，值为 0 则不限制
+   * @default 0
+   */
   max?: number;
   /**
    * HTTP 请求类型
@@ -108,19 +111,19 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   method?: 'POST' | 'GET' | 'PUT' | 'OPTIONS' | 'PATCH' | 'post' | 'get' | 'put' | 'options' | 'patch';
   /**
+   * 模拟进度间隔时间，单位：毫秒，默认：300。由于原始的上传请求，小文件上传进度只有 0 和 100，故而新增模拟进度，每间隔 `mockProgressDuration` 毫秒刷新一次模拟进度。小文件设置小一点，大文件设置大一点。注意：当 `useMockProgress` 为真时，当前设置有效
+   */
+  mockProgressDuration?: number;
+  /**
    * 支持多文件上传
    * @default false
    */
+  multiple?: boolean;
   /**
    * 文件上传时的名称
    * @default file
    */
   name?: string;
-  /**
-   * 模拟进度间隔时间，单位：毫秒，默认：300。由于原始的上传请求，小文件上传进度只有 0 和 100，故而新增模拟进度，每间隔 `mockProgressDuration` 毫秒刷新一次模拟进度。小文件设置小一点，大文件设置大一点。注意：当 `useMockProgress` 为真时，当前设置有效
-   */
-  mockProgressDuration?: number;
-  multiple?: boolean;
   /**
    * 是否支持图片预览，文件没有预览
    * @default true
@@ -140,15 +143,15 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   sizeLimit?: number | SizeLimitObj;
   /**
-   * 是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传
-   * @default true
-   */
-  useMockProgress?: boolean;
-  /**
    * 是否在同一个请求中上传全部文件，默认一个请求上传一个文件。多文件上传时有效
    * @default false
    */
   uploadAllFilesInOneRequest?: boolean;
+  /**
+   * 是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传
+   * @default true
+   */
+  useMockProgress?: boolean;
   /**
    * 已上传文件列表，同 `files`。TS 类型：`UploadFile`
    * @default []
@@ -165,14 +168,14 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   modelValue?: Array<T>;
   /**
-   * 点击「取消上传」时触发
-   */
-  onCancelUpload?: () => void;
-  /**
    * 上传请求时是否携带 cookie
    * @default false
    */
   withCredentials?: boolean;
+  /**
+   * 点击「取消上传」时触发
+   */
+  onCancelUpload?: () => void;
   /**
    * 已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源
    */
@@ -181,6 +184,14 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    * 点击上传区域时触发
    */
   onClickUpload?: (context: { e: MouseEvent }) => void;
+  /**
+   * 拖拽开始时触发
+   */
+  onDrag?: () => void;
+  /**
+   * 拖拽结束后触发，返回上传的文件列表（拖拽后的文件顺序）
+   */
+  onDrop?: (value: Array<T>) => void;
   /**
    * 上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构。如果是多文件多请求上传场景，请到事件 `onOneFileFail` 中查看 `response`
    */
@@ -306,7 +317,14 @@ export interface UploadChangeContext {
   files?: UploadFile[];
 }
 
-export type UploadChangeTrigger = 'add' | 'remove' | 'abort' | 'progress-success' | 'progress' | 'progress-fail';
+export type UploadChangeTrigger =
+  | 'add'
+  | 'remove'
+  | 'abort'
+  | 'progress-success'
+  | 'progress'
+  | 'progress-fail'
+  | 'sort';
 
 export interface UploadFailContext {
   e?: ProgressEvent;
