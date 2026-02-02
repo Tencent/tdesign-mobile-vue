@@ -1,4 +1,4 @@
-import { computed, h, ref, toRefs, ComputedRef } from 'vue';
+import { computed, h, ref, toRefs, ComputedRef, Ref } from 'vue';
 import { isFunction, isString } from 'lodash-es';
 import { SizeLimitObj, TdUploadProps, UploadChangeContext, UploadFile, UploadRemoveContext } from '../type';
 import useVModel from '../../hooks/useVModel';
@@ -20,12 +20,30 @@ import { getFileList, getFileUrlByFileRaw } from '../../_common/js/upload/utils'
 // @ts-ignore
 export type ValidateParams = Parameters<TdUploadProps['onValidate']>[0];
 
-export default function useUpload(props: TdUploadProps) {
+export interface UseUpload {
+  toUploadFiles: Ref<UploadFile[]>;
+  uploadValue: Ref<UploadFile[]>;
+  displayFiles: ComputedRef<UploadFile[]>;
+  sizeOverLimitMessage: Ref<string>;
+  uploading: Ref<boolean>;
+  inputRef: Ref<HTMLInputElement | undefined>;
+  disabled: Ref<boolean | undefined>;
+  xhrReq: Ref<{ files: UploadFile[]; xhrReq: XMLHttpRequest }[]>;
+  uploadFilePercent: (params: { file: UploadFile; percent: number }) => void;
+  uploadFiles: (toFiles?: UploadFile[]) => void;
+  onFileChange: (files: File[]) => void;
+  onNormalFileChange: (e: Event) => void;
+  onInnerRemove: (p: UploadRemoveContext) => void;
+  cancelUpload: (context?: { file?: UploadFile; e?: MouseEvent }) => void;
+  setUploadValue: (value: UploadFile[], context: UploadChangeContext) => void;
+}
+
+export default function useUpload(props: TdUploadProps): UseUpload {
   const inputRef = ref<HTMLInputElement>();
   const { disabled, autoUpload, isBatchUpload, multiple, files, modelValue, defaultFiles } = toRefs(props);
   // @ts-ignore
   const [uploadValue, setUploadValue] = useVModel(files, modelValue, defaultFiles.value, props.onChange, 'files');
-  const xhrReq = ref<{ files: UploadFile[]; xhrReq: XMLHttpRequest }[]>([]);
+  const xhrReq: UseUpload['xhrReq'] = ref([]);
   const toUploadFiles = ref<UploadFile[]>([]);
   const sizeOverLimitMessage = ref('');
 
@@ -385,5 +403,6 @@ export default function useUpload(props: TdUploadProps) {
     onNormalFileChange,
     onInnerRemove,
     cancelUpload,
+    setUploadValue,
   };
 }
