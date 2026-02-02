@@ -106,7 +106,7 @@ export default defineComponent({
 
     return () => {
       return (
-        <div class={imageClasses.value}>
+        <div class={imageClasses.value} onClick={props.onClick}>
           {maskContent.value}
           <picture>
             {props.srcset &&
@@ -120,7 +120,6 @@ export default defineComponent({
               referrerpolicy={props.referrerpolicy}
               onLoad={handleImgLoadCompleted}
               onError={handleImgLoadError}
-              onClick={props.onClick}
             />
           </picture>
         </div>
