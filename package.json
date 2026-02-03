@@ -201,6 +201,11 @@
       "prettier --write"
     ]
   },
+  "pnpm": {
+    "overrides": {
+      "@vue/runtime-core": "3.3.8"
+    }
+  },
   "vetur": {
     "tags": "helper/tags.json",
     "attributes": "helper/attributes.json"
