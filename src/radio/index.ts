@@ -10,7 +10,7 @@ export * from './type';
 export type RadioProps = TdRadioProps;
 export type RadioGroupProps = TdRadioGroupProps;
 
-export const RadioGroup = withInstall(_RadioGroup);
+export const RadioGroup: WithInstallType<typeof _RadioGroup> = withInstall(_RadioGroup);
 
 export const Radio: WithInstallType<typeof _Radio> = withInstall(_Radio);
 export default Radio;

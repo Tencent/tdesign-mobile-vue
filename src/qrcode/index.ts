@@ -1,5 +1,5 @@
 import _QRCode from './qrcode';
-import { withInstall } from '../shared';
+import { withInstall, WithInstallType } from '../shared';
 import { TdQRCodeProps } from './type';
 
 import './style';
@@ -7,6 +7,6 @@ import './style';
 export type QRCodeProps = TdQRCodeProps;
 export * from './type';
 
-export const QRCode = withInstall(_QRCode, 'TQrcode');
+export const QRCode: WithInstallType<typeof _QRCode> = withInstall(_QRCode, 'TQrcode');
 
 export default QRCode;
