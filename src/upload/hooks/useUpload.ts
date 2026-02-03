@@ -34,7 +34,7 @@ export default function useUpload(props: TdUploadProps): {
   onFileChange: (files: File[]) => void;
   onNormalFileChange: (e: Event) => void;
   onInnerRemove: (context: UploadRemoveContext) => void;
-  cancelUpload: () => void;
+  cancelUpload: (context?: { file?: UploadFile; e?: MouseEvent }) => void;
 } {
   const inputRef = ref<HTMLInputElement>();
   const { disabled, autoUpload, isBatchUpload, multiple, files, modelValue, defaultFiles } = toRefs(props);

@@ -27,10 +27,7 @@ function Toast(props: string | Partial<ToastOptions>): DefineComponent<ToastOpti
     ...parseOptions(props),
   };
 
-  if (instance) {
-    instance.clear();
-  }
-
+  instance?.clear();
   instance = vueToast;
 
   instance.clear = () => {
@@ -58,28 +55,11 @@ function Toast(props: string | Partial<ToastOptions>): DefineComponent<ToastOpti
   return instance;
 }
 
-Toast.clear = () => {
-  if (instance) {
-    instance.clear();
-  }
-};
-
-(['loading', 'success', 'warning', 'error'] as ToastOptions['theme'][]).forEach((type): void => {
-  if (!type) {
-    return;
-  }
-  Toast[type] = (options: ToastOptions | string) => {
-    let props = { message: '', theme: type } as unknown as ToastOptions;
-
-    if (typeof options === 'string') {
-      props.message = options;
-    } else {
-      props = { ...props, ...options };
-    }
-
-    return Toast(props);
-  };
-});
+Toast.clear = () => instance?.clear();
+Toast.error = (options: ToastOptions | string) => Toast({ ...parseOptions(options), theme: 'error' });
+Toast.loading = (options: ToastOptions | string) => Toast({ ...parseOptions(options), theme: 'loading' });
+Toast.warning = (options: ToastOptions | string) => Toast({ ...parseOptions(options), theme: 'warning' });
+Toast.success = (options: ToastOptions | string) => Toast({ ...parseOptions(options), theme: 'success' });
 
 function parseOptions(message?: Partial<ToastOptions> | string) {
   if (typeof message === 'string') {

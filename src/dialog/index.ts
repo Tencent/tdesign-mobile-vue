@@ -91,8 +91,10 @@ function create(options: Partial<TdDialogProps> | string): DialogInstance {
       } else {
         for (const key in options) {
           if (propsFn.includes(key as DialogPropsFnName)) {
+            // @ts-ignore type safe
             props.value[key] = options[key];
           } else {
+            // @ts-ignore type safe
             params[key] = options[key];
           }
         }
