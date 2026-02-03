@@ -1,4 +1,4 @@
-import { computed, h, ref, toRefs, ComputedRef } from 'vue';
+import { computed, h, ref, toRefs, ComputedRef, Ref } from 'vue';
 import { isFunction, isString } from 'lodash-es';
 import { SizeLimitObj, TdUploadProps, UploadChangeContext, UploadFile, UploadRemoveContext } from '../type';
 import useVModel from '../../hooks/useVModel';
@@ -20,7 +20,22 @@ import { getFileList, getFileUrlByFileRaw } from '../../_common/js/upload/utils'
 // @ts-ignore
 export type ValidateParams = Parameters<TdUploadProps['onValidate']>[0];
 
-export default function useUpload(props: TdUploadProps) {
+export default function useUpload(props: TdUploadProps): {
+  toUploadFiles: Ref<UploadFile[]>;
+  uploadValue: Ref<UploadFile[]>;
+  displayFiles: ComputedRef<UploadFile[]>;
+  sizeOverLimitMessage: Ref<string>;
+  uploading: Ref<boolean>;
+  inputRef: Ref<HTMLInputElement>;
+  disabled: Ref<boolean>;
+  xhrReq: Ref<{ files: UploadFile[]; xhrReq: any }[]>;
+  uploadFilePercent: (params: { file: UploadFile; percent: number }) => void;
+  uploadFiles: (toFiles?: UploadFile[]) => void;
+  onFileChange: (files: File[]) => void;
+  onNormalFileChange: (e: Event) => void;
+  onInnerRemove: (context: UploadRemoveContext) => void;
+  cancelUpload: () => void;
+} {
   const inputRef = ref<HTMLInputElement>();
   const { disabled, autoUpload, isBatchUpload, multiple, files, modelValue, defaultFiles } = toRefs(props);
   // @ts-ignore

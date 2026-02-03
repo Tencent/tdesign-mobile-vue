@@ -1,6 +1,6 @@
 import { createApp, App, h, ref, nextTick } from 'vue';
 import vueDrawer from './drawer';
-import { WithInstallType, isBrowser } from '../shared';
+import { isBrowser } from '../shared';
 import { TdDrawerProps } from './type';
 
 type DrawerOptions = Omit<TdDrawerProps, 'attach'>;
@@ -44,6 +44,6 @@ Drawer.install = (app: App): void => {
   app.config.globalProperties.$drawer = Drawer;
 };
 
-const DrawerPlugin: WithInstallType<typeof Drawer> = Drawer;
+const DrawerPlugin = Drawer as typeof Drawer;
 
 export default DrawerPlugin;

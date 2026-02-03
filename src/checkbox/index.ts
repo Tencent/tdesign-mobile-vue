@@ -1,6 +1,6 @@
 import _Checkbox from './checkbox';
 import _CheckboxGroup from './checkbox-group';
-import { withInstall, WithInstallType } from '../shared';
+import { withInstall } from '../shared';
 
 import './style';
 
@@ -10,6 +10,6 @@ export * from './type';
 export type CheckboxProps = TdCheckboxProps;
 export type CheckboxGroupProps = TdCheckboxGroupProps;
 
-export const Checkbox: WithInstallType<typeof _Checkbox> = withInstall(_Checkbox);
-export const CheckboxGroup: WithInstallType<typeof _CheckboxGroup> = withInstall(_CheckboxGroup);
+export const Checkbox = withInstall(_Checkbox);
+export const CheckboxGroup = withInstall(_CheckboxGroup);
 export default Checkbox;

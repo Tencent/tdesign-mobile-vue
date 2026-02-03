@@ -1,5 +1,5 @@
 import _List from './list';
-import { withInstall, WithInstallType } from '../shared';
+import { withInstall } from '../shared';
 
 import { TdListProps } from './type';
 import './style';
@@ -7,5 +7,5 @@ import './style';
 export * from './type';
 export type ListProps = TdListProps;
 
-export const List: WithInstallType<typeof _List> = withInstall(_List);
+export const List = withInstall(_List);
 export default List;

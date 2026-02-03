@@ -2,7 +2,7 @@ import { createApp, App, DefineComponent } from 'vue';
 import { isObject } from 'lodash-es';
 import vueToast from './toast';
 import { ToastOptions } from './type';
-import { WithInstallType, isBrowser } from '../shared';
+import { isBrowser } from '../shared';
 import { getAttach } from '../shared/dom';
 
 export type ToastProps = ToastOptions;
@@ -109,7 +109,7 @@ type ToastApi = {
   clear: () => void;
 };
 
-export const ToastPlugin: WithInstallType<typeof vueToast> & ToastApi = Toast as any;
+export const ToastPlugin = Toast as typeof Toast & ToastApi;
 export default ToastPlugin;
 
 declare module 'vue' {

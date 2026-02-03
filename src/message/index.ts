@@ -1,6 +1,6 @@
 import { createApp, defineComponent, ref, Ref, h, VNode, App, nextTick } from 'vue';
 import Message from './message';
-import { WithInstallType, isBrowser } from '../shared';
+import { isBrowser } from '../shared';
 import { TdMessageProps, MessageThemeList } from './type';
 
 import './style';
@@ -133,7 +133,7 @@ type MessageApi = {
   closeAll: () => void;
 };
 
-export const MessagePlugin: WithInstallType<typeof Message> & MessageApi = Message as any;
+export const MessagePlugin = Message as typeof Message & MessageApi;
 export default MessagePlugin;
 
 declare module 'vue' {

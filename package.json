@@ -4,6 +4,7 @@
   "version": "1.13.0",
   "description": "tdesign-mobile-vue",
   "author": "TDesign Group",
+  "packageManager": "pnpm@10.2.0",
   "homepage": "https://tdesign.tencent.com/mobile-vue/",
   "bugs": {
     "url": "https://github.com/Tencent/tdesign-mobile-vue/issues"
@@ -131,7 +132,7 @@
     "@vitest/ui": "^3.2.4",
     "@vue/babel-plugin-jsx": "1.1.1",
     "@vue/eslint-config-typescript": "^9.1.0",
-    "@vue/runtime-core": "^3.2.41",
+    "@vue/runtime-core": "3.3.8",
     "@vue/shared": "3.3.8",
     "@vue/test-utils": "2.4.1",
     "autoprefixer": "^10.2.4",
@@ -205,5 +206,10 @@
     "tags": "helper/tags.json",
     "attributes": "helper/attributes.json"
   },
-  "web-types": "helper/web-types.json"
+  "web-types": "helper/web-types.json",
+  "pnpm": {
+    "overrides": {
+      "@vue/runtime-core": "3.3.8"
+    }
+  }
 }
