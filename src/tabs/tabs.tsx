@@ -238,6 +238,7 @@ export default defineComponent({
 
     const readerNav = () => {
       return itemProps.value.map((item, index) => {
+        // @ts-expect-error compatibility
         const badgeProps = item['badge-props'] || item.badgeProps;
         return (
           <div

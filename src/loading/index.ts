@@ -1,5 +1,5 @@
 import _Loading from './loading';
-import { withInstall, WithInstallType } from '../shared';
+import { withInstall } from '../shared';
 
 import { TdLoadingProps } from './type';
 import './style';
@@ -10,5 +10,5 @@ export { default as LoadingPlugin } from './plugin';
 
 export type LoadingProps = TdLoadingProps;
 
-export const Loading: WithInstallType<typeof _Loading> = withInstall(_Loading);
+export const Loading = withInstall(_Loading);
 export default Loading;

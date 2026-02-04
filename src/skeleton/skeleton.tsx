@@ -22,7 +22,7 @@ const ThemeMap: Record<TdSkeletonProps['theme'], SkeletonRowCol> = {
   paragraph: [1, 1, 1, { width: '55%' }],
 };
 
-const getColItemStyle = (obj: SkeletonRowColObj): Styles => {
+const getColItemStyle = (obj: SkeletonRowColObj & Record<string, any>): Styles => {
   const styleName = [
     'width',
     'height',
@@ -33,7 +33,7 @@ const getColItemStyle = (obj: SkeletonRowColObj): Styles => {
     'background',
     'backgroundColor',
     'borderRadius',
-  ];
+  ] as const;
   const style: Styles = {};
   styleName.forEach((name) => {
     if (name in obj) {

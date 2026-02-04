@@ -7,6 +7,7 @@ export const getOptionListBySlots = (nodes: VNode[]) => {
   const arr: Array<CheckboxOptionObj> = [];
   nodes?.forEach((node) => {
     const option = node.props as CheckboxOptionObj;
+    // @ts-ignore TODO
     if (option?.['check-all'] === '' || option?.['check-all'] === true) {
       option.checkAll = true;
     }

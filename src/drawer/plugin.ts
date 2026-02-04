@@ -1,11 +1,11 @@
 import { createApp, App, h, ref, nextTick } from 'vue';
-import vueDrawer from './drawer';
-import { WithInstallType, isBrowser } from '../shared';
+import Drawer from './drawer';
+import { isBrowser } from '../shared';
 import { TdDrawerProps } from './type';
 
 type DrawerOptions = Omit<TdDrawerProps, 'attach'>;
 
-const Drawer = (options: DrawerOptions) => {
+export const DrawerPlugin = (options: DrawerOptions) => {
   if (!isBrowser) return;
   const root = document.createElement('div');
   document.body.appendChild(root);
@@ -14,7 +14,7 @@ const Drawer = (options: DrawerOptions) => {
   const destroyOnClose = ref(false);
 
   createApp(() =>
-    h(vueDrawer, { ...options, visible: visible.value, destroyOnClose: destroyOnClose.value, ...props.value }),
+    h(Drawer, { ...options, visible: visible.value, destroyOnClose: destroyOnClose.value, ...props.value }),
   ).mount(root);
 
   const handler = {
@@ -39,11 +39,8 @@ const Drawer = (options: DrawerOptions) => {
   return handler;
 };
 
-Drawer.install = (app: App): void => {
-  // 添加插件入口
-  app.config.globalProperties.$drawer = Drawer;
+DrawerPlugin.install = (app: App): void => {
+  app.config.globalProperties.$drawer = DrawerPlugin;
 };
-
-const DrawerPlugin: WithInstallType<typeof Drawer> = Drawer;
 
 export default DrawerPlugin;

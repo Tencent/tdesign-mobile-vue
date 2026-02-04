@@ -64,13 +64,11 @@ export default defineComponent({
       const icon = renderTNodeJSX('icon');
 
       const readerText = () => {
-        if (contentIsArray.value) {
+        if (Array.isArray(props.content) && props.content.length === 2) {
           return innerChecked.value ? props.content[0] : props.content[1];
         }
 
-        const content = renderContent('default', 'content');
-
-        return content;
+        return renderContent('default', 'content');
       };
 
       return (

@@ -9,8 +9,6 @@
     "noImplicitThis": true,
     "strictNullChecks": false,
     "removeComments": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "ignoreDeprecations": "5.0",
     "resolveJsonModule": true,
     "importHelpers": true,
     "isolatedModules": false,
@@ -22,16 +20,15 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "allowJs": true,
-    "baseUrl": "./",
     "paths": {
       "@/*": [
-        "src/*"
+        "./src/*"
       ],
       "tdesign-mobile-vue": [
-        "src"
+        "./src"
       ],
       "tdesign-mobile-vue/es/locale/*": [
-        "src/locale/*"
+        "./src/locale/*"
       ]
     },
     "types": [

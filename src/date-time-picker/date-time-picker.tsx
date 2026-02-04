@@ -72,6 +72,7 @@ export default defineComponent({
     };
     const curDate = ref(calcDate(innerValue.value));
 
+    // @ts-ignore TODO
     const valueOfPicker = computed(() => meaningColumn.value.map((item) => curDate.value[item]().toString()));
 
     // 每次pick后，根据start,end生成最新的columns
@@ -184,6 +185,7 @@ export default defineComponent({
     const onConfirm = (value: string[]) => {
       const dayObject = value.reduce((map, cur, index) => {
         const type = meaningColumn.value[index];
+        // @ts-ignore TODO
         map[type] = cur;
         return map;
       }, {});
