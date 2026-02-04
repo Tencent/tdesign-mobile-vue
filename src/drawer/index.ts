@@ -9,7 +9,6 @@ export type DrawerProps = TdDrawerProps;
 
 export * from './type';
 export * from './plugin';
-export { default as DrawerPlugin } from './plugin';
 
 export const Drawer = withInstall(_Drawer);
 export default Drawer;

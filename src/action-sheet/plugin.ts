@@ -55,17 +55,12 @@ function createInstance(props: Partial<TdActionSheetProps>): any {
   return instance;
 }
 
-type ActionSheetApi = {
-  /** 关闭ActionSheet */
-  close: (trigger?: any) => void;
+export const ActionSheetPlugin = {
   /** 显示ActionSheet */
-  show: (props: Partial<TdActionSheetProps>) => void;
-};
-
-export const ActionSheetPlugin: ActionSheetApi = {
   show(props: Partial<TdActionSheetProps>) {
     create(props);
   },
+  /** 关闭ActionSheet */
   close(trigger?: any) {
     if (instance) {
       instance.close(trigger);
