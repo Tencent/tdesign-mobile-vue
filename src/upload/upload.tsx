@@ -4,7 +4,7 @@ import { AddIcon, LoadingIcon, CloseIcon, CloseCircleIcon } from 'tdesign-icons-
 import { isBoolean } from 'lodash-es';
 import TImage from '../image';
 import TImageViewer from '../image-viewer';
-import { TdUploadProps, UploadFile, UploadRemoveContext } from './type';
+import type { TdUploadProps, UploadFile } from './type';
 import UploadProps from './props';
 import config from '../config';
 import useUpload from './hooks/useUpload';

@@ -1,10 +1,10 @@
-import { ref, Ref } from 'vue';
-import { TdUploadProps, UploadFile } from '../type';
+import { ComputedRef, ref, Ref } from 'vue';
+import type { TdUploadProps, UploadFile } from '../type';
 
 export default function useDrag(
   props: TdUploadProps,
-  setUploadValue: any,
-  uploadClass: any,
+  setUploadValue: (value: UploadFile[], ...args: any[]) => void,
+  uploadClass: ComputedRef<string>,
   listRef: Ref<HTMLElement | undefined>,
 ) {
   const dragIndex = ref<number>(-1);
@@ -53,7 +53,7 @@ export default function useDrag(
     }
   };
 
-  const performSort = (index: number, displayFiles: UploadFile[], e: any) => {
+  const performSort = (index: number, displayFiles: UploadFile[], e: DragEvent | TouchEvent) => {
     if (index === -1 || index === dragIndex.value) {
       pendingTargetIndex = -1;
       return;
@@ -130,7 +130,7 @@ export default function useDrag(
       dragIndex.value = index;
       updateDragBaseData();
     },
-    onDragover: (e: DragEvent, index: number, files: any) => {
+    onDragover: (e: DragEvent, index: number, files: UploadFile[]) => {
       if (!props.draggable || dragIndex.value === -1) return;
       e.preventDefault();
       performSort(index, files, e);
