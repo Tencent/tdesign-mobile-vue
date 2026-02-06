@@ -136,7 +136,7 @@ export default defineComponent({
       scrollToByIndex(index);
     };
 
-    const handleRootScroll = throttle((e: UIEvent) => {
+    const handleRootScroll = throttle((e: Event) => {
       const scrollTop = indexesRoot.value?.scrollTop ?? 0;
       setAnchorOnScroll(scrollTop);
     }, 1000 / 30);
