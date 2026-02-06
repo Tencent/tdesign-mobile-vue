@@ -184,11 +184,12 @@ export default defineComponent({
       }
       if (props.data?.length) {
         return props.data?.map((tr_item, tr_index) => {
+          const rowId = get(tr_item, props.rowKey || 'id') as string | number;
           const { style, classes } = getRowFixedStyles(
-            get(tr_item, props.rowKey || 'id'),
+            rowId,
             tr_index,
             props.data?.length || 0,
-            props.fixedRows,
+            props.fixedRows as TdBaseTableProps['fixedRows'],
             rowAndColFixedPosition.value,
             tableRowFixedClasses,
           );
