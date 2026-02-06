@@ -7,9 +7,10 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { ImageInfo } from 'tdesign-mobile-vue';
 
 const visible = ref(false);
-const images = [
+const images = ref<ImageInfo[]>([
   {
     url: 'https://tdesign.gtimg.com/mobile/demos/swiper1.png',
     align: 'start',
@@ -22,5 +23,5 @@ const images = [
     url: 'https://tdesign.gtimg.com/mobile/demos/swiper2.png',
     align: 'center',
   },
-];
+]);
 </script>
