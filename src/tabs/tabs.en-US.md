@@ -53,7 +53,7 @@ Name | Default Value | Description
 -- | -- | --
 --td-tab-border-color | @component-stroke | -
 --td-tab-font | @font-body-medium | -
---td-tab-icon-size | 16px | -
+--td-tab-icon-size | 18px | -
 --td-tab-item-active-color | @brand-color | -
 --td-tab-item-color | @text-color-primary | -
 --td-tab-item-disabled-color | @text-color-disabled | -

@@ -11,15 +11,20 @@ export default defineComponent({
     label: TabPanelProps.label,
     icon: TabPanelProps.icon,
   },
-  setup(props) {
+  setup() {
     const renderTNodeJSX = useTNodeJSX();
     const renderTNodeContent = useContent();
 
-    return () => (
-      <div>
-        {renderTNodeJSX('icon')}
-        {renderTNodeContent('default', 'label')}
-      </div>
-    );
+    return () => {
+      const iconContent = renderTNodeJSX('icon');
+      const labelContent = renderTNodeContent('default', 'label');
+
+      return (
+        <>
+          {iconContent && <div class={`${prefix}-tabs__icon`}>{iconContent}</div>}
+          {labelContent}
+        </>
+      );
+    };
   },
 });
