@@ -14,7 +14,6 @@ import { TdLoadingProps } from '../loading/type';
 import { useConfig } from '../config-provider/useConfig';
 import { useTNodeJSX } from '../hooks/tnode';
 import { formatClassNames, formatRowAttributes, formatRowClassNames } from './utils';
-import { RowAndColFixedPosition } from './interface';
 
 const { prefix } = config;
 
@@ -191,7 +190,7 @@ export default defineComponent({
             tr_index,
             props.data?.length || 0,
             props.fixedRows as TdBaseTableProps['fixedRows'],
-            rowAndColFixedPosition.value as RowAndColFixedPosition,
+            rowAndColFixedPosition.value,
             tableRowFixedClasses,
           );
 
