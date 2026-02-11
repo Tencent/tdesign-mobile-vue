@@ -115,7 +115,7 @@ export default defineComponent({
       const readerLeftIcon = () => {
         const leftIcon = renderTNodeJSX('leftIcon');
         if (leftIcon === 'search') {
-          return <TSearchIcon size="24px" />;
+          return <TSearchIcon />;
         }
         return renderTNodeJSX('leftIcon');
       };
@@ -127,7 +127,7 @@ export default defineComponent({
         ) {
           return (
             <div class={`${searchClass.value}__clear`} onClick={handleClear}>
-              <TIconClear size="24" />
+              <TIconClear />
             </div>
           );
         }
