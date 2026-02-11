@@ -15,11 +15,16 @@ export default defineComponent({
     const renderTNodeJSX = useTNodeJSX();
     const renderTNodeContent = useContent();
 
-    return () => (
-      <>
-        {renderTNodeJSX('icon')}
-        {renderTNodeContent('default', 'label')}
-      </>
-    );
+    return () => {
+      const iconContent = renderTNodeJSX('icon');
+      const labelContent = renderTNodeContent('default', 'label');
+
+      return (
+        <>
+          {iconContent && <div class={`${prefix}-tabs__icon`}>{iconContent}</div>}
+          {labelContent}
+        </>
+      );
+    };
   },
 });
