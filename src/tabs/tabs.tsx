@@ -10,7 +10,6 @@ import {
   readonly,
   Fragment,
   watch,
-  CSSProperties,
   onActivated,
   h,
   RendererNode,
