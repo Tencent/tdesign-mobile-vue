@@ -64,7 +64,7 @@ export default defineComponent({
 
     const inputValueChangeHandle = (e: Event) => {
       const { value } = e.target as HTMLInputElement;
-      setSearchValue(getValueByLimitNumber(value));
+      setSearchValue(getValueByLimitNumber(value), { trigger: 'input-change', e });
       nextTick(() => setInputValue(searchValue.value));
     };
 
@@ -79,7 +79,7 @@ export default defineComponent({
     };
 
     const handleClear = (e: MouseEvent) => {
-      setSearchValue('');
+      setSearchValue('', { trigger: 'clear', e });
       focused.value = true;
       props.onClear?.({ e });
     };
@@ -93,7 +93,7 @@ export default defineComponent({
     };
 
     const handleCompositionend = (e: CompositionEvent) => {
-      inputValueChangeHandle(e);
+      inputValueChangeHandle(e as unknown as Event);
     };
 
     const handleAction = (e: MouseEvent) => {
@@ -143,9 +143,9 @@ export default defineComponent({
         return null;
       };
 
-      const onSelectResultItem = (params: { item: string }) => {
+      const onSelectOption = (params: { item: string; e: MouseEvent }) => {
         isShowResultList.value = false;
-        setSearchValue(params.item);
+        setSearchValue(params.item, { trigger: 'option-click', e: params.e });
       };
 
       const highlightSearchValue = (item: string, searchValue: string) => {
@@ -167,7 +167,7 @@ export default defineComponent({
           {
             key: params.index,
             class: `${searchClass.value}__result-item`,
-            onClick: () => onSelectResultItem({ item: params.item }),
+            onClick: (context: { e: MouseEvent }) => onSelectOption({ item: params.item, e: context.e }),
           },
           {
             title: () => highlightSearchValue(params.item, searchValue.value),
