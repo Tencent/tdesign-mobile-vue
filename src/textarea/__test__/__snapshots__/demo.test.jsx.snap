@@ -175,6 +175,7 @@ exports[`Textarea > Textarea disabledVue demo works fine 1`] = `
       name=""
       placeholder="请输入文字"
       style="caret-color: #0052d9;"
+      value="不可编辑文字"
     />
     <!---->
   </div>
@@ -222,6 +223,7 @@ exports[`Textarea > Textarea maxcharacterVue demo works fine 1`] = `
       name="标签文字"
       placeholder="请输入文字"
       style="caret-color: #0052d9;"
+      value=""
     />
     <div
       class="t-textarea__indicator"
@@ -250,6 +252,7 @@ exports[`Textarea > Textarea maxlengthVue demo works fine 1`] = `
       name="标签文字"
       placeholder="请输入文字"
       style="caret-color: #0052d9;"
+      value=""
     />
     <div
       class="t-textarea__indicator"
@@ -430,6 +433,7 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
             name="标签文字"
             placeholder="请输入文字"
             style="caret-color: #0052d9;"
+            value=""
           />
           <div
             class="t-textarea__indicator"
@@ -466,6 +470,7 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
             name="标签文字"
             placeholder="请输入文字"
             style="caret-color: #0052d9;"
+            value=""
           />
           <div
             class="t-textarea__indicator"
@@ -517,6 +522,7 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
             name=""
             placeholder="请输入文字"
             style="caret-color: #0052d9;"
+            value="不可编辑文字"
           />
           <!---->
         </div>
