@@ -138,7 +138,7 @@
     "@vue/test-utils": "2.4.1",
     "autoprefixer": "^10.2.4",
     "axios": "^1.7.2",
-    "camelcase": "~6.3.0",
+    "camelcase": "~9.0.0",
     "codesandbox": "^2.2.3",
     "commitizen": "^4.2.3",
     "concurrently": "^6.5.1",
