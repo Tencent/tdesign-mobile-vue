@@ -3335,112 +3335,112 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                   class="t-picker-item__item"
                 >
                   
-                  2015 Year
+                  2015 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  2016 Year
+                  2016 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  2017 Year
+                  2017 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  2018 Year
+                  2018 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  2019 Year
+                  2019 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  2020 Year
+                  2020 
                   
                 </li>
                 <li
                   class="t-picker-item__item t-picker-item__item--active"
                 >
                   
-                  2021 Year
+                  2021 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  2022 Year
+                  2022 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  2023 Year
+                  2023 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  2024 Year
+                  2024 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  2025 Year
+                  2025 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  2026 Year
+                  2026 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  2027 Year
+                  2027 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  2028 Year
+                  2028 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  2029 Year
+                  2029 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  2030 Year
+                  2030 
                   
                 </li>
                 
@@ -3458,84 +3458,84 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                   class="t-picker-item__item"
                 >
                   
-                  1 Month
+                  1 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  2 Month
+                  2 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  3 Month
+                  3 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  4 Month
+                  4 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  5 Month
+                  5 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  6 Month
+                  6 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  7 Month
+                  7 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  8 Month
+                  8 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  9 Month
+                  9 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  10 Month
+                  10 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  11 Month
+                  11 
                   
                 </li>
                 <li
                   class="t-picker-item__item t-picker-item__item--active"
                 >
                   
-                  12 Month
+                  12 
                   
                 </li>
                 
@@ -3553,217 +3553,217 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                   class="t-picker-item__item"
                 >
                   
-                  1 Date
+                  1 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  2 Date
+                  2 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  3 Date
+                  3 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  4 Date
+                  4 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  5 Date
+                  5 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  6 Date
+                  6 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  7 Date
+                  7 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  8 Date
+                  8 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  9 Date
+                  9 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  10 Date
+                  10 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  11 Date
+                  11 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  12 Date
+                  12 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  13 Date
+                  13 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  14 Date
+                  14 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  15 Date
+                  15 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  16 Date
+                  16 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  17 Date
+                  17 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  18 Date
+                  18 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  19 Date
+                  19 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  20 Date
+                  20 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  21 Date
+                  21 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  22 Date
+                  22 
                   
                 </li>
                 <li
                   class="t-picker-item__item t-picker-item__item--active"
                 >
                   
-                  23 Date
+                  23 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  24 Date
+                  24 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  25 Date
+                  25 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  26 Date
+                  26 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  27 Date
+                  27 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  28 Date
+                  28 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  29 Date
+                  29 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  30 Date
+                  30 
                   
                 </li>
                 <li
                   class="t-picker-item__item"
                 >
                   
-                  31 Date
+                  31 
                   
                 </li>
                 
@@ -6632,112 +6632,112 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
               class="t-picker-item__item"
             >
               
-              2015 Year
+              2015 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              2016 Year
+              2016 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              2017 Year
+              2017 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              2018 Year
+              2018 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              2019 Year
+              2019 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              2020 Year
+              2020 
               
             </li>
             <li
               class="t-picker-item__item t-picker-item__item--active"
             >
               
-              2021 Year
+              2021 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              2022 Year
+              2022 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              2023 Year
+              2023 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              2024 Year
+              2024 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              2025 Year
+              2025 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              2026 Year
+              2026 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              2027 Year
+              2027 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              2028 Year
+              2028 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              2029 Year
+              2029 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              2030 Year
+              2030 
               
             </li>
             
@@ -6755,84 +6755,84 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
               class="t-picker-item__item"
             >
               
-              1 Month
+              1 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              2 Month
+              2 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              3 Month
+              3 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              4 Month
+              4 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              5 Month
+              5 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              6 Month
+              6 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              7 Month
+              7 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              8 Month
+              8 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              9 Month
+              9 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              10 Month
+              10 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              11 Month
+              11 
               
             </li>
             <li
               class="t-picker-item__item t-picker-item__item--active"
             >
               
-              12 Month
+              12 
               
             </li>
             
@@ -6850,217 +6850,217 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
               class="t-picker-item__item"
             >
               
-              1 Date
+              1 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              2 Date
+              2 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              3 Date
+              3 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              4 Date
+              4 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              5 Date
+              5 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              6 Date
+              6 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              7 Date
+              7 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              8 Date
+              8 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              9 Date
+              9 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              10 Date
+              10 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              11 Date
+              11 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              12 Date
+              12 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              13 Date
+              13 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              14 Date
+              14 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              15 Date
+              15 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              16 Date
+              16 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              17 Date
+              17 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              18 Date
+              18 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              19 Date
+              19 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              20 Date
+              20 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              21 Date
+              21 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              22 Date
+              22 
               
             </li>
             <li
               class="t-picker-item__item t-picker-item__item--active"
             >
               
-              23 Date
+              23 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              24 Date
+              24 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              25 Date
+              25 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              26 Date
+              26 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              27 Date
+              27 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              28 Date
+              28 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              29 Date
+              29 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              30 Date
+              30 
               
             </li>
             <li
               class="t-picker-item__item"
             >
               
-              31 Date
+              31 
               
             </li>
             
