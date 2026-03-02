@@ -46,6 +46,6 @@ Name | Default Value | Description
 --td-tab-bar-active-color | @brand-color | -
 --td-tab-bar-color | @text-color-primary | -
 --td-tab-bar-height | 40px | -
---td-tab-bar-hover-bg-color | rgba(0, 0, 0, .05) | -
+--td-tab-bar-hover-bg-color | rgba(0, 0, 0, 0.05) | -
 --td-tab-bar-spread-border-color | @border-color | -
 --td-tab-bar-spread-shadow | @shadow-3 | -

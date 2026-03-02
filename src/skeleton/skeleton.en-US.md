@@ -17,7 +17,7 @@ theme | String | text | options: avatar/image/text/paragraph | N
 The component provides the following CSS variables, which can be used to customize styles.
 Name | Default Value | Description 
 -- | -- | --
---td-skeleton-animation-flashed | rgba(90%, 90%, 90%, .3) | -
+--td-skeleton-animation-flashed | rgba(90%, 90%, 90%, 0.3) | -
 --td-skeleton-animation-gradient | @text-color-placeholder | -
 --td-skeleton-bg-color | @bg-color-secondarycontainer | -
 --td-skeleton-circle-border-radius | @radius-circle | -

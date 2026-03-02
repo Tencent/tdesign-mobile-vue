@@ -49,8 +49,8 @@ Name | Default Value | Description
 --td-picker-item-color | @text-color-secondary | -
 --td-picker-item-disabled-color | @text-color-disabled | -
 --td-picker-item-height | 40px | -
---td-picker-mask-color-bottom | hsla(0, 0%, 100%, .4) | -
---td-picker-mask-color-top | hsla(0, 0%, 100%, .92) | -
+--td-picker-mask-color-bottom | hsla(0, 0%, 100%, 0.4) | -
+--td-picker-mask-color-top | hsla(0, 0%, 100%, 0.92) | -
 --td-picker-title-color | @text-color-primary | -
 --td-picker-title-font | @font-title-large | -
 --td-picker-toolbar-height | 58px | -
