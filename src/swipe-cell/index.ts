@@ -1,5 +1,5 @@
 import _SwipeCell from './swipe-cell';
-import { withInstall, WithInstallType } from '../shared';
+import { withInstall } from '../shared';
 import { TdSwipeCellProps } from './type';
 
 import './style';
@@ -7,5 +7,5 @@ import './style';
 export * from './type';
 export type SwipeCellProps = TdSwipeCellProps;
 
-export const SwipeCell: WithInstallType<typeof _SwipeCell> = withInstall(_SwipeCell);
+export const SwipeCell = withInstall(_SwipeCell);
 export default SwipeCell;

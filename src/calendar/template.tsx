@@ -204,6 +204,7 @@ export default defineComponent({
       if (date1 instanceof Date) date1 = getYearMonthDay(date1);
       if (date2 instanceof Date) date2 = getYearMonthDay(date2);
       const keys = ['year', 'month', 'date'];
+      // @ts-ignore TODO
       return keys.every((key) => date1[key] === date2[key]);
     };
 

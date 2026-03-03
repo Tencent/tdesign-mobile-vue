@@ -41,10 +41,10 @@ exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -75,10 +75,10 @@ exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -109,10 +109,10 @@ exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -192,10 +192,10 @@ exports[`Tabs > Tabs contentVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -217,10 +217,10 @@ exports[`Tabs > Tabs contentVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -242,10 +242,10 @@ exports[`Tabs > Tabs contentVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        上限六个文字
-                      </div>
+                      
+                      <!---->
+                      上限六个文字
+                      
                     </div>
                     
                   </div>
@@ -333,14 +333,14 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        <div
-                          data-v-402afdd7=""
-                        >
-                          选项
-                        </div>
+                      
+                      <!---->
+                      <div
+                        data-v-402afdd7=""
+                      >
+                        选项
                       </div>
+                      
                     </div>
                     
                   </div>
@@ -362,10 +362,10 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -436,10 +436,10 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -461,10 +461,10 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -486,10 +486,10 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -561,10 +561,10 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -586,10 +586,10 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -611,10 +611,10 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -636,10 +636,10 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -714,10 +714,10 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -739,10 +739,10 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -764,10 +764,10 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -789,10 +789,10 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -814,10 +814,10 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -901,12 +901,15 @@ exports[`Tabs > Tabs iconVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
+                      
+                      <div
+                        class="t-tabs__icon"
+                      >
                         <svg
-                          class="t-icon t-icon-app t-size-l"
+                          class="t-icon t-icon-app"
                           fill="none"
                           height="1em"
-                          style="fill: none; margin-right: 3px;"
+                          style="fill: none;"
                           viewBox="0 0 24 24"
                           width="1em"
                         >
@@ -961,8 +964,9 @@ exports[`Tabs > Tabs iconVue demo works fine 1`] = `
                             />
                           </g>
                         </svg>
-                        选项
                       </div>
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -984,12 +988,15 @@ exports[`Tabs > Tabs iconVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
+                      
+                      <div
+                        class="t-tabs__icon"
+                      >
                         <svg
-                          class="t-icon t-icon-app t-size-l"
+                          class="t-icon t-icon-app"
                           fill="none"
                           height="1em"
-                          style="fill: none; margin-right: 3px;"
+                          style="fill: none;"
                           viewBox="0 0 24 24"
                           width="1em"
                         >
@@ -1044,8 +1051,9 @@ exports[`Tabs > Tabs iconVue demo works fine 1`] = `
                             />
                           </g>
                         </svg>
-                        选项
                       </div>
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -1067,23 +1075,79 @@ exports[`Tabs > Tabs iconVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        <div
-                          class="label-content"
+                      
+                      <!---->
+                      <div
+                        class="label-content"
+                        data-v-1949cad6=""
+                      >
+                        <svg
+                          class="t-icon t-icon-app t-size-l"
+                          data-v-1949cad6=""
+                          fill="none"
+                          height="1em"
+                          style="fill: none;"
+                          viewBox="0 0 24 24"
+                          width="1em"
+                        >
+                          <g
+                            id="app"
+                          >
+                            <g
+                              id="fill1"
+                            >
+                              <path
+                                d="M3 3H10V10H3V3Z"
+                                fill="transparent"
+                              />
+                              <path
+                                d="M14 14H21V21H14V14Z"
+                                fill="transparent"
+                              />
+                              <path
+                                d="M3 14H10V21H3V14Z"
+                                fill="transparent"
+                              />
+                            </g>
+                            <path
+                              d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                              fill="transparent"
+                              id="fill2"
+                            />
+                            <g
+                              id="stroke1"
+                            >
+                              <path
+                                d="M3 3H10V10H3V3Z"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M14 14H21V21H14V14Z"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M3 14H10V21H3V14Z"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              />
+                            </g>
+                            <path
+                              d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                              id="stroke2"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            />
+                          </g>
+                        </svg>
+                        <span
                           data-v-1949cad6=""
                         >
-                          <i
-                            class="t-icon t-icon-app t-size-l"
-                            data-v-1949cad6=""
-                          />
-                          <span
-                            data-v-1949cad6=""
-                          >
-                            选项
-                          </span>
-                        </div>
+                          选项
+                        </span>
                       </div>
+                      
                     </div>
                     
                   </div>
@@ -1163,10 +1227,10 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -1188,10 +1252,10 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -1213,10 +1277,10 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -1238,10 +1302,10 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -1263,10 +1327,10 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -1288,10 +1352,10 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -1313,10 +1377,10 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -1338,10 +1402,10 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -1363,10 +1427,10 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -1471,14 +1535,14 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              <div
-                                data-v-402afdd7=""
-                              >
-                                选项
-                              </div>
+                            
+                            <!---->
+                            <div
+                              data-v-402afdd7=""
+                            >
+                              选项
                             </div>
+                            
                           </div>
                           
                         </div>
@@ -1500,10 +1564,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -1574,10 +1638,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -1599,10 +1663,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -1624,10 +1688,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -1699,10 +1763,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -1724,10 +1788,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -1749,10 +1813,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -1774,10 +1838,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -1852,10 +1916,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -1877,10 +1941,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -1902,10 +1966,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -1927,10 +1991,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -1952,10 +2016,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -2056,10 +2120,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -2081,10 +2145,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -2106,10 +2170,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -2131,10 +2195,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -2156,10 +2220,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -2181,10 +2245,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -2206,10 +2270,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -2231,10 +2295,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -2256,10 +2320,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -2347,12 +2411,15 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
+                            
+                            <div
+                              class="t-tabs__icon"
+                            >
                               <svg
-                                class="t-icon t-icon-app t-size-l"
+                                class="t-icon t-icon-app"
                                 fill="none"
                                 height="1em"
-                                style="fill: none; margin-right: 3px;"
+                                style="fill: none;"
                                 viewBox="0 0 24 24"
                                 width="1em"
                               >
@@ -2407,8 +2474,9 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                                   />
                                 </g>
                               </svg>
-                              选项
                             </div>
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -2430,12 +2498,15 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
+                            
+                            <div
+                              class="t-tabs__icon"
+                            >
                               <svg
-                                class="t-icon t-icon-app t-size-l"
+                                class="t-icon t-icon-app"
                                 fill="none"
                                 height="1em"
-                                style="fill: none; margin-right: 3px;"
+                                style="fill: none;"
                                 viewBox="0 0 24 24"
                                 width="1em"
                               >
@@ -2490,8 +2561,9 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                                   />
                                 </g>
                               </svg>
-                              选项
                             </div>
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -2513,23 +2585,79 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              <div
-                                class="label-content"
+                            
+                            <!---->
+                            <div
+                              class="label-content"
+                              data-v-1949cad6=""
+                            >
+                              <svg
+                                class="t-icon t-icon-app t-size-l"
+                                data-v-1949cad6=""
+                                fill="none"
+                                height="1em"
+                                style="fill: none;"
+                                viewBox="0 0 24 24"
+                                width="1em"
+                              >
+                                <g
+                                  id="app"
+                                >
+                                  <g
+                                    id="fill1"
+                                  >
+                                    <path
+                                      d="M3 3H10V10H3V3Z"
+                                      fill="transparent"
+                                    />
+                                    <path
+                                      d="M14 14H21V21H14V14Z"
+                                      fill="transparent"
+                                    />
+                                    <path
+                                      d="M3 14H10V21H3V14Z"
+                                      fill="transparent"
+                                    />
+                                  </g>
+                                  <path
+                                    d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                                    fill="transparent"
+                                    id="fill2"
+                                  />
+                                  <g
+                                    id="stroke1"
+                                  >
+                                    <path
+                                      d="M3 3H10V10H3V3Z"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M14 14H21V21H14V14Z"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                    />
+                                    <path
+                                      d="M3 14H10V21H3V14Z"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                    />
+                                  </g>
+                                  <path
+                                    d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                                    id="stroke2"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                  />
+                                </g>
+                              </svg>
+                              <span
                                 data-v-1949cad6=""
                               >
-                                <i
-                                  class="t-icon t-icon-app t-size-l"
-                                  data-v-1949cad6=""
-                                />
-                                <span
-                                  data-v-1949cad6=""
-                                >
-                                  选项
-                                </span>
-                              </div>
+                                选项
+                              </span>
                             </div>
+                            
                           </div>
                           
                         </div>
@@ -2626,10 +2754,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -2660,10 +2788,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -2694,10 +2822,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -2794,10 +2922,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -2819,10 +2947,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -2844,10 +2972,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              上限六个文字
-                            </div>
+                            
+                            <!---->
+                            上限六个文字
+                            
                           </div>
                           
                         </div>
@@ -2956,10 +3084,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选中
-                            </div>
+                            
+                            <!---->
+                            选中
+                            
                           </div>
                           
                         </div>
@@ -2981,10 +3109,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              默认
-                            </div>
+                            
+                            <!---->
+                            默认
+                            
                           </div>
                           
                         </div>
@@ -3006,10 +3134,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              禁用
-                            </div>
+                            
+                            <!---->
+                            禁用
+                            
                           </div>
                           
                         </div>
@@ -3110,10 +3238,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              小尺寸
-                            </div>
+                            
+                            <!---->
+                            小尺寸
+                            
                           </div>
                           
                         </div>
@@ -3135,10 +3263,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -3160,10 +3288,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -3185,10 +3313,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -3263,10 +3391,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              大尺寸
-                            </div>
+                            
+                            <!---->
+                            大尺寸
+                            
                           </div>
                           
                         </div>
@@ -3288,10 +3416,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -3313,10 +3441,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -3338,10 +3466,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--line"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -3441,10 +3569,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--tag t-tabs__item-inner--active"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -3466,10 +3594,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--tag"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -3491,10 +3619,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--tag"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -3516,10 +3644,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--tag"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -3591,10 +3719,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--card"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -3616,10 +3744,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--card"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -3643,10 +3771,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--card"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -3668,10 +3796,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           <div
                             class="t-tabs__item-inner t-tabs__item-inner--card"
                           >
-                            <div>
-                              <!---->
-                              选项
-                            </div>
+                            
+                            <!---->
+                            选项
+                            
                           </div>
                           
                         </div>
@@ -3755,10 +3883,10 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        小尺寸
-                      </div>
+                      
+                      <!---->
+                      小尺寸
+                      
                     </div>
                     
                   </div>
@@ -3780,10 +3908,10 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -3805,10 +3933,10 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -3830,10 +3958,10 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -3908,10 +4036,10 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        大尺寸
-                      </div>
+                      
+                      <!---->
+                      大尺寸
+                      
                     </div>
                     
                   </div>
@@ -3933,10 +4061,10 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -3958,10 +4086,10 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -3983,10 +4111,10 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -4069,10 +4197,10 @@ exports[`Tabs > Tabs statusVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        选中
-                      </div>
+                      
+                      <!---->
+                      选中
+                      
                     </div>
                     
                   </div>
@@ -4094,10 +4222,10 @@ exports[`Tabs > Tabs statusVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        默认
-                      </div>
+                      
+                      <!---->
+                      默认
+                      
                     </div>
                     
                   </div>
@@ -4119,10 +4247,10 @@ exports[`Tabs > Tabs statusVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--line"
                     >
-                      <div>
-                        <!---->
-                        禁用
-                      </div>
+                      
+                      <!---->
+                      禁用
+                      
                     </div>
                     
                   </div>
@@ -4202,10 +4330,10 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--tag t-tabs__item-inner--active"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -4227,10 +4355,10 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--tag"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -4252,10 +4380,10 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--tag"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -4277,10 +4405,10 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--tag"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -4352,10 +4480,10 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--card"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -4377,10 +4505,10 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--card"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -4404,10 +4532,10 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--card"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>
@@ -4429,10 +4557,10 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
                     <div
                       class="t-tabs__item-inner t-tabs__item-inner--card"
                     >
-                      <div>
-                        <!---->
-                        选项
-                      </div>
+                      
+                      <!---->
+                      选项
+                      
                     </div>
                     
                   </div>

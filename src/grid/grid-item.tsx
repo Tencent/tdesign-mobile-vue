@@ -15,6 +15,9 @@ export default defineComponent({
   directives: { Hover },
   components: { TImage, TBadge },
   props,
+  emits: {
+    click: (e: MouseEvent) => true,
+  },
   setup(props, context) {
     const gridItemClass = usePrefixClass('grid-item');
 
@@ -55,6 +58,10 @@ export default defineComponent({
       },
     ]);
 
+    const handleClick = (e: MouseEvent) => {
+      context.emit('click', e);
+    };
+
     return () => {
       const renderImage = () => {
         if (realImage.value) {
@@ -71,6 +78,7 @@ export default defineComponent({
           class={gridItemClasses.value}
           style={rootStyle.value}
           v-hover={{ className: `${gridItemClass.value}--hover`, disabledHover: !hover.value }}
+          onClick={handleClick}
         >
           <div class={`${gridItemClass.value}__image ${gridItemClass.value}__image--${size.value}`}>
             {props.badge ? <t-badge {...(props.badge as Object)}>{renderImage()}</t-badge> : renderImage()}

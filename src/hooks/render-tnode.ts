@@ -76,7 +76,7 @@ export const renderTNodeJSX = (instance: ComponentPublicInstance, name: string, 
   // 处理 props 类型的Node
   let propsNode;
   if (name in instance) {
-    propsNode = instance[name];
+    propsNode = (instance as any)[name];
   }
 
   // 是否静默日志

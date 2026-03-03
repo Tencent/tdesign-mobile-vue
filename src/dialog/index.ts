@@ -1,7 +1,7 @@
 import { createApp, h, App, ref, nextTick, reactive } from 'vue';
 
 import Dialog from './dialog';
-import { WithInstallType, isBrowser } from '../shared';
+import { isBrowser } from '../shared';
 import { DialogCloseContext, TdDialogProps, DialogInstance } from './type';
 
 import './style';
@@ -91,8 +91,10 @@ function create(options: Partial<TdDialogProps> | string): DialogInstance {
       } else {
         for (const key in options) {
           if (propsFn.includes(key as DialogPropsFnName)) {
+            // @ts-ignore type safe
             props.value[key] = options[key];
           } else {
+            // @ts-ignore type safe
             params[key] = options[key];
           }
         }
@@ -140,7 +142,7 @@ type DialogApi = {
   confirm: (options: Partial<TdDialogProps> | string) => DialogInstance;
 };
 
-export const DialogPlugin: WithInstallType<typeof Dialog> & DialogApi = Dialog as any;
+export const DialogPlugin = Dialog as typeof Dialog & DialogApi;
 export default DialogPlugin;
 
 declare module 'vue' {

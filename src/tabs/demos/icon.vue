@@ -7,7 +7,7 @@
       <t-tab-panel value="third">
         <template #label>
           <div class="label-content">
-            <icon-font name="app" size="large" />
+            <AppIcon size="large" />
             <span>选项</span>
           </div>
         </template>
@@ -18,9 +18,9 @@
 
 <script lang="ts" setup>
 import { h } from 'vue';
-import { IconFont, AppIcon } from 'tdesign-icons-vue-next';
+import { AppIcon } from 'tdesign-icons-vue-next';
 
-const appIcon = () => h(AppIcon, { size: 'large', style: { marginRight: '3px' } });
+const appIcon = () => h(AppIcon);
 </script>
 
 <style lang="less" scoped>

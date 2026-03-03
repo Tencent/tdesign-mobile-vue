@@ -1,4 +1,4 @@
-import { ref, Ref, unref, watch, onMounted, onUnmounted } from 'vue';
+import { ref, shallowRef, Ref, ShallowRef, unref, watch, onMounted, onUnmounted } from 'vue';
 
 export type ElementOrRef = string | Element | null | undefined;
 
@@ -78,9 +78,16 @@ function getElementRect(element: HTMLElement): ElementRect {
  * // 延迟计算
  * const { element, rect, updateElement } = useElementRect(myRef, { immediate: false });
  */
-export default function useElementRect(element: Ref<ElementOrRef> | ElementOrRef, options: UseElementRectOptions = {}) {
+export default function useElementRect(
+  element: Ref<ElementOrRef> | ElementOrRef,
+  options: UseElementRectOptions = {},
+): {
+  element: ShallowRef<HTMLElement | null>;
+  rect: Ref<ElementRect>;
+  updateElement: () => void;
+} {
   const { immediate = true, resizeObserver = false } = options;
-  const elementRef = ref<HTMLElement | null>(null);
+  const elementRef = shallowRef<HTMLElement | null>(null);
   const rect = ref<ElementRect>({
     top: 0,
     bottom: 0,
@@ -105,12 +112,11 @@ export default function useElementRect(element: Ref<ElementOrRef> | ElementOrRef
   const setupResizeObserver = () => {
     if (!resizeObserver) return;
 
-    const currentElement = elementRef.value;
-    if (currentElement && window.ResizeObserver) {
+    if (elementRef.value && window.ResizeObserver) {
       resizeObserverInstance = new ResizeObserver(() => {
-        rect.value = getElementRect(currentElement);
+        rect.value = getElementRect(elementRef.value);
       });
-      resizeObserverInstance.observe(currentElement);
+      resizeObserverInstance.observe(elementRef.value);
     }
   };
 

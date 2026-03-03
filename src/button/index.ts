@@ -1,5 +1,5 @@
 import _Button from './button';
-import { withInstall, WithInstallType } from '../shared';
+import { withInstall } from '../shared';
 
 import './style';
 import { TdButtonProps } from './type';

@@ -1,5 +1,5 @@
 import _Cascader from './cascader';
-import { withInstall, WithInstallType } from '../shared';
+import { withInstall } from '../shared';
 
 import './style';
 import { TdCascaderProps } from './type';
@@ -7,5 +7,5 @@ import { TdCascaderProps } from './type';
 export * from './type';
 export type CascaderProps = TdCascaderProps;
 
-export const Cascader: WithInstallType<typeof _Cascader> = withInstall(_Cascader);
+export const Cascader = withInstall(_Cascader);
 export default Cascader;
