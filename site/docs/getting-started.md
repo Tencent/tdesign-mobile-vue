@@ -21,7 +21,7 @@ npm i tdesign-mobile-vue
 
 ```html
 <!-- vue 3 -->
-<script src="https://unpkg.com/vue@next"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/tdesign-mobile-vue/dist/tdesign.min.css" />
 <script src="https://unpkg.com/tdesign-mobile-vue/dist/tdesign.min.js"></script>
 ...
