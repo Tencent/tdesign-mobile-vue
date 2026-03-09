@@ -155,10 +155,8 @@ export default defineComponent({
 
     const fabStyle = computed(() => {
       const { x, y } = btnSwitchPos.value;
-      // TODO: 验收之后可移除
-      const transition = !switchPos.value.hasMoved ? 'transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)' : '';
 
-      return `right: ${x}px;bottom: ${y}px;${transition};`;
+      return `right: ${x}px;bottom: ${y}px;`;
     });
 
     const fabClasses = computed(() => [
