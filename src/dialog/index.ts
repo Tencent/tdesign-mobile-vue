@@ -35,16 +35,15 @@ function create(options: Partial<TdDialogProps> | string): DialogInstance {
     ...(typeof options === 'string' ? { content: options } : options),
   };
 
-  function callFn<T>(fnType: DialogPropsFnName, context?: T): void {
+  function callFn<T>(fnType: DialogPropsFnName, context?: T): void | Promise<void> {
     const fn = props.value[fnType] || propsObject[fnType];
-    typeof fn === 'function' && fn(context as any);
+    return typeof fn === 'function' ? fn(context as any) : undefined;
   }
 
   const params = reactive({
     ...propsObject,
     onConfirm: (context: { e: MouseEvent }) => {
-      callFn('onConfirm', context);
-      params.visible = false;
+      return callFn('onConfirm', context);
     },
     onCancel: (context: { e: MouseEvent }) => {
       callFn('onCancel', context);

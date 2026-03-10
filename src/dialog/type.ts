@@ -97,9 +97,9 @@ export interface TdDialogProps {
    */
   onClosed?: () => void;
   /**
-   * 如果“确认”按钮存在，则点击“确认”按钮时触发
+   * 如果“确认”按钮存在，则点击“确认”按钮时触发。若返回 Promise，则 Promise 结束前确认按钮显示加载状态，Promise resolve 后关闭对话框
    */
-  onConfirm?: (context: { e: MouseEvent }) => void;
+  onConfirm?: (context: { e: MouseEvent }) => void | Promise<void>;
   /**
    * 如果蒙层存在，点击蒙层时触发
    */

@@ -1,5 +1,5 @@
 import { CloseIcon } from 'tdesign-icons-vue-next';
-import { computed, defineComponent } from 'vue';
+import { computed, defineComponent, ref } from 'vue';
 import { get, isString, isObject } from 'lodash-es';
 
 import TButton, { ButtonProps } from '../button';
@@ -55,7 +55,21 @@ export default defineComponent({
       context.emit('closed');
     };
 
-    const handleConfirm = (e: MouseEvent) => {
+    const confirmLoading = ref(false);
+
+    const handleConfirm = async (e: MouseEvent) => {
+      const onConfirm = props.onConfirm;
+      if (typeof onConfirm === 'function') {
+        const result = onConfirm({ e });
+        if (result instanceof Promise) {
+          confirmLoading.value = true;
+          try {
+            await result;
+          } finally {
+            confirmLoading.value = false;
+          }
+        }
+      }
       context.emit('update:visible', false);
       context.emit?.('confirm', { e });
     };
@@ -91,6 +105,7 @@ export default defineComponent({
     const confirmBtnProps = computed<ButtonProps>(() => ({
       theme: 'primary',
       ...calcBtn(props.confirmBtn),
+      loading: confirmLoading.value || (calcBtn(props.confirmBtn) as ButtonProps)?.loading,
     }));
 
     const cancelBtnProps = computed<ButtonProps>(() => ({
