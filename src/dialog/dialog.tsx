@@ -1,5 +1,5 @@
 import { CloseIcon } from 'tdesign-icons-vue-next';
-import { computed, defineComponent } from 'vue';
+import { computed, defineComponent, ref } from 'vue';
 import { get, isString, isObject } from 'lodash-es';
 
 import TButton, { ButtonProps } from '../button';
@@ -45,8 +45,10 @@ export default defineComponent({
       width: isString(props.width) ? props.width : `${props.width}px`,
     }));
 
-    const handleClose = (args: { e: MouseEvent }) => {
+    const handleClose = async (args: { e: MouseEvent }) => {
       const { e } = args;
+      const allowed = await invokeBeforeClose('close-btn', e);
+      if (!allowed) return;
       context.emit('update:visible', false);
       context.emit('close', { e, trigger: 'close-btn' });
     };
@@ -55,22 +57,53 @@ export default defineComponent({
       context.emit('closed');
     };
 
-    const handleConfirm = (e: MouseEvent) => {
-      context.emit('update:visible', false);
-      context.emit?.('confirm', { e });
+    const confirmLoading = ref(false);
+
+    // 通用的 beforeClose 拦截逻辑
+    const invokeBeforeClose = async (
+      trigger: 'confirm' | 'cancel' | 'overlay' | 'close-btn',
+      e: MouseEvent,
+    ): Promise<boolean> => {
+      const { beforeClose } = props;
+      if (typeof beforeClose === 'function') {
+        const result = beforeClose(trigger, { e });
+        if (result instanceof Promise) {
+          confirmLoading.value = trigger === 'confirm';
+          try {
+            await result;
+            return true;
+          } catch {
+            return false;
+          } finally {
+            confirmLoading.value = false;
+          }
+        }
+      }
+      return true;
     };
 
-    const handleCancel = (e: MouseEvent) => {
+    const handleConfirm = async (e: MouseEvent) => {
+      const allowed = await invokeBeforeClose('confirm', e);
+      if (!allowed) return;
+      context.emit('update:visible', false);
+      context.emit('confirm', { e });
+    };
+
+    const handleCancel = async (e: MouseEvent) => {
+      const allowed = await invokeBeforeClose('cancel', e);
+      if (!allowed) return;
       context.emit('update:visible', false);
       context.emit('close', { e, trigger: 'cancel' });
       context.emit('cancel', { e });
     };
 
-    const handleOverlayClick = (args: { e: MouseEvent }) => {
+    const handleOverlayClick = async (args: { e: MouseEvent }) => {
       const { e } = args;
       if (!props.closeOnOverlayClick) {
         return;
       }
+      const allowed = await invokeBeforeClose('overlay', e);
+      if (!allowed) return;
       context.emit('update:visible', false);
       context.emit('close', { e, trigger: 'overlay' });
       context.emit('overlay-click', { e });
@@ -91,6 +124,7 @@ export default defineComponent({
     const confirmBtnProps = computed<ButtonProps>(() => ({
       theme: 'primary',
       ...calcBtn(props.confirmBtn),
+      loading: confirmLoading.value || (calcBtn(props.confirmBtn) as ButtonProps)?.loading,
     }));
 
     const cancelBtnProps = computed<ButtonProps>(() => ({
