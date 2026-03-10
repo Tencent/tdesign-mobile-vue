@@ -180,8 +180,7 @@ describe('dialog', () => {
       });
       const $overlay = wrapper.find(`.t-overlay`);
       expect($overlay.exists()).toBeTruthy();
-      await $overlay.trigger('click');
-      await nextTick();
+      $overlay.trigger('click');
       expect(onClose).toBeCalledTimes(1);
       expect(onOverlayClick).toBeCalledTimes(1);
       expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'overlay' });
@@ -243,17 +242,14 @@ describe('dialog', () => {
       expect($buttons.at(0).text()).toBe(cancelBtn);
       expect($buttons.at(1).text()).toBe(confirmBtn);
       await $buttons.at(0).trigger('click');
-      await nextTick();
       expect(onClose).toBeCalledTimes(1);
       expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'cancel' });
       expect(onCancel).toBeCalledTimes(1);
       await $buttons.at(1).trigger('click');
-      await nextTick();
       expect(onConfirm).toBeCalledTimes(1);
 
       const $closeIcon = wrapper.findComponent(CloseIcon);
       await $closeIcon.trigger('click');
-      await nextTick();
       expect(onClose).toBeCalledTimes(2);
       expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'close-btn' });
     });

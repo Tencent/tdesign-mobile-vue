@@ -45,12 +45,20 @@ export default defineComponent({
       width: isString(props.width) ? props.width : `${props.width}px`,
     }));
 
-    const handleClose = async (args: { e: MouseEvent }) => {
-      const { e } = args;
-      const allowed = await invokeBeforeClose('close-btn', e);
-      if (!allowed) return;
+    const emitClose = (e: MouseEvent, trigger: string) => {
       context.emit('update:visible', false);
-      context.emit('close', { e, trigger: 'close-btn' });
+      context.emit('close', { e, trigger });
+    };
+
+    const handleClose = (args: { e: MouseEvent }) => {
+      const { e } = args;
+      if (typeof props.beforeClose === 'function') {
+        invokeBeforeClose('close-btn', e).then((allowed) => {
+          if (allowed) emitClose(e, 'close-btn');
+        });
+        return;
+      }
+      emitClose(e, 'close-btn');
     };
 
     const handleClosed = () => {
@@ -82,30 +90,46 @@ export default defineComponent({
       return true;
     };
 
-    const handleConfirm = async (e: MouseEvent) => {
-      const allowed = await invokeBeforeClose('confirm', e);
-      if (!allowed) return;
+    const handleConfirm = (e: MouseEvent) => {
+      if (typeof props.beforeClose === 'function') {
+        invokeBeforeClose('confirm', e).then((allowed) => {
+          if (!allowed) return;
+          context.emit('update:visible', false);
+          context.emit('confirm', { e });
+        });
+        return;
+      }
       context.emit('update:visible', false);
       context.emit('confirm', { e });
     };
 
-    const handleCancel = async (e: MouseEvent) => {
-      const allowed = await invokeBeforeClose('cancel', e);
-      if (!allowed) return;
-      context.emit('update:visible', false);
-      context.emit('close', { e, trigger: 'cancel' });
+    const handleCancel = (e: MouseEvent) => {
+      if (typeof props.beforeClose === 'function') {
+        invokeBeforeClose('cancel', e).then((allowed) => {
+          if (!allowed) return;
+          emitClose(e, 'cancel');
+          context.emit('cancel', { e });
+        });
+        return;
+      }
+      emitClose(e, 'cancel');
       context.emit('cancel', { e });
     };
 
-    const handleOverlayClick = async (args: { e: MouseEvent }) => {
+    const handleOverlayClick = (args: { e: MouseEvent }) => {
       const { e } = args;
       if (!props.closeOnOverlayClick) {
         return;
       }
-      const allowed = await invokeBeforeClose('overlay', e);
-      if (!allowed) return;
-      context.emit('update:visible', false);
-      context.emit('close', { e, trigger: 'overlay' });
+      if (typeof props.beforeClose === 'function') {
+        invokeBeforeClose('overlay', e).then((allowed) => {
+          if (!allowed) return;
+          emitClose(e, 'overlay');
+          context.emit('overlay-click', { e });
+        });
+        return;
+      }
+      emitClose(e, 'overlay');
       context.emit('overlay-click', { e });
     };
 
