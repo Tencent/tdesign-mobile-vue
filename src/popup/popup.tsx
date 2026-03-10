@@ -95,6 +95,8 @@ export default defineComponent({
 
     const handleOverlayClick = (args: { e: MouseEvent }) => {
       const { e } = args;
+      // 阻止事件冒泡，防止嵌套 Popup 场景下点击子 Popup 遮罩层时触发父 Popup 关闭
+      e.stopPropagation();
       if (!props.closeOnOverlayClick) {
         return;
       }
