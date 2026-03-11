@@ -128,12 +128,33 @@ export default defineComponent({
 
     extendAPI({ focus, blur });
 
-    const handleClear = (e: TouchEvent) => {
+    const handleClear = (e: TouchEvent | MouseEvent) => {
       e.preventDefault();
       const val = props.type === 'number' ? undefined : '';
       setInnerValue(val);
       focus();
-      props.onClear?.({ e });
+      props.onClear?.({ e: e as TouchEvent });
+    };
+
+    // 记录是否正在进行 touch 操作，防止 touch 设备上 touchend 和 click 重复触发
+    let isTouchClearing = false;
+
+    const handleClearTouchStart = (e: TouchEvent) => {
+      // 阻止 touchstart 时 input 触发 blur，防止在企业微信等内置浏览器中
+      // clearable 按钮因 focused 变为 false 而从 DOM 消失，导致 touchend 无法触发
+      e.preventDefault();
+      isTouchClearing = true;
+    };
+
+    const handleClearTouchEnd = (e: TouchEvent) => {
+      isTouchClearing = false;
+      handleClear(e);
+    };
+
+    const handleClearClick = (e: MouseEvent) => {
+      // touch 设备上 touchend 已处理，忽略随后触发的 click 事件
+      if (isTouchClearing) return;
+      handleClear(e);
     };
 
     const handleFocus = (e: FocusEvent) => {
@@ -203,7 +224,12 @@ export default defineComponent({
       const renderClearable = () => {
         if (showClear.value) {
           return (
-            <div class={`${inputClass.value}__wrap--clearable-icon`} onTouchend={handleClear}>
+            <div
+              class={`${inputClass.value}__wrap--clearable-icon`}
+              onTouchstart={handleClearTouchStart}
+              onTouchend={handleClearTouchEnd}
+              onClick={handleClearClick}
+            >
               <TCloseCircleFilledIcon />
             </div>
           );
