@@ -8,7 +8,7 @@ import useFixed, { getRowFixedStyles, getColumnFixedStyles } from './hooks/useFi
 import { renderTitle } from './hooks/useTableHeader';
 import { ClassName } from '../common';
 
-import { BaseTableCellParams, BaseTableCol, TableRowData, TdBaseTableProps } from './type';
+import { BaseTableCellParams, BaseTableCol, TableRowData, RowspanColspan, TdBaseTableProps } from './type';
 import TLoading from '../loading';
 import { TdLoadingProps } from '../loading/type';
 import { useConfig } from '../config-provider/useConfig';
@@ -171,6 +171,19 @@ export default defineComponent({
       return [className, extra];
     };
 
+    // 获取单元格合并信息
+    const getRowspanAndColspan = (
+      rowIndex: number,
+      colIndex: number,
+      row: TableRowData,
+      col: BaseTableCol,
+    ): RowspanColspan => {
+      if (isFunction(props.rowspanAndColspan)) {
+        return props.rowspanAndColspan({ row, col, rowIndex, colIndex }) || {};
+      }
+      return {};
+    };
+
     const renderTableBody = () => {
       const renderContentEmpty = renderTNodeJSX('empty') || t(globalConfig.value.empty);
       if (!props.data?.length && renderContentEmpty) {
@@ -213,6 +226,13 @@ export default defineComponent({
               }}
             >
               {props.columns?.map((td_item, td_index) => {
+                // 获取合并单元格信息
+                const cellSpan = getRowspanAndColspan(tr_index, td_index, tr_item, td_item);
+                const rowspan = cellSpan.rowspan ?? 1;
+                const colspan = cellSpan.colspan ?? 1;
+                // rowspan 或 colspan 为 0 表示该单元格被合并，不渲染
+                if (rowspan === 0 || colspan === 0) return null;
+
                 const tdStyles = getColumnFixedStyles(
                   td_item,
                   td_index,
@@ -228,11 +248,16 @@ export default defineComponent({
                   type: 'td',
                 });
 
+                const spanAttrs: Record<string, number> = {};
+                if (rowspan > 1) spanAttrs.rowspan = rowspan;
+                if (colspan > 1) spanAttrs.colspan = colspan;
+
                 return (
                   <td
                     key={td_index}
                     style={tdStyles.style}
                     class={tdClassName(td_item, [tdStyles.classes, customClasses])}
+                    {...spanAttrs}
                     onClick={($event) => {
                       handleCellClick(tr_item, td_item, tr_index, td_index, $event);
                     }}
