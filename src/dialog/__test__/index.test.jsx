@@ -241,15 +241,15 @@ describe('dialog', () => {
       expect($buttons).toHaveLength(2);
       expect($buttons.at(0).text()).toBe(cancelBtn);
       expect($buttons.at(1).text()).toBe(confirmBtn);
-      await $buttons.at(0).trigger('click');
+      $buttons.at(0).trigger('click');
       expect(onClose).toBeCalledTimes(1);
       expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'cancel' });
       expect(onCancel).toBeCalledTimes(1);
-      await $buttons.at(1).trigger('click');
+      $buttons.at(1).trigger('click');
       expect(onConfirm).toBeCalledTimes(1);
 
       const $closeIcon = wrapper.findComponent(CloseIcon);
-      await $closeIcon.trigger('click');
+      $closeIcon.trigger('click');
       expect(onClose).toBeCalledTimes(2);
       expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'close-btn' });
     });
