@@ -33,6 +33,10 @@ export default {
   fixedRows: {
     type: Array as PropType<TdBaseTableProps['fixedRows']>,
   },
+  /** 表格底部内容，可用于显示「加载更多」、「没有更多了」等状态 */
+  footer: {
+    type: [String, Function] as PropType<TdBaseTableProps['footer']>,
+  },
   /** 表格高度，超出后会出现滚动条。示例：100,  '30%',  '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定表格高度，建议使用 `maxHeight` */
   height: {
     type: [String, Number] as PropType<TdBaseTableProps['height']>,
@@ -63,6 +67,11 @@ export default {
     type: String,
     default: 'id',
     required: true,
+  },
+  /** 触发 `onScrollToBottom` 事件的距离阈值，单位 px */
+  scrollBottomThreshold: {
+    type: Number,
+    default: 50,
   },
   /** 是否显示表头 */
   showHeader: {
@@ -100,4 +109,6 @@ export default {
   onRowClick: Function as PropType<TdBaseTableProps['onRowClick']>,
   /** 表格内容滚动时触发 */
   onScroll: Function as PropType<TdBaseTableProps['onScroll']>,
+  /** 表格内容滚动到底部时触发，可用于实现滚动加载 */
+  onScrollToBottom: Function as PropType<TdBaseTableProps['onScrollToBottom']>,
 };

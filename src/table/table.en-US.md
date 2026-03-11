@@ -12,6 +12,7 @@ columns | Array | [] | table column configs。Typescript: `Array<BaseTableCol<T>
 data | Array | [] | table data。Typescript: `Array<T>` | N
 empty | String / Slot / Function | '' | empty text or empty element。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 fixedRows | Array | - | `1.9.3`。Typescript: `Array<number>` | N
+footer | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 height | String / Number | - | table height | N
 loading | Boolean / Slot / Function | undefined | loading state table。Typescript: `boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 loadingProps | Object | - | Typescript: `Partial<LoadingProps>`，[Loading API Documents](./loading?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts) | N
@@ -19,6 +20,7 @@ maxHeight | String / Number | - | table max height | N
 rowAttributes | Object / Array / Function | - | `1.9.3`。`tr` attributes。Typescript: `TableRowAttributes<T>` `type TableRowAttributes<T> = HTMLElementAttributes \| ((params: { row: T; rowIndex: number; type: 'body' \| 'foot' }) => HTMLElementAttributes) \| Array<TableRowAttributes<T>>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts) | N
 rowClassName | String / Object / Array / Function | - | `1.9.3`。table `th` classname。Typescript: `ClassName \| ((params: RowClassNameParams<T>) => ClassName)` `interface RowClassNameParams<T> { row: T; rowIndex: number; rowKey?: string; type?: 'body' \| 'foot' }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts) | N
 rowKey | String | 'id' | required。unique key for each row data | Y
+scrollBottomThreshold | Number | 50 | \- | N
 showHeader | Boolean | true | show table header | N
 stripe | Boolean | false | show stripe style | N
 tableContentWidth | String | - | \- | N
@@ -27,6 +29,7 @@ verticalAlign | String | middle | vertical align。options: top/middle/bottom | 
 onCellClick | Function |  | Typescript: `(context: BaseTableCellEventContext<T>) => void`<br/>trigger on cell clicked。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts)。<br/>`interface BaseTableCellEventContext<T> { row: T; col: BaseTableCol; rowIndex: number; colIndex: number; e: MouseEvent }`<br/> | N
 onRowClick | Function |  | Typescript: `(context: RowEventContext<T>) => void`<br/>trigger on row click。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts)。<br/>`interface RowEventContext<T> { row: T; index: number; e: MouseEvent }`<br/> | N
 onScroll | Function |  | Typescript: `(params: { e: Event }) => void`<br/>trigger on table content scroll | N
+onScrollToBottom | Function |  | Typescript: `() => void`<br/>Typescript: `Partial<AffixProps>` | N
 
 ### BaseTable Events
 
@@ -35,6 +38,7 @@ name | params | description
 cell-click | `(context: BaseTableCellEventContext<T>)` | trigger on cell clicked。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts)。<br/>`interface BaseTableCellEventContext<T> { row: T; col: BaseTableCol; rowIndex: number; colIndex: number; e: MouseEvent }`<br/>
 row-click | `(context: RowEventContext<T>)` | trigger on row click。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts)。<br/>`interface RowEventContext<T> { row: T; index: number; e: MouseEvent }`<br/>
 scroll | `(params: { e: Event })` | trigger on table content scroll
+scroll-to-bottom | \- | Typescript: `Partial<AffixProps>`
 
 ### BaseTableInstanceFunctions 组件实例方法
 
