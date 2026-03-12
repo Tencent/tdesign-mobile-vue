@@ -3,8 +3,9 @@ import { get as lodashGet } from 'lodash-es';
 import config from '../config';
 import Picker from './picker.class';
 import { KeysType } from '../common';
-import { PickerColumnItem, PickerValue, TdPickerProps } from './type';
+import { PickerColumnItem, PickerValue, PickerWheelConfig, TdPickerProps } from './type';
 import { usePrefixClass } from '../hooks/useClass';
+import { DEFAULT_WHEEL_CONFIG } from './constants';
 
 const { prefix } = config;
 
@@ -26,9 +27,9 @@ export default defineComponent({
       type: Function,
       default: undefined,
     },
-    swipeDuration: {
-      type: [String, Number],
-      default: 300,
+    wheelConfig: {
+      type: Object as PropType<Required<PickerWheelConfig>>,
+      default: () => DEFAULT_WHEEL_CONFIG,
     },
   },
   emits: ['pick'],
@@ -93,7 +94,7 @@ export default defineComponent({
             const changeValue = { value: lodashGet(curItem, keys.value?.value ?? 'value'), index };
             props.onPick?.(changeValue);
           },
-          swipeDuration: props.swipeDuration,
+          wheelConfig: props.wheelConfig,
         });
       }
     });

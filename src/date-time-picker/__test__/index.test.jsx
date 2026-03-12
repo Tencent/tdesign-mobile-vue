@@ -5,7 +5,8 @@ import dayjs from 'dayjs';
 
 import DateTimePicker from '../date-time-picker';
 import PickerItem from '../../picker/picker-item';
-import { DEFAULT_ITEM_HEIGHT, ANIMATION_TIME_LIMIT } from '../../picker/picker.class';
+import { DEFAULT_ITEM_HEIGHT } from '../../picker/picker.class';
+import { DEFAULT_WHEEL_CONFIG } from '../../picker/constants';
 
 const makeTouch = (el, eventName, touchPosition) => {
   const event = new Event(eventName);
@@ -20,7 +21,7 @@ const simulateMoveOption = async (optionContainerEl, distance) => {
   makeTouch(optionContainerEl, 'touchstart', { pageY: 0 });
   makeTouch(optionContainerEl, 'touchmove', { pageY: -distance * DEFAULT_ITEM_HEIGHT });
 
-  vi.useFakeTimers().advanceTimersByTime(ANIMATION_TIME_LIMIT + 1);
+  vi.useFakeTimers().advanceTimersByTime(DEFAULT_WHEEL_CONFIG.inertiaTimeThreshold + 1);
   makeTouch(optionContainerEl, 'touchend', { pageY: -distance * DEFAULT_ITEM_HEIGHT });
   vi.useRealTimers();
 
