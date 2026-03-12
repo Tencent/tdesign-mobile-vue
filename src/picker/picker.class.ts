@@ -122,15 +122,32 @@ class Picker {
   }
 
   /**
+   * @description 更新 itemHeight 函数
+   */
+  updateItemHeight(): void {
+    this.itemGroupHeight = this.holder.parentElement?.offsetHeight || DEFAULT_HOLDER_HEIGHT;
+
+    this.itemHeight = this.holder.querySelector('li')?.offsetHeight || DEFAULT_ITEM_HEIGHT;
+    this.height = this.holder.offsetHeight || DEFAULT_HOLDER_HEIGHT;
+
+    this.indicatorOffset = this.itemGroupHeight / 2 - this.itemHeight / 2;
+
+    const startOffsetY = this.indicatorOffset - this.curIndex * this.itemHeight;
+    const itemLen = this.elementItems.length;
+
+    this.setOffsetY(startOffsetY);
+    this.offsetYOfStart = startOffsetY;
+    this.offsetYOfEnd = this.indicatorOffset - (itemLen - 1) * this.itemHeight;
+    this.offsetYOfStartBound = this.indicatorOffset + OFFSET_OF_BOUND;
+    this.offsetYOfEndBound = this.indicatorOffset - (itemLen - 1) * this.itemHeight - OFFSET_OF_BOUND;
+  }
+
+  /**
    * @description 初始化滚动参数
    */
   initScrollParams(): void {
     this.list = this.holder as HTMLUListElement;
-    this.itemGroupHeight = this.holder.parentElement?.offsetHeight || DEFAULT_HOLDER_HEIGHT;
     this.elementItems = [...this.holder.querySelectorAll('li')];
-    this.itemHeight = this.holder.querySelector('li')?.offsetHeight || DEFAULT_ITEM_HEIGHT;
-    this.height = this.holder.offsetHeight || DEFAULT_HOLDER_HEIGHT;
-    this.indicatorOffset = this.itemGroupHeight / 2 - this.itemHeight / 2;
     let curIndex = findIndexOfEnabledOption(this.pickerColumns, this.options.defaultIndex || 0, this.options.keys);
     if (curIndex !== (this.options.defaultIndex || 0)) this.onChange(curIndex);
     this.itemClassName = `${classPrefix.value}-picker-item__item`;
@@ -151,13 +168,7 @@ class Picker {
       },
     });
 
-    const startOffsetY = this.indicatorOffset - this.curIndex * this.itemHeight;
-    const itemLen = this.elementItems.length;
-    this.setOffsetY(startOffsetY);
-    this.offsetYOfStart = startOffsetY;
-    this.offsetYOfEnd = this.indicatorOffset - (itemLen - 1) * this.itemHeight;
-    this.offsetYOfStartBound = this.indicatorOffset + OFFSET_OF_BOUND;
-    this.offsetYOfEndBound = this.indicatorOffset - (itemLen - 1) * this.itemHeight - OFFSET_OF_BOUND;
+    this.updateItemHeight();
   }
 
   bindEvent(): void {

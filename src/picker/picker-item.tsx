@@ -95,6 +95,8 @@ export default defineComponent({
           },
           swipeDuration: props.swipeDuration,
         });
+
+        nextTick(() => picker?.updateItemHeight());
       }
     });
 
@@ -103,6 +105,7 @@ export default defineComponent({
       () => {
         picker?.updateOptions(props.options);
         picker?.updateItems();
+        picker?.updateItemHeight();
       },
       { flush: 'post', deep: true },
     );
