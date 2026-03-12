@@ -608,6 +608,137 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
 </div>
 `;
 
+exports[`Popup > Popup nestedVue demo works fine 1`] = `
+<div
+  class="popup-nested-demo"
+  data-v-4d689919=""
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+    data-v-4d689919=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+       打开嵌套弹窗 
+      
+    </span>
+    <!---->
+  </button>
+  <!-- 父 Popup：attach 到 body -->
+  <!--teleport start-->
+  
+  <div
+    class="t-overlay"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
+  >
+    <!---->
+  </div>
+  <div
+    class="t-popup t-popup--bottom"
+    style="z-index: 1500; display: none;"
+  >
+    <!---->
+    
+    <div
+      class="parent-popup-content"
+      data-v-4d689919=""
+    >
+      <h3
+        class="popup-title"
+        data-v-4d689919=""
+      >
+        筛选面板（父弹窗）
+      </h3>
+      <p
+        class="popup-desc"
+        data-v-4d689919=""
+      >
+        这是第一层 Popup，点击下方按钮可打开子弹窗。
+      </p>
+      <button
+        aria-disabled="false"
+        class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block"
+        data-v-4d689919=""
+        role="button"
+        type="button"
+      >
+        <!---->
+        <span
+          class="t-button__content"
+        >
+          
+           打开子弹窗（Picker） 
+          
+        </span>
+        <!---->
+      </button>
+      <!-- 子 Popup：attach 到父 Popup 内部的 DOM 容器 -->
+      <!--teleport start-->
+      
+      <div
+        class="t-overlay"
+        style="z-index: 1000; transition-duration: 300ms; display: none;"
+      >
+        <!---->
+      </div>
+      <div
+        class="t-popup t-popup--bottom"
+        style="z-index: 1600; display: none;"
+      >
+        <!---->
+        
+        <div
+          class="child-popup-content"
+          data-v-4d689919=""
+        >
+          <h3
+            class="popup-title"
+            data-v-4d689919=""
+          >
+            选择器（子弹窗）
+          </h3>
+          <p
+            class="popup-desc"
+            data-v-4d689919=""
+          >
+            这是第二层 Popup，通过将 attach 指向父 Popup 内部的 DOM 容器，实现正确的嵌套层级。
+          </p>
+          <button
+            aria-disabled="false"
+            class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block"
+            data-v-4d689919=""
+            role="button"
+            type="button"
+          >
+            <!---->
+            <span
+              class="t-button__content"
+            >
+              
+               确认选择 
+              
+            </span>
+            <!---->
+          </button>
+        </div>
+        
+      </div>
+      
+      <!--teleport end-->
+    </div>
+    
+  </div>
+  
+  <!--teleport end-->
+</div>
+`;
+
 exports[`Popup > Popup withTitleVue demo works fine 1`] = `
 <div
   class="popup-demo"
