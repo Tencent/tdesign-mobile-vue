@@ -1,4 +1,4 @@
-import { ComponentInternalInstance, defineComponent, getCurrentInstance, inject } from 'vue';
+import { ComponentInternalInstance, defineComponent, getCurrentInstance, inject, onBeforeUnmount } from 'vue';
 import config from '../config';
 import indexesAnchorProps from './indexes-anchor-props';
 import { usePrefixClass } from '../hooks/useClass';
@@ -16,6 +16,10 @@ export default defineComponent({
     const indexesProvide: any = inject('indexesProvide', undefined);
     const { proxy } = instance as ComponentInternalInstance;
     indexesProvide.relation(proxy);
+
+    onBeforeUnmount(() => {
+      indexesProvide.unRelation(proxy);
+    });
 
     return () => (
       <div class={indexesAnchorClass.value} data-index={props.index}>

@@ -23,6 +23,240 @@ exports[`BackTop > BackTop baseVue demo works fine 1`] = `
 </div>
 `;
 
+exports[`BackTop > BackTop halfRoundVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="button-group"
+    data-v-37c0a853=""
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+      data-v-37c0a853=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        半圆形返回顶部
+      </span>
+      <!---->
+    </button>
+  </div>
+  <div
+    class="group"
+    data-v-37c0a853=""
+  >
+    
+    <div
+      class="t-skeleton item"
+      data-v-37c0a853=""
+    >
+      
+      
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 100px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      
+      
+    </div>
+    <div
+      class="t-skeleton item"
+      data-v-37c0a853=""
+    >
+      
+      
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 100px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      
+      
+    </div>
+    <div
+      class="t-skeleton item"
+      data-v-37c0a853=""
+    >
+      
+      
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 100px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      
+      
+    </div>
+    <div
+      class="t-skeleton item"
+      data-v-37c0a853=""
+    >
+      
+      
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 100px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      
+      
+    </div>
+    <div
+      class="t-skeleton item"
+      data-v-37c0a853=""
+    >
+      
+      
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 100px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      
+      
+    </div>
+    <div
+      class="t-skeleton item"
+      data-v-37c0a853=""
+    >
+      
+      
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      <div
+        class="t-skeleton__row"
+      >
+        
+        <div
+          class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+          style="width: 100px;"
+        >
+          <!---->
+        </div>
+        
+      </div>
+      
+      
+    </div>
+    
+  </div>
+  
+</div>
+`;
+
 exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"

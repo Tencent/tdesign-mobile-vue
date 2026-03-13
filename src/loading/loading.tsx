@@ -120,7 +120,7 @@ export default defineComponent({
 
     const defaultLoading = computed(() => {
       setBlockTracking(-1);
-      const TIndicator = defaultIndicator[props.theme || 'circular'];
+      const TIndicator = defaultIndicator[(props.theme as 'circular' | 'spinner') || 'circular'];
       const node = (
         <TIndicator
           style={{

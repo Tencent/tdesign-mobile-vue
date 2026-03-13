@@ -1,5 +1,5 @@
 import _Popover from './popover';
-import { withInstall, WithInstallType } from '../shared';
+import { withInstall } from '../shared';
 import { TdPopoverProps } from './type';
 
 import './style';
@@ -7,5 +7,5 @@ import './style';
 export * from './type';
 export type PopoverProps = TdPopoverProps;
 
-export const Popover: WithInstallType<typeof _Popover> = withInstall(_Popover);
+export const Popover = withInstall(_Popover);
 export default Popover;

@@ -6,7 +6,8 @@ import Picker from '../picker';
 import PickerItem from '../picker-item';
 import { getPickerColumns } from '../utils';
 
-import { DEFAULT_ITEM_HEIGHT, ANIMATION_TIME_LIMIT } from '../picker.class';
+import { DEFAULT_ITEM_HEIGHT } from '../picker.class';
+import { DEFAULT_WHEEL_CONFIG } from '../constants';
 
 const getRealColumns = (columns) => {
   if (isFunction(columns)) {
@@ -46,7 +47,7 @@ const simulateMoveOption = async (optionContainerEl, distance) => {
   makeTouch(optionContainerEl, 'touchstart', { pageY: 0 });
   makeTouch(optionContainerEl, 'touchmove', { pageY: -distance * DEFAULT_ITEM_HEIGHT });
 
-  vi.useFakeTimers().advanceTimersByTime(ANIMATION_TIME_LIMIT + 1);
+  vi.useFakeTimers().advanceTimersByTime(DEFAULT_WHEEL_CONFIG.inertiaTimeThreshold + 1);
   makeTouch(optionContainerEl, 'touchend', { pageY: -distance * DEFAULT_ITEM_HEIGHT });
   vi.useRealTimers();
 

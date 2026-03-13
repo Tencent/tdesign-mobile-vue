@@ -1,7 +1,7 @@
 import { createApp, defineComponent, ref, Ref, h, VNode, App, nextTick } from 'vue';
 import Message from './message';
-import { WithInstallType, isBrowser } from '../shared';
-import { TdMessageProps, MessageThemeList } from './type';
+import { isBrowser } from '../shared';
+import { TdMessageProps } from './type';
 
 import './style';
 
@@ -16,6 +16,65 @@ const instanceMap: Map<
     visible: Ref<boolean>;
   }
 > = new Map();
+
+const defaultProps: MessageActionOptionsType = {
+  align: 'left',
+  closeBtn: false,
+  content: '',
+  duration: 3000,
+  theme: 'info',
+  visible: false,
+  zIndex: 5000,
+  context: isBrowser ? document.body : null,
+  onDurationEnd: () => {},
+  onCloseBtnClick: () => {},
+};
+
+/** 展示普通消息 */
+Message.info = (options?: MessageActionOptionsType | string) => {
+  create({ ...parseOptions(options), theme: 'info' });
+};
+
+/** 展示成功消息 */
+Message.success = (options?: MessageActionOptionsType | string) => {
+  create({ ...parseOptions(options), theme: 'success' });
+};
+
+/** 展示警示消息 */
+Message.warning = (options?: MessageActionOptionsType | string) => {
+  create({ ...parseOptions(options), theme: 'warning' });
+};
+
+/** 展示错误消息 */
+Message.error = (options?: MessageActionOptionsType | string) => {
+  create({ ...parseOptions(options), theme: 'error' });
+};
+
+/** 关闭全部 */
+Message.closeAll = () => {
+  if (instanceMap instanceof Map) {
+    for (const [key, value] of instanceMap) {
+      const { context, visible } = value;
+      destroy(context as Element, key);
+      visible.value = false;
+    }
+  }
+};
+
+Message.install = (app: App, name = '') => {
+  app.component(name || Message.name, Message);
+  app.config.globalProperties.$message = Message;
+};
+
+export const MessagePlugin = Message;
+export default MessagePlugin;
+
+declare module 'vue' {
+  // Bind to `this` keyword
+  export interface ComponentCustomProperties {
+    $message: typeof Message;
+  }
+}
 
 function destroy(context: Element, root: Element) {
   if (context.contains(root)) {
@@ -72,73 +131,6 @@ function create(props: MessageActionOptionsType): void {
   });
 }
 
-const defaultProps: MessageActionOptionsType = {
-  align: 'left',
-  closeBtn: false,
-  content: '',
-  duration: 3000,
-  theme: 'info',
-  visible: false,
-  zIndex: 5000,
-  context: isBrowser ? document.body : null,
-  onDurationEnd: () => {},
-  onCloseBtnClick: () => {},
-};
-
-(['info', 'success', 'warning', 'error'] as MessageThemeList[]).forEach((theme: MessageThemeList): void => {
-  Message[theme] = (options: MessageActionOptionsType | string) => {
-    let props: MessageActionOptionsType = {
-      ...defaultProps,
-      theme,
-    };
-
-    if (typeof options === 'string') {
-      props.content = options;
-    } else {
-      props = { ...props, ...options };
-    }
-
-    create(props);
-  };
-});
-
-Message.closeAll = () => {
-  if (instanceMap instanceof Map) {
-    for (const [key, value] of instanceMap) {
-      const { context, visible } = value;
-      destroy(context as Element, key);
-      visible.value = false;
-    }
-  }
-};
-
-Message.install = (app: App, name = '') => {
-  app.component(name || Message.name, Message);
-
-  // 添加插件入口
-  // eslint-disable-next-line no-param-reassign
-  app.config.globalProperties.$message = Message as any;
-};
-
-type MessageApi = {
-  /** 展示普通消息 */
-  info: (options?: MessageActionOptionsType | string) => void;
-  /** 展示成功消息 */
-  success: (options?: MessageActionOptionsType | string) => void;
-  /** 展示警示消息 */
-  warning: (options?: MessageActionOptionsType | string) => void;
-  /** 展示错误消息 */
-  error: (options?: MessageActionOptionsType | string) => void;
-  /** 关闭全部 */
-  closeAll: () => void;
-};
-
-export const MessagePlugin: WithInstallType<typeof Message> & MessageApi = Message as any;
-export default MessagePlugin;
-
-declare module 'vue' {
-  // Bind to `this` keyword
-  export interface ComponentCustomProperties {
-    $message: MessageApi;
-  }
+function parseOptions(content?: MessageActionOptionsType | string) {
+  return typeof content === 'string' ? { ...defaultProps, content } : { ...defaultProps, ...content };
 }

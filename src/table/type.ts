@@ -5,7 +5,7 @@
  * */
 
 import { LoadingProps } from '../loading';
-import { TNode, ClassName, HTMLElementAttributes } from '../common';
+import type { TNode, ClassName, HTMLElementAttributes } from '../common';
 
 export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
   /**
@@ -65,6 +65,10 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    * @default 'id'
    */
   rowKey: string;
+  /**
+   * 用于自定义合并单元格，泛型 T 指表格数据类型。示例：`({ row, col, rowIndex, colIndex }) => { rowspan: 2, colspan: 3 }`
+   */
+  rowspanAndColspan?: TableRowspanAndColspanFunc<T>;
   /**
    * 是否显示表头
    * @default true
@@ -173,6 +177,13 @@ export interface RowClassNameParams<T> {
   rowIndex: number;
   rowKey?: string;
   type?: 'body' | 'foot';
+}
+
+export type TableRowspanAndColspanFunc<T> = (params: BaseTableCellParams<T>) => RowspanColspan;
+
+export interface RowspanColspan {
+  colspan?: number;
+  rowspan?: number;
 }
 
 export interface BaseTableCellEventContext<T> {

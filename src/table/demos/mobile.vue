@@ -19,6 +19,9 @@
     <tdesign-demo-block summary="可自定义样式的表格" :padding="true">
       <customRowStyle />
     </tdesign-demo-block>
+    <tdesign-demo-block summary="带合并单元格的表格" :padding="true">
+      <rowspanColspan />
+    </tdesign-demo-block>
   </div>
 </template>
 
@@ -28,4 +31,5 @@ import scrollDemo from './scroll.vue';
 import stripeDemo from './stripe.vue';
 import borderedDemo from './bordered.vue';
 import customRowStyle from './custom-row-style.vue';
+import rowspanColspan from './rowspan-colspan.vue';
 </script>

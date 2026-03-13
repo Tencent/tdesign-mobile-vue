@@ -1,6 +1,5 @@
 import { App, Component, Plugin, getCurrentInstance } from 'vue';
 
-export type WithInstallType<T> = T & Plugin;
 export const withInstall = <T>(comp: T, alias?: string): T & Plugin => {
   const c = comp as T & Component & Plugin;
 

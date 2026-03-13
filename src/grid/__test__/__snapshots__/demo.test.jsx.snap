@@ -7036,6 +7036,553 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
 </div>
 `;
 
+exports[`Grid > Grid multipleVue demo works fine 1`] = `
+<div
+  class="t-grid grid-demo"
+  data-v-9af91aa5=""
+  style="grid-template-columns: repeat(4, 1fr);"
+>
+  
+  <div
+    class="t-grid-item t-grid-item--vertical"
+    data-v-9af91aa5=""
+    style="text-align: center; flex-basis: 25%;"
+  >
+    <div
+      class="t-grid-item__image t-grid-item__image--middle"
+    >
+      <div
+        class="t-image t-image--round"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!---->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/example1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="t-grid-item__content t-grid-item__content--vertical"
+    >
+      <div
+        class="t-grid-item__title t-grid-item__title--middle"
+      >
+        标题文字
+      </div>
+      <div
+        class="t-grid-item__description t-grid-item__description--vertical"
+      >
+        <!---->
+      </div>
+    </div>
+  </div>
+  <div
+    class="t-grid-item t-grid-item--vertical"
+    data-v-9af91aa5=""
+    style="text-align: center; flex-basis: 25%;"
+  >
+    <div
+      class="t-grid-item__image t-grid-item__image--middle"
+    >
+      <div
+        class="t-image t-image--round"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!---->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/example1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="t-grid-item__content t-grid-item__content--vertical"
+    >
+      <div
+        class="t-grid-item__title t-grid-item__title--middle"
+      >
+        标题文字
+      </div>
+      <div
+        class="t-grid-item__description t-grid-item__description--vertical"
+      >
+        <!---->
+      </div>
+    </div>
+  </div>
+  <div
+    class="t-grid-item t-grid-item--vertical"
+    data-v-9af91aa5=""
+    style="text-align: center; flex-basis: 25%;"
+  >
+    <div
+      class="t-grid-item__image t-grid-item__image--middle"
+    >
+      <div
+        class="t-image t-image--round"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!---->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/example1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="t-grid-item__content t-grid-item__content--vertical"
+    >
+      <div
+        class="t-grid-item__title t-grid-item__title--middle"
+      >
+        标题文字
+      </div>
+      <div
+        class="t-grid-item__description t-grid-item__description--vertical"
+      >
+        <!---->
+      </div>
+    </div>
+  </div>
+  <div
+    class="t-grid-item t-grid-item--vertical"
+    data-v-9af91aa5=""
+    style="text-align: center; flex-basis: 25%;"
+  >
+    <div
+      class="t-grid-item__image t-grid-item__image--middle"
+    >
+      <div
+        class="t-image t-image--round"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!---->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/example1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="t-grid-item__content t-grid-item__content--vertical"
+    >
+      <div
+        class="t-grid-item__title t-grid-item__title--middle"
+      >
+        最多五个字
+      </div>
+      <div
+        class="t-grid-item__description t-grid-item__description--vertical"
+      >
+        <!---->
+      </div>
+    </div>
+  </div>
+  <div
+    class="t-grid-item t-grid-item--vertical"
+    data-v-9af91aa5=""
+    style="text-align: center; flex-basis: 25%;"
+  >
+    <div
+      class="t-grid-item__image t-grid-item__image--middle"
+    >
+      <div
+        class="t-image t-image--round"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!---->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/example1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="t-grid-item__content t-grid-item__content--vertical"
+    >
+      <div
+        class="t-grid-item__title t-grid-item__title--middle"
+      >
+        标题文字
+      </div>
+      <div
+        class="t-grid-item__description t-grid-item__description--vertical"
+      >
+        <!---->
+      </div>
+    </div>
+  </div>
+  <div
+    class="t-grid-item t-grid-item--vertical"
+    data-v-9af91aa5=""
+    style="text-align: center; flex-basis: 25%;"
+  >
+    <div
+      class="t-grid-item__image t-grid-item__image--middle"
+    >
+      <div
+        class="t-image t-image--round"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!---->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/example1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="t-grid-item__content t-grid-item__content--vertical"
+    >
+      <div
+        class="t-grid-item__title t-grid-item__title--middle"
+      >
+        标题文字
+      </div>
+      <div
+        class="t-grid-item__description t-grid-item__description--vertical"
+      >
+        <!---->
+      </div>
+    </div>
+  </div>
+  <div
+    class="t-grid-item t-grid-item--vertical"
+    data-v-9af91aa5=""
+    style="text-align: center; flex-basis: 25%;"
+  >
+    <div
+      class="t-grid-item__image t-grid-item__image--middle"
+    >
+      <div
+        class="t-image t-image--round"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!---->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/example1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="t-grid-item__content t-grid-item__content--vertical"
+    >
+      <div
+        class="t-grid-item__title t-grid-item__title--middle"
+      >
+        标题文字
+      </div>
+      <div
+        class="t-grid-item__description t-grid-item__description--vertical"
+      >
+        <!---->
+      </div>
+    </div>
+  </div>
+  <div
+    class="t-grid-item t-grid-item--vertical"
+    data-v-9af91aa5=""
+    style="text-align: center; flex-basis: 25%;"
+  >
+    <div
+      class="t-grid-item__image t-grid-item__image--middle"
+    >
+      <div
+        class="t-image t-image--round"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+              
+            </div>
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!---->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/example1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </picture>
+      </div>
+    </div>
+    <div
+      class="t-grid-item__content t-grid-item__content--vertical"
+    >
+      <div
+        class="t-grid-item__title t-grid-item__title--middle"
+      >
+        最多五个字
+      </div>
+      <div
+        class="t-grid-item__description t-grid-item__description--vertical"
+      >
+        <!---->
+      </div>
+    </div>
+  </div>
+  
+</div>
+`;
+
 exports[`Grid > Grid scrollVue demo works fine 1`] = `
 <div
   class="t-grid t-grid--auto-size grid-demo"

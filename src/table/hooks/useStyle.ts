@@ -8,7 +8,7 @@ export function formatCSSUnit(unit: string | number | undefined) {
 }
 
 export default function useStyle(props: TdBaseTableProps) {
-  const { bordered, stripe, verticalAlign, height, maxHeight, tableContentWidth } = toRefs(props);
+  const { bordered, stripe, verticalAlign, height, maxHeight, tableContentWidth, rowspanAndColspan } = toRefs(props);
 
   const { tableBaseClass, tableAlignClasses } = useClassName();
 
@@ -19,6 +19,7 @@ export default function useStyle(props: TdBaseTableProps) {
       [tableBaseClass.bordered]: bordered?.value,
       [tableBaseClass.striped]: stripe?.value,
       [tableBaseClass.loading]: props.loading,
+      [tableBaseClass.rowspanAndColspan]: !!rowspanAndColspan?.value,
     },
   ]);
 

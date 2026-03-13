@@ -1,6 +1,6 @@
 import { preventDefault } from '../shared/dom';
 import { usePrefixClass } from '../hooks/useClass';
-import { PickerColumn } from './type';
+import { PickerColumn, PickerWheelConfig } from './type';
 import { KeysType } from '../common';
 import { findIndexOfEnabledOption, limitNumberInRange } from './utils';
 
@@ -12,7 +12,7 @@ export interface PickerOptions {
   defaultPickerColumns?: PickerColumn;
   el: HTMLElement | HTMLDivElement | HTMLUListElement;
   onChange: (index: number) => void;
-  swipeDuration?: string | number;
+  wheelConfig: Required<PickerWheelConfig>;
 }
 
 const quartEaseOut = function (t: number, b: number, c: number, d: number) {
@@ -25,13 +25,6 @@ const quartEaseOut = function (t: number, b: number, c: number, d: number) {
  */
 export const DEFAULT_ITEM_HEIGHT = 40;
 const DEFAULT_HOLDER_HEIGHT = 200;
-const OFFSET_OF_BOUND = 60;
-export const ANIMATION_TIME_LIMIT = 460;
-export const ANIMATION_DISTANCE_LIMIT = 15;
-const ANIMATION_DURATION = 150;
-const DEFAULT_SWIPE_DURATION = 1000;
-const TAP_DISTANCE_THRESHOLD = 5; // px
-const TAP_TIME_THRESHOLD = 200; // ms
 
 /**
  * @name picker
@@ -48,8 +41,6 @@ class Picker {
   list: HTMLUListElement | null = null;
 
   elementItems: HTMLLIElement[] = [];
-
-  height: number = DEFAULT_HOLDER_HEIGHT;
 
   curIndex = 0;
 
@@ -69,9 +60,9 @@ class Picker {
 
   isPicking = false;
 
-  offsetYOfStartBound: number = OFFSET_OF_BOUND;
+  offsetYOfStartBound = 0;
 
-  offsetYOfEndBound: number = -OFFSET_OF_BOUND;
+  offsetYOfEndBound = 0;
 
   offsetY = 0;
 
@@ -83,13 +74,34 @@ class Picker {
 
   onChange: (index: number) => void;
 
-  itemGroupHeight: number;
+  itemGroupHeight = DEFAULT_HOLDER_HEIGHT;
 
-  indicatorOffset: number;
-
-  swipeDuration?: number | string;
+  indicatorOffset = 0;
 
   pickerColumns: PickerColumn;
+
+  // wheelConfig 实例属性
+  inertiaDuration: number;
+
+  bounceDuration: number;
+
+  transitionDuration: number;
+
+  inertiaTimeThreshold: number;
+
+  inertiaDistanceThreshold: number;
+
+  boundOffset: number;
+
+  clickDistanceThreshold: number;
+
+  clickTimeThreshold: number;
+
+  // ResizeObserver 用于监听尺寸变化
+  private resizeObserver: ResizeObserver | null = null;
+
+  // 标记是否已初始化完成高度计算
+  private heightInitialized = false;
 
   constructor(options: PickerOptions) {
     if (!options.el) throw new Error('options el needed!');
@@ -97,7 +109,17 @@ class Picker {
     this.pickerColumns = options.defaultPickerColumns;
     this.options = options;
     this.onChange = options.onChange;
-    this.swipeDuration = options.swipeDuration ?? DEFAULT_SWIPE_DURATION;
+
+    // 直接使用传入的 wheelConfig（已由组件合并好默认值）
+    const { wheelConfig } = options;
+    this.inertiaDuration = wheelConfig.inertiaDuration;
+    this.bounceDuration = wheelConfig.bounceDuration;
+    this.transitionDuration = wheelConfig.transitionDuration;
+    this.inertiaTimeThreshold = wheelConfig.inertiaTimeThreshold;
+    this.inertiaDistanceThreshold = wheelConfig.inertiaDistanceThreshold;
+    this.boundOffset = wheelConfig.boundOffset;
+    this.clickDistanceThreshold = wheelConfig.clickDistanceThreshold;
+    this.clickTimeThreshold = wheelConfig.clickTimeThreshold;
 
     this.init();
   }
@@ -109,16 +131,85 @@ class Picker {
     this.setSelectedClassName();
     // 绑定事件
     this.bindEvent();
+    // 监听尺寸变化，适配 popup 场景和 CSS 变量动态生效
+    this.observeResize();
   }
 
   /**
-   * @description 获取所有的列表DOM元素
+   * @description 使用 ResizeObserver 监听元素尺寸变化
+   */
+  observeResize(): void {
+    if (typeof ResizeObserver === 'undefined') return;
+
+    this.resizeObserver = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        const { height } = entry.contentRect;
+        // 当高度从 0 变为有效值，或高度发生变化时，重新计算
+        if (height > 0) {
+          const newItemHeight = this.getFirstItemHeight();
+          const newGroupHeight = this.holder.parentElement?.offsetHeight || DEFAULT_HOLDER_HEIGHT;
+
+          // 只有当高度有效且发生变化时才更新
+          if (
+            newItemHeight > 0 &&
+            newGroupHeight > 0 &&
+            (newItemHeight !== this.itemHeight || newGroupHeight !== this.itemGroupHeight || !this.heightInitialized)
+          ) {
+            this.heightInitialized = true;
+            this.recalculateHeights();
+            // 重新定位到当前选中项
+            this.updateIndex(this.curIndex, { isChange: false, duration: 0 });
+          }
+        }
+      }
+    });
+
+    // 同时观察 holder 和其父元素
+    this.resizeObserver.observe(this.holder);
+    if (this.holder.parentElement) {
+      this.resizeObserver.observe(this.holder.parentElement);
+    }
+  }
+
+  /**
+   * @description 获取第一个 li 元素的高度，优先使用已缓存的 elementItems
+   */
+  private getFirstItemHeight(): number {
+    const firstItem = this.elementItems[0] || this.holder.querySelector('li');
+    return firstItem?.offsetHeight || DEFAULT_ITEM_HEIGHT;
+  }
+
+  /**
+   * @description 获取所有的列表DOM元素，并重新计算高度相关参数
    */
   updateItems(): void {
     this.elementItems = [...this.holder.querySelectorAll('li')];
+    // 重新获取实际高度，以支持 CSS 变量和 postcss-pxtorem 等场景
+    this.recalculateHeights();
+  }
+
+  /**
+   * @description 重新计算高度相关参数，适配 CSS 变量和 rem 转换场景
+   */
+  recalculateHeights(): void {
+    const newItemHeight = this.getFirstItemHeight();
+    const newGroupHeight = this.holder.parentElement?.offsetHeight || DEFAULT_HOLDER_HEIGHT;
+
+    // 高度发生变化时更新所有相关参数
+    if (newItemHeight !== this.itemHeight || newGroupHeight !== this.itemGroupHeight) {
+      this.itemHeight = newItemHeight;
+      this.itemGroupHeight = newGroupHeight;
+      this.indicatorOffset = this.itemGroupHeight / 2 - this.itemHeight / 2;
+    }
+
+    // 边界值需要根据当前 elementItems 数量计算，每次都更新
     const itemLen = this.elementItems.length;
-    this.offsetYOfEnd = -this.itemHeight * (itemLen - 3);
-    this.offsetYOfEndBound = -(this.itemHeight * (itemLen - 3) + OFFSET_OF_BOUND);
+    if (itemLen > 0) {
+      this.offsetYOfStart = this.indicatorOffset;
+      this.offsetYOfEnd = this.indicatorOffset - (itemLen - 1) * this.itemHeight;
+      this.offsetYOfStartBound = this.indicatorOffset + this.boundOffset;
+      this.offsetYOfEndBound = this.indicatorOffset - (itemLen - 1) * this.itemHeight - this.boundOffset;
+    }
   }
 
   /**
@@ -126,21 +217,24 @@ class Picker {
    */
   initScrollParams(): void {
     this.list = this.holder as HTMLUListElement;
-    this.itemGroupHeight = this.holder.parentElement?.offsetHeight || DEFAULT_HOLDER_HEIGHT;
     this.elementItems = [...this.holder.querySelectorAll('li')];
-    this.itemHeight = this.holder.querySelector('li')?.offsetHeight || DEFAULT_ITEM_HEIGHT;
-    this.height = this.holder.offsetHeight || DEFAULT_HOLDER_HEIGHT;
+    this.itemGroupHeight = this.holder.parentElement?.offsetHeight || DEFAULT_HOLDER_HEIGHT;
+    this.itemHeight = this.getFirstItemHeight();
     this.indicatorOffset = this.itemGroupHeight / 2 - this.itemHeight / 2;
-    let curIndex = findIndexOfEnabledOption(this.pickerColumns, this.options.defaultIndex || 0, this.options.keys);
-    if (curIndex !== (this.options.defaultIndex || 0)) this.onChange(curIndex);
+
+    // 设置 class 名称
     this.itemClassName = `${classPrefix.value}-picker-item__item`;
     this.itemSelectedClassName = `${classPrefix.value}-picker-item__item--active`;
-    this.startY = 0;
-    this.isPicking = false;
-    this.lastMoveTime = 0;
-    this.lastMoveStart = 0;
-    this.stopInertiaMove = false;
+
+    // 处理默认选中索引
+    let curIndex = findIndexOfEnabledOption(this.pickerColumns, this.options.defaultIndex || 0, this.options.keys);
+    if (curIndex !== (this.options.defaultIndex || 0)) {
+      this.onChange(curIndex);
+    }
+
     this.curValue = this.elementItems[curIndex]?.textContent;
+
+    // 使用 Object.defineProperty 确保 curIndex 变化时同步更新 curValue
     Object.defineProperty(this, 'curIndex', {
       set: (value: number) => {
         curIndex = value;
@@ -151,13 +245,14 @@ class Picker {
       },
     });
 
-    const startOffsetY = this.indicatorOffset - this.curIndex * this.itemHeight;
+    // 计算初始偏移和边界值
     const itemLen = this.elementItems.length;
+    const startOffsetY = this.indicatorOffset - this.curIndex * this.itemHeight;
     this.setOffsetY(startOffsetY);
-    this.offsetYOfStart = startOffsetY;
+    this.offsetYOfStart = this.indicatorOffset;
     this.offsetYOfEnd = this.indicatorOffset - (itemLen - 1) * this.itemHeight;
-    this.offsetYOfStartBound = this.indicatorOffset + OFFSET_OF_BOUND;
-    this.offsetYOfEndBound = this.indicatorOffset - (itemLen - 1) * this.itemHeight - OFFSET_OF_BOUND;
+    this.offsetYOfStartBound = this.indicatorOffset + this.boundOffset;
+    this.offsetYOfEndBound = this.indicatorOffset - (itemLen - 1) * this.itemHeight - this.boundOffset;
   }
 
   bindEvent(): void {
@@ -212,7 +307,7 @@ class Picker {
     const distance = point.pageY - this.lastMoveStart;
     const absDistance = Math.abs(distance);
 
-    if (absDistance < TAP_DISTANCE_THRESHOLD && moveTime < TAP_TIME_THRESHOLD) {
+    if (absDistance < this.clickDistanceThreshold && moveTime < this.clickTimeThreshold) {
       // 点选操作，查找 li
       const li = (event.target as HTMLElement).closest('li');
       if (li && this.list?.contains(li)) {
@@ -224,7 +319,7 @@ class Picker {
       }
     }
     // 超出一定时间不再惯性滚动
-    if (moveTime > ANIMATION_TIME_LIMIT || absDistance < ANIMATION_DISTANCE_LIMIT || !this.swipeDuration) {
+    if (moveTime > this.inertiaTimeThreshold || absDistance < this.inertiaDistanceThreshold || !this.inertiaDuration) {
       this.stopInertiaMove = false;
       this.endScroll();
       return;
@@ -239,7 +334,7 @@ class Picker {
       this.endScroll();
       return;
     }
-    this.scrollDist(nowTime, this.offsetY, dist, +this.swipeDuration);
+    this.scrollDist(this.offsetY, dist, this.inertiaDuration);
   }
 
   /**
@@ -258,12 +353,11 @@ class Picker {
 
   /**
    * @description 根据计算的物理惯性距离滚动
-   * @param now
    * @param startOffsetY
    * @param dist
    * @param duration
    */
-  scrollDist(now: number, startOffsetY: number, dist: number, duration: number): void {
+  scrollDist(startOffsetY: number, dist: number, duration: number): void {
     this.stopInertiaMove = false;
     let start: any = null;
     const inertiaMove = (timestamp: number) => {
@@ -300,7 +394,7 @@ class Picker {
    */
   updateIndex(index: number, options?: any): void {
     const realOptions = {
-      duration: 460,
+      duration: this.transitionDuration,
       isChange: true,
       ...options,
     };
@@ -330,18 +424,6 @@ class Picker {
    */
   getCurIndex(): number {
     return this.curIndex;
-  }
-
-  /**
-   * @description 适配3d， TBD
-   * @param index
-   */
-  fix3d(index: number): void {
-    for (let i = 0; i < this.elementItems.length; i++) {
-      const deg = 25 * (-index + i);
-      this.elementItems[i].style.transform = `rotateX(${deg}deg)`;
-      this.elementItems[i].style.webkitTransform = `rotateX(${deg}deg)`;
-    }
   }
 
   /**
@@ -385,32 +467,28 @@ class Picker {
    */
   endScroll(): void {
     if (this.stopInertiaMove) return;
+
+    // 设置回弹动画
+    if (this.list) {
+      this.list.style.transition = `${this.bounceDuration}ms ease-out`;
+    }
+
     let curIndex = 0;
     if (this.offsetY > this.offsetYOfStartBound) {
       curIndex = 0;
-      if (this.list) {
-        this.list.style.transition = `${ANIMATION_DURATION}ms ease-out`;
-      }
     } else if (this.offsetY < this.offsetYOfEndBound) {
       curIndex = this.elementItems.length - 1;
-      if (this.list) {
-        this.list.style.transition = `${ANIMATION_DURATION}ms ease-out`;
-      }
     } else {
-      if (this.list) {
-        this.list.style.transition = `${ANIMATION_DURATION}ms ease-out`;
-      }
       curIndex = -Math.round((this.offsetY - this.indicatorOffset) / this.itemHeight);
-      if (curIndex < 0) curIndex = 0;
-      if (curIndex > this.elementItems.length - 1) curIndex = this.elementItems.length - 1;
+      curIndex = Math.max(0, Math.min(curIndex, this.elementItems.length - 1));
     }
 
     curIndex = findIndexOfEnabledOption(this.pickerColumns, curIndex, this.options.keys);
 
     const offsetY = this.indicatorOffset - curIndex * this.itemHeight;
     this.setOffsetY(offsetY);
+
     if (curIndex !== this.curIndex) {
-      // 防止事件重复触发
       this.curIndex = curIndex;
       this.setSelectedClassName();
       this.onChange(this.curIndex);
@@ -418,6 +496,11 @@ class Picker {
   }
 
   destroy(): void {
+    // 清理 ResizeObserver
+    if (this.resizeObserver) {
+      this.resizeObserver.disconnect();
+      this.resizeObserver = null;
+    }
     // @ts-ignore: TODO
     delete this.holder;
   }

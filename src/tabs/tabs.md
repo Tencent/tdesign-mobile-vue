@@ -53,7 +53,7 @@ value | String / Number | - | 选项卡的值，唯一标识。TS 类型：`TabV
 -- | -- | --
 --td-tab-border-color | @component-stroke | -
 --td-tab-font | @font-body-medium | -
---td-tab-icon-size | 16px | -
+--td-tab-icon-size | 18px | -
 --td-tab-item-active-color | @brand-color | -
 --td-tab-item-color | @text-color-primary | -
 --td-tab-item-disabled-color | @text-color-disabled | -

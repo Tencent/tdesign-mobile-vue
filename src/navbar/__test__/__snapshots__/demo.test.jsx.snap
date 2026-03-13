@@ -770,7 +770,7 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
                     class="t-icon t-icon-search"
                     fill="none"
                     height="1em"
-                    style="fill: none; font-size: 24px;"
+                    style="fill: none;"
                     viewBox="0 0 24 24"
                     width="1em"
                   >
@@ -1378,7 +1378,7 @@ exports[`Navbar > Navbar searchVue demo works fine 1`] = `
               class="t-icon t-icon-search"
               fill="none"
               height="1em"
-              style="fill: none; font-size: 24px;"
+              style="fill: none;"
               viewBox="0 0 24 24"
               width="1em"
             >

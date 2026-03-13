@@ -1,6 +1,6 @@
 import _Collapse from './collapse';
 import _CollapsePanel from './collapse-panel';
-import { withInstall, WithInstallType } from '../shared';
+import { withInstall } from '../shared';
 
 import './style';
 
@@ -10,6 +10,6 @@ export * from './type';
 export type CollapseProps = TdCollapseProps;
 export type CollapsePanelProps = TdCollapsePanelProps;
 
-export const Collapse: WithInstallType<typeof _Collapse> = withInstall(_Collapse);
-export const CollapsePanel: WithInstallType<typeof _CollapsePanel> = withInstall(_CollapsePanel);
+export const Collapse = withInstall(_Collapse);
+export const CollapsePanel = withInstall(_CollapsePanel);
 export default Collapse;

@@ -25,7 +25,7 @@ value | String | - | `v-model` and `v-model:value` is supported | N
 defaultValue | String | - | uncontrolled property | N
 onActionClick | Function |  | Typescript: `(context: { e: MouseEvent }) => void`<br/> | N
 onBlur | Function |  | Typescript: `(context: { value: string; e: FocusEvent }) => void`<br/> | N
-onChange | Function |  | Typescript: `(value: string, context: { e?: InputEvent \| MouseEvent }) => void`<br/> | N
+onChange | Function |  | Typescript: `(value: string, context: { trigger: 'input-change' \| 'option-click' \| 'clear'; e?: InputEvent \| MouseEvent }) => void`<br/> | N
 onClear | Function |  | Typescript: `(context: { e: MouseEvent }) => void`<br/> | N
 onFocus | Function |  | Typescript: `(context: { value: string; e: FocusEvent }) => void`<br/> | N
 onSearch | Function |  | Typescript: `(context?: { value: string; trigger: 'submit' \| 'option-click' \| 'clear'; e?: InputEvent \| MouseEvent }) => void`<br/> | N
@@ -37,7 +37,7 @@ name | params | description
 -- | -- | --
 action-click | `(context: { e: MouseEvent })` | \-
 blur | `(context: { value: string; e: FocusEvent })` | \-
-change | `(value: string, context: { e?: InputEvent \| MouseEvent })` | \-
+change | `(value: string, context: { trigger: 'input-change' \| 'option-click' \| 'clear'; e?: InputEvent \| MouseEvent })` | \-
 clear | `(context: { e: MouseEvent })` | \-
 focus | `(context: { value: string; e: FocusEvent })` | \-
 search | `(context?: { value: string; trigger: 'submit' \| 'option-click' \| 'clear'; e?: InputEvent \| MouseEvent })` | \-
