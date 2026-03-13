@@ -54,7 +54,7 @@ const onPick = (value: PickerValue[], context: any) => {
 
 <template>
   <t-cell arrow title="自定义高度选择器" :note="cityState.city.join(' ')" @click="cityState.show = true" />
-  <t-popup v-if="cityState.show" v-model="cityState.show" class="picker-custom-height-demo" placement="bottom">
+  <t-popup v-model="cityState.show" class="picker-custom-height-demo" placement="bottom">
     <t-picker
       v-model="cityState.city"
       :columns="cityOptions"
