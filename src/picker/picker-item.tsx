@@ -1,4 +1,4 @@
-import { ref, computed, onMounted, defineComponent, PropType, watch, inject, nextTick } from 'vue';
+import { ref, computed, onMounted, onBeforeUnmount, defineComponent, PropType, watch, inject } from 'vue';
 import { get as lodashGet } from 'lodash-es';
 import config from '../config';
 import Picker from './picker.class';
@@ -52,22 +52,20 @@ export default defineComponent({
 
     const className = computed(() => `${pickerItemClass.value}`);
 
-    const updatePickerWithNextTick = (index: number) => {
+    const updatePickerIndex = (index: number) => {
       if (picker) {
         picker.updateItems();
-        nextTick(() => {
-          picker.updateIndex(index, { isChange: false });
-        });
+        picker.updateIndex(index, { isChange: false });
       }
     };
 
     const setIndex = (index: number) => {
-      updatePickerWithNextTick(index);
+      updatePickerIndex(index);
     };
 
     const setValue = (value: number | string | undefined) => {
       const index = getIndexByValue(value);
-      updatePickerWithNextTick(index);
+      updatePickerIndex(index);
     };
     const setOptions = () => {
       picker?.update();
@@ -97,6 +95,12 @@ export default defineComponent({
           wheelConfig: props.wheelConfig,
         });
       }
+    });
+
+    onBeforeUnmount(() => {
+      // 销毁 picker 实例，清理 ResizeObserver 等资源
+      picker?.destroy();
+      picker = null;
     });
 
     watch(
