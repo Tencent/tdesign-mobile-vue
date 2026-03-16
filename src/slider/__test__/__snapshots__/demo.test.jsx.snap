@@ -267,11 +267,11 @@ exports[`Slider > Slider disabledVue demo works fine 1`] = `
       class="t-slider t-slider--top t-slider--disabled t-slider--range"
       data-v-a32e1a57=""
     >
-      <text
+      <div
         class="t-slider__range-extreme t-slider__range-extreme--min"
       >
         0
-      </text>
+      </div>
       <div
         class="t-slider__bar t-slider__bar--default t-slider__bar--disabled"
       >
@@ -306,11 +306,11 @@ exports[`Slider > Slider disabledVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <text
+      <div
         class="t-slider__range-extreme t-slider__range-extreme--max"
       >
         100
-      </text>
+      </div>
     </div>
   </div>
   <div
@@ -420,11 +420,11 @@ exports[`Slider > Slider labelVue demo works fine 1`] = `
           class="t-slider t-slider--top t-slider--range"
           data-v-90a4d424=""
         >
-          <text
+          <div
             class="t-slider__range-extreme t-slider__range-extreme--min"
           >
             0
-          </text>
+          </div>
           <div
             class="t-slider__bar t-slider__bar--default"
           >
@@ -459,11 +459,11 @@ exports[`Slider > Slider labelVue demo works fine 1`] = `
               </div>
             </div>
           </div>
-          <text
+          <div
             class="t-slider__range-extreme t-slider__range-extreme--max"
           >
             100
-          </text>
+          </div>
         </div>
       </div>
       
@@ -685,11 +685,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               class="t-slider t-slider--top t-slider--range"
               data-v-90a4d424=""
             >
-              <text
+              <div
                 class="t-slider__range-extreme t-slider__range-extreme--min"
               >
                 0
-              </text>
+              </div>
               <div
                 class="t-slider__bar t-slider__bar--default"
               >
@@ -724,11 +724,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
                   </div>
                 </div>
               </div>
-              <text
+              <div
                 class="t-slider__range-extreme t-slider__range-extreme--max"
               >
                 100
-              </text>
+              </div>
             </div>
           </div>
           
@@ -911,11 +911,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           class="t-slider t-slider--top t-slider--disabled t-slider--range"
           data-v-a32e1a57=""
         >
-          <text
+          <div
             class="t-slider__range-extreme t-slider__range-extreme--min"
           >
             0
-          </text>
+          </div>
           <div
             class="t-slider__bar t-slider__bar--default t-slider__bar--disabled"
           >
@@ -950,11 +950,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               </div>
             </div>
           </div>
-          <text
+          <div
             class="t-slider__range-extreme t-slider__range-extreme--max"
           >
             100
-          </text>
+          </div>
         </div>
       </div>
       <div
