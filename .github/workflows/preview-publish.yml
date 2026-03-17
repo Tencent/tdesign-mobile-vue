@@ -11,5 +11,5 @@ on:
 jobs:
   call-preview:
     uses: TDesignOteam/workflows/.github/workflows/reusable-pr-preview.yml@main
-    with:
-       surge-token: ${{ secrets.TDESIGN_SURGE_TOKEN }}
+    secrets:
+      TDESIGN_SURGE_TOKEN: ${{ secrets.TDESIGN_SURGE_TOKEN }}
