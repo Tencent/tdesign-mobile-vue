@@ -52,26 +52,24 @@ export default defineComponent({
     const showViewer = ref(false);
     const initialIndex = ref(0);
     const uploadListRef = ref<HTMLElement>();
+    const isDragging = ref(false);
 
-    const { onDragstart, onDragover, onDragend, onTouchstart, onTouchmove, dragIndex, getFileId } = useDrag(
+    const { onTouchstart, onTouchmove, onTouchend, dragIndex, getFileId } = useDrag(
       props,
       setUploadValue,
       uploadClass,
       uploadListRef,
     );
 
-    const onDragSortStart = (e: DragEvent, index: number) => {
-      onDragstart(e, index);
-      props.onDrag?.();
-    };
-
     const onTouchDragStart = (e: TouchEvent, index: number) => {
+      isDragging.value = true;
       onTouchstart(e, index);
       props.onDrag?.();
     };
 
-    const onDragSortEnd = () => {
-      onDragend();
+    const onTouchDragEnd = () => {
+      isDragging.value = false;
+      onTouchend();
       props.onDrop?.(displayFiles.value);
     };
 
@@ -156,26 +154,16 @@ export default defineComponent({
           class={[
             `${uploadClass.value}__item`,
             {
-              [`${uploadClass.value}__item-drag`]: props.draggable,
+              [`${uploadClass.value}__item-drag`]: props.draggable && isDragging.value,
             },
           ]}
-          draggable={props.draggable}
-          onDragstart={(e: DragEvent) => onDragSortStart(e, index)}
-          onDragover={(e: DragEvent) => onDragover(e, index, displayFiles.value)}
-          onDragend={() => {
-            onDragSortEnd();
-          }}
-          onDrop={(e: DragEvent) => {
-            e.preventDefault();
-            onDragSortEnd();
-          }}
           onTouchstart={(e: TouchEvent) => onTouchDragStart(e, index)}
           onTouchmove={(e: TouchEvent) => onTouchmove(e, displayFiles.value)}
           onTouchend={() => {
-            onDragSortEnd();
+            onTouchDragEnd();
           }}
           onTouchcancel={() => {
-            onDragSortEnd();
+            onTouchDragEnd();
           }}
           onClick={(e: MouseEvent) => handlePreview(e, file, index)}
         >

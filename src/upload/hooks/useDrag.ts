@@ -1,4 +1,4 @@
-import { ComputedRef, ref, Ref } from 'vue';
+import { ComputedRef, ref, Ref, onMounted, onBeforeUnmount } from 'vue';
 import type { TdUploadProps, UploadFile } from '../type';
 
 interface UploadFileWithUid extends UploadFile {
@@ -57,7 +57,24 @@ export default function useDrag(
     }
   };
 
-  const performSort = (index: number, displayFiles: UploadFile[], e: DragEvent | TouchEvent) => {
+  let resizeObserver: ResizeObserver | null = null;
+
+  onMounted(() => {
+    updateDragBaseData();
+    if (listRef.value && window.ResizeObserver) {
+      resizeObserver = new ResizeObserver(() => {
+        updateDragBaseData();
+      });
+      resizeObserver.observe(listRef.value);
+    }
+  });
+
+  onBeforeUnmount(() => {
+    resizeObserver?.disconnect();
+    resizeObserver = null;
+  });
+
+  const performSort = (index: number, displayFiles: UploadFile[], e: TouchEvent) => {
     if (index === -1 || index === dragIndex.value) {
       pendingTargetIndex = -1;
       return;
@@ -129,23 +146,12 @@ export default function useDrag(
   };
 
   return {
-    onDragstart: (e: DragEvent, index: number) => {
-      if (!props.draggable) return;
-      dragIndex.value = index;
-      updateDragBaseData();
-    },
-    onDragover: (e: DragEvent, index: number, files: UploadFile[]) => {
-      if (!props.draggable || dragIndex.value === -1) return;
-      e.preventDefault();
-      performSort(index, files, e);
-    },
-    onDragend: resetDrag,
     onTouchstart: (e: TouchEvent, index: number) => {
       if (!props.draggable) return;
       dragIndex.value = index;
-      updateDragBaseData();
     },
     onTouchmove,
+    onTouchend: resetDrag,
     dragIndex,
     getFileId,
   };
