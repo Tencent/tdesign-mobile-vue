@@ -355,8 +355,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
         >
           
           <div
-            class="t-upload__item t-upload__item-drag"
-            draggable="true"
+            class="t-upload__item"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -405,8 +404,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             <!---->
           </div>
           <div
-            class="t-upload__item t-upload__item-drag"
-            draggable="true"
+            class="t-upload__item"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -474,8 +472,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             </svg>
           </div>
           <div
-            class="t-upload__item t-upload__item-drag"
-            draggable="true"
+            class="t-upload__item"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -1233,8 +1230,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
   >
     
     <div
-      class="t-upload__item t-upload__item-drag"
-      draggable="true"
+      class="t-upload__item"
     >
       <div
         class="t-image t-image--round t-upload__image"
@@ -1283,8 +1279,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
       <!---->
     </div>
     <div
-      class="t-upload__item t-upload__item-drag"
-      draggable="true"
+      class="t-upload__item"
     >
       <div
         class="t-image t-image--round t-upload__image"
@@ -1352,8 +1347,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
       </svg>
     </div>
     <div
-      class="t-upload__item t-upload__item-drag"
-      draggable="true"
+      class="t-upload__item"
     >
       <div
         class="t-image t-image--round t-upload__image"
