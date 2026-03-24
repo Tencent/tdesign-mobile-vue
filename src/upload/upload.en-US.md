@@ -12,13 +12,11 @@ addBtn | Boolean | true | `1.11.1` | N
 addContent | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 allowUploadDuplicateFile | Boolean | false | allow to upload duplicate name files | N
 autoUpload | Boolean | true | post upload request automatically after files being selected | N
-beforeAllFilesUpload | Function | - | before all files upload, return false can stop uploading file。Typescript: `(file: UploadFile[]) => boolean \| Promise<boolean>` | N
 beforeUpload | Function | - | stop one of files to upload。Typescript: `(file: UploadFile) => boolean \| Promise<boolean>` | N
 capture | String / Boolean | - | \- | N
 data | Object | - | extra request data of uploading. `formatRequest` can redefine all request data。Typescript: `Record<string, any> \| ((files: UploadFile[]) => Record<string, any>)` | N
 disabled | Boolean | undefined | make upload to be disabled | N
 draggable | Boolean | undefined | \- | N
-fileListDisplay | Slot / Function | - | used to render file list UI。Typescript: `TNode<{ files: UploadFile[]; dragEvents?: UploadDisplayDragEvents }>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 files | Array | [] | `v-model:files` is supported。Typescript: `Array<T>` | N
 defaultFiles | Array | [] | uncontrolled property。Typescript: `Array<T>` | N
 format | Function | - | to redefine  `UploadFile` data structure。Typescript: `(file: File) => UploadFile` | N
@@ -26,12 +24,9 @@ formatRequest | Function | - | redefine request data。Typescript: `(requestData
 formatResponse | Function | - | redefine response data structure。Typescript: `(response: any, context: FormatResponseContext) => ResponseType` `type ResponseType = { error?: string; url?: string } & Record<string, any>` ` interface FormatResponseContext { file: UploadFile; currentFiles?: UploadFile[] }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts) | N
 headers | Object | - | HTTP Request Header。Typescript: `{[key: string]: string}` | N
 imageProps | Object | - | Typescript: `ImageProps`，[Image API Documents](./image?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts) | N
-isBatchUpload | Boolean | false | make all files to be a whole package, files can only be replaced or deleted together, can not add more files | N
 max | Number | 0 | max count of files limit | N
 method | String | POST | HTTP request method。options: POST/GET/PUT/OPTIONS/PATCH/post/get/put/options/patch | N
-mockProgressDuration | Number | - | mock progress duration time. more large files more duration time | N
 multiple | Boolean | false | multiple files uploading | N
-name | String | file | field name of files in upload request data | N
 preview | Boolean | true | `1.6.0` | N
 removeBtn | Boolean | true | `1.10.0` | N
 requestMethod | Function | - | custom upload request method。Typescript: `(files: UploadFile \| UploadFile[]) => Promise<RequestMethodResponse>` `interface RequestMethodResponse { status: 'success' \| 'fail'; error?: string; response: { url?: string; files?: UploadFile[]; [key: string]: any } }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts) | N
