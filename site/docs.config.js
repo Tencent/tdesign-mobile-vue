@@ -27,6 +27,14 @@ export const docs = [
         component: () => import('@docs/overview.md'),
         componentEn: () => import('@docs/overview.en-US.md'),
       },
+      {
+        title: 'MCP',
+        titleEn: 'MCP',
+        name: 'MCP',
+        path: '/mobile-vue/mcp',
+        component: () => import('@common/docs/mcp.md'),
+        componentEn: () => import('@common/docs/mcp.en-US.md'),
+      },
     ],
   },
   {
