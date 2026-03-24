@@ -133,8 +133,8 @@
     "@vitest/ui": "^3.2.4",
     "@vue/babel-plugin-jsx": "1.1.1",
     "@vue/eslint-config-typescript": "^9.1.0",
-    "@vue/runtime-core": "3.3.8",
-    "@vue/shared": "3.3.8",
+    "@vue/runtime-core": "^3.5.1",
+    "@vue/shared": "^3.5.1",
     "@vue/test-utils": "2.4.1",
     "autoprefixer": "^10.2.4",
     "axios": "^1.7.2",
@@ -187,7 +187,7 @@
     "vite": "^6.2.3",
     "vite-plugin-tdoc": "^2.0.1",
     "vitest": "^3.2.4",
-    "vue": "3.3.8",
+    "vue": "^3.5.1",
     "vue-eslint-parser": "^8.0.1",
     "vue-router": "4.0.11",
     "vue-tsc": "^0.40.0"
@@ -210,7 +210,7 @@
   "web-types": "helper/web-types.json",
   "pnpm": {
     "overrides": {
-      "@vue/runtime-core": "3.3.8"
+      "@vue/runtime-core": "^3.5.1"
     }
   }
 }
