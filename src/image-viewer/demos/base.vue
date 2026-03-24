@@ -7,7 +7,7 @@
         <img
           :src="src"
           :style="style"
-          :className="className"
+          :class="className"
           @load="onLoad"
           @transitionstart="onTransitionstart"
           @transitionend="onTransitionend"
@@ -22,10 +22,10 @@ import { ref } from 'vue';
 import type { ImageViewerCloseTrigger } from 'tdesign-mobile-vue';
 
 const visible = ref(false);
-const images = [
+const images = ref([
   'https://tdesign.gtimg.com/mobile/demos/swiper1.png',
   'https://tdesign.gtimg.com/mobile/demos/swiper2.png',
-];
+]);
 
 const onIndexChange = (index: number, context: { trigger: 'prev' | 'next' }) => {
   console.log('onIndexChange', index, context);

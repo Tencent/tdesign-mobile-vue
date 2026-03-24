@@ -14,6 +14,8 @@ import TCell from '../cell/cell';
 
 const { prefix } = config;
 
+type EnterKeyHint = 'search' | 'done' | 'enter' | 'go' | 'next' | 'previous' | 'send';
+
 export default defineComponent({
   name: `${prefix}-search`,
   props: searchProps,
@@ -174,11 +176,9 @@ export default defineComponent({
           },
         );
       };
-
       const extraProps = {
-        enterkeyhint: 'search',
+        enterkeyhint: 'search' as EnterKeyHint,
       };
-
       return (
         <div>
           <div class={`${searchClass.value}`}>
