@@ -177,6 +177,7 @@ export default defineComponent({
           onTouchcancel={() => {
             onDragSortEnd();
           }}
+          onClick={(e: MouseEvent) => handlePreview(e, file, index)}
         >
           {file.url && (
             <TImage
@@ -184,7 +185,6 @@ export default defineComponent({
               shape="round"
               {...(props.imageProps as TdUploadProps['imageProps'])}
               src={file.url}
-              onClick={(e: MouseEvent) => handlePreview(e, file, index)}
             />
           )}
           {renderStatus(file)}

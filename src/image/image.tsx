@@ -14,11 +14,7 @@ const { prefix } = config;
 
 export default defineComponent({
   name: `${prefix}-image`,
-  props: {
-    ...props,
-    // 非对外暴露参数
-    onClick: Function as PropType<(e: MouseEvent) => void>,
-  },
+  props,
   setup(props, context) {
     const imageClass = usePrefixClass('image');
     const renderTNodeJSX = useTNodeJSX();
@@ -106,7 +102,7 @@ export default defineComponent({
 
     return () => {
       return (
-        <div class={imageClasses.value} onClick={props.onClick}>
+        <div class={imageClasses.value}>
           {maskContent.value}
           <picture>
             {props.srcset &&
