@@ -1,6 +1,10 @@
 import { ComputedRef, ref, Ref } from 'vue';
 import type { TdUploadProps, UploadFile } from '../type';
 
+interface UploadFileWithUid extends UploadFile {
+  __uid?: string;
+}
+
 export default function useDrag(
   props: TdUploadProps,
   setUploadValue: (value: UploadFile[], ...args: any[]) => void,
@@ -20,10 +24,10 @@ export default function useDrag(
   };
 
   // 生成文件唯一ID，用于拖拽排序识别
-  const getFileId = (file: UploadFile) => {
-    if ((file as any).__uid) return (file as any).__uid;
+  const getFileId = (file: UploadFileWithUid) => {
+    if (file.__uid) return file.__uid;
     const uid = `u_${Math.random().toString(36).slice(2, 9)}`;
-    (file as any).__uid = uid;
+    file.__uid = uid;
     return uid;
   };
 
