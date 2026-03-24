@@ -3,12 +3,13 @@ import { isBoolean, isFunction, isString, get as lodashGet } from 'lodash-es';
 import config from '../config';
 import PickerProps from './props';
 import { KeysType } from '../common';
-import { PickerValue, PickerColumn, PickerColumnItem } from './type';
+import { PickerValue, PickerColumn, PickerColumnItem, PickerWheelConfig } from './type';
 import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import PickerItem from './picker-item';
 import { getPickerColumns } from './utils';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
+import { DEFAULT_WHEEL_CONFIG } from './constants';
 
 const { prefix } = config;
 
@@ -37,6 +38,19 @@ export default defineComponent({
       if (isBoolean(prop) && prop) return defaultText;
       return '';
     };
+
+    // 合并 wheelConfig，确保每个字段都有值。优先级: swipeDuration > wheelConfig.inertiaDuration > DEFAULT_WHEEL_CONFIG.inertiaDuration
+    const mergedWheelConfig = computed((): Required<PickerWheelConfig> => {
+      const userConfig: Partial<PickerWheelConfig> = props.wheelConfig || {};
+      const merged: Required<PickerWheelConfig> = { ...DEFAULT_WHEEL_CONFIG, ...userConfig };
+
+      // swipeDuration 优先级最高，向后兼容
+      if (props.swipeDuration !== undefined) {
+        merged.inertiaDuration = Number(props.swipeDuration);
+      }
+
+      return merged;
+    });
 
     const confirmButtonText = computed(() => getDefaultText(props.confirmBtn, globalConfig.value.confirm));
     const cancelButtonText = computed(() => getDefaultText(props.cancelBtn, globalConfig.value.cancel));
@@ -126,7 +140,7 @@ export default defineComponent({
                   value={pickerValue.value?.[index]}
                   render-label={props.renderLabel}
                   onPick={($event: any) => handlePick($event, index)}
-                  swipeDuration={props.swipeDuration}
+                  wheelConfig={mergedWheelConfig.value}
                 />
               </div>
             ))}

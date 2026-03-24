@@ -41,13 +41,12 @@ type | String | dots | Typescript：`SwiperNavigationType` `type SwiperNavigatio
 ### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
-
-Name | Default Value | Description
+Name | Default Value | Description 
 -- | -- | --
---td-swiper-placement-outside-padding | calc(@spacer-1 + @swiper-nav-dot-size) | -
 --td-swiper-border-radius | 8px | -
 --td-swiper-item-left-padding | 6px | -
 --td-swiper-item-right-padding | 6px | -
+--td-swiper-placement-outside-padding | calc(@spacer-1 + @swiper-nav-dot-size) | -
 --td-swiper-nav-btn-bg-color | @font-gray-3 | -
 --td-swiper-nav-btn-color | @font-white-1 | -
 --td-swiper-nav-btn-size | 24px | -

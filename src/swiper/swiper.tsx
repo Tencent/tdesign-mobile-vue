@@ -57,6 +57,8 @@ export default defineComponent({
 
     const isVertical = computed(() => props.direction === 'vertical');
     const containerHeight = ref('auto');
+    // 滑动方向：1 表示向下一页, -1 表示向上一页, 0 表示无方向
+    const moveDirection = ref(0);
 
     const navigationConfig = computed<SwiperNavigation>(() => {
       if (props.navigation === true) {
@@ -112,20 +114,27 @@ export default defineComponent({
         if (nextIndex < 0 || nextIndex >= items.value.length) return;
       }
 
+      // 2 个 item 时，根据滑动方向更新 item 排列
+      if (!isReset && items.value.length === 2 && props.loop) {
+        moveDirection.value = step > 0 ? 1 : -1;
+        updateItemPosition();
+      }
+
       animating.value = true;
       const innerTargetValue = targetValue ?? (isReset ? step : nextIndex);
       processIndex(innerTargetValue, source);
 
-      const moveDirection = !isVertical.value ? 'X' : 'Y';
+      const moveDir = !isVertical.value ? 'X' : 'Y';
       const distance = root.value?.[isVertical.value ? 'offsetHeight' : 'offsetWidth'] ?? 0;
 
-      translateContainer.value = `translate${moveDirection}(${isReset ? 0 : -1 * distance * step}px)`;
+      translateContainer.value = `translate${moveDir}(${isReset ? 0 : -1 * distance * step}px)`;
     };
 
     const handleAnimationEnd = () => {
       disabled.value = false;
       animating.value = false;
       translateContainer.value = `translate${isVertical.value ? 'Y' : 'X'}(0)`;
+      moveDirection.value = 0;
 
       updateItemPosition();
     };
@@ -199,6 +208,12 @@ export default defineComponent({
 
       // 非loop状态: 阻止第一项向左滑(显示上一项)和最后一项向右滑(显示下一项)
       if (!props.loop && ((curIndex <= 0 && distance < 0) || (curIndex >= maxIndex && distance > 0))) return;
+
+      // 2 个 item 时，根据手势方向动态调整另一个 item 的位置
+      if (items.value.length === 2 && props.loop) {
+        moveDirection.value = distance > 0 ? 1 : -1;
+        updateItemPosition();
+      }
 
       setOffset(-distance, dir);
     };
@@ -295,6 +310,7 @@ export default defineComponent({
       addChild,
       removeChild,
       setContainerHeight,
+      moveDirection,
     });
 
     onMounted(() => {

@@ -9,6 +9,7 @@ import baseVue from '@/table/demos/base.vue';
 import borderedVue from '@/table/demos/bordered.vue';
 import customRowStyleVue from '@/table/demos/custom-row-style.vue';
 import mobileVue from '@/table/demos/mobile.vue';
+import rowspanColspanVue from '@/table/demos/rowspan-colspan.vue';
 import scrollVue from '@/table/demos/scroll.vue';
 import stripeVue from '@/table/demos/stripe.vue';
 
@@ -19,6 +20,7 @@ const mapper = {
   borderedVue,
   customRowStyleVue,
   mobileVue,
+  rowspanColspanVue,
   scrollVue,
   stripeVue,
 };

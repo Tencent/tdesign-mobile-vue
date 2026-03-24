@@ -1,6 +1,6 @@
 <template>
   <div class="demo-count-down">
-    <text class="demo-count-down-desc"> 时分秒 </text>
+    <div class="demo-count-down-desc">时分秒</div>
     <div class="demo-count-down-content">
       <t-count-down size="small" :time="time" />
     </div>
@@ -13,7 +13,7 @@
   </div>
 
   <div class="demo-count-down">
-    <text class="demo-count-down-desc"> 带毫秒 </text>
+    <div class="demo-count-down-desc">带毫秒</div>
     <div class="demo-count-down-content">
       <t-count-down size="small" :time="time" millisecond />
     </div>
@@ -26,7 +26,7 @@
   </div>
 
   <div class="demo-count-down">
-    <text class="demo-count-down-desc"> 带方形底 </text>
+    <div class="demo-count-down-desc">带方形底</div>
     <div class="demo-count-down-content">
       <t-count-down size="small" :time="time" theme="square" />
     </div>
@@ -39,7 +39,7 @@
   </div>
 
   <div class="demo-count-down">
-    <text class="demo-count-down-desc"> 带圆形底 </text>
+    <div class="demo-count-down-desc">带圆形底</div>
     <div class="demo-count-down-content">
       <t-count-down size="small" :time="time" theme="round" />
     </div>
@@ -52,7 +52,7 @@
   </div>
 
   <div class="demo-count-down">
-    <text class="demo-count-down-desc"> 带单位 </text>
+    <div class="demo-count-down-desc">带单位</div>
     <div class="demo-count-down-content">
       <t-count-down size="small" :time="time" split-with-unit theme="round" />
     </div>

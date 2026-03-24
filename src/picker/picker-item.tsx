@@ -1,10 +1,11 @@
-import { ref, computed, onMounted, defineComponent, PropType, watch, inject, nextTick } from 'vue';
+import { ref, computed, onMounted, onBeforeUnmount, defineComponent, PropType, watch, inject } from 'vue';
 import { get as lodashGet } from 'lodash-es';
 import config from '../config';
 import Picker from './picker.class';
 import { KeysType } from '../common';
-import { PickerColumnItem, PickerValue, TdPickerProps } from './type';
+import { PickerColumnItem, PickerValue, PickerWheelConfig, TdPickerProps } from './type';
 import { usePrefixClass } from '../hooks/useClass';
+import { DEFAULT_WHEEL_CONFIG } from './constants';
 
 const { prefix } = config;
 
@@ -26,9 +27,9 @@ export default defineComponent({
       type: Function,
       default: undefined,
     },
-    swipeDuration: {
-      type: [String, Number],
-      default: 300,
+    wheelConfig: {
+      type: Object as PropType<Required<PickerWheelConfig>>,
+      default: () => DEFAULT_WHEEL_CONFIG,
     },
   },
   emits: ['pick'],
@@ -51,22 +52,20 @@ export default defineComponent({
 
     const className = computed(() => `${pickerItemClass.value}`);
 
-    const updatePickerWithNextTick = (index: number) => {
+    const updatePickerIndex = (index: number) => {
       if (picker) {
         picker.updateItems();
-        nextTick(() => {
-          picker.updateIndex(index, { isChange: false });
-        });
+        picker.updateIndex(index, { isChange: false });
       }
     };
 
     const setIndex = (index: number) => {
-      updatePickerWithNextTick(index);
+      updatePickerIndex(index);
     };
 
     const setValue = (value: number | string | undefined) => {
       const index = getIndexByValue(value);
-      updatePickerWithNextTick(index);
+      updatePickerIndex(index);
     };
     const setOptions = () => {
       picker?.update();
@@ -93,9 +92,15 @@ export default defineComponent({
             const changeValue = { value: lodashGet(curItem, keys.value?.value ?? 'value'), index };
             props.onPick?.(changeValue);
           },
-          swipeDuration: props.swipeDuration,
+          wheelConfig: props.wheelConfig,
         });
       }
+    });
+
+    onBeforeUnmount(() => {
+      // 销毁 picker 实例，清理 ResizeObserver 等资源
+      picker?.destroy();
+      picker = null;
     });
 
     watch(

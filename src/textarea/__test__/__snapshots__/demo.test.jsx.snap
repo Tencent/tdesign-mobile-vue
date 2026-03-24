@@ -125,12 +125,12 @@ exports[`Textarea > Textarea customVue demo works fine 1`] = `
   class="textarea-example"
   data-v-b36a81b3=""
 >
-  <text
+  <div
     class="textarea-example__label"
     data-v-b36a81b3=""
   >
     标签文字
-  </text>
+  </div>
   <div
     class="t-textarea t-textarea--layout-horizontal t-textarea--border textarea"
     data-v-b36a81b3=""
@@ -643,12 +643,12 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
         class="textarea-example"
         data-v-b36a81b3=""
       >
-        <text
+        <div
           class="textarea-example__label"
           data-v-b36a81b3=""
         >
           标签文字
-        </text>
+        </div>
         <div
           class="t-textarea t-textarea--layout-horizontal t-textarea--border textarea"
           data-v-b36a81b3=""
