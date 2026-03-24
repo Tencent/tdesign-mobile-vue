@@ -43,7 +43,12 @@ export default defineComponent({
     const activeClass = `${tabsClass.value}__item--active`;
     const disabledClass = `${tabsClass.value}__item--disabled`;
     const tabsClasses = computed(() => [`${tabsClass.value}`, props.size && SIZE.value[props.size]]);
-    const navClasses = ref([`${tabsClass.value}__nav`]);
+    const navClasses = computed(() => [
+      `${tabsClass.value}__nav`,
+      {
+        [`${tabsClass.value}__nav--split`]: props.split,
+      },
+    ]);
     const startX = ref(0);
     const startY = ref(0);
     const endX = ref(0);
@@ -276,16 +281,7 @@ export default defineComponent({
         <div class={tabsClasses.value}>
           <TSticky {...stickyProps.value} onScroll={handlerScroll}>
             <div class={navClasses.value}>
-              <div
-                ref={navScroll}
-                class={[
-                  `${tabsClass.value}__scroll`,
-                  `${tabsClass.value}__scroll--${props.theme}`,
-                  {
-                    [`${tabsClass.value}__scroll--split`]: props.split,
-                  },
-                ]}
-              >
+              <div ref={navScroll} class={[`${tabsClass.value}__scroll`, `${tabsClass.value}__scroll--${props.theme}`]}>
                 <div ref={navWrap} class={`${tabsClass.value}__wrapper ${tabsClass.value}__wrapper--${props.theme}`}>
                   {readerNav()}
                   {props.theme === 'line' && props.showBottomLine && (
