@@ -15,6 +15,9 @@ const { prefix } = config;
 
 const statusName = ['pulling', 'loosing', 'loading', 'success', 'initial'];
 
+/** 触底检测阈值（距离底部多少像素时触发） */
+const SCROLL_TO_LOWER_THRESHOLD = 20;
+
 export default defineComponent({
   name: `${prefix}-pull-down-refresh`,
   components: { TLoading },
@@ -165,15 +168,15 @@ export default defineComponent({
       if (container === window) {
         const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
         const { clientHeight, scrollHeight } = document.documentElement;
-        return scrollTop + clientHeight >= scrollHeight - 20;
+        return scrollTop + clientHeight >= scrollHeight - SCROLL_TO_LOWER_THRESHOLD;
       }
       const el = container as Element;
-      return el.scrollTop + el.clientHeight >= el.scrollHeight - 20;
+      return el.scrollTop + el.clientHeight >= el.scrollHeight - SCROLL_TO_LOWER_THRESHOLD;
     };
 
     const onScroll = throttle(
       () => {
-        if (isReachBottom()) {
+        if (!loading.value && isReachBottom()) {
           props.onScrolltolower?.();
         }
       },
