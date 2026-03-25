@@ -70,14 +70,14 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    */
   rowKey: string;
   /**
+   * 用于自定义合并单元格，泛型 T 指表格数据类型。示例：`({ row, col, rowIndex, colIndex }) => { rowspan: 2, colspan: 3 }`
+   */
+  rowspanAndColspan?: TableRowspanAndColspanFunc<T>;
+  /**
    * 触发 `onScrollToBottom` 事件的距离阈值，单位 px
    * @default 50
    */
   scrollBottomThreshold?: number;
-  /**
-   * 用于自定义合并单元格，泛型 T 指表格数据类型。示例：`({ row, col, rowIndex, colIndex }) => { rowspan: 2, colspan: 3 }`
-   */
-  rowspanAndColspan?: TableRowspanAndColspanFunc<T>;
   /**
    * 是否显示表头
    * @default true

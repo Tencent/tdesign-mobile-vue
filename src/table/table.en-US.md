@@ -20,8 +20,8 @@ maxHeight | String / Number | - | table max height | N
 rowAttributes | Object / Array / Function | - | `1.9.3`。`tr` attributes。Typescript: `TableRowAttributes<T>` `type TableRowAttributes<T> = HTMLElementAttributes \| ((params: { row: T; rowIndex: number; type: 'body' \| 'foot' }) => HTMLElementAttributes) \| Array<TableRowAttributes<T>>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts) | N
 rowClassName | String / Object / Array / Function | - | `1.9.3`。table `th` classname。Typescript: `ClassName \| ((params: RowClassNameParams<T>) => ClassName)` `interface RowClassNameParams<T> { row: T; rowIndex: number; rowKey?: string; type?: 'body' \| 'foot' }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts) | N
 rowKey | String | 'id' | required。unique key for each row data | Y
-scrollBottomThreshold | Number | 50 | \- | N
 rowspanAndColspan | Function | - | rowspan and colspan。Typescript: `TableRowspanAndColspanFunc<T>` `type TableRowspanAndColspanFunc<T> = (params: BaseTableCellParams<T>) => RowspanColspan` `interface RowspanColspan { colspan?: number; rowspan?: number }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts) | N
+scrollBottomThreshold | Number | 50 | \- | N
 showHeader | Boolean | true | show table header | N
 stripe | Boolean | false | show stripe style | N
 tableContentWidth | String | - | \- | N
