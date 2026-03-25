@@ -34,7 +34,7 @@ export default defineComponent({
   name: `${prefix}-swiper`,
   props,
   emits: ['change', 'update:current', 'update:modelValue', 'transitionenter', 'transitionleave'],
-  setup(props, context) {
+  setup(props, { emit, expose, slots }) {
     const swiperClass = usePrefixClass('swiper');
     const swiperNavClass = usePrefixClass('swiper-nav');
 
@@ -98,7 +98,6 @@ export default defineComponent({
 
     const rootClass = computed(() => [
       `${swiperClass.value}`,
-      `${swiperClass.value}--${props.type}`,
       { [`${swiperClass.value}--${navigationConfig.value.placement}`]: isBottomPagination.value },
     ]);
 
@@ -177,8 +176,8 @@ export default defineComponent({
         val = props.loop ? 0 : max - 1;
       }
       innerSetCurrent(val);
-      context.emit('update:current', val);
-      context.emit('change', val, { source });
+      emit('update:current', val);
+      emit('change', val, { source });
     };
 
     const { lengthX, lengthY } = useSwipe(swiperContainer, {
@@ -232,11 +231,11 @@ export default defineComponent({
     };
 
     const onTransitionstart = (event: TransitionEvent) => {
-      context.emit('transitionenter', event);
+      emit('transitionenter', event);
     };
 
     const onTransitionend = (event: TransitionEvent) => {
-      context.emit('transitionleave', event);
+      emit('transitionleave', event);
     };
 
     const addChild = (item: SwiperItemInstance) => {
@@ -323,6 +322,30 @@ export default defineComponent({
       stopAutoplay();
     });
 
+    const swipeTo = (index: number, options?: { immediate?: boolean }) => {
+      if (index < 0 || index >= items.value.length) return;
+
+      const step = index - currentIndex.value;
+      if (step === 0) return;
+
+      stopAutoplay();
+
+      if (options?.immediate) {
+        // 立即切换：直接更新索引和位置，无动画
+        processIndex(index, 'autoplay');
+        updateItemPosition();
+      } else {
+        // 带动画切换：复用现有的 move 逻辑
+        move(step, 'autoplay', false, index);
+      }
+
+      startAutoplay();
+    };
+
+    expose({
+      swipeTo,
+    });
+
     // 渲染控制按钮（左右箭头）
     const renderControlsNav = () => {
       if (isVertical.value || !navigationConfig.value?.showControls) return null;
@@ -396,7 +419,7 @@ export default defineComponent({
 
         if (typeof props.navigation === 'function') return (props.navigation as Function)();
 
-        if (context.slots?.navigation) return context.slots.navigation();
+        if (slots?.navigation) return slots.navigation();
 
         return null;
       };

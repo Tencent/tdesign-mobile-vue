@@ -11,7 +11,13 @@ import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 // inner components
-import { SwiperChangeSource, Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
+import {
+  SwiperChangeSource,
+  Swiper as TSwiper,
+  SwiperItem as TSwiperItem,
+  SwiperInstanceFunctions,
+  SwiperToOptions,
+} from '../swiper';
 import { TdImageViewerProps, ImageInfo, ImageViewerCloseTrigger, ImageSlotParams } from './type';
 
 const { prefix } = config;
@@ -22,7 +28,7 @@ export default defineComponent({
   name: `${prefix}-image-viewer`,
   props,
   emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'update:index', 'delete'],
-  setup(props, { emit }) {
+  setup(props, { emit, expose }) {
     const imageViewerClass = usePrefixClass('image-viewer');
 
     const state = reactive({
@@ -83,7 +89,7 @@ export default defineComponent({
     const disabled = ref(false);
     const rootRef = ref();
     const imagesSize: Record<number, { height: number }> = reactive({});
-    const swiperRootRef = ref();
+    const swiperRootRef = ref<SwiperInstanceFunctions>();
     const swiperItemRefs = ref<any[]>([]);
     const gestureRef = ref();
 
@@ -398,6 +404,14 @@ export default defineComponent({
 
     onUnmounted(() => {
       clearTimeout(dblTapTimer);
+    });
+
+    const swipeTo = (index: number, options?: SwiperToOptions) => {
+      swiperRootRef.value?.swipeTo(index, options);
+    };
+
+    expose({
+      swipeTo,
     });
 
     return () => {
