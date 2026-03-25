@@ -15,7 +15,7 @@ import {
   SwiperChangeSource,
   Swiper as TSwiper,
   SwiperItem as TSwiperItem,
-  SwiperInstanceFunctions,
+  SwiperInstance,
   SwiperToOptions,
 } from '../swiper';
 import { TdImageViewerProps, ImageInfo, ImageViewerCloseTrigger, ImageSlotParams } from './type';
@@ -89,7 +89,7 @@ export default defineComponent({
     const disabled = ref(false);
     const rootRef = ref();
     const imagesSize: Record<number, { height: number }> = reactive({});
-    const swiperRootRef = ref<SwiperInstanceFunctions>();
+    const swiperRootRef = ref<SwiperInstance>();
     const swiperItemRefs = ref<any[]>([]);
     const gestureRef = ref();
 

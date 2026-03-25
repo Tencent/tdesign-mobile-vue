@@ -32,7 +32,13 @@ interface SwiperItemInstance {
 
 export default defineComponent({
   name: `${prefix}-swiper`,
-  props,
+  props: {
+    ...props,
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+  },
   emits: ['change', 'update:current', 'update:modelValue', 'transitionenter', 'transitionleave'],
   setup(props, { emit, expose, slots }) {
     const swiperClass = usePrefixClass('swiper');
