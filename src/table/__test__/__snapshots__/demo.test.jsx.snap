@@ -4704,6 +4704,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
           </table>
           <!---->
         </div>
+        <!---->
       </div>
       
     </div>
@@ -4913,6 +4914,7 @@ exports[`Table > Table rowspanColspanVue demo works fine 1`] = `
     </table>
     <!---->
   </div>
+  <!---->
 </div>
 `;
 
