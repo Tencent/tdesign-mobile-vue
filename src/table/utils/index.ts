@@ -1,6 +1,7 @@
 import { isFunction, get, isObject } from 'lodash-es';
 import { CellData, RowClassNameParams, TableColumnClassName, TableRowData, TdBaseTableProps } from '../type';
 import { ClassName, HTMLElementAttributes } from '../../common';
+import { SkipSpansValue } from '../hooks/useRowspanAndColspan';
 
 export function toString(obj: any): string {
   return Object.prototype.toString.call(obj).slice(8, -1).toLowerCase();
@@ -99,3 +100,48 @@ export function getCurrentRowByKey<T extends { colKey?: string; children?: any[]
     }
   }
 }
+
+export interface CellSpanResult {
+  /** 单元格的 rowspan 属性 */
+  rowspan?: number;
+  /** 单元格的 colspan 属性 */
+  colspan?: number;
+  /** 是否跳过渲染该单元格 */
+  skipped: boolean;
+}
+
+/**
+ * 获取单元格合并状态
+ * @param cellKey 单元格唯一标识
+ * @param skipSpansMap 合并单元格映射表
+ * @returns 合并单元格的结果
+ */
+export const handleCellSpan = (cellKey: string, skipSpansMap?: Map<string, SkipSpansValue>): CellSpanResult => {
+  const result: CellSpanResult = { skipped: false };
+
+  if (!skipSpansMap?.size) return result;
+
+  const spanState = skipSpansMap.get(cellKey);
+  if (!spanState) return result;
+
+  if (spanState.rowspan > 1) result.rowspan = spanState.rowspan;
+  if (spanState.colspan > 1) result.colspan = spanState.colspan;
+  if (spanState.skipped) result.skipped = true;
+
+  return result;
+};
+
+/**
+ * 判断单元格是否是最后一行（合并单元格场景移除底部边框）
+ */
+export const isLastRowInSpan = (rowIndex: number, rowspan?: number, totalDataLength?: number): boolean => {
+  return !!(rowspan && totalDataLength && rowIndex + rowspan === totalDataLength);
+};
+
+/**
+ * 判断单元格是否是第一列（合并单元格场景移除左边框）
+ * 在合并单元格场景下，所有行的第一列都应该移除左边框
+ */
+export const isFirstColumnInSpan = (colIndex: number, rowspan?: number): boolean => {
+  return colIndex === 0;
+};

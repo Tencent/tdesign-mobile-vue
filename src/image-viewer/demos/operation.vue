@@ -7,8 +7,8 @@
 import { ref } from 'vue';
 
 const visible = ref(false);
-const images = [
+const images = ref([
   'https://tdesign.gtimg.com/mobile/demos/swiper1.png',
   'https://tdesign.gtimg.com/mobile/demos/swiper2.png',
-];
+]);
 </script>

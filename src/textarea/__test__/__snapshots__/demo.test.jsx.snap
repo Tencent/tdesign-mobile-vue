@@ -125,12 +125,12 @@ exports[`Textarea > Textarea customVue demo works fine 1`] = `
   class="textarea-example"
   data-v-b36a81b3=""
 >
-  <text
+  <div
     class="textarea-example__label"
     data-v-b36a81b3=""
   >
     标签文字
-  </text>
+  </div>
   <div
     class="t-textarea t-textarea--layout-horizontal t-textarea--border textarea"
     data-v-b36a81b3=""
@@ -175,6 +175,7 @@ exports[`Textarea > Textarea disabledVue demo works fine 1`] = `
       name=""
       placeholder="请输入文字"
       style="caret-color: #0052d9;"
+      value="不可编辑文字"
     />
     <!---->
   </div>
@@ -222,6 +223,7 @@ exports[`Textarea > Textarea maxcharacterVue demo works fine 1`] = `
       name="标签文字"
       placeholder="请输入文字"
       style="caret-color: #0052d9;"
+      value=""
     />
     <div
       class="t-textarea__indicator"
@@ -250,6 +252,7 @@ exports[`Textarea > Textarea maxlengthVue demo works fine 1`] = `
       name="标签文字"
       placeholder="请输入文字"
       style="caret-color: #0052d9;"
+      value=""
     />
     <div
       class="t-textarea__indicator"
@@ -430,6 +433,7 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
             name="标签文字"
             placeholder="请输入文字"
             style="caret-color: #0052d9;"
+            value=""
           />
           <div
             class="t-textarea__indicator"
@@ -466,6 +470,7 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
             name="标签文字"
             placeholder="请输入文字"
             style="caret-color: #0052d9;"
+            value=""
           />
           <div
             class="t-textarea__indicator"
@@ -517,6 +522,7 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
             name=""
             placeholder="请输入文字"
             style="caret-color: #0052d9;"
+            value="不可编辑文字"
           />
           <!---->
         </div>
@@ -643,12 +649,12 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
         class="textarea-example"
         data-v-b36a81b3=""
       >
-        <text
+        <div
           class="textarea-example__label"
           data-v-b36a81b3=""
         >
           标签文字
-        </text>
+        </div>
         <div
           class="t-textarea t-textarea--layout-horizontal t-textarea--border textarea"
           data-v-b36a81b3=""

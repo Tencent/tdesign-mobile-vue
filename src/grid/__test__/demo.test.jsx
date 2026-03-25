@@ -10,6 +10,7 @@ import cardVue from '@/grid/demos/card.vue';
 import descVue from '@/grid/demos/desc.vue';
 import iconVue from '@/grid/demos/icon.vue';
 import mobileVue from '@/grid/demos/mobile.vue';
+import multipleVue from '@/grid/demos/multiple.vue';
 import scrollVue from '@/grid/demos/scroll.vue';
 
 const mapper = {
@@ -20,6 +21,7 @@ const mapper = {
   descVue,
   iconVue,
   mobileVue,
+  multipleVue,
   scrollVue,
 };
 

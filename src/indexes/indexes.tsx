@@ -119,7 +119,7 @@ export default defineComponent({
 
     const scrollToByIndex = (index: number | string) => {
       const curGroup = groupTop.find((item) => item.anchor === index);
-      if (indexesRoot.value) {
+      if (indexesRoot.value && curGroup) {
         indexesRoot.value.scrollTo?.(0, curGroup.top ?? 0);
         setCurrentIndex(index);
       }
@@ -136,7 +136,7 @@ export default defineComponent({
       scrollToByIndex(index);
     };
 
-    const handleRootScroll = throttle((e: UIEvent) => {
+    const handleRootScroll = throttle((e: Event) => {
       const scrollTop = indexesRoot.value?.scrollTop ?? 0;
       setAnchorOnScroll(scrollTop);
     }, 1000 / 30);
@@ -185,6 +185,13 @@ export default defineComponent({
       child && state.children.push(child);
     };
 
+    const unRelation = (child: ComponentPublicInstance) => {
+      const index = state.children.indexOf(child);
+      if (index > -1) {
+        state.children.splice(index, 1);
+      }
+    };
+
     watchEffect(() => {
       if (state.showSidebarTip) {
         clearSidebarTip();
@@ -202,6 +209,8 @@ export default defineComponent({
 
     const init = () => {
       nextTick(() => {
+        // 清空旧的位置数据，防止搜索过滤后数据残留导致点击索引失效
+        groupTop.length = 0;
         parentRect.value = indexesRoot.value?.getBoundingClientRect() || { top: 0 };
         getAnchorsRect().then(() => {
           groupTop.forEach((item, index) => {
@@ -217,6 +226,8 @@ export default defineComponent({
     onMounted(init);
 
     watch(() => props.indexList, init);
+    // 监听子组件数量变化（搜索过滤后 anchor 增减），重新计算位置
+    watch(() => state.children.length, init);
     watch(
       () => currentIndex.value,
       (val) => {
@@ -231,6 +242,7 @@ export default defineComponent({
 
     provide('indexesProvide', {
       relation,
+      unRelation,
     });
 
     return () => (

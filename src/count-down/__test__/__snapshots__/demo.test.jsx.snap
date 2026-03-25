@@ -8,11 +8,11 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
   <div
     class="demo-count-down"
   >
-    <text
+    <div
       class="demo-count-down-desc"
     >
-       时分秒
-    </text>
+      时分秒
+    </div>
     <div
       class="demo-count-down-content"
     >
@@ -59,11 +59,11 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
   <div
     class="demo-count-down"
   >
-    <text
+    <div
       class="demo-count-down-desc"
     >
-       带毫秒
-    </text>
+      带毫秒
+    </div>
     <div
       class="demo-count-down-content"
     >
@@ -122,11 +122,11 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
   <div
     class="demo-count-down"
   >
-    <text
+    <div
       class="demo-count-down-desc"
     >
-       带方形底
-    </text>
+      带方形底
+    </div>
     <div
       class="demo-count-down-content"
     >
@@ -173,11 +173,11 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
   <div
     class="demo-count-down"
   >
-    <text
+    <div
       class="demo-count-down-desc"
     >
-       带圆形底
-    </text>
+      带圆形底
+    </div>
     <div
       class="demo-count-down-content"
     >
@@ -224,11 +224,11 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
   <div
     class="demo-count-down"
   >
-    <text
+    <div
       class="demo-count-down-desc"
     >
-       带单位
-    </text>
+      带单位
+    </div>
     <div
       class="demo-count-down-content"
     >
@@ -279,11 +279,11 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
   <div
     class="demo-count-down"
   >
-    <text
+    <div
       class="demo-count-down-desc"
     >
-       无底色带单位
-    </text>
+      无底色带单位
+    </div>
     <div
       class="demo-count-down-content"
     >
@@ -374,11 +374,11 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
       <div
         class="demo-count-down"
       >
-        <text
+        <div
           class="demo-count-down-desc"
         >
-           时分秒
-        </text>
+          时分秒
+        </div>
         <div
           class="demo-count-down-content"
         >
@@ -425,11 +425,11 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
       <div
         class="demo-count-down"
       >
-        <text
+        <div
           class="demo-count-down-desc"
         >
-           带毫秒
-        </text>
+          带毫秒
+        </div>
         <div
           class="demo-count-down-content"
         >
@@ -488,11 +488,11 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
       <div
         class="demo-count-down"
       >
-        <text
+        <div
           class="demo-count-down-desc"
         >
-           带方形底
-        </text>
+          带方形底
+        </div>
         <div
           class="demo-count-down-content"
         >
@@ -539,11 +539,11 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
       <div
         class="demo-count-down"
       >
-        <text
+        <div
           class="demo-count-down-desc"
         >
-           带圆形底
-        </text>
+          带圆形底
+        </div>
         <div
           class="demo-count-down-content"
         >
@@ -590,11 +590,11 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
       <div
         class="demo-count-down"
       >
-        <text
+        <div
           class="demo-count-down-desc"
         >
-           带单位
-        </text>
+          带单位
+        </div>
         <div
           class="demo-count-down-content"
         >
@@ -645,11 +645,11 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
       <div
         class="demo-count-down"
       >
-        <text
+        <div
           class="demo-count-down-desc"
         >
-           无底色带单位
-        </text>
+          无底色带单位
+        </div>
         <div
           class="demo-count-down-content"
         >
@@ -727,11 +727,11 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
       <div
         class="demo-count-down"
       >
-        <text
+        <div
           class="demo-count-down-desc"
         >
-           时分秒 
-        </text>
+          时分秒
+        </div>
         <div
           class="demo-count-down-content"
         >
@@ -862,11 +862,11 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
       <div
         class="demo-count-down"
       >
-        <text
+        <div
           class="demo-count-down-desc"
         >
-           带毫秒 
-        </text>
+          带毫秒
+        </div>
         <div
           class="demo-count-down-content"
         >
@@ -1033,11 +1033,11 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
       <div
         class="demo-count-down"
       >
-        <text
+        <div
           class="demo-count-down-desc"
         >
-           带方形底 
-        </text>
+          带方形底
+        </div>
         <div
           class="demo-count-down-content"
         >
@@ -1168,11 +1168,11 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
       <div
         class="demo-count-down"
       >
-        <text
+        <div
           class="demo-count-down-desc"
         >
-           带圆形底 
-        </text>
+          带圆形底
+        </div>
         <div
           class="demo-count-down-content"
         >
@@ -1303,11 +1303,11 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
       <div
         class="demo-count-down"
       >
-        <text
+        <div
           class="demo-count-down-desc"
         >
-           带单位 
-        </text>
+          带单位
+        </div>
         <div
           class="demo-count-down-content"
         >
@@ -1462,11 +1462,11 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
   <div
     class="demo-count-down"
   >
-    <text
+    <div
       class="demo-count-down-desc"
     >
-       时分秒 
-    </text>
+      时分秒
+    </div>
     <div
       class="demo-count-down-content"
     >
@@ -1597,11 +1597,11 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
   <div
     class="demo-count-down"
   >
-    <text
+    <div
       class="demo-count-down-desc"
     >
-       带毫秒 
-    </text>
+      带毫秒
+    </div>
     <div
       class="demo-count-down-content"
     >
@@ -1768,11 +1768,11 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
   <div
     class="demo-count-down"
   >
-    <text
+    <div
       class="demo-count-down-desc"
     >
-       带方形底 
-    </text>
+      带方形底
+    </div>
     <div
       class="demo-count-down-content"
     >
@@ -1903,11 +1903,11 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
   <div
     class="demo-count-down"
   >
-    <text
+    <div
       class="demo-count-down-desc"
     >
-       带圆形底 
-    </text>
+      带圆形底
+    </div>
     <div
       class="demo-count-down-content"
     >
@@ -2038,11 +2038,11 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
   <div
     class="demo-count-down"
   >
-    <text
+    <div
       class="demo-count-down-desc"
     >
-       带单位 
-    </text>
+      带单位
+    </div>
     <div
       class="demo-count-down-content"
     >

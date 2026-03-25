@@ -1,4 +1,4 @@
-import { defineComponent, computed, h, ref, SetupContext } from 'vue';
+import { defineComponent, computed, h, ref, SetupContext, toRefs } from 'vue';
 import { get, isFunction, isString } from 'lodash-es';
 import baseTableProps from './base-table-props';
 import config from '../config';
@@ -6,6 +6,15 @@ import useClassName from './hooks/useClassName';
 import useStyle, { formatCSSUnit } from './hooks/useStyle';
 import useFixed, { getRowFixedStyles, getColumnFixedStyles } from './hooks/useFixed';
 import { renderTitle } from './hooks/useTableHeader';
+import useRowspanAndColspan from './hooks/useRowspanAndColspan';
+import {
+  formatClassNames,
+  formatRowAttributes,
+  formatRowClassNames,
+  handleCellSpan,
+  isFirstColumnInSpan,
+  isLastRowInSpan,
+} from './utils';
 import { ClassName } from '../common';
 
 import { BaseTableCellParams, BaseTableCol, TableRowData, TdBaseTableProps } from './type';
@@ -13,7 +22,6 @@ import TLoading from '../loading';
 import { TdLoadingProps } from '../loading/type';
 import { useConfig } from '../config-provider/useConfig';
 import { useTNodeJSX } from '../hooks/tnode';
-import { formatClassNames, formatRowAttributes, formatRowClassNames } from './utils';
 
 const { prefix } = config;
 
@@ -26,6 +34,7 @@ export default defineComponent({
     const theadRef = ref();
     const tableElmRef = ref();
     const renderTNodeJSX = useTNodeJSX();
+    const { data, columns, rowKey, rowspanAndColspan } = toRefs(props);
     const {
       classPrefix,
       tableLayoutClasses,
@@ -49,6 +58,8 @@ export default defineComponent({
       refreshTable,
       updateColumnFixedShadow,
     } = useFixed(props);
+
+    const { skipSpansMap } = useRowspanAndColspan(data, columns, rowKey, rowspanAndColspan);
 
     const defaultColWidth = props.tableLayout === 'fixed' ? '80px' : undefined;
 
@@ -190,11 +201,12 @@ export default defineComponent({
       }
       if (props.data?.length) {
         return props.data?.map((tr_item, tr_index) => {
+          const rowId = get(tr_item, props.rowKey || 'id') as string | number;
           const { style, classes } = getRowFixedStyles(
-            get(tr_item, props.rowKey || 'id'),
+            rowId,
             tr_index,
             props.data?.length || 0,
-            props.fixedRows,
+            props.fixedRows as TdBaseTableProps['fixedRows'],
             rowAndColFixedPosition.value,
             tableRowFixedClasses,
           );
@@ -219,6 +231,17 @@ export default defineComponent({
               }}
             >
               {props.columns?.map((td_item, td_index) => {
+                const params = { row: tr_item, col: td_item, rowIndex: tr_index, colIndex: td_index };
+                const cellSpans: Record<string, number> = {};
+                // 处理合并单元格
+                const cellKey = `${get(tr_item, props.rowKey || 'id')}_${td_item.colKey || td_index}`;
+                const { skipped, rowspan, colspan } = handleCellSpan(cellKey, skipSpansMap.value);
+
+                if (skipped) return null;
+
+                rowspan && (cellSpans.rowspan = rowspan);
+                colspan && (cellSpans.colspan = colspan);
+
                 const tdStyles = getColumnFixedStyles(
                   td_item,
                   td_index,
@@ -234,21 +257,28 @@ export default defineComponent({
                   type: 'td',
                 });
 
+                const cellClasses = [
+                  tdClassName(td_item, [tdStyles.classes, customClasses]),
+                  {
+                    // 合并单元格场景：最后一行移除底部边框
+                    [tableBaseClass.tdLastRow]: isLastRowInSpan(tr_index, rowspan, props.data?.length),
+                    // 合并单元格场景：第一列移除左边框
+                    [tableBaseClass.tdFirstCol]: props.rowspanAndColspan && isFirstColumnInSpan(td_index, rowspan),
+                  },
+                ];
+
                 return (
                   <td
                     key={td_index}
                     style={tdStyles.style}
-                    class={tdClassName(td_item, [tdStyles.classes, customClasses])}
+                    class={cellClasses}
                     onClick={($event) => {
                       handleCellClick(tr_item, td_item, tr_index, td_index, $event);
                     }}
+                    {...cellSpans}
                   >
                     <div class={td_item.ellipsis && ellipsisClasses.value}>
-                      {renderCell(
-                        { row: tr_item, col: td_item, rowIndex: tr_index, colIndex: td_index },
-                        context.slots,
-                        props.cellEmptyContent,
-                      )}
+                      {renderCell(params, context.slots, props.cellEmptyContent)}
                     </div>
                   </td>
                 );

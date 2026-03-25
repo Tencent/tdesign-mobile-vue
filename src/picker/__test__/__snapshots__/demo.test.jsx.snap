@@ -628,7 +628,124 @@ exports[`Picker > Picker customHeightVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <!--v-if-->
+  <!--teleport start-->
+  
+  <div
+    class="t-overlay"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
+  >
+    <!---->
+  </div>
+  <div
+    class="picker-custom-height-demo t-popup picker-custom-height-demo t-popup--bottom"
+    style="display: none;"
+  >
+    <!---->
+    
+    <div
+      class="t-picker"
+    >
+      <div
+        class="t-picker__toolbar"
+      >
+        <div
+          class="t-picker__cancel"
+        >
+          取消
+        </div>
+        <div
+          class="t-picker__title"
+        >
+          
+        </div>
+        <div
+          class="t-picker__confirm"
+        >
+          确认
+        </div>
+      </div>
+      <!---->
+      <div
+        class="t-picker__main"
+      >
+        
+        <div
+          class="t-picker-item__group"
+        >
+          <ul
+            class="t-picker-item"
+            style="transform: translate3d(0, 80px, 0);"
+          >
+            
+            <li
+              class="t-picker-item__item t-picker-item__item--active"
+            >
+              
+              北京市
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              上海市
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              广州市
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              深圳市
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              杭州市
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              成都市
+              
+            </li>
+            <li
+              class="t-picker-item__item"
+            >
+              
+              长沙市
+              
+            </li>
+            
+          </ul>
+        </div>
+        
+        <div
+          class="t-picker__mask t-picker__mask--top"
+        />
+        <div
+          class="t-picker__mask t-picker__mask--bottom"
+        />
+        <div
+          class="t-picker__indicator"
+        />
+      </div>
+      <!---->
+    </div>
+    
+  </div>
+  
+  <!--teleport end-->
   
 </div>
 `;
@@ -1500,7 +1617,124 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <!--v-if-->
+      <!--teleport start-->
+      
+      <div
+        class="t-overlay"
+        style="z-index: 1000; transition-duration: 300ms; display: none;"
+      >
+        <!---->
+      </div>
+      <div
+        class="picker-custom-height-demo t-popup picker-custom-height-demo t-popup--bottom"
+        style="display: none;"
+      >
+        <!---->
+        
+        <div
+          class="t-picker"
+        >
+          <div
+            class="t-picker__toolbar"
+          >
+            <div
+              class="t-picker__cancel"
+            >
+              取消
+            </div>
+            <div
+              class="t-picker__title"
+            >
+              
+            </div>
+            <div
+              class="t-picker__confirm"
+            >
+              确认
+            </div>
+          </div>
+          <!---->
+          <div
+            class="t-picker__main"
+          >
+            
+            <div
+              class="t-picker-item__group"
+            >
+              <ul
+                class="t-picker-item"
+                style="transform: translate3d(0, 80px, 0);"
+              >
+                
+                <li
+                  class="t-picker-item__item t-picker-item__item--active"
+                >
+                  
+                  北京市
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  上海市
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  广州市
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  深圳市
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  杭州市
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  成都市
+                  
+                </li>
+                <li
+                  class="t-picker-item__item"
+                >
+                  
+                  长沙市
+                  
+                </li>
+                
+              </ul>
+            </div>
+            
+            <div
+              class="t-picker__mask t-picker__mask--top"
+            />
+            <div
+              class="t-picker__mask t-picker__mask--bottom"
+            />
+            <div
+              class="t-picker__indicator"
+            />
+          </div>
+          <!---->
+        </div>
+        
+      </div>
+      
+      <!--teleport end-->
       
       
     </div>

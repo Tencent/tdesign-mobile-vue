@@ -14,6 +14,13 @@ export interface TdDialogProps {
    */
   actions?: Array<ButtonProps>;
   /**
+   * 关闭前的拦截钩子，支持异步。返回 Promise 时，确认按钮显示加载状态，Promise resolve 后关闭对话框，reject 则不关闭
+   */
+  beforeClose?: (
+    trigger: 'confirm' | 'cancel' | 'overlay' | 'close-btn',
+    context: { e: MouseEvent },
+  ) => void | Promise<void>;
+  /**
    * 多按钮排列方式
    * @default horizontal
    */

@@ -73,6 +73,10 @@ export default {
     type: Number,
     default: 50,
   },
+  /** 用于自定义合并单元格，泛型 T 指表格数据类型。示例：`({ row, col, rowIndex, colIndex }) => { rowspan: 2, colspan: 3 }` */
+  rowspanAndColspan: {
+    type: Function as PropType<TdBaseTableProps['rowspanAndColspan']>,
+  },
   /** 是否显示表头 */
   showHeader: {
     type: Boolean,

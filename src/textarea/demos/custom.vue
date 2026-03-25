@@ -1,6 +1,6 @@
 <template>
   <div class="textarea-example">
-    <text class="textarea-example__label">标签文字</text>
+    <div class="textarea-example__label">标签文字</div>
     <t-textarea class="textarea" placeholder="请输入文字" bordered :maxlength="100" indicator style="{{style}}" />
   </div>
 </template>

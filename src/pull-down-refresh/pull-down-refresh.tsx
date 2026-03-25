@@ -1,6 +1,6 @@
 import { defineComponent, onUnmounted, ref, toRefs, computed, watch, onMounted } from 'vue';
 import { useElementSize } from '@vueuse/core';
-import { debounce } from 'lodash-es';
+import { throttle } from 'lodash-es';
 import PullDownRefreshProps from './props';
 import { convertUnit, reconvertUnit } from '../shared';
 import { preventDefault } from '../shared/dom';
@@ -8,12 +8,15 @@ import config from '../config';
 import TLoading from '../loading';
 import useVModel from '../hooks/useVModel';
 import { useContent } from '../hooks/tnode';
-import { useTouch, isReachTop, easeDistance } from './useTouch';
+import { useTouch, isReachTop, easeDistance, getScrollParent } from './useTouch';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 
 const { prefix } = config;
 
 const statusName = ['pulling', 'loosing', 'loading', 'success', 'initial'];
+
+/** 触底检测阈值（距离底部多少像素时触发） */
+const SCROLL_TO_LOWER_THRESHOLD = 20;
 
 export default defineComponent({
   name: `${prefix}-pull-down-refresh`,
@@ -26,6 +29,7 @@ export default defineComponent({
     const renderContent = useContent();
 
     let timer: any = null;
+    const scrollContainerRef = ref<Element | Window | null>(null);
 
     // 滑动距离
     const distance = ref(0);
@@ -42,6 +46,7 @@ export default defineComponent({
     const touch = useTouch();
     const loadingBar = ref();
     const maxBar = ref();
+    const rootRef = ref<HTMLElement>();
     const { height: loadingBarHeight } = useElementSize(loadingBar);
     const { height: maxBarHeight } = useElementSize(maxBar);
     const actualLoadingBarHeight = ref(0);
@@ -157,20 +162,26 @@ export default defineComponent({
       }
     };
 
-    const onReachBottom = debounce(
+    const isReachBottom = () => {
+      const container = scrollContainerRef.value;
+      if (!container) return false;
+      if (container === window) {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const { clientHeight, scrollHeight } = document.documentElement;
+        return scrollTop + clientHeight >= scrollHeight - SCROLL_TO_LOWER_THRESHOLD;
+      }
+      const el = container as Element;
+      return el.scrollTop + el.clientHeight >= el.scrollHeight - SCROLL_TO_LOWER_THRESHOLD;
+    };
+
+    const onScroll = throttle(
       () => {
-        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop; // 滚动高度
-        const { clientHeight, scrollHeight } = document.documentElement; // 可视区域/屏幕高度， 页面高度
-        const distance = 20; // 距离视窗 20 时，开始触发
-        if (scrollTop + clientHeight >= scrollHeight - distance) {
+        if (!loading.value && isReachBottom()) {
           props.onScrolltolower?.();
         }
       },
       300,
-      {
-        leading: true,
-        trailing: false,
-      },
+      { leading: false, trailing: true },
     );
 
     const onTransitionEnd = () => {
@@ -197,12 +208,14 @@ export default defineComponent({
     }));
 
     onMounted(() => {
-      window.addEventListener('scroll', onReachBottom);
+      // 自动检测滚动容器：优先使用最近的滚动父元素，否则使用 window
+      scrollContainerRef.value = rootRef.value ? getScrollParent(rootRef.value) || window : window;
+      scrollContainerRef.value.addEventListener('scroll', onScroll);
     });
 
     onUnmounted(() => {
       clearTimeout(timer);
-      window.removeEventListener('scroll', onReachBottom);
+      scrollContainerRef.value?.removeEventListener('scroll', onScroll);
     });
     const renderLoading = () => {
       if (status.value === 'loading') {
@@ -217,7 +230,7 @@ export default defineComponent({
         className = `${className} ${pullDownRefreshClass.value}__track--loosing`;
       }
       return (
-        <div class={pullDownRefreshClass.value}>
+        <div ref={rootRef} class={pullDownRefreshClass.value}>
           <div
             class={className}
             style={trackStyle.value}

@@ -9,6 +9,9 @@
       <withTitle />
       <customClose />
     </tdesign-demo-block>
+    <tdesign-demo-block title="03 嵌套弹窗" summary="多层 Popup 嵌套使用">
+      <nestedDemo />
+    </tdesign-demo-block>
   </div>
 </template>
 
@@ -16,6 +19,7 @@
 import baseDemo from './base.vue';
 import withTitle from './with-title.vue';
 import customClose from './custom-close.vue';
+import nestedDemo from './nested.vue';
 </script>
 
 <style scoped>

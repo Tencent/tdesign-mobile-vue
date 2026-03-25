@@ -5,6 +5,27 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.13.1 `2026-03-13` 
+### 🚀 Features
+- `Upload`: 改用 `shallowRef` 提升组件性能 @BuptStEve ([#2145](https://github.com/Tencent/tdesign-mobile-vue/pull/2145))
+- `Search`: 为 `change` 事件新增 `trigger` 参数，表示触发源 @anlyyao ([#2138](https://github.com/Tencent/tdesign-mobile-vue/pull/2138))
+- `Fab`: 新增 `magnet` 和 `xBounds` 属性 @anlyyao ([#2136](https://github.com/Tencent/tdesign-mobile-vue/pull/2136))
+- `Table`: 新增 `rowspanAndColspan` 属性，用于自定义合并单元格 @anlyyao ([#2172](https://github.com/Tencent/tdesign-mobile-vue/pull/2172))
+- `Picker`: 新增 `wheelConfig` 属性，表示滚轮滑动相关配置，用于自定义滚轮的动画和交互行为 @anlyyao ([#2170](https://github.com/Tencent/tdesign-mobile-vue/pull/2170))
+### 🐞 Bug Fixes
+- `Popup`: 修复在 `Firefox` 浏览器中的闪烁问题 @anlyyao ([#2135](https://github.com/Tencent/tdesign-mobile-vue/pull/2135))
+- `Search`: 修复通过 `css vars` 修改图标大小无效 @liweijie0812 ([#2146](https://github.com/Tencent/tdesign-mobile-vue/pull/2146))
+- `Tabs`: 修复图标不居中的问题 @anlyyao ([#2149](https://github.com/Tencent/tdesign-mobile-vue/pull/2149))
+- `PullDownRefresh`: 修复组件在 `oppo reno13` 和 `iqoo12` 机型微信内置浏览器下距离计算精度问题 @RSS1102 ([#2137](https://github.com/Tencent/tdesign-mobile-vue/pull/2137))
+- `Swiper`: 修复 `loop` 模式下 `swiper-item` 少于 3 个时，向前滑动无预览效果的问题 @novlan1 ([#2159](https://github.com/Tencent/tdesign-mobile-vue/pull/2159))
+- `Indexes`: 修复数据变化后，侧边栏锚点定位无效的问题 @novlan1 ([#2160](https://github.com/Tencent/tdesign-mobile-vue/pull/2160))
+- `Checkbox`: 修复 `slot` 模式下数据变化，全选错误问题 @novlan1 ([#2162](https://github.com/Tencent/tdesign-mobile-vue/pull/2162))
+- `Form`: 修复使用 `amfe-flexible` 等插件进行单位转换，表单 `label` 文本大小错乱的问题 @novlan1 ( [#2441](https://github.com/Tencent/tdesign-common/pull/2441) )
+- `Radio`:  修复微信字体大小放大后，勾选图标显示不完整的问题 @novlan1 ( [#2442](https://github.com/Tencent/tdesign-common/pull/2442) )
+- `Picker`: 修复自定义子项高度或者 `postcss-pxtorem` 多屏适配场景下选中项定位错误 @anlyyao ([#2174](https://github.com/Tencent/tdesign-mobile-vue/pull/2174))
+### 🚧 Others
+- `build`: 升级 `TypeScript` 到 `5.9.3`，使用 `tsgo` 替代 `vue-tsc` 生成组件类型声明 @BuptStEve ([#2145](https://github.com/Tencent/tdesign-mobile-vue/pull/2145))
+
 ## 🌈 1.13.0 `2026-01-23` 
 ### 🚨 Breaking Changes
 - `ActionSheet`: 调整导出方式，分离组件和函数式 API 的使用方式 @anlyyao ([#2122](https://github.com/Tencent/tdesign-mobile-vue/pull/2122))
