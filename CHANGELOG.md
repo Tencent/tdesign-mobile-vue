@@ -5,6 +5,17 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.13.2 `2026-03-26` 
+### 🚀 Features
+- `ImageViewer`: 新增 `swipeTo` 组件实例方法，支持跳转到指定预览图片位置 @anlyyao ([#2185](https://github.com/Tencent/tdesign-mobile-vue/pull/2185))
+- `Cascader`: 新增 `reset()` 实例方法，支持通过组件 ref 重置状态 @anlyyao ([#2187](https://github.com/Tencent/tdesign-mobile-vue/pull/2187))
+### 🐞 Bug Fixes
+- `Silder`: 更正渲染 `min`和 `max` 的 `<text/>` 标签为 `<div/>` @RylanBot ([#2177](https://github.com/Tencent/tdesign-mobile-vue/pull/2177))
+- `Dialog`: 支持异步关闭 @novlan1 ([#2166](https://github.com/Tencent/tdesign-mobile-vue/pull/2166))
+- `PullDownRefresh`: 修复 `onScrolltolower` 触底事件触发时机异常，并支持非 `window` 滚动容器 @RSS1102 ([#2181](https://github.com/Tencent/tdesign-mobile-vue/pull/2181))
+- `Tabs`: 修复 `split` 分割线在可滚动场景下长度不足 @anlyyao ([#2183](https://github.com/Tencent/tdesign-mobile-vue/pull/2183))
+- `Cascader`: 修复组件通过 `v-model:value` 重置值时不生效的问题 @anlyyao ([#2187](https://github.com/Tencent/tdesign-mobile-vue/pull/2187))
+
 ## 🌈 1.13.1 `2026-03-13` 
 ### 🚀 Features
 - `Upload`: 改用 `shallowRef` 提升组件性能 @BuptStEve ([#2145](https://github.com/Tencent/tdesign-mobile-vue/pull/2145))
