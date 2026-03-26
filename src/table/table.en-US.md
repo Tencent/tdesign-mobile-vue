@@ -12,7 +12,7 @@ columns | Array | [] | table column configs。Typescript: `Array<BaseTableCol<T>
 data | Array | [] | table data。Typescript: `Array<T>` | N
 empty | String / Slot / Function | '' | empty text or empty element。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 fixedRows | Array | - | `1.9.3`。Typescript: `Array<number>` | N
-footer | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+footerSummary | String / Slot / Function | - | footer summary content。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 height | String / Number | - | table height | N
 loading | Boolean / Slot / Function | undefined | loading state table。Typescript: `boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 loadingProps | Object | - | Typescript: `Partial<LoadingProps>`，[Loading API Documents](./loading?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts) | N
@@ -21,7 +21,6 @@ rowAttributes | Object / Array / Function | - | `1.9.3`。`tr` attributes。Type
 rowClassName | String / Object / Array / Function | - | `1.9.3`。table `th` classname。Typescript: `ClassName \| ((params: RowClassNameParams<T>) => ClassName)` `interface RowClassNameParams<T> { row: T; rowIndex: number; rowKey?: string; type?: 'body' \| 'foot' }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts) | N
 rowKey | String | 'id' | required。unique key for each row data | Y
 rowspanAndColspan | Function | - | rowspan and colspan。Typescript: `TableRowspanAndColspanFunc<T>` `type TableRowspanAndColspanFunc<T> = (params: BaseTableCellParams<T>) => RowspanColspan` `interface RowspanColspan { colspan?: number; rowspan?: number }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts) | N
-scrollBottomThreshold | Number | 50 | \- | N
 showHeader | Boolean | true | show table header | N
 stripe | Boolean | false | show stripe style | N
 tableContentWidth | String | - | \- | N

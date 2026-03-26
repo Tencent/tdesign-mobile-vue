@@ -1325,7 +1325,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               spellcheck="false"
               style="--td-input-cursor-color: #0052d9;"
               type="password"
-              value="520 TDesign"
             />
             <!---->
             <!---->
@@ -1486,7 +1485,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               spellcheck="false"
               style="--td-input-cursor-color: #0052d9;"
               type="text"
-              value="17600600600"
             />
             <!---->
             <div
@@ -1657,7 +1655,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               spellcheck="false"
               style="--td-input-cursor-color: #0052d9;"
               type="text"
-              value="已输入文字"
             />
             <!---->
             <!---->
@@ -1723,7 +1720,6 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               spellcheck="false"
               style="--td-input-cursor-color: #0052d9;"
               type="text"
-              value="不可编辑文字"
             />
             <!---->
             <!---->
@@ -2450,7 +2446,6 @@ exports[`Input > Input specialVue demo works fine 1`] = `
           spellcheck="false"
           style="--td-input-cursor-color: #0052d9;"
           type="password"
-          value="520 TDesign"
         />
         <!---->
         <!---->
@@ -2611,7 +2606,6 @@ exports[`Input > Input specialVue demo works fine 1`] = `
           spellcheck="false"
           style="--td-input-cursor-color: #0052d9;"
           type="text"
-          value="17600600600"
         />
         <!---->
         <div
@@ -2765,7 +2759,6 @@ exports[`Input > Input statusVue demo works fine 1`] = `
           spellcheck="false"
           style="--td-input-cursor-color: #0052d9;"
           type="text"
-          value="已输入文字"
         />
         <!---->
         <!---->
@@ -2831,7 +2824,6 @@ exports[`Input > Input statusVue demo works fine 1`] = `
           spellcheck="false"
           style="--td-input-cursor-color: #0052d9;"
           type="text"
-          value="不可编辑文字"
         />
         <!---->
         <!---->

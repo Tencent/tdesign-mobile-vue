@@ -146,7 +146,7 @@ export default defineComponent({
       props.onScroll?.({ params: e });
 
       // 滚动到底部检测
-      const threshold = props.scrollBottomThreshold ?? 50;
+      const threshold = 50;
       if (target.scrollHeight - target.scrollTop - target.clientHeight <= threshold) {
         props.onScrollToBottom?.();
       }
@@ -295,7 +295,7 @@ export default defineComponent({
 
     return () => {
       const renderLoading = renderTNodeJSX('loading', { defaultNode: defaultLoadingContent });
-      const renderFooter = renderTNodeJSX('footer');
+      const renderFooter = renderTNodeJSX('footerSummary');
 
       return (
         <div ref={tableRef} class={dynamicBaseTableClasses.value} style="position: relative">

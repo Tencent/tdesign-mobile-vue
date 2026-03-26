@@ -36,7 +36,6 @@ exports[`Stepper > Stepper baseVue demo works fine 1`] = `
       inputmode="numeric"
       style=""
       type="tel"
-      value="3"
     />
     <div
       class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
@@ -95,7 +94,6 @@ exports[`Stepper > Stepper baseVue demo works fine 1`] = `
       inputmode="decimal"
       style=""
       type="text"
-      value="3.5"
     />
     <div
       class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
@@ -161,7 +159,6 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
       inputmode="numeric"
       style=""
       type="tel"
-      value="0"
     />
     <div
       class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
@@ -220,7 +217,6 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
       inputmode="numeric"
       style=""
       type="tel"
-      value="0"
     />
     <div
       class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
@@ -279,7 +275,6 @@ exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
       inputmode="numeric"
       style=""
       type="tel"
-      value="999"
     />
     <div
       class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium t-stepper--filled-disabled"
@@ -379,7 +374,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
             inputmode="numeric"
             style=""
             type="tel"
-            value="3"
           />
           <div
             class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
@@ -438,7 +432,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
             inputmode="decimal"
             style=""
             type="text"
-            value="3.5"
           />
           <div
             class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
@@ -525,7 +518,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
             inputmode="numeric"
             style=""
             type="tel"
-            value="0"
           />
           <div
             class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
@@ -584,7 +576,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
             inputmode="numeric"
             style=""
             type="tel"
-            value="0"
           />
           <div
             class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
@@ -643,7 +634,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
             inputmode="numeric"
             style=""
             type="tel"
-            value="999"
           />
           <div
             class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium t-stepper--filled-disabled"
@@ -727,7 +717,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
             inputmode="numeric"
             style=""
             type="tel"
-            value="0"
           />
           <div
             class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium t-stepper--filled-disabled"
@@ -814,7 +803,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
             inputmode="numeric"
             style=""
             type="tel"
-            value="3"
           />
           <div
             class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
@@ -873,7 +861,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
             inputmode="numeric"
             style=""
             type="tel"
-            value="3"
           />
           <div
             class="t-stepper__plus t-stepper__plus--outline t-stepper__icon--medium"
@@ -932,7 +919,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
             inputmode="numeric"
             style=""
             type="tel"
-            value="3"
           />
           <div
             class="t-stepper__plus t-stepper__plus--normal t-stepper__icon--medium"
@@ -1015,7 +1001,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
             inputmode="numeric"
             style=""
             type="tel"
-            value="3"
           />
           <div
             class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--large"
@@ -1074,7 +1059,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
             inputmode="numeric"
             style=""
             type="tel"
-            value="3"
           />
           <div
             class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
@@ -1133,7 +1117,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
             inputmode="numeric"
             style=""
             type="tel"
-            value="3"
           />
           <div
             class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--small"
@@ -1203,7 +1186,6 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
       inputmode="numeric"
       style=""
       type="tel"
-      value="3"
     />
     <div
       class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--large"
@@ -1262,7 +1244,6 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
       inputmode="numeric"
       style=""
       type="tel"
-      value="3"
     />
     <div
       class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
@@ -1321,7 +1302,6 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
       inputmode="numeric"
       style=""
       type="tel"
-      value="3"
     />
     <div
       class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--small"
@@ -1388,7 +1368,6 @@ exports[`Stepper > Stepper statusVue demo works fine 1`] = `
       inputmode="numeric"
       style=""
       type="tel"
-      value="0"
     />
     <div
       class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium t-stepper--filled-disabled"
@@ -1454,7 +1433,6 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
       inputmode="numeric"
       style=""
       type="tel"
-      value="3"
     />
     <div
       class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
@@ -1513,7 +1491,6 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
       inputmode="numeric"
       style=""
       type="tel"
-      value="3"
     />
     <div
       class="t-stepper__plus t-stepper__plus--outline t-stepper__icon--medium"
@@ -1572,7 +1549,6 @@ exports[`Stepper > Stepper themeVue demo works fine 1`] = `
       inputmode="numeric"
       style=""
       type="tel"
-      value="3"
     />
     <div
       class="t-stepper__plus t-stepper__plus--normal t-stepper__icon--medium"

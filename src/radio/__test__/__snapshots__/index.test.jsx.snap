@@ -42,7 +42,6 @@ exports[`Radio > props > : checked 1`] = `
     class="t-radio t-radio--left t-radio--block"
   >
     <input
-      checked=""
       class="t-radio__original"
       name=""
       type="radio"
@@ -167,7 +166,6 @@ exports[`Radio > props > :placement 1`] = `
   class="t-radio t-radio--right t-radio--block"
 >
   <input
-    checked=""
     class="t-radio__original"
     name=""
     type="radio"

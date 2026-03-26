@@ -804,7 +804,6 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
                     placeholder="搜索预设文案"
                     style="--td-search-cursor-color: #0052d9;"
                     type="search"
-                    value=""
                   />
                   <!---->
                 </div>
@@ -1413,7 +1412,6 @@ exports[`Navbar > Navbar searchVue demo works fine 1`] = `
               placeholder="搜索预设文案"
               style="--td-search-cursor-color: #0052d9;"
               type="search"
-              value=""
             />
             <!---->
           </div>

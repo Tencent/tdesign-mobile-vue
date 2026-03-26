@@ -37,9 +37,9 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    */
   fixedRows?: Array<number>;
   /**
-   * 表格底部内容，可用于显示「加载更多」、「没有更多了」等状态
+   * 表尾总结行
    */
-  footer?: string | TNode;
+  footerSummary?: string | TNode;
   /**
    * 表格高度，超出后会出现滚动条。示例：100,  '30%',  '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定表格高度，建议使用 `maxHeight`
    */
@@ -73,11 +73,6 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    * 用于自定义合并单元格，泛型 T 指表格数据类型。示例：`({ row, col, rowIndex, colIndex }) => { rowspan: 2, colspan: 3 }`
    */
   rowspanAndColspan?: TableRowspanAndColspanFunc<T>;
-  /**
-   * 触发 `onScrollToBottom` 事件的距离阈值，单位 px
-   * @default 50
-   */
-  scrollBottomThreshold?: number;
   /**
    * 是否显示表头
    * @default true

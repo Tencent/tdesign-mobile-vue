@@ -135,7 +135,6 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
         class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
       >
         <input
-          checked=""
           class="t-radio__original"
           name=""
           type="radio"
@@ -646,7 +645,6 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
             >
               <input
-                checked=""
                 class="t-radio__original"
                 name=""
                 type="radio"
@@ -1575,7 +1573,6 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
             >
               <input
-                checked=""
                 class="t-radio__original"
                 name=""
                 type="radio"
@@ -2663,7 +2660,6 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
         class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
       >
         <input
-          checked=""
           class="t-radio__original"
           name=""
           type="radio"

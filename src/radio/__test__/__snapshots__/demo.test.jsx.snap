@@ -76,7 +76,6 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
       class="t-radio t-radio--left t-radio--block"
     >
       <input
-        checked=""
         class="t-radio__original"
         name="radio"
         type="radio"
@@ -169,7 +168,6 @@ exports[`Radio > Radio cardVue demo works fine 1`] = `
       class="t-radio t-radio--left t-radio--block"
     >
       <input
-        checked=""
         class="t-radio__original"
         name="radio3"
         type="radio"
@@ -307,7 +305,6 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
         data-v-bb126958=""
       >
         <input
-          checked=""
           class="t-radio__original"
           name=""
           type="radio"
@@ -453,7 +450,6 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
         data-v-bb126958=""
       >
         <input
-          checked=""
           class="t-radio__original"
           name=""
           type="radio"
@@ -627,7 +623,6 @@ exports[`Radio > Radio horizontalVue demo works fine 1`] = `
     class="t-radio t-radio--left"
   >
     <input
-      checked=""
       class="t-radio__original"
       name="radio"
       type="radio"
@@ -678,7 +673,6 @@ exports[`Radio > Radio iconVue demo works fine 1`] = `
     data-v-172d1b62=""
   >
     <input
-      checked=""
       class="t-radio__original"
       name=""
       type="radio"
@@ -728,7 +722,6 @@ exports[`Radio > Radio iconVue demo works fine 1`] = `
     data-v-172d1b62=""
   >
     <input
-      checked=""
       class="t-radio__original"
       name=""
       type="radio"
@@ -870,7 +863,6 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             class="t-radio t-radio--left t-radio--block"
           >
             <input
-              checked=""
               class="t-radio__original"
               name="radio"
               type="radio"
@@ -1039,7 +1031,6 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           class="t-radio t-radio--left"
         >
           <input
-            checked=""
             class="t-radio__original"
             name="radio"
             type="radio"
@@ -1112,7 +1103,6 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           class="t-radio t-radio--left t-radio--block"
         >
           <input
-            checked=""
             class="t-radio__original"
             disabled=""
             name=""
@@ -1218,7 +1208,6 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         data-v-172d1b62=""
       >
         <input
-          checked=""
           class="t-radio__original"
           name=""
           type="radio"
@@ -1268,7 +1257,6 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         data-v-172d1b62=""
       >
         <input
-          checked=""
           class="t-radio__original"
           name=""
           type="radio"
@@ -1323,7 +1311,6 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         data-v-7e36f9df=""
       >
         <input
-          checked=""
           class="t-radio__original"
           name=""
           type="radio"
@@ -1366,7 +1353,6 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         data-v-7e36f9df=""
       >
         <input
-          checked=""
           class="t-radio__original"
           name=""
           type="radio"
@@ -1436,7 +1422,6 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             class="t-radio t-radio--left t-radio--block"
           >
             <input
-              checked=""
               class="t-radio__original"
               name="radio3"
               type="radio"
@@ -1592,7 +1577,6 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             data-v-bb126958=""
           >
             <input
-              checked=""
               class="t-radio__original"
               name=""
               type="radio"
@@ -1738,7 +1722,6 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             data-v-bb126958=""
           >
             <input
-              checked=""
               class="t-radio__original"
               name=""
               type="radio"
@@ -1854,7 +1837,6 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
     data-v-7e36f9df=""
   >
     <input
-      checked=""
       class="t-radio__original"
       name=""
       type="radio"
@@ -1897,7 +1879,6 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
     data-v-7e36f9df=""
   >
     <input
-      checked=""
       class="t-radio__original"
       name=""
       type="radio"
@@ -1950,7 +1931,6 @@ exports[`Radio > Radio statusVue demo works fine 1`] = `
     class="t-radio t-radio--left t-radio--block"
   >
     <input
-      checked=""
       class="t-radio__original"
       disabled=""
       name=""
