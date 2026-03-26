@@ -296,7 +296,7 @@ export default defineComponent({
               duration={Number(duration.value)}
               showOverlay={showOverlay.value}
               style={popupStyle.value}
-              overlayProps={{ style: 'position: absolute' }}
+              overlayProps={{ customStyle: 'position: absolute' }}
               attach={`#${popupId}`}
               onVisibleChange={onVisibleChange}
             >

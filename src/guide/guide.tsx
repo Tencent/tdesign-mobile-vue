@@ -146,6 +146,8 @@ export default defineComponent({
 
     // 设置高亮层的位置
     const setHighlightLayerPosition = (highlightLayer: HTMLElement, isReference = false) => {
+      if (!highlightLayer) return;
+
       let { top, left } = getRelativePosition(currentHighlightLayerElm.value);
       let { width, height } = currentHighlightLayerElm.value.getBoundingClientRect();
       const highlightPadding = getCurrentCrossProps('highlightPadding');

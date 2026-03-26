@@ -12,8 +12,6 @@ import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import { CascaderTriggerSource } from './type';
-import { TreeNodeModel } from '../_common/js/tree/tree-node-model';
-import { TreeNode } from '../_common/js/tree/tree-node';
 
 const { prefix } = config;
 const name = `${prefix}-cascader`;
@@ -39,7 +37,7 @@ export default defineComponent({
   name,
   props,
   emits: ['update:visible', 'update:value', 'update:modelValue'],
-  setup(props, context) {
+  setup(props, { emit, expose }) {
     const renderTNodeJSX = useTNodeJSX();
     const cascaderClass = usePrefixClass('cascader');
     const { globalConfig } = useConfig('cascader');
@@ -57,17 +55,23 @@ export default defineComponent({
     const steps = reactive([placeholder.value]);
 
     const initWithValue = () => {
-      if (cascaderValue.value != null) {
-        steps.length = 0;
-        selectedValue.length = 0;
-        selectedIndexes.splice(0, selectedIndexes.length);
+      // 清空所有状态
+      steps.length = 0;
+      selectedValue.length = 0;
+      selectedIndexes.splice(0, selectedIndexes.length);
+      items.value.splice(0, items.value.length, props.options ?? []);
 
+      if (cascaderValue.value != null) {
         const path = getIndexesByValue(props.options, cascaderValue.value);
         path?.forEach((e: number) => {
           // @ts-ignore
           selectedIndexes.push(e);
         });
         watchSelectedIndexes();
+      } else {
+        // 如果 value 为空,重置为初始状态
+        steps.push(placeholder.value);
+        stepIndex.value = 0;
       }
     };
 
@@ -238,7 +242,7 @@ export default defineComponent({
     };
 
     watch(open, () => {
-      context.emit('update:visible', open.value);
+      emit('update:visible', open.value);
     });
 
     watch(visible, () => {
@@ -269,8 +273,26 @@ export default defineComponent({
       }
     });
 
+    watch(
+      cascaderValue,
+      () => {
+        initWithValue();
+      },
+      {
+        deep: true,
+      },
+    );
+
     onMounted(() => {
       initWithValue();
+    });
+
+    const reset = () => {
+      setCascaderValue(undefined, []);
+    };
+
+    expose({
+      reset,
     });
 
     return () => {

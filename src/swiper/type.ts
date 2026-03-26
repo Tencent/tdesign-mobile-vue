@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdSwiperProps {
   /**
@@ -43,9 +43,9 @@ export interface TdSwiperProps {
    */
   duration?: number;
   /**
-   * 当使用垂直方向滚动时的高度
+   * 轮播的高度
    */
-  height?: number | string;
+  height?: string | number;
   /**
    * 轮播间隔时间
    * @default 5000
@@ -57,25 +57,19 @@ export interface TdSwiperProps {
    */
   loop?: boolean;
   /**
-   * 导航器全部配置，`true` 的话使用默认配置
-   * @default true
+   * 导航器全部配置
    */
-  navigation?: SwiperNavigation | TNode | Boolean;
+  navigation?: SwiperNavigation | TNode;
   /**
-   * 后边距，可用于露出后一项的一小部分。默认单位 `px`
+   * 【开发中】后边距，可用于露出后一项的一小部分。默认单位 `px`
    * @default 0
    */
   nextMargin?: string | number;
   /**
-   * 前边距，可用于露出前一项的一小部分。默认单位 `px`
+   * 【开发中】前边距，可用于露出前一项的一小部分。默认单位 `px`
    * @default 0
    */
   previousMargin?: string | number;
-  /**
-   * 样式类型：默认样式、卡片样式
-   * @default default
-   */
-  type?: 'default' | 'card';
   /**
    * 轮播切换时触发
    */
@@ -84,8 +78,6 @@ export interface TdSwiperProps {
    * 点击轮播项时触发
    */
   onClick?: (index: number) => void;
-  /** 是否禁用 */
-  disabled?: Boolean;
 }
 
 export interface SwiperNavigation {
@@ -97,7 +89,7 @@ export interface SwiperNavigation {
    * 页码信息展示位置
    * @default bottom
    */
-  paginationPosition?: 'top-left' | 'top' | 'top-right' | 'bottom-left' | 'bottom' | 'bottom-right';
+  paginationPosition?: 'top-left' | 'top' | 'top-right' | 'bottom-left' | 'bottom' | 'bottom-right' | 'left' | 'right';
   /**
    * 导航器位置，位于主体的内侧或是外侧
    * @default inside
@@ -110,7 +102,7 @@ export interface SwiperNavigation {
   showControls?: boolean;
   /**
    * 导航器类型，点状(dots)、点条状(dots-bar)、分式(fraction)等
-   * @default dots
+   * @default ''
    */
   type?: SwiperNavigationType;
 }

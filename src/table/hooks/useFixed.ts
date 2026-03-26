@@ -1,4 +1,4 @@
-import { toRefs, ref, watch, reactive } from 'vue';
+import { toRefs, ref, watch, reactive, shallowRef } from 'vue';
 import { get } from 'lodash-es';
 import log from '../../_common/js/log';
 import { ClassName, Styles } from '../../common';
@@ -70,7 +70,7 @@ export default function useFixed(props: TdBaseTableProps) {
   const isWidthOverflow = ref(false);
   const tableElmRef = ref<HTMLTableElement>();
   // 固定列、固定表头、固定表尾等内容的位置信息
-  const rowAndColFixedPosition = ref<RowAndColFixedPosition>(new Map());
+  const rowAndColFixedPosition = shallowRef<RowAndColFixedPosition>(new Map());
   const showColumnShadow = reactive({
     left: false,
     right: false,

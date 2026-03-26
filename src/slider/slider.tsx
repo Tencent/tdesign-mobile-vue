@@ -329,9 +329,9 @@ export default defineComponent({
         [`${sliderClass.value}__range-extreme--min`]: props.range,
       };
       if (props.range) {
-        return <text class={textClass}>{props.min}</text>;
+        return <div class={textClass}>{props.min}</div>;
       }
-      return <text class={textClass}>{props.label ? getValue(props.label, props.min) : props.min}</text>;
+      return <div class={textClass}>{props.label ? getValue(props.label, props.min) : props.min}</div>;
     };
     const renderMaxText = () => {
       if (!props.showExtremeValue) {
@@ -345,9 +345,9 @@ export default defineComponent({
       };
 
       if (props.range) {
-        return <text class={textClass}>{props.max}</text>;
+        return <div class={textClass}>{props.max}</div>;
       }
-      return <text class={textClass}>{props.label ? getValue(props.label, props.max) : props.max}</text>;
+      return <div class={textClass}>{props.label ? getValue(props.label, props.max) : props.max}</div>;
     };
 
     const renderScale = () => {
