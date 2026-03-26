@@ -19,10 +19,10 @@ exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
       >
         
         <div
-          class="t-tabs__nav"
+          class="t-tabs__nav t-tabs__nav--split"
         >
           <div
-            class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+            class="t-tabs__scroll t-tabs__scroll--line"
           >
             <div
               class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -170,10 +170,10 @@ exports[`Tabs > Tabs contentVue demo works fine 1`] = `
       >
         
         <div
-          class="t-tabs__nav"
+          class="t-tabs__nav t-tabs__nav--split"
         >
           <div
-            class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+            class="t-tabs__scroll t-tabs__scroll--line"
           >
             <div
               class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -311,10 +311,10 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
       >
         
         <div
-          class="t-tabs__nav"
+          class="t-tabs__nav t-tabs__nav--split"
         >
           <div
-            class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+            class="t-tabs__scroll t-tabs__scroll--line"
           >
             <div
               class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -414,10 +414,10 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
       >
         
         <div
-          class="t-tabs__nav"
+          class="t-tabs__nav t-tabs__nav--split"
         >
           <div
-            class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+            class="t-tabs__scroll t-tabs__scroll--line"
           >
             <div
               class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -539,10 +539,10 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
       >
         
         <div
-          class="t-tabs__nav"
+          class="t-tabs__nav t-tabs__nav--split"
         >
           <div
-            class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+            class="t-tabs__scroll t-tabs__scroll--line"
           >
             <div
               class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -692,10 +692,10 @@ exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
       >
         
         <div
-          class="t-tabs__nav"
+          class="t-tabs__nav t-tabs__nav--split"
         >
           <div
-            class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+            class="t-tabs__scroll t-tabs__scroll--line"
           >
             <div
               class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -879,10 +879,10 @@ exports[`Tabs > Tabs iconVue demo works fine 1`] = `
       >
         
         <div
-          class="t-tabs__nav"
+          class="t-tabs__nav t-tabs__nav--split"
         >
           <div
-            class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+            class="t-tabs__scroll t-tabs__scroll--line"
           >
             <div
               class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -1205,10 +1205,10 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
       >
         
         <div
-          class="t-tabs__nav"
+          class="t-tabs__nav t-tabs__nav--split"
         >
           <div
-            class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+            class="t-tabs__scroll t-tabs__scroll--line"
           >
             <div
               class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -1513,10 +1513,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav"
+                class="t-tabs__nav t-tabs__nav--split"
               >
                 <div
-                  class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+                  class="t-tabs__scroll t-tabs__scroll--line"
                 >
                   <div
                     class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -1616,10 +1616,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav"
+                class="t-tabs__nav t-tabs__nav--split"
               >
                 <div
-                  class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+                  class="t-tabs__scroll t-tabs__scroll--line"
                 >
                   <div
                     class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -1741,10 +1741,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav"
+                class="t-tabs__nav t-tabs__nav--split"
               >
                 <div
-                  class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+                  class="t-tabs__scroll t-tabs__scroll--line"
                 >
                   <div
                     class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -1894,10 +1894,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav"
+                class="t-tabs__nav t-tabs__nav--split"
               >
                 <div
-                  class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+                  class="t-tabs__scroll t-tabs__scroll--line"
                 >
                   <div
                     class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -2098,10 +2098,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav"
+                class="t-tabs__nav t-tabs__nav--split"
               >
                 <div
-                  class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+                  class="t-tabs__scroll t-tabs__scroll--line"
                 >
                   <div
                     class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -2389,10 +2389,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav"
+                class="t-tabs__nav t-tabs__nav--split"
               >
                 <div
-                  class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+                  class="t-tabs__scroll t-tabs__scroll--line"
                 >
                   <div
                     class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -2732,10 +2732,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav"
+                class="t-tabs__nav t-tabs__nav--split"
               >
                 <div
-                  class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+                  class="t-tabs__scroll t-tabs__scroll--line"
                 >
                   <div
                     class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -2900,10 +2900,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav"
+                class="t-tabs__nav t-tabs__nav--split"
               >
                 <div
-                  class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+                  class="t-tabs__scroll t-tabs__scroll--line"
                 >
                   <div
                     class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -3062,10 +3062,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav"
+                class="t-tabs__nav t-tabs__nav--split"
               >
                 <div
-                  class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+                  class="t-tabs__scroll t-tabs__scroll--line"
                 >
                   <div
                     class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -3216,10 +3216,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav"
+                class="t-tabs__nav t-tabs__nav--split"
               >
                 <div
-                  class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+                  class="t-tabs__scroll t-tabs__scroll--line"
                 >
                   <div
                     class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -3369,10 +3369,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav"
+                class="t-tabs__nav t-tabs__nav--split"
               >
                 <div
-                  class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+                  class="t-tabs__scroll t-tabs__scroll--line"
                 >
                   <div
                     class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -3547,10 +3547,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav"
+                class="t-tabs__nav t-tabs__nav--split"
               >
                 <div
-                  class="t-tabs__scroll t-tabs__scroll--tag t-tabs__scroll--split"
+                  class="t-tabs__scroll t-tabs__scroll--tag"
                 >
                   <div
                     class="t-tabs__wrapper t-tabs__wrapper--tag"
@@ -3697,10 +3697,10 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav"
+                class="t-tabs__nav t-tabs__nav--split"
               >
                 <div
-                  class="t-tabs__scroll t-tabs__scroll--card t-tabs__scroll--split"
+                  class="t-tabs__scroll t-tabs__scroll--card"
                 >
                   <div
                     class="t-tabs__wrapper t-tabs__wrapper--card"
@@ -3861,10 +3861,10 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
       >
         
         <div
-          class="t-tabs__nav"
+          class="t-tabs__nav t-tabs__nav--split"
         >
           <div
-            class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+            class="t-tabs__scroll t-tabs__scroll--line"
           >
             <div
               class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -4014,10 +4014,10 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
       >
         
         <div
-          class="t-tabs__nav"
+          class="t-tabs__nav t-tabs__nav--split"
         >
           <div
-            class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+            class="t-tabs__scroll t-tabs__scroll--line"
           >
             <div
               class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -4175,10 +4175,10 @@ exports[`Tabs > Tabs statusVue demo works fine 1`] = `
       >
         
         <div
-          class="t-tabs__nav"
+          class="t-tabs__nav t-tabs__nav--split"
         >
           <div
-            class="t-tabs__scroll t-tabs__scroll--line t-tabs__scroll--split"
+            class="t-tabs__scroll t-tabs__scroll--line"
           >
             <div
               class="t-tabs__wrapper t-tabs__wrapper--line"
@@ -4308,10 +4308,10 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
       >
         
         <div
-          class="t-tabs__nav"
+          class="t-tabs__nav t-tabs__nav--split"
         >
           <div
-            class="t-tabs__scroll t-tabs__scroll--tag t-tabs__scroll--split"
+            class="t-tabs__scroll t-tabs__scroll--tag"
           >
             <div
               class="t-tabs__wrapper t-tabs__wrapper--tag"
@@ -4458,10 +4458,10 @@ exports[`Tabs > Tabs themeVue demo works fine 1`] = `
       >
         
         <div
-          class="t-tabs__nav"
+          class="t-tabs__nav t-tabs__nav--split"
         >
           <div
-            class="t-tabs__scroll t-tabs__scroll--card t-tabs__scroll--split"
+            class="t-tabs__scroll t-tabs__scroll--card"
           >
             <div
               class="t-tabs__wrapper t-tabs__wrapper--card"

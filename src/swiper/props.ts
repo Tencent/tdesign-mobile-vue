@@ -50,7 +50,7 @@ export default {
     type: Number,
     default: 300,
   },
-  /** 当使用垂直方向滚动时的高度 */
+  /** 轮播的高度 */
   height: {
     type: [String, Number] as PropType<TdSwiperProps['height']>,
   },
@@ -66,32 +66,17 @@ export default {
   },
   /** 导航器全部配置 */
   navigation: {
-    type: [Boolean, Object, Function] as PropType<TdSwiperProps['navigation']>,
-    default: true as TdSwiperProps['navigation'],
+    type: [Object, Function] as PropType<TdSwiperProps['navigation']>,
   },
-  /** 后边距，可用于露出后一项的一小部分。默认单位 `px` */
+  /** 【开发中】后边距，可用于露出后一项的一小部分。默认单位 `px` */
   nextMargin: {
     type: [String, Number] as PropType<TdSwiperProps['nextMargin']>,
-    default: 0,
+    default: 0 as TdSwiperProps['nextMargin'],
   },
-  /** 前边距，可用于露出前一项的一小部分。默认单位 `px` */
+  /** 【开发中】前边距，可用于露出前一项的一小部分。默认单位 `px` */
   previousMargin: {
     type: [String, Number] as PropType<TdSwiperProps['previousMargin']>,
-    default: 0,
-  },
-  /** 样式类型：默认样式、卡片样式 */
-  type: {
-    type: String as PropType<TdSwiperProps['type']>,
-    default: 'default' as TdSwiperProps['type'],
-    validator(val: TdSwiperProps['type']): boolean {
-      if (!val) return true;
-      return ['default', 'card'].includes(val);
-    },
-  },
-  /** 是否禁用 */
-  disabled: {
-    type: Boolean as PropType<TdSwiperProps['disabled']>,
-    default: false,
+    default: 0 as TdSwiperProps['previousMargin'],
   },
   /** 轮播切换时触发 */
   onChange: Function as PropType<TdSwiperProps['onChange']>,

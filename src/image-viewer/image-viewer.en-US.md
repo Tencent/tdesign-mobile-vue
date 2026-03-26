@@ -29,6 +29,12 @@ close | `(context: { trigger: ImageViewerCloseTrigger, visible: boolean, index: 
 delete | `(index: number)` | \-
 index-change | `(index: number, context: { trigger: 'prev' \| 'next' })` | \-
 
+### ImageViewerInstanceFunctions 组件实例方法
+
+name | params | return | description
+-- | -- | -- | --
+swipeTo | `(index: number, options?: SwiperToOptions)` | \- | `1.13.2`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image-viewer/type.ts)。<br/>`import { SwiperToOptions } from '@Swiper'`<br/>
+
 ### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
