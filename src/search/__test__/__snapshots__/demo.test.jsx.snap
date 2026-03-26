@@ -49,6 +49,7 @@ exports[`Search > Search actionVue demo works fine 1`] = `
           placeholder="搜索预设文案"
           style="--td-search-cursor-color: #0052d9;"
           type="search"
+          value=""
         />
         <!---->
       </div>
@@ -112,6 +113,7 @@ exports[`Search > Search baseVue demo works fine 1`] = `
             placeholder="搜索预设文案"
             style="--td-search-cursor-color: #0052d9;"
             type="search"
+            value=""
           />
           <!---->
         </div>
@@ -168,6 +170,7 @@ exports[`Search > Search baseVue demo works fine 1`] = `
             placeholder="输入tdesign，有预览效果"
             style="--td-search-cursor-color: #0052d9;"
             type="search"
+            value=""
           />
           <!---->
         </div>
@@ -233,6 +236,7 @@ exports[`Search > Search maxLengthVue demo works fine 1`] = `
             placeholder="最多输入10个汉字"
             style="--td-search-cursor-color: #0052d9;"
             type="search"
+            value=""
           />
           <!---->
         </div>
@@ -289,6 +293,7 @@ exports[`Search > Search maxLengthVue demo works fine 1`] = `
             placeholder="最多输入10个字符（汉字算两个）"
             style="--td-search-cursor-color: #0052d9;"
             type="search"
+            value=""
           />
           <!---->
         </div>
@@ -385,6 +390,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 placeholder="搜索预设文案"
                 style="--td-search-cursor-color: #0052d9;"
                 type="search"
+                value=""
               />
               <!---->
             </div>
@@ -441,6 +447,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 placeholder="输入tdesign，有预览效果"
                 style="--td-search-cursor-color: #0052d9;"
                 type="search"
+                value=""
               />
               <!---->
             </div>
@@ -519,6 +526,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 placeholder="最多输入10个汉字"
                 style="--td-search-cursor-color: #0052d9;"
                 type="search"
+                value=""
               />
               <!---->
             </div>
@@ -575,6 +583,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 placeholder="最多输入10个字符（汉字算两个）"
                 style="--td-search-cursor-color: #0052d9;"
                 type="search"
+                value=""
               />
               <!---->
             </div>
@@ -652,6 +661,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 placeholder="搜索预设文案"
                 style="--td-search-cursor-color: #0052d9;"
                 type="search"
+                value=""
               />
               <!---->
             </div>
@@ -733,6 +743,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 placeholder="搜索预设文案"
                 style="--td-search-cursor-color: #0052d9;"
                 type="search"
+                value=""
               />
               <!---->
             </div>
@@ -789,6 +800,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 placeholder="搜索预设文案"
                 style="--td-search-cursor-color: #0052d9;"
                 type="search"
+                value=""
               />
               <!---->
             </div>
@@ -866,6 +878,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 placeholder="搜索预设文案"
                 style="--td-search-cursor-color: #0052d9;"
                 type="search"
+                value=""
               />
               <!---->
             </div>
@@ -929,6 +942,7 @@ exports[`Search > Search otherVue demo works fine 1`] = `
           placeholder="搜索预设文案"
           style="--td-search-cursor-color: #0052d9;"
           type="search"
+          value=""
         />
         <!---->
       </div>
@@ -992,6 +1006,7 @@ exports[`Search > Search shapeVue demo works fine 1`] = `
             placeholder="搜索预设文案"
             style="--td-search-cursor-color: #0052d9;"
             type="search"
+            value=""
           />
           <!---->
         </div>
@@ -1048,6 +1063,7 @@ exports[`Search > Search shapeVue demo works fine 1`] = `
             placeholder="搜索预设文案"
             style="--td-search-cursor-color: #0052d9;"
             type="search"
+            value=""
           />
           <!---->
         </div>
