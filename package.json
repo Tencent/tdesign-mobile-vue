@@ -186,7 +186,7 @@
     "typescript": "^5.9.3",
     "vite": "^6.2.3",
     "vite-plugin-tdoc": "^2.0.1",
-    "vitest": "^3.2.4",
+    "vitest": "^4.1.2",
     "vue": "^3.5.1",
     "vue-eslint-parser": "^8.0.1",
     "vue-router": "4.0.11",
