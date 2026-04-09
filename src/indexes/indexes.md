@@ -9,6 +9,7 @@
 current | String / Number | - | 索引列表的激活项，默认首项。支持语法糖 `v-model` 或 `v-model:current` | N
 defaultCurrent | String / Number | - | 索引列表的激活项，默认首项。非受控属性 | N
 indexList | Array | - | 索引字符列表。不传默认 `A-Z`。TS 类型：`Array<string \| number>` | N
+showFullIndex | Boolean | false | `1.13.3`。是否显示完整的索引内容，默认只显示首字符。TS 类型：`Boolean` | N
 sticky | Boolean | true | 索引是否吸顶，默认为true。TS 类型：`Boolean` | N
 stickyOffset | Number | 0 | 锚点吸顶时与顶部的距离	 | N
 onChange | Function |  | TS 类型：`(index: string \| number) => void`<br/>索引发生变更时触发事件 | N
