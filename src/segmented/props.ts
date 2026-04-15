@@ -8,6 +8,8 @@ import { TdSegmentedProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 是否撑满父元素宽度 */
+  block: Boolean,
   /** 是否禁用 */
   disabled: Boolean,
   /** 数据化配置选项内容 */
