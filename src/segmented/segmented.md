@@ -18,3 +18,16 @@ onChange | Function |  | TS 类型：`(value: string \| number, selectedOption: 
 名称 | 参数 | 描述
 -- | -- | --
 change | `(value: string \| number, selectedOption: SegmentedItem)` | 选项值发生变化时触发
+
+### CSS Variables
+
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述 
+-- | -- | --
+--td-segmented-bg-color | @bg-color-component-disabled | -
+--td-segmented-item-active-bg | @bg-color-container | -
+--td-segmented-item-active-color | @brand-color | -
+--td-segmented-item-color | @text-color-primary | -
+--td-segmented-item-disabled-color | @text-color-disabled | -
+--td-segmented-item-label-font | @font-body-medium | -
+--td-segmented-transition | all @anim-duration-base @anim-time-fn-easing | -
