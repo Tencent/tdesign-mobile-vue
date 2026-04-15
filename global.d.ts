@@ -66,6 +66,7 @@ declare module 'vue' {
     TResult: typeof import('tdesign-mobile-vue')['Result'];
     TRow: typeof import('tdesign-mobile-vue')['Row'];
     TSearch: typeof import('tdesign-mobile-vue')['Search'];
+    TSegmented: typeof import('tdesign-mobile-vue')['Segmented'];
     TSideBar: typeof import('tdesign-mobile-vue')['SideBar'];
     TSideBarItem: typeof import('tdesign-mobile-vue')['SideBarItem'];
     TSkeleton: typeof import('tdesign-mobile-vue')['Skeleton'];

@@ -41,7 +41,7 @@ export interface TdSegmentedProps {
 
 export interface SegmentedItem {
   value: string | number;
-  label?: TNode;
+  label?: string | TNode;
   icon?: TNode;
   disabled?: boolean;
 }
