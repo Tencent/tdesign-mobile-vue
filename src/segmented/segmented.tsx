@@ -2,7 +2,6 @@ import { computed, defineComponent, h, nextTick, onMounted, onUnmounted, ref, to
 import { isFunction } from 'lodash-es';
 import config from '../config';
 import props from './props';
-import { SegmentedItem } from './type';
 import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 
