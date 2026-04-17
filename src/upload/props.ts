@@ -55,6 +55,11 @@ export default {
     type: Boolean,
     default: undefined,
   },
+  /** 是否启用拖拽上传 */
+  draggable: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 用于完全自定义文件列表界面内容(UI)，单文件和多文件均有效 */
   fileListDisplay: {
     type: Function as PropType<TdUploadProps['fileListDisplay']>,
@@ -134,13 +139,13 @@ export default {
   sizeLimit: {
     type: [Number, Object] as PropType<TdUploadProps['sizeLimit']>,
   },
+  /** 是否在同一个请求中上传全部文件，默认一个请求上传一个文件。多文件上传时有效 */
+  uploadAllFilesInOneRequest: Boolean,
   /** 是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传 */
   useMockProgress: {
     type: Boolean,
     default: true,
   },
-  /** 是否在同一个请求中上传全部文件，默认一个请求上传一个文件。多文件上传时有效 */
-  uploadAllFilesInOneRequest: Boolean,
   /** 已上传文件列表，同 `files`。TS 类型：`UploadFile` */
   value: {
     type: Array as PropType<TdUploadProps['value']>,
@@ -163,6 +168,10 @@ export default {
   onChange: Function as PropType<TdUploadProps['onChange']>,
   /** 点击上传区域时触发 */
   onClickUpload: Function as PropType<TdUploadProps['onClickUpload']>,
+  /** 拖拽开始时触发 */
+  onDrag: Function as PropType<TdUploadProps['onDrag']>,
+  /** 拖拽结束后触发，返回上传的文件列表（拖拽后的文件顺序） */
+  onDrop: Function as PropType<TdUploadProps['onDrop']>,
   /** 上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构。如果是多文件多请求上传场景，请到事件 `onOneFileFail` 中查看 `response` */
   onFail: Function as PropType<TdUploadProps['onFail']>,
   /** 多文件/图片场景下，单个文件上传失败后触发，如果一个请求上传一个文件，则会触发多次。单文件/图片不会触发 */

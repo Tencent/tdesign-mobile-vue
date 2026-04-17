@@ -1,4 +1,5 @@
 import { ref, computed, defineComponent, watchEffect } from 'vue';
+import type { PropType } from 'vue';
 import { useIntersectionObserver } from '@vueuse/core';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 

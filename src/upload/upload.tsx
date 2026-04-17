@@ -1,23 +1,21 @@
-import { defineComponent, ref, computed } from 'vue';
+import { defineComponent, ref, computed, TransitionGroup } from 'vue';
 import type { InputHTMLAttributes } from 'vue';
 import { AddIcon, LoadingIcon, CloseIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
 import { isBoolean } from 'lodash-es';
 import TImage from '../image';
 import TImageViewer from '../image-viewer';
-import { TdUploadProps, UploadFile } from './type';
+import type { TdUploadProps, UploadFile } from './type';
 import UploadProps from './props';
 import config from '../config';
 import useUpload from './hooks/useUpload';
-import { useTNodeJSX, useContent } from '../hooks/tnode';
+import useDrag from './hooks/useDrag';
+import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 
 const { prefix } = config;
 
 export default defineComponent({
   name: `${prefix}-upload`,
-  components: {
-    TImage,
-  },
   props: UploadProps,
   emits: [
     'update:files',
@@ -46,14 +44,37 @@ export default defineComponent({
       onNormalFileChange,
       onInnerRemove,
       cancelUpload,
+      setUploadValue,
     } = useUpload(props);
 
     const renderTNodeJSX = useTNodeJSX();
 
     const showViewer = ref(false);
     const initialIndex = ref(0);
+    const uploadListRef = ref<HTMLElement>();
+    const isDragging = ref(false);
+
+    const { onTouchstart, onTouchmove, onTouchend, dragIndex, getFileId } = useDrag(
+      props,
+      setUploadValue,
+      uploadClass,
+      uploadListRef,
+    );
+
+    const onTouchDragStart = (e: TouchEvent, index: number) => {
+      isDragging.value = true;
+      onTouchstart(e, index);
+      props.onDrag?.();
+    };
+
+    const onTouchDragEnd = () => {
+      isDragging.value = false;
+      onTouchend();
+      props.onDrop?.(displayFiles.value);
+    };
 
     const handlePreview = (e: MouseEvent, file: UploadFile, index: number) => {
+      if (dragIndex.value !== -1) return;
       initialIndex.value = index;
       showViewer.value = props.preview;
       props.onPreview?.({
@@ -109,13 +130,14 @@ export default defineComponent({
         const addBtnNode = renderTNodeJSX('addBtn', <AddIcon />);
         const addContentNode = renderTNodeJSX('addContent');
         return (
-          <div class={`${uploadClass.value}__item ${uploadClass.value}__item--add`} onClick={triggerUpload}>
+          <div key="add" class={`${uploadClass.value}__item ${uploadClass.value}__item--add`} onClick={triggerUpload}>
             {<div class={`${uploadClass.value}__add-icon`}>{addContentNode || addBtnNode}</div>}
           </div>
         );
       }
       return null;
     };
+
     expose({
       upload: inputRef.value,
       uploading,
@@ -124,29 +146,48 @@ export default defineComponent({
       cancelUpload,
       uploadFilePercent,
     });
+
     return () => {
+      const children = displayFiles.value.map((file, index) => (
+        <div
+          key={getFileId(file)}
+          class={[
+            `${uploadClass.value}__item`,
+            {
+              [`${uploadClass.value}__item-drag`]: props.draggable && isDragging.value,
+            },
+          ]}
+          onTouchstart={(e: TouchEvent) => onTouchDragStart(e, index)}
+          onTouchmove={(e: TouchEvent) => onTouchmove(e, displayFiles.value)}
+          onTouchend={() => {
+            onTouchDragEnd();
+          }}
+          onTouchcancel={() => {
+            onTouchDragEnd();
+          }}
+          onClick={(e: MouseEvent) => handlePreview(e, file, index)}
+        >
+          {file.url && (
+            <TImage
+              class={`${uploadClass.value}__image`}
+              shape="round"
+              {...(props.imageProps as TdUploadProps['imageProps'])}
+              src={file.url}
+            />
+          )}
+          {renderStatus(file)}
+          {(isBoolean(file.removeBtn) ? file.removeBtn : props.removeBtn) && (
+            <CloseIcon
+              class={`${uploadClass.value}__delete-btn`}
+              onClick={({ e }: any) => onInnerRemove({ e, file, index })}
+            />
+          )}
+        </div>
+      ));
+
       return (
-        <div class={`${uploadClass.value}`}>
-          {displayFiles.value.map((file, index) => (
-            <div key={index} class={`${uploadClass.value}__item`}>
-              {file.url && (
-                <t-image
-                  class={`${uploadClass.value}__image`}
-                  shape="round"
-                  {...(props.imageProps as TdUploadProps['imageProps'])}
-                  src={file.url}
-                  onClick={(e: MouseEvent) => handlePreview(e, file, index)}
-                />
-              )}
-              {renderStatus(file)}
-              {(isBoolean(file.removeBtn) ? file.removeBtn : props.removeBtn) && (
-                <CloseIcon
-                  class={`${uploadClass.value}__delete-btn`}
-                  onClick={({ e }: any) => onInnerRemove({ e, file, index })}
-                />
-              )}
-            </div>
-          ))}
+        <div ref={uploadListRef} class={`${uploadClass.value}`}>
+          <TransitionGroup>{children}</TransitionGroup>
           {renderAddContent()}
           <input
             ref={inputRef}
