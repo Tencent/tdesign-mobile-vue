@@ -12,7 +12,7 @@
     "resolveJsonModule": true,
     "importHelpers": true,
     "isolatedModules": false,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "jsx": "preserve",
     "jsxImportSource": "vue",
     "experimentalDecorators": true,

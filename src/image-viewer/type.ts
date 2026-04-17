@@ -4,7 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import { SwiperToOptions } from '../swiper';
+import type { TNode } from '../common';
 
 export interface TdImageViewerProps {
   /**
@@ -75,6 +76,14 @@ export interface TdImageViewerProps {
    * 预览图片切换时触发，`context.prev` 切换到上一张图片，`context.next` 切换到下一张图片
    */
   onIndexChange?: (index: number, context: { trigger: 'prev' | 'next' }) => void;
+}
+
+/** 组件实例方法 */
+export interface ImageViewerInstanceFunctions {
+  /**
+   * 切换到指定预览图片位置
+   */
+  swipeTo?: (index: number, options?: SwiperToOptions) => void;
 }
 
 export interface ImageSlotParams {

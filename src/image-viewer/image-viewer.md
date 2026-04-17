@@ -29,6 +29,12 @@ close | `(context: { trigger: ImageViewerCloseTrigger, visible: boolean, index: 
 delete | `(index: number)` | 点击删除操作按钮时触发
 index-change | `(index: number, context: { trigger: 'prev' \| 'next' })` | 预览图片切换时触发，`context.prev` 切换到上一张图片，`context.next` 切换到下一张图片
 
+### ImageViewerInstanceFunctions 组件实例方法
+
+名称 | 参数 | 返回值 | 描述
+-- | -- | -- | --
+swipeTo | `(index: number, options?: SwiperToOptions)` | \- | `1.13.2`。切换到指定预览图片位置。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image-viewer/type.ts)。<br/>`import { SwiperToOptions } from '@Swiper'`<br/>
+
 ### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。

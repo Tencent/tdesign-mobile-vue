@@ -1,7 +1,7 @@
 {
   "name": "tdesign-mobile-vue",
   "purename": "tdesign",
-  "version": "1.13.1",
+  "version": "1.13.2",
   "description": "tdesign-mobile-vue",
   "author": "TDesign Group",
   "packageManager": "pnpm@10.2.0",
@@ -16,7 +16,7 @@
   "scripts": {
     "init": "git submodule init && git submodule update",
     "start": "npm run dev",
-    "prepare": "husky install .husky",
+    "prepare": "husky",
     "dev": "cd site && cross-env NODE_ENV=development vite",
     "dev:debug": "cd site && cross-env NODE_ENV=development vite --debug",
     "prebuild": "rimraf es/* esm/* lib/* cjs/* dist/* --glob",
@@ -92,7 +92,7 @@
     "@vueuse/core": "10.7.0",
     "dayjs": "^1.10.7",
     "lodash-es": "^4.17.21",
-    "tdesign-icons-vue-next": "^0.4.2",
+    "tdesign-icons-vue-next": "^0.4.4",
     "tinycolor2": "^1.6.0",
     "validator": "^13.5.1"
   },
@@ -155,7 +155,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-vue": "^8.2.0",
     "gray-matter": "^4.0.3",
-    "husky": "^6.0.0",
+    "husky": "^9.1.7",
     "jsdom": "^20.0.0",
     "less": "4.4.2",
     "lint-staged": "^10.5.4",

@@ -76,11 +76,11 @@ export default {
   /** 激活的选项卡值 */
   value: {
     type: [String, Number] as PropType<TdTabsProps['value']>,
-    default: undefined,
+    default: undefined as TdTabsProps['value'],
   },
   modelValue: {
     type: [String, Number] as PropType<TdTabsProps['value']>,
-    default: undefined,
+    default: undefined as TdTabsProps['value'],
   },
   /** 激活的选项卡值，非受控属性 */
   defaultValue: {
