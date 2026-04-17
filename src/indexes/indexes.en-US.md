@@ -38,12 +38,11 @@ Name | Default Value | Description
 --td-indexes-sidebar-color | @text-color-primary | -
 --td-indexes-sidebar-font | @font-body-small | -
 --td-indexes-sidebar-item-size | 20px | -
---td-indexes-sidebar-line-height | 20px | -
 --td-indexes-sidebar-right | 8px | -
 --td-indexes-sidebar-tips-bg-color | @brand-color-light | -
 --td-indexes-sidebar-tips-color | @brand-color | -
 --td-indexes-sidebar-tips-font | @font-title-extraLarge | -
---td-indexes-sidebar-tips-right | 38px | -
+--td-indexes-sidebar-tips-right | calc(100% + 16px) | -
 --td-indexes-sidebar-tips-size | 48px | -
 --td-indexes-anchor-active-bg-color | @bg-color-container | -
 --td-indexes-anchor-active-color | @brand-color | -
