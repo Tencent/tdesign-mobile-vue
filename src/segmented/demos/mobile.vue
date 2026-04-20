@@ -8,7 +8,7 @@
     <tdesign-demo-block summary="自适应宽度">
       <block-demo />
     </tdesign-demo-block>
-    <tdesign-demo-block title="02 组件状态" summary="控制器禁用态">
+    <tdesign-demo-block title="02 组件状态" summary="控制器状态">
       <disabled-demo />
     </tdesign-demo-block>
   </div>

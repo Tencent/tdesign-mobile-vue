@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-demo">
     <div class="example-segmented">
-      <t-segmented :options="['选项一', '选项二', '选项三']" default-value="选项一" />
+      <t-segmented :options="options" :default-value="0" />
     </div>
 
     <div class="example-segmented">
@@ -12,14 +12,20 @@
 
 <script lang="ts" setup>
 import { ref, h } from 'vue';
-import { HomeIcon, AppIcon, UserIcon } from 'tdesign-icons-vue-next';
+import { HomeIcon } from 'tdesign-icons-vue-next';
 
-const valueWithIcon = ref<string | number>(1);
+const valueWithIcon = ref<string | number>(0);
+
+const options = [
+  { value: 0, label: '选项' },
+  { value: 1, label: '选项' },
+  { value: 2, label: '选项' },
+];
 
 const optionsWithIcon = [
-  { value: 0, label: 'home', icon: () => h(HomeIcon) },
-  { value: 1, label: 'category', icon: () => h(AppIcon) },
-  { value: 2, label: 'mine', icon: () => h(UserIcon) },
+  { value: 0, label: '选项', icon: () => h(HomeIcon) },
+  { value: 1, label: '选项', icon: () => h(HomeIcon) },
+  { value: 2, label: '选项', icon: () => h(HomeIcon) },
 ];
 
 const handleChange = (value: string | number, selectedOption: any) => {
@@ -34,7 +40,7 @@ const handleChange = (value: string | number, selectedOption: any) => {
 
 .example-segmented {
   background-color: var(--td-bg-color-container);
-  padding: 16px;
+  padding: 8px 16px;
 }
 
 .example-segmented + .example-segmented {

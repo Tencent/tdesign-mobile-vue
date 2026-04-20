@@ -27,11 +27,11 @@ exports[`Segmented > Segmented baseVue demo works fine 1`] = `
             class="t-segmented__item-inner"
           >
             <!---->
-            <text
+            <span
               class="t-segmented__item-label"
             >
-              选项一
-            </text>
+              选项
+            </span>
           </div>
         </div>
         <div
@@ -41,11 +41,11 @@ exports[`Segmented > Segmented baseVue demo works fine 1`] = `
             class="t-segmented__item-inner"
           >
             <!---->
-            <text
+            <span
               class="t-segmented__item-label"
             >
-              选项二
-            </text>
+              选项
+            </span>
           </div>
         </div>
         <div
@@ -55,11 +55,11 @@ exports[`Segmented > Segmented baseVue demo works fine 1`] = `
             class="t-segmented__item-inner"
           >
             <!---->
-            <text
+            <span
               class="t-segmented__item-label"
             >
-              选项三
-            </text>
+              选项
+            </span>
           </div>
         </div>
         
@@ -82,7 +82,7 @@ exports[`Segmented > Segmented baseVue demo works fine 1`] = `
         />
         
         <div
-          class="t-segmented__item t-segmented-item-0"
+          class="t-segmented__item t-segmented-item-0 t-segmented__item--active"
         >
           <div
             class="t-segmented__item-inner"
@@ -128,15 +128,15 @@ exports[`Segmented > Segmented baseVue demo works fine 1`] = `
                 </g>
               </svg>
             </span>
-            <text
+            <span
               class="t-segmented__item-label"
             >
-              home
-            </text>
+              选项
+            </span>
           </div>
         </div>
         <div
-          class="t-segmented__item t-segmented-item-1 t-segmented__item--active"
+          class="t-segmented__item t-segmented-item-1"
         >
           <div
             class="t-segmented__item-inner"
@@ -145,7 +145,7 @@ exports[`Segmented > Segmented baseVue demo works fine 1`] = `
               class="t-segmented__item-icon"
             >
               <svg
-                class="t-icon t-icon-app"
+                class="t-icon t-icon-home"
                 fill="none"
                 height="1em"
                 style="fill: none;"
@@ -153,62 +153,40 @@ exports[`Segmented > Segmented baseVue demo works fine 1`] = `
                 width="1em"
               >
                 <g
-                  id="app"
+                  id="home"
                 >
-                  <g
-                    id="fill1"
-                  >
-                    <path
-                      d="M3 3H10V10H3V3Z"
-                      fill="transparent"
-                    />
-                    <path
-                      d="M14 14H21V21H14V14Z"
-                      fill="transparent"
-                    />
-                    <path
-                      d="M3 14H10V21H3V14Z"
-                      fill="transparent"
-                    />
-                  </g>
                   <path
-                    d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                    d="M3 10L12 2.5L21 10V21H3V10Z"
+                    fill="transparent"
+                    id="fill1"
+                  />
+                  <path
+                    d="M9 14H15V21H9V14Z"
                     fill="transparent"
                     id="fill2"
                   />
-                  <g
-                    id="stroke1"
-                  >
-                    <path
-                      d="M3 3H10V10H3V3Z"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M14 14H21V21H14V14Z"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M3 14H10V21H3V14Z"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                  </g>
                   <path
-                    d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                    d="M9 14H15V21H9V14Z"
                     id="stroke2"
                     stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M3 10L12 2.5L21 10V21H3V10Z"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
                     stroke-width="2"
                   />
                 </g>
               </svg>
             </span>
-            <text
+            <span
               class="t-segmented__item-label"
             >
-              category
-            </text>
+              选项
+            </span>
           </div>
         </div>
         <div
@@ -221,7 +199,7 @@ exports[`Segmented > Segmented baseVue demo works fine 1`] = `
               class="t-segmented__item-icon"
             >
               <svg
-                class="t-icon t-icon-user"
+                class="t-icon t-icon-home"
                 fill="none"
                 height="1em"
                 style="fill: none;"
@@ -229,44 +207,40 @@ exports[`Segmented > Segmented baseVue demo works fine 1`] = `
                 width="1em"
               >
                 <g
-                  id="user"
+                  id="home"
                 >
-                  <g
+                  <path
+                    d="M3 10L12 2.5L21 10V21H3V10Z"
+                    fill="transparent"
                     id="fill1"
-                  >
-                    <path
-                      d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                      fill="transparent"
-                    />
-                    <path
-                      d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                      fill="transparent"
-                    />
-                  </g>
-                  <g
+                  />
+                  <path
+                    d="M9 14H15V21H9V14Z"
+                    fill="transparent"
+                    id="fill2"
+                  />
+                  <path
+                    d="M9 14H15V21H9V14Z"
+                    id="stroke2"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M3 10L12 2.5L21 10V21H3V10Z"
                     id="stroke1"
-                  >
-                    <path
-                      d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
                 </g>
               </svg>
             </span>
-            <text
+            <span
               class="t-segmented__item-label"
             >
-              mine
-            </text>
+              选项
+            </span>
           </div>
         </div>
         
@@ -281,6 +255,67 @@ exports[`Segmented > Segmented blockVue demo works fine 1`] = `
   class="tdesign-mobile-demo"
   data-v-7b7a58bb=""
 >
+  <div
+    class="example-segmented"
+    data-v-7b7a58bb=""
+  >
+    <div
+      class="t-segmented t-segmented--block"
+      data-v-7b7a58bb=""
+    >
+      <div
+        class="t-segmented__group"
+      >
+        <div
+          class="t-segmented__thumb"
+        />
+        
+        <div
+          class="t-segmented__item t-segmented-item-0 t-segmented__item--active"
+        >
+          <div
+            class="t-segmented__item-inner"
+          >
+            <!---->
+            <span
+              class="t-segmented__item-label"
+            >
+              选项
+            </span>
+          </div>
+        </div>
+        <div
+          class="t-segmented__item t-segmented-item-1"
+        >
+          <div
+            class="t-segmented__item-inner"
+          >
+            <!---->
+            <span
+              class="t-segmented__item-label"
+            >
+              选项
+            </span>
+          </div>
+        </div>
+        <div
+          class="t-segmented__item t-segmented-item-2"
+        >
+          <div
+            class="t-segmented__item-inner"
+          >
+            <!---->
+            <span
+              class="t-segmented__item-label"
+            >
+              选项
+            </span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
   <div
     class="example-segmented"
     data-v-7b7a58bb=""
@@ -343,11 +378,11 @@ exports[`Segmented > Segmented blockVue demo works fine 1`] = `
                 </g>
               </svg>
             </span>
-            <text
+            <span
               class="t-segmented__item-label"
             >
-              home
-            </text>
+              选项
+            </span>
           </div>
         </div>
         <div
@@ -360,7 +395,7 @@ exports[`Segmented > Segmented blockVue demo works fine 1`] = `
               class="t-segmented__item-icon"
             >
               <svg
-                class="t-icon t-icon-app"
+                class="t-icon t-icon-home"
                 fill="none"
                 height="1em"
                 style="fill: none;"
@@ -368,62 +403,40 @@ exports[`Segmented > Segmented blockVue demo works fine 1`] = `
                 width="1em"
               >
                 <g
-                  id="app"
+                  id="home"
                 >
-                  <g
-                    id="fill1"
-                  >
-                    <path
-                      d="M3 3H10V10H3V3Z"
-                      fill="transparent"
-                    />
-                    <path
-                      d="M14 14H21V21H14V14Z"
-                      fill="transparent"
-                    />
-                    <path
-                      d="M3 14H10V21H3V14Z"
-                      fill="transparent"
-                    />
-                  </g>
                   <path
-                    d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                    d="M3 10L12 2.5L21 10V21H3V10Z"
+                    fill="transparent"
+                    id="fill1"
+                  />
+                  <path
+                    d="M9 14H15V21H9V14Z"
                     fill="transparent"
                     id="fill2"
                   />
-                  <g
-                    id="stroke1"
-                  >
-                    <path
-                      d="M3 3H10V10H3V3Z"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M14 14H21V21H14V14Z"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M3 14H10V21H3V14Z"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    />
-                  </g>
                   <path
-                    d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                    d="M9 14H15V21H9V14Z"
                     id="stroke2"
                     stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M3 10L12 2.5L21 10V21H3V10Z"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
                     stroke-width="2"
                   />
                 </g>
               </svg>
             </span>
-            <text
+            <span
               class="t-segmented__item-label"
             >
-              category
-            </text>
+              选项
+            </span>
           </div>
         </div>
         <div
@@ -436,7 +449,7 @@ exports[`Segmented > Segmented blockVue demo works fine 1`] = `
               class="t-segmented__item-icon"
             >
               <svg
-                class="t-icon t-icon-user"
+                class="t-icon t-icon-home"
                 fill="none"
                 height="1em"
                 style="fill: none;"
@@ -444,44 +457,40 @@ exports[`Segmented > Segmented blockVue demo works fine 1`] = `
                 width="1em"
               >
                 <g
-                  id="user"
+                  id="home"
                 >
-                  <g
+                  <path
+                    d="M3 10L12 2.5L21 10V21H3V10Z"
+                    fill="transparent"
                     id="fill1"
-                  >
-                    <path
-                      d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                      fill="transparent"
-                    />
-                    <path
-                      d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                      fill="transparent"
-                    />
-                  </g>
-                  <g
+                  />
+                  <path
+                    d="M9 14H15V21H9V14Z"
+                    fill="transparent"
+                    id="fill2"
+                  />
+                  <path
+                    d="M9 14H15V21H9V14Z"
+                    id="stroke2"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M3 10L12 2.5L21 10V21H3V10Z"
                     id="stroke1"
-                  >
-                    <path
-                      d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
                 </g>
               </svg>
             </span>
-            <text
+            <span
               class="t-segmented__item-label"
             >
-              mine
-            </text>
+              选项
+            </span>
           </div>
         </div>
         
@@ -512,92 +521,31 @@ exports[`Segmented > Segmented disabledVue demo works fine 1`] = `
         />
         
         <div
-          class="t-segmented__item t-segmented-item-0 t-segmented__item--active t-segmented__item--disabled"
+          class="t-segmented__item t-segmented-item-0 t-segmented__item--active"
         >
           <div
             class="t-segmented__item-inner"
           >
             <!---->
-            <text
+            <span
               class="t-segmented__item-label"
             >
-              最近
-            </text>
+              选中
+            </span>
           </div>
         </div>
         <div
-          class="t-segmented__item t-segmented-item-1 t-segmented__item--disabled"
+          class="t-segmented__item t-segmented-item-1"
         >
           <div
             class="t-segmented__item-inner"
           >
             <!---->
-            <text
+            <span
               class="t-segmented__item-label"
             >
-              推荐
-            </text>
-          </div>
-        </div>
-        <div
-          class="t-segmented__item t-segmented-item-2 t-segmented__item--disabled"
-        >
-          <div
-            class="t-segmented__item-inner"
-          >
-            <!---->
-            <text
-              class="t-segmented__item-label"
-            >
-              热门
-            </text>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  <div
-    class="example-segmented"
-    data-v-3ddafa08=""
-  >
-    <div
-      class="t-segmented"
-      data-v-3ddafa08=""
-    >
-      <div
-        class="t-segmented__group"
-      >
-        <div
-          class="t-segmented__thumb"
-        />
-        
-        <div
-          class="t-segmented__item t-segmented-item-0"
-        >
-          <div
-            class="t-segmented__item-inner"
-          >
-            <!---->
-            <text
-              class="t-segmented__item-label"
-            >
-              周一
-            </text>
-          </div>
-        </div>
-        <div
-          class="t-segmented__item t-segmented-item-1 t-segmented__item--active"
-        >
-          <div
-            class="t-segmented__item-inner"
-          >
-            <!---->
-            <text
-              class="t-segmented__item-label"
-            >
-              周二
-            </text>
+              默认
+            </span>
           </div>
         </div>
         <div
@@ -607,39 +555,11 @@ exports[`Segmented > Segmented disabledVue demo works fine 1`] = `
             class="t-segmented__item-inner"
           >
             <!---->
-            <text
+            <span
               class="t-segmented__item-label"
             >
-              周三
-            </text>
-          </div>
-        </div>
-        <div
-          class="t-segmented__item t-segmented-item-3"
-        >
-          <div
-            class="t-segmented__item-inner"
-          >
-            <!---->
-            <text
-              class="t-segmented__item-label"
-            >
-              周四
-            </text>
-          </div>
-        </div>
-        <div
-          class="t-segmented__item t-segmented-item-4 t-segmented__item--disabled"
-        >
-          <div
-            class="t-segmented__item-inner"
-          >
-            <!---->
-            <text
-              class="t-segmented__item-label"
-            >
-              周五
-            </text>
+              禁用
+            </span>
           </div>
         </div>
         
@@ -710,11 +630,11 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                   class="t-segmented__item-inner"
                 >
                   <!---->
-                  <text
+                  <span
                     class="t-segmented__item-label"
                   >
-                    选项一
-                  </text>
+                    选项
+                  </span>
                 </div>
               </div>
               <div
@@ -724,11 +644,11 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                   class="t-segmented__item-inner"
                 >
                   <!---->
-                  <text
+                  <span
                     class="t-segmented__item-label"
                   >
-                    选项二
-                  </text>
+                    选项
+                  </span>
                 </div>
               </div>
               <div
@@ -738,11 +658,11 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                   class="t-segmented__item-inner"
                 >
                   <!---->
-                  <text
+                  <span
                     class="t-segmented__item-label"
                   >
-                    选项三
-                  </text>
+                    选项
+                  </span>
                 </div>
               </div>
               
@@ -765,7 +685,7 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
               />
               
               <div
-                class="t-segmented__item t-segmented-item-0"
+                class="t-segmented__item t-segmented-item-0 t-segmented__item--active"
               >
                 <div
                   class="t-segmented__item-inner"
@@ -811,15 +731,15 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                       </g>
                     </svg>
                   </span>
-                  <text
+                  <span
                     class="t-segmented__item-label"
                   >
-                    home
-                  </text>
+                    选项
+                  </span>
                 </div>
               </div>
               <div
-                class="t-segmented__item t-segmented-item-1 t-segmented__item--active"
+                class="t-segmented__item t-segmented-item-1"
               >
                 <div
                   class="t-segmented__item-inner"
@@ -828,7 +748,7 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                     class="t-segmented__item-icon"
                   >
                     <svg
-                      class="t-icon t-icon-app"
+                      class="t-icon t-icon-home"
                       fill="none"
                       height="1em"
                       style="fill: none;"
@@ -836,62 +756,40 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                       width="1em"
                     >
                       <g
-                        id="app"
+                        id="home"
                       >
-                        <g
-                          id="fill1"
-                        >
-                          <path
-                            d="M3 3H10V10H3V3Z"
-                            fill="transparent"
-                          />
-                          <path
-                            d="M14 14H21V21H14V14Z"
-                            fill="transparent"
-                          />
-                          <path
-                            d="M3 14H10V21H3V14Z"
-                            fill="transparent"
-                          />
-                        </g>
                         <path
-                          d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                          d="M3 10L12 2.5L21 10V21H3V10Z"
+                          fill="transparent"
+                          id="fill1"
+                        />
+                        <path
+                          d="M9 14H15V21H9V14Z"
                           fill="transparent"
                           id="fill2"
                         />
-                        <g
-                          id="stroke1"
-                        >
-                          <path
-                            d="M3 3H10V10H3V3Z"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M14 14H21V21H14V14Z"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M3 14H10V21H3V14Z"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          />
-                        </g>
                         <path
-                          d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                          d="M9 14H15V21H9V14Z"
                           id="stroke2"
                           stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M3 10L12 2.5L21 10V21H3V10Z"
+                          id="stroke1"
+                          stroke="currentColor"
+                          stroke-linecap="square"
                           stroke-width="2"
                         />
                       </g>
                     </svg>
                   </span>
-                  <text
+                  <span
                     class="t-segmented__item-label"
                   >
-                    category
-                  </text>
+                    选项
+                  </span>
                 </div>
               </div>
               <div
@@ -904,7 +802,7 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                     class="t-segmented__item-icon"
                   >
                     <svg
-                      class="t-icon t-icon-user"
+                      class="t-icon t-icon-home"
                       fill="none"
                       height="1em"
                       style="fill: none;"
@@ -912,44 +810,40 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                       width="1em"
                     >
                       <g
-                        id="user"
+                        id="home"
                       >
-                        <g
+                        <path
+                          d="M3 10L12 2.5L21 10V21H3V10Z"
+                          fill="transparent"
                           id="fill1"
-                        >
-                          <path
-                            d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                            fill="transparent"
-                          />
-                          <path
-                            d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                            fill="transparent"
-                          />
-                        </g>
-                        <g
+                        />
+                        <path
+                          d="M9 14H15V21H9V14Z"
+                          fill="transparent"
+                          id="fill2"
+                        />
+                        <path
+                          d="M9 14H15V21H9V14Z"
+                          id="stroke2"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M3 10L12 2.5L21 10V21H3V10Z"
                           id="stroke1"
-                        >
-                          <path
-                            d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                            stroke="currentColor"
-                            stroke-linecap="square"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                            stroke="currentColor"
-                            stroke-linecap="square"
-                            stroke-width="2"
-                          />
-                        </g>
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
                       </g>
                     </svg>
                   </span>
-                  <text
+                  <span
                     class="t-segmented__item-label"
                   >
-                    mine
-                  </text>
+                    选项
+                  </span>
                 </div>
               </div>
               
@@ -981,6 +875,67 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
         class="tdesign-mobile-demo"
         data-v-7b7a58bb=""
       >
+        <div
+          class="example-segmented"
+          data-v-7b7a58bb=""
+        >
+          <div
+            class="t-segmented t-segmented--block"
+            data-v-7b7a58bb=""
+          >
+            <div
+              class="t-segmented__group"
+            >
+              <div
+                class="t-segmented__thumb"
+              />
+              
+              <div
+                class="t-segmented__item t-segmented-item-0 t-segmented__item--active"
+              >
+                <div
+                  class="t-segmented__item-inner"
+                >
+                  <!---->
+                  <span
+                    class="t-segmented__item-label"
+                  >
+                    选项
+                  </span>
+                </div>
+              </div>
+              <div
+                class="t-segmented__item t-segmented-item-1"
+              >
+                <div
+                  class="t-segmented__item-inner"
+                >
+                  <!---->
+                  <span
+                    class="t-segmented__item-label"
+                  >
+                    选项
+                  </span>
+                </div>
+              </div>
+              <div
+                class="t-segmented__item t-segmented-item-2"
+              >
+                <div
+                  class="t-segmented__item-inner"
+                >
+                  <!---->
+                  <span
+                    class="t-segmented__item-label"
+                  >
+                    选项
+                  </span>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
         <div
           class="example-segmented"
           data-v-7b7a58bb=""
@@ -1043,11 +998,11 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                       </g>
                     </svg>
                   </span>
-                  <text
+                  <span
                     class="t-segmented__item-label"
                   >
-                    home
-                  </text>
+                    选项
+                  </span>
                 </div>
               </div>
               <div
@@ -1060,7 +1015,7 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                     class="t-segmented__item-icon"
                   >
                     <svg
-                      class="t-icon t-icon-app"
+                      class="t-icon t-icon-home"
                       fill="none"
                       height="1em"
                       style="fill: none;"
@@ -1068,62 +1023,40 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                       width="1em"
                     >
                       <g
-                        id="app"
+                        id="home"
                       >
-                        <g
-                          id="fill1"
-                        >
-                          <path
-                            d="M3 3H10V10H3V3Z"
-                            fill="transparent"
-                          />
-                          <path
-                            d="M14 14H21V21H14V14Z"
-                            fill="transparent"
-                          />
-                          <path
-                            d="M3 14H10V21H3V14Z"
-                            fill="transparent"
-                          />
-                        </g>
                         <path
-                          d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                          d="M3 10L12 2.5L21 10V21H3V10Z"
+                          fill="transparent"
+                          id="fill1"
+                        />
+                        <path
+                          d="M9 14H15V21H9V14Z"
                           fill="transparent"
                           id="fill2"
                         />
-                        <g
-                          id="stroke1"
-                        >
-                          <path
-                            d="M3 3H10V10H3V3Z"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M14 14H21V21H14V14Z"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M3 14H10V21H3V14Z"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          />
-                        </g>
                         <path
-                          d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                          d="M9 14H15V21H9V14Z"
                           id="stroke2"
                           stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M3 10L12 2.5L21 10V21H3V10Z"
+                          id="stroke1"
+                          stroke="currentColor"
+                          stroke-linecap="square"
                           stroke-width="2"
                         />
                       </g>
                     </svg>
                   </span>
-                  <text
+                  <span
                     class="t-segmented__item-label"
                   >
-                    category
-                  </text>
+                    选项
+                  </span>
                 </div>
               </div>
               <div
@@ -1136,7 +1069,7 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                     class="t-segmented__item-icon"
                   >
                     <svg
-                      class="t-icon t-icon-user"
+                      class="t-icon t-icon-home"
                       fill="none"
                       height="1em"
                       style="fill: none;"
@@ -1144,44 +1077,40 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                       width="1em"
                     >
                       <g
-                        id="user"
+                        id="home"
                       >
-                        <g
+                        <path
+                          d="M3 10L12 2.5L21 10V21H3V10Z"
+                          fill="transparent"
                           id="fill1"
-                        >
-                          <path
-                            d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                            fill="transparent"
-                          />
-                          <path
-                            d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                            fill="transparent"
-                          />
-                        </g>
-                        <g
+                        />
+                        <path
+                          d="M9 14H15V21H9V14Z"
+                          fill="transparent"
+                          id="fill2"
+                        />
+                        <path
+                          d="M9 14H15V21H9V14Z"
+                          id="stroke2"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M3 10L12 2.5L21 10V21H3V10Z"
                           id="stroke1"
-                        >
-                          <path
-                            d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
-                            stroke="currentColor"
-                            stroke-linecap="square"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                            stroke="currentColor"
-                            stroke-linecap="square"
-                            stroke-width="2"
-                          />
-                        </g>
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
                       </g>
                     </svg>
                   </span>
-                  <text
+                  <span
                     class="t-segmented__item-label"
                   >
-                    mine
-                  </text>
+                    选项
+                  </span>
                 </div>
               </div>
               
@@ -1206,7 +1135,7 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
       <p
         class="tdesign-mobile-demo-block__summary"
       >
-        控制器禁用态
+        控制器状态
       </p>
     </div>
     <div
@@ -1233,92 +1162,31 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
               />
               
               <div
-                class="t-segmented__item t-segmented-item-0 t-segmented__item--active t-segmented__item--disabled"
+                class="t-segmented__item t-segmented-item-0 t-segmented__item--active"
               >
                 <div
                   class="t-segmented__item-inner"
                 >
                   <!---->
-                  <text
+                  <span
                     class="t-segmented__item-label"
                   >
-                    最近
-                  </text>
+                    选中
+                  </span>
                 </div>
               </div>
               <div
-                class="t-segmented__item t-segmented-item-1 t-segmented__item--disabled"
+                class="t-segmented__item t-segmented-item-1"
               >
                 <div
                   class="t-segmented__item-inner"
                 >
                   <!---->
-                  <text
+                  <span
                     class="t-segmented__item-label"
                   >
-                    推荐
-                  </text>
-                </div>
-              </div>
-              <div
-                class="t-segmented__item t-segmented-item-2 t-segmented__item--disabled"
-              >
-                <div
-                  class="t-segmented__item-inner"
-                >
-                  <!---->
-                  <text
-                    class="t-segmented__item-label"
-                  >
-                    热门
-                  </text>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-        <div
-          class="example-segmented"
-          data-v-3ddafa08=""
-        >
-          <div
-            class="t-segmented"
-            data-v-3ddafa08=""
-          >
-            <div
-              class="t-segmented__group"
-            >
-              <div
-                class="t-segmented__thumb"
-              />
-              
-              <div
-                class="t-segmented__item t-segmented-item-0"
-              >
-                <div
-                  class="t-segmented__item-inner"
-                >
-                  <!---->
-                  <text
-                    class="t-segmented__item-label"
-                  >
-                    周一
-                  </text>
-                </div>
-              </div>
-              <div
-                class="t-segmented__item t-segmented-item-1 t-segmented__item--active"
-              >
-                <div
-                  class="t-segmented__item-inner"
-                >
-                  <!---->
-                  <text
-                    class="t-segmented__item-label"
-                  >
-                    周二
-                  </text>
+                    默认
+                  </span>
                 </div>
               </div>
               <div
@@ -1328,39 +1196,11 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                   class="t-segmented__item-inner"
                 >
                   <!---->
-                  <text
+                  <span
                     class="t-segmented__item-label"
                   >
-                    周三
-                  </text>
-                </div>
-              </div>
-              <div
-                class="t-segmented__item t-segmented-item-3"
-              >
-                <div
-                  class="t-segmented__item-inner"
-                >
-                  <!---->
-                  <text
-                    class="t-segmented__item-label"
-                  >
-                    周四
-                  </text>
-                </div>
-              </div>
-              <div
-                class="t-segmented__item t-segmented-item-4 t-segmented__item--disabled"
-              >
-                <div
-                  class="t-segmented__item-inner"
-                >
-                  <!---->
-                  <text
-                    class="t-segmented__item-label"
-                  >
-                    周五
-                  </text>
+                    禁用
+                  </span>
                 </div>
               </div>
               

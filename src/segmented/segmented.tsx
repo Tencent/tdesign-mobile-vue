@@ -129,9 +129,9 @@ export default defineComponent({
 
               // 渲染 label
               const labelNode = item.label && (
-                <text class={`${segmentedClass.value}__item-label`}>
+                <span class={`${segmentedClass.value}__item-label`}>
                   {isFunction(item.label) ? item.label(h) : item.label}
-                </text>
+                </span>
               );
 
               return (
