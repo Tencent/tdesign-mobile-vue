@@ -28,7 +28,7 @@ const { prefix } = config;
 export default defineComponent({
   name: `${prefix}-base-table`,
   props: baseTableProps,
-  emits: ['cell-click', 'row-click', 'scroll'],
+  emits: ['cell-click', 'row-click', 'scroll', 'scroll-to-bottom'],
   setup(props, context) {
     const tableRef = ref();
     const theadRef = ref();
@@ -144,6 +144,12 @@ export default defineComponent({
       const target = (e.target || e.srcElement) as HTMLElement;
       updateColumnFixedShadow(target);
       props.onScroll?.({ params: e });
+
+      // 滚动到底部检测
+      const threshold = 50;
+      if (target.scrollHeight - target.scrollTop - target.clientHeight <= threshold) {
+        props.onScrollToBottom?.();
+      }
     };
 
     const tdClassName = (td_item: BaseTableCol<TableRowData>, extra?: Array<ClassName>) => {
@@ -289,6 +295,7 @@ export default defineComponent({
 
     return () => {
       const renderLoading = renderTNodeJSX('loading', { defaultNode: defaultLoadingContent });
+      const renderFooter = renderTNodeJSX('footerSummary');
 
       return (
         <div ref={tableRef} class={dynamicBaseTableClasses.value} style="position: relative">
@@ -334,6 +341,7 @@ export default defineComponent({
             </table>
             {renderLoading && <div class={loadingClasses.value}>{renderLoading}</div>}
           </div>
+          {renderFooter && <div class={tableBaseClass.bottomContent}>{renderFooter}</div>}
         </div>
       );
     };

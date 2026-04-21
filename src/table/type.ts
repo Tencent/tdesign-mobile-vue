@@ -37,6 +37,10 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    */
   fixedRows?: Array<number>;
   /**
+   * 表尾总结行
+   */
+  footerSummary?: string | TNode;
+  /**
    * 表格高度，超出后会出现滚动条。示例：100,  '30%',  '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定表格高度，建议使用 `maxHeight`
    */
   height?: string | number;
@@ -106,6 +110,10 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    * 表格内容滚动时触发
    */
   onScroll?: (params: { e: Event }) => void;
+  /**
+   * 表格内容滚动到底部时触发，可用于实现滚动加载
+   */
+  onScrollToBottom?: () => void;
 }
 
 /** 组件实例方法 */

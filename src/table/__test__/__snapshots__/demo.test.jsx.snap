@@ -547,6 +547,7 @@ exports[`Table > Table baseVue demo works fine 1`] = `
       </table>
       <!---->
     </div>
+    <!---->
   </div>
 </div>
 `;
@@ -1056,6 +1057,7 @@ exports[`Table > Table borderedVue demo works fine 1`] = `
       </table>
       <!---->
     </div>
+    <!---->
   </div>
 </div>
 `;
@@ -1505,6 +1507,7 @@ exports[`Table > Table customRowStyleVue demo works fine 1`] = `
       </table>
       <!---->
     </div>
+    <!---->
   </div>
 </div>
 `;
@@ -2090,6 +2093,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
             </table>
             <!---->
           </div>
+          <!---->
         </div>
       </div>
       
@@ -2358,6 +2362,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
             </table>
             <!---->
           </div>
+          <!---->
         </div>
       </div>
       
@@ -3481,6 +3486,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
             </table>
             <!---->
           </div>
+          <!---->
         </div>
       </div>
       
@@ -4007,6 +4013,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
             </table>
             <!---->
           </div>
+          <!---->
         </div>
       </div>
       
@@ -4473,6 +4480,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
             </table>
             <!---->
           </div>
+          <!---->
         </div>
       </div>
       
@@ -4696,6 +4704,7 @@ exports[`Table > Table mobileVue demo works fine 1`] = `
           </table>
           <!---->
         </div>
+        <!---->
       </div>
       
     </div>
@@ -4905,6 +4914,7 @@ exports[`Table > Table rowspanColspanVue demo works fine 1`] = `
     </table>
     <!---->
   </div>
+  <!---->
 </div>
 `;
 
@@ -5155,6 +5165,7 @@ exports[`Table > Table scrollVue demo works fine 1`] = `
       </table>
       <!---->
     </div>
+    <!---->
   </div>
 </div>
 `;
@@ -6261,6 +6272,7 @@ exports[`Table > Table stripeVue demo works fine 1`] = `
       </table>
       <!---->
     </div>
+    <!---->
   </div>
 </div>
 `;
