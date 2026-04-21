@@ -22,6 +22,11 @@ export interface TdIndexesProps {
    */
   indexList?: Array<string | number>;
   /**
+   * 是否显示完整的索引内容，默认只显示首字符
+   * @default false
+   */
+  showFullIndex?: Boolean;
+  /**
    * 索引是否吸顶，默认为true
    * @default true
    */
