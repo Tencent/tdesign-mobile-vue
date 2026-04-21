@@ -50,6 +50,7 @@ export * from './image-viewer';
 export * from './list';
 export * from './progress';
 export * from './result';
+export * from './segmented';
 export * from './skeleton';
 export * from './sticky';
 export * from './swiper';
