@@ -109,8 +109,8 @@ export const copy = (text: string, options?: Options) => {
       options.onCopy && options.onCopy((window as any).clipboardData);
       success = true;
     } catch (err) {
-      message = format('message' in options ? options.message : defaultMessage);
-      window.prompt(message, text);
+      // 移动端不使用 prompt 兜底，静默失败
+      console.warn('Copy to clipboard failed', err);
     }
   } finally {
     if (selection) {
