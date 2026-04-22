@@ -1,0 +1,1101 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Typography > Typography baseVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-typography-demo"
+  data-v-386b3a5d=""
+>
+  <span
+    class="t-typography"
+    data-v-386b3a5d=""
+  >
+    
+     TDesign 是腾讯各业务团队在服务业务过程中沉淀的一套企业级设计体系。 
+    
+    <!---->
+  </span>
+</div>
+`;
+
+exports[`Typography > Typography combinationVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-typography-demo"
+  data-v-2fb66ace=""
+>
+  
+  <h1
+    class="t-typography"
+  >
+    What is TDesign
+  </h1>
+  
+  <span
+    class="t-typography"
+    data-v-2fb66ace=""
+  >
+    <mark>
+      
+       TDesign is an enterprise-level design system accumulated by Tencent's various business teams. 
+      
+    </mark>
+    <!---->
+  </span>
+  <p
+    class="t-typography"
+    data-v-2fb66ace=""
+  >
+    
+    <span
+      class="t-typography"
+      data-v-2fb66ace=""
+    >
+      <strong>
+        
+         TDesign features a unified design values, consistent design language, and visual style, helping users form continuous and coherent perceptions of the experience. 
+        
+      </strong>
+      <!---->
+    </span>
+     Based on this, TDesign offers out-of-the-box UI component libraries, design guidelines, and design assets, elegantly and efficiently freeing design and development from repetitive tasks. Simultaneously, it facilitates easy extension on top of TDesign, enabling a better alignment with business requirements. 
+    
+  </p>
+  
+  <h1
+    class="t-typography"
+  >
+    Comprehensive
+  </h1>
+  
+  <p
+    class="t-typography"
+    data-v-2fb66ace=""
+  >
+    
+     TDesign Support 
+    <span
+      class="t-typography"
+      data-v-2fb66ace=""
+    >
+      <code>
+        
+        Vue 2
+        
+      </code>
+      <!---->
+    </span>
+    , 
+    <span
+      class="t-typography"
+      data-v-2fb66ace=""
+    >
+      <code>
+        
+        Vue 3
+        
+      </code>
+      <!---->
+    </span>
+    , 
+    <span
+      class="t-typography"
+      data-v-2fb66ace=""
+    >
+      <code>
+        
+        React
+        
+      </code>
+      <!---->
+    </span>
+     components for Desktop Application and 
+    <span
+      class="t-typography"
+      data-v-2fb66ace=""
+    >
+      <code>
+        
+        Vue 3
+        
+      </code>
+      <!---->
+    </span>
+    , 
+    <span
+      class="t-typography"
+      data-v-2fb66ace=""
+    >
+      <code>
+        
+        Wechat MiniProgram
+        
+      </code>
+      <!---->
+    </span>
+     components for Mobile Application. 
+    
+  </p>
+  <p
+    class="t-typography"
+    data-v-2fb66ace=""
+  >
+    
+    <ul
+      data-v-2fb66ace=""
+    >
+      <li
+        data-v-2fb66ace=""
+      >
+        Features
+      </li>
+      <li
+        data-v-2fb66ace=""
+      >
+        Comprehensive
+      </li>
+      <ul
+        data-v-2fb66ace=""
+      >
+        <li
+          data-v-2fb66ace=""
+        >
+          Consistency
+        </li>
+        <li
+          data-v-2fb66ace=""
+        >
+          Usability
+        </li>
+      </ul>
+      <li
+        data-v-2fb66ace=""
+      >
+        Join TDesign
+      </li>
+    </ul>
+    
+  </p>
+  <p
+    class="t-typography"
+    data-v-2fb66ace=""
+  >
+    
+    <ol
+      data-v-2fb66ace=""
+    >
+      <li
+        data-v-2fb66ace=""
+      >
+        Features
+      </li>
+      <li
+        data-v-2fb66ace=""
+      >
+        Comprehensive
+      </li>
+      <ol
+        data-v-2fb66ace=""
+      >
+        <li
+          data-v-2fb66ace=""
+        >
+          Consistency
+        </li>
+        <li
+          data-v-2fb66ace=""
+        >
+          Usability
+        </li>
+      </ol>
+      <li
+        data-v-2fb66ace=""
+      >
+        Join TDesign
+      </li>
+    </ol>
+    
+  </p>
+</div>
+`;
+
+exports[`Typography > Typography copyableVue demo works fine 1`] = `
+<div
+  data-v-4d87d309=""
+>
+  <div
+    class="tdesign-mobile-typography-demo"
+    data-v-4d87d309=""
+  >
+    <span
+      class="t-typography"
+      data-v-4d87d309=""
+    >
+      
+      This is a copyable text.
+      
+      <span
+        class="t-typography__copy"
+      >
+        <svg
+          class="t-icon t-icon-copy"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="copy"
+          >
+            <path
+              d="M10 10H21V21H10z"
+              fill="transparent"
+              id="fill1"
+            />
+            <path
+              d="M10 10H21V21H10V10Z"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+            <path
+              d="M14 6.5V3L3 3L3 14H6.5"
+              id="stroke2"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+      </span>
+    </span>
+  </div>
+  <div
+    class="tdesign-mobile-typography-demo"
+    data-v-4d87d309=""
+  >
+    <span
+      class="t-typography"
+      data-v-4d87d309=""
+    >
+      
+       This is a copyable text with custom icon. 
+      
+      <span
+        class="t-typography__copy"
+      >
+        <svg
+          class="t-icon t-icon-smile"
+          color="#00529D"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="smile"
+          >
+            <path
+              d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+              fill="transparent"
+              id="fill1"
+            />
+            <path
+              d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+            <path
+              d="M8 9V11M16 9V11M8.53516 15C9.22678 16.1956 10.5195 17 12 17C13.4806 17 14.7733 16.1956 15.4649 15"
+              id="stroke2"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+      </span>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Typography > Typography ellipsisVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="typography-ellipsis-demo"
+    data-v-8db72384=""
+  />
+  <div
+    data-v-8db72384=""
+  >
+    <div
+      class="tdesign-mobile-typography-demo"
+      data-v-8db72384=""
+    >
+      <div
+        class="t-typography"
+        data-v-8db72384=""
+        style="display: flex; align-items: flex-end;"
+      >
+        <p
+          style="overflow: hidden; text-overflow: ellipsis; white-space: normal; display: -webkit-box;"
+        >
+          
+          
+          TDesign 秉承开放的设计理念从创立之初就采用开源协作的方式进行设计和开发。协作方案讨论、组件设计以及 API 设计，包括源代码在内均在公司内部完全开放，赢得了内部开发者和设计师的广泛关注。TDesign 遵循平等、开放、严格的原则，不论参与者的角色如何。
+          
+          
+        </p>
+        <!---->
+        <!---->
+      </div>
+    </div>
+    <div
+      class="tdesign-mobile-typography-demo"
+      data-v-8db72384=""
+    >
+      <div
+        class="t-typography"
+        data-v-8db72384=""
+        style="display: flex; align-items: flex-end;"
+      >
+        <p
+          style="overflow: hidden; text-overflow: ellipsis; white-space: normal; display: -webkit-box;"
+        >
+          
+          
+          TDesign 秉承开放的设计理念从创立之初就采用开源协作的方式进行设计和开发。协作方案讨论、组件设计以及 API 设计，包括源代码在内均在公司内部完全开放，赢得了内部开发者和设计师的广泛关注。TDesign 遵循平等、开放、严格的原则，不论参与者的角色如何。
+          
+          
+        </p>
+        <span
+          class="t-typography-ellipsis-symbol"
+          style="text-decoration: none; white-space: nowrap; flex: 1; margin-right: 0px;"
+        >
+          展开
+        </span>
+        <!---->
+      </div>
+    </div>
+    <div
+      class="tdesign-mobile-typography-demo"
+      data-v-8db72384=""
+    >
+      <div
+        class="t-typography"
+        data-v-8db72384=""
+        style="display: flex; align-items: flex-end;"
+      >
+        <p
+          style="overflow: hidden; text-overflow: ellipsis; white-space: normal; display: -webkit-box;"
+        >
+          
+          
+          TDesign 秉承开放的设计理念从创立之初就采用开源协作的方式进行设计和开发。协作方案讨论、组件设计以及 API 设计，包括源代码在内均在公司内部完全开放，赢得了内部开发者和设计师的广泛关注。TDesign 遵循平等、开放、严格的原则，不论参与者的角色如何。
+          
+          
+        </p>
+        <span
+          class="t-typography-ellipsis-symbol"
+          style="text-decoration: none; white-space: nowrap; flex: 1; margin-right: 0px;"
+        >
+          <svg
+            class="t-icon t-icon-chevron-down"
+            fill="none"
+            height="1em"
+            style="fill: none;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <g
+              id="chevron-down"
+            >
+              <path
+                d="M17.5 9.5L12 15L6.5 9.5"
+                id="stroke1"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
+        </span>
+        <!---->
+      </div>
+    </div>
+  </div>
+  
+</div>
+`;
+
+exports[`Typography > Typography mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+>
+  <h1
+    class="title"
+  >
+    Typography 排版
+  </h1>
+  <p
+    class="summary"
+  >
+    用于定义页面中文本的基本格式，包括标题、正文及辅助文本等。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        01 基础排版
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        基础文本
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="tdesign-mobile-typography-demo"
+        data-v-386b3a5d=""
+      >
+        <span
+          class="t-typography"
+          data-v-386b3a5d=""
+        >
+          
+           TDesign 是腾讯各业务团队在服务业务过程中沉淀的一套企业级设计体系。 
+          
+          <!---->
+        </span>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        组合用法
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="tdesign-mobile-typography-demo"
+        data-v-2fb66ace=""
+      >
+        
+        <h1
+          class="t-typography"
+        >
+          What is TDesign
+        </h1>
+        
+        <span
+          class="t-typography"
+          data-v-2fb66ace=""
+        >
+          <mark>
+            
+             TDesign is an enterprise-level design system accumulated by Tencent's various business teams. 
+            
+          </mark>
+          <!---->
+        </span>
+        <p
+          class="t-typography"
+          data-v-2fb66ace=""
+        >
+          
+          <span
+            class="t-typography"
+            data-v-2fb66ace=""
+          >
+            <strong>
+              
+               TDesign features a unified design values, consistent design language, and visual style, helping users form continuous and coherent perceptions of the experience. 
+              
+            </strong>
+            <!---->
+          </span>
+           Based on this, TDesign offers out-of-the-box UI component libraries, design guidelines, and design assets, elegantly and efficiently freeing design and development from repetitive tasks. Simultaneously, it facilitates easy extension on top of TDesign, enabling a better alignment with business requirements. 
+          
+        </p>
+        
+        <h1
+          class="t-typography"
+        >
+          Comprehensive
+        </h1>
+        
+        <p
+          class="t-typography"
+          data-v-2fb66ace=""
+        >
+          
+           TDesign Support 
+          <span
+            class="t-typography"
+            data-v-2fb66ace=""
+          >
+            <code>
+              
+              Vue 2
+              
+            </code>
+            <!---->
+          </span>
+          , 
+          <span
+            class="t-typography"
+            data-v-2fb66ace=""
+          >
+            <code>
+              
+              Vue 3
+              
+            </code>
+            <!---->
+          </span>
+          , 
+          <span
+            class="t-typography"
+            data-v-2fb66ace=""
+          >
+            <code>
+              
+              React
+              
+            </code>
+            <!---->
+          </span>
+           components for Desktop Application and 
+          <span
+            class="t-typography"
+            data-v-2fb66ace=""
+          >
+            <code>
+              
+              Vue 3
+              
+            </code>
+            <!---->
+          </span>
+          , 
+          <span
+            class="t-typography"
+            data-v-2fb66ace=""
+          >
+            <code>
+              
+              Wechat MiniProgram
+              
+            </code>
+            <!---->
+          </span>
+           components for Mobile Application. 
+          
+        </p>
+        <p
+          class="t-typography"
+          data-v-2fb66ace=""
+        >
+          
+          <ul
+            data-v-2fb66ace=""
+          >
+            <li
+              data-v-2fb66ace=""
+            >
+              Features
+            </li>
+            <li
+              data-v-2fb66ace=""
+            >
+              Comprehensive
+            </li>
+            <ul
+              data-v-2fb66ace=""
+            >
+              <li
+                data-v-2fb66ace=""
+              >
+                Consistency
+              </li>
+              <li
+                data-v-2fb66ace=""
+              >
+                Usability
+              </li>
+            </ul>
+            <li
+              data-v-2fb66ace=""
+            >
+              Join TDesign
+            </li>
+          </ul>
+          
+        </p>
+        <p
+          class="t-typography"
+          data-v-2fb66ace=""
+        >
+          
+          <ol
+            data-v-2fb66ace=""
+          >
+            <li
+              data-v-2fb66ace=""
+            >
+              Features
+            </li>
+            <li
+              data-v-2fb66ace=""
+            >
+              Comprehensive
+            </li>
+            <ol
+              data-v-2fb66ace=""
+            >
+              <li
+                data-v-2fb66ace=""
+              >
+                Consistency
+              </li>
+              <li
+                data-v-2fb66ace=""
+              >
+                Usability
+              </li>
+            </ol>
+            <li
+              data-v-2fb66ace=""
+            >
+              Join TDesign
+            </li>
+          </ol>
+          
+        </p>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        主题样式
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="tdesign-mobile-typography-demo"
+        data-v-f9971b8c=""
+      >
+        <span
+          class="t-typography t-typography--primary"
+          data-v-f9971b8c=""
+        >
+          
+          常规
+          
+          <!---->
+        </span>
+        <span
+          class="t-typography t-typography--secondary"
+          data-v-f9971b8c=""
+        >
+          
+          主色
+          
+          <!---->
+        </span>
+        <span
+          class="t-typography t-typography--success"
+          data-v-f9971b8c=""
+        >
+          
+          成功
+          
+          <!---->
+        </span>
+        <span
+          class="t-typography t-typography--warning"
+          data-v-f9971b8c=""
+        >
+          
+          警告
+          
+          <!---->
+        </span>
+        <span
+          class="t-typography t-typography--error"
+          data-v-f9971b8c=""
+        >
+          
+          错误
+          
+          <!---->
+        </span>
+        <span
+          class="t-typography"
+          data-v-f9971b8c=""
+        >
+          <mark>
+            
+            标记
+            
+          </mark>
+          <!---->
+        </span>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        可复制
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        data-v-4d87d309=""
+      >
+        <div
+          class="tdesign-mobile-typography-demo"
+          data-v-4d87d309=""
+        >
+          <span
+            class="t-typography"
+            data-v-4d87d309=""
+          >
+            
+            This is a copyable text.
+            
+            <span
+              class="t-typography__copy"
+            >
+              <svg
+                class="t-icon t-icon-copy"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <g
+                  id="copy"
+                >
+                  <path
+                    d="M10 10H21V21H10z"
+                    fill="transparent"
+                    id="fill1"
+                  />
+                  <path
+                    d="M10 10H21V21H10V10Z"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M14 6.5V3L3 3L3 14H6.5"
+                    id="stroke2"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
+              </svg>
+            </span>
+          </span>
+        </div>
+        <div
+          class="tdesign-mobile-typography-demo"
+          data-v-4d87d309=""
+        >
+          <span
+            class="t-typography"
+            data-v-4d87d309=""
+          >
+            
+             This is a copyable text with custom icon. 
+            
+            <span
+              class="t-typography__copy"
+            >
+              <svg
+                class="t-icon t-icon-smile"
+                color="#00529D"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <g
+                  id="smile"
+                >
+                  <path
+                    d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                    fill="transparent"
+                    id="fill1"
+                  />
+                  <path
+                    d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M8 9V11M16 9V11M8.53516 15C9.22678 16.1956 10.5195 17 12 17C13.4806 17 14.7733 16.1956 15.4649 15"
+                    id="stroke2"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
+              </svg>
+            </span>
+          </span>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        文本省略
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="typography-ellipsis-demo"
+        data-v-8db72384=""
+      />
+      <div
+        data-v-8db72384=""
+      >
+        <div
+          class="tdesign-mobile-typography-demo"
+          data-v-8db72384=""
+        >
+          <div
+            class="t-typography"
+            data-v-8db72384=""
+            style="display: flex; align-items: flex-end;"
+          >
+            <p
+              style="overflow: hidden; text-overflow: ellipsis; white-space: normal; display: -webkit-box;"
+            >
+              
+              
+              TDesign 秉承开放的设计理念从创立之初就采用开源协作的方式进行设计和开发。协作方案讨论、组件设计以及 API 设计，包括源代码在内均在公司内部完全开放，赢得了内部开发者和设计师的广泛关注。TDesign 遵循平等、开放、严格的原则，不论参与者的角色如何。
+              
+              
+            </p>
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <div
+          class="tdesign-mobile-typography-demo"
+          data-v-8db72384=""
+        >
+          <div
+            class="t-typography"
+            data-v-8db72384=""
+            style="display: flex; align-items: flex-end;"
+          >
+            <p
+              style="overflow: hidden; text-overflow: ellipsis; white-space: normal; display: -webkit-box;"
+            >
+              
+              
+              TDesign 秉承开放的设计理念从创立之初就采用开源协作的方式进行设计和开发。协作方案讨论、组件设计以及 API 设计，包括源代码在内均在公司内部完全开放，赢得了内部开发者和设计师的广泛关注。TDesign 遵循平等、开放、严格的原则，不论参与者的角色如何。
+              
+              
+            </p>
+            <span
+              class="t-typography-ellipsis-symbol"
+              style="text-decoration: none; white-space: nowrap; flex: 1; margin-right: 0px;"
+            >
+              展开
+            </span>
+            <!---->
+          </div>
+        </div>
+        <div
+          class="tdesign-mobile-typography-demo"
+          data-v-8db72384=""
+        >
+          <div
+            class="t-typography"
+            data-v-8db72384=""
+            style="display: flex; align-items: flex-end;"
+          >
+            <p
+              style="overflow: hidden; text-overflow: ellipsis; white-space: normal; display: -webkit-box;"
+            >
+              
+              
+              TDesign 秉承开放的设计理念从创立之初就采用开源协作的方式进行设计和开发。协作方案讨论、组件设计以及 API 设计，包括源代码在内均在公司内部完全开放，赢得了内部开发者和设计师的广泛关注。TDesign 遵循平等、开放、严格的原则，不论参与者的角色如何。
+              
+              
+            </p>
+            <span
+              class="t-typography-ellipsis-symbol"
+              style="text-decoration: none; white-space: nowrap; flex: 1; margin-right: 0px;"
+            >
+              <svg
+                class="t-icon t-icon-chevron-down"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <g
+                  id="chevron-down"
+                >
+                  <path
+                    d="M17.5 9.5L12 15L6.5 9.5"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
+              </svg>
+            </span>
+            <!---->
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography > Typography themeVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-typography-demo"
+  data-v-f9971b8c=""
+>
+  <span
+    class="t-typography t-typography--primary"
+    data-v-f9971b8c=""
+  >
+    
+    常规
+    
+    <!---->
+  </span>
+  <span
+    class="t-typography t-typography--secondary"
+    data-v-f9971b8c=""
+  >
+    
+    主色
+    
+    <!---->
+  </span>
+  <span
+    class="t-typography t-typography--success"
+    data-v-f9971b8c=""
+  >
+    
+    成功
+    
+    <!---->
+  </span>
+  <span
+    class="t-typography t-typography--warning"
+    data-v-f9971b8c=""
+  >
+    
+    警告
+    
+    <!---->
+  </span>
+  <span
+    class="t-typography t-typography--error"
+    data-v-f9971b8c=""
+  >
+    
+    错误
+    
+    <!---->
+  </span>
+  <span
+    class="t-typography"
+    data-v-f9971b8c=""
+  >
+    <mark>
+      
+      标记
+      
+    </mark>
+    <!---->
+  </span>
+</div>
+`;
