@@ -4,14 +4,6 @@ interface Options {
   onCopy?: (clipboardData: object) => void;
 }
 
-const defaultMessage = 'Copy to clipboard: #{key}, Enter';
-
-const format = (message: string) => {
-  // eslint-disable-next-line
-  const copyKey = (/mac os x/i.test(navigator.userAgent) ? '⌘' : 'Ctrl') + '+C';
-  return message.replace(/#{\s*key\s*}/g, copyKey);
-};
-
 // inspired by https://github.com/sudodoki/toggle-selection, refactor to esm
 const deselectCurrent = () => {
   const selection = document.getSelection();
