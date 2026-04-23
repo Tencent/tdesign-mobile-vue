@@ -1,7 +1,6 @@
 <template>
   <div class="tdesign-mobile-typography-demo">
-    <t-typography-text theme="primary">常规</t-typography-text>
-    <t-typography-text theme="secondary">主色</t-typography-text>
+    <t-typography-text theme="primary">主色</t-typography-text>
     <t-typography-text theme="success">成功</t-typography-text>
     <t-typography-text theme="warning">警告</t-typography-text>
     <t-typography-text theme="error">错误</t-typography-text>

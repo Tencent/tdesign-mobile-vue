@@ -230,7 +230,7 @@ exports[`Typography > Typography copyableVue demo works fine 1`] = `
       data-v-4d87d309=""
     >
       
-      This is a copyable text.
+      这是一段可复制的文本
       
       <span
         class="t-typography__copy"
@@ -279,7 +279,7 @@ exports[`Typography > Typography copyableVue demo works fine 1`] = `
       data-v-4d87d309=""
     >
       
-       This is a copyable text with custom icon. 
+       这是一段带自定义图标的可复制的文本 
       
       <span
         class="t-typography__copy"
@@ -447,7 +447,7 @@ exports[`Typography > Typography mobileVue demo works fine 1`] = `
   <p
     class="summary"
   >
-    用于定义页面中文本的基本格式，包括标题、正文及辅助文本等。
+     排版用于文本基础编排和样式，使用排版组件，可以快速完成页面中的文本内容制作，同时配合其他组件完成深色与浅色模式切换等风格统一的需求。 
   </p>
   <div
     class="tdesign-mobile-demo-block"
@@ -458,7 +458,7 @@ exports[`Typography > Typography mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        01 基础排版
+        组件类型
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"
@@ -730,15 +730,6 @@ exports[`Typography > Typography mobileVue demo works fine 1`] = `
           data-v-f9971b8c=""
         >
           
-          常规
-          
-          <!---->
-        </span>
-        <span
-          class="t-typography t-typography--secondary"
-          data-v-f9971b8c=""
-        >
-          
           主色
           
           <!---->
@@ -814,7 +805,7 @@ exports[`Typography > Typography mobileVue demo works fine 1`] = `
             data-v-4d87d309=""
           >
             
-            This is a copyable text.
+            这是一段可复制的文本
             
             <span
               class="t-typography__copy"
@@ -863,7 +854,7 @@ exports[`Typography > Typography mobileVue demo works fine 1`] = `
             data-v-4d87d309=""
           >
             
-             This is a copyable text with custom icon. 
+             这是一段带自定义图标的可复制的文本 
             
             <span
               class="t-typography__copy"
@@ -1043,15 +1034,6 @@ exports[`Typography > Typography themeVue demo works fine 1`] = `
 >
   <span
     class="t-typography t-typography--primary"
-    data-v-f9971b8c=""
-  >
-    
-    常规
-    
-    <!---->
-  </span>
-  <span
-    class="t-typography t-typography--secondary"
     data-v-f9971b8c=""
   >
     

@@ -1,12 +1,10 @@
 <template>
   <div>
     <div class="tdesign-mobile-typography-demo">
-      <t-typography-text copyable>This is a copyable text.</t-typography-text>
+      <t-typography-text copyable>这是一段可复制的文本</t-typography-text>
     </div>
     <div class="tdesign-mobile-typography-demo">
-      <t-typography-text :copyable="copyableWithCustomSuffix">
-        This is a copyable text with custom icon.
-      </t-typography-text>
+      <t-typography-text :copyable="copyableWithCustomSuffix"> 这是一段带自定义图标的可复制的文本 </t-typography-text>
     </div>
   </div>
 </template>
