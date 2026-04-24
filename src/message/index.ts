@@ -1,13 +1,8 @@
 import { createApp, defineComponent, ref, Ref, h, VNode, App, nextTick } from 'vue';
-import Message from './message';
+import Message, { MessagePluginOptions } from './message';
 import { isBrowser } from '../shared';
-import { TdMessageProps } from './type';
 
 import './style';
-
-interface MessageActionOptionsType extends TdMessageProps {
-  context?: Element;
-}
 
 const instanceMap: Map<
   Element,
@@ -17,7 +12,7 @@ const instanceMap: Map<
   }
 > = new Map();
 
-const defaultProps: MessageActionOptionsType = {
+const defaultProps: MessagePluginOptions = {
   align: 'left',
   closeBtn: false,
   content: '',
@@ -31,22 +26,22 @@ const defaultProps: MessageActionOptionsType = {
 };
 
 /** 展示普通消息 */
-Message.info = (options?: MessageActionOptionsType | string) => {
+Message.info = (options?: MessagePluginOptions | string) => {
   create({ ...parseOptions(options), theme: 'info' });
 };
 
 /** 展示成功消息 */
-Message.success = (options?: MessageActionOptionsType | string) => {
+Message.success = (options?: MessagePluginOptions | string) => {
   create({ ...parseOptions(options), theme: 'success' });
 };
 
 /** 展示警示消息 */
-Message.warning = (options?: MessageActionOptionsType | string) => {
+Message.warning = (options?: MessagePluginOptions | string) => {
   create({ ...parseOptions(options), theme: 'warning' });
 };
 
 /** 展示错误消息 */
-Message.error = (options?: MessageActionOptionsType | string) => {
+Message.error = (options?: MessagePluginOptions | string) => {
   create({ ...parseOptions(options), theme: 'error' });
 };
 
@@ -85,7 +80,7 @@ function destroy(context: Element, root: Element) {
   }
 }
 
-function create(props: MessageActionOptionsType): void {
+function create(props: MessagePluginOptions): void {
   if (!isBrowser) return;
 
   const { context, ...otherOptions } = props;
@@ -131,6 +126,6 @@ function create(props: MessageActionOptionsType): void {
   });
 }
 
-function parseOptions(content?: MessageActionOptionsType | string) {
+function parseOptions(content?: MessagePluginOptions | string) {
   return typeof content === 'string' ? { ...defaultProps, content } : { ...defaultProps, ...content };
 }
