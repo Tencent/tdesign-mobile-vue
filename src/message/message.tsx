@@ -21,6 +21,14 @@ const iconDefault = {
 const closeBtnDefault = h(CloseIcon);
 let messageIndex = -1;
 
+export interface MessagePluginOptions extends TdMessageProps {
+  /**
+   * 指定消息组件的挂载容器，默认挂载到 `document.body`。可传入 DOM 元素，将消息渲染到指定容器内
+   * @default document.body
+   */
+  context?: Element;
+}
+
 export default defineComponent({
   name: `${prefix}-message`,
   props,
