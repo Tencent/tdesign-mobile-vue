@@ -153,7 +153,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-vue": "^8.2.0",
+    "eslint-plugin-vue": "^10.8.0",
     "gray-matter": "^4.0.3",
     "husky": "^9.1.7",
     "jsdom": "^20.0.0",
