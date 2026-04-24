@@ -433,6 +433,7 @@ export default defineComponent({
                 height="100vh"
                 defaultCurrent={currentIndex.value}
                 disabled={disabled.value}
+                loop={props.loop}
                 onChange={onSwiperChange}
               >
                 {imageInfoList.value.map((info, index) => (
