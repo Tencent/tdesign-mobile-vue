@@ -123,16 +123,7 @@ export default defineComponent({
           iconContent() && (
             <div class={`${tabBarItemClass.value}__icon`} style={{ height: `${iconOnly.value ? 24 : 20}px` }}>
               {badgeProps.value?.dot || badgeProps.value?.count ? (
-                <t-badge
-                  color={badgeProps.value?.color || ''}
-                  count={badgeProps.value?.count || 0}
-                  max-count={badgeProps.value?.maxCount || 99}
-                  dot={badgeProps.value?.dot || false}
-                  content={badgeProps.value?.content || ''}
-                  shape={badgeProps.value?.shape || 'circle'}
-                  size={badgeProps.value?.size || 'medium'}
-                  offset={badgeProps.value?.offset || [0, 0]}
-                >
+                <t-badge offset={badgeProps.value?.offset || [0, 0]} {...badgeProps.value}>
                   {iconContent()}
                 </t-badge>
               ) : (
