@@ -13,6 +13,7 @@ image | Slot / Function | - | `1.12.0`。Typescript: `TNode<ImageSlotParams>` `i
 images | Array | [] | Typescript: `Array<string \| ImageInfo>` `interface ImageInfo { url: string; align: 'start' \| 'center' \| 'end' }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image-viewer/type.ts) | N
 index | Number | - | `v-model:index` is supported | N
 defaultIndex | Number | - | uncontrolled property | N
+loop | Boolean | true | \- | N
 maxZoom | Number | 3 | \- | N
 showIndex | Boolean | false | \- | N
 visible | Boolean | false | hide or show image viewer。`v-model` and `v-model:visible` is supported | N

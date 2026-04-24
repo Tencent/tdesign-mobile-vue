@@ -40,6 +40,11 @@ export interface TdImageViewerProps {
    */
   defaultIndex?: number;
   /**
+   * 是否开启循环滚动
+   * @default true
+   */
+  loop?: boolean;
+  /**
    * 【开发中】最大放大比例
    * @default 3
    */

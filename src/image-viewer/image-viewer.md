@@ -13,6 +13,7 @@ image | Slot / Function | - | `1.12.0`。自定义图片内容。TS 类型：`TN
 images | Array | [] | 图片数组。TS 类型：`Array<string \| ImageInfo>` `interface ImageInfo { url: string; align: 'start' \| 'center' \| 'end' }`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image-viewer/type.ts) | N
 index | Number | - | 当前预览图片所在的下标。支持语法糖 `v-model:index` | N
 defaultIndex | Number | - | 当前预览图片所在的下标。非受控属性 | N
+loop | Boolean | true | 是否开启循环滚动 | N
 maxZoom | Number | 3 | 【开发中】最大放大比例 | N
 showIndex | Boolean | false | 是否显示页码 | N
 visible | Boolean | false | 隐藏/显示预览。支持语法糖 `v-model` 或 `v-model:visible` | N
