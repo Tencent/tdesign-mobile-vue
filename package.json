@@ -117,7 +117,7 @@
     "@rollup/plugin-replace": "^2.3.4",
     "@rollup/plugin-url": "^6.0.0",
     "@soerenmartius/vue3-clipboard": "^0.1.1",
-    "@tdesign/site-components": "^0.18.0-alpha.7",
+    "@tdesign/site-components": "^0.19.1",
     "@tdesign/theme-generator": "^1.2.0",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "18.8.0",
