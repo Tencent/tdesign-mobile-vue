@@ -452,6 +452,8 @@ export default defineComponent({
                             ${index === state.touchIndex ? imageTransitionDuration.value : 'transition-duration: 0s;'};
                           `,
                           src: info.image.url,
+                          index,
+                          extra: info.image.extra,
                           onLoad: (e: Event) => onImgLoad(e, index),
                           onTransitionstart: (e: TransitionEvent) => {
                             if (e.target === e.currentTarget) {

@@ -93,6 +93,8 @@ export interface ImageViewerInstanceFunctions {
 
 export interface ImageSlotParams {
   src: string;
+  index?: number;
+  extra?: Record<string, any>;
   className?: string;
   style?: string;
   onLoad?: (e: Event) => void;
@@ -103,6 +105,7 @@ export interface ImageSlotParams {
 export interface ImageInfo {
   url: string;
   align: 'start' | 'center' | 'end';
+  extra?: Record<string, any>;
 }
 
 export type ImageViewerCloseTrigger = 'image' | 'overlay' | 'close-btn';
