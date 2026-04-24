@@ -40,6 +40,11 @@ export default {
   defaultIndex: {
     type: Number,
   },
+  /** 是否开启循环滚动 */
+  loop: {
+    type: Boolean,
+    default: true,
+  },
   /** 【开发中】最大放大比例 */
   maxZoom: {
     type: Number,

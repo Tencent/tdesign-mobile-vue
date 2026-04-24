@@ -40,6 +40,11 @@ export interface TdImageViewerProps {
    */
   defaultIndex?: number;
   /**
+   * 是否开启循环滚动
+   * @default true
+   */
+  loop?: boolean;
+  /**
    * 【开发中】最大放大比例
    * @default 3
    */
@@ -88,6 +93,8 @@ export interface ImageViewerInstanceFunctions {
 
 export interface ImageSlotParams {
   src: string;
+  index?: number;
+  extra?: Record<string, any>;
   className?: string;
   style?: string;
   onLoad?: (e: Event) => void;
@@ -98,6 +105,7 @@ export interface ImageSlotParams {
 export interface ImageInfo {
   url: string;
   align: 'start' | 'center' | 'end';
+  extra?: Record<string, any>;
 }
 
 export type ImageViewerCloseTrigger = 'image' | 'overlay' | 'close-btn';
