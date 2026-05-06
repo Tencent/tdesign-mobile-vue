@@ -68,7 +68,7 @@ export default defineComponent({
     const moveDirection = ref(0);
 
     const navigationConfig = computed<SwiperNavigation>(() => {
-      if (props.navigation === true) {
+      if (props.navigation === true || props.navigation === undefined) {
         return DEFAULT_SWIPER_NAVIGATION;
       }
       if (typeof props.navigation === 'object' && props.navigation !== null) {
