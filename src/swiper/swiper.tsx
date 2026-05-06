@@ -1,4 +1,4 @@
-import { onMounted, computed, ref, provide, watch, onUnmounted, toRefs, defineComponent } from 'vue';
+import { onMounted, computed, ref, provide, watch, onUnmounted, toRefs, defineComponent, nextTick } from 'vue';
 import { isNumber } from 'lodash-es';
 import { useSwipe } from '../swipe-cell/useSwipe';
 import config from '../config';
@@ -8,6 +8,7 @@ import useVModel from '../hooks/useVModel';
 import { preventDefault } from '../shared/dom';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
+import { useVisibilityObserver } from '../hooks/useResizeObserver';
 
 const DEFAULT_SWIPER_NAVIGATION: SwiperNavigation = {
   paginationPosition: 'bottom',
@@ -318,10 +319,19 @@ export default defineComponent({
       moveDirection,
     });
 
-    onMounted(() => {
-      startAutoplay();
+    // 监听容器从不可见变为可见（v-show 场景），重新计算 item 位置
+    useVisibilityObserver(root, () => {
       updateItemPosition();
       updateContainerHeight();
+    });
+
+    onMounted(() => {
+      startAutoplay();
+      // 使用 nextTick 确保 DOM 完全渲染后再计算位置
+      nextTick(() => {
+        updateItemPosition();
+        updateContainerHeight();
+      });
     });
 
     onUnmounted(() => {
