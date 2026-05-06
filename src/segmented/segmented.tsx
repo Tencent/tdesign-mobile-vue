@@ -1,9 +1,10 @@
-import { computed, defineComponent, h, nextTick, onMounted, onUnmounted, ref, toRefs, watch } from 'vue';
+import { computed, defineComponent, h, nextTick, onMounted, ref, toRefs, watch } from 'vue';
 import { isFunction } from 'lodash-es';
 import config from '../config';
 import props from './props';
 import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
+import { useResizeObserver } from '../hooks/useResizeObserver';
 
 const { prefix } = config;
 
@@ -85,14 +86,11 @@ export default defineComponent({
       { deep: true },
     );
 
+    // 监听尺寸变化，适配 v-show 和动态布局场景
+    useResizeObserver(groupRef, () => updateThumb(), { onVisibilityChange: true });
+
     onMounted(() => {
       updateThumb();
-
-      if (typeof ResizeObserver !== 'undefined' && groupRef.value) {
-        const ro = new ResizeObserver(() => updateThumb());
-        ro.observe(groupRef.value);
-        onUnmounted(() => ro.disconnect());
-      }
     });
 
     return () => {
