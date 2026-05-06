@@ -32,6 +32,14 @@ close-btn-click | `(context: { e: MouseEvent })` | \-
 duration-end | \- | \-
 link-click | `(context: { e: MouseEvent })` | \-
 
+### MessagePlugin
+
+The following parameters are supported when using the plugin call (`MessagePlugin.info()` / `MessagePlugin.success()`, etc.), in addition to all Message Props above.
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+context | Element | document.body | Specify the DOM container element for the message component to mount to. Defaults to `document.body`. Pass a DOM element to render the message inside a specific container | N
+
 ### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
