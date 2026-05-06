@@ -5,6 +5,23 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.14.0 `2026-05-06` 
+### 🚀 Features
+- `Segmented`: 新增 `Segmented` 分段控制器组件 @anlyyao ([#2198](https://github.com/Tencent/tdesign-mobile-vue/pull/2198))
+- `Indexes`: 新增 `showFullIndex` 属性，表示是否显示完整的索引内容，默认显示首字符 @anlyyao ([#2197](https://github.com/Tencent/tdesign-mobile-vue/pull/2197))
+- `Table`: 新增 `footer` 和 `onScrollToBottom` 属性 @novlan1 ([#2169](https://github.com/Tencent/tdesign-mobile-vue/pull/2169))
+- `ImageViewer`: @anlyyao ([#2210](https://github.com/Tencent/tdesign-mobile-vue/pull/2210))
+  - 新增 `loop` 属性，表示是否开启循环滚动 
+  - `ImageSlotParams` 类型新增 `extra` 属性，支持透传额外数据到 `image` 插槽
+- `Message`: 优化 `offset`  计算逻辑，支持 CSS 单位  @anlyyao ([#2211](https://github.com/Tencent/tdesign-mobile-vue/pull/2211))
+- `Upload`: 补充 `.heic` 图片类型的支持 @uyarn ([common#2502](https://github.com/Tencent/tdesign-common/pull/2502))([#2220](https://github.com/Tencent/tdesign-mobile-vue/pull/2220))
+### 🐞 Bug Fixes
+- `Indexes`: 修复气泡与右侧索引列表间距错误 @anlyyao ([#2197](https://github.com/Tencent/tdesign-mobile-vue/pull/2197))
+- `TabBar`: 修复 `badgeProps` 属性中的 `color` 和 `shape` 字段无效 @liweijie0812 ([#2208](https://github.com/Tencent/tdesign-mobile-vue/pull/2208))
+- `DateTimePicker`: 修复 `showWeek` 启用时 `start` 和 `end` 属性无效 @anlyyao ([#2218](https://github.com/Tencent/tdesign-mobile-vue/pull/2218))
+- `ImageViewer`: 修复 `v-show` 场景下预览图片位置计算错误 @anlyyao ([#2219](https://github.com/Tencent/tdesign-mobile-vue/pull/2219))
+- `Swiper`: 修复不传入 `navigation` 属性时导航器不显示的问题 @anlyyao ([#2221](https://github.com/Tencent/tdesign-mobile-vue/pull/2221))
+
 ## 🌈 1.13.2 `2026-03-26` 
 ### 🚀 Features
 - `ImageViewer`: 新增 `swipeTo` 组件实例方法，支持跳转到指定预览图片位置 @anlyyao ([#2185](https://github.com/Tencent/tdesign-mobile-vue/pull/2185))

@@ -6,7 +6,7 @@ import Link from '../link';
 import props from './props';
 import { MessageMarquee, TdMessageProps } from './type';
 import config from '../config';
-import { reconvertUnit } from '../shared';
+import { hasStyleUnit } from '../_common/js/utils/helper';
 import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
@@ -20,6 +20,14 @@ const iconDefault = {
 };
 const closeBtnDefault = h(CloseIcon);
 let messageIndex = -1;
+
+export interface MessagePluginOptions extends TdMessageProps {
+  /**
+   * 指定消息组件的挂载容器，默认挂载到 `document.body`。可传入 DOM 元素，将消息渲染到指定容器内
+   * @default document.body
+   */
+  context?: Element;
+}
 
 export default defineComponent({
   name: `${prefix}-message`,
@@ -60,19 +68,22 @@ export default defineComponent({
     }));
 
     const getGap = () => {
-      if (props.single) {
-        return 0;
-      }
-      const gap = typeof props.gap === 'boolean' ? 12 : reconvertUnit(props.gap);
-
+      if (props.single) return 0;
+      let gap = parseFloat(String(props.gap)) || 0;
+      if (props.gap === true) gap = 12;
       return (gap + (rect.value?.height || 0)) * messageIndex;
     };
 
+    // 将 offset 项转换为 CSS 长度值，index === 0 时叠加 gap
+    const toCSSValue = (val: string | number, gap: number): string => {
+      if (isString(val) && hasStyleUnit(val)) {
+        return gap ? `calc(${val} + ${gap}px)` : val;
+      }
+      return `${(parseFloat(String(val)) || 0) + gap}px`;
+    };
+
     const changeNumToStr = (arr: TdMessageProps['offset'] = []) => {
-      return arr.map(function (item, index) {
-        const value = reconvertUnit(item);
-        return index === 0 ? `${value + getGap()}px` : `${value}px`;
-      });
+      return arr.map((item, index) => toCSSValue(item, index === 0 ? getGap() : 0));
     };
 
     const getMessageStylesOffset = (offset: TdMessageProps['offset']) => {

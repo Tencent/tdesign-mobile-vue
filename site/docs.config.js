@@ -457,6 +457,14 @@ export const docs = [
         componentEn: () => import('@/image-viewer/image-viewer.en-US.md'),
       },
       {
+        title: 'Segmented 分段器',
+        titleEn: 'Segmented',
+        name: 'segmented',
+        path: '/mobile-vue/components/segmented',
+        component: () => import('@/segmented/segmented.md'),
+        componentEn: () => import('@/segmented/segmented.en-US.md'),
+      },
+      {
         title: 'Skeleton 骨架屏',
         titleEn: 'Skeleton',
         name: 'skeleton',

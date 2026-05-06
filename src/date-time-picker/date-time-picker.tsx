@@ -110,19 +110,18 @@ export default defineComponent({
         second: globalConfig.value.secondLabel,
       };
 
-      const generateDayWithWeekColumn = (date: Dayjs) => {
+      const generateDayWithWeekColumn = (date: Dayjs, lower: number, upper: number) => {
         const startOfMonth = date.startOf('month');
-        const endOfMonth = date.endOf('month');
         const daysOfWeek = [];
         const type = 'date';
 
-        for (let i = 0; i <= endOfMonth.diff(startOfMonth, 'days'); i += 1) {
-          const currentDate = startOfMonth.add(i, 'days');
+        for (let i = lower; i <= upper; i += 1) {
+          const currentDate = startOfMonth.add(i - 1, 'days');
           const dayName = currentDate.format('ddd');
 
           daysOfWeek.push({
-            value: `${i + 1}`,
-            label: props.renderLabel ? props.renderLabel(type, i) : `${i + 1}${typeUnit[type] || ''} ${dayName}`,
+            value: `${i}`,
+            label: props.renderLabel ? props.renderLabel(type, i) : `${i}${typeUnit[type] || ''} ${dayName}`,
           });
         }
 
@@ -156,7 +155,7 @@ export default defineComponent({
         const lower = isInMinMonth ? minDay : 1;
         const upper = isInMaxMonth ? maxDay : dayjs(`${curYear}-${curMonth}`).daysInMonth();
         if (props.showWeek) {
-          generateDayWithWeekColumn(curDate.value);
+          generateDayWithWeekColumn(curDate.value, lower, upper);
         } else {
           generateColumn(lower, upper, 'date');
         }

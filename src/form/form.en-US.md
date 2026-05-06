@@ -102,3 +102,10 @@ telnumber | String | - | \- | N
 url | String | - | \- | N
 validator | String | - | \- | N
 whitespace | String | - | \- | N
+
+### CSS Variables
+
+The component provides the following CSS variables, which can be used to customize styles.
+Name | Default Value | Description 
+-- | -- | --
+--td-form-label-font-size | @font-size-m | -

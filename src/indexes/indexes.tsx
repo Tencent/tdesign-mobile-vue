@@ -41,7 +41,7 @@ export default defineComponent({
   props: IndexesProps,
   emits: ['select', 'change', 'update:current'],
   setup(props) {
-    const { current, modelValue } = toRefs(props);
+    const { current, modelValue, showFullIndex } = toRefs(props);
     const readerTNodeJSX = useTNodeJSX();
     const indexesClass = usePrefixClass('indexes');
 
@@ -248,25 +248,28 @@ export default defineComponent({
     return () => (
       <div ref={indexesRoot} class={indexesClass.value} onScroll={handleRootScroll}>
         <div class={`${indexesClass.value}__sidebar`}>
-          {indexList.value.map((item) => (
-            <div
-              class={[
-                `${indexesClass.value}__sidebar-item`,
-                state.activeSidebar === item ? `${indexesClass.value}__sidebar-item--active` : '',
-              ]}
-              data-index={item}
-              onClick={(e: MouseEvent) => {
-                e.preventDefault();
-                handleSidebarItemClick(item);
-              }}
-              onTouchmove={handleSidebarTouchmove}
-            >
-              {item}
-              {state.showSidebarTip && state.activeSidebar === item && (
-                <div class={`${indexesClass.value}__sidebar-tips`}>{state.activeSidebar}</div>
-              )}
-            </div>
-          ))}
+          {indexList.value.map((item) => {
+            const text = showFullIndex.value ? item : String(item).charAt(0);
+            return (
+              <div
+                class={[
+                  `${indexesClass.value}__sidebar-item`,
+                  state.activeSidebar === item ? `${indexesClass.value}__sidebar-item--active` : '',
+                ]}
+                data-index={item}
+                onClick={(e: MouseEvent) => {
+                  e.preventDefault();
+                  handleSidebarItemClick(item);
+                }}
+                onTouchmove={handleSidebarTouchmove}
+              >
+                {text}
+                {state.showSidebarTip && state.activeSidebar === item && (
+                  <div class={`${indexesClass.value}__sidebar-tips`}>{state.activeSidebar}</div>
+                )}
+              </div>
+            );
+          })}
         </div>
         {readerTNodeJSX('default')}
       </div>

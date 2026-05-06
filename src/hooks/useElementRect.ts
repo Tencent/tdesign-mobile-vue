@@ -1,4 +1,5 @@
 import { ref, shallowRef, Ref, ShallowRef, unref, watch, onMounted, onUnmounted } from 'vue';
+import { useResizeObserver } from './useResizeObserver';
 
 export type ElementOrRef = string | Element | null | undefined;
 
@@ -86,7 +87,7 @@ export default function useElementRect(
   rect: Ref<ElementRect>;
   updateElement: () => void;
 } {
-  const { immediate = true, resizeObserver = false } = options;
+  const { immediate = true, resizeObserver: enableResizeObserver = false } = options;
   const elementRef = shallowRef<HTMLElement | null>(null);
   const rect = ref<ElementRect>({
     top: 0,
@@ -96,7 +97,6 @@ export default function useElementRect(
     width: 0,
     height: 0,
   });
-  let resizeObserverInstance: ResizeObserver | null = null;
 
   const updateElement = () => {
     // 使用 unref 统一处理 Ref 和非 Ref 类型
@@ -109,31 +109,26 @@ export default function useElementRect(
     }
   };
 
-  const setupResizeObserver = () => {
-    if (!resizeObserver) return;
-
-    if (elementRef.value && window.ResizeObserver) {
-      resizeObserverInstance = new ResizeObserver(() => {
+  // 使用统一的 ResizeObserver hook
+  const { stop: stopResizeObserver, start: startResizeObserver } = useResizeObserver(
+    elementRef,
+    () => {
+      if (elementRef.value) {
         rect.value = getElementRect(elementRef.value);
-      });
-      resizeObserverInstance.observe(elementRef.value);
-    }
-  };
-
-  const cleanupResizeObserver = () => {
-    if (resizeObserverInstance) {
-      resizeObserverInstance.disconnect();
-      resizeObserverInstance = null;
-    }
-  };
+      }
+    },
+    { immediate: false, onResize: true, onVisibilityChange: false },
+  );
 
   // 监听 element 参数变化
   watch(
     () => unref(element),
     () => {
-      cleanupResizeObserver();
+      stopResizeObserver();
       updateElement();
-      setupResizeObserver();
+      if (enableResizeObserver) {
+        startResizeObserver();
+      }
     },
     { flush: 'post' },
   );
@@ -141,12 +136,14 @@ export default function useElementRect(
   onMounted(() => {
     if (immediate) {
       updateElement();
-      setupResizeObserver();
+      if (enableResizeObserver) {
+        startResizeObserver();
+      }
     }
   });
 
   onUnmounted(() => {
-    cleanupResizeObserver();
+    stopResizeObserver();
   });
 
   return {

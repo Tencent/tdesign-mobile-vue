@@ -229,7 +229,7 @@ describe('Indexes & IndexesAnchor', () => {
     const wrapper = mount({
       setup() {
         return () => (
-          <Indexes indexList={indexList}>
+          <Indexes showFullIndex indexList={indexList}>
             {{
               default: list.map((item, index) => (
                 <template>

@@ -11,11 +11,11 @@ export default {
   /** 索引列表的激活项，默认首项 */
   current: {
     type: [String, Number] as PropType<TdIndexesProps['current']>,
-    default: undefined,
+    default: undefined as TdIndexesProps['current'],
   },
   modelValue: {
     type: [String, Number] as PropType<TdIndexesProps['current']>,
-    default: undefined,
+    default: undefined as TdIndexesProps['current'],
   },
   /** 索引列表的激活项，默认首项，非受控属性 */
   defaultCurrent: {
@@ -25,6 +25,8 @@ export default {
   indexList: {
     type: Array as PropType<TdIndexesProps['indexList']>,
   },
+  /** 是否显示完整的索引内容，默认只显示首字符 */
+  showFullIndex: Boolean,
   /** 索引是否吸顶，默认为true */
   sticky: {
     type: Boolean,
