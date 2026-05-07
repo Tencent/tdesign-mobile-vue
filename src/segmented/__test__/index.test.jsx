@@ -1,8 +1,8 @@
 import { ref, h } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import Segmented from '../segmented';
 import { HomeIcon } from 'tdesign-icons-vue-next';
+import Segmented from '../segmented';
 
 const prefix = 't';
 const name = `${prefix}-segmented`;
@@ -125,7 +125,7 @@ describe('Segmented', () => {
       await $items[1].trigger('click');
 
       expect(onChange).toBeCalledTimes(1);
-      expect(onChange).toBeCalledWith('选项二', { value: '选项二', label: '选项二' });
+      expect(onChange).toBeCalledWith({ value: '选项二', selectedOption: { value: '选项二', label: '选项二' } });
     });
 
     it('v-model', async () => {

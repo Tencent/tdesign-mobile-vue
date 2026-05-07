@@ -36,7 +36,7 @@ export interface TdSegmentedProps {
   /**
    * 选项值发生变化时触发
    */
-  onChange?: (value: string | number, selectedOption: SegmentedItem) => void;
+  onChange?: (context: { value: string | number; selectedOption: SegmentedItem }) => void;
 }
 
 export interface SegmentedItem {
