@@ -17,12 +17,8 @@ const optionsWithDisabled = [
   { value: 2, label: '禁用', disabled: true },
 ];
 
-const handleChange = (value: string | number, selectedOption: any) => {
-  console.log('onChange:', value, selectedOption);
-};
-
-const handleChangeDisabled = (value: string | number, selectedOption: any) => {
-  console.log('onChangeWithDisabled:', value, selectedOption);
+const handleChange = (context: any) => {
+  console.log('onChange:', context);
 };
 </script>
 
