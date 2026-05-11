@@ -41,7 +41,7 @@ Name | Default Value | Description
 --td-button-danger-color | @font-white-1 | -
 --td-button-danger-disabled-bg | @error-color-3 | -
 --td-button-danger-disabled-border-color | @error-color-3 | -
---td-button-danger-disabled-color | @error-color-disabled | -
+--td-button-danger-disabled-color | @font-white-1 | -
 --td-button-danger-outline-active-bg-color | @bg-color-container-active | -
 --td-button-danger-outline-active-border-color | @error-color-7 | -
 --td-button-danger-outline-border-color | @button-danger-outline-color | -
