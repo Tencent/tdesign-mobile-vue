@@ -23,6 +23,13 @@ jobs:
 
       - run: npm run build
 
-      - run: node ./scripts/workflows/pkg-pr-new-generate-template.mjs
+      - run: |
+          mkdir templates && cd templates
+          pnpm dlx https://pkg.pr.new/TDesignOteam/create-tdesign@main mobile-vue-vite --template mobile-vue-vite
+          pnpm dlx https://pkg.pr.new/TDesignOteam/create-tdesign@main mobile-vue-vite-on-demand --template mobile-vue-vite-on-demand
+          pnpm dlx https://pkg.pr.new/TDesignOteam/create-tdesign@main mobile-vue-tsx-vite --template mobile-vue-tsx-vite
+          pnpm dlx https://pkg.pr.new/TDesignOteam/create-tdesign@main mobile-vue-tsx-rspack --template mobile-vue-tsx-rspack
+          pnpm dlx https://pkg.pr.new/TDesignOteam/create-tdesign@main mobile-vue-rspack --template mobile-vue-rspack
+          pnpm dlx https://pkg.pr.new/TDesignOteam/create-tdesign@main mobile-vue-rspack-on-demand --template mobile-vue-rspack-on-demand
 
-      - run: npx pkg-pr-new publish --template ./tdesign-mobile-vue-demo
+      - run: npx pkg-pr-new publish --template './templates/*'
