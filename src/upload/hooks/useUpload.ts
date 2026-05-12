@@ -1,4 +1,4 @@
-import { computed, h, ref, shallowRef, toRefs, ComputedRef, Ref, ShallowRef } from 'vue';
+import { computed, h, ref, shallowRef, toRefs, onBeforeUnmount, ComputedRef, Ref, ShallowRef } from 'vue';
 import { isFunction, isString } from 'lodash-es';
 import { SizeLimitObj, TdUploadProps, UploadChangeContext, UploadFile, UploadRemoveContext } from '../type';
 import useVModel from '../../hooks/useVModel';
@@ -15,7 +15,7 @@ import {
   OnResponseErrorContext,
   SuccessContext,
 } from '../../_common/js/upload/types';
-import { getFileList, getFileUrlByFileRaw } from '../../_common/js/upload/utils';
+import { getFileList, IMAGE_REGEXP } from '../../_common/js/upload/utils';
 
 // @ts-ignore
 export type ValidateParams = Parameters<TdUploadProps['onValidate']>[0];
@@ -29,6 +29,7 @@ export default function useUpload(props: TdUploadProps): {
   inputRef: Ref<HTMLInputElement>;
   disabled: Ref<boolean>;
   xhrReq: ShallowRef<{ files: UploadFile[]; xhrReq: XMLHttpRequest }[]>;
+  isImageFile: (file: UploadFile) => boolean;
   uploadFilePercent: (params: { file: UploadFile; percent: number }) => void;
   uploadFiles: (toFiles?: UploadFile[]) => void;
   onFileChange: (files: File[]) => void;
@@ -44,6 +45,27 @@ export default function useUpload(props: TdUploadProps): {
   const sizeOverLimitMessage = ref('');
 
   const uploading = ref(false);
+
+  const objectUrls: string[] = [];
+
+  const isImageFile = (file: UploadFile): boolean => {
+    const fileType = file.raw?.type || file.type || '';
+    const url = file.url || '';
+    return /^image\//.test(fileType) || IMAGE_REGEXP.test(fileType) || IMAGE_REGEXP.test(url);
+  };
+
+  const createObjectUrl = (file: UploadFile): UploadFile => {
+    if (file.raw && isImageFile(file) && !file.url) {
+      const objectUrl = URL.createObjectURL(file.raw);
+      objectUrls.push(objectUrl);
+      return { ...file, url: objectUrl };
+    }
+    return file;
+  };
+
+  onBeforeUnmount(() => {
+    objectUrls.forEach((url) => URL.revokeObjectURL(url));
+  });
 
   // 文件列表显示的内容（自动上传和非自动上传有所不同）
   const displayFiles: ComputedRef<UploadFile[]> = computed(() => {
@@ -150,21 +172,16 @@ export default function useUpload(props: TdUploadProps): {
     const tmpFiles =
       props.multiple && !isBatchUpload?.value ? (uploadValue?.value as UploadFile[]).concat(toFiles) : toFiles;
     if (!tmpFiles.length) return;
-    const list = tmpFiles.map(
-      (file) =>
-        new Promise((resolve) => {
-          getFileUrlByFileRaw(file.raw as File).then((url) => {
-            resolve({ ...file, url: file.url || url });
-          });
-        }),
-    );
-    Promise.all(list).then((files) => {
-      setUploadValue(files as UploadFile[], {
-        trigger: 'add',
-        index: (uploadValue.value as UploadFile[]).length,
-        file: toFiles[0],
-        files: toFiles,
-      });
+    // 使用 URL.createObjectURL 为图片文件生成即时预览 URL
+    const filesWithUrl = tmpFiles.map((file) => {
+      if (file.url) return file;
+      return createObjectUrl(file);
+    });
+    setUploadValue(filesWithUrl as UploadFile[], {
+      trigger: 'add',
+      index: (uploadValue.value as UploadFile[]).length,
+      file: toFiles[0],
+      files: toFiles,
     });
     toUploadFiles.value = [];
   };
@@ -210,7 +227,9 @@ export default function useUpload(props: TdUploadProps): {
           // @ts-ignore
           getSizeLimitError,
         );
-        const tmpWaitingFiles = autoUpload?.value ? toFiles : toUploadFiles.value.concat(toFiles);
+        // 自动上传模式下，为图片文件生成 objectUrl 以实现选择后立即回显预览
+        const filesWithPreview = autoUpload?.value ? toFiles.map(createObjectUrl) : toFiles;
+        const tmpWaitingFiles = autoUpload?.value ? filesWithPreview : toUploadFiles.value.concat(filesWithPreview);
         toUploadFiles.value = tmpWaitingFiles;
         props.onWaitingUploadFilesChange?.({ files: tmpWaitingFiles, trigger: 'validate' });
         // 文件大小处理
@@ -395,6 +414,7 @@ export default function useUpload(props: TdUploadProps): {
     inputRef,
     disabled,
     xhrReq,
+    isImageFile,
     uploadFilePercent,
     uploadFiles,
     onFileChange,

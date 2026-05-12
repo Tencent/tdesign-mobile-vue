@@ -1,6 +1,6 @@
 import { ref, nextTick, h } from 'vue';
 import { mount } from '@vue/test-utils';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, beforeAll, afterAll } from 'vitest';
 import {
   AddIcon,
   CloseIcon,
@@ -18,6 +18,19 @@ import {
   VideoFilledIcon,
 } from 'tdesign-icons-vue-next';
 import Upload from '../upload';
+
+// jsdom 环境下 URL.createObjectURL / revokeObjectURL 不存在，需要 mock
+let _objectUrlCounter = 0;
+const _origCreateObjectURL = URL.createObjectURL;
+const _origRevokeObjectURL = URL.revokeObjectURL;
+beforeAll(() => {
+  URL.createObjectURL = vi.fn(() => `blob:mock-url-${++_objectUrlCounter}`);
+  URL.revokeObjectURL = vi.fn();
+});
+afterAll(() => {
+  URL.createObjectURL = _origCreateObjectURL;
+  URL.revokeObjectURL = _origRevokeObjectURL;
+});
 
 const mockFileFoo = new File([new ArrayBuffer(3)], 'foo.png', {
   type: 'image/png',

@@ -27,7 +27,6 @@ import useUpload from './hooks/useUpload';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 import {
-  IMAGE_REGEXP,
   FILE_PDF_REGEXP,
   FILE_EXCEL_REGEXP,
   FILE_WORD_REGEXP,
@@ -40,12 +39,6 @@ import {
 const { prefix } = config;
 
 const FILE_ZIP_REGEXP = /(\.zip|\.rar|\.7z|\.tar|\.gz|\.bz2|\.xz)/i;
-
-const isImageFile = (file: UploadFile) => {
-  const fileType = file.raw?.type || file.type || '';
-  const url = file.url || '';
-  return /^image\//.test(fileType) || IMAGE_REGEXP.test(fileType) || IMAGE_REGEXP.test(url);
-};
 
 export default defineComponent({
   name: `${prefix}-upload`,
@@ -77,6 +70,7 @@ export default defineComponent({
       inputRef,
       uploadFilePercent,
       uploadFiles,
+      isImageFile,
       onNormalFileChange,
       onInnerRemove,
       cancelUpload,
