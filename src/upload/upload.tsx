@@ -45,6 +45,7 @@ export default defineComponent({
       uploadFiles,
       onNormalFileChange,
       onInnerRemove,
+      onInnerRemoveAll,
       cancelUpload,
     } = useUpload(props);
 
@@ -116,6 +117,9 @@ export default defineComponent({
       }
       return null;
     };
+    const removeAllFiles = () => {
+      onInnerRemoveAll();
+    };
     expose({
       upload: inputRef.value,
       uploading,
@@ -123,6 +127,7 @@ export default defineComponent({
       uploadFiles,
       cancelUpload,
       uploadFilePercent,
+      removeAllFiles, // 新增的方法
     });
     return () => {
       return (

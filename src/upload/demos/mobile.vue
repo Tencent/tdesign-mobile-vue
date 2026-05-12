@@ -14,6 +14,9 @@
     <tdesign-demo-block title="03 样式自定义" summary="单选上传">
       <CustomDemo />
     </tdesign-demo-block>
+    <tdesign-demo-block title="04 移除图片" summary="单选上传">
+      <RemoveDemo />
+    </tdesign-demo-block>
   </div>
 </template>
 <script setup lang="ts">
@@ -21,4 +24,5 @@ import BaseDemo from './base.vue';
 import CustomDemo from './custom.vue';
 import MultipleDemo from './multiple.vue';
 import StatusDemo from './status.vue';
+import RemoveDemo from './remove.vue';
 </script>
