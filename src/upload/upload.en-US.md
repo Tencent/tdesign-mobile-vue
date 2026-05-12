@@ -13,7 +13,7 @@ addContent | String / Slot / Function | - | Typescript: `string \| TNode`。[see
 allowUploadDuplicateFile | Boolean | false | allow to upload duplicate name files | N
 autoUpload | Boolean | true | post upload request automatically after files being selected | N
 beforeUpload | Function | - | stop one of files to upload。Typescript: `(file: UploadFile) => boolean \| Promise<boolean>` | N
-capture | String | - | \- | N
+capture | String / Boolean | - | \- | N
 data | Object | - | extra request data of uploading. `formatRequest` can redefine all request data。Typescript: `Record<string, any> \| ((files: UploadFile[]) => Record<string, any>)` | N
 disabled | Boolean | undefined | make upload to be disabled | N
 files | Array | [] | `v-model:files` is supported。Typescript: `Array<T>` | N
@@ -30,6 +30,7 @@ preview | Boolean | true | `1.6.0` | N
 removeBtn | Boolean | true | `1.10.0` | N
 requestMethod | Function | - | custom upload request method。Typescript: `(files: UploadFile \| UploadFile[]) => Promise<RequestMethodResponse>` `interface RequestMethodResponse { status: 'success' \| 'fail'; error?: string; response: { url?: string; files?: UploadFile[]; [key: string]: any } }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts) | N
 sizeLimit | Number / Object | - | files size limit。Typescript: `number \| SizeLimitObj` `interface SizeLimitObj { size: number; unit: SizeUnit ; message?: string }` `type SizeUnitArray = ['B', 'KB', 'MB', 'GB']` `type SizeUnit = SizeUnitArray[number]`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts) | N
+theme | String | grid | `1.14.1`。options: grid/list | N
 useMockProgress | Boolean | true | use mock progress, instead of real progress | N
 value | Array | [] | file list。`v-model` and `v-model:value` is supported。Typescript: `Array<T>` | N
 defaultValue | Array | [] | file list。uncontrolled property。Typescript: `Array<T>` | N
@@ -77,7 +78,7 @@ url | String | - | \- | N
 ### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
-Name | Default Value | Description 
+Name | Default Value | Description
 -- | -- | --
 --td-upload-add-bg-color | @bg-color-secondarycontainer | -
 --td-upload-add-color | @text-color-placeholder | -
