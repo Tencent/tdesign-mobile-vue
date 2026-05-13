@@ -8,6 +8,7 @@ import customVue from '@/upload/demos/custom.vue';
 import mobileVue from '@/upload/demos/mobile.vue';
 import multipleVue from '@/upload/demos/multiple.vue';
 import statusVue from '@/upload/demos/status.vue';
+import themeVue from '@/upload/demos/theme.vue';
 
 const mapper = {
   baseVue,
@@ -15,6 +16,7 @@ const mapper = {
   mobileVue,
   multipleVue,
   statusVue,
+  themeVue,
 };
 
 describe('Upload', () => {
