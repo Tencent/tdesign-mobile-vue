@@ -32,7 +32,7 @@ selected | `(selected: ActionSheetItem \| string, index: number)` | 选择菜单
 ### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。
-名称 | 默认值 | 描述 
+名称 | 默认值 | 描述
 -- | -- | --
 --td-action-sheet-border-color | @component-stroke | -
 --td-action-sheet-border-radius | @radius-extraLarge | -
