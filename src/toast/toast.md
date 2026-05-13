@@ -37,7 +37,7 @@ style | String / Object | - | 弹框 style 属性，输入 [CSSStyleDeclaration.
 ### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。
-名称 | 默认值 | 描述 
+名称 | 默认值 | 描述
 -- | -- | --
 --td-toast-bg-color | @mask-active | -
 --td-toast-color | @text-color-anti | -

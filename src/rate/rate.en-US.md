@@ -29,7 +29,7 @@ change | `(value: number)` | \-
 ### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
-Name | Default Value | Description 
+Name | Default Value | Description
 -- | -- | --
 --td-rate-disabled-selected-color | @warning-color-3 | -
 --td-rate-disabled-unselected-color | @gray-color-2 | -
