@@ -5,6 +5,17 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.14.1 `2026-05-13` 
+### 🚀 Features
+- `Segmented`: 调整 `change` 事件参数形式 @anlyyao ([#2223](https://github.com/Tencent/tdesign-mobile-vue/pull/2223))
+- `Upload`: 
+  - 新增 `theme` 属性，支持宫格和列表布局风格 @anlyyao ([#2225](https://github.com/Tencent/tdesign-mobile-vue/pull/2225))
+  - 选择图片后立即生成预览缩略图，`autoUpload=true` 时上传过程中也能回显图片 @anlyyao ([#2225](https://github.com/Tencent/tdesign-mobile-vue/pull/2225))
+### 🐞 Bug Fixes
+- `Button`:
+  -  修复 `danger` 主题下文本禁用色错误 @anlyyao ([#2224](https://github.com/Tencent/tdesign-mobile-vue/pull/2224))
+  - 修复图标默认大小错误 @anlyyao ([common#2521](https://github.com/Tencent/tdesign-common/pull/2521))([#2227](https://github.com/Tencent/tdesign-mobile-vue/pull/2227))
+
 ## 🌈 1.14.0 `2026-05-06` 
 ### 🚀 Features
 - `Segmented`: 新增 `Segmented` 分段控制器组件 @anlyyao ([#2198](https://github.com/Tencent/tdesign-mobile-vue/pull/2198))
