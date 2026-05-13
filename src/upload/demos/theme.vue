@@ -20,6 +20,7 @@
 </template>
 
 <script lang="ts" setup>
+import { Toast } from 'tdesign-mobile-vue';
 import type { UploadFile, RequestMethodResponse } from '../type';
 
 // 示例图片 URL
@@ -148,7 +149,10 @@ const gridFiles: UploadFile[] = [
 // 点击图片预览时触发
 const onPreview = (options: { file: UploadFile; index: number; e: MouseEvent }) => {
   const { file, index } = options;
-  console.log(`预览文件：${file.name}，索引：${index}，地址：${file.url || '无'}`);
+  if (!isImageFile(file) && file.status === 'success') {
+    Toast('该文件不支持预览');
+  }
+  console.log(`预览文件：${file}，索引：${index}，状态：${file.status}，地址：${file.url || '无'}`);
 };
 
 // 示例2：列表布局 - 展示各种文件类型和上传状态
