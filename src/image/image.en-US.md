@@ -30,7 +30,7 @@ load | `(context: { e: ImageEvent })` | trigger on image loaded
 ### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
-Name | Default Value | Description 
+Name | Default Value | Description
 -- | -- | --
 --td-image-color | @text-color-placeholder | -
 --td-image-loading-bg-color | @bg-color-secondarycontainer | -

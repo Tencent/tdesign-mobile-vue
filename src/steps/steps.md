@@ -35,7 +35,7 @@ titleRight | String / Slot / Function | '' | 标题右侧数据 仅支持 layout
 ### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。
-名称 | 默认值 | 描述 
+名称 | 默认值 | 描述
 -- | -- | --
 --td-step-item-circle-size | 22px | -
 --td-step-item-circle-text-font | @font-body-medium | -

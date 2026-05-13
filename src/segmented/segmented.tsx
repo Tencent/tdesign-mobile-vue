@@ -12,11 +12,11 @@ export default defineComponent({
   name: `${prefix}-segmented`,
   props,
   emits: ['update:value', 'update:modelValue', 'change'],
-  setup(props, context) {
+  setup(props) {
     const segmentedClass = usePrefixClass('segmented');
 
     const { value, modelValue } = toRefs(props);
-    const [innerValue, setInnerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+    const [innerValue, setInnerValue] = useVModel(value, modelValue, props.defaultValue);
 
     const thumbStyle = ref<Record<string, string>>({});
     const groupRef = ref<HTMLDivElement>();
@@ -69,7 +69,8 @@ export default defineComponent({
       if (props.disabled || !item || item.disabled) return;
       if (index === activeIndex.value) return;
 
-      setInnerValue(item.value, item);
+      setInnerValue(item.value);
+      props.onChange?.({ value: item.value, selectedOption: item });
     };
 
     watch(activeIndex, () => {

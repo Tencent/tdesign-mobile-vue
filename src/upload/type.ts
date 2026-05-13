@@ -150,6 +150,12 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   uploadAllFilesInOneRequest?: boolean;
   /**
+   * 组件风格。提供宫格和列表两种布局风格
+   * @default grid
+   */
+  theme?: 'grid' | 'list';
+
+  /**
    * 已上传文件列表，同 `files`。TS 类型：`UploadFile`
    * @default []
    */

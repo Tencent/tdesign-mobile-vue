@@ -51,7 +51,7 @@ value | String / Number | - | Typescript: `TabValue` | N
 ### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
-Name | Default Value | Description 
+Name | Default Value | Description
 -- | -- | --
 --td-tab-border-color | @component-stroke | -
 --td-tab-font | @font-body-medium | -

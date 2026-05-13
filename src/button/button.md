@@ -30,7 +30,7 @@ click | `(e: MouseEvent)` | 点击时触发
 ### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。
-名称 | 默认值 | 描述 
+名称 | 默认值 | 描述
 -- | -- | --
 --td-button-border-radius | @radius-default | -
 --td-button-border-width | 2px | -
@@ -41,7 +41,7 @@ click | `(e: MouseEvent)` | 点击时触发
 --td-button-danger-color | @font-white-1 | -
 --td-button-danger-disabled-bg | @error-color-3 | -
 --td-button-danger-disabled-border-color | @error-color-3 | -
---td-button-danger-disabled-color | @error-color-disabled | -
+--td-button-danger-disabled-color | @font-white-1 | -
 --td-button-danger-outline-active-bg-color | @bg-color-container-active | -
 --td-button-danger-outline-active-border-color | @error-color-7 | -
 --td-button-danger-outline-border-color | @button-danger-outline-color | -

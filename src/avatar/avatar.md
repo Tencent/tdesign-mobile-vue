@@ -43,7 +43,7 @@ collapsed-item-click | `(context: { e: MouseEvent })` | 点击头像折叠元素
 ### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。
-名称 | 默认值 | 描述 
+名称 | 默认值 | 描述
 -- | -- | --
 --td-avatar-bg-color | @brand-color-light-active | -
 --td-avatar-border-color | @bg-color-container | -

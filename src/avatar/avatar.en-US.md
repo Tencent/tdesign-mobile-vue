@@ -43,7 +43,7 @@ collapsed-item-click | `(context: { e: MouseEvent })` | \-
 ### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
-Name | Default Value | Description 
+Name | Default Value | Description
 -- | -- | --
 --td-avatar-bg-color | @brand-color-light-active | -
 --td-avatar-border-color | @bg-color-container | -

@@ -39,7 +39,7 @@ swipeTo | `(index: number, options?: SwiperToOptions)` | \- | `1.13.2`。[see mo
 ### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
-Name | Default Value | Description 
+Name | Default Value | Description
 -- | -- | --
 --td-image-viewer-close-margin-left | @spacer-1 | -
 --td-image-viewer-delete-margin-right | @spacer-1 | -

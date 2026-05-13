@@ -42,9 +42,10 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
         data-v-52e2c190=""
       >
         <div
-          class="t-upload"
+          class="t-upload t-upload--grid"
           data-v-52e2c190=""
         >
+          
           
           <div
             class="t-upload__item"
@@ -92,6 +93,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 />
               </picture>
             </div>
+            <!---->
             <div
               class="t-upload__progress-mask"
             >
@@ -116,7 +118,6 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 Uploading...
               </div>
               
-              <!---->
             </div>
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
@@ -185,6 +186,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 />
               </picture>
             </div>
+            <!---->
             <div
               class="t-upload__progress-mask"
             >
@@ -209,7 +211,6 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 68%
               </div>
               
-              <!---->
             </div>
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
@@ -278,11 +279,13 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 />
               </picture>
             </div>
+            <!---->
             <div
               class="t-upload__progress-mask"
             >
+              
               <svg
-                class="t-icon t-icon-close-circle"
+                class="t-icon t-icon-close-circle t-upload__progress-fail-icon"
                 fill="none"
                 height="1em"
                 style="fill: none;"
@@ -318,6 +321,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               >
                 Failed
               </div>
+              
             </div>
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
@@ -369,6 +373,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               </svg>
             </div>
           </div>
+          
           <input
             accept="image/png"
             hidden=""
@@ -7189,9 +7194,10 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
     data-v-52e2c190=""
   >
     <div
-      class="t-upload"
+      class="t-upload t-upload--grid"
       data-v-52e2c190=""
     >
+      
       
       <div
         class="t-upload__item"
@@ -7239,6 +7245,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
             />
           </picture>
         </div>
+        <!---->
         <div
           class="t-upload__progress-mask"
         >
@@ -7263,7 +7270,6 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
             Uploading...
           </div>
           
-          <!---->
         </div>
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
@@ -7332,6 +7338,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
             />
           </picture>
         </div>
+        <!---->
         <div
           class="t-upload__progress-mask"
         >
@@ -7356,7 +7363,6 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
             68%
           </div>
           
-          <!---->
         </div>
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
@@ -7425,11 +7431,13 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
             />
           </picture>
         </div>
+        <!---->
         <div
           class="t-upload__progress-mask"
         >
+          
           <svg
-            class="t-icon t-icon-close-circle"
+            class="t-icon t-icon-close-circle t-upload__progress-fail-icon"
             fill="none"
             height="1em"
             style="fill: none;"
@@ -7465,6 +7473,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
           >
             Failed
           </div>
+          
         </div>
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
@@ -7516,6 +7525,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
           </svg>
         </div>
       </div>
+      
       <input
         accept="image/png"
         hidden=""

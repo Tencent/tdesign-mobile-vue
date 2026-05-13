@@ -32,7 +32,7 @@ index | String / Number | - | 索引字符 | N
 ### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。
-名称 | 默认值 | 描述 
+名称 | 默认值 | 描述
 -- | -- | --
 --td-indexes-sidebar-active-bg-color | @brand-color | -
 --td-indexes-sidebar-active-color | @text-color-anti | -

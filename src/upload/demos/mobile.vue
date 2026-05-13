@@ -11,7 +11,10 @@
     <tdesign-demo-block title="02 组件状态" summary="加载状态">
       <StatusDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block title="03 样式自定义" summary="单选上传">
+    <tdesign-demo-block title="03 组件布局" summary="宫格/列表布局">
+      <themeDemo />
+    </tdesign-demo-block>
+    <tdesign-demo-block title="04 样式自定义" summary="单选上传">
       <CustomDemo />
     </tdesign-demo-block>
   </div>
@@ -21,4 +24,5 @@ import BaseDemo from './base.vue';
 import CustomDemo from './custom.vue';
 import MultipleDemo from './multiple.vue';
 import StatusDemo from './status.vue';
+import themeDemo from './theme.vue';
 </script>

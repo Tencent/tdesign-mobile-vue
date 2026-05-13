@@ -43,7 +43,7 @@ context | Element | document.body | Specify the DOM container element for the me
 ### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
-Name | Default Value | Description 
+Name | Default Value | Description
 -- | -- | --
 --td-message-bg-color | @bg-color-container | -
 --td-message-border-radius | @radius-default | -

@@ -15,7 +15,7 @@ layout | String | horizontal | options: horizontal/vertical | N
 ### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
-Name | Default Value | Description 
+Name | Default Value | Description
 -- | -- | --
 --td-divider-border-width | 1px | -
 --td-divider-color | @bg-color-component | -

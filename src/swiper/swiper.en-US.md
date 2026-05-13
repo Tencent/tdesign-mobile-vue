@@ -41,7 +41,7 @@ type | String | - | Typescript: `SwiperNavigationType` `type SwiperNavigationTyp
 ### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
-Name | Default Value | Description 
+Name | Default Value | Description
 -- | -- | --
 --td-swiper-border-radius | 8px | -
 --td-swiper-item-left-padding | 6px | -

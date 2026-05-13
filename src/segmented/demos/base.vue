@@ -5,7 +5,7 @@
     </div>
 
     <div class="example-segmented">
-      <t-segmented v-model="valueWithIcon" :options="optionsWithIcon" @change="handleChange" />
+      <t-segmented v-model="valueWithIcon" :options="optionsWithIcon" :on-change="handleChange" />
     </div>
   </div>
 </template>
@@ -28,8 +28,8 @@ const optionsWithIcon = [
   { value: 2, label: '选项', icon: () => h(HomeIcon) },
 ];
 
-const handleChange = (value: string | number, selectedOption: any) => {
-  console.log('onChange:', value, selectedOption);
+const handleChange = (context: any) => {
+  console.log('onChange:', context);
 };
 </script>
 

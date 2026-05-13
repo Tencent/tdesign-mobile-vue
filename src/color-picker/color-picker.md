@@ -27,7 +27,7 @@ palette-bar-change | `(context: { color: ColorObject })` | 调色板控制器的
 ### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。
-名称 | 默认值 | 描述 
+名称 | 默认值 | 描述
 -- | -- | --
 --td-color-picker-format-background-color | @gray-color-1 | -
 --td-color-picker-gradient-preview-height | 28px | -
