@@ -25,11 +25,11 @@ jobs:
 
       - run: |
           mkdir templates && cd templates
-          npx https://pkg.pr.new/TDesignOteam/create-tdesign@main mobile-vue-vite --template mobile-vue-vite
-          npx https://pkg.pr.new/TDesignOteam/create-tdesign@main mobile-vue-vite-on-demand --template mobile-vue-vite-on-demand
-          npx https://pkg.pr.new/TDesignOteam/create-tdesign@main mobile-vue-tsx-vite --template mobile-vue-tsx-vite
-          npx https://pkg.pr.new/TDesignOteam/create-tdesign@main mobile-vue-tsx-rspack --template mobile-vue-tsx-rspack
-          npx https://pkg.pr.new/TDesignOteam/create-tdesign@main mobile-vue-rspack --template mobile-vue-rspack
-          npx https://pkg.pr.new/TDesignOteam/create-tdesign@main mobile-vue-rspack-on-demand --template mobile-vue-rspack-on-demand
+          npx https://pkg.pr.new/TDesignOteam/create-tdesign@main mobile-vue-vite --template mobile-vue-vite --pm pnpm
+          npx https://pkg.pr.new/TDesignOteam/create-tdesign@main mobile-vue-vite-on-demand --template mobile-vue-vite-on-demand --pm pnpm
+          npx https://pkg.pr.new/TDesignOteam/create-tdesign@main mobile-vue-tsx-vite --template mobile-vue-tsx-vite --pm pnpm
+          npx https://pkg.pr.new/TDesignOteam/create-tdesign@main mobile-vue-tsx-rspack --template mobile-vue-tsx-rspack --pm pnpm
+          npx https://pkg.pr.new/TDesignOteam/create-tdesign@main mobile-vue-rspack --template mobile-vue-rspack --pm pnpm
+          npx https://pkg.pr.new/TDesignOteam/create-tdesign@main mobile-vue-rspack-on-demand --template mobile-vue-rspack-on-demand --pm pnpm
 
       - run: npx pkg-pr-new publish --template './templates/*'
