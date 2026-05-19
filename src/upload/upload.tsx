@@ -168,6 +168,8 @@ export default defineComponent({
           const isFileItem = !isImageFile(file) && !file.url;
           const showFileContent = isFileItem && file.status !== 'progress' && file.status !== 'fail';
           const showRemoveBtn = isBoolean(file.removeBtn) ? file.removeBtn : props.removeBtn;
+          const showDisabledMask =
+            disabled?.value && !isFileItem && file.status !== 'progress' && file.status !== 'fail';
           return (
             <div
               key={index}
@@ -192,6 +194,7 @@ export default defineComponent({
                 </div>
               )}
               {renderStatus(file)}
+              {showDisabledMask && <div class={`${uploadClass.value}__disabled-mask`} />}
               {showRemoveBtn && (
                 <CloseIcon
                   class={`${uploadClass.value}__delete-btn`}
@@ -214,12 +217,15 @@ export default defineComponent({
       }
       if (isImageFile(file) && file.url) {
         return (
-          <t-image
-            class={`${uploadClass.value}__list-item-thumbnail`}
-            shape="round"
-            {...(props.imageProps as TdUploadProps['imageProps'])}
-            src={file.url}
-          />
+          <div style={{ position: 'relative', flexShrink: 0 }}>
+            <t-image
+              class={`${uploadClass.value}__list-item-thumbnail`}
+              shape="round"
+              {...(props.imageProps as TdUploadProps['imageProps'])}
+              src={file.url}
+            />
+            {disabled?.value && <div class={`${uploadClass.value}__disabled-mask`} />}
+          </div>
         );
       }
       return <span class={`${uploadClass.value}__list-item-icon`}>{getFileTypeIcon(file)}</span>;
