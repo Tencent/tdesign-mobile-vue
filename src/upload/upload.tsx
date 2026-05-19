@@ -81,7 +81,11 @@ export default defineComponent({
     const showViewer = ref(false);
     const initialIndex = ref(0);
 
-    const rootClass = computed(() => [uploadClass.value, `${uploadClass.value}--${props.theme || 'grid'}`]);
+    const rootClass = computed(() => [
+      uploadClass.value,
+      `${uploadClass.value}--${props.theme || 'grid'}`,
+      { [`${uploadClass.value}--disabled`]: props.disabled },
+    ]);
 
     const previewImgs = computed(() =>
       displayFiles.value.filter((item) => isImageFile(item)).map((item) => item.url as string),
