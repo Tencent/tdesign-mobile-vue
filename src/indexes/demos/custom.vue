@@ -1,6 +1,6 @@
 <template>
   <div class="component-wrap">
-    <t-indexes :index-list="indexList" @change="change">
+    <t-indexes show-full-index :index-list="indexList" @change="change">
       <template v-for="item in list" :key="item.index">
         <t-indexes-anchor :index="item.index">
           <div :class="['capsule', item.index === curIndex ? 'capsule--active' : '']">{{ item.index }}</div>

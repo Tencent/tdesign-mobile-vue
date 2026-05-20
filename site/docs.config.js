@@ -121,6 +121,14 @@ export const docs = [
         component: () => import('@/link/link.md'),
         componentEn: () => import('@/link/link.en-US.md'),
       },
+      {
+        title: 'Typography 排版',
+        titleEn: 'Typography',
+        name: 'typography',
+        path: '/mobile-vue/components/typography',
+        component: () => import('@/typography/typography.md'),
+        componentEn: () => import('@/typography/typography.en-US.md'),
+      },
     ],
   },
   {
@@ -455,6 +463,14 @@ export const docs = [
         path: '/mobile-vue/components/image-viewer',
         component: () => import('@/image-viewer/image-viewer.md'),
         componentEn: () => import('@/image-viewer/image-viewer.en-US.md'),
+      },
+      {
+        title: 'Segmented 分段器',
+        titleEn: 'Segmented',
+        name: 'segmented',
+        path: '/mobile-vue/components/segmented',
+        component: () => import('@/segmented/segmented.md'),
+        componentEn: () => import('@/segmented/segmented.en-US.md'),
       },
       {
         title: 'Skeleton 骨架屏',

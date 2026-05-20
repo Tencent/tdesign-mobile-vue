@@ -4,7 +4,7 @@ description: Component types will continue to be added according to business pra
 spline: explain
 ---
 
-<h3>Base<em class="tag">6</em></h3>
+<h3>Base<em class="tag">7</em></h3>
 <section class="image-group">
   <div class="image-wrapper">
     <a class="item" href="./components/button-en">
@@ -48,13 +48,13 @@ spline: explain
       <p class="name">Link</p>
     </a>
   </div>
-  <!-- <div class="image-wrapper">
+  <div class="image-wrapper">
     <a class="item" href="./components/typography-en">
       <img class="__light__" src="https://tdesign.gtimg.com/site/mobile/doc-typography.png" />
       <img class="__dark__" src="https://tdesign.gtimg.com/site/mobile/doc-typography-dark.png" />
       <p class="name">Typography</p>
     </a>
-  </div> -->
+  </div>
 </section>
 
 <h3>Navigation<em class="tag">8</em></h3>
@@ -240,7 +240,7 @@ spline: explain
   </div>
 </section>
 
-<h3>Data Display<em class="tag">20</em></h3>
+<h3>Data Display<em class="tag">21</em></h3>
 <section class="image-group">
   <div class="image-wrapper">
     <a class="item" href="./components/avatar-en">
@@ -338,6 +338,13 @@ spline: explain
       <img class="__light__" src="https://tdesign.gtimg.com/site/mobile/doc-result.png" />
       <img class="__dark__" src="https://tdesign.gtimg.com/site/mobile/doc-result-dark.png" />
       <p class="name">Result</p>
+    </a>
+  </div>
+  <div class="image-wrapper">
+    <a class="item" href="./components/segmented">
+      <img class="__light__" src="https://tdesign.gtimg.com/site/mobile/doc-segmented.png" />
+      <img class="__dark__" src="https://tdesign.gtimg.com/site/mobile/doc-segmented-dark.png" />
+      <p class="name">Segmented</p>
     </a>
   </div>
   <div class="image-wrapper">

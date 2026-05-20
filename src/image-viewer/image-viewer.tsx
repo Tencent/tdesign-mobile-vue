@@ -433,6 +433,7 @@ export default defineComponent({
                 height="100vh"
                 defaultCurrent={currentIndex.value}
                 disabled={disabled.value}
+                loop={props.loop}
                 onChange={onSwiperChange}
               >
                 {imageInfoList.value.map((info, index) => (
@@ -451,6 +452,8 @@ export default defineComponent({
                             ${index === state.touchIndex ? imageTransitionDuration.value : 'transition-duration: 0s;'};
                           `,
                           src: info.image.url,
+                          index,
+                          extra: info.image.extra,
                           onLoad: (e: Event) => onImgLoad(e, index),
                           onTransitionstart: (e: TransitionEvent) => {
                             if (e.target === e.currentTarget) {

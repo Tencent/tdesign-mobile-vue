@@ -32,7 +32,7 @@ selected | `(selected: ActionSheetItem \| string, index: number)` | \-
 ### CSS Variables
 
 The component provides the following CSS variables, which can be used to customize styles.
-Name | Default Value | Description 
+Name | Default Value | Description
 -- | -- | --
 --td-action-sheet-border-color | @component-stroke | -
 --td-action-sheet-border-radius | @radius-extraLarge | -

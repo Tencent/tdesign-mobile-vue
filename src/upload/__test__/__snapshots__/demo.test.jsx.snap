@@ -12,9 +12,10 @@ exports[`Upload > Upload baseVue demo works fine 1`] = `
     单选上传
   </div>
   <div
-    class="t-upload"
+    class="t-upload t-upload--grid"
     data-v-43787b67=""
   >
+    
     
     
     <div
@@ -45,6 +46,7 @@ exports[`Upload > Upload baseVue demo works fine 1`] = `
         </svg>
       </div>
     </div>
+    
     <input
       accept="image/png"
       hidden=""
@@ -71,9 +73,10 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
     data-v-89f78ba6=""
   >
     <div
-      class="t-upload front"
+      class="t-upload t-upload--grid front"
       data-v-89f78ba6=""
     >
+      
       
       
       <div
@@ -136,6 +139,7 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
           
         </div>
       </div>
+      
       <input
         accept="image/png"
         hidden=""
@@ -155,9 +159,10 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
     data-v-89f78ba6=""
   >
     <div
-      class="t-upload reverse"
+      class="t-upload t-upload--grid reverse"
       data-v-89f78ba6=""
     >
+      
       
       
       <div
@@ -220,6 +225,7 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
           
         </div>
       </div>
+      
       <input
         accept="image/png"
         hidden=""
@@ -277,9 +283,10 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           单选上传
         </div>
         <div
-          class="t-upload"
+          class="t-upload t-upload--grid"
           data-v-43787b67=""
         >
+          
           
           
           <div
@@ -310,6 +317,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </svg>
             </div>
           </div>
+          
           <input
             accept="image/png"
             hidden=""
@@ -349,10 +357,11 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           多选上传
         </div>
         <div
-          class="t-upload"
+          class="t-upload t-upload--grid"
           data-v-79f9c52d=""
           grid-config="[object Object]"
         >
+          
           
           <div
             class="t-upload__item"
@@ -400,6 +409,8 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 />
               </picture>
             </div>
+            <!---->
+            <!---->
             <!---->
             <!---->
           </div>
@@ -450,6 +461,8 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </picture>
             </div>
             <!---->
+            <!---->
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -518,6 +531,8 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </picture>
             </div>
             <!---->
+            <!---->
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -568,6 +583,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </svg>
             </div>
           </div>
+          
           <input
             accept=""
             hidden=""
@@ -613,9 +629,10 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           上传图片
         </div>
         <div
-          class="t-upload"
+          class="t-upload t-upload--grid"
           data-v-6b9ad65a=""
         >
+          
           
           <div
             class="t-upload__item"
@@ -663,6 +680,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 />
               </picture>
             </div>
+            <!---->
             <div
               class="t-upload__progress-mask"
             >
@@ -687,8 +705,8 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 上传中...
               </div>
               
-              <!---->
             </div>
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -756,6 +774,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 />
               </picture>
             </div>
+            <!---->
             <div
               class="t-upload__progress-mask"
             >
@@ -780,8 +799,8 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 68%
               </div>
               
-              <!---->
             </div>
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -832,6 +851,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </svg>
             </div>
           </div>
+          
           <input
             accept="image/png"
             hidden=""
@@ -858,9 +878,10 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           上传图片
         </div>
         <div
-          class="t-upload"
+          class="t-upload t-upload--grid"
           data-v-6b9ad65a=""
         >
+          
           
           <div
             class="t-upload__item"
@@ -908,11 +929,13 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 />
               </picture>
             </div>
+            <!---->
             <div
               class="t-upload__progress-mask"
             >
+              
               <svg
-                class="t-icon t-icon-close-circle"
+                class="t-icon t-icon-close-circle t-upload__progress-fail-icon"
                 fill="none"
                 height="1em"
                 style="fill: none;"
@@ -948,7 +971,9 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               >
                 上传失败
               </div>
+              
             </div>
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -999,6 +1024,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </svg>
             </div>
           </div>
+          
           <input
             accept=""
             hidden=""
@@ -1021,7 +1047,1729 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        03 样式自定义
+        03 组件布局
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        宫格/列表布局
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="upload-demo"
+        data-v-60aa7fa7=""
+      >
+        <div
+          class="upload-title"
+          data-v-60aa7fa7=""
+        >
+          宫格布局上传
+        </div>
+        <div
+          class="t-upload t-upload--grid"
+          data-v-60aa7fa7=""
+        >
+          
+          
+          <div
+            class="t-upload__item t-upload__item--file"
+          >
+            <!---->
+            <!---->
+            <div
+              class="t-upload__progress-mask"
+            >
+              
+              <svg
+                class="t-icon t-icon-loading t-upload__progress-loading"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M12 2.25C6.61556 2.25 2.25 6.61556 2.25 12C2.25 17.3844 6.61556 21.75 12 21.75V19.3125C7.96142 19.3125 4.6875 16.0386 4.6875 12C4.6875 7.96142 7.96142 4.6875 12 4.6875C16.0386 4.6875 19.3125 7.96142 19.3125 12H21.75C21.75 6.61556 17.3844 2.25 12 2.25Z"
+                  fill="currentColor"
+                  id="loading"
+                />
+              </svg>
+              <div
+                class="t-upload__progress-text"
+              >
+                上传中...
+              </div>
+              
+            </div>
+            <!---->
+            <svg
+              class="t-icon t-icon-close t-upload__delete-btn"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="t-upload__item t-upload__item--file"
+          >
+            <!---->
+            <!---->
+            <div
+              class="t-upload__progress-mask"
+            >
+              
+              <svg
+                class="t-icon t-icon-loading t-upload__progress-loading"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M12 2.25C6.61556 2.25 2.25 6.61556 2.25 12C2.25 17.3844 6.61556 21.75 12 21.75V19.3125C7.96142 19.3125 4.6875 16.0386 4.6875 12C4.6875 7.96142 7.96142 4.6875 12 4.6875C16.0386 4.6875 19.3125 7.96142 19.3125 12H21.75C21.75 6.61556 17.3844 2.25 12 2.25Z"
+                  fill="currentColor"
+                  id="loading"
+                />
+              </svg>
+              <div
+                class="t-upload__progress-text"
+              >
+                68%
+              </div>
+              
+            </div>
+            <!---->
+            <svg
+              class="t-icon t-icon-close t-upload__delete-btn"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="t-upload__item t-upload__item--file"
+          >
+            <!---->
+            <!---->
+            <div
+              class="t-upload__progress-mask"
+            >
+              
+              <svg
+                class="t-icon t-icon-close-circle t-upload__progress-fail-icon"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <g
+                  id="close-circle"
+                >
+                  <path
+                    d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                    fill="transparent"
+                    id="fill1"
+                  />
+                  <path
+                    d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
+                    id="stroke2"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
+              </svg>
+              <div
+                class="t-upload__progress-text"
+              >
+                上传失败
+              </div>
+              
+            </div>
+            <!---->
+            <svg
+              class="t-icon t-icon-close t-upload__delete-btn"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="t-upload__item t-upload__item--file"
+          >
+            <!---->
+            <!---->
+            <div
+              class="t-upload__progress-mask"
+            >
+              
+              <svg
+                class="t-icon t-icon-close-circle t-upload__progress-fail-icon"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <g
+                  id="close-circle"
+                >
+                  <path
+                    d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                    fill="transparent"
+                    id="fill1"
+                  />
+                  <path
+                    d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
+                    id="stroke2"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
+              </svg>
+              <div
+                class="t-upload__progress-text"
+              >
+                上传失败
+              </div>
+              
+            </div>
+            <!---->
+            <svg
+              class="t-icon t-icon-close t-upload__delete-btn"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="t-upload__item t-upload__item--file"
+          >
+            <!---->
+            <div
+              class="t-upload__file-content"
+            >
+              <div
+                class="t-upload__file-icon"
+              >
+                <svg
+                  class="t-icon t-icon-file-excel-filled t-upload__file-type t-upload__file-type--excel"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M15.4142 1H3V23H21V6.58579L15.4142 1ZM14.5 7.5V3L19 7.5H14.5ZM15 11.6465C15 12.1896 14.7792 12.7093 14.3883 13.0862L13.4406 14L14.3883 14.9138C14.7792 15.2907 15 15.8104 15 16.3535V18H13L13 16.3535L12 15.3892L11 16.3535L11 18L9.00001 18L9.00001 16.3535C9.00001 15.8104 9.22083 15.2907 9.61173 14.9138L10.5594 14L9.61173 13.0862C9.22083 12.7093 9.00001 12.1896 9.00001 11.6465L9 10L11 10L11 11.6465L12 12.6108L13 11.6465L13 10L15 10L15 11.6465Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <div
+                class="t-upload__file-name"
+              >
+                report.xlsx
+              </div>
+            </div>
+            <!---->
+            <!---->
+            <svg
+              class="t-icon t-icon-close t-upload__delete-btn"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="t-upload__item t-upload__item--file"
+          >
+            <!---->
+            <div
+              class="t-upload__file-content"
+            >
+              <div
+                class="t-upload__file-icon"
+              >
+                <svg
+                  class="t-icon t-icon-file-pdf-filled t-upload__file-type t-upload__file-type--pdf"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M8 15.2496V14.0002L8.75003 14.0001V15.2494L8 15.2496Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M13.5 14.0005L14.25 14.0003V17.9999L13.5 18.0003V14.0005Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M15.4142 1H3V23H21V17.2497H19V20.0002H17V13.5006C17 12.6724 17.6713 12.0008 18.4996 12.0006L20.9998 12L21 12.8889V6.58579L15.4142 1ZM14.5 7.5V3L19 7.5H14.5ZM9.25031 17.2493L8 17.2496V20.0003H6V12.0004L9.24988 12C10.0784 12 10.75 12.6716 10.75 13.5V15.7493C10.75 16.5777 10.0786 17.2492 9.25031 17.2493ZM16.25 13.5001V18.4997C16.25 19.3279 15.5789 19.9993 14.7507 19.9997L11.5 20.0012V12.001L14.7496 12.0001C15.5782 11.9999 16.25 12.6716 16.25 13.5001Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M21 14L19 14.0005V15.2497H21V14Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <div
+                class="t-upload__file-name"
+              >
+                document.pdf
+              </div>
+            </div>
+            <!---->
+            <!---->
+            <svg
+              class="t-icon t-icon-close t-upload__delete-btn"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="t-upload__item t-upload__item--file"
+          >
+            <!---->
+            <div
+              class="t-upload__file-content"
+            >
+              <div
+                class="t-upload__file-icon"
+              >
+                <svg
+                  class="t-icon t-icon-file-powerpoint-filled t-upload__file-type t-upload__file-type--ppt"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M13 13.6L11 13.6V12H13V13.6Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M15.4142 1H3V23H21V6.58579L15.4142 1ZM14.5 7.5V3L19 7.5H14.5ZM13 10C14.1046 10 15 10.8954 15 12V13.6C15 14.7046 14.1046 15.6 13 15.6H11V18H9V10H13Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <div
+                class="t-upload__file-name"
+              >
+                presentation.pptx
+              </div>
+            </div>
+            <!---->
+            <!---->
+            <svg
+              class="t-icon t-icon-close t-upload__delete-btn"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="t-upload__item t-upload__item--file"
+          >
+            <!---->
+            <div
+              class="t-upload__file-content"
+            >
+              <div
+                class="t-upload__file-icon"
+              >
+                <svg
+                  class="t-icon t-icon-file-word-filled t-upload__file-type t-upload__file-type--word"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M15.4142 1H3V23H21V6.58579L15.4142 1ZM14.5 7.5V3L19 7.5H14.5ZM10 16H11L11 11H13L13 16H14V11H16V16C16 17.1046 15.1046 18 14 18H10C8.89543 18 8 17.1046 8 16V11H10V16Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <div
+                class="t-upload__file-name"
+              >
+                article.docx
+              </div>
+            </div>
+            <!---->
+            <!---->
+            <svg
+              class="t-icon t-icon-close t-upload__delete-btn"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="t-upload__item"
+          >
+            <div
+              class="t-image t-image--round t-upload__image"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!---->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!---->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/upload6.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </picture>
+            </div>
+            <!---->
+            <div
+              class="t-upload__progress-mask"
+            >
+              
+              <svg
+                class="t-icon t-icon-loading t-upload__progress-loading"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M12 2.25C6.61556 2.25 2.25 6.61556 2.25 12C2.25 17.3844 6.61556 21.75 12 21.75V19.3125C7.96142 19.3125 4.6875 16.0386 4.6875 12C4.6875 7.96142 7.96142 4.6875 12 4.6875C16.0386 4.6875 19.3125 7.96142 19.3125 12H21.75C21.75 6.61556 17.3844 2.25 12 2.25Z"
+                  fill="currentColor"
+                  id="loading"
+                />
+              </svg>
+              <div
+                class="t-upload__progress-text"
+              >
+                上传中...
+              </div>
+              
+            </div>
+            <!---->
+            <svg
+              class="t-icon t-icon-close t-upload__delete-btn"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="t-upload__item"
+          >
+            <div
+              class="t-image t-image--round t-upload__image"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!---->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!---->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/upload6.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </picture>
+            </div>
+            <!---->
+            <div
+              class="t-upload__progress-mask"
+            >
+              
+              <svg
+                class="t-icon t-icon-loading t-upload__progress-loading"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M12 2.25C6.61556 2.25 2.25 6.61556 2.25 12C2.25 17.3844 6.61556 21.75 12 21.75V19.3125C7.96142 19.3125 4.6875 16.0386 4.6875 12C4.6875 7.96142 7.96142 4.6875 12 4.6875C16.0386 4.6875 19.3125 7.96142 19.3125 12H21.75C21.75 6.61556 17.3844 2.25 12 2.25Z"
+                  fill="currentColor"
+                  id="loading"
+                />
+              </svg>
+              <div
+                class="t-upload__progress-text"
+              >
+                68%
+              </div>
+              
+            </div>
+            <!---->
+            <svg
+              class="t-icon t-icon-close t-upload__delete-btn"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="t-upload__item"
+          >
+            <div
+              class="t-image t-image--round t-upload__image"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!---->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!---->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/upload6.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </picture>
+            </div>
+            <!---->
+            <div
+              class="t-upload__progress-mask"
+            >
+              
+              <svg
+                class="t-icon t-icon-close-circle t-upload__progress-fail-icon"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <g
+                  id="close-circle"
+                >
+                  <path
+                    d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                    fill="transparent"
+                    id="fill1"
+                  />
+                  <path
+                    d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
+                    id="stroke2"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
+              </svg>
+              <div
+                class="t-upload__progress-text"
+              >
+                上传失败
+              </div>
+              
+            </div>
+            <!---->
+            <svg
+              class="t-icon t-icon-close t-upload__delete-btn"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="t-upload__item"
+          >
+            <div
+              class="t-image t-image--round t-upload__image"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!---->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!---->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/upload6.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </picture>
+            </div>
+            <!---->
+            <div
+              class="t-upload__progress-mask"
+            >
+              
+              <svg
+                class="t-icon t-icon-close-circle t-upload__progress-fail-icon"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <g
+                  id="close-circle"
+                >
+                  <path
+                    d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                    fill="transparent"
+                    id="fill1"
+                  />
+                  <path
+                    d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
+                    id="stroke2"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
+              </svg>
+              <div
+                class="t-upload__progress-text"
+              >
+                上传失败
+              </div>
+              
+            </div>
+            <!---->
+            <svg
+              class="t-icon t-icon-close t-upload__delete-btn"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="t-upload__item"
+          >
+            <div
+              class="t-image t-image--round t-upload__image"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!---->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!---->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/upload6.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </picture>
+            </div>
+            <!---->
+            <!---->
+            <!---->
+            <svg
+              class="t-icon t-icon-close t-upload__delete-btn"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+          
+          <div
+            class="t-upload__item t-upload__item--add"
+          >
+            <div
+              class="t-upload__add-icon"
+            >
+              <svg
+                class="t-icon t-icon-add"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <g
+                  id="add"
+                >
+                  <path
+                    d="M12 5L12 19M19 12L5 12"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+          
+          <input
+            accept=""
+            hidden=""
+            multiple=""
+            type="file"
+          />
+          <!---->
+        </div>
+      </div>
+      <div
+        class="upload-demo"
+        data-v-60aa7fa7=""
+      >
+        <div
+          class="upload-title"
+          data-v-60aa7fa7=""
+        >
+          列表布局上传
+        </div>
+        <div
+          class="t-upload t-upload--list"
+          data-v-60aa7fa7=""
+        >
+          
+          <div
+            class="t-upload__list-trigger"
+          >
+            <button
+              aria-disabled="false"
+              class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
+              role="button"
+              type="button"
+            >
+              
+              <svg
+                class="t-icon t-icon-upload"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <g
+                  id="upload"
+                >
+                  <path
+                    d="M16.5 8.5L12 4L7.5 8.5M12 5.25V15"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M20.5 15V20H3.5V15"
+                    id="stroke2"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
+              </svg>
+              
+              <span
+                class="t-button__content"
+              >
+                
+                Upload
+                
+              </span>
+              <!---->
+            </button>
+          </div>
+          <div
+            class="t-upload__list"
+          >
+            
+            <div
+              class="t-upload__list-item t-upload__list-item--progress"
+            >
+              <svg
+                class="t-icon t-icon-loading t-upload__list-item-loading"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M12 2.25C6.61556 2.25 2.25 6.61556 2.25 12C2.25 17.3844 6.61556 21.75 12 21.75V19.3125C7.96142 19.3125 4.6875 16.0386 4.6875 12C4.6875 7.96142 7.96142 4.6875 12 4.6875C16.0386 4.6875 19.3125 7.96142 19.3125 12H21.75C21.75 6.61556 17.3844 2.25 12 2.25Z"
+                  fill="currentColor"
+                  id="loading"
+                />
+              </svg>
+              <div
+                class="t-upload__list-item-content"
+              >
+                <div
+                  class="t-upload__list-item-name"
+                >
+                  Technical Design Document.pdf
+                </div>
+                <div
+                  class="t-upload__list-item-size"
+                >
+                  上传中... 30%
+                </div>
+              </div>
+              <div
+                class="t-upload__list-item-action"
+              >
+                <svg
+                  class="t-icon t-icon-delete t-upload__list-item-delete"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <g
+                    id="delete"
+                  >
+                    <path
+                      d="M5 5H19L18.5 22H5.5L5 5Z"
+                      fill="transparent"
+                      id="fill1"
+                    />
+                    <path
+                      d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M12 9V18"
+                      id="stroke2"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div
+              class="t-upload__list-item t-upload__list-item--fail"
+            >
+              <svg
+                class="t-icon t-icon-error-circle-filled t-upload__list-item-error-icon"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1ZM11.0001 14H13.0001V6.49998H11.0001V14ZM13.004 15.5H11.0001V17.5039H13.004V15.5Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <div
+                class="t-upload__list-item-content"
+              >
+                <div
+                  class="t-upload__list-item-name"
+                >
+                  Technical Design Document.pdf
+                </div>
+                <div
+                  class="t-upload__list-item-size"
+                >
+                  上传失败
+                </div>
+              </div>
+              <div
+                class="t-upload__list-item-action"
+              >
+                <svg
+                  class="t-icon t-icon-delete t-upload__list-item-delete"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <g
+                    id="delete"
+                  >
+                    <path
+                      d="M5 5H19L18.5 22H5.5L5 5Z"
+                      fill="transparent"
+                      id="fill1"
+                    />
+                    <path
+                      d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M12 9V18"
+                      id="stroke2"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div
+              class="t-upload__list-item"
+            >
+              <div
+                style="position: relative; flex-shrink: 0;"
+              >
+                <div
+                  class="t-image t-image--round t-upload__list-item-thumbnail"
+                >
+                  <div
+                    class="t-image__mask"
+                  >
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
+                    >
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                        
+                      </div>
+                      <!---->
+                      <!---->
+                    </div>
+                  </div>
+                  <picture>
+                    <!---->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/upload6.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
+                </div>
+                <!---->
+              </div>
+              <div
+                class="t-upload__list-item-content"
+              >
+                <div
+                  class="t-upload__list-item-name"
+                >
+                  Design Mockup.png
+                </div>
+                <div
+                  class="t-upload__list-item-size"
+                >
+                  1.0 MB
+                </div>
+              </div>
+              <div
+                class="t-upload__list-item-action"
+              >
+                <svg
+                  class="t-icon t-icon-delete t-upload__list-item-delete"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <g
+                    id="delete"
+                  >
+                    <path
+                      d="M5 5H19L18.5 22H5.5L5 5Z"
+                      fill="transparent"
+                      id="fill1"
+                    />
+                    <path
+                      d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M12 9V18"
+                      id="stroke2"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div
+              class="t-upload__list-item"
+            >
+              <span
+                class="t-upload__list-item-icon"
+              >
+                <svg
+                  class="t-icon t-icon-video-filled t-upload__file-type t-upload__file-type--media"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M22 2H2V22H22V2ZM16.75 11.9998L8.75 16.5V7.5L16.75 11.9998Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <div
+                class="t-upload__list-item-content"
+              >
+                <div
+                  class="t-upload__list-item-name"
+                >
+                  Product Demo.mp4
+                </div>
+                <div
+                  class="t-upload__list-item-size"
+                >
+                  5.0 MB
+                </div>
+              </div>
+              <div
+                class="t-upload__list-item-action"
+              >
+                <svg
+                  class="t-icon t-icon-delete t-upload__list-item-delete"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <g
+                    id="delete"
+                  >
+                    <path
+                      d="M5 5H19L18.5 22H5.5L5 5Z"
+                      fill="transparent"
+                      id="fill1"
+                    />
+                    <path
+                      d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M12 9V18"
+                      id="stroke2"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div
+              class="t-upload__list-item"
+            >
+              <span
+                class="t-upload__list-item-icon"
+              >
+                <svg
+                  class="t-icon t-icon-file-word-filled t-upload__file-type t-upload__file-type--word"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M15.4142 1H3V23H21V6.58579L15.4142 1ZM14.5 7.5V3L19 7.5H14.5ZM10 16H11L11 11H13L13 16H14V11H16V16C16 17.1046 15.1046 18 14 18H10C8.89543 18 8 17.1046 8 16V11H10V16Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <div
+                class="t-upload__list-item-content"
+              >
+                <div
+                  class="t-upload__list-item-name"
+                >
+                  Project Proposal.docx
+                </div>
+                <div
+                  class="t-upload__list-item-size"
+                >
+                  128.0 KB
+                </div>
+              </div>
+              <div
+                class="t-upload__list-item-action"
+              >
+                <svg
+                  class="t-icon t-icon-delete t-upload__list-item-delete"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <g
+                    id="delete"
+                  >
+                    <path
+                      d="M5 5H19L18.5 22H5.5L5 5Z"
+                      fill="transparent"
+                      id="fill1"
+                    />
+                    <path
+                      d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M12 9V18"
+                      id="stroke2"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div
+              class="t-upload__list-item"
+            >
+              <span
+                class="t-upload__list-item-icon"
+              >
+                <svg
+                  class="t-icon t-icon-file-excel-filled t-upload__file-type t-upload__file-type--excel"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M15.4142 1H3V23H21V6.58579L15.4142 1ZM14.5 7.5V3L19 7.5H14.5ZM15 11.6465C15 12.1896 14.7792 12.7093 14.3883 13.0862L13.4406 14L14.3883 14.9138C14.7792 15.2907 15 15.8104 15 16.3535V18H13L13 16.3535L12 15.3892L11 16.3535L11 18L9.00001 18L9.00001 16.3535C9.00001 15.8104 9.22083 15.2907 9.61173 14.9138L10.5594 14L9.61173 13.0862C9.22083 12.7093 9.00001 12.1896 9.00001 11.6465L9 10L11 10L11 11.6465L12 12.6108L13 11.6465L13 10L15 10L15 11.6465Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <div
+                class="t-upload__list-item-content"
+              >
+                <div
+                  class="t-upload__list-item-name"
+                >
+                  Financial Report.xlsx
+                </div>
+                <div
+                  class="t-upload__list-item-size"
+                >
+                  256.0 KB
+                </div>
+              </div>
+              <div
+                class="t-upload__list-item-action"
+              >
+                <svg
+                  class="t-icon t-icon-delete t-upload__list-item-delete"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <g
+                    id="delete"
+                  >
+                    <path
+                      d="M5 5H19L18.5 22H5.5L5 5Z"
+                      fill="transparent"
+                      id="fill1"
+                    />
+                    <path
+                      d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M12 9V18"
+                      id="stroke2"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div
+              class="t-upload__list-item"
+            >
+              <span
+                class="t-upload__list-item-icon"
+              >
+                <svg
+                  class="t-icon t-icon-file-pdf-filled t-upload__file-type t-upload__file-type--pdf"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M8 15.2496V14.0002L8.75003 14.0001V15.2494L8 15.2496Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M13.5 14.0005L14.25 14.0003V17.9999L13.5 18.0003V14.0005Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M15.4142 1H3V23H21V17.2497H19V20.0002H17V13.5006C17 12.6724 17.6713 12.0008 18.4996 12.0006L20.9998 12L21 12.8889V6.58579L15.4142 1ZM14.5 7.5V3L19 7.5H14.5ZM9.25031 17.2493L8 17.2496V20.0003H6V12.0004L9.24988 12C10.0784 12 10.75 12.6716 10.75 13.5V15.7493C10.75 16.5777 10.0786 17.2492 9.25031 17.2493ZM16.25 13.5001V18.4997C16.25 19.3279 15.5789 19.9993 14.7507 19.9997L11.5 20.0012V12.001L14.7496 12.0001C15.5782 11.9999 16.25 12.6716 16.25 13.5001Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M21 14L19 14.0005V15.2497H21V14Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <div
+                class="t-upload__list-item-content"
+              >
+                <div
+                  class="t-upload__list-item-name"
+                >
+                  User Manual.pdf
+                </div>
+                <div
+                  class="t-upload__list-item-size"
+                >
+                  512.0 KB
+                </div>
+              </div>
+              <div
+                class="t-upload__list-item-action"
+              >
+                <svg
+                  class="t-icon t-icon-delete t-upload__list-item-delete"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <g
+                    id="delete"
+                  >
+                    <path
+                      d="M5 5H19L18.5 22H5.5L5 5Z"
+                      fill="transparent"
+                      id="fill1"
+                    />
+                    <path
+                      d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M12 9V18"
+                      id="stroke2"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div
+              class="t-upload__list-item"
+            >
+              <span
+                class="t-upload__list-item-icon"
+              >
+                <svg
+                  class="t-icon t-icon-file-powerpoint-filled t-upload__file-type t-upload__file-type--ppt"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M13 13.6L11 13.6V12H13V13.6Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M15.4142 1H3V23H21V6.58579L15.4142 1ZM14.5 7.5V3L19 7.5H14.5ZM13 10C14.1046 10 15 10.8954 15 12V13.6C15 14.7046 14.1046 15.6 13 15.6H11V18H9V10H13Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <div
+                class="t-upload__list-item-content"
+              >
+                <div
+                  class="t-upload__list-item-name"
+                >
+                  Quarterly Review.pptx
+                </div>
+                <div
+                  class="t-upload__list-item-size"
+                >
+                  768.0 KB
+                </div>
+              </div>
+              <div
+                class="t-upload__list-item-action"
+              >
+                <svg
+                  class="t-icon t-icon-delete t-upload__list-item-delete"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <g
+                    id="delete"
+                  >
+                    <path
+                      d="M5 5H19L18.5 22H5.5L5 5Z"
+                      fill="transparent"
+                      id="fill1"
+                    />
+                    <path
+                      d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M12 9V18"
+                      id="stroke2"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            
+          </div>
+          
+          <input
+            accept=""
+            hidden=""
+            multiple=""
+            type="file"
+          />
+          <!---->
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        04 样式自定义
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"
@@ -1048,9 +2796,10 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           data-v-89f78ba6=""
         >
           <div
-            class="t-upload front"
+            class="t-upload t-upload--grid front"
             data-v-89f78ba6=""
           >
+            
             
             
             <div
@@ -1113,6 +2862,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 
               </div>
             </div>
+            
             <input
               accept="image/png"
               hidden=""
@@ -1132,9 +2882,10 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           data-v-89f78ba6=""
         >
           <div
-            class="t-upload reverse"
+            class="t-upload t-upload--grid reverse"
             data-v-89f78ba6=""
           >
+            
             
             
             <div
@@ -1197,6 +2948,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 
               </div>
             </div>
+            
             <input
               accept="image/png"
               hidden=""
@@ -1224,10 +2976,11 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
     多选上传
   </div>
   <div
-    class="t-upload"
+    class="t-upload t-upload--grid"
     data-v-79f9c52d=""
     grid-config="[object Object]"
   >
+    
     
     <div
       class="t-upload__item"
@@ -1277,6 +3030,8 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
       </div>
       <!---->
       <!---->
+      <!---->
+      <!---->
     </div>
     <div
       class="t-upload__item"
@@ -1324,6 +3079,8 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
           />
         </picture>
       </div>
+      <!---->
+      <!---->
       <!---->
       <svg
         class="t-icon t-icon-close t-upload__delete-btn"
@@ -1392,6 +3149,8 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
           />
         </picture>
       </div>
+      <!---->
+      <!---->
       <!---->
       <svg
         class="t-icon t-icon-close t-upload__delete-btn"
@@ -1443,6 +3202,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
         </svg>
       </div>
     </div>
+    
     <input
       accept=""
       hidden=""
@@ -1470,9 +3230,10 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
       上传图片
     </div>
     <div
-      class="t-upload"
+      class="t-upload t-upload--grid"
       data-v-6b9ad65a=""
     >
+      
       
       <div
         class="t-upload__item"
@@ -1520,6 +3281,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             />
           </picture>
         </div>
+        <!---->
         <div
           class="t-upload__progress-mask"
         >
@@ -1544,8 +3306,8 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             上传中...
           </div>
           
-          <!---->
         </div>
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
@@ -1613,6 +3375,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             />
           </picture>
         </div>
+        <!---->
         <div
           class="t-upload__progress-mask"
         >
@@ -1637,8 +3400,8 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             68%
           </div>
           
-          <!---->
         </div>
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
@@ -1689,6 +3452,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           </svg>
         </div>
       </div>
+      
       <input
         accept="image/png"
         hidden=""
@@ -1715,9 +3479,10 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
       上传图片
     </div>
     <div
-      class="t-upload"
+      class="t-upload t-upload--grid"
       data-v-6b9ad65a=""
     >
+      
       
       <div
         class="t-upload__item"
@@ -1765,11 +3530,13 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             />
           </picture>
         </div>
+        <!---->
         <div
           class="t-upload__progress-mask"
         >
+          
           <svg
-            class="t-icon t-icon-close-circle"
+            class="t-icon t-icon-close-circle t-upload__progress-fail-icon"
             fill="none"
             height="1em"
             style="fill: none;"
@@ -1805,7 +3572,9 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           >
             上传失败
           </div>
+          
         </div>
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
@@ -1856,6 +3625,1712 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           </svg>
         </div>
       </div>
+      
+      <input
+        accept=""
+        hidden=""
+        multiple=""
+        type="file"
+      />
+      <!---->
+    </div>
+  </div>
+  
+</div>
+`;
+
+exports[`Upload > Upload themeVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="upload-demo"
+    data-v-60aa7fa7=""
+  >
+    <div
+      class="upload-title"
+      data-v-60aa7fa7=""
+    >
+      宫格布局上传
+    </div>
+    <div
+      class="t-upload t-upload--grid"
+      data-v-60aa7fa7=""
+    >
+      
+      
+      <div
+        class="t-upload__item t-upload__item--file"
+      >
+        <!---->
+        <!---->
+        <div
+          class="t-upload__progress-mask"
+        >
+          
+          <svg
+            class="t-icon t-icon-loading t-upload__progress-loading"
+            fill="none"
+            height="1em"
+            style="fill: none;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M12 2.25C6.61556 2.25 2.25 6.61556 2.25 12C2.25 17.3844 6.61556 21.75 12 21.75V19.3125C7.96142 19.3125 4.6875 16.0386 4.6875 12C4.6875 7.96142 7.96142 4.6875 12 4.6875C16.0386 4.6875 19.3125 7.96142 19.3125 12H21.75C21.75 6.61556 17.3844 2.25 12 2.25Z"
+              fill="currentColor"
+              id="loading"
+            />
+          </svg>
+          <div
+            class="t-upload__progress-text"
+          >
+            上传中...
+          </div>
+          
+        </div>
+        <!---->
+        <svg
+          class="t-icon t-icon-close t-upload__delete-btn"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="t-upload__item t-upload__item--file"
+      >
+        <!---->
+        <!---->
+        <div
+          class="t-upload__progress-mask"
+        >
+          
+          <svg
+            class="t-icon t-icon-loading t-upload__progress-loading"
+            fill="none"
+            height="1em"
+            style="fill: none;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M12 2.25C6.61556 2.25 2.25 6.61556 2.25 12C2.25 17.3844 6.61556 21.75 12 21.75V19.3125C7.96142 19.3125 4.6875 16.0386 4.6875 12C4.6875 7.96142 7.96142 4.6875 12 4.6875C16.0386 4.6875 19.3125 7.96142 19.3125 12H21.75C21.75 6.61556 17.3844 2.25 12 2.25Z"
+              fill="currentColor"
+              id="loading"
+            />
+          </svg>
+          <div
+            class="t-upload__progress-text"
+          >
+            68%
+          </div>
+          
+        </div>
+        <!---->
+        <svg
+          class="t-icon t-icon-close t-upload__delete-btn"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="t-upload__item t-upload__item--file"
+      >
+        <!---->
+        <!---->
+        <div
+          class="t-upload__progress-mask"
+        >
+          
+          <svg
+            class="t-icon t-icon-close-circle t-upload__progress-fail-icon"
+            fill="none"
+            height="1em"
+            style="fill: none;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <g
+              id="close-circle"
+            >
+              <path
+                d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                fill="transparent"
+                id="fill1"
+              />
+              <path
+                d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                id="stroke1"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+              <path
+                d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
+                id="stroke2"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
+          <div
+            class="t-upload__progress-text"
+          >
+            上传失败
+          </div>
+          
+        </div>
+        <!---->
+        <svg
+          class="t-icon t-icon-close t-upload__delete-btn"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="t-upload__item t-upload__item--file"
+      >
+        <!---->
+        <!---->
+        <div
+          class="t-upload__progress-mask"
+        >
+          
+          <svg
+            class="t-icon t-icon-close-circle t-upload__progress-fail-icon"
+            fill="none"
+            height="1em"
+            style="fill: none;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <g
+              id="close-circle"
+            >
+              <path
+                d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                fill="transparent"
+                id="fill1"
+              />
+              <path
+                d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                id="stroke1"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+              <path
+                d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
+                id="stroke2"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
+          <div
+            class="t-upload__progress-text"
+          >
+            上传失败
+          </div>
+          
+        </div>
+        <!---->
+        <svg
+          class="t-icon t-icon-close t-upload__delete-btn"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="t-upload__item t-upload__item--file"
+      >
+        <!---->
+        <div
+          class="t-upload__file-content"
+        >
+          <div
+            class="t-upload__file-icon"
+          >
+            <svg
+              class="t-icon t-icon-file-excel-filled t-upload__file-type t-upload__file-type--excel"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M15.4142 1H3V23H21V6.58579L15.4142 1ZM14.5 7.5V3L19 7.5H14.5ZM15 11.6465C15 12.1896 14.7792 12.7093 14.3883 13.0862L13.4406 14L14.3883 14.9138C14.7792 15.2907 15 15.8104 15 16.3535V18H13L13 16.3535L12 15.3892L11 16.3535L11 18L9.00001 18L9.00001 16.3535C9.00001 15.8104 9.22083 15.2907 9.61173 14.9138L10.5594 14L9.61173 13.0862C9.22083 12.7093 9.00001 12.1896 9.00001 11.6465L9 10L11 10L11 11.6465L12 12.6108L13 11.6465L13 10L15 10L15 11.6465Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-upload__file-name"
+          >
+            report.xlsx
+          </div>
+        </div>
+        <!---->
+        <!---->
+        <svg
+          class="t-icon t-icon-close t-upload__delete-btn"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="t-upload__item t-upload__item--file"
+      >
+        <!---->
+        <div
+          class="t-upload__file-content"
+        >
+          <div
+            class="t-upload__file-icon"
+          >
+            <svg
+              class="t-icon t-icon-file-pdf-filled t-upload__file-type t-upload__file-type--pdf"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M8 15.2496V14.0002L8.75003 14.0001V15.2494L8 15.2496Z"
+                fill="currentColor"
+              />
+              <path
+                d="M13.5 14.0005L14.25 14.0003V17.9999L13.5 18.0003V14.0005Z"
+                fill="currentColor"
+              />
+              <path
+                d="M15.4142 1H3V23H21V17.2497H19V20.0002H17V13.5006C17 12.6724 17.6713 12.0008 18.4996 12.0006L20.9998 12L21 12.8889V6.58579L15.4142 1ZM14.5 7.5V3L19 7.5H14.5ZM9.25031 17.2493L8 17.2496V20.0003H6V12.0004L9.24988 12C10.0784 12 10.75 12.6716 10.75 13.5V15.7493C10.75 16.5777 10.0786 17.2492 9.25031 17.2493ZM16.25 13.5001V18.4997C16.25 19.3279 15.5789 19.9993 14.7507 19.9997L11.5 20.0012V12.001L14.7496 12.0001C15.5782 11.9999 16.25 12.6716 16.25 13.5001Z"
+                fill="currentColor"
+              />
+              <path
+                d="M21 14L19 14.0005V15.2497H21V14Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-upload__file-name"
+          >
+            document.pdf
+          </div>
+        </div>
+        <!---->
+        <!---->
+        <svg
+          class="t-icon t-icon-close t-upload__delete-btn"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="t-upload__item t-upload__item--file"
+      >
+        <!---->
+        <div
+          class="t-upload__file-content"
+        >
+          <div
+            class="t-upload__file-icon"
+          >
+            <svg
+              class="t-icon t-icon-file-powerpoint-filled t-upload__file-type t-upload__file-type--ppt"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M13 13.6L11 13.6V12H13V13.6Z"
+                fill="currentColor"
+              />
+              <path
+                d="M15.4142 1H3V23H21V6.58579L15.4142 1ZM14.5 7.5V3L19 7.5H14.5ZM13 10C14.1046 10 15 10.8954 15 12V13.6C15 14.7046 14.1046 15.6 13 15.6H11V18H9V10H13Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-upload__file-name"
+          >
+            presentation.pptx
+          </div>
+        </div>
+        <!---->
+        <!---->
+        <svg
+          class="t-icon t-icon-close t-upload__delete-btn"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="t-upload__item t-upload__item--file"
+      >
+        <!---->
+        <div
+          class="t-upload__file-content"
+        >
+          <div
+            class="t-upload__file-icon"
+          >
+            <svg
+              class="t-icon t-icon-file-word-filled t-upload__file-type t-upload__file-type--word"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M15.4142 1H3V23H21V6.58579L15.4142 1ZM14.5 7.5V3L19 7.5H14.5ZM10 16H11L11 11H13L13 16H14V11H16V16C16 17.1046 15.1046 18 14 18H10C8.89543 18 8 17.1046 8 16V11H10V16Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-upload__file-name"
+          >
+            article.docx
+          </div>
+        </div>
+        <!---->
+        <!---->
+        <svg
+          class="t-icon t-icon-close t-upload__delete-btn"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="t-upload__item"
+      >
+        <div
+          class="t-image t-image--round t-upload__image"
+        >
+          <div
+            class="t-image__mask"
+          >
+            <div
+              class="t-loading"
+              style="font-size: 20px;"
+            >
+              <div
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+                
+              </div>
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <picture>
+            <!---->
+            <img
+              alt=""
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/mobile/demos/upload6.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
+        </div>
+        <!---->
+        <div
+          class="t-upload__progress-mask"
+        >
+          
+          <svg
+            class="t-icon t-icon-loading t-upload__progress-loading"
+            fill="none"
+            height="1em"
+            style="fill: none;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M12 2.25C6.61556 2.25 2.25 6.61556 2.25 12C2.25 17.3844 6.61556 21.75 12 21.75V19.3125C7.96142 19.3125 4.6875 16.0386 4.6875 12C4.6875 7.96142 7.96142 4.6875 12 4.6875C16.0386 4.6875 19.3125 7.96142 19.3125 12H21.75C21.75 6.61556 17.3844 2.25 12 2.25Z"
+              fill="currentColor"
+              id="loading"
+            />
+          </svg>
+          <div
+            class="t-upload__progress-text"
+          >
+            上传中...
+          </div>
+          
+        </div>
+        <!---->
+        <svg
+          class="t-icon t-icon-close t-upload__delete-btn"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="t-upload__item"
+      >
+        <div
+          class="t-image t-image--round t-upload__image"
+        >
+          <div
+            class="t-image__mask"
+          >
+            <div
+              class="t-loading"
+              style="font-size: 20px;"
+            >
+              <div
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+                
+              </div>
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <picture>
+            <!---->
+            <img
+              alt=""
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/mobile/demos/upload6.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
+        </div>
+        <!---->
+        <div
+          class="t-upload__progress-mask"
+        >
+          
+          <svg
+            class="t-icon t-icon-loading t-upload__progress-loading"
+            fill="none"
+            height="1em"
+            style="fill: none;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M12 2.25C6.61556 2.25 2.25 6.61556 2.25 12C2.25 17.3844 6.61556 21.75 12 21.75V19.3125C7.96142 19.3125 4.6875 16.0386 4.6875 12C4.6875 7.96142 7.96142 4.6875 12 4.6875C16.0386 4.6875 19.3125 7.96142 19.3125 12H21.75C21.75 6.61556 17.3844 2.25 12 2.25Z"
+              fill="currentColor"
+              id="loading"
+            />
+          </svg>
+          <div
+            class="t-upload__progress-text"
+          >
+            68%
+          </div>
+          
+        </div>
+        <!---->
+        <svg
+          class="t-icon t-icon-close t-upload__delete-btn"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="t-upload__item"
+      >
+        <div
+          class="t-image t-image--round t-upload__image"
+        >
+          <div
+            class="t-image__mask"
+          >
+            <div
+              class="t-loading"
+              style="font-size: 20px;"
+            >
+              <div
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+                
+              </div>
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <picture>
+            <!---->
+            <img
+              alt=""
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/mobile/demos/upload6.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
+        </div>
+        <!---->
+        <div
+          class="t-upload__progress-mask"
+        >
+          
+          <svg
+            class="t-icon t-icon-close-circle t-upload__progress-fail-icon"
+            fill="none"
+            height="1em"
+            style="fill: none;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <g
+              id="close-circle"
+            >
+              <path
+                d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                fill="transparent"
+                id="fill1"
+              />
+              <path
+                d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                id="stroke1"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+              <path
+                d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
+                id="stroke2"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
+          <div
+            class="t-upload__progress-text"
+          >
+            上传失败
+          </div>
+          
+        </div>
+        <!---->
+        <svg
+          class="t-icon t-icon-close t-upload__delete-btn"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="t-upload__item"
+      >
+        <div
+          class="t-image t-image--round t-upload__image"
+        >
+          <div
+            class="t-image__mask"
+          >
+            <div
+              class="t-loading"
+              style="font-size: 20px;"
+            >
+              <div
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+                
+              </div>
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <picture>
+            <!---->
+            <img
+              alt=""
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/mobile/demos/upload6.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
+        </div>
+        <!---->
+        <div
+          class="t-upload__progress-mask"
+        >
+          
+          <svg
+            class="t-icon t-icon-close-circle t-upload__progress-fail-icon"
+            fill="none"
+            height="1em"
+            style="fill: none;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <g
+              id="close-circle"
+            >
+              <path
+                d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                fill="transparent"
+                id="fill1"
+              />
+              <path
+                d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                id="stroke1"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+              <path
+                d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
+                id="stroke2"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
+          <div
+            class="t-upload__progress-text"
+          >
+            上传失败
+          </div>
+          
+        </div>
+        <!---->
+        <svg
+          class="t-icon t-icon-close t-upload__delete-btn"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="t-upload__item"
+      >
+        <div
+          class="t-image t-image--round t-upload__image"
+        >
+          <div
+            class="t-image__mask"
+          >
+            <div
+              class="t-loading"
+              style="font-size: 20px;"
+            >
+              <div
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+                
+              </div>
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <picture>
+            <!---->
+            <img
+              alt=""
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/mobile/demos/upload6.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
+        </div>
+        <!---->
+        <!---->
+        <!---->
+        <svg
+          class="t-icon t-icon-close t-upload__delete-btn"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="close"
+          >
+            <path
+              d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+      </div>
+      
+      <div
+        class="t-upload__item t-upload__item--add"
+      >
+        <div
+          class="t-upload__add-icon"
+        >
+          <svg
+            class="t-icon t-icon-add"
+            fill="none"
+            height="1em"
+            style="fill: none;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <g
+              id="add"
+            >
+              <path
+                d="M12 5L12 19M19 12L5 12"
+                id="stroke1"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+      
+      <input
+        accept=""
+        hidden=""
+        multiple=""
+        type="file"
+      />
+      <!---->
+    </div>
+  </div>
+  <div
+    class="upload-demo"
+    data-v-60aa7fa7=""
+  >
+    <div
+      class="upload-title"
+      data-v-60aa7fa7=""
+    >
+      列表布局上传
+    </div>
+    <div
+      class="t-upload t-upload--list"
+      data-v-60aa7fa7=""
+    >
+      
+      <div
+        class="t-upload__list-trigger"
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
+          role="button"
+          type="button"
+        >
+          
+          <svg
+            class="t-icon t-icon-upload"
+            fill="none"
+            height="1em"
+            style="fill: none;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <g
+              id="upload"
+            >
+              <path
+                d="M16.5 8.5L12 4L7.5 8.5M12 5.25V15"
+                id="stroke1"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+              <path
+                d="M20.5 15V20H3.5V15"
+                id="stroke2"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
+          
+          <span
+            class="t-button__content"
+          >
+            
+            Upload
+            
+          </span>
+          <!---->
+        </button>
+      </div>
+      <div
+        class="t-upload__list"
+      >
+        
+        <div
+          class="t-upload__list-item t-upload__list-item--progress"
+        >
+          <svg
+            class="t-icon t-icon-loading t-upload__list-item-loading"
+            fill="none"
+            height="1em"
+            style="fill: none;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M12 2.25C6.61556 2.25 2.25 6.61556 2.25 12C2.25 17.3844 6.61556 21.75 12 21.75V19.3125C7.96142 19.3125 4.6875 16.0386 4.6875 12C4.6875 7.96142 7.96142 4.6875 12 4.6875C16.0386 4.6875 19.3125 7.96142 19.3125 12H21.75C21.75 6.61556 17.3844 2.25 12 2.25Z"
+              fill="currentColor"
+              id="loading"
+            />
+          </svg>
+          <div
+            class="t-upload__list-item-content"
+          >
+            <div
+              class="t-upload__list-item-name"
+            >
+              Technical Design Document.pdf
+            </div>
+            <div
+              class="t-upload__list-item-size"
+            >
+              上传中... 30%
+            </div>
+          </div>
+          <div
+            class="t-upload__list-item-action"
+          >
+            <svg
+              class="t-icon t-icon-delete t-upload__list-item-delete"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="delete"
+              >
+                <path
+                  d="M5 5H19L18.5 22H5.5L5 5Z"
+                  fill="transparent"
+                  id="fill1"
+                />
+                <path
+                  d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+                <path
+                  d="M12 9V18"
+                  id="stroke2"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="t-upload__list-item t-upload__list-item--fail"
+        >
+          <svg
+            class="t-icon t-icon-error-circle-filled t-upload__list-item-error-icon"
+            fill="none"
+            height="1em"
+            style="fill: none;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1ZM11.0001 14H13.0001V6.49998H11.0001V14ZM13.004 15.5H11.0001V17.5039H13.004V15.5Z"
+              fill="currentColor"
+            />
+          </svg>
+          <div
+            class="t-upload__list-item-content"
+          >
+            <div
+              class="t-upload__list-item-name"
+            >
+              Technical Design Document.pdf
+            </div>
+            <div
+              class="t-upload__list-item-size"
+            >
+              上传失败
+            </div>
+          </div>
+          <div
+            class="t-upload__list-item-action"
+          >
+            <svg
+              class="t-icon t-icon-delete t-upload__list-item-delete"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="delete"
+              >
+                <path
+                  d="M5 5H19L18.5 22H5.5L5 5Z"
+                  fill="transparent"
+                  id="fill1"
+                />
+                <path
+                  d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+                <path
+                  d="M12 9V18"
+                  id="stroke2"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="t-upload__list-item"
+        >
+          <div
+            style="position: relative; flex-shrink: 0;"
+          >
+            <div
+              class="t-image t-image--round t-upload__list-item-thumbnail"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!---->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!---->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/upload6.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </picture>
+            </div>
+            <!---->
+          </div>
+          <div
+            class="t-upload__list-item-content"
+          >
+            <div
+              class="t-upload__list-item-name"
+            >
+              Design Mockup.png
+            </div>
+            <div
+              class="t-upload__list-item-size"
+            >
+              1.0 MB
+            </div>
+          </div>
+          <div
+            class="t-upload__list-item-action"
+          >
+            <svg
+              class="t-icon t-icon-delete t-upload__list-item-delete"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="delete"
+              >
+                <path
+                  d="M5 5H19L18.5 22H5.5L5 5Z"
+                  fill="transparent"
+                  id="fill1"
+                />
+                <path
+                  d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+                <path
+                  d="M12 9V18"
+                  id="stroke2"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="t-upload__list-item"
+        >
+          <span
+            class="t-upload__list-item-icon"
+          >
+            <svg
+              class="t-icon t-icon-video-filled t-upload__file-type t-upload__file-type--media"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M22 2H2V22H22V2ZM16.75 11.9998L8.75 16.5V7.5L16.75 11.9998Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+          <div
+            class="t-upload__list-item-content"
+          >
+            <div
+              class="t-upload__list-item-name"
+            >
+              Product Demo.mp4
+            </div>
+            <div
+              class="t-upload__list-item-size"
+            >
+              5.0 MB
+            </div>
+          </div>
+          <div
+            class="t-upload__list-item-action"
+          >
+            <svg
+              class="t-icon t-icon-delete t-upload__list-item-delete"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="delete"
+              >
+                <path
+                  d="M5 5H19L18.5 22H5.5L5 5Z"
+                  fill="transparent"
+                  id="fill1"
+                />
+                <path
+                  d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+                <path
+                  d="M12 9V18"
+                  id="stroke2"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="t-upload__list-item"
+        >
+          <span
+            class="t-upload__list-item-icon"
+          >
+            <svg
+              class="t-icon t-icon-file-word-filled t-upload__file-type t-upload__file-type--word"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M15.4142 1H3V23H21V6.58579L15.4142 1ZM14.5 7.5V3L19 7.5H14.5ZM10 16H11L11 11H13L13 16H14V11H16V16C16 17.1046 15.1046 18 14 18H10C8.89543 18 8 17.1046 8 16V11H10V16Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+          <div
+            class="t-upload__list-item-content"
+          >
+            <div
+              class="t-upload__list-item-name"
+            >
+              Project Proposal.docx
+            </div>
+            <div
+              class="t-upload__list-item-size"
+            >
+              128.0 KB
+            </div>
+          </div>
+          <div
+            class="t-upload__list-item-action"
+          >
+            <svg
+              class="t-icon t-icon-delete t-upload__list-item-delete"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="delete"
+              >
+                <path
+                  d="M5 5H19L18.5 22H5.5L5 5Z"
+                  fill="transparent"
+                  id="fill1"
+                />
+                <path
+                  d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+                <path
+                  d="M12 9V18"
+                  id="stroke2"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="t-upload__list-item"
+        >
+          <span
+            class="t-upload__list-item-icon"
+          >
+            <svg
+              class="t-icon t-icon-file-excel-filled t-upload__file-type t-upload__file-type--excel"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M15.4142 1H3V23H21V6.58579L15.4142 1ZM14.5 7.5V3L19 7.5H14.5ZM15 11.6465C15 12.1896 14.7792 12.7093 14.3883 13.0862L13.4406 14L14.3883 14.9138C14.7792 15.2907 15 15.8104 15 16.3535V18H13L13 16.3535L12 15.3892L11 16.3535L11 18L9.00001 18L9.00001 16.3535C9.00001 15.8104 9.22083 15.2907 9.61173 14.9138L10.5594 14L9.61173 13.0862C9.22083 12.7093 9.00001 12.1896 9.00001 11.6465L9 10L11 10L11 11.6465L12 12.6108L13 11.6465L13 10L15 10L15 11.6465Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+          <div
+            class="t-upload__list-item-content"
+          >
+            <div
+              class="t-upload__list-item-name"
+            >
+              Financial Report.xlsx
+            </div>
+            <div
+              class="t-upload__list-item-size"
+            >
+              256.0 KB
+            </div>
+          </div>
+          <div
+            class="t-upload__list-item-action"
+          >
+            <svg
+              class="t-icon t-icon-delete t-upload__list-item-delete"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="delete"
+              >
+                <path
+                  d="M5 5H19L18.5 22H5.5L5 5Z"
+                  fill="transparent"
+                  id="fill1"
+                />
+                <path
+                  d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+                <path
+                  d="M12 9V18"
+                  id="stroke2"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="t-upload__list-item"
+        >
+          <span
+            class="t-upload__list-item-icon"
+          >
+            <svg
+              class="t-icon t-icon-file-pdf-filled t-upload__file-type t-upload__file-type--pdf"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M8 15.2496V14.0002L8.75003 14.0001V15.2494L8 15.2496Z"
+                fill="currentColor"
+              />
+              <path
+                d="M13.5 14.0005L14.25 14.0003V17.9999L13.5 18.0003V14.0005Z"
+                fill="currentColor"
+              />
+              <path
+                d="M15.4142 1H3V23H21V17.2497H19V20.0002H17V13.5006C17 12.6724 17.6713 12.0008 18.4996 12.0006L20.9998 12L21 12.8889V6.58579L15.4142 1ZM14.5 7.5V3L19 7.5H14.5ZM9.25031 17.2493L8 17.2496V20.0003H6V12.0004L9.24988 12C10.0784 12 10.75 12.6716 10.75 13.5V15.7493C10.75 16.5777 10.0786 17.2492 9.25031 17.2493ZM16.25 13.5001V18.4997C16.25 19.3279 15.5789 19.9993 14.7507 19.9997L11.5 20.0012V12.001L14.7496 12.0001C15.5782 11.9999 16.25 12.6716 16.25 13.5001Z"
+                fill="currentColor"
+              />
+              <path
+                d="M21 14L19 14.0005V15.2497H21V14Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+          <div
+            class="t-upload__list-item-content"
+          >
+            <div
+              class="t-upload__list-item-name"
+            >
+              User Manual.pdf
+            </div>
+            <div
+              class="t-upload__list-item-size"
+            >
+              512.0 KB
+            </div>
+          </div>
+          <div
+            class="t-upload__list-item-action"
+          >
+            <svg
+              class="t-icon t-icon-delete t-upload__list-item-delete"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="delete"
+              >
+                <path
+                  d="M5 5H19L18.5 22H5.5L5 5Z"
+                  fill="transparent"
+                  id="fill1"
+                />
+                <path
+                  d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+                <path
+                  d="M12 9V18"
+                  id="stroke2"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="t-upload__list-item"
+        >
+          <span
+            class="t-upload__list-item-icon"
+          >
+            <svg
+              class="t-icon t-icon-file-powerpoint-filled t-upload__file-type t-upload__file-type--ppt"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M13 13.6L11 13.6V12H13V13.6Z"
+                fill="currentColor"
+              />
+              <path
+                d="M15.4142 1H3V23H21V6.58579L15.4142 1ZM14.5 7.5V3L19 7.5H14.5ZM13 10C14.1046 10 15 10.8954 15 12V13.6C15 14.7046 14.1046 15.6 13 15.6H11V18H9V10H13Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+          <div
+            class="t-upload__list-item-content"
+          >
+            <div
+              class="t-upload__list-item-name"
+            >
+              Quarterly Review.pptx
+            </div>
+            <div
+              class="t-upload__list-item-size"
+            >
+              768.0 KB
+            </div>
+          </div>
+          <div
+            class="t-upload__list-item-action"
+          >
+            <svg
+              class="t-icon t-icon-delete t-upload__list-item-delete"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="delete"
+              >
+                <path
+                  d="M5 5H19L18.5 22H5.5L5 5Z"
+                  fill="transparent"
+                  id="fill1"
+                />
+                <path
+                  d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+                <path
+                  d="M12 9V18"
+                  id="stroke2"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        
+      </div>
+      
       <input
         accept=""
         hidden=""

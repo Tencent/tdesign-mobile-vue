@@ -1522,9 +1522,10 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-upload upload"
+            class="t-upload t-upload--grid upload"
             data-v-0efbfc02=""
           >
+            
             
             <div
               class="t-upload__item"
@@ -1572,6 +1573,8 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   />
                 </picture>
               </div>
+              <!---->
+              <!---->
               <!---->
               <svg
                 class="t-icon t-icon-close t-upload__delete-btn"
@@ -1641,6 +1644,8 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 </picture>
               </div>
               <!---->
+              <!---->
+              <!---->
               <svg
                 class="t-icon t-icon-close t-upload__delete-btn"
                 fill="none"
@@ -1691,6 +1696,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 </svg>
               </div>
             </div>
+            
             <input
               accept=""
               hidden=""
@@ -3412,9 +3418,10 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 
                 <div
-                  class="t-upload upload"
+                  class="t-upload t-upload--grid upload"
                   data-v-0efbfc02=""
                 >
+                  
                   
                   <div
                     class="t-upload__item"
@@ -3462,6 +3469,8 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         />
                       </picture>
                     </div>
+                    <!---->
+                    <!---->
                     <!---->
                     <svg
                       class="t-icon t-icon-close t-upload__delete-btn"
@@ -3531,6 +3540,8 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       </picture>
                     </div>
                     <!---->
+                    <!---->
+                    <!---->
                     <svg
                       class="t-icon t-icon-close t-upload__delete-btn"
                       fill="none"
@@ -3581,6 +3592,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       </svg>
                     </div>
                   </div>
+                  
                   <input
                     accept=""
                     hidden=""
@@ -5151,9 +5163,10 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-upload"
+            class="t-upload t-upload--grid"
             data-v-39ff7205=""
           >
+            
             
             <div
               class="t-upload__item"
@@ -5201,6 +5214,8 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   />
                 </picture>
               </div>
+              <!---->
+              <!---->
               <!---->
               <svg
                 class="t-icon t-icon-close t-upload__delete-btn"
@@ -5270,6 +5285,8 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 </picture>
               </div>
               <!---->
+              <!---->
+              <!---->
               <svg
                 class="t-icon t-icon-close t-upload__delete-btn"
                 fill="none"
@@ -5320,6 +5337,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 </svg>
               </div>
             </div>
+            
             <input
               accept=""
               hidden=""

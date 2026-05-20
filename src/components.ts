@@ -50,11 +50,13 @@ export * from './image-viewer';
 export * from './list';
 export * from './progress';
 export * from './result';
+export * from './segmented';
 export * from './skeleton';
 export * from './sticky';
 export * from './swiper';
 export * from './table';
 export * from './tag';
+export * from './typography';
 export * from './qrcode';
 
 // 反馈
