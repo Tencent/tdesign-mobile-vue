@@ -46,9 +46,9 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
           data-v-52e2c190=""
         >
           
-          
           <div
             class="t-upload__item"
+            data-drag-key="u_4qy7q79"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -143,6 +143,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item"
+            data-drag-key="u_hpo8g4k"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -237,6 +238,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item"
+            data-drag-key="u_sj8jnr8"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -347,7 +349,6 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               </g>
             </svg>
           </div>
-          
           <div
             class="t-upload__item t-upload__item--add"
           >
@@ -383,6 +384,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
             multiple=""
             type="file"
           />
+          <!---->
           <!---->
         </div>
       </div>
@@ -7201,9 +7203,9 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
       data-v-52e2c190=""
     >
       
-      
       <div
         class="t-upload__item"
+        data-drag-key="u_yfc3yjf"
       >
         <div
           class="t-image t-image--round t-upload__image"
@@ -7298,6 +7300,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
       </div>
       <div
         class="t-upload__item"
+        data-drag-key="u_5km9prn"
       >
         <div
           class="t-image t-image--round t-upload__image"
@@ -7392,6 +7395,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
       </div>
       <div
         class="t-upload__item"
+        data-drag-key="u_r7dqsye"
       >
         <div
           class="t-image t-image--round t-upload__image"
@@ -7502,7 +7506,6 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
           </g>
         </svg>
       </div>
-      
       <div
         class="t-upload__item t-upload__item--add"
       >
@@ -7538,6 +7541,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
         multiple=""
         type="file"
       />
+      <!---->
       <!---->
     </div>
   </div>

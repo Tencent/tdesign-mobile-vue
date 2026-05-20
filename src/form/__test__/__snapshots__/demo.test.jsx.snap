@@ -1526,9 +1526,9 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             data-v-0efbfc02=""
           >
             
-            
             <div
               class="t-upload__item"
+              data-drag-key="u_gk59byu"
             >
               <div
                 class="t-image t-image--round t-upload__image"
@@ -1599,6 +1599,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             </div>
             <div
               class="t-upload__item"
+              data-drag-key="u_ku9q4fz"
             >
               <div
                 class="t-image t-image--round t-upload__image"
@@ -1667,7 +1668,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 </g>
               </svg>
             </div>
-            
             <div
               class="t-upload__item t-upload__item--add"
             >
@@ -1703,6 +1703,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               multiple=""
               type="file"
             />
+            <!---->
             <!---->
           </div>
           
@@ -3422,9 +3423,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   data-v-0efbfc02=""
                 >
                   
-                  
                   <div
                     class="t-upload__item"
+                    data-drag-key="u_muke1ys"
                   >
                     <div
                       class="t-image t-image--round t-upload__image"
@@ -3495,6 +3496,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   </div>
                   <div
                     class="t-upload__item"
+                    data-drag-key="u_hv0ajmr"
                   >
                     <div
                       class="t-image t-image--round t-upload__image"
@@ -3563,7 +3565,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       </g>
                     </svg>
                   </div>
-                  
                   <div
                     class="t-upload__item t-upload__item--add"
                   >
@@ -3599,6 +3600,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     multiple=""
                     type="file"
                   />
+                  <!---->
                   <!---->
                 </div>
                 
@@ -5167,9 +5169,9 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             data-v-39ff7205=""
           >
             
-            
             <div
               class="t-upload__item"
+              data-drag-key="u_nvg705i"
             >
               <div
                 class="t-image t-image--round t-upload__image"
@@ -5240,6 +5242,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             </div>
             <div
               class="t-upload__item"
+              data-drag-key="u_unyzacl"
             >
               <div
                 class="t-image t-image--round t-upload__image"
@@ -5308,7 +5311,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 </g>
               </svg>
             </div>
-            
             <div
               class="t-upload__item t-upload__item--add"
             >
@@ -5344,6 +5346,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               multiple=""
               type="file"
             />
+            <!---->
             <!---->
           </div>
           
