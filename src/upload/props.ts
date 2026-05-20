@@ -146,8 +146,6 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 是否在同一个请求中上传全部文件，默认一个请求上传一个文件。多文件上传时有效 */
-  uploadAllFilesInOneRequest: Boolean,
   /** 组件风格。提供宫格和列表两种布局风格 */
   theme: {
     type: String as PropType<TdUploadProps['theme']>,

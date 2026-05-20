@@ -11,6 +11,7 @@
       :default-files="listFiles"
       theme="list"
       multiple
+      draggable
       :max="20"
       :request-method="requestMethod"
       :on-preview="onPreview"

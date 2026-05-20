@@ -1,4 +1,4 @@
-import { defineComponent, ref, computed } from 'vue';
+import { defineComponent, ref, computed, watch, TransitionGroup, Teleport } from 'vue';
 import type { InputHTMLAttributes } from 'vue';
 import {
   AddIcon,
@@ -24,6 +24,7 @@ import { TdUploadProps, UploadFile } from './type';
 import UploadProps from './props';
 import config from '../config';
 import useUpload from './hooks/useUpload';
+import useDrag from './hooks/useDrag';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 import {
@@ -58,6 +59,8 @@ export default defineComponent({
     'select-change',
     'validate',
     'click-upload',
+    'drag',
+    'drop',
   ],
   setup(props, { expose }) {
     const uploadClass = usePrefixClass('upload');
@@ -66,6 +69,7 @@ export default defineComponent({
     const {
       disabled,
       displayFiles,
+      toUploadFiles,
       uploading,
       inputRef,
       uploadFilePercent,
@@ -74,6 +78,7 @@ export default defineComponent({
       onNormalFileChange,
       onInnerRemove,
       cancelUpload,
+      setUploadValue,
     } = useUpload(props);
 
     const renderTNodeJSX = useTNodeJSX();
@@ -81,10 +86,41 @@ export default defineComponent({
     const showViewer = ref(false);
     const initialIndex = ref(0);
 
+    // ==================== 拖拽 hook ====================
+    // toUploadFiles 过滤已内移至 useDrag 内部（拖拽开始时快照 toUploadFiles，
+    // 拖拽结束时用快照 Set 过滤，防止拖拽期间 toUploadFiles 变化导致 displayFiles 重复）。
+    const {
+      dragging,
+      dragIndex,
+      sortedFiles,
+      cloneVisible,
+      cloneStyle,
+      cloneFile,
+      getDragKey,
+      syncFiles,
+      onTouchstart,
+      onTouchmove,
+      onTouchend,
+      onTouchcancel,
+    } = useDrag(props, uploadClass, setUploadValue, toUploadFiles);
+
+    watch(
+      () => displayFiles.value,
+      (files) => {
+        if (files) {
+          syncFiles(files);
+        }
+      },
+      { immediate: true, deep: true },
+    );
+
     const rootClass = computed(() => [
       uploadClass.value,
       `${uploadClass.value}--${props.theme || 'grid'}`,
-      { [`${uploadClass.value}--disabled`]: props.disabled },
+      {
+        [`${uploadClass.value}--disabled`]: props.disabled,
+        [`${uploadClass.value}--dragging`]: props.draggable && dragging.value,
+      },
     ]);
 
     const previewImgs = computed(() =>
@@ -92,8 +128,12 @@ export default defineComponent({
     );
 
     const handlePreview = (e: MouseEvent, file: UploadFile, index: number) => {
+      // 拖拽中禁止预览，避免与拖拽操作冲突
+      if (dragging.value) return;
+
       props.onPreview?.({ e, file, index });
       if (!isImageFile(file)) return;
+
       const imageIndex = displayFiles.value.filter((item, i) => isImageFile(item) && i <= index).length - 1;
       initialIndex.value = Math.max(0, imageIndex);
       showViewer.value = props.preview;
@@ -155,58 +195,76 @@ export default defineComponent({
 
       const addBtnNode = renderTNodeJSX('addBtn', <AddIcon />);
       const addContentNode = renderTNodeJSX('addContent');
+
       return (
-        <div class={`${uploadClass.value}__item ${uploadClass.value}__item--add`} onClick={triggerUpload}>
+        <div key="add-btn" class={`${uploadClass.value}__item ${uploadClass.value}__item--add`} onClick={triggerUpload}>
           <div class={`${uploadClass.value}__add-icon`}>{addContentNode || addBtnNode}</div>
         </div>
       );
     };
 
-    const renderGridLayout = () => (
-      <>
-        {displayFiles.value.map((file, index) => {
-          const isFileItem = !isImageFile(file) && !file.url;
-          const showFileContent = isFileItem && file.status !== 'progress' && file.status !== 'fail';
-          const showRemoveBtn = isBoolean(file.removeBtn) ? file.removeBtn : props.removeBtn;
-          const showDisabledMask =
-            disabled?.value && !isFileItem && file.status !== 'progress' && file.status !== 'fail';
-          return (
-            <div
-              key={index}
-              class={[`${uploadClass.value}__item`, { [`${uploadClass.value}__item--file`]: isFileItem }]}
-            >
-              {file.url && (
-                <t-image
-                  class={`${uploadClass.value}__image`}
-                  shape="round"
-                  {...(props.imageProps as TdUploadProps['imageProps'])}
-                  src={file.url}
-                  onClick={(e: MouseEvent) => handlePreview(e, file, index)}
-                />
-              )}
-              {showFileContent && (
-                <div
-                  class={`${uploadClass.value}__file-content`}
-                  onClick={(e: MouseEvent) => handlePreview(e, file, index)}
-                >
-                  <div class={`${uploadClass.value}__file-icon`}>{getFileTypeIcon(file)}</div>
-                  <div class={`${uploadClass.value}__file-name`}>{file.name}</div>
-                </div>
-              )}
-              {renderStatus(file)}
-              {showDisabledMask && <div class={`${uploadClass.value}__disabled-mask`} />}
-              {showRemoveBtn && (
-                <CloseIcon
-                  class={`${uploadClass.value}__delete-btn`}
-                  onClick={({ e }: any) => onInnerRemove({ e, file, index })}
-                />
-              )}
-            </div>
-          );
-        })}
-        {renderAddContent()}
-      </>
-    );
+    const renderGridLayout = () => {
+      const files = dragging.value && sortedFiles.value.length > 0 ? sortedFiles.value : displayFiles.value;
+      return (
+        <TransitionGroup name={`${uploadClass.value}-drag`}>
+          {files.map((file, index) => {
+            const isFileItem = !isImageFile(file) && !file.url;
+            const showFileContent = isFileItem && file.status !== 'progress' && file.status !== 'fail';
+            const showRemoveBtn = isBoolean(file.removeBtn) ? file.removeBtn : props.removeBtn;
+            const showDisabledMask =
+              disabled?.value && !isFileItem && file.status !== 'progress' && file.status !== 'fail';
+            const isDragged = dragging.value && dragIndex.value === index;
+
+            return (
+              <div
+                key={getDragKey(file)}
+                data-drag-key={getDragKey(file)}
+                class={[
+                  `${uploadClass.value}__item`,
+                  {
+                    [`${uploadClass.value}__item--file`]: isFileItem,
+                    [`${uploadClass.value}__item--dragging`]: isDragged,
+                  },
+                ]}
+                style={{ opacity: isDragged ? 0 : undefined }}
+                onTouchstart={(e: TouchEvent) => onTouchstart(e, index)}
+                onTouchmove={(e: TouchEvent) => onTouchmove(e)}
+                onTouchend={(e: TouchEvent) => onTouchend(e)}
+                onTouchcancel={(e: TouchEvent) => onTouchcancel(e)}
+              >
+                {file.url && (
+                  <t-image
+                    class={`${uploadClass.value}__image`}
+                    shape="round"
+                    {...(props.imageProps as TdUploadProps['imageProps'])}
+                    src={file.url}
+                    onClick={(e: MouseEvent) => handlePreview(e, file, index)}
+                  />
+                )}
+                {showFileContent && (
+                  <div
+                    class={`${uploadClass.value}__file-content`}
+                    onClick={(e: MouseEvent) => handlePreview(e, file, index)}
+                  >
+                    <div class={`${uploadClass.value}__file-icon`}>{getFileTypeIcon(file)}</div>
+                    <div class={`${uploadClass.value}__file-name`}>{file.name}</div>
+                  </div>
+                )}
+                {renderStatus(file)}
+                {showDisabledMask && <div class={`${uploadClass.value}__disabled-mask`} />}
+                {showRemoveBtn && !dragging.value && (
+                  <CloseIcon
+                    class={`${uploadClass.value}__delete-btn`}
+                    onClick={({ e }: any) => onInnerRemove({ e, file, index })}
+                  />
+                )}
+              </div>
+            );
+          })}
+          {renderAddContent()}
+        </TransitionGroup>
+      );
+    };
 
     const renderListItemIcon = (file: UploadFile) => {
       if (file.status === 'progress') {
@@ -257,29 +315,44 @@ export default defineComponent({
       const triggerNode = addContentNode || addBtnNode || defaultTriggerBtn;
       const showTrigger = props.addBtn && !reachMax.value;
 
+      const files = dragging.value && sortedFiles.value.length > 0 ? sortedFiles.value : displayFiles.value;
+
       return (
         <>
           {showTrigger && <div class={`${uploadClass.value}__list-trigger`}>{triggerNode}</div>}
-          {displayFiles.value.length > 0 && (
-            <div class={`${uploadClass.value}__list`}>
-              {displayFiles.value.map((file, index) => {
+          {files.length > 0 && (
+            <TransitionGroup name={`${uploadClass.value}-drag`}>
+              {files.map((file, index) => {
                 const itemClass = [
                   `${uploadClass.value}__list-item`,
                   {
                     [`${uploadClass.value}__list-item--fail`]: file.status === 'fail',
                     [`${uploadClass.value}__list-item--progress`]: file.status === 'progress',
+                    [`${uploadClass.value}__list-item--dragging`]: dragging.value && dragIndex.value === index,
                   },
                 ];
                 const showRemoveBtn = isBoolean(file.removeBtn) ? file.removeBtn : props.removeBtn;
+                const isDragged = dragging.value && dragIndex.value === index;
+
                 return (
-                  <div key={index} class={itemClass} onClick={(e: MouseEvent) => handlePreview(e, file, index)}>
+                  <div
+                    key={getDragKey(file)}
+                    data-drag-key={getDragKey(file)}
+                    class={itemClass}
+                    style={{ opacity: isDragged ? 0 : undefined }}
+                    onClick={(e: MouseEvent) => handlePreview(e, file, index)}
+                    onTouchstart={(e: TouchEvent) => onTouchstart(e, index)}
+                    onTouchmove={(e: TouchEvent) => onTouchmove(e)}
+                    onTouchend={(e: TouchEvent) => onTouchend(e)}
+                    onTouchcancel={(e: TouchEvent) => onTouchcancel(e)}
+                  >
                     {renderListItemIcon(file)}
                     <div class={`${uploadClass.value}__list-item-content`}>
                       <div class={`${uploadClass.value}__list-item-name`}>{file.name}</div>
                       <div class={`${uploadClass.value}__list-item-size`}>{renderListItemSubText(file)}</div>
                     </div>
                     <div class={`${uploadClass.value}__list-item-action`}>
-                      {showRemoveBtn && (
+                      {showRemoveBtn && !dragging.value && (
                         <DeleteIcon
                           class={`${uploadClass.value}__list-item-delete`}
                           onClick={({ e }: any) => {
@@ -292,9 +365,56 @@ export default defineComponent({
                   </div>
                 );
               })}
-            </div>
+            </TransitionGroup>
           )}
         </>
+      );
+    };
+
+    const renderDragClone = () => {
+      if (!cloneVisible.value || !cloneFile.value) return null;
+
+      const file = cloneFile.value;
+      const isList = props.theme === 'list';
+
+      // 列表布局
+      if (isList) {
+        return (
+          <Teleport to="body">
+            <div class={`${uploadClass.value}__list-item`} style={cloneStyle.value}>
+              {renderListItemIcon(file)}
+              <div class={`${uploadClass.value}__list-item-content`}>
+                <div class={`${uploadClass.value}__list-item-name`}>{file.name}</div>
+                <div class={`${uploadClass.value}__list-item-size`}>{renderListItemSubText(file)}</div>
+              </div>
+            </div>
+          </Teleport>
+        );
+      }
+
+      // 宫格布局
+      const isFileItem = !isImageFile(file) && !file.url;
+      const showFileContent = isFileItem && file.status !== 'progress' && file.status !== 'fail';
+
+      return (
+        <Teleport to="body">
+          <div class={`${uploadClass.value}__drag-clone`} style={cloneStyle.value}>
+            {file.url && (
+              <t-image
+                class={`${uploadClass.value}__image`}
+                shape="round"
+                {...(props.imageProps as TdUploadProps['imageProps'])}
+                src={file.url}
+              />
+            )}
+            {showFileContent && (
+              <div class={`${uploadClass.value}__file-content`}>
+                <div class={`${uploadClass.value}__file-icon`}>{getFileTypeIcon(file)}</div>
+                <div class={`${uploadClass.value}__file-name`}>{file.name}</div>
+              </div>
+            )}
+          </div>
+        </Teleport>
       );
     };
 
@@ -326,6 +446,7 @@ export default defineComponent({
           index={initialIndex.value}
           onClose={handleImageClose}
         />
+        {renderDragClone()}
       </div>
     );
   },
