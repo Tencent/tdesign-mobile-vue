@@ -86,9 +86,6 @@ export default defineComponent({
     const showViewer = ref(false);
     const initialIndex = ref(0);
 
-    // ==================== 拖拽 hook ====================
-    // toUploadFiles 过滤已内移至 useDrag 内部（拖拽开始时快照 toUploadFiles，
-    // 拖拽结束时用快照 Set 过滤，防止拖拽期间 toUploadFiles 变化导致 displayFiles 重复）。
     const {
       dragging,
       dragIndex,
@@ -321,51 +318,53 @@ export default defineComponent({
         <>
           {showTrigger && <div class={`${uploadClass.value}__list-trigger`}>{triggerNode}</div>}
           {files.length > 0 && (
-            <TransitionGroup name={`${uploadClass.value}-drag`}>
-              {files.map((file, index) => {
-                const itemClass = [
-                  `${uploadClass.value}__list-item`,
-                  {
-                    [`${uploadClass.value}__list-item--fail`]: file.status === 'fail',
-                    [`${uploadClass.value}__list-item--progress`]: file.status === 'progress',
-                    [`${uploadClass.value}__list-item--dragging`]: dragging.value && dragIndex.value === index,
-                  },
-                ];
-                const showRemoveBtn = isBoolean(file.removeBtn) ? file.removeBtn : props.removeBtn;
-                const isDragged = dragging.value && dragIndex.value === index;
+            <div class={`${uploadClass.value}__list`}>
+              <TransitionGroup name={`${uploadClass.value}-drag`}>
+                {files.map((file, index) => {
+                  const itemClass = [
+                    `${uploadClass.value}__list-item`,
+                    {
+                      [`${uploadClass.value}__list-item--fail`]: file.status === 'fail',
+                      [`${uploadClass.value}__list-item--progress`]: file.status === 'progress',
+                      [`${uploadClass.value}__list-item--dragging`]: dragging.value && dragIndex.value === index,
+                    },
+                  ];
+                  const showRemoveBtn = isBoolean(file.removeBtn) ? file.removeBtn : props.removeBtn;
+                  const isDragged = dragging.value && dragIndex.value === index;
 
-                return (
-                  <div
-                    key={getDragKey(file)}
-                    data-drag-key={getDragKey(file)}
-                    class={itemClass}
-                    style={{ opacity: isDragged ? 0 : undefined }}
-                    onClick={(e: MouseEvent) => handlePreview(e, file, index)}
-                    onTouchstart={(e: TouchEvent) => onTouchstart(e, index)}
-                    onTouchmove={(e: TouchEvent) => onTouchmove(e)}
-                    onTouchend={(e: TouchEvent) => onTouchend(e)}
-                    onTouchcancel={(e: TouchEvent) => onTouchcancel(e)}
-                  >
-                    {renderListItemIcon(file)}
-                    <div class={`${uploadClass.value}__list-item-content`}>
-                      <div class={`${uploadClass.value}__list-item-name`}>{file.name}</div>
-                      <div class={`${uploadClass.value}__list-item-size`}>{renderListItemSubText(file)}</div>
+                  return (
+                    <div
+                      key={getDragKey(file)}
+                      data-drag-key={getDragKey(file)}
+                      class={itemClass}
+                      style={{ opacity: isDragged ? 0 : undefined }}
+                      onClick={(e: MouseEvent) => handlePreview(e, file, index)}
+                      onTouchstart={(e: TouchEvent) => onTouchstart(e, index)}
+                      onTouchmove={(e: TouchEvent) => onTouchmove(e)}
+                      onTouchend={(e: TouchEvent) => onTouchend(e)}
+                      onTouchcancel={(e: TouchEvent) => onTouchcancel(e)}
+                    >
+                      {renderListItemIcon(file)}
+                      <div class={`${uploadClass.value}__list-item-content`}>
+                        <div class={`${uploadClass.value}__list-item-name`}>{file.name}</div>
+                        <div class={`${uploadClass.value}__list-item-size`}>{renderListItemSubText(file)}</div>
+                      </div>
+                      <div class={`${uploadClass.value}__list-item-action`}>
+                        {showRemoveBtn && !dragging.value && (
+                          <DeleteIcon
+                            class={`${uploadClass.value}__list-item-delete`}
+                            onClick={({ e }: any) => {
+                              e?.stopPropagation?.();
+                              onInnerRemove({ e, file, index });
+                            }}
+                          />
+                        )}
+                      </div>
                     </div>
-                    <div class={`${uploadClass.value}__list-item-action`}>
-                      {showRemoveBtn && !dragging.value && (
-                        <DeleteIcon
-                          class={`${uploadClass.value}__list-item-delete`}
-                          onClick={({ e }: any) => {
-                            e?.stopPropagation?.();
-                            onInnerRemove({ e, file, index });
-                          }}
-                        />
-                      )}
-                    </div>
-                  </div>
-                );
-              })}
-            </TransitionGroup>
+                  );
+                })}
+              </TransitionGroup>
+            </div>
           )}
         </>
       );
