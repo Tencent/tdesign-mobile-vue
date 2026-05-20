@@ -29,7 +29,7 @@ const ellipsisExpandable = {
 
 const ellipsisCustomSuffix = {
   row: 1,
-  suffix: <ChevronDownIcon />,
+  suffix: () => <ChevronDownIcon />,
   expandable: true,
   collapsible: false,
   onExpand: () => {
