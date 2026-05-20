@@ -1,5 +1,5 @@
 module.exports = {
-  util: { statements: '48.31%', branches: '71.42%', functions: '22.22%', lines: '48.31%' },
+  util: { statements: '54.83%', branches: '44.44%', functions: '41.66%', lines: '54.83%' },
   actionSheet: { statements: '81.15%', branches: '83.75%', functions: '91.89%', lines: '81.15%' },
   avatar: { statements: '93.22%', branches: '93.75%', functions: '76.92%', lines: '93.22%' },
   backTop: { statements: '86.6%', branches: '80%', functions: '75%', lines: '86.6%' },
@@ -49,7 +49,7 @@ module.exports = {
   rate: { statements: '91.56%', branches: '82.5%', functions: '84%', lines: '91.56%' },
   result: { statements: '91.11%', branches: '91.66%', functions: '88.88%', lines: '91.11%' },
   search: { statements: '83.39%', branches: '74.35%', functions: '76.19%', lines: '83.39%' },
-  segmented: { statements: '94.59%', branches: '81.57%', functions: '70%', lines: '94.59%' },
+  segmented: { statements: '94.63%', branches: '82.05%', functions: '70%', lines: '94.63%' },
   sideBar: { statements: '100%', branches: '100%', functions: '100%', lines: '100%' },
   skeleton: { statements: '91.44%', branches: '81.08%', functions: '90.9%', lines: '91.44%' },
   slider: { statements: '86.56%', branches: '69.09%', functions: '93.1%', lines: '86.56%' },
@@ -66,6 +66,7 @@ module.exports = {
   textarea: { statements: '90.95%', branches: '79.48%', functions: '92.3%', lines: '90.95%' },
   toast: { statements: '100%', branches: '93.33%', functions: '100%', lines: '100%' },
   treeSelect: { statements: '97.52%', branches: '90.32%', functions: '95.45%', lines: '97.52%' },
-  upload: { statements: '97.92%', branches: '89.65%', functions: '88.46%', lines: '97.92%' },
+  typography: { statements: '100%', branches: '91.66%', functions: '100%', lines: '100%' },
+  upload: { statements: '97.89%', branches: '84.76%', functions: '84.61%', lines: '97.89%' },
   watermark: { statements: '0%', branches: '50%', functions: '50%', lines: '0%' },
 };
