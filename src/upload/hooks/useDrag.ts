@@ -261,14 +261,23 @@ export default function useDrag(
   };
 
   const detectListSlot = (relY: number, count: number): number => {
-    const { itemTops, itemHeights } = layout;
-    for (let i = 0; i < itemTops.length && i < count; i++) {
-      const localY = relY - itemTops[i];
-      if (localY >= 0 && localY < itemHeights[i]) {
-        return localY > itemHeights[i] / 2 ? i + 1 : i;
-      }
-    }
-    return count - 1;
+    if (!layout || count === 0) return -1;
+
+    const itemH = layout.cellHeight;
+    const gap = layout.itemTops.length > 1 ? layout.itemTops[1] - layout.itemTops[0] - (layout.itemHeights[0] || 0) : 0;
+    const slotSize = itemH + gap;
+    if (slotSize <= 0) return 0;
+
+    const firstItemTop = layout.itemTops[0] || 0;
+    const adjustedY = relY - firstItemTop - itemH / 2;
+    if (adjustedY < 0) return 0;
+
+    const slotIndex = Math.floor(adjustedY / slotSize);
+    if (slotIndex >= count) return count - 1;
+
+    // 在该 item 的上半部分，放在当前 index；下半部分，放在下一个 index
+    const posInSlot = adjustedY - slotIndex * slotSize;
+    return posInSlot > itemH / 2 ? Math.min(slotIndex + 1, count - 1) : slotIndex;
   };
 
   const onTouchend = () => {

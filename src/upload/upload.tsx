@@ -249,7 +249,7 @@ export default defineComponent({
                 )}
                 {renderStatus(file)}
                 {showDisabledMask && <div class={`${uploadClass.value}__disabled-mask`} />}
-                {showRemoveBtn && !dragging.value && (
+                {showRemoveBtn && (
                   <CloseIcon
                     class={`${uploadClass.value}__delete-btn`}
                     onClick={({ e }: any) => onInnerRemove({ e, file, index })}
