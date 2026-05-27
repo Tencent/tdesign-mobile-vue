@@ -121,7 +121,6 @@ export function useSwipe(
         const [x, y] = getTouchEventCoords(e);
         updateCoordsStart(x, y);
         updateCoordsEnd(x, y);
-        onSwipeStart?.(e);
       },
       listenerOptions,
     ),
@@ -133,7 +132,11 @@ export function useSwipe(
         if (e.touches.length !== 1) return;
         const [x, y] = getTouchEventCoords(e);
         updateCoordsEnd(x, y);
-        if (!isSwiping.value && isThresholdExceeded.value) isSwiping.value = true;
+        if (!isSwiping.value && isThresholdExceeded.value) {
+          isSwiping.value = true;
+          onSwipeStart?.(e);
+        }
+
         if (isSwiping.value) onSwipe?.(e);
       },
       listenerOptions,

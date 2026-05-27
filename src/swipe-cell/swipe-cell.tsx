@@ -10,8 +10,8 @@ import {
   onUnmounted,
 } from 'vue';
 import { isArray, isBoolean } from 'lodash-es';
-import { useSwipe } from './useSwipe';
 import props from './props';
+import { useSwipe } from './useSwipe';
 import config from '../config';
 import { SwipeActionItem, SwipeSource } from './type';
 import { useClickAway } from '../shared';
@@ -105,6 +105,7 @@ export default defineComponent({
         swipeDir = 0;
         initData.moved = false;
         initData.offset = initData.pos;
+        props.onDragstart?.();
       },
       onSwipe: (e: TouchEvent) => {
         const absLenX = Math.abs(lengthX.value);
@@ -127,7 +128,6 @@ export default defineComponent({
         if (props.disabled || (!initData.moved && Math.abs(lengthX.value) < distance)) {
           return;
         }
-
         if (showSureRight.value) {
           closedSure.value = lengthX.value > 0 && initData.pos === 0;
           showSureRight.value = false;
@@ -144,6 +144,7 @@ export default defineComponent({
         if (props.disabled) {
           return;
         }
+        props.onDragend?.();
         initData.moving = false;
         setTimeout(() => {
           closedSure.value = false;
