@@ -128,7 +128,13 @@ export default defineComponent({
 
     extendAPI({ focus, blur });
 
-    const handleClear = (e: TouchEvent) => {
+    const handleClearTouchStart = (e: TouchEvent) => {
+      // 阻止 touchstart 时 input 触发 blur，防止在企业微信等内置浏览器中
+      // clearable 按钮因 focused 变为 false 而从 DOM 消失，导致 touchend 无法触发
+      e.preventDefault();
+    };
+
+    const handleClearTouchEnd = (e: TouchEvent) => {
       e.preventDefault();
       const val = props.type === 'number' ? undefined : '';
       setInnerValue(val);
@@ -203,7 +209,11 @@ export default defineComponent({
       const renderClearable = () => {
         if (showClear.value) {
           return (
-            <div class={`${inputClass.value}__wrap--clearable-icon`} onTouchend={handleClear}>
+            <div
+              class={`${inputClass.value}__wrap--clearable-icon`}
+              onTouchstart={handleClearTouchStart}
+              onTouchend={handleClearTouchEnd}
+            >
               <TCloseCircleFilledIcon />
             </div>
           );
