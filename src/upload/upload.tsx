@@ -102,13 +102,13 @@ export default defineComponent({
     } = useDrag(props, uploadClass, setUploadValue, toUploadFiles);
 
     watch(
-      () => displayFiles.value,
-      (files) => {
+      [() => displayFiles.value, () => displayFiles.value?.length],
+      ([files]) => {
         if (files) {
           syncFiles(files);
         }
       },
-      { immediate: true, deep: true },
+      { immediate: true },
     );
 
     const rootClass = computed(() => [
@@ -211,11 +211,12 @@ export default defineComponent({
             const showDisabledMask =
               disabled?.value && !isFileItem && file.status !== 'progress' && file.status !== 'fail';
             const isDragged = dragging.value && dragIndex.value === index;
+            const fileKey = getDragKey(file);
 
             return (
               <div
-                key={getDragKey(file)}
-                data-drag-key={getDragKey(file)}
+                key={fileKey}
+                data-drag-key={fileKey}
                 class={[
                   `${uploadClass.value}__item`,
                   {

@@ -1528,7 +1528,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             
             <div
               class="t-upload__item"
-              data-drag-key="u_gk59byu"
+              data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fexample4.png"
             >
               <div
                 class="t-image t-image--round t-upload__image"
@@ -1599,7 +1599,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             </div>
             <div
               class="t-upload__item"
-              data-drag-key="u_ku9q4fz"
+              data-drag-key="u_uploaded2.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fexample6.png"
             >
               <div
                 class="t-image t-image--round t-upload__image"
@@ -3425,7 +3425,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   
                   <div
                     class="t-upload__item"
-                    data-drag-key="u_muke1ys"
+                    data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fexample4.png"
                   >
                     <div
                       class="t-image t-image--round t-upload__image"
@@ -3496,7 +3496,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   </div>
                   <div
                     class="t-upload__item"
-                    data-drag-key="u_hv0ajmr"
+                    data-drag-key="u_uploaded2.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fexample6.png"
                   >
                     <div
                       class="t-image t-image--round t-upload__image"
@@ -5171,7 +5171,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             
             <div
               class="t-upload__item"
-              data-drag-key="u_nvg705i"
+              data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fexample4.png"
             >
               <div
                 class="t-image t-image--round t-upload__image"
@@ -5242,7 +5242,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             </div>
             <div
               class="t-upload__item"
-              data-drag-key="u_unyzacl"
+              data-drag-key="u_uploaded2.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fexample6.png"
             >
               <div
                 class="t-image t-image--round t-upload__image"

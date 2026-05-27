@@ -192,7 +192,7 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
   /**
    * 拖拽开始时触发
    */
-  onDrag?: () => void;
+  onDrag?: (context: { file: UploadFile; index: number }) => void;
   /**
    * 拖拽结束后触发，返回上传的文件列表（拖拽后的文件顺序）
    */

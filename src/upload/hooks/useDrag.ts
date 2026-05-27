@@ -39,6 +39,8 @@ export default function useDrag(
   setUploadValue: (value: UploadFile[], context: UploadChangeContext) => void,
   toUploadFilesRef?: ShallowRef<UploadFile[]>,
 ): UseDragReturn {
+  let dragUid = 0;
+  const keySeeds = new Map<string, number>();
   const dragging = ref(false);
   const dragIndex = ref(-1);
   const sortedFiles = ref<UploadFile[]>([]);
@@ -48,9 +50,26 @@ export default function useDrag(
 
   const getDragKey = (file: UploadFileWithUid): string => {
     if (file?.__uid) return file.__uid;
-    const uid = `u_${Math.random().toString(36).slice(2, 9)}`;
-    file.__uid = uid;
-    return uid;
+
+    const stableParts = [file?.name, file?.size, file?.lastModified, file?.type, file?.url].filter(
+      (part) => part !== undefined && part !== null && part !== '',
+    );
+    const baseKey = stableParts.length > 0 ? `u_${encodeURIComponent(stableParts.join('|'))}` : `u_${dragUid++}`;
+
+    const existingKeys = new Set(sortedFiles.value.map((item) => item.__uid).filter(Boolean));
+    let uniqueKey = baseKey;
+    if (existingKeys.has(uniqueKey)) {
+      const seed = keySeeds.get(baseKey) ?? 0;
+      let next = seed + 1;
+      while (existingKeys.has(`${baseKey}-${next}`)) {
+        next += 1;
+      }
+      keySeeds.set(baseKey, next);
+      uniqueKey = `${baseKey}-${next}`;
+    }
+
+    file.__uid = uniqueKey;
+    return uniqueKey;
   };
 
   const syncFiles = (files: UploadFile[]) => {
@@ -194,7 +213,7 @@ export default function useDrag(
       overflow: 'hidden',
     };
 
-    props.onDrag?.();
+    props.onDrag?.({ file, index });
   };
 
   // 拖拽

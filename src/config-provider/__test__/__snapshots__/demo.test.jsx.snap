@@ -48,7 +48,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
           
           <div
             class="t-upload__item"
-            data-drag-key="u_4qy7q79"
+            data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload6.png"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -143,7 +143,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item"
-            data-drag-key="u_hpo8g4k"
+            data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload4.png"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -238,7 +238,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item"
-            data-drag-key="u_sj8jnr8"
+            data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload4.png-1"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -7205,7 +7205,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
       
       <div
         class="t-upload__item"
-        data-drag-key="u_yfc3yjf"
+        data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload6.png"
       >
         <div
           class="t-image t-image--round t-upload__image"
@@ -7300,7 +7300,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
       </div>
       <div
         class="t-upload__item"
-        data-drag-key="u_5km9prn"
+        data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload4.png"
       >
         <div
           class="t-image t-image--round t-upload__image"
@@ -7395,7 +7395,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
       </div>
       <div
         class="t-upload__item"
-        data-drag-key="u_r7dqsye"
+        data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload4.png-1"
       >
         <div
           class="t-image t-image--round t-upload__image"
