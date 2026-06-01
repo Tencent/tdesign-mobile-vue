@@ -316,7 +316,6 @@ export default defineComponent({
         {props.theme === 'list' ? renderListLayout() : renderGridLayout()}
         <input
           ref={inputRef}
-          value={props.files}
           type="file"
           multiple={props.multiple}
           hidden
