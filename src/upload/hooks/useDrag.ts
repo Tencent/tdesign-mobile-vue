@@ -1,9 +1,34 @@
-import { ref } from 'vue';
+import { ref, onBeforeUnmount } from 'vue';
 import type { Ref, ShallowRef, ComputedRef, CSSProperties } from 'vue';
 import type { TdUploadProps, UploadFile, UploadChangeContext } from '../type';
 
 interface UploadFileWithUid extends UploadFile {
   __uid?: string;
+}
+
+let globalUidCounter = 0;
+const keySeeds = new Map<string, number>();
+
+// 设置 file 的唯一id
+function setDragKey(file: UploadFileWithUid, existing: Set<string>): string {
+  if (file.__uid) return file.__uid;
+
+  const parts = [file.name, file.size, file.lastModified, file.type, file.url].filter(
+    (p) => p !== undefined && p !== null && p !== '',
+  );
+  let base = parts.length > 0 ? `u_${encodeURIComponent(parts.join('|'))}` : `u_${++globalUidCounter}`;
+
+  if (existing.has(base)) {
+    const seed = keySeeds.get(base) ?? 0;
+    let n = seed + 1;
+    while (existing.has(`${base}-${n}`)) n++;
+    keySeeds.set(base, n);
+    base = `${base}-${n}`;
+  }
+
+  file.__uid = base;
+  existing.add(base);
+  return base;
 }
 
 export interface UseDragReturn {
@@ -31,6 +56,8 @@ export interface UseDragReturn {
   onTouchend: (e: TouchEvent) => void;
   /** 触摸取消：清理状态 */
   onTouchcancel: (e: TouchEvent) => void;
+  /** 拖拽刚结束 300ms 内为 true，用于屏蔽误触预览 */
+  dragEnded: Ref<boolean>;
 }
 
 export default function useDrag(
@@ -39,47 +66,33 @@ export default function useDrag(
   setUploadValue: (value: UploadFile[], context: UploadChangeContext) => void,
   toUploadFilesRef?: ShallowRef<UploadFile[]>,
 ): UseDragReturn {
-  let dragUid = 0;
-  const keySeeds = new Map<string, number>();
   const dragging = ref(false);
   const dragIndex = ref(-1);
   const sortedFiles = ref<UploadFile[]>([]);
   const cloneVisible = ref(false);
   const cloneStyle = ref<CSSProperties>({});
   const cloneFile = ref<UploadFile | null>(null);
+  const dragEnded = ref(false);
 
-  const getDragKey = (file: UploadFileWithUid): string => {
-    if (file?.__uid) return file.__uid;
+  let longPressTimer = 0;
+  let dragEndedTimer = 0;
+  const TIMEOUT_DURATION = 300;
 
-    const stableParts = [file?.name, file?.size, file?.lastModified, file?.type, file?.url].filter(
-      (part) => part !== undefined && part !== null && part !== '',
-    );
-    const baseKey = stableParts.length > 0 ? `u_${encodeURIComponent(stableParts.join('|'))}` : `u_${dragUid++}`;
+  onBeforeUnmount(() => {
+    clearTimeout(longPressTimer);
+    clearTimeout(dragEndedTimer);
+  });
 
-    const existingKeys = new Set(sortedFiles.value.map((item) => item.__uid).filter(Boolean));
-    let uniqueKey = baseKey;
-    if (existingKeys.has(uniqueKey)) {
-      const seed = keySeeds.get(baseKey) ?? 0;
-      let next = seed + 1;
-      while (existingKeys.has(`${baseKey}-${next}`)) {
-        next += 1;
-      }
-      keySeeds.set(baseKey, next);
-      uniqueKey = `${baseKey}-${next}`;
-    }
-
-    file.__uid = uniqueKey;
-    return uniqueKey;
-  };
+  const getDragKey = (file: UploadFileWithUid): string => file?.__uid || '';
 
   const syncFiles = (files: UploadFile[]) => {
     if (!dragging.value) {
+      const existing = new Set<string>();
+      files.forEach((f) => setDragKey(f as UploadFileWithUid, existing));
       sortedFiles.value = [...files];
     }
   };
 
-  // 非响应式内部状态
-  let longPressTimer = 0;
   let cachedItemWidth = 0;
   let cachedItemHeight = 0;
   let startFingerX = 0;
@@ -109,12 +122,9 @@ export default function useDrag(
     startFingerX = touch.clientX;
     startFingerY = touch.clientY;
     hasMoved = false;
-
     longPressTarget = e.currentTarget as HTMLElement;
 
-    longPressTimer = window.setTimeout(() => {
-      onLongPress(index);
-    }, 300);
+    longPressTimer = window.setTimeout(() => onLongPress(index), TIMEOUT_DURATION);
   };
 
   const onLongPress = (index: number) => {
@@ -128,9 +138,6 @@ export default function useDrag(
     cachedItemWidth = rect.width;
     cachedItemHeight = rect.height;
 
-    // 快照当前布局参数
-    // target.parentElement 可能是更上层的元素。
-    // 使用 querySelectorAll('[data-drag-key]') 确保只获取文 item 元素。
     const container = target.closest(`.${uploadClass.value}`);
     if (container) {
       const containerRect = container.getBoundingClientRect();
@@ -294,13 +301,19 @@ export default function useDrag(
     const slotIndex = Math.floor(adjustedY / slotSize);
     if (slotIndex >= count) return count - 1;
 
-    // 在该 item 的上半部分，放在当前 index；下半部分，放在下一个 index
+    // 上半部分放当前 index，下半部分放下一个 index
     const posInSlot = adjustedY - slotIndex * slotSize;
     return posInSlot > itemH / 2 ? Math.min(slotIndex + 1, count - 1) : slotIndex;
   };
 
   const onTouchend = () => {
     clearTimeout(longPressTimer);
+
+    // 拖拽刚结束，300ms 内置 true，屏蔽误触预览
+    dragEnded.value = true;
+    dragEndedTimer = window.setTimeout(() => {
+      dragEnded.value = false;
+    }, TIMEOUT_DURATION);
 
     if (!dragging.value) {
       longPressTarget = null;
@@ -387,5 +400,6 @@ export default function useDrag(
     onTouchmove,
     onTouchend,
     onTouchcancel,
+    dragEnded,
   };
 }

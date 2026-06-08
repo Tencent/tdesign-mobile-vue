@@ -99,6 +99,7 @@ export default defineComponent({
       onTouchmove,
       onTouchend,
       onTouchcancel,
+      dragEnded,
     } = useDrag(props, uploadClass, setUploadValue, toUploadFiles);
 
     watch(
@@ -125,8 +126,9 @@ export default defineComponent({
     );
 
     const handlePreview = (e: MouseEvent, file: UploadFile, index: number) => {
-      // 拖拽中禁止预览，避免与拖拽操作冲突
       if (dragging.value) return;
+      // 拖拽刚结束 300ms 内屏蔽误触预览
+      if (dragEnded.value) return;
 
       props.onPreview?.({ e, file, index });
       if (!isImageFile(file)) return;
@@ -402,7 +404,7 @@ export default defineComponent({
 
       return (
         <Teleport to="body">
-          <div class={`${uploadClass.value}__drag-clone`} style={cloneStyle.value}>
+          <div class={[`${uploadClass.value}__item`, `${uploadClass.value}__drag-clone`]} style={cloneStyle.value}>
             {file.url && (
               <t-image
                 class={`${uploadClass.value}__image`}
@@ -417,6 +419,7 @@ export default defineComponent({
                 <div class={`${uploadClass.value}__file-name`}>{file.name}</div>
               </div>
             )}
+            {renderStatus(file)}
           </div>
         </Teleport>
       );
