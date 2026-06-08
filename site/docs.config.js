@@ -121,6 +121,14 @@ export const docs = [
         component: () => import('@/link/link.md'),
         componentEn: () => import('@/link/link.en-US.md'),
       },
+      {
+        title: 'Typography 排版',
+        titleEn: 'Typography',
+        name: 'typography',
+        path: '/mobile-vue/components/typography',
+        component: () => import('@/typography/typography.md'),
+        componentEn: () => import('@/typography/typography.en-US.md'),
+      },
     ],
   },
   {

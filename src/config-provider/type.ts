@@ -73,6 +73,10 @@ export interface GlobalConfigProvider {
    */
   table?: TableConfig;
   /**
+   * 排版全局配置
+   */
+  typography?: TypographyConfig;
+  /**
    * 上传组件全局配置
    */
   upload?: UploadConfig;
@@ -353,6 +357,24 @@ export interface UploadConfig {
    * 语言配置，上传进度相关。示例：{ uploadText: '上传中', waitingText: '待上传', 'failText': '上传失败', successText: '上传成功' }
    */
   progress?: UploadConfigProgress;
+}
+
+export interface TypographyConfig {
+  /**
+   * 语言配置，"展开" 描述文本
+   * @default ''
+   */
+  expandText?: string;
+  /**
+   * 语言配置，"收起" 描述文本
+   * @default ''
+   */
+  collapseText?: string;
+  /**
+   * 语言配置，"复制成功" 描述文本
+   * @default ''
+   */
+  copiedText?: string;
 }
 
 export interface UploadConfigProgress {

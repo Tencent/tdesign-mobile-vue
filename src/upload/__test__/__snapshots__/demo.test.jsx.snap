@@ -412,6 +412,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             <!---->
             <!---->
             <!---->
+            <!---->
           </div>
           <div
             class="t-upload__item"
@@ -459,6 +460,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 />
               </picture>
             </div>
+            <!---->
             <!---->
             <!---->
             <svg
@@ -528,6 +530,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 />
               </picture>
             </div>
+            <!---->
             <!---->
             <!---->
             <svg
@@ -703,6 +706,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -796,6 +800,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -968,6 +973,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -1100,6 +1106,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -1151,6 +1158,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -1220,6 +1228,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -1289,6 +1298,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -1340,6 +1350,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 report.xlsx
               </div>
             </div>
+            <!---->
             <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
@@ -1405,6 +1416,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </div>
             </div>
             <!---->
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -1461,6 +1473,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </div>
             </div>
             <!---->
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -1512,6 +1525,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 article.docx
               </div>
             </div>
+            <!---->
             <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
@@ -1606,6 +1620,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -1699,6 +1714,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -1810,6 +1826,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -1921,6 +1938,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -1988,6 +2006,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 />
               </picture>
             </div>
+            <!---->
             <!---->
             <!---->
             <svg
@@ -2256,47 +2275,52 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               class="t-upload__list-item"
             >
               <div
-                class="t-image t-image--round t-upload__list-item-thumbnail"
+                style="position: relative; flex-shrink: 0;"
               >
                 <div
-                  class="t-image__mask"
+                  class="t-image t-image--round t-upload__list-item-thumbnail"
                 >
                   <div
-                    class="t-loading"
-                    style="font-size: 20px;"
+                    class="t-image__mask"
                   >
                     <div
-                      class="t-loading__dots"
-                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      
                       <div
-                        class="t-loading__dot"
-                        style="animation-duration: 0.8s; animation-delay: 0s;"
-                      />
-                      <div
-                        class="t-loading__dot"
-                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                      />
-                      <div
-                        class="t-loading__dot"
-                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                      />
-                      
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                        
+                      </div>
+                      <!---->
+                      <!---->
                     </div>
-                    <!---->
-                    <!---->
                   </div>
+                  <picture>
+                    <!---->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/upload6.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
-                <picture>
-                  <!---->
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/upload6.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
-                </picture>
+                <!---->
               </div>
               <div
                 class="t-upload__list-item-content"
@@ -3007,6 +3031,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
       <!---->
       <!---->
       <!---->
+      <!---->
     </div>
     <div
       class="t-upload__item"
@@ -3054,6 +3079,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
           />
         </picture>
       </div>
+      <!---->
       <!---->
       <!---->
       <svg
@@ -3123,6 +3149,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
           />
         </picture>
       </div>
+      <!---->
       <!---->
       <!---->
       <svg
@@ -3280,6 +3307,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           </div>
           
         </div>
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
@@ -3373,6 +3401,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           </div>
           
         </div>
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
@@ -3545,6 +3574,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           </div>
           
         </div>
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
@@ -3660,6 +3690,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
           </div>
           
         </div>
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
@@ -3711,6 +3742,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
           </div>
           
         </div>
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
@@ -3780,6 +3812,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
           </div>
           
         </div>
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
@@ -3849,6 +3882,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
           </div>
           
         </div>
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
@@ -3900,6 +3934,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
             report.xlsx
           </div>
         </div>
+        <!---->
         <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
@@ -3965,6 +4000,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
           </div>
         </div>
         <!---->
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
@@ -4021,6 +4057,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
           </div>
         </div>
         <!---->
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
@@ -4072,6 +4109,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
             article.docx
           </div>
         </div>
+        <!---->
         <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
@@ -4166,6 +4204,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
           </div>
           
         </div>
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
@@ -4259,6 +4298,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
           </div>
           
         </div>
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
@@ -4370,6 +4410,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
           </div>
           
         </div>
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
@@ -4481,6 +4522,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
           </div>
           
         </div>
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
@@ -4548,6 +4590,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
             />
           </picture>
         </div>
+        <!---->
         <!---->
         <!---->
         <svg
@@ -4816,47 +4859,52 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
           class="t-upload__list-item"
         >
           <div
-            class="t-image t-image--round t-upload__list-item-thumbnail"
+            style="position: relative; flex-shrink: 0;"
           >
             <div
-              class="t-image__mask"
+              class="t-image t-image--round t-upload__list-item-thumbnail"
             >
               <div
-                class="t-loading"
-                style="font-size: 20px;"
+                class="t-image__mask"
               >
                 <div
-                  class="t-loading__dots"
-                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  class="t-loading"
+                  style="font-size: 20px;"
                 >
-                  
                   <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0s;"
-                  />
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                  />
-                  <div
-                    class="t-loading__dot"
-                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                  />
-                  
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                    
+                  </div>
+                  <!---->
+                  <!---->
                 </div>
-                <!---->
-                <!---->
               </div>
+              <picture>
+                <!---->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/upload6.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </picture>
             </div>
-            <picture>
-              <!---->
-              <img
-                alt=""
-                class="t-image__img"
-                src="https://tdesign.gtimg.com/mobile/demos/upload6.png"
-                style="object-fit: fill; object-position: center;"
-              />
-            </picture>
+            <!---->
           </div>
           <div
             class="t-upload__list-item-content"

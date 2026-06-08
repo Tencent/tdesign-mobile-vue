@@ -1575,6 +1575,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               </div>
               <!---->
               <!---->
+              <!---->
               <svg
                 class="t-icon t-icon-close t-upload__delete-btn"
                 fill="none"
@@ -1642,6 +1643,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                   />
                 </picture>
               </div>
+              <!---->
               <!---->
               <!---->
               <svg
@@ -3469,6 +3471,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     </div>
                     <!---->
                     <!---->
+                    <!---->
                     <svg
                       class="t-icon t-icon-close t-upload__delete-btn"
                       fill="none"
@@ -3536,6 +3539,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                         />
                       </picture>
                     </div>
+                    <!---->
                     <!---->
                     <!---->
                     <svg
@@ -5212,6 +5216,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               </div>
               <!---->
               <!---->
+              <!---->
               <svg
                 class="t-icon t-icon-close t-upload__delete-btn"
                 fill="none"
@@ -5279,6 +5284,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                   />
                 </picture>
               </div>
+              <!---->
               <!---->
               <!---->
               <svg

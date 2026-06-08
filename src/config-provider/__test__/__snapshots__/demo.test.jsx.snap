@@ -119,6 +119,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -212,6 +213,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -323,6 +325,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            <!---->
             <svg
               class="t-icon t-icon-close t-upload__delete-btn"
               fill="none"
@@ -7271,6 +7274,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
           </div>
           
         </div>
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
@@ -7364,6 +7368,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
           </div>
           
         </div>
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"
@@ -7475,6 +7480,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
           </div>
           
         </div>
+        <!---->
         <svg
           class="t-icon t-icon-close t-upload__delete-btn"
           fill="none"

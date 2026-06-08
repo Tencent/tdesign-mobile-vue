@@ -54,6 +54,7 @@ declare module 'vue' {
     TNavbar: typeof import('tdesign-mobile-vue')['Navbar'];
     TNoticeBar: typeof import('tdesign-mobile-vue')['NoticeBar'];
     TOverlay: typeof import('tdesign-mobile-vue')['Overlay'];
+    TTypographyParagraph: typeof import('tdesign-mobile-vue')['Paragraph'];
     TPicker: typeof import('tdesign-mobile-vue')['Picker'];
     TPopover: typeof import('tdesign-mobile-vue')['Popover'];
     TPopup: typeof import('tdesign-mobile-vue')['Popup'];
@@ -83,7 +84,9 @@ declare module 'vue' {
     TTabPanel: typeof import('tdesign-mobile-vue')['TabPanel'];
     TTabs: typeof import('tdesign-mobile-vue')['Tabs'];
     TTag: typeof import('tdesign-mobile-vue')['Tag'];
+    TTypographyText: typeof import('tdesign-mobile-vue')['Text'];
     TTextarea: typeof import('tdesign-mobile-vue')['Textarea'];
+    TTypographyTitle: typeof import('tdesign-mobile-vue')['Title'];
     TToast: typeof import('tdesign-mobile-vue')['Toast'];
     TTreeSelect: typeof import('tdesign-mobile-vue')['TreeSelect'];
     TUpload: typeof import('tdesign-mobile-vue')['Upload'];

@@ -5,6 +5,15 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.15.0 `2026-06-08` 
+### 🚀 Features
+- `Typography`: 新增 `Typography` 排版组件 @anlyyao ([#2205](https://github.com/Tencent/tdesign-mobile-vue/pull/2205))
+### 🐞 Bug Fixes
+- `Upload`: 
+  - 修复文件禁用态样式错误 @anlyyao ([#2230](https://github.com/Tencent/tdesign-mobile-vue/pull/2230))
+  - 修复 `theme=list + #addContent`时，`click-upload` 事件无效 @anlyyao ([#2237](https://github.com/Tencent/tdesign-mobile-vue/pull/2237))
+  - 移除无效的 file input 中的 value 属性值 @anlyyao ([#2237](https://github.com/Tencent/tdesign-mobile-vue/pull/2237))
+
 ## 🌈 1.14.1 `2026-05-13` 
 ### 🚀 Features
 - `Segmented`: 调整 `change` 事件参数形式 @anlyyao ([#2223](https://github.com/Tencent/tdesign-mobile-vue/pull/2223))
