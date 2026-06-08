@@ -4824,7 +4824,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
         </div>
         <div
           class="t-upload__list-item t-upload__list-item--fail"
-          data-drag-key="u_Technical%20Design%20Document.pdf%7C222208%7Capplication%2Fpdf-1"
+          data-drag-key="u_Technical%20Design%20Document.pdf%7C222208%7Capplication%2Fpdf-2"
         >
           <svg
             class="t-icon t-icon-error-circle-filled t-upload__list-item-error-icon"
