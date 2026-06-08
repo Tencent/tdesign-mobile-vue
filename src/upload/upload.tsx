@@ -303,7 +303,7 @@ export default defineComponent({
       const addContentNode = renderTNodeJSX('addContent');
       const addBtnNode = renderTNodeJSX('addBtn');
       const defaultTriggerBtn = (
-        <TButton theme="primary" size="medium" disabled={disabled?.value} onClick={(e: MouseEvent) => triggerUpload(e)}>
+        <TButton theme="primary" size="medium" disabled={disabled?.value}>
           {{
             icon: () => <UploadIcon />,
             default: () => 'Upload',
@@ -317,7 +317,11 @@ export default defineComponent({
 
       return (
         <>
-          {showTrigger && <div class={`${uploadClass.value}__list-trigger`}>{triggerNode}</div>}
+          {showTrigger && (
+            <div class={`${uploadClass.value}__list-trigger`} onClick={triggerUpload}>
+              {triggerNode}
+            </div>
+          )}
           {files.length > 0 && (
             <div class={`${uploadClass.value}__list`}>
               <TransitionGroup name={`${uploadClass.value}-drag`}>
@@ -432,7 +436,6 @@ export default defineComponent({
         {props.theme === 'list' ? renderListLayout() : renderGridLayout()}
         <input
           ref={inputRef}
-          value={props.files}
           type="file"
           multiple={props.multiple}
           hidden
