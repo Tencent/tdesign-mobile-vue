@@ -85,6 +85,7 @@ Name | Default Value | Description
 --td-upload-add-icon-size | 28px | -
 --td-upload-background | @upload-add-bg-color | -
 --td-upload-delete-icon-color | #fff | -
+--td-upload-disabled-mask | @mask-disabled | -
 --td-upload-grid-columns | 4 | -
 --td-upload-height | 80px | -
 --td-upload-radius | @radius-default | -
