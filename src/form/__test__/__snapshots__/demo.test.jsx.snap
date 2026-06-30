@@ -22,6 +22,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           用户名
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -97,6 +98,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           密码
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -198,6 +200,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           性别
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -333,6 +336,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           生日
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -872,6 +876,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           籍贯
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -1141,6 +1146,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           年限
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -1234,6 +1240,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           自我评价
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -1456,6 +1463,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           个人简介
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -1512,6 +1520,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           上传照片
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -1918,6 +1927,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 用户名
               </label>
+              <!---->
             </div>
             <div
               class="t-form__controls"
@@ -1993,6 +2003,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 密码
               </label>
+              <!---->
             </div>
             <div
               class="t-form__controls"
@@ -2094,6 +2105,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 性别
               </label>
+              <!---->
             </div>
             <div
               class="t-form__controls"
@@ -2229,6 +2241,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 生日
               </label>
+              <!---->
             </div>
             <div
               class="t-form__controls"
@@ -2768,6 +2781,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 籍贯
               </label>
+              <!---->
             </div>
             <div
               class="t-form__controls"
@@ -3037,6 +3051,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 年限
               </label>
+              <!---->
             </div>
             <div
               class="t-form__controls"
@@ -3130,6 +3145,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 自我评价
               </label>
+              <!---->
             </div>
             <div
               class="t-form__controls"
@@ -3352,6 +3368,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 个人简介
               </label>
+              <!---->
             </div>
             <div
               class="t-form__controls"
@@ -3408,6 +3425,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 上传照片
               </label>
+              <!---->
             </div>
             <div
               class="t-form__controls"
@@ -3680,6 +3698,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           用户名
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -3753,6 +3772,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           密码
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -3852,6 +3872,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           性别
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -3985,6 +4006,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           生日
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -4522,6 +4544,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           籍贯
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -4789,6 +4812,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           年限
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -4880,6 +4904,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           自我评价
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -5100,6 +5125,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           个人简介
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -5154,6 +5180,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           上传照片
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
