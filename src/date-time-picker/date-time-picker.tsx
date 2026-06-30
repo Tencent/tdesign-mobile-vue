@@ -56,6 +56,15 @@ export default defineComponent({
       () => isArray(props.mode) && props.mode[0] == null && ['hour', 'minute', 'second'].includes(props.mode[1]),
     );
 
+    // format 优先级：props.format > globalConfig.format > 兜底 'YYYY-MM-DD HH:mm:ss'
+    const format = computed(() => props.format || globalConfig.value.format || 'YYYY-MM-DD HH:mm:ss');
+
+    // 格式化输出值：'time-stamp' 返回毫秒时间戳，其余走 dayjs.format
+    const formatValue = (val: Dayjs): string | number => {
+      if (format.value === 'time-stamp') return val.valueOf();
+      return val.format(format.value);
+    };
+
     const rationalize = (val: Dayjs) => {
       if (isTimeMode.value) return val;
       if (val.isBefore(start.value)) return start.value;
@@ -189,8 +198,9 @@ export default defineComponent({
         return map;
       }, {});
       const cur = dayjs(dayObject);
-      props.onConfirm?.(dayjs(cur || curDate.value).format(props.format));
-      setDateTimePickerValue(dayjs(cur || curDate.value).format(props.format));
+      const formatted = formatValue(dayjs(cur || curDate.value));
+      props.onConfirm?.(formatted);
+      setDateTimePickerValue(formatted);
     };
 
     const onCancel = (context: { e: MouseEvent }) => {
@@ -203,7 +213,7 @@ export default defineComponent({
       const val = curDate.value.set(type as UnitType, parseInt(columns.value[column][index]?.value, 10));
 
       curDate.value = rationalize(val);
-      props.onPick?.(rationalize(val).format(props.format));
+      props.onPick?.(formatValue(rationalize(val)));
     };
 
     watch(innerValue, (val) => {
