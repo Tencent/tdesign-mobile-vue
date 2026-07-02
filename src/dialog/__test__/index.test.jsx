@@ -215,6 +215,30 @@ describe('dialog', () => {
     });
   });
   describe('event', () => {
+    it('should support custom onClick in actions', async () => {
+      const onClick = vi.fn();
+      const onCancel = vi.fn();
+      const onClose = vi.fn();
+      const wrapper = mount(Dialog, {
+        props: {
+          visible: true,
+          actions: [{ content: 'action', onClick }],
+          onCancel,
+          onClose,
+        },
+      });
+
+      const $button = wrapper.findComponent(Button);
+      expect($button.props('onClick')).toBeTypeOf('function');
+
+      await $button.trigger('click');
+
+      expect(onClick).toHaveBeenCalledTimes(1);
+      expect(onClick).toHaveBeenCalledWith(expect.any(MouseEvent));
+      expect(onCancel).toHaveBeenCalledTimes(1);
+      expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'cancel' });
+    });
+
     it(':cancel && confirm && close', async () => {
       const visible = true;
       const cancelBtn = 'cancel';

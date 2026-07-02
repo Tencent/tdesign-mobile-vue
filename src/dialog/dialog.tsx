@@ -156,7 +156,9 @@ export default defineComponent({
       ...calcBtn(props.cancelBtn),
     }));
 
-    const actionsBtnProps = computed(() => props.actions?.map((item) => calcBtn(item)));
+    const actionsBtnProps = computed<ButtonProps[] | undefined>(() =>
+      Array.isArray(props.actions) ? props.actions.map((item) => calcBtn(item) as ButtonProps) : undefined,
+    );
 
     const renderButtonNode = (
       btnType: 'cancelBtn' | 'confirmBtn',
@@ -197,9 +199,15 @@ export default defineComponent({
       };
       const renderActionsNode = () => {
         if (actionsBtnProps.value) {
-          return actionsBtnProps.value.map((item, index) => (
-            <TButton key={index} {...item} class={buttonClass.value} onClick={handleCancel} />
-          ));
+          return actionsBtnProps.value.map((item, index) => {
+            const { onClick, ...buttonProps } = item;
+            const handleActionClick = (e: MouseEvent) => {
+              onClick?.(e);
+              handleCancel(e);
+            };
+
+            return <TButton key={index} {...buttonProps} class={buttonClass.value} onClick={handleActionClick} />;
+          });
         }
 
         return renderTNodeJSX('actions');
