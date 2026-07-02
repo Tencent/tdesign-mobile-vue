@@ -4,8 +4,9 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { FormErrorMessage } from '../form';
 import { ImageProps } from '../image';
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdConfigProviderProps {
   /**
@@ -41,6 +42,10 @@ export interface GlobalConfigProvider {
    */
   dropdownMenu?: DropdownMenuConfig;
   /**
+   * 表单组件全局配置
+   */
+  form?: FormConfig;
+  /**
    * 引导全局配置
    */
   guide?: GuideConfig;
@@ -73,7 +78,7 @@ export interface GlobalConfigProvider {
    */
   table?: TableConfig;
   /**
-   * 排版全局配置
+   * 排版组件全局配置
    */
   typography?: TypographyConfig;
   /**
@@ -147,7 +152,7 @@ export interface DateTimePickerConfig {
   dateLabel?: string;
   /**
    * 日期格式化规则
-   * @default YYYY-MM-DD
+   * @default 'YYYY-MM-DD HH:mm:ss'
    */
   format?: string;
   /**
@@ -193,6 +198,28 @@ export interface DropdownMenuConfig {
    * @default ''
    */
   reset?: string;
+}
+
+export interface FormConfig {
+  /**
+   * 字段旁边的冒号，中文为“：”
+   * @default ''
+   */
+  colonText?: string;
+  /**
+   * 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`
+   */
+  errorMessage?: FormErrorMessage;
+  /**
+   * 是否显示必填符号（*），默认显示
+   * @default true
+   */
+  requiredMark?: boolean;
+  /**
+   * 表单必填符号（*）显示位置
+   * @default left
+   */
+  requiredMarkPosition?: 'left' | 'right';
 }
 
 export interface GuideConfig {
@@ -352,29 +379,29 @@ export interface TableConfig {
   empty?: string | TNode;
 }
 
+export interface TypographyConfig {
+  /**
+   * 语言配置，“收起”描述文本
+   * @default ''
+   */
+  collapseText?: string;
+  /**
+   * 语言配置，“复制成功”描述文本
+   * @default ''
+   */
+  copiedText?: string;
+  /**
+   * 语言配置，“展开”描述文本
+   * @default ''
+   */
+  expandText?: string;
+}
+
 export interface UploadConfig {
   /**
    * 语言配置，上传进度相关。示例：{ uploadText: '上传中', waitingText: '待上传', 'failText': '上传失败', successText: '上传成功' }
    */
   progress?: UploadConfigProgress;
-}
-
-export interface TypographyConfig {
-  /**
-   * 语言配置，"展开" 描述文本
-   * @default ''
-   */
-  expandText?: string;
-  /**
-   * 语言配置，"收起" 描述文本
-   * @default ''
-   */
-  collapseText?: string;
-  /**
-   * 语言配置，"复制成功" 描述文本
-   * @default ''
-   */
-  copiedText?: string;
 }
 
 export interface UploadConfigProgress {
