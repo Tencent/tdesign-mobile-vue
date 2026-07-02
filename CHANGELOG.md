@@ -5,6 +5,15 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.15.1 `2026-07-02` 
+### 🚀 Features
+- `DateTimePicker`: 为 `format` 属性新增 `time-stamp` 可选项，支持时间戳格式 @anlyyao ([#2249](https://github.com/Tencent/tdesign-mobile-vue/pull/2249))
+- `Form`: 支持国际化 @anlyyao ([#2249](https://github.com/Tencent/tdesign-mobile-vue/pull/2249))
+### 🐞 Bug Fixes
+- `Button`: ⚠️ `--td-button-xx-font-size` 系列变更为 `--td-button-xx-font`；⚠️ 移除 `--td-button-font-weight`，请改用 `--td-button-xx-font`，或者[组件库级别的 css var ](https://github.com/Tencent/tdesign-common/blob/develop/style/mobile/theme/_font.less)调整字号、行高、字重、字体等文本样式 @liweijie0812 ([common#2540](https://github.com/Tencent/tdesign-common/pull/2540))([#2245](https://github.com/Tencent/tdesign-mobile-vue/pull/2245))
+- `ConfigProvider`: 为 `Upload` 语言包补充 `upload.progress.reloadText` 字段 @dev-soragoto ([common#2576](https://github.com/Tencent/tdesign-common/pull/2576))
+- `Dialog`: 修复 `actions` 配置 `onClick` 时按钮点击事件报错，⚠️ 配置项的 `onClick` 事件会无条件先执行，不受 `beforeClose` 影响 @AsukaShikinamiLangley ([#2253](https://github.com/Tencent/tdesign-mobile-vue/pull/2253))
+
 ## 🌈 1.15.0 `2026-06-08` 
 ### 🚀 Features
 - `Typography`: 新增 `Typography` 排版组件 @anlyyao ([#2205](https://github.com/Tencent/tdesign-mobile-vue/pull/2205))
