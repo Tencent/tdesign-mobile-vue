@@ -133,13 +133,13 @@ export default defineComponent({
       context.emit('overlay-click', { e });
     };
 
-    const calcBtn = (btn: TdDialogProps['cancelBtn'] | TdDialogProps['confirmBtn']) => {
+    const calcBtn = (btn: TdDialogProps['cancelBtn'] | TdDialogProps['confirmBtn'] | ButtonProps): ButtonProps => {
       if (isString(btn)) {
         return { content: btn };
       }
 
       if (isObject(btn)) {
-        return btn;
+        return btn as ButtonProps;
       }
 
       return {};
@@ -148,7 +148,7 @@ export default defineComponent({
     const confirmBtnProps = computed<ButtonProps>(() => ({
       theme: 'primary',
       ...calcBtn(props.confirmBtn),
-      loading: confirmLoading.value || (calcBtn(props.confirmBtn) as ButtonProps)?.loading,
+      loading: confirmLoading.value || calcBtn(props.confirmBtn)?.loading,
     }));
 
     const cancelBtnProps = computed<ButtonProps>(() => ({
@@ -157,7 +157,7 @@ export default defineComponent({
     }));
 
     const actionsBtnProps = computed<ButtonProps[] | undefined>(() =>
-      Array.isArray(props.actions) ? props.actions.map((item) => calcBtn(item) as ButtonProps) : undefined,
+      Array.isArray(props.actions) ? props.actions.map((item) => calcBtn(item)) : undefined,
     );
 
     const renderButtonNode = (
@@ -202,11 +202,13 @@ export default defineComponent({
           return actionsBtnProps.value.map((item, index) => {
             const { onClick, ...buttonProps } = item;
             const handleActionClick = (e: MouseEvent) => {
-              onClick?.(e);
-              handleCancel(e);
+              onClick?.(e); // 不受 beforeClose 影响，无条件先执行
+              handleCancel(e); // 内部可能被 beforeClose reject 而不关闭
             };
 
-            return <TButton key={index} {...buttonProps} class={buttonClass.value} onClick={handleActionClick} />;
+            const key = `${isString(item.content) ? item.content : 'action'}-${index}`;
+
+            return <TButton key={key} {...buttonProps} class={buttonClass.value} onClick={handleActionClick} />;
           });
         }
 
