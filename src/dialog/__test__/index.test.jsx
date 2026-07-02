@@ -215,6 +215,113 @@ describe('dialog', () => {
     });
   });
   describe('event', () => {
+    it('should support custom onClick in actions', async () => {
+      const onClick = vi.fn();
+      const onCancel = vi.fn();
+      const onClose = vi.fn();
+      const wrapper = mount(Dialog, {
+        props: {
+          visible: true,
+          actions: [{ content: 'action', onClick }],
+          onCancel,
+          onClose,
+        },
+      });
+
+      const $button = wrapper.findComponent(Button);
+      expect($button.props('onClick')).toBeTypeOf('function');
+
+      await $button.trigger('click');
+
+      expect(onClick).toHaveBeenCalledTimes(1);
+      expect(onClick).toHaveBeenCalledWith(expect.any(MouseEvent));
+      expect(onCancel).toHaveBeenCalledTimes(1);
+      expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'cancel' });
+    });
+
+    it('should close dialog when action has no onClick', async () => {
+      const onCancel = vi.fn();
+      const onClose = vi.fn();
+      const wrapper = mount(Dialog, {
+        props: {
+          visible: true,
+          actions: [{ content: 'action' }],
+          onCancel,
+          onClose,
+        },
+      });
+
+      const $button = wrapper.findComponent(Button);
+      await $button.trigger('click');
+
+      expect(onCancel).toHaveBeenCalledTimes(1);
+      expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'cancel' });
+    });
+
+    it('should trigger each action onClick independently', async () => {
+      const onClickA = vi.fn();
+      const onClickB = vi.fn();
+      const wrapper = mount(Dialog, {
+        props: {
+          visible: true,
+          actions: [
+            { content: 'A', onClick: onClickA },
+            { content: 'B', onClick: onClickB },
+          ],
+        },
+      });
+
+      const $buttons = wrapper.findAllComponents(Button);
+      expect($buttons).toHaveLength(2);
+
+      await $buttons.at(1).trigger('click');
+      expect(onClickB).toHaveBeenCalledTimes(1);
+      expect(onClickA).not.toHaveBeenCalled();
+
+      await $buttons.at(0).trigger('click');
+      expect(onClickA).toHaveBeenCalledTimes(1);
+      expect(onClickB).toHaveBeenCalledTimes(1);
+    });
+
+    it('should passthrough action props (e.g. class) to button', async () => {
+      const wrapper = mount(Dialog, {
+        props: {
+          visible: true,
+          actions: [{ content: 'action', theme: 'danger', class: 'custom-action' }],
+        },
+      });
+
+      const $button = wrapper.findComponent(Button);
+      expect($button.props('theme')).toBe('danger');
+      expect($button.classes()).toContain('custom-action');
+    });
+
+    it('should run action onClick before beforeClose intercepts closing', async () => {
+      const onClick = vi.fn();
+      const onCancel = vi.fn();
+      // beforeClose reject 阻止关闭
+      const beforeClose = vi.fn(() => Promise.reject());
+      const wrapper = mount(Dialog, {
+        props: {
+          visible: true,
+          actions: [{ content: 'action', onClick }],
+          beforeClose,
+          onCancel,
+        },
+      });
+
+      const $button = wrapper.findComponent(Button);
+      await $button.trigger('click');
+      await nextTick();
+
+      // 用户 onClick 无条件先执行
+      expect(onClick).toHaveBeenCalledTimes(1);
+      // beforeClose 被触发用于拦截 cancel
+      expect(beforeClose).toHaveBeenCalledWith('cancel', { e: expect.any(MouseEvent) });
+      // 被拦截后不 emit cancel
+      expect(onCancel).not.toHaveBeenCalled();
+    });
+
     it(':cancel && confirm && close', async () => {
       const visible = true;
       const cancelBtn = 'cancel';
