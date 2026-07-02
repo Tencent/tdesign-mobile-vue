@@ -14,11 +14,7 @@
       >
         <template #addContent>
           <div class="add-content">
-            <t-image
-              style="width: 32px; height: 32px"
-              src="https://tdesign.gtimg.com/mobile/demos/upload3.png"
-              alt=""
-            />
+            <CameraIcon stroke-color="#0152d9" size="32" />
           </div>
         </template>
       </t-upload>
@@ -37,11 +33,7 @@
       >
         <template #addContent>
           <div class="add-content">
-            <t-image
-              style="width: 32px; height: 32px"
-              src="https://tdesign.gtimg.com/mobile/demos/upload3.png"
-              alt=""
-            />
+            <CameraIcon stroke-color="#0152d9" size="32" />
           </div>
         </template>
       </t-upload>
@@ -51,6 +43,7 @@
 
 <script lang="ts" setup>
 import { Message } from 'tdesign-mobile-vue';
+import { CameraIcon } from 'tdesign-icons-vue-next';
 
 const onValidate = (context: any) => {
   if (context.type === 'FILE_OVER_SIZE_LIMIT') {
