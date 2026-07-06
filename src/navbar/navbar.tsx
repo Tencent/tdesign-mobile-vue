@@ -21,12 +21,14 @@ export default defineComponent({
       navbarClass.value,
       {
         [`${navbarClass.value}--fixed`]: props.fixed,
-        [`${classPrefix.value}-safe-area-top`]: props.safeAreaInsetTop,
       },
       props.visible
         ? `${navbarClass.value}--visible${animationSuffix.value}`
         : `${navbarClass.value}--hide${animationSuffix.value}`,
     ]);
+
+    // 顶部安全区适配需同时作用于固定导航条与占位元素，保证两者高度一致。避免固定定位的 __content 不继承根元素 padding 而导致占位多预留、露出底部空白
+    const safeAreaTopClass = computed(() => (props.safeAreaInsetTop ? `${classPrefix.value}-safe-area-top` : ''));
 
     const styles = computed<CSSProperties>(() => ({
       zIndex: props.zIndex,
@@ -104,7 +106,7 @@ export default defineComponent({
 
       const renderPlaceholder = () => {
         if (fixed && placeholder) {
-          return <div class={`${navbarClass.value}__placeholder`}></div>;
+          return <div class={[`${navbarClass.value}__placeholder`, safeAreaTopClass.value]}></div>;
         }
         return null;
       };
@@ -112,7 +114,7 @@ export default defineComponent({
       return (
         <div class={navClass.value} style={styles.value}>
           {renderPlaceholder()}
-          <div class={`${navbarClass.value}__content`}>
+          <div class={[`${navbarClass.value}__content`, safeAreaTopClass.value]}>
             {renderLeft()}
             {renderCenter()}
             {renderRight()}
