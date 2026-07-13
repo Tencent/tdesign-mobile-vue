@@ -10,7 +10,7 @@ bordered | Boolean | true | \- | N
 fixed | Boolean | true | \- | N
 placeholder | Boolean | false | `1.12.0` | N
 safeAreaInsetBottom | Boolean | true | \- | N
-shape | String | normal | options: normal/round | N
+shape | String | normal | options: normal/round/round-glass | N
 split | Boolean | true | \- | N
 theme | String | normal | options: normal/tag | N
 value | String / Number / Array | - | `v-model` and `v-model:value` is supported。Typescript: `string \| number \| Array<string \| number>` | N
@@ -42,6 +42,15 @@ Name | Default Value | Description
 --td-tab-bar-bg-color | @bg-color-container | -
 --td-tab-bar-border-color | @border-color | -
 --td-tab-bar-round-shadow | @shadow-3 | -
+--td-tab-bar-glass-bg-color | rgba(255, 255, 255, 0.12) | Liquid glass background color
+--td-tab-bar-glass-blur | 8px | Center frosted blur radius
+--td-tab-bar-glass-edge-blur | 18px | Edge lens blur radius
+--td-tab-bar-glass-saturate | 180% | Backdrop saturation
+--td-tab-bar-glass-highlight-color | rgba(255, 255, 255, 0.72) | Edge specular highlight color
+--td-tab-bar-glass-shadow | 0 8px 32px rgba(0, 0, 0, 0.18) | Drop shadow
+--td-tab-bar-glass-sweep-duration | 6s | Specular sweep period
+--td-tab-bar-glass-image | none | Refraction layer backdrop image, opt-in
+--td-tab-bar-glass-refract | none | Refraction filter, e.g. blur(1.5px) url(#..), opt-in
 --td-tab-bar-active-bg | @brand-color-light | -
 --td-tab-bar-active-color | @brand-color | -
 --td-tab-bar-color | @text-color-primary | -

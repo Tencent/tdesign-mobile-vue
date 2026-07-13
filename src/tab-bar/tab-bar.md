@@ -10,7 +10,7 @@ bordered | Boolean | true | 是否显示外边框 | N
 fixed | Boolean | true | 是否固定在底部 | N
 placeholder | Boolean | false | `1.12.0`。固定在底部时是否开启占位 | N
 safeAreaInsetBottom | Boolean | true | 是否开启底部安全区适配 | N
-shape | String | normal | 标签栏的形状。可选项：normal/round | N
+shape | String | normal | 标签栏的形状。可选项：normal/round/round-glass | N
 split | Boolean | true | 是否需要分割线 | N
 theme | String | normal | 选项风格。可选项：normal/tag | N
 value | String / Number / Array | - | 当前选中标签的索引。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`string \| number \| Array<string \| number>` | N
@@ -42,6 +42,15 @@ value | String / Number | - | 标识符 | N
 --td-tab-bar-bg-color | @bg-color-container | -
 --td-tab-bar-border-color | @border-color | -
 --td-tab-bar-round-shadow | @shadow-3 | -
+--td-tab-bar-glass-bg-color | rgba(255, 255, 255, 0.12) | 液态玻璃背景色
+--td-tab-bar-glass-blur | 8px | 中心磨砂模糊半径
+--td-tab-bar-glass-edge-blur | 18px | 边缘透镜模糊半径
+--td-tab-bar-glass-saturate | 180% | 背景饱和度
+--td-tab-bar-glass-highlight-color | rgba(255, 255, 255, 0.72) | 边缘镜面高光色
+--td-tab-bar-glass-shadow | 0 8px 32px rgba(0, 0, 0, 0.18) | 投影
+--td-tab-bar-glass-sweep-duration | 6s | 流光扫过周期
+--td-tab-bar-glass-image | none | 折射层"背后画面"，opt-in
+--td-tab-bar-glass-refract | none | 折射滤镜，如 blur(1.5px) url(#..)，opt-in
 --td-tab-bar-active-bg | @brand-color-light | -
 --td-tab-bar-active-color | @brand-color | -
 --td-tab-bar-color | @text-color-primary | -

@@ -74,6 +74,7 @@ export default defineComponent({
 
       const renderTabBar = (
         <div ref={root} role="tablist" class={rootClass.value} style={styles.value}>
+          {props.shape === 'round-glass' && <div class={`${tabBarClass.value}__glass`} aria-hidden="true" />}
           {renderTNodeJSX('default')}
         </div>
       );

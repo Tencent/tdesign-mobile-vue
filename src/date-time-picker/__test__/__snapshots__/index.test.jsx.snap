@@ -286,7 +286,7 @@ exports[`DateTimePicker > props > : onPick 1`] = `
     >
       <ul
         class="t-picker-item"
-        style="transform: translate3d(0, -400px, 0);"
+        style="transform: translate3d(0, -360px, 0);"
       >
         
         <li
@@ -367,14 +367,14 @@ exports[`DateTimePicker > props > : onPick 1`] = `
           
         </li>
         <li
-          class="t-picker-item__item"
+          class="t-picker-item__item t-picker-item__item--active"
         >
           
           12 日
           
         </li>
         <li
-          class="t-picker-item__item t-picker-item__item--active"
+          class="t-picker-item__item"
         >
           
           13 日
