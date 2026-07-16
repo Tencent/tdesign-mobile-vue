@@ -32,7 +32,8 @@ export interface TdTabBarProps {
    * 标签栏的形状
    * @default normal
    */
-  shape?: 'normal' | 'round';
+  shape?: 'normal' | 'round' | 'liquid-glass';
+
   /**
    * 是否需要分割线
    * @default true

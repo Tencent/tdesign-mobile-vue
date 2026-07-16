@@ -167,13 +167,14 @@ export default defineComponent({
           );
         }
       };
+      const itemShape = shape.value === 'liquid-glass' ? 'round' : shape.value;
       return (
         <div
           class={{
             [`${tabBarItemClass.value}`]: true,
             [`${tabBarItemClass.value}--split`]: split.value,
             [`${tabBarItemClass.value}--crowded`]: crowded.value,
-            [`${tabBarItemClass.value}--${shape.value}`]: true,
+            [`${tabBarItemClass.value}--${itemShape}`]: true,
             [`${context.attrs.class || ''}`]: true,
           }}
         >

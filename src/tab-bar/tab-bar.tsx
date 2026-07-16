@@ -35,8 +35,10 @@ export default defineComponent({
         [`${tabBarClass.value}--bordered`]: props.bordered,
         [`${tabBarClass.value}--fixed`]: props.fixed,
         [`${tabBarClass.value}--safe`]: props.safeAreaInsetBottom,
+        [`${tabBarClass.value}--liquid-glass`]: props.shape === 'liquid-glass',
+        [`${tabBarClass.value}--round`]: props.shape === 'round' || props.shape === 'liquid-glass',
       },
-      `${tabBarClass.value}--${props.shape}`,
+      props.shape !== 'liquid-glass' ? `${tabBarClass.value}--${props.shape}` : '',
     ]);
 
     const styles = computed<CSSProperties>(() => ({
@@ -68,12 +70,41 @@ export default defineComponent({
       itemCount.value = childSlots.length;
     };
 
+    const renderLiquidGlassLayers = () => {
+      if (props.shape !== 'liquid-glass') return null;
+      return (
+        <>
+          {/* SVG filter for liquid glass displacement effect */}
+          <svg class={`${tabBarClass.value}__liquid-glass-svg`} aria-hidden="true">
+            <defs>
+              <filter
+                id={`${tabBarClass.value}-liquid-glass-filter`}
+                x="0%"
+                y="0%"
+                width="100%"
+                height="100%"
+                filterUnits="objectBoundingBox"
+              >
+                <feDisplacementMap scale="200" />
+              </filter>
+            </defs>
+          </svg>
+          {/* Liquid glass layers */}
+          <div class={`${tabBarClass.value}__liquid-glass-outer`}></div>
+          <div class={`${tabBarClass.value}__liquid-glass-cover`}></div>
+          <div class={`${tabBarClass.value}__liquid-glass-sharp`}></div>
+          <div class={`${tabBarClass.value}__liquid-glass-reflect`}></div>
+        </>
+      );
+    };
+
     return () => {
       const vNodes = context.slots.default ? context.slots.default() : [];
       updateItemCount(vNodes);
 
       const renderTabBar = (
         <div ref={root} role="tablist" class={rootClass.value} style={styles.value}>
+          {renderLiquidGlassLayers()}
           {renderTNodeJSX('default')}
         </div>
       );

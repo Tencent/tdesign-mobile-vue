@@ -31,7 +31,7 @@ export default {
     default: 'normal' as TdTabBarProps['shape'],
     validator(val: TdTabBarProps['shape']): boolean {
       if (!val) return true;
-      return ['normal', 'round'].includes(val);
+      return ['normal', 'round', 'liquid-glass'].includes(val);
     },
   },
   /** 是否需要分割线 */
