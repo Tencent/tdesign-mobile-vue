@@ -1,14 +1,11 @@
 import { defineComponent, computed, CSSProperties } from 'vue';
 import { ChevronLeftIcon } from 'tdesign-icons-vue-next';
-import config from '../config';
 import props from './props';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-navbar`,
+  name: 'TNavbar',
   props,
   emits: ['left-click', 'right-click'],
   setup(props, { slots }) {

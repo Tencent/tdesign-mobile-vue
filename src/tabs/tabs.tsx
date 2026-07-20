@@ -32,7 +32,7 @@ import { Styles } from '../common';
 const { prefix } = config;
 
 export default defineComponent({
-  name: `${prefix}-tabs`,
+  name: 'TTabs',
   props,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();
@@ -89,7 +89,7 @@ export default defineComponent({
         });
       };
       handler(children);
-      children = res.filter((child: RendererNode) => child.type.name === `${prefix}-tab-panel`);
+      children = res.filter((child: RendererNode) => child.type.name === 'TTabPanel');
       return children.map((item: RendererNode, index: number) => ({
         ...item.props,
         label: () => label[index] || item.props.label,

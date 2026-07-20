@@ -12,15 +12,12 @@ import {
 import { isArray, isBoolean } from 'lodash-es';
 import { useSwipe } from './useSwipe';
 import props from './props';
-import config from '../config';
 import { SwipeActionItem, SwipeSource } from './type';
 import { useClickAway } from '../shared';
 import { preventDefault } from '../shared/dom';
 import { useSureConfirm } from './useSureConfirm';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
-
-const { prefix } = config;
 
 export interface SwipeInitData {
   moving: boolean;
@@ -33,7 +30,7 @@ export interface SwipeInitData {
 }
 
 export default defineComponent({
-  name: `${prefix}-swipe-cell`,
+  name: 'TSwipeCell',
   props,
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();

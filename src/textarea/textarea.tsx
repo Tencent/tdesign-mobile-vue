@@ -1,6 +1,5 @@
 import { computed, ref, onMounted, defineComponent, toRefs, nextTick, watch, inject } from 'vue';
 import useLengthLimit from '../hooks/useLengthLimit';
-import config from '../config';
 import props from './props';
 import { TextareaValue } from './type';
 import calcTextareaHeight from '../_common/js/utils/calcTextareaHeight';
@@ -10,10 +9,8 @@ import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 import useVModel from '../hooks/useVModel';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-textarea`,
+  name: 'TTextarea',
   props,
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();

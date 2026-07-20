@@ -48,7 +48,7 @@ describe('drawer', () => {
         },
       });
 
-      const $overlay = wrapper.findComponent({ name: 't-overlay' });
+      const $overlay = wrapper.findComponent({ name: 'TOverlay' });
       expect($overlay.exists()).toBeTruthy();
 
       $overlay.find('.t-overlay').trigger('click');
@@ -90,7 +90,7 @@ describe('drawer', () => {
         },
       });
 
-      const $popup = wrapper.findComponent({ name: 't-popup' });
+      const $popup = wrapper.findComponent({ name: 'TPopup' });
       expect($popup.exists()).toBeTruthy();
       $popup.vm.$emit('visible-change', visible.value);
       expect($popup.emitted()['visible-change'].length).toBe(1);
@@ -117,7 +117,7 @@ describe('drawer', () => {
         },
       });
 
-      const $popup = wrapper.findComponent({ name: 't-popup' });
+      const $popup = wrapper.findComponent({ name: 'TPopup' });
       expect($popup.exists()).toBeTruthy();
       $popup.vm.$emit('close');
       expect($popup.emitted().close).toBeTruthy();

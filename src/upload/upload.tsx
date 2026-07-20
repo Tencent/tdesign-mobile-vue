@@ -22,7 +22,6 @@ import TImageViewer from '../image-viewer';
 import TButton from '../button';
 import { TdUploadProps, UploadFile } from './type';
 import UploadProps from './props';
-import config from '../config';
 import useUpload from './hooks/useUpload';
 import useDrag from './hooks/useDrag';
 import { useTNodeJSX } from '../hooks/tnode';
@@ -37,12 +36,10 @@ import {
   returnFileSize,
 } from '../_common/js/upload/utils';
 
-const { prefix } = config;
-
 const FILE_ZIP_REGEXP = /(\.zip|\.rar|\.7z|\.tar|\.gz|\.bz2|\.xz)/i;
 
 export default defineComponent({
-  name: `${prefix}-upload`,
+  name: 'TUpload',
   components: {
     TImage,
   },

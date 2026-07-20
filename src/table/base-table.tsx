@@ -23,10 +23,8 @@ import { TdLoadingProps } from '../loading/type';
 import { useConfig } from '../config-provider/useConfig';
 import { useTNodeJSX } from '../hooks/tnode';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-base-table`,
+  name: 'TBaseTable',
   props: baseTableProps,
   emits: ['cell-click', 'row-click', 'scroll', 'scroll-to-bottom'],
   setup(props, context) {

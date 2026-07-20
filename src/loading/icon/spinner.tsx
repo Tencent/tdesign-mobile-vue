@@ -1,12 +1,9 @@
 import { CSSProperties, PropType, defineComponent } from 'vue';
-import config from '../../config';
 
 import { usePrefixClass } from '../../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-spinner`,
+  name: 'TSpinner',
   props: {
     style: Object as PropType<CSSProperties>,
   },

@@ -1,15 +1,12 @@
 import { provide, defineComponent, reactive, ComponentInternalInstance, computed, toRefs } from 'vue';
 import props from './props';
-import config from '../config';
 import { TdStepsProps } from './type';
 import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-steps`,
+  name: 'TSteps',
   props,
   emits: ['update:current', 'update:modelValue', 'change'],
   setup(props, context) {

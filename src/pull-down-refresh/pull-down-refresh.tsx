@@ -4,14 +4,11 @@ import { throttle } from 'lodash-es';
 import PullDownRefreshProps from './props';
 import { convertUnit, reconvertUnit } from '../shared';
 import { preventDefault } from '../shared/dom';
-import config from '../config';
 import TLoading from '../loading';
 import useVModel from '../hooks/useVModel';
 import { useContent } from '../hooks/tnode';
 import { useTouch, isReachTop, easeDistance, getScrollParent } from './useTouch';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
-
-const { prefix } = config;
 
 const statusName = ['pulling', 'loosing', 'loading', 'success', 'initial'];
 
@@ -19,7 +16,7 @@ const statusName = ['pulling', 'loosing', 'loading', 'success', 'initial'];
 const SCROLL_TO_LOWER_THRESHOLD = 20;
 
 export default defineComponent({
-  name: `${prefix}-pull-down-refresh`,
+  name: 'TPullDownRefresh',
   components: { TLoading },
   props: PullDownRefreshProps,
   emits: ['refresh', 'timeout', 'scrolltolower', 'update:value', 'update:modelValue'],

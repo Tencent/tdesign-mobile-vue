@@ -5,7 +5,6 @@ import {
   CloseCircleFilledIcon as TCloseCircleFilledIcon,
 } from 'tdesign-icons-vue-next';
 import { isFunction } from 'lodash-es';
-import config from '../config';
 import InputProps from './props';
 import { InputValue } from './type';
 import { extendAPI } from '../shared';
@@ -16,10 +15,8 @@ import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 import useLengthLimit from '../hooks/useLengthLimit';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-input`,
+  name: 'TInput',
   props: {
     ...InputProps,
     labelAlign: {

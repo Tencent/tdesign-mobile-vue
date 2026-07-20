@@ -3,16 +3,13 @@ import { get as lodashGet } from 'lodash-es';
 import props from '../radio/radio-group-props';
 import { RadioOption, RadioOptionObj, RadioValue, TdRadioGroupProps } from '../radio/type';
 import TRadio from './radio';
-import config from '../config';
 import { KeysType } from '../common';
 import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-radio-group`,
+  name: 'TRadioGroup',
   props,
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();

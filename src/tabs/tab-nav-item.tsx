@@ -6,7 +6,7 @@ import { useContent, useTNodeJSX } from '../hooks/tnode';
 const { prefix } = config;
 
 export default defineComponent({
-  name: `${prefix}-tab-nav`,
+  name: 'TTabNav',
   props: {
     label: TabPanelProps.label,
     icon: TabPanelProps.icon,
