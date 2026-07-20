@@ -16,8 +16,6 @@ exports[`Upload > Upload baseVue demo works fine 1`] = `
     data-v-43787b67=""
   >
     
-    
-    
     <div
       class="t-upload__item t-upload__item--add"
     >
@@ -53,6 +51,7 @@ exports[`Upload > Upload baseVue demo works fine 1`] = `
       type="file"
     />
     <!---->
+    <!---->
   </div>
 </div>
 `;
@@ -76,8 +75,6 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
       class="t-upload t-upload--grid front"
       data-v-89f78ba6=""
     >
-      
-      
       
       <div
         class="t-upload__item t-upload__item--add"
@@ -137,6 +134,7 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
         type="file"
       />
       <!---->
+      <!---->
     </div>
   </div>
   <div
@@ -153,8 +151,6 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
       class="t-upload t-upload--grid reverse"
       data-v-89f78ba6=""
     >
-      
-      
       
       <div
         class="t-upload__item t-upload__item--add"
@@ -213,6 +209,7 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
         hidden=""
         type="file"
       />
+      <!---->
       <!---->
     </div>
   </div>
@@ -269,8 +266,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           data-v-43787b67=""
         >
           
-          
-          
           <div
             class="t-upload__item t-upload__item--add"
           >
@@ -305,6 +300,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             hidden=""
             type="file"
           />
+          <!---->
           <!---->
         </div>
       </div>
@@ -344,9 +340,9 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           grid-config="[object Object]"
         >
           
-          
           <div
             class="t-upload__item"
+            data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload4.png"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -398,6 +394,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item"
+            data-drag-key="u_uploaded2.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload6.png"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -468,6 +465,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item"
+            data-drag-key="u_uploaded3.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload4.png"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -536,7 +534,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </g>
             </svg>
           </div>
-          
           <div
             class="t-upload__item t-upload__item--add"
           >
@@ -572,6 +569,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             multiple=""
             type="file"
           />
+          <!---->
           <!---->
         </div>
       </div>
@@ -615,9 +613,9 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           data-v-6b9ad65a=""
         >
           
-          
           <div
             class="t-upload__item"
+            data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload6.png"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -712,6 +710,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item"
+            data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload4.png"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -804,7 +803,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </g>
             </svg>
           </div>
-          
           <div
             class="t-upload__item t-upload__item--add"
           >
@@ -841,6 +839,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             type="file"
           />
           <!---->
+          <!---->
         </div>
       </div>
       <div
@@ -864,9 +863,9 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           data-v-6b9ad65a=""
         >
           
-          
           <div
             class="t-upload__item"
+            data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload4.png"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -977,7 +976,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </g>
             </svg>
           </div>
-          
           <div
             class="t-upload__item t-upload__item--add"
           >
@@ -1013,6 +1011,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             multiple=""
             type="file"
           />
+          <!---->
           <!---->
         </div>
       </div>
@@ -1057,9 +1056,9 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           data-v-60aa7fa7=""
         >
           
-          
           <div
             class="t-upload__item t-upload__item--file"
+            data-drag-key="u_loading-file.txt%7Ctext%2Fplain"
           >
             <!---->
             <!---->
@@ -1112,6 +1111,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item t-upload__item--file"
+            data-drag-key="u_loading-file2.txt%7Ctext%2Fplain"
           >
             <!---->
             <!---->
@@ -1164,6 +1164,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item t-upload__item--file"
+            data-drag-key="u_failed-file.txt%7Ctext%2Fplain"
           >
             <!---->
             <!---->
@@ -1234,6 +1235,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item t-upload__item--file"
+            data-drag-key="u_error-file.txt%7Ctext%2Fplain"
           >
             <!---->
             <!---->
@@ -1304,6 +1306,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item t-upload__item--file"
+            data-drag-key="u_report.xlsx%7C153600%7Capplication%2Fvnd.openxmlformats-officedocument.spreadsheetml.sheet"
           >
             <!---->
             <div
@@ -1357,6 +1360,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item t-upload__item--file"
+            data-drag-key="u_document.pdf%7C327680%7Capplication%2Fpdf"
           >
             <!---->
             <div
@@ -1422,6 +1426,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item t-upload__item--file"
+            data-drag-key="u_presentation.pptx%7C524288%7Capplication%2Fvnd.openxmlformats-officedocument.presentationml.presentation"
           >
             <!---->
             <div
@@ -1479,6 +1484,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item t-upload__item--file"
+            data-drag-key="u_article.docx%7C262144%7Capplication%2Fvnd.openxmlformats-officedocument.wordprocessingml.document"
           >
             <!---->
             <div
@@ -1532,6 +1538,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item"
+            data-drag-key="u_image-loading.png%7Cimage%2Fpng%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload6.png"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -1626,6 +1633,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item"
+            data-drag-key="u_image-percent.png%7Cimage%2Fpng%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload6.png"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -1720,6 +1728,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item"
+            data-drag-key="u_image-reload.png%7Cimage%2Fpng%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload6.png"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -1832,6 +1841,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item"
+            data-drag-key="u_image-failed.png%7Cimage%2Fpng%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload6.png"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -1944,6 +1954,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           </div>
           <div
             class="t-upload__item"
+            data-drag-key="u_image-done.png%7Cimage%2Fpng%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload6.png"
           >
             <div
               class="t-image t-image--round t-upload__image"
@@ -2012,7 +2023,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               </g>
             </svg>
           </div>
-          
           <div
             class="t-upload__item t-upload__item--add"
           >
@@ -2048,6 +2058,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             multiple=""
             type="file"
           />
+          <!---->
           <!---->
         </div>
       </div>
@@ -2120,6 +2131,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             
             <div
               class="t-upload__list-item t-upload__list-item--progress"
+              data-drag-key="u_Technical%20Design%20Document.pdf%7C222208%7Capplication%2Fpdf"
             >
               <svg
                 class="t-icon t-icon-loading t-upload__list-item-loading"
@@ -2188,6 +2200,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-upload__list-item t-upload__list-item--fail"
+              data-drag-key="u_Technical%20Design%20Document.pdf%7C222208%7Capplication%2Fpdf-1"
             >
               <svg
                 class="t-icon t-icon-error-circle-filled t-upload__list-item-error-icon"
@@ -2255,6 +2268,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-upload__list-item"
+              data-drag-key="u_Design%20Mockup.png%7C1048576%7Cimage%2Fpng%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload6.png"
             >
               <div
                 style="position: relative; flex-shrink: 0;"
@@ -2357,6 +2371,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-upload__list-item"
+              data-drag-key="u_Product%20Demo.mp4%7C5242880%7Cvideo%2Fmp4"
             >
               <span
                 class="t-upload__list-item-icon"
@@ -2428,6 +2443,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-upload__list-item"
+              data-drag-key="u_Project%20Proposal.docx%7C131072%7Capplication%2Fvnd.openxmlformats-officedocument.wordprocessingml.document"
             >
               <span
                 class="t-upload__list-item-icon"
@@ -2499,6 +2515,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-upload__list-item"
+              data-drag-key="u_Financial%20Report.xlsx%7C262144%7Capplication%2Fvnd.openxmlformats-officedocument.spreadsheetml.sheet"
             >
               <span
                 class="t-upload__list-item-icon"
@@ -2570,6 +2587,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-upload__list-item"
+              data-drag-key="u_User%20Manual.pdf%7C524288%7Capplication%2Fpdf"
             >
               <span
                 class="t-upload__list-item-icon"
@@ -2653,6 +2671,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-upload__list-item"
+              data-drag-key="u_Quarterly%20Review.pptx%7C786432%7Capplication%2Fvnd.openxmlformats-officedocument.presentationml.presentation"
             >
               <span
                 class="t-upload__list-item-icon"
@@ -2736,6 +2755,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             type="file"
           />
           <!---->
+          <!---->
         </div>
       </div>
       
@@ -2782,7 +2802,81 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             data-v-89f78ba6=""
           >
             
+            <div
+              class="t-upload__item t-upload__item--add"
+            >
+              <div
+                class="t-upload__add-icon"
+              >
+                
+                <div
+                  class="add-content"
+                  data-v-89f78ba6=""
+                >
+                  <svg
+                    class="t-icon t-icon-camera"
+                    data-v-89f78ba6=""
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                  >
+                    <g
+                      id="camera"
+                    >
+                      <path
+                        d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
+                        fill="transparent"
+                        id="fill1"
+                      />
+                      <path
+                        d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
+                        fill="transparent"
+                        id="fill2"
+                      />
+                      <path
+                        d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
+                        id="stroke1"
+                        stroke="#0152d9"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
+                        id="stroke2"
+                        stroke="#0152d9"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                
+              </div>
+            </div>
             
+            <input
+              accept="image/png"
+              hidden=""
+              type="file"
+            />
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <div
+          class="upload-title"
+          data-v-89f78ba6=""
+        >
+          请上传身份证国徽面
+        </div>
+        <div
+          class="upload-content"
+          data-v-89f78ba6=""
+        >
+          <div
+            class="t-upload t-upload--grid reverse"
+            data-v-89f78ba6=""
+          >
             
             <div
               class="t-upload__item t-upload__item--add"
@@ -2842,82 +2936,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
               type="file"
             />
             <!---->
-          </div>
-        </div>
-        <div
-          class="upload-title"
-          data-v-89f78ba6=""
-        >
-          请上传身份证国徽面
-        </div>
-        <div
-          class="upload-content"
-          data-v-89f78ba6=""
-        >
-          <div
-            class="t-upload t-upload--grid reverse"
-            data-v-89f78ba6=""
-          >
-            
-            
-            
-            <div
-              class="t-upload__item t-upload__item--add"
-            >
-              <div
-                class="t-upload__add-icon"
-              >
-                
-                <div
-                  class="add-content"
-                  data-v-89f78ba6=""
-                >
-                  <svg
-                    class="t-icon t-icon-camera"
-                    data-v-89f78ba6=""
-                    fill="none"
-                    height="1em"
-                    style="fill: none;"
-                    viewBox="0 0 24 24"
-                    width="1em"
-                  >
-                    <g
-                      id="camera"
-                    >
-                      <path
-                        d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
-                        fill="transparent"
-                        id="fill1"
-                      />
-                      <path
-                        d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
-                        fill="transparent"
-                        id="fill2"
-                      />
-                      <path
-                        d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
-                        id="stroke1"
-                        stroke="#0152d9"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
-                        id="stroke2"
-                        stroke="#0152d9"
-                        stroke-width="2"
-                      />
-                    </g>
-                  </svg>
-                </div>
-                
-              </div>
-            </div>
-            
-            <input
-              accept="image/png"
-              hidden=""
-              type="file"
-            />
             <!---->
           </div>
         </div>
@@ -2945,9 +2963,9 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
     grid-config="[object Object]"
   >
     
-    
     <div
       class="t-upload__item"
+      data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload4.png"
     >
       <div
         class="t-image t-image--round t-upload__image"
@@ -2999,6 +3017,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
     </div>
     <div
       class="t-upload__item"
+      data-drag-key="u_uploaded2.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload6.png"
     >
       <div
         class="t-image t-image--round t-upload__image"
@@ -3069,6 +3088,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
     </div>
     <div
       class="t-upload__item"
+      data-drag-key="u_uploaded3.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload4.png"
     >
       <div
         class="t-image t-image--round t-upload__image"
@@ -3137,7 +3157,6 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
         </g>
       </svg>
     </div>
-    
     <div
       class="t-upload__item t-upload__item--add"
     >
@@ -3174,6 +3193,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
       type="file"
     />
     <!---->
+    <!---->
   </div>
 </div>
 `;
@@ -3198,9 +3218,9 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
       data-v-6b9ad65a=""
     >
       
-      
       <div
         class="t-upload__item"
+        data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload6.png"
       >
         <div
           class="t-image t-image--round t-upload__image"
@@ -3295,6 +3315,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
       </div>
       <div
         class="t-upload__item"
+        data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload4.png"
       >
         <div
           class="t-image t-image--round t-upload__image"
@@ -3387,7 +3408,6 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           </g>
         </svg>
       </div>
-      
       <div
         class="t-upload__item t-upload__item--add"
       >
@@ -3424,6 +3444,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
         type="file"
       />
       <!---->
+      <!---->
     </div>
   </div>
   <div
@@ -3447,9 +3468,9 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
       data-v-6b9ad65a=""
     >
       
-      
       <div
         class="t-upload__item"
+        data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload4.png"
       >
         <div
           class="t-image t-image--round t-upload__image"
@@ -3560,7 +3581,6 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
           </g>
         </svg>
       </div>
-      
       <div
         class="t-upload__item t-upload__item--add"
       >
@@ -3597,6 +3617,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
         type="file"
       />
       <!---->
+      <!---->
     </div>
   </div>
   
@@ -3623,9 +3644,9 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
       data-v-60aa7fa7=""
     >
       
-      
       <div
         class="t-upload__item t-upload__item--file"
+        data-drag-key="u_loading-file.txt%7Ctext%2Fplain"
       >
         <!---->
         <!---->
@@ -3678,6 +3699,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
       </div>
       <div
         class="t-upload__item t-upload__item--file"
+        data-drag-key="u_loading-file2.txt%7Ctext%2Fplain"
       >
         <!---->
         <!---->
@@ -3730,6 +3752,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
       </div>
       <div
         class="t-upload__item t-upload__item--file"
+        data-drag-key="u_failed-file.txt%7Ctext%2Fplain"
       >
         <!---->
         <!---->
@@ -3800,6 +3823,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
       </div>
       <div
         class="t-upload__item t-upload__item--file"
+        data-drag-key="u_error-file.txt%7Ctext%2Fplain"
       >
         <!---->
         <!---->
@@ -3870,6 +3894,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
       </div>
       <div
         class="t-upload__item t-upload__item--file"
+        data-drag-key="u_report.xlsx%7C153600%7Capplication%2Fvnd.openxmlformats-officedocument.spreadsheetml.sheet"
       >
         <!---->
         <div
@@ -3923,6 +3948,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
       </div>
       <div
         class="t-upload__item t-upload__item--file"
+        data-drag-key="u_document.pdf%7C327680%7Capplication%2Fpdf"
       >
         <!---->
         <div
@@ -3988,6 +4014,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
       </div>
       <div
         class="t-upload__item t-upload__item--file"
+        data-drag-key="u_presentation.pptx%7C524288%7Capplication%2Fvnd.openxmlformats-officedocument.presentationml.presentation"
       >
         <!---->
         <div
@@ -4045,6 +4072,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
       </div>
       <div
         class="t-upload__item t-upload__item--file"
+        data-drag-key="u_article.docx%7C262144%7Capplication%2Fvnd.openxmlformats-officedocument.wordprocessingml.document"
       >
         <!---->
         <div
@@ -4098,6 +4126,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
       </div>
       <div
         class="t-upload__item"
+        data-drag-key="u_image-loading.png%7Cimage%2Fpng%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload6.png"
       >
         <div
           class="t-image t-image--round t-upload__image"
@@ -4192,6 +4221,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
       </div>
       <div
         class="t-upload__item"
+        data-drag-key="u_image-percent.png%7Cimage%2Fpng%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload6.png"
       >
         <div
           class="t-image t-image--round t-upload__image"
@@ -4286,6 +4316,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
       </div>
       <div
         class="t-upload__item"
+        data-drag-key="u_image-reload.png%7Cimage%2Fpng%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload6.png"
       >
         <div
           class="t-image t-image--round t-upload__image"
@@ -4398,6 +4429,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
       </div>
       <div
         class="t-upload__item"
+        data-drag-key="u_image-failed.png%7Cimage%2Fpng%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload6.png"
       >
         <div
           class="t-image t-image--round t-upload__image"
@@ -4510,6 +4542,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
       </div>
       <div
         class="t-upload__item"
+        data-drag-key="u_image-done.png%7Cimage%2Fpng%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload6.png"
       >
         <div
           class="t-image t-image--round t-upload__image"
@@ -4578,7 +4611,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
           </g>
         </svg>
       </div>
-      
       <div
         class="t-upload__item t-upload__item--add"
       >
@@ -4614,6 +4646,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
         multiple=""
         type="file"
       />
+      <!---->
       <!---->
     </div>
   </div>
@@ -4686,6 +4719,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
         
         <div
           class="t-upload__list-item t-upload__list-item--progress"
+          data-drag-key="u_Technical%20Design%20Document.pdf%7C222208%7Capplication%2Fpdf"
         >
           <svg
             class="t-icon t-icon-loading t-upload__list-item-loading"
@@ -4754,6 +4788,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
         </div>
         <div
           class="t-upload__list-item t-upload__list-item--fail"
+          data-drag-key="u_Technical%20Design%20Document.pdf%7C222208%7Capplication%2Fpdf-2"
         >
           <svg
             class="t-icon t-icon-error-circle-filled t-upload__list-item-error-icon"
@@ -4821,6 +4856,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
         </div>
         <div
           class="t-upload__list-item"
+          data-drag-key="u_Design%20Mockup.png%7C1048576%7Cimage%2Fpng%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fupload6.png"
         >
           <div
             style="position: relative; flex-shrink: 0;"
@@ -4923,6 +4959,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
         </div>
         <div
           class="t-upload__list-item"
+          data-drag-key="u_Product%20Demo.mp4%7C5242880%7Cvideo%2Fmp4"
         >
           <span
             class="t-upload__list-item-icon"
@@ -4994,6 +5031,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
         </div>
         <div
           class="t-upload__list-item"
+          data-drag-key="u_Project%20Proposal.docx%7C131072%7Capplication%2Fvnd.openxmlformats-officedocument.wordprocessingml.document"
         >
           <span
             class="t-upload__list-item-icon"
@@ -5065,6 +5103,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
         </div>
         <div
           class="t-upload__list-item"
+          data-drag-key="u_Financial%20Report.xlsx%7C262144%7Capplication%2Fvnd.openxmlformats-officedocument.spreadsheetml.sheet"
         >
           <span
             class="t-upload__list-item-icon"
@@ -5136,6 +5175,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
         </div>
         <div
           class="t-upload__list-item"
+          data-drag-key="u_User%20Manual.pdf%7C524288%7Capplication%2Fpdf"
         >
           <span
             class="t-upload__list-item-icon"
@@ -5219,6 +5259,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
         </div>
         <div
           class="t-upload__list-item"
+          data-drag-key="u_Quarterly%20Review.pptx%7C786432%7Capplication%2Fvnd.openxmlformats-officedocument.presentationml.presentation"
         >
           <span
             class="t-upload__list-item-icon"
@@ -5301,6 +5342,7 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
         multiple=""
         type="file"
       />
+      <!---->
       <!---->
     </div>
   </div>
