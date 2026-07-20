@@ -429,6 +429,7 @@ export default defineComponent({
               <TSwiper
                 ref={swiperRootRef}
                 autoplay={false}
+                navigation={false}
                 class={`${imageViewerClass.value}__content`}
                 height="100vh"
                 defaultCurrent={currentIndex.value}
