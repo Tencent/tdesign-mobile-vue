@@ -87,51 +87,42 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
             class="add-content"
             data-v-89f78ba6=""
           >
-            <div
-              class="t-image t-image--square"
+            <svg
+              class="t-icon t-icon-camera"
               data-v-89f78ba6=""
-              style="width: 32px; height: 32px;"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <div
-                class="t-image__mask"
+              <g
+                id="camera"
               >
-                <div
-                  class="t-loading"
-                  style="font-size: 20px;"
-                >
-                  <div
-                    class="t-loading__dots"
-                    style="animation-duration: 800ms; width: 20px; height: 20px;"
-                  >
-                    
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0s;"
-                    />
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                    />
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                    />
-                    
-                  </div>
-                  <!---->
-                  <!---->
-                </div>
-              </div>
-              <picture>
-                <!---->
-                <img
-                  alt=""
-                  class="t-image__img"
-                  src="https://tdesign.gtimg.com/mobile/demos/upload3.png"
-                  style="object-fit: fill; object-position: center;"
+                <path
+                  d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
+                  fill="transparent"
+                  id="fill1"
                 />
-              </picture>
-            </div>
+                <path
+                  d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
+                  fill="transparent"
+                  id="fill2"
+                />
+                <path
+                  d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
+                  id="stroke1"
+                  stroke="#0152d9"
+                  stroke-width="2"
+                />
+                <path
+                  d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
+                  id="stroke2"
+                  stroke="#0152d9"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
           </div>
           
         </div>
@@ -172,51 +163,42 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
             class="add-content"
             data-v-89f78ba6=""
           >
-            <div
-              class="t-image t-image--square"
+            <svg
+              class="t-icon t-icon-camera"
               data-v-89f78ba6=""
-              style="width: 32px; height: 32px;"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <div
-                class="t-image__mask"
+              <g
+                id="camera"
               >
-                <div
-                  class="t-loading"
-                  style="font-size: 20px;"
-                >
-                  <div
-                    class="t-loading__dots"
-                    style="animation-duration: 800ms; width: 20px; height: 20px;"
-                  >
-                    
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0s;"
-                    />
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                    />
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                    />
-                    
-                  </div>
-                  <!---->
-                  <!---->
-                </div>
-              </div>
-              <picture>
-                <!---->
-                <img
-                  alt=""
-                  class="t-image__img"
-                  src="https://tdesign.gtimg.com/mobile/demos/upload3.png"
-                  style="object-fit: fill; object-position: center;"
+                <path
+                  d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
+                  fill="transparent"
+                  id="fill1"
                 />
-              </picture>
-            </div>
+                <path
+                  d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
+                  fill="transparent"
+                  id="fill2"
+                />
+                <path
+                  d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
+                  id="stroke1"
+                  stroke="#0152d9"
+                  stroke-width="2"
+                />
+                <path
+                  d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
+                  id="stroke2"
+                  stroke="#0152d9"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
           </div>
           
         </div>
@@ -2831,51 +2813,42 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                   class="add-content"
                   data-v-89f78ba6=""
                 >
-                  <div
-                    class="t-image t-image--square"
+                  <svg
+                    class="t-icon t-icon-camera"
                     data-v-89f78ba6=""
-                    style="width: 32px; height: 32px;"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <div
-                      class="t-image__mask"
+                    <g
+                      id="camera"
                     >
-                      <div
-                        class="t-loading"
-                        style="font-size: 20px;"
-                      >
-                        <div
-                          class="t-loading__dots"
-                          style="animation-duration: 800ms; width: 20px; height: 20px;"
-                        >
-                          
-                          <div
-                            class="t-loading__dot"
-                            style="animation-duration: 0.8s; animation-delay: 0s;"
-                          />
-                          <div
-                            class="t-loading__dot"
-                            style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                          />
-                          <div
-                            class="t-loading__dot"
-                            style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                          />
-                          
-                        </div>
-                        <!---->
-                        <!---->
-                      </div>
-                    </div>
-                    <picture>
-                      <!---->
-                      <img
-                        alt=""
-                        class="t-image__img"
-                        src="https://tdesign.gtimg.com/mobile/demos/upload3.png"
-                        style="object-fit: fill; object-position: center;"
+                      <path
+                        d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
+                        fill="transparent"
+                        id="fill1"
                       />
-                    </picture>
-                  </div>
+                      <path
+                        d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
+                        fill="transparent"
+                        id="fill2"
+                      />
+                      <path
+                        d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
+                        id="stroke1"
+                        stroke="#0152d9"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
+                        id="stroke2"
+                        stroke="#0152d9"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
                 </div>
                 
               </div>
@@ -2916,51 +2889,42 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                   class="add-content"
                   data-v-89f78ba6=""
                 >
-                  <div
-                    class="t-image t-image--square"
+                  <svg
+                    class="t-icon t-icon-camera"
                     data-v-89f78ba6=""
-                    style="width: 32px; height: 32px;"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <div
-                      class="t-image__mask"
+                    <g
+                      id="camera"
                     >
-                      <div
-                        class="t-loading"
-                        style="font-size: 20px;"
-                      >
-                        <div
-                          class="t-loading__dots"
-                          style="animation-duration: 800ms; width: 20px; height: 20px;"
-                        >
-                          
-                          <div
-                            class="t-loading__dot"
-                            style="animation-duration: 0.8s; animation-delay: 0s;"
-                          />
-                          <div
-                            class="t-loading__dot"
-                            style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                          />
-                          <div
-                            class="t-loading__dot"
-                            style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                          />
-                          
-                        </div>
-                        <!---->
-                        <!---->
-                      </div>
-                    </div>
-                    <picture>
-                      <!---->
-                      <img
-                        alt=""
-                        class="t-image__img"
-                        src="https://tdesign.gtimg.com/mobile/demos/upload3.png"
-                        style="object-fit: fill; object-position: center;"
+                      <path
+                        d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
+                        fill="transparent"
+                        id="fill1"
                       />
-                    </picture>
-                  </div>
+                      <path
+                        d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
+                        fill="transparent"
+                        id="fill2"
+                      />
+                      <path
+                        d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
+                        id="stroke1"
+                        stroke="#0152d9"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
+                        id="stroke2"
+                        stroke="#0152d9"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
                 </div>
                 
               </div>

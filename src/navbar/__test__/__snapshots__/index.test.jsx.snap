@@ -2,12 +2,12 @@
 
 exports[`navbar > events > left-click 1`] = `
 <div
-  class="t-navbar t-navbar--fixed t-safe-area-top t-navbar--visible-animation"
+  class="t-navbar t-navbar--fixed t-navbar--visible-animation"
   style="z-index: 1;"
 >
   <!---->
   <div
-    class="t-navbar__content"
+    class="t-navbar__content t-safe-area-top"
   >
     <div
       class="t-navbar__left"
@@ -92,12 +92,12 @@ exports[`navbar > events > left-click 1`] = `
 
 exports[`navbar > events > right-click 1`] = `
 <div
-  class="t-navbar t-navbar--fixed t-safe-area-top t-navbar--visible-animation"
+  class="t-navbar t-navbar--fixed t-navbar--visible-animation"
   style="z-index: 1;"
 >
   <!---->
   <div
-    class="t-navbar__content"
+    class="t-navbar__content t-safe-area-top"
   >
     <div
       class="t-navbar__left"

@@ -26,10 +26,10 @@ export default {
   footer: {
     type: Function as PropType<TdDateTimePickerProps['footer']>,
   },
-  /** 用于pick、change、confirm事件参数格式化[详细文档](https://day.js.org/docs/en/display/format) */
+  /** 用于格式化 pick、change、confirm 事件返回的值，全局配置默认为：'YYYY-MM-DD HH:mm:ss'。当值为 'time-stamp' 时，表示事件参数与 v-model 返回毫秒级时间戳数值（number） [详细文档](https://day.js.org/docs/en/display/format) */
   format: {
     type: String,
-    default: 'YYYY-MM-DD HH:mm:ss',
+    default: undefined,
   },
   /** 头部内容 */
   header: {
@@ -38,7 +38,7 @@ export default {
   /** year = 年；month = 年月；date = 年月日；hour = 年月日时； minute = 年月日时分；当类型为数组时，第一个值控制年月日，第二个值控制时分秒 */
   mode: {
     type: [String, Array] as PropType<TdDateTimePickerProps['mode']>,
-    default: 'date',
+    default: 'date' as TdDateTimePickerProps['mode'],
   },
   /** 自定义label */
   renderLabel: {
@@ -63,9 +63,11 @@ export default {
   /** 选中值 */
   value: {
     type: [String, Number] as PropType<TdDateTimePickerProps['value']>,
+    default: undefined as TdDateTimePickerProps['value'],
   },
   modelValue: {
     type: [String, Number] as PropType<TdDateTimePickerProps['value']>,
+    default: undefined as TdDateTimePickerProps['value'],
   },
   /** 选中值，非受控属性 */
   defaultValue: {

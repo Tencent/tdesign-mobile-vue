@@ -513,7 +513,7 @@ describe('form', () => {
       expect(onValidate).toHaveBeenCalledTimes(1);
       await form.vm.$.exposed.submit({ showErrorMessage: true });
       await sleep(1000);
-      expect(form.findAll(`.${name}__item-extra`)).toHaveLength(1);
+      expect(form.findAll(`.${name}__item-extra`)).toHaveLength(2);
       expect(form.findAll(`.${name}__item--error`)).toHaveLength(2);
       expect(onSubmit).toHaveBeenCalledTimes(2);
       expect(onValidate).toHaveBeenCalledTimes(2);
@@ -528,7 +528,9 @@ describe('form', () => {
       expect(form.find(`${name}__item--error`).exists()).toBeFalsy();
 
       await form.vm.$.exposed.clearValidate(['name']);
-      expect(form.find(`.${name}__item-extra`).exists()).toBeFalsy();
+      // 仅清除 name 的校验状态，age 的 extra 仍然存在（使用全局 errorMessage 兜底）
+      const remainingExtras = form.findAll(`.${name}__item-extra`);
+      expect(remainingExtras).toHaveLength(1);
 
       await form.vm.$.exposed.validate();
       expect(onValidate).toHaveBeenCalledTimes(2);

@@ -6,13 +6,13 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
 >
   
   <div
-    class="t-navbar t-safe-area-top t-navbar--visible-animation"
+    class="t-navbar t-navbar--visible-animation"
     data-v-fcc0cda1=""
     style="z-index: 1;"
   >
     <!---->
     <div
-      class="t-navbar__content"
+      class="t-navbar__content t-safe-area-top"
     >
       <div
         class="t-navbar__left"
@@ -53,13 +53,13 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-navbar t-safe-area-top t-navbar--visible-animation"
+    class="t-navbar t-navbar--visible-animation"
     data-v-fcc0cda1=""
     style="z-index: 1;"
   >
     <!---->
     <div
-      class="t-navbar__content"
+      class="t-navbar__content t-safe-area-top"
     >
       <div
         class="t-navbar__left"
@@ -124,13 +124,13 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-navbar t-safe-area-top t-navbar--visible-animation"
+    class="t-navbar t-navbar--visible-animation"
     data-v-fcc0cda1=""
     style="z-index: 1;"
   >
     <!---->
     <div
-      class="t-navbar__content"
+      class="t-navbar__content t-safe-area-top"
     >
       <div
         class="t-navbar__left"
@@ -199,13 +199,13 @@ exports[`Navbar > Navbar baseVue demo works fine 1`] = `
 
 exports[`Navbar > Navbar customColorVue demo works fine 1`] = `
 <div
-  class="t-navbar t-safe-area-top t-navbar--visible-animation custom-navbar"
+  class="t-navbar t-navbar--visible-animation custom-navbar"
   data-v-3ef3b10f=""
   style="z-index: 1;"
 >
   <!---->
   <div
-    class="t-navbar__content"
+    class="t-navbar__content t-safe-area-top"
   >
     <div
       class="t-navbar__left"
@@ -263,13 +263,13 @@ exports[`Navbar > Navbar customColorVue demo works fine 1`] = `
 
 exports[`Navbar > Navbar imgVue demo works fine 1`] = `
 <div
-  class="t-navbar t-safe-area-top t-navbar--visible-animation"
+  class="t-navbar t-navbar--visible-animation"
   data-v-ed0b13d1=""
   style="z-index: 1;"
 >
   <!---->
   <div
-    class="t-navbar__content"
+    class="t-navbar__content t-safe-area-top"
   >
     <div
       class="t-navbar__left"
@@ -358,13 +358,13 @@ exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
 >
   
   <div
-    class="t-navbar t-safe-area-top t-navbar--visible-animation"
+    class="t-navbar t-navbar--visible-animation"
     data-v-593dba5f=""
     style="z-index: 1;"
   >
     <!---->
     <div
-      class="t-navbar__content"
+      class="t-navbar__content t-safe-area-top"
     >
       <div
         class="t-navbar__left"
@@ -419,13 +419,13 @@ exports[`Navbar > Navbar leftTitleVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-navbar t-safe-area-top t-navbar--visible-animation"
+    class="t-navbar t-navbar--visible-animation"
     data-v-593dba5f=""
     style="z-index: 1;"
   >
     <!---->
     <div
-      class="t-navbar__content"
+      class="t-navbar__content t-safe-area-top"
     >
       <div
         class="t-navbar__left"
@@ -532,13 +532,13 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        class="t-navbar t-navbar--visible-animation"
         data-v-fcc0cda1=""
         style="z-index: 1;"
       >
         <!---->
         <div
-          class="t-navbar__content"
+          class="t-navbar__content t-safe-area-top"
         >
           <div
             class="t-navbar__left"
@@ -579,13 +579,13 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        class="t-navbar t-navbar--visible-animation"
         data-v-fcc0cda1=""
         style="z-index: 1;"
       >
         <!---->
         <div
-          class="t-navbar__content"
+          class="t-navbar__content t-safe-area-top"
         >
           <div
             class="t-navbar__left"
@@ -650,13 +650,13 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        class="t-navbar t-navbar--visible-animation"
         data-v-fcc0cda1=""
         style="z-index: 1;"
       >
         <!---->
         <div
-          class="t-navbar__content"
+          class="t-navbar__content t-safe-area-top"
         >
           <div
             class="t-navbar__left"
@@ -742,14 +742,14 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        class="t-navbar t-navbar--visible-animation"
         data-v-0270c729=""
         data-v-614a1e54=""
         style="z-index: 1;"
       >
         <!---->
         <div
-          class="t-navbar__content"
+          class="t-navbar__content t-safe-area-top"
         >
           <div
             class="t-navbar__left"
@@ -864,14 +864,14 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        class="t-navbar t-navbar--visible-animation"
         data-v-0270c729=""
         data-v-ed0b13d1=""
         style="z-index: 1;"
       >
         <!---->
         <div
-          class="t-navbar__content"
+          class="t-navbar__content t-safe-area-top"
         >
           <div
             class="t-navbar__left"
@@ -979,13 +979,13 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        class="t-navbar t-navbar--visible-animation"
         data-v-593dba5f=""
         style="z-index: 1;"
       >
         <!---->
         <div
-          class="t-navbar__content"
+          class="t-navbar__content t-safe-area-top"
         >
           <div
             class="t-navbar__left"
@@ -1040,13 +1040,13 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        class="t-navbar t-navbar--visible-animation"
         data-v-593dba5f=""
         style="z-index: 1;"
       >
         <!---->
         <div
-          class="t-navbar__content"
+          class="t-navbar__content t-safe-area-top"
         >
           <div
             class="t-navbar__left"
@@ -1132,13 +1132,13 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-navbar t-safe-area-top t-navbar--visible-animation"
+        class="t-navbar t-navbar--visible-animation"
         data-v-f6e31b98=""
         style="z-index: 1;"
       >
         <!---->
         <div
-          class="t-navbar__content"
+          class="t-navbar__content t-safe-area-top"
         >
           <div
             class="t-navbar__left"
@@ -1193,13 +1193,13 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-navbar t-safe-area-top t-navbar--visible-animation custom-navbar"
+        class="t-navbar t-navbar--visible-animation custom-navbar"
         data-v-f6e31b98=""
         style="z-index: 1;"
       >
         <!---->
         <div
-          class="t-navbar__content"
+          class="t-navbar__content t-safe-area-top"
         >
           <div
             class="t-navbar__left"
@@ -1283,14 +1283,14 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-navbar t-safe-area-top t-navbar--visible-animation custom-navbar"
+        class="t-navbar t-navbar--visible-animation custom-navbar"
         data-v-0270c729=""
         data-v-3ef3b10f=""
         style="z-index: 1;"
       >
         <!---->
         <div
-          class="t-navbar__content"
+          class="t-navbar__content t-safe-area-top"
         >
           <div
             class="t-navbar__left"
@@ -1352,13 +1352,13 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
 
 exports[`Navbar > Navbar searchVue demo works fine 1`] = `
 <div
-  class="t-navbar t-safe-area-top t-navbar--visible-animation"
+  class="t-navbar t-navbar--visible-animation"
   data-v-614a1e54=""
   style="z-index: 1;"
 >
   <!---->
   <div
-    class="t-navbar__content"
+    class="t-navbar__content t-safe-area-top"
   >
     <div
       class="t-navbar__left"
@@ -1459,13 +1459,13 @@ exports[`Navbar > Navbar sizeVue demo works fine 1`] = `
 >
   
   <div
-    class="t-navbar t-safe-area-top t-navbar--visible-animation"
+    class="t-navbar t-navbar--visible-animation"
     data-v-f6e31b98=""
     style="z-index: 1;"
   >
     <!---->
     <div
-      class="t-navbar__content"
+      class="t-navbar__content t-safe-area-top"
     >
       <div
         class="t-navbar__left"
@@ -1520,13 +1520,13 @@ exports[`Navbar > Navbar sizeVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-navbar t-safe-area-top t-navbar--visible-animation custom-navbar"
+    class="t-navbar t-navbar--visible-animation custom-navbar"
     data-v-f6e31b98=""
     style="z-index: 1;"
   >
     <!---->
     <div
-      class="t-navbar__content"
+      class="t-navbar__content t-safe-area-top"
     >
       <div
         class="t-navbar__left"
