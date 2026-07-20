@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * */
+ */
 
 import { TdTabBarProps } from './type';
 import { PropType } from 'vue';
@@ -32,6 +32,15 @@ export default {
     validator(val: TdTabBarProps['shape']): boolean {
       if (!val) return true;
       return ['normal', 'round'].includes(val);
+    },
+  },
+  /** 标签栏的视觉效果 */
+  effect: {
+    type: String as PropType<TdTabBarProps['effect']>,
+    default: 'normal' as TdTabBarProps['effect'],
+    validator(val: TdTabBarProps['effect']): boolean {
+      if (!val) return true;
+      return ['normal', 'glass'].includes(val);
     },
   },
   /** 是否需要分割线 */

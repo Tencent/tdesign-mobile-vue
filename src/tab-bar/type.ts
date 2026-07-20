@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * */
+ */
 
 import { BadgeProps } from '../badge';
 import { TNode } from '../common';
@@ -33,6 +33,11 @@ export interface TdTabBarProps {
    * @default normal
    */
   shape?: 'normal' | 'round';
+  /**
+   * 标签栏的视觉效果
+   * @default normal
+   */
+  effect?: 'normal' | 'glass';
   /**
    * 是否需要分割线
    * @default true

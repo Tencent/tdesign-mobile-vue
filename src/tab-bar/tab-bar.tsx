@@ -35,6 +35,7 @@ export default defineComponent({
         [`${tabBarClass.value}--bordered`]: props.bordered,
         [`${tabBarClass.value}--fixed`]: props.fixed,
         [`${tabBarClass.value}--safe`]: props.safeAreaInsetBottom,
+        [`${tabBarClass.value}--${props.effect}`]: props.effect !== 'normal',
       },
       `${tabBarClass.value}--${props.shape}`,
     ]);
@@ -57,7 +58,6 @@ export default defineComponent({
       updateChild,
     });
 
-    // 在渲染函数中调用插槽函数并更新子节点数量
     const updateItemCount = (vNodes?: VNode[]) => {
       if (!vNodes || !Array.isArray(vNodes)) {
         itemCount.value = 0;

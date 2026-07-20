@@ -1,7 +1,8 @@
 <template>
   <div class="tdesign-mobile-demo">
-    <h1 class="title">TabBar 底部标签栏</h1>
+    <h1 class="title">TabBar</h1>
     <p class="summary">用于在不同功能模块之间进行快速切换，位于页面底部。</p>
+
     <tdesign-demo-block summary="纯文本标签栏" title="01 组件类型">
       <TextDemo />
     </tdesign-demo-block>
@@ -14,11 +15,15 @@
     <tdesign-demo-block summary="双层级纯文本标签栏">
       <TextSpreadDemo />
     </tdesign-demo-block>
+
     <tdesign-demo-block summary="弱选中标签栏" title="02 组件样式">
       <BadgePropsDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="悬浮胶囊标签栏">
-      <RoundPropsDemo />
+    <tdesign-demo-block summary="悬浮胶囊标签栏-normal">
+      <RoundPropsDemo effect="normal" />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="悬浮胶囊标签栏-glass">
+      <RoundPropsDemo effect="glass" />
     </tdesign-demo-block>
     <tdesign-demo-block summary="自定义样式" title="03 自定义">
       <CustomPropsDemo />
