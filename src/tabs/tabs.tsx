@@ -15,7 +15,6 @@ import {
   RendererNode,
 } from 'vue';
 import { isFunction } from 'lodash-es';
-import config from '../config';
 import props from './props';
 import TTabNavItem from './tab-nav-item';
 import useVModel from '../hooks/useVModel';
@@ -29,14 +28,13 @@ import { usePrefixClass } from '../hooks/useClass';
 import { useCommonClassName } from '../hooks/useCommonClassName';
 import { Styles } from '../common';
 
-const { prefix } = config;
-
 export default defineComponent({
   name: 'TTabs',
   props,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();
     const tabsClass = usePrefixClass('tabs');
+    const badgeClass = usePrefixClass('badge');
     const { SIZE } = useCommonClassName();
 
     const stickyProps = computed(() => ({ ...(props.stickyProps as TdStickyProps), disabled: !props.sticky }));
@@ -110,7 +108,7 @@ export default defineComponent({
         const tab = navWrap.value.querySelector<HTMLElement>(`.${activeClass}`);
         if (!tab) return;
         const line = navLine.value;
-        const tabInner = tab.querySelector<HTMLElement>(`.${prefix}-badge`);
+        const tabInner = tab.querySelector<HTMLElement>(`.${badgeClass.value}`);
         const style: Styles = { opacity: 1 };
         if (props.bottomLineMode === 'auto') {
           style.width = `${Number(tabInner?.offsetWidth)}px`;

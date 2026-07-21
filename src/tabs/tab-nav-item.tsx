@@ -1,9 +1,7 @@
 import { defineComponent } from 'vue';
-import config from '../config';
 import TabPanelProps from './tab-panel-props';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
-
-const { prefix } = config;
+import { usePrefixClass } from '../hooks/useClass';
 
 export default defineComponent({
   name: 'TTabNav',
@@ -12,6 +10,7 @@ export default defineComponent({
     icon: TabPanelProps.icon,
   },
   setup() {
+    const tabsClass = usePrefixClass('tabs');
     const renderTNodeJSX = useTNodeJSX();
     const renderTNodeContent = useContent();
 
@@ -21,7 +20,7 @@ export default defineComponent({
 
       return (
         <>
-          {iconContent && <div class={`${prefix}-tabs__icon`}>{iconContent}</div>}
+          {iconContent && <div class={`${tabsClass.value}__icon`}>{iconContent}</div>}
           {labelContent}
         </>
       );

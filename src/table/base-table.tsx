@@ -1,7 +1,6 @@
 import { defineComponent, computed, h, ref, SetupContext, toRefs } from 'vue';
 import { get, isFunction, isString } from 'lodash-es';
 import baseTableProps from './base-table-props';
-import config from '../config';
 import useClassName from './hooks/useClassName';
 import useStyle, { formatCSSUnit } from './hooks/useStyle';
 import useFixed, { getRowFixedStyles, getColumnFixedStyles } from './hooks/useFixed';
