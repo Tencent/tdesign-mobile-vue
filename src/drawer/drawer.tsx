@@ -1,15 +1,12 @@
 import { ref, watch, toRefs, defineComponent, h } from 'vue';
 import TPopup from '../popup';
-import config from '../config';
 import props from './props';
 import { DrawerItem } from './type';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-drawer`,
+  name: 'TDrawer',
   props,
   emits: ['update:visible', 'itemClick', 'overlayClick'],
   setup(props, context) {

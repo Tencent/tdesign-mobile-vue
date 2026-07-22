@@ -2,7 +2,6 @@ import { computed, defineComponent, ref, toRefs, watch } from 'vue';
 import { SideBar as TSideBar, SideBarItem as TSideBarItem } from '../side-bar';
 import TRadio, { RadioGroup as TRadioGroup } from '../radio';
 import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
-import config from '../config';
 import { convertUnit } from '../shared';
 import log from '../_common/js/log';
 import props from './props';
@@ -10,12 +9,10 @@ import { TdTreeSelectProps, TreeSelectValue, _TreeOptionData } from './type';
 import { usePrefixClass } from '../hooks/useClass';
 import useVModel from '../hooks/useVModel';
 
-const { prefix } = config;
-
 type TreeSelectValueGroup = TreeSelectValue[];
 
 export default defineComponent({
-  name: `${prefix}-tree-select`,
+  name: 'TTreeSelect',
   components: {
     TSideBar,
     TSideBarItem,

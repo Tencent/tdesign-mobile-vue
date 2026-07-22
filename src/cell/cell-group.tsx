@@ -1,13 +1,10 @@
 import { computed, defineComponent } from 'vue';
 import props from './cell-group-props';
-import config from '../config';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-cell-group`,
+  name: 'TCellGroup',
   props,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();

@@ -2,16 +2,13 @@ import { defineComponent, computed, ref, toRefs, watch, onUnmounted, Transition 
 import { createPopper, Placement } from '@popperjs/core';
 import PopoverProps from './props';
 import { TdPopoverProps } from './type';
-import config from '../config';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
 import { useClickAway } from '../shared';
 import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-popover`,
+  name: 'TPopover',
   props: PopoverProps,
   emits: ['visible-change', 'update:visible', 'update:modelValue'],
   setup(props, context) {

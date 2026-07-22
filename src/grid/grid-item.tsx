@@ -1,17 +1,14 @@
 import { defineComponent, computed, inject } from 'vue';
 import { isFunction, isString, isObject } from 'lodash-es';
 import { Hover } from '../shared';
-import config from '../config';
 import props from './grid-item-props';
 import { useTNodeJSX } from '../hooks/tnode';
 import TImage from '../image';
 import TBadge from '../badge';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-grid-item`,
+  name: 'TGridItem',
   directives: { Hover },
   components: { TImage, TBadge },
   props,

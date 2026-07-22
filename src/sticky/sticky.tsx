@@ -1,15 +1,12 @@
 import { computed, defineComponent, ref, watch } from 'vue';
 import { useElementBounding } from '@vueuse/core';
 import StickyProps from './props';
-import config from '../config';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 import useElementRect from '../hooks/useElementRect';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-sticky`,
+  name: 'TSticky',
   props: StickyProps,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();

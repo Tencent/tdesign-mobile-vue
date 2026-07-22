@@ -3,12 +3,8 @@ import { useElementBounding } from '@vueuse/core';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
-import config from '../config';
-
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-swiper-item`,
+  name: 'TSwiperItem',
   setup() {
     const { addChild, removeChild, isVertical, root, items, setContainerHeight, moveDirection, loop } = inject(
       'parent',

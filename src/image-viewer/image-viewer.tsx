@@ -1,7 +1,6 @@
 import { computed, defineComponent, reactive, h, Transition, ref, toRefs, watch, nextTick, onUnmounted } from 'vue';
 import { CloseIcon, DeleteIcon } from 'tdesign-icons-vue-next';
 
-import config from '../config';
 import props from './props';
 import useDefaultValue from '../hooks/useDefaultValue';
 import { isBrowser } from '../shared';
@@ -20,12 +19,10 @@ import {
 } from '../swiper';
 import { TdImageViewerProps, ImageInfo, ImageViewerCloseTrigger, ImageSlotParams } from './type';
 
-const { prefix } = config;
-
 const TAP_TIME = 300;
 
 export default defineComponent({
-  name: `${prefix}-image-viewer`,
+  name: 'TImageViewer',
   props,
   emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'update:index', 'delete'],
   setup(props, { emit, expose }) {

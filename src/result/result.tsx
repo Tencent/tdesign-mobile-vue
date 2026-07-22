@@ -1,16 +1,13 @@
 import { computed, defineComponent } from 'vue';
 import { InfoCircleIcon, CheckCircleIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
-import config from '../config';
 import ResultProps from './props';
 import { useTNodeJSX } from '../hooks/tnode';
 import TImage from '../image';
 import { useIcon } from '../hooks/icon';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-result`,
+  name: 'TResult',
   props: ResultProps,
   setup(props) {
     const resultClass = usePrefixClass('result');

@@ -2,16 +2,13 @@ import { computed, defineComponent } from 'vue';
 import TLoading from '../loading';
 import { Hover } from '../shared';
 import ButtonProps from './props';
-import config from '../config';
 import { useFormDisabled } from '../form/hooks';
 import { TdButtonProps } from './type';
 import { usePrefixClass } from '../hooks/useClass';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-button`,
+  name: 'TButton',
   directives: { Hover },
   props: ButtonProps,
   setup(props) {

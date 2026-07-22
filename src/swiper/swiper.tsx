@@ -1,7 +1,6 @@
 import { onMounted, computed, ref, provide, watch, onUnmounted, toRefs, defineComponent, nextTick } from 'vue';
 import { isNumber } from 'lodash-es';
 import { useSwipe } from '../swipe-cell/useSwipe';
-import config from '../config';
 import props from './props';
 import { SwiperChangeSource, SwiperNavigation } from './type';
 import useVModel from '../hooks/useVModel';
@@ -22,8 +21,6 @@ const DEFAULT_SWIPER_NAVIGATION: SwiperNavigation = {
  */
 const SWIPE_THRESHOLD = 100;
 
-const { prefix } = config;
-
 // 定义 SwiperItem 的接口
 interface SwiperItemInstance {
   uid: number;
@@ -32,7 +29,7 @@ interface SwiperItemInstance {
 }
 
 export default defineComponent({
-  name: `${prefix}-swiper`,
+  name: 'TSwiper',
   props: {
     ...props,
     disabled: {

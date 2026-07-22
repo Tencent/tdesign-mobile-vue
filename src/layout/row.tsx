@@ -1,15 +1,12 @@
 import { computed, defineComponent, CSSProperties, provide } from 'vue';
 import { convertUnit } from '../shared';
 import props from './row-props';
-import config from '../config';
 import { rowInjectionKey } from './constants';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-row`,
+  name: 'TRow',
   props,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();
