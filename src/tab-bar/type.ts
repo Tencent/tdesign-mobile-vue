@@ -5,7 +5,7 @@
  * */
 
 import { BadgeProps } from '../badge';
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdTabBarProps {
   /**
@@ -13,6 +13,11 @@ export interface TdTabBarProps {
    * @default true
    */
   bordered?: boolean;
+  /**
+   * 标签栏的材质效果
+   * @default normal
+   */
+  effect?: 'normal' | 'glass';
   /**
    * 是否固定在底部
    * @default true
@@ -63,7 +68,7 @@ export interface TdTabBarProps {
   /**
    * 选中标签切换时触发
    */
-  onChange?: (value: string | number) => void;
+  onChange?: (context: { value: string | number }) => void;
 }
 
 export interface TdTabBarItemProps {

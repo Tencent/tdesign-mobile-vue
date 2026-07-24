@@ -46,6 +46,21 @@ const list = [
 ];
 
 describe('TabBar', () => {
+  describe('effect contract', () => {
+    it('uses normal as the default effect', () => {
+      expect(TabBar.props.effect.default).toBe('normal');
+    });
+
+    it('accepts normal and glass effects', () => {
+      expect(TabBar.props.effect.validator('normal')).toBe(true);
+      expect(TabBar.props.effect.validator('glass')).toBe(true);
+    });
+
+    it('rejects unsupported effects', () => {
+      expect(TabBar.props.effect.validator('other')).toBe(false);
+    });
+  });
+
   describe('props', () => {
     it('bordered', async () => {
       const wrapper = mount(TabBar, {

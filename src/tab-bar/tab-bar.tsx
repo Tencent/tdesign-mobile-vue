@@ -1,10 +1,12 @@
-import { defineComponent, ref, provide, Ref, computed, toRefs, VNode, CSSProperties } from 'vue';
+import { defineComponent, ref, provide, inject, Ref, computed, toRefs, VNode, CSSProperties } from 'vue';
 import TabBarProps from './props';
 import useChildSlots from '../hooks/useChildSlots';
 import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import useElementRect from '../hooks/useElementRect';
+import { tabBarGlassDevContextKey, useTabBarGlassFilter } from './useTabBarGlassFilter';
+import { renderTabBarGlassLayers } from './tab-bar-glass-layers';
 
 export default defineComponent({
   name: 'TTabBar',
@@ -31,10 +33,19 @@ export default defineComponent({
       {
         [`${tabBarClass.value}--bordered`]: props.bordered,
         [`${tabBarClass.value}--fixed`]: props.fixed,
+        [`${tabBarClass.value}--glass`]: props.effect === 'glass',
         [`${tabBarClass.value}--safe`]: props.safeAreaInsetBottom,
       },
       `${tabBarClass.value}--${props.shape}`,
     ]);
+
+    const glassDevContext = inject(tabBarGlassDevContextKey, undefined);
+    const glassFilterState = useTabBarGlassFilter({
+      root,
+      enabled: computed(() => props.effect === 'glass'),
+      shape: computed(() => props.shape),
+      devContext: glassDevContext,
+    });
 
     const styles = computed<CSSProperties>(() => ({
       zIndex: props.zIndex,
@@ -70,11 +81,17 @@ export default defineComponent({
       const vNodes = context.slots.default ? context.slots.default() : [];
       updateItemCount(vNodes);
 
-      const renderTabBar = (
-        <div ref={root} role="tablist" class={rootClass.value} style={styles.value}>
-          {renderTNodeJSX('default')}
-        </div>
-      );
+      const renderTabBar =
+        props.effect === 'glass' ? (
+          <div ref={root} role="tablist" class={rootClass.value} style={styles.value}>
+            {renderTabBarGlassLayers(`${tabBarClass.value}__glass`, glassFilterState.value)}
+            {renderTNodeJSX('default')}
+          </div>
+        ) : (
+          <div ref={root} role="tablist" class={rootClass.value} style={styles.value}>
+            {renderTNodeJSX('default')}
+          </div>
+        );
 
       if (props.fixed && props.placeholder) {
         return (

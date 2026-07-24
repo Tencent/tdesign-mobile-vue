@@ -6,6 +6,8 @@ import { initName } from './useTabBar';
 import TabBarItemProps from './tab-bar-item-props';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
+import { tabBarGlassDevContextKey, useTabBarGlassFilter } from './useTabBarGlassFilter';
+import { renderTabBarGlassLayers } from './tab-bar-glass-layers';
 
 export default defineComponent({
   name: 'TTabBarItem',
@@ -17,7 +19,7 @@ export default defineComponent({
     const tabBarItemClass = usePrefixClass('tab-bar-item');
 
     const { t, globalConfig } = useConfig('tabBar');
-    const { split, shape, theme, defaultIndex, activeValue, itemCount, updateChild } = inject<any>('tab-bar');
+    const { split, shape, theme, effect, defaultIndex, activeValue, itemCount, updateChild } = inject<any>('tab-bar');
     const currentName = initName(defaultIndex);
 
     const textNode = ref<HTMLElement>();
@@ -61,6 +63,14 @@ export default defineComponent({
         return activeValue.value.includes(currentName);
       }
       return currentName === activeValue.value;
+    });
+    const contentNode = ref<HTMLElement>();
+    const glassDevContext = inject(tabBarGlassDevContextKey, undefined);
+    const selectedGlassFilterState = useTabBarGlassFilter({
+      root: contentNode,
+      enabled: computed(() => effect.value === 'glass' && shape.value === 'round' && isChecked.value),
+      shape: computed(() => 'round'),
+      devContext: glassDevContext ? { tuning: glassDevContext.tuning } : undefined,
     });
 
     const isSpread = ref(false);
@@ -175,6 +185,7 @@ export default defineComponent({
           }}
         >
           <div
+            ref={contentNode}
             class={{
               [`${tabBarItemClass.value}__content`]: true,
               [`${tabBarItemClass.value}__content--checked`]: isChecked.value,
@@ -185,6 +196,9 @@ export default defineComponent({
             role={hasChildren.value ? 'button' : 'tab'}
             onClick={toggle}
           >
+            {effect.value === 'glass' && shape.value === 'round' && isChecked.value
+              ? renderTabBarGlassLayers(`${tabBarItemClass.value}__selected-glass`, selectedGlassFilterState.value)
+              : null}
             {badge()}
             {textNodeContent()}
           </div>

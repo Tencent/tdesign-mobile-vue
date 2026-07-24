@@ -6,6 +6,7 @@ import { mount } from '@vue/test-utils';
 import badgePropsVue from '@/tab-bar/demos/badge-props.vue';
 import baseVue from '@/tab-bar/demos/base.vue';
 import customVue from '@/tab-bar/demos/custom.vue';
+import liquidGlassVue from '@/tab-bar/demos/liquid-glass.vue';
 import mobileVue from '@/tab-bar/demos/mobile.vue';
 import pureIconVue from '@/tab-bar/demos/pure-icon.vue';
 import roundVue from '@/tab-bar/demos/round.vue';
@@ -16,6 +17,7 @@ const mapper = {
   badgePropsVue,
   baseVue,
   customVue,
+  liquidGlassVue,
   mobileVue,
   pureIconVue,
   roundVue,

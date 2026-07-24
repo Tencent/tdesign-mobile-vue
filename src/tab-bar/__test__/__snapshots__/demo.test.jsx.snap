@@ -29,6 +29,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           role="tab"
         >
           <!---->
+          <!---->
           <div
             class="t-tab-bar-item__text"
           >
@@ -51,6 +52,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--normal"
           role="tab"
         >
+          <!---->
           <!---->
           <div
             class="t-tab-bar-item__text"
@@ -75,6 +77,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           role="tab"
         >
           <!---->
+          <!---->
           <div
             class="t-tab-bar-item__text"
           >
@@ -97,6 +100,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--normal"
           role="tab"
         >
+          <!---->
           <!---->
           <div
             class="t-tab-bar-item__text"
@@ -136,6 +140,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
           role="tab"
         >
+          <!---->
           <div
             class="t-tab-bar-item__icon"
             style="height: 20px;"
@@ -191,6 +196,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--normal"
           role="tab"
         >
+          <!---->
           <div
             class="t-tab-bar-item__icon"
             style="height: 20px;"
@@ -246,6 +252,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--normal"
           role="tab"
         >
+          <!---->
           <div
             class="t-tab-bar-item__icon"
             style="height: 20px;"
@@ -301,6 +308,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--normal"
           role="tab"
         >
+          <!---->
           <div
             class="t-tab-bar-item__icon"
             style="height: 20px;"
@@ -372,6 +380,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
           role="tab"
         >
+          <!---->
           <div
             class="t-tab-bar-item__icon"
             style="height: 20px;"
@@ -429,6 +438,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--normal"
           role="tab"
         >
+          <!---->
           <div
             class="t-tab-bar-item__icon"
             style="height: 20px;"
@@ -486,6 +496,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--normal"
           role="tab"
         >
+          <!---->
           <div
             class="t-tab-bar-item__icon"
             style="height: 20px;"
@@ -543,6 +554,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--normal"
           role="tab"
         >
+          <!---->
           <div
             class="t-tab-bar-item__icon"
             style="height: 20px;"
@@ -614,6 +626,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
       role="tab"
     >
+      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -649,6 +662,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
+      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -684,6 +698,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
+      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -719,6 +734,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
+      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -769,6 +785,7 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
       role="tab"
     >
+      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -804,6 +821,7 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--normal"
       role="tab"
     >
+      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -839,6 +857,7 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--normal"
       role="tab"
     >
+      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -874,6 +893,7 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--normal"
       role="tab"
     >
+      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -902,6 +922,1932 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
   
   
 </div>
+`;
+
+exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
+<section
+  class="glass-demo glass-demo--light"
+  data-v-b2e27a45=""
+  style="--td-tab-bar-glass-bg-color: rgba(255, 255, 255, 0.42); --td-tab-bar-glass-border-color: rgba(255, 255, 255, 0.62); --td-tab-bar-glass-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08); --demo-tab-bar-height: 64px; --demo-tab-bar-radius: 32px; --demo-tab-bar-item-height: 56px; --demo-tab-bar-item-radius: 28px; --demo-tab-bar-frame-height: 82px; --demo-secondary-bottom: 78px;"
+>
+  <header
+    class="glass-demo__toolbar"
+    data-v-b2e27a45=""
+  >
+    <div
+      class="glass-demo__modes"
+      data-v-b2e27a45=""
+    >
+      <div
+        class="glass-demo__control-group"
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__control-copy"
+          data-v-b2e27a45=""
+        >
+          <strong
+            data-v-b2e27a45=""
+          >
+            Effect / 材质效果
+          </strong>
+          <small
+            data-v-b2e27a45=""
+          >
+            切换普通模式与 Liquid Glass 增强模式，影响整个 TabBar 材质渲染路径。
+          </small>
+        </span>
+        <div
+          aria-label="Effect"
+          class="glass-demo__segments"
+          data-v-b2e27a45=""
+          role="group"
+        >
+          
+          <button
+            aria-pressed="false"
+            class=""
+            data-testid="effect-normal"
+            data-v-b2e27a45=""
+            type="button"
+          >
+            normal
+          </button>
+          <button
+            aria-pressed="true"
+            class="is-active"
+            data-testid="effect-glass"
+            data-v-b2e27a45=""
+            type="button"
+          >
+            glass
+          </button>
+          
+        </div>
+      </div>
+      <div
+        class="glass-demo__control-group"
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__control-copy"
+          data-v-b2e27a45=""
+        >
+          <strong
+            data-v-b2e27a45=""
+          >
+            Shape / 外形
+          </strong>
+          <small
+            data-v-b2e27a45=""
+          >
+            切换普通矩形与圆角胶囊；会改变圆角、边距和折射几何范围。
+          </small>
+        </span>
+        <div
+          aria-label="Shape"
+          class="glass-demo__segments"
+          data-v-b2e27a45=""
+          role="group"
+        >
+          
+          <button
+            aria-pressed="false"
+            class=""
+            data-testid="shape-normal"
+            data-v-b2e27a45=""
+            type="button"
+          >
+            normal
+          </button>
+          <button
+            aria-pressed="true"
+            class="is-active"
+            data-testid="shape-round"
+            data-v-b2e27a45=""
+            type="button"
+          >
+            round
+          </button>
+          
+        </div>
+      </div>
+      <div
+        class="glass-demo__control-group"
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__control-copy"
+          data-v-b2e27a45=""
+        >
+          <strong
+            data-v-b2e27a45=""
+          >
+            Background / 验证背景
+          </strong>
+          <small
+            data-v-b2e27a45=""
+          >
+            切换网格、文字和图片，用于观察折射连续性、清晰度与背景相关性。
+          </small>
+        </span>
+        <div
+          aria-label="Background"
+          class="glass-demo__segments"
+          data-v-b2e27a45=""
+          role="group"
+        >
+          
+          <button
+            aria-pressed="true"
+            class="is-active"
+            data-testid="background-grid"
+            data-v-b2e27a45=""
+            type="button"
+          >
+            grid
+          </button>
+          <button
+            aria-pressed="false"
+            class=""
+            data-testid="background-text"
+            data-v-b2e27a45=""
+            type="button"
+          >
+            text
+          </button>
+          <button
+            aria-pressed="false"
+            class=""
+            data-testid="background-image"
+            data-v-b2e27a45=""
+            type="button"
+          >
+            image
+          </button>
+          
+        </div>
+      </div>
+      <div
+        class="glass-demo__control-group"
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__control-copy"
+          data-v-b2e27a45=""
+        >
+          <strong
+            data-v-b2e27a45=""
+          >
+            Width / 预览宽度
+          </strong>
+          <small
+            data-v-b2e27a45=""
+          >
+            改变预览容器宽度，用于验证响应式尺寸、纹理重建和边缘覆盖。
+          </small>
+        </span>
+        <div
+          aria-label="Preview width"
+          class="glass-demo__segments"
+          data-v-b2e27a45=""
+          role="group"
+        >
+          
+          <button
+            aria-pressed="false"
+            class=""
+            data-testid="width-320"
+            data-v-b2e27a45=""
+            type="button"
+          >
+            320
+          </button>
+          <button
+            aria-pressed="true"
+            class="is-active"
+            data-testid="width-390"
+            data-v-b2e27a45=""
+            type="button"
+          >
+            390
+          </button>
+          <button
+            aria-pressed="false"
+            class=""
+            data-testid="width-430"
+            data-v-b2e27a45=""
+            type="button"
+          >
+            430
+          </button>
+          <button
+            aria-pressed="false"
+            class=""
+            data-testid="width-620"
+            data-v-b2e27a45=""
+            type="button"
+          >
+            620
+          </button>
+          
+        </div>
+      </div>
+      <div
+        class="glass-demo__control-group"
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__control-copy"
+          data-v-b2e27a45=""
+        >
+          <strong
+            data-v-b2e27a45=""
+          >
+            Theme / 主题
+          </strong>
+          <small
+            data-v-b2e27a45=""
+          >
+            切换明暗主题，影响材质底色、边框对比度和文字可读性。
+          </small>
+        </span>
+        <div
+          aria-label="Theme"
+          class="glass-demo__segments"
+          data-v-b2e27a45=""
+          role="group"
+        >
+          
+          <button
+            aria-pressed="true"
+            class="is-active"
+            data-testid="theme-light"
+            data-v-b2e27a45=""
+            type="button"
+          >
+            light
+          </button>
+          <button
+            aria-pressed="false"
+            class=""
+            data-testid="theme-dark"
+            data-v-b2e27a45=""
+            type="button"
+          >
+            dark
+          </button>
+          
+        </div>
+      </div>
+    </div>
+    <div
+      class="glass-demo__toggles"
+      data-v-b2e27a45=""
+    >
+      
+      <label
+        data-v-b2e27a45=""
+      >
+        <input
+          data-testid="toggle-fixed"
+          data-v-b2e27a45=""
+          type="checkbox"
+        />
+        <span
+          class="glass-demo__toggle-copy"
+          data-v-b2e27a45=""
+        >
+          <strong
+            data-v-b2e27a45=""
+          >
+            Fixed / 固定定位
+          </strong>
+          <small
+            data-v-b2e27a45=""
+          >
+            模拟吸附在视口底部的 TabBar 定位方式。
+          </small>
+        </span>
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <input
+          data-testid="toggle-placeholder"
+          data-v-b2e27a45=""
+          type="checkbox"
+        />
+        <span
+          class="glass-demo__toggle-copy"
+          data-v-b2e27a45=""
+        >
+          <strong
+            data-v-b2e27a45=""
+          >
+            Placeholder / 占位空间
+          </strong>
+          <small
+            data-v-b2e27a45=""
+          >
+            固定定位时保留等高占位，避免页面内容被 TabBar 遮挡。
+          </small>
+        </span>
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <input
+          data-testid="toggle-safe"
+          data-v-b2e27a45=""
+          type="checkbox"
+        />
+        <span
+          class="glass-demo__toggle-copy"
+          data-v-b2e27a45=""
+        >
+          <strong
+            data-v-b2e27a45=""
+          >
+            Safe area / 安全区
+          </strong>
+          <small
+            data-v-b2e27a45=""
+          >
+            增加底部安全区间距，模拟全面屏设备。
+          </small>
+        </span>
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <input
+          data-testid="toggle-bordered"
+          data-v-b2e27a45=""
+          type="checkbox"
+        />
+        <span
+          class="glass-demo__toggle-copy"
+          data-v-b2e27a45=""
+        >
+          <strong
+            data-v-b2e27a45=""
+          >
+            Bordered / 顶部边框
+          </strong>
+          <small
+            data-v-b2e27a45=""
+          >
+            切换组件原有的分隔边框样式。
+          </small>
+        </span>
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <input
+          data-testid="toggle-multiple"
+          data-v-b2e27a45=""
+          type="checkbox"
+        />
+        <span
+          class="glass-demo__toggle-copy"
+          data-v-b2e27a45=""
+        >
+          <strong
+            data-v-b2e27a45=""
+          >
+            Multi-instance / 多实例
+          </strong>
+          <small
+            data-v-b2e27a45=""
+          >
+            同时渲染两个玻璃 TabBar，用于检查 filter ID 与纹理是否串用。
+          </small>
+        </span>
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <input
+          data-testid="toggle-motion"
+          data-v-b2e27a45=""
+          type="checkbox"
+        />
+        <span
+          class="glass-demo__toggle-copy"
+          data-v-b2e27a45=""
+        >
+          <strong
+            data-v-b2e27a45=""
+          >
+            Move background / 移动背景
+          </strong>
+          <small
+            data-v-b2e27a45=""
+          >
+            持续移动验证背景，检查折射是否跟随真实背景内容变化。
+          </small>
+        </span>
+      </label>
+      
+    </div>
+  </header>
+  <div
+    class="glass-demo__comparison"
+    data-testid="comparison"
+    data-v-b2e27a45=""
+  >
+    
+    <article
+      class="glass-demo__preview"
+      data-v-b2e27a45=""
+    >
+      <div
+        class="glass-demo__preview-title"
+        data-v-b2e27a45=""
+      >
+        <strong
+          data-v-b2e27a45=""
+        >
+          Normal baseline
+        </strong>
+        <span
+          data-v-b2e27a45=""
+        >
+          390 px
+        </span>
+      </div>
+      <div
+        class="glass-demo__device glass-demo__device--grid"
+        data-testid="preview-normal"
+        data-v-b2e27a45=""
+        style="width: 390px; --demo-image: url(https://tdesign.gtimg.com/demo/demo-image-1.png);"
+      >
+        <div
+          aria-hidden="true"
+          class="glass-demo__landmarks"
+          data-v-b2e27a45=""
+        >
+          
+          <span
+            data-v-b2e27a45=""
+          >
+            1
+          </span>
+          <span
+            data-v-b2e27a45=""
+          >
+            2
+          </span>
+          <span
+            data-v-b2e27a45=""
+          >
+            3
+          </span>
+          <span
+            data-v-b2e27a45=""
+          >
+            4
+          </span>
+          <span
+            data-v-b2e27a45=""
+          >
+            5
+          </span>
+          <span
+            data-v-b2e27a45=""
+          >
+            6
+          </span>
+          
+        </div>
+        <div
+          class="glass-demo__bar-frame"
+          data-v-b2e27a45=""
+        >
+          <div
+            class="t-tab-bar t-tab-bar--bordered t-tab-bar--round"
+            data-v-b2e27a45=""
+            role="tablist"
+            style="z-index: 1;"
+          >
+            
+            
+            <div
+              class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+              data-v-b2e27a45=""
+            >
+              <div
+                aria-expanded="false"
+                aria-selected="true"
+                class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+                role="tab"
+              >
+                <!---->
+                <div
+                  class="t-tab-bar-item__icon"
+                  style="height: 20px;"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-home"
+                    data-v-b2e27a45=""
+                    style="font-size: 20px;"
+                  >
+                    <use
+                      href="#t-icon-home"
+                    />
+                  </svg>
+                  
+                </div>
+                <div
+                  class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                >
+                  <!---->
+                  
+                  Home 
+                  
+                </div>
+              </div>
+              <!---->
+            </div>
+            <div
+              class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+              data-v-b2e27a45=""
+            >
+              <div
+                aria-expanded="false"
+                aria-selected="false"
+                class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+                role="tab"
+              >
+                <!---->
+                <div
+                  class="t-tab-bar-item__icon"
+                  style="height: 20px;"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-search"
+                    data-v-b2e27a45=""
+                    style="font-size: 20px;"
+                  >
+                    <use
+                      href="#t-icon-search"
+                    />
+                  </svg>
+                  
+                </div>
+                <div
+                  class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                >
+                  <!---->
+                  
+                  Discover 
+                  
+                </div>
+              </div>
+              <!---->
+            </div>
+            <div
+              class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+              data-v-b2e27a45=""
+            >
+              <div
+                aria-expanded="false"
+                aria-selected="false"
+                class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+                role="tab"
+              >
+                <!---->
+                <div
+                  class="t-tab-bar-item__icon"
+                  style="height: 20px;"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-folder"
+                    data-v-b2e27a45=""
+                    style="font-size: 20px;"
+                  >
+                    <use
+                      href="#t-icon-folder"
+                    />
+                  </svg>
+                  
+                </div>
+                <div
+                  class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                >
+                  <!---->
+                  
+                  Library 
+                  
+                </div>
+              </div>
+              <!---->
+            </div>
+            <div
+              class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+              data-v-b2e27a45=""
+            >
+              <div
+                aria-expanded="false"
+                aria-selected="false"
+                class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+                role="tab"
+              >
+                <!---->
+                <div
+                  class="t-tab-bar-item__icon"
+                  style="height: 20px;"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-user"
+                    data-v-b2e27a45=""
+                    style="font-size: 20px;"
+                  >
+                    <use
+                      href="#t-icon-user"
+                    />
+                  </svg>
+                  
+                </div>
+                <div
+                  class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                >
+                  <!---->
+                  
+                  Profile 
+                  
+                </div>
+              </div>
+              <!---->
+            </div>
+            
+            
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+    </article>
+    <article
+      class="glass-demo__preview"
+      data-v-b2e27a45=""
+    >
+      <div
+        class="glass-demo__preview-title"
+        data-v-b2e27a45=""
+      >
+        <strong
+          data-v-b2e27a45=""
+        >
+          glass material
+        </strong>
+        <span
+          data-v-b2e27a45=""
+        >
+          390 px
+        </span>
+      </div>
+      <div
+        class="glass-demo__device glass-demo__device--grid"
+        data-testid="preview-glass"
+        data-v-b2e27a45=""
+        style="width: 390px; --demo-image: url(https://tdesign.gtimg.com/demo/demo-image-1.png);"
+      >
+        <div
+          aria-hidden="true"
+          class="glass-demo__landmarks"
+          data-v-b2e27a45=""
+        >
+          
+          <span
+            data-v-b2e27a45=""
+          >
+            1
+          </span>
+          <span
+            data-v-b2e27a45=""
+          >
+            2
+          </span>
+          <span
+            data-v-b2e27a45=""
+          >
+            3
+          </span>
+          <span
+            data-v-b2e27a45=""
+          >
+            4
+          </span>
+          <span
+            data-v-b2e27a45=""
+          >
+            5
+          </span>
+          <span
+            data-v-b2e27a45=""
+          >
+            6
+          </span>
+          
+        </div>
+        <div
+          class="glass-demo__bar-frame"
+          data-v-b2e27a45=""
+        >
+          <div
+            class="t-tab-bar t-tab-bar--bordered t-tab-bar--glass t-tab-bar--round"
+            data-v-b2e27a45=""
+            role="tablist"
+            style="z-index: 1;"
+          >
+            
+            <span
+              aria-hidden="true"
+              class="t-tab-bar__glass-refraction"
+            />
+            <span
+              aria-hidden="true"
+              class="t-tab-bar__glass-base"
+            />
+            <span
+              aria-hidden="true"
+              class="t-tab-bar__glass-sheen"
+            />
+            <!---->
+            
+            
+            
+            <div
+              class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+              data-v-b2e27a45=""
+            >
+              <div
+                aria-expanded="false"
+                aria-selected="true"
+                class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+                role="tab"
+              >
+                
+                <span
+                  aria-hidden="true"
+                  class="t-tab-bar-item__selected-glass-refraction"
+                />
+                <span
+                  aria-hidden="true"
+                  class="t-tab-bar-item__selected-glass-base"
+                />
+                <span
+                  aria-hidden="true"
+                  class="t-tab-bar-item__selected-glass-sheen"
+                />
+                <!---->
+                
+                <div
+                  class="t-tab-bar-item__icon"
+                  style="height: 20px;"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-home"
+                    data-v-b2e27a45=""
+                    style="font-size: 20px;"
+                  >
+                    <use
+                      href="#t-icon-home"
+                    />
+                  </svg>
+                  
+                </div>
+                <div
+                  class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                >
+                  <!---->
+                  
+                  Home 
+                  
+                </div>
+              </div>
+              <!---->
+            </div>
+            <div
+              class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+              data-v-b2e27a45=""
+            >
+              <div
+                aria-expanded="false"
+                aria-selected="false"
+                class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+                role="tab"
+              >
+                <!---->
+                <div
+                  class="t-tab-bar-item__icon"
+                  style="height: 20px;"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-search"
+                    data-v-b2e27a45=""
+                    style="font-size: 20px;"
+                  >
+                    <use
+                      href="#t-icon-search"
+                    />
+                  </svg>
+                  
+                </div>
+                <div
+                  class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                >
+                  <!---->
+                  
+                  Discover 
+                  
+                </div>
+              </div>
+              <!---->
+            </div>
+            <div
+              class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+              data-v-b2e27a45=""
+            >
+              <div
+                aria-expanded="false"
+                aria-selected="false"
+                class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+                role="tab"
+              >
+                <!---->
+                <div
+                  class="t-tab-bar-item__icon"
+                  style="height: 20px;"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-folder"
+                    data-v-b2e27a45=""
+                    style="font-size: 20px;"
+                  >
+                    <use
+                      href="#t-icon-folder"
+                    />
+                  </svg>
+                  
+                </div>
+                <div
+                  class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                >
+                  <!---->
+                  
+                  Library 
+                  
+                </div>
+              </div>
+              <!---->
+            </div>
+            <div
+              class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+              data-v-b2e27a45=""
+            >
+              <div
+                aria-expanded="false"
+                aria-selected="false"
+                class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+                role="tab"
+              >
+                <!---->
+                <div
+                  class="t-tab-bar-item__icon"
+                  style="height: 20px;"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-user"
+                    data-v-b2e27a45=""
+                    style="font-size: 20px;"
+                  >
+                    <use
+                      href="#t-icon-user"
+                    />
+                  </svg>
+                  
+                </div>
+                <div
+                  class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                >
+                  <!---->
+                  
+                  Profile 
+                  
+                </div>
+              </div>
+              <!---->
+            </div>
+            
+            
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+    </article>
+    
+  </div>
+  <section
+    class="glass-demo__calibration"
+    data-v-b2e27a45=""
+  >
+    <header
+      data-v-b2e27a45=""
+    >
+      <div
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__eyebrow"
+          data-v-b2e27a45=""
+        >
+          Optical calibration / 光学校准
+        </span>
+        <h3
+          data-v-b2e27a45=""
+        >
+          Runtime parameters / 实时参数
+        </h3>
+      </div>
+      <button
+        aria-label="恢复默认参数"
+        class="glass-demo__reset"
+        data-testid="reset-parameters"
+        data-v-b2e27a45=""
+        title="恢复默认参数"
+        type="button"
+      >
+        <svg
+          class="t-icon t-icon-refresh"
+          data-v-b2e27a45=""
+        >
+          <use
+            href="#t-icon-refresh"
+          />
+        </svg>
+      </button>
+    </header>
+    <div
+      aria-live="polite"
+      class="glass-demo__metrics"
+      data-v-b2e27a45=""
+    >
+      <div
+        data-v-b2e27a45=""
+      >
+        <span
+          data-v-b2e27a45=""
+        >
+          Texture / 纹理尺寸
+        </span>
+        <strong
+          data-testid="metric-texture"
+          data-v-b2e27a45=""
+        >
+          0 x 0
+        </strong>
+      </div>
+      <div
+        data-v-b2e27a45=""
+      >
+        <span
+          data-v-b2e27a45=""
+        >
+          Pixels / 像素数
+        </span>
+        <strong
+          data-testid="metric-pixels"
+          data-v-b2e27a45=""
+        >
+          0
+        </strong>
+      </div>
+      <div
+        data-v-b2e27a45=""
+      >
+        <span
+          data-v-b2e27a45=""
+        >
+          Bezel / 实际覆盖
+        </span>
+        <strong
+          data-testid="metric-bezel"
+          data-v-b2e27a45=""
+        >
+          0.0 px
+        </strong>
+      </div>
+      <div
+        data-v-b2e27a45=""
+      >
+        <span
+          data-v-b2e27a45=""
+        >
+          Generate / 生成耗时
+        </span>
+        <strong
+          data-testid="metric-generation"
+          data-v-b2e27a45=""
+        >
+          0.00 ms
+        </strong>
+      </div>
+      <div
+        data-v-b2e27a45=""
+      >
+        <span
+          data-v-b2e27a45=""
+        >
+          Total / 总耗时
+        </span>
+        <strong
+          data-testid="metric-total"
+          data-v-b2e27a45=""
+        >
+          0.00 ms
+        </strong>
+      </div>
+      <div
+        data-v-b2e27a45=""
+      >
+        <span
+          data-v-b2e27a45=""
+        >
+          Rebuilds / 重建次数
+        </span>
+        <strong
+          data-testid="metric-rebuilds"
+          data-v-b2e27a45=""
+        >
+          0
+        </strong>
+      </div>
+    </div>
+    <h4
+      class="glass-demo__section-title"
+      data-v-b2e27a45=""
+    >
+      Layout calibration / 尺寸校准
+    </h4>
+    <div
+      class="glass-demo__sliders"
+      data-v-b2e27a45=""
+    >
+      
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__parameter-title"
+          data-v-b2e27a45=""
+        >
+          <span
+            data-v-b2e27a45=""
+          >
+            TabBar width / TabBar 宽度 
+            <small
+              data-v-b2e27a45=""
+            >
+              Demo 布局
+            </small>
+          </span>
+          <output
+            data-v-b2e27a45=""
+          >
+            390px
+          </output>
+        </span>
+        <span
+          class="glass-demo__parameter-description"
+          data-v-b2e27a45=""
+        >
+          连续调整预览与组件可用宽度；round 外形会再扣除左右 margin，并触发纹理重新生成。
+        </span>
+        <input
+          data-testid="parameter-tab-bar-width"
+          data-v-b2e27a45=""
+          max="620"
+          min="280"
+          step="10"
+          type="range"
+        />
+        <span
+          class="glass-demo__parameter-meta"
+          data-v-b2e27a45=""
+        >
+          default 390 · 280–620
+        </span>
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__parameter-title"
+          data-v-b2e27a45=""
+        >
+          <span
+            data-v-b2e27a45=""
+          >
+            TabBar height / TabBar 高度 
+            <small
+              data-v-b2e27a45=""
+            >
+              Demo 布局
+            </small>
+          </span>
+          <output
+            data-v-b2e27a45=""
+          >
+            64px
+          </output>
+        </span>
+        <span
+          class="glass-demo__parameter-description"
+          data-v-b2e27a45=""
+        >
+          调整材质、圆角和内部项目高度；同时改变 radius、实际 bezel 像素与纹理尺寸。
+        </span>
+        <input
+          data-testid="parameter-tab-bar-height"
+          data-v-b2e27a45=""
+          max="88"
+          min="52"
+          step="2"
+          type="range"
+        />
+        <span
+          class="glass-demo__parameter-meta"
+          data-v-b2e27a45=""
+        >
+          default 64 · 52–88
+        </span>
+      </label>
+      
+    </div>
+    <h4
+      class="glass-demo__section-title"
+      data-v-b2e27a45=""
+    >
+      Optical calibration / 光学校准
+    </h4>
+    <div
+      class="glass-demo__sliders"
+      data-v-b2e27a45=""
+    >
+      
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__parameter-title"
+          data-v-b2e27a45=""
+        >
+          <span
+            data-v-b2e27a45=""
+          >
+            Glass thickness / 玻璃厚度 
+            <small
+              data-v-b2e27a45=""
+            >
+              内部调参
+            </small>
+          </span>
+          <output
+            data-v-b2e27a45=""
+          >
+            0.7x
+          </output>
+        </span>
+        <span
+          class="glass-demo__parameter-description"
+          data-v-b2e27a45=""
+        >
+          控制光学截面的等效厚度；主要改变折射曲线幅度，不改变折射覆盖范围。
+        </span>
+        <input
+          data-testid="parameter-thickness"
+          data-v-b2e27a45=""
+          max="2"
+          min="0"
+          step="0.05"
+          type="range"
+        />
+        <span
+          class="glass-demo__parameter-meta"
+          data-v-b2e27a45=""
+        >
+          default 0.7 · 0–2
+        </span>
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__parameter-title"
+          data-v-b2e27a45=""
+        >
+          <span
+            data-v-b2e27a45=""
+          >
+            Bezel ratio / 边缘折射覆盖比例 
+            <small
+              data-v-b2e27a45=""
+            >
+              内部调参
+            </small>
+          </span>
+          <output
+            data-v-b2e27a45=""
+          >
+            0.85x · 0.0px
+          </output>
+        </span>
+        <span
+          class="glass-demo__parameter-description"
+          data-v-b2e27a45=""
+        >
+          相对于圆角半径的覆盖比例；改变折射从边缘向中心延伸的范围，右侧同步显示实际 px。
+        </span>
+        <input
+          data-testid="parameter-bezel"
+          data-v-b2e27a45=""
+          max="1"
+          min="0.1"
+          step="0.05"
+          type="range"
+        />
+        <span
+          class="glass-demo__parameter-meta"
+          data-v-b2e27a45=""
+        >
+          default 0.85 · 0.1–1
+        </span>
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__parameter-title"
+          data-v-b2e27a45=""
+        >
+          <span
+            data-v-b2e27a45=""
+          >
+            Refractive index / 折射率 
+            <small
+              data-v-b2e27a45=""
+            >
+              内部调参
+            </small>
+          </span>
+          <output
+            data-v-b2e27a45=""
+          >
+            1.5
+          </output>
+        </span>
+        <span
+          class="glass-demo__parameter-description"
+          data-v-b2e27a45=""
+        >
+          控制空气与玻璃之间的折射率差；数值越高，背景光线的弯折通常越明显。
+        </span>
+        <input
+          data-testid="parameter-ior"
+          data-v-b2e27a45=""
+          max="2.5"
+          min="1"
+          step="0.05"
+          type="range"
+        />
+        <span
+          class="glass-demo__parameter-meta"
+          data-v-b2e27a45=""
+        >
+          default 1.5 · 1–2.5
+        </span>
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__parameter-title"
+          data-v-b2e27a45=""
+        >
+          <span
+            data-v-b2e27a45=""
+          >
+            Displacement gain / 位移增益 
+            <small
+              data-v-b2e27a45=""
+            >
+              内部调参
+            </small>
+          </span>
+          <output
+            data-v-b2e27a45=""
+          >
+            1x
+          </output>
+        </span>
+        <span
+          class="glass-demo__parameter-description"
+          data-v-b2e27a45=""
+        >
+          缩放最终 SVG 位移强度；整体放大或减弱背景扭曲，不改变折射带宽度。
+        </span>
+        <input
+          data-testid="parameter-gain"
+          data-v-b2e27a45=""
+          max="2"
+          min="0"
+          step="0.05"
+          type="range"
+        />
+        <span
+          class="glass-demo__parameter-meta"
+          data-v-b2e27a45=""
+        >
+          default 1 · 0–2
+        </span>
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__parameter-title"
+          data-v-b2e27a45=""
+        >
+          <span
+            data-v-b2e27a45=""
+          >
+            SVG blur / SVG 模糊 
+            <small
+              data-v-b2e27a45=""
+            >
+              内部调参
+            </small>
+          </span>
+          <output
+            data-v-b2e27a45=""
+          >
+            0.4px
+          </output>
+        </span>
+        <span
+          class="glass-demo__parameter-description"
+          data-v-b2e27a45=""
+        >
+          在执行位移前模糊背景采样；影响玻璃内部清晰度，不改变几何弯曲方向。
+        </span>
+        <input
+          data-testid="parameter-blur"
+          data-v-b2e27a45=""
+          max="4"
+          min="0"
+          step="0.1"
+          type="range"
+        />
+        <span
+          class="glass-demo__parameter-meta"
+          data-v-b2e27a45=""
+        >
+          default 0.4 · 0–4
+        </span>
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__parameter-title"
+          data-v-b2e27a45=""
+        >
+          <span
+            data-v-b2e27a45=""
+          >
+            Specular opacity / 高光透明度 
+            <small
+              data-v-b2e27a45=""
+            >
+              内部调参
+            </small>
+          </span>
+          <output
+            data-v-b2e27a45=""
+          >
+            0.5
+          </output>
+        </span>
+        <span
+          class="glass-demo__parameter-description"
+          data-v-b2e27a45=""
+        >
+          控制边缘镜面高光层的可见程度；只影响高光明暗，不改变背景折射。
+        </span>
+        <input
+          data-testid="parameter-specular-opacity"
+          data-v-b2e27a45=""
+          max="1"
+          min="0"
+          step="0.05"
+          type="range"
+        />
+        <span
+          class="glass-demo__parameter-meta"
+          data-v-b2e27a45=""
+        >
+          default 0.5 · 0–1
+        </span>
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__parameter-title"
+          data-v-b2e27a45=""
+        >
+          <span
+            data-v-b2e27a45=""
+          >
+            Specular saturation / 高光饱和度 
+            <small
+              data-v-b2e27a45=""
+            >
+              内部调参
+            </small>
+          </span>
+          <output
+            data-v-b2e27a45=""
+          >
+            2x
+          </output>
+        </span>
+        <span
+          class="glass-demo__parameter-description"
+          data-v-b2e27a45=""
+        >
+          控制高光区域内折射背景的色彩浓度；影响色彩表现，不改变位移范围。
+        </span>
+        <input
+          data-testid="parameter-specular-saturation"
+          data-v-b2e27a45=""
+          max="6"
+          min="1"
+          step="0.25"
+          type="range"
+        />
+        <span
+          class="glass-demo__parameter-meta"
+          data-v-b2e27a45=""
+        >
+          default 2 · 1–6
+        </span>
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__parameter-title"
+          data-v-b2e27a45=""
+        >
+          <span
+            data-v-b2e27a45=""
+          >
+            Light angle / 光源角度 
+            <small
+              data-v-b2e27a45=""
+            >
+              内部调参
+            </small>
+          </span>
+          <output
+            data-v-b2e27a45=""
+          >
+            225deg
+          </output>
+        </span>
+        <span
+          class="glass-demo__parameter-description"
+          data-v-b2e27a45=""
+        >
+          改变镜面高光出现的方向；影响材质受光位置，不改变折射曲线。
+        </span>
+        <input
+          data-testid="parameter-light-angle"
+          data-v-b2e27a45=""
+          max="360"
+          min="0"
+          step="5"
+          type="range"
+        />
+        <span
+          class="glass-demo__parameter-meta"
+          data-v-b2e27a45=""
+        >
+          default 225 · 0–360
+        </span>
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__parameter-title"
+          data-v-b2e27a45=""
+        >
+          <span
+            data-v-b2e27a45=""
+          >
+            Baseline opacity / 基线不透明度 
+            <small
+              data-v-b2e27a45=""
+            >
+              材质外观
+            </small>
+          </span>
+          <output
+            data-v-b2e27a45=""
+          >
+            0.42
+          </output>
+        </span>
+        <span
+          class="glass-demo__parameter-description"
+          data-v-b2e27a45=""
+        >
+          控制玻璃底色的遮盖程度；越高越易读，但背景与折射会越不明显。
+        </span>
+        <input
+          data-testid="parameter-background-alpha"
+          data-v-b2e27a45=""
+          max="0.95"
+          min="0.35"
+          step="0.01"
+          type="range"
+        />
+        <span
+          class="glass-demo__parameter-meta"
+          data-v-b2e27a45=""
+        >
+          default 0.42 · 0.35–0.95
+        </span>
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__parameter-title"
+          data-v-b2e27a45=""
+        >
+          <span
+            data-v-b2e27a45=""
+          >
+            Border opacity / 边框不透明度 
+            <small
+              data-v-b2e27a45=""
+            >
+              材质外观
+            </small>
+          </span>
+          <output
+            data-v-b2e27a45=""
+          >
+            0.62
+          </output>
+        </span>
+        <span
+          class="glass-demo__parameter-description"
+          data-v-b2e27a45=""
+        >
+          控制材质外轮廓的透明度；影响边缘识别和对比度，不改变折射。
+        </span>
+        <input
+          data-testid="parameter-border-alpha"
+          data-v-b2e27a45=""
+          max="1"
+          min="0"
+          step="0.01"
+          type="range"
+        />
+        <span
+          class="glass-demo__parameter-meta"
+          data-v-b2e27a45=""
+        >
+          default 0.62 · 0–1
+        </span>
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__parameter-title"
+          data-v-b2e27a45=""
+        >
+          <span
+            data-v-b2e27a45=""
+          >
+            Texture DPR / 纹理像素倍率 
+            <small
+              data-v-b2e27a45=""
+            >
+              内部调参
+            </small>
+          </span>
+          <output
+            data-v-b2e27a45=""
+          >
+            1x
+          </output>
+        </span>
+        <span
+          class="glass-demo__parameter-description"
+          data-v-b2e27a45=""
+        >
+          控制位移与高光纹理的采样分辨率；越高边缘越细腻，但生成耗时和内存占用更高。
+        </span>
+        <input
+          data-testid="parameter-texture-dpr"
+          data-v-b2e27a45=""
+          max="2"
+          min="1"
+          step="0.25"
+          type="range"
+        />
+        <span
+          class="glass-demo__parameter-meta"
+          data-v-b2e27a45=""
+        >
+          default 1 · 1–2
+        </span>
+      </label>
+      
+    </div>
+    <div
+      class="glass-demo__material-controls"
+      data-v-b2e27a45=""
+    >
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          data-v-b2e27a45=""
+        >
+          Surface profile / 表面轮廓 
+          <small
+            data-v-b2e27a45=""
+          >
+            内部调参
+          </small>
+        </span>
+        <small
+          class="glass-demo__control-description"
+          data-v-b2e27a45=""
+        >
+          选择折射截面的曲线形态；会改变边缘弯曲走势，不改变组件尺寸。
+        </small>
+        <select
+          data-testid="optics-surface"
+          data-v-b2e27a45=""
+        >
+          
+          <option
+            data-v-b2e27a45=""
+            value="squircle"
+          >
+            Squircle / 超椭圆凸面
+          </option>
+          <option
+            data-v-b2e27a45=""
+            value="lip"
+          >
+            Lip / 唇缘复合面
+          </option>
+          
+        </select>
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          data-v-b2e27a45=""
+        >
+          Background color / 材质底色 
+          <small
+            data-v-b2e27a45=""
+          >
+            材质外观
+          </small>
+        </span>
+        <small
+          class="glass-demo__control-description"
+          data-v-b2e27a45=""
+        >
+          设置玻璃基线填充色；影响整体色调，不改变折射几何。
+        </small>
+        <input
+          data-testid="material-background-color"
+          data-v-b2e27a45=""
+          type="color"
+        />
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          data-v-b2e27a45=""
+        >
+          Border color / 边框颜色 
+          <small
+            data-v-b2e27a45=""
+          >
+            材质外观
+          </small>
+        </span>
+        <small
+          class="glass-demo__control-description"
+          data-v-b2e27a45=""
+        >
+          设置材质外轮廓颜色；影响边缘辨识度，不改变位移。
+        </small>
+        <input
+          data-testid="material-border-color"
+          data-v-b2e27a45=""
+          type="color"
+        />
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          data-v-b2e27a45=""
+        >
+          Shadow / 阴影预设 
+          <small
+            data-v-b2e27a45=""
+          >
+            材质外观
+          </small>
+        </span>
+        <small
+          class="glass-demo__control-description"
+          data-v-b2e27a45=""
+        >
+          切换悬浮、紧凑或无阴影；只影响层级感和外部投影。
+        </small>
+        <select
+          data-testid="material-shadow"
+          data-v-b2e27a45=""
+        >
+          
+          <option
+            data-v-b2e27a45=""
+            value="floating"
+          >
+            Floating / 悬浮
+          </option>
+          <option
+            data-v-b2e27a45=""
+            value="compact"
+          >
+            Compact / 紧凑
+          </option>
+          <option
+            data-v-b2e27a45=""
+            value="none"
+          >
+            None / 无阴影
+          </option>
+          
+        </select>
+      </label>
+    </div>
+  </section>
+  <section
+    class="glass-demo__presets"
+    data-v-b2e27a45=""
+  >
+    <span
+      class="glass-demo__eyebrow"
+      data-v-b2e27a45=""
+    >
+      Fixed presets
+    </span>
+    <div
+      data-v-b2e27a45=""
+    >
+      
+      <article
+        data-v-b2e27a45=""
+      >
+        <strong
+          data-v-b2e27a45=""
+        >
+          Surface profile
+        </strong>
+        <p
+          data-v-b2e27a45=""
+        >
+          The profile function and Snell calculation are selected as a single physical model.
+        </p>
+      </article>
+      <article
+        data-v-b2e27a45=""
+      >
+        <strong
+          data-v-b2e27a45=""
+        >
+          Bezel ratio
+        </strong>
+        <p
+          data-v-b2e27a45=""
+        >
+          The ratio is measured against the corner radius, or half of the short side when the radius is zero.
+        </p>
+      </article>
+      <article
+        data-v-b2e27a45=""
+      >
+        <strong
+          data-v-b2e27a45=""
+        >
+          Selected item glass
+        </strong>
+        <p
+          data-v-b2e27a45=""
+        >
+          The active item owns one size-matched filter, reuses the optical tuning and releases it when selection moves.
+        </p>
+      </article>
+      <article
+        data-v-b2e27a45=""
+      >
+        <strong
+          data-v-b2e27a45=""
+        >
+          RGBA displacement encoding
+        </strong>
+        <p
+          data-v-b2e27a45=""
+        >
+          R/G displacement and alpha clipping remain an internal filter contract.
+        </p>
+      </article>
+      <article
+        data-v-b2e27a45=""
+      >
+        <strong
+          data-v-b2e27a45=""
+        >
+          SVG filter graph
+        </strong>
+        <p
+          data-v-b2e27a45=""
+        >
+          Blur, displacement, saturation, masked specular and blend order are validated together.
+        </p>
+      </article>
+      <article
+        data-v-b2e27a45=""
+      >
+        <strong
+          data-v-b2e27a45=""
+        >
+          512K adaptive budget
+        </strong>
+        <p
+          data-v-b2e27a45=""
+        >
+          Sampling dimensions are resolved together to preserve aspect ratio and memory limits.
+        </p>
+      </article>
+      <article
+        data-v-b2e27a45=""
+      >
+        <strong
+          data-v-b2e27a45=""
+        >
+          CSS fallback ladder
+        </strong>
+        <p
+          data-v-b2e27a45=""
+        >
+          Capability failure must retain the same readable baseline and interaction surface.
+        </p>
+      </article>
+      
+    </div>
+  </section>
+</section>
 `;
 
 exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
@@ -961,6 +2907,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <!---->
+            <!---->
             <div
               class="t-tab-bar-item__text"
             >
@@ -981,6 +2928,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
+            <!---->
             <!---->
             <div
               class="t-tab-bar-item__text"
@@ -1003,6 +2951,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <!---->
+            <!---->
             <div
               class="t-tab-bar-item__text"
             >
@@ -1023,6 +2972,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
+            <!---->
             <!---->
             <div
               class="t-tab-bar-item__text"
@@ -1076,6 +3026,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
             role="tab"
           >
+            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -1111,6 +3062,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
+            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -1146,6 +3098,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
+            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -1181,6 +3134,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
+            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -1248,6 +3202,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
             role="tab"
           >
+            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -1281,6 +3236,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
+            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -1314,6 +3270,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
+            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -1347,6 +3304,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
+            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -1413,6 +3371,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <!---->
+            <!---->
             <div
               class="t-tab-bar-item__text"
             >
@@ -1434,6 +3393,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <!---->
+            <!---->
             <div
               class="t-tab-bar-item__text"
             >
@@ -1454,6 +3414,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="button"
           >
+            <!---->
             <!---->
             <div
               class="t-tab-bar-item__text"
@@ -1538,6 +3499,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               role="tab"
             >
               <!---->
+              <!---->
               <div
                 class="t-tab-bar-item__text"
               >
@@ -1560,6 +3522,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--normal"
               role="tab"
             >
+              <!---->
               <!---->
               <div
                 class="t-tab-bar-item__text"
@@ -1584,6 +3547,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               role="tab"
             >
               <!---->
+              <!---->
               <div
                 class="t-tab-bar-item__text"
               >
@@ -1606,6 +3570,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--normal"
               role="tab"
             >
+              <!---->
               <!---->
               <div
                 class="t-tab-bar-item__text"
@@ -1645,6 +3610,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
               role="tab"
             >
+              <!---->
               <div
                 class="t-tab-bar-item__icon"
                 style="height: 20px;"
@@ -1700,6 +3666,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--normal"
               role="tab"
             >
+              <!---->
               <div
                 class="t-tab-bar-item__icon"
                 style="height: 20px;"
@@ -1755,6 +3722,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--normal"
               role="tab"
             >
+              <!---->
               <div
                 class="t-tab-bar-item__icon"
                 style="height: 20px;"
@@ -1810,6 +3778,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--normal"
               role="tab"
             >
+              <!---->
               <div
                 class="t-tab-bar-item__icon"
                 style="height: 20px;"
@@ -1881,6 +3850,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
               role="tab"
             >
+              <!---->
               <div
                 class="t-tab-bar-item__icon"
                 style="height: 20px;"
@@ -1938,6 +3908,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--normal"
               role="tab"
             >
+              <!---->
               <div
                 class="t-tab-bar-item__icon"
                 style="height: 20px;"
@@ -1995,6 +3966,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--normal"
               role="tab"
             >
+              <!---->
               <div
                 class="t-tab-bar-item__icon"
                 style="height: 20px;"
@@ -2052,6 +4024,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--normal"
               role="tab"
             >
+              <!---->
               <div
                 class="t-tab-bar-item__icon"
                 style="height: 20px;"
@@ -2141,6 +4114,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
             role="tab"
           >
+            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -2174,6 +4148,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
+            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -2207,6 +4182,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
+            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -2240,6 +4216,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
+            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -2280,7 +4257,1956 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        03 自定义
+        03 Liquid Glass
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        Liquid Glass 材质与光学参数
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <section
+        class="glass-demo glass-demo--light"
+        data-v-8bf7e573=""
+        data-v-b2e27a45=""
+        style="--td-tab-bar-glass-bg-color: rgba(255, 255, 255, 0.42); --td-tab-bar-glass-border-color: rgba(255, 255, 255, 0.62); --td-tab-bar-glass-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08); --demo-tab-bar-height: 64px; --demo-tab-bar-radius: 32px; --demo-tab-bar-item-height: 56px; --demo-tab-bar-item-radius: 28px; --demo-tab-bar-frame-height: 82px; --demo-secondary-bottom: 78px;"
+      >
+        <header
+          class="glass-demo__toolbar"
+          data-v-b2e27a45=""
+        >
+          <div
+            class="glass-demo__modes"
+            data-v-b2e27a45=""
+          >
+            <div
+              class="glass-demo__control-group"
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__control-copy"
+                data-v-b2e27a45=""
+              >
+                <strong
+                  data-v-b2e27a45=""
+                >
+                  Effect / 材质效果
+                </strong>
+                <small
+                  data-v-b2e27a45=""
+                >
+                  切换普通模式与 Liquid Glass 增强模式，影响整个 TabBar 材质渲染路径。
+                </small>
+              </span>
+              <div
+                aria-label="Effect"
+                class="glass-demo__segments"
+                data-v-b2e27a45=""
+                role="group"
+              >
+                
+                <button
+                  aria-pressed="false"
+                  class=""
+                  data-testid="effect-normal"
+                  data-v-b2e27a45=""
+                  type="button"
+                >
+                  normal
+                </button>
+                <button
+                  aria-pressed="true"
+                  class="is-active"
+                  data-testid="effect-glass"
+                  data-v-b2e27a45=""
+                  type="button"
+                >
+                  glass
+                </button>
+                
+              </div>
+            </div>
+            <div
+              class="glass-demo__control-group"
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__control-copy"
+                data-v-b2e27a45=""
+              >
+                <strong
+                  data-v-b2e27a45=""
+                >
+                  Shape / 外形
+                </strong>
+                <small
+                  data-v-b2e27a45=""
+                >
+                  切换普通矩形与圆角胶囊；会改变圆角、边距和折射几何范围。
+                </small>
+              </span>
+              <div
+                aria-label="Shape"
+                class="glass-demo__segments"
+                data-v-b2e27a45=""
+                role="group"
+              >
+                
+                <button
+                  aria-pressed="false"
+                  class=""
+                  data-testid="shape-normal"
+                  data-v-b2e27a45=""
+                  type="button"
+                >
+                  normal
+                </button>
+                <button
+                  aria-pressed="true"
+                  class="is-active"
+                  data-testid="shape-round"
+                  data-v-b2e27a45=""
+                  type="button"
+                >
+                  round
+                </button>
+                
+              </div>
+            </div>
+            <div
+              class="glass-demo__control-group"
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__control-copy"
+                data-v-b2e27a45=""
+              >
+                <strong
+                  data-v-b2e27a45=""
+                >
+                  Background / 验证背景
+                </strong>
+                <small
+                  data-v-b2e27a45=""
+                >
+                  切换网格、文字和图片，用于观察折射连续性、清晰度与背景相关性。
+                </small>
+              </span>
+              <div
+                aria-label="Background"
+                class="glass-demo__segments"
+                data-v-b2e27a45=""
+                role="group"
+              >
+                
+                <button
+                  aria-pressed="true"
+                  class="is-active"
+                  data-testid="background-grid"
+                  data-v-b2e27a45=""
+                  type="button"
+                >
+                  grid
+                </button>
+                <button
+                  aria-pressed="false"
+                  class=""
+                  data-testid="background-text"
+                  data-v-b2e27a45=""
+                  type="button"
+                >
+                  text
+                </button>
+                <button
+                  aria-pressed="false"
+                  class=""
+                  data-testid="background-image"
+                  data-v-b2e27a45=""
+                  type="button"
+                >
+                  image
+                </button>
+                
+              </div>
+            </div>
+            <div
+              class="glass-demo__control-group"
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__control-copy"
+                data-v-b2e27a45=""
+              >
+                <strong
+                  data-v-b2e27a45=""
+                >
+                  Width / 预览宽度
+                </strong>
+                <small
+                  data-v-b2e27a45=""
+                >
+                  改变预览容器宽度，用于验证响应式尺寸、纹理重建和边缘覆盖。
+                </small>
+              </span>
+              <div
+                aria-label="Preview width"
+                class="glass-demo__segments"
+                data-v-b2e27a45=""
+                role="group"
+              >
+                
+                <button
+                  aria-pressed="false"
+                  class=""
+                  data-testid="width-320"
+                  data-v-b2e27a45=""
+                  type="button"
+                >
+                  320
+                </button>
+                <button
+                  aria-pressed="true"
+                  class="is-active"
+                  data-testid="width-390"
+                  data-v-b2e27a45=""
+                  type="button"
+                >
+                  390
+                </button>
+                <button
+                  aria-pressed="false"
+                  class=""
+                  data-testid="width-430"
+                  data-v-b2e27a45=""
+                  type="button"
+                >
+                  430
+                </button>
+                <button
+                  aria-pressed="false"
+                  class=""
+                  data-testid="width-620"
+                  data-v-b2e27a45=""
+                  type="button"
+                >
+                  620
+                </button>
+                
+              </div>
+            </div>
+            <div
+              class="glass-demo__control-group"
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__control-copy"
+                data-v-b2e27a45=""
+              >
+                <strong
+                  data-v-b2e27a45=""
+                >
+                  Theme / 主题
+                </strong>
+                <small
+                  data-v-b2e27a45=""
+                >
+                  切换明暗主题，影响材质底色、边框对比度和文字可读性。
+                </small>
+              </span>
+              <div
+                aria-label="Theme"
+                class="glass-demo__segments"
+                data-v-b2e27a45=""
+                role="group"
+              >
+                
+                <button
+                  aria-pressed="true"
+                  class="is-active"
+                  data-testid="theme-light"
+                  data-v-b2e27a45=""
+                  type="button"
+                >
+                  light
+                </button>
+                <button
+                  aria-pressed="false"
+                  class=""
+                  data-testid="theme-dark"
+                  data-v-b2e27a45=""
+                  type="button"
+                >
+                  dark
+                </button>
+                
+              </div>
+            </div>
+          </div>
+          <div
+            class="glass-demo__toggles"
+            data-v-b2e27a45=""
+          >
+            
+            <label
+              data-v-b2e27a45=""
+            >
+              <input
+                data-testid="toggle-fixed"
+                data-v-b2e27a45=""
+                type="checkbox"
+              />
+              <span
+                class="glass-demo__toggle-copy"
+                data-v-b2e27a45=""
+              >
+                <strong
+                  data-v-b2e27a45=""
+                >
+                  Fixed / 固定定位
+                </strong>
+                <small
+                  data-v-b2e27a45=""
+                >
+                  模拟吸附在视口底部的 TabBar 定位方式。
+                </small>
+              </span>
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <input
+                data-testid="toggle-placeholder"
+                data-v-b2e27a45=""
+                type="checkbox"
+              />
+              <span
+                class="glass-demo__toggle-copy"
+                data-v-b2e27a45=""
+              >
+                <strong
+                  data-v-b2e27a45=""
+                >
+                  Placeholder / 占位空间
+                </strong>
+                <small
+                  data-v-b2e27a45=""
+                >
+                  固定定位时保留等高占位，避免页面内容被 TabBar 遮挡。
+                </small>
+              </span>
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <input
+                data-testid="toggle-safe"
+                data-v-b2e27a45=""
+                type="checkbox"
+              />
+              <span
+                class="glass-demo__toggle-copy"
+                data-v-b2e27a45=""
+              >
+                <strong
+                  data-v-b2e27a45=""
+                >
+                  Safe area / 安全区
+                </strong>
+                <small
+                  data-v-b2e27a45=""
+                >
+                  增加底部安全区间距，模拟全面屏设备。
+                </small>
+              </span>
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <input
+                data-testid="toggle-bordered"
+                data-v-b2e27a45=""
+                type="checkbox"
+              />
+              <span
+                class="glass-demo__toggle-copy"
+                data-v-b2e27a45=""
+              >
+                <strong
+                  data-v-b2e27a45=""
+                >
+                  Bordered / 顶部边框
+                </strong>
+                <small
+                  data-v-b2e27a45=""
+                >
+                  切换组件原有的分隔边框样式。
+                </small>
+              </span>
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <input
+                data-testid="toggle-multiple"
+                data-v-b2e27a45=""
+                type="checkbox"
+              />
+              <span
+                class="glass-demo__toggle-copy"
+                data-v-b2e27a45=""
+              >
+                <strong
+                  data-v-b2e27a45=""
+                >
+                  Multi-instance / 多实例
+                </strong>
+                <small
+                  data-v-b2e27a45=""
+                >
+                  同时渲染两个玻璃 TabBar，用于检查 filter ID 与纹理是否串用。
+                </small>
+              </span>
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <input
+                data-testid="toggle-motion"
+                data-v-b2e27a45=""
+                type="checkbox"
+              />
+              <span
+                class="glass-demo__toggle-copy"
+                data-v-b2e27a45=""
+              >
+                <strong
+                  data-v-b2e27a45=""
+                >
+                  Move background / 移动背景
+                </strong>
+                <small
+                  data-v-b2e27a45=""
+                >
+                  持续移动验证背景，检查折射是否跟随真实背景内容变化。
+                </small>
+              </span>
+            </label>
+            
+          </div>
+        </header>
+        <div
+          class="glass-demo__comparison"
+          data-testid="comparison"
+          data-v-b2e27a45=""
+        >
+          
+          <article
+            class="glass-demo__preview"
+            data-v-b2e27a45=""
+          >
+            <div
+              class="glass-demo__preview-title"
+              data-v-b2e27a45=""
+            >
+              <strong
+                data-v-b2e27a45=""
+              >
+                Normal baseline
+              </strong>
+              <span
+                data-v-b2e27a45=""
+              >
+                390 px
+              </span>
+            </div>
+            <div
+              class="glass-demo__device glass-demo__device--grid"
+              data-testid="preview-normal"
+              data-v-b2e27a45=""
+              style="width: 390px; --demo-image: url(https://tdesign.gtimg.com/demo/demo-image-1.png);"
+            >
+              <div
+                aria-hidden="true"
+                class="glass-demo__landmarks"
+                data-v-b2e27a45=""
+              >
+                
+                <span
+                  data-v-b2e27a45=""
+                >
+                  1
+                </span>
+                <span
+                  data-v-b2e27a45=""
+                >
+                  2
+                </span>
+                <span
+                  data-v-b2e27a45=""
+                >
+                  3
+                </span>
+                <span
+                  data-v-b2e27a45=""
+                >
+                  4
+                </span>
+                <span
+                  data-v-b2e27a45=""
+                >
+                  5
+                </span>
+                <span
+                  data-v-b2e27a45=""
+                >
+                  6
+                </span>
+                
+              </div>
+              <div
+                class="glass-demo__bar-frame"
+                data-v-b2e27a45=""
+              >
+                <div
+                  class="t-tab-bar t-tab-bar--bordered t-tab-bar--round"
+                  data-v-b2e27a45=""
+                  role="tablist"
+                  style="z-index: 1;"
+                >
+                  
+                  
+                  <div
+                    class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+                    data-v-b2e27a45=""
+                  >
+                    <div
+                      aria-expanded="false"
+                      aria-selected="true"
+                      class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+                      role="tab"
+                    >
+                      <!---->
+                      <div
+                        class="t-tab-bar-item__icon"
+                        style="height: 20px;"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-home"
+                          data-v-b2e27a45=""
+                          style="font-size: 20px;"
+                        >
+                          <use
+                            href="#t-icon-home"
+                          />
+                        </svg>
+                        
+                      </div>
+                      <div
+                        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                      >
+                        <!---->
+                        
+                        Home 
+                        
+                      </div>
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+                    data-v-b2e27a45=""
+                  >
+                    <div
+                      aria-expanded="false"
+                      aria-selected="false"
+                      class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+                      role="tab"
+                    >
+                      <!---->
+                      <div
+                        class="t-tab-bar-item__icon"
+                        style="height: 20px;"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-search"
+                          data-v-b2e27a45=""
+                          style="font-size: 20px;"
+                        >
+                          <use
+                            href="#t-icon-search"
+                          />
+                        </svg>
+                        
+                      </div>
+                      <div
+                        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                      >
+                        <!---->
+                        
+                        Discover 
+                        
+                      </div>
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+                    data-v-b2e27a45=""
+                  >
+                    <div
+                      aria-expanded="false"
+                      aria-selected="false"
+                      class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+                      role="tab"
+                    >
+                      <!---->
+                      <div
+                        class="t-tab-bar-item__icon"
+                        style="height: 20px;"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-folder"
+                          data-v-b2e27a45=""
+                          style="font-size: 20px;"
+                        >
+                          <use
+                            href="#t-icon-folder"
+                          />
+                        </svg>
+                        
+                      </div>
+                      <div
+                        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                      >
+                        <!---->
+                        
+                        Library 
+                        
+                      </div>
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+                    data-v-b2e27a45=""
+                  >
+                    <div
+                      aria-expanded="false"
+                      aria-selected="false"
+                      class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+                      role="tab"
+                    >
+                      <!---->
+                      <div
+                        class="t-tab-bar-item__icon"
+                        style="height: 20px;"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-user"
+                          data-v-b2e27a45=""
+                          style="font-size: 20px;"
+                        >
+                          <use
+                            href="#t-icon-user"
+                          />
+                        </svg>
+                        
+                      </div>
+                      <div
+                        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                      >
+                        <!---->
+                        
+                        Profile 
+                        
+                      </div>
+                    </div>
+                    <!---->
+                  </div>
+                  
+                  
+                </div>
+                <!--v-if-->
+              </div>
+            </div>
+          </article>
+          <article
+            class="glass-demo__preview"
+            data-v-b2e27a45=""
+          >
+            <div
+              class="glass-demo__preview-title"
+              data-v-b2e27a45=""
+            >
+              <strong
+                data-v-b2e27a45=""
+              >
+                glass material
+              </strong>
+              <span
+                data-v-b2e27a45=""
+              >
+                390 px
+              </span>
+            </div>
+            <div
+              class="glass-demo__device glass-demo__device--grid"
+              data-testid="preview-glass"
+              data-v-b2e27a45=""
+              style="width: 390px; --demo-image: url(https://tdesign.gtimg.com/demo/demo-image-1.png);"
+            >
+              <div
+                aria-hidden="true"
+                class="glass-demo__landmarks"
+                data-v-b2e27a45=""
+              >
+                
+                <span
+                  data-v-b2e27a45=""
+                >
+                  1
+                </span>
+                <span
+                  data-v-b2e27a45=""
+                >
+                  2
+                </span>
+                <span
+                  data-v-b2e27a45=""
+                >
+                  3
+                </span>
+                <span
+                  data-v-b2e27a45=""
+                >
+                  4
+                </span>
+                <span
+                  data-v-b2e27a45=""
+                >
+                  5
+                </span>
+                <span
+                  data-v-b2e27a45=""
+                >
+                  6
+                </span>
+                
+              </div>
+              <div
+                class="glass-demo__bar-frame"
+                data-v-b2e27a45=""
+              >
+                <div
+                  class="t-tab-bar t-tab-bar--bordered t-tab-bar--glass t-tab-bar--round"
+                  data-v-b2e27a45=""
+                  role="tablist"
+                  style="z-index: 1;"
+                >
+                  
+                  <span
+                    aria-hidden="true"
+                    class="t-tab-bar__glass-refraction"
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="t-tab-bar__glass-base"
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="t-tab-bar__glass-sheen"
+                  />
+                  <!---->
+                  
+                  
+                  
+                  <div
+                    class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+                    data-v-b2e27a45=""
+                  >
+                    <div
+                      aria-expanded="false"
+                      aria-selected="true"
+                      class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+                      role="tab"
+                    >
+                      
+                      <span
+                        aria-hidden="true"
+                        class="t-tab-bar-item__selected-glass-refraction"
+                      />
+                      <span
+                        aria-hidden="true"
+                        class="t-tab-bar-item__selected-glass-base"
+                      />
+                      <span
+                        aria-hidden="true"
+                        class="t-tab-bar-item__selected-glass-sheen"
+                      />
+                      <!---->
+                      
+                      <div
+                        class="t-tab-bar-item__icon"
+                        style="height: 20px;"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-home"
+                          data-v-b2e27a45=""
+                          style="font-size: 20px;"
+                        >
+                          <use
+                            href="#t-icon-home"
+                          />
+                        </svg>
+                        
+                      </div>
+                      <div
+                        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                      >
+                        <!---->
+                        
+                        Home 
+                        
+                      </div>
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+                    data-v-b2e27a45=""
+                  >
+                    <div
+                      aria-expanded="false"
+                      aria-selected="false"
+                      class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+                      role="tab"
+                    >
+                      <!---->
+                      <div
+                        class="t-tab-bar-item__icon"
+                        style="height: 20px;"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-search"
+                          data-v-b2e27a45=""
+                          style="font-size: 20px;"
+                        >
+                          <use
+                            href="#t-icon-search"
+                          />
+                        </svg>
+                        
+                      </div>
+                      <div
+                        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                      >
+                        <!---->
+                        
+                        Discover 
+                        
+                      </div>
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+                    data-v-b2e27a45=""
+                  >
+                    <div
+                      aria-expanded="false"
+                      aria-selected="false"
+                      class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+                      role="tab"
+                    >
+                      <!---->
+                      <div
+                        class="t-tab-bar-item__icon"
+                        style="height: 20px;"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-folder"
+                          data-v-b2e27a45=""
+                          style="font-size: 20px;"
+                        >
+                          <use
+                            href="#t-icon-folder"
+                          />
+                        </svg>
+                        
+                      </div>
+                      <div
+                        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                      >
+                        <!---->
+                        
+                        Library 
+                        
+                      </div>
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+                    data-v-b2e27a45=""
+                  >
+                    <div
+                      aria-expanded="false"
+                      aria-selected="false"
+                      class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+                      role="tab"
+                    >
+                      <!---->
+                      <div
+                        class="t-tab-bar-item__icon"
+                        style="height: 20px;"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-user"
+                          data-v-b2e27a45=""
+                          style="font-size: 20px;"
+                        >
+                          <use
+                            href="#t-icon-user"
+                          />
+                        </svg>
+                        
+                      </div>
+                      <div
+                        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                      >
+                        <!---->
+                        
+                        Profile 
+                        
+                      </div>
+                    </div>
+                    <!---->
+                  </div>
+                  
+                  
+                </div>
+                <!--v-if-->
+              </div>
+            </div>
+          </article>
+          
+        </div>
+        <section
+          class="glass-demo__calibration"
+          data-v-b2e27a45=""
+        >
+          <header
+            data-v-b2e27a45=""
+          >
+            <div
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__eyebrow"
+                data-v-b2e27a45=""
+              >
+                Optical calibration / 光学校准
+              </span>
+              <h3
+                data-v-b2e27a45=""
+              >
+                Runtime parameters / 实时参数
+              </h3>
+            </div>
+            <button
+              aria-label="恢复默认参数"
+              class="glass-demo__reset"
+              data-testid="reset-parameters"
+              data-v-b2e27a45=""
+              title="恢复默认参数"
+              type="button"
+            >
+              <svg
+                class="t-icon t-icon-refresh"
+                data-v-b2e27a45=""
+              >
+                <use
+                  href="#t-icon-refresh"
+                />
+              </svg>
+            </button>
+          </header>
+          <div
+            aria-live="polite"
+            class="glass-demo__metrics"
+            data-v-b2e27a45=""
+          >
+            <div
+              data-v-b2e27a45=""
+            >
+              <span
+                data-v-b2e27a45=""
+              >
+                Texture / 纹理尺寸
+              </span>
+              <strong
+                data-testid="metric-texture"
+                data-v-b2e27a45=""
+              >
+                0 x 0
+              </strong>
+            </div>
+            <div
+              data-v-b2e27a45=""
+            >
+              <span
+                data-v-b2e27a45=""
+              >
+                Pixels / 像素数
+              </span>
+              <strong
+                data-testid="metric-pixels"
+                data-v-b2e27a45=""
+              >
+                0
+              </strong>
+            </div>
+            <div
+              data-v-b2e27a45=""
+            >
+              <span
+                data-v-b2e27a45=""
+              >
+                Bezel / 实际覆盖
+              </span>
+              <strong
+                data-testid="metric-bezel"
+                data-v-b2e27a45=""
+              >
+                0.0 px
+              </strong>
+            </div>
+            <div
+              data-v-b2e27a45=""
+            >
+              <span
+                data-v-b2e27a45=""
+              >
+                Generate / 生成耗时
+              </span>
+              <strong
+                data-testid="metric-generation"
+                data-v-b2e27a45=""
+              >
+                0.00 ms
+              </strong>
+            </div>
+            <div
+              data-v-b2e27a45=""
+            >
+              <span
+                data-v-b2e27a45=""
+              >
+                Total / 总耗时
+              </span>
+              <strong
+                data-testid="metric-total"
+                data-v-b2e27a45=""
+              >
+                0.00 ms
+              </strong>
+            </div>
+            <div
+              data-v-b2e27a45=""
+            >
+              <span
+                data-v-b2e27a45=""
+              >
+                Rebuilds / 重建次数
+              </span>
+              <strong
+                data-testid="metric-rebuilds"
+                data-v-b2e27a45=""
+              >
+                0
+              </strong>
+            </div>
+          </div>
+          <h4
+            class="glass-demo__section-title"
+            data-v-b2e27a45=""
+          >
+            Layout calibration / 尺寸校准
+          </h4>
+          <div
+            class="glass-demo__sliders"
+            data-v-b2e27a45=""
+          >
+            
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__parameter-title"
+                data-v-b2e27a45=""
+              >
+                <span
+                  data-v-b2e27a45=""
+                >
+                  TabBar width / TabBar 宽度 
+                  <small
+                    data-v-b2e27a45=""
+                  >
+                    Demo 布局
+                  </small>
+                </span>
+                <output
+                  data-v-b2e27a45=""
+                >
+                  390px
+                </output>
+              </span>
+              <span
+                class="glass-demo__parameter-description"
+                data-v-b2e27a45=""
+              >
+                连续调整预览与组件可用宽度；round 外形会再扣除左右 margin，并触发纹理重新生成。
+              </span>
+              <input
+                data-testid="parameter-tab-bar-width"
+                data-v-b2e27a45=""
+                max="620"
+                min="280"
+                step="10"
+                type="range"
+              />
+              <span
+                class="glass-demo__parameter-meta"
+                data-v-b2e27a45=""
+              >
+                default 390 · 280–620
+              </span>
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__parameter-title"
+                data-v-b2e27a45=""
+              >
+                <span
+                  data-v-b2e27a45=""
+                >
+                  TabBar height / TabBar 高度 
+                  <small
+                    data-v-b2e27a45=""
+                  >
+                    Demo 布局
+                  </small>
+                </span>
+                <output
+                  data-v-b2e27a45=""
+                >
+                  64px
+                </output>
+              </span>
+              <span
+                class="glass-demo__parameter-description"
+                data-v-b2e27a45=""
+              >
+                调整材质、圆角和内部项目高度；同时改变 radius、实际 bezel 像素与纹理尺寸。
+              </span>
+              <input
+                data-testid="parameter-tab-bar-height"
+                data-v-b2e27a45=""
+                max="88"
+                min="52"
+                step="2"
+                type="range"
+              />
+              <span
+                class="glass-demo__parameter-meta"
+                data-v-b2e27a45=""
+              >
+                default 64 · 52–88
+              </span>
+            </label>
+            
+          </div>
+          <h4
+            class="glass-demo__section-title"
+            data-v-b2e27a45=""
+          >
+            Optical calibration / 光学校准
+          </h4>
+          <div
+            class="glass-demo__sliders"
+            data-v-b2e27a45=""
+          >
+            
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__parameter-title"
+                data-v-b2e27a45=""
+              >
+                <span
+                  data-v-b2e27a45=""
+                >
+                  Glass thickness / 玻璃厚度 
+                  <small
+                    data-v-b2e27a45=""
+                  >
+                    内部调参
+                  </small>
+                </span>
+                <output
+                  data-v-b2e27a45=""
+                >
+                  0.7x
+                </output>
+              </span>
+              <span
+                class="glass-demo__parameter-description"
+                data-v-b2e27a45=""
+              >
+                控制光学截面的等效厚度；主要改变折射曲线幅度，不改变折射覆盖范围。
+              </span>
+              <input
+                data-testid="parameter-thickness"
+                data-v-b2e27a45=""
+                max="2"
+                min="0"
+                step="0.05"
+                type="range"
+              />
+              <span
+                class="glass-demo__parameter-meta"
+                data-v-b2e27a45=""
+              >
+                default 0.7 · 0–2
+              </span>
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__parameter-title"
+                data-v-b2e27a45=""
+              >
+                <span
+                  data-v-b2e27a45=""
+                >
+                  Bezel ratio / 边缘折射覆盖比例 
+                  <small
+                    data-v-b2e27a45=""
+                  >
+                    内部调参
+                  </small>
+                </span>
+                <output
+                  data-v-b2e27a45=""
+                >
+                  0.85x · 0.0px
+                </output>
+              </span>
+              <span
+                class="glass-demo__parameter-description"
+                data-v-b2e27a45=""
+              >
+                相对于圆角半径的覆盖比例；改变折射从边缘向中心延伸的范围，右侧同步显示实际 px。
+              </span>
+              <input
+                data-testid="parameter-bezel"
+                data-v-b2e27a45=""
+                max="1"
+                min="0.1"
+                step="0.05"
+                type="range"
+              />
+              <span
+                class="glass-demo__parameter-meta"
+                data-v-b2e27a45=""
+              >
+                default 0.85 · 0.1–1
+              </span>
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__parameter-title"
+                data-v-b2e27a45=""
+              >
+                <span
+                  data-v-b2e27a45=""
+                >
+                  Refractive index / 折射率 
+                  <small
+                    data-v-b2e27a45=""
+                  >
+                    内部调参
+                  </small>
+                </span>
+                <output
+                  data-v-b2e27a45=""
+                >
+                  1.5
+                </output>
+              </span>
+              <span
+                class="glass-demo__parameter-description"
+                data-v-b2e27a45=""
+              >
+                控制空气与玻璃之间的折射率差；数值越高，背景光线的弯折通常越明显。
+              </span>
+              <input
+                data-testid="parameter-ior"
+                data-v-b2e27a45=""
+                max="2.5"
+                min="1"
+                step="0.05"
+                type="range"
+              />
+              <span
+                class="glass-demo__parameter-meta"
+                data-v-b2e27a45=""
+              >
+                default 1.5 · 1–2.5
+              </span>
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__parameter-title"
+                data-v-b2e27a45=""
+              >
+                <span
+                  data-v-b2e27a45=""
+                >
+                  Displacement gain / 位移增益 
+                  <small
+                    data-v-b2e27a45=""
+                  >
+                    内部调参
+                  </small>
+                </span>
+                <output
+                  data-v-b2e27a45=""
+                >
+                  1x
+                </output>
+              </span>
+              <span
+                class="glass-demo__parameter-description"
+                data-v-b2e27a45=""
+              >
+                缩放最终 SVG 位移强度；整体放大或减弱背景扭曲，不改变折射带宽度。
+              </span>
+              <input
+                data-testid="parameter-gain"
+                data-v-b2e27a45=""
+                max="2"
+                min="0"
+                step="0.05"
+                type="range"
+              />
+              <span
+                class="glass-demo__parameter-meta"
+                data-v-b2e27a45=""
+              >
+                default 1 · 0–2
+              </span>
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__parameter-title"
+                data-v-b2e27a45=""
+              >
+                <span
+                  data-v-b2e27a45=""
+                >
+                  SVG blur / SVG 模糊 
+                  <small
+                    data-v-b2e27a45=""
+                  >
+                    内部调参
+                  </small>
+                </span>
+                <output
+                  data-v-b2e27a45=""
+                >
+                  0.4px
+                </output>
+              </span>
+              <span
+                class="glass-demo__parameter-description"
+                data-v-b2e27a45=""
+              >
+                在执行位移前模糊背景采样；影响玻璃内部清晰度，不改变几何弯曲方向。
+              </span>
+              <input
+                data-testid="parameter-blur"
+                data-v-b2e27a45=""
+                max="4"
+                min="0"
+                step="0.1"
+                type="range"
+              />
+              <span
+                class="glass-demo__parameter-meta"
+                data-v-b2e27a45=""
+              >
+                default 0.4 · 0–4
+              </span>
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__parameter-title"
+                data-v-b2e27a45=""
+              >
+                <span
+                  data-v-b2e27a45=""
+                >
+                  Specular opacity / 高光透明度 
+                  <small
+                    data-v-b2e27a45=""
+                  >
+                    内部调参
+                  </small>
+                </span>
+                <output
+                  data-v-b2e27a45=""
+                >
+                  0.5
+                </output>
+              </span>
+              <span
+                class="glass-demo__parameter-description"
+                data-v-b2e27a45=""
+              >
+                控制边缘镜面高光层的可见程度；只影响高光明暗，不改变背景折射。
+              </span>
+              <input
+                data-testid="parameter-specular-opacity"
+                data-v-b2e27a45=""
+                max="1"
+                min="0"
+                step="0.05"
+                type="range"
+              />
+              <span
+                class="glass-demo__parameter-meta"
+                data-v-b2e27a45=""
+              >
+                default 0.5 · 0–1
+              </span>
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__parameter-title"
+                data-v-b2e27a45=""
+              >
+                <span
+                  data-v-b2e27a45=""
+                >
+                  Specular saturation / 高光饱和度 
+                  <small
+                    data-v-b2e27a45=""
+                  >
+                    内部调参
+                  </small>
+                </span>
+                <output
+                  data-v-b2e27a45=""
+                >
+                  2x
+                </output>
+              </span>
+              <span
+                class="glass-demo__parameter-description"
+                data-v-b2e27a45=""
+              >
+                控制高光区域内折射背景的色彩浓度；影响色彩表现，不改变位移范围。
+              </span>
+              <input
+                data-testid="parameter-specular-saturation"
+                data-v-b2e27a45=""
+                max="6"
+                min="1"
+                step="0.25"
+                type="range"
+              />
+              <span
+                class="glass-demo__parameter-meta"
+                data-v-b2e27a45=""
+              >
+                default 2 · 1–6
+              </span>
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__parameter-title"
+                data-v-b2e27a45=""
+              >
+                <span
+                  data-v-b2e27a45=""
+                >
+                  Light angle / 光源角度 
+                  <small
+                    data-v-b2e27a45=""
+                  >
+                    内部调参
+                  </small>
+                </span>
+                <output
+                  data-v-b2e27a45=""
+                >
+                  225deg
+                </output>
+              </span>
+              <span
+                class="glass-demo__parameter-description"
+                data-v-b2e27a45=""
+              >
+                改变镜面高光出现的方向；影响材质受光位置，不改变折射曲线。
+              </span>
+              <input
+                data-testid="parameter-light-angle"
+                data-v-b2e27a45=""
+                max="360"
+                min="0"
+                step="5"
+                type="range"
+              />
+              <span
+                class="glass-demo__parameter-meta"
+                data-v-b2e27a45=""
+              >
+                default 225 · 0–360
+              </span>
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__parameter-title"
+                data-v-b2e27a45=""
+              >
+                <span
+                  data-v-b2e27a45=""
+                >
+                  Baseline opacity / 基线不透明度 
+                  <small
+                    data-v-b2e27a45=""
+                  >
+                    材质外观
+                  </small>
+                </span>
+                <output
+                  data-v-b2e27a45=""
+                >
+                  0.42
+                </output>
+              </span>
+              <span
+                class="glass-demo__parameter-description"
+                data-v-b2e27a45=""
+              >
+                控制玻璃底色的遮盖程度；越高越易读，但背景与折射会越不明显。
+              </span>
+              <input
+                data-testid="parameter-background-alpha"
+                data-v-b2e27a45=""
+                max="0.95"
+                min="0.35"
+                step="0.01"
+                type="range"
+              />
+              <span
+                class="glass-demo__parameter-meta"
+                data-v-b2e27a45=""
+              >
+                default 0.42 · 0.35–0.95
+              </span>
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__parameter-title"
+                data-v-b2e27a45=""
+              >
+                <span
+                  data-v-b2e27a45=""
+                >
+                  Border opacity / 边框不透明度 
+                  <small
+                    data-v-b2e27a45=""
+                  >
+                    材质外观
+                  </small>
+                </span>
+                <output
+                  data-v-b2e27a45=""
+                >
+                  0.62
+                </output>
+              </span>
+              <span
+                class="glass-demo__parameter-description"
+                data-v-b2e27a45=""
+              >
+                控制材质外轮廓的透明度；影响边缘识别和对比度，不改变折射。
+              </span>
+              <input
+                data-testid="parameter-border-alpha"
+                data-v-b2e27a45=""
+                max="1"
+                min="0"
+                step="0.01"
+                type="range"
+              />
+              <span
+                class="glass-demo__parameter-meta"
+                data-v-b2e27a45=""
+              >
+                default 0.62 · 0–1
+              </span>
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__parameter-title"
+                data-v-b2e27a45=""
+              >
+                <span
+                  data-v-b2e27a45=""
+                >
+                  Texture DPR / 纹理像素倍率 
+                  <small
+                    data-v-b2e27a45=""
+                  >
+                    内部调参
+                  </small>
+                </span>
+                <output
+                  data-v-b2e27a45=""
+                >
+                  1x
+                </output>
+              </span>
+              <span
+                class="glass-demo__parameter-description"
+                data-v-b2e27a45=""
+              >
+                控制位移与高光纹理的采样分辨率；越高边缘越细腻，但生成耗时和内存占用更高。
+              </span>
+              <input
+                data-testid="parameter-texture-dpr"
+                data-v-b2e27a45=""
+                max="2"
+                min="1"
+                step="0.25"
+                type="range"
+              />
+              <span
+                class="glass-demo__parameter-meta"
+                data-v-b2e27a45=""
+              >
+                default 1 · 1–2
+              </span>
+            </label>
+            
+          </div>
+          <div
+            class="glass-demo__material-controls"
+            data-v-b2e27a45=""
+          >
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                data-v-b2e27a45=""
+              >
+                Surface profile / 表面轮廓 
+                <small
+                  data-v-b2e27a45=""
+                >
+                  内部调参
+                </small>
+              </span>
+              <small
+                class="glass-demo__control-description"
+                data-v-b2e27a45=""
+              >
+                选择折射截面的曲线形态；会改变边缘弯曲走势，不改变组件尺寸。
+              </small>
+              <select
+                data-testid="optics-surface"
+                data-v-b2e27a45=""
+              >
+                
+                <option
+                  data-v-b2e27a45=""
+                  value="squircle"
+                >
+                  Squircle / 超椭圆凸面
+                </option>
+                <option
+                  data-v-b2e27a45=""
+                  value="lip"
+                >
+                  Lip / 唇缘复合面
+                </option>
+                
+              </select>
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                data-v-b2e27a45=""
+              >
+                Background color / 材质底色 
+                <small
+                  data-v-b2e27a45=""
+                >
+                  材质外观
+                </small>
+              </span>
+              <small
+                class="glass-demo__control-description"
+                data-v-b2e27a45=""
+              >
+                设置玻璃基线填充色；影响整体色调，不改变折射几何。
+              </small>
+              <input
+                data-testid="material-background-color"
+                data-v-b2e27a45=""
+                type="color"
+              />
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                data-v-b2e27a45=""
+              >
+                Border color / 边框颜色 
+                <small
+                  data-v-b2e27a45=""
+                >
+                  材质外观
+                </small>
+              </span>
+              <small
+                class="glass-demo__control-description"
+                data-v-b2e27a45=""
+              >
+                设置材质外轮廓颜色；影响边缘辨识度，不改变位移。
+              </small>
+              <input
+                data-testid="material-border-color"
+                data-v-b2e27a45=""
+                type="color"
+              />
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                data-v-b2e27a45=""
+              >
+                Shadow / 阴影预设 
+                <small
+                  data-v-b2e27a45=""
+                >
+                  材质外观
+                </small>
+              </span>
+              <small
+                class="glass-demo__control-description"
+                data-v-b2e27a45=""
+              >
+                切换悬浮、紧凑或无阴影；只影响层级感和外部投影。
+              </small>
+              <select
+                data-testid="material-shadow"
+                data-v-b2e27a45=""
+              >
+                
+                <option
+                  data-v-b2e27a45=""
+                  value="floating"
+                >
+                  Floating / 悬浮
+                </option>
+                <option
+                  data-v-b2e27a45=""
+                  value="compact"
+                >
+                  Compact / 紧凑
+                </option>
+                <option
+                  data-v-b2e27a45=""
+                  value="none"
+                >
+                  None / 无阴影
+                </option>
+                
+              </select>
+            </label>
+          </div>
+        </section>
+        <section
+          class="glass-demo__presets"
+          data-v-b2e27a45=""
+        >
+          <span
+            class="glass-demo__eyebrow"
+            data-v-b2e27a45=""
+          >
+            Fixed presets
+          </span>
+          <div
+            data-v-b2e27a45=""
+          >
+            
+            <article
+              data-v-b2e27a45=""
+            >
+              <strong
+                data-v-b2e27a45=""
+              >
+                Surface profile
+              </strong>
+              <p
+                data-v-b2e27a45=""
+              >
+                The profile function and Snell calculation are selected as a single physical model.
+              </p>
+            </article>
+            <article
+              data-v-b2e27a45=""
+            >
+              <strong
+                data-v-b2e27a45=""
+              >
+                Bezel ratio
+              </strong>
+              <p
+                data-v-b2e27a45=""
+              >
+                The ratio is measured against the corner radius, or half of the short side when the radius is zero.
+              </p>
+            </article>
+            <article
+              data-v-b2e27a45=""
+            >
+              <strong
+                data-v-b2e27a45=""
+              >
+                Selected item glass
+              </strong>
+              <p
+                data-v-b2e27a45=""
+              >
+                The active item owns one size-matched filter, reuses the optical tuning and releases it when selection moves.
+              </p>
+            </article>
+            <article
+              data-v-b2e27a45=""
+            >
+              <strong
+                data-v-b2e27a45=""
+              >
+                RGBA displacement encoding
+              </strong>
+              <p
+                data-v-b2e27a45=""
+              >
+                R/G displacement and alpha clipping remain an internal filter contract.
+              </p>
+            </article>
+            <article
+              data-v-b2e27a45=""
+            >
+              <strong
+                data-v-b2e27a45=""
+              >
+                SVG filter graph
+              </strong>
+              <p
+                data-v-b2e27a45=""
+              >
+                Blur, displacement, saturation, masked specular and blend order are validated together.
+              </p>
+            </article>
+            <article
+              data-v-b2e27a45=""
+            >
+              <strong
+                data-v-b2e27a45=""
+              >
+                512K adaptive budget
+              </strong>
+              <p
+                data-v-b2e27a45=""
+              >
+                Sampling dimensions are resolved together to preserve aspect ratio and memory limits.
+              </p>
+            </article>
+            <article
+              data-v-b2e27a45=""
+            >
+              <strong
+                data-v-b2e27a45=""
+              >
+                CSS fallback ladder
+              </strong>
+              <p
+                data-v-b2e27a45=""
+              >
+                Capability failure must retain the same readable baseline and interaction surface.
+              </p>
+            </article>
+            
+          </div>
+        </section>
+      </section>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-8bf7e573=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        04 自定义
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"
@@ -2311,6 +6237,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
             role="tab"
           >
+            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -2346,6 +6273,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--normal"
             role="tab"
           >
+            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -2381,6 +6309,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--normal"
             role="tab"
           >
+            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -2416,6 +6345,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--normal"
             role="tab"
           >
+            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -2467,6 +6397,7 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
       role="tab"
     >
+      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -2500,6 +6431,7 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
+      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -2533,6 +6465,7 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
+      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -2566,6 +6499,7 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
+      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -2612,6 +6546,7 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
       role="tab"
     >
+      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -2645,6 +6580,7 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
+      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -2678,6 +6614,7 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
+      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -2711,6 +6648,7 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
+      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -2758,6 +6696,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
       role="tab"
     >
       <!---->
+      <!---->
       <div
         class="t-tab-bar-item__text"
       >
@@ -2779,6 +6718,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
       role="tab"
     >
       <!---->
+      <!---->
       <div
         class="t-tab-bar-item__text"
       >
@@ -2799,6 +6739,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="button"
     >
+      <!---->
       <!---->
       <div
         class="t-tab-bar-item__text"
@@ -2853,6 +6794,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
       role="tab"
     >
       <!---->
+      <!---->
       <div
         class="t-tab-bar-item__text"
       >
@@ -2873,6 +6815,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
+      <!---->
       <!---->
       <div
         class="t-tab-bar-item__text"
@@ -2895,6 +6838,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
       role="tab"
     >
       <!---->
+      <!---->
       <div
         class="t-tab-bar-item__text"
       >
@@ -2915,6 +6859,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
+      <!---->
       <!---->
       <div
         class="t-tab-bar-item__text"

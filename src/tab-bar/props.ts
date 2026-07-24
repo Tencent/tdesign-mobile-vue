@@ -13,6 +13,15 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 标签栏的材质效果 */
+  effect: {
+    type: String as PropType<TdTabBarProps['effect']>,
+    default: 'normal' as TdTabBarProps['effect'],
+    validator(val: TdTabBarProps['effect']): boolean {
+      if (!val) return true;
+      return ['normal', 'glass'].includes(val);
+    },
+  },
   /** 是否固定在底部 */
   fixed: {
     type: Boolean,
