@@ -20,7 +20,10 @@
     <tdesign-demo-block summary="悬浮胶囊标签栏">
       <RoundPropsDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="自定义样式" title="03 自定义">
+    <tdesign-demo-block summary="悬浮玻璃材质标签栏" title="03 Liquid Glass">
+      <GlassDemo />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="自定义样式" title="04 自定义">
       <CustomPropsDemo />
     </tdesign-demo-block>
   </div>
@@ -33,6 +36,7 @@ import PureIconDemo from './pure-icon.vue';
 import TextSpreadDemo from './text-spread.vue';
 import BadgePropsDemo from './badge-props.vue';
 import RoundPropsDemo from './round.vue';
+import GlassDemo from './glass.vue';
 import CustomPropsDemo from './custom.vue';
 </script>
 

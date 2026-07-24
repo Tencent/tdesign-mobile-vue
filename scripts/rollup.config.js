@@ -35,9 +35,10 @@ const inputList = [
   'src/**/*.ts',
   'src/**/*.vue',
   'src/**/*.tsx',
-  '!src/**/demos',
+  '!src/**/demos/**',
   '!src/**/*.d.ts',
-  '!src/**/__tests__',
+  '!src/**/__test__/**',
+  '!src/**/__tests__/**',
 ];
 
 const getPlugins = ({

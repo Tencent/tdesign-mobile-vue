@@ -904,6 +904,382 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
 </div>
 `;
 
+exports[`TabBar > TabBar glassVue demo works fine 1`] = `
+<div
+  class="glass-tab-bar-demo"
+  data-v-2cef45b6=""
+>
+  <div
+    class="glass-tab-bar-demo__orb glass-tab-bar-demo__orb--left"
+    data-v-2cef45b6=""
+  />
+  <div
+    class="glass-tab-bar-demo__orb glass-tab-bar-demo__orb--right"
+    data-v-2cef45b6=""
+  />
+  
+  <div
+    class="t-tab-bar t-tab-bar--bordered t-tab-bar--glass t-tab-bar--safe t-tab-bar--round glass-tab-bar-demo__bar"
+    data-v-2cef45b6=""
+    role="tablist"
+    style="z-index: 1;"
+  >
+    
+    <span
+      aria-hidden="true"
+      class="t-tab-bar__glass-refraction"
+    />
+    <span
+      aria-hidden="true"
+      class="t-tab-bar__glass-base"
+    />
+    <span
+      aria-hidden="true"
+      class="t-tab-bar__glass-sheen"
+    />
+    <!---->
+    
+    <!---->
+    
+    
+    <div
+      class="t-tab-bar-item t-tab-bar-item--round"
+      data-v-2cef45b6=""
+    >
+      <div
+        aria-expanded="false"
+        aria-selected="true"
+        class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
+        role="tab"
+      >
+        <div
+          class="t-tab-bar-item__icon"
+          style="height: 20px;"
+        >
+          
+          <svg
+            class="t-icon t-icon-home"
+            data-v-2cef45b6=""
+            style="font-size: 20px;"
+          >
+            <use
+              href="#t-icon-home"
+            />
+          </svg>
+          
+        </div>
+        <div
+          class="t-tab-bar-item__text t-tab-bar-item__text--small"
+        >
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <!---->
+    </div>
+    <div
+      class="t-tab-bar-item t-tab-bar-item--round"
+      data-v-2cef45b6=""
+    >
+      <div
+        aria-expanded="false"
+        aria-selected="false"
+        class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+        role="tab"
+      >
+        <div
+          class="t-tab-bar-item__icon"
+          style="height: 20px;"
+        >
+          
+          <svg
+            class="t-icon t-icon-search"
+            data-v-2cef45b6=""
+            style="font-size: 20px;"
+          >
+            <use
+              href="#t-icon-search"
+            />
+          </svg>
+          
+        </div>
+        <div
+          class="t-tab-bar-item__text t-tab-bar-item__text--small"
+        >
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <!---->
+    </div>
+    <div
+      class="t-tab-bar-item t-tab-bar-item--round"
+      data-v-2cef45b6=""
+    >
+      <div
+        aria-expanded="false"
+        aria-selected="false"
+        class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+        role="tab"
+      >
+        <div
+          class="t-tab-bar-item__icon"
+          style="height: 20px;"
+        >
+          
+          <svg
+            class="t-icon t-icon-folder"
+            data-v-2cef45b6=""
+            style="font-size: 20px;"
+          >
+            <use
+              href="#t-icon-folder"
+            />
+          </svg>
+          
+        </div>
+        <div
+          class="t-tab-bar-item__text t-tab-bar-item__text--small"
+        >
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <!---->
+    </div>
+    <div
+      class="t-tab-bar-item t-tab-bar-item--round"
+      data-v-2cef45b6=""
+    >
+      <div
+        aria-expanded="false"
+        aria-selected="false"
+        class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+        role="tab"
+      >
+        <div
+          class="t-tab-bar-item__icon"
+          style="height: 20px;"
+        >
+          
+          <svg
+            class="t-icon t-icon-user"
+            data-v-2cef45b6=""
+            style="font-size: 20px;"
+          >
+            <use
+              href="#t-icon-user"
+            />
+          </svg>
+          
+        </div>
+        <div
+          class="t-tab-bar-item__text t-tab-bar-item__text--small"
+        >
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <!---->
+    </div>
+    
+    
+  </div>
+  <div
+    class="t-tab-bar t-tab-bar--bordered t-tab-bar--glass t-tab-bar--safe t-tab-bar--theme-capsule t-tab-bar--round glass-tab-bar-demo__bar"
+    data-v-2cef45b6=""
+    role="tablist"
+    style="z-index: 1;"
+  >
+    
+    <span
+      aria-hidden="true"
+      class="t-tab-bar__glass-refraction"
+    />
+    <span
+      aria-hidden="true"
+      class="t-tab-bar__glass-base"
+    />
+    <span
+      aria-hidden="true"
+      class="t-tab-bar__glass-sheen"
+    />
+    <!---->
+    
+    <span
+      aria-hidden="true"
+      class="t-tab-bar__selection-track"
+    >
+      <span
+        class="t-tab-bar__selection-indicator"
+        style="width: 25%; transform: translate3d(0%, 0, 0);"
+      />
+    </span>
+    
+    
+    <div
+      class="t-tab-bar-item t-tab-bar-item--round"
+      data-v-2cef45b6=""
+    >
+      <div
+        aria-expanded="false"
+        aria-selected="true"
+        class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--capsule"
+        role="tab"
+      >
+        <div
+          class="t-tab-bar-item__icon"
+          style="height: 20px;"
+        >
+          
+          <svg
+            class="t-icon t-icon-home"
+            data-v-2cef45b6=""
+            style="font-size: 20px;"
+          >
+            <use
+              href="#t-icon-home"
+            />
+          </svg>
+          
+        </div>
+        <div
+          class="t-tab-bar-item__text t-tab-bar-item__text--small"
+        >
+          <!---->
+          
+          
+          首页
+          
+          
+        </div>
+      </div>
+      <!---->
+    </div>
+    <div
+      class="t-tab-bar-item t-tab-bar-item--round"
+      data-v-2cef45b6=""
+    >
+      <div
+        aria-expanded="false"
+        aria-selected="false"
+        class="t-tab-bar-item__content t-tab-bar-item__content--capsule"
+        role="tab"
+      >
+        <div
+          class="t-tab-bar-item__icon"
+          style="height: 20px;"
+        >
+          
+          <svg
+            class="t-icon t-icon-search"
+            data-v-2cef45b6=""
+            style="font-size: 20px;"
+          >
+            <use
+              href="#t-icon-search"
+            />
+          </svg>
+          
+        </div>
+        <div
+          class="t-tab-bar-item__text t-tab-bar-item__text--small"
+        >
+          <!---->
+          
+          
+          发现
+          
+          
+        </div>
+      </div>
+      <!---->
+    </div>
+    <div
+      class="t-tab-bar-item t-tab-bar-item--round"
+      data-v-2cef45b6=""
+    >
+      <div
+        aria-expanded="false"
+        aria-selected="false"
+        class="t-tab-bar-item__content t-tab-bar-item__content--capsule"
+        role="tab"
+      >
+        <div
+          class="t-tab-bar-item__icon"
+          style="height: 20px;"
+        >
+          
+          <svg
+            class="t-icon t-icon-folder"
+            data-v-2cef45b6=""
+            style="font-size: 20px;"
+          >
+            <use
+              href="#t-icon-folder"
+            />
+          </svg>
+          
+        </div>
+        <div
+          class="t-tab-bar-item__text t-tab-bar-item__text--small"
+        >
+          <!---->
+          
+          
+          收藏
+          
+          
+        </div>
+      </div>
+      <!---->
+    </div>
+    <div
+      class="t-tab-bar-item t-tab-bar-item--round"
+      data-v-2cef45b6=""
+    >
+      <div
+        aria-expanded="false"
+        aria-selected="false"
+        class="t-tab-bar-item__content t-tab-bar-item__content--capsule"
+        role="tab"
+      >
+        <div
+          class="t-tab-bar-item__icon"
+          style="height: 20px;"
+        >
+          
+          <svg
+            class="t-icon t-icon-user"
+            data-v-2cef45b6=""
+            style="font-size: 20px;"
+          >
+            <use
+              href="#t-icon-user"
+            />
+          </svg>
+          
+        </div>
+        <div
+          class="t-tab-bar-item__text t-tab-bar-item__text--small"
+        >
+          <!---->
+          
+          
+          我的
+          
+          
+        </div>
+      </div>
+      <!---->
+    </div>
+    
+    
+  </div>
+  
+</div>
+`;
+
 exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
@@ -2280,7 +2656,406 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        03 自定义
+        03 Liquid Glass
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        悬浮玻璃材质标签栏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="glass-tab-bar-demo"
+        data-v-2cef45b6=""
+        data-v-8bf7e573=""
+      >
+        <div
+          class="glass-tab-bar-demo__orb glass-tab-bar-demo__orb--left"
+          data-v-2cef45b6=""
+        />
+        <div
+          class="glass-tab-bar-demo__orb glass-tab-bar-demo__orb--right"
+          data-v-2cef45b6=""
+        />
+        
+        <div
+          class="t-tab-bar t-tab-bar--bordered t-tab-bar--glass t-tab-bar--safe t-tab-bar--round glass-tab-bar-demo__bar"
+          data-v-2cef45b6=""
+          role="tablist"
+          style="z-index: 1;"
+        >
+          
+          <span
+            aria-hidden="true"
+            class="t-tab-bar__glass-refraction"
+          />
+          <span
+            aria-hidden="true"
+            class="t-tab-bar__glass-base"
+          />
+          <span
+            aria-hidden="true"
+            class="t-tab-bar__glass-sheen"
+          />
+          <!---->
+          
+          <!---->
+          
+          
+          <div
+            class="t-tab-bar-item t-tab-bar-item--round"
+            data-v-2cef45b6=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="true"
+              class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                
+                <svg
+                  class="t-icon t-icon-home"
+                  data-v-2cef45b6=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-home"
+                  />
+                </svg>
+                
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            class="t-tab-bar-item t-tab-bar-item--round"
+            data-v-2cef45b6=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                
+                <svg
+                  class="t-icon t-icon-search"
+                  data-v-2cef45b6=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-search"
+                  />
+                </svg>
+                
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            class="t-tab-bar-item t-tab-bar-item--round"
+            data-v-2cef45b6=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                
+                <svg
+                  class="t-icon t-icon-folder"
+                  data-v-2cef45b6=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-folder"
+                  />
+                </svg>
+                
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            class="t-tab-bar-item t-tab-bar-item--round"
+            data-v-2cef45b6=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                
+                <svg
+                  class="t-icon t-icon-user"
+                  data-v-2cef45b6=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-user"
+                  />
+                </svg>
+                
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+          
+          
+        </div>
+        <div
+          class="t-tab-bar t-tab-bar--bordered t-tab-bar--glass t-tab-bar--safe t-tab-bar--theme-capsule t-tab-bar--round glass-tab-bar-demo__bar"
+          data-v-2cef45b6=""
+          role="tablist"
+          style="z-index: 1;"
+        >
+          
+          <span
+            aria-hidden="true"
+            class="t-tab-bar__glass-refraction"
+          />
+          <span
+            aria-hidden="true"
+            class="t-tab-bar__glass-base"
+          />
+          <span
+            aria-hidden="true"
+            class="t-tab-bar__glass-sheen"
+          />
+          <!---->
+          
+          <span
+            aria-hidden="true"
+            class="t-tab-bar__selection-track"
+          >
+            <span
+              class="t-tab-bar__selection-indicator"
+              style="width: 25%; transform: translate3d(0%, 0, 0);"
+            />
+          </span>
+          
+          
+          <div
+            class="t-tab-bar-item t-tab-bar-item--round"
+            data-v-2cef45b6=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="true"
+              class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--capsule"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                
+                <svg
+                  class="t-icon t-icon-home"
+                  data-v-2cef45b6=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-home"
+                  />
+                </svg>
+                
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                
+                
+                首页
+                
+                
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            class="t-tab-bar-item t-tab-bar-item--round"
+            data-v-2cef45b6=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--capsule"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                
+                <svg
+                  class="t-icon t-icon-search"
+                  data-v-2cef45b6=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-search"
+                  />
+                </svg>
+                
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                
+                
+                发现
+                
+                
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            class="t-tab-bar-item t-tab-bar-item--round"
+            data-v-2cef45b6=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--capsule"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                
+                <svg
+                  class="t-icon t-icon-folder"
+                  data-v-2cef45b6=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-folder"
+                  />
+                </svg>
+                
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                
+                
+                收藏
+                
+                
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            class="t-tab-bar-item t-tab-bar-item--round"
+            data-v-2cef45b6=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--capsule"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                
+                <svg
+                  class="t-icon t-icon-user"
+                  data-v-2cef45b6=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-user"
+                  />
+                </svg>
+                
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                
+                
+                我的
+                
+                
+              </div>
+            </div>
+            <!---->
+          </div>
+          
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-8bf7e573=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        04 自定义
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"

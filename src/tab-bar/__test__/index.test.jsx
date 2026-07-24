@@ -1,8 +1,8 @@
 import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
+import { ref } from 'vue';
 import TabBar from '../tab-bar';
 import TabBarItem from '../tab-bar-item';
-import { ref } from 'vue';
 
 const list = [
   {
@@ -46,7 +46,128 @@ const list = [
 ];
 
 describe('TabBar', () => {
+  describe('effect contract', () => {
+    it('uses normal as the default effect', () => {
+      expect(TabBar.props.effect.default).toBe('normal');
+    });
+
+    it('accepts normal and glass effects', () => {
+      expect(TabBar.props.effect.validator('normal')).toBe(true);
+      expect(TabBar.props.effect.validator('glass')).toBe(true);
+    });
+
+    it('rejects unsupported effects', () => {
+      expect(TabBar.props.effect.validator('other')).toBe(false);
+    });
+  });
+
   describe('props', () => {
+    it('moves one shared glass selection capsule between round items', async () => {
+      const value = ref('1');
+      const wrapper = mount({
+        render: () => (
+          <TabBar v-model={value.value} effect="glass" shape="round" theme="capsule" fixed={false}>
+            {list.map((item) => (
+              <TabBarItem {...item}>{item.text}</TabBarItem>
+            ))}
+          </TabBar>
+        ),
+      });
+
+      const indicator = wrapper.get('.t-tab-bar__selection-indicator');
+      expect(wrapper.findAll('.t-tab-bar__selection-indicator')).toHaveLength(1);
+      expect(indicator.element.style.width).toBe(`${100 / list.length}%`);
+      expect(indicator.element.style.transform).toBe('translate3d(0%, 0, 0)');
+
+      await wrapper.get('[name="label_2"] > .t-tab-bar-item__content').trigger('click');
+      expect(indicator.element.style.transform).toBe('translate3d(100%, 0, 0)');
+    });
+
+    it.each([2, 3, 4, 5])('keeps the shared capsule aligned with %s items', async (itemCount) => {
+      const value = ref('item-0');
+      const items = Array.from({ length: itemCount }, (_, index) => ({
+        name: `item-${index}`,
+        value: `item-${index}`,
+      }));
+      const wrapper = mount({
+        render: () => (
+          <TabBar v-model={value.value} effect="glass" shape="round" theme="capsule" fixed={false}>
+            {items.map((item) => (
+              <TabBarItem {...item}>{item.value}</TabBarItem>
+            ))}
+          </TabBar>
+        ),
+      });
+      const indicator = wrapper.get('.t-tab-bar__selection-indicator');
+
+      expect(indicator.element.style.width).toBe(`${100 / itemCount}%`);
+      await wrapper.get(`[name="item-${itemCount - 1}"] > .t-tab-bar-item__content`).trigger('click');
+      expect(indicator.element.style.transform).toBe(`translate3d(${(itemCount - 1) * 100}%, 0, 0)`);
+    });
+
+    it('scales the pressed item and shared capsule until the press ends', async () => {
+      const value = ref('1');
+      const wrapper = mount({
+        render: () => (
+          <TabBar v-model={value.value} effect="glass" shape="round" theme="capsule" fixed={false}>
+            {list.map((item) => (
+              <TabBarItem {...item}>{item.text}</TabBarItem>
+            ))}
+          </TabBar>
+        ),
+      });
+
+      const indicator = wrapper.get('.t-tab-bar__selection-indicator');
+      const firstItem = wrapper.get('[name="label_1"] > .t-tab-bar-item__content');
+      const secondItem = wrapper.get('[name="label_2"] > .t-tab-bar-item__content');
+
+      await secondItem.trigger('pointerdown', { button: 0 });
+      expect(firstItem.classes()).not.toContain('t-tab-bar-item__content--checked');
+      expect(secondItem.classes()).toContain('t-tab-bar-item__content--checked');
+      expect(secondItem.classes()).toContain('t-tab-bar-item__content--pressed');
+      expect(indicator.classes()).toContain('t-tab-bar__selection-indicator--pressed');
+      expect(indicator.element.style.transform).toBe('translate3d(100%, 0, 0)');
+
+      await secondItem.trigger('pointercancel');
+      expect(firstItem.classes()).toContain('t-tab-bar-item__content--checked');
+      expect(secondItem.classes()).not.toContain('t-tab-bar-item__content--checked');
+      expect(secondItem.classes()).not.toContain('t-tab-bar-item__content--pressed');
+      expect(indicator.classes()).not.toContain('t-tab-bar__selection-indicator--pressed');
+      expect(indicator.element.style.transform).toBe('translate3d(0%, 0, 0)');
+    });
+
+    it.each([
+      ['glass normal capsule', { effect: 'glass', shape: 'normal', theme: 'capsule' }],
+      ['glass round tag', { effect: 'glass', shape: 'round', theme: 'tag' }],
+      ['normal round tag', { effect: 'normal', shape: 'round', theme: 'tag' }],
+    ])('does not render the shared capsule in %s mode', (_, tabBarProps) => {
+      const wrapper = mount({
+        render: () => (
+          <TabBar value="1" fixed={false} {...tabBarProps}>
+            {list.map((item) => (
+              <TabBarItem {...item}>{item.text}</TabBarItem>
+            ))}
+          </TabBar>
+        ),
+      });
+
+      expect(wrapper.find('.t-tab-bar__selection-track').exists()).toBe(false);
+    });
+
+    it('renders the shared capsule in normal round capsule mode', () => {
+      const wrapper = mount({
+        render: () => (
+          <TabBar value="1" effect="normal" shape="round" theme="capsule" fixed={false}>
+            {list.map((item) => (
+              <TabBarItem {...item}>{item.text}</TabBarItem>
+            ))}
+          </TabBar>
+        ),
+      });
+
+      expect(wrapper.findAll('.t-tab-bar__selection-indicator')).toHaveLength(1);
+    });
+
     it('bordered', async () => {
       const wrapper = mount(TabBar, {
         shallow: true,

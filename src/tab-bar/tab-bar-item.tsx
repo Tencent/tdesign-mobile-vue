@@ -1,4 +1,4 @@
-import { defineComponent, inject, computed, ref, watch, ComponentInternalInstance } from 'vue';
+import { defineComponent, inject, computed, ref, watch, onBeforeUnmount, ComponentInternalInstance } from 'vue';
 import { ViewListIcon as TViewListIcon } from 'tdesign-icons-vue-next';
 import TBadge from '../badge';
 import { TdBadgeProps } from '../badge/type';
@@ -17,7 +17,8 @@ export default defineComponent({
     const tabBarItemClass = usePrefixClass('tab-bar-item');
 
     const { t, globalConfig } = useConfig('tabBar');
-    const { split, shape, theme, defaultIndex, activeValue, itemCount, updateChild } = inject<any>('tab-bar');
+    const { split, shape, theme, defaultIndex, activeValue, itemCount, pressedValue, updateChild, updatePressed } =
+      inject<any>('tab-bar');
     const currentName = initName(defaultIndex);
 
     const textNode = ref<HTMLElement>();
@@ -62,7 +63,6 @@ export default defineComponent({
       }
       return currentName === activeValue.value;
     });
-
     const isSpread = ref(false);
     watch(isChecked, (newValue) => {
       if (!newValue) {
@@ -81,16 +81,60 @@ export default defineComponent({
 
     const isToggleCurrent = computed(() => Array.isArray(activeValue.value) && activeValue.value[0] === currentName);
 
-    const toggle = () => {
-      if (hasSubTabBar.value) {
-        isSpread.value = !isSpread.value;
-        if (!isToggleCurrent.value) {
-          updateChild([currentName]);
-          return;
-        }
-      }
-      updateChild(currentName);
+    const isPressable = computed(() => theme.value === 'capsule' && shape.value === 'round');
+    const isPressed = computed(() => isPressable.value && pressedValue.value === currentName);
+    const isPreviewingPress = computed(() => isPressable.value && typeof pressedValue.value !== 'undefined');
+    const isVisuallyChecked = computed(() =>
+      isPreviewingPress.value ? pressedValue.value === currentName : isChecked.value,
+    );
+    let releaseTimer = 0;
+
+    const clearReleaseTimer = () => {
+      if (!releaseTimer || typeof window === 'undefined') return;
+      window.clearTimeout(releaseTimer);
+      releaseTimer = 0;
     };
+
+    const startPress = (event: PointerEvent) => {
+      if (!isPressable.value || event.button !== 0) return;
+      clearReleaseTimer();
+      updatePressed(currentName);
+    };
+
+    const endPress = () => {
+      clearReleaseTimer();
+      if (pressedValue.value === currentName) updatePressed();
+    };
+
+    const scheduleEndPress = () => {
+      if (typeof window === 'undefined') {
+        endPress();
+        return;
+      }
+      clearReleaseTimer();
+      releaseTimer = window.setTimeout(endPress, 0);
+    };
+
+    const cancelPressOnLeave = (event: PointerEvent) => {
+      if (event.buttons) endPress();
+    };
+
+    const toggle = () => {
+      try {
+        if (hasSubTabBar.value) {
+          isSpread.value = !isSpread.value;
+          if (!isToggleCurrent.value) {
+            updateChild([currentName]);
+            return;
+          }
+        }
+        updateChild(currentName);
+      } finally {
+        endPress();
+      }
+    };
+
+    onBeforeUnmount(endPress);
 
     const hasChildren = computed(() => {
       return Number(props.subTabBar?.length) > 0;
@@ -177,12 +221,17 @@ export default defineComponent({
           <div
             class={{
               [`${tabBarItemClass.value}__content`]: true,
-              [`${tabBarItemClass.value}__content--checked`]: isChecked.value,
+              [`${tabBarItemClass.value}__content--checked`]: isVisuallyChecked.value,
+              [`${tabBarItemClass.value}__content--pressed`]: isPressed.value,
               [`${tabBarItemClass.value}__content--${theme.value}`]: true,
             }}
             aria-selected={(!hasChildren.value || !isSpread.value) && isChecked.value}
             aria-expanded={hasChildren.value && isSpread.value}
             role={hasChildren.value ? 'button' : 'tab'}
+            onPointerdown={startPress}
+            onPointerup={scheduleEndPress}
+            onPointercancel={endPress}
+            onPointerleave={cancelPressOnLeave}
             onClick={toggle}
           >
             {badge()}
