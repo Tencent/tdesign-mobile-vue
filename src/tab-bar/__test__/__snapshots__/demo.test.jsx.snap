@@ -29,7 +29,6 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           role="tab"
         >
           <!---->
-          <!---->
           <div
             class="t-tab-bar-item__text"
           >
@@ -52,7 +51,6 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--normal"
           role="tab"
         >
-          <!---->
           <!---->
           <div
             class="t-tab-bar-item__text"
@@ -77,7 +75,6 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           role="tab"
         >
           <!---->
-          <!---->
           <div
             class="t-tab-bar-item__text"
           >
@@ -100,7 +97,6 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--normal"
           role="tab"
         >
-          <!---->
           <!---->
           <div
             class="t-tab-bar-item__text"
@@ -140,7 +136,6 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
           role="tab"
         >
-          <!---->
           <div
             class="t-tab-bar-item__icon"
             style="height: 20px;"
@@ -196,7 +191,6 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--normal"
           role="tab"
         >
-          <!---->
           <div
             class="t-tab-bar-item__icon"
             style="height: 20px;"
@@ -252,7 +246,6 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--normal"
           role="tab"
         >
-          <!---->
           <div
             class="t-tab-bar-item__icon"
             style="height: 20px;"
@@ -308,7 +301,6 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--normal"
           role="tab"
         >
-          <!---->
           <div
             class="t-tab-bar-item__icon"
             style="height: 20px;"
@@ -380,7 +372,6 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
           role="tab"
         >
-          <!---->
           <div
             class="t-tab-bar-item__icon"
             style="height: 20px;"
@@ -438,7 +429,6 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--normal"
           role="tab"
         >
-          <!---->
           <div
             class="t-tab-bar-item__icon"
             style="height: 20px;"
@@ -496,7 +486,6 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--normal"
           role="tab"
         >
-          <!---->
           <div
             class="t-tab-bar-item__icon"
             style="height: 20px;"
@@ -554,7 +543,6 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-tab-bar-item__content t-tab-bar-item__content--normal"
           role="tab"
         >
-          <!---->
           <div
             class="t-tab-bar-item__icon"
             style="height: 20px;"
@@ -626,7 +614,6 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -662,7 +649,6 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -698,7 +684,6 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -734,7 +719,6 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -785,7 +769,6 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
       role="tab"
     >
-      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -821,7 +804,6 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--normal"
       role="tab"
     >
-      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -857,7 +839,6 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--normal"
       role="tab"
     >
-      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -893,7 +874,6 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--normal"
       role="tab"
     >
-      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -1444,7 +1424,6 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
                 class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
                 role="tab"
               >
-                <!---->
                 <div
                   class="t-tab-bar-item__icon"
                   style="height: 20px;"
@@ -1482,7 +1461,6 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
                 class="t-tab-bar-item__content t-tab-bar-item__content--normal"
                 role="tab"
               >
-                <!---->
                 <div
                   class="t-tab-bar-item__icon"
                   style="height: 20px;"
@@ -1520,7 +1498,6 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
                 class="t-tab-bar-item__content t-tab-bar-item__content--normal"
                 role="tab"
               >
-                <!---->
                 <div
                   class="t-tab-bar-item__icon"
                   style="height: 20px;"
@@ -1558,7 +1535,6 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
                 class="t-tab-bar-item__content t-tab-bar-item__content--normal"
                 role="tab"
               >
-                <!---->
                 <div
                   class="t-tab-bar-item__icon"
                   style="height: 20px;"
@@ -1693,21 +1669,6 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
                 class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
                 role="tab"
               >
-                
-                <span
-                  aria-hidden="true"
-                  class="t-tab-bar-item__selected-glass-refraction"
-                />
-                <span
-                  aria-hidden="true"
-                  class="t-tab-bar-item__selected-glass-base"
-                />
-                <span
-                  aria-hidden="true"
-                  class="t-tab-bar-item__selected-glass-sheen"
-                />
-                <!---->
-                
                 <div
                   class="t-tab-bar-item__icon"
                   style="height: 20px;"
@@ -1745,7 +1706,6 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
                 class="t-tab-bar-item__content t-tab-bar-item__content--normal"
                 role="tab"
               >
-                <!---->
                 <div
                   class="t-tab-bar-item__icon"
                   style="height: 20px;"
@@ -1783,7 +1743,6 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
                 class="t-tab-bar-item__content t-tab-bar-item__content--normal"
                 role="tab"
               >
-                <!---->
                 <div
                   class="t-tab-bar-item__icon"
                   style="height: 20px;"
@@ -1821,7 +1780,6 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
                 class="t-tab-bar-item__content t-tab-bar-item__content--normal"
                 role="tab"
               >
-                <!---->
                 <div
                   class="t-tab-bar-item__icon"
                   style="height: 20px;"
@@ -2780,20 +2738,6 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
         <strong
           data-v-b2e27a45=""
         >
-          Selected item glass
-        </strong>
-        <p
-          data-v-b2e27a45=""
-        >
-          The active item owns one size-matched filter, reuses the optical tuning and releases it when selection moves.
-        </p>
-      </article>
-      <article
-        data-v-b2e27a45=""
-      >
-        <strong
-          data-v-b2e27a45=""
-        >
           RGBA displacement encoding
         </strong>
         <p
@@ -2907,7 +2851,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <!---->
-            <!---->
             <div
               class="t-tab-bar-item__text"
             >
@@ -2928,7 +2871,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!---->
             <!---->
             <div
               class="t-tab-bar-item__text"
@@ -2951,7 +2893,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <!---->
-            <!---->
             <div
               class="t-tab-bar-item__text"
             >
@@ -2972,7 +2913,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!---->
             <!---->
             <div
               class="t-tab-bar-item__text"
@@ -3026,7 +2966,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -3062,7 +3001,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -3098,7 +3036,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -3134,7 +3071,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -3202,7 +3138,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -3236,7 +3171,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -3270,7 +3204,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -3304,7 +3237,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -3371,7 +3303,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <!---->
-            <!---->
             <div
               class="t-tab-bar-item__text"
             >
@@ -3393,7 +3324,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <!---->
-            <!---->
             <div
               class="t-tab-bar-item__text"
             >
@@ -3414,7 +3344,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="button"
           >
-            <!---->
             <!---->
             <div
               class="t-tab-bar-item__text"
@@ -3499,7 +3428,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               role="tab"
             >
               <!---->
-              <!---->
               <div
                 class="t-tab-bar-item__text"
               >
@@ -3522,7 +3450,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--normal"
               role="tab"
             >
-              <!---->
               <!---->
               <div
                 class="t-tab-bar-item__text"
@@ -3547,7 +3474,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               role="tab"
             >
               <!---->
-              <!---->
               <div
                 class="t-tab-bar-item__text"
               >
@@ -3570,7 +3496,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--normal"
               role="tab"
             >
-              <!---->
               <!---->
               <div
                 class="t-tab-bar-item__text"
@@ -3610,7 +3535,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
               role="tab"
             >
-              <!---->
               <div
                 class="t-tab-bar-item__icon"
                 style="height: 20px;"
@@ -3666,7 +3590,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--normal"
               role="tab"
             >
-              <!---->
               <div
                 class="t-tab-bar-item__icon"
                 style="height: 20px;"
@@ -3722,7 +3645,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--normal"
               role="tab"
             >
-              <!---->
               <div
                 class="t-tab-bar-item__icon"
                 style="height: 20px;"
@@ -3778,7 +3700,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--normal"
               role="tab"
             >
-              <!---->
               <div
                 class="t-tab-bar-item__icon"
                 style="height: 20px;"
@@ -3850,7 +3771,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
               role="tab"
             >
-              <!---->
               <div
                 class="t-tab-bar-item__icon"
                 style="height: 20px;"
@@ -3908,7 +3828,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--normal"
               role="tab"
             >
-              <!---->
               <div
                 class="t-tab-bar-item__icon"
                 style="height: 20px;"
@@ -3966,7 +3885,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--normal"
               role="tab"
             >
-              <!---->
               <div
                 class="t-tab-bar-item__icon"
                 style="height: 20px;"
@@ -4024,7 +3942,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               class="t-tab-bar-item__content t-tab-bar-item__content--normal"
               role="tab"
             >
-              <!---->
               <div
                 class="t-tab-bar-item__icon"
                 style="height: 20px;"
@@ -4114,7 +4031,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -4148,7 +4064,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -4182,7 +4097,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -4216,7 +4130,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--tag"
             role="tab"
           >
-            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -4789,7 +4702,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
                       role="tab"
                     >
-                      <!---->
                       <div
                         class="t-tab-bar-item__icon"
                         style="height: 20px;"
@@ -4827,7 +4739,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                       class="t-tab-bar-item__content t-tab-bar-item__content--normal"
                       role="tab"
                     >
-                      <!---->
                       <div
                         class="t-tab-bar-item__icon"
                         style="height: 20px;"
@@ -4865,7 +4776,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                       class="t-tab-bar-item__content t-tab-bar-item__content--normal"
                       role="tab"
                     >
-                      <!---->
                       <div
                         class="t-tab-bar-item__icon"
                         style="height: 20px;"
@@ -4903,7 +4813,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                       class="t-tab-bar-item__content t-tab-bar-item__content--normal"
                       role="tab"
                     >
-                      <!---->
                       <div
                         class="t-tab-bar-item__icon"
                         style="height: 20px;"
@@ -5038,21 +4947,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
                       role="tab"
                     >
-                      
-                      <span
-                        aria-hidden="true"
-                        class="t-tab-bar-item__selected-glass-refraction"
-                      />
-                      <span
-                        aria-hidden="true"
-                        class="t-tab-bar-item__selected-glass-base"
-                      />
-                      <span
-                        aria-hidden="true"
-                        class="t-tab-bar-item__selected-glass-sheen"
-                      />
-                      <!---->
-                      
                       <div
                         class="t-tab-bar-item__icon"
                         style="height: 20px;"
@@ -5090,7 +4984,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                       class="t-tab-bar-item__content t-tab-bar-item__content--normal"
                       role="tab"
                     >
-                      <!---->
                       <div
                         class="t-tab-bar-item__icon"
                         style="height: 20px;"
@@ -5128,7 +5021,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                       class="t-tab-bar-item__content t-tab-bar-item__content--normal"
                       role="tab"
                     >
-                      <!---->
                       <div
                         class="t-tab-bar-item__icon"
                         style="height: 20px;"
@@ -5166,7 +5058,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                       class="t-tab-bar-item__content t-tab-bar-item__content--normal"
                       role="tab"
                     >
-                      <!---->
                       <div
                         class="t-tab-bar-item__icon"
                         style="height: 20px;"
@@ -6125,20 +6016,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               <strong
                 data-v-b2e27a45=""
               >
-                Selected item glass
-              </strong>
-              <p
-                data-v-b2e27a45=""
-              >
-                The active item owns one size-matched filter, reuses the optical tuning and releases it when selection moves.
-              </p>
-            </article>
-            <article
-              data-v-b2e27a45=""
-            >
-              <strong
-                data-v-b2e27a45=""
-              >
                 RGBA displacement encoding
               </strong>
               <p
@@ -6237,7 +6114,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
             role="tab"
           >
-            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -6273,7 +6149,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--normal"
             role="tab"
           >
-            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -6309,7 +6184,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--normal"
             role="tab"
           >
-            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -6345,7 +6219,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             class="t-tab-bar-item__content t-tab-bar-item__content--normal"
             role="tab"
           >
-            <!---->
             <div
               class="t-tab-bar-item__icon"
               style="height: 20px;"
@@ -6397,7 +6270,6 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -6431,7 +6303,6 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -6465,7 +6336,6 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -6499,7 +6369,6 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -6546,7 +6415,6 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -6580,7 +6448,6 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -6614,7 +6481,6 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -6648,7 +6514,6 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!---->
       <div
         class="t-tab-bar-item__icon"
         style="height: 20px;"
@@ -6696,7 +6561,6 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
       role="tab"
     >
       <!---->
-      <!---->
       <div
         class="t-tab-bar-item__text"
       >
@@ -6718,7 +6582,6 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
       role="tab"
     >
       <!---->
-      <!---->
       <div
         class="t-tab-bar-item__text"
       >
@@ -6739,7 +6602,6 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="button"
     >
-      <!---->
       <!---->
       <div
         class="t-tab-bar-item__text"
@@ -6794,7 +6656,6 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
       role="tab"
     >
       <!---->
-      <!---->
       <div
         class="t-tab-bar-item__text"
       >
@@ -6815,7 +6676,6 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!---->
       <!---->
       <div
         class="t-tab-bar-item__text"
@@ -6838,7 +6698,6 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
       role="tab"
     >
       <!---->
-      <!---->
       <div
         class="t-tab-bar-item__text"
       >
@@ -6859,7 +6718,6 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
       class="t-tab-bar-item__content t-tab-bar-item__content--tag"
       role="tab"
     >
-      <!---->
       <!---->
       <div
         class="t-tab-bar-item__text"

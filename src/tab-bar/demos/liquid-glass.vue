@@ -618,11 +618,6 @@ const fixedPresets = [
     reason: 'The ratio is measured against the corner radius, or half of the short side when the radius is zero.',
   },
   {
-    name: 'Selected item glass',
-    reason:
-      'The active item owns one size-matched filter, reuses the optical tuning and releases it when selection moves.',
-  },
-  {
     name: 'RGBA displacement encoding',
     reason: 'R/G displacement and alpha clipping remain an internal filter contract.',
   },

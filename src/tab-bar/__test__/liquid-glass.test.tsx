@@ -3,7 +3,6 @@ import { mount } from '@vue/test-utils';
 import { renderToString } from 'vue/server-renderer';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import TabBar from '../tab-bar';
-import TabBarItem from '../tab-bar-item';
 import { tabBarGlassDevContextKey } from '../useTabBarGlassFilter';
 
 interface RuntimeOptions {
@@ -125,50 +124,6 @@ describe('TabBar Liquid Glass runtime', () => {
 
     expect(wrapper.find('filter').exists()).toBe(true);
     expect(wrapper.find('.t-tab-bar__glass-refraction').attributes('style')).toContain('url');
-  });
-
-  it('renders one independent liquid-glass filter for the selected item and moves it on selection', async () => {
-    const runtime = installGlassRuntime();
-    const value = ref('home');
-    const Host = {
-      setup() {
-        return () =>
-          h(
-            TabBar,
-            {
-              effect: 'glass',
-              shape: 'round',
-              fixed: false,
-              modelValue: value.value,
-              'onUpdate:modelValue': (nextValue: string) => {
-                value.value = nextValue;
-              },
-            },
-            {
-              default: () => [
-                h(TabBarItem, { value: 'home' }, () => 'Home'),
-                h(TabBarItem, { value: 'discover' }, () => 'Discover'),
-              ],
-            },
-          );
-      },
-    };
-    const wrapper = mount(Host);
-    runtime.runFrames();
-    await nextTick();
-
-    expect(wrapper.findAll('filter')).toHaveLength(2);
-    expect(wrapper.findAll('.t-tab-bar-item__selected-glass-refraction')).toHaveLength(1);
-    const firstFilterId = wrapper.find('.t-tab-bar-item__selected-glass-filter filter').attributes('id');
-
-    await wrapper.findAll('[role="tab"]')[1].trigger('click');
-    await nextTick();
-    runtime.runFrames();
-    await nextTick();
-
-    expect(value.value).toBe('discover');
-    expect(wrapper.findAll('.t-tab-bar-item__selected-glass-refraction')).toHaveLength(1);
-    expect(wrapper.find('.t-tab-bar-item__selected-glass-filter filter').attributes('id')).not.toBe(firstFilterId);
   });
 
   it('renders only the CSS glass baseline during SSR', async () => {
