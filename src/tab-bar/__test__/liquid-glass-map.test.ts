@@ -118,6 +118,15 @@ describe('createTabBarGlassTextures', () => {
     expect(southEast?.specular).not.toEqual(northWest.specular);
   });
 
+  it('fades specular continuously into the neutral center', () => {
+    const textures = createFixture();
+    const innerEdgeAlpha = [14, 15, 16, 17, 18].map((x) => getPixel(textures.specular, textures.width, x, 20)[3]);
+
+    expect(innerEdgeAlpha.slice(1).every((alpha, index) => alpha <= innerEdgeAlpha[index])).toBe(true);
+    expect(innerEdgeAlpha.at(-1)).toBe(0);
+    expect(Math.abs(innerEdgeAlpha[2] - innerEdgeAlpha[3])).toBeLessThanOrEqual(2);
+  });
+
   it('returns null for zero-sized textures and respects DPR and pixel limits', () => {
     expect(createTabBarGlassTextures({ width: 0, height: 40, radius: 20, dpr: 1 })).toBeNull();
     const dpr = createTabBarGlassTextures({ width: 100, height: 40, radius: 20, dpr: 4 });

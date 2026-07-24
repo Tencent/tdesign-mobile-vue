@@ -189,7 +189,7 @@ export function createTabBarGlassTextures(options: TabBarGlassTextureOptions): T
 
       const light = Math.max(0, field.normalX * lightX + field.normalY * lightY);
       const edge = Math.sqrt(Math.max(0, 1 - (1 - edgePosition) ** 2));
-      const intensity = clamp(light * edge, 0, 1);
+      const intensity = clamp(light * edge * innerFade, 0, 1);
       specular[offset] = 255;
       specular[offset + 1] = 255;
       specular[offset + 2] = 255;
