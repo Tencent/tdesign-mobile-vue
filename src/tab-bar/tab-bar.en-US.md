@@ -43,6 +43,12 @@ Name | Default Value | Description
 --td-tab-bar-bg-color | @bg-color-container | -
 --td-tab-bar-border-color | @border-color | -
 --td-tab-bar-round-shadow | @shadow-3 | -
+--td-tab-bar-glass-bg-color | rgba(255, 255, 255, 42%) | Glass material baseline fill
+--td-tab-bar-glass-border-color | rgba(255, 255, 255, 62%) | Glass material border color
+--td-tab-bar-glass-shadow | @shadow-3 | Glass material shadow
+--td-tab-bar-glass-fallback-blur | 12px | Gaussian blur radius when SVG enhancement is unavailable
+--td-tab-bar-selected-bg-color | @brand-color | Selected capsule color for a round TabBar
+--td-tab-bar-selected-bg-opacity | 16% | Selected capsule color mix for a round TabBar
 --td-tab-bar-active-bg | @brand-color-light | -
 --td-tab-bar-active-color | @brand-color | -
 --td-tab-bar-color | @text-color-primary | -

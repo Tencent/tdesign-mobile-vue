@@ -261,6 +261,28 @@
         </label>
       </div>
 
+      <h4 class="glass-demo__section-title">Fallback calibration / 降级材质校准</h4>
+      <div class="glass-demo__sliders">
+        <label>
+          <span class="glass-demo__parameter-title">
+            <span>Fallback blur / 降级高斯模糊<small class="glass-demo__scope-label">组件主题参数</small></span>
+            <output>{{ fallbackBlur }}px</output>
+          </span>
+          <span class="glass-demo__parameter-description"
+            >仅控制 CSS fallback 的背景高斯模糊半径；不会创建、恢复或改变 SVG 折射增强。</span
+          >
+          <input
+            v-model.number="fallbackBlur"
+            type="range"
+            min="0"
+            max="32"
+            step="1"
+            data-testid="parameter-fallback-blur"
+          />
+          <span class="glass-demo__parameter-meta">default 12 · 0–32</span>
+        </label>
+      </div>
+
       <h4 class="glass-demo__section-title">Background calibration / 背景变换</h4>
       <div class="glass-demo__sliders">
         <label v-for="parameter in backgroundParameters" :key="parameter.key">
@@ -412,6 +434,7 @@ const borderColor = ref('#ffffff');
 const shadowPreset = ref<'floating' | 'compact' | 'none'>('floating');
 const selectedBackgroundHue = ref(216);
 const selectedBackgroundOpacity = ref(0.16);
+const fallbackBlur = ref(12);
 
 const textureWidth = ref(0);
 const textureHeight = ref(0);
@@ -850,6 +873,7 @@ const demoVariables = computed<CSSProperties>(() => ({
   '--td-tab-bar-glass-bg-color': toRgba(backgroundColor.value, backgroundAlpha.value),
   '--td-tab-bar-glass-border-color': toRgba(borderColor.value, borderAlpha.value),
   '--td-tab-bar-glass-shadow': shadowValues[shadowPreset.value],
+  '--td-tab-bar-glass-fallback-blur': `${fallbackBlur.value}px`,
   '--td-tab-bar-selected-bg-color': `hsl(${selectedBackgroundHue.value} 100% 50%)`,
   '--td-tab-bar-selected-bg-opacity': `${selectedBackgroundOpacity.value * 100}%`,
   '--demo-tab-bar-height': `${tabBarHeight.value}px`,
@@ -885,6 +909,7 @@ const resetParameters = () => {
   shadowPreset.value = 'floating';
   selectedBackgroundHue.value = 216;
   selectedBackgroundOpacity.value = 0.16;
+  fallbackBlur.value = 12;
   backgroundScale.value = 1;
   backgroundOffsetX.value = 0;
   backgroundOffsetY.value = 0;
@@ -1246,6 +1271,10 @@ onBeforeUnmount(() => {
 .glass-demo__material-controls small {
   color: var(--td-text-color-secondary, #667085);
   font-weight: 400;
+}
+
+.glass-demo__scope-label {
+  margin-left: 4px;
 }
 
 .glass-demo__parameter-title output {

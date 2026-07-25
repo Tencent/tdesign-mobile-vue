@@ -43,6 +43,12 @@ value | String / Number | - | 标识符 | N
 --td-tab-bar-bg-color | @bg-color-container | -
 --td-tab-bar-border-color | @border-color | -
 --td-tab-bar-round-shadow | @shadow-3 | -
+--td-tab-bar-glass-bg-color | rgba(255, 255, 255, 42%) | 玻璃材质基线填充色
+--td-tab-bar-glass-border-color | rgba(255, 255, 255, 62%) | 玻璃材质边框色
+--td-tab-bar-glass-shadow | @shadow-3 | 玻璃材质阴影
+--td-tab-bar-glass-fallback-blur | 12px | SVG 增强不可用时的高斯模糊半径
+--td-tab-bar-selected-bg-color | @brand-color | 圆角 TabBar 选中态胶囊颜色
+--td-tab-bar-selected-bg-opacity | 16% | 圆角 TabBar 选中态胶囊颜色混合比例
 --td-tab-bar-active-bg | @brand-color-light | -
 --td-tab-bar-active-color | @brand-color | -
 --td-tab-bar-color | @text-color-primary | -

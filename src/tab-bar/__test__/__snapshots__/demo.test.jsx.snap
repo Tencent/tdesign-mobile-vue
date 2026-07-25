@@ -908,7 +908,7 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
 <section
   class="glass-demo glass-demo--light"
   data-v-b2e27a45=""
-  style="--td-tab-bar-glass-bg-color: rgba(255, 255, 255, 0.42); --td-tab-bar-glass-border-color: rgba(255, 255, 255, 0.62); --td-tab-bar-glass-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08); --td-tab-bar-selected-bg-color: hsl(216 100% 50%); --td-tab-bar-selected-bg-opacity: 16%; --demo-tab-bar-height: 64px; --demo-tab-bar-radius: 32px; --demo-tab-bar-item-height: 56px; --demo-tab-bar-item-radius: 28px; --demo-tab-bar-frame-height: 82px; --demo-secondary-bottom: 78px;"
+  style="--td-tab-bar-glass-bg-color: rgba(255, 255, 255, 0.42); --td-tab-bar-glass-border-color: rgba(255, 255, 255, 0.62); --td-tab-bar-glass-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08); --td-tab-bar-glass-fallback-blur: 12px; --td-tab-bar-selected-bg-color: hsl(216 100% 50%); --td-tab-bar-selected-bg-opacity: 16%; --demo-tab-bar-height: 64px; --demo-tab-bar-radius: 32px; --demo-tab-bar-item-height: 56px; --demo-tab-bar-item-radius: 28px; --demo-tab-bar-frame-height: 82px; --demo-secondary-bottom: 78px;"
 >
   <header
     class="glass-demo__toolbar"
@@ -2476,6 +2476,62 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
         </span>
       </label>
       
+    </div>
+    <h4
+      class="glass-demo__section-title"
+      data-v-b2e27a45=""
+    >
+      Fallback calibration / 降级材质校准
+    </h4>
+    <div
+      class="glass-demo__sliders"
+      data-v-b2e27a45=""
+    >
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__parameter-title"
+          data-v-b2e27a45=""
+        >
+          <span
+            data-v-b2e27a45=""
+          >
+            Fallback blur / 降级高斯模糊
+            <small
+              class="glass-demo__scope-label"
+              data-v-b2e27a45=""
+            >
+              组件主题参数
+            </small>
+          </span>
+          <output
+            data-v-b2e27a45=""
+          >
+            12px
+          </output>
+        </span>
+        <span
+          class="glass-demo__parameter-description"
+          data-v-b2e27a45=""
+        >
+          仅控制 CSS fallback 的背景高斯模糊半径；不会创建、恢复或改变 SVG 折射增强。
+        </span>
+        <input
+          data-testid="parameter-fallback-blur"
+          data-v-b2e27a45=""
+          max="32"
+          min="0"
+          step="1"
+          type="range"
+        />
+        <span
+          class="glass-demo__parameter-meta"
+          data-v-b2e27a45=""
+        >
+          default 12 · 0–32
+        </span>
+      </label>
     </div>
     <h4
       class="glass-demo__section-title"
@@ -4755,7 +4811,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         class="glass-demo glass-demo--light"
         data-v-8bf7e573=""
         data-v-b2e27a45=""
-        style="--td-tab-bar-glass-bg-color: rgba(255, 255, 255, 0.42); --td-tab-bar-glass-border-color: rgba(255, 255, 255, 0.62); --td-tab-bar-glass-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08); --td-tab-bar-selected-bg-color: hsl(216 100% 50%); --td-tab-bar-selected-bg-opacity: 16%; --demo-tab-bar-height: 64px; --demo-tab-bar-radius: 32px; --demo-tab-bar-item-height: 56px; --demo-tab-bar-item-radius: 28px; --demo-tab-bar-frame-height: 82px; --demo-secondary-bottom: 78px;"
+        style="--td-tab-bar-glass-bg-color: rgba(255, 255, 255, 0.42); --td-tab-bar-glass-border-color: rgba(255, 255, 255, 0.62); --td-tab-bar-glass-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08); --td-tab-bar-glass-fallback-blur: 12px; --td-tab-bar-selected-bg-color: hsl(216 100% 50%); --td-tab-bar-selected-bg-opacity: 16%; --demo-tab-bar-height: 64px; --demo-tab-bar-radius: 32px; --demo-tab-bar-item-height: 56px; --demo-tab-bar-item-radius: 28px; --demo-tab-bar-frame-height: 82px; --demo-secondary-bottom: 78px;"
       >
         <header
           class="glass-demo__toolbar"
@@ -6323,6 +6379,62 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               </span>
             </label>
             
+          </div>
+          <h4
+            class="glass-demo__section-title"
+            data-v-b2e27a45=""
+          >
+            Fallback calibration / 降级材质校准
+          </h4>
+          <div
+            class="glass-demo__sliders"
+            data-v-b2e27a45=""
+          >
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__parameter-title"
+                data-v-b2e27a45=""
+              >
+                <span
+                  data-v-b2e27a45=""
+                >
+                  Fallback blur / 降级高斯模糊
+                  <small
+                    class="glass-demo__scope-label"
+                    data-v-b2e27a45=""
+                  >
+                    组件主题参数
+                  </small>
+                </span>
+                <output
+                  data-v-b2e27a45=""
+                >
+                  12px
+                </output>
+              </span>
+              <span
+                class="glass-demo__parameter-description"
+                data-v-b2e27a45=""
+              >
+                仅控制 CSS fallback 的背景高斯模糊半径；不会创建、恢复或改变 SVG 折射增强。
+              </span>
+              <input
+                data-testid="parameter-fallback-blur"
+                data-v-b2e27a45=""
+                max="32"
+                min="0"
+                step="1"
+                type="range"
+              />
+              <span
+                class="glass-demo__parameter-meta"
+                data-v-b2e27a45=""
+              >
+                default 12 · 0–32
+              </span>
+            </label>
           </div>
           <h4
             class="glass-demo__section-title"

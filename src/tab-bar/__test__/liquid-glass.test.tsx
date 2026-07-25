@@ -357,6 +357,15 @@ describe('TabBar Liquid Glass runtime', () => {
 });
 
 describe('TabBar Liquid Glass demo', () => {
+  it('updates fallback blur without enabling SVG enhancement', async () => {
+    const wrapper = mount(LiquidGlassDemo);
+
+    await wrapper.get('[data-testid="parameter-fallback-blur"]').setValue('24');
+
+    expect(wrapper.attributes('style')).toContain('--td-tab-bar-glass-fallback-blur: 24px');
+    expect(wrapper.get('.glass-demo__fallback-bar').find('filter').exists()).toBe(false);
+  });
+
   it('keeps the same free transform controls across every validation background', async () => {
     const wrapper = mount(LiquidGlassDemo);
     await wrapper.get('[data-testid="parameter-background-scale"]').setValue('1.4');
