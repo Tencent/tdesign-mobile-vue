@@ -129,10 +129,18 @@ export function useTabBarGlassFilter(options: TabBarGlassFilterOptions): Shallow
     clearEnhancement();
   };
 
+  const isEnhancementAllowed = (element: HTMLElement) => {
+    return options.devContext?.shouldEnhance?.(element) !== false && canEnhance();
+  };
+
   const rebuild = () => {
     scheduledFrame = 0;
     const element = options.root.value;
     if (!mounted || !options.enabled.value || !element) return;
+    if (!isEnhancementAllowed(element)) {
+      stop();
+      return;
+    }
 
     const startedAt = performance.now();
     const rect = element.getBoundingClientRect();
@@ -190,18 +198,17 @@ export function useTabBarGlassFilter(options: TabBarGlassFilterOptions): Shallow
 
   const scheduleRebuild = () => {
     if (scheduledFrame || !mounted || !options.enabled.value) return;
+    const element = options.root.value;
+    if (!element || !isEnhancementAllowed(element)) {
+      stop();
+      return;
+    }
     scheduledFrame = requestAnimationFrame(rebuild);
   };
 
   const start = () => {
     const element = options.root.value;
-    if (
-      !mounted ||
-      !options.enabled.value ||
-      !element ||
-      options.devContext?.shouldEnhance?.(element) === false ||
-      !canEnhance()
-    ) {
+    if (!mounted || !options.enabled.value || !element || !isEnhancementAllowed(element)) {
       stop();
       return;
     }

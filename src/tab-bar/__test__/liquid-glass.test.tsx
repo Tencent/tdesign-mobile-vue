@@ -3,6 +3,7 @@ import { mount } from '@vue/test-utils';
 import { renderToString } from 'vue/server-renderer';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import TabBar from '../tab-bar';
+import LiquidGlassDemo from '../demos/liquid-glass.vue';
 import { tabBarGlassDevContextKey } from '../useTabBarGlassFilter';
 
 interface RuntimeOptions {
@@ -303,10 +304,11 @@ describe('TabBar Liquid Glass runtime', () => {
 
   it('can force the CSS fallback without creating enhancement resources', async () => {
     const runtime = installGlassRuntime();
+    const tuning = ref({ displacementGain: 1 });
     const Host = {
       setup() {
         provide(tabBarGlassDevContextKey, {
-          tuning: computed(() => ({})),
+          tuning: computed(() => tuning.value),
           shouldEnhance: () => false,
         });
         return () => h(TabBar, { effect: 'glass', fixed: false });
@@ -316,6 +318,14 @@ describe('TabBar Liquid Glass runtime', () => {
     await nextTick();
 
     expect(wrapper.find('.t-tab-bar__glass-base').exists()).toBe(true);
+    expect(wrapper.find('filter').exists()).toBe(false);
+    expect(runtime.requestAnimationFrame).not.toHaveBeenCalled();
+    expect(runtime.getContext).not.toHaveBeenCalled();
+    expect(runtime.toDataURL).not.toHaveBeenCalled();
+
+    tuning.value = { displacementGain: 1.5 };
+    await nextTick();
+
     expect(wrapper.find('filter').exists()).toBe(false);
     expect(runtime.requestAnimationFrame).not.toHaveBeenCalled();
     expect(runtime.getContext).not.toHaveBeenCalled();
@@ -343,5 +353,31 @@ describe('TabBar Liquid Glass runtime', () => {
     expect(wrapper.find('.t-tab-bar__glass-base').exists()).toBe(true);
     expect(wrapper.find('filter').exists()).toBe(false);
     expect(addEventListener).not.toHaveBeenCalledWith('resize', expect.any(Function));
+  });
+});
+
+describe('TabBar Liquid Glass demo', () => {
+  it('keeps the same free transform controls across every validation background', async () => {
+    const wrapper = mount(LiquidGlassDemo);
+    await wrapper.get('[data-testid="parameter-background-scale"]').setValue('1.4');
+    await wrapper.get('[data-testid="parameter-background-offset-x"]').setValue('36');
+    await wrapper.get('[data-testid="parameter-background-offset-y"]').setValue('-24');
+
+    const expectBackground = async (background: 'grid' | 'text' | 'image') => {
+      await wrapper.get(`[data-testid="background-${background}"]`).trigger('click');
+      const backdrops = wrapper.findAll('.glass-demo__backdrop');
+
+      expect(backdrops).toHaveLength(3);
+      backdrops.forEach((backdrop) => {
+        expect(backdrop.classes()).toContain(`glass-demo__backdrop--${background}`);
+        expect(backdrop.attributes('style')).toContain('--demo-background-scale: 1.4');
+        expect(backdrop.attributes('style')).toContain('--demo-background-x: 36px');
+        expect(backdrop.attributes('style')).toContain('--demo-background-y: -24px');
+      });
+    };
+
+    await expectBackground('grid');
+    await expectBackground('text');
+    await expectBackground('image');
   });
 });

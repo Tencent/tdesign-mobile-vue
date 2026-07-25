@@ -118,18 +118,27 @@
         </div>
         <div
           class="glass-demo__device"
-          :class="[`glass-demo__device--${background}`, { 'is-moving': backgroundMoves }]"
+          :class="{ 'is-moving': backgroundMoves, 'is-dragging': backgroundDragging }"
           :style="{ width: `${previewWidth}px`, '--demo-image': `url(${landscapeUrl})` }"
           :data-testid="`preview-${mode}`"
+          @pointerdown="startBackgroundDrag"
+          @pointermove="moveBackground"
+          @pointerup="stopBackgroundDrag"
+          @pointercancel="stopBackgroundDrag"
         >
-          <div v-if="background === 'text'" class="glass-demo__backdrop-copy" aria-hidden="true">
-            <strong>Design systems should preserve context.</strong>
-            <span>Navigation remains readable above moving content.</span>
-            <span>Edges, letterforms and spacing expose optical displacement.</span>
-            <span>12:48 · Cupertino · 21 C</span>
-          </div>
-          <div v-else class="glass-demo__landmarks" aria-hidden="true">
-            <span v-for="index in 6" :key="index">{{ index }}</span>
+          <div
+            class="glass-demo__backdrop"
+            :class="`glass-demo__backdrop--${background}`"
+            :style="backgroundPlaneStyle"
+            aria-hidden="true"
+          >
+            <div v-if="background === 'text'" class="glass-demo__backdrop-copy">
+              <strong>Design systems should preserve context across every layer of an interface.</strong>
+              <span v-for="line in textBackdropLines" :key="line">{{ line }}</span>
+            </div>
+            <div v-else class="glass-demo__landmarks">
+              <span v-for="index in 10" :key="index">{{ index }}</span>
+            </div>
           </div>
 
           <div class="glass-demo__bar-frame">
@@ -252,6 +261,28 @@
         </label>
       </div>
 
+      <h4 class="glass-demo__section-title">Background calibration / 背景变换</h4>
+      <div class="glass-demo__sliders">
+        <label v-for="parameter in backgroundParameters" :key="parameter.key">
+          <span class="glass-demo__parameter-title">
+            <span>{{ parameter.label }} / {{ parameter.name }} <small>Demo 验证背景</small></span>
+            <output>{{ parameter.value.value }}{{ parameter.unit }}</output>
+          </span>
+          <span class="glass-demo__parameter-description">{{ parameter.description }}</span>
+          <input
+            v-model.number="parameter.value.value"
+            type="range"
+            :min="parameter.min"
+            :max="parameter.max"
+            :step="parameter.step"
+            :data-testid="`parameter-${parameter.key}`"
+          />
+          <span class="glass-demo__parameter-meta"
+            >default {{ parameter.default }} · {{ parameter.min }}–{{ parameter.max }}</span
+          >
+        </label>
+      </div>
+
       <h4 class="glass-demo__section-title">Optical calibration / 光学校准</h4>
       <div class="glass-demo__sliders">
         <label v-for="parameter in opticalParameters" :key="parameter.key">
@@ -357,6 +388,10 @@ const safeArea = ref(false);
 const bordered = ref(true);
 const multiple = ref(false);
 const backgroundMoves = ref(false);
+const backgroundDragging = ref(false);
+const backgroundScale = ref(1);
+const backgroundOffsetX = ref(0);
+const backgroundOffsetY = ref(0);
 const selected = ref('home');
 const secondarySelected = ref('listen');
 
@@ -398,6 +433,16 @@ const secondaryItems = [
   { value: 'saved', label: 'Saved', icon: 'bookmark' },
   { value: 'recent', label: 'Recent', icon: 'time' },
 ];
+const textBackdropLines = [
+  'Navigation remains readable while dense content continues beneath the translucent material and its rounded bezel.',
+  'Straight letterforms, punctuation, spacing and repeated baselines make small optical displacement easier to compare.',
+  'Move this background horizontally or vertically to inspect whether the sampled content follows the real page layer.',
+  'Scale the text plane to compare fine glyph edges with larger headlines, numbers and tightly spaced paragraphs.',
+  'A robust fallback should soften these characters with Gaussian blur without introducing geometric bending or tearing.',
+  'The enhanced material should preserve a stable center while the surrounding bezel continuously redirects nearby forms.',
+  '12:48 Cupertino · 21 C · Accessibility · Navigation · Typography · Motion · Contrast · Safe area · Responsive layout.',
+  'Repeated context below the TabBar ensures that every item overlaps meaningful text instead of an empty background region.',
+];
 
 const stateToggles = [
   {
@@ -437,9 +482,9 @@ const stateToggles = [
   },
   {
     key: 'motion',
-    label: 'Move background',
-    name: '移动背景',
-    description: '持续移动验证背景，检查折射是否跟随真实背景内容变化。',
+    label: 'Animate background',
+    name: '背景自动巡航',
+    description: '围绕当前 X/Y 位置沿多方向持续移动；手动位置与缩放值仍作为动画基准。',
     value: backgroundMoves,
   },
 ];
@@ -500,6 +545,45 @@ const selectionParameters = [
     max: 1,
     step: 0.01,
     unit: '',
+  },
+];
+
+const backgroundParameters = [
+  {
+    key: 'background-scale',
+    label: 'Background scale',
+    name: '背景缩放',
+    description: '同步缩放网格、文字或图片验证层；也可以直接拖拽预览背景改变位置。',
+    value: backgroundScale,
+    default: 1,
+    min: 0.75,
+    max: 2.5,
+    step: 0.05,
+    unit: 'x',
+  },
+  {
+    key: 'background-offset-x',
+    label: 'Background X',
+    name: '背景水平位移',
+    description: '沿水平方向移动实际验证背景；三个对照实例保持完全相同的位置。',
+    value: backgroundOffsetX,
+    default: 0,
+    min: -160,
+    max: 160,
+    step: 1,
+    unit: 'px',
+  },
+  {
+    key: 'background-offset-y',
+    label: 'Background Y',
+    name: '背景垂直位移',
+    description: '沿垂直方向移动实际验证背景，用于把网格线、文字或图片细节放到 TabBar 下方。',
+    value: backgroundOffsetY,
+    default: 0,
+    min: -160,
+    max: 160,
+    step: 1,
+    unit: 'px',
   },
 ];
 
@@ -697,6 +781,37 @@ const toRgba = (hex: string, alpha: number) => {
   return `rgba(${value >> 16}, ${(value >> 8) & 255}, ${value & 255}, ${alpha})`;
 };
 
+const clampBackgroundOffset = (value: number) => Math.min(Math.max(value, -160), 160);
+let backgroundDrag: { pointerId: number; startX: number; startY: number; offsetX: number; offsetY: number } | undefined;
+
+const startBackgroundDrag = (event: PointerEvent) => {
+  if (event.target instanceof Element && event.target.closest('.t-tab-bar')) return;
+  const target = event.currentTarget as HTMLElement;
+  target.setPointerCapture(event.pointerId);
+  backgroundDragging.value = true;
+  backgroundDrag = {
+    pointerId: event.pointerId,
+    startX: event.clientX,
+    startY: event.clientY,
+    offsetX: backgroundOffsetX.value,
+    offsetY: backgroundOffsetY.value,
+  };
+};
+
+const moveBackground = (event: PointerEvent) => {
+  if (!backgroundDrag || backgroundDrag.pointerId !== event.pointerId) return;
+  backgroundOffsetX.value = clampBackgroundOffset(backgroundDrag.offsetX + event.clientX - backgroundDrag.startX);
+  backgroundOffsetY.value = clampBackgroundOffset(backgroundDrag.offsetY + event.clientY - backgroundDrag.startY);
+};
+
+const stopBackgroundDrag = (event: PointerEvent) => {
+  if (!backgroundDrag || backgroundDrag.pointerId !== event.pointerId) return;
+  const target = event.currentTarget as HTMLElement;
+  if (target.hasPointerCapture(event.pointerId)) target.releasePointerCapture(event.pointerId);
+  backgroundDragging.value = false;
+  backgroundDrag = undefined;
+};
+
 const tuning = computed<TabBarGlassRuntimeTuning>(() => ({
   surface: surface.value,
   thicknessRatio: thicknessRatio.value,
@@ -724,6 +839,12 @@ provide(tabBarGlassDevContextKey, {
   onRebuild,
   shouldEnhance: (element) => !element.classList.contains('glass-demo__fallback-bar'),
 });
+
+const backgroundPlaneStyle = computed<CSSProperties>(() => ({
+  '--demo-background-scale': String(backgroundScale.value),
+  '--demo-background-x': `${backgroundOffsetX.value}px`,
+  '--demo-background-y': `${backgroundOffsetY.value}px`,
+}));
 
 const demoVariables = computed<CSSProperties>(() => ({
   '--td-tab-bar-glass-bg-color': toRgba(backgroundColor.value, backgroundAlpha.value),
@@ -764,6 +885,9 @@ const resetParameters = () => {
   shadowPreset.value = 'floating';
   selectedBackgroundHue.value = 216;
   selectedBackgroundOpacity.value = 0.16;
+  backgroundScale.value = 1;
+  backgroundOffsetX.value = 0;
+  backgroundOffsetY.value = 0;
 };
 
 const previousTheme = typeof document === 'undefined' ? null : document.documentElement.getAttribute('theme-mode');
@@ -932,12 +1056,27 @@ onBeforeUnmount(() => {
   height: 310px;
   overflow: hidden;
   background-color: #eef1f5;
-  background-position: 3px 3px;
   border: 1px solid var(--td-component-border, #cfd3dc);
   border-radius: 8px;
+  cursor: grab;
+  touch-action: none;
 }
 
-.glass-demo__device--grid {
+.glass-demo__device.is-dragging {
+  cursor: grabbing;
+}
+
+.glass-demo__backdrop {
+  position: absolute;
+  inset: -80px;
+  pointer-events: none;
+  transform: translate3d(var(--demo-background-x), var(--demo-background-y), 0) scale(var(--demo-background-scale));
+  transform-origin: center;
+  transition: transform 120ms ease-out;
+  will-change: transform;
+}
+
+.glass-demo__backdrop--grid {
   background-image:
     linear-gradient(90deg, rgba(20, 24, 32, 70%) 1px, transparent 1px),
     linear-gradient(rgba(20, 24, 32, 70%) 1px, transparent 1px),
@@ -948,30 +1087,32 @@ onBeforeUnmount(() => {
     100% 100%;
 }
 
-.glass-demo__device--text {
+.glass-demo__backdrop--text {
   background: linear-gradient(160deg, #f7f2e9, #dce8e2);
 }
 
-.glass-demo__device--image {
+.glass-demo__backdrop--image {
   background-image: var(--demo-image);
   background-size: cover;
+  background-position: center;
 }
 
-.glass-demo__device.is-moving {
-  animation: glass-demo-background 3s linear infinite;
+.glass-demo__device.is-moving .glass-demo__backdrop {
+  animation: glass-demo-background 5s ease-in-out infinite;
+  transition: none;
 }
 
 .glass-demo__backdrop-copy {
   display: grid;
-  gap: 18px;
-  padding: 30px 22px;
+  gap: 12px;
+  padding: 110px 102px;
   color: #17202a;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.45;
 }
 
 .glass-demo__backdrop-copy strong {
-  max-width: 280px;
+  max-width: 440px;
   font-size: 24px;
   line-height: 1.15;
 }
@@ -979,7 +1120,7 @@ onBeforeUnmount(() => {
 .glass-demo__landmarks {
   display: flex;
   justify-content: space-between;
-  padding: 24px 14px;
+  padding: 104px 94px;
   color: rgba(255, 255, 255, 88%);
   font:
     600 16px/1 ui-monospace,
@@ -990,6 +1131,7 @@ onBeforeUnmount(() => {
 
 .glass-demo__bar-frame {
   position: absolute;
+  z-index: 1;
   inset: auto 0 0;
   min-height: var(--demo-tab-bar-frame-height);
 }
@@ -1011,7 +1153,7 @@ onBeforeUnmount(() => {
   height: var(--demo-tab-bar-item-height);
 }
 
-.glass-demo__bar-frame :deep(.t-tab-bar--glass.t-tab-bar--round .t-tab-bar-item__content) {
+.glass-demo__bar-frame :deep(.t-tab-bar--round .t-tab-bar-item__content) {
   border-radius: var(--demo-tab-bar-item-radius);
 }
 
@@ -1181,11 +1323,21 @@ onBeforeUnmount(() => {
 }
 
 @keyframes glass-demo-background {
-  from {
-    background-position: 3px 3px;
+  0%,
+  100% {
+    transform: translate3d(var(--demo-background-x), var(--demo-background-y), 0) scale(var(--demo-background-scale));
   }
-  to {
-    background-position: 35px 3px;
+  25% {
+    transform: translate3d(calc(var(--demo-background-x) + 28px), calc(var(--demo-background-y) - 18px), 0)
+      scale(var(--demo-background-scale));
+  }
+  50% {
+    transform: translate3d(calc(var(--demo-background-x) - 18px), calc(var(--demo-background-y) + 24px), 0)
+      scale(var(--demo-background-scale));
+  }
+  75% {
+    transform: translate3d(calc(var(--demo-background-x) + 12px), calc(var(--demo-background-y) + 30px), 0)
+      scale(var(--demo-background-scale));
   }
 }
 
