@@ -113,7 +113,7 @@
     <div class="glass-demo__comparison" data-testid="comparison">
       <article v-for="mode in comparisonModes" :key="mode" class="glass-demo__preview">
         <div class="glass-demo__preview-title">
-          <strong>{{ mode === 'normal' ? 'Normal baseline' : `${effect} material` }}</strong>
+          <strong>{{ comparisonLabels[mode] }}</strong>
           <span>{{ previewWidth }} px</span>
         </div>
         <div
@@ -135,7 +135,8 @@
           <div class="glass-demo__bar-frame">
             <t-tab-bar
               v-model="selected"
-              :effect="mode === 'normal' ? 'normal' : effect"
+              :class="{ 'glass-demo__fallback-bar': mode === 'fallback' }"
+              :effect="mode === 'normal' ? 'normal' : mode === 'fallback' ? 'glass' : effect"
               :shape="shape"
               :fixed="fixed"
               :placeholder="placeholder"
@@ -212,6 +213,28 @@
         <label v-for="parameter in layoutParameters" :key="parameter.key">
           <span class="glass-demo__parameter-title">
             <span>{{ parameter.label }} / {{ parameter.name }} <small>Demo 布局</small></span>
+            <output>{{ parameter.value.value }}{{ parameter.unit }}</output>
+          </span>
+          <span class="glass-demo__parameter-description">{{ parameter.description }}</span>
+          <input
+            v-model.number="parameter.value.value"
+            type="range"
+            :min="parameter.min"
+            :max="parameter.max"
+            :step="parameter.step"
+            :data-testid="`parameter-${parameter.key}`"
+          />
+          <span class="glass-demo__parameter-meta"
+            >default {{ parameter.default }} · {{ parameter.min }}–{{ parameter.max }}</span
+          >
+        </label>
+      </div>
+
+      <h4 class="glass-demo__section-title">Selection calibration / 选中态校准</h4>
+      <div class="glass-demo__sliders">
+        <label v-for="parameter in selectionParameters" :key="parameter.key">
+          <span class="glass-demo__parameter-title">
+            <span>{{ parameter.label }} / {{ parameter.name }} <small>组件主题参数</small></span>
             <output>{{ parameter.value.value }}{{ parameter.unit }}</output>
           </span>
           <span class="glass-demo__parameter-description">{{ parameter.description }}</span>
@@ -315,7 +338,12 @@ const shapes: Shape[] = ['normal', 'round'];
 const backgrounds: Background[] = ['grid', 'text', 'image'];
 const themes: Theme[] = ['light', 'dark'];
 const widths = [320, 390, 430, 620];
-const comparisonModes = ['normal', 'glass'] as const;
+const comparisonModes = ['normal', 'fallback', 'glass'] as const;
+const comparisonLabels = {
+  normal: 'Normal regression baseline',
+  fallback: 'CSS fallback',
+  glass: 'Liquid Glass enhancement',
+} as const;
 const landscapeUrl = 'https://tdesign.gtimg.com/demo/demo-image-1.png';
 const effect = ref<Effect>('glass');
 const shape = ref<Shape>('round');
@@ -347,6 +375,8 @@ const blur = ref(DEFAULT_TAB_BAR_GLASS_TUNING.blur);
 const backgroundColor = ref('#ffffff');
 const borderColor = ref('#ffffff');
 const shadowPreset = ref<'floating' | 'compact' | 'none'>('floating');
+const selectedBackgroundHue = ref(216);
+const selectedBackgroundOpacity = ref(0.16);
 
 const textureWidth = ref(0);
 const textureHeight = ref(0);
@@ -443,6 +473,33 @@ const layoutParameters = [
     max: 88,
     step: 2,
     unit: 'px',
+  },
+];
+
+const selectionParameters = [
+  {
+    key: 'selected-background-hue',
+    label: 'Selected background hue',
+    name: '选中态色相',
+    description: '调整选中态胶囊的基础色相；normal 与 glass 使用同一颜色参数。',
+    value: selectedBackgroundHue,
+    default: 216,
+    min: 0,
+    max: 360,
+    step: 1,
+    unit: 'deg',
+  },
+  {
+    key: 'selected-background-opacity',
+    label: 'Selected background opacity',
+    name: '选中态透明度',
+    description: '调整选中态胶囊颜色的混合比例；0 为完全透明，1 为完全不透明。',
+    value: selectedBackgroundOpacity,
+    default: 0.16,
+    min: 0,
+    max: 1,
+    step: 0.01,
+    unit: '',
   },
 ];
 
@@ -662,12 +719,18 @@ const onRebuild = (stats: TabBarGlassBuildStats) => {
   rebuildCount.value += 1;
 };
 
-provide(tabBarGlassDevContextKey, { tuning, onRebuild });
+provide(tabBarGlassDevContextKey, {
+  tuning,
+  onRebuild,
+  shouldEnhance: (element) => !element.classList.contains('glass-demo__fallback-bar'),
+});
 
 const demoVariables = computed<CSSProperties>(() => ({
   '--td-tab-bar-glass-bg-color': toRgba(backgroundColor.value, backgroundAlpha.value),
   '--td-tab-bar-glass-border-color': toRgba(borderColor.value, borderAlpha.value),
   '--td-tab-bar-glass-shadow': shadowValues[shadowPreset.value],
+  '--td-tab-bar-selected-bg-color': `hsl(${selectedBackgroundHue.value} 100% 50%)`,
+  '--td-tab-bar-selected-bg-opacity': `${selectedBackgroundOpacity.value * 100}%`,
   '--demo-tab-bar-height': `${tabBarHeight.value}px`,
   '--demo-tab-bar-radius': `${tabBarHeight.value / 2}px`,
   '--demo-tab-bar-item-height': `${tabBarHeight.value - 8}px`,
@@ -699,6 +762,8 @@ const resetParameters = () => {
   backgroundColor.value = theme.value === 'dark' ? '#242424' : '#ffffff';
   borderColor.value = '#ffffff';
   shadowPreset.value = 'floating';
+  selectedBackgroundHue.value = 216;
+  selectedBackgroundOpacity.value = 0.16;
 };
 
 const previousTheme = typeof document === 'undefined' ? null : document.documentElement.getAttribute('theme-mode');

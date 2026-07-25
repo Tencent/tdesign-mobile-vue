@@ -908,7 +908,7 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
 <section
   class="glass-demo glass-demo--light"
   data-v-b2e27a45=""
-  style="--td-tab-bar-glass-bg-color: rgba(255, 255, 255, 0.42); --td-tab-bar-glass-border-color: rgba(255, 255, 255, 0.62); --td-tab-bar-glass-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08); --demo-tab-bar-height: 64px; --demo-tab-bar-radius: 32px; --demo-tab-bar-item-height: 56px; --demo-tab-bar-item-radius: 28px; --demo-tab-bar-frame-height: 82px; --demo-secondary-bottom: 78px;"
+  style="--td-tab-bar-glass-bg-color: rgba(255, 255, 255, 0.42); --td-tab-bar-glass-border-color: rgba(255, 255, 255, 0.62); --td-tab-bar-glass-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08); --td-tab-bar-selected-bg-color: hsl(216 100% 50%); --td-tab-bar-selected-bg-opacity: 16%; --demo-tab-bar-height: 64px; --demo-tab-bar-radius: 32px; --demo-tab-bar-item-height: 56px; --demo-tab-bar-item-radius: 28px; --demo-tab-bar-frame-height: 82px; --demo-secondary-bottom: 78px;"
 >
   <header
     class="glass-demo__toolbar"
@@ -1350,7 +1350,7 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
         <strong
           data-v-b2e27a45=""
         >
-          Normal baseline
+          Normal regression baseline
         </strong>
         <span
           data-v-b2e27a45=""
@@ -1580,7 +1580,252 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
         <strong
           data-v-b2e27a45=""
         >
-          glass material
+          CSS fallback
+        </strong>
+        <span
+          data-v-b2e27a45=""
+        >
+          390 px
+        </span>
+      </div>
+      <div
+        class="glass-demo__device glass-demo__device--grid"
+        data-testid="preview-fallback"
+        data-v-b2e27a45=""
+        style="width: 390px; --demo-image: url(https://tdesign.gtimg.com/demo/demo-image-1.png);"
+      >
+        <div
+          aria-hidden="true"
+          class="glass-demo__landmarks"
+          data-v-b2e27a45=""
+        >
+          
+          <span
+            data-v-b2e27a45=""
+          >
+            1
+          </span>
+          <span
+            data-v-b2e27a45=""
+          >
+            2
+          </span>
+          <span
+            data-v-b2e27a45=""
+          >
+            3
+          </span>
+          <span
+            data-v-b2e27a45=""
+          >
+            4
+          </span>
+          <span
+            data-v-b2e27a45=""
+          >
+            5
+          </span>
+          <span
+            data-v-b2e27a45=""
+          >
+            6
+          </span>
+          
+        </div>
+        <div
+          class="glass-demo__bar-frame"
+          data-v-b2e27a45=""
+        >
+          <div
+            class="t-tab-bar t-tab-bar--bordered t-tab-bar--glass t-tab-bar--round glass-demo__fallback-bar"
+            data-v-b2e27a45=""
+            role="tablist"
+            style="z-index: 1;"
+          >
+            
+            <span
+              aria-hidden="true"
+              class="t-tab-bar__glass-refraction"
+            />
+            <span
+              aria-hidden="true"
+              class="t-tab-bar__glass-base"
+            />
+            <span
+              aria-hidden="true"
+              class="t-tab-bar__glass-sheen"
+            />
+            <!---->
+            
+            
+            
+            <div
+              class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+              data-v-b2e27a45=""
+            >
+              <div
+                aria-expanded="false"
+                aria-selected="true"
+                class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+                role="tab"
+              >
+                <div
+                  class="t-tab-bar-item__icon"
+                  style="height: 20px;"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-home"
+                    data-v-b2e27a45=""
+                    style="font-size: 20px;"
+                  >
+                    <use
+                      href="#t-icon-home"
+                    />
+                  </svg>
+                  
+                </div>
+                <div
+                  class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                >
+                  <!---->
+                  
+                  Home 
+                  
+                </div>
+              </div>
+              <!---->
+            </div>
+            <div
+              class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+              data-v-b2e27a45=""
+            >
+              <div
+                aria-expanded="false"
+                aria-selected="false"
+                class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+                role="tab"
+              >
+                <div
+                  class="t-tab-bar-item__icon"
+                  style="height: 20px;"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-search"
+                    data-v-b2e27a45=""
+                    style="font-size: 20px;"
+                  >
+                    <use
+                      href="#t-icon-search"
+                    />
+                  </svg>
+                  
+                </div>
+                <div
+                  class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                >
+                  <!---->
+                  
+                  Discover 
+                  
+                </div>
+              </div>
+              <!---->
+            </div>
+            <div
+              class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+              data-v-b2e27a45=""
+            >
+              <div
+                aria-expanded="false"
+                aria-selected="false"
+                class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+                role="tab"
+              >
+                <div
+                  class="t-tab-bar-item__icon"
+                  style="height: 20px;"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-folder"
+                    data-v-b2e27a45=""
+                    style="font-size: 20px;"
+                  >
+                    <use
+                      href="#t-icon-folder"
+                    />
+                  </svg>
+                  
+                </div>
+                <div
+                  class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                >
+                  <!---->
+                  
+                  Library 
+                  
+                </div>
+              </div>
+              <!---->
+            </div>
+            <div
+              class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+              data-v-b2e27a45=""
+            >
+              <div
+                aria-expanded="false"
+                aria-selected="false"
+                class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+                role="tab"
+              >
+                <div
+                  class="t-tab-bar-item__icon"
+                  style="height: 20px;"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-user"
+                    data-v-b2e27a45=""
+                    style="font-size: 20px;"
+                  >
+                    <use
+                      href="#t-icon-user"
+                    />
+                  </svg>
+                  
+                </div>
+                <div
+                  class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                >
+                  <!---->
+                  
+                  Profile 
+                  
+                </div>
+              </div>
+              <!---->
+            </div>
+            
+            
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+    </article>
+    <article
+      class="glass-demo__preview"
+      data-v-b2e27a45=""
+    >
+      <div
+        class="glass-demo__preview-title"
+        data-v-b2e27a45=""
+      >
+        <strong
+          data-v-b2e27a45=""
+        >
+          Liquid Glass enhancement
         </strong>
         <span
           data-v-b2e27a45=""
@@ -2049,6 +2294,107 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
           data-v-b2e27a45=""
         >
           default 64 · 52–88
+        </span>
+      </label>
+      
+    </div>
+    <h4
+      class="glass-demo__section-title"
+      data-v-b2e27a45=""
+    >
+      Selection calibration / 选中态校准
+    </h4>
+    <div
+      class="glass-demo__sliders"
+      data-v-b2e27a45=""
+    >
+      
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__parameter-title"
+          data-v-b2e27a45=""
+        >
+          <span
+            data-v-b2e27a45=""
+          >
+            Selected background hue / 选中态色相 
+            <small
+              data-v-b2e27a45=""
+            >
+              组件主题参数
+            </small>
+          </span>
+          <output
+            data-v-b2e27a45=""
+          >
+            216deg
+          </output>
+        </span>
+        <span
+          class="glass-demo__parameter-description"
+          data-v-b2e27a45=""
+        >
+          调整选中态胶囊的基础色相；normal 与 glass 使用同一颜色参数。
+        </span>
+        <input
+          data-testid="parameter-selected-background-hue"
+          data-v-b2e27a45=""
+          max="360"
+          min="0"
+          step="1"
+          type="range"
+        />
+        <span
+          class="glass-demo__parameter-meta"
+          data-v-b2e27a45=""
+        >
+          default 216 · 0–360
+        </span>
+      </label>
+      <label
+        data-v-b2e27a45=""
+      >
+        <span
+          class="glass-demo__parameter-title"
+          data-v-b2e27a45=""
+        >
+          <span
+            data-v-b2e27a45=""
+          >
+            Selected background opacity / 选中态透明度 
+            <small
+              data-v-b2e27a45=""
+            >
+              组件主题参数
+            </small>
+          </span>
+          <output
+            data-v-b2e27a45=""
+          >
+            0.16
+          </output>
+        </span>
+        <span
+          class="glass-demo__parameter-description"
+          data-v-b2e27a45=""
+        >
+          调整选中态胶囊颜色的混合比例；0 为完全透明，1 为完全不透明。
+        </span>
+        <input
+          data-testid="parameter-selected-background-opacity"
+          data-v-b2e27a45=""
+          max="1"
+          min="0"
+          step="0.01"
+          type="range"
+        />
+        <span
+          class="glass-demo__parameter-meta"
+          data-v-b2e27a45=""
+        >
+          default 0.16 · 0–1
         </span>
       </label>
       
@@ -4186,7 +4532,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         class="glass-demo glass-demo--light"
         data-v-8bf7e573=""
         data-v-b2e27a45=""
-        style="--td-tab-bar-glass-bg-color: rgba(255, 255, 255, 0.42); --td-tab-bar-glass-border-color: rgba(255, 255, 255, 0.62); --td-tab-bar-glass-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08); --demo-tab-bar-height: 64px; --demo-tab-bar-radius: 32px; --demo-tab-bar-item-height: 56px; --demo-tab-bar-item-radius: 28px; --demo-tab-bar-frame-height: 82px; --demo-secondary-bottom: 78px;"
+        style="--td-tab-bar-glass-bg-color: rgba(255, 255, 255, 0.42); --td-tab-bar-glass-border-color: rgba(255, 255, 255, 0.62); --td-tab-bar-glass-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08); --td-tab-bar-selected-bg-color: hsl(216 100% 50%); --td-tab-bar-selected-bg-opacity: 16%; --demo-tab-bar-height: 64px; --demo-tab-bar-radius: 32px; --demo-tab-bar-item-height: 56px; --demo-tab-bar-item-radius: 28px; --demo-tab-bar-frame-height: 82px; --demo-secondary-bottom: 78px;"
       >
         <header
           class="glass-demo__toolbar"
@@ -4628,7 +4974,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               <strong
                 data-v-b2e27a45=""
               >
-                Normal baseline
+                Normal regression baseline
               </strong>
               <span
                 data-v-b2e27a45=""
@@ -4858,7 +5204,252 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               <strong
                 data-v-b2e27a45=""
               >
-                glass material
+                CSS fallback
+              </strong>
+              <span
+                data-v-b2e27a45=""
+              >
+                390 px
+              </span>
+            </div>
+            <div
+              class="glass-demo__device glass-demo__device--grid"
+              data-testid="preview-fallback"
+              data-v-b2e27a45=""
+              style="width: 390px; --demo-image: url(https://tdesign.gtimg.com/demo/demo-image-1.png);"
+            >
+              <div
+                aria-hidden="true"
+                class="glass-demo__landmarks"
+                data-v-b2e27a45=""
+              >
+                
+                <span
+                  data-v-b2e27a45=""
+                >
+                  1
+                </span>
+                <span
+                  data-v-b2e27a45=""
+                >
+                  2
+                </span>
+                <span
+                  data-v-b2e27a45=""
+                >
+                  3
+                </span>
+                <span
+                  data-v-b2e27a45=""
+                >
+                  4
+                </span>
+                <span
+                  data-v-b2e27a45=""
+                >
+                  5
+                </span>
+                <span
+                  data-v-b2e27a45=""
+                >
+                  6
+                </span>
+                
+              </div>
+              <div
+                class="glass-demo__bar-frame"
+                data-v-b2e27a45=""
+              >
+                <div
+                  class="t-tab-bar t-tab-bar--bordered t-tab-bar--glass t-tab-bar--round glass-demo__fallback-bar"
+                  data-v-b2e27a45=""
+                  role="tablist"
+                  style="z-index: 1;"
+                >
+                  
+                  <span
+                    aria-hidden="true"
+                    class="t-tab-bar__glass-refraction"
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="t-tab-bar__glass-base"
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="t-tab-bar__glass-sheen"
+                  />
+                  <!---->
+                  
+                  
+                  
+                  <div
+                    class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+                    data-v-b2e27a45=""
+                  >
+                    <div
+                      aria-expanded="false"
+                      aria-selected="true"
+                      class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+                      role="tab"
+                    >
+                      <div
+                        class="t-tab-bar-item__icon"
+                        style="height: 20px;"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-home"
+                          data-v-b2e27a45=""
+                          style="font-size: 20px;"
+                        >
+                          <use
+                            href="#t-icon-home"
+                          />
+                        </svg>
+                        
+                      </div>
+                      <div
+                        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                      >
+                        <!---->
+                        
+                        Home 
+                        
+                      </div>
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+                    data-v-b2e27a45=""
+                  >
+                    <div
+                      aria-expanded="false"
+                      aria-selected="false"
+                      class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+                      role="tab"
+                    >
+                      <div
+                        class="t-tab-bar-item__icon"
+                        style="height: 20px;"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-search"
+                          data-v-b2e27a45=""
+                          style="font-size: 20px;"
+                        >
+                          <use
+                            href="#t-icon-search"
+                          />
+                        </svg>
+                        
+                      </div>
+                      <div
+                        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                      >
+                        <!---->
+                        
+                        Discover 
+                        
+                      </div>
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+                    data-v-b2e27a45=""
+                  >
+                    <div
+                      aria-expanded="false"
+                      aria-selected="false"
+                      class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+                      role="tab"
+                    >
+                      <div
+                        class="t-tab-bar-item__icon"
+                        style="height: 20px;"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-folder"
+                          data-v-b2e27a45=""
+                          style="font-size: 20px;"
+                        >
+                          <use
+                            href="#t-icon-folder"
+                          />
+                        </svg>
+                        
+                      </div>
+                      <div
+                        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                      >
+                        <!---->
+                        
+                        Library 
+                        
+                      </div>
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--round"
+                    data-v-b2e27a45=""
+                  >
+                    <div
+                      aria-expanded="false"
+                      aria-selected="false"
+                      class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+                      role="tab"
+                    >
+                      <div
+                        class="t-tab-bar-item__icon"
+                        style="height: 20px;"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-user"
+                          data-v-b2e27a45=""
+                          style="font-size: 20px;"
+                        >
+                          <use
+                            href="#t-icon-user"
+                          />
+                        </svg>
+                        
+                      </div>
+                      <div
+                        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+                      >
+                        <!---->
+                        
+                        Profile 
+                        
+                      </div>
+                    </div>
+                    <!---->
+                  </div>
+                  
+                  
+                </div>
+                <!--v-if-->
+              </div>
+            </div>
+          </article>
+          <article
+            class="glass-demo__preview"
+            data-v-b2e27a45=""
+          >
+            <div
+              class="glass-demo__preview-title"
+              data-v-b2e27a45=""
+            >
+              <strong
+                data-v-b2e27a45=""
+              >
+                Liquid Glass enhancement
               </strong>
               <span
                 data-v-b2e27a45=""
@@ -5327,6 +5918,107 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                 data-v-b2e27a45=""
               >
                 default 64 · 52–88
+              </span>
+            </label>
+            
+          </div>
+          <h4
+            class="glass-demo__section-title"
+            data-v-b2e27a45=""
+          >
+            Selection calibration / 选中态校准
+          </h4>
+          <div
+            class="glass-demo__sliders"
+            data-v-b2e27a45=""
+          >
+            
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__parameter-title"
+                data-v-b2e27a45=""
+              >
+                <span
+                  data-v-b2e27a45=""
+                >
+                  Selected background hue / 选中态色相 
+                  <small
+                    data-v-b2e27a45=""
+                  >
+                    组件主题参数
+                  </small>
+                </span>
+                <output
+                  data-v-b2e27a45=""
+                >
+                  216deg
+                </output>
+              </span>
+              <span
+                class="glass-demo__parameter-description"
+                data-v-b2e27a45=""
+              >
+                调整选中态胶囊的基础色相；normal 与 glass 使用同一颜色参数。
+              </span>
+              <input
+                data-testid="parameter-selected-background-hue"
+                data-v-b2e27a45=""
+                max="360"
+                min="0"
+                step="1"
+                type="range"
+              />
+              <span
+                class="glass-demo__parameter-meta"
+                data-v-b2e27a45=""
+              >
+                default 216 · 0–360
+              </span>
+            </label>
+            <label
+              data-v-b2e27a45=""
+            >
+              <span
+                class="glass-demo__parameter-title"
+                data-v-b2e27a45=""
+              >
+                <span
+                  data-v-b2e27a45=""
+                >
+                  Selected background opacity / 选中态透明度 
+                  <small
+                    data-v-b2e27a45=""
+                  >
+                    组件主题参数
+                  </small>
+                </span>
+                <output
+                  data-v-b2e27a45=""
+                >
+                  0.16
+                </output>
+              </span>
+              <span
+                class="glass-demo__parameter-description"
+                data-v-b2e27a45=""
+              >
+                调整选中态胶囊颜色的混合比例；0 为完全透明，1 为完全不透明。
+              </span>
+              <input
+                data-testid="parameter-selected-background-opacity"
+                data-v-b2e27a45=""
+                max="1"
+                min="0"
+                step="0.01"
+                type="range"
+              />
+              <span
+                class="glass-demo__parameter-meta"
+                data-v-b2e27a45=""
+              >
+                default 0.16 · 0–1
               </span>
             </label>
             

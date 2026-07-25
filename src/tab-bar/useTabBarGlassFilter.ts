@@ -48,6 +48,7 @@ export interface TabBarGlassBuildStats {
 export interface TabBarGlassDevContext {
   tuning: ComputedRef<TabBarGlassRuntimeTuning>;
   onRebuild?: (stats: TabBarGlassBuildStats) => void;
+  shouldEnhance?: (element: HTMLElement) => boolean;
 }
 
 export const tabBarGlassDevContextKey: InjectionKey<TabBarGlassDevContext> = Symbol('tab-bar-glass-dev-context');
@@ -59,8 +60,18 @@ const createFilterId = () => {
   return `t-tab-bar-glass-${filterSequence}`;
 };
 
+const isChromiumEngine = () => {
+  const browserNavigator = navigator as Navigator & {
+    userAgentData?: { brands?: Array<{ brand: string }> };
+  };
+  const brands = browserNavigator.userAgentData?.brands;
+  if (brands?.some(({ brand }) => brand === 'Chromium')) return true;
+  return /\b(?:Chromium|Chrome|Edg|OPR)\/\d/.test(browserNavigator.userAgent);
+};
+
 const canEnhance = () => {
   if (typeof window === 'undefined' || typeof document === 'undefined') return false;
+  if (!isChromiumEngine()) return false;
   if (typeof ResizeObserver === 'undefined') return false;
   if (typeof requestAnimationFrame !== 'function' || typeof cancelAnimationFrame !== 'function') return false;
   if (typeof ImageData === 'undefined') return false;
@@ -184,7 +195,13 @@ export function useTabBarGlassFilter(options: TabBarGlassFilterOptions): Shallow
 
   const start = () => {
     const element = options.root.value;
-    if (!mounted || !options.enabled.value || !element || !canEnhance()) {
+    if (
+      !mounted ||
+      !options.enabled.value ||
+      !element ||
+      options.devContext?.shouldEnhance?.(element) === false ||
+      !canEnhance()
+    ) {
       stop();
       return;
     }

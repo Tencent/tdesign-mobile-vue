@@ -7,6 +7,7 @@ import { tabBarGlassDevContextKey } from '../useTabBarGlassFilter';
 
 interface RuntimeOptions {
   canvasContextFails?: boolean;
+  chromium?: boolean;
   includeResizeObserver?: boolean;
   toDataURLFails?: boolean;
 }
@@ -15,7 +16,7 @@ type AnimationFrameCallback = (timestamp: number) => void;
 type ObserverCallback = (entries: unknown[], observer: unknown) => void;
 
 function installGlassRuntime(options: RuntimeOptions = {}) {
-  const { canvasContextFails = false, includeResizeObserver = true, toDataURLFails = false } = options;
+  const { canvasContextFails = false, chromium = true, includeResizeObserver = true, toDataURLFails = false } = options;
   const frames = new Map<number, AnimationFrameCallback>();
   const observers: MockResizeObserver[] = [];
   let frameId = 0;
@@ -63,6 +64,11 @@ function installGlassRuntime(options: RuntimeOptions = {}) {
   vi.stubGlobal('cancelAnimationFrame', cancelAnimationFrame);
   vi.stubGlobal('ImageData', MockImageData);
   vi.stubGlobal('CSS', { supports: vi.fn(() => true) });
+  vi.spyOn(window.navigator, 'userAgent', 'get').mockReturnValue(
+    chromium
+      ? 'Mozilla/5.0 AppleWebKit/537.36 Chrome/152.0.0.0 Safari/537.36'
+      : 'Mozilla/5.0 AppleWebKit/605.1.15 Version/18.0 Safari/605.1.15',
+  );
   if (includeResizeObserver) vi.stubGlobal('ResizeObserver', MockResizeObserver);
   else vi.stubGlobal('ResizeObserver', undefined);
 
@@ -293,6 +299,39 @@ describe('TabBar Liquid Glass runtime', () => {
 
     expect(wrapper.find('.t-tab-bar__glass-base').exists()).toBe(true);
     expect(wrapper.find('filter').exists()).toBe(false);
+  });
+
+  it('can force the CSS fallback without creating enhancement resources', async () => {
+    const runtime = installGlassRuntime();
+    const Host = {
+      setup() {
+        provide(tabBarGlassDevContextKey, {
+          tuning: computed(() => ({})),
+          shouldEnhance: () => false,
+        });
+        return () => h(TabBar, { effect: 'glass', fixed: false });
+      },
+    };
+    const wrapper = mount(Host);
+    await nextTick();
+
+    expect(wrapper.find('.t-tab-bar__glass-base').exists()).toBe(true);
+    expect(wrapper.find('filter').exists()).toBe(false);
+    expect(runtime.requestAnimationFrame).not.toHaveBeenCalled();
+    expect(runtime.getContext).not.toHaveBeenCalled();
+    expect(runtime.toDataURL).not.toHaveBeenCalled();
+  });
+
+  it('uses the CSS fallback without enhancement work on WebKit', async () => {
+    const runtime = installGlassRuntime({ chromium: false });
+    const wrapper = mount(TabBar, { props: { effect: 'glass', fixed: false } });
+    await nextTick();
+
+    expect(wrapper.find('.t-tab-bar__glass-base').exists()).toBe(true);
+    expect(wrapper.find('filter').exists()).toBe(false);
+    expect(runtime.requestAnimationFrame).not.toHaveBeenCalled();
+    expect(runtime.getContext).not.toHaveBeenCalled();
+    expect(runtime.toDataURL).not.toHaveBeenCalled();
   });
 
   it('does not add a global resize listener without ResizeObserver', async () => {
