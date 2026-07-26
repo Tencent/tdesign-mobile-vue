@@ -51,7 +51,7 @@ const demoRouteGenerator = (compName, demos, title) => {
 // 组件需要多页面展示时，需要多个路由
 demoRouteGenerator('side-bar', ['base', 'switch', 'with-icon', 'custom'], 'SideBar');
 demoRouteGenerator('indexes', ['base', 'custom'], 'Indexes');
-demoRouteGenerator('tab-bar', ['liquid-glass'], 'TabBar Liquid Glass');
+demoRouteGenerator('tab-bar', ['liquid-glass', 'liquid-glass-inspector'], 'TabBar Liquid Glass');
 
 const routes: Array<RouteRecordRaw> = [
   {

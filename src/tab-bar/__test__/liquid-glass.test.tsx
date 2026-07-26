@@ -236,7 +236,15 @@ describe('TabBar Liquid Glass runtime', () => {
     runtime.runFrames();
     await nextTick();
     expect(onRebuild).toHaveBeenCalledTimes(2);
-    expect(onRebuild.mock.lastCall?.[0]).toMatchObject({ textureWidth: 780, textureHeight: 128 });
+    expect(onRebuild.mock.lastCall?.[0]).toMatchObject({
+      textureWidth: 780,
+      textureHeight: 128,
+      displacementUrl: expect.stringContaining('data:image/png;base64,'),
+      specularUrl: expect.stringContaining('data:image/png;base64,'),
+      specularMaxAlpha: expect.any(Number),
+      specularMeanAlpha: expect.any(Number),
+      specularCoverage: expect.any(Number),
+    });
     wrapper.unmount();
   });
 

@@ -43,6 +43,15 @@ export interface TabBarGlassBuildStats {
   bezelWidth: number;
   generationDuration: number;
   totalDuration: number;
+  displacementScale: number;
+  blur: number;
+  specularOpacity: number;
+  specularSaturation: number;
+  displacementUrl: string;
+  specularUrl: string;
+  specularMaxAlpha: number;
+  specularMeanAlpha: number;
+  specularCoverage: number;
 }
 
 export interface TabBarGlassDevContext {
@@ -169,6 +178,16 @@ export function useTabBarGlassFilter(options: TabBarGlassFilterOptions): Shallow
       }
 
       if (!filterId) filterId = createFilterId();
+      let specularAlphaTotal = 0;
+      let specularMaxAlpha = 0;
+      let specularVisiblePixels = 0;
+      for (let index = 3; index < textures.specular.length; index += 4) {
+        const alpha = textures.specular[index];
+        specularAlphaTotal += alpha;
+        specularMaxAlpha = Math.max(specularMaxAlpha, alpha);
+        if (alpha > 0) specularVisiblePixels += 1;
+      }
+      const texturePixels = textures.width * textures.height;
       filterState.value = {
         filterId,
         width,
@@ -190,6 +209,15 @@ export function useTabBarGlassFilter(options: TabBarGlassFilterOptions): Shallow
         bezelWidth: textures.bezelWidth,
         generationDuration,
         totalDuration: performance.now() - startedAt,
+        displacementScale: textures.displacementScale,
+        blur: textures.blur,
+        specularOpacity: textures.specularOpacity,
+        specularSaturation: textures.specularSaturation,
+        displacementUrl,
+        specularUrl,
+        specularMaxAlpha,
+        specularMeanAlpha: texturePixels ? specularAlphaTotal / texturePixels : 0,
+        specularCoverage: texturePixels ? specularVisiblePixels / texturePixels : 0,
       });
     } catch {
       clearEnhancement();

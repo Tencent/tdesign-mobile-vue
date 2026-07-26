@@ -69,11 +69,34 @@ export default defineComponent({
     const updateItemCount = (vNodes?: VNode[]) => {
       if (!vNodes || !Array.isArray(vNodes)) {
         itemCount.value = 0;
-        return;
+        return [];
       }
 
       const childSlots = useChildSlots('TTabBarItem', vNodes);
       itemCount.value = childSlots.length;
+      return childSlots;
+    };
+
+    const renderSelectionIndicator = (items: VNode[]) => {
+      if (props.effect !== 'glass' || props.shape !== 'round' || !items.length) return null;
+
+      const selectedValue = Array.isArray(activeValue.value) ? activeValue.value[0] : activeValue.value;
+      const selectedIndex = items.findIndex((item, index) => {
+        const itemValue = typeof item.props?.value === 'undefined' ? index : item.props.value;
+        return itemValue === selectedValue;
+      });
+      if (selectedIndex < 0) return null;
+
+      const indicatorStyle: CSSProperties = {
+        width: `${100 / items.length}%`,
+        transform: `translate3d(${selectedIndex * 100}%, 0, 0)`,
+      };
+
+      return (
+        <span class={`${tabBarClass.value}__selection-track`} aria-hidden="true">
+          <span class={`${tabBarClass.value}__selection-indicator`} style={indicatorStyle} />
+        </span>
+      );
     };
 
     const renderGlassLayers = () => {
@@ -156,12 +179,13 @@ export default defineComponent({
 
     return () => {
       const vNodes = context.slots.default ? context.slots.default() : [];
-      updateItemCount(vNodes);
+      const items = updateItemCount(vNodes);
 
       const renderTabBar =
         props.effect === 'glass' ? (
           <div ref={root} role="tablist" class={rootClass.value} style={styles.value}>
             {renderGlassLayers()}
+            {renderSelectionIndicator(items)}
             {renderTNodeJSX('default')}
           </div>
         ) : (

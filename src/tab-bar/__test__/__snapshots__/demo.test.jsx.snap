@@ -908,7 +908,7 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
 <section
   class="glass-demo glass-demo--light"
   data-v-b2e27a45=""
-  style="--td-tab-bar-glass-bg-color: rgba(255, 255, 255, 0.42); --td-tab-bar-glass-border-color: rgba(255, 255, 255, 0.62); --td-tab-bar-glass-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08); --td-tab-bar-glass-fallback-blur: 12px; --td-tab-bar-selected-bg-color: hsl(216 100% 50%); --td-tab-bar-selected-bg-opacity: 16%; --demo-tab-bar-height: 64px; --demo-tab-bar-radius: 32px; --demo-tab-bar-item-height: 56px; --demo-tab-bar-item-radius: 28px; --demo-tab-bar-frame-height: 82px; --demo-secondary-bottom: 78px;"
+  style="--td-tab-bar-glass-bg-color: rgba(255, 255, 255, 0.42); --td-tab-bar-glass-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08); --td-tab-bar-glass-fallback-blur: 12px; --td-tab-bar-selected-bg-color: hsl(216 100% 50%); --td-tab-bar-selected-bg-opacity: 16%; --demo-tab-bar-height: 64px; --demo-tab-bar-radius: 32px; --demo-tab-bar-item-height: 56px; --demo-tab-bar-item-radius: 28px; --demo-tab-bar-frame-height: 82px; --demo-secondary-bottom: 78px;"
 >
   <header
     class="glass-demo__toolbar"
@@ -1709,6 +1709,15 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
             />
             <!---->
             
+            <span
+              aria-hidden="true"
+              class="t-tab-bar__selection-track"
+            >
+              <span
+                class="t-tab-bar__selection-indicator"
+                style="width: 25%; transform: translate3d(0%, 0, 0);"
+              />
+            </span>
             
             
             <div
@@ -1980,6 +1989,15 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
             />
             <!---->
             
+            <span
+              aria-hidden="true"
+              class="t-tab-bar__selection-track"
+            >
+              <span
+                class="t-tab-bar__selection-indicator"
+                style="width: 25%; transform: translate3d(0%, 0, 0);"
+              />
+            </span>
             
             
             <div
@@ -3017,7 +3035,7 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
           <output
             data-v-b2e27a45=""
           >
-            225deg
+            270deg
           </output>
         </span>
         <span
@@ -3038,7 +3056,7 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
           class="glass-demo__parameter-meta"
           data-v-b2e27a45=""
         >
-          default 225 · 0–360
+          default 270 · 0–360
         </span>
       </label>
       <label
@@ -3083,50 +3101,6 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
           data-v-b2e27a45=""
         >
           default 0.42 · 0.35–0.95
-        </span>
-      </label>
-      <label
-        data-v-b2e27a45=""
-      >
-        <span
-          class="glass-demo__parameter-title"
-          data-v-b2e27a45=""
-        >
-          <span
-            data-v-b2e27a45=""
-          >
-            Border opacity / 边框不透明度 
-            <small
-              data-v-b2e27a45=""
-            >
-              材质外观
-            </small>
-          </span>
-          <output
-            data-v-b2e27a45=""
-          >
-            0.62
-          </output>
-        </span>
-        <span
-          class="glass-demo__parameter-description"
-          data-v-b2e27a45=""
-        >
-          控制材质外轮廓的透明度；影响边缘识别和对比度，不改变折射。
-        </span>
-        <input
-          data-testid="parameter-border-alpha"
-          data-v-b2e27a45=""
-          max="1"
-          min="0"
-          step="0.01"
-          type="range"
-        />
-        <span
-          class="glass-demo__parameter-meta"
-          data-v-b2e27a45=""
-        >
-          default 0.62 · 0–1
         </span>
       </label>
       <label
@@ -3239,31 +3213,6 @@ exports[`TabBar > TabBar liquidGlassVue demo works fine 1`] = `
         </small>
         <input
           data-testid="material-background-color"
-          data-v-b2e27a45=""
-          type="color"
-        />
-      </label>
-      <label
-        data-v-b2e27a45=""
-      >
-        <span
-          data-v-b2e27a45=""
-        >
-          Border color / 边框颜色 
-          <small
-            data-v-b2e27a45=""
-          >
-            材质外观
-          </small>
-        </span>
-        <small
-          class="glass-demo__control-description"
-          data-v-b2e27a45=""
-        >
-          设置材质外轮廓颜色；影响边缘辨识度，不改变位移。
-        </small>
-        <input
-          data-testid="material-border-color"
           data-v-b2e27a45=""
           type="color"
         />
@@ -4811,7 +4760,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         class="glass-demo glass-demo--light"
         data-v-8bf7e573=""
         data-v-b2e27a45=""
-        style="--td-tab-bar-glass-bg-color: rgba(255, 255, 255, 0.42); --td-tab-bar-glass-border-color: rgba(255, 255, 255, 0.62); --td-tab-bar-glass-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08); --td-tab-bar-glass-fallback-blur: 12px; --td-tab-bar-selected-bg-color: hsl(216 100% 50%); --td-tab-bar-selected-bg-opacity: 16%; --demo-tab-bar-height: 64px; --demo-tab-bar-radius: 32px; --demo-tab-bar-item-height: 56px; --demo-tab-bar-item-radius: 28px; --demo-tab-bar-frame-height: 82px; --demo-secondary-bottom: 78px;"
+        style="--td-tab-bar-glass-bg-color: rgba(255, 255, 255, 0.42); --td-tab-bar-glass-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08); --td-tab-bar-glass-fallback-blur: 12px; --td-tab-bar-selected-bg-color: hsl(216 100% 50%); --td-tab-bar-selected-bg-opacity: 16%; --demo-tab-bar-height: 64px; --demo-tab-bar-radius: 32px; --demo-tab-bar-item-height: 56px; --demo-tab-bar-item-radius: 28px; --demo-tab-bar-frame-height: 82px; --demo-secondary-bottom: 78px;"
       >
         <header
           class="glass-demo__toolbar"
@@ -5612,6 +5561,15 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                   />
                   <!---->
                   
+                  <span
+                    aria-hidden="true"
+                    class="t-tab-bar__selection-track"
+                  >
+                    <span
+                      class="t-tab-bar__selection-indicator"
+                      style="width: 25%; transform: translate3d(0%, 0, 0);"
+                    />
+                  </span>
                   
                   
                   <div
@@ -5883,6 +5841,15 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                   />
                   <!---->
                   
+                  <span
+                    aria-hidden="true"
+                    class="t-tab-bar__selection-track"
+                  >
+                    <span
+                      class="t-tab-bar__selection-indicator"
+                      style="width: 25%; transform: translate3d(0%, 0, 0);"
+                    />
+                  </span>
                   
                   
                   <div
@@ -6920,7 +6887,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                 <output
                   data-v-b2e27a45=""
                 >
-                  225deg
+                  270deg
                 </output>
               </span>
               <span
@@ -6941,7 +6908,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                 class="glass-demo__parameter-meta"
                 data-v-b2e27a45=""
               >
-                default 225 · 0–360
+                default 270 · 0–360
               </span>
             </label>
             <label
@@ -6986,50 +6953,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                 data-v-b2e27a45=""
               >
                 default 0.42 · 0.35–0.95
-              </span>
-            </label>
-            <label
-              data-v-b2e27a45=""
-            >
-              <span
-                class="glass-demo__parameter-title"
-                data-v-b2e27a45=""
-              >
-                <span
-                  data-v-b2e27a45=""
-                >
-                  Border opacity / 边框不透明度 
-                  <small
-                    data-v-b2e27a45=""
-                  >
-                    材质外观
-                  </small>
-                </span>
-                <output
-                  data-v-b2e27a45=""
-                >
-                  0.62
-                </output>
-              </span>
-              <span
-                class="glass-demo__parameter-description"
-                data-v-b2e27a45=""
-              >
-                控制材质外轮廓的透明度；影响边缘识别和对比度，不改变折射。
-              </span>
-              <input
-                data-testid="parameter-border-alpha"
-                data-v-b2e27a45=""
-                max="1"
-                min="0"
-                step="0.01"
-                type="range"
-              />
-              <span
-                class="glass-demo__parameter-meta"
-                data-v-b2e27a45=""
-              >
-                default 0.62 · 0–1
               </span>
             </label>
             <label
@@ -7142,31 +7065,6 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               </small>
               <input
                 data-testid="material-background-color"
-                data-v-b2e27a45=""
-                type="color"
-              />
-            </label>
-            <label
-              data-v-b2e27a45=""
-            >
-              <span
-                data-v-b2e27a45=""
-              >
-                Border color / 边框颜色 
-                <small
-                  data-v-b2e27a45=""
-                >
-                  材质外观
-                </small>
-              </span>
-              <small
-                class="glass-demo__control-description"
-                data-v-b2e27a45=""
-              >
-                设置材质外轮廓颜色；影响边缘辨识度，不改变位移。
-              </small>
-              <input
-                data-testid="material-border-color"
                 data-v-b2e27a45=""
                 type="color"
               />

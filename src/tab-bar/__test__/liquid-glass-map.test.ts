@@ -105,7 +105,7 @@ describe('createTabBarGlassTextures', () => {
   });
 
   it('keeps specular alpha in the bezel and responds to its direction', () => {
-    const northWest = createFixture();
+    const topLight = createFixture();
     const southEast = createTabBarGlassTextures({
       width: 100,
       height: 40,
@@ -114,17 +114,24 @@ describe('createTabBarGlassTextures', () => {
       tuning: { lightAngle: 45 },
     });
 
-    expect(getPixel(northWest.specular, northWest.width, 50, 20)[3]).toBe(0);
-    expect(southEast?.specular).not.toEqual(northWest.specular);
+    expect(getPixel(topLight.specular, topLight.width, 50, 20)[3]).toBe(0);
+    expect(getPixel(topLight.specular, topLight.width, 25, 3)[3]).toBe(
+      getPixel(topLight.specular, topLight.width, 74, 3)[3],
+    );
+    expect(getPixel(topLight.specular, topLight.width, 50, 2)[3]).toBeGreaterThan(
+      getPixel(topLight.specular, topLight.width, 50, 37)[3],
+    );
+    expect(southEast?.specular).not.toEqual(topLight.specular);
   });
 
   it('fades specular continuously into the neutral center', () => {
     const textures = createFixture();
-    const innerEdgeAlpha = [14, 15, 16, 17, 18].map((x) => getPixel(textures.specular, textures.width, x, 20)[3]);
+    const innerEdgeAlpha = [10, 12, 14, 16, 18].map((y) => getPixel(textures.specular, textures.width, 50, y)[3]);
 
     expect(innerEdgeAlpha.slice(1).every((alpha, index) => alpha <= innerEdgeAlpha[index])).toBe(true);
     expect(innerEdgeAlpha.at(-1)).toBe(0);
-    expect(Math.abs(innerEdgeAlpha[2] - innerEdgeAlpha[3])).toBeLessThanOrEqual(2);
+    expect(innerEdgeAlpha.filter((alpha) => alpha > 0).length).toBeGreaterThanOrEqual(3);
+    expect(Math.max(...innerEdgeAlpha.slice(1).map((alpha, index) => innerEdgeAlpha[index] - alpha))).toBeLessThan(50);
   });
 
   it('returns null for zero-sized textures and respects DPR and pixel limits', () => {

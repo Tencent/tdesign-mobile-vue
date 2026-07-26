@@ -1,8 +1,8 @@
 import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
+import { ref } from 'vue';
 import TabBar from '../tab-bar';
 import TabBarItem from '../tab-bar-item';
-import { ref } from 'vue';
 
 const list = [
   {
@@ -62,6 +62,41 @@ describe('TabBar', () => {
   });
 
   describe('props', () => {
+    it('moves one shared glass selection capsule between round items', async () => {
+      const value = ref('1');
+      const wrapper = mount({
+        render: () => (
+          <TabBar v-model={value.value} effect="glass" shape="round" fixed={false}>
+            {list.map((item) => (
+              <TabBarItem {...item}>{item.text}</TabBarItem>
+            ))}
+          </TabBar>
+        ),
+      });
+
+      const indicator = wrapper.get('.t-tab-bar__selection-indicator');
+      expect(wrapper.findAll('.t-tab-bar__selection-indicator')).toHaveLength(1);
+      expect(indicator.element.style.width).toBe(`${100 / list.length}%`);
+      expect(indicator.element.style.transform).toBe('translate3d(0%, 0, 0)');
+
+      await wrapper.get('[name="label_2"] > .t-tab-bar-item__content').trigger('click');
+      expect(indicator.element.style.transform).toBe('translate3d(100%, 0, 0)');
+    });
+
+    it('does not render the shared capsule outside glass round mode', () => {
+      const wrapper = mount({
+        render: () => (
+          <TabBar value="1" effect="glass" shape="normal" fixed={false}>
+            {list.map((item) => (
+              <TabBarItem {...item}>{item.text}</TabBarItem>
+            ))}
+          </TabBar>
+        ),
+      });
+
+      expect(wrapper.find('.t-tab-bar__selection-track').exists()).toBe(false);
+    });
+
     it('bordered', async () => {
       const wrapper = mount(TabBar, {
         shallow: true,

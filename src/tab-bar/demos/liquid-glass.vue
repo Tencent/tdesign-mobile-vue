@@ -347,11 +347,6 @@
           <input v-model="backgroundColor" data-testid="material-background-color" type="color" />
         </label>
         <label>
-          <span>Border color / 边框颜色 <small>材质外观</small></span>
-          <small class="glass-demo__control-description">设置材质外轮廓颜色；影响边缘辨识度，不改变位移。</small>
-          <input v-model="borderColor" data-testid="material-border-color" type="color" />
-        </label>
-        <label>
           <span>Shadow / 阴影预设 <small>材质外观</small></span>
           <small class="glass-demo__control-description">切换悬浮、紧凑或无阴影；只影响层级感和外部投影。</small>
           <select v-model="shadowPreset" data-testid="material-shadow">
@@ -427,10 +422,8 @@ const specularSaturation = ref(DEFAULT_TAB_BAR_GLASS_TUNING.specularSaturation);
 const lightAngle = ref(DEFAULT_TAB_BAR_GLASS_TUNING.lightAngle);
 const textureDpr = ref(1);
 const backgroundAlpha = ref(0.42);
-const borderAlpha = ref(0.62);
 const blur = ref(DEFAULT_TAB_BAR_GLASS_TUNING.blur);
 const backgroundColor = ref('#ffffff');
-const borderColor = ref('#ffffff');
 const shadowPreset = ref<'floating' | 'compact' | 'none'>('floating');
 const selectedBackgroundHue = ref(216);
 const selectedBackgroundOpacity = ref(0.16);
@@ -729,19 +722,6 @@ const opticalParameters = [
     scope: 'public',
   },
   {
-    key: 'border-alpha',
-    label: 'Border opacity',
-    name: '边框不透明度',
-    description: '控制材质外轮廓的透明度；影响边缘识别和对比度，不改变折射。',
-    value: borderAlpha,
-    default: 0.62,
-    min: 0,
-    max: 1,
-    step: 0.01,
-    unit: '',
-    scope: 'public',
-  },
-  {
     key: 'texture-dpr',
     label: 'Texture DPR',
     name: '纹理像素倍率',
@@ -871,7 +851,6 @@ const backgroundPlaneStyle = computed<CSSProperties>(() => ({
 
 const demoVariables = computed<CSSProperties>(() => ({
   '--td-tab-bar-glass-bg-color': toRgba(backgroundColor.value, backgroundAlpha.value),
-  '--td-tab-bar-glass-border-color': toRgba(borderColor.value, borderAlpha.value),
   '--td-tab-bar-glass-shadow': shadowValues[shadowPreset.value],
   '--td-tab-bar-glass-fallback-blur': `${fallbackBlur.value}px`,
   '--td-tab-bar-selected-bg-color': `hsl(${selectedBackgroundHue.value} 100% 50%)`,
@@ -903,9 +882,7 @@ const resetParameters = () => {
   previewWidth.value = 390;
   tabBarHeight.value = 64;
   backgroundAlpha.value = 0.42;
-  borderAlpha.value = theme.value === 'dark' ? 0.3 : 0.62;
   backgroundColor.value = theme.value === 'dark' ? '#242424' : '#ffffff';
-  borderColor.value = '#ffffff';
   shadowPreset.value = 'floating';
   selectedBackgroundHue.value = 216;
   selectedBackgroundOpacity.value = 0.16;
@@ -920,7 +897,6 @@ watch(theme, (value) => {
   if (typeof document === 'undefined') return;
   document.documentElement.setAttribute('theme-mode', value);
   backgroundColor.value = value === 'dark' ? '#242424' : '#ffffff';
-  borderAlpha.value = value === 'dark' ? 0.3 : 0.62;
 });
 onBeforeUnmount(() => {
   if (typeof document === 'undefined') return;
@@ -1301,7 +1277,7 @@ onBeforeUnmount(() => {
 
 .glass-demo__material-controls {
   display: grid;
-  grid-template-columns: repeat(3, minmax(140px, 1fr));
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
   gap: 18px;
   margin-top: 20px;
   padding-top: 18px;

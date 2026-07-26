@@ -32,7 +32,7 @@ export const DEFAULT_TAB_BAR_GLASS_TUNING: Readonly<TabBarGlassTuning> = Object.
   blur: 0.4,
   specularOpacity: 0.5,
   specularSaturation: 2,
-  lightAngle: 225,
+  lightAngle: 270,
 });
 
 export interface TabBarGlassTextures {
@@ -146,6 +146,13 @@ function roundedRectangleField(x: number, y: number, width: number, height: numb
   };
 }
 
+function specularBand(edgePosition: number) {
+  const position = clamp(edgePosition, 0, 1);
+  const outerFade = smoothstep(0, 0.16, position);
+  const innerFade = (1 - position) ** 1.15;
+  return outerFade * innerFade;
+}
+
 export function createTabBarGlassTextures(options: TabBarGlassTextureOptions): TabBarGlassTextures | null {
   const cssWidth = Number.isFinite(options.width) ? Math.max(0, options.width) : 0;
   const cssHeight = Number.isFinite(options.height) ? Math.max(0, options.height) : 0;
@@ -188,12 +195,11 @@ export function createTabBarGlassTextures(options: TabBarGlassTextureOptions): T
       displacement[offset + 1] = Math.round(CHANNEL_NEUTRAL - field.normalY * refraction * CHANNEL_RANGE);
 
       const light = Math.max(0, field.normalX * lightX + field.normalY * lightY);
-      const edge = Math.sqrt(Math.max(0, 1 - (1 - edgePosition) ** 2));
-      const intensity = clamp(light * edge * innerFade, 0, 1);
+      const intensity = clamp(light * specularBand(edgePosition), 0, 1);
       specular[offset] = 255;
       specular[offset + 1] = 255;
       specular[offset + 2] = 255;
-      specular[offset + 3] = Math.round(255 * intensity * intensity);
+      specular[offset + 3] = Math.round(255 * intensity ** 1.15);
     }
   }
 
