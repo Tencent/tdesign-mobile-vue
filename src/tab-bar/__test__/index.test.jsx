@@ -83,6 +83,28 @@ describe('TabBar', () => {
       expect(indicator.element.style.transform).toBe('translate3d(100%, 0, 0)');
     });
 
+    it.each([2, 3, 4, 5])('keeps the shared capsule aligned with %s items', async (itemCount) => {
+      const value = ref('item-0');
+      const items = Array.from({ length: itemCount }, (_, index) => ({
+        name: `item-${index}`,
+        value: `item-${index}`,
+      }));
+      const wrapper = mount({
+        render: () => (
+          <TabBar v-model={value.value} effect="glass" shape="round" fixed={false}>
+            {items.map((item) => (
+              <TabBarItem {...item}>{item.value}</TabBarItem>
+            ))}
+          </TabBar>
+        ),
+      });
+      const indicator = wrapper.get('.t-tab-bar__selection-indicator');
+
+      expect(indicator.element.style.width).toBe(`${100 / itemCount}%`);
+      await wrapper.get(`[name="item-${itemCount - 1}"] > .t-tab-bar-item__content`).trigger('click');
+      expect(indicator.element.style.transform).toBe(`translate3d(${(itemCount - 1) * 100}%, 0, 0)`);
+    });
+
     it('scales the pressed item and shared capsule until the press ends', async () => {
       const value = ref('1');
       const wrapper = mount({
