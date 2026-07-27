@@ -4,6 +4,7 @@
     <t-upload
       :default-files="files"
       multiple
+      draggable
       :max="10"
       :grid-config="gridConfig"
       :action="action"

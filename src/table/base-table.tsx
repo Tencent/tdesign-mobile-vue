@@ -1,7 +1,6 @@
 import { defineComponent, computed, h, ref, SetupContext, toRefs } from 'vue';
 import { get, isFunction, isString } from 'lodash-es';
 import baseTableProps from './base-table-props';
-import config from '../config';
 import useClassName from './hooks/useClassName';
 import useStyle, { formatCSSUnit } from './hooks/useStyle';
 import useFixed, { getRowFixedStyles, getColumnFixedStyles } from './hooks/useFixed';
@@ -23,10 +22,8 @@ import { TdLoadingProps } from '../loading/type';
 import { useConfig } from '../config-provider/useConfig';
 import { useTNodeJSX } from '../hooks/tnode';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-base-table`,
+  name: 'TBaseTable',
   props: baseTableProps,
   emits: ['cell-click', 'row-click', 'scroll', 'scroll-to-bottom'],
   setup(props, context) {

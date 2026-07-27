@@ -3,7 +3,6 @@ import { isFunction } from 'lodash-es';
 import TPopover, { PopoverProps } from '../popover';
 import TPopup, { PopupProps } from '../popup';
 import TButton, { ButtonProps } from '../button';
-import config from '../config';
 import useVModel from '../hooks/useVModel';
 import { addClass, getWindowScroll, removeClass } from '../shared/dom';
 import setStyle from '../_common/js/utils/setStyle';
@@ -14,10 +13,8 @@ import { GuideCrossProps } from './interface';
 import { SizeEnum } from '../common';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-guide`,
+  name: 'TGuide',
   components: {
     TPopover,
     TButton,

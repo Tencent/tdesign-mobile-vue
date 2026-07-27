@@ -1,6 +1,5 @@
 import { toRefs, provide, defineComponent, computed, Ref, ComputedRef } from 'vue';
 import props from './props';
-import config from '../config';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import useVModel from '../hooks/useVModel';
@@ -14,10 +13,8 @@ export interface CollapseProvide {
   defaultExpandAll: boolean;
 }
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-collapse`,
+  name: 'TCollapse',
   props,
   setup(props, { slots }) {
     const renderTNodeJSX = useTNodeJSX();

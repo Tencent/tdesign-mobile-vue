@@ -1,4 +1,15 @@
-import { ref, shallowRef, Ref, ShallowRef, unref, watch, onMounted, onUnmounted } from 'vue';
+import {
+  ref,
+  shallowRef,
+  Ref,
+  ShallowRef,
+  unref,
+  watch,
+  onMounted,
+  onUnmounted,
+  onActivated,
+  onDeactivated,
+} from 'vue';
 import { useResizeObserver } from './useResizeObserver';
 
 export type ElementOrRef = string | Element | null | undefined;
@@ -120,31 +131,33 @@ export default function useElementRect(
     { immediate: false, onResize: true, onVisibilityChange: false },
   );
 
-  // 监听 element 参数变化
+  // 挂载 / keep-alive 激活时的初始化逻辑
+  // 激活时同步更新 rect，避免等待 ResizeObserver 异步回调导致的闪动
+  const activate = () => {
+    if (!immediate) return;
+    updateElement();
+    if (enableResizeObserver) {
+      startResizeObserver();
+    }
+  };
+
+  // 监听 element 参数变化，更新元素引用与 rect
+  // 观察器随 elementRef 的变化由 useResizeObserver 内部自动重建，无需在此显式启停
   watch(
     () => unref(element),
     () => {
-      stopResizeObserver();
       updateElement();
-      if (enableResizeObserver) {
-        startResizeObserver();
-      }
     },
     { flush: 'post' },
   );
 
-  onMounted(() => {
-    if (immediate) {
-      updateElement();
-      if (enableResizeObserver) {
-        startResizeObserver();
-      }
-    }
-  });
+  onMounted(activate);
+  onActivated(activate);
 
-  onUnmounted(() => {
-    stopResizeObserver();
-  });
+  // keep-alive 场景：缓存期间元素已脱离文档，停止观察避免记录无意义的 0 尺寸
+  onDeactivated(stopResizeObserver);
+
+  onUnmounted(stopResizeObserver);
 
   return {
     element: elementRef,

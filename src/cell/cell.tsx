@@ -1,16 +1,13 @@
 import { computed, defineComponent } from 'vue';
 import { ChevronRightIcon } from 'tdesign-icons-vue-next';
 import { Hover } from '../shared';
-import config from '../config';
 import props from './props';
 import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-cell`,
+  name: 'TCell',
   directives: { Hover },
   props,
   setup(props) {

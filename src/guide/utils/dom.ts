@@ -101,7 +101,8 @@ export function getScrollParent(element: HTMLElement) {
 
   if (style.position === 'fixed') return document.body;
 
-  for (let parent = element; parent.parentElement;) {
+  let parent = element;
+  while (parent.parentElement) {
     parent = parent.parentElement;
     style = window.getComputedStyle(parent);
     if (excludeStaticParent && style.position === 'static') {

@@ -1,15 +1,12 @@
 import { defineComponent, computed, toRefs } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
-import config from '../config';
 import CheckTagProps from './check-tag-props';
 import { usePrefixClass } from '../hooks/useClass';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import useVModel from '../hooks/useVModel';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-check-tag`,
+  name: 'TCheckTag',
   props: CheckTagProps,
   setup(props) {
     const tagClass = usePrefixClass('tag');

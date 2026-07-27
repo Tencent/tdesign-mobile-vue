@@ -1,15 +1,12 @@
 import { computed, defineComponent, h, nextTick, onMounted, ref, toRefs, watch } from 'vue';
 import { isFunction } from 'lodash-es';
-import config from '../config';
 import props from './props';
 import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 import { useResizeObserver } from '../hooks/useResizeObserver';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-segmented`,
+  name: 'TSegmented',
   props,
   emits: ['update:value', 'update:modelValue', 'change'],
   setup(props) {

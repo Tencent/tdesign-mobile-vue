@@ -14,7 +14,6 @@ import {
 } from 'vue';
 import { throttle } from 'lodash-es';
 import { preventDefault } from '../shared/dom';
-import config from '../config';
 import IndexesProps from './props';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
@@ -34,10 +33,8 @@ interface GroupTop {
   totalHeight: number;
 }
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-indexes`,
+  name: 'TIndexes',
   props: IndexesProps,
   emits: ['select', 'change', 'update:current'],
   setup(props) {

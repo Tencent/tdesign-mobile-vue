@@ -1,15 +1,12 @@
 import { defineComponent } from 'vue';
 import TImage from '../image';
 import EmptyProps from './props';
-import config from '../config';
 
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-empty`,
+  name: 'TEmpty',
   props: EmptyProps,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();

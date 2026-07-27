@@ -21,6 +21,7 @@ type HoverBinding = string | HoverBindingObject | undefined;
 interface HoverContext {
   add: () => void;
   remove: () => void;
+  clearTimers: () => void;
   downHandler: (e: Event) => void;
   upHandler: (e: Event) => void;
   cancelHandler: (e: Event) => void;
@@ -68,8 +69,13 @@ const Hover: Directive<HTMLElement, HoverBinding> = {
       remove() {
         if (ctx.current.className) el.classList.remove(ctx.current.className);
       },
+      clearTimers() {
+        ctx.timers.forEach((t) => window.clearTimeout(t));
+        ctx.timers = [];
+      },
       downHandler() {
         if (ctx.current.disabledHover) return;
+        ctx.clearTimers();
         // 按下后预定时添加
         ctx.timers.push(
           window.setTimeout(() => {
@@ -79,6 +85,7 @@ const Hover: Directive<HTMLElement, HoverBinding> = {
       },
       upHandler() {
         if (ctx.current.disabledHover) return;
+        ctx.clearTimers();
         ctx.timers.push(
           window.setTimeout(() => {
             ctx.remove();
@@ -87,6 +94,7 @@ const Hover: Directive<HTMLElement, HoverBinding> = {
       },
       cancelHandler() {
         // 取消（如滚动、移出）立即移除
+        ctx.clearTimers();
         ctx.remove();
       },
     };
@@ -115,6 +123,10 @@ const Hover: Directive<HTMLElement, HoverBinding> = {
     if (!ctx) return;
     const next = resolveBinding(binding);
     const prev = ctx.current;
+    if (next.disabledHover) {
+      ctx.clearTimers();
+      if (prev.className) el.classList.remove(prev.className);
+    }
     // className 变化需要替换
     if (prev.className !== next.className) {
       if (prev.className) el.classList.remove(prev.className);

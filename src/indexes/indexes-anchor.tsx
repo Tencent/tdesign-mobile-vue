@@ -1,13 +1,10 @@
 import { ComponentInternalInstance, defineComponent, getCurrentInstance, inject, onBeforeUnmount } from 'vue';
-import config from '../config';
 import indexesAnchorProps from './indexes-anchor-props';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-indexes-anchor`,
+  name: 'TIndexesAnchor',
   props: indexesAnchorProps,
   setup(props) {
     const readerTNodeJSX = useTNodeJSX();

@@ -1,7 +1,6 @@
 import { SearchIcon as TSearchIcon, CloseCircleFilledIcon as TIconClear } from 'tdesign-icons-vue-next';
 import { ref, toRefs, computed, defineComponent, nextTick, h } from 'vue';
 import { useFocus } from '@vueuse/core';
-import config from '../config';
 import { preventDefault } from '../shared/dom';
 import searchProps from './props';
 import useVModel from '../hooks/useVModel';
@@ -12,12 +11,10 @@ import { TdSearchProps } from './type';
 import { ENTER_REG } from '../_common/js/common';
 import TCell from '../cell/cell';
 
-const { prefix } = config;
-
 type EnterKeyHint = 'search' | 'done' | 'enter' | 'go' | 'next' | 'previous' | 'send';
 
 export default defineComponent({
-  name: `${prefix}-search`,
+  name: 'TSearch',
   props: searchProps,
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();
