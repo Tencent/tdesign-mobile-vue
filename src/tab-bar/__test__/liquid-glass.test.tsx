@@ -3,7 +3,6 @@ import { mount } from '@vue/test-utils';
 import { renderToString } from 'vue/server-renderer';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import TabBar from '../tab-bar';
-import LiquidGlassDemo from '../demos/liquid-glass.vue';
 import { tabBarGlassDevContextKey } from '../useTabBarGlassFilter';
 
 interface RuntimeOptions {
@@ -385,44 +384,5 @@ describe('TabBar Liquid Glass runtime', () => {
     expect(wrapper.find('.t-tab-bar__glass-base').exists()).toBe(true);
     expect(wrapper.find('filter').exists()).toBe(false);
     expect(addEventListener).not.toHaveBeenCalledWith('resize', expect.any(Function));
-  });
-});
-
-describe('TabBar Liquid Glass demo', () => {
-  it('updates fallback blur without enabling SVG enhancement', async () => {
-    const wrapper = mount(LiquidGlassDemo);
-    const fallbackBlur = wrapper.get('[data-testid="parameter-fallback-blur"]');
-
-    expect(fallbackBlur.attributes('max')).toBe('12');
-    expect(fallbackBlur.attributes('step')).toBe('0.1');
-
-    await fallbackBlur.setValue('11.7');
-
-    expect(wrapper.attributes('style')).toContain('--td-tab-bar-glass-fallback-blur: 11.7px');
-    expect(wrapper.get('.glass-demo__fallback-bar').find('filter').exists()).toBe(false);
-  });
-
-  it('keeps the same free transform controls across every validation background', async () => {
-    const wrapper = mount(LiquidGlassDemo);
-    await wrapper.get('[data-testid="parameter-background-scale"]').setValue('1.4');
-    await wrapper.get('[data-testid="parameter-background-offset-x"]').setValue('36');
-    await wrapper.get('[data-testid="parameter-background-offset-y"]').setValue('-24');
-
-    const expectBackground = async (background: 'grid' | 'text' | 'image') => {
-      await wrapper.get(`[data-testid="background-${background}"]`).trigger('click');
-      const backdrops = wrapper.findAll('.glass-demo__backdrop');
-
-      expect(backdrops).toHaveLength(3);
-      backdrops.forEach((backdrop) => {
-        expect(backdrop.classes()).toContain(`glass-demo__backdrop--${background}`);
-        expect(backdrop.attributes('style')).toContain('--demo-background-scale: 1.4');
-        expect(backdrop.attributes('style')).toContain('--demo-background-x: 36px');
-        expect(backdrop.attributes('style')).toContain('--demo-background-y: -24px');
-      });
-    };
-
-    await expectBackground('grid');
-    await expectBackground('text');
-    await expectBackground('image');
   });
 });

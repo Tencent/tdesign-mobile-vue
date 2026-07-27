@@ -1,7 +1,6 @@
 import { RouteRecordRaw, createRouter, createWebHashHistory } from 'vue-router';
 import Home from './components/home.vue';
 import siteConfig from '../docs.config';
-import LiquidGlassTexturePreview from './dev/liquid-glass-texture-preview.vue';
 
 const { docs } = siteConfig;
 
@@ -51,7 +50,6 @@ const demoRouteGenerator = (compName, demos, title) => {
 // 组件需要多页面展示时，需要多个路由
 demoRouteGenerator('side-bar', ['base', 'switch', 'with-icon', 'custom'], 'SideBar');
 demoRouteGenerator('indexes', ['base', 'custom'], 'Indexes');
-demoRouteGenerator('tab-bar', ['liquid-glass', 'liquid-glass-inspector'], 'TabBar Liquid Glass');
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -60,16 +58,6 @@ const routes: Array<RouteRecordRaw> = [
   },
   ...getDocsRoutes(docs),
   ...componentInnerRoutes,
-  ...(import.meta.env.DEV
-    ? [
-        {
-          path: '/tab-bar-texture',
-          meta: { title: 'TabBar Texture Diagnostics' },
-          component: LiquidGlassTexturePreview,
-          beforeEnter: (to) => (to.query['glass-texture-debug'] === '1' ? true : { path: '/tab-bar' }),
-        },
-      ]
-    : []),
 ];
 const router = createRouter({
   history: createWebHashHistory('/mobile.html'),
