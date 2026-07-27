@@ -38,20 +38,23 @@
 
 The component provides the following CSS variables, which can be used to customize styles.
 
-| Name                             | Default Value            | Description                                              |
-| -------------------------------- | ------------------------ | -------------------------------------------------------- |
-| --td-tab-bar-bg-color            | @bg-color-container      | -                                                        |
-| --td-tab-bar-border-color        | @border-color            | -                                                        |
-| --td-tab-bar-round-shadow        | @shadow-3                | -                                                        |
-| --td-tab-bar-glass-bg-color      | rgba(255, 255, 255, 42%) | Glass material baseline fill                             |
-| --td-tab-bar-glass-shadow        | @shadow-3                | Glass material shadow                                    |
-| --td-tab-bar-glass-fallback-blur | 12px                     | Gaussian blur radius when SVG enhancement is unavailable |
-| --td-tab-bar-selected-bg-color   | @brand-color             | Selected capsule color for a round TabBar                |
-| --td-tab-bar-selected-bg-opacity | 16%                      | Selected capsule color mix for a round TabBar            |
-| --td-tab-bar-active-bg           | @brand-color-light       | -                                                        |
-| --td-tab-bar-active-color        | @brand-color             | -                                                        |
-| --td-tab-bar-color               | @text-color-primary      | -                                                        |
-| --td-tab-bar-height              | 40px                     | -                                                        |
-| --td-tab-bar-hover-bg-color      | rgba(0, 0, 0, 0.05)      | -                                                        |
-| --td-tab-bar-spread-border-color | @border-color            | -                                                        |
-| --td-tab-bar-spread-shadow       | @shadow-3                | -                                                        |
+| Name                                | Default Value            | Description                                              |
+| ----------------------------------- | ------------------------ | -------------------------------------------------------- |
+| --td-tab-bar-bg-color               | @bg-color-container      | -                                                        |
+| --td-tab-bar-border-color           | @border-color            | -                                                        |
+| --td-tab-bar-round-shadow           | @shadow-3                | -                                                        |
+| --td-tab-bar-glass-bg-color         | rgba(255, 255, 255, 50%) | Glass material baseline fill                             |
+| --td-tab-bar-glass-shadow           | @shadow-3                | Glass material shadow                                    |
+| --td-tab-bar-glass-fallback-blur    | 8px                      | Gaussian blur radius when SVG enhancement is unavailable |
+| --td-tab-bar-glass-sheen-opacity    | 1                        | Material sheen opacity                                   |
+| --td-tab-bar-selected-bg-color      | @brand-color             | Selected capsule color for a round TabBar                |
+| --td-tab-bar-selected-bg-opacity    | 16%                      | Selected capsule color mix for a round TabBar            |
+| --td-tab-bar-selected-sheen-opacity | 0.62                     | Round selected capsule sheen opacity                     |
+| --td-tab-bar-selected-border-color  | @component-border        | Normal round selected outline color                      |
+| --td-tab-bar-active-bg              | @brand-color-light       | -                                                        |
+| --td-tab-bar-active-color           | @brand-color             | -                                                        |
+| --td-tab-bar-color                  | @text-color-primary      | -                                                        |
+| --td-tab-bar-height                 | 40px                     | -                                                        |
+| --td-tab-bar-hover-bg-color         | rgba(0, 0, 0, 0.05)      | -                                                        |
+| --td-tab-bar-spread-border-color    | @border-color            | -                                                        |
+| --td-tab-bar-spread-shadow          | @shadow-3                | -                                                        |

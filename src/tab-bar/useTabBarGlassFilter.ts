@@ -60,6 +60,7 @@ export interface TabBarGlassDevContext {
   shouldEnhance?: (element: HTMLElement) => boolean;
 }
 
+/** @internal 仅供本地 Demo 与测试使用，生产构建不会读取该注入通道。 */
 export const tabBarGlassDevContextKey: InjectionKey<TabBarGlassDevContext> = Symbol('tab-bar-glass-dev-context');
 
 let filterSequence = 0;

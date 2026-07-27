@@ -22,9 +22,14 @@ export default defineComponent({
 
     const defaultIndex: Ref<number> = ref(-1);
     const itemCount = ref(0);
+    const pressedValue = ref<string | number>();
 
     const updateChild = (currentValue: number | string) => {
       setActiveValue(currentValue);
+    };
+
+    const updatePressed = (currentValue?: number | string) => {
+      pressedValue.value = currentValue;
     };
 
     const rootClass = computed(() => [
@@ -38,7 +43,9 @@ export default defineComponent({
       `${tabBarClass.value}--${props.shape}`,
     ]);
 
-    const glassDevContext = inject(tabBarGlassDevContextKey, undefined);
+    // 调参注入仅服务本地 Demo 与测试；生产构建固定使用已冻结的内部默认值。
+    const glassDevContext =
+      process.env.NODE_ENV === 'production' ? undefined : inject(tabBarGlassDevContextKey, undefined);
     const glassFilterState = useTabBarGlassFilter({
       root,
       enabled: computed(() => props.effect === 'glass'),
@@ -62,7 +69,9 @@ export default defineComponent({
       defaultIndex,
       activeValue,
       itemCount,
+      pressedValue,
       updateChild,
+      updatePressed,
     });
 
     // 在渲染函数中调用插槽函数并更新子节点数量
@@ -80,7 +89,9 @@ export default defineComponent({
     const renderSelectionIndicator = (items: VNode[]) => {
       if (props.effect !== 'glass' || props.shape !== 'round' || !items.length) return null;
 
-      const selectedValue = Array.isArray(activeValue.value) ? activeValue.value[0] : activeValue.value;
+      const isPressed = typeof pressedValue.value !== 'undefined';
+      const activeSelection = Array.isArray(activeValue.value) ? activeValue.value[0] : activeValue.value;
+      const selectedValue = isPressed ? pressedValue.value : activeSelection;
       const selectedIndex = items.findIndex((item, index) => {
         const itemValue = typeof item.props?.value === 'undefined' ? index : item.props.value;
         return itemValue === selectedValue;
@@ -94,7 +105,13 @@ export default defineComponent({
 
       return (
         <span class={`${tabBarClass.value}__selection-track`} aria-hidden="true">
-          <span class={`${tabBarClass.value}__selection-indicator`} style={indicatorStyle} />
+          <span
+            class={{
+              [`${tabBarClass.value}__selection-indicator`]: true,
+              [`${tabBarClass.value}__selection-indicator--pressed`]: isPressed,
+            }}
+            style={indicatorStyle}
+          />
         </span>
       );
     };
@@ -104,7 +121,11 @@ export default defineComponent({
 
       const filter = glassFilterState.value;
       const filterStyle = filter
-        ? ({ '--td-tab-bar-glass-filter': `url("#${filter.filterId}")` } as CSSProperties)
+        ? ({
+            '--td-tab-bar-glass-filter': `url("#${filter.filterId}")`,
+            // SVG 增强生效时关闭 CSS 分层降级，避免额外模糊覆盖真实折射
+            '--td-tab-bar-glass-fallback-layers': '0',
+          } as CSSProperties)
         : undefined;
 
       return [

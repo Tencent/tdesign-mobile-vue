@@ -109,6 +109,7 @@ function installGlassRuntime(options: RuntimeOptions = {}) {
 afterEach(() => {
   vi.restoreAllMocks();
   vi.unstubAllGlobals();
+  vi.unstubAllEnvs();
   document.body.innerHTML = '';
 });
 
@@ -248,6 +249,29 @@ describe('TabBar Liquid Glass runtime', () => {
     wrapper.unmount();
   });
 
+  it('ignores the private calibration channel in production', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    const runtime = installGlassRuntime();
+    const onRebuild = vi.fn();
+    const Host = {
+      setup() {
+        provide(tabBarGlassDevContextKey, {
+          tuning: computed(() => ({ displacementGain: 0 })),
+          onRebuild,
+          shouldEnhance: () => false,
+        });
+        return () => h(TabBar, { effect: 'glass', fixed: false });
+      },
+    };
+    const wrapper = mount(Host);
+    runtime.runFrames();
+    await nextTick();
+
+    expect(wrapper.find('filter').exists()).toBe(true);
+    expect(onRebuild).not.toHaveBeenCalled();
+    wrapper.unmount();
+  });
+
   it('rebuilds the texture when shape changes', async () => {
     const runtime = installGlassRuntime();
     const wrapper = mount(TabBar, { props: { effect: 'glass', fixed: false, shape: 'normal' } });
@@ -367,10 +391,14 @@ describe('TabBar Liquid Glass runtime', () => {
 describe('TabBar Liquid Glass demo', () => {
   it('updates fallback blur without enabling SVG enhancement', async () => {
     const wrapper = mount(LiquidGlassDemo);
+    const fallbackBlur = wrapper.get('[data-testid="parameter-fallback-blur"]');
 
-    await wrapper.get('[data-testid="parameter-fallback-blur"]').setValue('24');
+    expect(fallbackBlur.attributes('max')).toBe('12');
+    expect(fallbackBlur.attributes('step')).toBe('0.1');
 
-    expect(wrapper.attributes('style')).toContain('--td-tab-bar-glass-fallback-blur: 24px');
+    await fallbackBlur.setValue('11.7');
+
+    expect(wrapper.attributes('style')).toContain('--td-tab-bar-glass-fallback-blur: 11.7px');
     expect(wrapper.get('.glass-demo__fallback-bar').find('filter').exists()).toBe(false);
   });
 

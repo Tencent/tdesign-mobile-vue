@@ -1,377 +1,414 @@
 <template>
   <section class="glass-demo" :class="`glass-demo--${theme}`" :style="demoVariables">
-    <header class="glass-demo__toolbar">
-      <div class="glass-demo__modes">
-        <div class="glass-demo__control-group">
-          <span class="glass-demo__control-copy">
-            <strong>Effect / 材质效果</strong>
-            <small>切换普通模式与 Liquid Glass 增强模式，影响整个 TabBar 材质渲染路径。</small>
-          </span>
-          <div class="glass-demo__segments" role="group" aria-label="Effect">
-            <button
-              v-for="option in effects"
-              :key="option"
-              type="button"
-              :class="{ 'is-active': effect === option }"
-              :aria-pressed="effect === option"
-              :data-testid="`effect-${option}`"
-              @click="effect = option"
-            >
-              {{ option }}
-            </button>
-          </div>
-        </div>
-        <div class="glass-demo__control-group">
-          <span class="glass-demo__control-copy">
-            <strong>Shape / 外形</strong>
-            <small>切换普通矩形与圆角胶囊；会改变圆角、边距和折射几何范围。</small>
-          </span>
-          <div class="glass-demo__segments" role="group" aria-label="Shape">
-            <button
-              v-for="option in shapes"
-              :key="option"
-              type="button"
-              :class="{ 'is-active': shape === option }"
-              :aria-pressed="shape === option"
-              :data-testid="`shape-${option}`"
-              @click="shape = option"
-            >
-              {{ option }}
-            </button>
-          </div>
-        </div>
-        <div class="glass-demo__control-group">
-          <span class="glass-demo__control-copy">
-            <strong>Background / 验证背景</strong>
-            <small>切换网格、文字和图片，用于观察折射连续性、清晰度与背景相关性。</small>
-          </span>
-          <div class="glass-demo__segments" role="group" aria-label="Background">
-            <button
-              v-for="option in backgrounds"
-              :key="option"
-              type="button"
-              :class="{ 'is-active': background === option }"
-              :aria-pressed="background === option"
-              :data-testid="`background-${option}`"
-              @click="background = option"
-            >
-              {{ option }}
-            </button>
-          </div>
-        </div>
-        <div class="glass-demo__control-group">
-          <span class="glass-demo__control-copy">
-            <strong>Width / 预览宽度</strong>
-            <small>改变预览容器宽度，用于验证响应式尺寸、纹理重建和边缘覆盖。</small>
-          </span>
-          <div class="glass-demo__segments" role="group" aria-label="Preview width">
-            <button
-              v-for="option in widths"
-              :key="option"
-              type="button"
-              :class="{ 'is-active': previewWidth === option }"
-              :aria-pressed="previewWidth === option"
-              :data-testid="`width-${option}`"
-              @click="previewWidth = option"
-            >
-              {{ option }}
-            </button>
-          </div>
-        </div>
-        <div class="glass-demo__control-group">
-          <span class="glass-demo__control-copy">
-            <strong>Theme / 主题</strong>
-            <small>切换明暗主题，影响材质底色、边框对比度和文字可读性。</small>
-          </span>
-          <div class="glass-demo__segments" role="group" aria-label="Theme">
-            <button
-              v-for="option in themes"
-              :key="option"
-              type="button"
-              :class="{ 'is-active': theme === option }"
-              :aria-pressed="theme === option"
-              :data-testid="`theme-${option}`"
-              @click="theme = option"
-            >
-              {{ option }}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="glass-demo__toggles">
-        <label v-for="toggle in stateToggles" :key="toggle.key">
-          <input v-model="toggle.value.value" :data-testid="`toggle-${toggle.key}`" type="checkbox" />
-          <span class="glass-demo__toggle-copy">
-            <strong>{{ toggle.label }} / {{ toggle.name }}</strong>
-            <small>{{ toggle.description }}</small>
-          </span>
-        </label>
-      </div>
-    </header>
-
-    <div class="glass-demo__comparison" data-testid="comparison">
-      <article v-for="mode in comparisonModes" :key="mode" class="glass-demo__preview">
-        <div class="glass-demo__preview-title">
-          <strong>{{ comparisonLabels[mode] }}</strong>
-          <span>{{ previewWidth }} px</span>
-        </div>
-        <div
-          class="glass-demo__device"
-          :class="{ 'is-moving': backgroundMoves, 'is-dragging': backgroundDragging }"
-          :style="{ width: `${previewWidth}px`, '--demo-image': `url(${landscapeUrl})` }"
-          :data-testid="`preview-${mode}`"
-          @pointerdown="startBackgroundDrag"
-          @pointermove="moveBackground"
-          @pointerup="stopBackgroundDrag"
-          @pointercancel="stopBackgroundDrag"
-        >
-          <div
-            class="glass-demo__backdrop"
-            :class="`glass-demo__backdrop--${background}`"
-            :style="backgroundPlaneStyle"
-            aria-hidden="true"
-          >
-            <div v-if="background === 'text'" class="glass-demo__backdrop-copy">
-              <strong>Design systems should preserve context across every layer of an interface.</strong>
-              <span v-for="line in textBackdropLines" :key="line">{{ line }}</span>
+    <div ref="layoutElement" class="glass-demo__layout" :class="{ 'is-stacked': stacked }">
+      <aside class="glass-demo__stage">
+        <div class="glass-demo__comparison" data-testid="comparison">
+          <article v-for="mode in comparisonModes" :key="mode" class="glass-demo__preview">
+            <div class="glass-demo__preview-title">
+              <strong>{{ comparisonLabels[mode] }}</strong>
+              <span>{{ previewWidth }} px</span>
             </div>
-            <div v-else class="glass-demo__landmarks">
-              <span v-for="index in 10" :key="index">{{ index }}</span>
+            <div
+              class="glass-demo__device"
+              :class="{ 'is-moving': backgroundMoves, 'is-dragging': backgroundDragging }"
+              :style="{ width: `${previewWidth}px`, '--demo-image': `url(${landscapeUrl})` }"
+              :data-testid="`preview-${mode}`"
+              @pointerdown="startBackgroundDrag"
+              @pointermove="moveBackground"
+              @pointerup="stopBackgroundDrag"
+              @pointercancel="stopBackgroundDrag"
+            >
+              <div
+                class="glass-demo__backdrop"
+                :class="`glass-demo__backdrop--${background}`"
+                :style="backgroundPlaneStyle"
+                aria-hidden="true"
+              >
+                <div v-if="background === 'text'" class="glass-demo__backdrop-copy">
+                  <strong>Design systems should preserve context across every layer of an interface.</strong>
+                  <span v-for="line in textBackdropLines" :key="line">{{ line }}</span>
+                </div>
+                <div v-else class="glass-demo__landmarks">
+                  <span v-for="index in 10" :key="index">{{ index }}</span>
+                </div>
+              </div>
+
+              <div class="glass-demo__bar-frame">
+                <t-tab-bar
+                  v-model="selected"
+                  :class="{ 'glass-demo__fallback-bar': mode === 'fallback' }"
+                  :effect="mode === 'normal' ? 'normal' : mode === 'fallback' ? 'glass' : effect"
+                  :shape="shape"
+                  :fixed="fixed"
+                  :placeholder="placeholder"
+                  :safe-area-inset-bottom="safeArea"
+                  :bordered="bordered"
+                >
+                  <t-tab-bar-item v-for="item in items" :key="item.value" :value="item.value">
+                    {{ item.label }}
+                    <template #icon><t-icon :name="item.icon" /></template>
+                  </t-tab-bar-item>
+                </t-tab-bar>
+                <t-tab-bar
+                  v-if="multiple && mode === 'glass'"
+                  v-model="secondarySelected"
+                  class="glass-demo__secondary-bar"
+                  effect="glass"
+                  :shape="shape"
+                  :fixed="false"
+                  :safe-area-inset-bottom="false"
+                  :bordered="bordered"
+                >
+                  <t-tab-bar-item v-for="item in secondaryItems" :key="item.value" :value="item.value">
+                    {{ item.label }}
+                    <template #icon><t-icon :name="item.icon" /></template>
+                  </t-tab-bar-item>
+                </t-tab-bar>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="glass-demo__stage-hint" data-testid="stage-hint">
+          <t-icon name="move" />
+          <span>
+            <span>Drag any preview backdrop to reposition it</span>
+            <span>可直接拖动展示框背景调整验证位置</span>
+          </span>
+        </p>
+      </aside>
+
+      <div class="glass-demo__panel">
+        <header class="glass-demo__toolbar">
+          <div class="glass-demo__modes">
+            <div class="glass-demo__control-group">
+              <span class="glass-demo__control-copy">
+                <strong>Effect / 材质效果</strong>
+                <small>切换普通模式与 Liquid Glass 增强模式，影响整个 TabBar 材质渲染路径。</small>
+              </span>
+              <div class="glass-demo__segments" role="group" aria-label="Effect">
+                <button
+                  v-for="option in effects"
+                  :key="option"
+                  type="button"
+                  :class="{ 'is-active': effect === option }"
+                  :aria-pressed="effect === option"
+                  :data-testid="`effect-${option}`"
+                  @click="effect = option"
+                >
+                  {{ option }}
+                </button>
+              </div>
+            </div>
+            <div class="glass-demo__control-group">
+              <span class="glass-demo__control-copy">
+                <strong>Shape / 外形</strong>
+                <small>切换普通矩形与圆角胶囊；会改变圆角、边距和折射几何范围。</small>
+              </span>
+              <div class="glass-demo__segments" role="group" aria-label="Shape">
+                <button
+                  v-for="option in shapes"
+                  :key="option"
+                  type="button"
+                  :class="{ 'is-active': shape === option }"
+                  :aria-pressed="shape === option"
+                  :data-testid="`shape-${option}`"
+                  @click="shape = option"
+                >
+                  {{ option }}
+                </button>
+              </div>
+            </div>
+            <div class="glass-demo__control-group">
+              <span class="glass-demo__control-copy">
+                <strong>Background / 验证背景</strong>
+                <small>切换网格、文字和图片，用于观察折射连续性、清晰度与背景相关性。</small>
+              </span>
+              <div class="glass-demo__segments" role="group" aria-label="Background">
+                <button
+                  v-for="option in backgrounds"
+                  :key="option"
+                  type="button"
+                  :class="{ 'is-active': background === option }"
+                  :aria-pressed="background === option"
+                  :data-testid="`background-${option}`"
+                  @click="background = option"
+                >
+                  {{ option }}
+                </button>
+              </div>
+            </div>
+            <div class="glass-demo__control-group">
+              <span class="glass-demo__control-copy">
+                <strong>Width / 预览宽度</strong>
+                <small>改变预览容器宽度，用于验证响应式尺寸、纹理重建和边缘覆盖。</small>
+              </span>
+              <div class="glass-demo__segments" role="group" aria-label="Preview width">
+                <button
+                  v-for="option in widths"
+                  :key="option"
+                  type="button"
+                  :class="{ 'is-active': previewWidth === option }"
+                  :aria-pressed="previewWidth === option"
+                  :data-testid="`width-${option}`"
+                  @click="previewWidth = option"
+                >
+                  {{ option }}
+                </button>
+              </div>
+            </div>
+            <div class="glass-demo__control-group">
+              <span class="glass-demo__control-copy">
+                <strong>Theme / 主题</strong>
+                <small>切换明暗主题，影响材质底色、边框对比度和文字可读性。</small>
+              </span>
+              <div class="glass-demo__segments" role="group" aria-label="Theme">
+                <button
+                  v-for="option in themes"
+                  :key="option"
+                  type="button"
+                  :class="{ 'is-active': theme === option }"
+                  :aria-pressed="theme === option"
+                  :data-testid="`theme-${option}`"
+                  @click="theme = option"
+                >
+                  {{ option }}
+                </button>
+              </div>
             </div>
           </div>
 
-          <div class="glass-demo__bar-frame">
-            <t-tab-bar
-              v-model="selected"
-              :class="{ 'glass-demo__fallback-bar': mode === 'fallback' }"
-              :effect="mode === 'normal' ? 'normal' : mode === 'fallback' ? 'glass' : effect"
-              :shape="shape"
-              :fixed="fixed"
-              :placeholder="placeholder"
-              :safe-area-inset-bottom="safeArea"
-              :bordered="bordered"
-            >
-              <t-tab-bar-item v-for="item in items" :key="item.value" :value="item.value">
-                {{ item.label }}
-                <template #icon><t-icon :name="item.icon" /></template>
-              </t-tab-bar-item>
-            </t-tab-bar>
-            <t-tab-bar
-              v-if="multiple && mode === 'glass'"
-              v-model="secondarySelected"
-              class="glass-demo__secondary-bar"
-              effect="glass"
-              :shape="shape"
-              :fixed="false"
-              :safe-area-inset-bottom="false"
-              :bordered="bordered"
-            >
-              <t-tab-bar-item v-for="item in secondaryItems" :key="item.value" :value="item.value">
-                {{ item.label }}
-                <template #icon><t-icon :name="item.icon" /></template>
-              </t-tab-bar-item>
-            </t-tab-bar>
+          <div class="glass-demo__toggles">
+            <label v-for="toggle in stateToggles" :key="toggle.key">
+              <input v-model="toggle.value.value" :data-testid="`toggle-${toggle.key}`" type="checkbox" />
+              <span class="glass-demo__toggle-copy">
+                <strong>{{ toggle.label }} / {{ toggle.name }}</strong>
+                <small>{{ toggle.description }}</small>
+              </span>
+            </label>
           </div>
-        </div>
-      </article>
+        </header>
+
+        <section class="glass-demo__calibration">
+          <header>
+            <div>
+              <span class="glass-demo__eyebrow">Optical calibration / 光学校准</span>
+              <h3>Runtime parameters / 实时参数</h3>
+            </div>
+            <button
+              type="button"
+              class="glass-demo__reset"
+              title="恢复默认参数"
+              aria-label="恢复默认参数"
+              data-testid="reset-parameters"
+              @click="resetParameters"
+            >
+              <t-icon name="refresh" />
+            </button>
+          </header>
+
+          <div class="glass-demo__metrics" aria-live="polite">
+            <div>
+              <span>Texture / 纹理尺寸</span><strong data-testid="metric-texture">{{ textureLabel }}</strong>
+            </div>
+            <div>
+              <span>Pixels / 像素数</span><strong data-testid="metric-pixels">{{ texturePixels }}</strong>
+            </div>
+            <div>
+              <span>Bezel / 实际覆盖</span><strong data-testid="metric-bezel">{{ bezelWidth.toFixed(1) }} px</strong>
+            </div>
+            <div>
+              <span>Generate / 生成耗时</span
+              ><strong data-testid="metric-generation">{{ generationDuration.toFixed(2) }} ms</strong>
+            </div>
+            <div>
+              <span>Total / 总耗时</span><strong data-testid="metric-total">{{ totalDuration.toFixed(2) }} ms</strong>
+            </div>
+            <div>
+              <span>Rebuilds / 重建次数</span><strong data-testid="metric-rebuilds">{{ rebuildCount }}</strong>
+            </div>
+          </div>
+
+          <h4 class="glass-demo__section-title">Optical calibration / 光学校准</h4>
+          <div class="glass-demo__sliders">
+            <label>
+              <span class="glass-demo__parameter-title">
+                <span class="glass-demo__parameter-name">Surface profile / 表面轮廓</span>
+              </span>
+              <span class="glass-demo__parameter-description"
+                >选择折射截面的曲线形态；会改变边缘弯曲走势，不改变组件尺寸。</span
+              >
+              <select v-model="surface" data-testid="optics-surface">
+                <option v-for="option in surfaceOptions" :key="option.value" :value="option.value">
+                  {{ option.label }}
+                </option>
+              </select>
+              <span class="glass-demo__parameter-meta">
+                <em class="glass-demo__scope-label">内部调参</em>
+                <span>default {{ DEFAULT_TAB_BAR_GLASS_TUNING.surface }}</span>
+              </span>
+            </label>
+
+            <label>
+              <span class="glass-demo__parameter-title">
+                <span class="glass-demo__parameter-name">Background color / 材质底色</span>
+              </span>
+              <span class="glass-demo__parameter-description">设置玻璃基线填充色；影响整体色调，不改变折射几何。</span>
+              <input v-model="backgroundColor" data-testid="material-background-color" type="color" />
+              <span class="glass-demo__parameter-meta">
+                <em class="glass-demo__scope-label">材质外观</em>
+                <span>{{ backgroundColor }}</span>
+              </span>
+            </label>
+
+            <label>
+              <span class="glass-demo__parameter-title">
+                <span class="glass-demo__parameter-name">Shadow / 阴影预设</span>
+              </span>
+              <span class="glass-demo__parameter-description">切换悬浮、紧凑或无阴影；只影响层级感和外部投影。</span>
+              <select v-model="shadowPreset" data-testid="material-shadow">
+                <option v-for="option in shadowOptions" :key="option.value" :value="option.value">
+                  {{ option.label }}
+                </option>
+              </select>
+              <span class="glass-demo__parameter-meta">
+                <em class="glass-demo__scope-label">材质外观</em>
+                <span>default floating</span>
+              </span>
+            </label>
+
+            <label v-for="parameter in opticalParameters" :key="parameter.key">
+              <span class="glass-demo__parameter-title">
+                <span class="glass-demo__parameter-name">{{ parameter.label }} / {{ parameter.name }}</span>
+                <output>{{ formatParameter(parameter) }}</output>
+              </span>
+              <span class="glass-demo__parameter-description">{{ parameter.description }}</span>
+              <input
+                v-model.number="parameter.value.value"
+                type="range"
+                :min="parameter.min"
+                :max="parameter.max"
+                :step="parameter.step"
+                :data-testid="`parameter-${parameter.key}`"
+              />
+              <span class="glass-demo__parameter-meta">
+                <em class="glass-demo__scope-label">{{ scopeLabels[parameter.scope] }}</em>
+                <span>default {{ parameter.default }} · {{ parameter.min }}–{{ parameter.max }}</span>
+              </span>
+            </label>
+          </div>
+
+          <h4 class="glass-demo__section-title">Fallback calibration / 降级材质校准</h4>
+          <div class="glass-demo__sliders">
+            <label>
+              <span class="glass-demo__parameter-title">
+                <span class="glass-demo__parameter-name">Fallback blur / 降级高斯模糊</span>
+                <output>{{ fallbackBlur }}px</output>
+              </span>
+              <span class="glass-demo__parameter-description"
+                >仅控制 CSS fallback 的背景高斯模糊半径；不会创建、恢复或改变 SVG 折射增强。</span
+              >
+              <input
+                v-model.number="fallbackBlur"
+                type="range"
+                min="0"
+                max="12"
+                step="0.1"
+                data-testid="parameter-fallback-blur"
+              />
+              <span class="glass-demo__parameter-meta">
+                <em class="glass-demo__scope-label">组件主题参数</em>
+                <span>default 8 · 0–12</span>
+              </span>
+            </label>
+          </div>
+
+          <h4 class="glass-demo__section-title">Selection calibration / 选中态校准</h4>
+          <div class="glass-demo__sliders">
+            <label v-for="parameter in selectionParameters" :key="parameter.key">
+              <span class="glass-demo__parameter-title">
+                <span class="glass-demo__parameter-name">{{ parameter.label }} / {{ parameter.name }}</span>
+                <output>{{ parameter.value.value }}{{ parameter.unit }}</output>
+              </span>
+              <span class="glass-demo__parameter-description">{{ parameter.description }}</span>
+              <input
+                v-model.number="parameter.value.value"
+                type="range"
+                :min="parameter.min"
+                :max="parameter.max"
+                :step="parameter.step"
+                :data-testid="`parameter-${parameter.key}`"
+              />
+              <span class="glass-demo__parameter-meta">
+                <em class="glass-demo__scope-label">组件主题参数</em>
+                <span>default {{ parameter.default }} · {{ parameter.min }}–{{ parameter.max }}</span>
+              </span>
+            </label>
+          </div>
+
+          <h4 class="glass-demo__section-title">Background calibration / 背景变换</h4>
+          <div class="glass-demo__sliders">
+            <label v-for="parameter in backgroundParameters" :key="parameter.key">
+              <span class="glass-demo__parameter-title">
+                <span class="glass-demo__parameter-name">{{ parameter.label }} / {{ parameter.name }}</span>
+                <output>{{ parameter.value.value }}{{ parameter.unit }}</output>
+              </span>
+              <span class="glass-demo__parameter-description">{{ parameter.description }}</span>
+              <input
+                v-model.number="parameter.value.value"
+                type="range"
+                :min="parameter.min"
+                :max="parameter.max"
+                :step="parameter.step"
+                :data-testid="`parameter-${parameter.key}`"
+              />
+              <span class="glass-demo__parameter-meta">
+                <em class="glass-demo__scope-label">Demo 验证背景</em>
+                <span>default {{ parameter.default }} · {{ parameter.min }}–{{ parameter.max }}</span>
+              </span>
+            </label>
+          </div>
+
+          <h4 class="glass-demo__section-title">Layout calibration / 尺寸校准</h4>
+          <div class="glass-demo__sliders">
+            <label v-for="parameter in layoutParameters" :key="parameter.key">
+              <span class="glass-demo__parameter-title">
+                <span class="glass-demo__parameter-name">{{ parameter.label }} / {{ parameter.name }}</span>
+                <output>{{ parameter.value.value }}{{ parameter.unit }}</output>
+              </span>
+              <span class="glass-demo__parameter-description">{{ parameter.description }}</span>
+              <input
+                v-model.number="parameter.value.value"
+                type="range"
+                :min="parameter.min"
+                :max="parameter.max"
+                :step="parameter.step"
+                :data-testid="`parameter-${parameter.key}`"
+              />
+              <span class="glass-demo__parameter-meta">
+                <em class="glass-demo__scope-label">Demo 布局</em>
+                <span>default {{ parameter.default }} · {{ parameter.min }}–{{ parameter.max }}</span>
+              </span>
+            </label>
+          </div>
+        </section>
+
+        <section class="glass-demo__presets">
+          <span class="glass-demo__eyebrow">Fixed presets</span>
+          <div>
+            <article v-for="preset in fixedPresets" :key="preset.name">
+              <strong>{{ preset.name }}</strong>
+              <p>{{ preset.reason }}</p>
+            </article>
+          </div>
+        </section>
+      </div>
     </div>
-
-    <section class="glass-demo__calibration">
-      <header>
-        <div>
-          <span class="glass-demo__eyebrow">Optical calibration / 光学校准</span>
-          <h3>Runtime parameters / 实时参数</h3>
-        </div>
-        <button
-          type="button"
-          class="glass-demo__reset"
-          title="恢复默认参数"
-          aria-label="恢复默认参数"
-          data-testid="reset-parameters"
-          @click="resetParameters"
-        >
-          <t-icon name="refresh" />
-        </button>
-      </header>
-
-      <div class="glass-demo__metrics" aria-live="polite">
-        <div>
-          <span>Texture / 纹理尺寸</span><strong data-testid="metric-texture">{{ textureLabel }}</strong>
-        </div>
-        <div>
-          <span>Pixels / 像素数</span><strong data-testid="metric-pixels">{{ texturePixels }}</strong>
-        </div>
-        <div>
-          <span>Bezel / 实际覆盖</span><strong data-testid="metric-bezel">{{ bezelWidth.toFixed(1) }} px</strong>
-        </div>
-        <div>
-          <span>Generate / 生成耗时</span
-          ><strong data-testid="metric-generation">{{ generationDuration.toFixed(2) }} ms</strong>
-        </div>
-        <div>
-          <span>Total / 总耗时</span><strong data-testid="metric-total">{{ totalDuration.toFixed(2) }} ms</strong>
-        </div>
-        <div>
-          <span>Rebuilds / 重建次数</span><strong data-testid="metric-rebuilds">{{ rebuildCount }}</strong>
-        </div>
-      </div>
-
-      <h4 class="glass-demo__section-title">Layout calibration / 尺寸校准</h4>
-      <div class="glass-demo__sliders">
-        <label v-for="parameter in layoutParameters" :key="parameter.key">
-          <span class="glass-demo__parameter-title">
-            <span>{{ parameter.label }} / {{ parameter.name }} <small>Demo 布局</small></span>
-            <output>{{ parameter.value.value }}{{ parameter.unit }}</output>
-          </span>
-          <span class="glass-demo__parameter-description">{{ parameter.description }}</span>
-          <input
-            v-model.number="parameter.value.value"
-            type="range"
-            :min="parameter.min"
-            :max="parameter.max"
-            :step="parameter.step"
-            :data-testid="`parameter-${parameter.key}`"
-          />
-          <span class="glass-demo__parameter-meta"
-            >default {{ parameter.default }} · {{ parameter.min }}–{{ parameter.max }}</span
-          >
-        </label>
-      </div>
-
-      <h4 class="glass-demo__section-title">Selection calibration / 选中态校准</h4>
-      <div class="glass-demo__sliders">
-        <label v-for="parameter in selectionParameters" :key="parameter.key">
-          <span class="glass-demo__parameter-title">
-            <span>{{ parameter.label }} / {{ parameter.name }} <small>组件主题参数</small></span>
-            <output>{{ parameter.value.value }}{{ parameter.unit }}</output>
-          </span>
-          <span class="glass-demo__parameter-description">{{ parameter.description }}</span>
-          <input
-            v-model.number="parameter.value.value"
-            type="range"
-            :min="parameter.min"
-            :max="parameter.max"
-            :step="parameter.step"
-            :data-testid="`parameter-${parameter.key}`"
-          />
-          <span class="glass-demo__parameter-meta"
-            >default {{ parameter.default }} · {{ parameter.min }}–{{ parameter.max }}</span
-          >
-        </label>
-      </div>
-
-      <h4 class="glass-demo__section-title">Fallback calibration / 降级材质校准</h4>
-      <div class="glass-demo__sliders">
-        <label>
-          <span class="glass-demo__parameter-title">
-            <span>Fallback blur / 降级高斯模糊<small class="glass-demo__scope-label">组件主题参数</small></span>
-            <output>{{ fallbackBlur }}px</output>
-          </span>
-          <span class="glass-demo__parameter-description"
-            >仅控制 CSS fallback 的背景高斯模糊半径；不会创建、恢复或改变 SVG 折射增强。</span
-          >
-          <input
-            v-model.number="fallbackBlur"
-            type="range"
-            min="0"
-            max="32"
-            step="1"
-            data-testid="parameter-fallback-blur"
-          />
-          <span class="glass-demo__parameter-meta">default 12 · 0–32</span>
-        </label>
-      </div>
-
-      <h4 class="glass-demo__section-title">Background calibration / 背景变换</h4>
-      <div class="glass-demo__sliders">
-        <label v-for="parameter in backgroundParameters" :key="parameter.key">
-          <span class="glass-demo__parameter-title">
-            <span>{{ parameter.label }} / {{ parameter.name }} <small>Demo 验证背景</small></span>
-            <output>{{ parameter.value.value }}{{ parameter.unit }}</output>
-          </span>
-          <span class="glass-demo__parameter-description">{{ parameter.description }}</span>
-          <input
-            v-model.number="parameter.value.value"
-            type="range"
-            :min="parameter.min"
-            :max="parameter.max"
-            :step="parameter.step"
-            :data-testid="`parameter-${parameter.key}`"
-          />
-          <span class="glass-demo__parameter-meta"
-            >default {{ parameter.default }} · {{ parameter.min }}–{{ parameter.max }}</span
-          >
-        </label>
-      </div>
-
-      <h4 class="glass-demo__section-title">Optical calibration / 光学校准</h4>
-      <div class="glass-demo__sliders">
-        <label v-for="parameter in opticalParameters" :key="parameter.key">
-          <span class="glass-demo__parameter-title">
-            <span
-              >{{ parameter.label }} / {{ parameter.name }} <small>{{ scopeLabels[parameter.scope] }}</small></span
-            >
-            <output>{{ formatParameter(parameter) }}</output>
-          </span>
-          <span class="glass-demo__parameter-description">{{ parameter.description }}</span>
-          <input
-            v-model.number="parameter.value.value"
-            type="range"
-            :min="parameter.min"
-            :max="parameter.max"
-            :step="parameter.step"
-            :data-testid="`parameter-${parameter.key}`"
-          />
-          <span class="glass-demo__parameter-meta"
-            >default {{ parameter.default }} · {{ parameter.min }}–{{ parameter.max }}</span
-          >
-        </label>
-      </div>
-
-      <div class="glass-demo__material-controls">
-        <label>
-          <span>Surface profile / 表面轮廓 <small>内部调参</small></span>
-          <small class="glass-demo__control-description"
-            >选择折射截面的曲线形态；会改变边缘弯曲走势，不改变组件尺寸。</small
-          >
-          <select v-model="surface" data-testid="optics-surface">
-            <option v-for="option in surfaceOptions" :key="option.value" :value="option.value">
-              {{ option.label }}
-            </option>
-          </select>
-        </label>
-        <label>
-          <span>Background color / 材质底色 <small>材质外观</small></span>
-          <small class="glass-demo__control-description">设置玻璃基线填充色；影响整体色调，不改变折射几何。</small>
-          <input v-model="backgroundColor" data-testid="material-background-color" type="color" />
-        </label>
-        <label>
-          <span>Shadow / 阴影预设 <small>材质外观</small></span>
-          <small class="glass-demo__control-description">切换悬浮、紧凑或无阴影；只影响层级感和外部投影。</small>
-          <select v-model="shadowPreset" data-testid="material-shadow">
-            <option v-for="option in shadowOptions" :key="option.value" :value="option.value">
-              {{ option.label }}
-            </option>
-          </select>
-        </label>
-      </div>
-    </section>
-
-    <section class="glass-demo__presets">
-      <span class="glass-demo__eyebrow">Fixed presets</span>
-      <div>
-        <article v-for="preset in fixedPresets" :key="preset.name">
-          <strong>{{ preset.name }}</strong>
-          <p>{{ preset.reason }}</p>
-        </article>
-      </div>
-    </section>
   </section>
 </template>
 
 <script setup lang="ts">
-import { CSSProperties, computed, onBeforeUnmount, provide, ref, watch } from 'vue';
+import { CSSProperties, computed, onBeforeUnmount, onMounted, provide, ref, watch } from 'vue';
 import { Icon as TIcon } from 'tdesign-icons-vue-next';
 import { DEFAULT_TAB_BAR_GLASS_TUNING } from '../liquid-glass-map';
 import { TabBarGlassBuildStats, TabBarGlassRuntimeTuning, tabBarGlassDevContextKey } from '../useTabBarGlassFilter';
@@ -421,13 +458,13 @@ const specularOpacity = ref(DEFAULT_TAB_BAR_GLASS_TUNING.specularOpacity);
 const specularSaturation = ref(DEFAULT_TAB_BAR_GLASS_TUNING.specularSaturation);
 const lightAngle = ref(DEFAULT_TAB_BAR_GLASS_TUNING.lightAngle);
 const textureDpr = ref(1);
-const backgroundAlpha = ref(0.42);
+const backgroundAlpha = ref(0.5);
 const blur = ref(DEFAULT_TAB_BAR_GLASS_TUNING.blur);
 const backgroundColor = ref('#ffffff');
 const shadowPreset = ref<'floating' | 'compact' | 'none'>('floating');
 const selectedBackgroundHue = ref(216);
 const selectedBackgroundOpacity = ref(0.16);
-const fallbackBlur = ref(12);
+const fallbackBlur = ref(8);
 
 const textureWidth = ref(0);
 const textureHeight = ref(0);
@@ -714,7 +751,7 @@ const opticalParameters = [
     name: '基线不透明度',
     description: '控制玻璃底色的遮盖程度；越高越易读，但背景与折射会越不明显。',
     value: backgroundAlpha,
-    default: 0.42,
+    default: 0.5,
     min: 0.35,
     max: 0.95,
     step: 0.01,
@@ -849,7 +886,34 @@ const backgroundPlaneStyle = computed<CSSProperties>(() => ({
   '--demo-background-y': `${backgroundOffsetY.value}px`,
 }));
 
+/* 左侧展示栏宽度由展示框宽度约束；右侧参数区低于最小可用宽度时改为上下堆叠 */
+const PANEL_MIN_WIDTH = 420;
+const LAYOUT_GAP = 20;
+const layoutElement = ref<HTMLElement>();
+const stacked = ref(false);
+
+const updateLayoutMode = () => {
+  const element = layoutElement.value;
+  if (!element) return;
+  stacked.value = element.clientWidth - previewWidth.value - LAYOUT_GAP < PANEL_MIN_WIDTH;
+};
+
+let layoutObserver: ResizeObserver | undefined;
+onMounted(() => {
+  updateLayoutMode();
+  window.addEventListener('resize', updateLayoutMode);
+  if (!layoutElement.value || typeof ResizeObserver === 'undefined') return;
+  layoutObserver = new ResizeObserver(updateLayoutMode);
+  layoutObserver.observe(layoutElement.value);
+});
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', updateLayoutMode);
+  layoutObserver?.disconnect();
+});
+watch(previewWidth, updateLayoutMode);
+
 const demoVariables = computed<CSSProperties>(() => ({
+  '--demo-preview-width': `${previewWidth.value}px`,
   '--td-tab-bar-glass-bg-color': toRgba(backgroundColor.value, backgroundAlpha.value),
   '--td-tab-bar-glass-shadow': shadowValues[shadowPreset.value],
   '--td-tab-bar-glass-fallback-blur': `${fallbackBlur.value}px`,
@@ -881,12 +945,12 @@ const resetParameters = () => {
   textureDpr.value = 1;
   previewWidth.value = 390;
   tabBarHeight.value = 64;
-  backgroundAlpha.value = 0.42;
-  backgroundColor.value = theme.value === 'dark' ? '#242424' : '#ffffff';
+  backgroundAlpha.value = 0.5;
+  backgroundColor.value = theme.value === 'dark' ? '#000000' : '#ffffff';
   shadowPreset.value = 'floating';
   selectedBackgroundHue.value = 216;
   selectedBackgroundOpacity.value = 0.16;
-  fallbackBlur.value = 12;
+  fallbackBlur.value = 8;
   backgroundScale.value = 1;
   backgroundOffsetX.value = 0;
   backgroundOffsetY.value = 0;
@@ -896,7 +960,7 @@ const previousTheme = typeof document === 'undefined' ? null : document.document
 watch(theme, (value) => {
   if (typeof document === 'undefined') return;
   document.documentElement.setAttribute('theme-mode', value);
-  backgroundColor.value = value === 'dark' ? '#242424' : '#ffffff';
+  backgroundColor.value = value === 'dark' ? '#000000' : '#ffffff';
 });
 onBeforeUnmount(() => {
   if (typeof document === 'undefined') return;
@@ -907,6 +971,9 @@ onBeforeUnmount(() => {
 
 <style scoped lang="less">
 .glass-demo {
+  /* 站点顶栏高度，用于限制悬浮展示栏的可视高度 */
+  --demo-stage-max-height: calc(100vh - 50px);
+
   padding: 20px;
   color: #1f2329;
   background: #f3f5f7;
@@ -916,6 +983,34 @@ onBeforeUnmount(() => {
 .glass-demo--dark {
   color: rgba(255, 255, 255, 90%);
   background: #111315;
+}
+
+.glass-demo__layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* 左侧样式展示栏：宽度以展示框宽度为约束，滚动时保持悬浮 */
+.glass-demo__stage {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  flex: 0 0 var(--demo-preview-width);
+  align-self: flex-start;
+  width: var(--demo-preview-width);
+  max-width: 100%;
+  max-height: var(--demo-stage-max-height);
+  overflow: hidden auto;
+  overscroll-behavior: contain;
+}
+
+.glass-demo__panel {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
 }
 
 .glass-demo__toolbar,
@@ -929,13 +1024,12 @@ onBeforeUnmount(() => {
 
 .glass-demo__modes {
   display: grid;
-  grid-template-columns: repeat(5, minmax(130px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 14px;
 }
 
 .glass-demo__control-group > span,
-.glass-demo__parameter-title,
-.glass-demo__material-controls label > span {
+.glass-demo__parameter-title {
   display: flex;
   justify-content: space-between;
   margin-bottom: 7px;
@@ -957,7 +1051,6 @@ onBeforeUnmount(() => {
 
 .glass-demo__control-copy small,
 .glass-demo__toggle-copy small,
-.glass-demo__control-description,
 .glass-demo__parameter-description {
   color: var(--td-text-color-secondary, #667085);
   font-size: 10px;
@@ -1030,14 +1123,34 @@ onBeforeUnmount(() => {
 
 .glass-demo__comparison {
   display: flex;
-  gap: 20px;
-  margin: 20px 0;
-  overflow-x: auto;
-  padding-bottom: 8px;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 4px;
 }
 
 .glass-demo__preview {
   flex: 0 0 auto;
+}
+
+/* 展示区左下角的拖拽提示，中英文分行 */
+.glass-demo__stage-hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0 0;
+  color: var(--td-text-color-secondary, #667085);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.glass-demo__stage-hint > span {
+  display: flex;
+  flex-direction: column;
+}
+
+.glass-demo__stage-hint :deep(.t-icon) {
+  flex: 0 0 auto;
+  font-size: 14px;
 }
 
 .glass-demo__preview-title {
@@ -1054,7 +1167,7 @@ onBeforeUnmount(() => {
 
 .glass-demo__device {
   position: relative;
-  height: 310px;
+  height: 155px;
   overflow: hidden;
   background-color: #eef1f5;
   border: 1px solid var(--td-component-border, #cfd3dc);
@@ -1233,28 +1346,52 @@ onBeforeUnmount(() => {
 
 .glass-demo__sliders {
   display: grid;
-  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 14px 24px;
 }
 
+/* 分组之间留出更明显的间距 */
 .glass-demo__section-title {
-  margin: 18px 0 10px;
+  margin: 34px 0 12px;
   color: var(--td-text-color-primary, #1f2329);
   font-size: 12px;
 }
 
-.glass-demo__parameter-title small,
-.glass-demo__material-controls small {
+.glass-demo__section-title:first-of-type {
+  margin-top: 20px;
+}
+
+.glass-demo__parameter-title small {
   color: var(--td-text-color-secondary, #667085);
   font-weight: 400;
 }
 
-.glass-demo__scope-label {
-  margin-left: 4px;
+/* 标题占据剩余宽度并允许换行，数值始终整块靠右显示 */
+.glass-demo__parameter-title {
+  align-items: baseline;
+  gap: 10px;
+}
+
+.glass-demo__parameter-name {
+  flex: 1 1 auto;
+  min-width: 0;
+  line-height: 1.4;
 }
 
 .glass-demo__parameter-title output {
+  flex: 0 0 auto;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.glass-demo__scope-label {
+  padding: 1px 6px;
+  color: var(--td-text-color-secondary, #667085);
+  font-style: normal;
+  white-space: nowrap;
+  background: var(--td-bg-color-secondarycontainer, #f3f5f7);
+  border-radius: 999px;
 }
 
 .glass-demo__parameter-description {
@@ -1268,45 +1405,32 @@ onBeforeUnmount(() => {
   accent-color: var(--td-brand-color, #0052d9);
 }
 
-.glass-demo__parameter-meta {
+/* 下拉与取色控件与滑块共用同一分组栅格 */
+.glass-demo__sliders select,
+.glass-demo__sliders input[type='color'] {
   display: block;
-  margin-top: 3px;
-  color: var(--td-text-color-placeholder, #8b95a5);
-  font-size: 10px;
-}
-
-.glass-demo__material-controls {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(140px, 1fr));
-  gap: 18px;
-  margin-top: 20px;
-  padding-top: 18px;
-  border-top: 1px solid var(--td-component-stroke, #e7e9ee);
-}
-
-.glass-demo__material-controls input[type='color'],
-.glass-demo__material-controls select {
   width: 100%;
-  height: 34px;
+  height: 28px;
   color: inherit;
+  font-size: 12px;
   background: transparent;
   border: 1px solid var(--td-component-border, #cfd3dc);
   border-radius: 6px;
 }
 
-.glass-demo__control-description {
-  display: block;
-  min-height: 30px;
-  margin: -2px 0 6px;
-}
-
-.glass-demo__presets {
-  margin-top: 20px;
+.glass-demo__parameter-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  margin-top: 5px;
+  color: var(--td-text-color-placeholder, #8b95a5);
+  font-size: 10px;
 }
 
 .glass-demo__presets > div {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 14px;
   margin-top: 12px;
 }
@@ -1346,14 +1470,24 @@ onBeforeUnmount(() => {
   }
 }
 
-@media (max-width: 920px) {
-  .glass-demo__modes {
-    grid-template-columns: repeat(2, minmax(130px, 1fr));
-  }
+/* 右侧参数区放不下时退回上下堆叠，展示栏不再悬浮 */
+.glass-demo__layout.is-stacked {
+  flex-direction: column;
+}
 
-  .glass-demo__presets > div {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.glass-demo__layout.is-stacked .glass-demo__stage {
+  position: static;
+  flex: 0 0 auto;
+  align-self: stretch;
+  width: auto;
+  max-height: none;
+  overflow: visible;
+}
+
+.glass-demo__layout.is-stacked .glass-demo__comparison {
+  flex-direction: row;
+  overflow-x: auto;
+  padding-bottom: 8px;
 }
 
 @media (max-width: 560px) {
@@ -1363,7 +1497,6 @@ onBeforeUnmount(() => {
 
   .glass-demo__modes,
   .glass-demo__sliders,
-  .glass-demo__material-controls,
   .glass-demo__presets > div {
     grid-template-columns: 1fr;
   }

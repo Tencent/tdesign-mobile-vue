@@ -83,6 +83,37 @@ describe('TabBar', () => {
       expect(indicator.element.style.transform).toBe('translate3d(100%, 0, 0)');
     });
 
+    it('scales the pressed item and shared capsule until the press ends', async () => {
+      const value = ref('1');
+      const wrapper = mount({
+        render: () => (
+          <TabBar v-model={value.value} effect="glass" shape="round" fixed={false}>
+            {list.map((item) => (
+              <TabBarItem {...item}>{item.text}</TabBarItem>
+            ))}
+          </TabBar>
+        ),
+      });
+
+      const indicator = wrapper.get('.t-tab-bar__selection-indicator');
+      const firstItem = wrapper.get('[name="label_1"] > .t-tab-bar-item__content');
+      const secondItem = wrapper.get('[name="label_2"] > .t-tab-bar-item__content');
+
+      await secondItem.trigger('pointerdown', { button: 0 });
+      expect(firstItem.classes()).not.toContain('t-tab-bar-item__content--checked');
+      expect(secondItem.classes()).toContain('t-tab-bar-item__content--checked');
+      expect(secondItem.classes()).toContain('t-tab-bar-item__content--pressed');
+      expect(indicator.classes()).toContain('t-tab-bar__selection-indicator--pressed');
+      expect(indicator.element.style.transform).toBe('translate3d(100%, 0, 0)');
+
+      await secondItem.trigger('pointercancel');
+      expect(firstItem.classes()).toContain('t-tab-bar-item__content--checked');
+      expect(secondItem.classes()).not.toContain('t-tab-bar-item__content--checked');
+      expect(secondItem.classes()).not.toContain('t-tab-bar-item__content--pressed');
+      expect(indicator.classes()).not.toContain('t-tab-bar__selection-indicator--pressed');
+      expect(indicator.element.style.transform).toBe('translate3d(0%, 0, 0)');
+    });
+
     it('does not render the shared capsule outside glass round mode', () => {
       const wrapper = mount({
         render: () => (

@@ -77,7 +77,6 @@ npm run start
 
 如果仅想聚焦于对某个 `demo` 单独调试，如 `button`, 则可以打开 <http://127.0.0.1:18000/mobile.html#/button> 进行开发调试。
 
-
 ## 子仓库 tdesign-common
 
 TDesign 的项目都会以子仓库的形式引入 `tdesign-common` 公共仓库，对应 `src/\_common` 文件夹，
@@ -98,8 +97,21 @@ TDesign 的项目都会以子仓库的形式引入 `tdesign-common` 公共仓库
 子仓库组件分支从 `develop checkout` 示例：`feature/button`，提交代码时先进入子仓库完成提交，然在回到主仓库完成提交
 
 - 先进入 `src/\_common` 文件夹，正常将样式修改添加提交
-- 回到主仓库，此时应该会看到 `src/\_common` 文件夹是修改状态，按照正常步骤添加提交即可
+- 回到主仓库，将子仓库指针加入暂存区：`git add src/_common`
+- 提交前执行 `npm run verify:submodule`。该检查要求子仓库工作树干净，且其 HEAD 与主仓库暂存区中的 gitlink 一致
+- 子仓库必须指向已提交、可从 `.gitmodules` 配置的远端获取的 SHA。不要将站点或构建配置改为引用主仓库外的本地 `tdesign-common` worktree；外部 worktree 仅可用于开发与提交 Common 改动
 
+### Demo 与 Common 工作面同步
+
+Demo 的唯一 Common 输入是 `src/_common`，因此修改外部 `tdesign-common` worktree 不会自动进入 Demo。常规流程是：先提交 Common，再将 `src/_common` 切换到该提交，执行 `git add src/_common`，最后运行 `npm run verify:submodule` 并提交 Mobile gitlink。
+
+如需在提交前以外部 Common worktree 做临时联调，必须先将全部已跟踪文件同步到 `src/_common`，再执行以下命令确认二者逐文件一致：
+
+```bash
+COMMON_WORKTREE=/absolute/path/to/tdesign-common npm run verify:submodule
+```
+
+该对照仅是本地开发门禁，不会写入构建配置或 CI。CI 只验证已经提交且可复现的子模块 gitlink。
 
 ### 组件库 UI
 
@@ -170,6 +182,5 @@ git merge upstream/develop
 组件和 `CSS` 前缀以 `t-` 开头，无论 `js` 还是 `css` 都使用变量定义前缀，方便后续替换
 
 ### CSS 规范
-
 
 组件样式在 `common` 子仓库开发，遵循 [tdesign-common 仓库 UI 开发规范](https://github.com/Tencent/tdesign-common/blob/main/style/mobile/README.md)

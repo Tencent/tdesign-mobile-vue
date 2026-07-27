@@ -25,12 +25,12 @@ export interface TabBarGlassTextureOptions {
 
 export const DEFAULT_TAB_BAR_GLASS_TUNING: Readonly<TabBarGlassTuning> = Object.freeze({
   surface: 'squircle',
-  thicknessRatio: 0.7,
-  bezelRatio: 0.85,
-  refractiveIndex: 1.5,
-  displacementGain: 1,
-  blur: 0.4,
-  specularOpacity: 0.5,
+  thicknessRatio: 1,
+  bezelRatio: 0.9,
+  refractiveIndex: 2,
+  displacementGain: 1.5,
+  blur: 0.6,
+  specularOpacity: 0.75,
   specularSaturation: 2,
   lightAngle: 270,
 });

@@ -38,20 +38,23 @@
 
 组件提供了下列 CSS 变量，可用于自定义样式。
 
-| 名称                             | 默认值                   | 描述                               |
-| -------------------------------- | ------------------------ | ---------------------------------- |
-| --td-tab-bar-bg-color            | @bg-color-container      | -                                  |
-| --td-tab-bar-border-color        | @border-color            | -                                  |
-| --td-tab-bar-round-shadow        | @shadow-3                | -                                  |
-| --td-tab-bar-glass-bg-color      | rgba(255, 255, 255, 42%) | 玻璃材质基线填充色                 |
-| --td-tab-bar-glass-shadow        | @shadow-3                | 玻璃材质阴影                       |
-| --td-tab-bar-glass-fallback-blur | 12px                     | SVG 增强不可用时的高斯模糊半径     |
-| --td-tab-bar-selected-bg-color   | @brand-color             | 圆角 TabBar 选中态胶囊颜色         |
-| --td-tab-bar-selected-bg-opacity | 16%                      | 圆角 TabBar 选中态胶囊颜色混合比例 |
-| --td-tab-bar-active-bg           | @brand-color-light       | -                                  |
-| --td-tab-bar-active-color        | @brand-color             | -                                  |
-| --td-tab-bar-color               | @text-color-primary      | -                                  |
-| --td-tab-bar-height              | 40px                     | -                                  |
-| --td-tab-bar-hover-bg-color      | rgba(0, 0, 0, 0.05)      | -                                  |
-| --td-tab-bar-spread-border-color | @border-color            | -                                  |
-| --td-tab-bar-spread-shadow       | @shadow-3                | -                                  |
+| 名称                                | 默认值                   | 描述                               |
+| ----------------------------------- | ------------------------ | ---------------------------------- |
+| --td-tab-bar-bg-color               | @bg-color-container      | -                                  |
+| --td-tab-bar-border-color           | @border-color            | -                                  |
+| --td-tab-bar-round-shadow           | @shadow-3                | -                                  |
+| --td-tab-bar-glass-bg-color         | rgba(255, 255, 255, 50%) | 玻璃材质基线填充色                 |
+| --td-tab-bar-glass-shadow           | @shadow-3                | 玻璃材质阴影                       |
+| --td-tab-bar-glass-fallback-blur    | 8px                      | SVG 增强不可用时的高斯模糊半径     |
+| --td-tab-bar-glass-sheen-opacity    | 1                        | 材质高光轮廓透明度                 |
+| --td-tab-bar-selected-bg-color      | @brand-color             | 圆角 TabBar 选中态胶囊颜色         |
+| --td-tab-bar-selected-bg-opacity    | 16%                      | 圆角 TabBar 选中态胶囊颜色混合比例 |
+| --td-tab-bar-selected-sheen-opacity | 0.62                     | 圆角 TabBar 选中态高光轮廓透明度   |
+| --td-tab-bar-selected-border-color  | @component-border        | normal round 选中态描边颜色        |
+| --td-tab-bar-active-bg              | @brand-color-light       | -                                  |
+| --td-tab-bar-active-color           | @brand-color             | -                                  |
+| --td-tab-bar-color                  | @text-color-primary      | -                                  |
+| --td-tab-bar-height                 | 40px                     | -                                  |
+| --td-tab-bar-hover-bg-color         | rgba(0, 0, 0, 0.05)      | -                                  |
+| --td-tab-bar-spread-border-color    | @border-color            | -                                  |
+| --td-tab-bar-spread-shadow          | @shadow-3                | -                                  |
