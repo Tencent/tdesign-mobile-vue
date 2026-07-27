@@ -42,6 +42,7 @@ export default defineComponent({
 
     const { rect: tabBarRect } = useElementRect(root, {
       immediate: props.fixed && props.placeholder,
+      resizeObserver: props.fixed && props.placeholder,
     });
 
     const tabBarHeight = computed(() => tabBarRect.value.height);
