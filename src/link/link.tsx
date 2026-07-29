@@ -1,13 +1,11 @@
 import { defineComponent, computed } from 'vue';
-import config from '../config';
 import props from './props';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import { useFormDisabled } from '../form/hooks';
 
-const { prefix } = config;
 export default defineComponent({
-  name: `${prefix}-link`,
+  name: 'TLink',
   props,
   setup(props) {
     const linkClass = usePrefixClass('link');

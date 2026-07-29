@@ -44,16 +44,13 @@ import {
   SuccessListType,
   ValidateStatus,
 } from './const';
-import config from '../config';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
-
-const { prefix } = config;
 
 export type FormItemValidateResult<T extends Data = Data> = { [key in keyof T]: boolean | AllValidateResult[] };
 
 export default defineComponent({
-  name: `${prefix}-form-item`,
+  name: 'TFormItem',
   props,
   setup(props, { slots }) {
     const renderTNodeJSX = useTNodeJSX();

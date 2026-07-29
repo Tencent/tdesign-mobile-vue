@@ -3,14 +3,11 @@ import { computed, defineComponent, h, ref } from 'vue';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import TOverlay from '../overlay';
 import ToastProps from './props';
-import config from '../config';
 import { useLockScroll } from '../hooks/useLockScroll';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-toast`,
+  name: 'TToast',
   props: ToastProps,
   setup(props) {
     const toastTypeIcon = {

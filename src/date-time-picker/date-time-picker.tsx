@@ -5,7 +5,6 @@ import customParseFormat from 'dayjs/plugin/customParseFormat';
 import objectSupport from 'dayjs/plugin/objectSupport';
 import { isArray } from 'lodash-es';
 
-import config from '../config';
 import DateTimePickerProps from './props';
 import { getMeaningColumn } from './shared';
 import useVModel from '../hooks/useVModel';
@@ -20,10 +19,8 @@ dayjs.extend(weekday);
 dayjs.extend(customParseFormat);
 dayjs.extend(objectSupport);
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-date-time-picker`,
+  name: 'TDateTimePicker',
   components: { TPicker },
   props: DateTimePickerProps,
   emits: ['change', 'cancel', 'confirm', 'pick', 'update:modelValue', 'update:value'],

@@ -1,6 +1,5 @@
 import { inject, computed, defineComponent, Ref, toRefs } from 'vue';
 import { CheckIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
-import config from '../config';
 import props from './props';
 import { TdRadioGroupProps, TdRadioProps } from './type';
 import useVModel from '../hooks/useVModel';
@@ -8,10 +7,8 @@ import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-radio`,
+  name: 'TRadio',
   props,
   emits: ['update:checked', 'update:modelValue', 'change'],
   setup(props, context) {

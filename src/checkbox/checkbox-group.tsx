@@ -1,6 +1,5 @@
 import { provide, computed, defineComponent, toRefs } from 'vue';
 import { get as lodashGet } from 'lodash-es';
-import config from '../config';
 import props from './checkbox-group-props';
 import { KeysType } from '../common';
 import log from '../_common/js/log';
@@ -11,14 +10,12 @@ import { getOptions, setCheckAllStatus } from './hooks';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export interface Child {
   value: string | number;
 }
 
 export default defineComponent({
-  name: `${prefix}-checkbox-group`,
+  name: 'TCheckboxGroup',
   components: {
     Checkbox,
   },

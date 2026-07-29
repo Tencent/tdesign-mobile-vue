@@ -2,16 +2,13 @@ import { defineComponent, inject, computed, ref, watch, ComponentInternalInstanc
 import { ViewListIcon as TViewListIcon } from 'tdesign-icons-vue-next';
 import TBadge from '../badge';
 import { TdBadgeProps } from '../badge/type';
-import config from '../config';
 import { initName } from './useTabBar';
 import TabBarItemProps from './tab-bar-item-props';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-tab-bar-item`,
+  name: 'TTabBarItem',
   components: { TBadge, TViewListIcon },
   props: TabBarItemProps,
   setup(props, context) {

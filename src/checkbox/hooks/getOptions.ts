@@ -41,7 +41,7 @@ export const getOptions = (props: any, slots: Slots) => {
   const updateOptionListBySlots = () => {
     const nodes = slots.default && slots.default();
     if (nodes !== undefined) {
-      optionList.value = getOptionListBySlots(useChildSlots('t-checkbox'));
+      optionList.value = getOptionListBySlots(useChildSlots('TCheckbox'));
     }
   };
 

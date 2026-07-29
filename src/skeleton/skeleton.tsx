@@ -2,12 +2,9 @@ import { h, defineComponent, watch, ref } from 'vue';
 import { isArray, isFunction, isNumber } from 'lodash-es';
 import { useContent } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
-import config from '../config';
 import SkeletonProps from './props';
 import { SkeletonRowCol, SkeletonRowColObj, TdSkeletonProps } from './type';
 import { ClassName, Styles } from '../common';
-
-const { prefix } = config;
 
 const ThemeMap: Record<TdSkeletonProps['theme'], SkeletonRowCol> = {
   avatar: [{ type: 'circle', size: '48px' }],
@@ -49,7 +46,7 @@ const getColItemStyle = (obj: SkeletonRowColObj & Record<string, any>): Styles =
 };
 
 export default defineComponent({
-  name: `${prefix}-skeleton`,
+  name: 'TSkeleton',
   props: SkeletonProps,
   setup(props, { slots }) {
     const isShow = ref(false);

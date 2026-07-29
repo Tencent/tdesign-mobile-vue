@@ -1,15 +1,11 @@
 import { defineComponent, inject, Ref, computed, ref, watch } from 'vue';
-import config from '../config';
 import props from './tab-panel-props';
 import { useContent } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import { TabValue } from '.';
 
-const { prefix } = config;
-const name = `${prefix}-tab-panel`;
-
 export default defineComponent({
-  name,
+  name: 'TTabPanel',
   props,
   setup(props) {
     const renderTNodeContent = useContent();
