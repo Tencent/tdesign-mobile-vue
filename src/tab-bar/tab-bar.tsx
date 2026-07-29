@@ -1,16 +1,13 @@
 import { defineComponent, ref, provide, Ref, computed, toRefs, VNode, CSSProperties } from 'vue';
 import TabBarProps from './props';
-import config from '../config';
 import useChildSlots from '../hooks/useChildSlots';
 import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import useElementRect from '../hooks/useElementRect';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-tab-bar`,
+  name: 'TTabBar',
   props: TabBarProps,
   emits: ['update:value', 'update:modelValue', 'change'],
   setup(props, context) {
@@ -46,6 +43,7 @@ export default defineComponent({
 
     const { rect: tabBarRect } = useElementRect(root, {
       immediate: props.fixed && props.placeholder,
+      resizeObserver: props.fixed && props.placeholder,
     });
 
     const tabBarHeight = computed(() => tabBarRect.value.height);
@@ -64,7 +62,7 @@ export default defineComponent({
         return;
       }
 
-      const childSlots = useChildSlots(`${prefix}-tab-bar-item`, vNodes);
+      const childSlots = useChildSlots('TTabBarItem', vNodes);
       itemCount.value = childSlots.length;
     };
 

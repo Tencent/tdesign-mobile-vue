@@ -1,14 +1,11 @@
 import { defineComponent, computed, CSSProperties } from 'vue';
 import { isNumber, isString } from 'lodash-es';
-import config from '../config';
 import BadgeProps from './props';
 import { usePrefixClass } from '../hooks/useClass';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-badge`,
+  name: 'TBadge',
   props: BadgeProps,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();

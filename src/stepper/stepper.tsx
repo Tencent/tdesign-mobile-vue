@@ -1,6 +1,5 @@
 import { toRefs, computed, defineComponent } from 'vue';
 import { AddIcon, RemoveIcon } from 'tdesign-icons-vue-next';
-import config from '../config';
 import props from './props';
 import { formatNumber } from '../shared';
 import { TdStepperProps } from './type';
@@ -8,9 +7,8 @@ import { useFormDisabled } from '../form/hooks';
 import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
 export default defineComponent({
-  name: `${prefix}-stepper`,
+  name: 'TStepper',
   props,
   setup(props, context) {
     const stepperClass = usePrefixClass('stepper');

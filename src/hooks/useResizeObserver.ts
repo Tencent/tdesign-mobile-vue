@@ -69,8 +69,10 @@ export function useResizeObserver(
   const isSupported = typeof ResizeObserver !== 'undefined';
   const previousSize = ref({ width: 0, height: 0 });
   let observer: ResizeObserver | null = null;
+  // 是否处于观察状态：由 start/stop 控制，决定 target 变化时是否需要自动重新观察
+  let isActive = false;
 
-  const cleanup = () => {
+  const disconnect = () => {
     if (observer) {
       observer.disconnect();
       observer = null;
@@ -78,7 +80,7 @@ export function useResizeObserver(
   };
 
   const observe = () => {
-    cleanup();
+    disconnect();
 
     const element = unref(target);
     if (!element || !isSupported) return;
@@ -106,7 +108,8 @@ export function useResizeObserver(
         previousSize.value = { width, height };
 
         // 根据配置决定是否触发回调
-        const shouldTrigger = (onVisibilityChange && becameVisible) || (onResize && sizeChanged && !becameVisible);
+        // 注意：becameVisible 时尺寸必然发生了变化（0 -> 非 0），若因 becameVisible 而跳过 onResize 回调，会导致元素重新可见（如 keep-alive 激活）后尺寸无法更新
+        const shouldTrigger = (onVisibilityChange && becameVisible) || (onResize && sizeChanged);
 
         if (shouldTrigger) {
           callback({
@@ -122,12 +125,25 @@ export function useResizeObserver(
     observer.observe(element);
   };
 
-  // 监听 target 变化
+  // 开始观察：标记为激活状态并立即观察当前元素
+  const start = () => {
+    isActive = true;
+    observe();
+  };
+
+  // 停止观察：清除激活状态并断开观察器
+  const stop = () => {
+    isActive = false;
+    disconnect();
+  };
+
+  // 监听 target 变化：仅在已启用观察（isActive）时，才对新元素重新建立观察
+  // 避免未调用 start 时（如 useElementRect 传入 resizeObserver: false）观察器被意外启动
   if (typeof target === 'object' && target !== null && 'value' in target) {
     watch(
       () => unref(target),
       (newEl, oldEl) => {
-        if (newEl !== oldEl) {
+        if (newEl !== oldEl && isActive) {
           observe();
         }
       },
@@ -137,21 +153,21 @@ export function useResizeObserver(
 
   onMounted(() => {
     if (immediate) {
-      observe();
+      start();
     }
   });
 
   onUnmounted(() => {
-    cleanup();
+    stop();
   });
 
   return {
     /** 是否支持 ResizeObserver */
     isSupported,
     /** 手动停止观察 */
-    stop: cleanup,
+    stop,
     /** 手动开始观察 */
-    start: observe,
+    start,
   };
 }
 

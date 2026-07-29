@@ -3,7 +3,6 @@ import { CloseIcon } from 'tdesign-icons-vue-next';
 
 import popupProps from './props';
 import TOverlay from '../overlay';
-import config from '../config';
 import { TdPopupProps } from './type';
 import { TNode, isBrowser } from '../shared';
 import useVModel from '../hooks/useVModel';
@@ -12,10 +11,8 @@ import { useLockScroll } from '../hooks/useLockScroll';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import useTeleport from '../hooks/useTeleport';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-popup`,
+  name: 'TPopup',
   components: { TNode, TOverlay },
   inheritAttrs: false,
   props: popupProps,

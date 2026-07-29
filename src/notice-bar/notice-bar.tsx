@@ -4,12 +4,9 @@ import { isArray, isObject } from 'lodash-es';
 import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
 import props from './props';
 import { NoticeBarTrigger, NoticeBarMarquee } from './type';
-import config from '../config';
 import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
-
-const { prefix } = config;
 
 const iconDefault = {
   info: <InfoCircleFilledIcon />,
@@ -18,7 +15,7 @@ const iconDefault = {
   error: <ErrorCircleFilledIcon />,
 };
 export default defineComponent({
-  name: `${prefix}-notice-bar`,
+  name: 'TNoticeBar',
   props,
   emits: ['change'],
   setup(props) {

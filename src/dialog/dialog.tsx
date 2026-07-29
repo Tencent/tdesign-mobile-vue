@@ -4,16 +4,13 @@ import { get, isString, isObject } from 'lodash-es';
 
 import TButton, { ButtonProps } from '../button';
 import TPopup from '../popup';
-import config from '../config';
 import props from './props';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import { TdDialogProps } from './type';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-dialog`,
+  name: 'TDialog',
   props,
   emits: ['update:visible', 'confirm', 'overlay-click', 'cancel', 'close', 'closed'],
   setup(props, context) {

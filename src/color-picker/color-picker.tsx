@@ -1,6 +1,5 @@
 import { defineComponent, ref, watch, computed, onMounted, nextTick, toRefs } from 'vue';
 import props from './props';
-import config from '../config';
 import { Popup as TPopup } from '../popup';
 import type { ColorPickerChangeTrigger } from './type';
 import { useTNodeJSX } from '../hooks/tnode';
@@ -11,10 +10,8 @@ import { Color, getColorObject } from '../_common/js/color-picker';
 import { DEFAULT_COLOR } from '../_common/js/color-picker/constants';
 import { ALPHA_MAX, HUE_MAX } from './constants';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-color-picker`,
+  name: 'TColorPicker',
   components: {
     TPopup,
   },

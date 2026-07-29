@@ -2,16 +2,13 @@ import { computed, defineComponent, inject, onMounted } from 'vue';
 import { ChevronDownIcon, ChevronUpIcon } from 'tdesign-icons-vue-next';
 import TCell from '../cell';
 import props from './collapse-panel-props';
-import config from '../config';
 import { findIndex } from './util';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import { CollapseProvide } from './collapse';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-collapse-panel`,
+  name: 'TCollapsePanel',
   components: { TCell },
   props,
   setup(props, { slots }) {

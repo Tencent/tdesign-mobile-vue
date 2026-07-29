@@ -4,15 +4,12 @@ import { BacktopIcon as TIconBackTop } from 'tdesign-icons-vue-next';
 
 import { isBrowser } from '../shared';
 import props from './props';
-import config from '../config';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import getScrollParent from '../_util/getScrollParent';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-back-top`,
+  name: 'TBackTop',
   props,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();

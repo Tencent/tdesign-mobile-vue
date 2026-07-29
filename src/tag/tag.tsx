@@ -1,14 +1,11 @@
 import { computed, defineComponent } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
-import config from '../config';
 import TagProps from './props';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-tag`,
+  name: 'TTag',
   components: {
     CloseIcon,
   },

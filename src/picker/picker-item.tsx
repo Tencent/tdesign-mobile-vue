@@ -1,16 +1,13 @@
 import { ref, computed, onMounted, onBeforeUnmount, defineComponent, PropType, watch, inject } from 'vue';
 import { get as lodashGet } from 'lodash-es';
-import config from '../config';
 import Picker from './picker.class';
 import { KeysType } from '../common';
 import { PickerColumnItem, PickerValue, PickerWheelConfig, TdPickerProps } from './type';
 import { usePrefixClass } from '../hooks/useClass';
 import { DEFAULT_WHEEL_CONFIG } from './constants';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-picker-item`,
+  name: 'TPickerItem',
   props: {
     options: {
       type: Array as PropType<PickerColumnItem[]>,

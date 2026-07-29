@@ -1,17 +1,14 @@
 import { computed, defineComponent, inject } from 'vue';
 import TBadge from '../badge';
 import TImage from '../image';
-import config from '../config';
 import AvatarProps from './props';
 import { TdAvatarGroupProps, TdAvatarProps } from './type';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import { isValidSize } from '../_common/js/avatar/utils';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-avatar`,
+  name: 'TAvatar',
   props: AvatarProps,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();

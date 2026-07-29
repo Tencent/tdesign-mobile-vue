@@ -1,15 +1,12 @@
 import { computed, defineComponent, onMounted, reactive, ref, toRefs, watch } from 'vue';
 import { isFunction } from 'lodash-es';
 import { useIntersectionObserver } from '@vueuse/core';
-import config from '../config';
 import props from './props';
 import useVModel from '../hooks/useVModel';
 import { trimSingleValue, trimValue } from './tool';
 import type { SliderValue } from './type';
 import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
-
-const { prefix } = config;
 
 type dataType = {
   initialLeft: number;
@@ -33,7 +30,7 @@ export interface TouchData {
 }
 
 export default defineComponent({
-  name: `${prefix}-slider`,
+  name: 'TSlider',
   props,
   setup(props) {
     const sliderClass = usePrefixClass('slider');

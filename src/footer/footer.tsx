@@ -1,13 +1,10 @@
 import { defineComponent } from 'vue';
 import TImage from '../image';
 import FooterProps from './props';
-import config from '../config';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-footer`,
+  name: 'TFooter',
   props: FooterProps,
   setup(props) {
     const footerClass = usePrefixClass('footer');
