@@ -98,7 +98,7 @@ jobs:
           git submodule update --init
           if [ -n "$COMMON_PR_NUMBER" ]; then
             echo "Checking out tdesign-common PR #$COMMON_PR_NUMBER"
-            cd packages/common
+            cd src/_common
             git fetch origin "pull/${COMMON_PR_NUMBER}/head:refs/heads/pr-${COMMON_PR_NUMBER}"
             git checkout "pr-${COMMON_PR_NUMBER}"
           else
