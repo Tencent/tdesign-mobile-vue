@@ -12,14 +12,11 @@ import {
 import props from './props';
 import { FormInjectionKey, FormItemContext } from './const';
 import { FormDisabledProvider } from './hooks';
-import config from '../config';
 import { renderContent } from '../shared';
 import { preventDefault } from '../shared/dom';
 import { FormItemValidateResult } from './form-item';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
-
-const { prefix } = config;
 
 type FormResetEvent = Event;
 // export type FormSubmitEvent = SubmitEvent; (for higher typescript version)
@@ -39,7 +36,7 @@ export const requestSubmit = (target: HTMLFormElement) => {
 };
 
 export default defineComponent({
-  name: `${prefix}-form`,
+  name: 'TForm',
   props,
   setup(props, { expose }) {
     const renderTNodeJSX = useTNodeJSX();

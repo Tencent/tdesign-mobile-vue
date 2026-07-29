@@ -1,15 +1,12 @@
 import { provide, watch, ref, reactive, nextTick, onMounted, defineComponent, toRefs } from 'vue';
 import TPopup from '../popup';
-import config from '../config';
 import props from './props';
 import { useTNodeJSX } from '../hooks/tnode';
 import TCalendarTemplate from './template';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-calendar`,
+  name: 'TCalendar',
   props,
   emits: ['update:visible'],
   setup(props, context) {

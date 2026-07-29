@@ -2,16 +2,13 @@ import { computed, defineComponent, ref, toRefs, h } from 'vue';
 import { StarFilledIcon } from 'tdesign-icons-vue-next';
 import { onClickOutside } from '@vueuse/core';
 import props from './props';
-import config from '../config';
 import { TdRateProps } from './type';
 import useVModel from '../hooks/useVModel';
 import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-rate`,
+  name: 'TRate',
   props,
   setup(props, context) {
     const rateClass = usePrefixClass('rate');

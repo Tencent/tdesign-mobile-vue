@@ -8,7 +8,6 @@ import {
   MinusRectangleFilledIcon,
   CheckRectangleFilledIcon,
 } from 'tdesign-icons-vue-next';
-import config from '../config';
 import CheckboxProps from './props';
 import { TNode } from '../shared';
 import useVModel from '../hooks/useVModel';
@@ -17,10 +16,8 @@ import { useTNodeJSX, useContent } from '../hooks/tnode';
 import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-checkbox`,
+  name: 'TCheckbox',
   components: { TNode },
   props: CheckboxProps,
   emits: ['update:checked', 'update:modelValue', 'change'],

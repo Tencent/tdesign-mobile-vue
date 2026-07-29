@@ -1,7 +1,14 @@
 <template>
   <div class="upload-demo">
     <div class="upload-title">宫格布局上传</div>
-    <t-upload :default-files="gridFiles" multiple :max="20" :request-method="requestMethod" :on-preview="onPreview">
+    <t-upload
+      draggable
+      :default-files="gridFiles"
+      multiple
+      :max="20"
+      :request-method="requestMethod"
+      :on-preview="onPreview"
+    >
     </t-upload>
   </div>
 
@@ -11,6 +18,7 @@
       :default-files="listFiles"
       theme="list"
       multiple
+      draggable
       :max="20"
       :request-method="requestMethod"
       :on-preview="onPreview"

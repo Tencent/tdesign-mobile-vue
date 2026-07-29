@@ -1,18 +1,16 @@
 import { ref, computed, defineComponent, watchEffect } from 'vue';
+import type { PropType } from 'vue';
 import { useIntersectionObserver } from '@vueuse/core';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
 import TLoading from '../loading';
-import config from '../config';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
 import props from './props';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-image`,
+  name: 'TImage',
   props,
   setup(props, context) {
     const imageClass = usePrefixClass('image');

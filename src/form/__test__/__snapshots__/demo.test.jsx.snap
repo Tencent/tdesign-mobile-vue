@@ -22,6 +22,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           用户名
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -97,6 +98,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           密码
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -198,6 +200,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           性别
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -333,6 +336,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           生日
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -872,6 +876,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           籍贯
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -1141,6 +1146,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           年限
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -1234,6 +1240,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           自我评价
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -1456,6 +1463,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           个人简介
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -1512,6 +1520,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           上传照片
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -1526,9 +1535,9 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             data-v-0efbfc02=""
           >
             
-            
             <div
               class="t-upload__item"
+              data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fexample4.png"
             >
               <div
                 class="t-image t-image--round t-upload__image"
@@ -1599,6 +1608,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
             </div>
             <div
               class="t-upload__item"
+              data-drag-key="u_uploaded2.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fexample6.png"
             >
               <div
                 class="t-image t-image--round t-upload__image"
@@ -1667,7 +1677,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 </g>
               </svg>
             </div>
-            
             <div
               class="t-upload__item t-upload__item--add"
             >
@@ -1703,6 +1712,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               multiple=""
               type="file"
             />
+            <!---->
             <!---->
           </div>
           
@@ -1918,6 +1928,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 用户名
               </label>
+              <!---->
             </div>
             <div
               class="t-form__controls"
@@ -1993,6 +2004,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 密码
               </label>
+              <!---->
             </div>
             <div
               class="t-form__controls"
@@ -2094,6 +2106,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 性别
               </label>
+              <!---->
             </div>
             <div
               class="t-form__controls"
@@ -2229,6 +2242,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 生日
               </label>
+              <!---->
             </div>
             <div
               class="t-form__controls"
@@ -2768,6 +2782,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 籍贯
               </label>
+              <!---->
             </div>
             <div
               class="t-form__controls"
@@ -3037,6 +3052,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 年限
               </label>
+              <!---->
             </div>
             <div
               class="t-form__controls"
@@ -3130,6 +3146,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 自我评价
               </label>
+              <!---->
             </div>
             <div
               class="t-form__controls"
@@ -3352,6 +3369,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 个人简介
               </label>
+              <!---->
             </div>
             <div
               class="t-form__controls"
@@ -3408,6 +3426,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 上传照片
               </label>
+              <!---->
             </div>
             <div
               class="t-form__controls"
@@ -3422,9 +3441,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   data-v-0efbfc02=""
                 >
                   
-                  
                   <div
                     class="t-upload__item"
+                    data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fexample4.png"
                   >
                     <div
                       class="t-image t-image--round t-upload__image"
@@ -3495,6 +3514,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                   </div>
                   <div
                     class="t-upload__item"
+                    data-drag-key="u_uploaded2.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fexample6.png"
                   >
                     <div
                       class="t-image t-image--round t-upload__image"
@@ -3563,7 +3583,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       </g>
                     </svg>
                   </div>
-                  
                   <div
                     class="t-upload__item t-upload__item--add"
                   >
@@ -3599,6 +3618,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     multiple=""
                     type="file"
                   />
+                  <!---->
                   <!---->
                 </div>
                 
@@ -3680,6 +3700,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           用户名
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -3753,6 +3774,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           密码
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -3852,6 +3874,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           性别
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -3985,6 +4008,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           生日
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -4522,6 +4546,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           籍贯
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -4789,6 +4814,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           年限
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -4880,6 +4906,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           自我评价
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -5100,6 +5127,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           个人简介
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -5154,6 +5182,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           上传照片
         </label>
+        <!---->
       </div>
       <div
         class="t-form__controls"
@@ -5167,9 +5196,9 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             data-v-39ff7205=""
           >
             
-            
             <div
               class="t-upload__item"
+              data-drag-key="u_uploaded1.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fexample4.png"
             >
               <div
                 class="t-image t-image--round t-upload__image"
@@ -5240,6 +5269,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
             </div>
             <div
               class="t-upload__item"
+              data-drag-key="u_uploaded2.png%7Cimage%7Chttps%3A%2F%2Ftdesign.gtimg.com%2Fmobile%2Fdemos%2Fexample6.png"
             >
               <div
                 class="t-image t-image--round t-upload__image"
@@ -5308,7 +5338,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 </g>
               </svg>
             </div>
-            
             <div
               class="t-upload__item t-upload__item--add"
             >
@@ -5344,6 +5373,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               multiple=""
               type="file"
             />
+            <!---->
             <!---->
           </div>
           

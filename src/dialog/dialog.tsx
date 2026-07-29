@@ -4,16 +4,13 @@ import { get, isString, isObject } from 'lodash-es';
 
 import TButton, { ButtonProps } from '../button';
 import TPopup from '../popup';
-import config from '../config';
 import props from './props';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import { TdDialogProps } from './type';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-dialog`,
+  name: 'TDialog',
   props,
   emits: ['update:visible', 'confirm', 'overlay-click', 'cancel', 'close', 'closed'],
   setup(props, context) {
@@ -133,13 +130,13 @@ export default defineComponent({
       context.emit('overlay-click', { e });
     };
 
-    const calcBtn = (btn: TdDialogProps['cancelBtn'] | TdDialogProps['confirmBtn']) => {
+    const calcBtn = (btn: TdDialogProps['cancelBtn'] | TdDialogProps['confirmBtn'] | ButtonProps): ButtonProps => {
       if (isString(btn)) {
         return { content: btn };
       }
 
       if (isObject(btn)) {
-        return btn;
+        return btn as ButtonProps;
       }
 
       return {};
@@ -148,7 +145,7 @@ export default defineComponent({
     const confirmBtnProps = computed<ButtonProps>(() => ({
       theme: 'primary',
       ...calcBtn(props.confirmBtn),
-      loading: confirmLoading.value || (calcBtn(props.confirmBtn) as ButtonProps)?.loading,
+      loading: confirmLoading.value || calcBtn(props.confirmBtn)?.loading,
     }));
 
     const cancelBtnProps = computed<ButtonProps>(() => ({
@@ -156,7 +153,9 @@ export default defineComponent({
       ...calcBtn(props.cancelBtn),
     }));
 
-    const actionsBtnProps = computed(() => props.actions?.map((item) => calcBtn(item)));
+    const actionsBtnProps = computed<ButtonProps[] | undefined>(() =>
+      Array.isArray(props.actions) ? props.actions.map((item) => calcBtn(item)) : undefined,
+    );
 
     const renderButtonNode = (
       btnType: 'cancelBtn' | 'confirmBtn',
@@ -197,9 +196,17 @@ export default defineComponent({
       };
       const renderActionsNode = () => {
         if (actionsBtnProps.value) {
-          return actionsBtnProps.value.map((item, index) => (
-            <TButton key={index} {...item} class={buttonClass.value} onClick={handleCancel} />
-          ));
+          return actionsBtnProps.value.map((item, index) => {
+            const { onClick, ...buttonProps } = item;
+            const handleActionClick = (e: MouseEvent) => {
+              onClick?.(e); // 不受 beforeClose 影响，无条件先执行
+              handleCancel(e); // 内部可能被 beforeClose reject 而不关闭
+            };
+
+            const key = `${isString(item.content) ? item.content : 'action'}-${index}`;
+
+            return <TButton key={key} {...buttonProps} class={buttonClass.value} onClick={handleActionClick} />;
+          });
         }
 
         return renderTNodeJSX('actions');

@@ -1,14 +1,11 @@
 import { computed, defineComponent, onBeforeUnmount, onMounted, ref } from 'vue';
-import config from '../config';
 import CountDownProps from './props';
 import { useCountDown } from '../shared/useCountDown';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-count-down`,
+  name: 'TCountDown',
   props: CountDownProps,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();

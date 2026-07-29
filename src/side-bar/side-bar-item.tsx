@@ -4,13 +4,10 @@ import { TdSideBarItemProps } from './type';
 import TBadge from '../badge';
 import { useTNodeJSX } from '../hooks/tnode';
 
-import config from '../config';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-side-bar-item`,
+  name: 'TSideBarItem',
   props,
   setup(props) {
     const sideBarItemClass = usePrefixClass('side-bar-item');

@@ -2,7 +2,6 @@ import { defineComponent, computed, ref, reactive, watch, provide } from 'vue';
 import { onClickOutside } from '@vueuse/core';
 import { CaretDownSmallIcon, CaretUpSmallIcon } from 'tdesign-icons-vue-next';
 import { camelCase, get as lodashGet, isFunction } from 'lodash-es';
-import config from '../config';
 import {
   context as menuContext,
   DropdownMenuState,
@@ -17,10 +16,8 @@ import DropdownMenuProps from './props';
 import { TdDropdownItemProps } from './type';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-dropdown-menu`,
+  name: 'TDropdownMenu',
   components: { CaretDownSmallIcon, CaretUpSmallIcon },
   props: {
     onMenuOpened: Function,
@@ -45,7 +42,7 @@ export default defineComponent({
     const menuItems = ref<any>([]);
     const updateItems = () => {
       if (slots.default) {
-        const itemName = `${prefix}-dropdown-item`;
+        const itemName = 'TDropdownItem';
         const children = slots.default();
         menuItems.value = children.filter((child: any) => {
           const childTypeName = child?.type?.name;

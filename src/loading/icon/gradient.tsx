@@ -1,12 +1,9 @@
 import { defineComponent, nextTick, onMounted, onUpdated, ref, CSSProperties, PropType } from 'vue';
 import circleAdapter from '../../_common/js/loading/circle-adapter';
-import config from '../../config';
 import { usePrefixClass } from '../../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-gradient`,
+  name: 'TGradient',
   props: {
     style: Object as PropType<CSSProperties>,
   },

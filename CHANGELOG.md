@@ -5,6 +5,27 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.16.0 `2026-07-27` 
+### 📈 Performance
+- `component`: 组件全局注册名及 `$options.name` 由 `kebab-case` (t-button) 变为 `PascalCase` (TButton)，对齐 PC 端。模板中 `<t-button> / <TButton>` 两种写法仍可用，但依赖组件 name 字符串的场景（如 keep-alive 的 include/exclude、按 name key 直接访问组件）需相应更新 @anlyyao @liweijie0812  ([#2267](https://github.com/Tencent/tdesign-mobile-vue/pull/2267))
+### 🚀 Features
+- `Upload`: 新增 `draggable` 属性，支持拖拽排序 @Wesley-0808 ([#2141](https://github.com/Tencent/tdesign-mobile-vue/pull/2141))
+### 🐞 Bug Fixes
+- `Button`: 修复悬停状态未正确处理的问题 @RSS1102 ([#2259](https://github.com/Tencent/tdesign-mobile-vue/pull/2259))
+- `Navbar`: 修复 env(safe-area-inset-top) 非 0 时占位栏高度错误导致底部留白 @anlyyao ([#2256](https://github.com/Tencent/tdesign-mobile-vue/pull/2256))
+- `Input`: 修复PC浏览器环境下 `clearable` 不生效问题 @novlan1 ([#2167](https://github.com/Tencent/tdesign-mobile-vue/pull/2167))
+- `ImageViewer`: 移除底部的点状导航器 @anlyyao ([#2266](https://github.com/Tencent/tdesign-mobile-vue/pull/2266))
+- `TabBar`: 修复 `keep-alive` 场景下，组件占位高度为 0 @anlyyao ([#2272](https://github.com/Tencent/tdesign-mobile-vue/pull/2272))
+
+## 🌈 1.15.1 `2026-07-02` 
+### 🚀 Features
+- `DateTimePicker`: 为 `format` 属性新增 `time-stamp` 可选项，支持时间戳格式 @anlyyao ([#2249](https://github.com/Tencent/tdesign-mobile-vue/pull/2249))
+- `Form`: 支持国际化 @anlyyao ([#2249](https://github.com/Tencent/tdesign-mobile-vue/pull/2249))
+### 🐞 Bug Fixes
+- `Button`: ⚠️ `--td-button-xx-font-size` 系列变更为 `--td-button-xx-font`；⚠️ 移除 `--td-button-font-weight`，请改用 `--td-button-xx-font`，或者[组件库级别的 css var ](https://github.com/Tencent/tdesign-common/blob/develop/style/mobile/theme/_font.less)调整字号、行高、字重、字体等文本样式 @liweijie0812 ([common#2540](https://github.com/Tencent/tdesign-common/pull/2540))([#2245](https://github.com/Tencent/tdesign-mobile-vue/pull/2245))
+- `ConfigProvider`: 为 `Upload` 语言包补充 `upload.progress.reloadText` 字段 @dev-soragoto ([common#2576](https://github.com/Tencent/tdesign-common/pull/2576))
+- `Dialog`: 修复 `actions` 配置 `onClick` 时按钮点击事件报错，⚠️ 配置项的 `onClick` 事件会无条件先执行，不受 `beforeClose` 影响 @AsukaShikinamiLangley ([#2253](https://github.com/Tencent/tdesign-mobile-vue/pull/2253))
+
 ## 🌈 1.15.0 `2026-06-08` 
 ### 🚀 Features
 - `Typography`: 新增 `Typography` 排版组件 @anlyyao ([#2205](https://github.com/Tencent/tdesign-mobile-vue/pull/2205))

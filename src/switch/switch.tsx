@@ -2,17 +2,14 @@ import { computed, defineComponent, h, toRefs } from 'vue';
 import { isArray, isFunction, isString } from 'lodash-es';
 import TLoading from '../loading';
 import useToggle from '../hooks/useToggle';
-import config from '../config';
 import props from './props';
 import { SwitchValue, TdSwitchProps } from './type';
 import { useFormDisabled } from '../form/hooks';
 import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-switch`,
+  name: 'TSwitch',
   props,
   setup(props, context) {
     const switchClass = usePrefixClass('switch');

@@ -44,21 +44,19 @@ import {
   SuccessListType,
   ValidateStatus,
 } from './const';
-import config from '../config';
 import { useTNodeJSX } from '../hooks/tnode';
-import { usePrefixClass } from '../hooks/useClass';
-
-const { prefix } = config;
+import { usePrefixClass, useConfig } from '../hooks/useClass';
 
 export type FormItemValidateResult<T extends Data = Data> = { [key in keyof T]: boolean | AllValidateResult[] };
 
 export default defineComponent({
-  name: `${prefix}-form-item`,
+  name: 'TFormItem',
   props,
   setup(props, { slots }) {
     const renderTNodeJSX = useTNodeJSX();
     const formClass = usePrefixClass('form');
     const formItemClass = usePrefixClass('form__item');
+    const { globalConfig } = useConfig('form');
     const { name } = toRefs(props);
 
     const form = inject(FormInjectionKey, undefined);
@@ -103,7 +101,6 @@ export default defineComponent({
       {
         [`${labelClass}--required`]: needRequiredMark.value,
         [`${labelClass}--required-right`]: needRequiredMark.value && requiredMarkPosition.value === 'right',
-        [`${labelClass}--colon`]: hasColon.value,
         [`${labelClass}--top`]: hasLabel.value && (labelAlign.value === 'top' || !labelWidth.value),
         [`${labelClass}--left`]: labelAlign.value === 'left' && labelWidth.value,
         [`${labelClass}--right`]: labelAlign.value === 'right' && labelWidth.value,
@@ -195,7 +192,9 @@ export default defineComponent({
       }
     };
 
-    const errorMessages = computed<FormErrorMessage>(() => form?.errorMessage || {});
+    const errorMessages = computed<FormErrorMessage>(
+      () => form?.errorMessage ?? globalConfig.value?.errorMessage ?? {},
+    );
     const innerRules = computed<FormRule[]>(() => {
       if (props.rules?.length) return props.rules;
       if (!props.name) return [];
@@ -379,6 +378,7 @@ export default defineComponent({
           <div class={[`${formItemClass.value}-wrap`, `${formItemClass.value}--${labelAlign.value}`]}>
             <div class={labelClasses.value} style={labelStyle.value}>
               <label for={props.for}>{renderLabelContent()}</label>
+              {hasColon.value && globalConfig.value.colonText}
             </div>
             <div class={contentClasses.value} style={contentStyle.value}>
               <div class={contentSlotClasses.value}>{renderTNodeJSX('default')}</div>

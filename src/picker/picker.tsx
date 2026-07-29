@@ -1,6 +1,5 @@
 import { computed, defineComponent, toRefs, ref, watch, provide } from 'vue';
 import { isBoolean, isFunction, isString, get as lodashGet } from 'lodash-es';
-import config from '../config';
 import PickerProps from './props';
 import { KeysType } from '../common';
 import { PickerValue, PickerColumn, PickerColumnItem, PickerWheelConfig } from './type';
@@ -11,15 +10,13 @@ import { getPickerColumns } from './utils';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 import { DEFAULT_WHEEL_CONFIG } from './constants';
 
-const { prefix } = config;
-
 const getIndexFromColumns = (column: PickerColumn, value: PickerValue, keys?: KeysType) => {
   if (!value) return 0;
   return column?.findIndex((item: PickerColumnItem) => lodashGet(item, keys?.value ?? 'value') === value);
 };
 
 export default defineComponent({
-  name: `${prefix}-picker`,
+  name: 'TPicker',
   components: { PickerItem },
   props: PickerProps,
   emits: ['change', 'cancel', 'pick', 'update:modelValue', 'update:value'],
