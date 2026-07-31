@@ -7,12 +7,9 @@ import { getBackgroundColor } from './utils';
 import props from './props';
 import { PRO_THEME, STATUS_ICON, PLUMP_SEPARATE } from '../_common/js/progress/const';
 import { getDiameter, getCircleStokeWidth } from '../_common/js/progress/utils';
-import config from '../config';
-
-const { prefix } = config;
 
 export default defineComponent({
-  name: `${prefix}-progress`,
+  name: 'TProgress',
   props,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();

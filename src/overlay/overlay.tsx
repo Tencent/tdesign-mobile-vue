@@ -1,14 +1,11 @@
 import { Transition, computed, defineComponent } from 'vue';
 import { preventDefault } from '../shared/dom';
-import config from '../config';
 import OverlayProps from './props';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-overlay`,
+  name: 'TOverlay',
   props: OverlayProps,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();

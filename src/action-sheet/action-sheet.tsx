@@ -3,16 +3,13 @@ import TActionSheetGrid from './action-sheet-grid';
 import TActionSheetList from './action-sheet-list';
 import TButton from '../button';
 import TPopup from '../popup';
-import config from '../config';
 import { useConfig, usePrefixClass } from '../hooks/useClass';
 import useVModel from '../hooks/useVModel';
 import props from './props';
 import { ActionSheetItem, TdActionSheetProps } from './type';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-action-sheet`,
+  name: 'TActionSheet',
   props,
   emits: ['selected', 'update:modelValue', 'cancel', 'close', 'update:visible'],
   setup(props, context) {

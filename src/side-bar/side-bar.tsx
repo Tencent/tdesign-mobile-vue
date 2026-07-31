@@ -1,15 +1,12 @@
 import { defineComponent, ref, Ref, toRefs, ComponentInternalInstance, provide } from 'vue';
-import config from '../config';
 import props from './props';
 import { TdSideBarProps } from './type';
 import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-side-bar`,
+  name: 'TSideBar',
   props,
   emits: ['update:value', 'update:modelValue', 'change'],
   setup(props, context) {

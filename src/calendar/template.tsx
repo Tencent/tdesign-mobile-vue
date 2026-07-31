@@ -7,17 +7,14 @@ import {
   ChevronRightDoubleIcon,
 } from 'tdesign-icons-vue-next';
 import TButton from '../button';
-import config from '../config';
 import props from './template-props';
 import { useTNodeJSX } from '../hooks/tnode';
 import { TdCalendarProps, TDate, TDateType, CalendarValue, TCalendarValue } from './type';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 import { getPrevMonth, getPrevYear, getNextMonth, getNextYear } from './utils';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-calendar-template`,
+  name: 'TCalendarTemplate',
   props,
   emits: ['visible-change'],
   setup(_props, context) {

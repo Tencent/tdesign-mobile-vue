@@ -1,5 +1,4 @@
 import { defineComponent, ref, computed, onMounted, watch } from 'vue';
-import config from '../config';
 import FabProps from './props';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
@@ -7,10 +6,8 @@ import TButton from '../button';
 import { TdFabProps } from './type';
 import { reconvertUnit } from '../shared';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-fab`,
+  name: 'TFab',
   props: FabProps,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();

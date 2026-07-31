@@ -5,13 +5,11 @@ import { isString, isObject } from 'lodash-es';
 import Link from '../link';
 import props from './props';
 import { MessageMarquee, TdMessageProps } from './type';
-import config from '../config';
 import { hasStyleUnit } from '../_common/js/utils/helper';
 import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
 
-const { prefix } = config;
 const iconDefault = {
   info: h(InfoCircleFilledIcon),
   success: h(CheckCircleFilledIcon),
@@ -30,7 +28,7 @@ export interface MessagePluginOptions extends TdMessageProps {
 }
 
 export default defineComponent({
-  name: `${prefix}-message`,
+  name: 'TMessage',
   props,
   setup(props, context) {
     const messageClass = usePrefixClass('message');

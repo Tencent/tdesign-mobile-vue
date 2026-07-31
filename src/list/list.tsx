@@ -2,15 +2,12 @@ import { defineComponent, ref } from 'vue';
 import { useWindowSize, useEventListener } from '@vueuse/core';
 import { useTNodeJSX } from '../hooks/tnode';
 import TLoading from '../loading';
-import config from '../config';
 import props from './props';
 import { useScrollParent } from '../shared';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-list`,
+  name: 'TList',
   components: {
     TLoading,
   },

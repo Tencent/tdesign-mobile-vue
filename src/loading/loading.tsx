@@ -2,16 +2,13 @@ import { defineComponent, computed, ref, watch, h, setBlockTracking, Teleport, o
 import TGradientIcon from './icon/gradient';
 import SpinnerIcon from './icon/spinner';
 
-import config from '../config';
 import props from './props';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import { addClass, getAttach, removeClass } from '../shared/dom';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-loading`,
+  name: 'TLoading',
   props,
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();

@@ -1,7 +1,6 @@
 import { computed, defineComponent, inject, nextTick, onBeforeMount, reactive, ref, toRefs, watch } from 'vue';
 import { get as lodashGet } from 'lodash-es';
 import TRadio, { RadioGroup as TRadioGroup } from '../radio';
-import config from '../config';
 import TButton from '../button';
 import TPopup from '../popup';
 import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
@@ -14,12 +13,10 @@ import useVModel from '../hooks/useVModel';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import { useConfig, usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 const getUniqueID = uniqueFactory('dropdown-popup');
 
 export default defineComponent({
-  name: `${prefix}-dropdown-item`,
+  name: 'TDropdownItem',
   props,
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
   setup(props) {

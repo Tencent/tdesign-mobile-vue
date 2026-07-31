@@ -1,13 +1,10 @@
 import { defineComponent, provide, toRefs, computed } from 'vue';
 
-import config from '../config';
 import props from './props';
 import { usePrefixClass } from '../hooks/useClass';
 
-const { prefix } = config;
-
 export default defineComponent({
-  name: `${prefix}-grid`,
+  name: 'TGrid',
   props,
   setup(props, { slots }) {
     const gridClass = usePrefixClass('grid');

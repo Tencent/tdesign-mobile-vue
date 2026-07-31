@@ -4,7 +4,6 @@ import { get as lodashGet } from 'lodash-es';
 import TPopup from '../popup';
 import { Tabs } from '../tabs';
 import { RadioValue, RadioGroup as TRadioGroup } from '../radio';
-import config from '../config';
 import props from './props';
 import { TreeOptionData } from '../common';
 import { useConfig } from '../config-provider/useConfig';
@@ -12,9 +11,6 @@ import useVModel from '../hooks/useVModel';
 import { useTNodeJSX } from '../hooks/tnode';
 import { usePrefixClass } from '../hooks/useClass';
 import { CascaderTriggerSource } from './type';
-
-const { prefix } = config;
-const name = `${prefix}-cascader`;
 
 interface ChildrenInfoType {
   value: string | number | boolean;
@@ -34,7 +30,7 @@ interface KeysType {
 }
 
 export default defineComponent({
-  name,
+  name: 'TCascader',
   props,
   emits: ['update:visible', 'update:value', 'update:modelValue'],
   setup(props, { emit, expose }) {
