@@ -15,6 +15,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       role="tablist"
       style="z-index: 1;"
     >
+      <!---->
       
       
       <div
@@ -123,6 +124,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       role="tablist"
       style="z-index: 1;"
     >
+      <!---->
       
       
       <div
@@ -359,6 +361,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       role="tablist"
       style="z-index: 1;"
     >
+      <!---->
       
       
       <div
@@ -603,6 +606,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
   role="tablist"
   style="z-index: 1;"
 >
+  <!---->
   
   
   <div
@@ -757,6 +761,7 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
   role="tablist"
   style="z-index: 1;"
 >
+  <!---->
   
   
   <div
@@ -949,6 +954,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         role="tablist"
         style="z-index: 1;"
       >
+        <!---->
         
         
         <div
@@ -1065,6 +1071,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         role="tablist"
         style="z-index: 1;"
       >
+        <!---->
         
         
         <div
@@ -1237,6 +1244,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         role="tablist"
         style="z-index: 1;"
       >
+        <!---->
         
         
         <div
@@ -1401,6 +1409,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         role="tablist"
         style="z-index: 1;"
       >
+        <!---->
         
         
         <div
@@ -1524,6 +1533,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           role="tablist"
           style="z-index: 1;"
         >
+          <!---->
           
           
           <div
@@ -1632,6 +1642,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           role="tablist"
           style="z-index: 1;"
         >
+          <!---->
           
           
           <div
@@ -1868,6 +1879,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           role="tablist"
           style="z-index: 1;"
         >
+          <!---->
           
           
           <div
@@ -2125,11 +2137,209 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--round"
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--round t-tab-bar--round"
         data-v-8bf7e573=""
         role="tablist"
         style="z-index: 1;"
       >
+        <!---->
+        
+        
+        <div
+          class="t-tab-bar-item t-tab-bar-item--round"
+        >
+          <div
+            aria-expanded="false"
+            aria-selected="true"
+            class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-home"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-home"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--round"
+        >
+          <div
+            aria-expanded="false"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-app"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-app"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--round"
+        >
+          <div
+            aria-expanded="false"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-chat"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-chat"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--round"
+        >
+          <div
+            aria-expanded="false"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-user"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-user"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-8bf7e573=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        液态玻璃悬浮胶囊标签栏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-tab-bar t-tab-bar--safe t-tab-bar--liquid-glass t-tab-bar--round"
+        data-v-8bf7e573=""
+        role="tablist"
+        style="z-index: 1;"
+      >
+        
+        <svg
+          aria-hidden="true"
+          class="t-tab-bar__liquid-glass-svg"
+        >
+          <defs>
+            <filter
+              filterUnits="objectBoundingBox"
+              height="100%"
+              id="t-tab-bar-liquid-glass-filter"
+              width="100%"
+              x="0%"
+              y="0%"
+            >
+              <fedisplacementmap
+                scale="200"
+              />
+            </filter>
+          </defs>
+        </svg>
+        <div
+          class="t-tab-bar__liquid-glass-outer"
+        />
+        <div
+          class="t-tab-bar__liquid-glass-cover"
+        />
+        <div
+          class="t-tab-bar__liquid-glass-sharp"
+        />
+        <div
+          class="t-tab-bar__liquid-glass-reflect"
+        />
+        
         
         
         <div
@@ -2299,6 +2509,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         role="tablist"
         style="z-index: 1;"
       >
+        <!---->
         
         
         <div
@@ -2456,6 +2667,7 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
   role="tablist"
   style="z-index: 1;"
 >
+  <!---->
   
   
   <div
@@ -2597,10 +2809,11 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
 
 exports[`TabBar > TabBar roundVue demo works fine 1`] = `
 <div
-  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--round"
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--round t-tab-bar--round"
   role="tablist"
   style="z-index: 1;"
 >
+  <!---->
   
   
   <div
@@ -2746,6 +2959,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
   role="tablist"
   style="z-index: 1;"
 >
+  <!---->
   
   
   <div
@@ -2841,6 +3055,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
   role="tablist"
   style="z-index: 1;"
 >
+  <!---->
   
   
   <div
