@@ -2271,6 +2271,170 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-8bf7e573=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        液态玻璃悬浮胶囊
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--round t-tab-bar--liquid-glass"
+        data-v-8bf7e573=""
+        role="tablist"
+        style="z-index: 1;"
+      >
+        
+        
+        <div
+          class="t-tab-bar-item t-tab-bar-item--round"
+        >
+          <div
+            aria-expanded="false"
+            aria-selected="true"
+            class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-home"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-home"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--round"
+        >
+          <div
+            aria-expanded="false"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-app"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-app"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--round"
+        >
+          <div
+            aria-expanded="false"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-chat"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-chat"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--round"
+        >
+          <div
+            aria-expanded="false"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-user"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-user"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+  <div
     class="tdesign-mobile-demo-block"
     data-v-8bf7e573=""
   >
