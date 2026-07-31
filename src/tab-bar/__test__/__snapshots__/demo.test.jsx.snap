@@ -15,6 +15,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       role="tablist"
       style="z-index: 1;"
     >
+      <!---->
       
       
       <div
@@ -123,6 +124,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       role="tablist"
       style="z-index: 1;"
     >
+      <!---->
       
       
       <div
@@ -359,6 +361,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       role="tablist"
       style="z-index: 1;"
     >
+      <!---->
       
       
       <div
@@ -603,6 +606,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
   role="tablist"
   style="z-index: 1;"
 >
+  <!---->
   
   
   <div
@@ -757,6 +761,7 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
   role="tablist"
   style="z-index: 1;"
 >
+  <!---->
   
   
   <div
@@ -949,6 +954,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         role="tablist"
         style="z-index: 1;"
       >
+        <!---->
         
         
         <div
@@ -1065,6 +1071,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         role="tablist"
         style="z-index: 1;"
       >
+        <!---->
         
         
         <div
@@ -1237,6 +1244,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         role="tablist"
         style="z-index: 1;"
       >
+        <!---->
         
         
         <div
@@ -1401,6 +1409,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         role="tablist"
         style="z-index: 1;"
       >
+        <!---->
         
         
         <div
@@ -1524,6 +1533,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           role="tablist"
           style="z-index: 1;"
         >
+          <!---->
           
           
           <div
@@ -1632,6 +1642,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           role="tablist"
           style="z-index: 1;"
         >
+          <!---->
           
           
           <div
@@ -1868,6 +1879,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
           role="tablist"
           style="z-index: 1;"
         >
+          <!---->
           
           
           <div
@@ -2130,6 +2142,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         role="tablist"
         style="z-index: 1;"
       >
+        <!---->
         
         
         <div
@@ -2271,6 +2284,268 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-8bf7e573=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        液态玻璃悬浮胶囊标签栏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="tab-bar-glass-demo"
+        data-v-8bf7e573=""
+        data-v-dde4e901=""
+      >
+        <div
+          class="tab-bar-glass-demo__bg"
+          data-v-dde4e901=""
+        />
+        <!--
+      液态玻璃（对标 iOS 26）：
+      - 组件内置的 __glass 折射层通过 CSS 变量接收"玻璃背后的画面"，用 SVG 位移贴图（边缘凸镜）+ 色散做真折射；
+      - 折射为 opt-in：不传 --td-tab-bar-glass-image / --td-tab-bar-glass-refract 时，自动退化为 backdrop-filter 磨砂，兼容任意背景。
+      注：真机像素级对齐需 App 把页面背景与 image-size/pos 对齐；此处 demo 为近似演示。
+    -->
+        <div
+          class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--round-glass"
+          data-v-dde4e901=""
+          role="tablist"
+          style="z-index: 1; --td-tab-bar-glass-image: linear-gradient(135deg, #ff8fb1, #ff5f7e 28%, #6f6cf0 66%, #1ec8ff); --td-tab-bar-glass-refract: blur(3px) url('#t-tab-bar-liquid-lens');"
+        >
+          <div
+            aria-hidden="true"
+            class="t-tab-bar__glass"
+          />
+          
+          
+          <div
+            class="t-tab-bar-item t-tab-bar-item--round-glass"
+            data-v-dde4e901=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="true"
+              class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                
+                <svg
+                  class="t-icon t-icon-home"
+                  data-v-dde4e901=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-home"
+                  />
+                </svg>
+                
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            class="t-tab-bar-item t-tab-bar-item--round-glass"
+            data-v-dde4e901=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                
+                <svg
+                  class="t-icon t-icon-app"
+                  data-v-dde4e901=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-app"
+                  />
+                </svg>
+                
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            class="t-tab-bar-item t-tab-bar-item--round-glass"
+            data-v-dde4e901=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                
+                <svg
+                  class="t-icon t-icon-chat"
+                  data-v-dde4e901=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-chat"
+                  />
+                </svg>
+                
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            class="t-tab-bar-item t-tab-bar-item--round-glass"
+            data-v-dde4e901=""
+          >
+            <div
+              aria-expanded="false"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                
+                <svg
+                  class="t-icon t-icon-user"
+                  data-v-dde4e901=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-user"
+                  />
+                </svg>
+                
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+          
+          
+        </div>
+        <svg
+          aria-hidden="true"
+          class="tab-bar-glass-demo__defs"
+          data-v-dde4e901=""
+        >
+          <filter
+            color-interpolation-filters="sRGB"
+            data-v-dde4e901=""
+            height="130%"
+            id="t-tab-bar-liquid-lens"
+            width="130%"
+            x="-15%"
+            y="-15%"
+          >
+            <!-- 离线烘焙的&quot;边缘凸镜&quot;位移贴图：中心中性、四周向内弯折 -->
+            <feimage
+              data-v-dde4e901=""
+              height="100%"
+              href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAABACAIAAADkhTlJAAABKUlEQVR42u3dwQqCQBiFUQvfu7c2LXXaVGRiUC2mS+cgQ8v4mQ9FUHelHEpzVW7r4zEv161j2l5f/Hixbh1Pf+l+NMsV1srGPv9+k3+21d/d5Osd3trvkKttJkOA3IBHQ4DcgM+GALkBD4YAAgYqBNwbAuQGfDQEEDAgYEDA8CcBd4YAuQG7Cw0uoQFnYOCtgE+GAAIGKgTsaSQIDtgD/RAc8GwIkGpvBCBgQMCAgEHAgIABAQMCBgEDAgYEDAIGBAwIGBAwCBgQMCBgQMAgYEDAgIBBwEAS74WG6IB9mQGCA/ZtJAgO2NcJQcBAjYB7Q4DcgI+GAM7AQIWAO0MAl9CAgAEBg4CBXw/YXWgIDngwBBAwUCFgTyNBcMCjIUBuwB7oh1jeiQXBLqU6qU1hLRa9AAAAAElFTkSuQmCC"
+              preserveAspectRatio="none"
+              result="map"
+              width="100%"
+              x="0"
+              y="0"
+            />
+            <!-- 色散：红通道位移量(46)大于绿蓝(34)，边缘产生 RGB 分离 -->
+            <fedisplacementmap
+              data-v-dde4e901=""
+              in="SourceGraphic"
+              in2="map"
+              result="dr"
+              scale="46"
+              xChannelSelector="R"
+              yChannelSelector="G"
+            />
+            <fecolormatrix
+              data-v-dde4e901=""
+              in="dr"
+              result="drR"
+              type="matrix"
+              values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0"
+            />
+            <fedisplacementmap
+              data-v-dde4e901=""
+              in="SourceGraphic"
+              in2="map"
+              result="dg"
+              scale="34"
+              xChannelSelector="R"
+              yChannelSelector="G"
+            />
+            <fecolormatrix
+              data-v-dde4e901=""
+              in="dg"
+              result="dgGB"
+              type="matrix"
+              values="0 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
+            />
+            <fecomposite
+              data-v-dde4e901=""
+              in="drR"
+              in2="dgGB"
+              k1="0"
+              k2="1"
+              k3="1"
+              k4="0"
+              operator="arithmetic"
+            />
+          </filter>
+        </svg>
+      </div>
+      
+    </div>
+  </div>
+  <div
     class="tdesign-mobile-demo-block"
     data-v-8bf7e573=""
   >
@@ -2299,6 +2574,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         role="tablist"
         style="z-index: 1;"
       >
+        <!---->
         
         
         <div
@@ -2456,6 +2732,7 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
   role="tablist"
   style="z-index: 1;"
 >
+  <!---->
   
   
   <div
@@ -2601,6 +2878,7 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
   role="tablist"
   style="z-index: 1;"
 >
+  <!---->
   
   
   <div
@@ -2746,6 +3024,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
   role="tablist"
   style="z-index: 1;"
 >
+  <!---->
   
   
   <div
@@ -2841,6 +3120,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
   role="tablist"
   style="z-index: 1;"
 >
+  <!---->
   
   
   <div
