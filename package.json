@@ -141,7 +141,7 @@
     "camelcase": "~6.3.0",
     "codesandbox": "^2.2.3",
     "commitizen": "^4.2.3",
-    "concurrently": "^6.5.1",
+    "concurrently": "^10.0.4",
     "cross-env": "^7.0.3",
     "cypress": "^9.1.1",
     "cz-conventional-changelog": "3.3.0",
