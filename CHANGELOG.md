@@ -640,8 +640,8 @@ spline: explain
 - `Layout`: 新增 `Layout` 组件 @aaronmhl ([#1393](https://github.com/Tencent/tdesign-mobile-vue/pull/1393))
 - `Loading`: 新增 `attach` 和 `fullscreen` 属性，并支持函数式调用 @dexterBo ([#1444](https://github.com/Tencent/tdesign-mobile-vue/pull/1444))
 - `ImageViewer`: 优化 `align` 配置长图滚动范围设置 @aaronmhl ([#1442](https://github.com/Tencent/tdesign-mobile-vue/pull/1442))
-- `SideBar`: `
-  - label` 标签对齐方式从 "居中对齐" 变更为 “左对齐” @anlyyao ([#1347](https://github.com/Tencent/tdesign-mobile-vue/pull/1347))
+- `SideBar`: 
+  - `label` 标签对齐方式从 "居中对齐" 变更为 “左对齐” @anlyyao ([#1347](https://github.com/Tencent/tdesign-mobile-vue/pull/1347))
   - 修复禁用态仍能点选的问题 @anlyyao ([#1347](https://github.com/Tencent/tdesign-mobile-vue/pull/1347))
 - `Form`:
   - 支持`scrollToFirstError`，自动滚动到第一个校验不通过的字段位置 @liweijie0812 ([#1460](https://github.com/Tencent/tdesign-mobile-vue/pull/1460))
