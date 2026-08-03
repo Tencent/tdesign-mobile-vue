@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
-import { Typography, TypographyText, TypographyTitle, TypographyParagraph } from '../index';
+import { Typography, Text, Title, Paragraph } from '../index';
 
 const prefix = 't';
 const COMPONENT_NAME = `${prefix}-typography`;
@@ -40,8 +40,8 @@ describe('Typography', () => {
 describe('Typography exports', () => {
   it('exports all sub-components', () => {
     expect(Typography).toBeDefined();
-    expect(TypographyText).toBeDefined();
-    expect(TypographyTitle).toBeDefined();
-    expect(TypographyParagraph).toBeDefined();
+    expect(Text).toBeDefined();
+    expect(Title).toBeDefined();
+    expect(Paragraph).toBeDefined();
   });
 });
