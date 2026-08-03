@@ -13,10 +13,8 @@ export type TitleProps = TdTitleProps;
 export type ParagraphProps = TdParagraphProps;
 
 export const Typography = withInstall(_Typography);
-export const TypographyText = withInstall(_Text);
-export const TypographyTitle = withInstall(_Title);
-export const TypographyParagraph = withInstall(_Paragraph);
-
-export { _Text as Text, _Title as Title, _Paragraph as Paragraph };
+export const Text = withInstall(_Text);
+export const Title = withInstall(_Title);
+export const Paragraph = withInstall(_Paragraph);
 
 export default Typography;
