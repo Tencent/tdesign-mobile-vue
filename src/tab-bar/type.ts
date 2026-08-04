@@ -5,7 +5,7 @@
  * */
 
 import { BadgeProps } from '../badge';
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdTabBarProps {
   /**
@@ -13,6 +13,11 @@ export interface TdTabBarProps {
    * @default true
    */
   bordered?: boolean;
+  /**
+   * 标签栏的材质效果
+   * @default normal
+   */
+  effect?: 'normal' | 'glass';
   /**
    * 是否固定在底部
    * @default true
@@ -39,10 +44,10 @@ export interface TdTabBarProps {
    */
   split?: boolean;
   /**
-   * 选项风格
+   * 选项风格。normal 为弱选中，tag 为逐项标签选中，capsule 为共享胶囊选中态
    * @default normal
    */
-  theme?: 'normal' | 'tag';
+  theme?: 'normal' | 'tag' | 'capsule';
   /**
    * 当前选中标签的索引
    */

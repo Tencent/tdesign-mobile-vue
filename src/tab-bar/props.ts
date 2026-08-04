@@ -13,6 +13,15 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 标签栏的材质效果 */
+  effect: {
+    type: String as PropType<TdTabBarProps['effect']>,
+    default: 'normal' as TdTabBarProps['effect'],
+    validator(val: TdTabBarProps['effect']): boolean {
+      if (!val) return true;
+      return ['normal', 'glass'].includes(val);
+    },
+  },
   /** 是否固定在底部 */
   fixed: {
     type: Boolean,
@@ -39,13 +48,13 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 选项风格 */
+  /** 选项风格。normal 为弱选中，tag 为逐项标签选中，capsule 为共享胶囊选中态 */
   theme: {
     type: String as PropType<TdTabBarProps['theme']>,
     default: 'normal' as TdTabBarProps['theme'],
     validator(val: TdTabBarProps['theme']): boolean {
       if (!val) return true;
-      return ['normal', 'tag'].includes(val);
+      return ['normal', 'tag', 'capsule'].includes(val);
     },
   },
   /** 当前选中标签的索引 */

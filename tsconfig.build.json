@@ -4,5 +4,17 @@
     "rootDir": "src"
   },
   "include": ["src/**/*", "globals.d.ts"],
-  "exclude": ["node_modules", "src/**/demos", "src/_common", "src/**/__test__", "dist", "es", "esm", "lib", "cjs", "site"]
+  "exclude": [
+    "node_modules",
+    "src/**/demos/**",
+    "src/_common",
+    "src/**/__test__/**",
+    "src/**/__tests__/**",
+    "dist",
+    "es",
+    "esm",
+    "lib",
+    "cjs",
+    "site"
+  ]
 }
