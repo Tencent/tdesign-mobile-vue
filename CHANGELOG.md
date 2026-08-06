@@ -5,6 +5,13 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.16.1 `2026-08-06`
+
+### 🐞 Bug Fixes
+
+- `Search`: 修复搜索框清空图标垂直居中问题 @anlyyao ([common#2663](https://github.com/Tencent/tdesign-common/pull/2663))
+- `Typography`: 移除重复导出的组件 `Text/Title/Paragraph`，修复 "Plugin has already been applied" 告警 @anlyyao ([#2282](https://github.com/Tencent/tdesign-mobile-vue/pull/2282))
+
 ## 🌈 1.16.0 `2026-07-27`
 
 ### 📈 Performance
