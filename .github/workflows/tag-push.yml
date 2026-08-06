@@ -14,6 +14,7 @@ jobs:
       TDESIGN_BOT_TOKEN: ${{ secrets.TDESIGN_BOT_TOKEN }}
     with:
       node-version-file: .node-version
+      skip-publish-npm: true
     permissions:
       contents: read
       id-token: write
