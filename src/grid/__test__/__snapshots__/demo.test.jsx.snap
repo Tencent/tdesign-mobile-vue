@@ -2627,11 +2627,39 @@ exports[`Grid > Grid iconVue demo works fine 1`] = `
           viewBox="0 0 24 24"
           width="1em"
         >
+          <defs>
+            <mask
+              height="24"
+              id="t-icon-share-instance-v0-overlap-fill1"
+              mask-type="luminance"
+              maskContentUnits="userSpaceOnUse"
+              maskUnits="userSpaceOnUse"
+              width="24"
+              x="0"
+              y="0"
+            >
+              <rect
+                fill="#fff"
+                height="24"
+                width="24"
+                x="0"
+                y="0"
+              />
+              <path
+                d="M7.59863 13.501L15.3929 18.001M7.59863 10.499L15.3929 5.99902M15.3927 5.99855C14.5642 4.56367 15.0559 2.7289 16.4907 1.90047C17.9256 1.07204 19.7604 1.56367 20.5888 2.99855C21.4172 4.43343 20.9256 6.2682 19.4907 7.09662C18.0559 7.92505 16.2211 7.43342 15.3927 5.99855ZM15.3927 18.0005C16.2211 16.5656 18.0559 16.074 19.4907 16.9024C20.9256 17.7309 21.4172 19.5656 20.5888 21.0005C19.7604 22.4354 17.9256 22.927 16.4907 22.0986C15.0559 21.2701 14.5642 19.4354 15.3927 18.0005ZM7.59858 10.4985C8.42701 11.9334 7.93538 13.7682 6.5005 14.5966C5.06562 15.4251 3.23085 14.9334 2.40242 13.4985C1.574 12.0637 2.06562 10.2289 3.5005 9.40047C4.93538 8.57204 6.77015 9.06367 7.59858 10.4985ZM7.59858 13.5004C6.77015 14.9353 4.93538 15.4269 3.5005 14.5985C2.06562 13.7701 1.574 11.9353 2.40242 10.5004C3.23085 9.06553 5.06562 8.5739 6.5005 9.40233C7.93538 10.2308 8.42701 12.0655 7.59858 13.5004Z"
+                fill="none"
+                stroke="#000"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </mask>
+          </defs>
           <g
             id="share"
           >
             <g
               id="fill1"
+              mask="url(#t-icon-share-instance-v0-overlap-fill1)"
             >
               <path
                 d="M19.4907 7.09662C20.9256 6.2682 21.4172 4.43343 20.5888 2.99855C19.7604 1.56367 17.9256 1.07204 16.4907 1.90047C15.0559 2.7289 14.5642 4.56367 15.3927 5.99855C16.2211 7.43342 18.0559 7.92505 19.4907 7.09662Z"
@@ -2692,6 +2720,33 @@ exports[`Grid > Grid iconVue demo works fine 1`] = `
         viewBox="0 0 24 24"
         width="1em"
       >
+        <defs>
+          <mask
+            height="24"
+            id="t-icon-star-instance-v1-overlap-fill1"
+            mask-type="luminance"
+            maskContentUnits="userSpaceOnUse"
+            maskUnits="userSpaceOnUse"
+            width="24"
+            x="0"
+            y="0"
+          >
+            <rect
+              fill="#fff"
+              height="24"
+              width="24"
+              x="0"
+              y="0"
+            />
+            <path
+              d="M12.0001 3.67603L14.1867 9.96648L20.8449 10.1022L15.538 14.1256L17.4665 20.4999L12.0001 16.696L6.5337 20.4999L8.46217 14.1256L3.15527 10.1022L9.81354 9.96648L12.0001 3.67603Z"
+              fill="none"
+              stroke="#000"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </mask>
+        </defs>
         <g
           id="star"
         >
@@ -2699,6 +2754,7 @@ exports[`Grid > Grid iconVue demo works fine 1`] = `
             d="M12.0001 3.67603L14.1867 9.96648L20.8449 10.1022L15.538 14.1256L17.4665 20.4999L12.0001 16.696L6.5337 20.4999L8.46217 14.1256L3.15527 10.1022L9.81354 9.96648L12.0001 3.67603Z"
             fill="transparent"
             id="fill1"
+            mask="url(#t-icon-star-instance-v1-overlap-fill1)"
           />
           <path
             d="M12.0001 3.67603L14.1867 9.96648L20.8449 10.1022L15.538 14.1256L17.4665 20.4999L12.0001 16.696L6.5337 20.4999L8.46217 14.1256L3.15527 10.1022L9.81354 9.96648L12.0001 3.67603Z"
@@ -2790,6 +2846,56 @@ exports[`Grid > Grid iconVue demo works fine 1`] = `
         viewBox="0 0 24 24"
         width="1em"
       >
+        <defs>
+          <mask
+            height="24"
+            id="t-icon-edit-1-instance-v3-overlap-fill1"
+            mask-type="luminance"
+            maskContentUnits="userSpaceOnUse"
+            maskUnits="userSpaceOnUse"
+            width="24"
+            x="0"
+            y="0"
+          >
+            <rect
+              fill="#fff"
+              height="24"
+              width="24"
+              x="0"
+              y="0"
+            />
+            <path
+              d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
+              fill="none"
+              stroke="#000"
+              stroke-width="2"
+            />
+          </mask>
+          <mask
+            height="24"
+            id="t-icon-edit-1-instance-v3-overlap-fill2"
+            mask-type="luminance"
+            maskContentUnits="userSpaceOnUse"
+            maskUnits="userSpaceOnUse"
+            width="24"
+            x="0"
+            y="0"
+          >
+            <rect
+              fill="#fff"
+              height="24"
+              width="24"
+              x="0"
+              y="0"
+            />
+            <path
+              d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
+              fill="none"
+              stroke="#000"
+              stroke-width="2"
+            />
+          </mask>
+        </defs>
         <g
           id="edit-1"
         >
@@ -2797,11 +2903,13 @@ exports[`Grid > Grid iconVue demo works fine 1`] = `
             d="M3.0001 20.9999L7.5 20.9999L17.5 11L13 6.5L3.0001 16.5L3.0001 20.9999Z"
             fill="transparent"
             id="fill1"
+            mask="url(#t-icon-edit-1-instance-v3-overlap-fill1)"
           />
           <path
             d="M21.5 7L17 2.5L13 6.5L17.5 11L21.5 7Z"
             fill="transparent"
             id="fill2"
+            mask="url(#t-icon-edit-1-instance-v3-overlap-fill2)"
           />
           <path
             d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
@@ -5556,11 +5664,39 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-share-instance-v0-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M7.59863 13.501L15.3929 18.001M7.59863 10.499L15.3929 5.99902M15.3927 5.99855C14.5642 4.56367 15.0559 2.7289 16.4907 1.90047C17.9256 1.07204 19.7604 1.56367 20.5888 2.99855C21.4172 4.43343 20.9256 6.2682 19.4907 7.09662C18.0559 7.92505 16.2211 7.43342 15.3927 5.99855ZM15.3927 18.0005C16.2211 16.5656 18.0559 16.074 19.4907 16.9024C20.9256 17.7309 21.4172 19.5656 20.5888 21.0005C19.7604 22.4354 17.9256 22.927 16.4907 22.0986C15.0559 21.2701 14.5642 19.4354 15.3927 18.0005ZM7.59858 10.4985C8.42701 11.9334 7.93538 13.7682 6.5005 14.5966C5.06562 15.4251 3.23085 14.9334 2.40242 13.4985C1.574 12.0637 2.06562 10.2289 3.5005 9.40047C4.93538 8.57204 6.77015 9.06367 7.59858 10.4985ZM7.59858 13.5004C6.77015 14.9353 4.93538 15.4269 3.5005 14.5985C2.06562 13.7701 1.574 11.9353 2.40242 10.5004C3.23085 9.06553 5.06562 8.5739 6.5005 9.40233C7.93538 10.2308 8.42701 12.0655 7.59858 13.5004Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="share"
                 >
                   <g
                     id="fill1"
+                    mask="url(#t-icon-share-instance-v0-overlap-fill1)"
                   >
                     <path
                       d="M19.4907 7.09662C20.9256 6.2682 21.4172 4.43343 20.5888 2.99855C19.7604 1.56367 17.9256 1.07204 16.4907 1.90047C15.0559 2.7289 14.5642 4.56367 15.3927 5.99855C16.2211 7.43342 18.0559 7.92505 19.4907 7.09662Z"
@@ -5621,6 +5757,33 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
+              <defs>
+                <mask
+                  height="24"
+                  id="t-icon-star-instance-v1-overlap-fill1"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <path
+                    d="M12.0001 3.67603L14.1867 9.96648L20.8449 10.1022L15.538 14.1256L17.4665 20.4999L12.0001 16.696L6.5337 20.4999L8.46217 14.1256L3.15527 10.1022L9.81354 9.96648L12.0001 3.67603Z"
+                    fill="none"
+                    stroke="#000"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </mask>
+              </defs>
               <g
                 id="star"
               >
@@ -5628,6 +5791,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
                   d="M12.0001 3.67603L14.1867 9.96648L20.8449 10.1022L15.538 14.1256L17.4665 20.4999L12.0001 16.696L6.5337 20.4999L8.46217 14.1256L3.15527 10.1022L9.81354 9.96648L12.0001 3.67603Z"
                   fill="transparent"
                   id="fill1"
+                  mask="url(#t-icon-star-instance-v1-overlap-fill1)"
                 />
                 <path
                   d="M12.0001 3.67603L14.1867 9.96648L20.8449 10.1022L15.538 14.1256L17.4665 20.4999L12.0001 16.696L6.5337 20.4999L8.46217 14.1256L3.15527 10.1022L9.81354 9.96648L12.0001 3.67603Z"
@@ -5719,6 +5883,56 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
+              <defs>
+                <mask
+                  height="24"
+                  id="t-icon-edit-1-instance-v3-overlap-fill1"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <path
+                    d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="2"
+                  />
+                </mask>
+                <mask
+                  height="24"
+                  id="t-icon-edit-1-instance-v3-overlap-fill2"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <path
+                    d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="2"
+                  />
+                </mask>
+              </defs>
               <g
                 id="edit-1"
               >
@@ -5726,11 +5940,13 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
                   d="M3.0001 20.9999L7.5 20.9999L17.5 11L13 6.5L3.0001 16.5L3.0001 20.9999Z"
                   fill="transparent"
                   id="fill1"
+                  mask="url(#t-icon-edit-1-instance-v3-overlap-fill1)"
                 />
                 <path
                   d="M21.5 7L17 2.5L13 6.5L17.5 11L21.5 7Z"
                   fill="transparent"
                   id="fill2"
+                  mask="url(#t-icon-edit-1-instance-v3-overlap-fill2)"
                 />
                 <path
                   d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
